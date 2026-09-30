@@ -1,0 +1,36 @@
+# The flashcards app. Its image is built and pushed by CI (.github/workflows);
+# deploy.sh sets IMAGE to the commit being deployed.
+services:
+  api:
+    image: ${IMAGE:?set IMAGE, e.g. by running deploy.sh}
+    container_name: flashcards-api
+    restart: unless-stopped
+    env_file: .env # DATABASE_URL (see .env.example)
+    environment:
+      NODE_ENV: production
+      # Safe because the only way to reach this container is through Caddy on
+      # the internal network; never publish its port.
+      TRUST_PROXY: "true"
+      # Invite-only: only the emails in ALLOWED_EMAILS (set in .env) may register.
+      REGISTRATION_MODE: allowlist
+    networks:
+      - web # reached by Caddy
+      - db # reaches Postgres
+    read_only: true
+    tmpfs:
+      - /tmp
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+    logging:
+      driver: json-file
+      options: { max-size: "10m", max-file: "3" }
+
+networks:
+  web:
+    external: true
+    name: web
+  db:
+    external: true
+    name: db

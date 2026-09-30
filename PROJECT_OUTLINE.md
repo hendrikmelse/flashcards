@@ -145,11 +145,21 @@ Hub model: each language's words point at a language-independent **concept** (a 
 - Hourly cleanup of expired sessions; graceful shutdown on SIGTERM
 - Production bundle (`npm run build`, esbuild) and a Dockerfile; migrations run as a separate step (`node apps/api/dist/migrate.js`)
 
-**Phase 2: infrastructure (next)**
-- Server hardening (non-root user, SSH keys only, firewall, fail2ban, unattended upgrades)
-- Compose projects for Caddy, Postgres and the app; image tagged by git SHA for rollback
-- CI (GitHub Actions): typecheck and tests on every push, build and push the image, deploy over SSH (migrate, then restart)
-- Nightly `pg_dump` copied off the server, plus a restore drill
-- Domain, DNS and HTTPS
+**Phase 2: infrastructure (files written, not yet run on a server)**
 
-**Phase 3: hardening:** uptime monitoring, error tracking, log rotation; email verification and password reset before public signups.
+Live at **flashcards.hendrikmelse.com**. The runbook is `deploy/README.md`; the server-side files are under `deploy/server/`.
+- Server hardening (non-root user, SSH keys only, firewall, fail2ban, unattended upgrades): runbook commands
+- Compose projects for Caddy, Postgres and the app; image tagged by git SHA for rollback; `deploy.sh` migrates, restarts, health-checks and rolls back automatically
+- CI (`.github/workflows/ci.yml`): typecheck, tests and build on every push, Docker build on every run, image pushed to GHCR from `main`, deploy over SSH once `DEPLOY_ENABLED=true`
+- Nightly `pg_dump` with 14-day retention (`backup.sh`) plus a documented restore drill
+- Decisions: Hetzner in Hillsboro (US West), x86 plan; invite-only (`REGISTRATION_MODE=allowlist` plus `ALLOWED_EMAILS`; production refuses to start without an explicit mode)
+- Still to do: the server itself and its DNS record, first real deploy
+- Production has a separate `seed-languages` command (no sample data)
+
+**Phase 3: hardening:** uptime monitoring, error tracking, log rotation.
+
+**Before launch (anyone other than the owner using it):**
+- Offsite database backups (nightly local dumps are already part of the runbook) and a tested restore
+- Email verification and password reset (needs an email provider)
+- Replace the email allowlist with invite codes, so outsiders cannot probe which addresses are allowed
+- Decide whether to run the production CSP through a real browser pass

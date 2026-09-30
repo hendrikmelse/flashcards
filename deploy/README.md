@@ -1,0 +1,391 @@
+# Deployment runbook
+
+Runs the app at **https://flashcards.hendrikmelse.com** on a single VPS using
+Docker Compose, with Caddy in front for HTTPS.
+
+> **Status: tested locally in Docker, not yet on a real server.** The image, the
+> compose files, `deploy.sh` (including rollback) and the backup/restore drill
+> have all been run against real containers (see "What has been verified" at the
+> end). The server-setup steps (1 to 3: provider, DNS, SSH and firewall
+> hardening) and real HTTPS certificates have not. Update this file with
+> anything you learn on the first real pass.
+
+## How it fits together
+
+```
+internet ─▶ Caddy (80/443, automatic HTTPS) ─▶ flashcards-api (Node, port 3000)
+                                                        │
+                                          internal "db" network
+                                                        ▼
+                                              Postgres (no public port)
+```
+
+- **One image** contains the API and the built web app. CI builds it and pushes
+  it to GitHub Container Registry, tagged with the commit SHA.
+- **Three compose projects** on the server, each independent:
+
+  | Path on server | Purpose |
+  |---|---|
+  | `/srv/caddy` | Shared reverse proxy. Owns ports 80/443. One block per site in `Caddyfile`. |
+  | `/srv/postgres` | Shared Postgres. One database and one role per app. Publishes no ports. |
+  | `/srv/flashcards` | This app. `deploy.sh` does pull, migrate, restart, health check, rollback. |
+
+- Two shared Docker networks: `web` (Caddy to apps) and `db` (apps to Postgres).
+  Postgres is never on `web`, and Caddy is never on `db`.
+
+## 1. Create the server
+
+Hetzner Cloud is assumed, but any Ubuntu VPS works.
+
+- **Image:** Ubuntu 24.04 LTS. **Size:** a small shared-vCPU plan with 2 vCPUs
+  and 2 to 4 GB RAM is plenty for several small apps.
+- **Location:** Hillsboro, Oregon (US West), since you and the expected users are there.
+- **CPU architecture: choose x86 (amd64), not ARM.** CI builds an amd64 image;
+  it will not run on an ARM server. Hetzner's US locations may offer fewer plan
+  families than Europe, so pick from whatever x86 shared-vCPU plans Hillsboro
+  lists at the time (plan names change).
+- **SSH key:** add your public key when creating the server. On Windows,
+  `ssh-keygen -t ed25519` creates one; the public half is
+  `%USERPROFILE%\.ssh\id_ed25519.pub`.
+- **Cloud firewall** (in the provider console, in addition to the host firewall
+  below): allow inbound TCP 22 (ideally only from your IP), TCP 80, TCP 443, and
+  UDP 443.
+- **Optional but worthwhile:** enable the provider's automated backups
+  (snapshots). They cost a little extra and are a second safety net next to the
+  database dumps below.
+- Note the server's IPv4 address (and IPv6 if you want it).
+
+## 2. DNS
+
+Where `hendrikmelse.com`'s DNS is managed, add:
+
+| Type | Name | Value |
+|---|---|---|
+| A | `flashcards` | the server's IPv4 |
+| AAAA (optional) | `flashcards` | the server's IPv6 |
+
+Check with `nslookup flashcards.hendrikmelse.com`. Caddy can only get a
+certificate once this resolves to the server. Do not put a proxy (for example
+Cloudflare's orange cloud) in front until everything works without one.
+
+## 3. Bootstrap the server
+
+SSH in as root (`ssh root@<ip>`) and run the following. Do the steps in order,
+and **do not close your root session until step 3c is confirmed**.
+
+### 3a. Users, packages, Docker, firewall
+
+```bash
+apt-get update && apt-get -y upgrade
+
+# An admin user that CI and you will use. No password; key login only.
+adduser --disabled-password --gecos "" deploy
+usermod -aG sudo deploy
+echo 'deploy ALL=(ALL) NOPASSWD:ALL' > /etc/sudoers.d/deploy && chmod 440 /etc/sudoers.d/deploy
+rsync --archive --chown=deploy:deploy ~/.ssh /home/deploy   # reuse your key
+
+# Docker (official apt repository)
+apt-get install -y ca-certificates curl
+install -m 0755 -d /etc/apt/keyrings
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
+chmod a+r /etc/apt/keyrings/docker.asc
+echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu $(. /etc/os-release && echo "$VERSION_CODENAME") stable" > /etc/apt/sources.list.d/docker.list
+apt-get update
+apt-get install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+usermod -aG docker deploy   # note: docker group access is effectively root
+
+# Host firewall, brute-force protection, automatic security updates
+apt-get install -y ufw fail2ban unattended-upgrades
+ufw default deny incoming && ufw default allow outgoing
+ufw allow OpenSSH && ufw allow 80/tcp && ufw allow 443/tcp && ufw allow 443/udp
+ufw --force enable
+echo unattended-upgrades unattended-upgrades/enable_auto_updates boolean true | debconf-set-selections
+dpkg-reconfigure -f noninteractive unattended-upgrades
+```
+
+Docker publishes container ports by editing iptables directly, which **bypasses
+UFW**. That is fine here because only Caddy publishes ports. Never add a
+`ports:` entry to Postgres or an app.
+
+### 3b. Check the deploy user works
+
+In a **new terminal**, from your machine:
+
+```bash
+ssh deploy@<ip>
+docker ps          # should print an empty table, not a permission error
+```
+
+### 3c. Lock down SSH
+
+Only after 3b succeeded, as `deploy` on the server:
+
+```bash
+sudo tee /etc/ssh/sshd_config.d/99-hardening.conf <<'EOF'
+PasswordAuthentication no
+KbdInteractiveAuthentication no
+PermitRootLogin no
+EOF
+sudo sshd -t && sudo systemctl reload ssh
+```
+
+Open yet another terminal and confirm `ssh deploy@<ip>` still works before
+closing the old sessions.
+
+## 4. Put the compose files on the server
+
+From the repository root on your machine:
+
+```bash
+ssh deploy@<ip> "sudo mkdir -p /srv && sudo chown deploy:deploy /srv"
+scp -r deploy/server/caddy deploy/server/postgres deploy/server/flashcards deploy@<ip>:/srv/
+ssh deploy@<ip> "chmod +x /srv/flashcards/deploy.sh /srv/postgres/backup.sh"
+```
+
+These files change rarely. Re-run the `scp` when they do.
+
+## 5. Postgres
+
+On the server:
+
+```bash
+cd /srv/postgres
+cp .env.example .env && chmod 600 .env
+openssl rand -base64 32        # paste the output as POSTGRES_PASSWORD
+nano .env
+docker compose up -d
+docker compose ps              # wait until it reports "healthy"
+```
+
+Create this app's role and database:
+
+```bash
+APP_PW="$(openssl rand -base64 24 | tr -d '/+=')"   # no characters that need URL-encoding
+docker compose exec -T postgres psql -U postgres <<SQL
+create role flashcards login password '$APP_PW';
+create database flashcards owner flashcards;
+SQL
+echo "$APP_PW"
+```
+
+Then configure the app with that password:
+
+```bash
+cd /srv/flashcards
+cp .env.example .env && chmod 600 .env
+nano .env    # 1) replace change-me in DATABASE_URL with the password printed above
+             # 2) set ALLOWED_EMAILS to the email(s) allowed to register
+```
+
+The app is **invite-only**: `compose.yaml` sets `REGISTRATION_MODE=allowlist`, so
+only the emails in `ALLOWED_EMAILS` can create an account. The server refuses to
+start in production if no registration mode is set, so sign-ups can never be
+left open by accident.
+
+## 6. Caddy
+
+```bash
+cd /srv/caddy
+docker compose up -d
+docker compose logs -f caddy    # watch for the certificate being obtained
+```
+
+Start Caddy and Postgres **before** the app: they create the `web` and `db`
+networks that the app's compose file expects to exist.
+
+## 7. Connect GitHub and deploy
+
+1. **Create a dedicated deploy key** on your machine, outside the repo folder:
+
+   ```bash
+   ssh-keygen -t ed25519 -f ~/flashcards_deploy -C "github-actions-deploy" -N ""
+   ```
+
+2. **Authorize it** on the server: append `~/flashcards_deploy.pub` to
+   `/home/deploy/.ssh/authorized_keys`.
+
+3. **Get the server's host key** so CI can verify it is talking to your server.
+   Compare it with the fingerprint from
+   `ssh-keygen -lf /etc/ssh/ssh_host_ed25519_key.pub` run on the server:
+
+   ```bash
+   ssh-keyscan -t ed25519 <ip>
+   ```
+
+4. **Add GitHub repository secrets** (Settings, Secrets and variables, Actions):
+
+   | Secret | Value |
+   |---|---|
+   | `DEPLOY_HOST` | the server IP or `flashcards.hendrikmelse.com` |
+   | `DEPLOY_USER` | `deploy` |
+   | `DEPLOY_SSH_KEY` | the full contents of the private key file `~/flashcards_deploy` |
+   | `DEPLOY_KNOWN_HOSTS` | the `ssh-keyscan` output line |
+
+   Then add the repository **variable** `DEPLOY_ENABLED` = `true`. Until it is
+   set, CI builds and tests but never deploys. Delete the local key files
+   afterwards or store them somewhere safe. Never commit them.
+
+5. **Push to `main`** (or re-run the workflow). CI runs the tests, builds the
+   image, pushes it to `ghcr.io/hendrikmelse/flashcards`, and deploys it over
+   SSH. The server pulls with the workflow's short-lived token, so no registry
+   password is stored on it.
+
+6. **One-time: create the language rows** (production has no sample data):
+
+   ```bash
+   cd /srv/flashcards
+   export IMAGE="$(cat current-image)"
+   docker compose run --rm --no-deps api node apps/api/dist/seed-languages.js
+   ```
+
+## 8. Verify
+
+```bash
+curl -i https://flashcards.hendrikmelse.com/api/ready   # 200 {"status":"ok"}
+```
+
+Then open https://flashcards.hendrikmelse.com, register, and check the pack
+pages load. Look for a padlock, and in the browser's console for any
+Content-Security-Policy violations (the CSP has not yet been exercised in a
+real browser against the production build). On the server, `docker compose logs
+--tail 100 api` (in `/srv/flashcards`) shows the app's logs.
+
+## 9. Backups
+
+> **Plan:** turn on the nightly dump below from day one (it is free and guards
+> against your own mistakes). Offsite copies can wait, but **must be in place
+> before anyone other than you uses the app.**
+
+The dump script writes compressed dumps of every app database (plus roles) to
+`/srv/postgres/backups` and keeps 14 days. Schedule it as the `deploy` user
+(`crontab -e`):
+
+```
+17 3 * * * /srv/postgres/backup.sh >> /srv/postgres/backup.log 2>&1
+```
+
+**Practice a restore before you need one.** This restores into a scratch
+database and never touches the live one:
+
+```bash
+cd /srv/postgres
+ls backups
+docker compose exec -T postgres psql -U postgres -c "create database restore_test owner flashcards"
+docker compose exec -T postgres pg_restore -U postgres -d restore_test --no-owner --role=flashcards < backups/flashcards-<stamp>.dump
+docker compose exec -T postgres psql -U postgres -d restore_test -c "select count(*) from users"
+docker compose exec -T postgres psql -U postgres -c "drop database restore_test"
+```
+
+### Offsite backups (not set up yet)
+
+Dumps on the same disk do not survive losing the server. Copy them elsewhere
+too, for example with `restic` to an S3-compatible bucket (Backblaze B2 is cheap)
+or `rsync` to a provider storage box, run right after `backup.sh` in cron. This
+needs an account and credentials from you, so it is left for when you choose a
+destination.
+
+To rebuild after a total loss: create a new server (steps 1 to 6), restore the
+roles with `psql -U postgres < globals-<stamp>.sql`, create the database, then
+`pg_restore` the dump into it.
+
+## 10. Rolling back
+
+Deploy the previous image tag (commit SHA) with the same script:
+
+```bash
+/srv/flashcards/deploy.sh ghcr.io/hendrikmelse/flashcards:<previous-sha>
+```
+
+`deploy.sh` also rolls back automatically if a new version never becomes
+healthy, and then waits to confirm the old version is healthy again (it prints
+`rollback succeeded` or `rollback FAILED`). If a migration fails, the deploy
+stops before touching the running app. Because the app is a single container,
+every deploy has a few seconds of downtime while it restarts.
+**Database migrations are not undone by a rollback.** Keep them
+backward compatible: add columns and tables in one deploy, and remove the old
+ones only in a later one.
+
+## 11. Routine maintenance
+
+- Security updates install themselves. Check for a pending reboot now and then:
+  `ls /var/run/reboot-required`.
+- Update Caddy and Postgres within their major versions: in each of
+  `/srv/caddy` and `/srv/postgres`, run `docker compose pull && docker compose up -d`.
+  A Postgres **major** upgrade (for example 17 to 18) is a manual dump and restore.
+- Keep an eye on disk: `df -h` and `docker system df`.
+
+## Inviting someone
+
+1. Add their email to `ALLOWED_EMAILS` (comma-separated) in `/srv/flashcards/.env`.
+2. Apply it: `cd /srv/flashcards && IMAGE="$(cat current-image)" docker compose up -d`
+   (compose recreates the container when its environment changes).
+3. Tell them to sign up at https://flashcards.hendrikmelse.com/register with
+   that exact email. Login for existing accounts never depends on the list.
+
+Anyone not on the list gets a 403 "Registration is closed". Note that this
+tells an outsider who guesses an address whether it is on the list; fine for a
+private test, but worth replacing with invite codes before a wider launch.
+
+## Adding another app to this server
+
+1. Create its role and database in the shared Postgres (step 5).
+2. Give it its own `/srv/<app>` compose project with containers on the `web`
+   and `db` networks (same pattern as `flashcards/compose.yaml`), and no published ports.
+3. Add a site block to `/srv/caddy/Caddyfile` and run
+   `docker compose exec caddy caddy reload --config /etc/caddy/Caddyfile`.
+4. Add the DNS record.
+
+## What has been verified
+
+Run locally with Docker Desktop, using the real compose files and scripts from
+this directory (only Caddy's port and site address were overridden, and a
+local registry container stood in for GHCR):
+
+- The image builds (about 25 s), is 405 MB, runs as the non-root `node` user,
+  and contains no dev tooling.
+- The real `Caddyfile` validates. Postgres and the app start on the shared
+  `web`/`db` networks; neither Postgres nor the app publishes a port.
+- Creating the role and database with the commands in step 5 works.
+- `deploy.sh`: a first deploy applies the migrations to an empty database and
+  the app turns healthy in about 11 s. A second deploy updates it. A release
+  that crashes is rolled back automatically, and the rollback is verified. A
+  release whose migration fails leaves the running app untouched. Verified
+  rollback takes about 13 s.
+- `seed-languages`, the app behind Caddy (app shell, client routes, cache and
+  security headers, the Origin check), and invite-only registration all work.
+  A spoofed `X-Forwarded-For` does not evade the login rate limit, because
+  Caddy overwrites it with the real client address.
+- Hardening: read-only root filesystem, zero capabilities, no-new-privileges.
+- `docker stop` shuts the app down cleanly in under a second (exit code 0).
+- `backup.sh`, the 14-day pruning, and the restore drill all work. The restored
+  database had the right data and ownership.
+- Editing `ALLOWED_EMAILS` and re-running `docker compose up -d` recreates the
+  container and the new address can register.
+
+## Not yet verified
+
+- Steps 1 to 3 (server creation, DNS, SSH and firewall hardening, unattended
+  upgrades) on a real VPS.
+- Real HTTPS certificates from Let's Encrypt (needs the DNS record and open ports).
+- The GitHub Actions workflow and the push to and pull from GHCR.
+- The production Content-Security-Policy in a real browser against the
+  production build.
+- The nightly cron entry, and offsite backups (not built yet).
+
+## Repeating the local test
+
+After changing the Dockerfile, compose files or `deploy.sh`, rerun the local
+stack before pushing. In outline:
+
+1. `docker build -t flashcards:local .`
+2. Copy `deploy/server/*` to a scratch folder. Start `postgres` (real compose),
+   create the role and database (step 5), start a throwaway registry
+   (`docker run -d -p 5000:5000 registry:2`), push the image to it as
+   `localhost:5000/flashcards:v1`.
+3. For Caddy, add a `compose.override.yaml` that maps `8080:80` and mounts a
+   `:80 { reverse_proxy flashcards-api:3000 }` Caddyfile (the real one
+   requests a public certificate), then `docker compose up -d`.
+4. In the `flashcards` folder, create `.env` and run
+   `./deploy.sh localhost:5000/flashcards:v1`. Browse http://localhost:8080.
+5. Tear down: `docker compose down -v` in each folder, `docker rm -f registry`,
+   and `docker network rm web db`.

@@ -1,0 +1,30 @@
+# Shared Postgres for every app on this server: one database and one login
+# role per app. It is only on the internal "db" network and publishes no ports,
+# so it is unreachable from the internet.
+services:
+  postgres:
+    image: postgres:17
+    container_name: postgres
+    restart: unless-stopped
+    env_file: .env # POSTGRES_PASSWORD (see .env.example)
+    environment:
+      POSTGRES_USER: postgres
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    networks:
+      - db
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    logging:
+      driver: json-file
+      options: { max-size: "10m", max-file: "3" }
+
+volumes:
+  pgdata:
+
+networks:
+  db:
+    name: db

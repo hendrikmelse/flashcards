@@ -1,0 +1,18 @@
+# One block per site. Caddy sets X-Forwarded-For/-Proto and keeps the original
+# Host header, which the app relies on (client IP for rate limiting, and the
+# Origin check compares against Host).
+#
+# Optional: to get certificate-expiry notices from Let's Encrypt, add a global
+# block with your address at the top:
+#   { email you@example.com }
+
+flashcards.hendrikmelse.com {
+	encode zstd gzip
+	reverse_proxy flashcards-api:3000
+}
+
+# To host another app, add a block here and attach that app's container to the
+# "web" network, e.g.:
+#   other.hendrikmelse.com {
+#       reverse_proxy other-api:3000
+#   }
