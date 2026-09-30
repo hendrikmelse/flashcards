@@ -1,5 +1,5 @@
 {
-  "id": "ee237c51-becb-428f-b58d-69de5f628e5f",
+  "id": "7e9c7097-c93d-4182-9ac8-647ea7a5e6f4",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "version": "7",
   "dialect": "postgresql",
@@ -21,8 +21,8 @@
           "primaryKey": false,
           "notNull": true
         },
-        "createdAt": {
-          "name": "createdAt",
+        "created_at": {
+          "name": "created_at",
           "type": "timestamp with time zone",
           "primaryKey": false,
           "notNull": true,
@@ -48,8 +48,8 @@
           "notNull": true,
           "default": "gen_random_uuid()"
         },
-        "conceptId": {
-          "name": "conceptId",
+        "concept_id": {
+          "name": "concept_id",
           "type": "uuid",
           "primaryKey": false,
           "notNull": true
@@ -66,8 +66,8 @@
           "primaryKey": false,
           "notNull": true
         },
-        "partOfSpeech": {
-          "name": "partOfSpeech",
+        "part_of_speech": {
+          "name": "part_of_speech",
           "type": "text",
           "primaryKey": false,
           "notNull": false
@@ -79,8 +79,8 @@
           "notNull": true,
           "default": "'{}'::jsonb"
         },
-        "createdAt": {
-          "name": "createdAt",
+        "created_at": {
+          "name": "created_at",
           "type": "timestamp with time zone",
           "primaryKey": false,
           "notNull": true,
@@ -92,7 +92,7 @@
           "name": "entries_concept_idx",
           "columns": [
             {
-              "expression": "conceptId",
+              "expression": "concept_id",
               "isExpression": false,
               "asc": true,
               "nulls": "last"
@@ -126,12 +126,12 @@
         }
       },
       "foreignKeys": {
-        "entries_conceptId_concepts_id_fk": {
-          "name": "entries_conceptId_concepts_id_fk",
+        "entries_concept_id_concepts_id_fk": {
+          "name": "entries_concept_id_concepts_id_fk",
           "tableFrom": "entries",
           "tableTo": "concepts",
           "columnsFrom": [
-            "conceptId"
+            "concept_id"
           ],
           "columnsTo": [
             "id"
@@ -159,7 +159,7 @@
           "name": "entries_concept_language_lemma_uq",
           "nullsNotDistinct": false,
           "columns": [
-            "conceptId",
+            "concept_id",
             "language",
             "lemma"
           ]
@@ -173,14 +173,14 @@
       "name": "entry_sentences",
       "schema": "",
       "columns": {
-        "entryId": {
-          "name": "entryId",
+        "entry_id": {
+          "name": "entry_id",
           "type": "uuid",
           "primaryKey": false,
           "notNull": true
         },
-        "sentenceId": {
-          "name": "sentenceId",
+        "sentence_id": {
+          "name": "sentence_id",
           "type": "uuid",
           "primaryKey": false,
           "notNull": true
@@ -188,12 +188,12 @@
       },
       "indexes": {},
       "foreignKeys": {
-        "entry_sentences_entryId_entries_id_fk": {
-          "name": "entry_sentences_entryId_entries_id_fk",
+        "entry_sentences_entry_id_entries_id_fk": {
+          "name": "entry_sentences_entry_id_entries_id_fk",
           "tableFrom": "entry_sentences",
           "tableTo": "entries",
           "columnsFrom": [
-            "entryId"
+            "entry_id"
           ],
           "columnsTo": [
             "id"
@@ -201,12 +201,12 @@
           "onDelete": "cascade",
           "onUpdate": "no action"
         },
-        "entry_sentences_sentenceId_sentences_id_fk": {
-          "name": "entry_sentences_sentenceId_sentences_id_fk",
+        "entry_sentences_sentence_id_sentences_id_fk": {
+          "name": "entry_sentences_sentence_id_sentences_id_fk",
           "tableFrom": "entry_sentences",
           "tableTo": "sentences",
           "columnsFrom": [
-            "sentenceId"
+            "sentence_id"
           ],
           "columnsTo": [
             "id"
@@ -216,11 +216,11 @@
         }
       },
       "compositePrimaryKeys": {
-        "entry_sentences_entryId_sentenceId_pk": {
-          "name": "entry_sentences_entryId_sentenceId_pk",
+        "entry_sentences_entry_id_sentence_id_pk": {
+          "name": "entry_sentences_entry_id_sentence_id_pk",
           "columns": [
-            "entryId",
-            "sentenceId"
+            "entry_id",
+            "sentence_id"
           ]
         }
       },
@@ -258,14 +258,14 @@
       "name": "pack_concepts",
       "schema": "",
       "columns": {
-        "packId": {
-          "name": "packId",
+        "pack_id": {
+          "name": "pack_id",
           "type": "uuid",
           "primaryKey": false,
           "notNull": true
         },
-        "conceptId": {
-          "name": "conceptId",
+        "concept_id": {
+          "name": "concept_id",
           "type": "uuid",
           "primaryKey": false,
           "notNull": true
@@ -283,7 +283,7 @@
           "name": "pack_concepts_concept_idx",
           "columns": [
             {
-              "expression": "conceptId",
+              "expression": "concept_id",
               "isExpression": false,
               "asc": true,
               "nulls": "last"
@@ -296,12 +296,12 @@
         }
       },
       "foreignKeys": {
-        "pack_concepts_packId_packs_id_fk": {
-          "name": "pack_concepts_packId_packs_id_fk",
+        "pack_concepts_pack_id_packs_id_fk": {
+          "name": "pack_concepts_pack_id_packs_id_fk",
           "tableFrom": "pack_concepts",
           "tableTo": "packs",
           "columnsFrom": [
-            "packId"
+            "pack_id"
           ],
           "columnsTo": [
             "id"
@@ -309,12 +309,12 @@
           "onDelete": "cascade",
           "onUpdate": "no action"
         },
-        "pack_concepts_conceptId_concepts_id_fk": {
-          "name": "pack_concepts_conceptId_concepts_id_fk",
+        "pack_concepts_concept_id_concepts_id_fk": {
+          "name": "pack_concepts_concept_id_concepts_id_fk",
           "tableFrom": "pack_concepts",
           "tableTo": "concepts",
           "columnsFrom": [
-            "conceptId"
+            "concept_id"
           ],
           "columnsTo": [
             "id"
@@ -324,11 +324,11 @@
         }
       },
       "compositePrimaryKeys": {
-        "pack_concepts_packId_conceptId_pk": {
-          "name": "pack_concepts_packId_conceptId_pk",
+        "pack_concepts_pack_id_concept_id_pk": {
+          "name": "pack_concepts_pack_id_concept_id_pk",
           "columns": [
-            "packId",
-            "conceptId"
+            "pack_id",
+            "concept_id"
           ]
         }
       },
@@ -366,8 +366,8 @@
           "primaryKey": false,
           "notNull": false
         },
-        "createdAt": {
-          "name": "createdAt",
+        "created_at": {
+          "name": "created_at",
           "type": "timestamp with time zone",
           "primaryKey": false,
           "notNull": true,
@@ -401,20 +401,20 @@
           "notNull": true,
           "default": "gen_random_uuid()"
         },
-        "userCardId": {
-          "name": "userCardId",
+        "user_card_id": {
+          "name": "user_card_id",
           "type": "uuid",
           "primaryKey": false,
           "notNull": true
         },
-        "userId": {
-          "name": "userId",
+        "user_id": {
+          "name": "user_id",
           "type": "uuid",
           "primaryKey": false,
           "notNull": true
         },
-        "clientReviewId": {
-          "name": "clientReviewId",
+        "client_review_id": {
+          "name": "client_review_id",
           "type": "uuid",
           "primaryKey": false,
           "notNull": true
@@ -426,47 +426,47 @@
           "primaryKey": false,
           "notNull": true
         },
-        "reviewedAt": {
-          "name": "reviewedAt",
+        "reviewed_at": {
+          "name": "reviewed_at",
           "type": "timestamp with time zone",
           "primaryKey": false,
           "notNull": true,
           "default": "now()"
         },
-        "timeTakenMs": {
-          "name": "timeTakenMs",
+        "time_taken_ms": {
+          "name": "time_taken_ms",
           "type": "integer",
           "primaryKey": false,
           "notNull": false
         },
-        "stateBefore": {
-          "name": "stateBefore",
+        "state_before": {
+          "name": "state_before",
           "type": "card_state",
           "typeSchema": "public",
           "primaryKey": false,
           "notNull": true
         },
-        "stateAfter": {
-          "name": "stateAfter",
+        "state_after": {
+          "name": "state_after",
           "type": "card_state",
           "typeSchema": "public",
           "primaryKey": false,
           "notNull": true
         },
-        "intervalBeforeDays": {
-          "name": "intervalBeforeDays",
+        "interval_before_days": {
+          "name": "interval_before_days",
           "type": "real",
           "primaryKey": false,
           "notNull": true
         },
-        "intervalAfterDays": {
-          "name": "intervalAfterDays",
+        "interval_after_days": {
+          "name": "interval_after_days",
           "type": "real",
           "primaryKey": false,
           "notNull": true
         },
-        "dueAfter": {
-          "name": "dueAfter",
+        "due_after": {
+          "name": "due_after",
           "type": "timestamp with time zone",
           "primaryKey": false,
           "notNull": true
@@ -477,13 +477,13 @@
           "name": "review_logs_card_idx",
           "columns": [
             {
-              "expression": "userCardId",
+              "expression": "user_card_id",
               "isExpression": false,
               "asc": true,
               "nulls": "last"
             },
             {
-              "expression": "reviewedAt",
+              "expression": "reviewed_at",
               "isExpression": false,
               "asc": true,
               "nulls": "last"
@@ -498,13 +498,13 @@
           "name": "review_logs_user_idx",
           "columns": [
             {
-              "expression": "userId",
+              "expression": "user_id",
               "isExpression": false,
               "asc": true,
               "nulls": "last"
             },
             {
-              "expression": "reviewedAt",
+              "expression": "reviewed_at",
               "isExpression": false,
               "asc": true,
               "nulls": "last"
@@ -517,12 +517,12 @@
         }
       },
       "foreignKeys": {
-        "review_logs_userCardId_user_cards_id_fk": {
-          "name": "review_logs_userCardId_user_cards_id_fk",
+        "review_logs_user_card_id_user_cards_id_fk": {
+          "name": "review_logs_user_card_id_user_cards_id_fk",
           "tableFrom": "review_logs",
           "tableTo": "user_cards",
           "columnsFrom": [
-            "userCardId"
+            "user_card_id"
           ],
           "columnsTo": [
             "id"
@@ -530,12 +530,12 @@
           "onDelete": "cascade",
           "onUpdate": "no action"
         },
-        "review_logs_userId_users_id_fk": {
-          "name": "review_logs_userId_users_id_fk",
+        "review_logs_user_id_users_id_fk": {
+          "name": "review_logs_user_id_users_id_fk",
           "tableFrom": "review_logs",
           "tableTo": "users",
           "columnsFrom": [
-            "userId"
+            "user_id"
           ],
           "columnsTo": [
             "id"
@@ -550,8 +550,8 @@
           "name": "review_logs_user_client_review_uq",
           "nullsNotDistinct": false,
           "columns": [
-            "userId",
-            "clientReviewId"
+            "user_id",
+            "client_review_id"
           ]
         }
       },
@@ -582,8 +582,8 @@
           "primaryKey": false,
           "notNull": true
         },
-        "createdAt": {
-          "name": "createdAt",
+        "created_at": {
+          "name": "created_at",
           "type": "timestamp with time zone",
           "primaryKey": false,
           "notNull": true,
@@ -638,20 +638,20 @@
           "primaryKey": true,
           "notNull": true
         },
-        "userId": {
-          "name": "userId",
+        "user_id": {
+          "name": "user_id",
           "type": "uuid",
           "primaryKey": false,
           "notNull": true
         },
-        "expiresAt": {
-          "name": "expiresAt",
+        "expires_at": {
+          "name": "expires_at",
           "type": "timestamp with time zone",
           "primaryKey": false,
           "notNull": true
         },
-        "createdAt": {
-          "name": "createdAt",
+        "created_at": {
+          "name": "created_at",
           "type": "timestamp with time zone",
           "primaryKey": false,
           "notNull": true,
@@ -663,7 +663,7 @@
           "name": "sessions_user_idx",
           "columns": [
             {
-              "expression": "userId",
+              "expression": "user_id",
               "isExpression": false,
               "asc": true,
               "nulls": "last"
@@ -676,12 +676,12 @@
         }
       },
       "foreignKeys": {
-        "sessions_userId_users_id_fk": {
-          "name": "sessions_userId_users_id_fk",
+        "sessions_user_id_users_id_fk": {
+          "name": "sessions_user_id_users_id_fk",
           "tableFrom": "sessions",
           "tableTo": "users",
           "columnsFrom": [
-            "userId"
+            "user_id"
           ],
           "columnsTo": [
             "id"
@@ -707,39 +707,39 @@
           "notNull": true,
           "default": "gen_random_uuid()"
         },
-        "userId": {
-          "name": "userId",
+        "user_id": {
+          "name": "user_id",
           "type": "uuid",
           "primaryKey": false,
           "notNull": true
         },
-        "conceptId": {
-          "name": "conceptId",
+        "concept_id": {
+          "name": "concept_id",
           "type": "uuid",
           "primaryKey": false,
           "notNull": true
         },
-        "fromLanguage": {
-          "name": "fromLanguage",
+        "from_language": {
+          "name": "from_language",
           "type": "text",
           "primaryKey": false,
           "notNull": true
         },
-        "toLanguage": {
-          "name": "toLanguage",
+        "to_language": {
+          "name": "to_language",
           "type": "text",
           "primaryKey": false,
           "notNull": true
         },
-        "addedAt": {
-          "name": "addedAt",
+        "added_at": {
+          "name": "added_at",
           "type": "timestamp with time zone",
           "primaryKey": false,
           "notNull": true,
           "default": "now()"
         },
-        "sortKey": {
-          "name": "sortKey",
+        "sort_key": {
+          "name": "sort_key",
           "type": "integer",
           "primaryKey": false,
           "notNull": true,
@@ -753,15 +753,15 @@
           "notNull": true,
           "default": "'new'"
         },
-        "dueAt": {
-          "name": "dueAt",
+        "due_at": {
+          "name": "due_at",
           "type": "timestamp with time zone",
           "primaryKey": false,
           "notNull": true,
           "default": "now()"
         },
-        "intervalDays": {
-          "name": "intervalDays",
+        "interval_days": {
+          "name": "interval_days",
           "type": "real",
           "primaryKey": false,
           "notNull": true,
@@ -779,8 +779,8 @@
           "primaryKey": false,
           "notNull": false
         },
-        "learningStep": {
-          "name": "learningStep",
+        "learning_step": {
+          "name": "learning_step",
           "type": "integer",
           "primaryKey": false,
           "notNull": true,
@@ -800,8 +800,8 @@
           "notNull": true,
           "default": 0
         },
-        "lastReviewedAt": {
-          "name": "lastReviewedAt",
+        "last_reviewed_at": {
+          "name": "last_reviewed_at",
           "type": "timestamp with time zone",
           "primaryKey": false,
           "notNull": false
@@ -812,13 +812,13 @@
           "name": "user_cards_due_idx",
           "columns": [
             {
-              "expression": "userId",
+              "expression": "user_id",
               "isExpression": false,
               "asc": true,
               "nulls": "last"
             },
             {
-              "expression": "dueAt",
+              "expression": "due_at",
               "isExpression": false,
               "asc": true,
               "nulls": "last"
@@ -831,12 +831,12 @@
         }
       },
       "foreignKeys": {
-        "user_cards_userId_users_id_fk": {
-          "name": "user_cards_userId_users_id_fk",
+        "user_cards_user_id_users_id_fk": {
+          "name": "user_cards_user_id_users_id_fk",
           "tableFrom": "user_cards",
           "tableTo": "users",
           "columnsFrom": [
-            "userId"
+            "user_id"
           ],
           "columnsTo": [
             "id"
@@ -844,12 +844,12 @@
           "onDelete": "cascade",
           "onUpdate": "no action"
         },
-        "user_cards_conceptId_concepts_id_fk": {
-          "name": "user_cards_conceptId_concepts_id_fk",
+        "user_cards_concept_id_concepts_id_fk": {
+          "name": "user_cards_concept_id_concepts_id_fk",
           "tableFrom": "user_cards",
           "tableTo": "concepts",
           "columnsFrom": [
-            "conceptId"
+            "concept_id"
           ],
           "columnsTo": [
             "id"
@@ -857,12 +857,12 @@
           "onDelete": "cascade",
           "onUpdate": "no action"
         },
-        "user_cards_fromLanguage_languages_code_fk": {
-          "name": "user_cards_fromLanguage_languages_code_fk",
+        "user_cards_from_language_languages_code_fk": {
+          "name": "user_cards_from_language_languages_code_fk",
           "tableFrom": "user_cards",
           "tableTo": "languages",
           "columnsFrom": [
-            "fromLanguage"
+            "from_language"
           ],
           "columnsTo": [
             "code"
@@ -870,12 +870,12 @@
           "onDelete": "no action",
           "onUpdate": "no action"
         },
-        "user_cards_toLanguage_languages_code_fk": {
-          "name": "user_cards_toLanguage_languages_code_fk",
+        "user_cards_to_language_languages_code_fk": {
+          "name": "user_cards_to_language_languages_code_fk",
           "tableFrom": "user_cards",
           "tableTo": "languages",
           "columnsFrom": [
-            "toLanguage"
+            "to_language"
           ],
           "columnsTo": [
             "code"
@@ -890,10 +890,10 @@
           "name": "user_cards_user_concept_direction_uq",
           "nullsNotDistinct": false,
           "columns": [
-            "userId",
-            "conceptId",
-            "fromLanguage",
-            "toLanguage"
+            "user_id",
+            "concept_id",
+            "from_language",
+            "to_language"
           ]
         }
       },
@@ -901,7 +901,7 @@
       "checkConstraints": {
         "user_cards_languages_differ": {
           "name": "user_cards_languages_differ",
-          "value": "\"user_cards\".\"fromLanguage\" <> \"user_cards\".\"toLanguage\""
+          "value": "\"user_cards\".\"from_language\" <> \"user_cards\".\"to_language\""
         }
       },
       "isRLSEnabled": false
@@ -923,8 +923,8 @@
           "primaryKey": false,
           "notNull": true
         },
-        "passwordHash": {
-          "name": "passwordHash",
+        "password_hash": {
+          "name": "password_hash",
           "type": "text",
           "primaryKey": false,
           "notNull": true
@@ -936,15 +936,15 @@
           "notNull": true,
           "default": "'UTC'"
         },
-        "dailyNewCardLimit": {
-          "name": "dailyNewCardLimit",
+        "daily_new_card_limit": {
+          "name": "daily_new_card_limit",
           "type": "integer",
           "primaryKey": false,
           "notNull": true,
           "default": 20
         },
-        "createdAt": {
-          "name": "createdAt",
+        "created_at": {
+          "name": "created_at",
           "type": "timestamp with time zone",
           "primaryKey": false,
           "notNull": true,

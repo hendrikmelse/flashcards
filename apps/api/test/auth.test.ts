@@ -11,7 +11,7 @@ let pg: PGlite;
 
 beforeAll(async () => {
   pg = new PGlite();
-  const db = drizzle(pg, { schema });
+  const db = drizzle(pg, { schema, casing: "snake_case" });
   await migrate(db, { migrationsFolder: "./drizzle" });
   app = await buildApp({ db, logger: false });
 }, 60_000);

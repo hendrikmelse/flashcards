@@ -9,6 +9,8 @@ export interface ReviewResult {
   state: CardStateName;
   dueAt: Date;
   intervalDays: number;
+  /** Server time of the answer. dueAt - reviewedAt is how long until the card returns, free of client clock skew. */
+  reviewedAt: Date;
   /** True when this clientReviewId was already applied and nothing changed. */
   replayed: boolean;
 }
@@ -54,6 +56,7 @@ export async function submitReview(
           state: prior.stateAfter,
           dueAt: prior.dueAfter,
           intervalDays: prior.intervalAfterDays,
+          reviewedAt: prior.reviewedAt,
           replayed: true,
         },
       };
@@ -97,6 +100,7 @@ export async function submitReview(
         state: next.state,
         dueAt: next.dueAt,
         intervalDays: next.intervalDays,
+        reviewedAt: now,
         replayed: false,
       },
     };

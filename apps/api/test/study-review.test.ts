@@ -65,7 +65,7 @@ async function register(email: string) {
 
 beforeAll(async () => {
   pg = new PGlite();
-  db = drizzle(pg, { schema });
+  db = drizzle(pg, { schema, casing: "snake_case" });
   await migrate(db, { migrationsFolder: "./drizzle" });
   await seed(db);
 
@@ -180,6 +180,8 @@ describe("POST /reviews", () => {
     expect(res.statusCode).toBe(200);
     const body = res.json();
     expect(body).toMatchObject({ userCardId: dogId, state: "learning", replayed: false });
+    // reviewedAt is the server clock; dueAt - reviewedAt is the learning step (10 minutes).
+    expect(new Date(body.dueAt).getTime() - new Date(body.reviewedAt).getTime()).toBe(10 * 60_000);
     const minutesAway = (new Date(body.dueAt).getTime() - before) / 60_000;
     expect(minutesAway).toBeGreaterThan(9.9);
     expect(minutesAway).toBeLessThan(10.1);

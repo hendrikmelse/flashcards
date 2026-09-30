@@ -4,4 +4,4 @@ import { config } from "../config.js";
 import * as schema from "./schema.js";
 
 export const sql = postgres(config.DATABASE_URL);
-export const db = drizzle(sql, { schema });
+export const db = drizzle(sql, { schema, casing: "snake_case" });

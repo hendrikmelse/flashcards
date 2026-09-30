@@ -13,7 +13,7 @@ let db: ReturnType<typeof drizzle<typeof schema>>;
 
 beforeAll(async () => {
   pg = new PGlite();
-  db = drizzle(pg, { schema });
+  db = drizzle(pg, { schema, casing: "snake_case" });
   await migrate(db, { migrationsFolder: "./drizzle" });
   await seed(db);
 }, 60_000);

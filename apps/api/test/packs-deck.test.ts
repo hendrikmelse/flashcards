@@ -19,7 +19,7 @@ const NL_EN = { fromLanguage: "nl", toLanguage: "en" };
 
 beforeAll(async () => {
   pg = new PGlite();
-  const db = drizzle(pg, { schema });
+  const db = drizzle(pg, { schema, casing: "snake_case" });
   await migrate(db, { migrationsFolder: "./drizzle" });
   await seed(db);
 
