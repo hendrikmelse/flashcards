@@ -1,0 +1,7 @@
+# Normalize line endings: LF in the repository and on checkout, on every OS.
+# The Dockerfile and any shell scripts run on Linux and break with CRLF.
+* text=auto eol=lf
+
+# Windows batch files need CRLF.
+*.bat text eol=crlf
+*.cmd text eol=crlf
