@@ -1,0 +1,32 @@
+import { createHash, randomBytes } from "node:crypto";
+import { and, eq, gt } from "drizzle-orm";
+import type { Db } from "../db/types.js";
+import { sessions, users } from "../db/schema.js";
+
+export const SESSION_COOKIE = "session";
+export const SESSION_TTL_MS = 30 * 24 * 60 * 60 * 1000;
+
+const hashToken = (token: string) =>
+  createHash("sha256").update(token).digest("hex");
+
+export async function createSession(db: Db, userId: string) {
+  const token = randomBytes(32).toString("base64url");
+  const expiresAt = new Date(Date.now() + SESSION_TTL_MS);
+  await db.insert(sessions).values({ id: hashToken(token), userId, expiresAt });
+  return { token, expiresAt };
+}
+
+export async function getSessionUser(db: Db, token: string) {
+  const [row] = await db
+    .select({ id: users.id, email: users.email })
+    .from(sessions)
+    .innerJoin(users, eq(users.id, sessions.userId))
+    .where(
+      and(eq(sessions.id, hashToken(token)), gt(sessions.expiresAt, new Date())),
+    );
+  return row ?? null;
+}
+
+export async function deleteSession(db: Db, token: string) {
+  await db.delete(sessions).where(eq(sessions.id, hashToken(token)));
+}

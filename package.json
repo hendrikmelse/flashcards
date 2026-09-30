@@ -1,0 +1,22 @@
+{
+  "name": "language-flashcards",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev:api": "npm run dev -w @flashcards/api",
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "db:generate": "npm run db:generate -w @flashcards/api",
+    "db:migrate": "npm run db:migrate -w @flashcards/api",
+    "db:seed": "npm run db:seed -w @flashcards/api"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "devDependencies": {
+    "typescript": "^7.0.2"
+  }
+}
