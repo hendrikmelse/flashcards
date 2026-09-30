@@ -10,6 +10,9 @@ type FieldErrors = { email?: string; password?: string };
 function describeError(mode: Mode, e: unknown): string {
   if (e instanceof ApiError) {
     if (e.status === 401) return "Invalid email or password.";
+    if (e.status === 403 && mode === "register") {
+      return "Sign-ups are invite-only right now. Ask for an invite.";
+    }
     if (e.status === 409) return "That email is already registered. Try logging in.";
     if (e.status === 429) return "Too many attempts. Please wait a minute and try again.";
     if (e.status === 400) return "Please check your details and try again.";

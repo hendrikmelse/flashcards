@@ -2,6 +2,7 @@ import type { FastifyInstance, FastifyReply } from "fastify";
 import { eq } from "drizzle-orm";
 import { loginSchema, registerSchema } from "@flashcards/shared";
 import { DUMMY_HASH, hashPassword, verifyPassword } from "../auth/password.js";
+import { mayRegister, type RegistrationPolicy } from "../auth/registration.js";
 import {
   createSession,
   deleteSession,
@@ -13,7 +14,10 @@ import type { Db } from "../db/types.js";
 const invalid = (reply: FastifyReply, issues: unknown) =>
   reply.code(400).send({ error: "Invalid input", issues });
 
-export async function authRoutes(app: FastifyInstance, { db }: { db: Db }) {
+export async function authRoutes(
+  app: FastifyInstance,
+  { db, registration }: { db: Db; registration: RegistrationPolicy },
+) {
   const secure = process.env.NODE_ENV === "production";
 
   async function startSession(reply: FastifyReply, userId: string) {
@@ -33,6 +37,9 @@ export async function authRoutes(app: FastifyInstance, { db }: { db: Db }) {
     const parsed = registerSchema.safeParse(req.body);
     if (!parsed.success) return invalid(reply, parsed.error.issues);
     const { email, password } = parsed.data;
+    if (!mayRegister(registration, email)) {
+      return reply.code(403).send({ error: "Registration is closed" });
+    }
 
     const passwordHash = await hashPassword(password);
     const [user] = await db

@@ -8,7 +8,11 @@ const pkg = JSON.parse(readFileSync("package.json", "utf8"));
 const external = Object.keys(pkg.dependencies ?? {}).filter((d) => !d.startsWith("@flashcards/"));
 
 await build({
-  entryPoints: { server: "src/server.ts", migrate: "src/db/migrate.ts" },
+  entryPoints: {
+    server: "src/server.ts",
+    migrate: "src/db/migrate.ts",
+    "seed-languages": "src/db/seed-languages-cli.ts",
+  },
   bundle: true,
   platform: "node",
   format: "esm",

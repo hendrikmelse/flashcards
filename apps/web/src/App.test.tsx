@@ -66,6 +66,16 @@ describe("auth flow", () => {
     expect(await screen.findByRole("alert")).toHaveTextContent("already registered");
   });
 
+  it("explains when sign-ups are invite-only", async () => {
+    mock.handlers["POST /auth/register"] = () => json(403, { error: "Registration is closed" });
+    const user = userEvent.setup();
+    renderApp("/register");
+    await user.type(await screen.findByLabelText("Email"), "eve@example.com");
+    await user.type(screen.getByLabelText("Password"), "correct horse battery");
+    await user.click(screen.getByRole("button", { name: "Sign up" }));
+    expect(await screen.findByRole("alert")).toHaveTextContent("invite-only");
+  });
+
   it("sends signed-in users away from the login page", async () => {
     mock.loggedIn = true;
     renderApp("/login");

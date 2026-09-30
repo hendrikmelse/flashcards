@@ -4,6 +4,7 @@ import rateLimit from "@fastify/rate-limit";
 import fastifyStatic from "@fastify/static";
 import Fastify from "fastify";
 import { authPlugin } from "./auth/plugin.js";
+import { OPEN_REGISTRATION, type RegistrationPolicy } from "./auth/registration.js";
 import type { Db } from "./db/types.js";
 import { authRoutes } from "./routes/auth.js";
 import { deckRoutes } from "./routes/deck.js";
@@ -24,6 +25,8 @@ export interface AppOptions {
   production?: boolean;
   /** Directory of the built web app to serve alongside the API. */
   staticDir?: string;
+  /** Who may create an account. Defaults to open. */
+  registration?: RegistrationPolicy;
 }
 
 export async function buildApp({
@@ -34,6 +37,7 @@ export async function buildApp({
   trustProxy = false,
   production = false,
   staticDir,
+  registration = OPEN_REGISTRATION,
 }: AppOptions) {
   const app = Fastify({ logger, trustProxy });
 
@@ -46,7 +50,7 @@ export async function buildApp({
   await app.register(
     async (api) => {
       await api.register(healthRoutes, { db });
-      await api.register(authRoutes, { db });
+      await api.register(authRoutes, { db, registration });
       await api.register(packRoutes, { db });
       await api.register(deckRoutes, { db });
       await api.register(studyRoutes, { db, scheduler });

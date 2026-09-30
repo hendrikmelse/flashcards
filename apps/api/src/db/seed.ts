@@ -2,10 +2,9 @@ import { sql } from "drizzle-orm";
 import { concepts, entries, languages, packConcepts, packs } from "./schema.js";
 import type { Db } from "./types.js";
 
-// Tiny sample data to exercise the model. Real content will come from an
-// import script over open datasets. Idempotent for languages and packs;
-// sample concepts are only inserted when the concepts table is empty.
-export async function seed(db: Db) {
+// The languages the app supports. Needed in every environment, including
+// production, before any content or cards can exist. Idempotent.
+export async function seedLanguages(db: Db) {
   await db
     .insert(languages)
     .values([
@@ -13,6 +12,13 @@ export async function seed(db: Db) {
       { code: "nl", name: "Nederlands" },
     ])
     .onConflictDoNothing();
+}
+
+// Development only: languages plus tiny sample data to exercise the model.
+// Real content will come from an import script over open datasets. Sample
+// concepts are only inserted when the concepts table is empty.
+export async function seed(db: Db) {
+  await seedLanguages(db);
 
   const [{ count } = { count: 0 }] = await db
     .select({ count: sql<number>`count(*)::int` })

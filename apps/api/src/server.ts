@@ -1,4 +1,5 @@
 import { buildApp } from "./app.js";
+import { registrationPolicyFromEnv } from "./auth/registration.js";
 import { deleteExpiredSessions } from "./auth/sessions.js";
 import { config } from "./config.js";
 import { db, sql } from "./db/client.js";
@@ -9,6 +10,7 @@ const app = await buildApp({
   trustProxy: config.TRUST_PROXY,
   production: config.NODE_ENV === "production",
   staticDir: config.WEB_DIST,
+  registration: registrationPolicyFromEnv(process.env),
 });
 
 async function cleanUpSessions() {
