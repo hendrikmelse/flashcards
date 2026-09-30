@@ -72,3 +72,70 @@ export type EntryView = {
 export const studyQuerySchema = z.object({
   limit: z.coerce.number().int().min(1).max(100).default(20),
 });
+
+// Response shapes of the API (dates arrive as ISO strings over JSON).
+export type CardStateName = "new" | "learning" | "review" | "relearning";
+
+export type DeckSummary = {
+  total: number;
+  new: number;
+  learning: number;
+  review: number;
+  relearning: number;
+  dueNow: number;
+};
+export type DeckResponse = { summary: DeckSummary };
+
+export type StudyCounts = { learning: number; review: number; new: number };
+export type StudyCardView = {
+  id: string;
+  conceptId: string;
+  fromLanguage: string;
+  toLanguage: string;
+  state: CardStateName;
+  dueAt: string;
+  front: EntryView[];
+  back: EntryView[];
+  sentences: { front: string[]; back: string[] };
+};
+export type StudyResponse = { now: string; counts: StudyCounts; cards: StudyCardView[] };
+
+export type ReviewResponse = {
+  userCardId: string;
+  state: CardStateName;
+  dueAt: string;
+  intervalDays: number;
+  /** Server time of the answer; dueAt - reviewedAt is the wait until the card returns. */
+  reviewedAt: string;
+  replayed: boolean;
+};
+
+export type LanguageInfo = { code: string; name: string };
+
+export type PackListItem = {
+  id: string;
+  slug: string;
+  name: string;
+  description: string | null;
+  conceptCount: number;
+  /** Present when a direction was requested. */
+  availableCount?: number;
+  /** Present when a direction was requested and the user is signed in. */
+  addedCount?: number;
+};
+
+export type PackConceptView = {
+  conceptId: string;
+  position: number;
+  entries: EntryView[];
+  available?: boolean;
+  inDeck?: boolean;
+};
+
+export type PackDetailResponse = {
+  pack: { id: string; slug: string; name: string; description: string | null };
+  concepts: PackConceptView[];
+};
+
+export type AddPackResult = { added: number; alreadyInDeck: number; unavailable: number };
+export type AddConceptResult = { added: number; alreadyInDeck: number };

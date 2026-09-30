@@ -11,7 +11,10 @@
     "typecheck": "npm run typecheck --workspaces --if-present",
     "db:generate": "npm run db:generate -w @flashcards/api",
     "db:migrate": "npm run db:migrate -w @flashcards/api",
-    "db:seed": "npm run db:seed -w @flashcards/api"
+    "db:seed": "npm run db:seed -w @flashcards/api",
+    "dev:web": "npm run dev -w @flashcards/web",
+    "build:web": "npm run build -w @flashcards/web",
+    "test": "npm run test --workspaces --if-present"
   },
   "engines": {
     "node": ">=22"

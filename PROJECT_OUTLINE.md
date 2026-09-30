@@ -29,7 +29,7 @@ A web app for learning vocabulary with flashcards and spaced repetition (SRS).
 | Database | **Decided**: PostgreSQL | PGlite (in-memory) used for tests |
 | Auth | **Decided**: email + password, cookie sessions | scrypt hashing; session tokens stored hashed |
 | Content model | **Decided**: concept hub (see section 4) | |
-| Frontend framework | Open | React (Vite) is the default candidate |
+| Frontend | **Decided**: React + Vite + TypeScript, React Router, TanStack Query | Dev server proxies `/api` to the API so cookies are same-origin; production needs a reverse proxy doing the same |
 | SRS algorithm | **Decided**: FSRS via `ts-fsrs`, behind a swappable `Scheduler` interface | Learning steps 1m/10m, relearning 10m, 90% target retention |
 | Study day | **Decided**: rolls over at 04:00 in the user's timezone | Drives the daily new-card limit |
 | Content sourcing | Open | Open datasets (Wiktionary, Open Multilingual WordNet, Tatoeba), AI drafts with review, or hand-authored; will need an import script |
@@ -100,11 +100,11 @@ Hub model: each language's words point at a language-independent **concept** (a 
 ## 6. Frontend
 
 **Pages/views**
-- Sign up / log in
-- Dashboard: due count, new count, streak
-- Browse packs, preview, add to deck (choose direction)
+- Sign up / log in (done)
+- Dashboard (done: due/new/deck counts): due count, new count, streak
+- Browse packs, preview, add to deck, choose direction (done)
 - My deck: list/search the user's cards and progress
-- Study session: show front (with example sentence), reveal back, rate (Again/Hard/Good/Easy), show progress, end-of-session summary
+- Study session: show front (with example sentence), reveal back, rate (Again/Hard/Good/Easy), show progress, end-of-session summary (done; learning cards return within the session, 1-4 keys rate)
 - Stats page (charts of reviews and retention)
 - Settings (daily limits, account)
 
