@@ -33,7 +33,7 @@ A web app for learning vocabulary with flashcards and spaced repetition (SRS).
 | SRS algorithm | **Decided**: FSRS via `ts-fsrs`, behind a swappable `Scheduler` interface | Learning steps 1m/10m, relearning 10m, 90% target retention |
 | Study day | **Decided**: rolls over at 04:00 in the user's timezone | Drives the daily new-card limit |
 | Content sourcing | Open | Open datasets (Wiktionary, Open Multilingual WordNet, Tatoeba), AI drafts with review, or hand-authored; will need an import script |
-| Hosting | **Decided**: a VPS (Hetzner-class, Ubuntu) running Docker Compose behind Caddy | One shared Caddy (HTTPS, routing per domain) and one shared Postgres container (a database and user per app) so more apps can be added cheaply. See section 9 |
+| Hosting | **Decided**: an IONOS VPS (Ubuntu 24.04, x86) running Docker Compose behind Caddy; domain registered at Namecheap | One shared Caddy (HTTPS, routing per domain) and one shared Postgres container (a database and user per app) so more apps can be added cheaply. See section 9 |
 
 ## 3. Architecture Overview
 
@@ -152,7 +152,7 @@ Live at **flashcards.hendrikmelse.com**. The runbook is `deploy/README.md`; the 
 - Compose projects for Caddy, Postgres and the app; image tagged by git SHA for rollback; `deploy.sh` migrates, restarts, health-checks and rolls back automatically
 - CI (`.github/workflows/ci.yml`): typecheck, tests and build on every push, Docker build on every run, image pushed to GHCR from `main`, deploy over SSH once `DEPLOY_ENABLED=true`
 - Nightly `pg_dump` with 14-day retention (`backup.sh`) plus a documented restore drill
-- Decisions: Hetzner in Hillsboro (US West), x86 plan; invite-only (`REGISTRATION_MODE=allowlist` plus `ALLOWED_EMAILS`; production refuses to start without an explicit mode)
+- Decisions: IONOS VPS (closest US location to US West), x86 plan (Hetzner and Contabo were ruled out: tiers unavailable and payment declined); invite-only (`REGISTRATION_MODE=allowlist` plus `ALLOWED_EMAILS`; production refuses to start without an explicit mode)
 - Still to do: the server itself and its DNS record, first real deploy
 - Production has a separate `seed-languages` command (no sample data)
 

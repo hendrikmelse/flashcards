@@ -3,12 +3,12 @@
 Runs the app at **https://flashcards.hendrikmelse.com** on a single VPS using
 Docker Compose, with Caddy in front for HTTPS.
 
-> **Status: tested locally in Docker, not yet on a real server.** The image, the
+> **Status: steps 1 to 3 have been run on a real server (an IONOS VPS); the
+> rest is tested locally in Docker but not yet deployed.** The image, the
 > compose files, `deploy.sh` (including rollback) and the backup/restore drill
 > have all been run against real containers (see "What has been verified" at the
-> end). The server-setup steps (1 to 3: provider, DNS, SSH and firewall
-> hardening) and real HTTPS certificates have not. Update this file with
-> anything you learn on the first real pass.
+> end). The first real deploy has not. Update this file with anything you learn
+> on the first real pass.
 
 ## How it fits together
 
@@ -35,38 +35,71 @@ internet ─▶ Caddy (80/443, automatic HTTPS) ─▶ flashcards-api (Node, por
 
 ## 1. Create the server
 
-Hetzner Cloud is assumed, but any Ubuntu VPS works.
+Any Ubuntu VPS that meets the list below works. The plan is an **IONOS VPS**;
+provider-specific wording is marked, the rest is generic.
 
-- **Image:** Ubuntu 24.04 LTS. **Size:** a small shared-vCPU plan with 2 vCPUs
-  and 2 to 4 GB RAM is plenty for several small apps.
-- **Location:** Hillsboro, Oregon (US West), since you and the expected users are there.
+- **Image:** Ubuntu 24.04 LTS, with **root access** and real virtualization
+  (KVM), which Docker needs. Avoid images with a control panel such as cPanel
+  or Plesk preinstalled.
+- **Size:** at least 2 GB RAM and 40 GB disk is comfortable. **1 GB RAM and
+  10 GB disk is the bare minimum** and needs the extra steps in "Small servers"
+  below. Memory matters because Postgres, the app, Caddy and Docker all run
+  here; disk matters because the images alone are about 1.2 GB and a deploy
+  briefly holds two copies of the app image.
+- **Location:** the US location closest to US West that the plan offers.
 - **CPU architecture: choose x86 (amd64), not ARM.** CI builds an amd64 image;
-  it will not run on an ARM server. Hetzner's US locations may offer fewer plan
-  families than Europe, so pick from whatever x86 shared-vCPU plans Hillsboro
-  lists at the time (plan names change).
-- **SSH key:** add your public key when creating the server. On Windows,
-  `ssh-keygen -t ed25519` creates one; the public half is
-  `%USERPROFILE%\.ssh\id_ed25519.pub`.
-- **Cloud firewall** (in the provider console, in addition to the host firewall
-  below): allow inbound TCP 22 (ideally only from your IP), TCP 80, TCP 443, and
-  UDP 443.
-- **Optional but worthwhile:** enable the provider's automated backups
-  (snapshots). They cost a little extra and are a second safety net next to the
-  database dumps below.
+  it will not run on an ARM server.
+- **SSH key:** add your public key when creating the server if the panel
+  offers it (IONOS has an SSH keys section). On Windows, `ssh-keygen -t ed25519`
+  creates one; the public half is `%USERPROFILE%\.ssh\id_ed25519.pub`. If the
+  server is created with only a root password, install the key right after the
+  first login and then turn password login off in step 3c.
+- **Network firewall** (if the provider offers one; IONOS has firewall policies
+  in its panel): allow inbound TCP 22 (ideally only from your IP), TCP 80,
+  TCP 443, and UDP 443. The host firewall below is the real protection, so this
+  is an extra layer, not a requirement.
+- **Optional but worthwhile:** the provider's automated backups or snapshots.
+  They cost a little extra and are a second safety net next to the database
+  dumps below. Check the renewal price, not just the first-term price.
 - Note the server's IPv4 address (and IPv6 if you want it).
+
+### Small servers (under 2 GB RAM)
+
+Do these during step 3 if the server has 1 GB of RAM:
+
+```bash
+# A swap file so a memory spike does not get the database killed
+fallocate -l 2G /swapfile && chmod 600 /swapfile && mkswap /swapfile && swapon /swapfile
+echo '/swapfile none swap sw 0 0' >> /etc/fstab
+sysctl vm.swappiness=10 && echo 'vm.swappiness=10' > /etc/sysctl.d/99-swappiness.conf
+```
+
+Also keep disk usage in check: `deploy.sh` already prunes dangling images after
+each deploy; watch `df -h` and `docker system df`, and remove old backups
+early if space is tight.
 
 ## 2. DNS
 
-Where `hendrikmelse.com`'s DNS is managed, add:
+`hendrikmelse.com` is registered at **Namecheap**. In Namecheap: Domain List,
+then **Manage** next to the domain, then the **Advanced DNS** tab, then
+**Add New Record**:
 
-| Type | Name | Value |
-|---|---|---|
-| A | `flashcards` | the server's IPv4 |
-| AAAA (optional) | `flashcards` | the server's IPv6 |
+| Type | Host | Value | TTL |
+|---|---|---|---|
+| A Record | `flashcards` | the server's IPv4 | Automatic |
+| AAAA Record (optional) | `flashcards` | the server's IPv6 | Automatic |
 
-Check with `nslookup flashcards.hendrikmelse.com`. Caddy can only get a
-certificate once this resolves to the server. Do not put a proxy (for example
-Cloudflare's orange cloud) in front until everything works without one.
+- Enter just `flashcards` as the host, not the full domain.
+- This only works while the domain uses Namecheap's own nameservers (the
+  default, "Namecheap BasicDNS"). If its nameservers point elsewhere, for
+  example Cloudflare, add the record there instead.
+- Make sure there is no other record, such as a URL Redirect, for the same host.
+- Leave the records of any other subdomains alone.
+
+Check with `nslookup flashcards.hendrikmelse.com`; it can take a few minutes.
+Caddy can only get a certificate once this resolves to the server. Do not put a
+proxy (for example Cloudflare's orange cloud) in front until everything works
+without one.
 
 ## 3. Bootstrap the server
 
@@ -82,7 +115,8 @@ apt-get update && apt-get -y upgrade
 adduser --disabled-password --gecos "" deploy
 usermod -aG sudo deploy
 echo 'deploy ALL=(ALL) NOPASSWD:ALL' > /etc/sudoers.d/deploy && chmod 440 /etc/sudoers.d/deploy
-rsync --archive --chown=deploy:deploy ~/.ssh /home/deploy   # reuse your key
+install -d -m 700 -o deploy -g deploy /home/deploy/.ssh
+install -m 600 -o deploy -g deploy /root/.ssh/authorized_keys /home/deploy/.ssh/authorized_keys   # reuse your key
 
 # Docker (official apt repository)
 apt-get install -y ca-certificates curl
@@ -121,16 +155,35 @@ docker ps          # should print an empty table, not a permission error
 Only after 3b succeeded, as `deploy` on the server:
 
 ```bash
-sudo tee /etc/ssh/sshd_config.d/99-hardening.conf <<'EOF'
+sudo tee /etc/ssh/sshd_config.d/00-hardening.conf <<'EOF'
+# Must sort before 50-cloud-init.conf: sshd uses the FIRST value it sees.
 PasswordAuthentication no
 KbdInteractiveAuthentication no
 PermitRootLogin no
+MaxAuthTries 3
 EOF
-sudo sshd -t && sudo systemctl reload ssh
+sudo sshd -t && sudo sshd -T | grep -E "^(passwordauthentication|permitrootlogin) "
+sudo systemctl reload ssh
 ```
 
-Open yet another terminal and confirm `ssh deploy@<ip>` still works before
-closing the old sessions.
+**The file name matters.** Ubuntu cloud images ship
+`/etc/ssh/sshd_config.d/50-cloud-init.conf` with `PasswordAuthentication yes`,
+and sshd keeps the first value it finds, so a file named `99-...` would be
+silently ignored. Check the `sshd -T` output says `passwordauthentication no`
+and `permitrootlogin no` **before** reloading.
+
+Then test from your machine, in a new terminal, that key login as `deploy`
+works and that root login and password login are refused:
+
+```bash
+ssh deploy@<ip> true                                   # works
+ssh root@<ip> true                                     # Permission denied (publickey)
+ssh -o PubkeyAuthentication=no deploy@<ip> true        # Permission denied (publickey)
+```
+
+Expect a lot of noise from internet scanners: a server a couple of hours old
+had already logged about 200 failed login attempts, which is why password and
+root login are turned off. Lost access? Use the provider's web console.
 
 ## 4. Put the compose files on the server
 
@@ -139,7 +192,7 @@ From the repository root on your machine:
 ```bash
 ssh deploy@<ip> "sudo mkdir -p /srv && sudo chown deploy:deploy /srv"
 scp -r deploy/server/caddy deploy/server/postgres deploy/server/flashcards deploy@<ip>:/srv/
-ssh deploy@<ip> "chmod +x /srv/flashcards/deploy.sh /srv/postgres/backup.sh"
+ssh deploy@<ip> "chmod +x /srv/flashcards/deploy.sh /srv/flashcards/ci-entrypoint.sh /srv/postgres/backup.sh"
 ```
 
 These files change rarely. Re-run the `scp` when they do.
@@ -201,22 +254,36 @@ networks that the app's compose file expects to exist.
    ssh-keygen -t ed25519 -f ~/flashcards_deploy -C "github-actions-deploy" -N ""
    ```
 
-2. **Authorize it** on the server: append `~/flashcards_deploy.pub` to
-   `/home/deploy/.ssh/authorized_keys`.
+2. **Authorize it as a restricted key.** The deploy user can run Docker, which
+   is effectively root, so the CI key must not get a shell. Append this single
+   line to `/home/deploy/.ssh/authorized_keys` (the public key is the contents of
+   `~/flashcards_deploy.pub`):
 
-3. **Get the server's host key** so CI can verify it is talking to your server.
-   Compare it with the fingerprint from
-   `ssh-keygen -lf /etc/ssh/ssh_host_ed25519_key.pub` run on the server:
+   ```
+   restrict,command="/srv/flashcards/ci-entrypoint.sh" ssh-ed25519 AAAA... github-actions-deploy
+   ```
+
+   `ci-entrypoint.sh` accepts exactly `deploy ghcr.io/hendrikmelse/flashcards:<40-hex
+   sha> <github user>`, logs in to the registry with the token sent on stdin, and
+   runs `deploy.sh`. `restrict` disables shells, terminals, port forwarding and
+   agent forwarding. Test it: `ssh -i ~/flashcards_deploy deploy@<ip> id` must
+   answer `only 'deploy <image> <actor>' is allowed`. Requests are logged:
+   `sudo journalctl -t flashcards-deploy`.
+
+3. **Get the server's host key** so CI can verify it is talking to your server,
+   and compare it with the fingerprint the server itself reports over your
+   authenticated login:
 
    ```bash
    ssh-keyscan -t ed25519 <ip>
+   ssh deploy@<ip> ssh-keygen -lf /etc/ssh/ssh_host_ed25519_key.pub
    ```
 
 4. **Add GitHub repository secrets** (Settings, Secrets and variables, Actions):
 
    | Secret | Value |
    |---|---|
-   | `DEPLOY_HOST` | the server IP or `flashcards.hendrikmelse.com` |
+   | `DEPLOY_HOST` | the server's **IP address** (the pinned host key line is keyed by IP, so a hostname would not match) |
    | `DEPLOY_USER` | `deploy` |
    | `DEPLOY_SSH_KEY` | the full contents of the private key file `~/flashcards_deploy` |
    | `DEPLOY_KNOWN_HOSTS` | the `ssh-keyscan` output line |
@@ -362,14 +429,32 @@ local registry container stood in for GHCR):
 - Editing `ALLOWED_EMAILS` and re-running `docker compose up -d` recreates the
   container and the new address can register.
 
+## Verified on the real server
+
+Steps 1 to 3 were run on an IONOS VPS (Ubuntu 24.04.5, KVM, 1 vCPU, 2 GB RAM,
+60 GB disk): the `deploy` user and its key login, a 2 GB swap file, Docker 29
+from the official repository, UFW (22, 80, 443/tcp, 443/udp) and fail2ban, a
+reboot into the updated kernel, and SSH hardening. After the hardening, only key
+login as `deploy` works; root login and password login are refused.
+
+Steps 4 to 6 were also run there: the compose files were copied, Postgres
+started with the app role and database created (the app role can log in, Postgres
+publishes no port), and Caddy obtained a real Let's Encrypt certificate for
+`flashcards.hendrikmelse.com` in about 6 seconds. From outside, HTTPS presents a
+valid certificate, plain HTTP redirects to HTTPS, and the site answers 502 until
+the app is deployed. The CI key was installed as a restricted key and tested: it
+cannot run arbitrary commands, open a terminal or forward ports, and the one
+allowed command form passes validation and stops at the registry login when given
+a bad token, without ever reaching `deploy.sh`.
+
+The GitHub Actions workflow has run green for the test, build and image jobs
+(the deploy job was not enabled yet).
+
 ## Not yet verified
 
-- Steps 1 to 3 (server creation, DNS, SSH and firewall hardening, unattended
-  upgrades) on a real VPS.
-- Real HTTPS certificates from Let's Encrypt (needs the DNS record and open ports).
-- The GitHub Actions workflow and the push to and pull from GHCR.
-- The production Content-Security-Policy in a real browser against the
-  production build.
+- The deploy job itself: the push to and pull from GHCR, and a real deploy.
+- The production site in a browser over HTTPS. The Content-Security-Policy was
+  checked in a browser against the local stack over plain http only.
 - The nightly cron entry, and offsite backups (not built yet).
 
 ## Repeating the local test

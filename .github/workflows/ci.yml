@@ -88,9 +88,11 @@ jobs:
           install -m 600 /dev/null key
           printf '%s\n' "$DEPLOY_SSH_KEY" > key
           printf '%s\n' "$DEPLOY_KNOWN_HOSTS" > known_hosts
-          # The job's short-lived token is sent over stdin so the server can pull
-          # the private image; no long-lived registry credential is stored there.
-          printf '%s' "$TOKEN" | ssh -i key \
+          # The deploy key is restricted on the server to one forced command
+          # (ci-entrypoint.sh), which accepts exactly "deploy <image> <actor>",
+          # logs in to the registry with the token read from stdin, and runs
+          # deploy.sh. The token is the job's short-lived one; nothing
+          # long-lived for the registry is stored on the server.
+          printf '%s' "$TOKEN" | ssh -i key -o IdentitiesOnly=yes \
             -o UserKnownHostsFile=known_hosts -o StrictHostKeyChecking=yes \
-            "$DEPLOY_USER@$DEPLOY_HOST" \
-            "docker login ghcr.io -u '$ACTOR' --password-stdin && /srv/flashcards/deploy.sh '$IMAGE'"
+            "$DEPLOY_USER@$DEPLOY_HOST" "deploy $IMAGE $ACTOR"
