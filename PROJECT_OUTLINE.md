@@ -33,7 +33,7 @@ A web app for learning vocabulary with flashcards and spaced repetition (SRS).
 | SRS algorithm | **Decided**: FSRS via `ts-fsrs`, behind a swappable `Scheduler` interface | Learning steps 1m/10m, relearning 10m, 90% target retention |
 | Study day | **Decided**: rolls over at 04:00 in the user's timezone | Drives the daily new-card limit |
 | Content sourcing | Open | Open datasets (Wiktionary, Open Multilingual WordNet, Tatoeba), AI drafts with review, or hand-authored; will need an import script |
-| Hosting | Open | |
+| Hosting | **Decided**: a VPS (Hetzner-class, Ubuntu) running Docker Compose behind Caddy | One shared Caddy (HTTPS, routing per domain) and one shared Postgres container (a database and user per app) so more apps can be added cheaply. See section 9 |
 
 ## 3. Architecture Overview
 
@@ -131,3 +131,25 @@ Hub model: each language's words point at a language-independent **concept** (a 
 - Content is the product: quality and quantity of packs, sentences and sense-matching will matter as much as the code.
 - Store timestamps in UTC; handle the user's timezone only at the "day" boundary.
 - Plan for data privacy: hashed passwords, HTTPS only, account deletion/export.
+
+## 9. Deployment
+
+**Shape:** one Docker image. The API serves `/api/*` and the built web app (falling back to `index.html` for client-side routes), so everything is same-origin. Caddy terminates HTTPS and proxies to the container. Postgres runs as a separate container on an internal Docker network, never exposed publicly.
+
+**Phase 1: production-ready app (done)**
+- API mounted under `/api` in dev and prod (the dev proxy forwards unchanged and keeps the browser Host, so the Origin check passes)
+- Serves the built web app with long-lived caching for hashed assets and `no-cache` for the shell
+- `TRUST_PROXY=true` so rate limits key on the real client IP behind Caddy (never enable when the app is exposed directly)
+- Helmet security headers (CSP, HSTS in production), Origin check on state-changing requests, `Secure` cookies in production
+- Liveness (`/api/health`) separate from readiness (`/api/ready`, checks the database)
+- Hourly cleanup of expired sessions; graceful shutdown on SIGTERM
+- Production bundle (`npm run build`, esbuild) and a Dockerfile; migrations run as a separate step (`node apps/api/dist/migrate.js`)
+
+**Phase 2: infrastructure (next)**
+- Server hardening (non-root user, SSH keys only, firewall, fail2ban, unattended upgrades)
+- Compose projects for Caddy, Postgres and the app; image tagged by git SHA for rollback
+- CI (GitHub Actions): typecheck and tests on every push, build and push the image, deploy over SSH (migrate, then restart)
+- Nightly `pg_dump` copied off the server, plus a restore drill
+- Domain, DNS and HTTPS
+
+**Phase 3: hardening:** uptime monitoring, error tracking, log rotation; email verification and password reset before public signups.

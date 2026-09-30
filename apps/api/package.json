@@ -9,11 +9,15 @@
     "db:generate": "drizzle-kit generate",
     "db:migrate": "tsx --env-file-if-exists=../../.env src/db/migrate.ts",
     "test": "vitest run",
-    "db:seed": "tsx --env-file-if-exists=../../.env src/db/seed-cli.ts"
+    "db:seed": "tsx --env-file-if-exists=../../.env src/db/seed-cli.ts",
+    "build": "node build.mjs",
+    "start": "node --env-file-if-exists=../../.env dist/server.js"
   },
   "dependencies": {
     "@fastify/cookie": "^11.1.2",
+    "@fastify/helmet": "^13.1.1",
     "@fastify/rate-limit": "^11.2.0",
+    "@fastify/static": "^10.1.5",
     "@flashcards/shared": "^0.0.0",
     "drizzle-orm": "^0.45.3",
     "fastify": "^5.12.5",
@@ -26,6 +30,7 @@
     "@electric-sql/pglite": "^0.5.8",
     "@types/node": "^26.6.3",
     "drizzle-kit": "^0.31.11",
+    "esbuild": "^0.28.2",
     "tsx": "^4.23.15",
     "vitest": "^5.0.3"
   }

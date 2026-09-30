@@ -1,5 +1,5 @@
 import { createHash, randomBytes } from "node:crypto";
-import { and, eq, gt } from "drizzle-orm";
+import { and, eq, gt, lt } from "drizzle-orm";
 import type { Db } from "../db/types.js";
 import { sessions, users } from "../db/schema.js";
 
@@ -29,4 +29,13 @@ export async function getSessionUser(db: Db, token: string) {
 
 export async function deleteSession(db: Db, token: string) {
   await db.delete(sessions).where(eq(sessions.id, hashToken(token)));
+}
+
+// Expired sessions are already rejected on lookup; this just reclaims the rows.
+export async function deleteExpiredSessions(db: Db): Promise<number> {
+  const rows = await db
+    .delete(sessions)
+    .where(lt(sessions.expiresAt, new Date()))
+    .returning({ id: sessions.id });
+  return rows.length;
 }
