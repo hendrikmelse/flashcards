@@ -145,7 +145,7 @@ Hub model: each language's words point at a language-independent **concept** (a 
 - Hourly cleanup of expired sessions; graceful shutdown on SIGTERM
 - Production bundle (`npm run build`, esbuild) and a Dockerfile; migrations run as a separate step (`node apps/api/dist/migrate.js`)
 
-**Phase 2: infrastructure (files written, not yet run on a server)**
+**Phase 2: infrastructure (done; live and deployed by CI)**
 
 Live at **flashcards.hendrikmelse.com**. The runbook is `deploy/README.md`; the server-side files are under `deploy/server/`.
 - Server hardening (non-root user, SSH keys only, firewall, fail2ban, unattended upgrades): runbook commands
@@ -153,7 +153,8 @@ Live at **flashcards.hendrikmelse.com**. The runbook is `deploy/README.md`; the 
 - CI (`.github/workflows/ci.yml`): typecheck, tests and build on every push, Docker build on every run, image pushed to GHCR from `main`, deploy over SSH once `DEPLOY_ENABLED=true`
 - Nightly `pg_dump` with 14-day retention (`backup.sh`) plus a documented restore drill
 - Decisions: IONOS VPS (closest US location to US West), x86 plan (Hetzner and Contabo were ruled out: tiers unavailable and payment declined); invite-only (`REGISTRATION_MODE=allowlist` plus `ALLOWED_EMAILS`; production refuses to start without an explicit mode)
-- Still to do: the server itself and its DNS record, first real deploy
+- The CI deploy key is restricted to one validated command (`ci-entrypoint.sh`); SSH is key-only for a non-root user; only ports 22, 80 and 443 are open
+- Still to do: enable the nightly backup cron on the server, then the before-launch items below
 - Production has a separate `seed-languages` command (no sample data)
 
 **Phase 3: hardening:** uptime monitoring, error tracking, log rotation.

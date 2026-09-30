@@ -3,12 +3,10 @@
 Runs the app at **https://flashcards.hendrikmelse.com** on a single VPS using
 Docker Compose, with Caddy in front for HTTPS.
 
-> **Status: steps 1 to 3 have been run on a real server (an IONOS VPS); the
-> rest is tested locally in Docker but not yet deployed.** The image, the
-> compose files, `deploy.sh` (including rollback) and the backup/restore drill
-> have all been run against real containers (see "What has been verified" at the
-> end). The first real deploy has not. Update this file with anything you learn
-> on the first real pass.
+> **Status: live.** The app runs at https://flashcards.hendrikmelse.com on an
+> IONOS VPS, deployed by CI. Rollback and the backup/restore drill were verified
+> locally in Docker, not yet on the server (see the verification sections at the
+> end). Update this file with anything you learn.
 
 ## How it fits together
 
@@ -311,11 +309,13 @@ networks that the app's compose file expects to exist.
 curl -i https://flashcards.hendrikmelse.com/api/ready   # 200 {"status":"ok"}
 ```
 
-Then open https://flashcards.hendrikmelse.com, register, and check the pack
-pages load. Look for a padlock, and in the browser's console for any
-Content-Security-Policy violations (the CSP has not yet been exercised in a
-real browser against the production build). On the server, `docker compose logs
---tail 100 api` (in `/srv/flashcards`) shows the app's logs.
+Then open https://flashcards.hendrikmelse.com, register with an email on the
+allowlist, and check the pack pages load. Look for a padlock, and in the
+browser's console for any Content-Security-Policy violations. On the server,
+read the app's logs with `docker logs --tail 100 flashcards-api`. (Plain
+`docker compose` commands in `/srv/flashcards` need `IMAGE` set, because the
+compose file requires it; prefix them with
+`IMAGE="$(cat /srv/flashcards/current-image)"`.)
 
 ## 9. Backups
 
@@ -447,15 +447,30 @@ cannot run arbitrary commands, open a terminal or forward ports, and the one
 allowed command form passes validation and stops at the registry login when given
 a bad token, without ever reaching `deploy.sh`.
 
-The GitHub Actions workflow has run green for the test, build and image jobs
-(the deploy job was not enabled yet).
+**The first real deploy worked.** After the secrets and `DEPLOY_ENABLED` were
+set, a push to `main` ran the tests, built the image, pushed it to GHCR, and
+deployed it over SSH. It took about 105 seconds from push to a healthy container.
+The server pulled the private image using the job's short-lived token, applied
+the migrations to the empty database (11 tables), and the one-time
+`seed-languages` command created `en` and `nl`. The whole stack then used about
+80 MB of RAM (app 30 MB, Postgres 41 MB, Caddy 11 MB) and the box about 600 MB
+of 1.8 GB, with no swap in use, and 5.7 GB of 58 GB of disk.
+
+Checked from outside against the live site: HTTPS with a valid certificate,
+the app shell, client routes, security headers, immutable caching of hashed
+assets, gzip, the API, uninvited registration refused with 403, cross-origin
+writes refused with 403, and **only ports 22, 80 and 443 reachable** (3000,
+5432 and 8080 are closed). Caddy does not serve the app for other hostnames or
+the bare IP.
 
 ## Not yet verified
 
-- The deploy job itself: the push to and pull from GHCR, and a real deploy.
-- The production site in a browser over HTTPS. The Content-Security-Policy was
-  checked in a browser against the local stack over plain http only.
-- The nightly cron entry, and offsite backups (not built yet).
+- The production site used in a browser over HTTPS (registering and studying).
+  The Content-Security-Policy was checked in a browser against the local stack
+  over plain http only.
+- Updating an already-running production deploy, and a production rollback
+  (both were verified locally).
+- The nightly backup cron entry, and offsite backups (not built yet).
 
 ## Repeating the local test
 
