@@ -75,7 +75,12 @@ export async function authRoutes(
     return reply.code(204).send();
   });
 
-  app.get("/auth/me", { preHandler: app.requireAuth }, async (req) => ({
-    user: req.user,
-  }));
+  // "Who am I?" for the page load. Answers 200 for everyone, with user: null
+  // when logged out, so an anonymous visitor does not produce a failed request
+  // (and a console error) just by opening the site. Never cacheable: the answer
+  // depends on the session cookie.
+  app.get("/auth/me", async (req, reply) => {
+    reply.header("cache-control", "no-store");
+    return { user: req.user };
+  });
 }

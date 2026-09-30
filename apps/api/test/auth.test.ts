@@ -69,9 +69,18 @@ describe("auth", () => {
     expect(res.json().user.email).toBe("ann@example.com");
   });
 
-  it("returns 401 without a session", async () => {
+  it("answers 200 with a null user, uncacheable, without a session", async () => {
     const res = await app.inject({ method: "GET", url: "/auth/me" });
-    expect(res.statusCode).toBe(401);
+    expect(res.statusCode).toBe(200);
+    expect(res.json()).toEqual({ user: null });
+    expect(res.headers["cache-control"]).toBe("no-store");
+  });
+
+  it("still protects the data routes with 401", async () => {
+    for (const url of ["/deck", "/study"]) {
+      const res = await app.inject({ method: "GET", url });
+      expect(res.statusCode, url).toBe(401);
+    }
   });
 
   it("rejects a wrong password and an unknown email identically", async () => {
@@ -108,6 +117,7 @@ describe("auth", () => {
     });
     expect(out.statusCode).toBe(204);
     const res = await app.inject({ method: "GET", url: "/auth/me", cookies });
-    expect(res.statusCode).toBe(401);
+    expect(res.statusCode).toBe(200);
+    expect(res.json()).toEqual({ user: null });
   });
 });

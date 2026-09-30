@@ -6,7 +6,7 @@ import type {
   RegisterInput,
   StudyResponse,
 } from "@flashcards/shared";
-import { api, ApiError } from "./client";
+import { api } from "./client";
 
 const ME = ["me"] as const;
 
@@ -18,18 +18,13 @@ function setUser(qc: QueryClient, user: PublicUser | null) {
   qc.setQueryData(ME, user);
 }
 
-// The current user, or null when logged out. Never throws for a 401.
+// The current user, or null when logged out. The server answers 200 either
+// way, so a logged-out visitor causes no failed request; a real failure (server
+// down, 5xx) is an error.
 export function useMe() {
   return useQuery({
     queryKey: ME,
-    queryFn: async () => {
-      try {
-        return (await api<{ user: PublicUser }>("/auth/me")).user;
-      } catch (e) {
-        if (e instanceof ApiError && e.status === 401) return null;
-        throw e;
-      }
-    },
+    queryFn: async () => (await api<{ user: PublicUser | null }>("/auth/me")).user,
     retry: false,
     staleTime: Infinity,
   });

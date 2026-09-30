@@ -18,8 +18,7 @@ export const mock = {
 
 function defaultHandlers(): Record<string, Handler> {
   return {
-    "GET /auth/me": () =>
-      mock.loggedIn ? json(200, { user: USER }) : json(401, { error: "Not authenticated" }),
+    "GET /auth/me": () => json(200, { user: mock.loggedIn ? USER : null }),
     "POST /auth/login": () => {
       mock.loggedIn = true;
       return json(200, { user: USER });
