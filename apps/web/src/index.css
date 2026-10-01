@@ -481,6 +481,32 @@ a.button.primary {
   border-top: 1px solid var(--border);
 }
 
+.forms {
+  margin: 0.25rem 0 0.75rem;
+  font-size: 0.95rem;
+}
+
+.forms div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.forms dt {
+  min-width: 4.5rem;
+  color: var(--muted);
+}
+
+.forms dd {
+  margin: 0;
+}
+
+.forms .forms-lemma {
+  margin-top: 0.4rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
 button.reveal {
   display: block;
   width: 100%;

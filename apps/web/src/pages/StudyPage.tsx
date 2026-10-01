@@ -9,6 +9,7 @@ import type {
   StudyCardView,
   StudyResponse,
 } from "@flashcards/shared";
+import { formLines } from "@flashcards/shared";
 import { api } from "../api/client";
 import { useLanguages } from "../api/packs";
 import { displayLemma } from "../components/entries";
@@ -195,6 +196,31 @@ function Entries({ entries }: { entries: EntryView[] }) {
   );
 }
 
+// Word forms (noun plural; verb past, participle and irregular present) for the
+// answer side. Shown only on the back of the card; entries without forms
+// render nothing.
+function Forms({ entries }: { entries: EntryView[] }) {
+  const withForms = entries
+    .map((e) => ({ e, lines: formLines(e.language, e.details) }))
+    .filter(({ lines }) => lines.length > 0);
+  if (withForms.length === 0) return null;
+  return (
+    <>
+      {withForms.map(({ e, lines }) => (
+        <dl key={e.lemma} className="forms" aria-label={`Forms of ${e.lemma}`}>
+          {withForms.length > 1 && <dt className="forms-lemma">{e.lemma}</dt>}
+          {lines.map((l) => (
+            <div key={l.label}>
+              <dt>{l.label}</dt>
+              <dd>{l.value}</dd>
+            </div>
+          ))}
+        </dl>
+      ))}
+    </>
+  );
+}
+
 function Sentences({ items }: { items: string[] }) {
   return (
     <>
@@ -264,6 +290,7 @@ function CardView({
       {revealed ? (
         <section aria-label="Answer" className="study-answer">
           <Entries entries={card.back} />
+          <Forms entries={card.back} />
           <Sentences items={card.sentences.back} />
         </section>
       ) : (

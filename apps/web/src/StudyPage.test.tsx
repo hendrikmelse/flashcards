@@ -196,6 +196,121 @@ describe("study session", () => {
   });
 });
 
+describe("verb forms", () => {
+  const walk = {
+    ...dog,
+    id: "card-walk",
+    conceptId: "c3",
+    front: [entry("en", "walk", { past: "walked", participle: "walked" })],
+    back: [
+      entry("nl", "lopen", {
+        pastSingular: "liep",
+        pastPlural: "liepen",
+        participle: "gelopen",
+        auxiliary: "hebben/zijn",
+      }),
+    ],
+    sentences: { front: [], back: [] },
+  };
+  const be = {
+    ...walk,
+    id: "card-be",
+    conceptId: "c4",
+    front: [entry("nl", "zijn")],
+    back: [
+      entry("en", "be", {
+        past: "was/were",
+        participle: "been",
+        // jsonb does not keep key order, so scramble it to prove the card sorts.
+        present: { we: "are", he: "is", I: "am", you: "are" },
+      }),
+    ],
+  };
+
+  it("shows the forms on the back only", async () => {
+    const user = userEvent.setup();
+    studyWith([walk]);
+    renderApp("/study");
+
+    expect(await screen.findByText("walk")).toBeInTheDocument();
+    expect(screen.queryByText("liep, liepen")).not.toBeInTheDocument();
+    expect(screen.queryByText("walked")).not.toBeInTheDocument();
+
+    await user.click(screen.getByRole("button", { name: "Show answer" }));
+
+    expect(screen.getByText("liep, liepen")).toBeInTheDocument();
+    expect(screen.getByText("heeft/is gelopen")).toBeInTheDocument();
+  });
+
+  it("does not show forms for the prompt side, even when it is a verb", async () => {
+    const user = userEvent.setup();
+    studyWith([{ ...walk, front: walk.back, back: walk.front }]);
+    renderApp("/study");
+
+    expect(await screen.findByText("lopen")).toBeInTheDocument();
+    expect(screen.queryByText("liep, liepen")).not.toBeInTheDocument();
+    await user.click(screen.getByRole("button", { name: "Show answer" }));
+    // The back is now the English verb: its forms appear, the Dutch ones do not.
+    expect(screen.getAllByText("walked")).toHaveLength(2); // past and participle
+    expect(screen.queryByText("liep, liepen")).not.toBeInTheDocument();
+  });
+
+  it("lists an irregular present tense in pronoun order", async () => {
+    const user = userEvent.setup();
+    studyWith([be]);
+    renderApp("/study");
+
+    await user.click(await screen.findByRole("button", { name: "Show answer" }));
+
+    expect(screen.getByText("I am, you are, he is, we are")).toBeInTheDocument();
+    expect(screen.getByText("was/were")).toBeInTheDocument();
+    expect(screen.getByText("been")).toBeInTheDocument();
+  });
+
+  it("shows a noun's plural on the back only", async () => {
+    const user = userEvent.setup();
+    const hond = {
+      ...dog,
+      front: [entry("en", "dog", { plural: "dogs" })],
+      back: [entry("nl", "hond", { article: "de", plural: "honden" })],
+    };
+    studyWith([hond]);
+    renderApp("/study");
+
+    expect(await screen.findByText("dog")).toBeInTheDocument();
+    expect(screen.queryByText("dogs")).not.toBeInTheDocument();
+    expect(screen.queryByText("honden")).not.toBeInTheDocument();
+
+    await user.click(screen.getByRole("button", { name: "Show answer" }));
+
+    expect(screen.getByText("plural")).toBeInTheDocument();
+    expect(screen.getByText("honden")).toBeInTheDocument();
+    expect(screen.queryByText("dogs")).not.toBeInTheDocument();
+  });
+
+  it("says when a noun is uncountable", async () => {
+    const user = userEvent.setup();
+    studyWith([
+      { ...dog, front: [entry("en", "money", { uncountable: true })], back: [entry("nl", "geld", { article: "het", uncountable: true })] },
+    ]);
+    renderApp("/study");
+
+    await user.click(await screen.findByRole("button", { name: "Show answer" }));
+
+    expect(screen.getByText("uncountable")).toBeInTheDocument();
+  });
+
+  it("adds nothing for words without forms", async () => {
+    const user = userEvent.setup();
+    studyWith([dog]);
+    renderApp("/study");
+
+    await user.click(await screen.findByRole("button", { name: "Show answer" }));
+
+    expect(screen.queryByLabelText(/^Forms of/)).not.toBeInTheDocument();
+  });
+});
+
 describe("dashboard entry point", () => {
   it("offers to start studying when cards are due", async () => {
     renderApp("/");
