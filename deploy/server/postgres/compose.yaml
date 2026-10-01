@@ -18,9 +18,12 @@ services:
       interval: 10s
       timeout: 5s
       retries: 5
+    # Logs go to the host's journal, which outlives the container (see
+    # deploy/README.md, "Logs"). Read them with: sudo journalctl -t postgres
     logging:
-      driver: json-file
-      options: { max-size: "10m", max-file: "3" }
+      driver: journald
+      options:
+        tag: "{{.Name}}"
 
 volumes:
   pgdata:

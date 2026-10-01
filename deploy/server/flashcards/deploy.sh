@@ -58,5 +58,20 @@ if ! wait_healthy; then
 fi
 
 echo "$NEW" > current-image
-docker image prune -f >/dev/null
+
+# Keep the new and the previous image (a rollback then needs no download) and
+# remove older ones of this repository, so each deploy does not leave another
+# copy on disk. Cleanup must never fail a deploy that already succeeded.
+repo="${NEW%:*}"
+keep=" $NEW ${PREV:-} "
+{
+  docker image ls --format '{{.Repository}}:{{.Tag}}' "$repo" | while read -r ref; do
+    case "$keep" in
+      *" $ref "*) ;;
+      *) echo "==> removing old image $ref"; docker image rm "$ref" >/dev/null 2>&1 || true ;;
+    esac
+  done
+  docker image prune -f >/dev/null
+} || true
+
 echo "==> deployed $NEW"

@@ -3,7 +3,16 @@ name: CI
 on:
   push:
     branches: [main]
+    # Changes that cannot affect the built app do not need a build or a deploy.
+    # (deploy/** is copied to the server by hand; see deploy/README.md.)
+    paths-ignore:
+      - "**.md"
+      - "deploy/**"
+      - ".gitattributes"
   pull_request:
+  # A manual "Run workflow" button in the Actions tab. On main it builds and,
+  # if DEPLOY_ENABLED is set, redeploys: handy to redeploy without a commit.
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -38,7 +47,7 @@ jobs:
     outputs:
       image: ${{ steps.meta.outputs.image }}
     env:
-      PUBLISH: ${{ github.ref == 'refs/heads/main' && github.event_name == 'push' }}
+      PUBLISH: ${{ github.ref == 'refs/heads/main' && github.event_name != 'pull_request' }}
     steps:
       - uses: actions/checkout@v4
       - id: meta
@@ -64,7 +73,7 @@ jobs:
   # DEPLOY_ENABLED=true and the secrets listed in deploy/README.md.
   deploy:
     needs: image
-    if: github.ref == 'refs/heads/main' && github.event_name == 'push' && vars.DEPLOY_ENABLED == 'true'
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request' && vars.DEPLOY_ENABLED == 'true'
     runs-on: ubuntu-latest
     environment: production
     concurrency:

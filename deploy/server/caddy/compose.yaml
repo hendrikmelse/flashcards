@@ -16,9 +16,12 @@ services:
       - caddy_config:/config
     networks:
       - web
+    # Logs go to the host's journal, which outlives the container (see
+    # deploy/README.md, "Logs"). Read them with: sudo journalctl -t caddy
     logging:
-      driver: json-file
-      options: { max-size: "10m", max-file: "3" }
+      driver: journald
+      options:
+        tag: "{{.Name}}"
 
 volumes:
   caddy_data:

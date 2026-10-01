@@ -23,9 +23,13 @@ services:
       - ALL
     security_opt:
       - no-new-privileges:true
+    # Logs go to the host's journal, which outlives the container, so they
+    # survive every deploy (see deploy/README.md, "Logs"). Read them with:
+    #   sudo journalctl -t flashcards-api
     logging:
-      driver: json-file
-      options: { max-size: "10m", max-file: "3" }
+      driver: journald
+      options:
+        tag: "{{.Name}}"
 
 networks:
   web:

@@ -193,7 +193,20 @@ scp -r deploy/server/caddy deploy/server/postgres deploy/server/flashcards deplo
 ssh deploy@<ip> "chmod +x /srv/flashcards/deploy.sh /srv/flashcards/ci-entrypoint.sh /srv/postgres/backup.sh"
 ```
 
-These files change rarely. Re-run the `scp` when they do.
+Then set up the host journal, where all container logs go (see "Logs" below):
+
+```bash
+scp deploy/server/system/journald-flashcards.conf deploy@<ip>:/tmp/
+ssh deploy@<ip> 'sudo install -d /etc/systemd/journald.conf.d \
+  && sudo install -m 644 /tmp/journald-flashcards.conf /etc/systemd/journald.conf.d/flashcards.conf \
+  && rm /tmp/journald-flashcards.conf && sudo systemctl restart systemd-journald \
+  && sudo usermod -aG systemd-journal deploy'
+```
+
+These files change rarely, and **CI does not copy them**: pushes that only touch
+`deploy/**` or Markdown files do not trigger a build or deploy. When you change
+a file here, re-run the `scp` for it, then `docker compose up -d` in that
+service's folder (with `IMAGE` set for the app, see below).
 
 ## 5. Postgres
 
@@ -311,11 +324,37 @@ curl -i https://flashcards.hendrikmelse.com/api/ready   # 200 {"status":"ok"}
 
 Then open https://flashcards.hendrikmelse.com, register with an email on the
 allowlist, and check the pack pages load. Look for a padlock, and in the
-browser's console for any Content-Security-Policy violations. On the server,
-read the app's logs with `docker logs --tail 100 flashcards-api`. (Plain
-`docker compose` commands in `/srv/flashcards` need `IMAGE` set, because the
-compose file requires it; prefix them with
-`IMAGE="$(cat /srv/flashcards/current-image)"`.)
+browser's console for any Content-Security-Policy violations. (Errors that
+mention `triggerAutofillScriptInjection`, or whose source is a
+`chrome-extension://` or `moz-extension://` file, come from a password-manager
+or autofill browser extension, not from the app. A private window with
+extensions off will not show them.)
+
+Plain `docker compose` commands in `/srv/flashcards` need `IMAGE` set, because
+the compose file requires it; prefix them with
+`IMAGE="$(cat /srv/flashcards/current-image)"`.
+
+### Logs
+
+The app, Postgres and Caddy send their logs to the host's systemd journal
+instead of storing them inside the container. A container's own log is deleted
+with the container, and every deploy replaces the app container, so before this
+change a bug's evidence vanished on the next deploy. The journal outlives
+containers and reboots, and is capped at 500 MB and 30 days
+(`/etc/systemd/journald.conf.d/flashcards.conf`).
+
+```bash
+sudo journalctl -t flashcards-api -o cat --since "1 hour ago"   # the app
+sudo journalctl -t postgres --since today                      # database
+sudo journalctl -t caddy --since today                         # web server / certificates
+sudo journalctl -t flashcards-deploy -o cat                    # deploy requests, and rejected attempts
+sudo journalctl -t flashcards-api -f                           # follow live
+```
+
+The `deploy` user can omit `sudo` after logging in again, since it is in the
+`systemd-journal` group. `docker logs flashcards-api` still works, but only
+shows the current container. The app logs one JSON object per line; add
+`-o cat` for clean output.
 
 ## 9. Backups
 
@@ -379,7 +418,11 @@ ones only in a later one.
 - Update Caddy and Postgres within their major versions: in each of
   `/srv/caddy` and `/srv/postgres`, run `docker compose pull && docker compose up -d`.
   A Postgres **major** upgrade (for example 17 to 18) is a manual dump and restore.
-- Keep an eye on disk: `df -h` and `docker system df`.
+- Keep an eye on disk: `df -h` and `docker system df`. `deploy.sh` keeps only
+  the current and the previous app image (so a rollback needs no download) and
+  removes older ones itself.
+- To redeploy without making a commit, use the **Run workflow** button on the
+  CI workflow in the Actions tab (on `main`). It rebuilds and redeploys.
 
 ## Inviting someone
 
@@ -462,6 +505,13 @@ assets, gzip, the API, uninvited registration refused with 403, cross-origin
 writes refused with 403, and **only ports 22, 80 and 443 reachable** (3000,
 5432 and 8080 are closed). Caddy does not serve the app for other hostnames or
 the bare IP.
+
+Logging and cleanup were added afterwards and checked on the real server: the three
+containers log to the host journal, and a log line written before the app
+container was destroyed was still readable afterwards (while `docker logs` had
+lost it). The image cleanup in `deploy.sh` was tested locally with five
+consecutive deploys and a failed one: it always kept the current and previous
+image and removed the rest.
 
 ## Not yet verified
 
