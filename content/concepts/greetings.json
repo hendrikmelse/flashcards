@@ -1,0 +1,124 @@
+{
+  "concepts": [
+    {
+      "key": "hello",
+      "gloss": "hello (greeting)",
+      "entries": {
+        "en": [
+        {"lemma": "hello", "pos": "interjection", "sentences": ["Hello, how are you?"]}
+        ],
+        "nl": [
+        {"lemma": "hallo", "pos": "interjection", "sentences": ["Hallo, hoe gaat het?"]}
+        ]
+      }
+    },
+    {
+      "key": "goodbye",
+      "gloss": "goodbye (parting)",
+      "entries": {
+        "en": [
+        {"lemma": "goodbye", "pos": "interjection", "sentences": ["Goodbye, see you tomorrow."]}
+        ],
+        "nl": [
+        {"lemma": "tot ziens", "pos": "phrase", "sentences": ["Tot ziens, tot morgen."]}
+        ]
+      }
+    },
+    {
+      "key": "yes",
+      "gloss": "yes (affirmative answer)",
+      "entries": {
+        "en": [
+        {"lemma": "yes", "pos": "interjection", "sentences": ["Yes, I understand."]}
+        ],
+        "nl": [
+        {"lemma": "ja", "pos": "interjection", "sentences": ["Ja, ik begrijp het."]}
+        ]
+      }
+    },
+    {
+      "key": "no",
+      "gloss": "no (negative answer)",
+      "entries": {
+        "en": [
+        {"lemma": "no", "pos": "interjection", "sentences": ["No, thank you."]}
+        ],
+        "nl": [
+        {"lemma": "nee", "pos": "interjection", "sentences": ["Nee, dank je."]}
+        ]
+      }
+    },
+    {
+      "key": "please",
+      "gloss": "please (polite request)",
+      "entries": {
+        "en": [
+        {"lemma": "please", "pos": "interjection", "sentences": ["Water, please."]}
+        ],
+        "nl": [
+        {"lemma": "alsjeblieft", "pos": "interjection", "sentences": ["Water, alsjeblieft."]}
+        ]
+      }
+    },
+    {
+      "key": "thank-you",
+      "gloss": "thank you (gratitude)",
+      "entries": {
+        "en": [
+        {"lemma": "thank you", "pos": "phrase", "sentences": ["Thank you for the coffee."]}
+        ],
+        "nl": [
+        {"lemma": "dank je wel", "pos": "phrase", "sentences": ["Dank je wel voor de koffie."]}
+        ]
+      }
+    },
+    {
+      "key": "sorry",
+      "gloss": "sorry (apology)",
+      "entries": {
+        "en": [
+        {"lemma": "sorry", "pos": "interjection", "sentences": ["Sorry, I am late."]}
+        ],
+        "nl": [
+        {"lemma": "sorry", "pos": "interjection", "sentences": ["Sorry, ik ben te laat."]}
+        ]
+      }
+    },
+    {
+      "key": "good-morning",
+      "gloss": "good morning (greeting)",
+      "entries": {
+        "en": [
+        {"lemma": "good morning", "pos": "phrase", "sentences": ["Good morning, Anna!"]}
+        ],
+        "nl": [
+        {"lemma": "goedemorgen", "pos": "phrase", "sentences": ["Goedemorgen, Anna!"]}
+        ]
+      }
+    },
+    {
+      "key": "good-night",
+      "gloss": "good night (before sleep)",
+      "entries": {
+        "en": [
+        {"lemma": "good night", "pos": "phrase", "sentences": ["Good night, sleep well."]}
+        ],
+        "nl": [
+        {"lemma": "welterusten", "pos": "phrase", "sentences": ["Welterusten, slaap lekker."]}
+        ]
+      }
+    },
+    {
+      "key": "excuse-me",
+      "gloss": "excuse me (to get attention)",
+      "entries": {
+        "en": [
+        {"lemma": "excuse me", "pos": "phrase", "sentences": ["Excuse me, where is the bus?"]}
+        ],
+        "nl": [
+        {"lemma": "pardon", "pos": "interjection", "sentences": ["Pardon, waar is de bus?"]}
+        ]
+      }
+    }
+  ]
+}

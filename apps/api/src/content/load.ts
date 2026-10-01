@@ -1,56 +1,78 @@
 import { readdirSync, readFileSync } from "node:fs";
-import { join } from "node:path";
-import { checkPack, packFileSchema, type PackFile } from "./pack-file.js";
+import { basename, join } from "node:path";
+import { conceptFileSchema, packFileSchema, type Concept, type PackFile } from "./content-schema.js";
+import { validateContent, type ConceptSource, type PackSource } from "./validate.js";
 
-export interface LoadedPacks {
+export interface LoadedContent {
+  concepts: Concept[];
   packs: PackFile[];
   errors: string[];
   warnings: string[];
 }
 
-// Reads and validates every *.json file in a directory. Nothing here touches
-// the database, so it also backs the offline `content:check` command.
-export function loadPacks(dir: string): LoadedPacks {
-  const result: LoadedPacks = { packs: [], errors: [], warnings: [] };
-  const files = readdirSync(dir).filter((f) => f.endsWith(".json")).sort();
-  if (files.length === 0) result.errors.push(`no .json files in ${dir}`);
+// Reads concepts/*.json and packs/*.json under `dir` and validates them as one
+// library. Nothing here touches the database, so it also backs the offline
+// `content:check` command.
+export function loadContent(dir: string): LoadedContent {
+  const errors: string[] = [];
+  const conceptFiles: ConceptSource[] = [];
+  const packFiles: PackSource[] = [];
 
-  const seenSlugs = new Map<string, string>();
-  const seenGlosses = new Map<string, string>();
-
-  for (const file of files) {
-    let raw: unknown;
-    try {
-      raw = JSON.parse(readFileSync(join(dir, file), "utf8"));
-    } catch (e) {
-      result.errors.push(`${file}: ${(e as Error).message}`);
-      continue;
-    }
-    const parsed = packFileSchema.safeParse(raw);
-    if (!parsed.success) {
-      for (const issue of parsed.error.issues) {
-        result.errors.push(`${file}: ${issue.path.join(".")}: ${issue.message}`);
-      }
-      continue;
-    }
-    const pack = parsed.data;
-
-    const slugFile = seenSlugs.get(pack.slug);
-    if (slugFile) result.errors.push(`${file}: slug "${pack.slug}" is also used by ${slugFile}`);
-    seenSlugs.set(pack.slug, file);
-
-    // A gloss identifies a concept across the whole database, so two files
-    // defining the same one would overwrite each other's entries.
-    for (const concept of pack.concepts) {
-      const glossFile = seenGlosses.get(concept.gloss);
-      if (glossFile) result.errors.push(`${file}: gloss "${concept.gloss}" is also in ${glossFile}`);
-      seenGlosses.set(concept.gloss, file);
-    }
-
-    const check = checkPack(pack);
-    result.errors.push(...check.errors.map((m) => `${file}: ${m}`));
-    result.warnings.push(...check.warnings.map((m) => `${file}: ${m}`));
-    result.packs.push(pack);
+  for (const file of jsonFiles(join(dir, "concepts"), errors)) {
+    const raw = readJson(file.path, file.name, errors);
+    if (raw === undefined) continue;
+    const parsed = conceptFileSchema.safeParse(raw);
+    if (!parsed.success) addIssues(file.name, parsed.error.issues, errors);
+    else conceptFiles.push({ file: file.name, concepts: parsed.data.concepts });
   }
-  return result;
+  for (const file of jsonFiles(join(dir, "packs"), errors)) {
+    const raw = readJson(file.path, file.name, errors);
+    if (raw === undefined) continue;
+    const parsed = packFileSchema.safeParse(raw);
+    if (!parsed.success) addIssues(file.name, parsed.error.issues, errors);
+    else packFiles.push({ file: file.name, pack: parsed.data });
+  }
+
+  // Cross-file checks would only add noise (unknown concepts) if a file failed to parse.
+  const cross =
+    errors.length === 0 ? validateContent(conceptFiles, packFiles) : { errors: [], warnings: [] };
+  return {
+    concepts: conceptFiles.flatMap((f) => f.concepts),
+    packs: packFiles.map((f) => f.pack),
+    errors: [...errors, ...cross.errors],
+    warnings: cross.warnings,
+  };
+}
+
+function jsonFiles(dir: string, errors: string[]): { name: string; path: string }[] {
+  let names: string[];
+  try {
+    names = readdirSync(dir)
+      .filter((f) => f.endsWith(".json"))
+      .sort();
+  } catch (e) {
+    errors.push(`cannot read ${dir}: ${(e as Error).message}`);
+    return [];
+  }
+  if (names.length === 0) errors.push(`no .json files in ${dir}`);
+  return names.map((name) => ({ name: `${basename(dir)}/${name}`, path: join(dir, name) }));
+}
+
+function readJson(path: string, name: string, errors: string[]): unknown {
+  try {
+    return JSON.parse(readFileSync(path, "utf8"));
+  } catch (e) {
+    errors.push(`${name}: ${(e as Error).message}`);
+    return undefined;
+  }
+}
+
+function addIssues(
+  name: string,
+  issues: { path: PropertyKey[]; message: string }[],
+  errors: string[],
+) {
+  for (const issue of issues) {
+    errors.push(`${name}: ${issue.path.map(String).join(".")}: ${issue.message}`);
+  }
 }

@@ -1,0 +1,196 @@
+{
+  "concepts": [
+    {
+      "key": "and",
+      "gloss": "and (conjunction)",
+      "entries": {
+        "en": [
+        {"lemma": "and", "pos": "conjunction", "sentences": ["I eat bread and cheese."]}
+        ],
+        "nl": [
+        {"lemma": "en", "pos": "conjunction", "sentences": ["Ik eet brood en kaas."]}
+        ]
+      }
+    },
+    {
+      "key": "but",
+      "gloss": "but (conjunction)",
+      "entries": {
+        "en": [
+        {"lemma": "but", "pos": "conjunction", "sentences": ["I am tired, but happy."]}
+        ],
+        "nl": [
+        {"lemma": "maar", "pos": "conjunction", "sentences": ["Ik ben moe, maar blij."]}
+        ]
+      }
+    },
+    {
+      "key": "or",
+      "gloss": "or (conjunction)",
+      "entries": {
+        "en": [
+        {"lemma": "or", "pos": "conjunction", "sentences": ["Tea or coffee?"]}
+        ],
+        "nl": [
+        {"lemma": "of", "pos": "conjunction", "sentences": ["Thee of koffie?"]}
+        ]
+      }
+    },
+    {
+      "key": "because",
+      "gloss": "because (conjunction)",
+      "entries": {
+        "en": [
+        {"lemma": "because", "pos": "conjunction", "sentences": ["I sleep because I am tired."]}
+        ],
+        "nl": [
+        {"lemma": "omdat", "pos": "conjunction", "sentences": ["Ik slaap omdat ik moe ben."]}
+        ]
+      }
+    },
+    {
+      "key": "with",
+      "gloss": "with (accompanied by)",
+      "entries": {
+        "en": [
+        {"lemma": "with", "pos": "preposition", "sentences": ["I drink coffee with milk."]}
+        ],
+        "nl": [
+        {"lemma": "met", "pos": "preposition", "sentences": ["Ik drink koffie met melk."]}
+        ]
+      }
+    },
+    {
+      "key": "without",
+      "gloss": "without (lacking)",
+      "entries": {
+        "en": [
+        {"lemma": "without", "pos": "preposition", "sentences": ["Coffee without sugar, please."]}
+        ],
+        "nl": [
+        {"lemma": "zonder", "pos": "preposition", "sentences": ["Koffie zonder suiker, alsjeblieft."]}
+        ]
+      }
+    },
+    {
+      "key": "in",
+      "gloss": "in (inside)",
+      "entries": {
+        "en": [
+        {"lemma": "in", "pos": "preposition", "sentences": ["The cat is in the house."]}
+        ],
+        "nl": [
+        {"lemma": "in", "pos": "preposition", "sentences": ["De kat is in het huis."]}
+        ]
+      }
+    },
+    {
+      "key": "on",
+      "gloss": "on (on top of)",
+      "entries": {
+        "en": [
+        {"lemma": "on", "pos": "preposition", "sentences": ["The book is on the table."]}
+        ],
+        "nl": [
+        {"lemma": "op", "pos": "preposition", "sentences": ["Het boek ligt op de tafel."]}
+        ]
+      }
+    },
+    {
+      "key": "under",
+      "gloss": "under (beneath)",
+      "entries": {
+        "en": [
+        {"lemma": "under", "pos": "preposition", "sentences": ["The cat is under the table."]}
+        ],
+        "nl": [
+        {"lemma": "onder", "pos": "preposition", "sentences": ["De kat zit onder de tafel."]}
+        ]
+      }
+    },
+    {
+      "key": "very",
+      "gloss": "very (to a high degree)",
+      "entries": {
+        "en": [
+        {"lemma": "very", "pos": "adverb", "sentences": ["The coffee is very hot."]}
+        ],
+        "nl": [
+        {"lemma": "heel", "pos": "adverb", "sentences": ["De koffie is heel heet."]}
+        ]
+      }
+    },
+    {
+      "key": "also",
+      "gloss": "also (as well)",
+      "entries": {
+        "en": [
+        {"lemma": "also", "pos": "adverb", "sentences": ["I also want tea."]}
+        ],
+        "nl": [
+        {"lemma": "ook", "pos": "adverb", "sentences": ["Ik wil ook thee."]}
+        ]
+      }
+    },
+    {
+      "key": "not",
+      "gloss": "not (negation)",
+      "entries": {
+        "en": [
+        {"lemma": "not", "pos": "adverb", "sentences": ["I do not know."]}
+        ],
+        "nl": [
+        {"lemma": "niet", "pos": "adverb", "sentences": ["Ik weet het niet."]}
+        ]
+      }
+    },
+    {
+      "key": "more",
+      "gloss": "more (a greater amount)",
+      "entries": {
+        "en": [
+        {"lemma": "more", "pos": "adverb", "sentences": ["I want more water."]}
+        ],
+        "nl": [
+        {"lemma": "meer", "pos": "adverb", "sentences": ["Ik wil meer water."]}
+        ]
+      }
+    },
+    {
+      "key": "here",
+      "gloss": "here (at this place)",
+      "entries": {
+        "en": [
+        {"lemma": "here", "pos": "adverb", "sentences": ["Come here!"]}
+        ],
+        "nl": [
+        {"lemma": "hier", "pos": "adverb", "sentences": ["Kom hier!"]}
+        ]
+      }
+    },
+    {
+      "key": "there",
+      "gloss": "there (at that place)",
+      "entries": {
+        "en": [
+        {"lemma": "there", "pos": "adverb", "sentences": ["The bus is over there."]}
+        ],
+        "nl": [
+        {"lemma": "daar", "pos": "adverb", "sentences": ["De bus is daar."]}
+        ]
+      }
+    },
+    {
+      "key": "at-home",
+      "gloss": "at home (in one's own house)",
+      "entries": {
+        "en": [
+        {"lemma": "at home", "pos": "adverb", "sentences": ["I am at home today."]}
+        ],
+        "nl": [
+        {"lemma": "thuis", "pos": "adverb", "sentences": ["Ik ben vandaag thuis."]}
+        ]
+      }
+    }
+  ]
+}

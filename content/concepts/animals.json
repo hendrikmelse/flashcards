@@ -1,0 +1,88 @@
+{
+  "concepts": [
+    {
+      "key": "dog",
+      "gloss": "dog (domestic animal)",
+      "entries": {
+        "en": [
+        {"lemma": "dog", "pos": "noun", "details": {"plural": "dogs"}, "sentences": ["The dog is in the garden."]}
+        ],
+        "nl": [
+        {"lemma": "hond", "pos": "noun", "details": {"article": "de", "plural": "honden"}, "sentences": ["De hond is in de tuin."]}
+        ]
+      }
+    },
+    {
+      "key": "cat",
+      "gloss": "cat (domestic animal)",
+      "entries": {
+        "en": [
+        {"lemma": "cat", "pos": "noun", "details": {"plural": "cats"}, "sentences": ["The cat sleeps on the bed."]}
+        ],
+        "nl": [
+        {"lemma": "kat", "pos": "noun", "details": {"article": "de", "plural": "katten"}, "sentences": ["De kat slaapt op het bed."]}
+        ]
+      }
+    },
+    {
+      "key": "bird",
+      "gloss": "bird (flying animal)",
+      "entries": {
+        "en": [
+        {"lemma": "bird", "pos": "noun", "details": {"plural": "birds"}, "sentences": ["The bird is in the tree."]}
+        ],
+        "nl": [
+        {"lemma": "vogel", "pos": "noun", "details": {"article": "de", "plural": "vogels"}, "sentences": ["De vogel zit in de boom."]}
+        ]
+      }
+    },
+    {
+      "key": "horse",
+      "gloss": "horse (large farm animal)",
+      "entries": {
+        "en": [
+        {"lemma": "horse", "pos": "noun", "details": {"plural": "horses"}, "sentences": ["The horse is big."]}
+        ],
+        "nl": [
+        {"lemma": "paard", "pos": "noun", "details": {"article": "het", "plural": "paarden"}, "sentences": ["Het paard is groot."]}
+        ]
+      }
+    },
+    {
+      "key": "cow",
+      "gloss": "cow (farm animal)",
+      "entries": {
+        "en": [
+        {"lemma": "cow", "pos": "noun", "details": {"plural": "cows"}, "sentences": ["The cow eats grass."]}
+        ],
+        "nl": [
+        {"lemma": "koe", "pos": "noun", "details": {"article": "de", "plural": "koeien"}, "sentences": ["De koe eet gras."]}
+        ]
+      }
+    },
+    {
+      "key": "pig",
+      "gloss": "pig (farm animal)",
+      "entries": {
+        "en": [
+        {"lemma": "pig", "pos": "noun", "details": {"plural": "pigs"}, "sentences": ["The pig is pink."]}
+        ],
+        "nl": [
+        {"lemma": "varken", "pos": "noun", "details": {"article": "het", "plural": "varkens"}, "sentences": ["Het varken is roze."]}
+        ]
+      }
+    },
+    {
+      "key": "animal",
+      "gloss": "animal (living creature)",
+      "entries": {
+        "en": [
+        {"lemma": "animal", "pos": "noun", "details": {"plural": "animals"}, "sentences": ["A cat is an animal."]}
+        ],
+        "nl": [
+        {"lemma": "dier", "pos": "noun", "details": {"article": "het", "plural": "dieren"}, "sentences": ["Een kat is een dier."]}
+        ]
+      }
+    }
+  ]
+}

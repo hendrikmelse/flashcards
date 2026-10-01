@@ -6,12 +6,20 @@ import {
 } from "@flashcards/shared";
 import { z } from "zod";
 
-// The reviewed content format: one JSON file per pack under content/packs/.
-// The files are the source of truth; the importer makes the database match.
+// The reviewed content format. The files are the source of truth; the importer
+// makes the database match them.
 //
-// A concept is identified by its gloss, so glosses must be unique across all
-// files (the importer refuses duplicates). Entries and sentences are keyed
-// within their concept by language and lemma / text.
+//   content/concepts/*.json   { "concepts": [ { key, gloss, entries }, ... ] }
+//   content/packs/*.json      { slug, name, description?, concepts: [key, ...] }
+//
+// The concept files are the word library; how they are split across files is
+// only for organizing. A pack is an ordered list of concept keys, so the same
+// concept can be in any number of packs. A concept's key is its permanent
+// identity (the gloss is free text and can be reworded); entries and sentences
+// are matched within their concept by language and lemma / text.
+
+// Lowercase words joined by hyphens, e.g. "dog" or "know-fact".
+export const KEY_PATTERN = /^[a-z0-9]+(-[a-z0-9]+)*$/;
 
 export const PARTS_OF_SPEECH = [
   "noun",
@@ -26,8 +34,8 @@ export const PARTS_OF_SPEECH = [
   "phrase",
 ] as const;
 
-// Every concept in a pack must have entries in these, or a card in one of the
-// directions could not be built.
+// Every concept must have entries in these, or a card in one of the directions
+// could not be built.
 export const REQUIRED_LANGUAGES = ["en", "nl"] as const;
 
 const entrySchema = z.object({
@@ -38,80 +46,82 @@ const entrySchema = z.object({
   sentences: z.array(z.string().trim().min(1)).default([]),
 });
 
-const conceptSchema = z.object({
+const keySchema = z.string().regex(KEY_PATTERN, "lowercase letters, digits and hyphens");
+
+export const conceptSchema = z.object({
+  key: keySchema,
   gloss: z.string().trim().min(1),
   entries: z.record(z.string(), z.array(entrySchema).min(1)),
 });
 
-export const packFileSchema = z.object({
-  slug: z.string().regex(/^[a-z0-9]+(-[a-z0-9]+)*$/, "lowercase letters, digits and hyphens"),
-  name: z.string().trim().min(1),
-  description: z.string().trim().min(1).optional(),
+export const conceptFileSchema = z.object({
   concepts: z.array(conceptSchema).min(1),
 });
 
-export type PackFile = z.infer<typeof packFileSchema>;
-export type PackConcept = PackFile["concepts"][number];
-export type PackEntry = z.infer<typeof entrySchema>;
+export const packFileSchema = z.object({
+  slug: keySchema,
+  name: z.string().trim().min(1),
+  description: z.string().trim().min(1).optional(),
+  // Concept keys, in study order.
+  concepts: z.array(keySchema).min(1),
+});
 
-export interface PackCheck {
+export type Concept = z.infer<typeof conceptSchema>;
+export type PackFile = z.infer<typeof packFileSchema>;
+export type ConceptEntry = z.infer<typeof entrySchema>;
+
+export interface Check {
   errors: string[];
   warnings: string[];
 }
 
-// Checks that go beyond the JSON shape. Errors block the import; warnings are
-// things a reviewer should look at but that can be legitimate.
-export function checkPack(pack: PackFile): PackCheck {
+// Checks one concept beyond the JSON shape. Errors block the import; warnings
+// are things a reviewer should look at but that can be legitimate.
+export function checkConcept(concept: Concept): Check {
   const errors: string[] = [];
   const warnings: string[] = [];
-  const glosses = new Set<string>();
+  const where = `"${concept.key}"`;
 
-  for (const concept of pack.concepts) {
-    const where = `"${concept.gloss}"`;
-    if (glosses.has(concept.gloss)) errors.push(`${where}: duplicate gloss in the pack`);
-    glosses.add(concept.gloss);
+  for (const lang of REQUIRED_LANGUAGES) {
+    if (!concept.entries[lang]) errors.push(`${where}: no ${lang} entry`);
+  }
 
-    for (const lang of REQUIRED_LANGUAGES) {
-      if (!concept.entries[lang]) errors.push(`${where}: no ${lang} entry`);
-    }
+  for (const [lang, entries] of Object.entries(concept.entries)) {
+    const lemmas = new Set<string>();
+    for (const entry of entries) {
+      const at = `${where} ${lang} "${entry.lemma}"`;
+      if (lemmas.has(entry.lemma)) errors.push(`${at}: duplicate lemma`);
+      lemmas.add(entry.lemma);
 
-    for (const [lang, entries] of Object.entries(concept.entries)) {
-      const lemmas = new Set<string>();
-      for (const entry of entries) {
-        const at = `${where} ${lang} "${entry.lemma}"`;
-        if (lemmas.has(entry.lemma)) errors.push(`${at}: duplicate lemma`);
-        lemmas.add(entry.lemma);
-
-        if (entry.pos === "noun") {
-          if (lang === "nl") {
-            const article = entry.details["article"];
-            if (article !== "de" && article !== "het") {
-              errors.push(`${at}: Dutch nouns need details.article of "de" or "het"`);
-            }
-          }
-          if (typeof entry.details["plural"] !== "string" && entry.details["uncountable"] !== true) {
-            warnings.push(`${at}: no details.plural (set details.uncountable if it has none)`);
+      if (entry.pos === "noun") {
+        if (lang === "nl") {
+          const article = entry.details["article"];
+          if (article !== "de" && article !== "het") {
+            errors.push(`${at}: Dutch nouns need details.article of "de" or "het"`);
           }
         }
-
-        if (entry.pos === "verb") checkVerbForms(at, lang, entry, errors, warnings);
-
-        if (entry.sentences.length === 0) {
-          warnings.push(`${at}: no example sentence`);
+        if (typeof entry.details["plural"] !== "string" && entry.details["uncountable"] !== true) {
+          warnings.push(`${at}: no details.plural (set details.uncountable if it has none)`);
         }
-        // Inflected forms (plurals, "an" for "a") legitimately miss the lemma,
-        // so this is only a prompt to look, not an error. Verbs may use any
-        // stored form instead.
-        if (entry.pos !== "phrase") {
-          const candidates =
-            entry.pos === "verb"
-              ? [entry.lemma, ...stems(entry.lemma), ...allVerbForms(lang, entry.details)]
-              : [entry.lemma];
-          for (const s of entry.sentences) {
-            const hay = squash(s);
-            if (!candidates.some((c) => hay.includes(squash(c)))) {
-              warnings.push(`${at}: sentence does not contain the lemma or a stored form: "${s}"`);
-            }
+      }
+
+      if (entry.pos === "verb") checkVerbForms(at, lang, entry, errors, warnings);
+
+      if (entry.sentences.length === 0) {
+        warnings.push(`${at}: no example sentence`);
+      }
+      // Inflected forms (plurals, "an" for "a") legitimately miss the lemma,
+      // so this is only a prompt to look, not an error. Verbs may use any
+      // stored form instead.
+      if (entry.pos !== "phrase") {
+        const candidates =
+          entry.pos === "verb"
+            ? [entry.lemma, ...stems(entry.lemma), ...allVerbForms(lang, entry.details)]
+            : [entry.lemma];
+        for (const s of entry.sentences) {
+          const hay = squash(s);
+          if (!candidates.some((c) => hay.includes(squash(c)))) {
+            warnings.push(`${at}: sentence does not contain the lemma or a stored form: "${s}"`);
           }
         }
       }
@@ -140,7 +150,7 @@ function stems(lemma: string): string[] {
 function checkVerbForms(
   at: string,
   lang: string,
-  entry: PackEntry,
+  entry: ConceptEntry,
   errors: string[],
   warnings: string[],
 ) {

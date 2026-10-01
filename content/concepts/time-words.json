@@ -1,0 +1,100 @@
+{
+  "concepts": [
+    {
+      "key": "now",
+      "gloss": "now (at this moment)",
+      "entries": {
+        "en": [
+        {"lemma": "now", "pos": "adverb", "sentences": ["I am working now."]}
+        ],
+        "nl": [
+        {"lemma": "nu", "pos": "adverb", "sentences": ["Ik werk nu."]}
+        ]
+      }
+    },
+    {
+      "key": "today",
+      "gloss": "today (this day)",
+      "entries": {
+        "en": [
+        {"lemma": "today", "pos": "adverb", "sentences": ["Today it is cold."]}
+        ],
+        "nl": [
+        {"lemma": "vandaag", "pos": "adverb", "sentences": ["Vandaag is het koud."]}
+        ]
+      }
+    },
+    {
+      "key": "tomorrow",
+      "gloss": "tomorrow (the next day)",
+      "entries": {
+        "en": [
+        {"lemma": "tomorrow", "pos": "adverb", "sentences": ["Tomorrow I am working."]}
+        ],
+        "nl": [
+        {"lemma": "morgen", "pos": "adverb", "sentences": ["Morgen werk ik."]}
+        ]
+      }
+    },
+    {
+      "key": "yesterday",
+      "gloss": "yesterday (the day before today)",
+      "entries": {
+        "en": [
+        {"lemma": "yesterday", "pos": "adverb", "sentences": ["I was at home yesterday."]}
+        ],
+        "nl": [
+        {"lemma": "gisteren", "pos": "adverb", "sentences": ["Ik was gisteren thuis."]}
+        ]
+      }
+    },
+    {
+      "key": "always",
+      "gloss": "always (at all times)",
+      "entries": {
+        "en": [
+        {"lemma": "always", "pos": "adverb", "sentences": ["She always drinks tea."]}
+        ],
+        "nl": [
+        {"lemma": "altijd", "pos": "adverb", "sentences": ["Zij drinkt altijd thee."]}
+        ]
+      }
+    },
+    {
+      "key": "never",
+      "gloss": "never (at no time)",
+      "entries": {
+        "en": [
+        {"lemma": "never", "pos": "adverb", "sentences": ["I never drink beer."]}
+        ],
+        "nl": [
+        {"lemma": "nooit", "pos": "adverb", "sentences": ["Ik drink nooit bier."]}
+        ]
+      }
+    },
+    {
+      "key": "often",
+      "gloss": "often (many times)",
+      "entries": {
+        "en": [
+        {"lemma": "often", "pos": "adverb", "sentences": ["We often walk."]}
+        ],
+        "nl": [
+        {"lemma": "vaak", "pos": "adverb", "sentences": ["Wij lopen vaak."]}
+        ]
+      }
+    },
+    {
+      "key": "sometimes",
+      "gloss": "sometimes (now and then)",
+      "entries": {
+        "en": [
+        {"lemma": "sometimes", "pos": "adverb", "sentences": ["Sometimes I read."]}
+        ],
+        "nl": [
+        {"lemma": "soms", "pos": "adverb", "sentences": ["Soms lees ik."]}
+        ]
+      }
+    }
+  ]
+}

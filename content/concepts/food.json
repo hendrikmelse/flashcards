@@ -1,0 +1,280 @@
+{
+  "concepts": [
+    {
+      "key": "bread",
+      "gloss": "bread (baked food)",
+      "entries": {
+        "en": [
+        {"lemma": "bread", "pos": "noun", "details": {"uncountable": true}, "sentences": ["I eat bread for breakfast."]}
+        ],
+        "nl": [
+        {"lemma": "brood", "pos": "noun", "details": {"article": "het", "plural": "broden"}, "sentences": ["Ik eet brood bij het ontbijt."]}
+        ]
+      }
+    },
+    {
+      "key": "water",
+      "gloss": "water (liquid)",
+      "entries": {
+        "en": [
+        {"lemma": "water", "pos": "noun", "details": {"uncountable": true}, "sentences": ["I drink water."]}
+        ],
+        "nl": [
+        {"lemma": "water", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["Ik drink water."]}
+        ]
+      }
+    },
+    {
+      "key": "milk",
+      "gloss": "milk (drink)",
+      "entries": {
+        "en": [
+        {"lemma": "milk", "pos": "noun", "details": {"uncountable": true}, "sentences": ["The cat drinks milk."]}
+        ],
+        "nl": [
+        {"lemma": "melk", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["De kat drinkt melk."]}
+        ]
+      }
+    },
+    {
+      "key": "coffee",
+      "gloss": "coffee (drink)",
+      "entries": {
+        "en": [
+        {"lemma": "coffee", "pos": "noun", "details": {"uncountable": true}, "sentences": ["I drink coffee in the morning."]}
+        ],
+        "nl": [
+        {"lemma": "koffie", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Ik drink 's ochtends koffie."]}
+        ]
+      }
+    },
+    {
+      "key": "tea",
+      "gloss": "tea (drink)",
+      "entries": {
+        "en": [
+        {"lemma": "tea", "pos": "noun", "details": {"uncountable": true}, "sentences": ["Do you want tea?"]}
+        ],
+        "nl": [
+        {"lemma": "thee", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Wil je thee?"]}
+        ]
+      }
+    },
+    {
+      "key": "beer",
+      "gloss": "beer (alcoholic drink)",
+      "entries": {
+        "en": [
+        {"lemma": "beer", "pos": "noun", "details": {"plural": "beers"}, "sentences": ["He drinks a beer."]}
+        ],
+        "nl": [
+        {"lemma": "bier", "pos": "noun", "details": {"article": "het", "plural": "bieren"}, "sentences": ["Hij drinkt een bier."]}
+        ]
+      }
+    },
+    {
+      "key": "wine",
+      "gloss": "wine (alcoholic drink)",
+      "entries": {
+        "en": [
+        {"lemma": "wine", "pos": "noun", "details": {"plural": "wines"}, "sentences": ["She drinks red wine."]}
+        ],
+        "nl": [
+        {"lemma": "wijn", "pos": "noun", "details": {"article": "de", "plural": "wijnen"}, "sentences": ["Zij drinkt rode wijn."]}
+        ]
+      }
+    },
+    {
+      "key": "apple",
+      "gloss": "apple (fruit)",
+      "entries": {
+        "en": [
+        {"lemma": "apple", "pos": "noun", "details": {"plural": "apples"}, "sentences": ["I eat an apple."]}
+        ],
+        "nl": [
+        {"lemma": "appel", "pos": "noun", "details": {"article": "de", "plural": "appels"}, "sentences": ["Ik eet een appel."]}
+        ]
+      }
+    },
+    {
+      "key": "orange",
+      "gloss": "orange (fruit)",
+      "entries": {
+        "en": [
+        {"lemma": "orange", "pos": "noun", "details": {"plural": "oranges"}, "sentences": ["I want an orange."]}
+        ],
+        "nl": [
+        {"lemma": "sinaasappel", "pos": "noun", "details": {"article": "de", "plural": "sinaasappels"}, "sentences": ["Ik wil een sinaasappel."]}
+        ]
+      }
+    },
+    {
+      "key": "egg",
+      "gloss": "egg (food)",
+      "entries": {
+        "en": [
+        {"lemma": "egg", "pos": "noun", "details": {"plural": "eggs"}, "sentences": ["I eat an egg for breakfast."]}
+        ],
+        "nl": [
+        {"lemma": "ei", "pos": "noun", "details": {"article": "het", "plural": "eieren"}, "sentences": ["Ik eet een ei bij het ontbijt."]}
+        ]
+      }
+    },
+    {
+      "key": "cheese",
+      "gloss": "cheese (food)",
+      "entries": {
+        "en": [
+        {"lemma": "cheese", "pos": "noun", "details": {"uncountable": true}, "sentences": ["I like Dutch cheese."]}
+        ],
+        "nl": [
+        {"lemma": "kaas", "pos": "noun", "details": {"article": "de", "plural": "kazen"}, "sentences": ["Ik hou van Nederlandse kaas."]}
+        ]
+      }
+    },
+    {
+      "key": "meat",
+      "gloss": "meat (food)",
+      "entries": {
+        "en": [
+        {"lemma": "meat", "pos": "noun", "details": {"uncountable": true}, "sentences": ["I do not eat meat."]}
+        ],
+        "nl": [
+        {"lemma": "vlees", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["Ik eet geen vlees."]}
+        ]
+      }
+    },
+    {
+      "key": "fish",
+      "gloss": "fish (food)",
+      "entries": {
+        "en": [
+        {"lemma": "fish", "pos": "noun", "details": {"plural": "fish"}, "sentences": ["We eat fish today."]}
+        ],
+        "nl": [
+        {"lemma": "vis", "pos": "noun", "details": {"article": "de", "plural": "vissen"}, "sentences": ["Wij eten vandaag vis."]}
+        ]
+      }
+    },
+    {
+      "key": "potato",
+      "gloss": "potato (vegetable)",
+      "entries": {
+        "en": [
+        {"lemma": "potato", "pos": "noun", "details": {"plural": "potatoes"}, "sentences": ["There are potatoes in the soup."]}
+        ],
+        "nl": [
+        {"lemma": "aardappel", "pos": "noun", "details": {"article": "de", "plural": "aardappels"}, "sentences": ["Er zitten aardappels in de soep."]}
+        ]
+      }
+    },
+    {
+      "key": "rice",
+      "gloss": "rice (grain)",
+      "entries": {
+        "en": [
+        {"lemma": "rice", "pos": "noun", "details": {"uncountable": true}, "sentences": ["We eat rice with fish."]}
+        ],
+        "nl": [
+        {"lemma": "rijst", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Wij eten rijst met vis."]}
+        ]
+      }
+    },
+    {
+      "key": "soup",
+      "gloss": "soup (liquid dish)",
+      "entries": {
+        "en": [
+        {"lemma": "soup", "pos": "noun", "details": {"plural": "soups"}, "sentences": ["We eat soup in the evening."]}
+        ],
+        "nl": [
+        {"lemma": "soep", "pos": "noun", "details": {"article": "de", "plural": "soepen"}, "sentences": ["Wij eten 's avonds soep."]}
+        ]
+      }
+    },
+    {
+      "key": "sugar",
+      "gloss": "sugar (sweetener)",
+      "entries": {
+        "en": [
+        {"lemma": "sugar", "pos": "noun", "details": {"uncountable": true}, "sentences": ["Do you want sugar?"]}
+        ],
+        "nl": [
+        {"lemma": "suiker", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Wil je suiker?"]}
+        ]
+      }
+    },
+    {
+      "key": "salt",
+      "gloss": "salt (seasoning)",
+      "entries": {
+        "en": [
+        {"lemma": "salt", "pos": "noun", "details": {"uncountable": true}, "sentences": ["Can you give me the salt?"]}
+        ],
+        "nl": [
+        {"lemma": "zout", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["Kun je mij het zout geven?"]}
+        ]
+      }
+    },
+    {
+      "key": "vegetable",
+      "gloss": "vegetable (plant food)",
+      "entries": {
+        "en": [
+        {"lemma": "vegetable", "pos": "noun", "details": {"plural": "vegetables"}, "sentences": ["I eat vegetables every day."]}
+        ],
+        "nl": [
+        {"lemma": "groente", "pos": "noun", "details": {"article": "de", "plural": "groenten"}, "sentences": ["Ik eet elke dag groente."]}
+        ]
+      }
+    },
+    {
+      "key": "fruit",
+      "gloss": "fruit (sweet plant food)",
+      "entries": {
+        "en": [
+        {"lemma": "fruit", "pos": "noun", "details": {"uncountable": true}, "sentences": ["I eat fruit every day."]}
+        ],
+        "nl": [
+        {"lemma": "fruit", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["Ik eet elke dag fruit."]}
+        ]
+      }
+    },
+    {
+      "key": "breakfast",
+      "gloss": "breakfast (morning meal)",
+      "entries": {
+        "en": [
+        {"lemma": "breakfast", "pos": "noun", "details": {"plural": "breakfasts"}, "sentences": ["Breakfast is at eight."]}
+        ],
+        "nl": [
+        {"lemma": "ontbijt", "pos": "noun", "details": {"article": "het", "plural": "ontbijten"}, "sentences": ["Het ontbijt is om acht uur."]}
+        ]
+      }
+    },
+    {
+      "key": "lunch",
+      "gloss": "lunch (midday meal)",
+      "entries": {
+        "en": [
+        {"lemma": "lunch", "pos": "noun", "details": {"plural": "lunches"}, "sentences": ["Lunch is ready."]}
+        ],
+        "nl": [
+        {"lemma": "lunch", "pos": "noun", "details": {"article": "de", "plural": "lunches"}, "sentences": ["De lunch is klaar."]}
+        ]
+      }
+    },
+    {
+      "key": "restaurant",
+      "gloss": "restaurant (place to eat out)",
+      "entries": {
+        "en": [
+        {"lemma": "restaurant", "pos": "noun", "details": {"plural": "restaurants"}, "sentences": ["We eat in a restaurant."]}
+        ],
+        "nl": [
+        {"lemma": "restaurant", "pos": "noun", "details": {"article": "het", "plural": "restaurants"}, "sentences": ["Wij eten in een restaurant."]}
+        ]
+      }
+    }
+  ]
+}

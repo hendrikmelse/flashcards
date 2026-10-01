@@ -64,6 +64,9 @@ export const languages = pgTable("languages", {
 
 export const concepts = pgTable("concepts", {
   id: uuid().primaryKey().defaultRandom(),
+  // Stable identifier used by the content files and never edited, e.g. "dog" or
+  // "know-fact". It is how packs refer to a concept, so the gloss can be reworded.
+  key: text().notNull().unique(),
   // Short human-readable description of the sense, for curators,
   // e.g. "run (move fast on foot)". Not shown to learners.
   gloss: text().notNull(),

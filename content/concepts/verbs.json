@@ -1,0 +1,558 @@
+{
+  "concepts": [
+    {
+      "key": "be",
+      "gloss": "be (exist, state of being)",
+      "entries": {
+        "en": [
+        {"lemma": "be", "pos": "verb", "details": {"past": "was/were", "participle": "been", "present": {"I": "am", "you": "are", "he": "is", "we": "are"}}, "sentences": ["I am at home."]}
+        ],
+        "nl": [
+        {"lemma": "zijn", "pos": "verb", "details": {"pastSingular": "was", "pastPlural": "waren", "participle": "geweest", "auxiliary": "zijn", "present": {"ik": "ben", "jij": "bent", "hij": "is", "wij": "zijn"}}, "sentences": ["Ik ben thuis."]}
+        ]
+      }
+    },
+    {
+      "key": "have",
+      "gloss": "have (possess)",
+      "entries": {
+        "en": [
+        {"lemma": "have", "pos": "verb", "details": {"past": "had", "participle": "had", "present": {"I": "have", "you": "have", "he": "has", "we": "have"}}, "sentences": ["I have a dog."]}
+        ],
+        "nl": [
+        {"lemma": "hebben", "pos": "verb", "details": {"pastSingular": "had", "pastPlural": "hadden", "participle": "gehad", "auxiliary": "hebben", "present": {"ik": "heb", "jij": "hebt", "hij": "heeft", "wij": "hebben"}}, "sentences": ["Ik heb een hond."]}
+        ]
+      }
+    },
+    {
+      "key": "go",
+      "gloss": "go (travel to a place)",
+      "entries": {
+        "en": [
+        {"lemma": "go", "pos": "verb", "details": {"past": "went", "participle": "gone"}, "sentences": ["We go to school."]}
+        ],
+        "nl": [
+        {"lemma": "gaan", "pos": "verb", "details": {"pastSingular": "ging", "pastPlural": "gingen", "participle": "gegaan", "auxiliary": "zijn", "present": {"ik": "ga", "jij": "gaat", "hij": "gaat", "wij": "gaan"}}, "sentences": ["Wij gaan naar school."]}
+        ]
+      }
+    },
+    {
+      "key": "come",
+      "gloss": "come (move toward the speaker)",
+      "entries": {
+        "en": [
+        {"lemma": "come", "pos": "verb", "details": {"past": "came", "participle": "come"}, "sentences": ["He comes from Amsterdam."]}
+        ],
+        "nl": [
+        {"lemma": "komen", "pos": "verb", "details": {"pastSingular": "kwam", "pastPlural": "kwamen", "participle": "gekomen", "auxiliary": "zijn"}, "sentences": ["Hij komt uit Amsterdam."]}
+        ]
+      }
+    },
+    {
+      "key": "see",
+      "gloss": "see (perceive with the eyes)",
+      "entries": {
+        "en": [
+        {"lemma": "see", "pos": "verb", "details": {"past": "saw", "participle": "seen"}, "sentences": ["I see a bird."]}
+        ],
+        "nl": [
+        {"lemma": "zien", "pos": "verb", "details": {"pastSingular": "zag", "pastPlural": "zagen", "participle": "gezien", "auxiliary": "hebben"}, "sentences": ["Ik zie een vogel."]}
+        ]
+      }
+    },
+    {
+      "key": "hear",
+      "gloss": "hear (perceive with the ears)",
+      "entries": {
+        "en": [
+        {"lemma": "hear", "pos": "verb", "details": {"past": "heard", "participle": "heard"}, "sentences": ["I hear music."]}
+        ],
+        "nl": [
+        {"lemma": "horen", "pos": "verb", "details": {"pastSingular": "hoorde", "pastPlural": "hoorden", "participle": "gehoord", "auxiliary": "hebben"}, "sentences": ["Ik hoor muziek."]}
+        ]
+      }
+    },
+    {
+      "key": "eat",
+      "gloss": "eat (consume food)",
+      "entries": {
+        "en": [
+        {"lemma": "eat", "pos": "verb", "details": {"past": "ate", "participle": "eaten"}, "sentences": ["We eat bread."]}
+        ],
+        "nl": [
+        {"lemma": "eten", "pos": "verb", "details": {"pastSingular": "at", "pastPlural": "aten", "participle": "gegeten", "auxiliary": "hebben"}, "sentences": ["Wij eten brood."]}
+        ]
+      }
+    },
+    {
+      "key": "drink",
+      "gloss": "drink (consume liquid)",
+      "entries": {
+        "en": [
+        {"lemma": "drink", "pos": "verb", "details": {"past": "drank", "participle": "drunk"}, "sentences": ["I drink water."]}
+        ],
+        "nl": [
+        {"lemma": "drinken", "pos": "verb", "details": {"pastSingular": "dronk", "pastPlural": "dronken", "participle": "gedronken", "auxiliary": "hebben"}, "sentences": ["Ik drink water."]}
+        ]
+      }
+    },
+    {
+      "key": "sleep",
+      "gloss": "sleep (rest while unconscious)",
+      "entries": {
+        "en": [
+        {"lemma": "sleep", "pos": "verb", "details": {"past": "slept", "participle": "slept"}, "sentences": ["The baby sleeps."]}
+        ],
+        "nl": [
+        {"lemma": "slapen", "pos": "verb", "details": {"pastSingular": "sliep", "pastPlural": "sliepen", "participle": "geslapen", "auxiliary": "hebben"}, "sentences": ["De baby slaapt."]}
+        ]
+      }
+    },
+    {
+      "key": "work-verb",
+      "gloss": "work (do a job)",
+      "entries": {
+        "en": [
+        {"lemma": "work", "pos": "verb", "details": {"past": "worked", "participle": "worked"}, "sentences": ["She works in a shop."]}
+        ],
+        "nl": [
+        {"lemma": "werken", "pos": "verb", "details": {"pastSingular": "werkte", "pastPlural": "werkten", "participle": "gewerkt", "auxiliary": "hebben"}, "sentences": ["Zij werkt in een winkel."]}
+        ]
+      }
+    },
+    {
+      "key": "live",
+      "gloss": "live (reside somewhere)",
+      "entries": {
+        "en": [
+        {"lemma": "live", "pos": "verb", "details": {"past": "lived", "participle": "lived"}, "sentences": ["I live in a small house."]}
+        ],
+        "nl": [
+        {"lemma": "wonen", "pos": "verb", "details": {"pastSingular": "woonde", "pastPlural": "woonden", "participle": "gewoond", "auxiliary": "hebben"}, "sentences": ["Ik woon in een klein huis."]}
+        ]
+      }
+    },
+    {
+      "key": "speak",
+      "gloss": "speak (use a language)",
+      "entries": {
+        "en": [
+        {"lemma": "speak", "pos": "verb", "details": {"past": "spoke", "participle": "spoken"}, "sentences": ["He speaks Dutch."]}
+        ],
+        "nl": [
+        {"lemma": "spreken", "pos": "verb", "details": {"pastSingular": "sprak", "pastPlural": "spraken", "participle": "gesproken", "auxiliary": "hebben"}, "sentences": ["Hij spreekt Nederlands."]}
+        ]
+      }
+    },
+    {
+      "key": "say",
+      "gloss": "say (utter words)",
+      "entries": {
+        "en": [
+        {"lemma": "say", "pos": "verb", "details": {"past": "said", "participle": "said"}, "sentences": ["What do you say?"]}
+        ],
+        "nl": [
+        {"lemma": "zeggen", "pos": "verb", "details": {"pastSingular": "zei", "pastPlural": "zeiden", "participle": "gezegd", "auxiliary": "hebben"}, "sentences": ["Wat zeg je?"]}
+        ]
+      }
+    },
+    {
+      "key": "know-fact",
+      "gloss": "know (a fact)",
+      "entries": {
+        "en": [
+        {"lemma": "know", "pos": "verb", "details": {"past": "knew", "participle": "known"}, "sentences": ["I do not know the answer."]}
+        ],
+        "nl": [
+        {"lemma": "weten", "pos": "verb", "details": {"pastSingular": "wist", "pastPlural": "wisten", "participle": "geweten", "auxiliary": "hebben", "present": {"ik": "weet", "jij": "weet", "hij": "weet", "wij": "weten"}}, "sentences": ["Ik weet het antwoord niet."]}
+        ]
+      }
+    },
+    {
+      "key": "know-person",
+      "gloss": "know (a person or place)",
+      "entries": {
+        "en": [
+        {"lemma": "know", "pos": "verb", "details": {"past": "knew", "participle": "known"}, "sentences": ["I know your sister."]}
+        ],
+        "nl": [
+        {"lemma": "kennen", "pos": "verb", "details": {"pastSingular": "kende", "pastPlural": "kenden", "participle": "gekend", "auxiliary": "hebben"}, "sentences": ["Ik ken je zus."]}
+        ]
+      }
+    },
+    {
+      "key": "understand",
+      "gloss": "understand (grasp the meaning)",
+      "entries": {
+        "en": [
+        {"lemma": "understand", "pos": "verb", "details": {"past": "understood", "participle": "understood"}, "sentences": ["I understand the question."]}
+        ],
+        "nl": [
+        {"lemma": "begrijpen", "pos": "verb", "details": {"pastSingular": "begreep", "pastPlural": "begrepen", "participle": "begrepen", "auxiliary": "hebben"}, "sentences": ["Ik begrijp de vraag."]}
+        ]
+      }
+    },
+    {
+      "key": "think",
+      "gloss": "think (have an opinion)",
+      "entries": {
+        "en": [
+        {"lemma": "think", "pos": "verb", "details": {"past": "thought", "participle": "thought"}, "sentences": ["I think it is a good idea."]}
+        ],
+        "nl": [
+        {"lemma": "denken", "pos": "verb", "details": {"pastSingular": "dacht", "pastPlural": "dachten", "participle": "gedacht", "auxiliary": "hebben"}, "sentences": ["Ik denk dat het een goed idee is."]}
+        ]
+      }
+    },
+    {
+      "key": "want",
+      "gloss": "want (desire)",
+      "entries": {
+        "en": [
+        {"lemma": "want", "pos": "verb", "details": {"past": "wanted", "participle": "wanted"}, "sentences": ["I want a coffee."]}
+        ],
+        "nl": [
+        {"lemma": "willen", "pos": "verb", "details": {"pastSingular": "wilde", "pastPlural": "wilden", "participle": "gewild", "auxiliary": "hebben", "present": {"ik": "wil", "jij": "wilt", "hij": "wil", "wij": "willen"}}, "sentences": ["Ik wil een koffie."]}
+        ]
+      }
+    },
+    {
+      "key": "can",
+      "gloss": "can (be able to)",
+      "entries": {
+        "en": [
+        {"lemma": "can", "pos": "verb", "details": {"past": "could", "defective": true, "present": {"I": "can", "you": "can", "he": "can", "we": "can"}}, "sentences": ["I can help you."]}
+        ],
+        "nl": [
+        {"lemma": "kunnen", "pos": "verb", "details": {"pastSingular": "kon", "pastPlural": "konden", "participle": "gekund", "auxiliary": "hebben", "present": {"ik": "kan", "jij": "kunt", "hij": "kan", "wij": "kunnen"}}, "sentences": ["Ik kan je helpen."]}
+        ]
+      }
+    },
+    {
+      "key": "must",
+      "gloss": "must (have to)",
+      "entries": {
+        "en": [
+        {"lemma": "must", "pos": "verb", "details": {"defective": true}, "sentences": ["I must work."]},
+        {"lemma": "have to", "pos": "verb", "details": {"past": "had to", "participle": "had to"}, "sentences": ["We have to go now."]}
+        ],
+        "nl": [
+        {"lemma": "moeten", "pos": "verb", "details": {"pastSingular": "moest", "pastPlural": "moesten", "participle": "gemoeten", "auxiliary": "hebben", "present": {"ik": "moet", "jij": "moet", "hij": "moet", "wij": "moeten"}}, "sentences": ["Ik moet werken.", "Wij moeten nu gaan."]}
+        ]
+      }
+    },
+    {
+      "key": "love",
+      "gloss": "love (feel deep affection for)",
+      "entries": {
+        "en": [
+        {"lemma": "love", "pos": "verb", "details": {"past": "loved", "participle": "loved"}, "sentences": ["I love you."]}
+        ],
+        "nl": [
+        {"lemma": "houden van", "pos": "verb", "details": {"pastSingular": "hield van", "pastPlural": "hielden van", "participle": "gehouden van", "auxiliary": "hebben", "present": {"ik": "hou van", "jij": "houdt van", "hij": "houdt van", "wij": "houden van"}}, "sentences": ["Ik hou van jou."]}
+        ]
+      }
+    },
+    {
+      "key": "give",
+      "gloss": "give (hand over)",
+      "entries": {
+        "en": [
+        {"lemma": "give", "pos": "verb", "details": {"past": "gave", "participle": "given"}, "sentences": ["She gives a gift."]}
+        ],
+        "nl": [
+        {"lemma": "geven", "pos": "verb", "details": {"pastSingular": "gaf", "pastPlural": "gaven", "participle": "gegeven", "auxiliary": "hebben"}, "sentences": ["Zij geeft een cadeau."]}
+        ]
+      }
+    },
+    {
+      "key": "take",
+      "gloss": "take (pick up or board)",
+      "entries": {
+        "en": [
+        {"lemma": "take", "pos": "verb", "details": {"past": "took", "participle": "taken"}, "sentences": ["I take the bus."]}
+        ],
+        "nl": [
+        {"lemma": "nemen", "pos": "verb", "details": {"pastSingular": "nam", "pastPlural": "namen", "participle": "genomen", "auxiliary": "hebben"}, "sentences": ["Ik neem de bus."]}
+        ]
+      }
+    },
+    {
+      "key": "make",
+      "gloss": "make (create or prepare)",
+      "entries": {
+        "en": [
+        {"lemma": "make", "pos": "verb", "details": {"past": "made", "participle": "made"}, "sentences": ["He makes soup."]}
+        ],
+        "nl": [
+        {"lemma": "maken", "pos": "verb", "details": {"pastSingular": "maakte", "pastPlural": "maakten", "participle": "gemaakt", "auxiliary": "hebben"}, "sentences": ["Hij maakt soep."]}
+        ]
+      }
+    },
+    {
+      "key": "buy",
+      "gloss": "buy (pay to own)",
+      "entries": {
+        "en": [
+        {"lemma": "buy", "pos": "verb", "details": {"past": "bought", "participle": "bought"}, "sentences": ["I buy bread."]}
+        ],
+        "nl": [
+        {"lemma": "kopen", "pos": "verb", "details": {"pastSingular": "kocht", "pastPlural": "kochten", "participle": "gekocht", "auxiliary": "hebben"}, "sentences": ["Ik koop brood."]}
+        ]
+      }
+    },
+    {
+      "key": "sell",
+      "gloss": "sell (give for money)",
+      "entries": {
+        "en": [
+        {"lemma": "sell", "pos": "verb", "details": {"past": "sold", "participle": "sold"}, "sentences": ["He sells fish."]}
+        ],
+        "nl": [
+        {"lemma": "verkopen", "pos": "verb", "details": {"pastSingular": "verkocht", "pastPlural": "verkochten", "participle": "verkocht", "auxiliary": "hebben"}, "sentences": ["Hij verkoopt vis."]}
+        ]
+      }
+    },
+    {
+      "key": "pay",
+      "gloss": "pay (give money for something)",
+      "entries": {
+        "en": [
+        {"lemma": "pay", "pos": "verb", "details": {"past": "paid", "participle": "paid"}, "sentences": ["I pay for the coffee."]}
+        ],
+        "nl": [
+        {"lemma": "betalen", "pos": "verb", "details": {"pastSingular": "betaalde", "pastPlural": "betaalden", "participle": "betaald", "auxiliary": "hebben"}, "sentences": ["Ik betaal de koffie."]}
+        ]
+      }
+    },
+    {
+      "key": "open",
+      "gloss": "open (make not closed)",
+      "entries": {
+        "en": [
+        {"lemma": "open", "pos": "verb", "details": {"past": "opened", "participle": "opened"}, "sentences": ["She opens the door."]}
+        ],
+        "nl": [
+        {"lemma": "openen", "pos": "verb", "details": {"pastSingular": "opende", "pastPlural": "openden", "participle": "geopend", "auxiliary": "hebben"}, "sentences": ["Zij opent de deur."]}
+        ]
+      }
+    },
+    {
+      "key": "close",
+      "gloss": "close (make not open)",
+      "entries": {
+        "en": [
+        {"lemma": "close", "pos": "verb", "details": {"past": "closed", "participle": "closed"}, "sentences": ["He closes the window."]}
+        ],
+        "nl": [
+        {"lemma": "sluiten", "pos": "verb", "details": {"pastSingular": "sloot", "pastPlural": "sloten", "participle": "gesloten", "auxiliary": "hebben"}, "sentences": ["Hij sluit het raam."]}
+        ]
+      }
+    },
+    {
+      "key": "read",
+      "gloss": "read (understand written text)",
+      "entries": {
+        "en": [
+        {"lemma": "read", "pos": "verb", "details": {"past": "read", "participle": "read"}, "sentences": ["I read a book."]}
+        ],
+        "nl": [
+        {"lemma": "lezen", "pos": "verb", "details": {"pastSingular": "las", "pastPlural": "lazen", "participle": "gelezen", "auxiliary": "hebben"}, "sentences": ["Ik lees een boek."]}
+        ]
+      }
+    },
+    {
+      "key": "write",
+      "gloss": "write (put words on paper)",
+      "entries": {
+        "en": [
+        {"lemma": "write", "pos": "verb", "details": {"past": "wrote", "participle": "written"}, "sentences": ["She writes a word."]}
+        ],
+        "nl": [
+        {"lemma": "schrijven", "pos": "verb", "details": {"pastSingular": "schreef", "pastPlural": "schreven", "participle": "geschreven", "auxiliary": "hebben"}, "sentences": ["Zij schrijft een woord."]}
+        ]
+      }
+    },
+    {
+      "key": "learn",
+      "gloss": "learn (gain knowledge)",
+      "entries": {
+        "en": [
+        {"lemma": "learn", "pos": "verb", "details": {"past": "learned", "participle": "learned"}, "sentences": ["We learn Dutch."]}
+        ],
+        "nl": [
+        {"lemma": "leren", "pos": "verb", "details": {"pastSingular": "leerde", "pastPlural": "leerden", "participle": "geleerd", "auxiliary": "hebben"}, "sentences": ["Wij leren Nederlands."]}
+        ]
+      }
+    },
+    {
+      "key": "play",
+      "gloss": "play (take part in a game)",
+      "entries": {
+        "en": [
+        {"lemma": "play", "pos": "verb", "details": {"past": "played", "participle": "played"}, "sentences": ["The children play."]}
+        ],
+        "nl": [
+        {"lemma": "spelen", "pos": "verb", "details": {"pastSingular": "speelde", "pastPlural": "speelden", "participle": "gespeeld", "auxiliary": "hebben"}, "sentences": ["De kinderen spelen."]}
+        ]
+      }
+    },
+    {
+      "key": "walk",
+      "gloss": "walk (go on foot)",
+      "entries": {
+        "en": [
+        {"lemma": "walk", "pos": "verb", "details": {"past": "walked", "participle": "walked"}, "sentences": ["I walk to school."]}
+        ],
+        "nl": [
+        {"lemma": "lopen", "pos": "verb", "details": {"pastSingular": "liep", "pastPlural": "liepen", "participle": "gelopen", "auxiliary": "hebben/zijn"}, "sentences": ["Ik loop naar school."]}
+        ]
+      }
+    },
+    {
+      "key": "run",
+      "gloss": "run (move fast on foot)",
+      "entries": {
+        "en": [
+        {"lemma": "run", "pos": "verb", "details": {"past": "ran", "participle": "run"}, "sentences": ["The dog runs."]}
+        ],
+        "nl": [
+        {"lemma": "rennen", "pos": "verb", "details": {"pastSingular": "rende", "pastPlural": "renden", "participle": "gerend", "auxiliary": "hebben/zijn"}, "sentences": ["De hond rent."]}
+        ]
+      }
+    },
+    {
+      "key": "drive",
+      "gloss": "drive (operate a vehicle)",
+      "entries": {
+        "en": [
+        {"lemma": "drive", "pos": "verb", "details": {"past": "drove", "participle": "driven"}, "sentences": ["My father drives the car."]}
+        ],
+        "nl": [
+        {"lemma": "rijden", "pos": "verb", "details": {"pastSingular": "reed", "pastPlural": "reden", "participle": "gereden", "auxiliary": "hebben/zijn"}, "sentences": ["Mijn vader rijdt de auto."]}
+        ]
+      }
+    },
+    {
+      "key": "wait",
+      "gloss": "wait (stay until something happens)",
+      "entries": {
+        "en": [
+        {"lemma": "wait", "pos": "verb", "details": {"past": "waited", "participle": "waited"}, "sentences": ["I wait for the bus."]}
+        ],
+        "nl": [
+        {"lemma": "wachten", "pos": "verb", "details": {"pastSingular": "wachtte", "pastPlural": "wachtten", "participle": "gewacht", "auxiliary": "hebben"}, "sentences": ["Ik wacht op de bus."]}
+        ]
+      }
+    },
+    {
+      "key": "ask",
+      "gloss": "ask (request)",
+      "entries": {
+        "en": [
+        {"lemma": "ask", "pos": "verb", "details": {"past": "asked", "participle": "asked"}, "sentences": ["I ask for water."]}
+        ],
+        "nl": [
+        {"lemma": "vragen", "pos": "verb", "details": {"pastSingular": "vroeg", "pastPlural": "vroegen", "participle": "gevraagd", "auxiliary": "hebben"}, "sentences": ["Ik vraag om water."]}
+        ]
+      }
+    },
+    {
+      "key": "help",
+      "gloss": "help (assist)",
+      "entries": {
+        "en": [
+        {"lemma": "help", "pos": "verb", "details": {"past": "helped", "participle": "helped"}, "sentences": ["He helps his mother."]}
+        ],
+        "nl": [
+        {"lemma": "helpen", "pos": "verb", "details": {"pastSingular": "hielp", "pastPlural": "hielpen", "participle": "geholpen", "auxiliary": "hebben"}, "sentences": ["Hij helpt zijn moeder."]}
+        ]
+      }
+    },
+    {
+      "key": "find",
+      "gloss": "find (come across or locate)",
+      "entries": {
+        "en": [
+        {"lemma": "find", "pos": "verb", "details": {"past": "found", "participle": "found"}, "sentences": ["I find my key."]}
+        ],
+        "nl": [
+        {"lemma": "vinden", "pos": "verb", "details": {"pastSingular": "vond", "pastPlural": "vonden", "participle": "gevonden", "auxiliary": "hebben"}, "sentences": ["Ik vind mijn sleutel."]}
+        ]
+      }
+    },
+    {
+      "key": "begin",
+      "gloss": "begin (start)",
+      "entries": {
+        "en": [
+        {"lemma": "begin", "pos": "verb", "details": {"past": "began", "participle": "begun"}, "sentences": ["The film begins now."]},
+        {"lemma": "start", "pos": "verb", "details": {"past": "started", "participle": "started"}, "sentences": ["We start at nine."]}
+        ],
+        "nl": [
+        {"lemma": "beginnen", "pos": "verb", "details": {"pastSingular": "begon", "pastPlural": "begonnen", "participle": "begonnen", "auxiliary": "zijn"}, "sentences": ["De film begint nu.", "Wij beginnen om negen uur."]}
+        ]
+      }
+    },
+    {
+      "key": "call",
+      "gloss": "call (phone someone)",
+      "entries": {
+        "en": [
+        {"lemma": "call", "pos": "verb", "details": {"past": "called", "participle": "called"}, "sentences": ["I call my mother."]}
+        ],
+        "nl": [
+        {"lemma": "bellen", "pos": "verb", "details": {"pastSingular": "belde", "pastPlural": "belden", "participle": "gebeld", "auxiliary": "hebben"}, "sentences": ["Ik bel mijn moeder."]}
+        ]
+      }
+    },
+    {
+      "key": "sit",
+      "gloss": "sit (be seated)",
+      "entries": {
+        "en": [
+        {"lemma": "sit", "pos": "verb", "details": {"past": "sat", "participle": "sat"}, "sentences": ["The cat sits on the chair."]}
+        ],
+        "nl": [
+        {"lemma": "zitten", "pos": "verb", "details": {"pastSingular": "zat", "pastPlural": "zaten", "participle": "gezeten", "auxiliary": "hebben"}, "sentences": ["De kat zit op de stoel."]}
+        ]
+      }
+    },
+    {
+      "key": "stand",
+      "gloss": "stand (be upright)",
+      "entries": {
+        "en": [
+        {"lemma": "stand", "pos": "verb", "details": {"past": "stood", "participle": "stood"}, "sentences": ["The man stands at the door."]}
+        ],
+        "nl": [
+        {"lemma": "staan", "pos": "verb", "details": {"pastSingular": "stond", "pastPlural": "stonden", "participle": "gestaan", "auxiliary": "hebben", "present": {"ik": "sta", "jij": "staat", "hij": "staat", "wij": "staan"}}, "sentences": ["De man staat bij de deur."]}
+        ]
+      }
+    },
+    {
+      "key": "cook",
+      "gloss": "cook (prepare food with heat)",
+      "entries": {
+        "en": [
+        {"lemma": "cook", "pos": "verb", "details": {"past": "cooked", "participle": "cooked"}, "sentences": ["He cooks in the kitchen."]}
+        ],
+        "nl": [
+        {"lemma": "koken", "pos": "verb", "details": {"pastSingular": "kookte", "pastPlural": "kookten", "participle": "gekookt", "auxiliary": "hebben"}, "sentences": ["Hij kookt in de keuken."]}
+        ]
+      }
+    },
+    {
+      "key": "wash",
+      "gloss": "wash (clean with water)",
+      "entries": {
+        "en": [
+        {"lemma": "wash", "pos": "verb", "details": {"past": "washed", "participle": "washed"}, "sentences": ["I wash my hands."]}
+        ],
+        "nl": [
+        {"lemma": "wassen", "pos": "verb", "details": {"pastSingular": "waste", "pastPlural": "wasten", "participle": "gewassen", "auxiliary": "hebben"}, "sentences": ["Ik was mijn handen."]}
+        ]
+      }
+    }
+  ]
+}

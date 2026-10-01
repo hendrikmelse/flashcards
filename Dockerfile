@@ -33,7 +33,7 @@ COPY --from=build /app/content content
 ENV PORT=3000 \
     WEB_DIST=/app/web \
     MIGRATIONS_DIR=/app/apps/api/drizzle \
-    CONTENT_DIR=/app/content/packs
+    CONTENT_DIR=/app/content
 
 USER node
 EXPOSE 3000

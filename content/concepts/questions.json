@@ -1,0 +1,136 @@
+{
+  "concepts": [
+    {
+      "key": "i",
+      "gloss": "I (first person singular)",
+      "entries": {
+        "en": [
+        {"lemma": "I", "pos": "pronoun", "sentences": ["I am tired."]}
+        ],
+        "nl": [
+        {"lemma": "ik", "pos": "pronoun", "sentences": ["Ik ben moe."]}
+        ]
+      }
+    },
+    {
+      "key": "you",
+      "gloss": "you (informal, singular)",
+      "entries": {
+        "en": [
+        {"lemma": "you", "pos": "pronoun", "sentences": ["Are you hungry?"]}
+        ],
+        "nl": [
+        {"lemma": "jij", "pos": "pronoun", "sentences": ["Heb jij honger?"]}
+        ]
+      }
+    },
+    {
+      "key": "he",
+      "gloss": "he",
+      "entries": {
+        "en": [
+        {"lemma": "he", "pos": "pronoun", "sentences": ["He is my brother."]}
+        ],
+        "nl": [
+        {"lemma": "hij", "pos": "pronoun", "sentences": ["Hij is mijn broer."]}
+        ]
+      }
+    },
+    {
+      "key": "she",
+      "gloss": "she",
+      "entries": {
+        "en": [
+        {"lemma": "she", "pos": "pronoun", "sentences": ["She is my sister."]}
+        ],
+        "nl": [
+        {"lemma": "zij", "pos": "pronoun", "sentences": ["Zij is mijn zus."]}
+        ]
+      }
+    },
+    {
+      "key": "we",
+      "gloss": "we",
+      "entries": {
+        "en": [
+        {"lemma": "we", "pos": "pronoun", "sentences": ["We are friends."]}
+        ],
+        "nl": [
+        {"lemma": "wij", "pos": "pronoun", "sentences": ["Wij zijn vrienden."]}
+        ]
+      }
+    },
+    {
+      "key": "what",
+      "gloss": "what (question word)",
+      "entries": {
+        "en": [
+        {"lemma": "what", "pos": "pronoun", "sentences": ["What is this?"]}
+        ],
+        "nl": [
+        {"lemma": "wat", "pos": "pronoun", "sentences": ["Wat is dit?"]}
+        ]
+      }
+    },
+    {
+      "key": "who",
+      "gloss": "who (question word)",
+      "entries": {
+        "en": [
+        {"lemma": "who", "pos": "pronoun", "sentences": ["Who is that man?"]}
+        ],
+        "nl": [
+        {"lemma": "wie", "pos": "pronoun", "sentences": ["Wie is die man?"]}
+        ]
+      }
+    },
+    {
+      "key": "where",
+      "gloss": "where (question word)",
+      "entries": {
+        "en": [
+        {"lemma": "where", "pos": "adverb", "sentences": ["Where is the bus?"]}
+        ],
+        "nl": [
+        {"lemma": "waar", "pos": "adverb", "sentences": ["Waar is de bus?"]}
+        ]
+      }
+    },
+    {
+      "key": "why",
+      "gloss": "why (question word)",
+      "entries": {
+        "en": [
+        {"lemma": "why", "pos": "adverb", "sentences": ["Why are you tired?"]}
+        ],
+        "nl": [
+        {"lemma": "waarom", "pos": "adverb", "sentences": ["Waarom ben je moe?"]}
+        ]
+      }
+    },
+    {
+      "key": "how",
+      "gloss": "how (question word)",
+      "entries": {
+        "en": [
+        {"lemma": "how", "pos": "adverb", "sentences": ["How are you?"]}
+        ],
+        "nl": [
+        {"lemma": "hoe", "pos": "adverb", "sentences": ["Hoe gaat het met je?"]}
+        ]
+      }
+    },
+    {
+      "key": "when",
+      "gloss": "when (question word)",
+      "entries": {
+        "en": [
+        {"lemma": "when", "pos": "adverb", "sentences": ["When do you eat?"]}
+        ],
+        "nl": [
+        {"lemma": "wanneer", "pos": "adverb", "sentences": ["Wanneer eet je?"]}
+        ]
+      }
+    }
+  ]
+}

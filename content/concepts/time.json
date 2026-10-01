@@ -1,0 +1,124 @@
+{
+  "concepts": [
+    {
+      "key": "day",
+      "gloss": "day (24 hours)",
+      "entries": {
+        "en": [
+        {"lemma": "day", "pos": "noun", "details": {"plural": "days"}, "sentences": ["I work every day."]}
+        ],
+        "nl": [
+        {"lemma": "dag", "pos": "noun", "details": {"article": "de", "plural": "dagen"}, "sentences": ["Ik werk elke dag."]}
+        ]
+      }
+    },
+    {
+      "key": "night",
+      "gloss": "night (dark part of the day)",
+      "entries": {
+        "en": [
+        {"lemma": "night", "pos": "noun", "details": {"plural": "nights"}, "sentences": ["The night is long."]}
+        ],
+        "nl": [
+        {"lemma": "nacht", "pos": "noun", "details": {"article": "de", "plural": "nachten"}, "sentences": ["De nacht is lang."]}
+        ]
+      }
+    },
+    {
+      "key": "morning",
+      "gloss": "morning (early part of the day)",
+      "entries": {
+        "en": [
+        {"lemma": "morning", "pos": "noun", "details": {"plural": "mornings"}, "sentences": ["I read in the morning."]}
+        ],
+        "nl": [
+        {"lemma": "ochtend", "pos": "noun", "details": {"article": "de", "plural": "ochtenden"}, "sentences": ["Ik lees 's ochtends."]}
+        ]
+      }
+    },
+    {
+      "key": "evening",
+      "gloss": "evening (end of the day)",
+      "entries": {
+        "en": [
+        {"lemma": "evening", "pos": "noun", "details": {"plural": "evenings"}, "sentences": ["I walk in the evening."]}
+        ],
+        "nl": [
+        {"lemma": "avond", "pos": "noun", "details": {"article": "de", "plural": "avonden"}, "sentences": ["Ik loop 's avonds."]}
+        ]
+      }
+    },
+    {
+      "key": "week",
+      "gloss": "week (seven days)",
+      "entries": {
+        "en": [
+        {"lemma": "week", "pos": "noun", "details": {"plural": "weeks"}, "sentences": ["I work five days a week."]}
+        ],
+        "nl": [
+        {"lemma": "week", "pos": "noun", "details": {"article": "de", "plural": "weken"}, "sentences": ["Ik werk vijf dagen per week."]}
+        ]
+      }
+    },
+    {
+      "key": "month",
+      "gloss": "month (part of a year)",
+      "entries": {
+        "en": [
+        {"lemma": "month", "pos": "noun", "details": {"plural": "months"}, "sentences": ["There are twelve months in a year."]}
+        ],
+        "nl": [
+        {"lemma": "maand", "pos": "noun", "details": {"article": "de", "plural": "maanden"}, "sentences": ["Er zijn twaalf maanden in een jaar."]}
+        ]
+      }
+    },
+    {
+      "key": "year",
+      "gloss": "year (twelve months)",
+      "entries": {
+        "en": [
+        {"lemma": "year", "pos": "noun", "details": {"plural": "years"}, "sentences": ["This year I learn Dutch."]}
+        ],
+        "nl": [
+        {"lemma": "jaar", "pos": "noun", "details": {"article": "het", "plural": "jaren"}, "sentences": ["Dit jaar leer ik Nederlands."]}
+        ]
+      }
+    },
+    {
+      "key": "hour",
+      "gloss": "hour (sixty minutes)",
+      "entries": {
+        "en": [
+        {"lemma": "hour", "pos": "noun", "details": {"plural": "hours"}, "sentences": ["The film lasts one hour."]}
+        ],
+        "nl": [
+        {"lemma": "uur", "pos": "noun", "details": {"article": "het", "plural": "uren"}, "sentences": ["De film duurt één uur."]}
+        ]
+      }
+    },
+    {
+      "key": "minute",
+      "gloss": "minute (sixty seconds)",
+      "entries": {
+        "en": [
+        {"lemma": "minute", "pos": "noun", "details": {"plural": "minutes"}, "sentences": ["Wait one minute, please."]}
+        ],
+        "nl": [
+        {"lemma": "minuut", "pos": "noun", "details": {"article": "de", "plural": "minuten"}, "sentences": ["Wacht één minuut, alsjeblieft."]}
+        ]
+      }
+    },
+    {
+      "key": "time",
+      "gloss": "time (in general)",
+      "entries": {
+        "en": [
+        {"lemma": "time", "pos": "noun", "details": {"plural": "times"}, "sentences": ["I have no time."]}
+        ],
+        "nl": [
+        {"lemma": "tijd", "pos": "noun", "details": {"article": "de", "plural": "tijden"}, "sentences": ["Ik heb geen tijd."]}
+        ]
+      }
+    }
+  ]
+}

@@ -1,14 +1,30 @@
 import { PGlite } from "@electric-sql/pglite";
-import { and, eq, sql } from "drizzle-orm";
+import { eq, sql } from "drizzle-orm";
 import type { PgTable } from "drizzle-orm/pg-core";
 import { drizzle } from "drizzle-orm/pglite";
 import { migrate } from "drizzle-orm/pglite/migrator";
-import { afterAll, beforeAll, describe, expect, it } from "vitest";
-import { importPack } from "../src/content/import.js";
-import { loadPacks } from "../src/content/load.js";
-import { checkPack, packFileSchema, type PackFile } from "../src/content/pack-file.js";
+import { afterAll, beforeAll, beforeEach, describe, expect, it } from "vitest";
+import {
+  checkConcept,
+  conceptSchema,
+  packFileSchema,
+  type Concept,
+  type PackFile,
+} from "../src/content/content-schema.js";
+import { importContent } from "../src/content/import.js";
+import { loadContent } from "../src/content/load.js";
+import { validateContent } from "../src/content/validate.js";
 import * as schema from "../src/db/schema.js";
-import { concepts, entries, entrySentences, packConcepts, packs, sentences } from "../src/db/schema.js";
+import {
+  concepts,
+  entries,
+  entrySentences,
+  packConcepts,
+  packs,
+  sentences,
+  userCards,
+  users,
+} from "../src/db/schema.js";
 import { seedLanguages } from "../src/db/seed.js";
 
 let pg: PGlite;
@@ -24,155 +40,270 @@ beforeAll(async () => {
   await seedLanguages(db);
 }, 60_000);
 
+beforeEach(async () => {
+  // Cascades remove entries, sentence links, pack membership and cards.
+  await db.delete(userCards);
+  await db.delete(users);
+  await db.delete(concepts);
+  await db.delete(packs);
+  await db.delete(sentences);
+});
+
 afterAll(async () => {
   await pg.close();
 });
 
-const small = (): PackFile =>
-  packFileSchema.parse({
-    slug: "t",
-    name: "Test",
-    concepts: [
-      {
-        gloss: "dog (test)",
-        entries: {
-          en: [{ lemma: "dog", pos: "noun", sentences: ["The dog runs."] }],
-          nl: [
-            {
-              lemma: "hond",
-              pos: "noun",
-              details: { article: "de", plural: "honden" },
-              sentences: ["De hond rent."],
-            },
-          ],
-        },
-      },
-      {
-        gloss: "water (test)",
-        entries: {
-          en: [{ lemma: "water", pos: "noun", sentences: ["I drink water."] }],
-          nl: [
-            {
-              lemma: "water",
-              pos: "noun",
-              details: { article: "het", uncountable: true },
-              sentences: ["Ik drink water."],
-            },
-          ],
-        },
-      },
-    ],
-  });
-
-describe("content files", () => {
-  it("ship valid: every concept has both languages and Dutch nouns have articles", () => {
-    const loaded = loadPacks("../../content/packs");
-    expect(loaded.errors).toEqual([]);
-    expect(loaded.packs.length).toBeGreaterThan(0);
-  });
-
-  it("flags a Dutch noun without an article and a missing language", () => {
-    const pack = small();
-    delete pack.concepts[0]!.entries["nl"]![0]!.details["article"];
-    delete pack.concepts[1]!.entries["nl"];
-    const { errors } = checkPack(pack);
-    expect(errors.some((e) => e.includes("article"))).toBe(true);
-    expect(errors.some((e) => e.includes("no nl entry"))).toBe(true);
-  });
-});
-
-describe("verb form checks", () => {
-  const verbPack = (en: Record<string, unknown>, nl: Record<string, unknown>) =>
-    packFileSchema.parse({
-      slug: "v",
-      name: "Verbs",
-      concepts: [
+const noun = (key: string, en: string, nl: string, article = "de"): Concept =>
+  conceptSchema.parse({
+    key,
+    gloss: `${key} (test)`,
+    entries: {
+      en: [{ lemma: en, pos: "noun", details: { plural: `${en}s` }, sentences: [`The ${en} runs.`] }],
+      nl: [
         {
-          gloss: "run (test)",
-          entries: {
-            en: [{ lemma: "run", pos: "verb", details: en, sentences: ["I run."] }],
-            nl: [{ lemma: "rennen", pos: "verb", details: nl, sentences: ["Ik ren."] }],
-          },
+          lemma: nl,
+          pos: "noun",
+          details: { article, plural: `${nl}en` },
+          sentences: [`De ${nl} rent.`],
         },
       ],
-    });
-  const goodEn = { past: "ran", participle: "run" };
-  const goodNl = { pastSingular: "rende", pastPlural: "renden", participle: "gerend", auxiliary: "hebben/zijn" };
-
-  it("accepts complete forms", () => {
-    expect(checkPack(verbPack(goodEn, goodNl))).toEqual({ errors: [], warnings: [] });
+    },
   });
 
-  it("warns about missing forms unless the verb is marked defective", () => {
-    const { warnings } = checkPack(verbPack({ past: "ran" }, { ...goodNl, auxiliary: undefined }));
-    expect(warnings.some((w) => w.includes("details.participle"))).toBe(true);
-    expect(warnings.some((w) => w.includes("details.auxiliary"))).toBe(true);
-    expect(checkPack(verbPack({ defective: true }, goodNl)).warnings).toEqual([]);
+const pack = (slug: string, keys: string[]): PackFile =>
+  packFileSchema.parse({ slug, name: slug, concepts: keys });
+
+describe("shipped content", () => {
+  it("validates, and shares concepts between packs", () => {
+    const loaded = loadContent("../../content");
+    expect(loaded.errors).toEqual([]);
+    expect(loaded.packs.length).toBeGreaterThan(1);
+
+    const packsPerConcept = new Map<string, number>();
+    for (const p of loaded.packs) {
+      for (const key of p.concepts) packsPerConcept.set(key, (packsPerConcept.get(key) ?? 0) + 1);
+    }
+    expect([...packsPerConcept.values()].some((n) => n > 1)).toBe(true);
   });
 
-  it("rejects an unknown auxiliary and an unknown present-tense pronoun", () => {
-    const { errors } = checkPack(
-      verbPack({ ...goodEn, present: { she: "runs" } }, { ...goodNl, auxiliary: "worden" }),
+  it("imports into an empty database", async () => {
+    const { concepts: cs, packs: ps } = loadContent("../../content");
+    const summary = await importContent(db, { concepts: cs, packs: ps });
+    expect(summary.concepts).toBe(cs.length);
+    expect(await count(concepts)).toBe(cs.length);
+    expect(await count(packs)).toBe(ps.length);
+  }, 60_000);
+});
+
+describe("validateContent", () => {
+  const files = (...cs: Concept[][]) => cs.map((concepts, i) => ({ file: `c${i}.json`, concepts }));
+  const packFiles = (...ps: PackFile[]) => ps.map((p) => ({ file: `${p.slug}.json`, pack: p }));
+
+  it("accepts the same concept in several packs", () => {
+    const cs = [noun("dog", "dog", "hond"), noun("house", "house", "huis", "het")];
+    const check = validateContent(
+      files(cs),
+      packFiles(pack("a", ["dog", "house"]), pack("b", ["house", "dog"])),
     );
-    expect(errors.some((e) => e.includes("auxiliary"))).toBe(true);
-    expect(errors.some((e) => e.includes('unknown pronoun "she"'))).toBe(true);
+    expect(check).toEqual({ errors: [], warnings: [] });
   });
 
-  it("accepts a verb sentence that uses an inflected form", () => {
-    const pack = verbPack(goodEn, goodNl);
-    pack.concepts[0]!.entries["en"]![0]!.sentences = ["She ran home."];
-    pack.concepts[0]!.entries["nl"]![0]!.sentences = ["Hij rende naar huis."];
-    expect(checkPack(pack).warnings).toEqual([]);
+  it("rejects a key defined in two files", () => {
+    const { errors } = validateContent(
+      files([noun("dog", "dog", "hond")], [noun("dog", "dog", "hond")]),
+      packFiles(pack("a", ["dog"])),
+    );
+    expect(errors.some((e) => e.includes('key "dog" is also defined in c0.json'))).toBe(true);
+  });
+
+  it("rejects a pack that lists an unknown or repeated concept", () => {
+    const { errors } = validateContent(
+      files([noun("dog", "dog", "hond")]),
+      packFiles(pack("a", ["dog", "dog", "cat"])),
+    );
+    expect(errors.some((e) => e.includes('"dog" is listed twice'))).toBe(true);
+    expect(errors.some((e) => e.includes('unknown concept "cat"'))).toBe(true);
+  });
+
+  it("warns about a concept that no pack lists", () => {
+    const { warnings } = validateContent(
+      files([noun("dog", "dog", "hond"), noun("cat", "cat", "kat")]),
+      packFiles(pack("a", ["dog"])),
+    );
+    expect(warnings.some((w) => w.includes('"cat" is not in any pack'))).toBe(true);
+  });
+
+  it("rejects a key that is not lowercase hyphenated", () => {
+    expect(conceptSchema.safeParse({ ...noun("dog", "dog", "hond"), key: "Dog Food" }).success).toBe(
+      false,
+    );
+    expect(packFileSchema.safeParse({ slug: "ok", name: "x", concepts: ["bad_key"] }).success).toBe(
+      false,
+    );
   });
 });
 
-describe("importPack", () => {
-  it("imports, is idempotent, and applies corrections", async () => {
-    const first = await importPack(db, small());
-    expect(first).toMatchObject({ concepts: 2, conceptsCreated: 2, entries: 4, sentences: 4 });
-    expect(await count(concepts)).toBe(2);
-    expect(await count(entries)).toBe(4);
+describe("checkConcept", () => {
+  it("flags a Dutch noun without an article and a missing language", () => {
+    const c = noun("dog", "dog", "hond");
+    delete c.entries["nl"]![0]!.details["article"];
+    delete c.entries["en"];
+    const { errors } = checkConcept(c);
+    expect(errors.some((e) => e.includes("article"))).toBe(true);
+    expect(errors.some((e) => e.includes("no en entry"))).toBe(true);
+  });
 
-    const again = await importPack(db, small());
+  describe("verb forms", () => {
+    const verb = (en: Record<string, unknown>, nl: Record<string, unknown>) =>
+      conceptSchema.parse({
+        key: "run",
+        gloss: "run (test)",
+        entries: {
+          en: [{ lemma: "run", pos: "verb", details: en, sentences: ["I run."] }],
+          nl: [{ lemma: "rennen", pos: "verb", details: nl, sentences: ["Ik ren."] }],
+        },
+      });
+    const goodEn = { past: "ran", participle: "run" };
+    const goodNl = {
+      pastSingular: "rende",
+      pastPlural: "renden",
+      participle: "gerend",
+      auxiliary: "hebben/zijn",
+    };
+
+    it("accepts complete forms", () => {
+      expect(checkConcept(verb(goodEn, goodNl))).toEqual({ errors: [], warnings: [] });
+    });
+
+    it("warns about missing forms unless the verb is marked defective", () => {
+      const { warnings } = checkConcept(verb({ past: "ran" }, { ...goodNl, auxiliary: undefined }));
+      expect(warnings.some((w) => w.includes("details.participle"))).toBe(true);
+      expect(warnings.some((w) => w.includes("details.auxiliary"))).toBe(true);
+      expect(checkConcept(verb({ defective: true }, goodNl)).warnings).toEqual([]);
+    });
+
+    it("rejects an unknown auxiliary and an unknown present-tense pronoun", () => {
+      const { errors } = checkConcept(
+        verb({ ...goodEn, present: { she: "runs" } }, { ...goodNl, auxiliary: "worden" }),
+      );
+      expect(errors.some((e) => e.includes("auxiliary"))).toBe(true);
+      expect(errors.some((e) => e.includes('unknown pronoun "she"'))).toBe(true);
+    });
+
+    it("accepts a verb sentence that uses an inflected form", () => {
+      const c = verb(goodEn, goodNl);
+      c.entries["en"]![0]!.sentences = ["She ran home."];
+      c.entries["nl"]![0]!.sentences = ["Hij rende naar huis."];
+      expect(checkConcept(c).warnings).toEqual([]);
+    });
+  });
+});
+
+describe("importContent", () => {
+  it("puts one concept in several packs without duplicating it", async () => {
+    const cs = [noun("dog", "dog", "hond"), noun("house", "house", "huis", "het")];
+    const summary = await importContent(db, {
+      concepts: cs,
+      packs: [pack("a", ["dog", "house"]), pack("b", ["house"])],
+    });
+    expect(summary).toMatchObject({ concepts: 2, conceptsCreated: 2, packs: 2 });
+    expect(await count(concepts)).toBe(2);
+    expect(await count(packConcepts)).toBe(3);
+
+    const [house] = await db.select().from(concepts).where(eq(concepts.key, "house"));
+    const memberships = await db
+      .select()
+      .from(packConcepts)
+      .where(eq(packConcepts.conceptId, house!.id));
+    expect(memberships).toHaveLength(2);
+  });
+
+  it("is idempotent and applies corrections, including reordering a pack", async () => {
+    const make = () => ({
+      concepts: [noun("dog", "dog", "hond"), noun("water", "water", "water", "het")],
+      packs: [pack("t", ["dog", "water"])],
+    });
+    const first = await importContent(db, make());
+    expect(first).toMatchObject({ conceptsCreated: 2, entries: 4, sentences: 4 });
+
+    const again = await importContent(db, make());
     expect(again.conceptsCreated).toBe(0);
     expect(await count(concepts)).toBe(2);
     expect(await count(entries)).toBe(4);
     expect(await count(sentences)).toBe(4);
     expect(await count(entrySentences)).toBe(4);
 
-    // Correct a lemma and a sentence, and reorder the pack.
-    const fixed = small();
+    const fixed = make();
     fixed.concepts[0]!.entries["nl"]![0]!.lemma = "puppy";
     fixed.concepts[0]!.entries["en"]![0]!.sentences = ["The dog sleeps."];
-    fixed.concepts.reverse();
-    await importPack(db, fixed);
+    fixed.concepts[0]!.gloss = "dog (reworded)";
+    fixed.packs = [pack("t", ["water", "dog"])];
+    await importContent(db, fixed);
 
-    const dutch = await db
-      .select({ lemma: entries.lemma })
+    const [dog] = await db.select().from(concepts).where(eq(concepts.key, "dog"));
+    expect(dog!.gloss).toBe("dog (reworded)"); // rewording the gloss keeps the concept
+    const rows = await db
+      .select({ language: entries.language, lemma: entries.lemma })
       .from(entries)
-      .innerJoin(concepts, eq(concepts.id, entries.conceptId))
-      .where(and(eq(concepts.gloss, "dog (test)"), eq(entries.language, "nl")));
-    expect(dutch).toEqual([{ lemma: "puppy" }]);
-
-    expect(await count(entries)).toBe(4);
+      .where(eq(entries.conceptId, dog!.id));
+    expect(rows.map((e) => `${e.language}:${e.lemma}`).sort()).toEqual(["en:dog", "nl:puppy"]);
     expect(await count(sentences)).toBe(4); // the old English sentence is gone
 
     const order = await db
-      .select({ gloss: concepts.gloss })
+      .select({ key: concepts.key })
       .from(packConcepts)
-      .innerJoin(packs, eq(packs.id, packConcepts.packId))
       .innerJoin(concepts, eq(concepts.id, packConcepts.conceptId))
-      .where(eq(packs.slug, "t"))
       .orderBy(packConcepts.position);
-    expect(order.map((r) => r.gloss)).toEqual(["water (test)", "dog (test)"]);
+    expect(order.map((r) => r.key)).toEqual(["water", "dog"]);
   });
 
-  it("imports the shipped starter pack", async () => {
-    const { packs: shipped, errors } = loadPacks("../../content/packs");
-    expect(errors).toEqual([]);
-    for (const pack of shipped) {
-      const s = await importPack(db, pack);
-      expect(s.concepts).toBe(pack.concepts.length);
-    }
-  }, 60_000);
+  it("gives a keyless legacy concept its key instead of duplicating it", async () => {
+    const [legacy] = await db
+      .insert(concepts)
+      .values({ key: "legacy:123", gloss: "dog (test)" })
+      .returning();
+    const [user] = await db
+      .insert(users)
+      .values({ email: "a@example.com", passwordHash: "x" })
+      .returning();
+    await db
+      .insert(userCards)
+      .values({ userId: user!.id, conceptId: legacy!.id, fromLanguage: "en", toLanguage: "nl" });
+
+    const summary = await importContent(db, {
+      concepts: [noun("dog", "dog", "hond")],
+      packs: [pack("a", ["dog"])],
+    });
+
+    expect(summary).toMatchObject({ conceptsCreated: 0, conceptsAdopted: 1 });
+    expect(await count(concepts)).toBe(1);
+    const [adopted] = await db.select().from(concepts);
+    expect(adopted).toMatchObject({ id: legacy!.id, key: "dog" });
+    expect(await count(userCards)).toBe(1); // the card still points at it
+  });
+
+  it("reports but never deletes concepts or packs the files no longer mention", async () => {
+    await importContent(db, {
+      concepts: [noun("dog", "dog", "hond"), noun("cat", "cat", "kat")],
+      packs: [pack("a", ["dog", "cat"]), pack("old", ["cat"])],
+    });
+    const summary = await importContent(db, {
+      concepts: [noun("dog", "dog", "hond")],
+      packs: [pack("a", ["dog"])],
+    });
+    expect(summary.conceptsNotInFiles).toEqual(["cat"]);
+    expect(summary.packsNotInFiles).toEqual(["old"]);
+    expect(await count(concepts)).toBe(2);
+    expect(await count(packs)).toBe(2);
+  });
+
+  it("changes nothing when a pack lists a missing concept", async () => {
+    await expect(
+      importContent(db, {
+        concepts: [noun("dog", "dog", "hond")],
+        packs: [pack("a", ["dog", "nope"])],
+      }),
+    ).rejects.toThrow(/unknown concept "nope"/);
+    expect(await count(concepts)).toBe(0); // rolled back
+  });
 });

@@ -1,0 +1,88 @@
+{
+  "concepts": [
+    {
+      "key": "head",
+      "gloss": "head (top of the body)",
+      "entries": {
+        "en": [
+        {"lemma": "head", "pos": "noun", "details": {"plural": "heads"}, "sentences": ["My head hurts."]}
+        ],
+        "nl": [
+        {"lemma": "hoofd", "pos": "noun", "details": {"article": "het", "plural": "hoofden"}, "sentences": ["Mijn hoofd doet pijn."]}
+        ]
+      }
+    },
+    {
+      "key": "hand",
+      "gloss": "hand (end of the arm)",
+      "entries": {
+        "en": [
+        {"lemma": "hand", "pos": "noun", "details": {"plural": "hands"}, "sentences": ["Give me your hand."]}
+        ],
+        "nl": [
+        {"lemma": "hand", "pos": "noun", "details": {"article": "de", "plural": "handen"}, "sentences": ["Geef mij je hand."]}
+        ]
+      }
+    },
+    {
+      "key": "eye",
+      "gloss": "eye (organ of sight)",
+      "entries": {
+        "en": [
+        {"lemma": "eye", "pos": "noun", "details": {"plural": "eyes"}, "sentences": ["She has blue eyes."]}
+        ],
+        "nl": [
+        {"lemma": "oog", "pos": "noun", "details": {"article": "het", "plural": "ogen"}, "sentences": ["Zij heeft blauwe ogen."]}
+        ]
+      }
+    },
+    {
+      "key": "foot",
+      "gloss": "foot (end of the leg)",
+      "entries": {
+        "en": [
+        {"lemma": "foot", "pos": "noun", "details": {"plural": "feet"}, "sentences": ["My foot hurts."]}
+        ],
+        "nl": [
+        {"lemma": "voet", "pos": "noun", "details": {"article": "de", "plural": "voeten"}, "sentences": ["Mijn voet doet pijn."]}
+        ]
+      }
+    },
+    {
+      "key": "heart",
+      "gloss": "heart (organ)",
+      "entries": {
+        "en": [
+        {"lemma": "heart", "pos": "noun", "details": {"plural": "hearts"}, "sentences": ["She has a big heart."]}
+        ],
+        "nl": [
+        {"lemma": "hart", "pos": "noun", "details": {"article": "het", "plural": "harten"}, "sentences": ["Zij heeft een groot hart."]}
+        ]
+      }
+    },
+    {
+      "key": "mouth",
+      "gloss": "mouth (part of the face)",
+      "entries": {
+        "en": [
+        {"lemma": "mouth", "pos": "noun", "details": {"plural": "mouths"}, "sentences": ["Open your mouth."]}
+        ],
+        "nl": [
+        {"lemma": "mond", "pos": "noun", "details": {"article": "de", "plural": "monden"}, "sentences": ["Doe je mond open."]}
+        ]
+      }
+    },
+    {
+      "key": "hair",
+      "gloss": "hair (on the head)",
+      "entries": {
+        "en": [
+        {"lemma": "hair", "pos": "noun", "details": {"uncountable": true}, "sentences": ["She has long hair."]}
+        ],
+        "nl": [
+        {"lemma": "haar", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["Zij heeft lang haar."]}
+        ]
+      }
+    }
+  ]
+}

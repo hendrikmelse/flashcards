@@ -1,0 +1,244 @@
+{
+  "concepts": [
+    {
+      "key": "name",
+      "gloss": "name (what someone is called)",
+      "entries": {
+        "en": [
+        {"lemma": "name", "pos": "noun", "details": {"plural": "names"}, "sentences": ["My name is Anna."]}
+        ],
+        "nl": [
+        {"lemma": "naam", "pos": "noun", "details": {"article": "de", "plural": "namen"}, "sentences": ["Mijn naam is Anna."]}
+        ]
+      }
+    },
+    {
+      "key": "question",
+      "gloss": "question (something asked)",
+      "entries": {
+        "en": [
+        {"lemma": "question", "pos": "noun", "details": {"plural": "questions"}, "sentences": ["I have a question."]}
+        ],
+        "nl": [
+        {"lemma": "vraag", "pos": "noun", "details": {"article": "de", "plural": "vragen"}, "sentences": ["Ik heb een vraag."]}
+        ]
+      }
+    },
+    {
+      "key": "answer",
+      "gloss": "answer (reply to a question)",
+      "entries": {
+        "en": [
+        {"lemma": "answer", "pos": "noun", "details": {"plural": "answers"}, "sentences": ["The answer is easy."]}
+        ],
+        "nl": [
+        {"lemma": "antwoord", "pos": "noun", "details": {"article": "het", "plural": "antwoorden"}, "sentences": ["Het antwoord is makkelijk."]}
+        ]
+      }
+    },
+    {
+      "key": "word",
+      "gloss": "word (unit of language)",
+      "entries": {
+        "en": [
+        {"lemma": "word", "pos": "noun", "details": {"plural": "words"}, "sentences": ["I learn a new word."]}
+        ],
+        "nl": [
+        {"lemma": "woord", "pos": "noun", "details": {"article": "het", "plural": "woorden"}, "sentences": ["Ik leer een nieuw woord."]}
+        ]
+      }
+    },
+    {
+      "key": "language",
+      "gloss": "language (system of words)",
+      "entries": {
+        "en": [
+        {"lemma": "language", "pos": "noun", "details": {"plural": "languages"}, "sentences": ["Dutch is a beautiful language."]}
+        ],
+        "nl": [
+        {"lemma": "taal", "pos": "noun", "details": {"article": "de", "plural": "talen"}, "sentences": ["Nederlands is een mooie taal."]}
+        ]
+      }
+    },
+    {
+      "key": "problem",
+      "gloss": "problem (difficulty)",
+      "entries": {
+        "en": [
+        {"lemma": "problem", "pos": "noun", "details": {"plural": "problems"}, "sentences": ["That is not a problem."]}
+        ],
+        "nl": [
+        {"lemma": "probleem", "pos": "noun", "details": {"article": "het", "plural": "problemen"}, "sentences": ["Dat is geen probleem."]}
+        ]
+      }
+    },
+    {
+      "key": "idea",
+      "gloss": "idea (thought or plan)",
+      "entries": {
+        "en": [
+        {"lemma": "idea", "pos": "noun", "details": {"plural": "ideas"}, "sentences": ["That is a good idea."]}
+        ],
+        "nl": [
+        {"lemma": "idee", "pos": "noun", "details": {"article": "het", "plural": "ideeën"}, "sentences": ["Dat is een goed idee."]}
+        ]
+      }
+    },
+    {
+      "key": "life",
+      "gloss": "life (being alive)",
+      "entries": {
+        "en": [
+        {"lemma": "life", "pos": "noun", "details": {"plural": "lives"}, "sentences": ["Life is beautiful."]}
+        ],
+        "nl": [
+        {"lemma": "leven", "pos": "noun", "details": {"article": "het", "plural": "levens"}, "sentences": ["Het leven is mooi."]}
+        ]
+      }
+    },
+    {
+      "key": "world",
+      "gloss": "world (the Earth and its people)",
+      "entries": {
+        "en": [
+        {"lemma": "world", "pos": "noun", "details": {"plural": "worlds"}, "sentences": ["The world is big."]}
+        ],
+        "nl": [
+        {"lemma": "wereld", "pos": "noun", "details": {"article": "de", "plural": "werelden"}, "sentences": ["De wereld is groot."]}
+        ]
+      }
+    },
+    {
+      "key": "country",
+      "gloss": "country (nation)",
+      "entries": {
+        "en": [
+        {"lemma": "country", "pos": "noun", "details": {"plural": "countries"}, "sentences": ["The Netherlands is a small country."]}
+        ],
+        "nl": [
+        {"lemma": "land", "pos": "noun", "details": {"article": "het", "plural": "landen"}, "sentences": ["Nederland is een klein land."]}
+        ]
+      }
+    },
+    {
+      "key": "job",
+      "gloss": "job (paid position)",
+      "entries": {
+        "en": [
+        {"lemma": "job", "pos": "noun", "details": {"plural": "jobs"}, "sentences": ["He has a new job."]}
+        ],
+        "nl": [
+        {"lemma": "baan", "pos": "noun", "details": {"article": "de", "plural": "banen"}, "sentences": ["Hij heeft een nieuwe baan."]}
+        ]
+      }
+    },
+    {
+      "key": "work-noun",
+      "gloss": "work (activity of working)",
+      "entries": {
+        "en": [
+        {"lemma": "work", "pos": "noun", "details": {"uncountable": true}, "sentences": ["I go to work."]}
+        ],
+        "nl": [
+        {"lemma": "werk", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["Ik ga naar mijn werk."]}
+        ]
+      }
+    },
+    {
+      "key": "thing",
+      "gloss": "thing (object)",
+      "entries": {
+        "en": [
+        {"lemma": "thing", "pos": "noun", "details": {"plural": "things"}, "sentences": ["What is that thing?"]}
+        ],
+        "nl": [
+        {"lemma": "ding", "pos": "noun", "details": {"article": "het", "plural": "dingen"}, "sentences": ["Wat is dat ding?"]}
+        ]
+      }
+    },
+    {
+      "key": "place",
+      "gloss": "place (location)",
+      "entries": {
+        "en": [
+        {"lemma": "place", "pos": "noun", "details": {"plural": "places"}, "sentences": ["This is a nice place."]}
+        ],
+        "nl": [
+        {"lemma": "plaats", "pos": "noun", "details": {"article": "de", "plural": "plaatsen"}, "sentences": ["Dit is een mooie plaats."]}
+        ]
+      }
+    },
+    {
+      "key": "road",
+      "gloss": "road (way for traffic)",
+      "entries": {
+        "en": [
+        {"lemma": "road", "pos": "noun", "details": {"plural": "roads"}, "sentences": ["This road is long."]}
+        ],
+        "nl": [
+        {"lemma": "weg", "pos": "noun", "details": {"article": "de", "plural": "wegen"}, "sentences": ["Deze weg is lang."]}
+        ]
+      }
+    },
+    {
+      "key": "music",
+      "gloss": "music (organized sound)",
+      "entries": {
+        "en": [
+        {"lemma": "music", "pos": "noun", "details": {"uncountable": true}, "sentences": ["I like music."]}
+        ],
+        "nl": [
+        {"lemma": "muziek", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Ik hou van muziek."]}
+        ]
+      }
+    },
+    {
+      "key": "film",
+      "gloss": "film (movie)",
+      "entries": {
+        "en": [
+        {"lemma": "film", "pos": "noun", "details": {"plural": "films"}, "sentences": ["We watch a film."]}
+        ],
+        "nl": [
+        {"lemma": "film", "pos": "noun", "details": {"article": "de", "plural": "films"}, "sentences": ["Wij kijken naar een film."]}
+        ]
+      }
+    },
+    {
+      "key": "game",
+      "gloss": "game (play activity)",
+      "entries": {
+        "en": [
+        {"lemma": "game", "pos": "noun", "details": {"plural": "games"}, "sentences": ["The children play a game."]}
+        ],
+        "nl": [
+        {"lemma": "spel", "pos": "noun", "details": {"article": "het", "plural": "spellen"}, "sentences": ["De kinderen spelen een spel."]}
+        ]
+      }
+    },
+    {
+      "key": "gift",
+      "gloss": "gift (present)",
+      "entries": {
+        "en": [
+        {"lemma": "gift", "pos": "noun", "details": {"plural": "gifts"}, "sentences": ["This is a gift for you."]}
+        ],
+        "nl": [
+        {"lemma": "cadeau", "pos": "noun", "details": {"article": "het", "plural": "cadeaus"}, "sentences": ["Dit is een cadeau voor jou."]}
+        ]
+      }
+    },
+    {
+      "key": "party",
+      "gloss": "party (celebration)",
+      "entries": {
+        "en": [
+        {"lemma": "party", "pos": "noun", "details": {"plural": "parties"}, "sentences": ["We have a party today."]}
+        ],
+        "nl": [
+        {"lemma": "feest", "pos": "noun", "details": {"article": "het", "plural": "feesten"}, "sentences": ["Wij hebben vandaag een feest."]}
+        ]
+      }
+    }
+  ]
+}

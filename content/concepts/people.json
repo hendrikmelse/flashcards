@@ -1,0 +1,184 @@
+{
+  "concepts": [
+    {
+      "key": "man",
+      "gloss": "man (adult male)",
+      "entries": {
+        "en": [
+        {"lemma": "man", "pos": "noun", "details": {"plural": "men"}, "sentences": ["The man is tall."]}
+        ],
+        "nl": [
+        {"lemma": "man", "pos": "noun", "details": {"article": "de", "plural": "mannen"}, "sentences": ["De man is lang."]}
+        ]
+      }
+    },
+    {
+      "key": "woman",
+      "gloss": "woman (adult female)",
+      "entries": {
+        "en": [
+        {"lemma": "woman", "pos": "noun", "details": {"plural": "women"}, "sentences": ["The woman is reading a book."]}
+        ],
+        "nl": [
+        {"lemma": "vrouw", "pos": "noun", "details": {"article": "de", "plural": "vrouwen"}, "sentences": ["De vrouw leest een boek."]}
+        ]
+      }
+    },
+    {
+      "key": "child",
+      "gloss": "child (young person)",
+      "entries": {
+        "en": [
+        {"lemma": "child", "pos": "noun", "details": {"plural": "children"}, "sentences": ["The child is sleeping."]}
+        ],
+        "nl": [
+        {"lemma": "kind", "pos": "noun", "details": {"article": "het", "plural": "kinderen"}, "sentences": ["Het kind slaapt."]}
+        ]
+      }
+    },
+    {
+      "key": "boy",
+      "gloss": "boy (young male)",
+      "entries": {
+        "en": [
+        {"lemma": "boy", "pos": "noun", "details": {"plural": "boys"}, "sentences": ["The boy is playing."]}
+        ],
+        "nl": [
+        {"lemma": "jongen", "pos": "noun", "details": {"article": "de", "plural": "jongens"}, "sentences": ["De jongen speelt."]}
+        ]
+      }
+    },
+    {
+      "key": "girl",
+      "gloss": "girl (young female)",
+      "entries": {
+        "en": [
+        {"lemma": "girl", "pos": "noun", "details": {"plural": "girls"}, "sentences": ["The girl has a cat."]}
+        ],
+        "nl": [
+        {"lemma": "meisje", "pos": "noun", "details": {"article": "het", "plural": "meisjes"}, "sentences": ["Het meisje heeft een kat."]}
+        ]
+      }
+    },
+    {
+      "key": "mother",
+      "gloss": "mother (female parent)",
+      "entries": {
+        "en": [
+        {"lemma": "mother", "pos": "noun", "details": {"plural": "mothers"}, "sentences": ["My mother is a doctor."]}
+        ],
+        "nl": [
+        {"lemma": "moeder", "pos": "noun", "details": {"article": "de", "plural": "moeders"}, "sentences": ["Mijn moeder is dokter."]}
+        ]
+      }
+    },
+    {
+      "key": "father",
+      "gloss": "father (male parent)",
+      "entries": {
+        "en": [
+        {"lemma": "father", "pos": "noun", "details": {"plural": "fathers"}, "sentences": ["My father is at work."]}
+        ],
+        "nl": [
+        {"lemma": "vader", "pos": "noun", "details": {"article": "de", "plural": "vaders"}, "sentences": ["Mijn vader is op zijn werk."]}
+        ]
+      }
+    },
+    {
+      "key": "brother",
+      "gloss": "brother (male sibling)",
+      "entries": {
+        "en": [
+        {"lemma": "brother", "pos": "noun", "details": {"plural": "brothers"}, "sentences": ["My brother lives in the city."]}
+        ],
+        "nl": [
+        {"lemma": "broer", "pos": "noun", "details": {"article": "de", "plural": "broers"}, "sentences": ["Mijn broer woont in de stad."]}
+        ]
+      }
+    },
+    {
+      "key": "sister",
+      "gloss": "sister (female sibling)",
+      "entries": {
+        "en": [
+        {"lemma": "sister", "pos": "noun", "details": {"plural": "sisters"}, "sentences": ["My sister is young."]}
+        ],
+        "nl": [
+        {"lemma": "zus", "pos": "noun", "details": {"article": "de", "plural": "zussen"}, "sentences": ["Mijn zus is jong."]}
+        ]
+      }
+    },
+    {
+      "key": "friend",
+      "gloss": "friend (person you like)",
+      "entries": {
+        "en": [
+        {"lemma": "friend", "pos": "noun", "details": {"plural": "friends"}, "sentences": ["He is my friend."]}
+        ],
+        "nl": [
+        {"lemma": "vriend", "pos": "noun", "details": {"article": "de", "plural": "vrienden"}, "sentences": ["Hij is mijn vriend."]}
+        ]
+      }
+    },
+    {
+      "key": "baby",
+      "gloss": "baby (infant)",
+      "entries": {
+        "en": [
+        {"lemma": "baby", "pos": "noun", "details": {"plural": "babies"}, "sentences": ["The baby is sleeping."]}
+        ],
+        "nl": [
+        {"lemma": "baby", "pos": "noun", "details": {"article": "de", "plural": "baby's"}, "sentences": ["De baby slaapt."]}
+        ]
+      }
+    },
+    {
+      "key": "person",
+      "gloss": "person (individual human)",
+      "entries": {
+        "en": [
+        {"lemma": "person", "pos": "noun", "details": {"plural": "people"}, "sentences": ["He is a nice person."]}
+        ],
+        "nl": [
+        {"lemma": "persoon", "pos": "noun", "details": {"article": "de", "plural": "personen"}, "sentences": ["Hij is een aardige persoon."]}
+        ]
+      }
+    },
+    {
+      "key": "family",
+      "gloss": "family (parents and children living together)",
+      "entries": {
+        "en": [
+        {"lemma": "family", "pos": "noun", "details": {"plural": "families"}, "sentences": ["I have a big family."]}
+        ],
+        "nl": [
+        {"lemma": "gezin", "pos": "noun", "details": {"article": "het", "plural": "gezinnen"}, "sentences": ["Ik heb een groot gezin."]}
+        ]
+      }
+    },
+    {
+      "key": "teacher",
+      "gloss": "teacher (person who teaches)",
+      "entries": {
+        "en": [
+        {"lemma": "teacher", "pos": "noun", "details": {"plural": "teachers"}, "sentences": ["The teacher is at school."]}
+        ],
+        "nl": [
+        {"lemma": "leraar", "pos": "noun", "details": {"article": "de", "plural": "leraren"}, "sentences": ["De leraar is op school."]}
+        ]
+      }
+    },
+    {
+      "key": "doctor",
+      "gloss": "doctor (medical professional)",
+      "entries": {
+        "en": [
+        {"lemma": "doctor", "pos": "noun", "details": {"plural": "doctors"}, "sentences": ["The doctor helps people."]}
+        ],
+        "nl": [
+        {"lemma": "dokter", "pos": "noun", "details": {"article": "de", "plural": "dokters"}, "sentences": ["De dokter helpt mensen."]}
+        ]
+      }
+    }
+  ]
+}

@@ -25,10 +25,11 @@ export async function seed(db: Db) {
     .from(concepts);
   if (count > 0) return;
 
-  const sample: { gloss: string; en: string; nl: string; article?: string }[] = [
-    { gloss: "dog (domestic animal)", en: "dog", nl: "hond", article: "de" },
-    { gloss: "house (building)", en: "house", nl: "huis", article: "het" },
-    { gloss: "water (liquid)", en: "water", nl: "water", article: "het" },
+  // Keys match the real content (content/concepts), so importing it later updates these in place.
+  const sample: { key: string; gloss: string; en: string; nl: string; article?: string }[] = [
+    { key: "dog", gloss: "dog (domestic animal)", en: "dog", nl: "hond", article: "de" },
+    { key: "house", gloss: "house (building)", en: "house", nl: "huis", article: "het" },
+    { key: "water", gloss: "water (liquid)", en: "water", nl: "water", article: "het" },
   ];
 
   const [pack] = await db
@@ -40,7 +41,7 @@ export async function seed(db: Db) {
   for (const [i, s] of sample.entries()) {
     const [concept] = await db
       .insert(concepts)
-      .values({ gloss: s.gloss })
+      .values({ key: s.key, gloss: s.gloss })
       .returning();
     if (!concept) continue;
     await db.insert(entries).values([

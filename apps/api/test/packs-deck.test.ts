@@ -24,7 +24,7 @@ beforeAll(async () => {
   await seed(db);
 
   // A concept that only exists in English (no Dutch entry yet), added to the pack.
-  const [orphan] = await db.insert(concepts).values({ gloss: "orphan" }).returning();
+  const [orphan] = await db.insert(concepts).values({ key: "orphan", gloss: "orphan" }).returning();
   orphanConceptId = orphan!.id;
   await db
     .insert(entries)

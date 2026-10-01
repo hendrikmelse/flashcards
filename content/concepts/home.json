@@ -1,0 +1,316 @@
+{
+  "concepts": [
+    {
+      "key": "house",
+      "gloss": "house (building)",
+      "entries": {
+        "en": [
+        {"lemma": "house", "pos": "noun", "details": {"plural": "houses"}, "sentences": ["The house is big."]}
+        ],
+        "nl": [
+        {"lemma": "huis", "pos": "noun", "details": {"article": "het", "plural": "huizen"}, "sentences": ["Het huis is groot."]}
+        ]
+      }
+    },
+    {
+      "key": "room",
+      "gloss": "room (space inside a building)",
+      "entries": {
+        "en": [
+        {"lemma": "room", "pos": "noun", "details": {"plural": "rooms"}, "sentences": ["There is a bed in the room."]}
+        ],
+        "nl": [
+        {"lemma": "kamer", "pos": "noun", "details": {"article": "de", "plural": "kamers"}, "sentences": ["Er is een bed in de kamer."]}
+        ]
+      }
+    },
+    {
+      "key": "door",
+      "gloss": "door (entrance to a room)",
+      "entries": {
+        "en": [
+        {"lemma": "door", "pos": "noun", "details": {"plural": "doors"}, "sentences": ["The door is white."]}
+        ],
+        "nl": [
+        {"lemma": "deur", "pos": "noun", "details": {"article": "de", "plural": "deuren"}, "sentences": ["De deur is wit."]}
+        ]
+      }
+    },
+    {
+      "key": "window",
+      "gloss": "window (opening in a wall)",
+      "entries": {
+        "en": [
+        {"lemma": "window", "pos": "noun", "details": {"plural": "windows"}, "sentences": ["The window is open."]}
+        ],
+        "nl": [
+        {"lemma": "raam", "pos": "noun", "details": {"article": "het", "plural": "ramen"}, "sentences": ["Het raam is open."]}
+        ]
+      }
+    },
+    {
+      "key": "table",
+      "gloss": "table (furniture)",
+      "entries": {
+        "en": [
+        {"lemma": "table", "pos": "noun", "details": {"plural": "tables"}, "sentences": ["We eat at the table."]}
+        ],
+        "nl": [
+        {"lemma": "tafel", "pos": "noun", "details": {"article": "de", "plural": "tafels"}, "sentences": ["Wij eten aan tafel."]}
+        ]
+      }
+    },
+    {
+      "key": "chair",
+      "gloss": "chair (furniture for sitting)",
+      "entries": {
+        "en": [
+        {"lemma": "chair", "pos": "noun", "details": {"plural": "chairs"}, "sentences": ["There is a chair in the kitchen."]}
+        ],
+        "nl": [
+        {"lemma": "stoel", "pos": "noun", "details": {"article": "de", "plural": "stoelen"}, "sentences": ["Er staat een stoel in de keuken."]}
+        ]
+      }
+    },
+    {
+      "key": "bed",
+      "gloss": "bed (furniture for sleeping)",
+      "entries": {
+        "en": [
+        {"lemma": "bed", "pos": "noun", "details": {"plural": "beds"}, "sentences": ["I sleep in my bed."]}
+        ],
+        "nl": [
+        {"lemma": "bed", "pos": "noun", "details": {"article": "het", "plural": "bedden"}, "sentences": ["Ik slaap in mijn bed."]}
+        ]
+      }
+    },
+    {
+      "key": "kitchen",
+      "gloss": "kitchen (room for cooking)",
+      "entries": {
+        "en": [
+        {"lemma": "kitchen", "pos": "noun", "details": {"plural": "kitchens"}, "sentences": ["We eat in the kitchen."]}
+        ],
+        "nl": [
+        {"lemma": "keuken", "pos": "noun", "details": {"article": "de", "plural": "keukens"}, "sentences": ["Wij eten in de keuken."]}
+        ]
+      }
+    },
+    {
+      "key": "bathroom",
+      "gloss": "bathroom (room for washing)",
+      "entries": {
+        "en": [
+        {"lemma": "bathroom", "pos": "noun", "details": {"plural": "bathrooms"}, "sentences": ["The bathroom is upstairs."]}
+        ],
+        "nl": [
+        {"lemma": "badkamer", "pos": "noun", "details": {"article": "de", "plural": "badkamers"}, "sentences": ["De badkamer is boven."]}
+        ]
+      }
+    },
+    {
+      "key": "garden",
+      "gloss": "garden (outdoor space at a house)",
+      "entries": {
+        "en": [
+        {"lemma": "garden", "pos": "noun", "details": {"plural": "gardens"}, "sentences": ["The cat is in the garden."]}
+        ],
+        "nl": [
+        {"lemma": "tuin", "pos": "noun", "details": {"article": "de", "plural": "tuinen"}, "sentences": ["De kat is in de tuin."]}
+        ]
+      }
+    },
+    {
+      "key": "key",
+      "gloss": "key (for a lock)",
+      "entries": {
+        "en": [
+        {"lemma": "key", "pos": "noun", "details": {"plural": "keys"}, "sentences": ["Where is my key?"]}
+        ],
+        "nl": [
+        {"lemma": "sleutel", "pos": "noun", "details": {"article": "de", "plural": "sleutels"}, "sentences": ["Waar is mijn sleutel?"]}
+        ]
+      }
+    },
+    {
+      "key": "street",
+      "gloss": "street (road in a town)",
+      "entries": {
+        "en": [
+        {"lemma": "street", "pos": "noun", "details": {"plural": "streets"}, "sentences": ["The shop is on this street."]}
+        ],
+        "nl": [
+        {"lemma": "straat", "pos": "noun", "details": {"article": "de", "plural": "straten"}, "sentences": ["De winkel is in deze straat."]}
+        ]
+      }
+    },
+    {
+      "key": "city",
+      "gloss": "city (large town)",
+      "entries": {
+        "en": [
+        {"lemma": "city", "pos": "noun", "details": {"plural": "cities"}, "sentences": ["I live in a big city."]}
+        ],
+        "nl": [
+        {"lemma": "stad", "pos": "noun", "details": {"article": "de", "plural": "steden"}, "sentences": ["Ik woon in een grote stad."]}
+        ]
+      }
+    },
+    {
+      "key": "village",
+      "gloss": "village (small town)",
+      "entries": {
+        "en": [
+        {"lemma": "village", "pos": "noun", "details": {"plural": "villages"}, "sentences": ["My mother lives in a small village."]}
+        ],
+        "nl": [
+        {"lemma": "dorp", "pos": "noun", "details": {"article": "het", "plural": "dorpen"}, "sentences": ["Mijn moeder woont in een klein dorp."]}
+        ]
+      }
+    },
+    {
+      "key": "shop",
+      "gloss": "shop (place that sells things)",
+      "entries": {
+        "en": [
+        {"lemma": "shop", "pos": "noun", "details": {"plural": "shops"}, "sentences": ["The shop is open."]}
+        ],
+        "nl": [
+        {"lemma": "winkel", "pos": "noun", "details": {"article": "de", "plural": "winkels"}, "sentences": ["De winkel is open."]}
+        ]
+      }
+    },
+    {
+      "key": "school",
+      "gloss": "school (place for learning)",
+      "entries": {
+        "en": [
+        {"lemma": "school", "pos": "noun", "details": {"plural": "schools"}, "sentences": ["The children are at school."]}
+        ],
+        "nl": [
+        {"lemma": "school", "pos": "noun", "details": {"article": "de", "plural": "scholen"}, "sentences": ["De kinderen zijn op school."]}
+        ]
+      }
+    },
+    {
+      "key": "book",
+      "gloss": "book (printed text)",
+      "entries": {
+        "en": [
+        {"lemma": "book", "pos": "noun", "details": {"plural": "books"}, "sentences": ["This book is good."]}
+        ],
+        "nl": [
+        {"lemma": "boek", "pos": "noun", "details": {"article": "het", "plural": "boeken"}, "sentences": ["Dit boek is goed."]}
+        ]
+      }
+    },
+    {
+      "key": "phone",
+      "gloss": "phone (telephone)",
+      "entries": {
+        "en": [
+        {"lemma": "phone", "pos": "noun", "details": {"plural": "phones"}, "sentences": ["My phone is new."]}
+        ],
+        "nl": [
+        {"lemma": "telefoon", "pos": "noun", "details": {"article": "de", "plural": "telefoons"}, "sentences": ["Mijn telefoon is nieuw."]}
+        ]
+      }
+    },
+    {
+      "key": "computer",
+      "gloss": "computer (machine)",
+      "entries": {
+        "en": [
+        {"lemma": "computer", "pos": "noun", "details": {"plural": "computers"}, "sentences": ["He works on the computer."]}
+        ],
+        "nl": [
+        {"lemma": "computer", "pos": "noun", "details": {"article": "de", "plural": "computers"}, "sentences": ["Hij werkt op de computer."]}
+        ]
+      }
+    },
+    {
+      "key": "car",
+      "gloss": "car (road vehicle)",
+      "entries": {
+        "en": [
+        {"lemma": "car", "pos": "noun", "details": {"plural": "cars"}, "sentences": ["The car is red."]}
+        ],
+        "nl": [
+        {"lemma": "auto", "pos": "noun", "details": {"article": "de", "plural": "auto's"}, "sentences": ["De auto is rood."]}
+        ]
+      }
+    },
+    {
+      "key": "bicycle",
+      "gloss": "bicycle (two-wheeled vehicle)",
+      "entries": {
+        "en": [
+        {"lemma": "bicycle", "pos": "noun", "details": {"plural": "bicycles"}, "sentences": ["I go to school by bicycle."]}
+        ],
+        "nl": [
+        {"lemma": "fiets", "pos": "noun", "details": {"article": "de", "plural": "fietsen"}, "sentences": ["Ik ga met de fiets naar school."]}
+        ]
+      }
+    },
+    {
+      "key": "train",
+      "gloss": "train (rail vehicle)",
+      "entries": {
+        "en": [
+        {"lemma": "train", "pos": "noun", "details": {"plural": "trains"}, "sentences": ["The train comes at ten o'clock."]}
+        ],
+        "nl": [
+        {"lemma": "trein", "pos": "noun", "details": {"article": "de", "plural": "treinen"}, "sentences": ["De trein komt om tien uur."]}
+        ]
+      }
+    },
+    {
+      "key": "bus",
+      "gloss": "bus (public road vehicle)",
+      "entries": {
+        "en": [
+        {"lemma": "bus", "pos": "noun", "details": {"plural": "buses"}, "sentences": ["I take the bus to work."]}
+        ],
+        "nl": [
+        {"lemma": "bus", "pos": "noun", "details": {"article": "de", "plural": "bussen"}, "sentences": ["Ik neem de bus naar mijn werk."]}
+        ]
+      }
+    },
+    {
+      "key": "plane",
+      "gloss": "plane (aircraft)",
+      "entries": {
+        "en": [
+        {"lemma": "plane", "pos": "noun", "details": {"plural": "planes"}, "sentences": ["We travel by plane."]}
+        ],
+        "nl": [
+        {"lemma": "vliegtuig", "pos": "noun", "details": {"article": "het", "plural": "vliegtuigen"}, "sentences": ["Wij reizen met het vliegtuig."]}
+        ]
+      }
+    },
+    {
+      "key": "ticket",
+      "gloss": "ticket (for transport)",
+      "entries": {
+        "en": [
+        {"lemma": "ticket", "pos": "noun", "details": {"plural": "tickets"}, "sentences": ["I buy a ticket."]}
+        ],
+        "nl": [
+        {"lemma": "kaartje", "pos": "noun", "details": {"article": "het", "plural": "kaartjes"}, "sentences": ["Ik koop een kaartje."]}
+        ]
+      }
+    },
+    {
+      "key": "money",
+      "gloss": "money (what you pay with)",
+      "entries": {
+        "en": [
+        {"lemma": "money", "pos": "noun", "details": {"uncountable": true}, "sentences": ["I have no money."]}
+        ],
+        "nl": [
+        {"lemma": "geld", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["Ik heb geen geld."]}
+        ]
+      }
+    }
+  ]
+}

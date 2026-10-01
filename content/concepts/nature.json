@@ -1,0 +1,100 @@
+{
+  "concepts": [
+    {
+      "key": "sun",
+      "gloss": "sun (star we orbit)",
+      "entries": {
+        "en": [
+        {"lemma": "sun", "pos": "noun", "details": {"plural": "suns"}, "sentences": ["The sun is shining today."]}
+        ],
+        "nl": [
+        {"lemma": "zon", "pos": "noun", "details": {"article": "de", "plural": "zonnen"}, "sentences": ["De zon schijnt vandaag."]}
+        ]
+      }
+    },
+    {
+      "key": "rain",
+      "gloss": "rain (water from clouds)",
+      "entries": {
+        "en": [
+        {"lemma": "rain", "pos": "noun", "details": {"uncountable": true}, "sentences": ["I do not like rain."]}
+        ],
+        "nl": [
+        {"lemma": "regen", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Ik hou niet van regen."]}
+        ]
+      }
+    },
+    {
+      "key": "weather",
+      "gloss": "weather (state of the atmosphere)",
+      "entries": {
+        "en": [
+        {"lemma": "weather", "pos": "noun", "details": {"uncountable": true}, "sentences": ["How is the weather today?"]}
+        ],
+        "nl": [
+        {"lemma": "weer", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["Hoe is het weer vandaag?"]}
+        ]
+      }
+    },
+    {
+      "key": "tree",
+      "gloss": "tree (large plant)",
+      "entries": {
+        "en": [
+        {"lemma": "tree", "pos": "noun", "details": {"plural": "trees"}, "sentences": ["There is a big tree in the garden."]}
+        ],
+        "nl": [
+        {"lemma": "boom", "pos": "noun", "details": {"article": "de", "plural": "bomen"}, "sentences": ["Er staat een grote boom in de tuin."]}
+        ]
+      }
+    },
+    {
+      "key": "flower",
+      "gloss": "flower (plant bloom)",
+      "entries": {
+        "en": [
+        {"lemma": "flower", "pos": "noun", "details": {"plural": "flowers"}, "sentences": ["She gives me a flower."]}
+        ],
+        "nl": [
+        {"lemma": "bloem", "pos": "noun", "details": {"article": "de", "plural": "bloemen"}, "sentences": ["Zij geeft mij een bloem."]}
+        ]
+      }
+    },
+    {
+      "key": "sea",
+      "gloss": "sea (salt water)",
+      "entries": {
+        "en": [
+        {"lemma": "sea", "pos": "noun", "details": {"plural": "seas"}, "sentences": ["We swim in the sea."]}
+        ],
+        "nl": [
+        {"lemma": "zee", "pos": "noun", "details": {"article": "de", "plural": "zeeën"}, "sentences": ["Wij zwemmen in de zee."]}
+        ]
+      }
+    },
+    {
+      "key": "river",
+      "gloss": "river (flowing water)",
+      "entries": {
+        "en": [
+        {"lemma": "river", "pos": "noun", "details": {"plural": "rivers"}, "sentences": ["The river is long."]}
+        ],
+        "nl": [
+        {"lemma": "rivier", "pos": "noun", "details": {"article": "de", "plural": "rivieren"}, "sentences": ["De rivier is lang."]}
+        ]
+      }
+    },
+    {
+      "key": "mountain",
+      "gloss": "mountain (high land)",
+      "entries": {
+        "en": [
+        {"lemma": "mountain", "pos": "noun", "details": {"plural": "mountains"}, "sentences": ["We walk in the mountains."]}
+        ],
+        "nl": [
+        {"lemma": "berg", "pos": "noun", "details": {"article": "de", "plural": "bergen"}, "sentences": ["Wij lopen in de bergen."]}
+        ]
+      }
+    }
+  ]
+}
