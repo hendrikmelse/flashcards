@@ -408,7 +408,7 @@ docker compose exec -T postgres psql -U postgres -c "drop database restore_test"
 
 Dumps on the same disk do not survive losing the server. Copy them elsewhere
 too, for example with `restic` to an S3-compatible bucket (Backblaze B2 is cheap)
-or `rsync` to a provider storage box, run right after `backup.sh` in cron. This
+or `rsync` to a provider storage box, run right after `backup.sh` (for example as an `ExecStartPost=` line in the backup service). This
 needs an account and credentials from you, so it is left for when you choose a
 destination.
 
