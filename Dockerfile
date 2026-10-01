@@ -28,10 +28,11 @@ RUN npm ci --omit=dev -w @flashcards/api && npm cache clean --force
 COPY --from=build /app/apps/api/dist apps/api/dist
 COPY --from=build /app/apps/api/drizzle apps/api/drizzle
 COPY --from=build /app/apps/web/dist web
+COPY --from=build /app/content content
 
 ENV PORT=3000 \
     WEB_DIST=/app/web \
-    MIGRATIONS_DIR=/app/apps/api/drizzle
+    MIGRATIONS_DIR=/app/apps/api/drizzle \n    CONTENT_DIR=/app/content/packs
 
 USER node
 EXPOSE 3000

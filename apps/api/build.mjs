@@ -12,6 +12,7 @@ await build({
     server: "src/server.ts",
     migrate: "src/db/migrate.ts",
     "seed-languages": "src/db/seed-languages-cli.ts",
+    "import-content": "src/db/import-content-cli.ts",
   },
   bundle: true,
   platform: "node",
