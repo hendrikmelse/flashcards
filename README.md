@@ -19,6 +19,7 @@ Live at **flashcards.hendrikmelse.com** (invite-only).
 apps/api/         Fastify API (src/auth, content, routes, srs, study, db)
 apps/web/         React single-page app
 packages/shared/  Types and schemas shared by both apps
+content/packs/    Reviewed word packs (JSON), the source of truth for content
 deploy/           Production runbook (deploy/README.md) and server-side files
 Dockerfile        One image: the API serves /api/* and the built web app
 docker-compose.yml  Local Postgres for development
@@ -51,6 +52,8 @@ Registration is open in development. In production it is controlled by `REGISTRA
 | `npm run db:generate` | Generate a migration after a schema change |
 | `npm run db:migrate` | Apply migrations |
 | `npm run db:seed` | Load the sample data (development only) |
+| `npm run content:check` | Validate the content files in `content/packs/` (no database needed) |
+| `npm run content:import` | Import the content files into the database |
 
 ### Configuration
 
@@ -113,6 +116,18 @@ All routes live under `/api`.
 
 Helmet headers (CSP, HSTS), an Origin check on state-changing requests, `Secure` cookies, hourly cleanup of expired sessions, and graceful shutdown on SIGTERM.
 
+## Content
+
+Content is authored as reviewed JSON files in `content/packs/` (one file per pack) and imported into the database. The files are the source of truth; the importer makes the database match them.
+
+- A concept is identified by its **gloss**, which must be unique across all files. Each concept has entries in `en` and `nl` (each with a lemma, part of speech, optional `details` and example sentences). Nouns in both languages need a `details.plural`, or `uncountable: true`, and Dutch nouns also need `details.article` (`de` or `het`). Verbs carry their principal parts: English `past` and `participle`; Dutch `pastSingular`, `pastPlural`, `participle` and `auxiliary` (`hebben`, `zijn` or `hebben/zijn`). A verb whose present tense is irregular also has `present`, keyed by pronoun (`ik, jij, hij, wij` / `I, you, he, we`); `defective: true` exempts verbs that lack forms (English "can", "must"). The study card shows noun plurals and verb forms on the back only
+- Example sentences are written as parallel English and Dutch pairs, because the study card shows sentences for the front and the back language
+- `npm run content:check` validates every file without a database. Errors block the import; warnings (for example a sentence that does not contain its lemma) are for a reviewer to look at
+- `npm run content:import` imports into the database in `.env` (run `db:migrate` and `db:seed` first). It is idempotent: a rerun updates in place, and entries or sentences removed from a file are removed from the database. User cards are untouched
+- In production the image contains the files; import them with the command in the runbook's "Importing content" section
+
+The first pack, `starter`, has about 260 beginner concepts (greetings, numbers, family, home, food, animals, time, nature, body, common verbs and adjectives). Its drafts were written and then reviewed by Claude, not by a Dutch speaker, so a native check is still worthwhile before treating it as final.
+
 ## Deployment
 
 One Docker image: the API serves `/api/*` and the built web app (falling back to `index.html` for client routes), so everything is same-origin. Caddy terminates HTTPS and proxies to the container. Postgres runs as a separate container on an internal Docker network and is never exposed.
@@ -139,8 +154,8 @@ The full runbook, including server setup, rollback, backups and how to invite so
 - Run the production CSP through a real browser pass
 
 **Content (the product)**
-- Decide on sourcing: open datasets (Wiktionary, Open Multilingual WordNet, Tatoeba), AI drafts with review, or hand-authored
-- Write an import script and a pack curation workflow. Production currently has the languages but no packs
+- The importer and the first `starter` pack exist; it is not yet imported into production, and it has had no native Dutch review
+- Grow beyond the first slice: more packs, and a decision on sourcing at scale (open datasets such as Wiktionary, Open Multilingual WordNet and Tatoeba, or more drafting and review)
 
 **Features still to build**
 - `GET /stats` and a stats page (cards learned, reviews per day, retention, streak)

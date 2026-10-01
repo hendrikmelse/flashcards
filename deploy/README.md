@@ -446,6 +446,26 @@ ones only in a later one.
 - To redeploy without making a commit, use the **Run workflow** button on the
   CI workflow in the Actions tab (on `main`). It rebuilds and redeploys.
 
+## Importing content
+
+Word and pack content lives in the repo as reviewed JSON under
+`content/packs/` and is baked into the image, so a content change reaches the
+server through the normal deploy. Importing is a separate, manual step (like
+`seed-languages`), so nothing changes for users until you run it:
+
+```bash
+cd /srv/flashcards
+export IMAGE="$(cat current-image)"
+docker compose run --rm --no-deps api node apps/api/dist/import-content.js
+```
+
+It validates every file first and imports nothing if any has an error. It is
+safe to repeat: concepts are matched by gloss, so a rerun updates in place and
+removes entries and sentences that were dropped from the files. It never
+touches user data (cards and reviews point at concepts, which are kept).
+`--check` validates without a database: add it to the command above, or run
+`npm run content:check` locally.
+
 ## Inviting someone
 
 1. Add their email to `ALLOWED_EMAILS` (comma-separated) in `/srv/flashcards/.env`.
