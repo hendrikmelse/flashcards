@@ -19,7 +19,7 @@ Live at **flashcards.hendrikmelse.com** (invite-only).
 apps/api/         Fastify API (src/auth, content, routes, srs, study, db)
 apps/web/         React single-page app
 packages/shared/  Types and schemas shared by both apps
-content/packs/    Reviewed word packs (JSON), the source of truth for content
+content/          Reviewed content (JSON), the source of truth: concepts/ (words) and packs/
 deploy/           Production runbook (deploy/README.md) and server-side files
 Dockerfile        One image: the API serves /api/* and the built web app
 docker-compose.yml  Local Postgres for development
@@ -52,7 +52,7 @@ Registration is open in development. In production it is controlled by `REGISTRA
 | `npm run db:generate` | Generate a migration after a schema change |
 | `npm run db:migrate` | Apply migrations |
 | `npm run db:seed` | Load the sample data (development only) |
-| `npm run content:check` | Validate the content files in `content/packs/` (no database needed) |
+| `npm run content:check` | Validate the files in `content/` (no database needed) |
 | `npm run content:import` | Import the content files into the database |
 
 ### Configuration
@@ -78,7 +78,7 @@ Each language's words point at a language-independent **concept** (a word sense)
 
 **Shared content**
 - `Language`: code (`en`, `nl`) and name
-- `Concept`: a word sense, with a curator-facing gloss such as "run (move fast on foot)"
+- `Concept`: a word sense, with a permanent `key` (such as `dog`) that the content files and packs refer to, and a curator-facing gloss such as "run (move fast on foot)"
 - `Entry`: a concept's word in one language (lemma, part of speech, and a jsonb `details` for extras such as the Dutch article or plural). A concept can have several entries per language (synonyms)
 - `Sentence` and `EntrySentence`: example sentences linked to entries
 - `Pack` and `PackConcept`: an ordered list of concepts. Packs are language-agnostic; the user picks the direction when adding one
@@ -118,15 +118,21 @@ Helmet headers (CSP, HSTS), an Origin check on state-changing requests, `Secure`
 
 ## Content
 
-Content is authored as reviewed JSON files in `content/packs/` (one file per pack) and imported into the database. The files are the source of truth; the importer makes the database match them.
+Content is authored as reviewed JSON files and imported into the database. The files are the source of truth; the importer makes the database match them. There are two kinds:
 
-- A concept is identified by its **gloss**, which must be unique across all files. Each concept has entries in `en` and `nl` (each with a lemma, part of speech, optional `details` and example sentences). Nouns in both languages need a `details.plural`, or `uncountable: true`, and Dutch nouns also need `details.article` (`de` or `het`). Verbs carry their principal parts: English `past` and `participle`; Dutch `pastSingular`, `pastPlural`, `participle` and `auxiliary` (`hebben`, `zijn` or `hebben/zijn`). A verb whose present tense is irregular also has `present`, keyed by pronoun (`ik, jij, hij, wij` / `I, you, he, we`); `defective: true` exempts verbs that lack forms (English "can", "must"). The study card shows noun plurals and verb forms on the back only
+- `content/concepts/*.json` is the word library: `{ "concepts": [ { "key", "gloss", "entries" } ] }`. How the library is split across files (currently by topic) is only for organizing
+- `content/packs/*.json` defines packs: `{ "slug", "name", "description", "concepts": [key, ...] }`, an ordered list of concept keys with no word data. Because packs only refer to concepts, the same word can be in any number of packs
+
+A concept's **key** (lowercase words joined by hyphens, such as `dog` or `know-fact`) is its permanent identity. Packs refer to it, and the gloss is free text you can reword. Keys must be unique across all files, and a pack that lists an unknown key is an error.
+
+- Each concept has entries in `en` and `nl` (each with a lemma, part of speech, optional `details` and example sentences). Nouns in both languages need a `details.plural`, or `uncountable: true`, and Dutch nouns also need `details.article` (`de` or `het`). Verbs carry their principal parts: English `past` and `participle`; Dutch `pastSingular`, `pastPlural`, `participle` and `auxiliary` (`hebben`, `zijn` or `hebben/zijn`). A verb whose present tense is irregular also has `present`, keyed by pronoun (`ik, jij, hij, wij` / `I, you, he, we`); `defective: true` exempts verbs that lack forms (English "can", "must"). The study card shows noun plurals and verb forms on the back only
 - Example sentences are written as parallel English and Dutch pairs, because the study card shows sentences for the front and the back language
-- `npm run content:check` validates every file without a database. Errors block the import; warnings (for example a sentence that does not contain its lemma) are for a reviewer to look at
-- `npm run content:import` imports into the database in `.env` (run `db:migrate` and `db:seed` first). It is idempotent: a rerun updates in place, and entries or sentences removed from a file are removed from the database. User cards are untouched
+- `npm run content:check` validates every file without a database. Errors block the import; warnings (for example a sentence that does not contain its lemma, or a concept that is in no pack) are for a reviewer to look at
+- `npm run content:import` imports into the database in `.env` (run `db:migrate` first, and `db:seed` for the languages). It is idempotent and runs in one transaction: a rerun updates in place, entries or sentences removed from a file are removed from the database, and each pack is rewritten to exactly the listed concepts. User cards are untouched
+- The importer never deletes a concept or pack that the files stop mentioning, because user cards cascade-delete with their concept. It reports them instead, and cleanup is manual
 - In production the image contains the files; import them with the command in the runbook's "Importing content" section
 
-The first pack, `starter`, has about 260 beginner concepts (greetings, numbers, family, home, food, animals, time, nature, body, common verbs and adjectives). Its drafts were written and then reviewed by Claude, not by a Dutch speaker, so a native check is still worthwhile before treating it as final.
+The library has 259 beginner concepts in 15 topic files (greetings, numbers, family, home, food, animals, time, nature, body, common verbs and adjectives). Three packs draw on it: `starter` (all of them, beginner-first), `food-and-eating` and `common-verbs`, which reuse concepts from `starter`. The drafts were written and then reviewed by Claude, not by a Dutch speaker, so a native check is still worthwhile before treating them as final.
 
 ## Deployment
 

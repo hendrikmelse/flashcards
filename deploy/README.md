@@ -448,8 +448,9 @@ ones only in a later one.
 
 ## Importing content
 
-Word and pack content lives in the repo as reviewed JSON under
-`content/packs/` and is baked into the image, so a content change reaches the
+Word and pack content lives in the repo as reviewed JSON under `content/`
+(`concepts/` for the words, `packs/` for the packs) and is baked into the
+image, so a content change reaches the
 server through the normal deploy. Importing is a separate, manual step (like
 `seed-languages`), so nothing changes for users until you run it:
 
@@ -460,9 +461,11 @@ docker compose run --rm --no-deps api node apps/api/dist/import-content.js
 ```
 
 It validates every file first and imports nothing if any has an error. It is
-safe to repeat: concepts are matched by gloss, so a rerun updates in place and
+safe to repeat: concepts are matched by key, so a rerun updates in place and
 removes entries and sentences that were dropped from the files. It never
-touches user data (cards and reviews point at concepts, which are kept).
+touches user data, and it never deletes a concept or pack that the files stop
+mentioning (cards and reviews point at concepts); it lists them at the end so
+you can clean up by hand.
 `--check` validates without a database: add it to the command above, or run
 `npm run content:check` locally.
 
