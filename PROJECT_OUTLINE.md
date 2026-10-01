@@ -156,7 +156,8 @@ Live at **flashcards.hendrikmelse.com**. The runbook is `deploy/README.md`; the 
 - The CI deploy key is restricted to one validated command (`ci-entrypoint.sh`); SSH is key-only for a non-root user; only ports 22, 80 and 443 are open
 - Container logs go to the host journal (capped at 500 MB / 30 days), so they survive deploys; `deploy.sh` keeps only the current and previous image
 - CI skips builds and deploys for Markdown-only and `deploy/**`-only pushes, and can be run by hand (Run workflow) to redeploy
-- Still to do: enable the nightly backup cron on the server, then the before-launch items below
+- Nightly database dump at 03:00 Pacific via a systemd timer (14 days kept, restore drill verified on the server)
+- Still to do: the before-launch items below
 - Production has a separate `seed-languages` command (no sample data)
 
 **Phase 3: hardening:** uptime monitoring, error tracking, log rotation.

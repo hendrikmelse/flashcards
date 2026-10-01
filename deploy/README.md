@@ -358,17 +358,39 @@ shows the current container. The app logs one JSON object per line; add
 
 ## 9. Backups
 
-> **Plan:** turn on the nightly dump below from day one (it is free and guards
+> **Plan:** the nightly dump below runs from day one (it is free and guards
 > against your own mistakes). Offsite copies can wait, but **must be in place
 > before anyone other than you uses the app.**
 
-The dump script writes compressed dumps of every app database (plus roles) to
-`/srv/postgres/backups` and keeps 14 days. Schedule it as the `deploy` user
-(`crontab -e`):
+`backup.sh` writes compressed dumps of every app database (plus roles) to
+`/srv/postgres/backups` and keeps 14 days. A **systemd timer** runs it every
+night at **03:00 Pacific time**. It is a timer rather than cron because systemd
+accepts the timezone in the schedule, so it stays at 3 am local through daylight
+saving changes (10:00 UTC in summer, 11:00 UTC in winter); it also runs a missed
+backup after the server was off, and logs to the journal. Install it once
+(the unit files are in `deploy/server/system/`):
 
+```bash
+scp deploy/server/system/flashcards-backup.service deploy/server/system/flashcards-backup.timer deploy@<ip>:/tmp/
+ssh deploy@<ip> 'sudo install -m 644 /tmp/flashcards-backup.service /tmp/flashcards-backup.timer /etc/systemd/system/ \
+  && rm /tmp/flashcards-backup.* && sudo systemctl daemon-reload && sudo systemctl enable --now flashcards-backup.timer'
 ```
-17 3 * * * /srv/postgres/backup.sh >> /srv/postgres/backup.log 2>&1
+
+Check on it:
+
+```bash
+systemctl list-timers flashcards-backup.timer      # when it last ran and when it runs next
+sudo journalctl -u flashcards-backup -o cat        # what each run did
+systemctl status flashcards-backup.service         # "Result: success" or a failure
+sudo systemctl start flashcards-backup.service     # run one now
+ls -lh /srv/postgres/backups                       # the dumps (the directory is mode 700)
 ```
+
+**Nothing alerts you if a backup fails.** A failed run only shows up in the
+status and journal above, so look at `list-timers` and the newest file in
+`backups/` now and then, until monitoring is added (a before-launch item). The
+roles file (`globals-*.sql`) contains password hashes: keep the directory
+private, and encrypt dumps before copying them off the server.
 
 **Practice a restore before you need one.** This restores into a scratch
 database and never touches the live one:
@@ -513,6 +535,12 @@ lost it). The image cleanup in `deploy.sh` was tested locally with five
 consecutive deploys and a failed one: it always kept the current and previous
 image and removed the rest.
 
+The nightly backup was set up as a systemd timer and checked on the real server:
+systemd computed the right next run for summer (10:00 UTC) and winter (11:00 UTC),
+the service ran by hand under the same unit as the timer will use (as the `deploy`
+user, exit 0, output in the journal, a 26 KB dump), and that dump restored into
+a scratch database with row and table counts identical to the live database.
+
 ## Not yet verified
 
 - The production site used in a browser over HTTPS (registering and studying).
@@ -520,7 +548,8 @@ image and removed the rest.
   over plain http only.
 - Updating an already-running production deploy, and a production rollback
   (both were verified locally).
-- The nightly backup cron entry, and offsite backups (not built yet).
+- The first scheduled (unattended) backup run, due at 03:00 Pacific; offsite
+  backups (not built yet) and failure alerts for backups.
 
 ## Repeating the local test
 

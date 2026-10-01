@@ -1,0 +1,16 @@
+# Installed as /etc/systemd/system/flashcards-backup.timer
+#
+# 03:00 Pacific time every night. systemd applies the timezone itself, so this
+# stays at 3 am local through daylight saving changes (10:00 UTC in summer,
+# 11:00 UTC in winter), unlike a fixed UTC cron entry.
+[Unit]
+Description=Run the nightly PostgreSQL dump at 03:00 Pacific time
+
+[Timer]
+OnCalendar=*-*-* 03:00:00 America/Los_Angeles
+# If the server was off at 03:00, run the missed dump at the next boot.
+Persistent=true
+RandomizedDelaySec=120
+
+[Install]
+WantedBy=timers.target

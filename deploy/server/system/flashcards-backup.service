@@ -1,0 +1,21 @@
+# Installed as /etc/systemd/system/flashcards-backup.service
+#
+# Dumps every application database (plus roles) into /srv/postgres/backups and
+# prunes dumps older than 14 days. Started by flashcards-backup.timer; to run it
+# by hand: sudo systemctl start flashcards-backup.service
+# Output goes to the journal: sudo journalctl -u flashcards-backup
+[Unit]
+Description=Nightly PostgreSQL dump of all application databases
+After=docker.service
+Requires=docker.service
+
+[Service]
+Type=oneshot
+# The deploy user is in the docker group, which backup.sh needs.
+User=deploy
+Group=deploy
+WorkingDirectory=/srv/postgres
+ExecStart=/srv/postgres/backup.sh
+# Stay out of the way of the app and the database.
+Nice=10
+IOSchedulingClass=idle
