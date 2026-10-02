@@ -273,6 +273,47 @@ describe("pack detail", () => {
     expect(await screen.findByRole("button", { name: "All words added" })).toBeDisabled();
   });
 
+  it("adds the whole pack in the reverse direction too", async () => {
+    const bodies: unknown[] = [];
+    mock.handlers[`GET /packs?${NL_EN}`] = () =>
+      json(200, {
+        packs: [
+          { id: "p1", slug: "sample", name: "Sample pack", description: null, conceptCount: 4, availableCount: 3, addedCount: 0 },
+        ],
+      });
+    mock.handlers["POST /packs/p1/add"] = (b) => {
+      bodies.push(b);
+      return json(200, { added: 3, alreadyInDeck: 0, unavailable: 1 });
+    };
+    const user = userEvent.setup();
+    renderApp(`/packs/p1?from=en&to=nl`);
+    await user.click(await screen.findByRole("button", { name: "Add reverse cards (NL → EN)" }));
+
+    expect(await screen.findByText(/NL → EN: Added 3 new cards/)).toBeInTheDocument();
+    expect(bodies).toEqual([{ fromLanguage: "nl", toLanguage: "en" }]);
+  });
+
+  it("disables the reverse button when the reverse is already in the deck or unavailable", async () => {
+    mock.handlers[`GET /packs?${NL_EN}`] = () =>
+      json(200, {
+        packs: [
+          { id: "p1", slug: "sample", name: "Sample pack", description: null, conceptCount: 4, availableCount: 3, addedCount: 3 },
+        ],
+      });
+    const view = renderApp(`/packs/p1?from=en&to=nl`);
+    expect(await screen.findByRole("button", { name: "All reverse cards added" })).toBeDisabled();
+    view.unmount();
+
+    mock.handlers[`GET /packs?${NL_EN}`] = () =>
+      json(200, {
+        packs: [
+          { id: "p1", slug: "sample", name: "Sample pack", description: null, conceptCount: 4, availableCount: 0, addedCount: 0 },
+        ],
+      });
+    renderApp(`/packs/p1?from=en&to=nl`);
+    expect(await screen.findByRole("button", { name: "Add reverse cards (NL → EN)" })).toBeDisabled();
+  });
+
   it("explains when the pack does not exist", async () => {
     mock.handlers[`GET /packs/nope?${EN_NL}&limit=1000`] = () =>
       json(404, { error: "Pack not found" });

@@ -360,13 +360,33 @@ button.link {
   margin: 0;
 }
 
-.toggle .count {
+.toggle .count,
+.button .count {
   margin-left: 0.5rem;
   padding: 0 0.45rem;
   border-radius: 999px;
   background: color-mix(in srgb, currentColor 18%, transparent);
   font-size: 0.8rem;
   font-weight: 600;
+}
+
+.card-actions {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 1rem;
+}
+
+.mirror-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 1rem;
+  margin: 0 0 1rem;
+}
+
+.mirror-bar .muted {
+  font-size: 0.9rem;
 }
 
 .card-status {

@@ -6,6 +6,7 @@ import {
 } from "@tanstack/react-query";
 import type {
   AddConceptResult,
+  AddMirrorsResult,
   AddPackResult,
   ConceptSearchResponse,
   LanguageInfo,
@@ -93,6 +94,40 @@ export function useAddPack(packId: string, direction: Direction) {
           method: "POST",
           body: { fromLanguage: direction.from, toLanguage: direction.to },
         }),
+        new Promise((resolve) => setTimeout(resolve, MIN_SPINNER_MS)),
+      ]);
+      return result;
+    },
+    onSuccess: invalidate,
+  });
+}
+
+// One card's reverse: the same word, studied the other way around.
+export function useAddMirror() {
+  const invalidate = useInvalidateAfterDeckChange();
+  return useMutation({
+    mutationFn: async (v: { cardId: string; conceptId: string; fromLanguage: string; toLanguage: string }) => {
+      const [result] = await Promise.all([
+        api<AddConceptResult>(`/concepts/${v.conceptId}/add`, {
+          method: "POST",
+          body: { fromLanguage: v.fromLanguage, toLanguage: v.toLanguage },
+        }),
+        new Promise((resolve) => setTimeout(resolve, MIN_SPINNER_MS)),
+      ]);
+      return result;
+    },
+    onSuccess: invalidate,
+  });
+}
+
+// The reverse of every card in a view of the deck that does not have one yet.
+export type MirrorFilter = { fromLanguage?: string; toLanguage?: string; state?: string; q?: string };
+export function useAddMirrors() {
+  const invalidate = useInvalidateAfterDeckChange();
+  return useMutation({
+    mutationFn: async (filter: MirrorFilter) => {
+      const [result] = await Promise.all([
+        api<AddMirrorsResult>("/deck/mirrors", { method: "POST", body: filter }),
         new Promise((resolve) => setTimeout(resolve, MIN_SPINNER_MS)),
       ]);
       return result;

@@ -24,6 +24,7 @@ const card = (id: string, en: string, nl: string, extra: Record<string, unknown>
   intervalDays: 0,
   lapses: 0,
   lastReviewedAt: null,
+  hasMirror: true,
   front: [entry("en", en)],
   back: [entry("nl", nl, { article: "de" })],
   ...extra,
@@ -163,7 +164,7 @@ describe("deck page", () => {
 
   it("narrows to one direction with the toggle, and labels the direction when showing both", async () => {
     const dir = (from: string, to: string) => ({
-      fromLanguage: from, toLanguage: to, total: 6, new: 3, learning: 1, review: 2, dueNow: 1, nextDueAt: null,
+      fromLanguage: from, toLanguage: to, total: 6, new: 3, learning: 1, review: 2, dueNow: 1, nextDueAt: null, ready: { learning: 0, review: 0, new: 0 },
     });
     mock.handlers["GET /stats"] = () =>
       json(200, { now: at(0), reviewsToday: 0, nextDueAt: null, directions: [dir("en", "nl"), dir("nl", "en")] });
@@ -178,7 +179,7 @@ describe("deck page", () => {
 
   it("always shows the whole deck's size at the top, whichever direction is selected", async () => {
     const dir = (from: string, to: string, total: number) => ({
-      fromLanguage: from, toLanguage: to, total, new: total, learning: 0, review: 0, dueNow: 0, nextDueAt: null,
+      fromLanguage: from, toLanguage: to, total, new: total, learning: 0, review: 0, dueNow: 0, nextDueAt: null, ready: { learning: 0, review: 0, new: 0 },
     });
     mock.handlers["GET /stats"] = () =>
       json(200, { now: at(0), reviewsToday: 0, nextDueAt: null, directions: [dir("en", "nl", 300), dir("nl", "en", 66)] });
@@ -192,6 +193,91 @@ describe("deck page", () => {
     await user.click(await screen.findByRole("button", { name: "NL → EN" }));
     await vi.waitFor(() => expect(lastList()).toContain("fromLanguage=nl&toLanguage=en"));
     expect(screen.getByText("366 cards")).toBeInTheDocument();
+  });
+
+  describe("reverse cards", () => {
+    const withGaps = (mirrorable = 2) => ({
+      summary,
+      hasMore: false,
+      mirrorable,
+      cards: [
+        card("a", "dog", "hond"),
+        card("b", "house", "huis", { hasMirror: false }),
+        card("c", "water", "water", { hasMirror: false }),
+      ],
+    });
+
+    it("offers to add the reverse of a card that lacks one, and confirms it", async () => {
+      let body: unknown;
+      mock.handlers["GET /deck"] = () => json(200, withGaps());
+      mock.handlers["POST /concepts/c-b/add"] = (b) => {
+        body = b;
+        return json(201, { added: 1, alreadyInDeck: 0 });
+      };
+      const user = userEvent.setup();
+      renderApp("/deck");
+      expect(screen.queryByRole("button", { name: "Add reverse of dog" })).not.toBeInTheDocument();
+      await user.click(await screen.findByRole("button", { name: "Add reverse of house" }));
+
+      expect(await screen.findByText("Reverse added")).toBeInTheDocument();
+      expect(body).toEqual({ fromLanguage: "nl", toLanguage: "en" }); // the card is en->nl
+    });
+
+    it("can show only cards missing a reverse, and keeps one you just fixed in view", async () => {
+      let fixed = false;
+      mock.handlers["GET /deck"] = () =>
+        json(200, lastList().includes("missingMirror=1")
+          ? { ...withGaps(fixed ? 1 : 2), cards: withGaps().cards.filter((c) => !c.hasMirror && !(fixed && c.id === "b")) }
+          : withGaps());
+      mock.handlers["POST /concepts/c-b/add"] = () => {
+        fixed = true;
+        return json(201, { added: 1, alreadyInDeck: 0 });
+      };
+      const user = userEvent.setup();
+      renderApp("/deck");
+      await user.click(await screen.findByRole("button", { name: "Missing reverse" }));
+      await vi.waitFor(() => expect(lastList()).toContain("missingMirror=1"));
+      expect(screen.queryByText("dog")).not.toBeInTheDocument();
+
+      await user.click(await screen.findByRole("button", { name: "Add reverse of house" }));
+      expect(await screen.findByText("Reverse added")).toBeInTheDocument();
+      // The server no longer lists it, but it stays until the view changes.
+      expect(screen.getByText("house")).toBeInTheDocument();
+
+      await user.click(screen.getByRole("button", { name: "Missing reverse" }));
+      await user.click(screen.getByRole("button", { name: "Missing reverse" }));
+      await vi.waitFor(() => expect(screen.queryByText("Reverse added")).not.toBeInTheDocument());
+    });
+
+    it("adds the reverse of everything in the view at once", async () => {
+      let body: unknown;
+      mock.handlers["GET /deck"] = () => json(200, withGaps(2));
+      mock.handlers["POST /deck/mirrors"] = (b) => {
+        body = b;
+        return json(200, { added: 2 });
+      };
+      const user = userEvent.setup();
+      renderApp("/deck");
+      await user.click(await screen.findByRole("button", { name: /^Review/ }));
+      await user.type(screen.getByRole("searchbox", { name: "Search your deck" }), "hu");
+      await vi.waitFor(() => expect(lastList()).toContain("q=hu"));
+
+      await user.click(await screen.findByRole("button", { name: "Add reverse for all 2 cards in this view" }));
+      expect(await screen.findByText("Added 2 reverse cards.")).toBeInTheDocument();
+      expect(body).toEqual({ state: "review", q: "hu" });
+    });
+
+    it("says it plainly for a single card, and hides the button when there is nothing to add", async () => {
+      mock.handlers["GET /deck"] = () => json(200, withGaps(1));
+      const view = renderApp("/deck");
+      expect(await screen.findByRole("button", { name: "Add reverse for 1 card in this view" })).toBeInTheDocument();
+      view.unmount();
+
+      mock.handlers["GET /deck"] = () => json(200, withGaps(0));
+      renderApp("/deck");
+      await screen.findByText("house");
+      expect(screen.queryByRole("button", { name: /in this view/ })).not.toBeInTheDocument();
+    });
   });
 
   it("loads more cards on request", async () => {

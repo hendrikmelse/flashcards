@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router";
 import { DECK_SORT_DEFAULT_ORDER, DECK_SORTS, type DeckCardView, type DeckSort, type DirectionSummary } from "@flashcards/shared";
 import { useDeckCards, useStats, type DeckStage } from "../api/hooks";
+import { useAddMirror, useAddMirrors } from "../api/packs";
+import { BusyLabel } from "../components/BusyLabel";
 import { displayLemma, entriesFor } from "../components/entries";
 import { sameDirection, shortDirection, useDeckFilter } from "../hooks/useDeckFilter";
 import { formatUntil } from "../lib/relativeTime";
@@ -52,7 +54,16 @@ function details(card: DeckCardView): string | null {
   return parts.length > 0 ? parts.join(" · ") : null;
 }
 
-function CardRow({ card, showDirection }: { card: DeckCardView; showDirection: boolean }) {
+type RowProps = {
+  card: DeckCardView;
+  showDirection: boolean;
+  adding: boolean;
+  justAdded: boolean;
+  disabled: boolean;
+  onAddReverse: () => void;
+};
+
+function CardRow({ card, showDirection, adding, justAdded, disabled, onAddReverse }: RowProps) {
   const front = entriesFor(card.front, card.fromLanguage).map(displayLemma).join(", ");
   const back = entriesFor(card.back, card.toLanguage).map(displayLemma).join(", ");
   const extra = details(card);
@@ -70,12 +81,29 @@ function CardRow({ card, showDirection }: { card: DeckCardView; showDirection: b
           </span>
         )}
       </span>
-      <span className="card-status">
-        <span className="status-line">
-          <span className={`dot ${STATE_TONE[card.state]}`} aria-hidden="true" />
-          {STATE_LABEL[card.state]}
+      <span className="card-actions">
+        {justAdded ? (
+          <span className="badge">Reverse added</span>
+        ) : (
+          !card.hasMirror && (
+            <button
+              className="secondary"
+              onClick={onAddReverse}
+              disabled={disabled}
+              aria-busy={adding}
+              aria-label={`Add reverse of ${front}`}
+            >
+              <BusyLabel busy={adding}>Add reverse</BusyLabel>
+            </button>
+          )
+        )}
+        <span className="card-status">
+          <span className="status-line">
+            <span className={`dot ${STATE_TONE[card.state]}`} aria-hidden="true" />
+            {STATE_LABEL[card.state]}
+          </span>
+          <span className="muted">{[whenDue(card), extra].filter(Boolean).join(" · ")}</span>
         </span>
-        <span className="muted">{[whenDue(card), extra].filter(Boolean).join(" · ")}</span>
       </span>
     </li>
   );
@@ -103,8 +131,24 @@ export function DeckPage() {
   const sort = sortChoice ?? (stage === "learning" || stage === "review" ? "due" : "added");
   const order = orderChoice ?? DECK_SORT_DEFAULT_ORDER[sort];
 
-  const list = useDeckCards(filter.selected, stage, term, sort, order);
+  const [missingOnly, setMissingOnly] = useState(false);
+  const list = useDeckCards(filter.selected, stage, term, sort, order, missingOnly);
   const byDirection = directions ?? [];
+
+  const addMirror = useAddMirror();
+  const addMirrors = useAddMirrors();
+  // A card you just mirrored stays in the list (marked "Reverse added") even if the
+  // "missing reverse" filter would drop it, so the list doesn't move under the cursor.
+  // `index` is where it goes back. Cleared when the view changes.
+  const [recent, setRecent] = useState(
+    new Map<string, { index: number; card: DeckCardView; done: boolean }>(),
+  );
+  const [bulkResult, setBulkResult] = useState<number | null>(null);
+  const view = [filter.selected?.from, filter.selected?.to, stage, term, sort, order, missingOnly].join("|");
+  useEffect(() => {
+    setRecent(new Map());
+    setBulkResult(null);
+  }, [view]);
 
   if (list.isPending) return <p className="status">Loading…</p>;
   if (list.isError) return <p className="status error">Could not load your deck. Please refresh.</p>;
@@ -117,7 +161,46 @@ export function DeckPage() {
     learning: summary.learning + summary.relearning,
     review: summary.review,
   };
-  const filtering = stage !== "all" || term !== "";
+  const filtering = stage !== "all" || term !== "" || missingOnly;
+  const { mirrorable } = list.data.pages[0]!;
+
+  const rows = [...new Map(cards.map((c) => [c.id, c])).values()];
+  [...recent.values()]
+    .filter((r) => !rows.some((c) => c.id === r.card.id))
+    .sort((x, y) => x.index - y.index)
+    .forEach((r) => rows.splice(Math.min(r.index, rows.length), 0, r.card));
+
+  const addReverse = (card: DeckCardView, index: number) => {
+    setRecent((prev) => new Map(prev).set(card.id, { index, card, done: false }));
+    addMirror.mutate(
+      { cardId: card.id, conceptId: card.conceptId, fromLanguage: card.toLanguage, toLanguage: card.fromLanguage },
+      {
+        onSuccess: () =>
+          setRecent((prev) => {
+            const entry = prev.get(card.id);
+            return entry ? new Map(prev).set(card.id, { ...entry, done: true }) : prev;
+          }),
+        onError: () =>
+          setRecent((prev) => {
+            const next = new Map(prev);
+            next.delete(card.id);
+            return next;
+          }),
+      },
+    );
+  };
+
+  const addAllReverses = () => {
+    setBulkResult(null);
+    addMirrors.mutate(
+      {
+        ...(filter.selected ? { fromLanguage: filter.selected.from, toLanguage: filter.selected.to } : {}),
+        ...(stage !== "all" ? { state: stage } : {}),
+        ...(term ? { q: term } : {}),
+      },
+      { onSuccess: (r) => setBulkResult(r.added) },
+    );
+  };
   // The headline is the whole deck, whatever direction is selected below. Until the
   // per-direction stats arrive, a selected direction has no total to show yet.
   const deckTotal = directions
@@ -187,6 +270,11 @@ export function DeckPage() {
                 </button>
               ))}
             </div>
+            <div className="toggle">
+              <button type="button" aria-pressed={missingOnly} onClick={() => setMissingOnly(!missingOnly)}>
+                Missing reverse
+              </button>
+            </div>
           </div>
 
           <div className="sort-row">
@@ -219,12 +307,46 @@ export function DeckPage() {
             </div>
           </div>
 
-          {cards.length === 0 ? (
+          {(mirrorable > 0 || bulkResult !== null) && (
+            <div className="mirror-bar">
+              {mirrorable > 0 && (
+                <button
+                  className="secondary"
+                  onClick={addAllReverses}
+                  disabled={addMirrors.isPending}
+                  aria-busy={addMirrors.isPending}
+                >
+                  <BusyLabel busy={addMirrors.isPending}>
+                    Add reverse for {mirrorable === 1 ? "1 card" : `all ${mirrorable} cards`} in this view
+                  </BusyLabel>
+                </button>
+              )}
+              <span className="muted" role="status">
+                {addMirrors.isError
+                  ? "Could not add the reverse cards. Please try again."
+                  : bulkResult !== null
+                    ? `Added ${bulkResult === 1 ? "1 reverse card" : `${bulkResult} reverse cards`}.`
+                    : mirrorable > 0
+                      ? "They join your new cards, introduced a few at a time."
+                      : ""}
+              </span>
+            </div>
+          )}
+
+          {rows.length === 0 ? (
             <p className="empty">{filtering ? "No cards match." : "No cards in this view."}</p>
           ) : (
             <ul className="concept-list">
-              {cards.map((c) => (
-                <CardRow key={c.id} card={c} showDirection={!filter.selected && byDirection.length > 1} />
+              {rows.map((c, i) => (
+                <CardRow
+                  key={c.id}
+                  card={c}
+                  showDirection={!filter.selected && byDirection.length > 1}
+                  adding={addMirror.isPending && addMirror.variables?.cardId === c.id}
+                  justAdded={recent.get(c.id)?.done === true}
+                  disabled={addMirror.isPending}
+                  onAddReverse={() => addReverse(c, i)}
+                />
               ))}
             </ul>
           )}

@@ -39,33 +39,30 @@ function DeckBar({ counts }: { counts: { new: number; learning: number; review: 
 export function DashboardPage() {
   const [directions, setDirections] = useState<DirectionSummary[] | undefined>();
   const filter = useDeckFilter(directions);
-  const { deck, study, stats } = useDashboard(filter.selected);
+  const { deck, deckAll, study, stats } = useDashboard(filter.selected);
   // Keep the last known directions so the filter doesn't vanish while stats refetch.
   if (stats.data && stats.data.directions !== directions) setDirections(stats.data.directions);
 
-  if (deck.isPending || study.isPending) return <p className="status">Loading…</p>;
-  if (deck.isError || study.isError) {
+  if (deckAll.isPending || study.isPending) return <p className="status">Loading…</p>;
+  if (deckAll.isError || study.isError) {
     return <p className="status error">Could not load your dashboard. Please refresh.</p>;
   }
 
-  const { summary } = deck.data;
+  // The "ready to study" card is about the whole deck. Only "Your deck" below follows the toggle.
   const { counts } = study.data;
   const dueNow = counts.learning + counts.review;
   const ready = dueNow + counts.new;
-  const learning = summary.learning + summary.relearning;
   const byDirection = stats.data?.directions ?? [];
-  const studyLink = filter.selected
-    ? `/study?from=${encodeURIComponent(filter.selected.from)}&to=${encodeURIComponent(filter.selected.to)}`
-    : "/study";
-  const nextDueAt = filter.selected
-    ? (byDirection.find((d) => sameDirection(d, filter.selected))?.nextDueAt ?? null)
-    : (stats.data?.nextDueAt ?? null);
+  const nextDueAt = stats.data?.nextDueAt ?? null;
+  // One button per direction with something ready, but only when that is a real choice.
+  const readyIn = (d: DirectionSummary) => d.ready.learning + d.ready.review + d.ready.new;
+  const studyable = byDirection.filter((d) => readyIn(d) > 0);
 
   return (
     <>
       <h1>Dashboard</h1>
 
-      {summary.total === 0 ? (
+      {deckAll.data.summary.total === 0 ? (
         <div className="hero">
           <p className="hero-title">Your deck is empty</p>
           <p className="muted">
@@ -98,9 +95,21 @@ export function DashboardPage() {
             )}
             {ready > 0 && (
               <div className="hero-actions">
-                <Link to={studyLink} className="button primary">
+                <Link to="/study" className="button primary">
                   Start studying
                 </Link>
+                {studyable.length > 1 &&
+                  studyable.map((d) => (
+                    <Link
+                      key={`${d.fromLanguage}-${d.toLanguage}`}
+                      to={`/study?from=${encodeURIComponent(d.fromLanguage)}&to=${encodeURIComponent(d.toLanguage)}`}
+                      className="button secondary"
+                      aria-label={`Study ${shortDirection(d)}, ${readyIn(d)} ready`}
+                    >
+                      {shortDirection(d)}
+                      <span className="count">{readyIn(d)}</span>
+                    </Link>
+                  ))}
               </div>
             )}
           </section>
@@ -123,12 +132,18 @@ export function DashboardPage() {
               </button>
             </div>
           )}
-          <DeckBar counts={{ new: summary.new, learning, review: summary.review }} />
-          <section aria-label="Progress" className="stats secondary">
-            <Stat label="Review" value={summary.review} tone="review" />
-            <Stat label="Learning" value={learning} tone="learning" />
-            <Stat label="New" value={summary.new} tone="new" />
-          </section>
+          {deck.data ? (
+            <>
+              <DeckBar counts={{ new: deck.data.summary.new, learning: deck.data.summary.learning + deck.data.summary.relearning, review: deck.data.summary.review }} />
+              <section aria-label="Progress" className="stats secondary">
+                <Stat label="Review" value={deck.data.summary.review} tone="review" />
+                <Stat label="Learning" value={deck.data.summary.learning + deck.data.summary.relearning} tone="learning" />
+                <Stat label="New" value={deck.data.summary.new} tone="new" />
+              </section>
+            </>
+          ) : (
+            <p className="status">{deck.isError ? "Could not load this view." : "Loading…"}</p>
+          )}
           <div className="deck-actions">
             <Link to="/deck" className="button secondary">
               View deck

@@ -58,26 +58,30 @@ export function useLogout() {
   });
 }
 
-// Dashboard numbers: deck totals and what is ready to study right now, for one
-// direction or (null) for the whole deck, plus reviews today and per-direction stats.
+// Dashboard numbers. What is ready to study and whether the deck is empty always
+// cover the whole deck. `deck` is the progress summary for the chosen direction
+// (or, with null, the whole deck, which is then the same query as `deckAll`).
 export function useDashboard(direction: { from: string; to: string } | null) {
-  const dir = direction
-    ? `&fromLanguage=${encodeURIComponent(direction.from)}&toLanguage=${encodeURIComponent(direction.to)}`
-    : "";
-  const key = direction ? [direction.from, direction.to] : ["all"];
-  const deck = useQuery({
-    queryKey: ["deck", "summary", ...key],
-    queryFn: () => api<DeckResponse>(`/deck?limit=1${dir}`),
+  const deckAll = useQuery({
+    queryKey: ["deck", "summary", "all"],
+    queryFn: () => api<DeckResponse>("/deck?limit=1"),
+  });
+  const deckDirection = useQuery({
+    queryKey: ["deck", "summary", direction?.from, direction?.to],
+    enabled: direction !== null,
+    queryFn: () =>
+      api<DeckResponse>(
+        `/deck?limit=1&fromLanguage=${encodeURIComponent(direction!.from)}&toLanguage=${encodeURIComponent(direction!.to)}`,
+      ),
     placeholderData: (previous) => previous,
   });
   const study = useQuery({
-    queryKey: ["study", "counts", ...key],
-    queryFn: () => api<StudyResponse>(`/study?limit=1${dir}`),
-    placeholderData: (previous) => previous,
+    queryKey: ["study", "counts", "all"],
+    queryFn: () => api<StudyResponse>("/study?limit=1"),
   });
   // Extras: the dashboard still works without them.
   const stats = useStats();
-  return { deck, study, stats };
+  return { deck: direction ? deckDirection : deckAll, deckAll, study, stats };
 }
 
 export function useStats() {
@@ -100,10 +104,11 @@ export function useDeckCards(
   term: string,
   sort: DeckSort,
   order: "asc" | "desc",
+  missingMirror: boolean,
 ) {
   const key = direction ? [direction.from, direction.to] : ["all"];
   return useInfiniteQuery({
-    queryKey: ["deck", "list", ...key, stage, term, sort, order],
+    queryKey: ["deck", "list", ...key, stage, term, sort, order, missingMirror],
     initialPageParam: 0,
     placeholderData: (previous) => previous,
     queryFn: async ({ pageParam }) => {
@@ -116,6 +121,7 @@ export function useDeckCards(
       if (term) params.set("q", term);
       params.set("sort", sort);
       params.set("order", order);
+      if (missingMirror) params.set("missingMirror", "1");
       const request = api<DeckResponse>(`/deck?${params}`);
       const wait = pageParam === 0 ? 0 : MIN_SPINNER_MS;
       const [page] = await Promise.all([request, new Promise((r) => setTimeout(r, wait))]);

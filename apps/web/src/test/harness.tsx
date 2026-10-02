@@ -42,7 +42,7 @@ function defaultHandlers(): Record<string, Handler> {
         reviewsToday: 9,
         nextDueAt: null,
         directions: [
-          { fromLanguage: "en", toLanguage: "nl", total: 12, new: 5, learning: 3, review: 4, dueNow: 4, nextDueAt: null },
+          { fromLanguage: "en", toLanguage: "nl", total: 12, new: 5, learning: 3, review: 4, dueNow: 4, nextDueAt: null, ready: { learning: 1, review: 3, new: 7 } },
         ],
       }),
     "GET /languages": () =>

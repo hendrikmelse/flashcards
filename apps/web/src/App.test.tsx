@@ -140,6 +140,7 @@ describe("dashboard", () => {
       review: 5,
       dueNow: 3,
       nextDueAt: null,
+      ready: { learning: 1, review: 2, new: 4 },
       ...extra,
     });
     const stats = (directions: unknown[], extra = {}) => ({
@@ -157,26 +158,50 @@ describe("dashboard", () => {
         json(200, stats([dir("en", "nl"), dir("nl", "en", { dueNow: 0 })]));
     });
 
-    it("narrows everything to one direction and studies just that one", async () => {
-      mock.handlers["GET /deck?limit=1&fromLanguage=nl&toLanguage=en"] = () => json(200, summary(8));
-      mock.handlers["GET /study?limit=1&fromLanguage=nl&toLanguage=en"] = () =>
-        json(200, { now: "x", counts: { learning: 0, review: 1, new: 2 }, cards: [] });
+    it("narrows only the deck section to one direction, leaving what is ready to study alone", async () => {
+      mock.handlers["GET /deck?limit=1&fromLanguage=nl&toLanguage=en"] = () =>
+        json(200, { summary: { total: 8, new: 1, learning: 1, relearning: 0, review: 6, dueNow: 2 } });
       const user = userEvent.setup();
       renderApp("/");
-      await user.click(await screen.findByRole("button", { name: "NL → EN" }));
+      const hero = await screen.findByRole("region", { name: "Ready to study" });
+      expect(hero).toHaveTextContent("11 cards ready to study");
 
-      expect(await screen.findByText("3 cards ready to study")).toBeInTheDocument();
-      expect(screen.getByRole("link", { name: "Start studying" })).toHaveAttribute(
-        "href",
-        "/study?from=nl&to=en",
-      );
+      await user.click(await screen.findByRole("button", { name: "NL → EN" }));
+      expect(await within(screen.getByRole("region", { name: "Progress" })).findByText("6")).toBeInTheDocument();
+      expect(hero).toHaveTextContent("11 cards ready to study");
+      expect(within(hero).getByRole("link", { name: "Start studying" })).toHaveAttribute("href", "/study");
+      expect(mock.calls.filter((c) => c.startsWith("GET /study"))).toEqual(["GET /study?limit=1"]);
       expect(screen.getByRole("button", { name: "NL → EN" })).toHaveAttribute("aria-pressed", "true");
       expect(JSON.parse(localStorage.getItem("dashboardDirection")!)).toEqual({ from: "nl", to: "en" });
 
-      // The toggle under "Your deck" is the same control, so it can switch back too.
       await user.click(screen.getByRole("button", { name: "Both" }));
       expect(await screen.findByRole("button", { name: "Both" })).toHaveAttribute("aria-pressed", "true");
-      expect(screen.getByRole("button", { name: "EN → NL" })).toHaveAttribute("aria-pressed", "false");
+      expect(screen.getByRole("button", { name: "NL → EN" })).toHaveAttribute("aria-pressed", "false");
+      expect(hero).toHaveTextContent("11 cards ready to study");
+    });
+
+    it("offers a button per direction with its ready count, next to Start studying", async () => {
+      mock.handlers["GET /stats"] = () =>
+        json(200, stats([dir("en", "nl", { ready: { learning: 1, review: 2, new: 4 } }), dir("nl", "en", { ready: { learning: 0, review: 1, new: 2 } })]));
+      renderApp("/");
+      const hero = await screen.findByRole("region", { name: "Ready to study" });
+      const en = await within(hero).findByRole("link", { name: "Study EN → NL, 7 ready" });
+      expect(en).toHaveAttribute("href", "/study?from=en&to=nl");
+      expect(en).toHaveTextContent("7");
+      expect(within(hero).getByRole("link", { name: "Study NL → EN, 3 ready" })).toHaveAttribute(
+        "href",
+        "/study?from=nl&to=en",
+      );
+      expect(within(hero).getByRole("link", { name: "Start studying" })).toHaveAttribute("href", "/study");
+    });
+
+    it("leaves out a direction with nothing ready, and the buttons when it is no real choice", async () => {
+      mock.handlers["GET /stats"] = () =>
+        json(200, stats([dir("en", "nl"), dir("nl", "en", { ready: { learning: 0, review: 0, new: 0 } })]));
+      renderApp("/");
+      const hero = await screen.findByRole("region", { name: "Ready to study" });
+      await screen.findByRole("button", { name: "NL → EN" }); // stats have loaded
+      expect(within(hero).queryByRole("link", { name: /^Study / })).not.toBeInTheDocument();
     });
 
     it("hides the deck filter when there is only one direction", async () => {
