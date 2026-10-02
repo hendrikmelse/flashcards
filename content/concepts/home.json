@@ -349,7 +349,7 @@
       }
     },
     {
-      "key": "light",
+      "key": "light-noun",
       "gloss": "light (noun)",
       "entries": {
         "en": [
@@ -457,7 +457,7 @@
       }
     },
     {
-      "key": "box",
+      "key": "box-noun",
       "gloss": "box (noun)",
       "entries": {
         "en": [
@@ -525,6 +525,354 @@
         ],
         "nl": [
         {"lemma": "bad", "pos": "noun", "details": {"article": "het", "plural": "baden"}, "sentences": ["Ik neem een bad."]}
+        ]
+      }
+    },
+    {
+      "key": "cellar",
+      "gloss": "cellar (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "cellar", "pos": "noun", "details": {"plural": "cellars"}, "sentences": ["The wine is in the cellar."]}
+        ],
+        "nl": [
+        {"lemma": "kelder", "pos": "noun", "details": {"article": "de", "plural": "kelders"}, "sentences": ["De wijn staat in de kelder."]}
+        ]
+      }
+    },
+    {
+      "key": "bedroom",
+      "gloss": "bedroom (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "bedroom", "pos": "noun", "details": {"plural": "bedrooms"}, "sentences": ["The bedroom is upstairs."]}
+        ],
+        "nl": [
+        {"lemma": "slaapkamer", "pos": "noun", "details": {"article": "de", "plural": "slaapkamers"}, "sentences": ["De slaapkamer is boven."]}
+        ]
+      }
+    },
+    {
+      "key": "floor-noun-vloer",
+      "gloss": "floor (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "floor", "pos": "noun", "details": {"plural": "floors"}, "sentences": ["The floor is clean."]}
+        ],
+        "nl": [
+        {"lemma": "vloer", "pos": "noun", "details": {"article": "de", "plural": "vloeren"}, "sentences": ["De vloer is schoon."]}
+        ]
+      }
+    },
+    {
+      "key": "cupboard",
+      "gloss": "cupboard (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "cupboard", "pos": "noun", "details": {"plural": "cupboards"}, "sentences": ["The plates are in the cupboard."]}
+        ],
+        "nl": [
+        {"lemma": "kast", "pos": "noun", "details": {"article": "de", "plural": "kasten"}, "sentences": ["De borden staan in de kast."]}
+        ]
+      }
+    },
+    {
+      "key": "dust",
+      "gloss": "dust (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "dust", "pos": "noun", "details": {"uncountable": true}, "sentences": ["There is dust on the table."]}
+        ],
+        "nl": [
+        {"lemma": "stof", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["Er ligt stof op de tafel."]}
+        ]
+      }
+    },
+    {
+      "key": "chest-noun-kist",
+      "gloss": "chest (box)",
+      "entries": {
+        "en": [
+        {"lemma": "chest (box)", "pos": "noun", "details": {"plural": "chests"}, "sentences": ["The chest is full of gold."]}
+        ],
+        "nl": [
+        {"lemma": "kist", "pos": "noun", "details": {"article": "de", "plural": "kisten"}, "sentences": ["De kist is vol goud."]}
+        ]
+      }
+    },
+    {
+      "key": "floor-noun-verdieping",
+      "gloss": "floor (level)",
+      "entries": {
+        "en": [
+        {"lemma": "floor (level)", "pos": "noun", "details": {"plural": "floors"}, "sentences": ["He lives on the third floor."]}
+        ],
+        "nl": [
+        {"lemma": "verdieping", "pos": "noun", "details": {"article": "de", "plural": "verdiepingen"}, "sentences": ["Hij woont op de derde verdieping."]}
+        ]
+      }
+    },
+    {
+      "key": "rope",
+      "gloss": "rope (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "rope", "pos": "noun", "details": {"plural": "ropes"}, "sentences": ["The rope is long."]}
+        ],
+        "nl": [
+        {"lemma": "touw", "pos": "noun", "details": {"article": "het", "plural": "touwen"}, "sentences": ["Het touw is lang."]}
+        ]
+      }
+    },
+    {
+      "key": "mirror",
+      "gloss": "mirror (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "mirror", "pos": "noun", "details": {"plural": "mirrors"}, "sentences": ["I look in the mirror."]}
+        ],
+        "nl": [
+        {"lemma": "spiegel", "pos": "noun", "details": {"article": "de", "plural": "spiegels"}, "sentences": ["Ik kijk in de spiegel."]}
+        ]
+      }
+    },
+    {
+      "key": "pipe",
+      "gloss": "pipe (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "pipe", "pos": "noun", "details": {"plural": "pipes"}, "sentences": ["The pipe is broken."]}
+        ],
+        "nl": [
+        {"lemma": "pijp", "pos": "noun", "details": {"article": "de", "plural": "pijpen"}, "sentences": ["De pijp is kapot."]}
+        ]
+      }
+    },
+    {
+      "key": "fence",
+      "gloss": "fence (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "fence", "pos": "noun", "details": {"plural": "fences"}, "sentences": ["The fence is white."]}
+        ],
+        "nl": [
+        {"lemma": "hek", "pos": "noun", "details": {"article": "het", "plural": "hekken"}, "sentences": ["Het hek is wit."]}
+        ]
+      }
+    },
+    {
+      "key": "lamp",
+      "gloss": "lamp (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "lamp", "pos": "noun", "details": {"plural": "lamps"}, "sentences": ["The lamp is on."]}
+        ],
+        "nl": [
+        {"lemma": "lamp", "pos": "noun", "details": {"article": "de", "plural": "lampen"}, "sentences": ["De lamp staat aan."]}
+        ]
+      }
+    },
+    {
+      "key": "shower-noun",
+      "gloss": "shower (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "shower", "pos": "noun", "details": {"plural": "showers"}, "sentences": ["I take a shower."]}
+        ],
+        "nl": [
+        {"lemma": "douche", "pos": "noun", "details": {"article": "de", "plural": "douches"}, "sentences": ["Ik neem een douche."]}
+        ]
+      }
+    },
+    {
+      "key": "blanket",
+      "gloss": "blanket (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "blanket", "pos": "noun", "details": {"plural": "blankets"}, "sentences": ["I need a blanket."]}
+        ],
+        "nl": [
+        {"lemma": "deken", "pos": "noun", "details": {"article": "de", "plural": "dekens"}, "sentences": ["Ik heb een deken nodig."]}
+        ]
+      }
+    },
+    {
+      "key": "cabin",
+      "gloss": "cabin (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "cabin", "pos": "noun", "details": {"plural": "cabins"}, "sentences": ["We sleep in a cabin."]}
+        ],
+        "nl": [
+        {"lemma": "hut", "pos": "noun", "details": {"article": "de", "plural": "hutten"}, "sentences": ["Wij slapen in een hut."]}
+        ]
+      }
+    },
+    {
+      "key": "clutter",
+      "gloss": "clutter (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "clutter", "pos": "noun", "details": {"uncountable": true}, "sentences": ["What clutter!"]}
+        ],
+        "nl": [
+        {"lemma": "rommel", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Wat een rommel!"]}
+        ]
+      }
+    },
+    {
+      "key": "move-in",
+      "gloss": "move in (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "move in", "pos": "verb", "details": {"past": "moved in", "participle": "moved in"}, "sentences": ["We moved in last week."]}
+        ],
+        "nl": [
+        {"lemma": "intrekken", "pos": "verb", "details": {"pastSingular": "trok in", "pastPlural": "trokken in", "participle": "ingetrokken", "auxiliary": "zijn"}, "sentences": ["Wij trokken vorige week in."]}
+        ]
+      }
+    },
+    {
+      "key": "lobby",
+      "gloss": "lobby (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "lobby", "pos": "noun", "details": {"plural": "lobbies"}, "sentences": ["We wait in the lobby."]}
+        ],
+        "nl": [
+        {"lemma": "hal", "pos": "noun", "details": {"article": "de", "plural": "hallen"}, "sentences": ["Wij wachten in de hal."]}
+        ]
+      }
+    },
+    {
+      "key": "candle",
+      "gloss": "candle (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "candle", "pos": "noun", "details": {"plural": "candles"}, "sentences": ["The candle is burning."]}
+        ],
+        "nl": [
+        {"lemma": "kaars", "pos": "noun", "details": {"article": "de", "plural": "kaarsen"}, "sentences": ["De kaars brandt."]}
+        ]
+      }
+    },
+    {
+      "key": "shed",
+      "gloss": "shed (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "shed", "pos": "noun", "details": {"plural": "sheds"}, "sentences": ["The tools are in the shed."]}
+        ],
+        "nl": [
+        {"lemma": "schuur", "pos": "noun", "details": {"article": "de", "plural": "schuren"}, "sentences": ["Het gereedschap ligt in de schuur."]}
+        ]
+      }
+    },
+    {
+      "key": "towel",
+      "gloss": "towel (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "towel", "pos": "noun", "details": {"plural": "towels"}, "sentences": ["I need a towel."]}
+        ],
+        "nl": [
+        {"lemma": "handdoek", "pos": "noun", "details": {"article": "de", "plural": "handdoeken"}, "sentences": ["Ik heb een handdoek nodig."]}
+        ]
+      }
+    },
+    {
+      "key": "refrigerator",
+      "gloss": "refrigerator (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "refrigerator", "pos": "noun", "details": {"plural": "refrigerators"}, "sentences": ["The milk is in the refrigerator."]}
+        ],
+        "nl": [
+        {"lemma": "koelkast", "pos": "noun", "details": {"article": "de", "plural": "koelkasten"}, "sentences": ["De melk staat in de koelkast."]}
+        ]
+      }
+    },
+    {
+      "key": "shelf",
+      "gloss": "shelf (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "shelf", "pos": "noun", "details": {"plural": "shelves"}, "sentences": ["The book is on the shelf."]}
+        ],
+        "nl": [
+        {"lemma": "plank", "pos": "noun", "details": {"article": "de", "plural": "planken"}, "sentences": ["Het boek staat op de plank."]}
+        ]
+      }
+    },
+    {
+      "key": "paint-noun",
+      "gloss": "paint (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "paint", "pos": "noun", "details": {"uncountable": true}, "sentences": ["The paint is wet."]}
+        ],
+        "nl": [
+        {"lemma": "verf", "pos": "noun", "details": {"article": "de", "plural": "verven"}, "sentences": ["De verf is nat."]}
+        ]
+      }
+    },
+    {
+      "key": "hook",
+      "gloss": "hook (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "hook", "pos": "noun", "details": {"plural": "hooks"}, "sentences": ["The coat hangs on a hook."]}
+        ],
+        "nl": [
+        {"lemma": "haak", "pos": "noun", "details": {"article": "de", "plural": "haken"}, "sentences": ["De jas hangt aan een haak."]}
+        ]
+      }
+    },
+    {
+      "key": "barrel",
+      "gloss": "barrel (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "barrel", "pos": "noun", "details": {"plural": "barrels"}, "sentences": ["The barrel is full."]}
+        ],
+        "nl": [
+        {"lemma": "vat", "pos": "noun", "details": {"article": "het", "plural": "vaten"}, "sentences": ["Het vat is vol."]}
+        ]
+      }
+    },
+    {
+      "key": "knot",
+      "gloss": "knot (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "knot", "pos": "noun", "details": {"plural": "knots"}, "sentences": ["I tie a knot."]}
+        ],
+        "nl": [
+        {"lemma": "knoop", "pos": "noun", "details": {"article": "de", "plural": "knopen"}, "sentences": ["Ik maak een knoop."]}
+        ]
+      }
+    },
+    {
+      "key": "soap",
+      "gloss": "soap (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "soap", "pos": "noun", "details": {"uncountable": true}, "sentences": ["The soap smells good."]}
+        ],
+        "nl": [
+        {"lemma": "zeep", "pos": "noun", "details": {"article": "de", "plural": "zepen"}, "sentences": ["De zeep ruikt lekker."]}
+        ]
+      }
+    },
+    {
+      "key": "bedsheet",
+      "gloss": "bedsheet (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "bedsheet", "pos": "noun", "details": {"plural": "bedsheets"}, "sentences": ["I wash the bedsheet."]}
+        ],
+        "nl": [
+        {"lemma": "laken", "pos": "noun", "details": {"article": "het", "plural": "lakens"}, "sentences": ["Ik was het laken."]}
         ]
       }
     }

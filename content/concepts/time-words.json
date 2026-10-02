@@ -479,6 +479,30 @@
         {"lemma": "gauw", "pos": "adverb", "sentences": ["Ik kom gauw."]}
         ]
       }
+    },
+    {
+      "key": "nowadays",
+      "gloss": "nowadays (adverb)",
+      "entries": {
+        "en": [
+        {"lemma": "nowadays", "pos": "adverb", "sentences": ["Nowadays everyone has a phone."]}
+        ],
+        "nl": [
+        {"lemma": "tegenwoordig", "pos": "adverb", "sentences": ["Tegenwoordig heeft iedereen een telefoon."]}
+        ]
+      }
+    },
+    {
+      "key": "currently",
+      "gloss": "currently (adverb)",
+      "entries": {
+        "en": [
+        {"lemma": "currently", "pos": "adverb", "sentences": ["I am currently at work."]}
+        ],
+        "nl": [
+        {"lemma": "momenteel", "pos": "adverb", "sentences": ["Ik ben momenteel op mijn werk."]}
+        ]
+      }
     }
   ]
 }

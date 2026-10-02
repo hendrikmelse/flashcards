@@ -217,7 +217,7 @@
       }
     },
     {
-      "key": "chest",
+      "key": "chest-noun-borst",
       "gloss": "chest (noun)",
       "entries": {
         "en": [
@@ -273,6 +273,150 @@
         ],
         "nl": [
         {"lemma": "hersenen", "pos": "noun", "details": {"article": "de", "pluralOnly": true}, "sentences": ["Mijn hersenen zijn moe."]}
+        ]
+      }
+    },
+    {
+      "key": "tongue",
+      "gloss": "tongue (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "tongue", "pos": "noun", "details": {"plural": "tongues"}, "sentences": ["I burned my tongue."]}
+        ],
+        "nl": [
+        {"lemma": "tong", "pos": "noun", "details": {"article": "de", "plural": "tongen"}, "sentences": ["Ik heb mijn tong verbrand."]}
+        ]
+      }
+    },
+    {
+      "key": "shoulder",
+      "gloss": "shoulder (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "shoulder", "pos": "noun", "details": {"plural": "shoulders"}, "sentences": ["My shoulder hurts."]}
+        ],
+        "nl": [
+        {"lemma": "schouder", "pos": "noun", "details": {"article": "de", "plural": "schouders"}, "sentences": ["Mijn schouder doet pijn."]}
+        ]
+      }
+    },
+    {
+      "key": "lip",
+      "gloss": "lip (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "lip", "pos": "noun", "details": {"plural": "lips"}, "sentences": ["She has red lips."]}
+        ],
+        "nl": [
+        {"lemma": "lip", "pos": "noun", "details": {"article": "de", "plural": "lippen"}, "sentences": ["Zij heeft rode lippen."]}
+        ]
+      }
+    },
+    {
+      "key": "throat",
+      "gloss": "throat (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "throat", "pos": "noun", "details": {"plural": "throats"}, "sentences": ["My throat hurts."]}
+        ],
+        "nl": [
+        {"lemma": "keel", "pos": "noun", "details": {"article": "de", "plural": "kelen"}, "sentences": ["Mijn keel doet pijn."]}
+        ]
+      }
+    },
+    {
+      "key": "belly",
+      "gloss": "belly (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "belly", "pos": "noun", "details": {"plural": "bellies"}, "sentences": ["My belly hurts."]}
+        ],
+        "nl": [
+        {"lemma": "buik", "pos": "noun", "details": {"article": "de", "plural": "buiken"}, "sentences": ["Mijn buik doet pijn."]}
+        ]
+      }
+    },
+    {
+      "key": "stomach",
+      "gloss": "stomach (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "stomach", "pos": "noun", "details": {"plural": "stomaches"}, "sentences": ["My stomach hurts."]}
+        ],
+        "nl": [
+        {"lemma": "maag", "pos": "noun", "details": {"article": "de", "plural": "magen"}, "sentences": ["Mijn maag doet pijn."]}
+        ]
+      }
+    },
+    {
+      "key": "tear-noun",
+      "gloss": "tear (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "tear", "pos": "noun", "details": {"plural": "tears"}, "sentences": ["A tear runs down her cheek."]}
+        ],
+        "nl": [
+        {"lemma": "traan", "pos": "noun", "details": {"article": "de", "plural": "tranen"}, "sentences": ["Een traan rolt over haar wang."]}
+        ]
+      }
+    },
+    {
+      "key": "toe",
+      "gloss": "toe (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "toe", "pos": "noun", "details": {"plural": "toes"}, "sentences": ["My toe hurts."]}
+        ],
+        "nl": [
+        {"lemma": "teen", "pos": "noun", "details": {"article": "de", "plural": "tenen"}, "sentences": ["Mijn teen doet pijn."]}
+        ]
+      }
+    },
+    {
+      "key": "nerve",
+      "gloss": "nerve (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "nerve", "pos": "noun", "details": {"plural": "nerves"}, "sentences": ["A nerve hurts."]}
+        ],
+        "nl": [
+        {"lemma": "zenuw", "pos": "noun", "details": {"article": "de", "plural": "zenuwen"}, "sentences": ["Een zenuw doet pijn."]}
+        ]
+      }
+    },
+    {
+      "key": "wrist",
+      "gloss": "wrist (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "wrist", "pos": "noun", "details": {"plural": "wrists"}, "sentences": ["My wrist hurts."]}
+        ],
+        "nl": [
+        {"lemma": "pols", "pos": "noun", "details": {"article": "de", "plural": "polsen"}, "sentences": ["Mijn pols doet pijn."]}
+        ]
+      }
+    },
+    {
+      "key": "nail",
+      "gloss": "nail (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "nail", "pos": "noun", "details": {"plural": "nails"}, "sentences": ["I cut my nails."]}
+        ],
+        "nl": [
+        {"lemma": "nagel", "pos": "noun", "details": {"article": "de", "plural": "nagels"}, "sentences": ["Ik knip mijn nagels."]}
+        ]
+      }
+    },
+    {
+      "key": "skull",
+      "gloss": "skull (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "skull", "pos": "noun", "details": {"plural": "skulls"}, "sentences": ["The skull is old."]}
+        ],
+        "nl": [
+        {"lemma": "schedel", "pos": "noun", "details": {"article": "de", "plural": "schedels"}, "sentences": ["De schedel is oud."]}
         ]
       }
     }

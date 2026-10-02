@@ -239,6 +239,126 @@
         {"lemma": "ogenblik", "pos": "noun", "details": {"article": "het", "plural": "ogenblikken"}, "sentences": ["Een ogenblik, alstublieft."]}
         ]
       }
+    },
+    {
+      "key": "clock",
+      "gloss": "clock (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "clock", "pos": "noun", "details": {"plural": "clocks"}, "sentences": ["The clock is on the wall."]}
+        ],
+        "nl": [
+        {"lemma": "klok", "pos": "noun", "details": {"article": "de", "plural": "klokken"}, "sentences": ["De klok hangt aan de muur."]}
+        ]
+      }
+    },
+    {
+      "key": "break-noun",
+      "gloss": "break (pause)",
+      "entries": {
+        "en": [
+        {"lemma": "break (pause)", "pos": "noun", "details": {"plural": "breaks"}, "sentences": ["We take a break."]}
+        ],
+        "nl": [
+        {"lemma": "pauze", "pos": "noun", "details": {"article": "de", "plural": "pauzes"}, "sentences": ["Wij nemen een pauze."]}
+        ]
+      }
+    },
+    {
+      "key": "afternoon",
+      "gloss": "afternoon (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "afternoon", "pos": "noun", "details": {"plural": "afternoons"}, "sentences": ["I work in the afternoon."]}
+        ],
+        "nl": [
+        {"lemma": "middag", "pos": "noun", "details": {"article": "de", "plural": "middagen"}, "sentences": ["Ik werk in de middag."]}
+        ]
+      }
+    },
+    {
+      "key": "season",
+      "gloss": "season (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "season", "pos": "noun", "details": {"plural": "seasons"}, "sentences": ["Summer is my favorite season."]}
+        ],
+        "nl": [
+        {"lemma": "seizoen", "pos": "noun", "details": {"article": "het", "plural": "seizoenen"}, "sentences": ["De zomer is mijn favoriete seizoen."]}
+        ]
+      }
+    },
+    {
+      "key": "winter",
+      "gloss": "winter (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "winter", "pos": "noun", "details": {"plural": "winters"}, "sentences": ["The winter is cold."]}
+        ],
+        "nl": [
+        {"lemma": "winter", "pos": "noun", "details": {"article": "de", "plural": "winters"}, "sentences": ["De winter is koud."]}
+        ]
+      }
+    },
+    {
+      "key": "midnight",
+      "gloss": "midnight (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "midnight", "pos": "noun", "details": {"uncountable": true}, "sentences": ["We sleep at midnight."]}
+        ],
+        "nl": [
+        {"lemma": "middernacht", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Wij slapen om middernacht."]}
+        ]
+      }
+    },
+    {
+      "key": "quarter-of-an-hour",
+      "gloss": "quarter of an hour (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "quarter of an hour", "pos": "noun", "details": {"plural": "quarter of an hours"}, "sentences": ["I wait a quarter of an hour."]}
+        ],
+        "nl": [
+        {"lemma": "kwartier", "pos": "noun", "details": {"article": "het", "plural": "kwartieren"}, "sentences": ["Ik wacht een kwartier."]}
+        ]
+      }
+    },
+    {
+      "key": "period",
+      "gloss": "period (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "period", "pos": "noun", "details": {"plural": "periods"}, "sentences": ["This is a difficult period."]}
+        ],
+        "nl": [
+        {"lemma": "periode", "pos": "noun", "details": {"article": "de", "plural": "periodes"}, "sentences": ["Dit is een moeilijke periode."]}
+        ]
+      }
+    },
+    {
+      "key": "spring",
+      "gloss": "spring (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "spring", "pos": "noun", "details": {"plural": "springs"}, "sentences": ["The spring is warm."]}
+        ],
+        "nl": [
+        {"lemma": "lente", "pos": "noun", "details": {"article": "de", "plural": "lentes"}, "sentences": ["De lente is warm."]}
+        ]
+      }
+    },
+    {
+      "key": "date-noun-datum",
+      "gloss": "date (calendar)",
+      "entries": {
+        "en": [
+        {"lemma": "date (calendar)", "pos": "noun", "details": {"plural": "dates"}, "sentences": ["What is the date?"]}
+        ],
+        "nl": [
+        {"lemma": "datum", "pos": "noun", "details": {"article": "de", "plural": "data"}, "sentences": ["Wat is de datum?"]}
+        ]
+      }
     }
   ]
 }

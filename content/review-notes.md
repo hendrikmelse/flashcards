@@ -18,7 +18,7 @@ Delete an item once checked; delete this file when it is empty.
 - `bad-adjective-erg` (erg / bad): erg is also an adverb ('very')
 - `fixed` (vast / fixed): vast has several meanings (firm, stuck, fixed); only 'fixed' shown
 - `sir` (meneer / sir): plural of meneer: 'heren' (gentlemen) or 'meneren'
-- `couple` (paar / couple): 'paar' = pair; 'een paar' = a few
+- `couple-noun-paar` (paar / couple): 'paar' = pair; 'een paar' = a few
 - `matter-noun` (zaak / matter): zaak also means case, shop, business
 - `damn` (verdomme / damn): mild profanity
 - `get-verb-snappen` (snappen / get): colloquial
@@ -36,3 +36,6 @@ Delete an item once checked; delete this file when it is empty.
 - `slave` (slaaf / slave): historical/sensitive word
 - `husband` (echtgenoot / husband): echtgenoot is formal; 'man' is the everyday word
 - `brain` (hersenen / brain): Dutch plural-only 'hersenen'; English singular 'brain'
+- `neighbor` (buur / neighbor): buur / buurman / buurvrouw; 'buurman' is the everyday word
+- `belong` (behoren / belong): behoren is formal; 'van mij zijn' is more everyday
+- `risk-verb` (riskeren / risk): participle gerisqueerd/gerikseerd is uncertain

@@ -205,7 +205,7 @@
       }
     },
     {
-      "key": "darling",
+      "key": "darling-noun-schat",
       "gloss": "darling (term of endearment)",
       "entries": {
         "en": [
@@ -493,7 +493,7 @@
       }
     },
     {
-      "key": "separate",
+      "key": "separate-verb",
       "gloss": "separate (divorce)",
       "entries": {
         "en": [
@@ -529,7 +529,7 @@
       }
     },
     {
-      "key": "master",
+      "key": "master-noun",
       "gloss": "master (noun)",
       "entries": {
         "en": [
@@ -705,6 +705,378 @@
         ],
         "nl": [
         {"lemma": "echtgenoot", "pos": "noun", "details": {"article": "de", "plural": "echtgenoten"}, "sentences": ["Mijn echtgenoot is thuis."]}
+        ]
+      }
+    },
+    {
+      "key": "cheat",
+      "gloss": "cheat (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "cheat", "pos": "verb", "details": {"past": "cheated", "participle": "cheated"}, "sentences": ["He cheats his friend."]}
+        ],
+        "nl": [
+        {"lemma": "bedriegen", "pos": "verb", "details": {"pastSingular": "bedroog", "pastPlural": "bedrogen", "participle": "bedrogen", "auxiliary": "hebben"}, "sentences": ["Hij bedriegt zijn vriend."]}
+        ]
+      }
+    },
+    {
+      "key": "neighbor",
+      "gloss": "neighbor (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "neighbor", "pos": "noun", "details": {"plural": "neighbors"}, "sentences": ["My neighbor is nice."]}
+        ],
+        "nl": [
+        {"lemma": "buur", "pos": "noun", "details": {"article": "de", "plural": "buren"}, "sentences": ["Mijn buurman is aardig."]}
+        ]
+      }
+    },
+    {
+      "key": "romantic",
+      "gloss": "romantic (adjective)",
+      "entries": {
+        "en": [
+        {"lemma": "romantic", "pos": "adjective", "sentences": ["The dinner is romantic."]}
+        ],
+        "nl": [
+        {"lemma": "romantisch", "pos": "adjective", "sentences": ["Het diner is romantisch."]}
+        ]
+      }
+    },
+    {
+      "key": "couple-noun-stel",
+      "gloss": "couple (two people)",
+      "entries": {
+        "en": [
+        {"lemma": "couple (two people)", "pos": "noun", "details": {"plural": "couples"}, "sentences": ["They are a nice couple."]}
+        ],
+        "nl": [
+        {"lemma": "stel", "pos": "noun", "details": {"article": "het", "plural": "stellen"}, "sentences": ["Zij zijn een leuk stel."]}
+        ]
+      }
+    },
+    {
+      "key": "young-man",
+      "gloss": "young man (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "young man", "pos": "noun", "details": {"plural": "young men"}, "sentences": ["The young man is polite."]}
+        ],
+        "nl": [
+        {"lemma": "jongeman", "pos": "noun", "details": {"article": "de", "plural": "jongemannen"}, "sentences": ["De jongeman is beleefd."]}
+        ]
+      }
+    },
+    {
+      "key": "fan",
+      "gloss": "fan (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "fan", "pos": "noun", "details": {"plural": "fans"}, "sentences": ["He is a big fan."]}
+        ],
+        "nl": [
+        {"lemma": "fan", "pos": "noun", "details": {"article": "de", "plural": "fans"}, "sentences": ["Hij is een grote fan."]}
+        ]
+      }
+    },
+    {
+      "key": "youth",
+      "gloss": "youth (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "youth", "pos": "noun", "details": {"uncountable": true}, "sentences": ["The youth are our future."]}
+        ],
+        "nl": [
+        {"lemma": "jeugd", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["De jeugd is onze toekomst."]}
+        ]
+      }
+    },
+    {
+      "key": "genius",
+      "gloss": "genius (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "genius", "pos": "noun", "details": {"plural": "geniuses"}, "sentences": ["He is a genius."]}
+        ],
+        "nl": [
+        {"lemma": "genie", "pos": "noun", "details": {"article": "het", "plural": "genieën"}, "sentences": ["Hij is een genie."]}
+        ]
+      }
+    },
+    {
+      "key": "little-brother",
+      "gloss": "little brother (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "little brother", "pos": "noun", "details": {"plural": "little brothers"}, "sentences": ["My little brother is five."]}
+        ],
+        "nl": [
+        {"lemma": "broertje", "pos": "noun", "details": {"article": "het", "plural": "broertjes"}, "sentences": ["Mijn broertje is vijf."]}
+        ]
+      }
+    },
+    {
+      "key": "friendship",
+      "gloss": "friendship (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "friendship", "pos": "noun", "details": {"plural": "friendships"}, "sentences": ["Friendship is important."]}
+        ],
+        "nl": [
+        {"lemma": "vriendschap", "pos": "noun", "details": {"article": "de", "plural": "vriendschappen"}, "sentences": ["Vriendschap is belangrijk."]}
+        ]
+      }
+    },
+    {
+      "key": "bride",
+      "gloss": "bride (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "bride", "pos": "noun", "details": {"plural": "brides"}, "sentences": ["The bride is beautiful."]}
+        ],
+        "nl": [
+        {"lemma": "bruid", "pos": "noun", "details": {"article": "de", "plural": "bruiden"}, "sentences": ["De bruid is mooi."]}
+        ]
+      }
+    },
+    {
+      "key": "community",
+      "gloss": "community (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "community", "pos": "noun", "details": {"plural": "communities"}, "sentences": ["The community helps."]}
+        ],
+        "nl": [
+        {"lemma": "gemeenschap", "pos": "noun", "details": {"article": "de", "plural": "gemeenschappen"}, "sentences": ["De gemeenschap helpt."]}
+        ]
+      }
+    },
+    {
+      "key": "grandfather",
+      "gloss": "grandfather (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "grandfather", "pos": "noun", "details": {"plural": "grandfathers"}, "sentences": ["My grandfather is old."]}
+        ],
+        "nl": [
+        {"lemma": "grootvader", "pos": "noun", "details": {"article": "de", "plural": "grootvaders"}, "sentences": ["Mijn grootvader is oud."]}
+        ]
+      }
+    },
+    {
+      "key": "knight",
+      "gloss": "knight (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "knight", "pos": "noun", "details": {"plural": "knights"}, "sentences": ["The knight has a sword."]}
+        ],
+        "nl": [
+        {"lemma": "ridder", "pos": "noun", "details": {"article": "de", "plural": "ridders"}, "sentences": ["De ridder heeft een zwaard."]}
+        ]
+      }
+    },
+    {
+      "key": "divorce",
+      "gloss": "divorce (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "divorce", "pos": "noun", "details": {"plural": "divorces"}, "sentences": ["The divorce is hard."]}
+        ],
+        "nl": [
+        {"lemma": "scheiding", "pos": "noun", "details": {"article": "de", "plural": "scheidingen"}, "sentences": ["De scheiding is zwaar."]}
+        ]
+      }
+    },
+    {
+      "key": "humanity",
+      "gloss": "humanity (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "humanity", "pos": "noun", "details": {"uncountable": true}, "sentences": ["Humanity needs peace."]}
+        ],
+        "nl": [
+        {"lemma": "mensheid", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["De mensheid heeft vrede nodig."]}
+        ]
+      }
+    },
+    {
+      "key": "twins",
+      "gloss": "twins (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "twins", "pos": "noun", "details": {"pluralOnly": true}, "sentences": ["The twins are five."]}
+        ],
+        "nl": [
+        {"lemma": "tweeling", "pos": "noun", "details": {"article": "de", "plural": "tweelingen"}, "sentences": ["De tweeling is vijf."]}
+        ]
+      }
+    },
+    {
+      "key": "little-sister",
+      "gloss": "little sister (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "little sister", "pos": "noun", "details": {"plural": "little sisters"}, "sentences": ["My little sister is six."]}
+        ],
+        "nl": [
+        {"lemma": "zusje", "pos": "noun", "details": {"article": "het", "plural": "zusjes"}, "sentences": ["Mijn zusje is zes."]}
+        ]
+      }
+    },
+    {
+      "key": "comrade",
+      "gloss": "comrade (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "comrade", "pos": "noun", "details": {"plural": "comrades"}, "sentences": ["He is my comrade."]}
+        ],
+        "nl": [
+        {"lemma": "kameraad", "pos": "noun", "details": {"article": "de", "plural": "kameraden"}, "sentences": ["Hij is mijn kameraad."]}
+        ]
+      }
+    },
+    {
+      "key": "darling-noun-lieveling",
+      "gloss": "darling (favorite)",
+      "entries": {
+        "en": [
+        {"lemma": "darling (favorite)", "pos": "noun", "details": {"plural": "darlings"}, "sentences": ["She is my darling."]}
+        ],
+        "nl": [
+        {"lemma": "lieveling", "pos": "noun", "details": {"article": "de", "plural": "lievelingen"}, "sentences": ["Zij is mijn lieveling."]}
+        ]
+      }
+    },
+    {
+      "key": "servant",
+      "gloss": "servant (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "servant", "pos": "noun", "details": {"plural": "servants"}, "sentences": ["The servant brings the tea."]}
+        ],
+        "nl": [
+        {"lemma": "bediende", "pos": "noun", "details": {"article": "de", "plural": "bedienden"}, "sentences": ["De bediende brengt de thee."]}
+        ]
+      }
+    },
+    {
+      "key": "tribe",
+      "gloss": "tribe (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "tribe", "pos": "noun", "details": {"plural": "tribes"}, "sentences": ["The tribe lives in the forest."]}
+        ],
+        "nl": [
+        {"lemma": "stam", "pos": "noun", "details": {"article": "de", "plural": "stammen"}, "sentences": ["De stam leeft in het bos."]}
+        ]
+      }
+    },
+    {
+      "key": "cowboy",
+      "gloss": "cowboy (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "cowboy", "pos": "noun", "details": {"plural": "cowboys"}, "sentences": ["The cowboy rides a horse."]}
+        ],
+        "nl": [
+        {"lemma": "cowboy", "pos": "noun", "details": {"article": "de", "plural": "cowboys"}, "sentences": ["De cowboy rijdt op een paard."]}
+        ]
+      }
+    },
+    {
+      "key": "lover",
+      "gloss": "lover (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "lover", "pos": "noun", "details": {"plural": "lovers"}, "sentences": ["He is her lover."]}
+        ],
+        "nl": [
+        {"lemma": "minnaar", "pos": "noun", "details": {"article": "de", "plural": "minnaars"}, "sentences": ["Hij is haar minnaar."]}
+        ]
+      }
+    },
+    {
+      "key": "stranger",
+      "gloss": "stranger (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "stranger", "pos": "noun", "details": {"plural": "strangers"}, "sentences": ["A stranger knocks."]}
+        ],
+        "nl": [
+        {"lemma": "vreemdeling", "pos": "noun", "details": {"article": "de", "plural": "vreemdelingen"}, "sentences": ["Een vreemdeling klopt."]}
+        ]
+      }
+    },
+    {
+      "key": "teenager",
+      "gloss": "teenager (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "teenager", "pos": "noun", "details": {"plural": "teenagers"}, "sentences": ["The teenager sleeps late."]}
+        ],
+        "nl": [
+        {"lemma": "tiener", "pos": "noun", "details": {"article": "de", "plural": "tieners"}, "sentences": ["De tiener slaapt laat."]}
+        ]
+      }
+    },
+    {
+      "key": "tempt",
+      "gloss": "tempt (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "tempt", "pos": "verb", "details": {"past": "tempted", "participle": "tempted"}, "sentences": ["The cake tempts me."]}
+        ],
+        "nl": [
+        {"lemma": "verleiden", "pos": "verb", "details": {"pastSingular": "verleidde", "pastPlural": "verleidden", "participle": "verleid", "auxiliary": "hebben"}, "sentences": ["De taart verleidt mij."]}
+        ]
+      }
+    },
+    {
+      "key": "date-noun-date",
+      "gloss": "date (romantic)",
+      "entries": {
+        "en": [
+        {"lemma": "date (romantic)", "pos": "noun", "details": {"plural": "dates"}, "sentences": ["I have a date tonight."]}
+        ],
+        "nl": [
+        {"lemma": "date", "pos": "noun", "details": {"article": "de", "plural": "dates"}, "sentences": ["Ik heb vanavond een date."]}
+        ]
+      }
+    },
+    {
+      "key": "pirate",
+      "gloss": "pirate (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "pirate", "pos": "noun", "details": {"plural": "pirates"}, "sentences": ["The pirate has a ship."]}
+        ],
+        "nl": [
+        {"lemma": "piraat", "pos": "noun", "details": {"article": "de", "plural": "piraten"}, "sentences": ["De piraat heeft een schip."]}
+        ]
+      }
+    },
+    {
+      "key": "crown",
+      "gloss": "crown (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "crown", "pos": "noun", "details": {"plural": "crowns"}, "sentences": ["The king wears a crown."]}
+        ],
+        "nl": [
+        {"lemma": "kroon", "pos": "noun", "details": {"article": "de", "plural": "kronen"}, "sentences": ["De koning draagt een kroon."]}
+        ]
+      }
+    },
+    {
+      "key": "rebel",
+      "gloss": "rebel (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "rebel", "pos": "noun", "details": {"plural": "rebels"}, "sentences": ["The rebel flees."]}
+        ],
+        "nl": [
+        {"lemma": "rebel", "pos": "noun", "details": {"article": "de", "plural": "rebellen"}, "sentences": ["De rebel vlucht."]}
         ]
       }
     }

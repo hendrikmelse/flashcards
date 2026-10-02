@@ -25,7 +25,7 @@
       }
     },
     {
-      "key": "dance",
+      "key": "dance-verb",
       "gloss": "dance (verb)",
       "entries": {
         "en": [
@@ -297,6 +297,582 @@
         ],
         "nl": [
         {"lemma": "kunst", "pos": "noun", "details": {"article": "de", "plural": "kunsten"}, "sentences": ["Ik hou van kunst."]}
+        ]
+      }
+    },
+    {
+      "key": "christmas",
+      "gloss": "Christmas (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "Christmas", "pos": "noun", "details": {"uncountable": true}, "sentences": ["We celebrate Christmas."]}
+        ],
+        "nl": [
+        {"lemma": "kerst", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Wij vieren kerst."]}
+        ]
+      }
+    },
+    {
+      "key": "go-out",
+      "gloss": "go out (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "go out", "pos": "verb", "details": {"past": "went out", "participle": "gone out"}, "sentences": ["We went out last night."]}
+        ],
+        "nl": [
+        {"lemma": "uitgaan", "pos": "verb", "details": {"pastSingular": "ging uit", "pastPlural": "gingen uit", "participle": "uitgegaan", "auxiliary": "zijn"}, "sentences": ["Wij gingen gisteravond uit."]}
+        ]
+      }
+    },
+    {
+      "key": "song",
+      "gloss": "song (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "song", "pos": "noun", "details": {"plural": "songs"}, "sentences": ["She sings a song."]}
+        ],
+        "nl": [
+        {"lemma": "lied", "pos": "noun", "details": {"article": "het", "plural": "liederen"}, "sentences": ["Zij zingt een lied."]}
+        ]
+      }
+    },
+    {
+      "key": "painting",
+      "gloss": "painting (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "painting", "pos": "noun", "details": {"plural": "paintings"}, "sentences": ["The painting is beautiful."]}
+        ],
+        "nl": [
+        {"lemma": "schilderij", "pos": "noun", "details": {"article": "het", "plural": "schilderijen"}, "sentences": ["Het schilderij is mooi."]}
+        ]
+      }
+    },
+    {
+      "key": "magic",
+      "gloss": "magic (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "magic", "pos": "noun", "details": {"uncountable": true}, "sentences": ["I believe in magic."]}
+        ],
+        "nl": [
+        {"lemma": "magie", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Ik geloof in magie."]}
+        ]
+      }
+    },
+    {
+      "key": "coach",
+      "gloss": "coach (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "coach", "pos": "noun", "details": {"plural": "coaches"}, "sentences": ["The coach is strict."]}
+        ],
+        "nl": [
+        {"lemma": "coach", "pos": "noun", "details": {"article": "de", "plural": "coaches"}, "sentences": ["De coach is streng."]}
+        ]
+      }
+    },
+    {
+      "key": "little-song",
+      "gloss": "little song (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "little song", "pos": "noun", "details": {"plural": "little songs"}, "sentences": ["The child sings a little song."]}
+        ],
+        "nl": [
+        {"lemma": "liedje", "pos": "noun", "details": {"article": "het", "plural": "liedjes"}, "sentences": ["Het kind zingt een liedje."]}
+        ]
+      }
+    },
+    {
+      "key": "doll",
+      "gloss": "doll (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "doll", "pos": "noun", "details": {"plural": "dolls"}, "sentences": ["The girl plays with a doll."]}
+        ],
+        "nl": [
+        {"lemma": "pop", "pos": "noun", "details": {"article": "de", "plural": "poppen"}, "sentences": ["Het meisje speelt met een pop."]}
+        ]
+      }
+    },
+    {
+      "key": "dive",
+      "gloss": "dive (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "dive", "pos": "verb", "details": {"past": "dived", "participle": "dived"}, "sentences": ["He dives into the water."]}
+        ],
+        "nl": [
+        {"lemma": "duiken", "pos": "verb", "details": {"pastSingular": "dook", "pastPlural": "doken", "participle": "gedoken", "auxiliary": "hebben/zijn"}, "sentences": ["Hij duikt in het water."]}
+        ]
+      }
+    },
+    {
+      "key": "winner",
+      "gloss": "winner (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "winner", "pos": "noun", "details": {"plural": "winners"}, "sentences": ["The winner gets a prize."]}
+        ],
+        "nl": [
+        {"lemma": "winnaar", "pos": "noun", "details": {"article": "de", "plural": "winnaars"}, "sentences": ["De winnaar krijgt een prijs."]}
+        ]
+      }
+    },
+    {
+      "key": "kick",
+      "gloss": "kick (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "kick", "pos": "verb", "details": {"past": "kicked", "participle": "kicked"}, "sentences": ["He kicks the ball."]}
+        ],
+        "nl": [
+        {"lemma": "trappen", "pos": "verb", "details": {"pastSingular": "trapte", "pastPlural": "trapten", "participle": "getrapt", "auxiliary": "hebben"}, "sentences": ["Hij trapt de bal."]}
+        ]
+      }
+    },
+    {
+      "key": "climb",
+      "gloss": "climb (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "climb", "pos": "verb", "details": {"past": "climbed", "participle": "climbed"}, "sentences": ["We climb the mountain."]}
+        ],
+        "nl": [
+        {"lemma": "klimmen", "pos": "verb", "details": {"pastSingular": "klom", "pastPlural": "klommen", "participle": "geklommen", "auxiliary": "hebben/zijn"}, "sentences": ["Wij klimmen de berg op."]}
+        ]
+      }
+    },
+    {
+      "key": "race",
+      "gloss": "race (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "race", "pos": "noun", "details": {"plural": "races"}, "sentences": ["The race starts now."]}
+        ],
+        "nl": [
+        {"lemma": "race", "pos": "noun", "details": {"article": "de", "plural": "races"}, "sentences": ["De race begint nu."]}
+        ]
+      }
+    },
+    {
+      "key": "champion",
+      "gloss": "champion (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "champion", "pos": "noun", "details": {"plural": "champions"}, "sentences": ["He is the champion."]}
+        ],
+        "nl": [
+        {"lemma": "kampioen", "pos": "noun", "details": {"article": "de", "plural": "kampioenen"}, "sentences": ["Hij is de kampioen."]}
+        ]
+      }
+    },
+    {
+      "key": "dance-noun",
+      "gloss": "dance (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "dance", "pos": "noun", "details": {"plural": "dances"}, "sentences": ["The dance is beautiful."]}
+        ],
+        "nl": [
+        {"lemma": "dans", "pos": "noun", "details": {"article": "de", "plural": "dansen"}, "sentences": ["De dans is mooi."]}
+        ]
+      }
+    },
+    {
+      "key": "player",
+      "gloss": "player (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "player", "pos": "noun", "details": {"plural": "players"}, "sentences": ["The player scores."]}
+        ],
+        "nl": [
+        {"lemma": "speler", "pos": "noun", "details": {"article": "de", "plural": "spelers"}, "sentences": ["De speler scoort."]}
+        ]
+      }
+    },
+    {
+      "key": "paint-verb",
+      "gloss": "paint (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "paint", "pos": "verb", "details": {"past": "painted", "participle": "painted"}, "sentences": ["I paint the wall."]}
+        ],
+        "nl": [
+        {"lemma": "schilderen", "pos": "verb", "details": {"pastSingular": "schilderde", "pastPlural": "schilderden", "participle": "geschilderd", "auxiliary": "hebben"}, "sentences": ["Ik schilder de muur."]}
+        ]
+      }
+    },
+    {
+      "key": "style",
+      "gloss": "style (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "style", "pos": "noun", "details": {"plural": "styles"}, "sentences": ["I like his style."]}
+        ],
+        "nl": [
+        {"lemma": "stijl", "pos": "noun", "details": {"article": "de", "plural": "stijlen"}, "sentences": ["Ik hou van zijn stijl."]}
+        ]
+      }
+    },
+    {
+      "key": "victory",
+      "gloss": "victory (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "victory", "pos": "noun", "details": {"plural": "victories"}, "sentences": ["The victory is ours."]}
+        ],
+        "nl": [
+        {"lemma": "overwinning", "pos": "noun", "details": {"article": "de", "plural": "overwinningen"}, "sentences": ["De overwinning is van ons."]}
+        ]
+      }
+    },
+    {
+      "key": "swimming-pool",
+      "gloss": "swimming pool (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "swimming pool", "pos": "noun", "details": {"plural": "swimming pools"}, "sentences": ["We swim in the swimming pool."]}
+        ],
+        "nl": [
+        {"lemma": "zwembad", "pos": "noun", "details": {"article": "het", "plural": "zwembaden"}, "sentences": ["Wij zwemmen in het zwembad."]}
+        ]
+      }
+    },
+    {
+      "key": "score",
+      "gloss": "score (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "score", "pos": "verb", "details": {"past": "scored", "participle": "scored"}, "sentences": ["He scores a goal."]}
+        ],
+        "nl": [
+        {"lemma": "scoren", "pos": "verb", "details": {"pastSingular": "scoorde", "pastPlural": "scoorden", "participle": "gescoord", "auxiliary": "hebben"}, "sentences": ["Hij scoort een doelpunt."]}
+        ]
+      }
+    },
+    {
+      "key": "santa-claus",
+      "gloss": "Santa Claus (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "Santa Claus", "pos": "noun", "details": {"plural": "Santa Clauses"}, "sentences": ["Santa Claus brings gifts."]}
+        ],
+        "nl": [
+        {"lemma": "kerstman", "pos": "noun", "details": {"article": "de", "plural": "kerstmannen"}, "sentences": ["De kerstman brengt cadeaus."]}
+        ]
+      }
+    },
+    {
+      "key": "defense",
+      "gloss": "defense (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "defense", "pos": "noun", "details": {"plural": "defenses"}, "sentences": ["The defense is strong."]}
+        ],
+        "nl": [
+        {"lemma": "verdediging", "pos": "noun", "details": {"article": "de", "plural": "verdedigingen"}, "sentences": ["De verdediging is sterk."]}
+        ]
+      }
+    },
+    {
+      "key": "poem",
+      "gloss": "poem (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "poem", "pos": "noun", "details": {"plural": "poems"}, "sentences": ["I read a poem."]}
+        ],
+        "nl": [
+        {"lemma": "gedicht", "pos": "noun", "details": {"article": "het", "plural": "gedichten"}, "sentences": ["Ik lees een gedicht."]}
+        ]
+      }
+    },
+    {
+      "key": "theater",
+      "gloss": "theater (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "theater", "pos": "noun", "details": {"plural": "theaters"}, "sentences": ["We go to the theater."]}
+        ],
+        "nl": [
+        {"lemma": "theater", "pos": "noun", "details": {"article": "het", "plural": "theaters"}, "sentences": ["Wij gaan naar het theater."]}
+        ]
+      }
+    },
+    {
+      "key": "legend",
+      "gloss": "legend (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "legend", "pos": "noun", "details": {"plural": "legends"}, "sentences": ["This is an old legend."]}
+        ],
+        "nl": [
+        {"lemma": "legende", "pos": "noun", "details": {"article": "de", "plural": "legendes"}, "sentences": ["Dit is een oude legende."]}
+        ]
+      }
+    },
+    {
+      "key": "wizard",
+      "gloss": "wizard (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "wizard", "pos": "noun", "details": {"plural": "wizards"}, "sentences": ["The wizard casts a spell."]}
+        ],
+        "nl": [
+        {"lemma": "tovenaar", "pos": "noun", "details": {"article": "de", "plural": "tovenaars"}, "sentences": ["De tovenaar spreekt een spreuk uit."]}
+        ]
+      }
+    },
+    {
+      "key": "drinks",
+      "gloss": "drinks (social gathering)",
+      "entries": {
+        "en": [
+        {"lemma": "drinks (social gathering)", "pos": "noun", "details": {"plural": "drinkses"}, "sentences": ["We have drinks on Friday."]}
+        ],
+        "nl": [
+        {"lemma": "borrel", "pos": "noun", "details": {"article": "de", "plural": "borrels"}, "sentences": ["Wij gaan vrijdag op een borrel."]}
+        ]
+      }
+    },
+    {
+      "key": "decorate",
+      "gloss": "decorate (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "decorate", "pos": "verb", "details": {"past": "decorated", "participle": "decorated"}, "sentences": ["We decorate the tree."]}
+        ],
+        "nl": [
+        {"lemma": "versieren", "pos": "verb", "details": {"pastSingular": "versierde", "pastPlural": "versierden", "participle": "versierd", "auxiliary": "hebben"}, "sentences": ["Wij versieren de boom."]}
+        ]
+      }
+    },
+    {
+      "key": "perform",
+      "gloss": "perform (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "perform", "pos": "verb", "details": {"past": "performed", "participle": "performed"}, "sentences": ["The band performs tonight."]}
+        ],
+        "nl": [
+        {"lemma": "optreden", "pos": "verb", "details": {"pastSingular": "trad op", "pastPlural": "traden op", "participle": "opgetreden", "auxiliary": "hebben"}, "sentences": ["De band treedt vanavond op."]}
+        ]
+      }
+    },
+    {
+      "key": "training",
+      "gloss": "training (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "training", "pos": "noun", "details": {"plural": "trainings"}, "sentences": ["The training is hard."]}
+        ],
+        "nl": [
+        {"lemma": "training", "pos": "noun", "details": {"article": "de", "plural": "trainingen"}, "sentences": ["De training is zwaar."]}
+        ]
+      }
+    },
+    {
+      "key": "gamble",
+      "gloss": "gamble (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "gamble", "pos": "verb", "details": {"past": "gambled", "participle": "gambled"}, "sentences": ["He gambles every week."]}
+        ],
+        "nl": [
+        {"lemma": "gokken", "pos": "verb", "details": {"pastSingular": "gokte", "pastPlural": "gokten", "participle": "gegokt", "auxiliary": "hebben"}, "sentences": ["Hij gokt elke week."]}
+        ]
+      }
+    },
+    {
+      "key": "sport",
+      "gloss": "sport (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "sport", "pos": "noun", "details": {"plural": "sports"}, "sentences": ["Football is a sport."]}
+        ],
+        "nl": [
+        {"lemma": "sport", "pos": "noun", "details": {"article": "de", "plural": "sporten"}, "sentences": ["Voetbal is een sport."]}
+        ]
+      }
+    },
+    {
+      "key": "audition",
+      "gloss": "audition (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "audition", "pos": "noun", "details": {"plural": "auditions"}, "sentences": ["I have an audition."]}
+        ],
+        "nl": [
+        {"lemma": "auditie", "pos": "noun", "details": {"article": "de", "plural": "audities"}, "sentences": ["Ik heb een auditie."]}
+        ]
+      }
+    },
+    {
+      "key": "toys",
+      "gloss": "toys (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "toys", "pos": "noun", "details": {"pluralOnly": true}, "sentences": ["The children play with toys."]}
+        ],
+        "nl": [
+        {"lemma": "speelgoed", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["De kinderen spelen met speelgoed."]}
+        ]
+      }
+    },
+    {
+      "key": "applause",
+      "gloss": "applause (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "applause", "pos": "noun", "details": {"uncountable": true}, "sentences": ["The applause is loud."]}
+        ],
+        "nl": [
+        {"lemma": "applaus", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["Het applaus is luid."]}
+        ]
+      }
+    },
+    {
+      "key": "casino",
+      "gloss": "casino (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "casino", "pos": "noun", "details": {"plural": "casinos"}, "sentences": ["We go to the casino."]}
+        ],
+        "nl": [
+        {"lemma": "casino", "pos": "noun", "details": {"article": "het", "plural": "casino's"}, "sentences": ["Wij gaan naar het casino."]}
+        ]
+      }
+    },
+    {
+      "key": "drawing",
+      "gloss": "drawing (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "drawing", "pos": "noun", "details": {"plural": "drawings"}, "sentences": ["The drawing is beautiful."]}
+        ],
+        "nl": [
+        {"lemma": "tekening", "pos": "noun", "details": {"article": "de", "plural": "tekeningen"}, "sentences": ["De tekening is mooi."]}
+        ]
+      }
+    },
+    {
+      "key": "clown",
+      "gloss": "clown (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "clown", "pos": "noun", "details": {"plural": "clowns"}, "sentences": ["The clown makes me laugh."]}
+        ],
+        "nl": [
+        {"lemma": "clown", "pos": "noun", "details": {"article": "de", "plural": "clowns"}, "sentences": ["De clown laat mij lachen."]}
+        ]
+      }
+    },
+    {
+      "key": "costume",
+      "gloss": "costume (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "costume", "pos": "noun", "details": {"plural": "costumes"}, "sentences": ["The costume is funny."]}
+        ],
+        "nl": [
+        {"lemma": "kostuum", "pos": "noun", "details": {"article": "het", "plural": "kostuums"}, "sentences": ["Het kostuum is grappig."]}
+        ]
+      }
+    },
+    {
+      "key": "entertain",
+      "gloss": "entertain (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "entertain", "pos": "verb", "details": {"past": "entertained", "participle": "entertained"}, "sentences": ["The clown entertains the children."]}
+        ],
+        "nl": [
+        {"lemma": "vermaken", "pos": "verb", "details": {"pastSingular": "vermaakte", "pastPlural": "vermaakten", "participle": "vermaakt", "auxiliary": "hebben"}, "sentences": ["De clown vermaakt de kinderen."]}
+        ]
+      }
+    },
+    {
+      "key": "opponent",
+      "gloss": "opponent (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "opponent", "pos": "noun", "details": {"plural": "opponents"}, "sentences": ["The opponent is strong."]}
+        ],
+        "nl": [
+        {"lemma": "tegenstander", "pos": "noun", "details": {"article": "de", "plural": "tegenstanders"}, "sentences": ["De tegenstander is sterk."]}
+        ]
+      }
+    },
+    {
+      "key": "concert",
+      "gloss": "concert (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "concert", "pos": "noun", "details": {"plural": "concerts"}, "sentences": ["We go to a concert."]}
+        ],
+        "nl": [
+        {"lemma": "concert", "pos": "noun", "details": {"article": "het", "plural": "concerten"}, "sentences": ["Wij gaan naar een concert."]}
+        ]
+      }
+    },
+    {
+      "key": "act-verb-acteren",
+      "gloss": "act (perform)",
+      "entries": {
+        "en": [
+        {"lemma": "act (perform)", "pos": "verb", "details": {"past": "acted", "participle": "acted"}, "sentences": ["She acts in a film."]}
+        ],
+        "nl": [
+        {"lemma": "acteren", "pos": "verb", "details": {"pastSingular": "acteerde", "pastPlural": "acteerden", "participle": "geacteerd", "auxiliary": "hebben"}, "sentences": ["Zij acteert in een film."]}
+        ]
+      }
+    },
+    {
+      "key": "piano",
+      "gloss": "piano (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "piano", "pos": "noun", "details": {"plural": "pianos"}, "sentences": ["She plays the piano."]}
+        ],
+        "nl": [
+        {"lemma": "piano", "pos": "noun", "details": {"article": "de", "plural": "piano's"}, "sentences": ["Zij speelt piano."]}
+        ]
+      }
+    },
+    {
+      "key": "performer",
+      "gloss": "performer (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "performer", "pos": "noun", "details": {"plural": "performers"}, "sentences": ["The performer sings."]}
+        ],
+        "nl": [
+        {"lemma": "artiest", "pos": "noun", "details": {"article": "de", "plural": "artiesten"}, "sentences": ["De artiest zingt."]}
+        ]
+      }
+    },
+    {
+      "key": "amuse",
+      "gloss": "amuse (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "amuse", "pos": "verb", "details": {"past": "amused", "participle": "amused"}, "sentences": ["The film amuses me."]}
+        ],
+        "nl": [
+        {"lemma": "amuseren", "pos": "verb", "details": {"pastSingular": "amuseerde", "pastPlural": "amuseerden", "participle": "geamuseerd", "auxiliary": "hebben"}, "sentences": ["De film amuseert mij."]}
+        ]
+      }
+    },
+    {
+      "key": "box-verb",
+      "gloss": "box (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "box", "pos": "verb", "details": {"past": "boxed", "participle": "boxed"}, "sentences": ["He boxes."]}
+        ],
+        "nl": [
+        {"lemma": "boksen", "pos": "verb", "details": {"pastSingular": "bokste", "pastPlural": "boksten", "participle": "geboksd", "auxiliary": "hebben"}, "sentences": ["Hij bokst."]}
         ]
       }
     }

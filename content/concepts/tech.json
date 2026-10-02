@@ -37,7 +37,7 @@
       }
     },
     {
-      "key": "letter",
+      "key": "letter-noun-brief",
       "gloss": "letter (noun)",
       "entries": {
         "en": [
@@ -265,7 +265,7 @@
       }
     },
     {
-      "key": "press",
+      "key": "press-noun",
       "gloss": "press (noun)",
       "entries": {
         "en": [
@@ -273,6 +273,450 @@
         ],
         "nl": [
         {"lemma": "pers", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["De pers is er."]}
+        ]
+      }
+    },
+    {
+      "key": "alarm",
+      "gloss": "alarm (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "alarm", "pos": "noun", "details": {"plural": "alarms"}, "sentences": ["The alarm rings."]}
+        ],
+        "nl": [
+        {"lemma": "alarm", "pos": "noun", "details": {"article": "het", "plural": "alarmen"}, "sentences": ["Het alarm gaat af."]}
+        ]
+      }
+    },
+    {
+      "key": "signal",
+      "gloss": "signal (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "signal", "pos": "noun", "details": {"plural": "signals"}, "sentences": ["The signal is weak."]}
+        ],
+        "nl": [
+        {"lemma": "signaal", "pos": "noun", "details": {"article": "het", "plural": "signalen"}, "sentences": ["Het signaal is zwak."]}
+        ]
+      }
+    },
+    {
+      "key": "test-verb",
+      "gloss": "test (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "test", "pos": "verb", "details": {"past": "tested", "participle": "tested"}, "sentences": ["We test the machine."]}
+        ],
+        "nl": [
+        {"lemma": "testen", "pos": "verb", "details": {"pastSingular": "testte", "pastPlural": "testten", "participle": "getest", "auxiliary": "hebben"}, "sentences": ["Wij testen de machine."]}
+        ]
+      }
+    },
+    {
+      "key": "article",
+      "gloss": "article (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "article", "pos": "noun", "details": {"plural": "articles"}, "sentences": ["I read an article."]}
+        ],
+        "nl": [
+        {"lemma": "artikel", "pos": "noun", "details": {"article": "het", "plural": "artikelen"}, "sentences": ["Ik lees een artikel."]}
+        ]
+      }
+    },
+    {
+      "key": "video",
+      "gloss": "video (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "video", "pos": "noun", "details": {"plural": "videos"}, "sentences": ["I watch a video."]}
+        ],
+        "nl": [
+        {"lemma": "video", "pos": "noun", "details": {"article": "de", "plural": "video's"}, "sentences": ["Ik kijk een video."]}
+        ]
+      }
+    },
+    {
+      "key": "film-verb",
+      "gloss": "film (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "film", "pos": "verb", "details": {"past": "filmed", "participle": "filmed"}, "sentences": ["We film the party."]}
+        ],
+        "nl": [
+        {"lemma": "filmen", "pos": "verb", "details": {"pastSingular": "filmde", "pastPlural": "filmden", "participle": "gefilmd", "auxiliary": "hebben"}, "sentences": ["Wij filmen het feest."]}
+        ]
+      }
+    },
+    {
+      "key": "switch-off",
+      "gloss": "switch off (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "switch off", "pos": "verb", "details": {"past": "switched off", "participle": "switched off"}, "sentences": ["I switch off the computer."]}
+        ],
+        "nl": [
+        {"lemma": "uitschakelen", "pos": "verb", "details": {"pastSingular": "schakelde uit", "pastPlural": "schakelden uit", "participle": "uitgeschakeld", "auxiliary": "hebben"}, "sentences": ["Ik schakel de computer uit."]}
+        ]
+      }
+    },
+    {
+      "key": "scene",
+      "gloss": "scene (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "scene", "pos": "noun", "details": {"plural": "scenes"}, "sentences": ["This is a good scene."]}
+        ],
+        "nl": [
+        {"lemma": "scène", "pos": "noun", "details": {"article": "de", "plural": "scènes"}, "sentences": ["Dit is een goede scène."]}
+        ]
+      }
+    },
+    {
+      "key": "text",
+      "gloss": "text (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "text", "pos": "noun", "details": {"plural": "texts"}, "sentences": ["I read the text."]}
+        ],
+        "nl": [
+        {"lemma": "tekst", "pos": "noun", "details": {"article": "de", "plural": "teksten"}, "sentences": ["Ik lees de tekst."]}
+        ]
+      }
+    },
+    {
+      "key": "button",
+      "gloss": "button (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "button", "pos": "noun", "details": {"plural": "buttons"}, "sentences": ["I press the button."]}
+        ],
+        "nl": [
+        {"lemma": "knop", "pos": "noun", "details": {"article": "de", "plural": "knoppen"}, "sentences": ["Ik druk op de knop."]}
+        ]
+      }
+    },
+    {
+      "key": "television",
+      "gloss": "television (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "television", "pos": "noun", "details": {"plural": "televisions"}, "sentences": ["The television is on."]}
+        ],
+        "nl": [
+        {"lemma": "televisie", "pos": "noun", "details": {"article": "de", "plural": "televisies"}, "sentences": ["De televisie staat aan."]}
+        ]
+      }
+    },
+    {
+      "key": "device-noun-apparaat",
+      "gloss": "device (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "device", "pos": "noun", "details": {"plural": "devices"}, "sentences": ["The device is new."]}
+        ],
+        "nl": [
+        {"lemma": "apparaat", "pos": "noun", "details": {"article": "het", "plural": "apparaten"}, "sentences": ["Het apparaat is nieuw."]}
+        ]
+      }
+    },
+    {
+      "key": "interview",
+      "gloss": "interview (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "interview", "pos": "noun", "details": {"plural": "interviews"}, "sentences": ["The interview is on TV."]}
+        ],
+        "nl": [
+        {"lemma": "interview", "pos": "noun", "details": {"article": "het", "plural": "interviews"}, "sentences": ["Het interview is op tv."]}
+        ]
+      }
+    },
+    {
+      "key": "title",
+      "gloss": "title (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "title", "pos": "noun", "details": {"plural": "titles"}, "sentences": ["The title is long."]}
+        ],
+        "nl": [
+        {"lemma": "titel", "pos": "noun", "details": {"article": "de", "plural": "titels"}, "sentences": ["De titel is lang."]}
+        ]
+      }
+    },
+    {
+      "key": "device-noun-toestel",
+      "gloss": "device (appliance)",
+      "entries": {
+        "en": [
+        {"lemma": "device (appliance)", "pos": "noun", "details": {"plural": "devices"}, "sentences": ["The device is on."]}
+        ],
+        "nl": [
+        {"lemma": "toestel", "pos": "noun", "details": {"article": "het", "plural": "toestellen"}, "sentences": ["Het toestel staat aan."]}
+        ]
+      }
+    },
+    {
+      "key": "page",
+      "gloss": "page (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "page", "pos": "noun", "details": {"plural": "pages"}, "sentences": ["Turn the page."]}
+        ],
+        "nl": [
+        {"lemma": "pagina", "pos": "noun", "details": {"article": "de", "plural": "pagina's"}, "sentences": ["Sla de pagina om."]}
+        ]
+      }
+    },
+    {
+      "key": "connection-noun-verbinding",
+      "gloss": "connection (link)",
+      "entries": {
+        "en": [
+        {"lemma": "connection (link)", "pos": "noun", "details": {"plural": "connections"}, "sentences": ["The connection is bad."]}
+        ],
+        "nl": [
+        {"lemma": "verbinding", "pos": "noun", "details": {"article": "de", "plural": "verbindingen"}, "sentences": ["De verbinding is slecht."]}
+        ]
+      }
+    },
+    {
+      "key": "robot",
+      "gloss": "robot (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "robot", "pos": "noun", "details": {"plural": "robots"}, "sentences": ["The robot works."]}
+        ],
+        "nl": [
+        {"lemma": "robot", "pos": "noun", "details": {"article": "de", "plural": "robots"}, "sentences": ["De robot werkt."]}
+        ]
+      }
+    },
+    {
+      "key": "studio",
+      "gloss": "studio (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "studio", "pos": "noun", "details": {"plural": "studios"}, "sentences": ["The studio is big."]}
+        ],
+        "nl": [
+        {"lemma": "studio", "pos": "noun", "details": {"article": "de", "plural": "studio's"}, "sentences": ["De studio is groot."]}
+        ]
+      }
+    },
+    {
+      "key": "activate",
+      "gloss": "activate (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "activate", "pos": "verb", "details": {"past": "activated", "participle": "activated"}, "sentences": ["I activate the alarm."]}
+        ],
+        "nl": [
+        {"lemma": "activeren", "pos": "verb", "details": {"pastSingular": "activeerde", "pastPlural": "activeerden", "participle": "geactiveerd", "auxiliary": "hebben"}, "sentences": ["Ik activeer het alarm."]}
+        ]
+      }
+    },
+    {
+      "key": "connect",
+      "gloss": "connect (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "connect", "pos": "verb", "details": {"past": "connected", "participle": "connected"}, "sentences": ["I connect the cable."]}
+        ],
+        "nl": [
+        {"lemma": "verbinden", "pos": "verb", "details": {"pastSingular": "verbond", "pastPlural": "verbonden", "participle": "verbonden", "auxiliary": "hebben"}, "sentences": ["Ik verbind de kabel."]}
+        ]
+      }
+    },
+    {
+      "key": "internet",
+      "gloss": "internet (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "internet", "pos": "noun", "details": {"uncountable": true}, "sentences": ["I use the internet."]}
+        ],
+        "nl": [
+        {"lemma": "internet", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["Ik gebruik het internet."]}
+        ]
+      }
+    },
+    {
+      "key": "screen",
+      "gloss": "screen (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "screen", "pos": "noun", "details": {"plural": "screens"}, "sentences": ["The screen is big."]}
+        ],
+        "nl": [
+        {"lemma": "scherm", "pos": "noun", "details": {"article": "het", "plural": "schermen"}, "sentences": ["Het scherm is groot."]}
+        ]
+      }
+    },
+    {
+      "key": "phone-number",
+      "gloss": "phone number (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "phone number", "pos": "noun", "details": {"plural": "phone numbers"}, "sentences": ["What is your phone number?"]}
+        ],
+        "nl": [
+        {"lemma": "telefoonnummer", "pos": "noun", "details": {"article": "het", "plural": "telefoonnummers"}, "sentences": ["Wat is je telefoonnummer?"]}
+        ]
+      }
+    },
+    {
+      "key": "script",
+      "gloss": "script (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "script", "pos": "noun", "details": {"plural": "scripts"}, "sentences": ["I read the script."]}
+        ],
+        "nl": [
+        {"lemma": "script", "pos": "noun", "details": {"article": "het", "plural": "scripts"}, "sentences": ["Ik lees het script."]}
+        ]
+      }
+    },
+    {
+      "key": "series",
+      "gloss": "series (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "series", "pos": "noun", "details": {"plural": "series"}, "sentences": ["I watch a series."]}
+        ],
+        "nl": [
+        {"lemma": "serie", "pos": "noun", "details": {"article": "de", "plural": "series"}, "sentences": ["Ik kijk een serie."]}
+        ]
+      }
+    },
+    {
+      "key": "technology",
+      "gloss": "technology (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "technology", "pos": "noun", "details": {"plural": "technologies"}, "sentences": ["Technology changes fast."]}
+        ],
+        "nl": [
+        {"lemma": "technologie", "pos": "noun", "details": {"article": "de", "plural": "technologieën"}, "sentences": ["Technologie verandert snel."]}
+        ]
+      }
+    },
+    {
+      "key": "call-back",
+      "gloss": "call back (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "call back", "pos": "verb", "details": {"past": "called back", "participle": "called back"}, "sentences": ["I call you back."]}
+        ],
+        "nl": [
+        {"lemma": "terugbellen", "pos": "verb", "details": {"pastSingular": "belde terug", "pastPlural": "belden terug", "participle": "teruggebeld", "auxiliary": "hebben"}, "sentences": ["Ik bel je terug."]}
+        ]
+      }
+    },
+    {
+      "key": "chapter",
+      "gloss": "chapter (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "chapter", "pos": "noun", "details": {"plural": "chapters"}, "sentences": ["I read the last chapter."]}
+        ],
+        "nl": [
+        {"lemma": "hoofdstuk", "pos": "noun", "details": {"article": "het", "plural": "hoofdstukken"}, "sentences": ["Ik lees het laatste hoofdstuk."]}
+        ]
+      }
+    },
+    {
+      "key": "commentary",
+      "gloss": "commentary (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "commentary", "pos": "noun", "details": {"uncountable": true}, "sentences": ["The commentary is long."]}
+        ],
+        "nl": [
+        {"lemma": "commentaar", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["Het commentaar is lang."]}
+        ]
+      }
+    },
+    {
+      "key": "magazine",
+      "gloss": "magazine (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "magazine", "pos": "noun", "details": {"plural": "magazines"}, "sentences": ["I read a magazine."]}
+        ],
+        "nl": [
+        {"lemma": "tijdschrift", "pos": "noun", "details": {"article": "het", "plural": "tijdschriften"}, "sentences": ["Ik lees een tijdschrift."]}
+        ]
+      }
+    },
+    {
+      "key": "speech",
+      "gloss": "speech (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "speech", "pos": "noun", "details": {"plural": "speeches"}, "sentences": ["The speech is long."]}
+        ],
+        "nl": [
+        {"lemma": "toespraak", "pos": "noun", "details": {"article": "de", "plural": "toespraken"}, "sentences": ["De toespraak is lang."]}
+        ]
+      }
+    },
+    {
+      "key": "cell-phone",
+      "gloss": "cell phone (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "cell phone", "pos": "noun", "details": {"plural": "cell phones"}, "sentences": ["My cell phone is new."]}
+        ],
+        "nl": [
+        {"lemma": "mobiel", "pos": "noun", "details": {"article": "de", "plural": "mobiels"}, "sentences": ["Mijn mobiel is nieuw."]}
+        ]
+      }
+    },
+    {
+      "key": "erase",
+      "gloss": "erase (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "erase", "pos": "verb", "details": {"past": "erased", "participle": "erased"}, "sentences": ["I erase the file."]}
+        ],
+        "nl": [
+        {"lemma": "wissen", "pos": "verb", "details": {"pastSingular": "wiste", "pastPlural": "wisten", "participle": "gewist", "auxiliary": "hebben"}, "sentences": ["Ik wis het bestand."]}
+        ]
+      }
+    },
+    {
+      "key": "film-director",
+      "gloss": "film director (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "film director", "pos": "noun", "details": {"plural": "film directors"}, "sentences": ["The film director speaks."]}
+        ],
+        "nl": [
+        {"lemma": "regisseur", "pos": "noun", "details": {"article": "de", "plural": "regisseurs"}, "sentences": ["De regisseur spreekt."]}
+        ]
+      }
+    },
+    {
+      "key": "microphone",
+      "gloss": "microphone (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "microphone", "pos": "noun", "details": {"plural": "microphones"}, "sentences": ["The microphone is on."]}
+        ],
+        "nl": [
+        {"lemma": "microfoon", "pos": "noun", "details": {"article": "de", "plural": "microfoons"}, "sentences": ["De microfoon staat aan."]}
+        ]
+      }
+    },
+    {
+      "key": "battery",
+      "gloss": "battery (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "battery", "pos": "noun", "details": {"plural": "batteries"}, "sentences": ["The battery is empty."]}
+        ],
+        "nl": [
+        {"lemma": "batterij", "pos": "noun", "details": {"article": "de", "plural": "batterijen"}, "sentences": ["De batterij is leeg."]}
         ]
       }
     }

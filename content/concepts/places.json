@@ -191,6 +191,258 @@
         {"lemma": "bezorgen", "pos": "verb", "details": {"pastSingular": "bezorgde", "pastPlural": "bezorgden", "participle": "bezorgd", "auxiliary": "hebben"}, "sentences": ["Hij bezorgt de pizza."]}
         ]
       }
+    },
+    {
+      "key": "order-noun-order",
+      "gloss": "order (purchase)",
+      "entries": {
+        "en": [
+        {"lemma": "order (purchase)", "pos": "noun", "details": {"plural": "orders"}, "sentences": ["I place an order."]}
+        ],
+        "nl": [
+        {"lemma": "order", "pos": "noun", "details": {"article": "de", "plural": "orders"}, "sentences": ["Ik plaats een order."]}
+        ]
+      }
+    },
+    {
+      "key": "garage",
+      "gloss": "garage (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "garage", "pos": "noun", "details": {"plural": "garages"}, "sentences": ["The car is in the garage."]}
+        ],
+        "nl": [
+        {"lemma": "garage", "pos": "noun", "details": {"article": "de", "plural": "garages"}, "sentences": ["De auto staat in de garage."]}
+        ]
+      }
+    },
+    {
+      "key": "gate",
+      "gloss": "gate (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "gate", "pos": "noun", "details": {"plural": "gates"}, "sentences": ["The gate is open."]}
+        ],
+        "nl": [
+        {"lemma": "poort", "pos": "noun", "details": {"article": "de", "plural": "poorten"}, "sentences": ["De poort is open."]}
+        ]
+      }
+    },
+    {
+      "key": "castle",
+      "gloss": "castle (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "castle", "pos": "noun", "details": {"plural": "castles"}, "sentences": ["The castle is old."]}
+        ],
+        "nl": [
+        {"lemma": "kasteel", "pos": "noun", "details": {"article": "het", "plural": "kastelen"}, "sentences": ["Het kasteel is oud."]}
+        ]
+      }
+    },
+    {
+      "key": "park-noun",
+      "gloss": "park (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "park", "pos": "noun", "details": {"plural": "parks"}, "sentences": ["We walk in the park."]}
+        ],
+        "nl": [
+        {"lemma": "park", "pos": "noun", "details": {"article": "het", "plural": "parken"}, "sentences": ["Wij lopen in het park."]}
+        ]
+      }
+    },
+    {
+      "key": "offer-noun",
+      "gloss": "offer (proposal)",
+      "entries": {
+        "en": [
+        {"lemma": "offer (proposal)", "pos": "noun", "details": {"plural": "offers"}, "sentences": ["I accept the offer."]}
+        ],
+        "nl": [
+        {"lemma": "aanbod", "pos": "noun", "details": {"article": "het", "plural": "aanbiedingen"}, "sentences": ["Ik accepteer het aanbod."]}
+        ]
+      }
+    },
+    {
+      "key": "location",
+      "gloss": "location (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "location", "pos": "noun", "details": {"plural": "locations"}, "sentences": ["This is a good location."]}
+        ],
+        "nl": [
+        {"lemma": "locatie", "pos": "noun", "details": {"article": "de", "plural": "locaties"}, "sentences": ["Dit is een goede locatie."]}
+        ]
+      }
+    },
+    {
+      "key": "tower",
+      "gloss": "tower (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "tower", "pos": "noun", "details": {"plural": "towers"}, "sentences": ["The tower is high."]}
+        ],
+        "nl": [
+        {"lemma": "toren", "pos": "noun", "details": {"article": "de", "plural": "torens"}, "sentences": ["De toren is hoog."]}
+        ]
+      }
+    },
+    {
+      "key": "swap",
+      "gloss": "swap (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "swap", "pos": "verb", "details": {"past": "swaped", "participle": "swaped"}, "sentences": ["We swap books."]}
+        ],
+        "nl": [
+        {"lemma": "ruilen", "pos": "verb", "details": {"pastSingular": "ruilde", "pastPlural": "ruilden", "participle": "geruild", "auxiliary": "hebben"}, "sentences": ["Wij ruilen boeken."]}
+        ]
+      }
+    },
+    {
+      "key": "museum",
+      "gloss": "museum (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "museum", "pos": "noun", "details": {"plural": "museums"}, "sentences": ["We visit the museum."]}
+        ],
+        "nl": [
+        {"lemma": "museum", "pos": "noun", "details": {"article": "het", "plural": "musea"}, "sentences": ["Wij bezoeken het museum."]}
+        ]
+      }
+    },
+    {
+      "key": "library",
+      "gloss": "library (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "library", "pos": "noun", "details": {"plural": "libraries"}, "sentences": ["I read in the library."]}
+        ],
+        "nl": [
+        {"lemma": "bibliotheek", "pos": "noun", "details": {"article": "de", "plural": "bibliotheken"}, "sentences": ["Ik lees in de bibliotheek."]}
+        ]
+      }
+    },
+    {
+      "key": "market",
+      "gloss": "market (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "market", "pos": "noun", "details": {"plural": "markets"}, "sentences": ["We go to the market."]}
+        ],
+        "nl": [
+        {"lemma": "markt", "pos": "noun", "details": {"article": "de", "plural": "markten"}, "sentences": ["Wij gaan naar de markt."]}
+        ]
+      }
+    },
+    {
+      "key": "exit",
+      "gloss": "exit (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "exit", "pos": "noun", "details": {"plural": "exits"}, "sentences": ["The exit is on the left."]}
+        ],
+        "nl": [
+        {"lemma": "uitgang", "pos": "noun", "details": {"article": "de", "plural": "uitgangen"}, "sentences": ["De uitgang is links."]}
+        ]
+      }
+    },
+    {
+      "key": "other-side",
+      "gloss": "other side (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "other side", "pos": "noun", "details": {"uncountable": true}, "sentences": ["The shop is on the other side."]}
+        ],
+        "nl": [
+        {"lemma": "overkant", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["De winkel is aan de overkant."]}
+        ]
+      }
+    },
+    {
+      "key": "entrance",
+      "gloss": "entrance (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "entrance", "pos": "noun", "details": {"plural": "entrances"}, "sentences": ["The entrance is there."]}
+        ],
+        "nl": [
+        {"lemma": "ingang", "pos": "noun", "details": {"article": "de", "plural": "ingangen"}, "sentences": ["De ingang is daar."]}
+        ]
+      }
+    },
+    {
+      "key": "caf",
+      "gloss": "café (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "café", "pos": "noun", "details": {"plural": "cafés"}, "sentences": ["We drink coffee in the café."]}
+        ],
+        "nl": [
+        {"lemma": "café", "pos": "noun", "details": {"article": "het", "plural": "cafés"}, "sentences": ["Wij drinken koffie in het café."]}
+        ]
+      }
+    },
+    {
+      "key": "hall",
+      "gloss": "hall (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "hall", "pos": "noun", "details": {"plural": "halls"}, "sentences": ["The hall is full."]}
+        ],
+        "nl": [
+        {"lemma": "zaal", "pos": "noun", "details": {"article": "de", "plural": "zalen"}, "sentences": ["De zaal is vol."]}
+        ]
+      }
+    },
+    {
+      "key": "go-shopping",
+      "gloss": "go shopping (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "go shopping", "pos": "verb", "details": {"past": "went shopping", "participle": "gone shopping"}, "sentences": ["We went shopping."]}
+        ],
+        "nl": [
+        {"lemma": "winkelen", "pos": "verb", "details": {"pastSingular": "winkelde", "pastPlural": "winkelden", "participle": "gewinkeld", "auxiliary": "hebben"}, "sentences": ["Wij gingen winkelen."]}
+        ]
+      }
+    },
+    {
+      "key": "palace",
+      "gloss": "palace (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "palace", "pos": "noun", "details": {"plural": "palaces"}, "sentences": ["The king lives in a palace."]}
+        ],
+        "nl": [
+        {"lemma": "paleis", "pos": "noun", "details": {"article": "het", "plural": "paleizen"}, "sentences": ["De koning woont in een paleis."]}
+        ]
+      }
+    },
+    {
+      "key": "receipt",
+      "gloss": "receipt (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "receipt", "pos": "noun", "details": {"plural": "receipts"}, "sentences": ["I keep the receipt."]}
+        ],
+        "nl": [
+        {"lemma": "bon", "pos": "noun", "details": {"article": "de", "plural": "bonnen"}, "sentences": ["Ik bewaar de bon."]}
+        ]
+      }
+    },
+    {
+      "key": "product",
+      "gloss": "product (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "product", "pos": "noun", "details": {"plural": "products"}, "sentences": ["This product is new."]}
+        ],
+        "nl": [
+        {"lemma": "product", "pos": "noun", "details": {"article": "het", "plural": "producten"}, "sentences": ["Dit product is nieuw."]}
+        ]
+      }
     }
   ]
 }

@@ -49,7 +49,7 @@
       }
     },
     {
-      "key": "study",
+      "key": "study-verb-studeren",
       "gloss": "study (verb)",
       "entries": {
         "en": [
@@ -121,7 +121,7 @@
       }
     },
     {
-      "key": "fail",
+      "key": "fail-verb-zakken",
       "gloss": "fail (an exam)",
       "entries": {
         "en": [
@@ -133,7 +133,7 @@
       }
     },
     {
-      "key": "test",
+      "key": "test-noun",
       "gloss": "test (noun)",
       "entries": {
         "en": [
@@ -201,6 +201,390 @@
         ],
         "nl": [
         {"lemma": "pond", "pos": "noun", "details": {"article": "het", "plural": "ponden"}, "sentences": ["Een pond appels."]}
+        ]
+      }
+    },
+    {
+      "key": "lab",
+      "gloss": "lab (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "lab", "pos": "noun", "details": {"plural": "labs"}, "sentences": ["The lab is closed."]}
+        ],
+        "nl": [
+        {"lemma": "lab", "pos": "noun", "details": {"article": "het", "plural": "labs"}, "sentences": ["Het lab is gesloten."]}
+        ]
+      }
+    },
+    {
+      "key": "paper",
+      "gloss": "paper (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "paper", "pos": "noun", "details": {"plural": "papers"}, "sentences": ["I need a sheet of paper."]}
+        ],
+        "nl": [
+        {"lemma": "papier", "pos": "noun", "details": {"article": "het", "plural": "papieren"}, "sentences": ["Ik heb een stuk papier nodig."]}
+        ]
+      }
+    },
+    {
+      "key": "theory",
+      "gloss": "theory (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "theory", "pos": "noun", "details": {"plural": "theories"}, "sentences": ["This is a good theory."]}
+        ],
+        "nl": [
+        {"lemma": "theorie", "pos": "noun", "details": {"article": "de", "plural": "theorieën"}, "sentences": ["Dit is een goede theorie."]}
+        ]
+      }
+    },
+    {
+      "key": "kilo",
+      "gloss": "kilo (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "kilo", "pos": "noun", "details": {"plural": "kilos"}, "sentences": ["One kilo of apples."]}
+        ],
+        "nl": [
+        {"lemma": "kilo", "pos": "noun", "details": {"article": "de", "plural": "kilo's"}, "sentences": ["Een kilo appels."]}
+        ]
+      }
+    },
+    {
+      "key": "grade",
+      "gloss": "grade (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "grade", "pos": "noun", "details": {"plural": "grades"}, "sentences": ["I got a good grade."]}
+        ],
+        "nl": [
+        {"lemma": "cijfer", "pos": "noun", "details": {"article": "het", "plural": "cijfers"}, "sentences": ["Ik kreeg een goed cijfer."]}
+        ]
+      }
+    },
+    {
+      "key": "degree",
+      "gloss": "degree (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "degree", "pos": "noun", "details": {"plural": "degrees"}, "sentences": ["It is ten degrees."]}
+        ],
+        "nl": [
+        {"lemma": "graad", "pos": "noun", "details": {"article": "de", "plural": "graden"}, "sentences": ["Het is tien graden."]}
+        ]
+      }
+    },
+    {
+      "key": "gas",
+      "gloss": "gas (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "gas", "pos": "noun", "details": {"plural": "gases"}, "sentences": ["The gas is dangerous."]}
+        ],
+        "nl": [
+        {"lemma": "gas", "pos": "noun", "details": {"article": "het", "plural": "gassen"}, "sentences": ["Het gas is gevaarlijk."]}
+        ]
+      }
+    },
+    {
+      "key": "pupil",
+      "gloss": "pupil (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "pupil", "pos": "noun", "details": {"plural": "pupils"}, "sentences": ["The pupil learns quickly."]}
+        ],
+        "nl": [
+        {"lemma": "leerling", "pos": "noun", "details": {"article": "de", "plural": "leerlingen"}, "sentences": ["De leerling leert snel."]}
+        ]
+      }
+    },
+    {
+      "key": "subject-noun-vak",
+      "gloss": "subject (school)",
+      "entries": {
+        "en": [
+        {"lemma": "subject (school)", "pos": "noun", "details": {"plural": "subjects"}, "sentences": ["Math is my favorite subject."]}
+        ],
+        "nl": [
+        {"lemma": "vak", "pos": "noun", "details": {"article": "het", "plural": "vakken"}, "sentences": ["Wiskunde is mijn lievelingsvak."]}
+        ]
+      }
+    },
+    {
+      "key": "science",
+      "gloss": "science (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "science", "pos": "noun", "details": {"plural": "sciences"}, "sentences": ["I like science."]}
+        ],
+        "nl": [
+        {"lemma": "wetenschap", "pos": "noun", "details": {"article": "de", "plural": "wetenschappen"}, "sentences": ["Ik hou van wetenschap."]}
+        ]
+      }
+    },
+    {
+      "key": "experiment",
+      "gloss": "experiment (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "experiment", "pos": "noun", "details": {"plural": "experiments"}, "sentences": ["The experiment works."]}
+        ],
+        "nl": [
+        {"lemma": "experiment", "pos": "noun", "details": {"article": "het", "plural": "experimenten"}, "sentences": ["Het experiment lukt."]}
+        ]
+      }
+    },
+    {
+      "key": "pen",
+      "gloss": "pen (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "pen", "pos": "noun", "details": {"plural": "pens"}, "sentences": ["I write with a pen."]}
+        ],
+        "nl": [
+        {"lemma": "pen", "pos": "noun", "details": {"article": "de", "plural": "pennen"}, "sentences": ["Ik schrijf met een pen."]}
+        ]
+      }
+    },
+    {
+      "key": "study-verb-bestuderen",
+      "gloss": "study (examine)",
+      "entries": {
+        "en": [
+        {"lemma": "study (examine)", "pos": "verb", "details": {"past": "studied", "participle": "studied"}, "sentences": ["We study the map."]}
+        ],
+        "nl": [
+        {"lemma": "bestuderen", "pos": "verb", "details": {"pastSingular": "bestudeerde", "pastPlural": "bestudeerden", "participle": "bestudeerd", "auxiliary": "hebben"}, "sentences": ["Wij bestuderen de kaart."]}
+        ]
+      }
+    },
+    {
+      "key": "translate",
+      "gloss": "translate (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "translate", "pos": "verb", "details": {"past": "translated", "participle": "translated"}, "sentences": ["I translate the text."]}
+        ],
+        "nl": [
+        {"lemma": "vertalen", "pos": "verb", "details": {"pastSingular": "vertaalde", "pastPlural": "vertaalden", "participle": "vertaald", "auxiliary": "hebben"}, "sentences": ["Ik vertaal de tekst."]}
+        ]
+      }
+    },
+    {
+      "key": "homework",
+      "gloss": "homework (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "homework", "pos": "noun", "details": {"uncountable": true}, "sentences": ["I do my homework."]}
+        ],
+        "nl": [
+        {"lemma": "huiswerk", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["Ik maak mijn huiswerk."]}
+        ]
+      }
+    },
+    {
+      "key": "study-noun",
+      "gloss": "study (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "study", "pos": "noun", "details": {"plural": "studies"}, "sentences": ["He starts a study."]}
+        ],
+        "nl": [
+        {"lemma": "studie", "pos": "noun", "details": {"article": "de", "plural": "studies"}, "sentences": ["Hij begint een studie."]}
+        ]
+      }
+    },
+    {
+      "key": "diary",
+      "gloss": "diary (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "diary", "pos": "noun", "details": {"plural": "diaries"}, "sentences": ["I write in my diary."]}
+        ],
+        "nl": [
+        {"lemma": "dagboek", "pos": "noun", "details": {"article": "het", "plural": "dagboeken"}, "sentences": ["Ik schrijf in mijn dagboek."]}
+        ]
+      }
+    },
+    {
+      "key": "education",
+      "gloss": "education (training)",
+      "entries": {
+        "en": [
+        {"lemma": "education (training)", "pos": "noun", "details": {"plural": "educations"}, "sentences": ["He has a good education."]}
+        ],
+        "nl": [
+        {"lemma": "opleiding", "pos": "noun", "details": {"article": "de", "plural": "opleidingen"}, "sentences": ["Hij heeft een goede opleiding."]}
+        ]
+      }
+    },
+    {
+      "key": "exercise",
+      "gloss": "exercise (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "exercise", "pos": "noun", "details": {"plural": "exercises"}, "sentences": ["The exercise is easy."]}
+        ],
+        "nl": [
+        {"lemma": "oefening", "pos": "noun", "details": {"article": "de", "plural": "oefeningen"}, "sentences": ["De oefening is makkelijk."]}
+        ]
+      }
+    },
+    {
+      "key": "mile",
+      "gloss": "mile (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "mile", "pos": "noun", "details": {"plural": "miles"}, "sentences": ["It is five miles."]}
+        ],
+        "nl": [
+        {"lemma": "mijl", "pos": "noun", "details": {"article": "de", "plural": "mijlen"}, "sentences": ["Het is vijf mijl."]}
+        ]
+      }
+    },
+    {
+      "key": "instruction",
+      "gloss": "instruction (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "instruction", "pos": "noun", "details": {"plural": "instructions"}, "sentences": ["I read the instruction."]}
+        ],
+        "nl": [
+        {"lemma": "instructie", "pos": "noun", "details": {"article": "de", "plural": "instructies"}, "sentences": ["Ik lees de instructie."]}
+        ]
+      }
+    },
+    {
+      "key": "write-down",
+      "gloss": "write down (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "write down", "pos": "verb", "details": {"past": "wrote down", "participle": "written down"}, "sentences": ["I write down the address."]}
+        ],
+        "nl": [
+        {"lemma": "opschrijven", "pos": "verb", "details": {"pastSingular": "schreef op", "pastPlural": "schreven op", "participle": "opgeschreven", "auxiliary": "hebben"}, "sentences": ["Ik schrijf het adres op."]}
+        ]
+      }
+    },
+    {
+      "key": "read-aloud",
+      "gloss": "read aloud (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "read aloud", "pos": "verb", "details": {"past": "read aloud", "participle": "read aloud"}, "sentences": ["I read a story aloud."]}
+        ],
+        "nl": [
+        {"lemma": "voorlezen", "pos": "verb", "details": {"pastSingular": "las voor", "pastPlural": "lazen voor", "participle": "voorgelezen", "auxiliary": "hebben"}, "sentences": ["Ik lees een verhaal voor."]}
+        ]
+      }
+    },
+    {
+      "key": "exam",
+      "gloss": "exam (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "exam", "pos": "noun", "details": {"plural": "exams"}, "sentences": ["I have an exam tomorrow."]}
+        ],
+        "nl": [
+        {"lemma": "examen", "pos": "noun", "details": {"article": "het", "plural": "examens"}, "sentences": ["Ik heb morgen een examen."]}
+        ]
+      }
+    },
+    {
+      "key": "universe",
+      "gloss": "universe (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "universe", "pos": "noun", "details": {"plural": "universes"}, "sentences": ["The universe is big."]}
+        ],
+        "nl": [
+        {"lemma": "universum", "pos": "noun", "details": {"article": "het", "plural": "universums"}, "sentences": ["Het universum is groot."]}
+        ]
+      }
+    },
+    {
+      "key": "number-noun-getal",
+      "gloss": "number (mathematical)",
+      "entries": {
+        "en": [
+        {"lemma": "number (mathematical)", "pos": "noun", "details": {"plural": "numbers"}, "sentences": ["Seven is a number."]}
+        ],
+        "nl": [
+        {"lemma": "getal", "pos": "noun", "details": {"article": "het", "plural": "getallen"}, "sentences": ["Zeven is een getal."]}
+        ]
+      }
+    },
+    {
+      "key": "note",
+      "gloss": "note (write down)",
+      "entries": {
+        "en": [
+        {"lemma": "note (write down)", "pos": "verb", "details": {"past": "noted", "participle": "noted"}, "sentences": ["I note the date."]}
+        ],
+        "nl": [
+        {"lemma": "noteren", "pos": "verb", "details": {"pastSingular": "noteerde", "pastPlural": "noteerden", "participle": "genoteerd", "auxiliary": "hebben"}, "sentences": ["Ik noteer de datum."]}
+        ]
+      }
+    },
+    {
+      "key": "letter-noun-letter",
+      "gloss": "letter (of the alphabet)",
+      "entries": {
+        "en": [
+        {"lemma": "letter (of the alphabet)", "pos": "noun", "details": {"plural": "letters"}, "sentences": ["This is a big letter."]}
+        ],
+        "nl": [
+        {"lemma": "letter", "pos": "noun", "details": {"article": "de", "plural": "letters"}, "sentences": ["Dit is een grote letter."]}
+        ]
+      }
+    },
+    {
+      "key": "lecture",
+      "gloss": "lecture (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "lecture", "pos": "noun", "details": {"plural": "lectures"}, "sentences": ["The lecture starts at nine."]}
+        ],
+        "nl": [
+        {"lemma": "college", "pos": "noun", "details": {"article": "het", "plural": "colleges"}, "sentences": ["Het college begint om negen uur."]}
+        ]
+      }
+    },
+    {
+      "key": "translation",
+      "gloss": "translation (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "translation", "pos": "noun", "details": {"plural": "translations"}, "sentences": ["The translation is good."]}
+        ],
+        "nl": [
+        {"lemma": "vertaling", "pos": "noun", "details": {"article": "de", "plural": "vertalingen"}, "sentences": ["De vertaling is goed."]}
+        ]
+      }
+    },
+    {
+      "key": "satellite",
+      "gloss": "satellite (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "satellite", "pos": "noun", "details": {"plural": "satellites"}, "sentences": ["The satellite flies in space."]}
+        ],
+        "nl": [
+        {"lemma": "satelliet", "pos": "noun", "details": {"article": "de", "plural": "satellieten"}, "sentences": ["De satelliet vliegt in de ruimte."]}
+        ]
+      }
+    },
+    {
+      "key": "centimeter",
+      "gloss": "centimeter (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "centimeter", "pos": "noun", "details": {"plural": "centimeters"}, "sentences": ["It is ten centimeters long."]}
+        ],
+        "nl": [
+        {"lemma": "centimeter", "pos": "noun", "details": {"article": "de", "plural": "centimeters"}, "sentences": ["Het is tien centimeter lang."]}
         ]
       }
     }
