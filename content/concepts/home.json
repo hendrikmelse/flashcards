@@ -361,7 +361,7 @@
       }
     },
     {
-      "key": "wall-noun-muur",
+      "key": "wall",
       "gloss": "wall (noun)",
       "entries": {
         "en": [
@@ -409,7 +409,7 @@
       }
     },
     {
-      "key": "lock-noun-slot",
+      "key": "lock",
       "gloss": "lock (noun)",
       "entries": {
         "en": [
@@ -553,7 +553,7 @@
       }
     },
     {
-      "key": "floor-noun-vloer",
+      "key": "floor",
       "gloss": "floor (noun)",
       "entries": {
         "en": [
@@ -589,7 +589,7 @@
       }
     },
     {
-      "key": "chest-noun-kist",
+      "key": "chest-box",
       "gloss": "chest (box)",
       "entries": {
         "en": [
@@ -601,7 +601,7 @@
       }
     },
     {
-      "key": "floor-noun-verdieping",
+      "key": "floor-level",
       "gloss": "floor (level)",
       "entries": {
         "en": [
@@ -673,7 +673,7 @@
       }
     },
     {
-      "key": "shower-noun-douche",
+      "key": "shower",
       "gloss": "shower (noun)",
       "entries": {
         "en": [
@@ -697,7 +697,7 @@
       }
     },
     {
-      "key": "cabin-noun-hut",
+      "key": "cabin",
       "gloss": "cabin (noun)",
       "entries": {
         "en": [
@@ -733,8 +733,8 @@
       }
     },
     {
-      "key": "lobby-noun-hal",
-      "gloss": "lobby (noun)",
+      "key": "lobby-entrance",
+      "gloss": "lobby (entrance hall)",
       "entries": {
         "en": [
         {"lemma": "lobby", "pos": "noun", "details": {"plural": "lobbies"}, "sentences": ["We wait in the lobby."]}
@@ -1081,8 +1081,8 @@
       }
     },
     {
-      "key": "pot-noun-potje",
-      "gloss": "pot (noun)",
+      "key": "pot-container",
+      "gloss": "pot (container)",
       "entries": {
         "en": [
         {"lemma": "pot", "pos": "noun", "details": {"plural": "pots"}, "sentences": ["The pot is on the stove."]}
@@ -1093,8 +1093,8 @@
       }
     },
     {
-      "key": "pole-noun-paal",
-      "gloss": "pole (noun)",
+      "key": "pole",
+      "gloss": "pole (post)",
       "entries": {
         "en": [
         {"lemma": "pole", "pos": "noun", "details": {"plural": "poles"}, "sentences": ["The pole is tall."]}
@@ -1141,8 +1141,8 @@
       }
     },
     {
-      "key": "match-noun-lucifer",
-      "gloss": "match (noun, lucifer)",
+      "key": "match-fire",
+      "gloss": "match (for fire)",
       "entries": {
         "en": [
         {"lemma": "match", "pos": "noun", "details": {"plural": "matches"}, "sentences": ["I light a match."]}
@@ -1165,7 +1165,7 @@
       }
     },
     {
-      "key": "paint-verb-verven",
+      "key": "paint-coat",
       "gloss": "paint (coat)",
       "entries": {
         "en": [
@@ -1225,7 +1225,7 @@
       }
     },
     {
-      "key": "floor-noun-etage",
+      "key": "floor-story",
       "gloss": "floor (story)",
       "entries": {
         "en": [
@@ -1273,7 +1273,7 @@
       }
     },
     {
-      "key": "dish-noun-schotel",
+      "key": "dish-serving-dish",
       "gloss": "dish (serving dish)",
       "entries": {
         "en": [
@@ -1369,7 +1369,7 @@
       }
     },
     {
-      "key": "nail-noun-spijker",
+      "key": "nail-metal",
       "gloss": "nail (metal)",
       "entries": {
         "en": [
@@ -1573,7 +1573,7 @@
       }
     },
     {
-      "key": "wall-noun-wand",
+      "key": "wall-inner",
       "gloss": "wall (inner)",
       "entries": {
         "en": [
@@ -1741,7 +1741,7 @@
       }
     },
     {
-      "key": "study-noun-studeerkamer",
+      "key": "study-room",
       "gloss": "study (room)",
       "entries": {
         "en": [
@@ -1801,7 +1801,7 @@
       }
     },
     {
-      "key": "change-verb-verschonen",
+      "key": "change-bedding",
       "gloss": "change (bedding)",
       "entries": {
         "en": [
@@ -2065,8 +2065,8 @@
       }
     },
     {
-      "key": "fan-noun-ventilator",
-      "gloss": "fan (noun, ventilator)",
+      "key": "fan",
+      "gloss": "fan (cooling device)",
       "entries": {
         "en": [
         {"lemma": "fan", "pos": "noun", "details": {"plural": "fans"}, "sentences": ["The fan is on."]}
@@ -2089,7 +2089,7 @@
       }
     },
     {
-      "key": "stove-noun-kachel",
+      "key": "stove-heater",
       "gloss": "stove (heater)",
       "entries": {
         "en": [
@@ -2101,8 +2101,8 @@
       }
     },
     {
-      "key": "beam-noun-balk",
-      "gloss": "beam (noun, balk)",
+      "key": "beam",
+      "gloss": "beam (timber)",
       "entries": {
         "en": [
         {"lemma": "beam", "pos": "noun", "details": {"plural": "beams"}, "sentences": ["The beam supports the roof."]}

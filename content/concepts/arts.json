@@ -49,7 +49,7 @@
       }
     },
     {
-      "key": "fun-noun-plezier",
+      "key": "fun",
       "gloss": "fun (noun)",
       "entries": {
         "en": [
@@ -97,8 +97,8 @@
       }
     },
     {
-      "key": "match-noun-wedstrijd",
-      "gloss": "match (noun)",
+      "key": "match",
+      "gloss": "match (game)",
       "entries": {
         "en": [
         {"lemma": "match", "pos": "noun", "details": {"plural": "matches"}, "sentences": ["The match starts at two."]}
@@ -277,7 +277,7 @@
       }
     },
     {
-      "key": "collect-verb-verzamelen",
+      "key": "collect",
       "gloss": "collect (verb)",
       "entries": {
         "en": [
@@ -493,7 +493,7 @@
       }
     },
     {
-      "key": "paint-verb-schilderen",
+      "key": "paint",
       "gloss": "paint (verb)",
       "entries": {
         "en": [
@@ -649,7 +649,7 @@
       }
     },
     {
-      "key": "perform-verb-optreden",
+      "key": "perform",
       "gloss": "perform (verb)",
       "entries": {
         "en": [
@@ -817,7 +817,7 @@
       }
     },
     {
-      "key": "act-verb-acteren",
+      "key": "act-perform",
       "gloss": "act (perform)",
       "entries": {
         "en": [
@@ -889,7 +889,7 @@
       }
     },
     {
-      "key": "performance-noun-voorstelling",
+      "key": "performance",
       "gloss": "performance (noun)",
       "entries": {
         "en": [
@@ -949,7 +949,7 @@
       }
     },
     {
-      "key": "round-noun-rondje",
+      "key": "round-of-drinks",
       "gloss": "round (of drinks)",
       "entries": {
         "en": [
@@ -1177,8 +1177,8 @@
       }
     },
     {
-      "key": "trip-noun-trip",
-      "gloss": "trip (noun, trip)",
+      "key": "trip-outing",
+      "gloss": "trip (short outing)",
       "entries": {
         "en": [
         {"lemma": "trip", "pos": "noun", "details": {"plural": "trips"}, "sentences": ["We go on a trip."]}
@@ -1345,7 +1345,7 @@
       }
     },
     {
-      "key": "lead-noun-voorsprong",
+      "key": "lead-advantage",
       "gloss": "lead (advantage)",
       "entries": {
         "en": [
@@ -1441,8 +1441,8 @@
       }
     },
     {
-      "key": "fighter-noun-vechter",
-      "gloss": "fighter (noun, vechter)",
+      "key": "fighter",
+      "gloss": "fighter (person who fights)",
       "entries": {
         "en": [
         {"lemma": "fighter", "pos": "noun", "details": {"plural": "fighters"}, "sentences": ["The fighter is strong."]}
@@ -1573,8 +1573,8 @@
       }
     },
     {
-      "key": "tour-noun-tournee",
-      "gloss": "tour (noun, tournee)",
+      "key": "tour-performance",
+      "gloss": "tour (series of performances)",
       "entries": {
         "en": [
         {"lemma": "tour", "pos": "noun", "details": {"plural": "tours"}, "sentences": ["The band goes on tour."]}
@@ -1837,7 +1837,7 @@
       }
     },
     {
-      "key": "play-verb-bespelen",
+      "key": "play-an-instrument",
       "gloss": "play (an instrument)",
       "entries": {
         "en": [
@@ -2089,7 +2089,7 @@
       }
     },
     {
-      "key": "tour-noun-toer",
+      "key": "tour-round-trip",
       "gloss": "tour (round trip)",
       "entries": {
         "en": [
@@ -2461,8 +2461,8 @@
       }
     },
     {
-      "key": "goal-noun-goal",
-      "gloss": "goal (noun, goal)",
+      "key": "goal-score",
+      "gloss": "goal (scored in sport)",
       "entries": {
         "en": [
         {"lemma": "goal", "pos": "noun", "details": {"plural": "goals"}, "sentences": ["He scores a goal."]}
@@ -2473,8 +2473,8 @@
       }
     },
     {
-      "key": "token-noun-fiche",
-      "gloss": "token (noun, fiche)",
+      "key": "token-chip",
+      "gloss": "token (chip)",
       "entries": {
         "en": [
         {"lemma": "token", "pos": "noun", "details": {"plural": "tokens"}, "sentences": ["I put a token on the table."]}
@@ -2485,7 +2485,7 @@
       }
     },
     {
-      "key": "cover-noun-cover",
+      "key": "cover-of-an-album",
       "gloss": "cover (of an album)",
       "entries": {
         "en": [
@@ -2521,7 +2521,7 @@
       }
     },
     {
-      "key": "stamp-noun-postzegel",
+      "key": "stamp-postage",
       "gloss": "stamp (postage)",
       "entries": {
         "en": [
@@ -2569,8 +2569,8 @@
       }
     },
     {
-      "key": "event-noun-evenement",
-      "gloss": "event (noun, evenement)",
+      "key": "event-organized",
+      "gloss": "event (organized occasion)",
       "entries": {
         "en": [
         {"lemma": "event", "pos": "noun", "details": {"plural": "events"}, "sentences": ["The event is on Saturday."]}
@@ -2725,7 +2725,7 @@
       }
     },
     {
-      "key": "party-noun-fuif",
+      "key": "party-informal",
       "gloss": "party (informal)",
       "entries": {
         "en": [

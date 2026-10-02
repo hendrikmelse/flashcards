@@ -109,7 +109,7 @@
       }
     },
     {
-      "key": "bank-noun-bank",
+      "key": "bank-financial",
       "gloss": "bank (financial)",
       "entries": {
         "en": [
@@ -121,7 +121,7 @@
       }
     },
     {
-      "key": "company-noun-bedrijf",
+      "key": "company",
       "gloss": "company (noun)",
       "entries": {
         "en": [
@@ -133,7 +133,7 @@
       }
     },
     {
-      "key": "fire-verb-ontslaan",
+      "key": "fire-dismiss",
       "gloss": "fire (dismiss)",
       "entries": {
         "en": [
@@ -181,7 +181,7 @@
       }
     },
     {
-      "key": "file-noun-dossier",
+      "key": "file",
       "gloss": "file (noun)",
       "entries": {
         "en": [
@@ -253,7 +253,7 @@
       }
     },
     {
-      "key": "report-noun-rapport",
+      "key": "report",
       "gloss": "report (noun)",
       "entries": {
         "en": [
@@ -385,7 +385,7 @@
       }
     },
     {
-      "key": "writer-noun-schrijver",
+      "key": "writer",
       "gloss": "writer (noun)",
       "entries": {
         "en": [
@@ -397,7 +397,7 @@
       }
     },
     {
-      "key": "department-noun-afdeling",
+      "key": "department",
       "gloss": "department (noun)",
       "entries": {
         "en": [
@@ -409,7 +409,7 @@
       }
     },
     {
-      "key": "save-verb-sparen",
+      "key": "save-money",
       "gloss": "save (money)",
       "entries": {
         "en": [
@@ -445,7 +445,7 @@
       }
     },
     {
-      "key": "driver-noun-chauffeur",
+      "key": "driver",
       "gloss": "driver (noun)",
       "entries": {
         "en": [
@@ -601,7 +601,7 @@
       }
     },
     {
-      "key": "journalist-noun-journalist",
+      "key": "journalist",
       "gloss": "journalist (noun)",
       "entries": {
         "en": [
@@ -637,7 +637,7 @@
       }
     },
     {
-      "key": "copy-noun-kopie",
+      "key": "copy",
       "gloss": "copy (noun)",
       "entries": {
         "en": [
@@ -745,7 +745,7 @@
       }
     },
     {
-      "key": "assistant-noun-assistent",
+      "key": "assistant",
       "gloss": "assistant (noun)",
       "entries": {
         "en": [
@@ -781,7 +781,7 @@
       }
     },
     {
-      "key": "spend-verb-uitgeven",
+      "key": "spend-money",
       "gloss": "spend (money)",
       "entries": {
         "en": [
@@ -949,7 +949,7 @@
       }
     },
     {
-      "key": "nurse-noun-verpleegster",
+      "key": "nurse-female",
       "gloss": "nurse (female)",
       "entries": {
         "en": [
@@ -1117,7 +1117,7 @@
       }
     },
     {
-      "key": "secretary-noun-secretaresse",
+      "key": "secretary",
       "gloss": "secretary (noun)",
       "entries": {
         "en": [
@@ -1165,7 +1165,7 @@
       }
     },
     {
-      "key": "tip-noun-fooi",
+      "key": "tip-gratuity",
       "gloss": "tip (gratuity)",
       "entries": {
         "en": [
@@ -1297,7 +1297,7 @@
       }
     },
     {
-      "key": "teacher-noun-lerares",
+      "key": "teacher-female",
       "gloss": "teacher (female)",
       "entries": {
         "en": [
@@ -1669,7 +1669,7 @@
       }
     },
     {
-      "key": "transfer-verb-overplaatsen",
+      "key": "transfer",
       "gloss": "transfer (verb)",
       "entries": {
         "en": [
@@ -1693,7 +1693,7 @@
       }
     },
     {
-      "key": "reception-noun-receptie",
+      "key": "reception",
       "gloss": "reception (noun)",
       "entries": {
         "en": [
@@ -1741,7 +1741,7 @@
       }
     },
     {
-      "key": "union-noun-vakbond",
+      "key": "union",
       "gloss": "union (noun)",
       "entries": {
         "en": [
@@ -1813,8 +1813,8 @@
       }
     },
     {
-      "key": "session-noun-sessie",
-      "gloss": "session (noun, sessie)",
+      "key": "session",
+      "gloss": "session (period of activity)",
       "entries": {
         "en": [
         {"lemma": "session", "pos": "noun", "details": {"plural": "sessions"}, "sentences": ["The session is long."]}
@@ -1837,7 +1837,7 @@
       }
     },
     {
-      "key": "assistant-noun-assistente",
+      "key": "assistant-female",
       "gloss": "assistant (female)",
       "entries": {
         "en": [
@@ -1849,8 +1849,8 @@
       }
     },
     {
-      "key": "token-noun-penning",
-      "gloss": "token (noun)",
+      "key": "token",
+      "gloss": "token (coin-like piece)",
       "entries": {
         "en": [
         {"lemma": "token", "pos": "noun", "details": {"plural": "tokens"}, "sentences": ["He gets a token."]}
@@ -1861,7 +1861,7 @@
       }
     },
     {
-      "key": "spy-noun-spionne",
+      "key": "spy-female",
       "gloss": "spy (female)",
       "entries": {
         "en": [
@@ -1873,7 +1873,7 @@
       }
     },
     {
-      "key": "change-noun-wisselgeld",
+      "key": "change-coins",
       "gloss": "change (coins)",
       "entries": {
         "en": [
@@ -1957,7 +1957,7 @@
       }
     },
     {
-      "key": "singer-noun-zanger",
+      "key": "singer",
       "gloss": "singer (noun)",
       "entries": {
         "en": [
@@ -1969,7 +1969,7 @@
       }
     },
     {
-      "key": "dancer-noun-danseres",
+      "key": "dancer-female",
       "gloss": "dancer (female)",
       "entries": {
         "en": [
@@ -1981,7 +1981,7 @@
       }
     },
     {
-      "key": "union-noun-bond",
+      "key": "union-association",
       "gloss": "union (association)",
       "entries": {
         "en": [
@@ -2017,7 +2017,7 @@
       }
     },
     {
-      "key": "dancer-noun-danser",
+      "key": "dancer",
       "gloss": "dancer (noun)",
       "entries": {
         "en": [
@@ -2209,7 +2209,7 @@
       }
     },
     {
-      "key": "cooperation-noun-samenwerking",
+      "key": "cooperation-joint-work",
       "gloss": "cooperation (joint work)",
       "entries": {
         "en": [
@@ -2293,7 +2293,7 @@
       }
     },
     {
-      "key": "strike-verb-staken",
+      "key": "strike-stop-work",
       "gloss": "strike (stop work)",
       "entries": {
         "en": [
@@ -2377,7 +2377,7 @@
       }
     },
     {
-      "key": "interest-noun-rente",
+      "key": "interest-on-money",
       "gloss": "interest (on money)",
       "entries": {
         "en": [
@@ -2413,7 +2413,7 @@
       }
     },
     {
-      "key": "discussion-noun-bespreking",
+      "key": "discussion-meeting",
       "gloss": "discussion (meeting)",
       "entries": {
         "en": [
@@ -2485,7 +2485,7 @@
       }
     },
     {
-      "key": "singer-noun-zangeres",
+      "key": "singer-female",
       "gloss": "singer (female)",
       "entries": {
         "en": [
@@ -2665,7 +2665,7 @@
       }
     },
     {
-      "key": "student-noun-studente",
+      "key": "student-female",
       "gloss": "student (female)",
       "entries": {
         "en": [
@@ -2761,7 +2761,7 @@
       }
     },
     {
-      "key": "secretary-noun-secretaris",
+      "key": "secretary-official",
       "gloss": "secretary (official)",
       "entries": {
         "en": [
@@ -2857,7 +2857,7 @@
       }
     },
     {
-      "key": "collect-verb-innen",
+      "key": "collect-money",
       "gloss": "collect (money)",
       "entries": {
         "en": [
@@ -2905,7 +2905,7 @@
       }
     },
     {
-      "key": "department-noun-departement",
+      "key": "department-government",
       "gloss": "department (government)",
       "entries": {
         "en": [
@@ -3037,7 +3037,7 @@
       }
     },
     {
-      "key": "stamp-noun-stempel",
+      "key": "stamp",
       "gloss": "stamp (noun)",
       "entries": {
         "en": [
@@ -3121,7 +3121,7 @@
       }
     },
     {
-      "key": "beg-verb-bedelen",
+      "key": "beg-for-money",
       "gloss": "beg (for money)",
       "entries": {
         "en": [
@@ -3157,7 +3157,7 @@
       }
     },
     {
-      "key": "teacher-noun-juf",
+      "key": "teacher-female-elementary",
       "gloss": "teacher (female elementary)",
       "entries": {
         "en": [
@@ -3325,7 +3325,7 @@
       }
     },
     {
-      "key": "apply-verb-solliciteren",
+      "key": "apply-for-a-job",
       "gloss": "apply (for a job)",
       "entries": {
         "en": [
@@ -3385,7 +3385,7 @@
       }
     },
     {
-      "key": "perform-verb-presteren",
+      "key": "perform-achieve",
       "gloss": "perform (achieve)",
       "entries": {
         "en": [
@@ -3409,7 +3409,7 @@
       }
     },
     {
-      "key": "practice-verb-uitoefenen",
+      "key": "practice-a-profession",
       "gloss": "practice (a profession)",
       "entries": {
         "en": [
@@ -3469,7 +3469,7 @@
       }
     },
     {
-      "key": "finish-verb-afwerken",
+      "key": "finish-off",
       "gloss": "finish (off)",
       "entries": {
         "en": [
@@ -3505,7 +3505,7 @@
       }
     },
     {
-      "key": "pass-noun-pasje",
+      "key": "pass-card",
       "gloss": "pass (card)",
       "entries": {
         "en": [
@@ -3601,7 +3601,7 @@
       }
     },
     {
-      "key": "job-noun-karwei",
+      "key": "job-task",
       "gloss": "job (task)",
       "entries": {
         "en": [
@@ -3853,7 +3853,7 @@
       }
     },
     {
-      "key": "apply-verb-toepassen",
+      "key": "apply-use",
       "gloss": "apply (use)",
       "entries": {
         "en": [
@@ -3925,7 +3925,7 @@
       }
     },
     {
-      "key": "transfer-verb-overmaken",
+      "key": "transfer-money",
       "gloss": "transfer (money)",
       "entries": {
         "en": [
@@ -3961,7 +3961,7 @@
       }
     },
     {
-      "key": "writer-noun-schrijfster",
+      "key": "writer-female",
       "gloss": "writer (female)",
       "entries": {
         "en": [
@@ -3973,7 +3973,7 @@
       }
     },
     {
-      "key": "journalist-noun-journaliste",
+      "key": "journalist-female",
       "gloss": "journalist (female)",
       "entries": {
         "en": [
@@ -4045,8 +4045,8 @@
       }
     },
     {
-      "key": "capital-noun-kapitaal",
-      "gloss": "capital (noun, kapitaal)",
+      "key": "capital-money",
+      "gloss": "capital (money)",
       "entries": {
         "en": [
         {"lemma": "capital", "pos": "noun", "details": {"plural": "capitals"}, "sentences": ["The company needs capital."]}

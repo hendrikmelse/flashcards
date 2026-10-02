@@ -37,7 +37,7 @@
       }
     },
     {
-      "key": "letter-noun-brief",
+      "key": "letter",
       "gloss": "letter (noun)",
       "entries": {
         "en": [
@@ -109,7 +109,7 @@
       }
     },
     {
-      "key": "joke-noun-grapje",
+      "key": "joke-little",
       "gloss": "joke (little)",
       "entries": {
         "en": [
@@ -121,7 +121,7 @@
       }
     },
     {
-      "key": "joke-noun-grap",
+      "key": "joke",
       "gloss": "joke (noun)",
       "entries": {
         "en": [
@@ -409,7 +409,7 @@
       }
     },
     {
-      "key": "device-noun-apparaat",
+      "key": "device",
       "gloss": "device (noun)",
       "entries": {
         "en": [
@@ -445,7 +445,7 @@
       }
     },
     {
-      "key": "device-noun-toestel",
+      "key": "device-appliance",
       "gloss": "device (appliance)",
       "entries": {
         "en": [
@@ -457,7 +457,7 @@
       }
     },
     {
-      "key": "page-noun-pagina",
+      "key": "page",
       "gloss": "page (noun)",
       "entries": {
         "en": [
@@ -469,7 +469,7 @@
       }
     },
     {
-      "key": "connection-noun-verbinding",
+      "key": "connection-link",
       "gloss": "connection (link)",
       "entries": {
         "en": [
@@ -577,7 +577,7 @@
       }
     },
     {
-      "key": "series-noun-serie",
+      "key": "series",
       "gloss": "series (noun)",
       "entries": {
         "en": [
@@ -769,7 +769,7 @@
       }
     },
     {
-      "key": "file-noun-bestand",
+      "key": "file-computer",
       "gloss": "file (computer)",
       "entries": {
         "en": [
@@ -829,7 +829,7 @@
       }
     },
     {
-      "key": "character-noun-personage",
+      "key": "character-in-a-story",
       "gloss": "character (in a story)",
       "entries": {
         "en": [
@@ -877,7 +877,7 @@
       }
     },
     {
-      "key": "equipment-noun-apparatuur",
+      "key": "equipment",
       "gloss": "equipment (noun)",
       "entries": {
         "en": [
@@ -889,7 +889,7 @@
       }
     },
     {
-      "key": "joke-noun-mop",
+      "key": "joke-short",
       "gloss": "joke (short)",
       "entries": {
         "en": [
@@ -1009,8 +1009,8 @@
       }
     },
     {
-      "key": "link-noun-link",
-      "gloss": "link (noun, link)",
+      "key": "link-web",
+      "gloss": "link (web)",
       "entries": {
         "en": [
         {"lemma": "link", "pos": "noun", "details": {"plural": "links"}, "sentences": ["I send you the link."]}
@@ -1117,7 +1117,7 @@
       }
     },
     {
-      "key": "ring-verb-overgaan",
+      "key": "ring-phone",
       "gloss": "ring (phone)",
       "entries": {
         "en": [
@@ -1177,7 +1177,7 @@
       }
     },
     {
-      "key": "operation-noun-werking",
+      "key": "operation-working",
       "gloss": "operation (working)",
       "entries": {
         "en": [
@@ -1249,8 +1249,8 @@
       }
     },
     {
-      "key": "crew-noun-crew",
-      "gloss": "crew (noun, crew)",
+      "key": "crew-film",
+      "gloss": "crew (film or work team)",
       "entries": {
         "en": [
         {"lemma": "crew", "pos": "noun", "details": {"plural": "crews"}, "sentences": ["The crew films the scene."]}
@@ -1321,7 +1321,7 @@
       }
     },
     {
-      "key": "page-noun-bladzijde",
+      "key": "page-of-a-book",
       "gloss": "page (of a book)",
       "entries": {
         "en": [
@@ -1561,7 +1561,7 @@
       }
     },
     {
-      "key": "note-noun-notitie",
+      "key": "note-short",
       "gloss": "note (short)",
       "entries": {
         "en": [
@@ -1897,7 +1897,7 @@
       }
     },
     {
-      "key": "enter-verb-invoeren",
+      "key": "enter-data",
       "gloss": "enter (data)",
       "entries": {
         "en": [
@@ -2113,7 +2113,7 @@
       }
     },
     {
-      "key": "cover-noun-omslag",
+      "key": "cover-of-a-book",
       "gloss": "cover (of a book)",
       "entries": {
         "en": [
@@ -2185,7 +2185,7 @@
       }
     },
     {
-      "key": "report-noun-reportage",
+      "key": "report-coverage",
       "gloss": "report (coverage)",
       "entries": {
         "en": [

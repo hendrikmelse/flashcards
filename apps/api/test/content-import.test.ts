@@ -86,6 +86,22 @@ describe("shipped content", () => {
     expect([...packsPerConcept.values()].some((n) => n > 1)).toBe(true);
   });
 
+  it("keeps keys language-neutral: English words only, no Dutch lemma on the end", () => {
+    const slug = (text: string) => text.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+    const { concepts: cs } = loadContent("../../content");
+    const offenders = cs
+      .filter((c) => {
+        const english = c.entries.en.map((e) => slug(e.lemma));
+        return c.entries.nl.some((e) => {
+          const nl = slug(e.lemma);
+          return !english.includes(nl) && new RegExp(`(^|-)${nl}(-[0-9]+)?$`).test(c.key) && !c.key.startsWith(nl);
+        });
+      })
+      .map((c) => c.key);
+    // "comic-strip" ends in the Dutch word "strip" by coincidence
+    expect(offenders.filter((k) => k !== "comic-strip")).toEqual([]);
+  });
+
   it("imports into an empty database", async () => {
     const { concepts: cs, packs: ps } = loadContent("../../content");
     const summary = await importContent(db, { concepts: cs, packs: ps });

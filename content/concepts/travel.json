@@ -61,8 +61,8 @@
       }
     },
     {
-      "key": "trip-noun-reis",
-      "gloss": "trip (noun)",
+      "key": "trip",
+      "gloss": "trip (journey)",
       "entries": {
         "en": [
         {"lemma": "trip", "pos": "noun", "details": {"plural": "trips"}, "sentences": ["The trip is long."]}
@@ -193,7 +193,7 @@
       }
     },
     {
-      "key": "truck-noun-truck",
+      "key": "truck",
       "gloss": "truck (noun)",
       "entries": {
         "en": [
@@ -205,7 +205,7 @@
       }
     },
     {
-      "key": "airport-noun-vliegveld",
+      "key": "airport",
       "gloss": "airport (noun)",
       "entries": {
         "en": [
@@ -277,7 +277,7 @@
       }
     },
     {
-      "key": "course-noun-koers",
+      "key": "course-direction",
       "gloss": "course (direction)",
       "entries": {
         "en": [
@@ -349,7 +349,7 @@
       }
     },
     {
-      "key": "pack-verb-inpakken",
+      "key": "pack",
       "gloss": "pack (verb)",
       "entries": {
         "en": [
@@ -361,7 +361,7 @@
       }
     },
     {
-      "key": "truck-noun-vrachtwagen",
+      "key": "truck-freight",
       "gloss": "truck (freight)",
       "entries": {
         "en": [
@@ -373,8 +373,8 @@
       }
     },
     {
-      "key": "crew-noun-bemanning",
-      "gloss": "crew (noun)",
+      "key": "crew",
+      "gloss": "crew (on a ship or plane)",
       "entries": {
         "en": [
         {"lemma": "crew", "pos": "noun", "details": {"plural": "crews"}, "sentences": ["The crew is on board."]}
@@ -385,8 +385,8 @@
       }
     },
     {
-      "key": "arrival-noun-komst",
-      "gloss": "arrival (noun)",
+      "key": "arrival-coming",
+      "gloss": "arrival (coming)",
       "entries": {
         "en": [
         {"lemma": "arrival", "pos": "noun", "details": {"plural": "arrivals"}, "sentences": ["We await his arrival."]}
@@ -433,7 +433,7 @@
       }
     },
     {
-      "key": "land-verb-landen",
+      "key": "land",
       "gloss": "land (verb)",
       "entries": {
         "en": [
@@ -733,7 +733,7 @@
       }
     },
     {
-      "key": "transport-noun-transport",
+      "key": "transport",
       "gloss": "transport (noun)",
       "entries": {
         "en": [
@@ -769,7 +769,7 @@
       }
     },
     {
-      "key": "take-off-verb-opstijgen",
+      "key": "take-off-aircraft",
       "gloss": "take off (aircraft)",
       "entries": {
         "en": [
@@ -781,7 +781,7 @@
       }
     },
     {
-      "key": "transport-noun-vervoer",
+      "key": "transport-conveyance",
       "gloss": "transport (conveyance)",
       "entries": {
         "en": [
@@ -805,7 +805,7 @@
       }
     },
     {
-      "key": "speed-noun-vaart",
+      "key": "speed-movement",
       "gloss": "speed (movement)",
       "entries": {
         "en": [
@@ -889,7 +889,7 @@
       }
     },
     {
-      "key": "airport-noun-luchthaven",
+      "key": "airport-large",
       "gloss": "airport (large)",
       "entries": {
         "en": [
@@ -913,8 +913,8 @@
       }
     },
     {
-      "key": "arrival-noun-aankomst",
-      "gloss": "arrival (noun, aankomst)",
+      "key": "arrival",
+      "gloss": "arrival (reaching a place)",
       "entries": {
         "en": [
         {"lemma": "arrival", "pos": "noun", "details": {"uncountable": true}, "sentences": ["The arrival is at six."]}
@@ -925,7 +925,7 @@
       }
     },
     {
-      "key": "driver-noun-bestuurder",
+      "key": "driver-of-a-vehicle",
       "gloss": "driver (of a vehicle)",
       "entries": {
         "en": [
@@ -961,8 +961,8 @@
       }
     },
     {
-      "key": "tour-noun-rondleiding",
-      "gloss": "tour (noun)",
+      "key": "tour",
+      "gloss": "tour (guided visit)",
       "entries": {
         "en": [
         {"lemma": "tour", "pos": "noun", "details": {"plural": "tours"}, "sentences": ["We take a tour."]}
@@ -1009,7 +1009,7 @@
       }
     },
     {
-      "key": "delay-noun-vertraging",
+      "key": "delay",
       "gloss": "delay (noun)",
       "entries": {
         "en": [
@@ -1129,7 +1129,7 @@
       }
     },
     {
-      "key": "turn-off-verb-afslaan",
+      "key": "turn-off-a-road",
       "gloss": "turn off (a road)",
       "entries": {
         "en": [
@@ -1237,7 +1237,7 @@
       }
     },
     {
-      "key": "exit-noun-afslag",
+      "key": "exit-highway",
       "gloss": "exit (highway)",
       "entries": {
         "en": [
@@ -1345,8 +1345,8 @@
       }
     },
     {
-      "key": "drive-away-verb-wegrijden",
-      "gloss": "drive away (verb, wegrijden)",
+      "key": "drive-away",
+      "gloss": "drive away (leave by vehicle)",
       "entries": {
         "en": [
         {"lemma": "drive away", "pos": "verb", "details": {"past": "drove away", "participle": "driven away"}, "sentences": ["The car drove away."]}
@@ -1429,7 +1429,7 @@
       }
     },
     {
-      "key": "cabin-noun-cabine",
+      "key": "cabin-on-a-ship",
       "gloss": "cabin (on a ship)",
       "entries": {
         "en": [
@@ -1537,7 +1537,7 @@
       }
     },
     {
-      "key": "pass-noun-pas",
+      "key": "pass-mountain",
       "gloss": "pass (mountain)",
       "entries": {
         "en": [

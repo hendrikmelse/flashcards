@@ -1,7 +1,7 @@
 {
   "concepts": [
     {
-      "key": "you-pronoun-je",
+      "key": "you-unstressed",
       "gloss": "you (unstressed)",
       "entries": {
         "en": [
@@ -25,7 +25,7 @@
       }
     },
     {
-      "key": "that-pronoun-dat",
+      "key": "that-het-words",
       "gloss": "that (het-words)",
       "entries": {
         "en": [
@@ -49,7 +49,7 @@
       }
     },
     {
-      "key": "me-pronoun-me",
+      "key": "me-unstressed",
       "gloss": "me (unstressed)",
       "entries": {
         "en": [
@@ -61,7 +61,7 @@
       }
     },
     {
-      "key": "that-pronoun-die",
+      "key": "that-de-words-and-plural",
       "gloss": "that (de-words and plural)",
       "entries": {
         "en": [
@@ -85,7 +85,7 @@
       }
     },
     {
-      "key": "you-pronoun-u",
+      "key": "you-formal",
       "gloss": "you (formal)",
       "entries": {
         "en": [
@@ -181,7 +181,7 @@
       }
     },
     {
-      "key": "me-pronoun-mij",
+      "key": "me-stressed",
       "gloss": "me (stressed)",
       "entries": {
         "en": [
@@ -193,7 +193,7 @@
       }
     },
     {
-      "key": "you-pronoun-jullie",
+      "key": "you-plural",
       "gloss": "you (plural)",
       "entries": {
         "en": [
@@ -241,7 +241,7 @@
       }
     },
     {
-      "key": "you-pronoun-jou",
+      "key": "you-stressed-object",
       "gloss": "you (stressed object)",
       "entries": {
         "en": [
@@ -253,7 +253,7 @@
       }
     },
     {
-      "key": "nothing-pronoun-niets",
+      "key": "nothing",
       "gloss": "nothing (pronoun)",
       "entries": {
         "en": [
@@ -277,7 +277,7 @@
       }
     },
     {
-      "key": "your-determiner-uw",
+      "key": "your-formal",
       "gloss": "your (formal)",
       "entries": {
         "en": [
@@ -289,7 +289,7 @@
       }
     },
     {
-      "key": "nothing-pronoun-niks",
+      "key": "nothing-informal",
       "gloss": "nothing (informal)",
       "entries": {
         "en": [
@@ -301,7 +301,7 @@
       }
     },
     {
-      "key": "your-determiner-jouw",
+      "key": "your-stressed",
       "gloss": "your (stressed)",
       "entries": {
         "en": [
@@ -409,7 +409,7 @@
       }
     },
     {
-      "key": "every-determiner-elke",
+      "key": "every-de-words",
       "gloss": "every (de-words)",
       "entries": {
         "en": [
@@ -433,7 +433,7 @@
       }
     },
     {
-      "key": "which-determiner-welke",
+      "key": "which-de-words-and-plural",
       "gloss": "which (de-words and plural)",
       "entries": {
         "en": [
@@ -517,7 +517,7 @@
       }
     },
     {
-      "key": "every-determiner-elk",
+      "key": "every-het-words",
       "gloss": "every (het-words)",
       "entries": {
         "en": [
@@ -613,7 +613,7 @@
       }
     },
     {
-      "key": "which-determiner-welk",
+      "key": "which-het-words",
       "gloss": "which (het-words)",
       "entries": {
         "en": [
@@ -721,7 +721,7 @@
       }
     },
     {
-      "key": "what-pronoun-wat-2",
+      "key": "what-exclamation",
       "gloss": "what (exclamation)",
       "entries": {
         "en": [
@@ -1021,7 +1021,7 @@
       }
     },
     {
-      "key": "from-preposition-vanaf",
+      "key": "from-a-point-on",
       "gloss": "from (a point on)",
       "entries": {
         "en": [
@@ -1081,7 +1081,7 @@
       }
     },
     {
-      "key": "from-preposition-vanuit",
+      "key": "from-out-of",
       "gloss": "from (out of)",
       "entries": {
         "en": [
@@ -1189,7 +1189,7 @@
       }
     },
     {
-      "key": "because-conjunction-want",
+      "key": "because-main-clause",
       "gloss": "because (main clause)",
       "entries": {
         "en": [
@@ -1225,7 +1225,7 @@
       }
     },
     {
-      "key": "so-that-conjunction-zodat",
+      "key": "so-that",
       "gloss": "so that (conjunction)",
       "entries": {
         "en": [
@@ -1369,7 +1369,7 @@
       }
     },
     {
-      "key": "or-conjunction-ofwel",
+      "key": "or-formal",
       "gloss": "or (formal)",
       "entries": {
         "en": [
@@ -1393,7 +1393,7 @@
       }
     },
     {
-      "key": "because-conjunction-doordat",
+      "key": "because-of-the-fact-that",
       "gloss": "because (of the fact that)",
       "entries": {
         "en": [
@@ -1405,7 +1405,7 @@
       }
     },
     {
-      "key": "so-that-conjunction-opdat",
+      "key": "so-that-formal",
       "gloss": "so that (formal)",
       "entries": {
         "en": [
@@ -1537,7 +1537,7 @@
       }
     },
     {
-      "key": "about-it-adverb-eraan",
+      "key": "about-it-think-of-it",
       "gloss": "about it (think of it)",
       "entries": {
         "en": [
@@ -1573,7 +1573,7 @@
       }
     },
     {
-      "key": "for-it-adverb-ervoor",
+      "key": "for-it",
       "gloss": "for it (adverb)",
       "entries": {
         "en": [
@@ -1597,7 +1597,7 @@
       }
     },
     {
-      "key": "about-it-adverb-erover",
+      "key": "about-it-talk-about-it",
       "gloss": "about it (talk about it)",
       "entries": {
         "en": [
@@ -1681,7 +1681,7 @@
       }
     },
     {
-      "key": "there-adverb-erheen",
+      "key": "there-to-that-place",
       "gloss": "there (to that place)",
       "entries": {
         "en": [
@@ -1693,7 +1693,7 @@
       }
     },
     {
-      "key": "for-it-adverb-erom",
+      "key": "for-it-ask-for-it",
       "gloss": "for it (ask for it)",
       "entries": {
         "en": [
@@ -1777,7 +1777,7 @@
       }
     },
     {
-      "key": "of-that-adverb-daarvan",
+      "key": "of-that",
       "gloss": "of that (adverb)",
       "entries": {
         "en": [
@@ -1825,7 +1825,7 @@
       }
     },
     {
-      "key": "of-that-adverb-daaraan",
+      "key": "of-that-think-of",
       "gloss": "of that (think of)",
       "entries": {
         "en": [
@@ -1897,8 +1897,8 @@
       }
     },
     {
-      "key": "there-adverb-daarheen",
-      "gloss": "there (to that place, daarheen)",
+      "key": "there-to-that-place-emphatic",
+      "gloss": "there (to that place, emphatic)",
       "entries": {
         "en": [
         {"lemma": "there (to that place)", "pos": "adverb", "sentences": ["I am going there."]}

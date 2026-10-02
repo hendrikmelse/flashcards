@@ -433,7 +433,7 @@
       }
     },
     {
-      "key": "order-noun-bevel",
+      "key": "order-command",
       "gloss": "order (command)",
       "entries": {
         "en": [
@@ -745,7 +745,7 @@
       }
     },
     {
-      "key": "trap-noun-val",
+      "key": "trap",
       "gloss": "trap (noun)",
       "entries": {
         "en": [
@@ -853,7 +853,7 @@
       }
     },
     {
-      "key": "pick-up-verb-oppakken",
+      "key": "pick-up-arrest",
       "gloss": "pick up (arrest)",
       "entries": {
         "en": [
@@ -913,7 +913,7 @@
       }
     },
     {
-      "key": "guard-noun-bewaker",
+      "key": "guard",
       "gloss": "guard (noun)",
       "entries": {
         "en": [
@@ -937,7 +937,7 @@
       }
     },
     {
-      "key": "fire-noun-brand",
+      "key": "fire-blaze",
       "gloss": "fire (blaze)",
       "entries": {
         "en": [
@@ -1273,7 +1273,7 @@
       }
     },
     {
-      "key": "party-noun-partij",
+      "key": "party-political",
       "gloss": "party (political)",
       "entries": {
         "en": [
@@ -1333,7 +1333,7 @@
       }
     },
     {
-      "key": "catch-verb-betrappen",
+      "key": "catch-in-the-act",
       "gloss": "catch (in the act)",
       "entries": {
         "en": [
@@ -1585,7 +1585,7 @@
       }
     },
     {
-      "key": "cover-noun-dekking",
+      "key": "cover",
       "gloss": "cover (noun)",
       "entries": {
         "en": [
@@ -1621,7 +1621,7 @@
       }
     },
     {
-      "key": "threat-noun-bedreiging",
+      "key": "threat",
       "gloss": "threat (noun)",
       "entries": {
         "en": [
@@ -1657,7 +1657,7 @@
       }
     },
     {
-      "key": "authorities-noun-overheid",
+      "key": "authorities",
       "gloss": "authorities (noun)",
       "entries": {
         "en": [
@@ -1813,7 +1813,7 @@
       }
     },
     {
-      "key": "spy-noun-spion",
+      "key": "spy",
       "gloss": "spy (noun)",
       "entries": {
         "en": [
@@ -2053,7 +2053,7 @@
       }
     },
     {
-      "key": "legal-adjective-legaal",
+      "key": "legal",
       "gloss": "legal (adjective)",
       "entries": {
         "en": [
@@ -2245,7 +2245,7 @@
       }
     },
     {
-      "key": "fire-verb-vuren",
+      "key": "fire-a-weapon",
       "gloss": "fire (a weapon)",
       "entries": {
         "en": [
@@ -2293,7 +2293,7 @@
       }
     },
     {
-      "key": "offense-noun-misdrijf",
+      "key": "offense",
       "gloss": "offense (noun)",
       "entries": {
         "en": [
@@ -2509,7 +2509,7 @@
       }
     },
     {
-      "key": "cemetery-noun-kerkhof",
+      "key": "cemetery",
       "gloss": "cemetery (noun)",
       "entries": {
         "en": [
@@ -2641,7 +2641,7 @@
       }
     },
     {
-      "key": "authority-noun-gezag",
+      "key": "authority",
       "gloss": "authority (noun)",
       "entries": {
         "en": [
@@ -2893,7 +2893,7 @@
       }
     },
     {
-      "key": "authorities-noun-autoriteiten",
+      "key": "authorities-officials",
       "gloss": "authorities (officials)",
       "entries": {
         "en": [
@@ -3205,8 +3205,8 @@
       }
     },
     {
-      "key": "fighter-noun-strijder",
-      "gloss": "fighter (noun)",
+      "key": "fighter-warrior",
+      "gloss": "fighter (warrior)",
       "entries": {
         "en": [
         {"lemma": "fighter", "pos": "noun", "details": {"plural": "fighters"}, "sentences": ["The fighter is brave."]}
@@ -3217,7 +3217,7 @@
       }
     },
     {
-      "key": "trap-noun-valstrik",
+      "key": "trap-snare",
       "gloss": "trap (snare)",
       "entries": {
         "en": [
@@ -3301,7 +3301,7 @@
       }
     },
     {
-      "key": "cover-noun-dekmantel",
+      "key": "cover-front",
       "gloss": "cover (front)",
       "entries": {
         "en": [
@@ -3505,7 +3505,7 @@
       }
     },
     {
-      "key": "offense-noun-delict",
+      "key": "offense-minor",
       "gloss": "offense (minor)",
       "entries": {
         "en": [
@@ -3577,7 +3577,7 @@
       }
     },
     {
-      "key": "legal-adjective-juridisch",
+      "key": "legal-juridical",
       "gloss": "legal (juridical)",
       "entries": {
         "en": [
@@ -3589,7 +3589,7 @@
       }
     },
     {
-      "key": "forgiveness-noun-vergiffenis",
+      "key": "forgiveness",
       "gloss": "forgiveness (noun)",
       "entries": {
         "en": [
@@ -3733,7 +3733,7 @@
       }
     },
     {
-      "key": "forge-verb-vervalsen",
+      "key": "forge",
       "gloss": "forge (verb)",
       "entries": {
         "en": [
@@ -3769,8 +3769,8 @@
       }
     },
     {
-      "key": "hearing-noun-hoorzitting",
-      "gloss": "hearing (noun)",
+      "key": "hearing-formal",
+      "gloss": "hearing (formal session)",
       "entries": {
         "en": [
         {"lemma": "hearing", "pos": "noun", "details": {"plural": "hearings"}, "sentences": ["The hearing starts at ten."]}
@@ -3805,7 +3805,7 @@
       }
     },
     {
-      "key": "company-noun-compagnie",
+      "key": "company-military-unit",
       "gloss": "company (military unit)",
       "entries": {
         "en": [
@@ -3925,7 +3925,7 @@
       }
     },
     {
-      "key": "cemetery-noun-begraafplaats",
+      "key": "cemetery-burial-ground",
       "gloss": "cemetery (burial ground)",
       "entries": {
         "en": [
@@ -3997,7 +3997,7 @@
       }
     },
     {
-      "key": "conviction-noun-veroordeling",
+      "key": "conviction-verdict",
       "gloss": "conviction (verdict)",
       "entries": {
         "en": [
@@ -4033,8 +4033,8 @@
       }
     },
     {
-      "key": "capital-noun-hoofdstad",
-      "gloss": "capital (noun)",
+      "key": "capital",
+      "gloss": "capital (city)",
       "entries": {
         "en": [
         {"lemma": "capital", "pos": "noun", "details": {"plural": "capitals"}, "sentences": ["Amsterdam is the capital."]}
@@ -4117,7 +4117,7 @@
       }
     },
     {
-      "key": "try-verb-berechten",
+      "key": "try-in-court",
       "gloss": "try (in court)",
       "entries": {
         "en": [
@@ -4153,7 +4153,7 @@
       }
     },
     {
-      "key": "threat-noun-dreigement",
+      "key": "threat-spoken",
       "gloss": "threat (spoken)",
       "entries": {
         "en": [
@@ -4201,7 +4201,7 @@
       }
     },
     {
-      "key": "guard-noun-wachter",
+      "key": "guard-watchman",
       "gloss": "guard (watchman)",
       "entries": {
         "en": [
@@ -4681,7 +4681,7 @@
       }
     },
     {
-      "key": "ally-noun-bondgenote",
+      "key": "ally-female",
       "gloss": "ally (female)",
       "entries": {
         "en": [
@@ -4861,8 +4861,8 @@
       }
     },
     {
-      "key": "lobby-noun-lobby",
-      "gloss": "lobby (noun, lobby)",
+      "key": "lobby-pressure-group",
+      "gloss": "lobby (pressure group)",
       "entries": {
         "en": [
         {"lemma": "lobby", "pos": "noun", "details": {"plural": "lobbies"}, "sentences": ["The lobby is strong."]}
@@ -4957,7 +4957,7 @@
       }
     },
     {
-      "key": "authority-noun-autoriteit",
+      "key": "authority-institution",
       "gloss": "authority (institution)",
       "entries": {
         "en": [
@@ -4981,7 +4981,7 @@
       }
     },
     {
-      "key": "deed-noun-akte",
+      "key": "deed-certificate",
       "gloss": "deed (certificate)",
       "entries": {
         "en": [
@@ -4993,8 +4993,8 @@
       }
     },
     {
-      "key": "claim-verb-opeisen",
-      "gloss": "claim (verb, opeisen)",
+      "key": "claim-demand",
+      "gloss": "claim (demand as one's own)",
       "entries": {
         "en": [
         {"lemma": "claim", "pos": "verb", "details": {"past": "claimed", "participle": "claimed"}, "sentences": ["They claim the land."]}
@@ -5401,7 +5401,7 @@
       }
     },
     {
-      "key": "ally-noun-bondgenoot",
+      "key": "ally",
       "gloss": "ally (noun)",
       "entries": {
         "en": [
@@ -5929,8 +5929,8 @@
       }
     },
     {
-      "key": "claim-verb-claimen",
-      "gloss": "claim (verb, claimen)",
+      "key": "claim-prize",
+      "gloss": "claim (apply for)",
       "entries": {
         "en": [
         {"lemma": "claim (verb)", "pos": "verb", "details": {"past": "claimed", "participle": "claimed"}, "sentences": ["They claim the prize."]}

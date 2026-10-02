@@ -138,7 +138,7 @@ The library has about 5,900 concepts in 88 packs:
 - **Topic packs** (about 70, 40 to 130 words each): food and drink (basic and advanced), Dutch culture, countries and languages, everyday phrases, family, home, town, travel, work, health, nature, animals, and so on. Large topics are split into levels (`-1`, `-2`, ...). A concept can be in a band and in a topic pack
 - `starter` (the original 259 beginner words), plus `food-and-eating` and `common-verbs`
 
-Parts of speech are noun, verb, adjective, adverb, pronoun, preposition, conjunction, interjection, numeral, determiner, particle, phrase and proper noun (a name without a Dutch article, such as a country). Where one word has several senses or parts of speech, the key says which (`water-noun`, `water-verb`).
+Parts of speech are noun, verb, adjective, adverb, pronoun, preposition, conjunction, interjection, numeral, determiner, particle, phrase and proper noun (a name without a Dutch article, such as a country). Keys and glosses are English only, so they stay meaningful when more languages are added. Where one English word has several senses or parts of speech, the key says which in English (`water-noun`, `water-verb`, `bank-river`, `bank-money`); `content:check` and the tests reject keys that end in a Dutch word.
 
 **Word selection and attribution.** Which words to include was chosen using the SUBTLEX-NL frequency list (Keuleers, Brysbaert & New, 2010, *Behavior Research Methods*; CC BY-NC-SA 4.0). It was used only to pick and order words. None of its data is in this repository.
 

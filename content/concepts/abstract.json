@@ -1,7 +1,7 @@
 {
   "concepts": [
     {
-      "key": "time-noun-keer",
+      "key": "time-occurrence",
       "gloss": "time (occurrence)",
       "entries": {
         "en": [
@@ -13,7 +13,7 @@
       }
     },
     {
-      "key": "couple-noun-paar",
+      "key": "couple",
       "gloss": "couple (noun)",
       "entries": {
         "en": [
@@ -37,7 +37,7 @@
       }
     },
     {
-      "key": "side-noun-kant",
+      "key": "side",
       "gloss": "side (noun)",
       "entries": {
         "en": [
@@ -109,7 +109,7 @@
       }
     },
     {
-      "key": "number-noun-nummer",
+      "key": "number",
       "gloss": "number (noun)",
       "entries": {
         "en": [
@@ -169,8 +169,8 @@
       }
     },
     {
-      "key": "rest-noun-rest",
-      "gloss": "rest (noun)",
+      "key": "rest-remainder",
+      "gloss": "rest (remainder)",
       "entries": {
         "en": [
         {"lemma": "rest", "pos": "noun", "details": {"plural": "rests"}, "sentences": ["I eat the rest."]}
@@ -205,7 +205,7 @@
       }
     },
     {
-      "key": "strength-noun-kracht",
+      "key": "strength",
       "gloss": "strength (noun)",
       "entries": {
         "en": [
@@ -253,7 +253,7 @@
       }
     },
     {
-      "key": "nonsense-noun-onzin",
+      "key": "nonsense",
       "gloss": "nonsense (noun)",
       "entries": {
         "en": [
@@ -277,7 +277,7 @@
       }
     },
     {
-      "key": "accident-noun-ongeluk",
+      "key": "accident",
       "gloss": "accident (noun)",
       "entries": {
         "en": [
@@ -361,8 +361,8 @@
       }
     },
     {
-      "key": "goal-noun-doel",
-      "gloss": "goal (noun)",
+      "key": "goal",
+      "gloss": "goal (aim)",
       "entries": {
         "en": [
         {"lemma": "goal", "pos": "noun", "details": {"plural": "goals"}, "sentences": ["The goal is clear."]}
@@ -373,7 +373,7 @@
       }
     },
     {
-      "key": "line-noun-lijn",
+      "key": "line",
       "gloss": "line (noun)",
       "entries": {
         "en": [
@@ -445,7 +445,7 @@
       }
     },
     {
-      "key": "list-noun-lijst",
+      "key": "list",
       "gloss": "list (noun)",
       "entries": {
         "en": [
@@ -493,7 +493,7 @@
       }
     },
     {
-      "key": "respect-noun-respect",
+      "key": "respect",
       "gloss": "respect (noun)",
       "entries": {
         "en": [
@@ -517,7 +517,7 @@
       }
     },
     {
-      "key": "effort-noun-moeite",
+      "key": "effort",
       "gloss": "effort (noun)",
       "entries": {
         "en": [
@@ -697,7 +697,7 @@
       }
     },
     {
-      "key": "advice-noun-raad",
+      "key": "advice",
       "gloss": "advice (noun)",
       "entries": {
         "en": [
@@ -745,7 +745,7 @@
       }
     },
     {
-      "key": "order-noun-orde",
+      "key": "order-tidiness",
       "gloss": "order (tidiness)",
       "entries": {
         "en": [
@@ -793,7 +793,7 @@
       }
     },
     {
-      "key": "memory-noun-herinnering",
+      "key": "memory-recollection",
       "gloss": "memory (recollection)",
       "entries": {
         "en": [
@@ -805,7 +805,7 @@
       }
     },
     {
-      "key": "action-noun-actie",
+      "key": "action",
       "gloss": "action (noun)",
       "entries": {
         "en": [
@@ -961,7 +961,7 @@
       }
     },
     {
-      "key": "mistake-noun-fout",
+      "key": "mistake",
       "gloss": "mistake (noun)",
       "entries": {
         "en": [
@@ -1021,7 +1021,7 @@
       }
     },
     {
-      "key": "sense-noun-verstand",
+      "key": "sense-intellect",
       "gloss": "sense (intellect)",
       "entries": {
         "en": [
@@ -1057,7 +1057,7 @@
       }
     },
     {
-      "key": "company-noun-gezelschap",
+      "key": "company-being-with-people",
       "gloss": "company (being with people)",
       "entries": {
         "en": [
@@ -1093,7 +1093,7 @@
       }
     },
     {
-      "key": "mistake-noun-vergissing",
+      "key": "mistake-error",
       "gloss": "mistake (error)",
       "entries": {
         "en": [
@@ -1117,7 +1117,7 @@
       }
     },
     {
-      "key": "advice-noun-advies",
+      "key": "advice-recommendation",
       "gloss": "advice (recommendation)",
       "entries": {
         "en": [
@@ -1129,7 +1129,7 @@
       }
     },
     {
-      "key": "trick-noun-truc",
+      "key": "trick",
       "gloss": "trick (noun)",
       "entries": {
         "en": [
@@ -1153,7 +1153,7 @@
       }
     },
     {
-      "key": "change-noun-verandering",
+      "key": "change",
       "gloss": "change (noun)",
       "entries": {
         "en": [
@@ -1189,7 +1189,7 @@
       }
     },
     {
-      "key": "deed-noun-daad",
+      "key": "deed",
       "gloss": "deed (noun)",
       "entries": {
         "en": [
@@ -1273,7 +1273,7 @@
       }
     },
     {
-      "key": "interest-noun-interesse",
+      "key": "interest",
       "gloss": "interest (noun)",
       "entries": {
         "en": [
@@ -1285,7 +1285,7 @@
       }
     },
     {
-      "key": "condition-noun-toestand",
+      "key": "condition",
       "gloss": "condition (noun)",
       "entries": {
         "en": [
@@ -1405,7 +1405,7 @@
       }
     },
     {
-      "key": "subject-noun-onderwerp",
+      "key": "subject",
       "gloss": "subject (noun)",
       "entries": {
         "en": [
@@ -1501,7 +1501,7 @@
       }
     },
     {
-      "key": "connection-noun-verband",
+      "key": "connection",
       "gloss": "connection (noun)",
       "entries": {
         "en": [
@@ -1561,7 +1561,7 @@
       }
     },
     {
-      "key": "speed-noun-snelheid",
+      "key": "speed",
       "gloss": "speed (noun)",
       "entries": {
         "en": [
@@ -1597,8 +1597,8 @@
       }
     },
     {
-      "key": "imagination-noun-fantasie",
-      "gloss": "imagination (noun)",
+      "key": "imagination",
+      "gloss": "imagination (fantasy)",
       "entries": {
         "en": [
         {"lemma": "imagination", "pos": "noun", "details": {"plural": "imaginations"}, "sentences": ["She has a big imagination."]}
@@ -1669,7 +1669,7 @@
       }
     },
     {
-      "key": "condition-noun-voorwaarde",
+      "key": "condition-term",
       "gloss": "condition (term)",
       "entries": {
         "en": [
@@ -1693,7 +1693,7 @@
       }
     },
     {
-      "key": "tip-noun-tip",
+      "key": "tip",
       "gloss": "tip (noun)",
       "entries": {
         "en": [
@@ -1729,8 +1729,8 @@
       }
     },
     {
-      "key": "category-noun-klasse",
-      "gloss": "category (noun)",
+      "key": "category-class",
+      "gloss": "category (class)",
       "entries": {
         "en": [
         {"lemma": "category", "pos": "noun", "details": {"plural": "categories"}, "sentences": ["This is a new category."]}
@@ -1741,8 +1741,8 @@
       }
     },
     {
-      "key": "event-noun-gebeurtenis",
-      "gloss": "event (noun)",
+      "key": "event",
+      "gloss": "event (occurrence)",
       "entries": {
         "en": [
         {"lemma": "event", "pos": "noun", "details": {"plural": "events"}, "sentences": ["That was a big event."]}
@@ -1789,7 +1789,7 @@
       }
     },
     {
-      "key": "round-noun-ronde",
+      "key": "round",
       "gloss": "round (noun)",
       "entries": {
         "en": [
@@ -2209,7 +2209,7 @@
       }
     },
     {
-      "key": "discussion-noun-discussie",
+      "key": "discussion",
       "gloss": "discussion (noun)",
       "entries": {
         "en": [
@@ -2389,7 +2389,7 @@
       }
     },
     {
-      "key": "vision-noun-visioen",
+      "key": "vision",
       "gloss": "vision (noun)",
       "entries": {
         "en": [
@@ -2425,7 +2425,7 @@
       }
     },
     {
-      "key": "circle-noun-cirkel",
+      "key": "circle",
       "gloss": "circle (noun)",
       "entries": {
         "en": [
@@ -2473,7 +2473,7 @@
       }
     },
     {
-      "key": "incident-noun-incident",
+      "key": "incident",
       "gloss": "incident (noun)",
       "entries": {
         "en": [
@@ -2509,7 +2509,7 @@
       }
     },
     {
-      "key": "outcome-noun-uitslag",
+      "key": "outcome",
       "gloss": "outcome (noun)",
       "entries": {
         "en": [
@@ -2749,7 +2749,7 @@
       }
     },
     {
-      "key": "appearance-noun-uiterlijk",
+      "key": "appearance",
       "gloss": "appearance (noun)",
       "entries": {
         "en": [
@@ -3001,8 +3001,8 @@
       }
     },
     {
-      "key": "session-noun-zitting",
-      "gloss": "session (noun)",
+      "key": "session-formal",
+      "gloss": "session (formal meeting)",
       "entries": {
         "en": [
         {"lemma": "session", "pos": "noun", "details": {"plural": "sessions"}, "sentences": ["The session starts at nine."]}
@@ -3037,7 +3037,7 @@
       }
     },
     {
-      "key": "appearance-noun-schijn",
+      "key": "appearance-semblance",
       "gloss": "appearance (semblance)",
       "entries": {
         "en": [
@@ -3121,7 +3121,7 @@
       }
     },
     {
-      "key": "balance-noun-balans",
+      "key": "balance",
       "gloss": "balance (noun)",
       "entries": {
         "en": [
@@ -3133,8 +3133,8 @@
       }
     },
     {
-      "key": "imagination-noun-verbeelding",
-      "gloss": "imagination (noun, verbeelding)",
+      "key": "imagination-mental-image",
+      "gloss": "imagination (mental image)",
       "entries": {
         "en": [
         {"lemma": "imagination", "pos": "noun", "details": {"uncountable": true}, "sentences": ["Use your imagination."]}
@@ -3145,8 +3145,8 @@
       }
     },
     {
-      "key": "link-noun-schakel",
-      "gloss": "link (noun)",
+      "key": "link",
+      "gloss": "link (connection)",
       "entries": {
         "en": [
         {"lemma": "link", "pos": "noun", "details": {"plural": "links"}, "sentences": ["He is the link."]}
@@ -3241,8 +3241,8 @@
       }
     },
     {
-      "key": "beam-noun-straal",
-      "gloss": "beam (noun)",
+      "key": "beam-light",
+      "gloss": "beam (of light)",
       "entries": {
         "en": [
         {"lemma": "beam", "pos": "noun", "details": {"plural": "beams"}, "sentences": ["A beam of light."]}
@@ -3265,7 +3265,7 @@
       }
     },
     {
-      "key": "term-noun-term",
+      "key": "term",
       "gloss": "term (noun)",
       "entries": {
         "en": [
@@ -3313,7 +3313,7 @@
       }
     },
     {
-      "key": "accident-noun-ongeval",
+      "key": "accident-mishap",
       "gloss": "accident (mishap)",
       "entries": {
         "en": [
@@ -3337,7 +3337,7 @@
       }
     },
     {
-      "key": "cooperation-noun-medewerking",
+      "key": "cooperation",
       "gloss": "cooperation (noun)",
       "entries": {
         "en": [
@@ -3349,7 +3349,7 @@
       }
     },
     {
-      "key": "saying-noun-spreuk",
+      "key": "saying",
       "gloss": "saying (noun)",
       "entries": {
         "en": [
@@ -3397,7 +3397,7 @@
       }
     },
     {
-      "key": "copy-noun-exemplaar",
+      "key": "copy-specimen",
       "gloss": "copy (specimen)",
       "entries": {
         "en": [
@@ -3421,7 +3421,7 @@
       }
     },
     {
-      "key": "atmosphere-noun-sfeer",
+      "key": "atmosphere",
       "gloss": "atmosphere (noun)",
       "entries": {
         "en": [
@@ -3517,7 +3517,7 @@
       }
     },
     {
-      "key": "vision-noun-visie",
+      "key": "vision-outlook",
       "gloss": "vision (outlook)",
       "entries": {
         "en": [
@@ -3565,7 +3565,7 @@
       }
     },
     {
-      "key": "equipment-noun-uitrusting",
+      "key": "equipment-gear",
       "gloss": "equipment (gear)",
       "entries": {
         "en": [
@@ -3577,7 +3577,7 @@
       }
     },
     {
-      "key": "strength-noun-sterkte",
+      "key": "strength-courage",
       "gloss": "strength (courage)",
       "entries": {
         "en": [
@@ -3625,7 +3625,7 @@
       }
     },
     {
-      "key": "list-noun-rijtje",
+      "key": "list-short",
       "gloss": "list (short)",
       "entries": {
         "en": [
@@ -3721,7 +3721,7 @@
       }
     },
     {
-      "key": "outcome-noun-afloop",
+      "key": "outcome-ending",
       "gloss": "outcome (ending)",
       "entries": {
         "en": [
@@ -3745,8 +3745,8 @@
       }
     },
     {
-      "key": "size-noun-grootte",
-      "gloss": "size (noun, grootte)",
+      "key": "size",
+      "gloss": "size (how big)",
       "entries": {
         "en": [
         {"lemma": "size", "pos": "noun", "details": {"plural": "sizes"}, "sentences": ["What size is it?"]}
@@ -3817,7 +3817,7 @@
       }
     },
     {
-      "key": "circle-noun-kring",
+      "key": "circle-group",
       "gloss": "circle (group)",
       "entries": {
         "en": [
@@ -3841,7 +3841,7 @@
       }
     },
     {
-      "key": "term-noun-termijn",
+      "key": "term-period",
       "gloss": "term (period)",
       "entries": {
         "en": [
@@ -3877,7 +3877,7 @@
       }
     },
     {
-      "key": "series-noun-reeks",
+      "key": "series-sequence",
       "gloss": "series (sequence)",
       "entries": {
         "en": [
@@ -3901,7 +3901,7 @@
       }
     },
     {
-      "key": "order-noun-volgorde",
+      "key": "order-sequence",
       "gloss": "order (sequence)",
       "entries": {
         "en": [
@@ -3913,7 +3913,7 @@
       }
     },
     {
-      "key": "atmosphere-noun-atmosfeer",
+      "key": "atmosphere-mood",
       "gloss": "atmosphere (mood)",
       "entries": {
         "en": [
@@ -3925,7 +3925,7 @@
       }
     },
     {
-      "key": "reception-noun-ontvangst",
+      "key": "reception-welcome",
       "gloss": "reception (welcome)",
       "entries": {
         "en": [
@@ -3949,7 +3949,7 @@
       }
     },
     {
-      "key": "balance-noun-evenwicht",
+      "key": "balance-equilibrium",
       "gloss": "balance (equilibrium)",
       "entries": {
         "en": [
@@ -3985,7 +3985,7 @@
       }
     },
     {
-      "key": "respect-noun-opzicht",
+      "key": "respect-aspect",
       "gloss": "respect (aspect)",
       "entries": {
         "en": [
@@ -3997,7 +3997,7 @@
       }
     },
     {
-      "key": "conviction-noun-overtuiging",
+      "key": "conviction-belief",
       "gloss": "conviction (belief)",
       "entries": {
         "en": [
@@ -4009,7 +4009,7 @@
       }
     },
     {
-      "key": "effort-noun-inspanning",
+      "key": "effort-exertion",
       "gloss": "effort (exertion)",
       "entries": {
         "en": [
@@ -4045,7 +4045,7 @@
       }
     },
     {
-      "key": "side-noun-zijkant",
+      "key": "side-lateral",
       "gloss": "side (lateral)",
       "entries": {
         "en": [
@@ -4069,7 +4069,7 @@
       }
     },
     {
-      "key": "line-noun-linie",
+      "key": "line-formation",
       "gloss": "line (formation)",
       "entries": {
         "en": [
@@ -4141,7 +4141,7 @@
       }
     },
     {
-      "key": "delay-noun-uitstel",
+      "key": "delay-postponement",
       "gloss": "delay (postponement)",
       "entries": {
         "en": [
@@ -4189,8 +4189,8 @@
       }
     },
     {
-      "key": "nonsense-noun-nonsens",
-      "gloss": "nonsense (noun, nonsens)",
+      "key": "nonsense-absurdity",
+      "gloss": "nonsense (absurdity)",
       "entries": {
         "en": [
         {"lemma": "nonsense", "pos": "noun", "details": {"uncountable": true}, "sentences": ["That is nonsense."]}
@@ -4201,7 +4201,7 @@
       }
     },
     {
-      "key": "origin-noun-afkomst",
+      "key": "origin",
       "gloss": "origin (noun)",
       "entries": {
         "en": [
@@ -4237,7 +4237,7 @@
       }
     },
     {
-      "key": "saying-noun-gezegde",
+      "key": "saying-expression",
       "gloss": "saying (expression)",
       "entries": {
         "en": [
@@ -4465,8 +4465,8 @@
       }
     },
     {
-      "key": "seal-noun-zegel",
-      "gloss": "seal (noun)",
+      "key": "seal-stamp",
+      "gloss": "seal (stamp)",
       "entries": {
         "en": [
         {"lemma": "seal", "pos": "noun", "details": {"plural": "seals"}, "sentences": ["The letter has a seal."]}
@@ -4525,7 +4525,7 @@
       }
     },
     {
-      "key": "incident-noun-voorval",
+      "key": "incident-event",
       "gloss": "incident (event)",
       "entries": {
         "en": [
@@ -4657,7 +4657,7 @@
       }
     },
     {
-      "key": "clich",
+      "key": "cliche",
       "gloss": "cliché (noun)",
       "entries": {
         "en": [
@@ -4705,7 +4705,7 @@
       }
     },
     {
-      "key": "waste-noun-verspilling",
+      "key": "waste-squandering",
       "gloss": "waste (squandering)",
       "entries": {
         "en": [
@@ -4789,8 +4789,8 @@
       }
     },
     {
-      "key": "argument-noun-argument",
-      "gloss": "argument (noun, argument)",
+      "key": "argument",
+      "gloss": "argument (reasoning)",
       "entries": {
         "en": [
         {"lemma": "argument", "pos": "noun", "details": {"plural": "arguments"}, "sentences": ["That is a good argument."]}
@@ -5101,7 +5101,7 @@
       }
     },
     {
-      "key": "action-noun-handeling",
+      "key": "action-act",
       "gloss": "action (act)",
       "entries": {
         "en": [
@@ -5233,7 +5233,7 @@
       }
     },
     {
-      "key": "origin-noun-oorsprong",
+      "key": "origin-source",
       "gloss": "origin (source)",
       "entries": {
         "en": [
@@ -5257,7 +5257,7 @@
       }
     },
     {
-      "key": "performance-noun-uitvoering",
+      "key": "performance-execution",
       "gloss": "performance (execution)",
       "entries": {
         "en": [
@@ -5293,8 +5293,8 @@
       }
     },
     {
-      "key": "category-noun-categorie",
-      "gloss": "category (noun, categorie)",
+      "key": "category",
+      "gloss": "category (grouping)",
       "entries": {
         "en": [
         {"lemma": "category", "pos": "noun", "details": {"plural": "categories"}, "sentences": ["The category is large."]}
@@ -5389,7 +5389,7 @@
       }
     },
     {
-      "key": "trick-noun-list",
+      "key": "trick-ruse",
       "gloss": "trick (ruse)",
       "entries": {
         "en": [
@@ -5797,7 +5797,7 @@
       }
     },
     {
-      "key": "memory-noun-nagedachtenis",
+      "key": "memory-commemoration",
       "gloss": "memory (commemoration)",
       "entries": {
         "en": [
