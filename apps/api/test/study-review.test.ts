@@ -10,6 +10,7 @@ import { createFsrsScheduler } from "../src/srs/engine.js";
 import { seed } from "../src/db/seed.js";
 import * as schema from "../src/db/schema.js";
 import {
+  concepts,
   entries,
   entrySentences,
   reviewLogs,
@@ -282,5 +283,58 @@ describe("study queue after reviews", () => {
     expect(counts.new).toBe(0);
     expect(cards.some((c) => c.state === "new")).toBe(false);
     await setLimit(20);
+  });
+});
+
+describe("new card priority", () => {
+  // dog, house, water were added in that order, all en->nl and new. Which of them
+  // comes first depends on the state of the reverse (nl->en) card.
+  async function setup(email: string, reverseOf: "dog" | "house" | "water", reverseState: "review" | "learning" | "relearning" | "new") {
+    const me = await register(email);
+    const cs = await db.select().from(concepts);
+    const id = (key: string) => cs.find((c) => c.key === key)!.id;
+    const day = (n: number) => new Date(Date.now() - (10 - n) * 86_400_000);
+    await db.insert(userCards).values([
+      { userId: me.id, conceptId: id("dog"), fromLanguage: "en", toLanguage: "nl", addedAt: day(1) },
+      { userId: me.id, conceptId: id("house"), fromLanguage: "en", toLanguage: "nl", addedAt: day(2) },
+      { userId: me.id, conceptId: id("water"), fromLanguage: "en", toLanguage: "nl", addedAt: day(3) },
+      {
+        userId: me.id,
+        conceptId: id(reverseOf),
+        fromLanguage: "nl",
+        toLanguage: "en",
+        state: reverseState,
+        dueAt: new Date(Date.now() + 5 * 86_400_000),
+        addedAt: day(0),
+      },
+    ]);
+    return me.cookies;
+  }
+  const newOrder = async (c: { session: string }, qs = "") =>
+    ((await get(`/study?limit=20${qs}`, c)).json() as { cards: Card[] }).cards
+      .filter((x) => x.state === "new")
+      .map((x) => `${x.front[0]?.lemma}`);
+
+  it("puts a new card first when its reverse is in review or relearning", async () => {
+    for (const state of ["review", "relearning"] as const) {
+      const c = await setup(`priority-${state}@example.com`, "house", state);
+      // house was added after dog, but its reverse is known.
+      expect(await newOrder(c, "&fromLanguage=en&toLanguage=nl")).toEqual(["house", "dog", "water"]);
+    }
+  });
+
+  it("keeps the usual order otherwise, including when the reverse is only learning or new", async () => {
+    for (const state of ["learning", "new"] as const) {
+      const c = await setup(`no-priority-${state}@example.com`, "house", state);
+      expect(await newOrder(c, "&fromLanguage=en&toLanguage=nl")).toEqual(["dog", "house", "water"]);
+    }
+  });
+
+  it("applies in a mixed session too, ahead of older new cards", async () => {
+    const c = await setup("mixed@example.com", "dog", "review");
+    // The nl->en dog card is a review that is not due, so only the new cards are offered.
+    expect(await newOrder(c)).toEqual(["dog", "house", "water"]);
+    const c2 = await setup("mixed2@example.com", "water", "review");
+    expect(await newOrder(c2)).toEqual(["water", "dog", "house"]);
   });
 });

@@ -1,4 +1,5 @@
-import { and, asc, count, eq, gte, inArray, lte } from "drizzle-orm";
+import { and, asc, count, eq, exists, gte, inArray, lte, sql } from "drizzle-orm";
+import { alias } from "drizzle-orm/pg-core";
 import type { EntryView } from "@flashcards/shared";
 import { loadEntries, loadSentences, sentenceKey } from "../content/queries.js";
 import { reviewLogs, userCards, users } from "../db/schema.js";
@@ -8,6 +9,8 @@ import { studyDayStart } from "./day.js";
 // Learning cards due within this window are offered now, so a card rated
 // "Again" can come back during the same session.
 export const LEARN_AHEAD_MS = 20 * 60 * 1000;
+
+const reverse = alias(userCards, "reverse");
 
 export interface StudyCard {
   id: string;
@@ -80,6 +83,23 @@ export async function getStudyBatch(
   // Fill the batch in priority order: time-sensitive learning cards, then
   // overdue reviews (most overdue first), then new cards.
   const rows: (typeof userCards.$inferSelect)[] = [];
+  // A new card whose reverse (same word, other direction) is in review, or relearning
+  // after a lapse, comes before other new cards: you have known the word one way, so
+  // learn it the other way now. A reverse still in its first learning steps doesn't count.
+  const reverseInReview = exists(
+    db
+      .select({ one: sql`1` })
+      .from(reverse)
+      .where(
+        and(
+          eq(reverse.userId, userCards.userId),
+          eq(reverse.conceptId, userCards.conceptId),
+          eq(reverse.fromLanguage, userCards.toLanguage),
+          eq(reverse.toLanguage, userCards.fromLanguage),
+          inArray(reverse.state, ["review", "relearning"]),
+        ),
+      ),
+  );
   const take = (where: ReturnType<typeof and>, n: number, order: "due" | "added") =>
     db
       .select()
@@ -88,7 +108,12 @@ export async function getStudyBatch(
       .orderBy(
         ...(order === "due"
           ? [asc(userCards.dueAt), asc(userCards.id)]
-          : [asc(userCards.addedAt), asc(userCards.sortKey), asc(userCards.id)]),
+          : [
+              sql`(case when ${reverseInReview} then 0 else 1 end)`,
+              asc(userCards.addedAt),
+              asc(userCards.sortKey),
+              asc(userCards.id),
+            ]),
       )
       .limit(n);
 

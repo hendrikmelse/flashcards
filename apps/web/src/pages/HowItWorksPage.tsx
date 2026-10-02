@@ -47,7 +47,9 @@ export function HowItWorksPage() {
       <ol className="steps">
         <li>
           <strong>New.</strong> You haven’t seen it yet. New cards are introduced in the order you
-          added them, and pack order within a pack.
+          added them, and pack order within a pack. The exception: if you already know a word one
+          way (its reverse card is in review, or relearning after a slip), the new card for the
+          other direction jumps to the front of the line.
         </li>
         <li>
           <strong>Learning.</strong> Your first answers use short steps: the card returns after about
