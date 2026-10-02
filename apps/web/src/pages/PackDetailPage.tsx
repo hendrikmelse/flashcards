@@ -10,7 +10,7 @@ import {
   type Direction,
 } from "../api/packs";
 import { DirectionPicker } from "../components/DirectionPicker";
-import { displayLemma, entriesFor } from "../components/entries";
+import { ConceptRow } from "../components/ConceptRow";
 import { useDirection } from "../hooks/useDirection";
 
 export function PackDetailPage() {
@@ -65,8 +65,7 @@ function PackDetail({ direction }: { direction: Direction }) {
     );
   }
 
-  const pack = concepts.data.pages[0]!.pack;
-  const rows = concepts.data.pages.flatMap((p) => p.concepts);
+  const { pack, concepts: rows } = concepts.data;
   const summary = packs.data?.find((p) => p.id === id);
   const allAdded =
     summary !== undefined &&
@@ -84,8 +83,14 @@ function PackDetail({ direction }: { direction: Direction }) {
           className="primary"
           onClick={() => addPack.mutate()}
           disabled={addPack.isPending || allAdded || nothingAvailable}
+          aria-busy={addPack.isPending}
+          aria-label={addPack.isPending ? "Adding words to my deck" : undefined}
         >
-          {addPack.isPending ? "Adding…" : allAdded ? "All words added" : "Add all to my deck"}
+          {/* The label stays (hidden) so the button keeps its width under the spinner. */}
+          <span style={addPack.isPending ? { visibility: "hidden" } : undefined}>
+            {allAdded ? "All words added" : "Add all to my deck"}
+          </span>
+          {addPack.isPending && <span className="spinner" aria-hidden="true" />}
         </button>
         <div role="status" className={addPack.isError ? "form-error" : "muted"}>
           {addPack.isError
@@ -100,36 +105,19 @@ function PackDetail({ direction }: { direction: Direction }) {
         <p className="empty">This pack has no words yet.</p>
       ) : (
         <ul className="concept-list">
-          {rows.map((c) => {
-            const front = entriesFor(c.entries, direction.from).map(displayLemma).join(", ");
-            const back = entriesFor(c.entries, direction.to).map(displayLemma).join(", ");
-            const adding = addConcept.isPending && addConcept.variables === c.conceptId;
-            return (
-              <li key={c.conceptId} className={c.available ? undefined : "unavailable"}>
-                <span className="pair">
-                  <span className="prompt">{front || "—"}</span>
-                  <span className="arrow" aria-hidden="true">
-                    →
-                  </span>
-                  <span className="answer">{back || "—"}</span>
-                </span>
-                {c.inDeck ? (
-                  <span className="badge">In deck</span>
-                ) : !c.available ? (
-                  <span className="badge muted">Not available yet</span>
-                ) : (
-                  <button
-                    className="secondary"
-                    onClick={() => addConcept.mutate(c.conceptId)}
-                    disabled={addConcept.isPending}
-                    aria-label={`Add ${front} to my deck`}
-                  >
-                    {adding ? "Adding…" : "Add"}
-                  </button>
-                )}
-              </li>
-            );
-          })}
+          {rows.map((c) => (
+            <ConceptRow
+              key={c.conceptId}
+              entries={c.entries}
+              from={direction.from}
+              to={direction.to}
+              available={c.available}
+              inDeck={c.inDeck}
+              adding={addConcept.isPending && addConcept.variables === c.conceptId}
+              disabled={addConcept.isPending}
+              onAdd={() => addConcept.mutate(c.conceptId)}
+            />
+          ))}
         </ul>
       )}
 
@@ -137,16 +125,6 @@ function PackDetail({ direction }: { direction: Direction }) {
         <p role="alert" className="form-error">
           Could not add that word. Please try again.
         </p>
-      )}
-
-      {concepts.hasNextPage && (
-        <button
-          className="secondary more"
-          onClick={() => concepts.fetchNextPage()}
-          disabled={concepts.isFetchingNextPage}
-        >
-          {concepts.isFetchingNextPage ? "Loading…" : "Load more"}
-        </button>
       )}
     </>
   );

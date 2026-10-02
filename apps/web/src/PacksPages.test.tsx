@@ -1,4 +1,4 @@
-import { screen, within } from "@testing-library/react";
+import { screen, waitFor, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import { installMockApi, json, mock, renderApp } from "./test/harness";
@@ -53,7 +53,7 @@ beforeEach(() => {
         { id: "p1", slug: "sample", name: "Sample pack", description: null, conceptCount: 4, availableCount: 0, addedCount: 0 },
       ],
     });
-  mock.handlers[`GET /packs/p1?${EN_NL}&limit=50&offset=0`] = () => json(200, packDetail());
+  mock.handlers[`GET /packs/p1?${EN_NL}&limit=1000`] = () => json(200, packDetail());
   mock.handlers["POST /concepts/c2/add"] = () => {
     inDeck.add("c2");
     return json(201, { added: 1, alreadyInDeck: 0 });
@@ -110,10 +110,129 @@ describe("pack list", () => {
     expect(screen.getByRole("combobox", { name: "Prompt language" })).toHaveValue("nl");
   });
 
+  it("filters packs by name or description as you type", async () => {
+    const user = userEvent.setup();
+    renderApp("/packs");
+    await screen.findByRole("link", { name: "Sample pack" });
+    const box = screen.getByRole("searchbox", { name: "Search packs" });
+
+    await user.type(box, "demo");
+    expect(screen.getByRole("link", { name: "Sample pack" })).toBeInTheDocument();
+
+    await user.clear(box);
+    await user.type(box, "zebra");
+    expect(screen.queryByRole("link", { name: "Sample pack" })).not.toBeInTheDocument();
+    expect(screen.getByText(/No packs match/)).toBeInTheDocument();
+  });
+
+  it("lists name matches before packs that only match in the description", async () => {
+    const user = userEvent.setup();
+    const pack = (id: string, name: string, description: string) => ({
+      id, slug: id, name, description, conceptCount: 1, availableCount: 1, addedCount: 0,
+    });
+    mock.handlers[`GET /packs?${EN_NL}`] = () =>
+      json(200, {
+        packs: [
+          pack("a", "Animals", "Includes a few things you eat, like fish"),
+          pack("b", "Cooking", "Verbs for the kitchen"),
+          pack("c", "Food", "Everyday food"),
+          pack("d", "Fish and sea", "Sea life"),
+        ],
+      });
+    renderApp("/packs");
+    await screen.findByRole("link", { name: "Cooking" });
+
+    await user.type(screen.getByRole("searchbox", { name: "Search packs" }), "fish");
+
+    const names = screen.getAllByRole("heading", { level: 2 }).map((h) => h.textContent);
+    expect(names).toEqual(["Fish and sea", "Animals"]);
+  });
+
   it("shows an error when packs cannot be loaded", async () => {
     mock.handlers[`GET /packs?${EN_NL}`] = () => json(500, { error: "boom" });
     renderApp("/packs");
     expect(await screen.findByText(/Could not load packs/)).toBeInTheDocument();
+  });
+});
+
+describe("word search", () => {
+  const word = (id: string, en: string, nl: string, inDeckNow = false) => ({
+    conceptId: id,
+    entries: [entry("en", en), entry("nl", nl, { article: "de" })],
+    inDeck: inDeckNow,
+  });
+  const lastSearch = () => mock.calls.filter((c) => c.startsWith("GET /concepts/search")).at(-1)!;
+
+  async function openWords(user: ReturnType<typeof userEvent.setup>) {
+    renderApp("/packs");
+    await screen.findByRole("link", { name: "Sample pack" });
+    await user.click(screen.getByRole("button", { name: "Words" }));
+    return screen.getByRole("searchbox", { name: "Search words" });
+  }
+
+  it("asks for a longer term, then lists matches and adds one", async () => {
+    const user = userEvent.setup();
+    let added = false;
+    mock.handlers["GET /concepts/search"] = () =>
+      json(200, { concepts: [word("c9", "dog", "hond", added)], hasMore: false });
+    mock.handlers["POST /concepts/c9/add"] = () => {
+      added = true;
+      return json(201, { added: 1, alreadyInDeck: 0 });
+    };
+
+    const box = await openWords(user);
+    expect(screen.getByText(/at least two letters/)).toBeInTheDocument();
+    expect(screen.queryByRole("link", { name: "Sample pack" })).not.toBeInTheDocument();
+
+    await user.type(box, "hond");
+    expect(await screen.findByText("de hond")).toBeInTheDocument();
+    expect(lastSearch()).toContain("q=hond");
+
+    await user.click(screen.getByRole("button", { name: "Add dog to my deck" }));
+    expect(await screen.findByText("In deck")).toBeInTheDocument();
+  });
+
+  it("keeps a word you just added while hiding added results, until the filter changes", async () => {
+    const user = userEvent.setup();
+    let added = false;
+    mock.handlers["GET /concepts/search"] = () =>
+      json(200, { concepts: added ? [] : [word("c9", "dog", "hond")], hasMore: false });
+    mock.handlers["POST /concepts/c9/add"] = () => {
+      added = true;
+      return json(201, { added: 1, alreadyInDeck: 0 });
+    };
+
+    const box = await openWords(user);
+    await user.click(screen.getByRole("button", { name: "Hide already added results" }));
+    await user.type(box, "hond");
+    await user.click(await screen.findByRole("button", { name: "Add dog to my deck" }));
+
+    expect(lastSearch()).toContain("hideInDeck=1");
+    expect(await screen.findByText("In deck")).toBeInTheDocument();
+    // The server no longer returns it, but it stays put.
+    expect(screen.getByText("de hond")).toBeInTheDocument();
+
+    await user.click(screen.getByRole("button", { name: "Hide already added results" }));
+    await user.click(screen.getByRole("button", { name: "Hide already added results" }));
+    await waitFor(() => expect(screen.queryByText("de hond")).not.toBeInTheDocument());
+  });
+
+  it("loads more matches on request", async () => {
+    const user = userEvent.setup();
+    mock.handlers["GET /concepts/search"] = () =>
+      lastSearch().includes("offset=0")
+        ? json(200, { concepts: [word("c1", "do", "doen")], hasMore: true })
+        : json(200, { concepts: [word("c2", "dog", "hond")], hasMore: false });
+
+    const box = await openWords(user);
+    await user.type(box, "do");
+    expect(await screen.findByText("de doen")).toBeInTheDocument();
+
+    await user.click(screen.getByRole("button", { name: "Load more matches" }));
+    expect(await screen.findByText("de hond")).toBeInTheDocument();
+    expect(screen.getByText("de doen")).toBeInTheDocument();
+    expect(lastSearch()).toContain("offset=50");
+    expect(screen.queryByRole("button", { name: "Load more matches" })).not.toBeInTheDocument();
   });
 });
 
@@ -147,20 +266,21 @@ describe("pack detail", () => {
     renderApp(`/packs/p1?from=en&to=nl`);
     await user.click(await screen.findByRole("button", { name: "Add all to my deck" }));
 
-    expect(await screen.findByRole("status")).toHaveTextContent(
+    // The spinner holds the request for a moment, so wait for the message itself.
+    expect(await screen.findByText(/Added 2 new cards/)).toHaveTextContent(
       "Added 2 new cards. 1 already in your deck. 1 not available in this direction yet.",
     );
     expect(await screen.findByRole("button", { name: "All words added" })).toBeDisabled();
   });
 
   it("explains when the pack does not exist", async () => {
-    mock.handlers[`GET /packs/nope?${EN_NL}&limit=50&offset=0`] = () =>
+    mock.handlers[`GET /packs/nope?${EN_NL}&limit=1000`] = () =>
       json(404, { error: "Pack not found" });
     renderApp(`/packs/nope?from=en&to=nl`);
     expect(await screen.findByText("That pack was not found.")).toBeInTheDocument();
   });
 
-  it("loads more words a page at a time", async () => {
+  it("shows every word of a large pack at once", async () => {
     const page = (start: number, n: number) =>
       Array.from({ length: n }, (_, i) => ({
         conceptId: `w${start + i}`,
@@ -170,18 +290,12 @@ describe("pack detail", () => {
         entries: [entry("en", `word${start + i}`), entry("nl", `woord${start + i}`)],
       }));
     const pack = { id: "p1", slug: "sample", name: "Sample pack", description: null };
-    mock.handlers[`GET /packs/p1?${EN_NL}&limit=50&offset=0`] = () =>
-      json(200, { pack, concepts: page(0, 50) });
-    mock.handlers[`GET /packs/p1?${EN_NL}&limit=50&offset=50`] = () =>
-      json(200, { pack, concepts: page(50, 3) });
+    mock.handlers[`GET /packs/p1?${EN_NL}&limit=1000`] = () =>
+      json(200, { pack, concepts: page(0, 53) });
 
-    const user = userEvent.setup();
     renderApp(`/packs/p1?from=en&to=nl`);
-    await screen.findByText("word49");
-    expect(screen.queryByText("word50")).not.toBeInTheDocument();
-
-    await user.click(screen.getByRole("button", { name: "Load more" }));
     expect(await screen.findByText("word52")).toBeInTheDocument();
+    expect(screen.getByText("word0")).toBeInTheDocument();
     expect(screen.queryByRole("button", { name: "Load more" })).not.toBeInTheDocument();
   });
 });
