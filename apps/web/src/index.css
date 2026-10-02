@@ -101,10 +101,37 @@ input {
   overflow-wrap: anywhere;
 }
 
+/* The page fills the window, so a footer can sit at the very bottom of short pages. */
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
 .page {
+  position: relative;
+  flex: 1 0 auto;
+  width: 100%;
   max-width: 48rem;
   margin: 0 auto;
   padding: 1.5rem 1rem 3rem;
+}
+
+.page-footer {
+  position: absolute;
+  bottom: 1rem;
+  left: 0;
+  right: 0;
+  margin: 0;
+  text-align: center;
+  font-size: 0.8rem;
+  color: color-mix(in srgb, var(--muted) 80%, var(--bg));
+}
+
+.page-footer a {
+  color: inherit;
+  text-underline-offset: 0.15em;
 }
 
 /* Status messages */
@@ -252,6 +279,146 @@ button.link {
   font-size: 0.9rem;
 }
 
+.hero {
+  display: grid;
+  gap: 0.35rem;
+  justify-items: start;
+  margin-bottom: 1rem;
+  padding: 1.25rem 1.25rem 1.35rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 0.9rem;
+}
+
+.hero p {
+  margin: 0;
+}
+
+.hero-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.hero .button,
+.hero-actions {
+  margin-top: 0.75rem;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.hero-actions .button {
+  margin-top: 0;
+}
+
+.deck-view {
+  margin-bottom: 0.75rem;
+}
+
+.section-title {
+  margin: 1.5rem 0 0.6rem;
+  font-size: 1.05rem;
+}
+
+.deck-bar {
+  display: flex;
+  gap: 2px;
+  height: 0.75rem;
+  margin-bottom: 0.75rem;
+  overflow: hidden;
+  border-radius: 999px;
+  background: var(--border);
+}
+
+.deck-bar .seg {
+  flex-basis: 0;
+  min-width: 4px;
+}
+
+.seg.review,
+.dot.review {
+  background: var(--accent);
+}
+
+.seg.learning,
+.dot.learning {
+  background: color-mix(in srgb, var(--accent) 50%, var(--surface));
+}
+
+.seg.new,
+.dot.new {
+  background: var(--border);
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--muted) 45%, transparent);
+}
+
+.dot {
+  display: inline-block;
+  width: 0.6rem;
+  height: 0.6rem;
+  margin-right: 0.4rem;
+  border-radius: 50%;
+}
+
+.footnote {
+  margin: 2rem 0 0;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.footnote a {
+  color: inherit;
+}
+
+/* Reading pages */
+
+.prose {
+  max-width: 42rem;
+}
+
+.prose h2 {
+  margin: 2rem 0 0.5rem;
+  font-size: 1.15rem;
+}
+
+.prose p,
+.prose li,
+.prose dd {
+  line-height: 1.6;
+}
+
+.prose ul,
+.prose ol {
+  padding-left: 1.25rem;
+}
+
+.prose li + li {
+  margin-top: 0.5rem;
+}
+
+.rating-help {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 0.5rem 1rem;
+  margin: 0 0 1rem;
+  padding: 0.9rem 1rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+}
+
+.rating-help dt {
+  font-weight: 700;
+}
+
+.rating-help dd {
+  margin: 0;
+}
+
 /* Packs */
 
 .lead {
@@ -289,7 +456,7 @@ button.link {
 }
 
 /* Where the browser supports it (Chrome/Edge 135+), style the open list too.
-   Elsewhere the native list is used, with the colours set above. */
+   Elsewhere the native list is used, with the colors set above. */
 @supports (appearance: base-select) {
   .direction select,
   .direction select::picker(select) {
@@ -571,6 +738,14 @@ a.button.primary {
   border-radius: 0.5rem;
   background: var(--accent);
   color: var(--accent-text);
+  font-weight: 600;
+}
+
+a.button.secondary {
+  padding: 0.6rem 1.1rem;
+  border: 1px solid var(--accent);
+  border-radius: 0.5rem;
+  color: var(--accent);
   font-weight: 600;
 }
 

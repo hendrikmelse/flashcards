@@ -80,7 +80,7 @@ function useInvalidateAfterDeckChange() {
   const qc = useQueryClient();
   return () =>
     Promise.all(
-      ["packs", "pack", "concept-search", "deck", "study"].map((key) => qc.invalidateQueries({ queryKey: [key] })),
+      ["packs", "pack", "concept-search", "deck", "study", "stats"].map((key) => qc.invalidateQueries({ queryKey: [key] })),
     );
 }
 

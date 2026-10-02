@@ -4,6 +4,7 @@ import type {
   LoginInput,
   PublicUser,
   RegisterInput,
+  StatsResponse,
   StudyResponse,
 } from "@flashcards/shared";
 import { api } from "./client";
@@ -50,15 +51,27 @@ export function useLogout() {
   });
 }
 
-// Dashboard numbers: deck totals plus what is ready to study right now.
-export function useDashboard() {
+// Dashboard numbers: deck totals and what is ready to study right now, for one
+// direction or (null) for the whole deck, plus reviews today and per-direction stats.
+export function useDashboard(direction: { from: string; to: string } | null) {
+  const dir = direction
+    ? `&fromLanguage=${encodeURIComponent(direction.from)}&toLanguage=${encodeURIComponent(direction.to)}`
+    : "";
+  const key = direction ? [direction.from, direction.to] : ["all"];
   const deck = useQuery({
-    queryKey: ["deck", "summary"],
-    queryFn: () => api<DeckResponse>("/deck?limit=1"),
+    queryKey: ["deck", "summary", ...key],
+    queryFn: () => api<DeckResponse>(`/deck?limit=1${dir}`),
+    placeholderData: (previous) => previous,
   });
   const study = useQuery({
-    queryKey: ["study", "counts"],
-    queryFn: () => api<StudyResponse>("/study?limit=1"),
+    queryKey: ["study", "counts", ...key],
+    queryFn: () => api<StudyResponse>(`/study?limit=1${dir}`),
+    placeholderData: (previous) => previous,
   });
-  return { deck, study };
+  // Extras: the dashboard still works without them.
+  const stats = useQuery({
+    queryKey: ["stats"],
+    queryFn: () => api<StatsResponse>("/stats"),
+  });
+  return { deck, study, stats };
 }
