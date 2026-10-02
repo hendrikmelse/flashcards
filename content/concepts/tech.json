@@ -217,7 +217,7 @@
       }
     },
     {
-      "key": "program",
+      "key": "program-noun",
       "gloss": "program (noun)",
       "entries": {
         "en": [
@@ -421,7 +421,7 @@
       }
     },
     {
-      "key": "interview",
+      "key": "interview-noun",
       "gloss": "interview (noun)",
       "entries": {
         "en": [
@@ -457,7 +457,7 @@
       }
     },
     {
-      "key": "page",
+      "key": "page-noun-pagina",
       "gloss": "page (noun)",
       "entries": {
         "en": [
@@ -577,7 +577,7 @@
       }
     },
     {
-      "key": "series",
+      "key": "series-noun-serie",
       "gloss": "series (noun)",
       "entries": {
         "en": [
@@ -1233,6 +1233,594 @@
         ],
         "nl": [
         {"lemma": "persconferentie", "pos": "noun", "details": {"article": "de", "plural": "persconferenties"}, "sentences": ["De persconferentie begint nu."]}
+        ]
+      }
+    },
+    {
+      "key": "producer",
+      "gloss": "producer (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "producer", "pos": "noun", "details": {"plural": "producers"}, "sentences": ["The producer makes a film."]}
+        ],
+        "nl": [
+        {"lemma": "producer", "pos": "noun", "details": {"article": "de", "plural": "producers"}, "sentences": ["De producer maakt een film."]}
+        ]
+      }
+    },
+    {
+      "key": "crew-noun-crew",
+      "gloss": "crew (noun, crew)",
+      "entries": {
+        "en": [
+        {"lemma": "crew", "pos": "noun", "details": {"plural": "crews"}, "sentences": ["The crew films the scene."]}
+        ],
+        "nl": [
+        {"lemma": "crew", "pos": "noun", "details": {"article": "de", "plural": "crews"}, "sentences": ["De crew filmt de scène."]}
+        ]
+      }
+    },
+    {
+      "key": "interview-verb",
+      "gloss": "interview (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "interview", "pos": "verb", "details": {"past": "interviewed", "participle": "interviewed"}, "sentences": ["I interview the mayor."]}
+        ],
+        "nl": [
+        {"lemma": "interviewen", "pos": "verb", "details": {"pastSingular": "interviewde", "pastPlural": "interviewden", "participle": "geïnterviewd", "auxiliary": "hebben"}, "sentences": ["Ik interview de burgemeester."]}
+        ]
+      }
+    },
+    {
+      "key": "capture",
+      "gloss": "capture (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "capture", "pos": "verb", "details": {"past": "captured", "participle": "captured"}, "sentences": ["I capture the moment."]}
+        ],
+        "nl": [
+        {"lemma": "vastleggen", "pos": "verb", "details": {"pastSingular": "legde vast", "pastPlural": "legden vast", "participle": "vastgelegd", "auxiliary": "hebben"}, "sentences": ["Ik leg het moment vast."]}
+        ]
+      }
+    },
+    {
+      "key": "poster",
+      "gloss": "poster (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "poster", "pos": "noun", "details": {"plural": "posters"}, "sentences": ["The poster hangs on the wall."]}
+        ],
+        "nl": [
+        {"lemma": "poster", "pos": "noun", "details": {"article": "de", "plural": "posters"}, "sentences": ["De poster hangt aan de muur."]}
+        ]
+      }
+    },
+    {
+      "key": "copy-verb",
+      "gloss": "copy (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "copy", "pos": "verb", "details": {"past": "copied", "participle": "copied"}, "sentences": ["I copy the file."]}
+        ],
+        "nl": [
+        {"lemma": "kopiëren", "pos": "verb", "details": {"pastSingular": "kopieerde", "pastPlural": "kopieerden", "participle": "gekopieerd", "auxiliary": "hebben"}, "sentences": ["Ik kopieer het bestand."]}
+        ]
+      }
+    },
+    {
+      "key": "print-verb",
+      "gloss": "print (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "print", "pos": "verb", "details": {"past": "printed", "participle": "printed"}, "sentences": ["I print the page."]}
+        ],
+        "nl": [
+        {"lemma": "afdrukken", "pos": "verb", "details": {"pastSingular": "drukte af", "pastPlural": "drukten af", "participle": "afgedrukt", "auxiliary": "hebben"}, "sentences": ["Ik druk de pagina af."]}
+        ]
+      }
+    },
+    {
+      "key": "page-noun-bladzijde",
+      "gloss": "page (of a book)",
+      "entries": {
+        "en": [
+        {"lemma": "page (of a book)", "pos": "noun", "details": {"plural": "pages"}, "sentences": ["Open page ten."]}
+        ],
+        "nl": [
+        {"lemma": "bladzijde", "pos": "noun", "details": {"article": "de", "plural": "bladzijden"}, "sentences": ["Sla bladzijde tien op."]}
+        ]
+      }
+    },
+    {
+      "key": "store",
+      "gloss": "store (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "store", "pos": "verb", "details": {"past": "stored", "participle": "stored"}, "sentences": ["I store the file."]}
+        ],
+        "nl": [
+        {"lemma": "opslaan", "pos": "verb", "details": {"pastSingular": "sloeg op", "pastPlural": "sloegen op", "participle": "opgeslagen", "auxiliary": "hebben"}, "sentences": ["Ik sla het bestand op."]}
+        ]
+      }
+    },
+    {
+      "key": "viewer",
+      "gloss": "viewer (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "viewer", "pos": "noun", "details": {"plural": "viewers"}, "sentences": ["The viewers watch the film."]}
+        ],
+        "nl": [
+        {"lemma": "kijker", "pos": "noun", "details": {"article": "de", "plural": "kijkers"}, "sentences": ["De kijkers kijken naar de film."]}
+        ]
+      }
+    },
+    {
+      "key": "notification",
+      "gloss": "notification (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "notification", "pos": "noun", "details": {"plural": "notifications"}, "sentences": ["I get a notification."]}
+        ],
+        "nl": [
+        {"lemma": "melding", "pos": "noun", "details": {"article": "de", "plural": "meldingen"}, "sentences": ["Ik krijg een melding."]}
+        ]
+      }
+    },
+    {
+      "key": "database",
+      "gloss": "database (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "database", "pos": "noun", "details": {"plural": "databases"}, "sentences": ["The database is large."]}
+        ],
+        "nl": [
+        {"lemma": "database", "pos": "noun", "details": {"article": "de", "plural": "databases"}, "sentences": ["De database is groot."]}
+        ]
+      }
+    },
+    {
+      "key": "website",
+      "gloss": "website (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "website", "pos": "noun", "details": {"plural": "websites"}, "sentences": ["I visit a website."]}
+        ],
+        "nl": [
+        {"lemma": "website", "pos": "noun", "details": {"article": "de", "plural": "websites"}, "sentences": ["Ik bezoek een website."]}
+        ]
+      }
+    },
+    {
+      "key": "launch-noun",
+      "gloss": "launch (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "launch", "pos": "noun", "details": {"plural": "launches"}, "sentences": ["The launch is tomorrow."]}
+        ],
+        "nl": [
+        {"lemma": "lancering", "pos": "noun", "details": {"article": "de", "plural": "lanceringen"}, "sentences": ["De lancering is morgen."]}
+        ]
+      }
+    },
+    {
+      "key": "program-verb",
+      "gloss": "program (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "program", "pos": "verb", "details": {"past": "programed", "participle": "programed"}, "sentences": ["I program the computer."]}
+        ],
+        "nl": [
+        {"lemma": "programmeren", "pos": "verb", "details": {"pastSingular": "programmeerde", "pastPlural": "programmeerden", "participle": "geprogrammeerd", "auxiliary": "hebben"}, "sentences": ["Ik programmeer de computer."]}
+        ]
+      }
+    },
+    {
+      "key": "sensor",
+      "gloss": "sensor (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "sensor", "pos": "noun", "details": {"plural": "sensors"}, "sentences": ["The sensor works."]}
+        ],
+        "nl": [
+        {"lemma": "sensor", "pos": "noun", "details": {"article": "de", "plural": "sensoren"}, "sentences": ["De sensor werkt."]}
+        ]
+      }
+    },
+    {
+      "key": "lens",
+      "gloss": "lens (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "lens", "pos": "noun", "details": {"plural": "lenses"}, "sentences": ["The lens is dirty."]}
+        ],
+        "nl": [
+        {"lemma": "lens", "pos": "noun", "details": {"article": "de", "plural": "lenzen"}, "sentences": ["De lens is vuil."]}
+        ]
+      }
+    },
+    {
+      "key": "digital",
+      "gloss": "digital (adjective)",
+      "entries": {
+        "en": [
+        {"lemma": "digital", "pos": "adjective", "sentences": ["The clock is digital."]}
+        ],
+        "nl": [
+        {"lemma": "digitaal", "pos": "adjective", "sentences": ["De klok is digitaal."]}
+        ]
+      }
+    },
+    {
+      "key": "answering-machine",
+      "gloss": "answering machine (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "answering machine", "pos": "noun", "details": {"plural": "answering machines"}, "sentences": ["I leave a message on the answering machine."]}
+        ],
+        "nl": [
+        {"lemma": "antwoordapparaat", "pos": "noun", "details": {"article": "het", "plural": "antwoordapparaten"}, "sentences": ["Ik laat een bericht achter op het antwoordapparaat."]}
+        ]
+      }
+    },
+    {
+      "key": "laptop",
+      "gloss": "laptop (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "laptop", "pos": "noun", "details": {"plural": "laptops"}, "sentences": ["My laptop is new."]}
+        ],
+        "nl": [
+        {"lemma": "laptop", "pos": "noun", "details": {"article": "de", "plural": "laptops"}, "sentences": ["Mijn laptop is nieuw."]}
+        ]
+      }
+    },
+    {
+      "key": "remote-control",
+      "gloss": "remote control (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "remote control", "pos": "noun", "details": {"plural": "remote controls"}, "sentences": ["I look for the remote control."]}
+        ],
+        "nl": [
+        {"lemma": "afstandsbediening", "pos": "noun", "details": {"article": "de", "plural": "afstandsbedieningen"}, "sentences": ["Ik zoek de afstandsbediening."]}
+        ]
+      }
+    },
+    {
+      "key": "valve",
+      "gloss": "valve (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "valve", "pos": "noun", "details": {"plural": "valves"}, "sentences": ["The valve is open."]}
+        ],
+        "nl": [
+        {"lemma": "klep", "pos": "noun", "details": {"article": "de", "plural": "kleppen"}, "sentences": ["De klep is open."]}
+        ]
+      }
+    },
+    {
+      "key": "disc",
+      "gloss": "disc (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "disc", "pos": "noun", "details": {"plural": "discs"}, "sentences": ["The disc is scratched."]}
+        ],
+        "nl": [
+        {"lemma": "schijf", "pos": "noun", "details": {"article": "de", "plural": "schijven"}, "sentences": ["De schijf is bekrast."]}
+        ]
+      }
+    },
+    {
+      "key": "medium",
+      "gloss": "medium (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "medium", "pos": "noun", "details": {"plural": "mediums"}, "sentences": ["The medium is new."]}
+        ],
+        "nl": [
+        {"lemma": "medium", "pos": "noun", "details": {"article": "het", "plural": "media"}, "sentences": ["Het medium is nieuw."]}
+        ]
+      }
+    },
+    {
+      "key": "front-page",
+      "gloss": "front page (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "front page", "pos": "noun", "details": {"plural": "front pages"}, "sentences": ["The news is on the front page."]}
+        ],
+        "nl": [
+        {"lemma": "voorpagina", "pos": "noun", "details": {"article": "de", "plural": "voorpagina's"}, "sentences": ["Het nieuws staat op de voorpagina."]}
+        ]
+      }
+    },
+    {
+      "key": "pump-noun",
+      "gloss": "pump (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "pump", "pos": "noun", "details": {"plural": "pumps"}, "sentences": ["The pump is broken."]}
+        ],
+        "nl": [
+        {"lemma": "pomp", "pos": "noun", "details": {"article": "de", "plural": "pompen"}, "sentences": ["De pomp is kapot."]}
+        ]
+      }
+    },
+    {
+      "key": "scenario",
+      "gloss": "scenario (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "scenario", "pos": "noun", "details": {"plural": "scenarios"}, "sentences": ["That is a bad scenario."]}
+        ],
+        "nl": [
+        {"lemma": "scenario", "pos": "noun", "details": {"article": "het", "plural": "scenario's"}, "sentences": ["Dat is een slecht scenario."]}
+        ]
+      }
+    },
+    {
+      "key": "note-noun-notitie",
+      "gloss": "note (short)",
+      "entries": {
+        "en": [
+        {"lemma": "note (short)", "pos": "noun", "details": {"plural": "notes"}, "sentences": ["I make a note."]}
+        ],
+        "nl": [
+        {"lemma": "notitie", "pos": "noun", "details": {"article": "de", "plural": "notities"}, "sentences": ["Ik maak een notitie."]}
+        ]
+      }
+    },
+    {
+      "key": "type-verb",
+      "gloss": "type (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "type", "pos": "verb", "details": {"past": "typed", "participle": "typed"}, "sentences": ["I type a letter."]}
+        ],
+        "nl": [
+        {"lemma": "typen", "pos": "verb", "details": {"pastSingular": "typte", "pastPlural": "typten", "participle": "getypt", "auxiliary": "hebben"}, "sentences": ["Ik typ een brief."]}
+        ]
+      }
+    },
+    {
+      "key": "announcement",
+      "gloss": "announcement (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "announcement", "pos": "noun", "details": {"plural": "announcements"}, "sentences": ["The announcement is clear."]}
+        ],
+        "nl": [
+        {"lemma": "mededeling", "pos": "noun", "details": {"article": "de", "plural": "mededelingen"}, "sentences": ["De mededeling is duidelijk."]}
+        ]
+      }
+    },
+    {
+      "key": "play-back",
+      "gloss": "play back (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "play back", "pos": "verb", "details": {"past": "played back", "participle": "played back"}, "sentences": ["I play back the song."]}
+        ],
+        "nl": [
+        {"lemma": "afspelen", "pos": "verb", "details": {"pastSingular": "speelde af", "pastPlural": "speelden af", "participle": "afgespeeld", "auxiliary": "hebben"}, "sentences": ["Ik speel het liedje af."]}
+        ]
+      }
+    },
+    {
+      "key": "switch",
+      "gloss": "switch (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "switch", "pos": "noun", "details": {"plural": "switches"}, "sentences": ["I press the switch."]}
+        ],
+        "nl": [
+        {"lemma": "schakelaar", "pos": "noun", "details": {"article": "de", "plural": "schakelaars"}, "sentences": ["Ik druk op de schakelaar."]}
+        ]
+      }
+    },
+    {
+      "key": "video-tape",
+      "gloss": "video tape (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "video tape", "pos": "noun", "details": {"plural": "video tapes"}, "sentences": ["I watch the video tape."]}
+        ],
+        "nl": [
+        {"lemma": "videoband", "pos": "noun", "details": {"article": "de", "plural": "videobanden"}, "sentences": ["Ik kijk naar de videoband."]}
+        ]
+      }
+    },
+    {
+      "key": "sequel",
+      "gloss": "sequel (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "sequel", "pos": "noun", "details": {"plural": "sequels"}, "sentences": ["The sequel is better."]}
+        ],
+        "nl": [
+        {"lemma": "vervolg", "pos": "noun", "details": {"article": "het", "plural": "vervolgen"}, "sentences": ["Het vervolg is beter."]}
+        ]
+      }
+    },
+    {
+      "key": "monitor",
+      "gloss": "monitor (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "monitor", "pos": "noun", "details": {"plural": "monitors"}, "sentences": ["The monitor is big."]}
+        ],
+        "nl": [
+        {"lemma": "monitor", "pos": "noun", "details": {"article": "de", "plural": "monitoren"}, "sentences": ["De monitor is groot."]}
+        ]
+      }
+    },
+    {
+      "key": "electronic",
+      "gloss": "electronic (adjective)",
+      "entries": {
+        "en": [
+        {"lemma": "electronic", "pos": "adjective", "sentences": ["The device is electronic."]}
+        ],
+        "nl": [
+        {"lemma": "elektronisch", "pos": "adjective", "sentences": ["Het apparaat is elektronisch."]}
+        ]
+      }
+    },
+    {
+      "key": "edition",
+      "gloss": "edition (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "edition", "pos": "noun", "details": {"plural": "editions"}, "sentences": ["This is a new edition."]}
+        ],
+        "nl": [
+        {"lemma": "uitgave", "pos": "noun", "details": {"article": "de", "plural": "uitgaven"}, "sentences": ["Dit is een nieuwe uitgave."]}
+        ]
+      }
+    },
+    {
+      "key": "speaker",
+      "gloss": "speaker (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "speaker", "pos": "noun", "details": {"plural": "speakers"}, "sentences": ["The speaker is loud."]}
+        ],
+        "nl": [
+        {"lemma": "box", "pos": "noun", "details": {"article": "de", "plural": "boxen"}, "sentences": ["De box is luid."]}
+        ]
+      }
+    },
+    {
+      "key": "scan",
+      "gloss": "scan (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "scan", "pos": "verb", "details": {"past": "scaned", "participle": "scaned"}, "sentences": ["I scan the document."]}
+        ],
+        "nl": [
+        {"lemma": "scannen", "pos": "verb", "details": {"pastSingular": "scande", "pastPlural": "scanden", "participle": "gescand", "auxiliary": "hebben"}, "sentences": ["Ik scan het document."]}
+        ]
+      }
+    },
+    {
+      "key": "scanner",
+      "gloss": "scanner (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "scanner", "pos": "noun", "details": {"plural": "scanners"}, "sentences": ["The scanner works."]}
+        ],
+        "nl": [
+        {"lemma": "scanner", "pos": "noun", "details": {"article": "de", "plural": "scanners"}, "sentences": ["De scanner werkt."]}
+        ]
+      }
+    },
+    {
+      "key": "siren",
+      "gloss": "siren (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "siren", "pos": "noun", "details": {"plural": "sirens"}, "sentences": ["The siren sounds."]}
+        ],
+        "nl": [
+        {"lemma": "sirene", "pos": "noun", "details": {"article": "de", "plural": "sirenes"}, "sentences": ["De sirene loeit."]}
+        ]
+      }
+    },
+    {
+      "key": "web",
+      "gloss": "web (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "web", "pos": "noun", "details": {"plural": "webs"}, "sentences": ["The spider has a web."]}
+        ],
+        "nl": [
+        {"lemma": "web", "pos": "noun", "details": {"article": "het", "plural": "webben"}, "sentences": ["De spin heeft een web."]}
+        ]
+      }
+    },
+    {
+      "key": "software",
+      "gloss": "software (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "software", "pos": "noun", "details": {"uncountable": true}, "sentences": ["I install the software."]}
+        ],
+        "nl": [
+        {"lemma": "software", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Ik installeer de software."]}
+        ]
+      }
+    },
+    {
+      "key": "documentary",
+      "gloss": "documentary (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "documentary", "pos": "noun", "details": {"plural": "documentaries"}, "sentences": ["I watch a documentary."]}
+        ],
+        "nl": [
+        {"lemma": "documentaire", "pos": "noun", "details": {"article": "de", "plural": "documentaires"}, "sentences": ["Ik kijk naar een documentaire."]}
+        ]
+      }
+    },
+    {
+      "key": "select",
+      "gloss": "select (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "select", "pos": "verb", "details": {"past": "selected", "participle": "selected"}, "sentences": ["I select a file."]}
+        ],
+        "nl": [
+        {"lemma": "selecteren", "pos": "verb", "details": {"pastSingular": "selecteerde", "pastPlural": "selecteerden", "participle": "geselecteerd", "auxiliary": "hebben"}, "sentences": ["Ik selecteer een bestand."]}
+        ]
+      }
+    },
+    {
+      "key": "download",
+      "gloss": "download (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "download", "pos": "verb", "details": {"past": "downloaded", "participle": "downloaded"}, "sentences": ["I download the file."]}
+        ],
+        "nl": [
+        {"lemma": "downloaden", "pos": "verb", "details": {"pastSingular": "downloadde", "pastPlural": "downloadden", "participle": "gedownload", "auxiliary": "hebben"}, "sentences": ["Ik download het bestand."]}
+        ]
+      }
+    },
+    {
+      "key": "circuit",
+      "gloss": "circuit (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "circuit", "pos": "noun", "details": {"plural": "circuits"}, "sentences": ["The circuit is broken."]}
+        ],
+        "nl": [
+        {"lemma": "circuit", "pos": "noun", "details": {"article": "het", "plural": "circuits"}, "sentences": ["Het circuit is kapot."]}
+        ]
+      }
+    },
+    {
+      "key": "manuscript",
+      "gloss": "manuscript (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "manuscript", "pos": "noun", "details": {"plural": "manuscripts"}, "sentences": ["The manuscript is old."]}
+        ],
+        "nl": [
+        {"lemma": "manuscript", "pos": "noun", "details": {"article": "het", "plural": "manuscripten"}, "sentences": ["Het manuscript is oud."]}
+        ]
+      }
+    },
+    {
+      "key": "compass",
+      "gloss": "compass (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "compass", "pos": "noun", "details": {"plural": "compasses"}, "sentences": ["The compass shows north."]}
+        ],
+        "nl": [
+        {"lemma": "kompas", "pos": "noun", "details": {"article": "het", "plural": "kompassen"}, "sentences": ["Het kompas wijst naar het noorden."]}
         ]
       }
     }

@@ -31,7 +31,7 @@ Delete an item once checked; delete this file when it is empty.
 - `hallway` (gang / hallway): gang also means 'pace, course'
 - `attention` (aandacht / attention): 'aandacht' without a standard plural; sentence kept simple
 - `guess` (raden / guess): raden: 'raadde' (guess) vs 'ried' (advise); check the past tense
-- `concern` (betreffen / concern): formal verb
+- `concern-verb` (betreffen / concern): formal verb
 - `niece` (nicht / niece): nicht = niece or female cousin
 - `slave` (slaaf / slave): historical/sensitive word
 - `husband` (echtgenoot / husband): echtgenoot is formal; 'man' is the everyday word
@@ -44,3 +44,9 @@ Delete an item once checked; delete this file when it is empty.
 - `furniture` (meubel / furniture): 'meubel' is a single piece; 'meubilair' is furniture in general
 - `raise-verb-heffen` (heffen / raise): 'heffen' is formal; 'omhoog doen/ heffen het glas'
 - `briefcase` (portefeuille / briefcase): 'portefeuille' = portfolio/ministerial post; 'aktetas' = briefcase
+- `dock` (dok / dock): 'dok' (het/de) vs 'steiger'/'kade'; check article
+- `scold` (schelden / scold): schelden = to swear at/ scold
+- `poison-noun-gift` (gift / poison): 'gift' in Dutch = poison (de/het), not a present
+- `steel-adjective` (stalen / steel): stalen is the attributive form (een stalen brug); predicate is "van staal"
+- `cold-adjective-verkouden` (verkouden / cold): verkouden zijn = to have a cold; the adjective form
+- `drop-off` (wegbrengen / drop off): wegbrengen: take (something/someone) somewhere

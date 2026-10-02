@@ -31,7 +31,7 @@
     "convince",
     "discuss",
     "scream",
-    "beg",
+    "beg-verb-smeken",
     "betray",
     "repeat",
     "complain",
@@ -40,13 +40,13 @@
     "answer-verb",
     "admit",
     "be-silent",
-    "claim",
+    "claim-verb-beweren",
     "deny",
     "nag",
     "indicate",
     "identify",
     "describe",
-    "guarantee",
+    "guarantee-verb",
     "pass-on",
     "exaggerate",
     "summon",
@@ -65,6 +65,10 @@
     "suggest",
     "recommend",
     "quote",
-    "express"
+    "express",
+    "address-verb",
+    "convey",
+    "announce",
+    "interpret"
   ]
 }

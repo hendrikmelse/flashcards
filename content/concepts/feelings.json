@@ -1477,7 +1477,7 @@
       }
     },
     {
-      "key": "comfort",
+      "key": "comfort-noun",
       "gloss": "comfort (noun)",
       "entries": {
         "en": [
@@ -1953,6 +1953,906 @@
         ],
         "nl": [
         {"lemma": "kinderachtig", "pos": "adjective", "sentences": ["Dat is kinderachtig."]}
+        ]
+      }
+    },
+    {
+      "key": "tidy",
+      "gloss": "tidy (adjective)",
+      "entries": {
+        "en": [
+        {"lemma": "tidy", "pos": "adjective", "sentences": ["The room is tidy."]}
+        ],
+        "nl": [
+        {"lemma": "keurig", "pos": "adjective", "sentences": ["De kamer is keurig."]}
+        ]
+      }
+    },
+    {
+      "key": "mourn",
+      "gloss": "mourn (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "mourn", "pos": "verb", "details": {"past": "mourned", "participle": "mourned"}, "sentences": ["They mourn their father."]}
+        ],
+        "nl": [
+        {"lemma": "rouwen", "pos": "verb", "details": {"pastSingular": "rouwde", "pastPlural": "rouwden", "participle": "gerouwd", "auxiliary": "hebben"}, "sentences": ["Zij rouwen om hun vader."]}
+        ]
+      }
+    },
+    {
+      "key": "loneliness",
+      "gloss": "loneliness (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "loneliness", "pos": "noun", "details": {"uncountable": true}, "sentences": ["Loneliness is hard."]}
+        ],
+        "nl": [
+        {"lemma": "eenzaamheid", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Eenzaamheid is zwaar."]}
+        ]
+      }
+    },
+    {
+      "key": "fright",
+      "gloss": "fright (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "fright", "pos": "noun", "details": {"uncountable": true}, "sentences": ["I get a fright."]}
+        ],
+        "nl": [
+        {"lemma": "schrik", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Ik krijg een schrik."]}
+        ]
+      }
+    },
+    {
+      "key": "considerate",
+      "gloss": "considerate (adjective)",
+      "entries": {
+        "en": [
+        {"lemma": "considerate", "pos": "adjective", "sentences": ["He is considerate."]}
+        ],
+        "nl": [
+        {"lemma": "attent", "pos": "adjective", "sentences": ["Hij is attent."]}
+        ]
+      }
+    },
+    {
+      "key": "humble",
+      "gloss": "humble (adjective)",
+      "entries": {
+        "en": [
+        {"lemma": "humble", "pos": "adjective", "sentences": ["He is humble."]}
+        ],
+        "nl": [
+        {"lemma": "nederig", "pos": "adjective", "sentences": ["Hij is nederig."]}
+        ]
+      }
+    },
+    {
+      "key": "relief",
+      "gloss": "relief (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "relief", "pos": "noun", "details": {"uncountable": true}, "sentences": ["I feel relief."]}
+        ],
+        "nl": [
+        {"lemma": "opluchting", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Ik voel opluchting."]}
+        ]
+      }
+    },
+    {
+      "key": "hysterical",
+      "gloss": "hysterical (adjective)",
+      "entries": {
+        "en": [
+        {"lemma": "hysterical", "pos": "adjective", "sentences": ["She is hysterical."]}
+        ],
+        "nl": [
+        {"lemma": "hysterisch", "pos": "adjective", "sentences": ["Zij is hysterisch."]}
+        ]
+      }
+    },
+    {
+      "key": "patient-adjective",
+      "gloss": "patient (adjective)",
+      "entries": {
+        "en": [
+        {"lemma": "patient", "pos": "adjective", "sentences": ["She is patient."]}
+        ],
+        "nl": [
+        {"lemma": "geduldig", "pos": "adjective", "sentences": ["Zij is geduldig."]}
+        ]
+      }
+    },
+    {
+      "key": "naive",
+      "gloss": "naive (adjective)",
+      "entries": {
+        "en": [
+        {"lemma": "naive", "pos": "adjective", "sentences": ["He is naive."]}
+        ],
+        "nl": [
+        {"lemma": "naïef", "pos": "adjective", "sentences": ["Hij is naïef."]}
+        ]
+      }
+    },
+    {
+      "key": "torment",
+      "gloss": "torment (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "torment", "pos": "verb", "details": {"past": "tormented", "participle": "tormented"}, "sentences": ["The thought torments me."]}
+        ],
+        "nl": [
+        {"lemma": "kwellen", "pos": "verb", "details": {"pastSingular": "kwelde", "pastPlural": "kwelden", "participle": "gekweld", "auxiliary": "hebben"}, "sentences": ["De gedachte kwelt mij."]}
+        ]
+      }
+    },
+    {
+      "key": "loyal",
+      "gloss": "loyal (adjective)",
+      "entries": {
+        "en": [
+        {"lemma": "loyal", "pos": "adjective", "sentences": ["The dog is loyal."]}
+        ],
+        "nl": [
+        {"lemma": "loyaal", "pos": "adjective", "sentences": ["De hond is loyaal."]}
+        ]
+      }
+    },
+    {
+      "key": "sympathy",
+      "gloss": "sympathy (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "sympathy", "pos": "noun", "details": {"uncountable": true}, "sentences": ["I send my sympathy."]}
+        ],
+        "nl": [
+        {"lemma": "medeleven", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["Ik betuig mijn medeleven."]}
+        ]
+      }
+    },
+    {
+      "key": "lazy",
+      "gloss": "lazy (adjective)",
+      "entries": {
+        "en": [
+        {"lemma": "lazy", "pos": "adjective", "sentences": ["He is lazy."]}
+        ],
+        "nl": [
+        {"lemma": "lui", "pos": "adjective", "sentences": ["Hij is lui."]}
+        ]
+      }
+    },
+    {
+      "key": "merciful",
+      "gloss": "merciful (adjective)",
+      "entries": {
+        "en": [
+        {"lemma": "merciful", "pos": "adjective", "sentences": ["The king is merciful."]}
+        ],
+        "nl": [
+        {"lemma": "genadig", "pos": "adjective", "sentences": ["De koning is genadig."]}
+        ]
+      }
+    },
+    {
+      "key": "fascinating",
+      "gloss": "fascinating (adjective)",
+      "entries": {
+        "en": [
+        {"lemma": "fascinating", "pos": "adjective", "sentences": ["The book is fascinating."]}
+        ],
+        "nl": [
+        {"lemma": "boeiend", "pos": "adjective", "sentences": ["Het boek is boeiend."]}
+        ]
+      }
+    },
+    {
+      "key": "honorable",
+      "gloss": "honorable (adjective)",
+      "entries": {
+        "en": [
+        {"lemma": "honorable", "pos": "adjective", "sentences": ["He is honorable."]}
+        ],
+        "nl": [
+        {"lemma": "eervol", "pos": "adjective", "sentences": ["Hij is eervol."]}
+        ]
+      }
+    },
+    {
+      "key": "generous",
+      "gloss": "generous (adjective)",
+      "entries": {
+        "en": [
+        {"lemma": "generous", "pos": "adjective", "sentences": ["He is generous."]}
+        ],
+        "nl": [
+        {"lemma": "gul", "pos": "adjective", "sentences": ["Hij is gul."]}
+        ]
+      }
+    },
+    {
+      "key": "shame",
+      "gloss": "shame (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "shame", "pos": "noun", "details": {"uncountable": true}, "sentences": ["I feel shame."]}
+        ],
+        "nl": [
+        {"lemma": "schaamte", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Ik voel schaamte."]}
+        ]
+      }
+    },
+    {
+      "key": "notorious",
+      "gloss": "notorious (adjective)",
+      "entries": {
+        "en": [
+        {"lemma": "notorious", "pos": "adjective", "sentences": ["He is notorious."]}
+        ],
+        "nl": [
+        {"lemma": "berucht", "pos": "adjective", "sentences": ["Hij is berucht."]}
+        ]
+      }
+    },
+    {
+      "key": "helpless",
+      "gloss": "helpless (adjective)",
+      "entries": {
+        "en": [
+        {"lemma": "helpless", "pos": "adjective", "sentences": ["The child is helpless."]}
+        ],
+        "nl": [
+        {"lemma": "hulpeloos", "pos": "adjective", "sentences": ["Het kind is hulpeloos."]}
+        ]
+      }
+    },
+    {
+      "key": "dedication",
+      "gloss": "dedication (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "dedication", "pos": "noun", "details": {"uncountable": true}, "sentences": ["He works with dedication."]}
+        ],
+        "nl": [
+        {"lemma": "toewijding", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Hij werkt met toewijding."]}
+        ]
+      }
+    },
+    {
+      "key": "lively",
+      "gloss": "lively (adjective)",
+      "entries": {
+        "en": [
+        {"lemma": "lively", "pos": "adjective", "sentences": ["The child is lively."]}
+        ],
+        "nl": [
+        {"lemma": "levendig", "pos": "adjective", "sentences": ["Het kind is levendig."]}
+        ]
+      }
+    },
+    {
+      "key": "frustrate",
+      "gloss": "frustrate (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "frustrate", "pos": "verb", "details": {"past": "frustrated", "participle": "frustrated"}, "sentences": ["The delay frustrates me."]}
+        ],
+        "nl": [
+        {"lemma": "frustreren", "pos": "verb", "details": {"pastSingular": "frustreerde", "pastPlural": "frustreerden", "participle": "gefrustreerd", "auxiliary": "hebben"}, "sentences": ["De vertraging frustreert mij."]}
+        ]
+      }
+    },
+    {
+      "key": "hunch",
+      "gloss": "hunch (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "hunch", "pos": "noun", "details": {"plural": "hunches"}, "sentences": ["I have a hunch."]}
+        ],
+        "nl": [
+        {"lemma": "voorgevoel", "pos": "noun", "details": {"article": "het", "plural": "voorgevoelens"}, "sentences": ["Ik heb een voorgevoel."]}
+        ]
+      }
+    },
+    {
+      "key": "jealousy",
+      "gloss": "jealousy (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "jealousy", "pos": "noun", "details": {"uncountable": true}, "sentences": ["Jealousy is hard."]}
+        ],
+        "nl": [
+        {"lemma": "jaloezie", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Jaloezie is zwaar."]}
+        ]
+      }
+    },
+    {
+      "key": "curiosity",
+      "gloss": "curiosity (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "curiosity", "pos": "noun", "details": {"uncountable": true}, "sentences": ["Curiosity is natural."]}
+        ],
+        "nl": [
+        {"lemma": "nieuwsgierigheid", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Nieuwsgierigheid is natuurlijk."]}
+        ]
+      }
+    },
+    {
+      "key": "discreet",
+      "gloss": "discreet (adjective)",
+      "entries": {
+        "en": [
+        {"lemma": "discreet", "pos": "adjective", "sentences": ["He is discreet."]}
+        ],
+        "nl": [
+        {"lemma": "discreet", "pos": "adjective", "sentences": ["Hij is discreet."]}
+        ]
+      }
+    },
+    {
+      "key": "despair",
+      "gloss": "despair (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "despair", "pos": "noun", "details": {"uncountable": true}, "sentences": ["He feels despair."]}
+        ],
+        "nl": [
+        {"lemma": "wanhoop", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Hij voelt wanhoop."]}
+        ]
+      }
+    },
+    {
+      "key": "disappointment",
+      "gloss": "disappointment (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "disappointment", "pos": "noun", "details": {"plural": "disappointments"}, "sentences": ["The result is a disappointment."]}
+        ],
+        "nl": [
+        {"lemma": "teleurstelling", "pos": "noun", "details": {"article": "de", "plural": "teleurstellingen"}, "sentences": ["Het resultaat is een teleurstelling."]}
+        ]
+      }
+    },
+    {
+      "key": "gratitude",
+      "gloss": "gratitude (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "gratitude", "pos": "noun", "details": {"uncountable": true}, "sentences": ["I feel gratitude."]}
+        ],
+        "nl": [
+        {"lemma": "dankbaarheid", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Ik voel dankbaarheid."]}
+        ]
+      }
+    },
+    {
+      "key": "depress",
+      "gloss": "depress (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "depress", "pos": "verb", "details": {"past": "depressed", "participle": "depressed"}, "sentences": ["The weather depresses me."]}
+        ],
+        "nl": [
+        {"lemma": "deprimeren", "pos": "verb", "details": {"pastSingular": "deprimeerde", "pastPlural": "deprimeerden", "participle": "gedeprimeerd", "auxiliary": "hebben"}, "sentences": ["Het weer deprimeert mij."]}
+        ]
+      }
+    },
+    {
+      "key": "frightening",
+      "gloss": "frightening (adjective)",
+      "entries": {
+        "en": [
+        {"lemma": "frightening", "pos": "adjective", "sentences": ["The film is frightening."]}
+        ],
+        "nl": [
+        {"lemma": "angstaanjagend", "pos": "adjective", "sentences": ["De film is angstaanjagend."]}
+        ]
+      }
+    },
+    {
+      "key": "ruthless",
+      "gloss": "ruthless (adjective)",
+      "entries": {
+        "en": [
+        {"lemma": "ruthless", "pos": "adjective", "sentences": ["The man is ruthless."]}
+        ],
+        "nl": [
+        {"lemma": "meedogenloos", "pos": "adjective", "sentences": ["De man is meedogenloos."]}
+        ]
+      }
+    },
+    {
+      "key": "embarrassment",
+      "gloss": "embarrassment (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "embarrassment", "pos": "noun", "details": {"uncountable": true}, "sentences": ["He blushes with embarrassment."]}
+        ],
+        "nl": [
+        {"lemma": "verlegenheid", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Hij bloost van verlegenheid."]}
+        ]
+      }
+    },
+    {
+      "key": "ambitious",
+      "gloss": "ambitious (adjective)",
+      "entries": {
+        "en": [
+        {"lemma": "ambitious", "pos": "adjective", "sentences": ["She is ambitious."]}
+        ],
+        "nl": [
+        {"lemma": "ambitieus", "pos": "adjective", "sentences": ["Zij is ambitieus."]}
+        ]
+      }
+    },
+    {
+      "key": "greed",
+      "gloss": "greed (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "greed", "pos": "noun", "details": {"uncountable": true}, "sentences": ["Greed is bad."]}
+        ],
+        "nl": [
+        {"lemma": "hebzucht", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Hebzucht is slecht."]}
+        ]
+      }
+    },
+    {
+      "key": "hospitality",
+      "gloss": "hospitality (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "hospitality", "pos": "noun", "details": {"uncountable": true}, "sentences": ["Their hospitality is great."]}
+        ],
+        "nl": [
+        {"lemma": "gastvrijheid", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Hun gastvrijheid is geweldig."]}
+        ]
+      }
+    },
+    {
+      "key": "spontaneous",
+      "gloss": "spontaneous (adjective)",
+      "entries": {
+        "en": [
+        {"lemma": "spontaneous", "pos": "adjective", "sentences": ["She is spontaneous."]}
+        ],
+        "nl": [
+        {"lemma": "spontaan", "pos": "adjective", "sentences": ["Zij is spontaan."]}
+        ]
+      }
+    },
+    {
+      "key": "clumsy",
+      "gloss": "clumsy (adjective)",
+      "entries": {
+        "en": [
+        {"lemma": "clumsy", "pos": "adjective", "sentences": ["He is clumsy."]}
+        ],
+        "nl": [
+        {"lemma": "onhandig", "pos": "adjective", "sentences": ["Hij is onhandig."]}
+        ]
+      }
+    },
+    {
+      "key": "brood",
+      "gloss": "brood (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "brood", "pos": "verb", "details": {"past": "brooded", "participle": "brooded"}, "sentences": ["I brood too much."]}
+        ],
+        "nl": [
+        {"lemma": "piekeren", "pos": "verb", "details": {"pastSingular": "piekerde", "pastPlural": "piekerden", "participle": "gepiekerd", "auxiliary": "hebben"}, "sentences": ["Ik pieker te veel."]}
+        ]
+      }
+    },
+    {
+      "key": "helpful",
+      "gloss": "helpful (adjective)",
+      "entries": {
+        "en": [
+        {"lemma": "helpful", "pos": "adjective", "sentences": ["She is helpful."]}
+        ],
+        "nl": [
+        {"lemma": "behulpzaam", "pos": "adjective", "sentences": ["Zij is behulpzaam."]}
+        ]
+      }
+    },
+    {
+      "key": "alert",
+      "gloss": "alert (adjective)",
+      "entries": {
+        "en": [
+        {"lemma": "alert", "pos": "adjective", "sentences": ["The guard is alert."]}
+        ],
+        "nl": [
+        {"lemma": "alert", "pos": "adjective", "sentences": ["De bewaker is alert."]}
+        ]
+      }
+    },
+    {
+      "key": "remorse",
+      "gloss": "remorse (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "remorse", "pos": "noun", "details": {"uncountable": true}, "sentences": ["He feels remorse."]}
+        ],
+        "nl": [
+        {"lemma": "berouw", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["Hij voelt berouw."]}
+        ]
+      }
+    },
+    {
+      "key": "despise",
+      "gloss": "despise (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "despise", "pos": "verb", "details": {"past": "despised", "participle": "despised"}, "sentences": ["I despise lies."]}
+        ],
+        "nl": [
+        {"lemma": "verachten", "pos": "verb", "details": {"pastSingular": "verachtte", "pastPlural": "verachtten", "participle": "veracht", "auxiliary": "hebben"}, "sentences": ["Ik veracht leugens."]}
+        ]
+      }
+    },
+    {
+      "key": "ungrateful",
+      "gloss": "ungrateful (adjective)",
+      "entries": {
+        "en": [
+        {"lemma": "ungrateful", "pos": "adjective", "sentences": ["He is ungrateful."]}
+        ],
+        "nl": [
+        {"lemma": "ondankbaar", "pos": "adjective", "sentences": ["Hij is ondankbaar."]}
+        ]
+      }
+    },
+    {
+      "key": "just-adjective",
+      "gloss": "just (fair)",
+      "entries": {
+        "en": [
+        {"lemma": "just (fair)", "pos": "adjective", "sentences": ["The judge is just."]}
+        ],
+        "nl": [
+        {"lemma": "rechtvaardig", "pos": "adjective", "sentences": ["De rechter is rechtvaardig."]}
+        ]
+      }
+    },
+    {
+      "key": "reckless",
+      "gloss": "reckless (adjective)",
+      "entries": {
+        "en": [
+        {"lemma": "reckless", "pos": "adjective", "sentences": ["The driver is reckless."]}
+        ],
+        "nl": [
+        {"lemma": "roekeloos", "pos": "adjective", "sentences": ["De bestuurder is roekeloos."]}
+        ]
+      }
+    },
+    {
+      "key": "comfort-verb",
+      "gloss": "comfort (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "comfort", "pos": "verb", "details": {"past": "comforted", "participle": "comforted"}, "sentences": ["I comfort the child."]}
+        ],
+        "nl": [
+        {"lemma": "troosten", "pos": "verb", "details": {"pastSingular": "troostte", "pastPlural": "troostten", "participle": "getroost", "auxiliary": "hebben"}, "sentences": ["Ik troost het kind."]}
+        ]
+      }
+    },
+    {
+      "key": "cunning",
+      "gloss": "cunning (adjective)",
+      "entries": {
+        "en": [
+        {"lemma": "cunning", "pos": "adjective", "sentences": ["The fox is cunning."]}
+        ],
+        "nl": [
+        {"lemma": "sluw", "pos": "adjective", "sentences": ["De vos is sluw."]}
+        ]
+      }
+    },
+    {
+      "key": "hypocritical",
+      "gloss": "hypocritical (adjective)",
+      "entries": {
+        "en": [
+        {"lemma": "hypocritical", "pos": "adjective", "sentences": ["He is hypocritical."]}
+        ],
+        "nl": [
+        {"lemma": "hypocriet", "pos": "adjective", "sentences": ["Hij is hypocriet."]}
+        ]
+      }
+    },
+    {
+      "key": "impolite",
+      "gloss": "impolite (adjective)",
+      "entries": {
+        "en": [
+        {"lemma": "impolite", "pos": "adjective", "sentences": ["That is impolite."]}
+        ],
+        "nl": [
+        {"lemma": "onbeschoft", "pos": "adjective", "sentences": ["Dat is onbeschoft."]}
+        ]
+      }
+    },
+    {
+      "key": "witty",
+      "gloss": "witty (adjective)",
+      "entries": {
+        "en": [
+        {"lemma": "witty", "pos": "adjective", "sentences": ["He is witty."]}
+        ],
+        "nl": [
+        {"lemma": "geestig", "pos": "adjective", "sentences": ["Hij is geestig."]}
+        ]
+      }
+    },
+    {
+      "key": "strive",
+      "gloss": "strive (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "strive", "pos": "verb", "details": {"past": "strived", "participle": "strived"}, "sentences": ["I strive for the best."]}
+        ],
+        "nl": [
+        {"lemma": "streven", "pos": "verb", "details": {"pastSingular": "streefde", "pastPlural": "streefden", "participle": "gestreefd", "auxiliary": "hebben"}, "sentences": ["Ik streef naar het beste."]}
+        ]
+      }
+    },
+    {
+      "key": "concern-noun",
+      "gloss": "concern (worry)",
+      "entries": {
+        "en": [
+        {"lemma": "concern (worry)", "pos": "noun", "details": {"plural": "concerns"}, "sentences": ["I feel concern."]}
+        ],
+        "nl": [
+        {"lemma": "bezorgdheid", "pos": "noun", "details": {"article": "de", "plural": "bezorgdheden"}, "sentences": ["Ik voel bezorgdheid."]}
+        ]
+      }
+    },
+    {
+      "key": "powerless",
+      "gloss": "powerless (adjective)",
+      "entries": {
+        "en": [
+        {"lemma": "powerless", "pos": "adjective", "sentences": ["I feel powerless."]}
+        ],
+        "nl": [
+        {"lemma": "machteloos", "pos": "adjective", "sentences": ["Ik voel me machteloos."]}
+        ]
+      }
+    },
+    {
+      "key": "humiliation",
+      "gloss": "humiliation (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "humiliation", "pos": "noun", "details": {"plural": "humiliations"}, "sentences": ["The humiliation is big."]}
+        ],
+        "nl": [
+        {"lemma": "vernedering", "pos": "noun", "details": {"article": "de", "plural": "vernederingen"}, "sentences": ["De vernedering is groot."]}
+        ]
+      }
+    },
+    {
+      "key": "cheer",
+      "gloss": "cheer (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "cheer", "pos": "verb", "details": {"past": "cheered", "participle": "cheered"}, "sentences": ["The fans cheer."]}
+        ],
+        "nl": [
+        {"lemma": "juichen", "pos": "verb", "details": {"pastSingular": "juichte", "pastPlural": "juichten", "participle": "gejuicht", "auxiliary": "hebben"}, "sentences": ["De fans juichen."]}
+        ]
+      }
+    },
+    {
+      "key": "envy",
+      "gloss": "envy (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "envy", "pos": "verb", "details": {"past": "envied", "participle": "envied"}, "sentences": ["I envy him."]}
+        ],
+        "nl": [
+        {"lemma": "benijden", "pos": "verb", "details": {"pastSingular": "benijdde", "pastPlural": "benijdden", "participle": "benijd", "auxiliary": "hebben"}, "sentences": ["Ik benijd hem."]}
+        ]
+      }
+    },
+    {
+      "key": "brutal",
+      "gloss": "brutal (adjective)",
+      "entries": {
+        "en": [
+        {"lemma": "brutal", "pos": "adjective", "sentences": ["The man is brutal."]}
+        ],
+        "nl": [
+        {"lemma": "bruut", "pos": "adjective", "sentences": ["De man is bruut."]}
+        ]
+      }
+    },
+    {
+      "key": "aggression",
+      "gloss": "aggression (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "aggression", "pos": "noun", "details": {"uncountable": true}, "sentences": ["The aggression is clear."]}
+        ],
+        "nl": [
+        {"lemma": "agressie", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["De agressie is duidelijk."]}
+        ]
+      }
+    },
+    {
+      "key": "intuition",
+      "gloss": "intuition (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "intuition", "pos": "noun", "details": {"uncountable": true}, "sentences": ["Trust your intuition."]}
+        ],
+        "nl": [
+        {"lemma": "intuïtie", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Vertrouw op je intuïtie."]}
+        ]
+      }
+    },
+    {
+      "key": "suspicious",
+      "gloss": "suspicious (adjective)",
+      "entries": {
+        "en": [
+        {"lemma": "suspicious", "pos": "adjective", "sentences": ["He is suspicious."]}
+        ],
+        "nl": [
+        {"lemma": "achterdochtig", "pos": "adjective", "sentences": ["Hij is achterdochtig."]}
+        ]
+      }
+    },
+    {
+      "key": "grieve",
+      "gloss": "grieve (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "grieve", "pos": "verb", "details": {"past": "grieved", "participle": "grieved"}, "sentences": ["They grieve for him."]}
+        ],
+        "nl": [
+        {"lemma": "treuren", "pos": "verb", "details": {"pastSingular": "treurde", "pastPlural": "treurden", "participle": "getreurd", "auxiliary": "hebben"}, "sentences": ["Zij treuren om hem."]}
+        ]
+      }
+    },
+    {
+      "key": "regret",
+      "gloss": "regret (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "regret", "pos": "verb", "details": {"past": "regreted", "participle": "regreted"}, "sentences": ["I regret my words."]}
+        ],
+        "nl": [
+        {"lemma": "betreuren", "pos": "verb", "details": {"pastSingular": "betreurde", "pastPlural": "betreurden", "participle": "betreurd", "auxiliary": "hebben"}, "sentences": ["Ik betreur mijn woorden."]}
+        ]
+      }
+    },
+    {
+      "key": "devilish",
+      "gloss": "devilish (adjective)",
+      "entries": {
+        "en": [
+        {"lemma": "devilish", "pos": "adjective", "sentences": ["The plan is devilish."]}
+        ],
+        "nl": [
+        {"lemma": "duivels", "pos": "adjective", "sentences": ["Het plan is duivels."]}
+        ]
+      }
+    },
+    {
+      "key": "impatient",
+      "gloss": "impatient (adjective)",
+      "entries": {
+        "en": [
+        {"lemma": "impatient", "pos": "adjective", "sentences": ["He is impatient."]}
+        ],
+        "nl": [
+        {"lemma": "ongeduldig", "pos": "adjective", "sentences": ["Hij is ongeduldig."]}
+        ]
+      }
+    },
+    {
+      "key": "desire",
+      "gloss": "desire (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "desire", "pos": "verb", "details": {"past": "desired", "participle": "desired"}, "sentences": ["I desire peace."]}
+        ],
+        "nl": [
+        {"lemma": "begeren", "pos": "verb", "details": {"pastSingular": "begeerde", "pastPlural": "begeerden", "participle": "begeerd", "auxiliary": "hebben"}, "sentences": ["Ik begeer vrede."]}
+        ]
+      }
+    },
+    {
+      "key": "determined",
+      "gloss": "determined (adjective)",
+      "entries": {
+        "en": [
+        {"lemma": "determined", "pos": "adjective", "sentences": ["She is determined."]}
+        ],
+        "nl": [
+        {"lemma": "vastbesloten", "pos": "adjective", "sentences": ["Zij is vastbesloten."]}
+        ]
+      }
+    },
+    {
+      "key": "annoy",
+      "gloss": "annoy (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "annoy", "pos": "verb", "details": {"past": "annoyed", "participle": "annoyed"}, "sentences": ["The noise annoys me."]}
+        ],
+        "nl": [
+        {"lemma": "ergeren", "pos": "verb", "details": {"pastSingular": "ergerde", "pastPlural": "ergerden", "participle": "geërgerd", "auxiliary": "hebben"}, "sentences": ["Het lawaai ergert mij."]}
+        ]
+      }
+    },
+    {
+      "key": "blush",
+      "gloss": "blush (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "blush", "pos": "verb", "details": {"past": "blushed", "participle": "blushed"}, "sentences": ["She blushes."]}
+        ],
+        "nl": [
+        {"lemma": "blozen", "pos": "verb", "details": {"pastSingular": "bloosde", "pastPlural": "bloosden", "participle": "gebloosd", "auxiliary": "hebben"}, "sentences": ["Zij bloost."]}
+        ]
+      }
+    },
+    {
+      "key": "cheer-up",
+      "gloss": "cheer up (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "cheer up", "pos": "verb", "details": {"past": "cheered up", "participle": "cheered up"}, "sentences": ["I cheer up my friend."]}
+        ],
+        "nl": [
+        {"lemma": "opvrolijken", "pos": "verb", "details": {"pastSingular": "vrolijkte op", "pastPlural": "vrolijkten op", "participle": "opgevrolijkt", "auxiliary": "hebben"}, "sentences": ["Ik vrolijk mijn vriend op."]}
+        ]
+      }
+    },
+    {
+      "key": "urge",
+      "gloss": "urge (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "urge", "pos": "noun", "details": {"uncountable": true}, "sentences": ["I feel an urge."]}
+        ],
+        "nl": [
+        {"lemma": "drang", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Ik voel een drang."]}
+        ]
+      }
+    },
+    {
+      "key": "integrity",
+      "gloss": "integrity (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "integrity", "pos": "noun", "details": {"uncountable": true}, "sentences": ["He has integrity."]}
+        ],
+        "nl": [
+        {"lemma": "integriteit", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Hij heeft integriteit."]}
+        ]
+      }
+    },
+    {
+      "key": "thrifty",
+      "gloss": "thrifty (adjective)",
+      "entries": {
+        "en": [
+        {"lemma": "thrifty", "pos": "adjective", "sentences": ["She is thrifty."]}
+        ],
+        "nl": [
+        {"lemma": "zuinig", "pos": "adjective", "sentences": ["Zij is zuinig."]}
         ]
       }
     }

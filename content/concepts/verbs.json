@@ -386,7 +386,7 @@
       }
     },
     {
-      "key": "play-verb",
+      "key": "play-verb-spelen",
       "gloss": "play (take part in a game)",
       "entries": {
         "en": [
@@ -470,7 +470,7 @@
       }
     },
     {
-      "key": "find",
+      "key": "find-verb",
       "gloss": "find (come across or locate)",
       "entries": {
         "en": [
@@ -699,7 +699,7 @@
       }
     },
     {
-      "key": "try",
+      "key": "try-verb-proberen",
       "gloss": "try (verb)",
       "entries": {
         "en": [
@@ -1251,7 +1251,7 @@
       }
     },
     {
-      "key": "throw",
+      "key": "throw-verb",
       "gloss": "throw (verb)",
       "entries": {
         "en": [
@@ -1491,7 +1491,7 @@
       }
     },
     {
-      "key": "fit",
+      "key": "fit-verb",
       "gloss": "fit (verb)",
       "entries": {
         "en": [
@@ -1971,7 +1971,7 @@
       }
     },
     {
-      "key": "argument",
+      "key": "argument-noun-ruzie",
       "gloss": "argument (noun)",
       "entries": {
         "en": [
@@ -2391,7 +2391,7 @@
       }
     },
     {
-      "key": "beg",
+      "key": "beg-verb-smeken",
       "gloss": "beg (verb)",
       "entries": {
         "en": [
@@ -2655,7 +2655,7 @@
       }
     },
     {
-      "key": "concern",
+      "key": "concern-verb",
       "gloss": "concern (verb)",
       "entries": {
         "en": [
@@ -3039,7 +3039,7 @@
       }
     },
     {
-      "key": "apply",
+      "key": "apply-verb-gelden",
       "gloss": "apply (be valid)",
       "entries": {
         "en": [
@@ -3087,7 +3087,7 @@
       }
     },
     {
-      "key": "claim",
+      "key": "claim-verb-beweren",
       "gloss": "claim (verb)",
       "entries": {
         "en": [
@@ -3891,7 +3891,7 @@
       }
     },
     {
-      "key": "guarantee",
+      "key": "guarantee-verb",
       "gloss": "guarantee (verb)",
       "entries": {
         "en": [
@@ -4119,7 +4119,7 @@
       }
     },
     {
-      "key": "crack",
+      "key": "crack-verb",
       "gloss": "crack (verb)",
       "entries": {
         "en": [
@@ -4659,7 +4659,7 @@
       }
     },
     {
-      "key": "pass",
+      "key": "pass-verb-passeren",
       "gloss": "pass (verb)",
       "entries": {
         "en": [
@@ -4779,7 +4779,7 @@
       }
     },
     {
-      "key": "turn-off",
+      "key": "turn-off-verb-uitzetten",
       "gloss": "turn off (verb)",
       "entries": {
         "en": [
@@ -6131,6 +6131,1254 @@
         ],
         "nl": [
         {"lemma": "uiten", "pos": "verb", "details": {"pastSingular": "uitte", "pastPlural": "uitten", "participle": "geuit", "auxiliary": "hebben"}, "sentences": ["Ik uit mijn mening."]}
+        ]
+      }
+    },
+    {
+      "key": "refrain",
+      "gloss": "refrain (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "refrain", "pos": "verb", "details": {"past": "refrained", "participle": "refrained"}, "sentences": ["I refrain from comment."]}
+        ],
+        "nl": [
+        {"lemma": "afzien", "pos": "verb", "details": {"pastSingular": "zag af", "pastPlural": "zagen af", "participle": "afgezien", "auxiliary": "hebben"}, "sentences": ["Ik zie af van commentaar."]}
+        ]
+      }
+    },
+    {
+      "key": "overtake",
+      "gloss": "overtake (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "overtake", "pos": "verb", "details": {"past": "overtook", "participle": "overtaken"}, "sentences": ["The car overtakes the bus."]}
+        ],
+        "nl": [
+        {"lemma": "inhalen", "pos": "verb", "details": {"pastSingular": "haalde in", "pastPlural": "haalden in", "participle": "ingehaald", "auxiliary": "hebben"}, "sentences": ["De auto haalt de bus in."]}
+        ]
+      }
+    },
+    {
+      "key": "reduce",
+      "gloss": "reduce (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "reduce", "pos": "verb", "details": {"past": "reduced", "participle": "reduced"}, "sentences": ["We reduce the costs."]}
+        ],
+        "nl": [
+        {"lemma": "verminderen", "pos": "verb", "details": {"pastSingular": "verminderde", "pastPlural": "verminderden", "participle": "verminderd", "auxiliary": "hebben/zijn"}, "sentences": ["Wij verminderen de kosten."]}
+        ]
+      }
+    },
+    {
+      "key": "drive-away-verb-verdrijven",
+      "gloss": "drive away (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "drive away", "pos": "verb", "details": {"past": "drove away", "participle": "driven away"}, "sentences": ["The sun drives away the clouds."]}
+        ],
+        "nl": [
+        {"lemma": "verdrijven", "pos": "verb", "details": {"pastSingular": "verdreef", "pastPlural": "verdreven", "participle": "verdreven", "auxiliary": "hebben"}, "sentences": ["De zon verdrijft de wolken."]}
+        ]
+      }
+    },
+    {
+      "key": "burst-in",
+      "gloss": "burst in (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "burst in", "pos": "verb", "details": {"past": "burst in", "participle": "burst in"}, "sentences": ["The police burst in."]}
+        ],
+        "nl": [
+        {"lemma": "binnenvallen", "pos": "verb", "details": {"pastSingular": "viel binnen", "pastPlural": "vielen binnen", "participle": "binnengevallen", "auxiliary": "zijn"}, "sentences": ["De politie viel binnen."]}
+        ]
+      }
+    },
+    {
+      "key": "mess-up",
+      "gloss": "mess up (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "mess up", "pos": "verb", "details": {"past": "messed up", "participle": "messed up"}, "sentences": ["I mess up the work."]}
+        ],
+        "nl": [
+        {"lemma": "verknoeien", "pos": "verb", "details": {"pastSingular": "verknoeide", "pastPlural": "verknoeiden", "participle": "verknoeid", "auxiliary": "hebben"}, "sentences": ["Ik verknoei het werk."]}
+        ]
+      }
+    },
+    {
+      "key": "break-out",
+      "gloss": "break out (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "break out", "pos": "verb", "details": {"past": "broke out", "participle": "broken out"}, "sentences": ["A war broke out."]}
+        ],
+        "nl": [
+        {"lemma": "uitbreken", "pos": "verb", "details": {"pastSingular": "brak uit", "pastPlural": "braken uit", "participle": "uitgebroken", "auxiliary": "zijn"}, "sentences": ["Er brak een oorlog uit."]}
+        ]
+      }
+    },
+    {
+      "key": "give-away",
+      "gloss": "give away (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "give away", "pos": "verb", "details": {"past": "gave away", "participle": "given away"}, "sentences": ["I give away the books."]}
+        ],
+        "nl": [
+        {"lemma": "weggeven", "pos": "verb", "details": {"pastSingular": "gaf weg", "pastPlural": "gaven weg", "participle": "weggegeven", "auxiliary": "hebben"}, "sentences": ["Ik geef de boeken weg."]}
+        ]
+      }
+    },
+    {
+      "key": "hand-out",
+      "gloss": "hand out (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "hand out", "pos": "verb", "details": {"past": "handed out", "participle": "handed out"}, "sentences": ["I hand out the papers."]}
+        ],
+        "nl": [
+        {"lemma": "uitdelen", "pos": "verb", "details": {"pastSingular": "deelde uit", "pastPlural": "deelden uit", "participle": "uitgedeeld", "auxiliary": "hebben"}, "sentences": ["Ik deel de papieren uit."]}
+        ]
+      }
+    },
+    {
+      "key": "pump-verb",
+      "gloss": "pump (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "pump", "pos": "verb", "details": {"past": "pumped", "participle": "pumped"}, "sentences": ["I pump water."]}
+        ],
+        "nl": [
+        {"lemma": "pompen", "pos": "verb", "details": {"pastSingular": "pompte", "pastPlural": "pompten", "participle": "gepompt", "auxiliary": "hebben"}, "sentences": ["Ik pomp water."]}
+        ]
+      }
+    },
+    {
+      "key": "address-verb",
+      "gloss": "address (speak to)",
+      "entries": {
+        "en": [
+        {"lemma": "address (speak to)", "pos": "verb", "details": {"past": "addressed", "participle": "addressed"}, "sentences": ["I address the man."]}
+        ],
+        "nl": [
+        {"lemma": "aanspreken", "pos": "verb", "details": {"pastSingular": "sprak aan", "pastPlural": "spraken aan", "participle": "aangesproken", "auxiliary": "hebben"}, "sentences": ["Ik spreek de man aan."]}
+        ]
+      }
+    },
+    {
+      "key": "slip",
+      "gloss": "slip (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "slip", "pos": "verb", "details": {"past": "sliped", "participle": "sliped"}, "sentences": ["The soap slips away."]}
+        ],
+        "nl": [
+        {"lemma": "glippen", "pos": "verb", "details": {"pastSingular": "glipte", "pastPlural": "glipten", "participle": "geglipt", "auxiliary": "zijn"}, "sentences": ["De zeep glipt weg."]}
+        ]
+      }
+    },
+    {
+      "key": "scold",
+      "gloss": "scold (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "scold", "pos": "verb", "details": {"past": "scolded", "participle": "scolded"}, "sentences": ["The father scolds the boy."]}
+        ],
+        "nl": [
+        {"lemma": "schelden", "pos": "verb", "details": {"pastSingular": "schold", "pastPlural": "scholden", "participle": "gescholden", "auxiliary": "hebben"}, "sentences": ["De vader scheldt de jongen uit."]}
+        ]
+      }
+    },
+    {
+      "key": "convey",
+      "gloss": "convey (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "convey", "pos": "verb", "details": {"past": "conveyed", "participle": "conveyed"}, "sentences": ["I convey the message."]}
+        ],
+        "nl": [
+        {"lemma": "overbrengen", "pos": "verb", "details": {"pastSingular": "bracht over", "pastPlural": "brachten over", "participle": "overgebracht", "auxiliary": "hebben"}, "sentences": ["Ik breng de boodschap over."]}
+        ]
+      }
+    },
+    {
+      "key": "enlarge",
+      "gloss": "enlarge (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "enlarge", "pos": "verb", "details": {"past": "enlarged", "participle": "enlarged"}, "sentences": ["I enlarge the photo."]}
+        ],
+        "nl": [
+        {"lemma": "vergroten", "pos": "verb", "details": {"pastSingular": "vergrootte", "pastPlural": "vergrootten", "participle": "vergroot", "auxiliary": "hebben"}, "sentences": ["Ik vergroot de foto."]}
+        ]
+      }
+    },
+    {
+      "key": "try-out",
+      "gloss": "try out (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "try out", "pos": "verb", "details": {"past": "tried out", "participle": "tried out"}, "sentences": ["I try out the new phone."]}
+        ],
+        "nl": [
+        {"lemma": "uitproberen", "pos": "verb", "details": {"pastSingular": "probeerde uit", "pastPlural": "probeerden uit", "participle": "uitgeprobeerd", "auxiliary": "hebben"}, "sentences": ["Ik probeer de nieuwe telefoon uit."]}
+        ]
+      }
+    },
+    {
+      "key": "collect-verb-afhalen",
+      "gloss": "collect (pick up)",
+      "entries": {
+        "en": [
+        {"lemma": "collect (pick up)", "pos": "verb", "details": {"past": "collected", "participle": "collected"}, "sentences": ["I collect the package."]}
+        ],
+        "nl": [
+        {"lemma": "afhalen", "pos": "verb", "details": {"pastSingular": "haalde af", "pastPlural": "haalden af", "participle": "afgehaald", "auxiliary": "hebben"}, "sentences": ["Ik haal het pakket af."]}
+        ]
+      }
+    },
+    {
+      "key": "surpass",
+      "gloss": "surpass (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "surpass", "pos": "verb", "details": {"past": "surpassed", "participle": "surpassed"}, "sentences": ["He surpasses me."]}
+        ],
+        "nl": [
+        {"lemma": "overtreffen", "pos": "verb", "details": {"pastSingular": "overtrof", "pastPlural": "overtroffen", "participle": "overtroffen", "auxiliary": "hebben"}, "sentences": ["Hij overtreft mij."]}
+        ]
+      }
+    },
+    {
+      "key": "estimate",
+      "gloss": "estimate (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "estimate", "pos": "verb", "details": {"past": "estimated", "participle": "estimated"}, "sentences": ["I estimate the cost."]}
+        ],
+        "nl": [
+        {"lemma": "schatten", "pos": "verb", "details": {"pastSingular": "schatte", "pastPlural": "schatten", "participle": "geschat", "auxiliary": "hebben"}, "sentences": ["Ik schat de kosten."]}
+        ]
+      }
+    },
+    {
+      "key": "enter",
+      "gloss": "enter (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "enter", "pos": "verb", "details": {"past": "entered", "participle": "entered"}, "sentences": ["We enter the house."]}
+        ],
+        "nl": [
+        {"lemma": "binnengaan", "pos": "verb", "details": {"pastSingular": "ging binnen", "pastPlural": "gingen binnen", "participle": "binnengegaan", "auxiliary": "zijn"}, "sentences": ["Wij gaan het huis binnen."]}
+        ]
+      }
+    },
+    {
+      "key": "charity",
+      "gloss": "charity (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "charity", "pos": "noun", "details": {"uncountable": true}, "sentences": ["He gives to charity."]}
+        ],
+        "nl": [
+        {"lemma": "liefdadigheid", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Hij geeft aan liefdadigheid."]}
+        ]
+      }
+    },
+    {
+      "key": "eliminate",
+      "gloss": "eliminate (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "eliminate", "pos": "verb", "details": {"past": "eliminated", "participle": "eliminated"}, "sentences": ["We eliminate the error."]}
+        ],
+        "nl": [
+        {"lemma": "elimineren", "pos": "verb", "details": {"pastSingular": "elimineerde", "pastPlural": "elimineerden", "participle": "geëlimineerd", "auxiliary": "hebben"}, "sentences": ["Wij elimineren de fout."]}
+        ]
+      }
+    },
+    {
+      "key": "die-out",
+      "gloss": "die out (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "die out", "pos": "verb", "details": {"past": "died out", "participle": "died out"}, "sentences": ["The dinosaurs died out."]}
+        ],
+        "nl": [
+        {"lemma": "uitsterven", "pos": "verb", "details": {"pastSingular": "stierf uit", "pastPlural": "stierven uit", "participle": "uitgestorven", "auxiliary": "zijn"}, "sentences": ["De dinosaurussen stierven uit."]}
+        ]
+      }
+    },
+    {
+      "key": "see-again",
+      "gloss": "see again (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "see again", "pos": "verb", "details": {"past": "saw again", "participle": "seen again"}, "sentences": ["I see you again tomorrow."]}
+        ],
+        "nl": [
+        {"lemma": "terugzien", "pos": "verb", "details": {"pastSingular": "zag terug", "pastPlural": "zagen terug", "participle": "teruggezien", "auxiliary": "hebben"}, "sentences": ["Ik zie je morgen terug."]}
+        ]
+      }
+    },
+    {
+      "key": "bluff",
+      "gloss": "bluff (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "bluff", "pos": "verb", "details": {"past": "bluffed", "participle": "bluffed"}, "sentences": ["He is bluffing."]}
+        ],
+        "nl": [
+        {"lemma": "bluffen", "pos": "verb", "details": {"pastSingular": "bluffte", "pastPlural": "bluften", "participle": "gebluft", "auxiliary": "hebben"}, "sentences": ["Hij bluft."]}
+        ]
+      }
+    },
+    {
+      "key": "stimulate",
+      "gloss": "stimulate (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "stimulate", "pos": "verb", "details": {"past": "stimulated", "participle": "stimulated"}, "sentences": ["We stimulate the children."]}
+        ],
+        "nl": [
+        {"lemma": "stimuleren", "pos": "verb", "details": {"pastSingular": "stimuleerde", "pastPlural": "stimuleerden", "participle": "gestimuleerd", "auxiliary": "hebben"}, "sentences": ["Wij stimuleren de kinderen."]}
+        ]
+      }
+    },
+    {
+      "key": "keep-watch",
+      "gloss": "keep watch (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "keep watch", "pos": "verb", "details": {"past": "kept watch", "participle": "kept watch"}, "sentences": ["I keep watch at night."]}
+        ],
+        "nl": [
+        {"lemma": "waken", "pos": "verb", "details": {"pastSingular": "waakte", "pastPlural": "waakten", "participle": "gewaakt", "auxiliary": "hebben"}, "sentences": ["Ik waak 's nachts."]}
+        ]
+      }
+    },
+    {
+      "key": "iron-verb",
+      "gloss": "iron (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "iron", "pos": "verb", "details": {"past": "ironed", "participle": "ironed"}, "sentences": ["I iron the shirt."]}
+        ],
+        "nl": [
+        {"lemma": "strijken", "pos": "verb", "details": {"pastSingular": "streek", "pastPlural": "streken", "participle": "gestreken", "auxiliary": "hebben"}, "sentences": ["Ik strijk het overhemd."]}
+        ]
+      }
+    },
+    {
+      "key": "renovate",
+      "gloss": "renovate (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "renovate", "pos": "verb", "details": {"past": "renovated", "participle": "renovated"}, "sentences": ["We renovate the house."]}
+        ],
+        "nl": [
+        {"lemma": "verbouwen", "pos": "verb", "details": {"pastSingular": "verbouwde", "pastPlural": "verbouwden", "participle": "verbouwd", "auxiliary": "hebben"}, "sentences": ["Wij verbouwen het huis."]}
+        ]
+      }
+    },
+    {
+      "key": "disguise-verb",
+      "gloss": "disguise (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "disguise", "pos": "verb", "details": {"past": "disguised", "participle": "disguised"}, "sentences": ["He disguises himself."]}
+        ],
+        "nl": [
+        {"lemma": "vermommen", "pos": "verb", "details": {"pastSingular": "vermomde", "pastPlural": "vermomden", "participle": "vermomd", "auxiliary": "hebben"}, "sentences": ["Hij vermomt zich."]}
+        ]
+      }
+    },
+    {
+      "key": "send-back",
+      "gloss": "send back (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "send back", "pos": "verb", "details": {"past": "sent back", "participle": "sent back"}, "sentences": ["I send the package back."]}
+        ],
+        "nl": [
+        {"lemma": "terugsturen", "pos": "verb", "details": {"pastSingular": "stuurde terug", "pastPlural": "stuurden terug", "participle": "teruggestuurd", "auxiliary": "hebben"}, "sentences": ["Ik stuur het pakket terug."]}
+        ]
+      }
+    },
+    {
+      "key": "announce",
+      "gloss": "announce (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "announce", "pos": "verb", "details": {"past": "announced", "participle": "announced"}, "sentences": ["They announce the news."]}
+        ],
+        "nl": [
+        {"lemma": "aankondigen", "pos": "verb", "details": {"pastSingular": "kondigde aan", "pastPlural": "kondigden aan", "participle": "aangekondigd", "auxiliary": "hebben"}, "sentences": ["Zij kondigen het nieuws aan."]}
+        ]
+      }
+    },
+    {
+      "key": "blind-verb",
+      "gloss": "blind (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "blind", "pos": "verb", "details": {"past": "blinded", "participle": "blinded"}, "sentences": ["The light blinds me."]}
+        ],
+        "nl": [
+        {"lemma": "verblinden", "pos": "verb", "details": {"pastSingular": "verblindde", "pastPlural": "verblindden", "participle": "verblind", "auxiliary": "hebben"}, "sentences": ["Het licht verblindt mij."]}
+        ]
+      }
+    },
+    {
+      "key": "chase-away",
+      "gloss": "chase away (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "chase away", "pos": "verb", "details": {"past": "chased away", "participle": "chased away"}, "sentences": ["I chase the dog away."]}
+        ],
+        "nl": [
+        {"lemma": "verjagen", "pos": "verb", "details": {"pastSingular": "verjoeg", "pastPlural": "verjoegen", "participle": "verjaagd", "auxiliary": "hebben"}, "sentences": ["Ik verjaag de hond."]}
+        ]
+      }
+    },
+    {
+      "key": "correct-verb",
+      "gloss": "correct (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "correct", "pos": "verb", "details": {"past": "corrected", "participle": "corrected"}, "sentences": ["I correct the mistake."]}
+        ],
+        "nl": [
+        {"lemma": "rechtzetten", "pos": "verb", "details": {"pastSingular": "zette recht", "pastPlural": "zetten recht", "participle": "rechtgezet", "auxiliary": "hebben"}, "sentences": ["Ik zet de fout recht."]}
+        ]
+      }
+    },
+    {
+      "key": "break-through",
+      "gloss": "break through (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "break through", "pos": "verb", "details": {"past": "broke through", "participle": "broken through"}, "sentences": ["The sun breaks through the clouds."]}
+        ],
+        "nl": [
+        {"lemma": "doorbreken", "pos": "verb", "details": {"pastSingular": "brak door", "pastPlural": "braken door", "participle": "doorgebroken", "auxiliary": "zijn"}, "sentences": ["De zon breekt door de wolken."]}
+        ]
+      }
+    },
+    {
+      "key": "forgiveness-noun-vergeving",
+      "gloss": "forgiveness (pardon)",
+      "entries": {
+        "en": [
+        {"lemma": "forgiveness (pardon)", "pos": "noun", "details": {"uncountable": true}, "sentences": ["I ask for forgiveness."]}
+        ],
+        "nl": [
+        {"lemma": "vergeving", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Ik vraag om vergeving."]}
+        ]
+      }
+    },
+    {
+      "key": "get-to-know",
+      "gloss": "get to know (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "get to know", "pos": "verb", "details": {"past": "got to know", "participle": "got to know"}, "sentences": ["I get to know my neighbors."]}
+        ],
+        "nl": [
+        {"lemma": "kennismaken", "pos": "verb", "details": {"pastSingular": "maakte kennis", "pastPlural": "maakten kennis", "participle": "kennisgemaakt", "auxiliary": "hebben"}, "sentences": ["Ik maak kennis met mijn buren."]}
+        ]
+      }
+    },
+    {
+      "key": "assist",
+      "gloss": "assist (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "assist", "pos": "verb", "details": {"past": "assisted", "participle": "assisted"}, "sentences": ["I assist my friend."]}
+        ],
+        "nl": [
+        {"lemma": "bijstaan", "pos": "verb", "details": {"pastSingular": "stond bij", "pastPlural": "stonden bij", "participle": "bijgestaan", "auxiliary": "hebben"}, "sentences": ["Ik sta mijn vriend bij."]}
+        ]
+      }
+    },
+    {
+      "key": "intervene",
+      "gloss": "intervene (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "intervene", "pos": "verb", "details": {"past": "intervened", "participle": "intervened"}, "sentences": ["The police intervene."]}
+        ],
+        "nl": [
+        {"lemma": "ingrijpen", "pos": "verb", "details": {"pastSingular": "greep in", "pastPlural": "grepen in", "participle": "ingegrepen", "auxiliary": "hebben"}, "sentences": ["De politie grijpt in."]}
+        ]
+      }
+    },
+    {
+      "key": "intimidate",
+      "gloss": "intimidate (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "intimidate", "pos": "verb", "details": {"past": "intimidated", "participle": "intimidated"}, "sentences": ["They intimidate the witness."]}
+        ],
+        "nl": [
+        {"lemma": "intimideren", "pos": "verb", "details": {"pastSingular": "intimideerde", "pastPlural": "intimideerden", "participle": "geïntimideerd", "auxiliary": "hebben"}, "sentences": ["Zij intimideren de getuige."]}
+        ]
+      }
+    },
+    {
+      "key": "demonstrate",
+      "gloss": "demonstrate (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "demonstrate", "pos": "verb", "details": {"past": "demonstrated", "participle": "demonstrated"}, "sentences": ["The study demonstrates it."]}
+        ],
+        "nl": [
+        {"lemma": "aantonen", "pos": "verb", "details": {"pastSingular": "toonde aan", "pastPlural": "toonden aan", "participle": "aangetoond", "auxiliary": "hebben"}, "sentences": ["Het onderzoek toont het aan."]}
+        ]
+      }
+    },
+    {
+      "key": "tolerate",
+      "gloss": "tolerate (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "tolerate", "pos": "verb", "details": {"past": "tolerated", "participle": "tolerated"}, "sentences": ["I do not tolerate it."]}
+        ],
+        "nl": [
+        {"lemma": "tolereren", "pos": "verb", "details": {"pastSingular": "tolereerde", "pastPlural": "tolereerden", "participle": "getolereerd", "auxiliary": "hebben"}, "sentences": ["Ik tolereer het niet."]}
+        ]
+      }
+    },
+    {
+      "key": "dig-up",
+      "gloss": "dig up (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "dig up", "pos": "verb", "details": {"past": "dug up", "participle": "dug up"}, "sentences": ["They dig up the old bones."]}
+        ],
+        "nl": [
+        {"lemma": "opgraven", "pos": "verb", "details": {"pastSingular": "groef op", "pastPlural": "groeven op", "participle": "opgegraven", "auxiliary": "hebben"}, "sentences": ["Zij graven de oude botten op."]}
+        ]
+      }
+    },
+    {
+      "key": "impose",
+      "gloss": "impose (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "impose", "pos": "verb", "details": {"past": "imposed", "participle": "imposed"}, "sentences": ["They impose a rule."]}
+        ],
+        "nl": [
+        {"lemma": "opleggen", "pos": "verb", "details": {"pastSingular": "legde op", "pastPlural": "legden op", "participle": "opgelegd", "auxiliary": "hebben"}, "sentences": ["Zij leggen een regel op."]}
+        ]
+      }
+    },
+    {
+      "key": "warm-up",
+      "gloss": "warm up (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "warm up", "pos": "verb", "details": {"past": "warmed up", "participle": "warmed up"}, "sentences": ["I warm up the soup."]}
+        ],
+        "nl": [
+        {"lemma": "opwarmen", "pos": "verb", "details": {"pastSingular": "warmde op", "pastPlural": "warmden op", "participle": "opgewarmd", "auxiliary": "hebben"}, "sentences": ["Ik warm de soep op."]}
+        ]
+      }
+    },
+    {
+      "key": "roam",
+      "gloss": "roam (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "roam", "pos": "verb", "details": {"past": "roamed", "participle": "roamed"}, "sentences": ["The dog roams around."]}
+        ],
+        "nl": [
+        {"lemma": "zwerven", "pos": "verb", "details": {"pastSingular": "zwierf", "pastPlural": "zwierven", "participle": "gezworven", "auxiliary": "hebben"}, "sentences": ["De hond zwerft rond."]}
+        ]
+      }
+    },
+    {
+      "key": "gossip-noun",
+      "gloss": "gossip (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "gossip", "pos": "noun", "details": {"plural": "gossips"}, "sentences": ["That is gossip."]}
+        ],
+        "nl": [
+        {"lemma": "roddel", "pos": "noun", "details": {"article": "de", "plural": "roddels"}, "sentences": ["Dat is een roddel."]}
+        ]
+      }
+    },
+    {
+      "key": "put-away",
+      "gloss": "put away (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "put away", "pos": "verb", "details": {"past": "put away", "participle": "put away"}, "sentences": ["I put away the clothes."]}
+        ],
+        "nl": [
+        {"lemma": "opbergen", "pos": "verb", "details": {"pastSingular": "borg op", "pastPlural": "borgen op", "participle": "opgeborgen", "auxiliary": "hebben"}, "sentences": ["Ik berg de kleren op."]}
+        ]
+      }
+    },
+    {
+      "key": "stick-out",
+      "gloss": "stick out (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "stick out", "pos": "verb", "details": {"past": "stuck out", "participle": "stuck out"}, "sentences": ["He sticks out his tongue."]}
+        ],
+        "nl": [
+        {"lemma": "uitsteken", "pos": "verb", "details": {"pastSingular": "stak uit", "pastPlural": "staken uit", "participle": "uitgestoken", "auxiliary": "hebben"}, "sentences": ["Hij steekt zijn tong uit."]}
+        ]
+      }
+    },
+    {
+      "key": "whistle",
+      "gloss": "whistle (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "whistle", "pos": "verb", "details": {"past": "whistled", "participle": "whistled"}, "sentences": ["He whistles a song."]}
+        ],
+        "nl": [
+        {"lemma": "fluiten", "pos": "verb", "details": {"pastSingular": "floot", "pastPlural": "floten", "participle": "gefloten", "auxiliary": "hebben"}, "sentences": ["Hij fluit een liedje."]}
+        ]
+      }
+    },
+    {
+      "key": "imagine",
+      "gloss": "imagine (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "imagine", "pos": "verb", "details": {"past": "imagined", "participle": "imagined"}, "sentences": ["I imagine a house."]}
+        ],
+        "nl": [
+        {"lemma": "verbeelden", "pos": "verb", "details": {"pastSingular": "verbeeldde", "pastPlural": "verbeeldden", "participle": "verbeeld", "auxiliary": "hebben"}, "sentences": ["Ik verbeeld me een huis."]}
+        ]
+      }
+    },
+    {
+      "key": "lower",
+      "gloss": "lower (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "lower", "pos": "verb", "details": {"past": "lowered", "participle": "lowered"}, "sentences": ["They lower the price."]}
+        ],
+        "nl": [
+        {"lemma": "verlagen", "pos": "verb", "details": {"pastSingular": "verlaagde", "pastPlural": "verlaagden", "participle": "verlaagd", "auxiliary": "hebben"}, "sentences": ["Zij verlagen de prijs."]}
+        ]
+      }
+    },
+    {
+      "key": "name-after",
+      "gloss": "name after (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "name after", "pos": "verb", "details": {"past": "named after", "participle": "named after"}, "sentences": ["They name the child after his grandfather."]}
+        ],
+        "nl": [
+        {"lemma": "vernoemen", "pos": "verb", "details": {"pastSingular": "vernoemde", "pastPlural": "vernoemden", "participle": "vernoemd", "auxiliary": "hebben"}, "sentences": ["Zij vernoemen het kind naar zijn opa."]}
+        ]
+      }
+    },
+    {
+      "key": "peek",
+      "gloss": "peek (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "peek", "pos": "verb", "details": {"past": "peeked", "participle": "peeked"}, "sentences": ["The child peeks through the door."]}
+        ],
+        "nl": [
+        {"lemma": "gluren", "pos": "verb", "details": {"pastSingular": "gluurde", "pastPlural": "gluurden", "participle": "gegluurd", "auxiliary": "hebben"}, "sentences": ["Het kind gluurt door de deur."]}
+        ]
+      }
+    },
+    {
+      "key": "limit",
+      "gloss": "limit (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "limit", "pos": "verb", "details": {"past": "limited", "participle": "limited"}, "sentences": ["We limit the costs."]}
+        ],
+        "nl": [
+        {"lemma": "beperken", "pos": "verb", "details": {"pastSingular": "beperkte", "pastPlural": "beperkten", "participle": "beperkt", "auxiliary": "hebben"}, "sentences": ["Wij beperken de kosten."]}
+        ]
+      }
+    },
+    {
+      "key": "progress-verb",
+      "gloss": "progress (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "progress", "pos": "verb", "details": {"past": "progressed", "participle": "progressed"}, "sentences": ["The work progresses."]}
+        ],
+        "nl": [
+        {"lemma": "vorderen", "pos": "verb", "details": {"pastSingular": "vorderde", "pastPlural": "vorderden", "participle": "gevorderd", "auxiliary": "hebben/zijn"}, "sentences": ["Het werk vordert."]}
+        ]
+      }
+    },
+    {
+      "key": "spill",
+      "gloss": "spill (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "spill", "pos": "verb", "details": {"past": "spilled", "participle": "spilled"}, "sentences": ["I spill the coffee."]}
+        ],
+        "nl": [
+        {"lemma": "morsen", "pos": "verb", "details": {"pastSingular": "morste", "pastPlural": "morsten", "participle": "gemorst", "auxiliary": "hebben"}, "sentences": ["Ik mors de koffie."]}
+        ]
+      }
+    },
+    {
+      "key": "little-talk",
+      "gloss": "little talk (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "little talk", "pos": "noun", "details": {"plural": "little talks"}, "sentences": ["We have a little talk."]}
+        ],
+        "nl": [
+        {"lemma": "praatje", "pos": "noun", "details": {"article": "het", "plural": "praatjes"}, "sentences": ["Wij maken een praatje."]}
+        ]
+      }
+    },
+    {
+      "key": "cool-down",
+      "gloss": "cool down (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "cool down", "pos": "verb", "details": {"past": "cooled down", "participle": "cooled down"}, "sentences": ["The soup cools down."]}
+        ],
+        "nl": [
+        {"lemma": "afkoelen", "pos": "verb", "details": {"pastSingular": "koelde af", "pastPlural": "koelden af", "participle": "afgekoeld", "auxiliary": "hebben/zijn"}, "sentences": ["De soep koelt af."]}
+        ]
+      }
+    },
+    {
+      "key": "decipher",
+      "gloss": "decipher (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "decipher", "pos": "verb", "details": {"past": "deciphered", "participle": "deciphered"}, "sentences": ["I decipher the code."]}
+        ],
+        "nl": [
+        {"lemma": "ontcijferen", "pos": "verb", "details": {"pastSingular": "ontcijferde", "pastPlural": "ontcijferden", "participle": "ontcijferd", "auxiliary": "hebben"}, "sentences": ["Ik ontcijfer de code."]}
+        ]
+      }
+    },
+    {
+      "key": "encourage",
+      "gloss": "encourage (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "encourage", "pos": "verb", "details": {"past": "encouraged", "participle": "encouraged"}, "sentences": ["I encourage my friend."]}
+        ],
+        "nl": [
+        {"lemma": "aanmoedigen", "pos": "verb", "details": {"pastSingular": "moedigde aan", "pastPlural": "moedigden aan", "participle": "aangemoedigd", "auxiliary": "hebben"}, "sentences": ["Ik moedig mijn vriend aan."]}
+        ]
+      }
+    },
+    {
+      "key": "fantasize",
+      "gloss": "fantasize (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "fantasize", "pos": "verb", "details": {"past": "fantasized", "participle": "fantasized"}, "sentences": ["I fantasize about a trip."]}
+        ],
+        "nl": [
+        {"lemma": "fantaseren", "pos": "verb", "details": {"pastSingular": "fantaseerde", "pastPlural": "fantaseerden", "participle": "gefantaseerd", "auxiliary": "hebben"}, "sentences": ["Ik fantaseer over een reis."]}
+        ]
+      }
+    },
+    {
+      "key": "agree",
+      "gloss": "agree (consent)",
+      "entries": {
+        "en": [
+        {"lemma": "agree (consent)", "pos": "verb", "details": {"past": "agreed", "participle": "agreed"}, "sentences": ["I agree with the plan."]}
+        ],
+        "nl": [
+        {"lemma": "instemmen", "pos": "verb", "details": {"pastSingular": "stemde in", "pastPlural": "stemden in", "participle": "ingestemd", "auxiliary": "hebben"}, "sentences": ["Ik stem in met het plan."]}
+        ]
+      }
+    },
+    {
+      "key": "wander",
+      "gloss": "wander (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "wander", "pos": "verb", "details": {"past": "wandered", "participle": "wandered"}, "sentences": ["We wander through the city."]}
+        ],
+        "nl": [
+        {"lemma": "dwalen", "pos": "verb", "details": {"pastSingular": "dwaalde", "pastPlural": "dwaalden", "participle": "gedwaald", "auxiliary": "hebben"}, "sentences": ["Wij dwalen door de stad."]}
+        ]
+      }
+    },
+    {
+      "key": "blink",
+      "gloss": "blink (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "blink", "pos": "verb", "details": {"past": "blinked", "participle": "blinked"}, "sentences": ["I blink my eyes."]}
+        ],
+        "nl": [
+        {"lemma": "knipperen", "pos": "verb", "details": {"pastSingular": "knipperde", "pastPlural": "knipperden", "participle": "geknipperd", "auxiliary": "hebben"}, "sentences": ["Ik knipper met mijn ogen."]}
+        ]
+      }
+    },
+    {
+      "key": "interpret",
+      "gloss": "interpret (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "interpret", "pos": "verb", "details": {"past": "interpreted", "participle": "interpreted"}, "sentences": ["I interpret the sign."]}
+        ],
+        "nl": [
+        {"lemma": "duiden", "pos": "verb", "details": {"pastSingular": "duidde", "pastPlural": "duidden", "participle": "geduid", "auxiliary": "hebben"}, "sentences": ["Ik duid het teken."]}
+        ]
+      }
+    },
+    {
+      "key": "match-verb",
+      "gloss": "match (agree)",
+      "entries": {
+        "en": [
+        {"lemma": "match (agree)", "pos": "verb", "details": {"past": "matched", "participle": "matched"}, "sentences": ["The stories match."]}
+        ],
+        "nl": [
+        {"lemma": "overeenkomen", "pos": "verb", "details": {"pastSingular": "kwam overeen", "pastPlural": "kwamen overeen", "participle": "overeengekomen", "auxiliary": "zijn"}, "sentences": ["De verhalen komen overeen."]}
+        ]
+      }
+    },
+    {
+      "key": "squeak",
+      "gloss": "squeak (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "squeak", "pos": "verb", "details": {"past": "squeaked", "participle": "squeaked"}, "sentences": ["The door squeaks."]}
+        ],
+        "nl": [
+        {"lemma": "piepen", "pos": "verb", "details": {"pastSingular": "piepte", "pastPlural": "piepten", "participle": "gepiept", "auxiliary": "hebben"}, "sentences": ["De deur piept."]}
+        ]
+      }
+    },
+    {
+      "key": "swing",
+      "gloss": "swing (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "swing", "pos": "verb", "details": {"past": "swinged", "participle": "swinged"}, "sentences": ["The child swings."]}
+        ],
+        "nl": [
+        {"lemma": "slingeren", "pos": "verb", "details": {"pastSingular": "slingerde", "pastPlural": "slingerden", "participle": "geslingerd", "auxiliary": "hebben"}, "sentences": ["Het kind slingert."]}
+        ]
+      }
+    },
+    {
+      "key": "tickle",
+      "gloss": "tickle (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "tickle", "pos": "verb", "details": {"past": "tickled", "participle": "tickled"}, "sentences": ["I tickle the baby."]}
+        ],
+        "nl": [
+        {"lemma": "kietelen", "pos": "verb", "details": {"pastSingular": "kietelde", "pastPlural": "kietelden", "participle": "gekieteld", "auxiliary": "hebben"}, "sentences": ["Ik kietel de baby."]}
+        ]
+      }
+    },
+    {
+      "key": "entrust",
+      "gloss": "entrust (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "entrust", "pos": "verb", "details": {"past": "entrusted", "participle": "entrusted"}, "sentences": ["I entrust you with the key."]}
+        ],
+        "nl": [
+        {"lemma": "toevertrouwen", "pos": "verb", "details": {"pastSingular": "vertrouwde toe", "pastPlural": "vertrouwden toe", "participle": "toevertrouwd", "auxiliary": "hebben"}, "sentences": ["Ik vertrouw je de sleutel toe."]}
+        ]
+      }
+    },
+    {
+      "key": "sniff-around",
+      "gloss": "sniff around (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "sniff around", "pos": "verb", "details": {"past": "sniffed around", "participle": "sniffed around"}, "sentences": ["The dog sniffs around."]}
+        ],
+        "nl": [
+        {"lemma": "snuffelen", "pos": "verb", "details": {"pastSingular": "snuffelde", "pastPlural": "snuffelden", "participle": "gesnuffeld", "auxiliary": "hebben"}, "sentences": ["De hond snuffelt rond."]}
+        ]
+      }
+    },
+    {
+      "key": "justify",
+      "gloss": "justify (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "justify", "pos": "verb", "details": {"past": "justified", "participle": "justified"}, "sentences": ["I cannot justify it."]}
+        ],
+        "nl": [
+        {"lemma": "rechtvaardigen", "pos": "verb", "details": {"pastSingular": "rechtvaardigde", "pastPlural": "rechtvaardigden", "participle": "gerechtvaardigd", "auxiliary": "hebben"}, "sentences": ["Ik kan het niet rechtvaardigen."]}
+        ]
+      }
+    },
+    {
+      "key": "call-off",
+      "gloss": "call off (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "call off", "pos": "verb", "details": {"past": "called off", "participle": "called off"}, "sentences": ["They call off the match."]}
+        ],
+        "nl": [
+        {"lemma": "afblazen", "pos": "verb", "details": {"pastSingular": "blies af", "pastPlural": "bliezen af", "participle": "afgeblazen", "auxiliary": "hebben"}, "sentences": ["Zij blazen de wedstrijd af."]}
+        ]
+      }
+    },
+    {
+      "key": "apply-verb-aanbrengen",
+      "gloss": "apply (attach)",
+      "entries": {
+        "en": [
+        {"lemma": "apply (attach)", "pos": "verb", "details": {"past": "applied", "participle": "applied"}, "sentences": ["I apply a layer of paint."]}
+        ],
+        "nl": [
+        {"lemma": "aanbrengen", "pos": "verb", "details": {"pastSingular": "bracht aan", "pastPlural": "brachten aan", "participle": "aangebracht", "auxiliary": "hebben"}, "sentences": ["Ik breng een laag verf aan."]}
+        ]
+      }
+    },
+    {
+      "key": "enclose",
+      "gloss": "enclose (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "enclose", "pos": "verb", "details": {"past": "enclosed", "participle": "enclosed"}, "sentences": ["I enclose a letter."]}
+        ],
+        "nl": [
+        {"lemma": "insluiten", "pos": "verb", "details": {"pastSingular": "sloot in", "pastPlural": "sloten in", "participle": "ingesloten", "auxiliary": "hebben"}, "sentences": ["Ik sluit een brief in."]}
+        ]
+      }
+    },
+    {
+      "key": "jingle",
+      "gloss": "jingle (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "jingle", "pos": "verb", "details": {"past": "jingled", "participle": "jingled"}, "sentences": ["The keys jingle."]}
+        ],
+        "nl": [
+        {"lemma": "rinkelen", "pos": "verb", "details": {"pastSingular": "rinkelde", "pastPlural": "rinkelden", "participle": "gerinkeld", "auxiliary": "hebben"}, "sentences": ["De sleutels rinkelen."]}
+        ]
+      }
+    },
+    {
+      "key": "ignite",
+      "gloss": "ignite (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "ignite", "pos": "verb", "details": {"past": "ignited", "participle": "ignited"}, "sentences": ["I ignite the fire."]}
+        ],
+        "nl": [
+        {"lemma": "ontsteken", "pos": "verb", "details": {"pastSingular": "ontstak", "pastPlural": "ontstaken", "participle": "ontstoken", "auxiliary": "hebben"}, "sentences": ["Ik ontsteek het vuur."]}
+        ]
+      }
+    },
+    {
+      "key": "insist",
+      "gloss": "insist (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "insist", "pos": "verb", "details": {"past": "insisted", "participle": "insisted"}, "sentences": ["I insist on it."]}
+        ],
+        "nl": [
+        {"lemma": "aandringen", "pos": "verb", "details": {"pastSingular": "drong aan", "pastPlural": "drongen aan", "participle": "aangedrongen", "auxiliary": "hebben"}, "sentences": ["Ik dring erop aan."]}
+        ]
+      }
+    },
+    {
+      "key": "mark",
+      "gloss": "mark (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "mark", "pos": "verb", "details": {"past": "marked", "participle": "marked"}, "sentences": ["I mark the date."]}
+        ],
+        "nl": [
+        {"lemma": "markeren", "pos": "verb", "details": {"pastSingular": "markeerde", "pastPlural": "markeerden", "participle": "gemarkeerd", "auxiliary": "hebben"}, "sentences": ["Ik markeer de datum."]}
+        ]
+      }
+    },
+    {
+      "key": "fade",
+      "gloss": "fade (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "fade", "pos": "verb", "details": {"past": "faded", "participle": "faded"}, "sentences": ["The colors fade."]}
+        ],
+        "nl": [
+        {"lemma": "vervagen", "pos": "verb", "details": {"pastSingular": "vervaagde", "pastPlural": "vervaagden", "participle": "vervaagd", "auxiliary": "zijn"}, "sentences": ["De kleuren vervagen."]}
+        ]
+      }
+    },
+    {
+      "key": "pause",
+      "gloss": "pause (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "pause", "pos": "verb", "details": {"past": "paused", "participle": "paused"}, "sentences": ["I pause the film."]}
+        ],
+        "nl": [
+        {"lemma": "pauzeren", "pos": "verb", "details": {"pastSingular": "pauzeerde", "pastPlural": "pauzeerden", "participle": "gepauzeerd", "auxiliary": "hebben"}, "sentences": ["Ik pauzeer de film."]}
+        ]
+      }
+    },
+    {
+      "key": "pierce",
+      "gloss": "pierce (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "pierce", "pos": "verb", "details": {"past": "pierced", "participle": "pierced"}, "sentences": ["The arrow pierces the shield."]}
+        ],
+        "nl": [
+        {"lemma": "doorboren", "pos": "verb", "details": {"pastSingular": "doorboorde", "pastPlural": "doorboorden", "participle": "doorboord", "auxiliary": "hebben"}, "sentences": ["De pijl doorboort het schild."]}
+        ]
+      }
+    },
+    {
+      "key": "participate",
+      "gloss": "participate (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "participate", "pos": "verb", "details": {"past": "participated", "participle": "participated"}, "sentences": ["I participate in the game."]}
+        ],
+        "nl": [
+        {"lemma": "deelnemen", "pos": "verb", "details": {"pastSingular": "nam deel", "pastPlural": "namen deel", "participle": "deelgenomen", "auxiliary": "hebben"}, "sentences": ["Ik neem deel aan het spel."]}
+        ]
+      }
+    },
+    {
+      "key": "seal-verb",
+      "gloss": "seal (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "seal", "pos": "verb", "details": {"past": "sealed", "participle": "sealed"}, "sentences": ["They seal the letter."]}
+        ],
+        "nl": [
+        {"lemma": "verzegelen", "pos": "verb", "details": {"pastSingular": "verzegelde", "pastPlural": "verzegelden", "participle": "verzegeld", "auxiliary": "hebben"}, "sentences": ["Zij verzegelen de brief."]}
+        ]
+      }
+    },
+    {
+      "key": "sense-verb",
+      "gloss": "sense (feel)",
+      "entries": {
+        "en": [
+        {"lemma": "sense (feel)", "pos": "verb", "details": {"past": "sensed", "participle": "sensed"}, "sentences": ["I sense danger."]}
+        ],
+        "nl": [
+        {"lemma": "aanvoelen", "pos": "verb", "details": {"pastSingular": "voelde aan", "pastPlural": "voelden aan", "participle": "aangevoeld", "auxiliary": "hebben"}, "sentences": ["Ik voel gevaar aan."]}
+        ]
+      }
+    },
+    {
+      "key": "please-verb",
+      "gloss": "please (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "please", "pos": "verb", "details": {"past": "pleased", "participle": "pleased"}, "sentences": ["I want to please you."]}
+        ],
+        "nl": [
+        {"lemma": "behagen", "pos": "verb", "details": {"pastSingular": "behaagde", "pastPlural": "behaagden", "participle": "behaagd", "auxiliary": "hebben"}, "sentences": ["Ik wil je behagen."]}
+        ]
+      }
+    },
+    {
+      "key": "drop-off",
+      "gloss": "drop off (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "drop off", "pos": "verb", "details": {"past": "dropped off", "participle": "dropped off"}, "sentences": ["I drop off the child at school."]}
+        ],
+        "nl": [
+        {"lemma": "wegbrengen", "pos": "verb", "details": {"pastSingular": "bracht weg", "pastPlural": "brachten weg", "participle": "weggebracht", "auxiliary": "hebben"}, "sentences": ["Ik breng het kind naar school weg."]}
+        ]
+      }
+    },
+    {
+      "key": "decay",
+      "gloss": "decay (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "decay", "pos": "verb", "details": {"past": "decayed", "participle": "decayed"}, "sentences": ["The building decays."]}
+        ],
+        "nl": [
+        {"lemma": "vervallen", "pos": "verb", "details": {"pastSingular": "verviel", "pastPlural": "vervielen", "participle": "vervallen", "auxiliary": "zijn"}, "sentences": ["Het gebouw vervalt."]}
+        ]
+      }
+    },
+    {
+      "key": "provide",
+      "gloss": "provide (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "provide", "pos": "verb", "details": {"past": "provided", "participle": "provided"}, "sentences": ["We provide shelter."]}
+        ],
+        "nl": [
+        {"lemma": "verschaffen", "pos": "verb", "details": {"pastSingular": "verschafte", "pastPlural": "verschaften", "participle": "verschaft", "auxiliary": "hebben"}, "sentences": ["Wij verschaffen onderdak."]}
+        ]
+      }
+    },
+    {
+      "key": "penetrate",
+      "gloss": "penetrate (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "penetrate", "pos": "verb", "details": {"past": "penetrated", "participle": "penetrated"}, "sentences": ["The cold penetrates the walls."]}
+        ],
+        "nl": [
+        {"lemma": "doordringen", "pos": "verb", "details": {"pastSingular": "drong door", "pastPlural": "drongen door", "participle": "doorgedrongen", "auxiliary": "zijn"}, "sentences": ["De kou dringt door de muren."]}
+        ]
+      }
+    },
+    {
+      "key": "gossip-verb",
+      "gloss": "gossip (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "gossip", "pos": "verb", "details": {"past": "gossiped", "participle": "gossiped"}, "sentences": ["They gossip about him."]}
+        ],
+        "nl": [
+        {"lemma": "roddelen", "pos": "verb", "details": {"pastSingular": "roddelde", "pastPlural": "roddelden", "participle": "geroddeld", "auxiliary": "hebben"}, "sentences": ["Zij roddelen over hem."]}
+        ]
+      }
+    },
+    {
+      "key": "extinguish",
+      "gloss": "extinguish (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "extinguish", "pos": "verb", "details": {"past": "extinguished", "participle": "extinguished"}, "sentences": ["I extinguish the fire."]}
+        ],
+        "nl": [
+        {"lemma": "doven", "pos": "verb", "details": {"pastSingular": "doofde", "pastPlural": "doofden", "participle": "gedoofd", "auxiliary": "hebben"}, "sentences": ["Ik doof het vuur."]}
+        ]
+      }
+    },
+    {
+      "key": "reunion",
+      "gloss": "reunion (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "reunion", "pos": "noun", "details": {"plural": "reunions"}, "sentences": ["The reunion is on Saturday."]}
+        ],
+        "nl": [
+        {"lemma": "reünie", "pos": "noun", "details": {"article": "de", "plural": "reünies"}, "sentences": ["De reünie is zaterdag."]}
+        ]
+      }
+    },
+    {
+      "key": "split",
+      "gloss": "split (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "split", "pos": "verb", "details": {"past": "splited", "participle": "splited"}, "sentences": ["We split the bill."]}
+        ],
+        "nl": [
+        {"lemma": "splitsen", "pos": "verb", "details": {"pastSingular": "splitste", "pastPlural": "splitsten", "participle": "gesplitst", "auxiliary": "hebben"}, "sentences": ["Wij splitsen de rekening."]}
+        ]
+      }
+    },
+    {
+      "key": "extend",
+      "gloss": "extend (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "extend", "pos": "verb", "details": {"past": "extended", "participle": "extended"}, "sentences": ["I extend the contract."]}
+        ],
+        "nl": [
+        {"lemma": "verlengen", "pos": "verb", "details": {"pastSingular": "verlengde", "pastPlural": "verlengden", "participle": "verlengd", "auxiliary": "hebben"}, "sentences": ["Ik verleng het contract."]}
+        ]
+      }
+    },
+    {
+      "key": "lean-verb",
+      "gloss": "lean (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "lean", "pos": "verb", "details": {"past": "leaned", "participle": "leaned"}, "sentences": ["I lean against the wall."]}
+        ],
+        "nl": [
+        {"lemma": "leunen", "pos": "verb", "details": {"pastSingular": "leunde", "pastPlural": "leunden", "participle": "geleund", "auxiliary": "hebben"}, "sentences": ["Ik leun tegen de muur."]}
+        ]
+      }
+    },
+    {
+      "key": "hinder",
+      "gloss": "hinder (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "hinder", "pos": "verb", "details": {"past": "hindered", "participle": "hindered"}, "sentences": ["The noise hinders me."]}
+        ],
+        "nl": [
+        {"lemma": "hinderen", "pos": "verb", "details": {"pastSingular": "hinderde", "pastPlural": "hinderden", "participle": "gehinderd", "auxiliary": "hebben"}, "sentences": ["Het lawaai hindert mij."]}
+        ]
+      }
+    },
+    {
+      "key": "drop-in",
+      "gloss": "drop in (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "drop in", "pos": "verb", "details": {"past": "dropped in", "participle": "dropped in"}, "sentences": ["I dropped in at his house."]}
+        ],
+        "nl": [
+        {"lemma": "binnenlopen", "pos": "verb", "details": {"pastSingular": "liep binnen", "pastPlural": "liepen binnen", "participle": "binnengelopen", "auxiliary": "zijn"}, "sentences": ["Ik liep bij hem binnen."]}
+        ]
+      }
+    },
+    {
+      "key": "attempt-verb",
+      "gloss": "attempt (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "attempt", "pos": "verb", "details": {"past": "attempted", "participle": "attempted"}, "sentences": ["I attempt to help."]}
+        ],
+        "nl": [
+        {"lemma": "trachten", "pos": "verb", "details": {"pastSingular": "trachtte", "pastPlural": "trachtten", "participle": "getracht", "auxiliary": "hebben"}, "sentences": ["Ik tracht te helpen."]}
+        ]
+      }
+    },
+    {
+      "key": "discharge",
+      "gloss": "discharge (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "discharge", "pos": "verb", "details": {"past": "discharged", "participle": "discharged"}, "sentences": ["The factory discharges water."]}
+        ],
+        "nl": [
+        {"lemma": "lozen", "pos": "verb", "details": {"pastSingular": "loosde", "pastPlural": "loosden", "participle": "geloosd", "auxiliary": "hebben"}, "sentences": ["De fabriek loost water."]}
+        ]
+      }
+    },
+    {
+      "key": "depend",
+      "gloss": "depend (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "depend", "pos": "verb", "details": {"past": "depended", "participle": "depended"}, "sentences": ["It depends on the weather."]}
+        ],
+        "nl": [
+        {"lemma": "afhangen", "pos": "verb", "details": {"pastSingular": "hing af", "pastPlural": "hingen af", "participle": "afgehangen", "auxiliary": "hebben"}, "sentences": ["Het hangt af van het weer."]}
+        ]
+      }
+    },
+    {
+      "key": "stay-behind",
+      "gloss": "stay behind (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "stay behind", "pos": "verb", "details": {"past": "stayed behind", "participle": "stayed behind"}, "sentences": ["I stay behind."]}
+        ],
+        "nl": [
+        {"lemma": "achterblijven", "pos": "verb", "details": {"pastSingular": "bleef achter", "pastPlural": "bleven achter", "participle": "achtergebleven", "auxiliary": "zijn"}, "sentences": ["Ik blijf achter."]}
         ]
       }
     }

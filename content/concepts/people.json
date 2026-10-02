@@ -1165,7 +1165,7 @@
       }
     },
     {
-      "key": "single",
+      "key": "single-adjective-vrijgezel",
       "gloss": "single (unmarried)",
       "entries": {
         "en": [
@@ -1497,6 +1497,522 @@
         ],
         "nl": [
         {"lemma": "kusje", "pos": "noun", "details": {"article": "het", "plural": "kusjes"}, "sentences": ["Zij geeft hem een kusje."]}
+        ]
+      }
+    },
+    {
+      "key": "ancestor",
+      "gloss": "ancestor (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "ancestor", "pos": "noun", "details": {"plural": "ancestors"}, "sentences": ["My ancestor lived here."]}
+        ],
+        "nl": [
+        {"lemma": "voorouder", "pos": "noun", "details": {"article": "de", "plural": "voorouders"}, "sentences": ["Mijn voorouder woonde hier."]}
+        ]
+      }
+    },
+    {
+      "key": "live-together",
+      "gloss": "live together (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "live together", "pos": "verb", "details": {"past": "lived together", "participle": "lived together"}, "sentences": ["They live together."]}
+        ],
+        "nl": [
+        {"lemma": "samenwonen", "pos": "verb", "details": {"pastSingular": "woonde samen", "pastPlural": "woonden samen", "participle": "samengewoond", "auxiliary": "hebben"}, "sentences": ["Zij wonen samen."]}
+        ]
+      }
+    },
+    {
+      "key": "cuddle",
+      "gloss": "cuddle (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "cuddle", "pos": "verb", "details": {"past": "cuddled", "participle": "cuddled"}, "sentences": ["We cuddle on the couch."]}
+        ],
+        "nl": [
+        {"lemma": "knuffelen", "pos": "verb", "details": {"pastSingular": "knuffelde", "pastPlural": "knuffelden", "participle": "geknuffeld", "auxiliary": "hebben"}, "sentences": ["Wij knuffelen op de bank."]}
+        ]
+      }
+    },
+    {
+      "key": "stroke-verb",
+      "gloss": "stroke (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "stroke", "pos": "verb", "details": {"past": "stroked", "participle": "stroked"}, "sentences": ["I stroke the cat."]}
+        ],
+        "nl": [
+        {"lemma": "strelen", "pos": "verb", "details": {"pastSingular": "streelde", "pastPlural": "streelden", "participle": "gestreeld", "auxiliary": "hebben"}, "sentences": ["Ik streel de kat."]}
+        ]
+      }
+    },
+    {
+      "key": "foreigner",
+      "gloss": "foreigner (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "foreigner", "pos": "noun", "details": {"plural": "foreigners"}, "sentences": ["The foreigner speaks Dutch."]}
+        ],
+        "nl": [
+        {"lemma": "buitenlander", "pos": "noun", "details": {"article": "de", "plural": "buitenlanders"}, "sentences": ["De buitenlander spreekt Nederlands."]}
+        ]
+      }
+    },
+    {
+      "key": "embrace",
+      "gloss": "embrace (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "embrace", "pos": "verb", "details": {"past": "embraced", "participle": "embraced"}, "sentences": ["They embrace."]}
+        ],
+        "nl": [
+        {"lemma": "omhelzen", "pos": "verb", "details": {"pastSingular": "omhelsde", "pastPlural": "omhelsden", "participle": "omhelsd", "auxiliary": "hebben"}, "sentences": ["Zij omhelzen elkaar."]}
+        ]
+      }
+    },
+    {
+      "key": "romance",
+      "gloss": "romance (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "romance", "pos": "noun", "details": {"uncountable": true}, "sentences": ["I like romance."]}
+        ],
+        "nl": [
+        {"lemma": "romantiek", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Ik hou van romantiek."]}
+        ]
+      }
+    },
+    {
+      "key": "couple-noun-koppel",
+      "gloss": "couple (pair)",
+      "entries": {
+        "en": [
+        {"lemma": "couple (pair)", "pos": "noun", "details": {"plural": "couples"}, "sentences": ["They are a nice couple."]}
+        ],
+        "nl": [
+        {"lemma": "koppel", "pos": "noun", "details": {"article": "het", "plural": "koppels"}, "sentences": ["Zij zijn een leuk koppel."]}
+        ]
+      }
+    },
+    {
+      "key": "orphanage",
+      "gloss": "orphanage (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "orphanage", "pos": "noun", "details": {"plural": "orphanages"}, "sentences": ["The child lives in an orphanage."]}
+        ],
+        "nl": [
+        {"lemma": "weeshuis", "pos": "noun", "details": {"article": "het", "plural": "weeshuizen"}, "sentences": ["Het kind woont in een weeshuis."]}
+        ]
+      }
+    },
+    {
+      "key": "countess",
+      "gloss": "countess (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "countess", "pos": "noun", "details": {"plural": "countesses"}, "sentences": ["The countess lives in the castle."]}
+        ],
+        "nl": [
+        {"lemma": "gravin", "pos": "noun", "details": {"article": "de", "plural": "gravinnen"}, "sentences": ["De gravin woont in het kasteel."]}
+        ]
+      }
+    },
+    {
+      "key": "heir",
+      "gloss": "heir (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "heir", "pos": "noun", "details": {"plural": "heirs"}, "sentences": ["He is the heir."]}
+        ],
+        "nl": [
+        {"lemma": "erfgenaam", "pos": "noun", "details": {"article": "de", "plural": "erfgenamen"}, "sentences": ["Hij is de erfgenaam."]}
+        ]
+      }
+    },
+    {
+      "key": "newcomer",
+      "gloss": "newcomer (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "newcomer", "pos": "noun", "details": {"plural": "newcomers"}, "sentences": ["The newcomer is shy."]}
+        ],
+        "nl": [
+        {"lemma": "nieuweling", "pos": "noun", "details": {"article": "de", "plural": "nieuwelingen"}, "sentences": ["De nieuweling is verlegen."]}
+        ]
+      }
+    },
+    {
+      "key": "rookie",
+      "gloss": "rookie (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "rookie", "pos": "noun", "details": {"plural": "rookies"}, "sentences": ["The rookie is nervous."]}
+        ],
+        "nl": [
+        {"lemma": "groentje", "pos": "noun", "details": {"article": "het", "plural": "groentjes"}, "sentences": ["Het groentje is nerveus."]}
+        ]
+      }
+    },
+    {
+      "key": "groom",
+      "gloss": "groom (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "groom", "pos": "noun", "details": {"plural": "grooms"}, "sentences": ["The groom is nervous."]}
+        ],
+        "nl": [
+        {"lemma": "bruidegom", "pos": "noun", "details": {"article": "de", "plural": "bruidegoms"}, "sentences": ["De bruidegom is nerveus."]}
+        ]
+      }
+    },
+    {
+      "key": "joker",
+      "gloss": "joker (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "joker", "pos": "noun", "details": {"plural": "jokers"}, "sentences": ["He is a joker."]}
+        ],
+        "nl": [
+        {"lemma": "grapjas", "pos": "noun", "details": {"article": "de", "plural": "grapjassen"}, "sentences": ["Hij is een grapjas."]}
+        ]
+      }
+    },
+    {
+      "key": "marriage-proposal",
+      "gloss": "marriage proposal (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "marriage proposal", "pos": "noun", "details": {"plural": "marriage proposals"}, "sentences": ["He makes a marriage proposal."]}
+        ],
+        "nl": [
+        {"lemma": "aanzoek", "pos": "noun", "details": {"article": "het", "plural": "aanzoeken"}, "sentences": ["Hij doet een aanzoek."]}
+        ]
+      }
+    },
+    {
+      "key": "messenger",
+      "gloss": "messenger (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "messenger", "pos": "noun", "details": {"plural": "messengers"}, "sentences": ["The messenger arrives."]}
+        ],
+        "nl": [
+        {"lemma": "boodschapper", "pos": "noun", "details": {"article": "de", "plural": "boodschappers"}, "sentences": ["De boodschapper komt aan."]}
+        ]
+      }
+    },
+    {
+      "key": "gambler",
+      "gloss": "gambler (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "gambler", "pos": "noun", "details": {"plural": "gamblers"}, "sentences": ["The gambler loses."]}
+        ],
+        "nl": [
+        {"lemma": "gokker", "pos": "noun", "details": {"article": "de", "plural": "gokkers"}, "sentences": ["De gokker verliest."]}
+        ]
+      }
+    },
+    {
+      "key": "pharaoh",
+      "gloss": "pharaoh (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "pharaoh", "pos": "noun", "details": {"plural": "pharaohs"}, "sentences": ["The pharaoh is old."]}
+        ],
+        "nl": [
+        {"lemma": "farao", "pos": "noun", "details": {"article": "de", "plural": "farao's"}, "sentences": ["De farao is oud."]}
+        ]
+      }
+    },
+    {
+      "key": "stepfather",
+      "gloss": "stepfather (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "stepfather", "pos": "noun", "details": {"plural": "stepfathers"}, "sentences": ["My stepfather is kind."]}
+        ],
+        "nl": [
+        {"lemma": "stiefvader", "pos": "noun", "details": {"article": "de", "plural": "stiefvaders"}, "sentences": ["Mijn stiefvader is aardig."]}
+        ]
+      }
+    },
+    {
+      "key": "brother-in-law",
+      "gloss": "brother-in-law (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "brother-in-law", "pos": "noun", "details": {"plural": "brother-in-laws"}, "sentences": ["My brother-in-law lives here."]}
+        ],
+        "nl": [
+        {"lemma": "zwager", "pos": "noun", "details": {"article": "de", "plural": "zwagers"}, "sentences": ["Mijn zwager woont hier."]}
+        ]
+      }
+    },
+    {
+      "key": "tempting",
+      "gloss": "tempting (adjective)",
+      "entries": {
+        "en": [
+        {"lemma": "tempting", "pos": "adjective", "sentences": ["The offer is tempting."]}
+        ],
+        "nl": [
+        {"lemma": "verleidelijk", "pos": "adjective", "sentences": ["Het aanbod is verleidelijk."]}
+        ]
+      }
+    },
+    {
+      "key": "follower",
+      "gloss": "follower (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "follower", "pos": "noun", "details": {"plural": "followers"}, "sentences": ["The leader has many followers."]}
+        ],
+        "nl": [
+        {"lemma": "volgeling", "pos": "noun", "details": {"article": "de", "plural": "volgelingen"}, "sentences": ["De leider heeft veel volgelingen."]}
+        ]
+      }
+    },
+    {
+      "key": "empress",
+      "gloss": "empress (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "empress", "pos": "noun", "details": {"plural": "empresses"}, "sentences": ["The empress is wise."]}
+        ],
+        "nl": [
+        {"lemma": "keizerin", "pos": "noun", "details": {"article": "de", "plural": "keizerinnen"}, "sentences": ["De keizerin is wijs."]}
+        ]
+      }
+    },
+    {
+      "key": "single-adjective-alleenstaand",
+      "gloss": "single (alone)",
+      "entries": {
+        "en": [
+        {"lemma": "single (alone)", "pos": "adjective", "sentences": ["She is single."]}
+        ],
+        "nl": [
+        {"lemma": "alleenstaand", "pos": "adjective", "sentences": ["Zij is alleenstaand."]}
+        ]
+      }
+    },
+    {
+      "key": "granddaughter",
+      "gloss": "granddaughter (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "granddaughter", "pos": "noun", "details": {"plural": "granddaughters"}, "sentences": ["My granddaughter is six."]}
+        ],
+        "nl": [
+        {"lemma": "kleindochter", "pos": "noun", "details": {"article": "de", "plural": "kleindochters"}, "sentences": ["Mijn kleindochter is zes."]}
+        ]
+      }
+    },
+    {
+      "key": "wed",
+      "gloss": "wed (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "wed", "pos": "verb", "details": {"past": "weded", "participle": "weded"}, "sentences": ["They wed in June."]}
+        ],
+        "nl": [
+        {"lemma": "huwen", "pos": "verb", "details": {"pastSingular": "huwde", "pastPlural": "huwden", "participle": "gehuwd", "auxiliary": "hebben"}, "sentences": ["Zij huwen in juni."]}
+        ]
+      }
+    },
+    {
+      "key": "wedding-ring",
+      "gloss": "wedding ring (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "wedding ring", "pos": "noun", "details": {"plural": "wedding rings"}, "sentences": ["She wears a wedding ring."]}
+        ],
+        "nl": [
+        {"lemma": "trouwring", "pos": "noun", "details": {"article": "de", "plural": "trouwringen"}, "sentences": ["Zij draagt een trouwring."]}
+        ]
+      }
+    },
+    {
+      "key": "contact-person",
+      "gloss": "contact person (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "contact person", "pos": "noun", "details": {"plural": "contact people"}, "sentences": ["He is the contact person."]}
+        ],
+        "nl": [
+        {"lemma": "contactpersoon", "pos": "noun", "details": {"article": "de", "plural": "contactpersonen"}, "sentences": ["Hij is de contactpersoon."]}
+        ]
+      }
+    },
+    {
+      "key": "individual",
+      "gloss": "individual (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "individual", "pos": "noun", "details": {"plural": "individuals"}, "sentences": ["Each individual is unique."]}
+        ],
+        "nl": [
+        {"lemma": "individu", "pos": "noun", "details": {"article": "het", "plural": "individuen"}, "sentences": ["Elk individu is uniek."]}
+        ]
+      }
+    },
+    {
+      "key": "participant",
+      "gloss": "participant (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "participant", "pos": "noun", "details": {"plural": "participants"}, "sentences": ["The participant wins."]}
+        ],
+        "nl": [
+        {"lemma": "deelnemer", "pos": "noun", "details": {"article": "de", "plural": "deelnemers"}, "sentences": ["De deelnemer wint."]}
+        ]
+      }
+    },
+    {
+      "key": "outsider",
+      "gloss": "outsider (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "outsider", "pos": "noun", "details": {"plural": "outsiders"}, "sentences": ["He feels like an outsider."]}
+        ],
+        "nl": [
+        {"lemma": "buitenstaander", "pos": "noun", "details": {"article": "de", "plural": "buitenstaanders"}, "sentences": ["Hij voelt zich een buitenstaander."]}
+        ]
+      }
+    },
+    {
+      "key": "adult",
+      "gloss": "adult (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "adult", "pos": "noun", "details": {"plural": "adults"}, "sentences": ["The adult helps the child."]}
+        ],
+        "nl": [
+        {"lemma": "volwassene", "pos": "noun", "details": {"article": "de", "plural": "volwassenen"}, "sentences": ["De volwassene helpt het kind."]}
+        ]
+      }
+    },
+    {
+      "key": "upbringing",
+      "gloss": "upbringing (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "upbringing", "pos": "noun", "details": {"uncountable": true}, "sentences": ["His upbringing was strict."]}
+        ],
+        "nl": [
+        {"lemma": "opvoeding", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Zijn opvoeding was streng."]}
+        ]
+      }
+    },
+    {
+      "key": "neighbor-noun-buurvrouw",
+      "gloss": "neighbor (female)",
+      "entries": {
+        "en": [
+        {"lemma": "neighbor (female)", "pos": "noun", "details": {"plural": "neighbors"}, "sentences": ["My neighbor is friendly."]}
+        ],
+        "nl": [
+        {"lemma": "buurvrouw", "pos": "noun", "details": {"article": "de", "plural": "buurvrouwen"}, "sentences": ["Mijn buurvrouw is vriendelijk."]}
+        ]
+      }
+    },
+    {
+      "key": "successor",
+      "gloss": "successor (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "successor", "pos": "noun", "details": {"plural": "successors"}, "sentences": ["The successor is young."]}
+        ],
+        "nl": [
+        {"lemma": "opvolger", "pos": "noun", "details": {"article": "de", "plural": "opvolgers"}, "sentences": ["De opvolger is jong."]}
+        ]
+      }
+    },
+    {
+      "key": "barbarian",
+      "gloss": "barbarian (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "barbarian", "pos": "noun", "details": {"plural": "barbarians"}, "sentences": ["The barbarian attacks."]}
+        ],
+        "nl": [
+        {"lemma": "barbaar", "pos": "noun", "details": {"article": "de", "plural": "barbaren"}, "sentences": ["De barbaar valt aan."]}
+        ]
+      }
+    },
+    {
+      "key": "engagement",
+      "gloss": "engagement (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "engagement", "pos": "noun", "details": {"plural": "engagements"}, "sentences": ["The engagement is in May."]}
+        ],
+        "nl": [
+        {"lemma": "verloving", "pos": "noun", "details": {"article": "de", "plural": "verlovingen"}, "sentences": ["De verloving is in mei."]}
+        ]
+      }
+    },
+    {
+      "key": "rescuer",
+      "gloss": "rescuer (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "rescuer", "pos": "noun", "details": {"plural": "rescuers"}, "sentences": ["The rescuer saves the boy."]}
+        ],
+        "nl": [
+        {"lemma": "redder", "pos": "noun", "details": {"article": "de", "plural": "redders"}, "sentences": ["De redder redt de jongen."]}
+        ]
+      }
+    },
+    {
+      "key": "baron",
+      "gloss": "baron (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "baron", "pos": "noun", "details": {"plural": "barons"}, "sentences": ["The baron lives in the castle."]}
+        ],
+        "nl": [
+        {"lemma": "baron", "pos": "noun", "details": {"article": "de", "plural": "baronnen"}, "sentences": ["De baron woont in het kasteel."]}
+        ]
+      }
+    },
+    {
+      "key": "housewife",
+      "gloss": "housewife (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "housewife", "pos": "noun", "details": {"plural": "housewifes"}, "sentences": ["She is a housewife."]}
+        ],
+        "nl": [
+        {"lemma": "huisvrouw", "pos": "noun", "details": {"article": "de", "plural": "huisvrouwen"}, "sentences": ["Zij is een huisvrouw."]}
+        ]
+      }
+    },
+    {
+      "key": "reader",
+      "gloss": "reader (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "reader", "pos": "noun", "details": {"plural": "readers"}, "sentences": ["The reader likes the book."]}
+        ],
+        "nl": [
+        {"lemma": "lezer", "pos": "noun", "details": {"article": "de", "plural": "lezers"}, "sentences": ["De lezer houdt van het boek."]}
+        ]
+      }
+    },
+    {
+      "key": "landlord",
+      "gloss": "landlord (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "landlord", "pos": "noun", "details": {"plural": "landlords"}, "sentences": ["The landlord comes for the rent."]}
+        ],
+        "nl": [
+        {"lemma": "huisbaas", "pos": "noun", "details": {"article": "de", "plural": "huisbazen"}, "sentences": ["De huisbaas komt voor de huur."]}
         ]
       }
     }

@@ -49,7 +49,7 @@
       }
     },
     {
-      "key": "size",
+      "key": "size-noun-maat",
       "gloss": "size (noun)",
       "entries": {
         "en": [
@@ -621,6 +621,210 @@
         ],
         "nl": [
         {"lemma": "zakdoek", "pos": "noun", "details": {"article": "de", "plural": "zakdoeken"}, "sentences": ["Ik heb een zakdoek."]}
+        ]
+      }
+    },
+    {
+      "key": "undress",
+      "gloss": "undress (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "undress", "pos": "verb", "details": {"past": "undressed", "participle": "undressed"}, "sentences": ["I undress the child."]}
+        ],
+        "nl": [
+        {"lemma": "uitkleden", "pos": "verb", "details": {"pastSingular": "kleedde uit", "pastPlural": "kleedden uit", "participle": "uitgekleed", "auxiliary": "hebben"}, "sentences": ["Ik kleed het kind uit."]}
+        ]
+      }
+    },
+    {
+      "key": "sleeve",
+      "gloss": "sleeve (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "sleeve", "pos": "noun", "details": {"plural": "sleeves"}, "sentences": ["The sleeve is long."]}
+        ],
+        "nl": [
+        {"lemma": "mouw", "pos": "noun", "details": {"article": "de", "plural": "mouwen"}, "sentences": ["De mouw is lang."]}
+        ]
+      }
+    },
+    {
+      "key": "piece-of-jewelry",
+      "gloss": "piece of jewelry (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "piece of jewelry", "pos": "noun", "details": {"plural": "piece of jewelries"}, "sentences": ["I wear a piece of jewelry."]}
+        ],
+        "nl": [
+        {"lemma": "sieraad", "pos": "noun", "details": {"article": "het", "plural": "sieraden"}, "sentences": ["Ik draag een sieraad."]}
+        ]
+      }
+    },
+    {
+      "key": "pajamas",
+      "gloss": "pajamas (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "pajamas", "pos": "noun", "details": {"pluralOnly": true}, "sentences": ["I wear pajamas."]}
+        ],
+        "nl": [
+        {"lemma": "pyjama", "pos": "noun", "details": {"article": "de", "plural": "pyjama's"}, "sentences": ["Ik draag een pyjama."]}
+        ]
+      }
+    },
+    {
+      "key": "earring",
+      "gloss": "earring (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "earring", "pos": "noun", "details": {"plural": "earrings"}, "sentences": ["She wears an earring."]}
+        ],
+        "nl": [
+        {"lemma": "oorbel", "pos": "noun", "details": {"article": "de", "plural": "oorbellen"}, "sentences": ["Zij draagt een oorbel."]}
+        ]
+      }
+    },
+    {
+      "key": "lipstick",
+      "gloss": "lipstick (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "lipstick", "pos": "noun", "details": {"plural": "lipsticks"}, "sentences": ["She wears red lipstick."]}
+        ],
+        "nl": [
+        {"lemma": "lippenstift", "pos": "noun", "details": {"article": "de", "plural": "lippenstiften"}, "sentences": ["Zij draagt rode lippenstift."]}
+        ]
+      }
+    },
+    {
+      "key": "suit",
+      "gloss": "suit (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "suit", "pos": "noun", "details": {"plural": "suits"}, "sentences": ["He wears a suit."]}
+        ],
+        "nl": [
+        {"lemma": "pak", "pos": "noun", "details": {"article": "het", "plural": "pakken"}, "sentences": ["Hij draagt een pak."]}
+        ]
+      }
+    },
+    {
+      "key": "scarf",
+      "gloss": "scarf (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "scarf", "pos": "noun", "details": {"plural": "scarfs"}, "sentences": ["I wear a scarf."]}
+        ],
+        "nl": [
+        {"lemma": "sjaal", "pos": "noun", "details": {"article": "de", "plural": "sjaals"}, "sentences": ["Ik draag een sjaal."]}
+        ]
+      }
+    },
+    {
+      "key": "stocking",
+      "gloss": "stocking (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "stocking", "pos": "noun", "details": {"plural": "stockings"}, "sentences": ["I wear a stocking."]}
+        ],
+        "nl": [
+        {"lemma": "kous", "pos": "noun", "details": {"article": "de", "plural": "kousen"}, "sentences": ["Ik draag een kous."]}
+        ]
+      }
+    },
+    {
+      "key": "sunglasses",
+      "gloss": "sunglasses (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "sunglasses", "pos": "noun", "details": {"pluralOnly": true}, "sentences": ["I wear sunglasses."]}
+        ],
+        "nl": [
+        {"lemma": "zonnebril", "pos": "noun", "details": {"article": "de", "plural": "zonnebrillen"}, "sentences": ["Ik draag een zonnebril."]}
+        ]
+      }
+    },
+    {
+      "key": "tuxedo",
+      "gloss": "tuxedo (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "tuxedo", "pos": "noun", "details": {"plural": "tuxedos"}, "sentences": ["He wears a tuxedo."]}
+        ],
+        "nl": [
+        {"lemma": "smoking", "pos": "noun", "details": {"article": "de", "plural": "smokings"}, "sentences": ["Hij draagt een smoking."]}
+        ]
+      }
+    },
+    {
+      "key": "necktie",
+      "gloss": "necktie (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "necktie", "pos": "noun", "details": {"plural": "neckties"}, "sentences": ["He wears a necktie."]}
+        ],
+        "nl": [
+        {"lemma": "stropdas", "pos": "noun", "details": {"article": "de", "plural": "stropdassen"}, "sentences": ["Hij draagt een stropdas."]}
+        ]
+      }
+    },
+    {
+      "key": "cloak",
+      "gloss": "cloak (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "cloak", "pos": "noun", "details": {"plural": "cloaks"}, "sentences": ["He wears a cloak."]}
+        ],
+        "nl": [
+        {"lemma": "mantel", "pos": "noun", "details": {"article": "de", "plural": "mantels"}, "sentences": ["Hij draagt een mantel."]}
+        ]
+      }
+    },
+    {
+      "key": "handbag",
+      "gloss": "handbag (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "handbag", "pos": "noun", "details": {"plural": "handbags"}, "sentences": ["She has a red handbag."]}
+        ],
+        "nl": [
+        {"lemma": "handtas", "pos": "noun", "details": {"article": "de", "plural": "handtassen"}, "sentences": ["Zij heeft een rode handtas."]}
+        ]
+      }
+    },
+    {
+      "key": "cotton",
+      "gloss": "cotton (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "cotton", "pos": "noun", "details": {"uncountable": true}, "sentences": ["The shirt is made of cotton."]}
+        ],
+        "nl": [
+        {"lemma": "katoen", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["Het shirt is van katoen."]}
+        ]
+      }
+    },
+    {
+      "key": "knit-hat",
+      "gloss": "knit hat (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "knit hat", "pos": "noun", "details": {"plural": "knit hats"}, "sentences": ["I wear a knit hat in winter."]}
+        ],
+        "nl": [
+        {"lemma": "muts", "pos": "noun", "details": {"article": "de", "plural": "mutsen"}, "sentences": ["Ik draag in de winter een muts."]}
+        ]
+      }
+    },
+    {
+      "key": "little-bag",
+      "gloss": "little bag (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "little bag", "pos": "noun", "details": {"plural": "little bags"}, "sentences": ["I have a little bag."]}
+        ],
+        "nl": [
+        {"lemma": "tasje", "pos": "noun", "details": {"article": "het", "plural": "tasjes"}, "sentences": ["Ik heb een tasje."]}
         ]
       }
     }

@@ -829,7 +829,7 @@
       }
     },
     {
-      "key": "sin",
+      "key": "sin-noun",
       "gloss": "sin (noun)",
       "entries": {
         "en": [
@@ -913,7 +913,7 @@
       }
     },
     {
-      "key": "guard-noun",
+      "key": "guard-noun-bewaker",
       "gloss": "guard (noun)",
       "entries": {
         "en": [
@@ -1621,7 +1621,7 @@
       }
     },
     {
-      "key": "threat",
+      "key": "threat-noun-bedreiging",
       "gloss": "threat (noun)",
       "entries": {
         "en": [
@@ -1729,7 +1729,7 @@
       }
     },
     {
-      "key": "release",
+      "key": "release-verb",
       "gloss": "release (verb)",
       "entries": {
         "en": [
@@ -2509,7 +2509,7 @@
       }
     },
     {
-      "key": "cemetery",
+      "key": "cemetery-noun-kerkhof",
       "gloss": "cemetery (noun)",
       "entries": {
         "en": [
@@ -2641,7 +2641,7 @@
       }
     },
     {
-      "key": "authority",
+      "key": "authority-noun-gezag",
       "gloss": "authority (noun)",
       "entries": {
         "en": [
@@ -2725,7 +2725,7 @@
       }
     },
     {
-      "key": "protest",
+      "key": "protest-noun",
       "gloss": "protest (noun)",
       "entries": {
         "en": [
@@ -3205,7 +3205,7 @@
       }
     },
     {
-      "key": "fighter",
+      "key": "fighter-noun-strijder",
       "gloss": "fighter (noun)",
       "entries": {
         "en": [
@@ -3589,7 +3589,7 @@
       }
     },
     {
-      "key": "forgiveness",
+      "key": "forgiveness-noun-vergiffenis",
       "gloss": "forgiveness (noun)",
       "entries": {
         "en": [
@@ -3717,6 +3717,1422 @@
         ],
         "nl": [
         {"lemma": "zelfverdediging", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Hij handelt uit zelfverdediging."]}
+        ]
+      }
+    },
+    {
+      "key": "protest-verb",
+      "gloss": "protest (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "protest", "pos": "verb", "details": {"past": "protested", "participle": "protested"}, "sentences": ["They protest against the plan."]}
+        ],
+        "nl": [
+        {"lemma": "protesteren", "pos": "verb", "details": {"pastSingular": "protesteerde", "pastPlural": "protesteerden", "participle": "geprotesteerd", "auxiliary": "hebben"}, "sentences": ["Zij protesteren tegen het plan."]}
+        ]
+      }
+    },
+    {
+      "key": "forge",
+      "gloss": "forge (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "forge", "pos": "verb", "details": {"past": "forged", "participle": "forged"}, "sentences": ["He forges a signature."]}
+        ],
+        "nl": [
+        {"lemma": "vervalsen", "pos": "verb", "details": {"pastSingular": "vervalste", "pastPlural": "vervalsten", "participle": "vervalst", "auxiliary": "hebben"}, "sentences": ["Hij vervalst een handtekening."]}
+        ]
+      }
+    },
+    {
+      "key": "almighty",
+      "gloss": "almighty (adjective)",
+      "entries": {
+        "en": [
+        {"lemma": "almighty", "pos": "adjective", "sentences": ["God is almighty."]}
+        ],
+        "nl": [
+        {"lemma": "almachtig", "pos": "adjective", "sentences": ["God is almachtig."]}
+        ]
+      }
+    },
+    {
+      "key": "sinner",
+      "gloss": "sinner (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "sinner", "pos": "noun", "details": {"plural": "sinners"}, "sentences": ["He is a sinner."]}
+        ],
+        "nl": [
+        {"lemma": "zondaar", "pos": "noun", "details": {"article": "de", "plural": "zondaars"}, "sentences": ["Hij is een zondaar."]}
+        ]
+      }
+    },
+    {
+      "key": "hearing-noun-hoorzitting",
+      "gloss": "hearing (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "hearing", "pos": "noun", "details": {"plural": "hearings"}, "sentences": ["The hearing starts at ten."]}
+        ],
+        "nl": [
+        {"lemma": "hoorzitting", "pos": "noun", "details": {"article": "de", "plural": "hoorzittingen"}, "sentences": ["De hoorzitting begint om tien uur."]}
+        ]
+      }
+    },
+    {
+      "key": "search-warrant",
+      "gloss": "search warrant (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "search warrant", "pos": "noun", "details": {"plural": "search warrants"}, "sentences": ["The police have a search warrant."]}
+        ],
+        "nl": [
+        {"lemma": "huiszoekingsbevel", "pos": "noun", "details": {"article": "het", "plural": "huiszoekingsbevelen"}, "sentences": ["De politie heeft een huiszoekingsbevel."]}
+        ]
+      }
+    },
+    {
+      "key": "invasion",
+      "gloss": "invasion (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "invasion", "pos": "noun", "details": {"plural": "invasions"}, "sentences": ["The invasion starts."]}
+        ],
+        "nl": [
+        {"lemma": "invasie", "pos": "noun", "details": {"article": "de", "plural": "invasies"}, "sentences": ["De invasie begint."]}
+        ]
+      }
+    },
+    {
+      "key": "company-noun-compagnie",
+      "gloss": "company (military unit)",
+      "entries": {
+        "en": [
+        {"lemma": "company (military unit)", "pos": "noun", "details": {"plural": "companies"}, "sentences": ["The company marches."]}
+        ],
+        "nl": [
+        {"lemma": "compagnie", "pos": "noun", "details": {"article": "de", "plural": "compagnieën"}, "sentences": ["De compagnie marcheert."]}
+        ]
+      }
+    },
+    {
+      "key": "interrogation",
+      "gloss": "interrogation (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "interrogation", "pos": "noun", "details": {"plural": "interrogations"}, "sentences": ["The interrogation is long."]}
+        ],
+        "nl": [
+        {"lemma": "verhoor", "pos": "noun", "details": {"article": "het", "plural": "verhoren"}, "sentences": ["Het verhoor is lang."]}
+        ]
+      }
+    },
+    {
+      "key": "verdict",
+      "gloss": "verdict (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "verdict", "pos": "noun", "details": {"plural": "verdicts"}, "sentences": ["The verdict is guilty."]}
+        ],
+        "nl": [
+        {"lemma": "vonnis", "pos": "noun", "details": {"article": "het", "plural": "vonnissen"}, "sentences": ["Het vonnis is schuldig."]}
+        ]
+      }
+    },
+    {
+      "key": "christian",
+      "gloss": "Christian (adjective)",
+      "entries": {
+        "en": [
+        {"lemma": "Christian", "pos": "adjective", "sentences": ["He is Christian."]}
+        ],
+        "nl": [
+        {"lemma": "christelijk", "pos": "adjective", "sentences": ["Hij is christelijk."]}
+        ]
+      }
+    },
+    {
+      "key": "fairy",
+      "gloss": "fairy (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "fairy", "pos": "noun", "details": {"plural": "fairies"}, "sentences": ["The fairy has a wand."]}
+        ],
+        "nl": [
+        {"lemma": "fee", "pos": "noun", "details": {"article": "de", "plural": "feeën"}, "sentences": ["De fee heeft een toverstaf."]}
+        ]
+      }
+    },
+    {
+      "key": "clear-verb",
+      "gloss": "clear (a building)",
+      "entries": {
+        "en": [
+        {"lemma": "clear (a building)", "pos": "verb", "details": {"past": "cleared", "participle": "cleared"}, "sentences": ["They clear the building."]}
+        ],
+        "nl": [
+        {"lemma": "ontruimen", "pos": "verb", "details": {"pastSingular": "ontruimde", "pastPlural": "ontruimden", "participle": "ontruimd", "auxiliary": "hebben"}, "sentences": ["Zij ontruimen het gebouw."]}
+        ]
+      }
+    },
+    {
+      "key": "dynamite",
+      "gloss": "dynamite (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "dynamite", "pos": "noun", "details": {"uncountable": true}, "sentences": ["The dynamite explodes."]}
+        ],
+        "nl": [
+        {"lemma": "dynamiet", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["Het dynamiet ontploft."]}
+        ]
+      }
+    },
+    {
+      "key": "burglar",
+      "gloss": "burglar (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "burglar", "pos": "noun", "details": {"plural": "burglars"}, "sentences": ["The burglar is caught."]}
+        ],
+        "nl": [
+        {"lemma": "inbreker", "pos": "noun", "details": {"article": "de", "plural": "inbrekers"}, "sentences": ["De inbreker is gepakt."]}
+        ]
+      }
+    },
+    {
+      "key": "confront",
+      "gloss": "confront (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "confront", "pos": "verb", "details": {"past": "confronted", "participle": "confronted"}, "sentences": ["I confront him."]}
+        ],
+        "nl": [
+        {"lemma": "confronteren", "pos": "verb", "details": {"pastSingular": "confronteerde", "pastPlural": "confronteerden", "participle": "geconfronteerd", "auxiliary": "hebben"}, "sentences": ["Ik confronteer hem."]}
+        ]
+      }
+    },
+    {
+      "key": "municipality",
+      "gloss": "municipality (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "municipality", "pos": "noun", "details": {"plural": "municipalities"}, "sentences": ["The municipality decides."]}
+        ],
+        "nl": [
+        {"lemma": "gemeente", "pos": "noun", "details": {"article": "de", "plural": "gemeenten"}, "sentences": ["De gemeente beslist."]}
+        ]
+      }
+    },
+    {
+      "key": "cemetery-noun-begraafplaats",
+      "gloss": "cemetery (burial ground)",
+      "entries": {
+        "en": [
+        {"lemma": "cemetery (burial ground)", "pos": "noun", "details": {"plural": "cemeteries"}, "sentences": ["The cemetery is quiet."]}
+        ],
+        "nl": [
+        {"lemma": "begraafplaats", "pos": "noun", "details": {"article": "de", "plural": "begraafplaatsen"}, "sentences": ["De begraafplaats is stil."]}
+        ]
+      }
+    },
+    {
+      "key": "battlefield",
+      "gloss": "battlefield (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "battlefield", "pos": "noun", "details": {"plural": "battlefields"}, "sentences": ["The battlefield is quiet."]}
+        ],
+        "nl": [
+        {"lemma": "slagveld", "pos": "noun", "details": {"article": "het", "plural": "slagvelden"}, "sentences": ["Het slagveld is stil."]}
+        ]
+      }
+    },
+    {
+      "key": "ambush",
+      "gloss": "ambush (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "ambush", "pos": "noun", "details": {"plural": "ambushes"}, "sentences": ["They set an ambush."]}
+        ],
+        "nl": [
+        {"lemma": "hinderlaag", "pos": "noun", "details": {"article": "de", "plural": "hinderlagen"}, "sentences": ["Zij leggen een hinderlaag."]}
+        ]
+      }
+    },
+    {
+      "key": "hold-hostage",
+      "gloss": "hold hostage (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "hold hostage", "pos": "verb", "details": {"past": "held hostage", "participle": "held hostage"}, "sentences": ["They hold him hostage."]}
+        ],
+        "nl": [
+        {"lemma": "gijzelen", "pos": "verb", "details": {"pastSingular": "gijzelde", "pastPlural": "gijzelden", "participle": "gegijzeld", "auxiliary": "hebben"}, "sentences": ["Zij gijzelen hem."]}
+        ]
+      }
+    },
+    {
+      "key": "treaty",
+      "gloss": "treaty (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "treaty", "pos": "noun", "details": {"plural": "treaties"}, "sentences": ["They sign a treaty."]}
+        ],
+        "nl": [
+        {"lemma": "verdrag", "pos": "noun", "details": {"article": "het", "plural": "verdragen"}, "sentences": ["Zij ondertekenen een verdrag."]}
+        ]
+      }
+    },
+    {
+      "key": "measure-noun",
+      "gloss": "measure (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "measure", "pos": "noun", "details": {"plural": "measures"}, "sentences": ["They take a measure."]}
+        ],
+        "nl": [
+        {"lemma": "maatregel", "pos": "noun", "details": {"article": "de", "plural": "maatregelen"}, "sentences": ["Zij nemen een maatregel."]}
+        ]
+      }
+    },
+    {
+      "key": "conviction-noun-veroordeling",
+      "gloss": "conviction (verdict)",
+      "entries": {
+        "en": [
+        {"lemma": "conviction (verdict)", "pos": "noun", "details": {"plural": "convictions"}, "sentences": ["The conviction is a surprise."]}
+        ],
+        "nl": [
+        {"lemma": "veroordeling", "pos": "noun", "details": {"article": "de", "plural": "veroordelingen"}, "sentences": ["De veroordeling is een verrassing."]}
+        ]
+      }
+    },
+    {
+      "key": "murder-weapon",
+      "gloss": "murder weapon (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "murder weapon", "pos": "noun", "details": {"plural": "murder weapons"}, "sentences": ["The police find the murder weapon."]}
+        ],
+        "nl": [
+        {"lemma": "moordwapen", "pos": "noun", "details": {"article": "het", "plural": "moordwapens"}, "sentences": ["De politie vindt het moordwapen."]}
+        ]
+      }
+    },
+    {
+      "key": "underage",
+      "gloss": "underage (adjective)",
+      "entries": {
+        "en": [
+        {"lemma": "underage", "pos": "adjective", "sentences": ["The boy is underage."]}
+        ],
+        "nl": [
+        {"lemma": "minderjarig", "pos": "adjective", "sentences": ["De jongen is minderjarig."]}
+        ]
+      }
+    },
+    {
+      "key": "capital",
+      "gloss": "capital (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "capital", "pos": "noun", "details": {"plural": "capitals"}, "sentences": ["Amsterdam is the capital."]}
+        ],
+        "nl": [
+        {"lemma": "hoofdstad", "pos": "noun", "details": {"article": "de", "plural": "hoofdsteden"}, "sentences": ["Amsterdam is de hoofdstad."]}
+        ]
+      }
+    },
+    {
+      "key": "pastor",
+      "gloss": "pastor (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "pastor", "pos": "noun", "details": {"plural": "pastors"}, "sentences": ["The pastor speaks."]}
+        ],
+        "nl": [
+        {"lemma": "predikant", "pos": "noun", "details": {"article": "de", "plural": "predikanten"}, "sentences": ["De predikant spreekt."]}
+        ]
+      }
+    },
+    {
+      "key": "massacre",
+      "gloss": "massacre (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "massacre", "pos": "noun", "details": {"plural": "massacres"}, "sentences": ["The massacre is terrible."]}
+        ],
+        "nl": [
+        {"lemma": "bloedbad", "pos": "noun", "details": {"article": "het", "plural": "bloedbaden"}, "sentences": ["Het bloedbad is verschrikkelijk."]}
+        ]
+      }
+    },
+    {
+      "key": "arm-verb",
+      "gloss": "arm (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "arm", "pos": "verb", "details": {"past": "armed", "participle": "armed"}, "sentences": ["They arm the soldiers."]}
+        ],
+        "nl": [
+        {"lemma": "bewapenen", "pos": "verb", "details": {"pastSingular": "bewapende", "pastPlural": "bewapenden", "participle": "bewapend", "auxiliary": "hebben"}, "sentences": ["Zij bewapenen de soldaten."]}
+        ]
+      }
+    },
+    {
+      "key": "plead",
+      "gloss": "plead (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "plead", "pos": "verb", "details": {"past": "pleaded", "participle": "pleaded"}, "sentences": ["The lawyer pleads."]}
+        ],
+        "nl": [
+        {"lemma": "pleiten", "pos": "verb", "details": {"pastSingular": "pleitte", "pastPlural": "pleitten", "participle": "gepleit", "auxiliary": "hebben"}, "sentences": ["De advocaat pleit."]}
+        ]
+      }
+    },
+    {
+      "key": "release-noun",
+      "gloss": "release (from custody)",
+      "entries": {
+        "en": [
+        {"lemma": "release (from custody)", "pos": "noun", "details": {"plural": "releases"}, "sentences": ["The release is tomorrow."]}
+        ],
+        "nl": [
+        {"lemma": "vrijlating", "pos": "noun", "details": {"article": "de", "plural": "vrijlatingen"}, "sentences": ["De vrijlating is morgen."]}
+        ]
+      }
+    },
+    {
+      "key": "house-arrest",
+      "gloss": "house arrest (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "house arrest", "pos": "noun", "details": {"uncountable": true}, "sentences": ["He is under house arrest."]}
+        ],
+        "nl": [
+        {"lemma": "huisarrest", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["Hij zit onder huisarrest."]}
+        ]
+      }
+    },
+    {
+      "key": "try-verb-berechten",
+      "gloss": "try (in court)",
+      "entries": {
+        "en": [
+        {"lemma": "try (in court)", "pos": "verb", "details": {"past": "tried", "participle": "tried"}, "sentences": ["They try the man in court."]}
+        ],
+        "nl": [
+        {"lemma": "berechten", "pos": "verb", "details": {"pastSingular": "berechtte", "pastPlural": "berechtten", "participle": "berecht", "auxiliary": "hebben"}, "sentences": ["Zij berechten de man."]}
+        ]
+      }
+    },
+    {
+      "key": "abolish",
+      "gloss": "abolish (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "abolish", "pos": "verb", "details": {"past": "abolished", "participle": "abolished"}, "sentences": ["They abolish the rule."]}
+        ],
+        "nl": [
+        {"lemma": "opheffen", "pos": "verb", "details": {"pastSingular": "hief op", "pastPlural": "hieven op", "participle": "opgeheven", "auxiliary": "hebben"}, "sentences": ["Zij heffen de regel op."]}
+        ]
+      }
+    },
+    {
+      "key": "alliance",
+      "gloss": "alliance (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "alliance", "pos": "noun", "details": {"plural": "alliances"}, "sentences": ["They form an alliance."]}
+        ],
+        "nl": [
+        {"lemma": "verbond", "pos": "noun", "details": {"article": "het", "plural": "verbonden"}, "sentences": ["Zij sluiten een verbond."]}
+        ]
+      }
+    },
+    {
+      "key": "threat-noun-dreigement",
+      "gloss": "threat (spoken)",
+      "entries": {
+        "en": [
+        {"lemma": "threat (spoken)", "pos": "noun", "details": {"plural": "threats"}, "sentences": ["He makes a threat."]}
+        ],
+        "nl": [
+        {"lemma": "dreigement", "pos": "noun", "details": {"article": "het", "plural": "dreigementen"}, "sentences": ["Hij doet een dreigement."]}
+        ]
+      }
+    },
+    {
+      "key": "accomplice",
+      "gloss": "accomplice (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "accomplice", "pos": "noun", "details": {"plural": "accomplices"}, "sentences": ["The accomplice is caught."]}
+        ],
+        "nl": [
+        {"lemma": "handlanger", "pos": "noun", "details": {"article": "de", "plural": "handlangers"}, "sentences": ["De handlanger is gepakt."]}
+        ]
+      }
+    },
+    {
+      "key": "unarmed",
+      "gloss": "unarmed (adjective)",
+      "entries": {
+        "en": [
+        {"lemma": "unarmed", "pos": "adjective", "sentences": ["The man is unarmed."]}
+        ],
+        "nl": [
+        {"lemma": "ongewapend", "pos": "adjective", "sentences": ["De man is ongewapend."]}
+        ]
+      }
+    },
+    {
+      "key": "behead",
+      "gloss": "behead (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "behead", "pos": "verb", "details": {"past": "beheaded", "participle": "beheaded"}, "sentences": ["They behead the traitor."]}
+        ],
+        "nl": [
+        {"lemma": "onthoofden", "pos": "verb", "details": {"pastSingular": "onthoofdde", "pastPlural": "onthoofdden", "participle": "onthoofd", "auxiliary": "hebben"}, "sentences": ["Zij onthoofden de verrader."]}
+        ]
+      }
+    },
+    {
+      "key": "guard-noun-wachter",
+      "gloss": "guard (watchman)",
+      "entries": {
+        "en": [
+        {"lemma": "guard (watchman)", "pos": "noun", "details": {"plural": "guards"}, "sentences": ["The guard stands at the gate."]}
+        ],
+        "nl": [
+        {"lemma": "wachter", "pos": "noun", "details": {"article": "de", "plural": "wachters"}, "sentences": ["De wachter staat bij de poort."]}
+        ]
+      }
+    },
+    {
+      "key": "corps",
+      "gloss": "corps (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "corps", "pos": "noun", "details": {"plural": "corpses"}, "sentences": ["The corps marches."]}
+        ],
+        "nl": [
+        {"lemma": "korps", "pos": "noun", "details": {"article": "het", "plural": "korpsen"}, "sentences": ["Het korps marcheert."]}
+        ]
+      }
+    },
+    {
+      "key": "homeland",
+      "gloss": "homeland (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "homeland", "pos": "noun", "details": {"plural": "homelands"}, "sentences": ["He loves his homeland."]}
+        ],
+        "nl": [
+        {"lemma": "vaderland", "pos": "noun", "details": {"article": "het", "plural": "vaderlanden"}, "sentences": ["Hij houdt van zijn vaderland."]}
+        ]
+      }
+    },
+    {
+      "key": "slavery",
+      "gloss": "slavery (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "slavery", "pos": "noun", "details": {"uncountable": true}, "sentences": ["Slavery is abolished."]}
+        ],
+        "nl": [
+        {"lemma": "slavernij", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["De slavernij is afgeschaft."]}
+        ]
+      }
+    },
+    {
+      "key": "debate",
+      "gloss": "debate (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "debate", "pos": "noun", "details": {"plural": "debates"}, "sentences": ["The debate is on TV."]}
+        ],
+        "nl": [
+        {"lemma": "debat", "pos": "noun", "details": {"article": "het", "plural": "debatten"}, "sentences": ["Het debat is op tv."]}
+        ]
+      }
+    },
+    {
+      "key": "pursuit",
+      "gloss": "pursuit (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "pursuit", "pos": "noun", "details": {"plural": "pursuits"}, "sentences": ["The pursuit is on the news."]}
+        ],
+        "nl": [
+        {"lemma": "achtervolging", "pos": "noun", "details": {"article": "de", "plural": "achtervolgingen"}, "sentences": ["De achtervolging staat in het nieuws."]}
+        ]
+      }
+    },
+    {
+      "key": "kneel",
+      "gloss": "kneel (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "kneel", "pos": "verb", "details": {"past": "knelt", "participle": "knelt"}, "sentences": ["He kneels before the king."]}
+        ],
+        "nl": [
+        {"lemma": "knielen", "pos": "verb", "details": {"pastSingular": "knielde", "pastPlural": "knielden", "participle": "geknield", "auxiliary": "hebben"}, "sentences": ["Hij knielt voor de koning."]}
+        ]
+      }
+    },
+    {
+      "key": "dagger",
+      "gloss": "dagger (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "dagger", "pos": "noun", "details": {"plural": "daggers"}, "sentences": ["The dagger is sharp."]}
+        ],
+        "nl": [
+        {"lemma": "dolk", "pos": "noun", "details": {"article": "de", "plural": "dolken"}, "sentences": ["De dolk is scherp."]}
+        ]
+      }
+    },
+    {
+      "key": "demolish",
+      "gloss": "demolish (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "demolish", "pos": "verb", "details": {"past": "demolished", "participle": "demolished"}, "sentences": ["They demolish the building."]}
+        ],
+        "nl": [
+        {"lemma": "slopen", "pos": "verb", "details": {"pastSingular": "sloopte", "pastPlural": "sloopten", "participle": "gesloopt", "auxiliary": "hebben"}, "sentences": ["Zij slopen het gebouw."]}
+        ]
+      }
+    },
+    {
+      "key": "unmask",
+      "gloss": "unmask (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "unmask", "pos": "verb", "details": {"past": "unmasked", "participle": "unmasked"}, "sentences": ["They unmask the thief."]}
+        ],
+        "nl": [
+        {"lemma": "ontmaskeren", "pos": "verb", "details": {"pastSingular": "ontmaskerde", "pastPlural": "ontmaskerden", "participle": "ontmaskerd", "auxiliary": "hebben"}, "sentences": ["Zij ontmaskeren de dief."]}
+        ]
+      }
+    },
+    {
+      "key": "lookout",
+      "gloss": "lookout (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "lookout", "pos": "noun", "details": {"plural": "lookouts"}, "sentences": ["The lookout sees the ship."]}
+        ],
+        "nl": [
+        {"lemma": "uitkijk", "pos": "noun", "details": {"article": "de", "plural": "uitkijken"}, "sentences": ["De uitkijk ziet het schip."]}
+        ]
+      }
+    },
+    {
+      "key": "forensic",
+      "gloss": "forensic (adjective)",
+      "entries": {
+        "en": [
+        {"lemma": "forensic", "pos": "adjective", "sentences": ["It is a forensic study."]}
+        ],
+        "nl": [
+        {"lemma": "forensisch", "pos": "adjective", "sentences": ["Het is een forensisch onderzoek."]}
+        ]
+      }
+    },
+    {
+      "key": "constitution",
+      "gloss": "constitution (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "constitution", "pos": "noun", "details": {"plural": "constitutions"}, "sentences": ["The constitution is old."]}
+        ],
+        "nl": [
+        {"lemma": "grondwet", "pos": "noun", "details": {"article": "de", "plural": "grondwetten"}, "sentences": ["De grondwet is oud."]}
+        ]
+      }
+    },
+    {
+      "key": "deputy",
+      "gloss": "deputy (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "deputy", "pos": "noun", "details": {"plural": "deputies"}, "sentences": ["The deputy arrests him."]}
+        ],
+        "nl": [
+        {"lemma": "hulpsheriff", "pos": "noun", "details": {"article": "de", "plural": "hulpsheriffs"}, "sentences": ["De hulpsheriff arresteert hem."]}
+        ]
+      }
+    },
+    {
+      "key": "harm",
+      "gloss": "harm (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "harm", "pos": "verb", "details": {"past": "harmed", "participle": "harmed"}, "sentences": ["That harms his reputation."]}
+        ],
+        "nl": [
+        {"lemma": "schaden", "pos": "verb", "details": {"pastSingular": "schaadde", "pastPlural": "schaadden", "participle": "geschaad", "auxiliary": "hebben"}, "sentences": ["Dat schaadt zijn reputatie."]}
+        ]
+      }
+    },
+    {
+      "key": "baptize",
+      "gloss": "baptize (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "baptize", "pos": "verb", "details": {"past": "baptized", "participle": "baptized"}, "sentences": ["They baptize the child."]}
+        ],
+        "nl": [
+        {"lemma": "dopen", "pos": "verb", "details": {"pastSingular": "doopte", "pastPlural": "doopten", "participle": "gedoopt", "auxiliary": "hebben"}, "sentences": ["Zij dopen het kind."]}
+        ]
+      }
+    },
+    {
+      "key": "firearm",
+      "gloss": "firearm (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "firearm", "pos": "noun", "details": {"plural": "firearms"}, "sentences": ["He has a firearm."]}
+        ],
+        "nl": [
+        {"lemma": "vuurwapen", "pos": "noun", "details": {"article": "het", "plural": "vuurwapens"}, "sentences": ["Hij heeft een vuurwapen."]}
+        ]
+      }
+    },
+    {
+      "key": "plunder",
+      "gloss": "plunder (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "plunder", "pos": "verb", "details": {"past": "plundered", "participle": "plundered"}, "sentences": ["They plunder the village."]}
+        ],
+        "nl": [
+        {"lemma": "plunderen", "pos": "verb", "details": {"pastSingular": "plunderde", "pastPlural": "plunderden", "participle": "geplunderd", "auxiliary": "hebben"}, "sentences": ["Zij plunderen het dorp."]}
+        ]
+      }
+    },
+    {
+      "key": "tactic",
+      "gloss": "tactic (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "tactic", "pos": "noun", "details": {"plural": "tactics"}, "sentences": ["That is a good tactic."]}
+        ],
+        "nl": [
+        {"lemma": "tactiek", "pos": "noun", "details": {"article": "de", "plural": "tactieken"}, "sentences": ["Dat is een goede tactiek."]}
+        ]
+      }
+    },
+    {
+      "key": "regiment",
+      "gloss": "regiment (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "regiment", "pos": "noun", "details": {"plural": "regiments"}, "sentences": ["The regiment marches."]}
+        ],
+        "nl": [
+        {"lemma": "regiment", "pos": "noun", "details": {"article": "het", "plural": "regimenten"}, "sentences": ["Het regiment marcheert."]}
+        ]
+      }
+    },
+    {
+      "key": "enforce",
+      "gloss": "enforce (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "enforce", "pos": "verb", "details": {"past": "enforced", "participle": "enforced"}, "sentences": ["The police enforce the law."]}
+        ],
+        "nl": [
+        {"lemma": "handhaven", "pos": "verb", "details": {"pastSingular": "handhaafde", "pastPlural": "handhaafden", "participle": "gehandhaafd", "auxiliary": "hebben"}, "sentences": ["De politie handhaaft de wet."]}
+        ]
+      }
+    },
+    {
+      "key": "cardinal",
+      "gloss": "cardinal (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "cardinal", "pos": "noun", "details": {"plural": "cardinals"}, "sentences": ["The cardinal speaks."]}
+        ],
+        "nl": [
+        {"lemma": "kardinaal", "pos": "noun", "details": {"article": "de", "plural": "kardinalen"}, "sentences": ["De kardinaal spreekt."]}
+        ]
+      }
+    },
+    {
+      "key": "sin-verb",
+      "gloss": "sin (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "sin", "pos": "verb", "details": {"past": "sined", "participle": "sined"}, "sentences": ["He sins."]}
+        ],
+        "nl": [
+        {"lemma": "zondigen", "pos": "verb", "details": {"pastSingular": "zondigde", "pastPlural": "zondigden", "participle": "gezondigd", "auxiliary": "hebben"}, "sentences": ["Hij zondigt."]}
+        ]
+      }
+    },
+    {
+      "key": "raid",
+      "gloss": "raid (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "raid", "pos": "noun", "details": {"plural": "raids"}, "sentences": ["The police make a raid."]}
+        ],
+        "nl": [
+        {"lemma": "inval", "pos": "noun", "details": {"article": "de", "plural": "invallen"}, "sentences": ["De politie doet een inval."]}
+        ]
+      }
+    },
+    {
+      "key": "fugitive",
+      "gloss": "fugitive (adjective)",
+      "entries": {
+        "en": [
+        {"lemma": "fugitive", "pos": "adjective", "sentences": ["The thief is fugitive."]}
+        ],
+        "nl": [
+        {"lemma": "voortvluchtig", "pos": "adjective", "sentences": ["De dief is voortvluchtig."]}
+        ]
+      }
+    },
+    {
+      "key": "bunker",
+      "gloss": "bunker (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "bunker", "pos": "noun", "details": {"plural": "bunkers"}, "sentences": ["The bunker is underground."]}
+        ],
+        "nl": [
+        {"lemma": "bunker", "pos": "noun", "details": {"article": "de", "plural": "bunkers"}, "sentences": ["De bunker is ondergronds."]}
+        ]
+      }
+    },
+    {
+      "key": "prophecy",
+      "gloss": "prophecy (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "prophecy", "pos": "noun", "details": {"plural": "prophecies"}, "sentences": ["The prophecy comes true."]}
+        ],
+        "nl": [
+        {"lemma": "profetie", "pos": "noun", "details": {"article": "de", "plural": "profetieën"}, "sentences": ["De profetie komt uit."]}
+        ]
+      }
+    },
+    {
+      "key": "shoot-down",
+      "gloss": "shoot down (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "shoot down", "pos": "verb", "details": {"past": "shot down", "participle": "shot down"}, "sentences": ["They shoot down the plane."]}
+        ],
+        "nl": [
+        {"lemma": "neerhalen", "pos": "verb", "details": {"pastSingular": "haalde neer", "pastPlural": "haalden neer", "participle": "neergehaald", "auxiliary": "hebben"}, "sentences": ["Zij halen het vliegtuig neer."]}
+        ]
+      }
+    },
+    {
+      "key": "machine-gun",
+      "gloss": "machine gun (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "machine gun", "pos": "noun", "details": {"plural": "machine guns"}, "sentences": ["The soldier has a machine gun."]}
+        ],
+        "nl": [
+        {"lemma": "machinegeweer", "pos": "noun", "details": {"article": "het", "plural": "machinegeweren"}, "sentences": ["De soldaat heeft een machinegeweer."]}
+        ]
+      }
+    },
+    {
+      "key": "torpedo",
+      "gloss": "torpedo (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "torpedo", "pos": "noun", "details": {"plural": "torpedos"}, "sentences": ["The torpedo hits the ship."]}
+        ],
+        "nl": [
+        {"lemma": "torpedo", "pos": "noun", "details": {"article": "de", "plural": "torpedo's"}, "sentences": ["De torpedo raakt het schip."]}
+        ]
+      }
+    },
+    {
+      "key": "coast-guard",
+      "gloss": "coast guard (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "coast guard", "pos": "noun", "details": {"uncountable": true}, "sentences": ["The coast guard helps."]}
+        ],
+        "nl": [
+        {"lemma": "kustwacht", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["De kustwacht helpt."]}
+        ]
+      }
+    },
+    {
+      "key": "kidnapper",
+      "gloss": "kidnapper (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "kidnapper", "pos": "noun", "details": {"plural": "kidnappers"}, "sentences": ["The kidnapper is caught."]}
+        ],
+        "nl": [
+        {"lemma": "ontvoerder", "pos": "noun", "details": {"article": "de", "plural": "ontvoerders"}, "sentences": ["De ontvoerder is gepakt."]}
+        ]
+      }
+    },
+    {
+      "key": "cavalry",
+      "gloss": "cavalry (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "cavalry", "pos": "noun", "details": {"uncountable": true}, "sentences": ["The cavalry attacks."]}
+        ],
+        "nl": [
+        {"lemma": "cavalerie", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["De cavalerie valt aan."]}
+        ]
+      }
+    },
+    {
+      "key": "march",
+      "gloss": "march (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "march", "pos": "verb", "details": {"past": "marched", "participle": "marched"}, "sentences": ["The soldiers march."]}
+        ],
+        "nl": [
+        {"lemma": "marcheren", "pos": "verb", "details": {"pastSingular": "marcheerde", "pastPlural": "marcheerden", "participle": "gemarcheerd", "auxiliary": "hebben/zijn"}, "sentences": ["De soldaten marcheren."]}
+        ]
+      }
+    },
+    {
+      "key": "legion",
+      "gloss": "legion (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "legion", "pos": "noun", "details": {"plural": "legions"}, "sentences": ["The legion marches."]}
+        ],
+        "nl": [
+        {"lemma": "legioen", "pos": "noun", "details": {"article": "het", "plural": "legioenen"}, "sentences": ["Het legioen marcheert."]}
+        ]
+      }
+    },
+    {
+      "key": "civil-war",
+      "gloss": "civil war (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "civil war", "pos": "noun", "details": {"plural": "civil wars"}, "sentences": ["The civil war is long."]}
+        ],
+        "nl": [
+        {"lemma": "burgeroorlog", "pos": "noun", "details": {"article": "de", "plural": "burgeroorlogen"}, "sentences": ["De burgeroorlog is lang."]}
+        ]
+      }
+    },
+    {
+      "key": "whip",
+      "gloss": "whip (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "whip", "pos": "noun", "details": {"plural": "whips"}, "sentences": ["He has a whip."]}
+        ],
+        "nl": [
+        {"lemma": "zweep", "pos": "noun", "details": {"article": "de", "plural": "zwepen"}, "sentences": ["Hij heeft een zweep."]}
+        ]
+      }
+    },
+    {
+      "key": "veteran",
+      "gloss": "veteran (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "veteran", "pos": "noun", "details": {"plural": "veterans"}, "sentences": ["The veteran tells a story."]}
+        ],
+        "nl": [
+        {"lemma": "veteraan", "pos": "noun", "details": {"article": "de", "plural": "veteranen"}, "sentences": ["De veteraan vertelt een verhaal."]}
+        ]
+      }
+    },
+    {
+      "key": "elf",
+      "gloss": "elf (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "elf", "pos": "noun", "details": {"plural": "elfs"}, "sentences": ["The elf lives in the forest."]}
+        ],
+        "nl": [
+        {"lemma": "elf", "pos": "noun", "details": {"article": "de", "plural": "elfen"}, "sentences": ["De elf woont in het bos."]}
+        ]
+      }
+    },
+    {
+      "key": "dungeon",
+      "gloss": "dungeon (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "dungeon", "pos": "noun", "details": {"plural": "dungeons"}, "sentences": ["The dungeon is dark."]}
+        ],
+        "nl": [
+        {"lemma": "kerker", "pos": "noun", "details": {"article": "de", "plural": "kerkers"}, "sentences": ["De kerker is donker."]}
+        ]
+      }
+    },
+    {
+      "key": "ally",
+      "gloss": "ally (female)",
+      "entries": {
+        "en": [
+        {"lemma": "ally (female)", "pos": "noun", "details": {"plural": "allies"}, "sentences": ["She is my ally."]}
+        ],
+        "nl": [
+        {"lemma": "bondgenote", "pos": "noun", "details": {"article": "de", "plural": "bondgenotes"}, "sentences": ["Zij is mijn bondgenote."]}
+        ]
+      }
+    },
+    {
+      "key": "eyewitness",
+      "gloss": "eyewitness (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "eyewitness", "pos": "noun", "details": {"plural": "eyewitnesses"}, "sentences": ["The eyewitness speaks."]}
+        ],
+        "nl": [
+        {"lemma": "ooggetuige", "pos": "noun", "details": {"article": "de", "plural": "ooggetuigen"}, "sentences": ["De ooggetuige spreekt."]}
+        ]
+      }
+    },
+    {
+      "key": "province",
+      "gloss": "province (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "province", "pos": "noun", "details": {"plural": "provinces"}, "sentences": ["The province is large."]}
+        ],
+        "nl": [
+        {"lemma": "provincie", "pos": "noun", "details": {"article": "de", "plural": "provincies"}, "sentences": ["De provincie is groot."]}
+        ]
+      }
+    },
+    {
+      "key": "martyr",
+      "gloss": "martyr (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "martyr", "pos": "noun", "details": {"plural": "martyrs"}, "sentences": ["The martyr dies for his belief."]}
+        ],
+        "nl": [
+        {"lemma": "martelaar", "pos": "noun", "details": {"article": "de", "plural": "martelaars"}, "sentences": ["De martelaar sterft voor zijn geloof."]}
+        ]
+      }
+    },
+    {
+      "key": "evacuation",
+      "gloss": "evacuation (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "evacuation", "pos": "noun", "details": {"plural": "evacuations"}, "sentences": ["The evacuation starts."]}
+        ],
+        "nl": [
+        {"lemma": "evacuatie", "pos": "noun", "details": {"article": "de", "plural": "evacuaties"}, "sentences": ["De evacuatie begint."]}
+        ]
+      }
+    },
+    {
+      "key": "sabotage",
+      "gloss": "sabotage (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "sabotage", "pos": "verb", "details": {"past": "sabotaged", "participle": "sabotaged"}, "sentences": ["They sabotage the plan."]}
+        ],
+        "nl": [
+        {"lemma": "saboteren", "pos": "verb", "details": {"pastSingular": "saboteerde", "pastPlural": "saboteerden", "participle": "gesaboteerd", "auxiliary": "hebben"}, "sentences": ["Zij saboteren het plan."]}
+        ]
+      }
+    },
+    {
+      "key": "altar",
+      "gloss": "altar (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "altar", "pos": "noun", "details": {"plural": "altars"}, "sentences": ["The candles stand on the altar."]}
+        ],
+        "nl": [
+        {"lemma": "altaar", "pos": "noun", "details": {"article": "het", "plural": "altaren"}, "sentences": ["De kaarsen staan op het altaar."]}
+        ]
+      }
+    },
+    {
+      "key": "ruler",
+      "gloss": "ruler (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "ruler", "pos": "noun", "details": {"plural": "rulers"}, "sentences": ["The ruler is strict."]}
+        ],
+        "nl": [
+        {"lemma": "heerser", "pos": "noun", "details": {"article": "de", "plural": "heersers"}, "sentences": ["De heerser is streng."]}
+        ]
+      }
+    },
+    {
+      "key": "majority",
+      "gloss": "majority (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "majority", "pos": "noun", "details": {"plural": "majorities"}, "sentences": ["The majority votes yes."]}
+        ],
+        "nl": [
+        {"lemma": "meerderheid", "pos": "noun", "details": {"article": "de", "plural": "meerderheden"}, "sentences": ["De meerderheid stemt ja."]}
+        ]
+      }
+    },
+    {
+      "key": "robber",
+      "gloss": "robber (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "robber", "pos": "noun", "details": {"plural": "robbers"}, "sentences": ["The robber flees."]}
+        ],
+        "nl": [
+        {"lemma": "overvaller", "pos": "noun", "details": {"article": "de", "plural": "overvallers"}, "sentences": ["De overvaller vlucht."]}
+        ]
+      }
+    },
+    {
+      "key": "juror",
+      "gloss": "juror (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "juror", "pos": "noun", "details": {"plural": "jurors"}, "sentences": ["The juror listens."]}
+        ],
+        "nl": [
+        {"lemma": "jurylid", "pos": "noun", "details": {"article": "het", "plural": "juryleden"}, "sentences": ["Het jurylid luistert."]}
+        ]
+      }
+    },
+    {
+      "key": "mercenary",
+      "gloss": "mercenary (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "mercenary", "pos": "noun", "details": {"plural": "mercenaries"}, "sentences": ["The mercenary fights for money."]}
+        ],
+        "nl": [
+        {"lemma": "huurling", "pos": "noun", "details": {"article": "de", "plural": "huurlingen"}, "sentences": ["De huurling vecht voor geld."]}
+        ]
+      }
+    },
+    {
+      "key": "armor",
+      "gloss": "armor (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "armor", "pos": "noun", "details": {"plural": "armors"}, "sentences": ["The knight wears armor."]}
+        ],
+        "nl": [
+        {"lemma": "harnas", "pos": "noun", "details": {"article": "het", "plural": "harnassen"}, "sentences": ["De ridder draagt een harnas."]}
+        ]
+      }
+    },
+    {
+      "key": "convert",
+      "gloss": "convert (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "convert", "pos": "verb", "details": {"past": "converted", "participle": "converted"}, "sentences": ["They convert him."]}
+        ],
+        "nl": [
+        {"lemma": "bekeren", "pos": "verb", "details": {"pastSingular": "bekeerde", "pastPlural": "bekeerden", "participle": "bekeerd", "auxiliary": "hebben"}, "sentences": ["Zij bekeren hem."]}
+        ]
+      }
+    },
+    {
+      "key": "hijack",
+      "gloss": "hijack (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "hijack", "pos": "verb", "details": {"past": "hijacked", "participle": "hijacked"}, "sentences": ["They hijack the plane."]}
+        ],
+        "nl": [
+        {"lemma": "kapen", "pos": "verb", "details": {"pastSingular": "kaapte", "pastPlural": "kaapten", "participle": "gekaapt", "auxiliary": "hebben"}, "sentences": ["Zij kapen het vliegtuig."]}
+        ]
+      }
+    },
+    {
+      "key": "lobby-noun-lobby",
+      "gloss": "lobby (noun, lobby)",
+      "entries": {
+        "en": [
+        {"lemma": "lobby", "pos": "noun", "details": {"plural": "lobbies"}, "sentences": ["The lobby is strong."]}
+        ],
+        "nl": [
+        {"lemma": "lobby", "pos": "noun", "details": {"article": "de", "plural": "lobby's"}, "sentences": ["De lobby is sterk."]}
+        ]
+      }
+    },
+    {
+      "key": "terrorism",
+      "gloss": "terrorism (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "terrorism", "pos": "noun", "details": {"uncountable": true}, "sentences": ["Terrorism is a threat."]}
+        ],
+        "nl": [
+        {"lemma": "terrorisme", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["Terrorisme is een bedreiging."]}
+        ]
+      }
+    },
+    {
+      "key": "escort",
+      "gloss": "escort (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "escort", "pos": "noun", "details": {"plural": "escorts"}, "sentences": ["The escort protects the king."]}
+        ],
+        "nl": [
+        {"lemma": "escorte", "pos": "noun", "details": {"article": "de", "plural": "escortes"}, "sentences": ["De escorte beschermt de koning."]}
+        ]
+      }
+    },
+    {
+      "key": "scout",
+      "gloss": "scout (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "scout", "pos": "noun", "details": {"plural": "scouts"}, "sentences": ["The scout reports."]}
+        ],
+        "nl": [
+        {"lemma": "verkenner", "pos": "noun", "details": {"article": "de", "plural": "verkenners"}, "sentences": ["De verkenner meldt."]}
+        ]
+      }
+    },
+    {
+      "key": "barracks",
+      "gloss": "barracks (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "barracks", "pos": "noun", "details": {"pluralOnly": true}, "sentences": ["The soldiers sleep in the barracks."]}
+        ],
+        "nl": [
+        {"lemma": "barak", "pos": "noun", "details": {"article": "de", "plural": "barakken"}, "sentences": ["De soldaten slapen in de barak."]}
+        ]
+      }
+    },
+    {
+      "key": "revelation",
+      "gloss": "revelation (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "revelation", "pos": "noun", "details": {"plural": "revelations"}, "sentences": ["This is a revelation."]}
+        ],
+        "nl": [
+        {"lemma": "openbaring", "pos": "noun", "details": {"article": "de", "plural": "openbaringen"}, "sentences": ["Dit is een openbaring."]}
+        ]
+      }
+    },
+    {
+      "key": "custody",
+      "gloss": "custody (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "custody", "pos": "noun", "details": {"uncountable": true}, "sentences": ["She has custody."]}
+        ],
+        "nl": [
+        {"lemma": "voogdij", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Zij heeft de voogdij."]}
+        ]
+      }
+    },
+    {
+      "key": "corruption",
+      "gloss": "corruption (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "corruption", "pos": "noun", "details": {"uncountable": true}, "sentences": ["Corruption is a problem."]}
+        ],
+        "nl": [
+        {"lemma": "corruptie", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Corruptie is een probleem."]}
+        ]
+      }
+    },
+    {
+      "key": "authority-noun-autoriteit",
+      "gloss": "authority (institution)",
+      "entries": {
+        "en": [
+        {"lemma": "authority (institution)", "pos": "noun", "details": {"plural": "authorities"}, "sentences": ["The authority decides."]}
+        ],
+        "nl": [
+        {"lemma": "autoriteit", "pos": "noun", "details": {"article": "de", "plural": "autoriteiten"}, "sentences": ["De autoriteit beslist."]}
+        ]
+      }
+    },
+    {
+      "key": "convoy",
+      "gloss": "convoy (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "convoy", "pos": "noun", "details": {"plural": "convoys"}, "sentences": ["The convoy drives."]}
+        ],
+        "nl": [
+        {"lemma": "konvooi", "pos": "noun", "details": {"article": "het", "plural": "konvooien"}, "sentences": ["Het konvooi rijdt."]}
+        ]
+      }
+    },
+    {
+      "key": "deed-noun-akte",
+      "gloss": "deed (certificate)",
+      "entries": {
+        "en": [
+        {"lemma": "deed (certificate)", "pos": "noun", "details": {"plural": "deeds"}, "sentences": ["I sign the deed."]}
+        ],
+        "nl": [
+        {"lemma": "akte", "pos": "noun", "details": {"article": "de", "plural": "aktes"}, "sentences": ["Ik teken de akte."]}
+        ]
+      }
+    },
+    {
+      "key": "claim-verb-opeisen",
+      "gloss": "claim (verb, opeisen)",
+      "entries": {
+        "en": [
+        {"lemma": "claim", "pos": "verb", "details": {"past": "claimed", "participle": "claimed"}, "sentences": ["They claim the land."]}
+        ],
+        "nl": [
+        {"lemma": "opeisen", "pos": "verb", "details": {"pastSingular": "eiste op", "pastPlural": "eisten op", "participle": "opgeëist", "auxiliary": "hebben"}, "sentences": ["Zij eisen het land op."]}
+        ]
+      }
+    },
+    {
+      "key": "asylum",
+      "gloss": "asylum (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "asylum", "pos": "noun", "details": {"uncountable": true}, "sentences": ["He seeks asylum."]}
+        ],
+        "nl": [
+        {"lemma": "asiel", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["Hij zoekt asiel."]}
+        ]
+      }
+    },
+    {
+      "key": "underworld",
+      "gloss": "underworld (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "underworld", "pos": "noun", "details": {"uncountable": true}, "sentences": ["He belongs to the underworld."]}
+        ],
+        "nl": [
+        {"lemma": "onderwereld", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Hij hoort bij de onderwereld."]}
+        ]
+      }
+    },
+    {
+      "key": "chancellor",
+      "gloss": "chancellor (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "chancellor", "pos": "noun", "details": {"plural": "chancellors"}, "sentences": ["The chancellor speaks."]}
+        ],
+        "nl": [
+        {"lemma": "kanselier", "pos": "noun", "details": {"article": "de", "plural": "kanseliers"}, "sentences": ["De kanselier spreekt."]}
+        ]
+      }
+    },
+    {
+      "key": "caliber",
+      "gloss": "caliber (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "caliber", "pos": "noun", "details": {"plural": "calibers"}, "sentences": ["The caliber is large."]}
+        ],
+        "nl": [
+        {"lemma": "kaliber", "pos": "noun", "details": {"article": "het", "plural": "kalibers"}, "sentences": ["Het kaliber is groot."]}
+        ]
+      }
+    },
+    {
+      "key": "identification",
+      "gloss": "identification (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "identification", "pos": "noun", "details": {"plural": "identifications"}, "sentences": ["I show my identification."]}
+        ],
+        "nl": [
+        {"lemma": "legitimatie", "pos": "noun", "details": {"article": "de", "plural": "legitimaties"}, "sentences": ["Ik toon mijn legitimatie."]}
+        ]
+      }
+    },
+    {
+      "key": "police-report",
+      "gloss": "police report (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "police report", "pos": "noun", "details": {"plural": "police reports"}, "sentences": ["I file a police report."]}
+        ],
+        "nl": [
+        {"lemma": "aangifte", "pos": "noun", "details": {"article": "de", "plural": "aangiftes"}, "sentences": ["Ik doe aangifte bij de politie."]}
+        ]
+      }
+    },
+    {
+      "key": "infiltrate",
+      "gloss": "infiltrate (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "infiltrate", "pos": "verb", "details": {"past": "infiltrated", "participle": "infiltrated"}, "sentences": ["They infiltrate the group."]}
+        ],
+        "nl": [
+        {"lemma": "infiltreren", "pos": "verb", "details": {"pastSingular": "infiltreerde", "pastPlural": "infiltreerden", "participle": "geïnfiltreerd", "auxiliary": "hebben"}, "sentences": ["Zij infiltreren de groep."]}
+        ]
+      }
+    },
+    {
+      "key": "amulet",
+      "gloss": "amulet (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "amulet", "pos": "noun", "details": {"plural": "amulets"}, "sentences": ["He wears an amulet."]}
+        ],
+        "nl": [
+        {"lemma": "amulet", "pos": "noun", "details": {"article": "het", "plural": "amuletten"}, "sentences": ["Hij draagt een amulet."]}
+        ]
+      }
+    },
+    {
+      "key": "injustice",
+      "gloss": "injustice (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "injustice", "pos": "noun", "details": {"uncountable": true}, "sentences": ["We fight injustice."]}
+        ],
+        "nl": [
+        {"lemma": "onrecht", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["Wij vechten tegen onrecht."]}
+        ]
+      }
+    },
+    {
+      "key": "manslaughter",
+      "gloss": "manslaughter (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "manslaughter", "pos": "noun", "details": {"uncountable": true}, "sentences": ["He is guilty of manslaughter."]}
+        ],
+        "nl": [
+        {"lemma": "doodslag", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Hij is schuldig aan doodslag."]}
+        ]
+      }
+    },
+    {
+      "key": "parliament",
+      "gloss": "parliament (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "parliament", "pos": "noun", "details": {"plural": "parliaments"}, "sentences": ["The parliament decides."]}
+        ],
+        "nl": [
+        {"lemma": "parlement", "pos": "noun", "details": {"article": "het", "plural": "parlementen"}, "sentences": ["Het parlement beslist."]}
         ]
       }
     }

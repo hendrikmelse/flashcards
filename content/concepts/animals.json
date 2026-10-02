@@ -659,6 +659,294 @@
         {"lemma": "kakkerlak", "pos": "noun", "details": {"article": "de", "plural": "kakkerlakken"}, "sentences": ["Er zit een kakkerlak in de keuken."]}
         ]
       }
+    },
+    {
+      "key": "tomcat",
+      "gloss": "tomcat (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "tomcat", "pos": "noun", "details": {"plural": "tomcats"}, "sentences": ["The tomcat sleeps."]}
+        ],
+        "nl": [
+        {"lemma": "kater", "pos": "noun", "details": {"article": "de", "plural": "katers"}, "sentences": ["De kater slaapt."]}
+        ]
+      }
+    },
+    {
+      "key": "gorilla",
+      "gloss": "gorilla (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "gorilla", "pos": "noun", "details": {"plural": "gorillas"}, "sentences": ["The gorilla is strong."]}
+        ],
+        "nl": [
+        {"lemma": "gorilla", "pos": "noun", "details": {"article": "de", "plural": "gorilla's"}, "sentences": ["De gorilla is sterk."]}
+        ]
+      }
+    },
+    {
+      "key": "bee",
+      "gloss": "bee (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "bee", "pos": "noun", "details": {"plural": "bees"}, "sentences": ["The bee makes honey."]}
+        ],
+        "nl": [
+        {"lemma": "bij", "pos": "noun", "details": {"article": "de", "plural": "bijen"}, "sentences": ["De bij maakt honing."]}
+        ]
+      }
+    },
+    {
+      "key": "den",
+      "gloss": "den (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "den", "pos": "noun", "details": {"plural": "dens"}, "sentences": ["The fox lives in the den."]}
+        ],
+        "nl": [
+        {"lemma": "hol", "pos": "noun", "details": {"article": "het", "plural": "holen"}, "sentences": ["De vos leeft in het hol."]}
+        ]
+      }
+    },
+    {
+      "key": "fox",
+      "gloss": "fox (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "fox", "pos": "noun", "details": {"plural": "foxes"}, "sentences": ["The fox is clever."]}
+        ],
+        "nl": [
+        {"lemma": "vos", "pos": "noun", "details": {"article": "de", "plural": "vossen"}, "sentences": ["De vos is slim."]}
+        ]
+      }
+    },
+    {
+      "key": "werewolf",
+      "gloss": "werewolf (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "werewolf", "pos": "noun", "details": {"plural": "werewolfs"}, "sentences": ["The werewolf howls."]}
+        ],
+        "nl": [
+        {"lemma": "weerwolf", "pos": "noun", "details": {"article": "de", "plural": "weerwolven"}, "sentences": ["De weerwolf huilt."]}
+        ]
+      }
+    },
+    {
+      "key": "mole",
+      "gloss": "mole (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "mole", "pos": "noun", "details": {"plural": "moles"}, "sentences": ["The mole lives under the ground."]}
+        ],
+        "nl": [
+        {"lemma": "mol", "pos": "noun", "details": {"article": "de", "plural": "mollen"}, "sentences": ["De mol leeft onder de grond."]}
+        ]
+      }
+    },
+    {
+      "key": "dinosaur",
+      "gloss": "dinosaur (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "dinosaur", "pos": "noun", "details": {"plural": "dinosaurs"}, "sentences": ["The dinosaur is huge."]}
+        ],
+        "nl": [
+        {"lemma": "dinosaurus", "pos": "noun", "details": {"article": "de", "plural": "dinosauriërs"}, "sentences": ["De dinosaurus is enorm."]}
+        ]
+      }
+    },
+    {
+      "key": "turtle",
+      "gloss": "turtle (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "turtle", "pos": "noun", "details": {"plural": "turtles"}, "sentences": ["The turtle is slow."]}
+        ],
+        "nl": [
+        {"lemma": "schildpad", "pos": "noun", "details": {"article": "de", "plural": "schildpadden"}, "sentences": ["De schildpad is langzaam."]}
+        ]
+      }
+    },
+    {
+      "key": "vermin",
+      "gloss": "vermin (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "vermin", "pos": "noun", "details": {"uncountable": true}, "sentences": ["There is vermin in the house."]}
+        ],
+        "nl": [
+        {"lemma": "ongedierte", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["Er zit ongedierte in het huis."]}
+        ]
+      }
+    },
+    {
+      "key": "bat",
+      "gloss": "bat (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "bat", "pos": "noun", "details": {"plural": "bats"}, "sentences": ["The bat flies at night."]}
+        ],
+        "nl": [
+        {"lemma": "vleermuis", "pos": "noun", "details": {"article": "de", "plural": "vleermuizen"}, "sentences": ["De vleermuis vliegt 's nachts."]}
+        ]
+      }
+    },
+    {
+      "key": "snail",
+      "gloss": "snail (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "snail", "pos": "noun", "details": {"plural": "snails"}, "sentences": ["The snail is slow."]}
+        ],
+        "nl": [
+        {"lemma": "slak", "pos": "noun", "details": {"article": "de", "plural": "slakken"}, "sentences": ["De slak is langzaam."]}
+        ]
+      }
+    },
+    {
+      "key": "coop",
+      "gloss": "coop (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "coop", "pos": "noun", "details": {"plural": "coops"}, "sentences": ["The chickens are in the coop."]}
+        ],
+        "nl": [
+        {"lemma": "hok", "pos": "noun", "details": {"article": "het", "plural": "hokken"}, "sentences": ["De kippen zitten in het hok."]}
+        ]
+      }
+    },
+    {
+      "key": "pony",
+      "gloss": "pony (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "pony", "pos": "noun", "details": {"plural": "ponies"}, "sentences": ["The child rides a pony."]}
+        ],
+        "nl": [
+        {"lemma": "pony", "pos": "noun", "details": {"article": "de", "plural": "pony's"}, "sentences": ["Het kind rijdt op een pony."]}
+        ]
+      }
+    },
+    {
+      "key": "predator",
+      "gloss": "predator (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "predator", "pos": "noun", "details": {"plural": "predators"}, "sentences": ["The lion is a predator."]}
+        ],
+        "nl": [
+        {"lemma": "roofdier", "pos": "noun", "details": {"article": "het", "plural": "roofdieren"}, "sentences": ["De leeuw is een roofdier."]}
+        ]
+      }
+    },
+    {
+      "key": "breed-verb-fokken",
+      "gloss": "breed (animals)",
+      "entries": {
+        "en": [
+        {"lemma": "breed (animals)", "pos": "verb", "details": {"past": "breeded", "participle": "breeded"}, "sentences": ["He breeds horses."]}
+        ],
+        "nl": [
+        {"lemma": "fokken", "pos": "verb", "details": {"pastSingular": "fokte", "pastPlural": "fokten", "participle": "gefokt", "auxiliary": "hebben"}, "sentences": ["Hij fokt paarden."]}
+        ]
+      }
+    },
+    {
+      "key": "camel",
+      "gloss": "camel (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "camel", "pos": "noun", "details": {"plural": "camels"}, "sentences": ["The camel lives in the desert."]}
+        ],
+        "nl": [
+        {"lemma": "kameel", "pos": "noun", "details": {"article": "de", "plural": "kamelen"}, "sentences": ["De kameel leeft in de woestijn."]}
+        ]
+      }
+    },
+    {
+      "key": "mammoth",
+      "gloss": "mammoth (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "mammoth", "pos": "noun", "details": {"plural": "mammoths"}, "sentences": ["The mammoth is extinct."]}
+        ],
+        "nl": [
+        {"lemma": "mammoet", "pos": "noun", "details": {"article": "de", "plural": "mammoeten"}, "sentences": ["De mammoet is uitgestorven."]}
+        ]
+      }
+    },
+    {
+      "key": "stallion",
+      "gloss": "stallion (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "stallion", "pos": "noun", "details": {"plural": "stallions"}, "sentences": ["The stallion runs."]}
+        ],
+        "nl": [
+        {"lemma": "hengst", "pos": "noun", "details": {"article": "de", "plural": "hengsten"}, "sentences": ["De hengst rent."]}
+        ]
+      }
+    },
+    {
+      "key": "parasite",
+      "gloss": "parasite (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "parasite", "pos": "noun", "details": {"plural": "parasites"}, "sentences": ["The parasite lives on the dog."]}
+        ],
+        "nl": [
+        {"lemma": "parasiet", "pos": "noun", "details": {"article": "de", "plural": "parasieten"}, "sentences": ["De parasiet leeft op de hond."]}
+        ]
+      }
+    },
+    {
+      "key": "collar",
+      "gloss": "collar (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "collar", "pos": "noun", "details": {"plural": "collars"}, "sentences": ["The dog has a collar."]}
+        ],
+        "nl": [
+        {"lemma": "halsband", "pos": "noun", "details": {"article": "de", "plural": "halsbanden"}, "sentences": ["De hond heeft een halsband."]}
+        ]
+      }
+    },
+    {
+      "key": "eagle",
+      "gloss": "eagle (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "eagle", "pos": "noun", "details": {"plural": "eagles"}, "sentences": ["The eagle flies high."]}
+        ],
+        "nl": [
+        {"lemma": "adelaar", "pos": "noun", "details": {"article": "de", "plural": "adelaars"}, "sentences": ["De adelaar vliegt hoog."]}
+        ]
+      }
+    },
+    {
+      "key": "calf",
+      "gloss": "calf (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "calf", "pos": "noun", "details": {"plural": "calves"}, "sentences": ["The calf drinks milk."]}
+        ],
+        "nl": [
+        {"lemma": "kalf", "pos": "noun", "details": {"article": "het", "plural": "kalveren"}, "sentences": ["Het kalf drinkt melk."]}
+        ]
+      }
+    },
+    {
+      "key": "rooster",
+      "gloss": "rooster (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "rooster", "pos": "noun", "details": {"plural": "roosters"}, "sentences": ["The rooster crows."]}
+        ],
+        "nl": [
+        {"lemma": "haan", "pos": "noun", "details": {"article": "de", "plural": "hanen"}, "sentences": ["De haan kraait."]}
+        ]
+      }
     }
   ]
 }

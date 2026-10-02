@@ -193,7 +193,7 @@
       }
     },
     {
-      "key": "patient",
+      "key": "patient-noun",
       "gloss": "patient (noun)",
       "entries": {
         "en": [
@@ -229,7 +229,7 @@
       }
     },
     {
-      "key": "blind",
+      "key": "blind-adjective",
       "gloss": "blind (adjective)",
       "entries": {
         "en": [
@@ -673,7 +673,7 @@
       }
     },
     {
-      "key": "poison-noun",
+      "key": "poison-noun-gif",
       "gloss": "poison (noun)",
       "entries": {
         "en": [
@@ -1017,6 +1017,726 @@
         ],
         "nl": [
         {"lemma": "injectie", "pos": "noun", "details": {"article": "de", "plural": "injecties"}, "sentences": ["Ik krijg een injectie."]}
+        ]
+      }
+    },
+    {
+      "key": "fire-department",
+      "gloss": "fire department (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "fire department", "pos": "noun", "details": {"uncountable": true}, "sentences": ["The fire department comes."]}
+        ],
+        "nl": [
+        {"lemma": "brandweer", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["De brandweer komt."]}
+        ]
+      }
+    },
+    {
+      "key": "sweat-verb",
+      "gloss": "sweat (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "sweat", "pos": "verb", "details": {"past": "sweated", "participle": "sweated"}, "sentences": ["I sweat in the sun."]}
+        ],
+        "nl": [
+        {"lemma": "zweten", "pos": "verb", "details": {"pastSingular": "zweette", "pastPlural": "zweetten", "participle": "gezweet", "auxiliary": "hebben"}, "sentences": ["Ik zweet in de zon."]}
+        ]
+      }
+    },
+    {
+      "key": "syringe",
+      "gloss": "syringe (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "syringe", "pos": "noun", "details": {"plural": "syringes"}, "sentences": ["The nurse has a syringe."]}
+        ],
+        "nl": [
+        {"lemma": "spuit", "pos": "noun", "details": {"article": "de", "plural": "spuiten"}, "sentences": ["De zuster heeft een spuit."]}
+        ]
+      }
+    },
+    {
+      "key": "infection",
+      "gloss": "infection (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "infection", "pos": "noun", "details": {"plural": "infections"}, "sentences": ["I have an infection."]}
+        ],
+        "nl": [
+        {"lemma": "infectie", "pos": "noun", "details": {"article": "de", "plural": "infecties"}, "sentences": ["Ik heb een infectie."]}
+        ]
+      }
+    },
+    {
+      "key": "autopsy",
+      "gloss": "autopsy (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "autopsy", "pos": "noun", "details": {"plural": "autopsies"}, "sentences": ["The autopsy is tomorrow."]}
+        ],
+        "nl": [
+        {"lemma": "autopsie", "pos": "noun", "details": {"article": "de", "plural": "autopsieën"}, "sentences": ["De autopsie is morgen."]}
+        ]
+      }
+    },
+    {
+      "key": "flu",
+      "gloss": "flu (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "flu", "pos": "noun", "details": {"uncountable": true}, "sentences": ["I have the flu."]}
+        ],
+        "nl": [
+        {"lemma": "griep", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Ik heb de griep."]}
+        ]
+      }
+    },
+    {
+      "key": "break-noun-breuk",
+      "gloss": "break (fracture)",
+      "entries": {
+        "en": [
+        {"lemma": "break (fracture)", "pos": "noun", "details": {"plural": "breaks"}, "sentences": ["He has a break in his arm."]}
+        ],
+        "nl": [
+        {"lemma": "breuk", "pos": "noun", "details": {"article": "de", "plural": "breuken"}, "sentences": ["Hij heeft een breuk in zijn arm."]}
+        ]
+      }
+    },
+    {
+      "key": "overdose",
+      "gloss": "overdose (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "overdose", "pos": "noun", "details": {"plural": "overdoses"}, "sentences": ["He takes an overdose."]}
+        ],
+        "nl": [
+        {"lemma": "overdosis", "pos": "noun", "details": {"article": "de", "plural": "overdoses"}, "sentences": ["Hij neemt een overdosis."]}
+        ]
+      }
+    },
+    {
+      "key": "starve",
+      "gloss": "starve (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "starve", "pos": "verb", "details": {"past": "starved", "participle": "starved"}, "sentences": ["The animals starve."]}
+        ],
+        "nl": [
+        {"lemma": "verhongeren", "pos": "verb", "details": {"pastSingular": "verhongerde", "pastPlural": "verhongerden", "participle": "verhongerd", "auxiliary": "zijn"}, "sentences": ["De dieren verhongeren."]}
+        ]
+      }
+    },
+    {
+      "key": "massage-noun",
+      "gloss": "massage (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "massage", "pos": "noun", "details": {"plural": "massages"}, "sentences": ["I get a massage."]}
+        ],
+        "nl": [
+        {"lemma": "massage", "pos": "noun", "details": {"article": "de", "plural": "massages"}, "sentences": ["Ik krijg een massage."]}
+        ]
+      }
+    },
+    {
+      "key": "psychiatric",
+      "gloss": "psychiatric (adjective)",
+      "entries": {
+        "en": [
+        {"lemma": "psychiatric", "pos": "adjective", "sentences": ["He is in a psychiatric clinic."]}
+        ],
+        "nl": [
+        {"lemma": "psychiatrisch", "pos": "adjective", "sentences": ["Hij zit in een psychiatrische kliniek."]}
+        ]
+      }
+    },
+    {
+      "key": "aspirin",
+      "gloss": "aspirin (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "aspirin", "pos": "noun", "details": {"uncountable": true}, "sentences": ["I take an aspirin."]}
+        ],
+        "nl": [
+        {"lemma": "aspirine", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Ik neem een aspirine."]}
+        ]
+      }
+    },
+    {
+      "key": "nap",
+      "gloss": "nap (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "nap", "pos": "noun", "details": {"plural": "naps"}, "sentences": ["I take a nap."]}
+        ],
+        "nl": [
+        {"lemma": "dutje", "pos": "noun", "details": {"article": "het", "plural": "dutjes"}, "sentences": ["Ik doe een dutje."]}
+        ]
+      }
+    },
+    {
+      "key": "stroke-noun",
+      "gloss": "stroke (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "stroke", "pos": "noun", "details": {"plural": "strokes"}, "sentences": ["He has a stroke."]}
+        ],
+        "nl": [
+        {"lemma": "beroerte", "pos": "noun", "details": {"article": "de", "plural": "beroertes"}, "sentences": ["Hij heeft een beroerte."]}
+        ]
+      }
+    },
+    {
+      "key": "diagnosis",
+      "gloss": "diagnosis (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "diagnosis", "pos": "noun", "details": {"plural": "diagnosises"}, "sentences": ["The diagnosis is clear."]}
+        ],
+        "nl": [
+        {"lemma": "diagnose", "pos": "noun", "details": {"article": "de", "plural": "diagnoses"}, "sentences": ["De diagnose is duidelijk."]}
+        ]
+      }
+    },
+    {
+      "key": "tumor",
+      "gloss": "tumor (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "tumor", "pos": "noun", "details": {"plural": "tumors"}, "sentences": ["The tumor is small."]}
+        ],
+        "nl": [
+        {"lemma": "tumor", "pos": "noun", "details": {"article": "de", "plural": "tumoren"}, "sentences": ["De tumor is klein."]}
+        ]
+      }
+    },
+    {
+      "key": "contagious",
+      "gloss": "contagious (adjective)",
+      "entries": {
+        "en": [
+        {"lemma": "contagious", "pos": "adjective", "sentences": ["The disease is contagious."]}
+        ],
+        "nl": [
+        {"lemma": "besmettelijk", "pos": "adjective", "sentences": ["De ziekte is besmettelijk."]}
+        ]
+      }
+    },
+    {
+      "key": "poison-noun-gift",
+      "gloss": "poison (toxin)",
+      "entries": {
+        "en": [
+        {"lemma": "poison (toxin)", "pos": "noun", "details": {"plural": "poisons"}, "sentences": ["The poison is dangerous."]}
+        ],
+        "nl": [
+        {"lemma": "gift", "pos": "noun", "details": {"article": "de", "plural": "giften"}, "sentences": ["De gift is gevaarlijk."]}
+        ]
+      }
+    },
+    {
+      "key": "faint",
+      "gloss": "faint (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "faint", "pos": "verb", "details": {"past": "fainted", "participle": "fainted"}, "sentences": ["He faints."]}
+        ],
+        "nl": [
+        {"lemma": "flauwvallen", "pos": "verb", "details": {"pastSingular": "viel flauw", "pastPlural": "vielen flauw", "participle": "flauwgevallen", "auxiliary": "zijn"}, "sentences": ["Hij valt flauw."]}
+        ]
+      }
+    },
+    {
+      "key": "inhale",
+      "gloss": "inhale (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "inhale", "pos": "verb", "details": {"past": "inhaled", "participle": "inhaled"}, "sentences": ["I inhale deeply."]}
+        ],
+        "nl": [
+        {"lemma": "inademen", "pos": "verb", "details": {"pastSingular": "ademde in", "pastPlural": "ademden in", "participle": "ingeademd", "auxiliary": "hebben"}, "sentences": ["Ik adem diep in."]}
+        ]
+      }
+    },
+    {
+      "key": "depression",
+      "gloss": "depression (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "depression", "pos": "noun", "details": {"plural": "depressions"}, "sentences": ["He has a depression."]}
+        ],
+        "nl": [
+        {"lemma": "depressie", "pos": "noun", "details": {"article": "de", "plural": "depressies"}, "sentences": ["Hij heeft een depressie."]}
+        ]
+      }
+    },
+    {
+      "key": "quarantine",
+      "gloss": "quarantine (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "quarantine", "pos": "noun", "details": {"uncountable": true}, "sentences": ["He is in quarantine."]}
+        ],
+        "nl": [
+        {"lemma": "quarantaine", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Hij zit in quarantaine."]}
+        ]
+      }
+    },
+    {
+      "key": "weaken",
+      "gloss": "weaken (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "weaken", "pos": "verb", "details": {"past": "weakened", "participle": "weakened"}, "sentences": ["The illness weakens him."]}
+        ],
+        "nl": [
+        {"lemma": "verzwakken", "pos": "verb", "details": {"pastSingular": "verzwakte", "pastPlural": "verzwakten", "participle": "verzwakt", "auxiliary": "hebben/zijn"}, "sentences": ["De ziekte verzwakt hem."]}
+        ]
+      }
+    },
+    {
+      "key": "shiver",
+      "gloss": "shiver (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "shiver", "pos": "verb", "details": {"past": "shivered", "participle": "shivered"}, "sentences": ["I shiver in the cold."]}
+        ],
+        "nl": [
+        {"lemma": "beven", "pos": "verb", "details": {"pastSingular": "beefde", "pastPlural": "beefden", "participle": "gebeefd", "auxiliary": "hebben"}, "sentences": ["Ik beef van de kou."]}
+        ]
+      }
+    },
+    {
+      "key": "cough",
+      "gloss": "cough (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "cough", "pos": "verb", "details": {"past": "coughed", "participle": "coughed"}, "sentences": ["I cough a lot."]}
+        ],
+        "nl": [
+        {"lemma": "hoesten", "pos": "verb", "details": {"pastSingular": "hoestte", "pastPlural": "hoestten", "participle": "gehoest", "auxiliary": "hebben"}, "sentences": ["Ik hoest veel."]}
+        ]
+      }
+    },
+    {
+      "key": "medication",
+      "gloss": "medication (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "medication", "pos": "noun", "details": {"uncountable": true}, "sentences": ["He takes medication."]}
+        ],
+        "nl": [
+        {"lemma": "medicatie", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Hij neemt medicatie."]}
+        ]
+      }
+    },
+    {
+      "key": "morphine",
+      "gloss": "morphine (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "morphine", "pos": "noun", "details": {"uncountable": true}, "sentences": ["He gets morphine."]}
+        ],
+        "nl": [
+        {"lemma": "morfine", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Hij krijgt morfine."]}
+        ]
+      }
+    },
+    {
+      "key": "morgue",
+      "gloss": "morgue (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "morgue", "pos": "noun", "details": {"plural": "morgues"}, "sentences": ["The body is in the morgue."]}
+        ],
+        "nl": [
+        {"lemma": "mortuarium", "pos": "noun", "details": {"article": "het", "plural": "mortuaria"}, "sentences": ["Het lichaam ligt in het mortuarium."]}
+        ]
+      }
+    },
+    {
+      "key": "scrape",
+      "gloss": "scrape (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "scrape", "pos": "noun", "details": {"plural": "scrapes"}, "sentences": ["I have a scrape on my knee."]}
+        ],
+        "nl": [
+        {"lemma": "schram", "pos": "noun", "details": {"article": "de", "plural": "schrammen"}, "sentences": ["Ik heb een schram op mijn knie."]}
+        ]
+      }
+    },
+    {
+      "key": "bleeding",
+      "gloss": "bleeding (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "bleeding", "pos": "noun", "details": {"plural": "bleedings"}, "sentences": ["The bleeding stops."]}
+        ],
+        "nl": [
+        {"lemma": "bloeding", "pos": "noun", "details": {"article": "de", "plural": "bloedingen"}, "sentences": ["De bloeding stopt."]}
+        ]
+      }
+    },
+    {
+      "key": "hearing-noun-gehoor",
+      "gloss": "hearing (noun, gehoor)",
+      "entries": {
+        "en": [
+        {"lemma": "hearing", "pos": "noun", "details": {"uncountable": true}, "sentences": ["His hearing is poor."]}
+        ],
+        "nl": [
+        {"lemma": "gehoor", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["Zijn gehoor is slecht."]}
+        ]
+      }
+    },
+    {
+      "key": "home",
+      "gloss": "home (institution)",
+      "entries": {
+        "en": [
+        {"lemma": "home (institution)", "pos": "noun", "details": {"plural": "homes"}, "sentences": ["He lives in a nursing home."]}
+        ],
+        "nl": [
+        {"lemma": "tehuis", "pos": "noun", "details": {"article": "het", "plural": "tehuizen"}, "sentences": ["Hij woont in een verpleegtehuis."]}
+        ]
+      }
+    },
+    {
+      "key": "fit-adjective",
+      "gloss": "fit (adjective)",
+      "entries": {
+        "en": [
+        {"lemma": "fit", "pos": "adjective", "sentences": ["He is fit."]}
+        ],
+        "nl": [
+        {"lemma": "fit", "pos": "adjective", "sentences": ["Hij is fit."]}
+        ]
+      }
+    },
+    {
+      "key": "antidote",
+      "gloss": "antidote (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "antidote", "pos": "noun", "details": {"plural": "antidotes"}, "sentences": ["The doctor has an antidote."]}
+        ],
+        "nl": [
+        {"lemma": "tegengif", "pos": "noun", "details": {"article": "het", "plural": "tegengiffen"}, "sentences": ["De dokter heeft een tegengif."]}
+        ]
+      }
+    },
+    {
+      "key": "trauma",
+      "gloss": "trauma (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "trauma", "pos": "noun", "details": {"plural": "traumas"}, "sentences": ["He has a trauma."]}
+        ],
+        "nl": [
+        {"lemma": "trauma", "pos": "noun", "details": {"article": "het", "plural": "trauma's"}, "sentences": ["Hij heeft een trauma."]}
+        ]
+      }
+    },
+    {
+      "key": "vaccine",
+      "gloss": "vaccine (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "vaccine", "pos": "noun", "details": {"plural": "vaccines"}, "sentences": ["The vaccine works."]}
+        ],
+        "nl": [
+        {"lemma": "vaccin", "pos": "noun", "details": {"article": "het", "plural": "vaccins"}, "sentences": ["Het vaccin werkt."]}
+        ]
+      }
+    },
+    {
+      "key": "hormone",
+      "gloss": "hormone (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "hormone", "pos": "noun", "details": {"plural": "hormones"}, "sentences": ["This hormone is important."]}
+        ],
+        "nl": [
+        {"lemma": "hormoon", "pos": "noun", "details": {"article": "het", "plural": "hormonen"}, "sentences": ["Dit hormoon is belangrijk."]}
+        ]
+      }
+    },
+    {
+      "key": "inflammation",
+      "gloss": "inflammation (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "inflammation", "pos": "noun", "details": {"plural": "inflammations"}, "sentences": ["The inflammation is painful."]}
+        ],
+        "nl": [
+        {"lemma": "ontsteking", "pos": "noun", "details": {"article": "de", "plural": "ontstekingen"}, "sentences": ["De ontsteking is pijnlijk."]}
+        ]
+      }
+    },
+    {
+      "key": "painkiller",
+      "gloss": "painkiller (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "painkiller", "pos": "noun", "details": {"plural": "painkillers"}, "sentences": ["I take a painkiller."]}
+        ],
+        "nl": [
+        {"lemma": "pijnstiller", "pos": "noun", "details": {"article": "de", "plural": "pijnstillers"}, "sentences": ["Ik neem een pijnstiller."]}
+        ]
+      }
+    },
+    {
+      "key": "remedy",
+      "gloss": "remedy (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "remedy", "pos": "noun", "details": {"plural": "remedies"}, "sentences": ["This is a good remedy."]}
+        ],
+        "nl": [
+        {"lemma": "geneesmiddel", "pos": "noun", "details": {"article": "het", "plural": "geneesmiddelen"}, "sentences": ["Dit is een goed geneesmiddel."]}
+        ]
+      }
+    },
+    {
+      "key": "vitamin",
+      "gloss": "vitamin (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "vitamin", "pos": "noun", "details": {"plural": "vitamins"}, "sentences": ["I take a vitamin."]}
+        ],
+        "nl": [
+        {"lemma": "vitamine", "pos": "noun", "details": {"article": "de", "plural": "vitamines"}, "sentences": ["Ik neem een vitamine."]}
+        ]
+      }
+    },
+    {
+      "key": "bacterium",
+      "gloss": "bacterium (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "bacterium", "pos": "noun", "details": {"plural": "bacteria"}, "sentences": ["The bacterium is small."]}
+        ],
+        "nl": [
+        {"lemma": "bacterie", "pos": "noun", "details": {"article": "de", "plural": "bacteriën"}, "sentences": ["De bacterie is klein."]}
+        ]
+      }
+    },
+    {
+      "key": "capsule",
+      "gloss": "capsule (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "capsule", "pos": "noun", "details": {"plural": "capsules"}, "sentences": ["I take a capsule."]}
+        ],
+        "nl": [
+        {"lemma": "capsule", "pos": "noun", "details": {"article": "de", "plural": "capsules"}, "sentences": ["Ik neem een capsule."]}
+        ]
+      }
+    },
+    {
+      "key": "tobacco",
+      "gloss": "tobacco (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "tobacco", "pos": "noun", "details": {"uncountable": true}, "sentences": ["He smokes tobacco."]}
+        ],
+        "nl": [
+        {"lemma": "tabak", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Hij rookt tabak."]}
+        ]
+      }
+    },
+    {
+      "key": "prescribe",
+      "gloss": "prescribe (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "prescribe", "pos": "verb", "details": {"past": "prescribed", "participle": "prescribed"}, "sentences": ["The doctor prescribes a pill."]}
+        ],
+        "nl": [
+        {"lemma": "voorschrijven", "pos": "verb", "details": {"pastSingular": "schreef voor", "pastPlural": "schreven voor", "participle": "voorgeschreven", "auxiliary": "hebben"}, "sentences": ["De dokter schrijft een pil voor."]}
+        ]
+      }
+    },
+    {
+      "key": "childbirth",
+      "gloss": "childbirth (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "childbirth", "pos": "noun", "details": {"plural": "childbirths"}, "sentences": ["The childbirth is long."]}
+        ],
+        "nl": [
+        {"lemma": "bevalling", "pos": "noun", "details": {"article": "de", "plural": "bevallingen"}, "sentences": ["De bevalling is lang."]}
+        ]
+      }
+    },
+    {
+      "key": "hallucination",
+      "gloss": "hallucination (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "hallucination", "pos": "noun", "details": {"plural": "hallucinations"}, "sentences": ["He has a hallucination."]}
+        ],
+        "nl": [
+        {"lemma": "hallucinatie", "pos": "noun", "details": {"article": "de", "plural": "hallucinaties"}, "sentences": ["Hij heeft een hallucinatie."]}
+        ]
+      }
+    },
+    {
+      "key": "pregnancy",
+      "gloss": "pregnancy (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "pregnancy", "pos": "noun", "details": {"plural": "pregnancies"}, "sentences": ["The pregnancy is going well."]}
+        ],
+        "nl": [
+        {"lemma": "zwangerschap", "pos": "noun", "details": {"article": "de", "plural": "zwangerschappen"}, "sentences": ["De zwangerschap verloopt goed."]}
+        ]
+      }
+    },
+    {
+      "key": "massage-verb",
+      "gloss": "massage (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "massage", "pos": "verb", "details": {"past": "massaged", "participle": "massaged"}, "sentences": ["I massage my neck."]}
+        ],
+        "nl": [
+        {"lemma": "masseren", "pos": "verb", "details": {"pastSingular": "masseerde", "pastPlural": "masseerden", "participle": "gemasseerd", "auxiliary": "hebben"}, "sentences": ["Ik masseer mijn nek."]}
+        ]
+      }
+    },
+    {
+      "key": "amnesia",
+      "gloss": "amnesia (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "amnesia", "pos": "noun", "details": {"uncountable": true}, "sentences": ["He has amnesia."]}
+        ],
+        "nl": [
+        {"lemma": "geheugenverlies", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["Hij heeft geheugenverlies."]}
+        ]
+      }
+    },
+    {
+      "key": "cold-adjective-verkouden",
+      "gloss": "cold (illness)",
+      "entries": {
+        "en": [
+        {"lemma": "cold (illness)", "pos": "adjective", "sentences": ["I have a cold."]}
+        ],
+        "nl": [
+        {"lemma": "verkouden", "pos": "adjective", "sentences": ["Ik ben verkouden."]}
+        ]
+      }
+    },
+    {
+      "key": "breathing",
+      "gloss": "breathing (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "breathing", "pos": "noun", "details": {"uncountable": true}, "sentences": ["His breathing is calm."]}
+        ],
+        "nl": [
+        {"lemma": "ademhaling", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Zijn ademhaling is rustig."]}
+        ]
+      }
+    },
+    {
+      "key": "shrink",
+      "gloss": "shrink (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "shrink", "pos": "verb", "details": {"past": "shrank", "participle": "shrunk"}, "sentences": ["The shirt shrinks."]}
+        ],
+        "nl": [
+        {"lemma": "krimpen", "pos": "verb", "details": {"pastSingular": "kromp", "pastPlural": "krompen", "participle": "gekrompen", "auxiliary": "zijn"}, "sentences": ["Het shirt krimpt."]}
+        ]
+      }
+    },
+    {
+      "key": "bloody",
+      "gloss": "bloody (adjective)",
+      "entries": {
+        "en": [
+        {"lemma": "bloody", "pos": "adjective", "sentences": ["The wound is bloody."]}
+        ],
+        "nl": [
+        {"lemma": "bloederig", "pos": "adjective", "sentences": ["De wond is bloederig."]}
+        ]
+      }
+    },
+    {
+      "key": "recovery",
+      "gloss": "recovery (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "recovery", "pos": "noun", "details": {"uncountable": true}, "sentences": ["His recovery is quick."]}
+        ],
+        "nl": [
+        {"lemma": "herstel", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["Zijn herstel is snel."]}
+        ]
+      }
+    },
+    {
+      "key": "cure",
+      "gloss": "cure (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "cure", "pos": "noun", "details": {"uncountable": true}, "sentences": ["The cure takes time."]}
+        ],
+        "nl": [
+        {"lemma": "genezing", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["De genezing kost tijd."]}
+        ]
+      }
+    },
+    {
+      "key": "drool",
+      "gloss": "drool (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "drool", "pos": "verb", "details": {"past": "drooled", "participle": "drooled"}, "sentences": ["The dog drools."]}
+        ],
+        "nl": [
+        {"lemma": "kwijlen", "pos": "verb", "details": {"pastSingular": "kwijlde", "pastPlural": "kwijlden", "participle": "gekwijld", "auxiliary": "hebben"}, "sentences": ["De hond kwijlt."]}
+        ]
+      }
+    },
+    {
+      "key": "alive",
+      "gloss": "alive (adjective)",
+      "entries": {
+        "en": [
+        {"lemma": "alive", "pos": "adjective", "sentences": ["The fish is alive."]}
+        ],
+        "nl": [
+        {"lemma": "levend", "pos": "adjective", "sentences": ["De vis is levend."]}
+        ]
+      }
+    },
+    {
+      "key": "adrenaline",
+      "gloss": "adrenaline (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "adrenaline", "pos": "noun", "details": {"uncountable": true}, "sentences": ["I feel adrenaline."]}
+        ],
+        "nl": [
+        {"lemma": "adrenaline", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Ik voel adrenaline."]}
+        ]
+      }
+    },
+    {
+      "key": "anesthesia",
+      "gloss": "anesthesia (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "anesthesia", "pos": "noun", "details": {"uncountable": true}, "sentences": ["He gets anesthesia."]}
+        ],
+        "nl": [
+        {"lemma": "verdoving", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Hij krijgt verdoving."]}
         ]
       }
     }

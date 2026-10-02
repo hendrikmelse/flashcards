@@ -121,7 +121,7 @@
       }
     },
     {
-      "key": "arm",
+      "key": "arm-noun",
       "gloss": "arm (noun)",
       "entries": {
         "en": [
@@ -193,7 +193,7 @@
       }
     },
     {
-      "key": "neck",
+      "key": "neck-noun-nek",
       "gloss": "neck (noun)",
       "entries": {
         "en": [
@@ -397,7 +397,7 @@
       }
     },
     {
-      "key": "nail",
+      "key": "nail-noun-nagel",
       "gloss": "nail (noun)",
       "entries": {
         "en": [
@@ -553,7 +553,7 @@
       }
     },
     {
-      "key": "sweat",
+      "key": "sweat-noun",
       "gloss": "sweat (noun)",
       "entries": {
         "en": [
@@ -609,6 +609,174 @@
         ],
         "nl": [
         {"lemma": "voorhoofd", "pos": "noun", "details": {"article": "het", "plural": "voorhoofden"}, "sentences": ["Hij heeft een groot voorhoofd."]}
+        ]
+      }
+    },
+    {
+      "key": "jaw",
+      "gloss": "jaw (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "jaw", "pos": "noun", "details": {"plural": "jaws"}, "sentences": ["My jaw hurts."]}
+        ],
+        "nl": [
+        {"lemma": "kaak", "pos": "noun", "details": {"article": "de", "plural": "kaken"}, "sentences": ["Mijn kaak doet pijn."]}
+        ]
+      }
+    },
+    {
+      "key": "neck-noun-hals",
+      "gloss": "neck (throat)",
+      "entries": {
+        "en": [
+        {"lemma": "neck (throat)", "pos": "noun", "details": {"plural": "necks"}, "sentences": ["He has a long neck."]}
+        ],
+        "nl": [
+        {"lemma": "hals", "pos": "noun", "details": {"article": "de", "plural": "halzen"}, "sentences": ["Hij heeft een lange hals."]}
+        ]
+      }
+    },
+    {
+      "key": "chin",
+      "gloss": "chin (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "chin", "pos": "noun", "details": {"plural": "chins"}, "sentences": ["He has a round chin."]}
+        ],
+        "nl": [
+        {"lemma": "kin", "pos": "noun", "details": {"article": "de", "plural": "kinnen"}, "sentences": ["Hij heeft een ronde kin."]}
+        ]
+      }
+    },
+    {
+      "key": "intestine",
+      "gloss": "intestine (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "intestine", "pos": "noun", "details": {"plural": "intestines"}, "sentences": ["The intestine is long."]}
+        ],
+        "nl": [
+        {"lemma": "darm", "pos": "noun", "details": {"article": "de", "plural": "darmen"}, "sentences": ["De darm is lang."]}
+        ]
+      }
+    },
+    {
+      "key": "tissue",
+      "gloss": "tissue (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "tissue", "pos": "noun", "details": {"plural": "tissues"}, "sentences": ["The tissue is damaged."]}
+        ],
+        "nl": [
+        {"lemma": "weefsel", "pos": "noun", "details": {"article": "het", "plural": "weefsels"}, "sentences": ["Het weefsel is beschadigd."]}
+        ]
+      }
+    },
+    {
+      "key": "heel",
+      "gloss": "heel (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "heel", "pos": "noun", "details": {"plural": "heels"}, "sentences": ["My heel hurts."]}
+        ],
+        "nl": [
+        {"lemma": "hiel", "pos": "noun", "details": {"article": "de", "plural": "hielen"}, "sentences": ["Mijn hiel doet pijn."]}
+        ]
+      }
+    },
+    {
+      "key": "torso",
+      "gloss": "torso (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "torso", "pos": "noun", "details": {"plural": "torsos"}, "sentences": ["The torso is strong."]}
+        ],
+        "nl": [
+        {"lemma": "romp", "pos": "noun", "details": {"article": "de", "plural": "rompen"}, "sentences": ["De romp is sterk."]}
+        ]
+      }
+    },
+    {
+      "key": "elbow",
+      "gloss": "elbow (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "elbow", "pos": "noun", "details": {"plural": "elbows"}, "sentences": ["My elbow hurts."]}
+        ],
+        "nl": [
+        {"lemma": "elleboog", "pos": "noun", "details": {"article": "de", "plural": "ellebogen"}, "sentences": ["Mijn elleboog doet pijn."]}
+        ]
+      }
+    },
+    {
+      "key": "thigh",
+      "gloss": "thigh (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "thigh", "pos": "noun", "details": {"plural": "thighs"}, "sentences": ["My thigh hurts."]}
+        ],
+        "nl": [
+        {"lemma": "dij", "pos": "noun", "details": {"article": "de", "plural": "dijen"}, "sentences": ["Mijn dij doet pijn."]}
+        ]
+      }
+    },
+    {
+      "key": "spine",
+      "gloss": "spine (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "spine", "pos": "noun", "details": {"plural": "spines"}, "sentences": ["His spine hurts."]}
+        ],
+        "nl": [
+        {"lemma": "ruggengraat", "pos": "noun", "details": {"article": "de", "plural": "ruggengraten"}, "sentences": ["Zijn ruggengraat doet pijn."]}
+        ]
+      }
+    },
+    {
+      "key": "left-hand",
+      "gloss": "left hand (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "left hand", "pos": "noun", "details": {"plural": "left hands"}, "sentences": ["He writes with his left hand."]}
+        ],
+        "nl": [
+        {"lemma": "linkerhand", "pos": "noun", "details": {"article": "de", "plural": "linkerhanden"}, "sentences": ["Hij schrijft met zijn linkerhand."]}
+        ]
+      }
+    },
+    {
+      "key": "sense-noun-zintuig",
+      "gloss": "sense (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "sense", "pos": "noun", "details": {"plural": "senses"}, "sentences": ["Sight is a sense."]}
+        ],
+        "nl": [
+        {"lemma": "zintuig", "pos": "noun", "details": {"article": "het", "plural": "zintuigen"}, "sentences": ["Zicht is een zintuig."]}
+        ]
+      }
+    },
+    {
+      "key": "eyebrow",
+      "gloss": "eyebrow (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "eyebrow", "pos": "noun", "details": {"plural": "eyebrows"}, "sentences": ["He raises an eyebrow."]}
+        ],
+        "nl": [
+        {"lemma": "wenkbrauw", "pos": "noun", "details": {"article": "de", "plural": "wenkbrauwen"}, "sentences": ["Hij trekt een wenkbrauw op."]}
+        ]
+      }
+    },
+    {
+      "key": "back-of-the-head",
+      "gloss": "back of the head (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "back of the head", "pos": "noun", "details": {"plural": "back of the heads"}, "sentences": ["She has a bump on the back of the head."]}
+        ],
+        "nl": [
+        {"lemma": "achterhoofd", "pos": "noun", "details": {"article": "het", "plural": "achterhoofden"}, "sentences": ["Zij heeft een bult op haar achterhoofd."]}
         ]
       }
     }

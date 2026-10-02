@@ -37,7 +37,7 @@
       }
     },
     {
-      "key": "side",
+      "key": "side-noun-kant",
       "gloss": "side (noun)",
       "entries": {
         "en": [
@@ -253,7 +253,7 @@
       }
     },
     {
-      "key": "nonsense",
+      "key": "nonsense-noun-onzin",
       "gloss": "nonsense (noun)",
       "entries": {
         "en": [
@@ -373,7 +373,7 @@
       }
     },
     {
-      "key": "line",
+      "key": "line-noun-lijn",
       "gloss": "line (noun)",
       "entries": {
         "en": [
@@ -493,7 +493,7 @@
       }
     },
     {
-      "key": "respect-noun",
+      "key": "respect-noun-respect",
       "gloss": "respect (noun)",
       "entries": {
         "en": [
@@ -517,7 +517,7 @@
       }
     },
     {
-      "key": "effort",
+      "key": "effort-noun-moeite",
       "gloss": "effort (noun)",
       "entries": {
         "en": [
@@ -841,7 +841,7 @@
       }
     },
     {
-      "key": "type",
+      "key": "type-noun",
       "gloss": "type (noun)",
       "entries": {
         "en": [
@@ -1021,7 +1021,7 @@
       }
     },
     {
-      "key": "sense",
+      "key": "sense-noun-verstand",
       "gloss": "sense (intellect)",
       "entries": {
         "en": [
@@ -1189,7 +1189,7 @@
       }
     },
     {
-      "key": "deed",
+      "key": "deed-noun-daad",
       "gloss": "deed (noun)",
       "entries": {
         "en": [
@@ -1273,7 +1273,7 @@
       }
     },
     {
-      "key": "interest-noun",
+      "key": "interest-noun-interesse",
       "gloss": "interest (noun)",
       "entries": {
         "en": [
@@ -1489,7 +1489,7 @@
       }
     },
     {
-      "key": "attempt",
+      "key": "attempt-noun",
       "gloss": "attempt (noun)",
       "entries": {
         "en": [
@@ -2209,7 +2209,7 @@
       }
     },
     {
-      "key": "discussion",
+      "key": "discussion-noun-discussie",
       "gloss": "discussion (noun)",
       "entries": {
         "en": [
@@ -2341,7 +2341,7 @@
       }
     },
     {
-      "key": "progress",
+      "key": "progress-noun",
       "gloss": "progress (noun)",
       "entries": {
         "en": [
@@ -2425,7 +2425,7 @@
       }
     },
     {
-      "key": "circle",
+      "key": "circle-noun-cirkel",
       "gloss": "circle (noun)",
       "entries": {
         "en": [
@@ -2473,7 +2473,7 @@
       }
     },
     {
-      "key": "incident",
+      "key": "incident-noun-incident",
       "gloss": "incident (noun)",
       "entries": {
         "en": [
@@ -2677,7 +2677,7 @@
       }
     },
     {
-      "key": "function",
+      "key": "function-noun",
       "gloss": "function (noun)",
       "entries": {
         "en": [
@@ -3121,7 +3121,7 @@
       }
     },
     {
-      "key": "balance",
+      "key": "balance-noun-balans",
       "gloss": "balance (noun)",
       "entries": {
         "en": [
@@ -3265,7 +3265,7 @@
       }
     },
     {
-      "key": "term",
+      "key": "term-noun-term",
       "gloss": "term (noun)",
       "entries": {
         "en": [
@@ -3337,7 +3337,7 @@
       }
     },
     {
-      "key": "cooperation",
+      "key": "cooperation-noun-medewerking",
       "gloss": "cooperation (noun)",
       "entries": {
         "en": [
@@ -3349,7 +3349,7 @@
       }
     },
     {
-      "key": "saying",
+      "key": "saying-noun-spreuk",
       "gloss": "saying (noun)",
       "entries": {
         "en": [
@@ -3421,7 +3421,7 @@
       }
     },
     {
-      "key": "atmosphere",
+      "key": "atmosphere-noun-sfeer",
       "gloss": "atmosphere (noun)",
       "entries": {
         "en": [
@@ -3729,6 +3729,1218 @@
         ],
         "nl": [
         {"lemma": "afloop", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["De afloop is goed."]}
+        ]
+      }
+    },
+    {
+      "key": "clarity",
+      "gloss": "clarity (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "clarity", "pos": "noun", "details": {"uncountable": true}, "sentences": ["I want clarity."]}
+        ],
+        "nl": [
+        {"lemma": "duidelijkheid", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Ik wil duidelijkheid."]}
+        ]
+      }
+    },
+    {
+      "key": "size-noun-grootte",
+      "gloss": "size (noun, grootte)",
+      "entries": {
+        "en": [
+        {"lemma": "size", "pos": "noun", "details": {"plural": "sizes"}, "sentences": ["What size is it?"]}
+        ],
+        "nl": [
+        {"lemma": "grootte", "pos": "noun", "details": {"article": "de", "plural": "groottes"}, "sentences": ["Wat is de grootte?"]}
+        ]
+      }
+    },
+    {
+      "key": "characteristic",
+      "gloss": "characteristic (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "characteristic", "pos": "noun", "details": {"plural": "characteristics"}, "sentences": ["This is a good characteristic."]}
+        ],
+        "nl": [
+        {"lemma": "eigenschap", "pos": "noun", "details": {"article": "de", "plural": "eigenschappen"}, "sentences": ["Dit is een goede eigenschap."]}
+        ]
+      }
+    },
+    {
+      "key": "content",
+      "gloss": "content (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "content", "pos": "noun", "details": {"uncountable": true}, "sentences": ["The content is interesting."]}
+        ],
+        "nl": [
+        {"lemma": "inhoud", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["De inhoud is interessant."]}
+        ]
+      }
+    },
+    {
+      "key": "description",
+      "gloss": "description (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "description", "pos": "noun", "details": {"plural": "descriptions"}, "sentences": ["The description is clear."]}
+        ],
+        "nl": [
+        {"lemma": "beschrijving", "pos": "noun", "details": {"article": "de", "plural": "beschrijvingen"}, "sentences": ["De beschrijving is duidelijk."]}
+        ]
+      }
+    },
+    {
+      "key": "destruction",
+      "gloss": "destruction (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "destruction", "pos": "noun", "details": {"uncountable": true}, "sentences": ["The destruction is big."]}
+        ],
+        "nl": [
+        {"lemma": "vernietiging", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["De vernietiging is groot."]}
+        ]
+      }
+    },
+    {
+      "key": "routine",
+      "gloss": "routine (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "routine", "pos": "noun", "details": {"plural": "routines"}, "sentences": ["I have a routine."]}
+        ],
+        "nl": [
+        {"lemma": "routine", "pos": "noun", "details": {"article": "de", "plural": "routines"}, "sentences": ["Ik heb een routine."]}
+        ]
+      }
+    },
+    {
+      "key": "circle-noun-kring",
+      "gloss": "circle (group)",
+      "entries": {
+        "en": [
+        {"lemma": "circle (group)", "pos": "noun", "details": {"plural": "circles"}, "sentences": ["We sit in a circle."]}
+        ],
+        "nl": [
+        {"lemma": "kring", "pos": "noun", "details": {"article": "de", "plural": "kringen"}, "sentences": ["Wij zitten in een kring."]}
+        ]
+      }
+    },
+    {
+      "key": "bustle",
+      "gloss": "bustle (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "bustle", "pos": "noun", "details": {"uncountable": true}, "sentences": ["I do not like the bustle."]}
+        ],
+        "nl": [
+        {"lemma": "drukte", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Ik hou niet van de drukte."]}
+        ]
+      }
+    },
+    {
+      "key": "term-noun-termijn",
+      "gloss": "term (period)",
+      "entries": {
+        "en": [
+        {"lemma": "term (period)", "pos": "noun", "details": {"plural": "terms"}, "sentences": ["The term is two weeks."]}
+        ],
+        "nl": [
+        {"lemma": "termijn", "pos": "noun", "details": {"article": "de", "plural": "termijnen"}, "sentences": ["De termijn is twee weken."]}
+        ]
+      }
+    },
+    {
+      "key": "breakthrough",
+      "gloss": "breakthrough (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "breakthrough", "pos": "noun", "details": {"plural": "breakthroughs"}, "sentences": ["This is a breakthrough."]}
+        ],
+        "nl": [
+        {"lemma": "doorbraak", "pos": "noun", "details": {"article": "de", "plural": "doorbraken"}, "sentences": ["Dit is een doorbraak."]}
+        ]
+      }
+    },
+    {
+      "key": "conflict",
+      "gloss": "conflict (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "conflict", "pos": "noun", "details": {"plural": "conflicts"}, "sentences": ["There is a conflict."]}
+        ],
+        "nl": [
+        {"lemma": "conflict", "pos": "noun", "details": {"article": "het", "plural": "conflicten"}, "sentences": ["Er is een conflict."]}
+        ]
+      }
+    },
+    {
+      "key": "series-noun-reeks",
+      "gloss": "series (sequence)",
+      "entries": {
+        "en": [
+        {"lemma": "series (sequence)", "pos": "noun", "details": {"plural": "series"}, "sentences": ["There is a series of problems."]}
+        ],
+        "nl": [
+        {"lemma": "reeks", "pos": "noun", "details": {"article": "de", "plural": "reeksen"}, "sentences": ["Er is een reeks problemen."]}
+        ]
+      }
+    },
+    {
+      "key": "reserve-noun",
+      "gloss": "reserve (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "reserve", "pos": "noun", "details": {"plural": "reserves"}, "sentences": ["We have a reserve."]}
+        ],
+        "nl": [
+        {"lemma": "reserve", "pos": "noun", "details": {"article": "de", "plural": "reserves"}, "sentences": ["Wij hebben een reserve."]}
+        ]
+      }
+    },
+    {
+      "key": "order-noun-volgorde",
+      "gloss": "order (sequence)",
+      "entries": {
+        "en": [
+        {"lemma": "order (sequence)", "pos": "noun", "details": {"plural": "orders"}, "sentences": ["The order is important."]}
+        ],
+        "nl": [
+        {"lemma": "volgorde", "pos": "noun", "details": {"article": "de", "plural": "volgordes"}, "sentences": ["De volgorde is belangrijk."]}
+        ]
+      }
+    },
+    {
+      "key": "atmosphere-noun-atmosfeer",
+      "gloss": "atmosphere (mood)",
+      "entries": {
+        "en": [
+        {"lemma": "atmosphere (mood)", "pos": "noun", "details": {"plural": "atmospheres"}, "sentences": ["The atmosphere is relaxed."]}
+        ],
+        "nl": [
+        {"lemma": "atmosfeer", "pos": "noun", "details": {"article": "de", "plural": "atmosferen"}, "sentences": ["De atmosfeer is ontspannen."]}
+        ]
+      }
+    },
+    {
+      "key": "reception-noun-ontvangst",
+      "gloss": "reception (welcome)",
+      "entries": {
+        "en": [
+        {"lemma": "reception (welcome)", "pos": "noun", "details": {"plural": "receptions"}, "sentences": ["The reception was warm."]}
+        ],
+        "nl": [
+        {"lemma": "ontvangst", "pos": "noun", "details": {"article": "de", "plural": "ontvangsten"}, "sentences": ["De ontvangst was hartelijk."]}
+        ]
+      }
+    },
+    {
+      "key": "approval",
+      "gloss": "approval (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "approval", "pos": "noun", "details": {"uncountable": true}, "sentences": ["I need your approval."]}
+        ],
+        "nl": [
+        {"lemma": "goedkeuring", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Ik heb je goedkeuring nodig."]}
+        ]
+      }
+    },
+    {
+      "key": "balance-noun-evenwicht",
+      "gloss": "balance (equilibrium)",
+      "entries": {
+        "en": [
+        {"lemma": "balance (equilibrium)", "pos": "noun", "details": {"uncountable": true}, "sentences": ["I keep my balance."]}
+        ],
+        "nl": [
+        {"lemma": "evenwicht", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["Ik houd mijn evenwicht."]}
+        ]
+      }
+    },
+    {
+      "key": "invention",
+      "gloss": "invention (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "invention", "pos": "noun", "details": {"plural": "inventions"}, "sentences": ["The invention is useful."]}
+        ],
+        "nl": [
+        {"lemma": "uitvinding", "pos": "noun", "details": {"article": "de", "plural": "uitvindingen"}, "sentences": ["De uitvinding is nuttig."]}
+        ]
+      }
+    },
+    {
+      "key": "deviation",
+      "gloss": "deviation (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "deviation", "pos": "noun", "details": {"plural": "deviations"}, "sentences": ["There is a small deviation."]}
+        ],
+        "nl": [
+        {"lemma": "afwijking", "pos": "noun", "details": {"article": "de", "plural": "afwijkingen"}, "sentences": ["Er is een kleine afwijking."]}
+        ]
+      }
+    },
+    {
+      "key": "respect-noun-opzicht",
+      "gloss": "respect (aspect)",
+      "entries": {
+        "en": [
+        {"lemma": "respect (aspect)", "pos": "noun", "details": {"plural": "respects"}, "sentences": ["In this respect he is right."]}
+        ],
+        "nl": [
+        {"lemma": "opzicht", "pos": "noun", "details": {"article": "het", "plural": "opzichten"}, "sentences": ["In dit opzicht heeft hij gelijk."]}
+        ]
+      }
+    },
+    {
+      "key": "conviction-noun-overtuiging",
+      "gloss": "conviction (belief)",
+      "entries": {
+        "en": [
+        {"lemma": "conviction (belief)", "pos": "noun", "details": {"plural": "convictions"}, "sentences": ["That is my conviction."]}
+        ],
+        "nl": [
+        {"lemma": "overtuiging", "pos": "noun", "details": {"article": "de", "plural": "overtuigingen"}, "sentences": ["Dat is mijn overtuiging."]}
+        ]
+      }
+    },
+    {
+      "key": "effort-noun-inspanning",
+      "gloss": "effort (exertion)",
+      "entries": {
+        "en": [
+        {"lemma": "effort (exertion)", "pos": "noun", "details": {"plural": "efforts"}, "sentences": ["The effort is big."]}
+        ],
+        "nl": [
+        {"lemma": "inspanning", "pos": "noun", "details": {"article": "de", "plural": "inspanningen"}, "sentences": ["De inspanning is groot."]}
+        ]
+      }
+    },
+    {
+      "key": "morality",
+      "gloss": "morality (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "morality", "pos": "noun", "details": {"uncountable": true}, "sentences": ["Morality is important."]}
+        ],
+        "nl": [
+        {"lemma": "moraal", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Moraal is belangrijk."]}
+        ]
+      }
+    },
+    {
+      "key": "nagging",
+      "gloss": "nagging (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "nagging", "pos": "noun", "details": {"uncountable": true}, "sentences": ["I hate the nagging."]}
+        ],
+        "nl": [
+        {"lemma": "gezeur", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["Ik haat het gezeur."]}
+        ]
+      }
+    },
+    {
+      "key": "side-noun-zijkant",
+      "gloss": "side (lateral)",
+      "entries": {
+        "en": [
+        {"lemma": "side (lateral)", "pos": "noun", "details": {"plural": "sides"}, "sentences": ["The door is on the side."]}
+        ],
+        "nl": [
+        {"lemma": "zijkant", "pos": "noun", "details": {"article": "de", "plural": "zijkanten"}, "sentences": ["De deur zit aan de zijkant."]}
+        ]
+      }
+    },
+    {
+      "key": "luxury",
+      "gloss": "luxury (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "luxury", "pos": "noun", "details": {"uncountable": true}, "sentences": ["This is luxury."]}
+        ],
+        "nl": [
+        {"lemma": "luxe", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Dit is luxe."]}
+        ]
+      }
+    },
+    {
+      "key": "line-noun-linie",
+      "gloss": "line (formation)",
+      "entries": {
+        "en": [
+        {"lemma": "line (formation)", "pos": "noun", "details": {"plural": "lines"}, "sentences": ["The soldiers stand in line."]}
+        ],
+        "nl": [
+        {"lemma": "linie", "pos": "noun", "details": {"article": "de", "plural": "linies"}, "sentences": ["De soldaten staan in linie."]}
+        ]
+      }
+    },
+    {
+      "key": "rubble",
+      "gloss": "rubble (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "rubble", "pos": "noun", "details": {"uncountable": true}, "sentences": ["The house is rubble."]}
+        ],
+        "nl": [
+        {"lemma": "puin", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["Het huis is puin."]}
+        ]
+      }
+    },
+    {
+      "key": "institute",
+      "gloss": "institute (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "institute", "pos": "noun", "details": {"plural": "institutes"}, "sentences": ["He works at the institute."]}
+        ],
+        "nl": [
+        {"lemma": "instituut", "pos": "noun", "details": {"article": "het", "plural": "instituten"}, "sentences": ["Hij werkt bij het instituut."]}
+        ]
+      }
+    },
+    {
+      "key": "cut-noun",
+      "gloss": "cut (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "cut", "pos": "noun", "details": {"plural": "cuts"}, "sentences": ["He has a cut on his hand."]}
+        ],
+        "nl": [
+        {"lemma": "snee", "pos": "noun", "details": {"article": "de", "plural": "sneden"}, "sentences": ["Hij heeft een snee in zijn hand."]}
+        ]
+      }
+    },
+    {
+      "key": "protocol",
+      "gloss": "protocol (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "protocol", "pos": "noun", "details": {"plural": "protocols"}, "sentences": ["We follow the protocol."]}
+        ],
+        "nl": [
+        {"lemma": "protocol", "pos": "noun", "details": {"article": "het", "plural": "protocollen"}, "sentences": ["Wij volgen het protocol."]}
+        ]
+      }
+    },
+    {
+      "key": "concentration",
+      "gloss": "concentration (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "concentration", "pos": "noun", "details": {"plural": "concentrations"}, "sentences": ["I need concentration."]}
+        ],
+        "nl": [
+        {"lemma": "concentratie", "pos": "noun", "details": {"article": "de", "plural": "concentraties"}, "sentences": ["Ik heb concentratie nodig."]}
+        ]
+      }
+    },
+    {
+      "key": "delay-noun-uitstel",
+      "gloss": "delay (postponement)",
+      "entries": {
+        "en": [
+        {"lemma": "delay (postponement)", "pos": "noun", "details": {"uncountable": true}, "sentences": ["We ask for a delay."]}
+        ],
+        "nl": [
+        {"lemma": "uitstel", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["Wij vragen om uitstel."]}
+        ]
+      }
+    },
+    {
+      "key": "confirmation",
+      "gloss": "confirmation (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "confirmation", "pos": "noun", "details": {"plural": "confirmations"}, "sentences": ["I wait for the confirmation."]}
+        ],
+        "nl": [
+        {"lemma": "bevestiging", "pos": "noun", "details": {"article": "de", "plural": "bevestigingen"}, "sentences": ["Ik wacht op de bevestiging."]}
+        ]
+      }
+    },
+    {
+      "key": "accountability",
+      "gloss": "accountability (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "accountability", "pos": "noun", "details": {"uncountable": true}, "sentences": ["Accountability is important."]}
+        ],
+        "nl": [
+        {"lemma": "verantwoording", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Verantwoording is belangrijk."]}
+        ]
+      }
+    },
+    {
+      "key": "plague",
+      "gloss": "plague (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "plague", "pos": "noun", "details": {"plural": "plagues"}, "sentences": ["The plague spreads."]}
+        ],
+        "nl": [
+        {"lemma": "plaag", "pos": "noun", "details": {"article": "de", "plural": "plagen"}, "sentences": ["De plaag verspreidt zich."]}
+        ]
+      }
+    },
+    {
+      "key": "nonsense-noun-nonsens",
+      "gloss": "nonsense (noun, nonsens)",
+      "entries": {
+        "en": [
+        {"lemma": "nonsense", "pos": "noun", "details": {"uncountable": true}, "sentences": ["That is nonsense."]}
+        ],
+        "nl": [
+        {"lemma": "nonsens", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Dat is nonsens."]}
+        ]
+      }
+    },
+    {
+      "key": "origin",
+      "gloss": "origin (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "origin", "pos": "noun", "details": {"uncountable": true}, "sentences": ["His origin is unknown."]}
+        ],
+        "nl": [
+        {"lemma": "afkomst", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Zijn afkomst is onbekend."]}
+        ]
+      }
+    },
+    {
+      "key": "weakness",
+      "gloss": "weakness (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "weakness", "pos": "noun", "details": {"plural": "weaknesses"}, "sentences": ["That is his weakness."]}
+        ],
+        "nl": [
+        {"lemma": "zwakte", "pos": "noun", "details": {"article": "de", "plural": "zwaktes"}, "sentences": ["Dat is zijn zwakte."]}
+        ]
+      }
+    },
+    {
+      "key": "contribution",
+      "gloss": "contribution (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "contribution", "pos": "noun", "details": {"plural": "contributions"}, "sentences": ["Thank you for your contribution."]}
+        ],
+        "nl": [
+        {"lemma": "bijdrage", "pos": "noun", "details": {"article": "de", "plural": "bijdragen"}, "sentences": ["Dank u voor uw bijdrage."]}
+        ]
+      }
+    },
+    {
+      "key": "saying-noun-gezegde",
+      "gloss": "saying (expression)",
+      "entries": {
+        "en": [
+        {"lemma": "saying (expression)", "pos": "noun", "details": {"plural": "sayings"}, "sentences": ["That is an old saying."]}
+        ],
+        "nl": [
+        {"lemma": "gezegde", "pos": "noun", "details": {"article": "het", "plural": "gezegden"}, "sentences": ["Dat is een oud gezegde."]}
+        ]
+      }
+    },
+    {
+      "key": "draft",
+      "gloss": "draft (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "draft", "pos": "noun", "details": {"plural": "drafts"}, "sentences": ["I read the draft."]}
+        ],
+        "nl": [
+        {"lemma": "concept", "pos": "noun", "details": {"article": "het", "plural": "concepten"}, "sentences": ["Ik lees het concept."]}
+        ]
+      }
+    },
+    {
+      "key": "passage",
+      "gloss": "passage (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "passage", "pos": "noun", "details": {"uncountable": true}, "sentences": ["The passage is blocked."]}
+        ],
+        "nl": [
+        {"lemma": "doorgang", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["De doorgang is geblokkeerd."]}
+        ]
+      }
+    },
+    {
+      "key": "failure",
+      "gloss": "failure (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "failure", "pos": "noun", "details": {"plural": "failures"}, "sentences": ["The plan is a failure."]}
+        ],
+        "nl": [
+        {"lemma": "mislukking", "pos": "noun", "details": {"article": "de", "plural": "mislukkingen"}, "sentences": ["Het plan is een mislukking."]}
+        ]
+      }
+    },
+    {
+      "key": "repetition",
+      "gloss": "repetition (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "repetition", "pos": "noun", "details": {"plural": "repetitions"}, "sentences": ["The repetition is boring."]}
+        ],
+        "nl": [
+        {"lemma": "herhaling", "pos": "noun", "details": {"article": "de", "plural": "herhalingen"}, "sentences": ["De herhaling is saai."]}
+        ]
+      }
+    },
+    {
+      "key": "comparison",
+      "gloss": "comparison (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "comparison", "pos": "noun", "details": {"plural": "comparisons"}, "sentences": ["The comparison is fair."]}
+        ],
+        "nl": [
+        {"lemma": "vergelijking", "pos": "noun", "details": {"article": "de", "plural": "vergelijkingen"}, "sentences": ["De vergelijking is eerlijk."]}
+        ]
+      }
+    },
+    {
+      "key": "left-side",
+      "gloss": "left side (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "left side", "pos": "noun", "details": {"plural": "left sides"}, "sentences": ["The shop is on the left side."]}
+        ],
+        "nl": [
+        {"lemma": "linkerkant", "pos": "noun", "details": {"article": "de", "plural": "linkerkanten"}, "sentences": ["De winkel is aan de linkerkant."]}
+        ]
+      }
+    },
+    {
+      "key": "vow",
+      "gloss": "vow (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "vow", "pos": "noun", "details": {"plural": "vows"}, "sentences": ["He makes a vow."]}
+        ],
+        "nl": [
+        {"lemma": "gelofte", "pos": "noun", "details": {"article": "de", "plural": "geloften"}, "sentences": ["Hij legt een gelofte af."]}
+        ]
+      }
+    },
+    {
+      "key": "waste-of-time",
+      "gloss": "waste of time (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "waste of time", "pos": "noun", "details": {"uncountable": true}, "sentences": ["That is a waste of time."]}
+        ],
+        "nl": [
+        {"lemma": "tijdverspilling", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Dat is tijdverspilling."]}
+        ]
+      }
+    },
+    {
+      "key": "structure",
+      "gloss": "structure (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "structure", "pos": "noun", "details": {"plural": "structures"}, "sentences": ["The structure is clear."]}
+        ],
+        "nl": [
+        {"lemma": "structuur", "pos": "noun", "details": {"article": "de", "plural": "structuren"}, "sentences": ["De structuur is duidelijk."]}
+        ]
+      }
+    },
+    {
+      "key": "resistance",
+      "gloss": "resistance (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "resistance", "pos": "noun", "details": {"uncountable": true}, "sentences": ["There is resistance."]}
+        ],
+        "nl": [
+        {"lemma": "weerstand", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Er is weerstand."]}
+        ]
+      }
+    },
+    {
+      "key": "shouting",
+      "gloss": "shouting (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "shouting", "pos": "noun", "details": {"uncountable": true}, "sentences": ["The shouting is loud."]}
+        ],
+        "nl": [
+        {"lemma": "geschreeuw", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["Het geschreeuw is luid."]}
+        ]
+      }
+    },
+    {
+      "key": "theme",
+      "gloss": "theme (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "theme", "pos": "noun", "details": {"plural": "themes"}, "sentences": ["The theme is love."]}
+        ],
+        "nl": [
+        {"lemma": "thema", "pos": "noun", "details": {"article": "het", "plural": "thema's"}, "sentences": ["Het thema is liefde."]}
+        ]
+      }
+    },
+    {
+      "key": "growth",
+      "gloss": "growth (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "growth", "pos": "noun", "details": {"uncountable": true}, "sentences": ["The growth is fast."]}
+        ],
+        "nl": [
+        {"lemma": "groei", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["De groei is snel."]}
+        ]
+      }
+    },
+    {
+      "key": "inside",
+      "gloss": "inside (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "inside", "pos": "noun", "details": {"plural": "insides"}, "sentences": ["The inside of the box is red."]}
+        ],
+        "nl": [
+        {"lemma": "binnenkant", "pos": "noun", "details": {"article": "de", "plural": "binnenkanten"}, "sentences": ["De binnenkant van de doos is rood."]}
+        ]
+      }
+    },
+    {
+      "key": "print-noun",
+      "gloss": "print (imprint)",
+      "entries": {
+        "en": [
+        {"lemma": "print (imprint)", "pos": "noun", "details": {"plural": "prints"}, "sentences": ["I see a print in the sand."]}
+        ],
+        "nl": [
+        {"lemma": "afdruk", "pos": "noun", "details": {"article": "de", "plural": "afdrukken"}, "sentences": ["Ik zie een afdruk in het zand."]}
+        ]
+      }
+    },
+    {
+      "key": "emptiness",
+      "gloss": "emptiness (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "emptiness", "pos": "noun", "details": {"uncountable": true}, "sentences": ["I feel emptiness."]}
+        ],
+        "nl": [
+        {"lemma": "leegte", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Ik voel leegte."]}
+        ]
+      }
+    },
+    {
+      "key": "outside-noun",
+      "gloss": "outside (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "outside", "pos": "noun", "details": {"plural": "outsides"}, "sentences": ["The outside of the house is white."]}
+        ],
+        "nl": [
+        {"lemma": "buitenkant", "pos": "noun", "details": {"article": "de", "plural": "buitenkanten"}, "sentences": ["De buitenkant van het huis is wit."]}
+        ]
+      }
+    },
+    {
+      "key": "regulation",
+      "gloss": "regulation (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "regulation", "pos": "noun", "details": {"plural": "regulations"}, "sentences": ["There is a new regulation."]}
+        ],
+        "nl": [
+        {"lemma": "regeling", "pos": "noun", "details": {"article": "de", "plural": "regelingen"}, "sentences": ["Er is een nieuwe regeling."]}
+        ]
+      }
+    },
+    {
+      "key": "seal-noun",
+      "gloss": "seal (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "seal", "pos": "noun", "details": {"plural": "seals"}, "sentences": ["The letter has a seal."]}
+        ],
+        "nl": [
+        {"lemma": "zegel", "pos": "noun", "details": {"article": "het", "plural": "zegels"}, "sentences": ["De brief heeft een zegel."]}
+        ]
+      }
+    },
+    {
+      "key": "welfare",
+      "gloss": "welfare (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "welfare", "pos": "noun", "details": {"uncountable": true}, "sentences": ["Her welfare is important."]}
+        ],
+        "nl": [
+        {"lemma": "welzijn", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["Haar welzijn is belangrijk."]}
+        ]
+      }
+    },
+    {
+      "key": "privilege",
+      "gloss": "privilege (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "privilege", "pos": "noun", "details": {"plural": "privileges"}, "sentences": ["It is a privilege."]}
+        ],
+        "nl": [
+        {"lemma": "voorrecht", "pos": "noun", "details": {"article": "het", "plural": "voorrechten"}, "sentences": ["Het is een voorrecht."]}
+        ]
+      }
+    },
+    {
+      "key": "confrontation",
+      "gloss": "confrontation (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "confrontation", "pos": "noun", "details": {"plural": "confrontations"}, "sentences": ["The confrontation is tense."]}
+        ],
+        "nl": [
+        {"lemma": "confrontatie", "pos": "noun", "details": {"article": "de", "plural": "confrontaties"}, "sentences": ["De confrontatie is gespannen."]}
+        ]
+      }
+    },
+    {
+      "key": "opposite-noun",
+      "gloss": "opposite (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "opposite", "pos": "noun", "details": {"uncountable": true}, "sentences": ["The opposite is true."]}
+        ],
+        "nl": [
+        {"lemma": "tegendeel", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["Het tegendeel is waar."]}
+        ]
+      }
+    },
+    {
+      "key": "incident-noun-voorval",
+      "gloss": "incident (event)",
+      "entries": {
+        "en": [
+        {"lemma": "incident (event)", "pos": "noun", "details": {"plural": "incidents"}, "sentences": ["The incident was minor."]}
+        ],
+        "nl": [
+        {"lemma": "voorval", "pos": "noun", "details": {"article": "het", "plural": "voorvallen"}, "sentences": ["Het voorval was klein."]}
+        ]
+      }
+    },
+    {
+      "key": "chain",
+      "gloss": "chain (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "chain", "pos": "noun", "details": {"plural": "chains"}, "sentences": ["The chain is long."]}
+        ],
+        "nl": [
+        {"lemma": "keten", "pos": "noun", "details": {"article": "de", "plural": "ketens"}, "sentences": ["De keten is lang."]}
+        ]
+      }
+    },
+    {
+      "key": "pyramid",
+      "gloss": "pyramid (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "pyramid", "pos": "noun", "details": {"plural": "pyramids"}, "sentences": ["The pyramid is old."]}
+        ],
+        "nl": [
+        {"lemma": "piramide", "pos": "noun", "details": {"article": "de", "plural": "piramides"}, "sentences": ["De piramide is oud."]}
+        ]
+      }
+    },
+    {
+      "key": "spell-noun",
+      "gloss": "spell (enchantment)",
+      "entries": {
+        "en": [
+        {"lemma": "spell (enchantment)", "pos": "noun", "details": {"plural": "spells"}, "sentences": ["The spell is broken."]}
+        ],
+        "nl": [
+        {"lemma": "betovering", "pos": "noun", "details": {"article": "de", "plural": "betoveringen"}, "sentences": ["De betovering is verbroken."]}
+        ]
+      }
+    },
+    {
+      "key": "outside-world",
+      "gloss": "outside world (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "outside world", "pos": "noun", "details": {"uncountable": true}, "sentences": ["The outside world is big."]}
+        ],
+        "nl": [
+        {"lemma": "buitenwereld", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["De buitenwereld is groot."]}
+        ]
+      }
+    },
+    {
+      "key": "surface",
+      "gloss": "surface (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "surface", "pos": "noun", "details": {"plural": "surfaces"}, "sentences": ["The surface is smooth."]}
+        ],
+        "nl": [
+        {"lemma": "oppervlakte", "pos": "noun", "details": {"article": "de", "plural": "oppervlakten"}, "sentences": ["De oppervlakte is glad."]}
+        ]
+      }
+    },
+    {
+      "key": "tendency",
+      "gloss": "tendency (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "tendency", "pos": "noun", "details": {"plural": "tendencies"}, "sentences": ["He has a tendency to be late."]}
+        ],
+        "nl": [
+        {"lemma": "neiging", "pos": "noun", "details": {"article": "de", "plural": "neigingen"}, "sentences": ["Hij heeft de neiging te laat te komen."]}
+        ]
+      }
+    },
+    {
+      "key": "reference",
+      "gloss": "reference (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "reference", "pos": "noun", "details": {"plural": "references"}, "sentences": ["I have a good reference."]}
+        ],
+        "nl": [
+        {"lemma": "referentie", "pos": "noun", "details": {"article": "de", "plural": "referenties"}, "sentences": ["Ik heb een goede referentie."]}
+        ]
+      }
+    },
+    {
+      "key": "cruelty",
+      "gloss": "cruelty (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "cruelty", "pos": "noun", "details": {"plural": "cruelties"}, "sentences": ["The cruelty is shocking."]}
+        ],
+        "nl": [
+        {"lemma": "wreedheid", "pos": "noun", "details": {"article": "de", "plural": "wreedheden"}, "sentences": ["De wreedheid is schokkend."]}
+        ]
+      }
+    },
+    {
+      "key": "setback",
+      "gloss": "setback (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "setback", "pos": "noun", "details": {"plural": "setbacks"}, "sentences": ["He suffers a setback."]}
+        ],
+        "nl": [
+        {"lemma": "tegenslag", "pos": "noun", "details": {"article": "de", "plural": "tegenslagen"}, "sentences": ["Hij lijdt een tegenslag."]}
+        ]
+      }
+    },
+    {
+      "key": "right-side",
+      "gloss": "right side (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "right side", "pos": "noun", "details": {"plural": "right sides"}, "sentences": ["The shop is on the right side."]}
+        ],
+        "nl": [
+        {"lemma": "rechterkant", "pos": "noun", "details": {"article": "de", "plural": "rechterkanten"}, "sentences": ["De winkel is aan de rechterkant."]}
+        ]
+      }
+    },
+    {
+      "key": "clich",
+      "gloss": "cliché (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "cliché", "pos": "noun", "details": {"plural": "clichés"}, "sentences": ["That is a cliché."]}
+        ],
+        "nl": [
+        {"lemma": "cliché", "pos": "noun", "details": {"article": "het", "plural": "clichés"}, "sentences": ["Dat is een cliché."]}
+        ]
+      }
+    },
+    {
+      "key": "crack-noun",
+      "gloss": "crack (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "crack", "pos": "noun", "details": {"plural": "cracks"}, "sentences": ["There is a crack in the wall."]}
+        ],
+        "nl": [
+        {"lemma": "scheur", "pos": "noun", "details": {"article": "de", "plural": "scheuren"}, "sentences": ["Er zit een scheur in de muur."]}
+        ]
+      }
+    },
+    {
+      "key": "harmony",
+      "gloss": "harmony (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "harmony", "pos": "noun", "details": {"uncountable": true}, "sentences": ["They live in harmony."]}
+        ],
+        "nl": [
+        {"lemma": "harmonie", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Zij leven in harmonie."]}
+        ]
+      }
+    },
+    {
+      "key": "motto",
+      "gloss": "motto (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "motto", "pos": "noun", "details": {"plural": "mottos"}, "sentences": ["That is my motto."]}
+        ],
+        "nl": [
+        {"lemma": "motto", "pos": "noun", "details": {"article": "het", "plural": "motto's"}, "sentences": ["Dat is mijn motto."]}
+        ]
+      }
+    },
+    {
+      "key": "waste-noun-verspilling",
+      "gloss": "waste (squandering)",
+      "entries": {
+        "en": [
+        {"lemma": "waste (squandering)", "pos": "noun", "details": {"uncountable": true}, "sentences": ["This is a waste."]}
+        ],
+        "nl": [
+        {"lemma": "verspilling", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Dit is een verspilling."]}
+        ]
+      }
+    },
+    {
+      "key": "improvement",
+      "gloss": "improvement (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "improvement", "pos": "noun", "details": {"plural": "improvements"}, "sentences": ["That is an improvement."]}
+        ],
+        "nl": [
+        {"lemma": "verbetering", "pos": "noun", "details": {"article": "de", "plural": "verbeteringen"}, "sentences": ["Dat is een verbetering."]}
+        ]
+      }
+    },
+    {
+      "key": "prospect",
+      "gloss": "prospect (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "prospect", "pos": "noun", "details": {"plural": "prospects"}, "sentences": ["The prospect is good."]}
+        ],
+        "nl": [
+        {"lemma": "vooruitzicht", "pos": "noun", "details": {"article": "het", "plural": "vooruitzichten"}, "sentences": ["Het vooruitzicht is goed."]}
+        ]
+      }
+    },
+    {
+      "key": "trifle",
+      "gloss": "trifle (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "trifle", "pos": "noun", "details": {"plural": "trifles"}, "sentences": ["That is a trifle."]}
+        ],
+        "nl": [
+        {"lemma": "kleinigheid", "pos": "noun", "details": {"article": "de", "plural": "kleinigheden"}, "sentences": ["Dat is een kleinigheid."]}
+        ]
+      }
+    },
+    {
+      "key": "initiative",
+      "gloss": "initiative (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "initiative", "pos": "noun", "details": {"plural": "initiatives"}, "sentences": ["He takes the initiative."]}
+        ],
+        "nl": [
+        {"lemma": "initiatief", "pos": "noun", "details": {"article": "het", "plural": "initiatieven"}, "sentences": ["Hij neemt het initiatief."]}
+        ]
+      }
+    },
+    {
+      "key": "aspect",
+      "gloss": "aspect (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "aspect", "pos": "noun", "details": {"plural": "aspects"}, "sentences": ["That is an important aspect."]}
+        ],
+        "nl": [
+        {"lemma": "aspect", "pos": "noun", "details": {"article": "het", "plural": "aspecten"}, "sentences": ["Dat is een belangrijk aspect."]}
+        ]
+      }
+    },
+    {
+      "key": "appreciation",
+      "gloss": "appreciation (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "appreciation", "pos": "noun", "details": {"plural": "appreciations"}, "sentences": ["I feel appreciation."]}
+        ],
+        "nl": [
+        {"lemma": "waardering", "pos": "noun", "details": {"article": "de", "plural": "waarderingen"}, "sentences": ["Ik voel waardering."]}
+        ]
+      }
+    },
+    {
+      "key": "argument-noun-argument",
+      "gloss": "argument (noun, argument)",
+      "entries": {
+        "en": [
+        {"lemma": "argument", "pos": "noun", "details": {"plural": "arguments"}, "sentences": ["That is a good argument."]}
+        ],
+        "nl": [
+        {"lemma": "argument", "pos": "noun", "details": {"article": "het", "plural": "argumenten"}, "sentences": ["Dat is een goed argument."]}
+        ]
+      }
+    },
+    {
+      "key": "disadvantage",
+      "gloss": "disadvantage (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "disadvantage", "pos": "noun", "details": {"plural": "disadvantages"}, "sentences": ["That is a disadvantage."]}
+        ],
+        "nl": [
+        {"lemma": "nadeel", "pos": "noun", "details": {"article": "het", "plural": "nadelen"}, "sentences": ["Dat is een nadeel."]}
+        ]
+      }
+    },
+    {
+      "key": "facility",
+      "gloss": "facility (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "facility", "pos": "noun", "details": {"plural": "facilities"}, "sentences": ["The facility is new."]}
+        ],
+        "nl": [
+        {"lemma": "faciliteit", "pos": "noun", "details": {"article": "de", "plural": "faciliteiten"}, "sentences": ["De faciliteit is nieuw."]}
+        ]
+      }
+    },
+    {
+      "key": "calculation",
+      "gloss": "calculation (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "calculation", "pos": "noun", "details": {"plural": "calculations"}, "sentences": ["The calculation is correct."]}
+        ],
+        "nl": [
+        {"lemma": "berekening", "pos": "noun", "details": {"article": "de", "plural": "berekeningen"}, "sentences": ["De berekening is juist."]}
+        ]
+      }
+    },
+    {
+      "key": "compromise",
+      "gloss": "compromise (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "compromise", "pos": "noun", "details": {"plural": "compromises"}, "sentences": ["We find a compromise."]}
+        ],
+        "nl": [
+        {"lemma": "compromis", "pos": "noun", "details": {"article": "het", "plural": "compromissen"}, "sentences": ["Wij vinden een compromis."]}
+        ]
+      }
+    },
+    {
+      "key": "claim-noun",
+      "gloss": "claim (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "claim", "pos": "noun", "details": {"plural": "claims"}, "sentences": ["He makes a claim."]}
+        ],
+        "nl": [
+        {"lemma": "claim", "pos": "noun", "details": {"article": "de", "plural": "claims"}, "sentences": ["Hij doet een claim."]}
+        ]
+      }
+    },
+    {
+      "key": "little-hole",
+      "gloss": "little hole (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "little hole", "pos": "noun", "details": {"plural": "little holes"}, "sentences": ["There is a little hole in the sock."]}
+        ],
+        "nl": [
+        {"lemma": "gaatje", "pos": "noun", "details": {"article": "het", "plural": "gaatjes"}, "sentences": ["Er zit een gaatje in de sok."]}
+        ]
+      }
+    },
+    {
+      "key": "convention",
+      "gloss": "convention (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "convention", "pos": "noun", "details": {"plural": "conventions"}, "sentences": ["That is the convention."]}
+        ],
+        "nl": [
+        {"lemma": "conventie", "pos": "noun", "details": {"article": "de", "plural": "conventies"}, "sentences": ["Dat is de conventie."]}
+        ]
+      }
+    },
+    {
+      "key": "resemblance",
+      "gloss": "resemblance (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "resemblance", "pos": "noun", "details": {"plural": "resemblances"}, "sentences": ["There is a resemblance."]}
+        ],
+        "nl": [
+        {"lemma": "gelijkenis", "pos": "noun", "details": {"article": "de", "plural": "gelijkenissen"}, "sentences": ["Er is een gelijkenis."]}
+        ]
+      }
+    },
+    {
+      "key": "factor",
+      "gloss": "factor (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "factor", "pos": "noun", "details": {"plural": "factors"}, "sentences": ["That is a factor."]}
+        ],
+        "nl": [
+        {"lemma": "factor", "pos": "noun", "details": {"article": "de", "plural": "factoren"}, "sentences": ["Dat is een factor."]}
+        ]
+      }
+    },
+    {
+      "key": "absence",
+      "gloss": "absence (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "absence", "pos": "noun", "details": {"uncountable": true}, "sentences": ["His absence is noticed."]}
+        ],
+        "nl": [
+        {"lemma": "afwezigheid", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Zijn afwezigheid valt op."]}
+        ]
+      }
+    },
+    {
+      "key": "find-noun",
+      "gloss": "find (discovery)",
+      "entries": {
+        "en": [
+        {"lemma": "find (discovery)", "pos": "noun", "details": {"plural": "finds"}, "sentences": ["That is a great find."]}
+        ],
+        "nl": [
+        {"lemma": "vondst", "pos": "noun", "details": {"article": "de", "plural": "vondsten"}, "sentences": ["Dat is een mooie vondst."]}
+        ]
+      }
+    },
+    {
+      "key": "recommendation",
+      "gloss": "recommendation (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "recommendation", "pos": "noun", "details": {"plural": "recommendations"}, "sentences": ["I give a recommendation."]}
+        ],
+        "nl": [
+        {"lemma": "aanbeveling", "pos": "noun", "details": {"article": "de", "plural": "aanbevelingen"}, "sentences": ["Ik geef een aanbeveling."]}
         ]
       }
     }

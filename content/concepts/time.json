@@ -253,7 +253,7 @@
       }
     },
     {
-      "key": "break-noun",
+      "key": "break-noun-pauze",
       "gloss": "break (pause)",
       "entries": {
         "en": [
@@ -429,6 +429,102 @@
         ],
         "nl": [
         {"lemma": "tijdperk", "pos": "noun", "details": {"article": "het", "plural": "tijdperken"}, "sentences": ["Dit is een nieuw tijdperk."]}
+        ]
+      }
+    },
+    {
+      "key": "bedtime",
+      "gloss": "bedtime (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "bedtime", "pos": "noun", "details": {"uncountable": true}, "sentences": ["It is bedtime."]}
+        ],
+        "nl": [
+        {"lemma": "bedtijd", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Het is bedtijd."]}
+        ]
+      }
+    },
+    {
+      "key": "friday-evening",
+      "gloss": "Friday evening (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "Friday evening", "pos": "noun", "details": {"plural": "Friday evenings"}, "sentences": ["Friday evening we go out."]}
+        ],
+        "nl": [
+        {"lemma": "vrijdagavond", "pos": "noun", "details": {"article": "de", "plural": "vrijdagavonden"}, "sentences": ["Vrijdagavond gaan we uit."]}
+        ]
+      }
+    },
+    {
+      "key": "annual",
+      "gloss": "annual (adjective)",
+      "entries": {
+        "en": [
+        {"lemma": "annual", "pos": "adjective", "sentences": ["This is an annual event."]}
+        ],
+        "nl": [
+        {"lemma": "jaarlijks", "pos": "adjective", "sentences": ["Dit is een jaarlijks evenement."]}
+        ]
+      }
+    },
+    {
+      "key": "upcoming",
+      "gloss": "upcoming (adjective)",
+      "entries": {
+        "en": [
+        {"lemma": "upcoming", "pos": "adjective", "sentences": ["The upcoming week is busy."]}
+        ],
+        "nl": [
+        {"lemma": "aanstaande", "pos": "adjective", "sentences": ["De aanstaande week is druk."]}
+        ]
+      }
+    },
+    {
+      "key": "half-hour",
+      "gloss": "half hour (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "half hour", "pos": "noun", "details": {"plural": "half hours"}, "sentences": ["I wait a half hour."]}
+        ],
+        "nl": [
+        {"lemma": "halfuur", "pos": "noun", "details": {"article": "het", "plural": "halfuren"}, "sentences": ["Ik wacht een halfuur."]}
+        ]
+      }
+    },
+    {
+      "key": "saturday-evening",
+      "gloss": "Saturday evening (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "Saturday evening", "pos": "noun", "details": {"plural": "Saturday evenings"}, "sentences": ["Saturday evening we eat out."]}
+        ],
+        "nl": [
+        {"lemma": "zaterdagavond", "pos": "noun", "details": {"article": "de", "plural": "zaterdagavonden"}, "sentences": ["Zaterdagavond eten we buiten de deur."]}
+        ]
+      }
+    },
+    {
+      "key": "pass-verb-verstrijken",
+      "gloss": "pass (of time)",
+      "entries": {
+        "en": [
+        {"lemma": "pass (of time)", "pos": "verb", "details": {"past": "passed", "participle": "passed"}, "sentences": ["The time passes."]}
+        ],
+        "nl": [
+        {"lemma": "verstrijken", "pos": "verb", "details": {"pastSingular": "verstreek", "pastPlural": "verstreken", "participle": "verstreken", "auxiliary": "zijn"}, "sentences": ["De tijd verstrijkt."]}
+        ]
+      }
+    },
+    {
+      "key": "new-year",
+      "gloss": "New Year (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "New Year", "pos": "noun", "details": {"uncountable": true}, "sentences": ["We celebrate New Year."]}
+        ],
+        "nl": [
+        {"lemma": "nieuwjaar", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["Wij vieren nieuwjaar."]}
         ]
       }
     }

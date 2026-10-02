@@ -155,10 +155,14 @@ export function checkConcept(concept: Concept): Check {
   return { errors, warnings };
 }
 
-// Lowercase and collapse doubled letters, so Dutch spelling alternations
-// (woon / won, maak / mak) do not hide a match.
+// Lowercase, drop accents and collapse doubled letters, so Dutch spelling
+// alternations (woon / won, maak / mak, kopiëren / kopieer) do not hide a match.
 function squash(s: string): string {
-  return s.toLowerCase().replace(/(.)\1/g, "$1");
+  return s
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[̀-ͯ]/g, "")
+    .replace(/(.)\1/g, "$1");
 }
 
 // Regular present-tense forms are not stored, so match on the stem

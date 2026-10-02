@@ -37,7 +37,7 @@
       }
     },
     {
-      "key": "building",
+      "key": "building-noun-gebouw",
       "gloss": "building (noun)",
       "entries": {
         "en": [
@@ -97,7 +97,7 @@
       }
     },
     {
-      "key": "address",
+      "key": "address-noun",
       "gloss": "address (noun)",
       "entries": {
         "en": [
@@ -133,7 +133,7 @@
       }
     },
     {
-      "key": "bar",
+      "key": "bar-noun-bar",
       "gloss": "bar (noun)",
       "entries": {
         "en": [
@@ -337,7 +337,7 @@
       }
     },
     {
-      "key": "exit",
+      "key": "exit-noun-uitgang",
       "gloss": "exit (noun)",
       "entries": {
         "en": [
@@ -577,7 +577,7 @@
       }
     },
     {
-      "key": "warehouse",
+      "key": "warehouse-noun-magazijn",
       "gloss": "warehouse (noun)",
       "entries": {
         "en": [
@@ -585,6 +585,234 @@
         ],
         "nl": [
         {"lemma": "magazijn", "pos": "noun", "details": {"article": "het", "plural": "magazijnen"}, "sentences": ["De goederen liggen in het magazijn."]}
+        ]
+      }
+    },
+    {
+      "key": "sidewalk",
+      "gloss": "sidewalk (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "sidewalk", "pos": "noun", "details": {"plural": "sidewalks"}, "sentences": ["I walk on the sidewalk."]}
+        ],
+        "nl": [
+        {"lemma": "stoep", "pos": "noun", "details": {"article": "de", "plural": "stoepen"}, "sentences": ["Ik loop op de stoep."]}
+        ]
+      }
+    },
+    {
+      "key": "guarantee-noun",
+      "gloss": "guarantee (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "guarantee", "pos": "noun", "details": {"plural": "guarantees"}, "sentences": ["The phone has a guarantee."]}
+        ],
+        "nl": [
+        {"lemma": "garantie", "pos": "noun", "details": {"article": "de", "plural": "garanties"}, "sentences": ["De telefoon heeft garantie."]}
+        ]
+      }
+    },
+    {
+      "key": "service",
+      "gloss": "service (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "service", "pos": "noun", "details": {"uncountable": true}, "sentences": ["The service is good."]}
+        ],
+        "nl": [
+        {"lemma": "service", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["De service is goed."]}
+        ]
+      }
+    },
+    {
+      "key": "nightclub",
+      "gloss": "nightclub (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "nightclub", "pos": "noun", "details": {"plural": "nightclubs"}, "sentences": ["We go to a nightclub."]}
+        ],
+        "nl": [
+        {"lemma": "nachtclub", "pos": "noun", "details": {"article": "de", "plural": "nachtclubs"}, "sentences": ["Wij gaan naar een nachtclub."]}
+        ]
+      }
+    },
+    {
+      "key": "building-noun-pand",
+      "gloss": "building (premises)",
+      "entries": {
+        "en": [
+        {"lemma": "building (premises)", "pos": "noun", "details": {"plural": "buildings"}, "sentences": ["The building is old."]}
+        ],
+        "nl": [
+        {"lemma": "pand", "pos": "noun", "details": {"article": "het", "plural": "panden"}, "sentences": ["Het pand is oud."]}
+        ]
+      }
+    },
+    {
+      "key": "special-offer",
+      "gloss": "special offer (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "special offer", "pos": "noun", "details": {"plural": "special offers"}, "sentences": ["This is a special offer."]}
+        ],
+        "nl": [
+        {"lemma": "aanbieding", "pos": "noun", "details": {"article": "de", "plural": "aanbiedingen"}, "sentences": ["Dit is een aanbieding."]}
+        ]
+      }
+    },
+    {
+      "key": "warehouse-noun-pakhuis",
+      "gloss": "warehouse (storehouse)",
+      "entries": {
+        "en": [
+        {"lemma": "warehouse (storehouse)", "pos": "noun", "details": {"plural": "warehouses"}, "sentences": ["The goods are in the warehouse."]}
+        ],
+        "nl": [
+        {"lemma": "pakhuis", "pos": "noun", "details": {"article": "het", "plural": "pakhuizen"}, "sentences": ["De goederen liggen in het pakhuis."]}
+        ]
+      }
+    },
+    {
+      "key": "phone-booth",
+      "gloss": "phone booth (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "phone booth", "pos": "noun", "details": {"plural": "phone booths"}, "sentences": ["The phone booth is empty."]}
+        ],
+        "nl": [
+        {"lemma": "telefooncel", "pos": "noun", "details": {"article": "de", "plural": "telefooncellen"}, "sentences": ["De telefooncel is leeg."]}
+        ]
+      }
+    },
+    {
+      "key": "goods",
+      "gloss": "goods (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "goods", "pos": "noun", "details": {"pluralOnly": true}, "sentences": ["The goods arrive tomorrow."]}
+        ],
+        "nl": [
+        {"lemma": "goederen", "pos": "noun", "details": {"article": "de", "pluralOnly": true}, "sentences": ["De goederen komen morgen aan."]}
+        ]
+      }
+    },
+    {
+      "key": "sewer",
+      "gloss": "sewer (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "sewer", "pos": "noun", "details": {"plural": "sewers"}, "sentences": ["The sewer smells bad."]}
+        ],
+        "nl": [
+        {"lemma": "riool", "pos": "noun", "details": {"article": "het", "plural": "riolen"}, "sentences": ["Het riool stinkt."]}
+        ]
+      }
+    },
+    {
+      "key": "square-noun",
+      "gloss": "square (town)",
+      "entries": {
+        "en": [
+        {"lemma": "square (town)", "pos": "noun", "details": {"plural": "squares"}, "sentences": ["We meet on the square."]}
+        ],
+        "nl": [
+        {"lemma": "plein", "pos": "noun", "details": {"article": "het", "plural": "pleinen"}, "sentences": ["Wij spreken af op het plein."]}
+        ]
+      }
+    },
+    {
+      "key": "gutter",
+      "gloss": "gutter (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "gutter", "pos": "noun", "details": {"plural": "gutters"}, "sentences": ["The leaf lies in the gutter."]}
+        ],
+        "nl": [
+        {"lemma": "goot", "pos": "noun", "details": {"article": "de", "plural": "gooten"}, "sentences": ["Het blad ligt in de goot."]}
+        ]
+      }
+    },
+    {
+      "key": "auction",
+      "gloss": "auction (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "auction", "pos": "noun", "details": {"plural": "auctions"}, "sentences": ["The auction starts at ten."]}
+        ],
+        "nl": [
+        {"lemma": "veiling", "pos": "noun", "details": {"article": "de", "plural": "veilingen"}, "sentences": ["De veiling begint om tien uur."]}
+        ]
+      }
+    },
+    {
+      "key": "delivery",
+      "gloss": "delivery (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "delivery", "pos": "noun", "details": {"plural": "deliveries"}, "sentences": ["The delivery is tomorrow."]}
+        ],
+        "nl": [
+        {"lemma": "levering", "pos": "noun", "details": {"article": "de", "plural": "leveringen"}, "sentences": ["De levering is morgen."]}
+        ]
+      }
+    },
+    {
+      "key": "discount",
+      "gloss": "discount (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "discount", "pos": "noun", "details": {"plural": "discounts"}, "sentences": ["I get a discount."]}
+        ],
+        "nl": [
+        {"lemma": "korting", "pos": "noun", "details": {"article": "de", "plural": "kortingen"}, "sentences": ["Ik krijg korting."]}
+        ]
+      }
+    },
+    {
+      "key": "post-office",
+      "gloss": "post office (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "post office", "pos": "noun", "details": {"plural": "post offices"}, "sentences": ["I go to the post office."]}
+        ],
+        "nl": [
+        {"lemma": "postkantoor", "pos": "noun", "details": {"article": "het", "plural": "postkantoren"}, "sentences": ["Ik ga naar het postkantoor."]}
+        ]
+      }
+    },
+    {
+      "key": "salon",
+      "gloss": "salon (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "salon", "pos": "noun", "details": {"plural": "salons"}, "sentences": ["She goes to the salon."]}
+        ],
+        "nl": [
+        {"lemma": "salon", "pos": "noun", "details": {"article": "de", "plural": "salons"}, "sentences": ["Zij gaat naar de salon."]}
+        ]
+      }
+    },
+    {
+      "key": "pharmacy",
+      "gloss": "pharmacy (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "pharmacy", "pos": "noun", "details": {"plural": "pharmacies"}, "sentences": ["I go to the pharmacy."]}
+        ],
+        "nl": [
+        {"lemma": "apotheek", "pos": "noun", "details": {"article": "de", "plural": "apotheken"}, "sentences": ["Ik ga naar de apotheek."]}
+        ]
+      }
+    },
+    {
+      "key": "label",
+      "gloss": "label (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "label", "pos": "noun", "details": {"plural": "labels"}, "sentences": ["The label says the price."]}
+        ],
+        "nl": [
+        {"lemma": "label", "pos": "noun", "details": {"article": "het", "plural": "labels"}, "sentences": ["Op het label staat de prijs."]}
         ]
       }
     }
