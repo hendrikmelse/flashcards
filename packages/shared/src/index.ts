@@ -93,6 +93,8 @@ export const deckFilterSchema = z.object({
   state: z.enum(["new", "learning", "review"]).optional(),
   sort: z.enum(DECK_SORTS).default("added"),
   order: z.enum(["asc", "desc"]).optional(),
+  // "1" keeps only cards whose opposite-direction card is not in the deck.
+  missingMirror: z.enum(["0", "1"]).default("0"),
 });
 
 export const uuidParamSchema = z.object({ id: z.string().uuid() });
@@ -130,6 +132,8 @@ export type DeckCardView = {
   intervalDays: number;
   lapses: number;
   lastReviewedAt: string | null;
+  /** Whether the same word is also in the deck in the opposite direction. */
+  hasMirror: boolean;
   front: EntryView[];
   back: EntryView[];
 };
@@ -139,7 +143,10 @@ export type DeckResponse = {
   cards: DeckCardView[];
   /** True when more cards match after this page. */
   hasMore: boolean;
+  /** How many cards matching the search, stage and direction have no opposite-direction card yet. */
+  mirrorable: number;
 };
+export type AddMirrorsResult = { added: number };
 
 export type StudyCounts = { learning: number; review: number; new: number };
 export type StudyCardView = {
@@ -166,6 +173,12 @@ export type DirectionSummary = {
   dueNow: number;
   /** When the next not-yet-due card in this direction comes due, if any. */
   nextDueAt: string | null;
+  /**
+   * What a study session in just this direction would offer right now. The daily
+   * new-card limit is shared across directions, so `new` here can add up to more
+   * than the whole-deck figure.
+   */
+  ready: { learning: number; review: number; new: number };
 };
 
 export type StatsResponse = {

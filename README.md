@@ -108,9 +108,10 @@ All routes live under `/api`.
 | `GET /languages` | Available languages |
 | `GET /packs`, `GET /packs/:id` | Public browsing. With `fromLanguage` and `toLanguage` it adds availability and, when logged in, what is already in the deck |
 | `POST /packs/:id/add`, `POST /concepts/:id/add` | Add to the deck for a direction. Idempotent; skips concepts missing an entry in either language |
-| `GET /deck` | Progress summary and a page of cards, filterable by direction, stage (new, learning, review) and a search word, sortable by date added, next due, status, interval, lapses or the prompt word |
+| `GET /deck` | Progress summary and a page of cards, filterable by direction, stage (new, learning, review) and a search word, sortable by date added, next due, status, interval, lapses or the prompt word. Each card says whether its reverse (same word, other direction) is in the deck, and `missingMirror=1` keeps only those without one |
+| `POST /deck/mirrors` | Adds the reverse card for every card in a view of the deck (direction, stage and search, as in `GET /deck`) that has none. Idempotent |
 | `GET /study` | Read-only batch: learning cards due within 20 minutes, overdue reviews, then new cards up to the daily limit |
-| `GET /stats` | Reviews today, when the next card is due, and a per-direction breakdown of the deck |
+| `GET /stats` | Reviews today, when the next card is due, and a per-direction breakdown of the deck, including what is ready to study in each |
 | `POST /reviews` | Transactional. Locks the card, runs FSRS, updates state and appends to the log. Idempotent via `clientReviewId` |
 
 ### Production hardening
