@@ -18,7 +18,7 @@ export function DirectionPicker({ languages, direction, onChange }: Props) {
     <div className="direction" role="group" aria-label="Study direction">
       <label>
         Prompt language
-        <select value={direction.from} onChange={(e) => setFrom(e.target.value)}>
+        <select className="dropdown" value={direction.from} onChange={(e) => setFrom(e.target.value)}>
           {languages.map((l) => (
             <option key={l.code} value={l.code}>
               {l.name}
@@ -36,7 +36,7 @@ export function DirectionPicker({ languages, direction, onChange }: Props) {
       </button>
       <label>
         Answer language
-        <select value={direction.to} onChange={(e) => setTo(e.target.value)}>
+        <select className="dropdown" value={direction.to} onChange={(e) => setTo(e.target.value)}>
           {languages.map((l) => (
             <option key={l.code} value={l.code}>
               {l.name}

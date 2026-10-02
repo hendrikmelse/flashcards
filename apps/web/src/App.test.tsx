@@ -109,7 +109,11 @@ describe("dashboard", () => {
     expect(hero).toHaveTextContent("11 cards ready to study"); // 4 due + 7 new
     expect(hero).toHaveTextContent("4 due now · 7 new");
     expect(within(hero).getByRole("link", { name: "Start studying" })).toHaveAttribute("href", "/study");
-    expect(within(hero).getByRole("link", { name: "Add more words" })).toHaveAttribute("href", "/packs");
+    // "Add more words" lives next to "View deck", not in the hero.
+    expect(within(hero).queryByRole("link", { name: "Add more words" })).not.toBeInTheDocument();
+    const yourDeck = screen.getByRole("heading", { name: "Your deck" }).parentElement!;
+    expect(within(yourDeck).getByRole("link", { name: "View deck" })).toHaveAttribute("href", "/deck");
+    expect(within(yourDeck).getByRole("link", { name: "Add more words" })).toHaveAttribute("href", "/packs");
     expect(screen.getByRole("img", { name: /3 learning/ })).toBeInTheDocument();
   });
 
@@ -120,6 +124,7 @@ describe("dashboard", () => {
     renderApp("/");
     expect(await screen.findByText("You’re all caught up")).toBeInTheDocument();
     expect(screen.queryByRole("link", { name: "Start studying" })).not.toBeInTheDocument();
+    expect(screen.getByRole("link", { name: "Add more words" })).toHaveAttribute("href", "/packs");
   });
 
   describe("with several decks", () => {

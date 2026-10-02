@@ -316,6 +316,82 @@ button.link {
   margin-top: 0;
 }
 
+.sort-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem 1rem;
+  margin: 0 0 1rem;
+}
+
+.sort-row .toggle {
+  margin: 0;
+}
+
+.sort-by {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.deck-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin: 0.25rem 0 0;
+}
+
+.page-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 0.5rem 1rem;
+  margin-bottom: 1rem;
+}
+
+.page-head h1 {
+  margin-bottom: 0.25rem;
+}
+
+.page-head .lead {
+  margin: 0;
+}
+
+.toggle .count {
+  margin-left: 0.5rem;
+  padding: 0 0.45rem;
+  border-radius: 999px;
+  background: color-mix(in srgb, currentColor 18%, transparent);
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.card-status {
+  display: grid;
+  flex-shrink: 0;
+  justify-items: end;
+  text-align: right;
+  font-size: 0.9rem;
+  line-height: 1.35;
+}
+
+.status-line {
+  font-weight: 600;
+}
+
+.direction-tag {
+  margin-left: 0.6rem;
+  padding: 0.05rem 0.4rem;
+  border: 1px solid var(--border);
+  border-radius: 0.35rem;
+  color: var(--muted);
+  font-size: 0.75rem;
+  white-space: nowrap;
+}
+
 .deck-view {
   margin-bottom: 0.75rem;
 }
@@ -327,7 +403,6 @@ button.link {
 
 .deck-bar {
   display: flex;
-  gap: 2px;
   height: 0.75rem;
   margin-bottom: 0.75rem;
   overflow: hidden;
@@ -353,6 +428,10 @@ button.link {
 .seg.new,
 .dot.new {
   background: var(--border);
+}
+
+/* The dot sits on the page background, so it gets an outline; the bar segment doesn't need one. */
+.dot.new {
   box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--muted) 45%, transparent);
 }
 
@@ -445,7 +524,7 @@ button.link {
   color: var(--muted);
 }
 
-.direction select {
+select.dropdown {
   height: 2.5rem;
   padding: 0 0.6rem;
   border: 1px solid var(--border);
@@ -458,12 +537,12 @@ button.link {
 /* Where the browser supports it (Chrome/Edge 135+), style the open list too.
    Elsewhere the native list is used, with the colors set above. */
 @supports (appearance: base-select) {
-  .direction select,
-  .direction select::picker(select) {
+  select.dropdown,
+  select.dropdown::picker(select) {
     appearance: base-select;
   }
 
-  .direction select {
+  select.dropdown {
     display: inline-flex;
     align-items: center;
     justify-content: space-between;
@@ -471,21 +550,21 @@ button.link {
     cursor: pointer;
   }
 
-  .direction select:hover,
-  .direction select:open {
+  select.dropdown:hover,
+  select.dropdown:open {
     border-color: var(--accent);
   }
 
-  .direction select::picker-icon {
+  select.dropdown::picker-icon {
     color: var(--muted);
     transition: rotate 0.15s;
   }
 
-  .direction select:open::picker-icon {
+  select.dropdown:open::picker-icon {
     rotate: 180deg;
   }
 
-  .direction select::picker(select) {
+  select.dropdown::picker(select) {
     margin-top: 0.25rem;
     padding: 0.25rem;
     border: 1px solid var(--border);
@@ -494,23 +573,23 @@ button.link {
     box-shadow: 0 6px 20px rgb(0 0 0 / 0.12);
   }
 
-  .direction select option {
+  select.dropdown option {
     padding: 0.45rem 0.7rem;
     border-radius: 0.4rem;
     cursor: pointer;
   }
 
-  .direction select option:hover,
-  .direction select option:focus-visible {
+  select.dropdown option:hover,
+  select.dropdown option:focus-visible {
     background: color-mix(in srgb, var(--accent) 14%, transparent);
   }
 
-  .direction select option:checked {
+  select.dropdown option:checked {
     background: color-mix(in srgb, var(--accent) 24%, transparent);
     font-weight: 600;
   }
 
-  .direction select option::checkmark {
+  select.dropdown option::checkmark {
     display: none;
   }
 }

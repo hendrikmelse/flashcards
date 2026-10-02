@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router";
 import type { DirectionSummary } from "@flashcards/shared";
 import { useDashboard } from "../api/hooks";
-import type { Direction } from "../api/packs";
+import { shortDirection, sameDirection, useDeckFilter } from "../hooks/useDeckFilter";
 import { formatUntil } from "../lib/relativeTime";
 
 function Stat({ label, value, tone }: { label: string; value: number; tone?: "new" | "learning" | "review" }) {
@@ -36,38 +36,6 @@ function DeckBar({ counts }: { counts: { new: number; learning: number; review: 
   );
 }
 
-const STORAGE_KEY = "dashboardDirection";
-
-function readStored(): Direction | null {
-  try {
-    const d = JSON.parse(localStorage.getItem(STORAGE_KEY) ?? "null") as Partial<Direction> | null;
-    return d?.from && d.to ? { from: d.from, to: d.to } : null;
-  } catch {
-    return null;
-  }
-}
-
-const sameDirection = (d: DirectionSummary, s: Direction | null) =>
-  s !== null && d.fromLanguage === s.from && d.toLanguage === s.to;
-
-// Which deck the dashboard shows: one direction, or null for all of them.
-// Remembered between visits. Until the user's directions are known the remembered
-// choice is trusted (so the first requests are the right ones); once known, a
-// direction the user has no cards in falls back to all.
-function useDeckFilter(directions: DirectionSummary[] | undefined) {
-  const [chosen, setChosen] = useState<Direction | null>(readStored);
-  const valid = !directions || directions.some((d) => sameDirection(d, chosen));
-  const select = (d: Direction | null) => {
-    setChosen(d);
-    try {
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(d));
-    } catch {
-      // Storage can be unavailable; the choice just won't be remembered.
-    }
-  };
-  return { selected: valid ? chosen : null, select };
-}
-
 export function DashboardPage() {
   const [directions, setDirections] = useState<DirectionSummary[] | undefined>();
   const filter = useDeckFilter(directions);
@@ -79,10 +47,6 @@ export function DashboardPage() {
   if (deck.isError || study.isError) {
     return <p className="status error">Could not load your dashboard. Please refresh.</p>;
   }
-
-  // "EN → NL", for the compact deck toggle.
-  const short = (d: { fromLanguage: string; toLanguage: string }) =>
-    `${d.fromLanguage.toUpperCase()} → ${d.toLanguage.toUpperCase()}`;
 
   const { summary } = deck.data;
   const { counts } = study.data;
@@ -132,22 +96,13 @@ export function DashboardPage() {
                 )}
               </>
             )}
-            <div className="hero-actions">
-              {ready > 0 ? (
-                <>
-                  <Link to={studyLink} className="button primary">
-                    Start studying
-                  </Link>
-                  <Link to="/packs" className="button secondary">
-                    Add more words
-                  </Link>
-                </>
-              ) : (
-                <Link to="/packs" className="button primary">
-                  Add more words
+            {ready > 0 && (
+              <div className="hero-actions">
+                <Link to={studyLink} className="button primary">
+                  Start studying
                 </Link>
-              )}
-            </div>
+              </div>
+            )}
           </section>
 
           <h2 className="section-title">Your deck</h2>
@@ -160,7 +115,7 @@ export function DashboardPage() {
                   aria-pressed={sameDirection(d, filter.selected)}
                   onClick={() => filter.select({ from: d.fromLanguage, to: d.toLanguage })}
                 >
-                  {short(d)}
+                  {shortDirection(d)}
                 </button>
               ))}
               <button type="button" aria-pressed={!filter.selected} onClick={() => filter.select(null)}>
@@ -174,6 +129,14 @@ export function DashboardPage() {
             <Stat label="Learning" value={learning} tone="learning" />
             <Stat label="New" value={summary.new} tone="new" />
           </section>
+          <div className="deck-actions">
+            <Link to="/deck" className="button secondary">
+              View deck
+            </Link>
+            <Link to="/packs" className="button secondary">
+              Add more words
+            </Link>
+          </div>
         </>
       )}
 
