@@ -1,7 +1,8 @@
 import type { FastifyInstance, FastifyReply } from "fastify";
-import { and, asc, count, eq, inArray } from "drizzle-orm";
+import { and, asc, count, eq, exists, inArray, not, sql } from "drizzle-orm";
 import {
   addToDeckSchema,
+  conceptSearchQuerySchema,
   directionQuerySchema,
   pageQuerySchema,
   uuidParamSchema,
@@ -13,6 +14,7 @@ import {
 } from "../content/queries.js";
 import {
   concepts,
+  entries,
   languages,
   packConcepts,
   packs,
@@ -201,6 +203,91 @@ export async function packRoutes(app: FastifyInstance, { db }: { db: Db }) {
       added,
       alreadyInDeck: available.length - added,
       unavailable: total - available.length,
+    };
+  });
+
+  // Public. Finds words by lemma in either language of the direction, best
+  // matches first (exact, then prefix, then anywhere in the word). Only concepts
+  // that can become a card in the direction are returned.
+  app.get("/concepts/search", async (req, reply) => {
+    const q = conceptSearchQuerySchema.safeParse(req.query);
+    if (!q.success) return invalid(reply, q.error.issues);
+    const { fromLanguage, toLanguage, limit, offset } = q.data;
+    const term = q.data.q.toLowerCase();
+    const like = term.replace(/[\\%_]/g, "\\$&");
+
+    const rank = sql<number>`min(case
+      when lower(${entries.lemma}) = ${term} then 0
+      when lower(${entries.lemma}) like ${like + "%"} then 1
+      else 2 end)`;
+    const matches = await db
+      .select({ conceptId: entries.conceptId })
+      .from(entries)
+      // Joined so the availability check below has an outer table to correlate with;
+      // it cannot use `entries`, which its own subquery also reads from.
+      .innerJoin(concepts, eq(concepts.id, entries.conceptId))
+      .where(
+        and(
+          inArray(entries.language, [fromLanguage, toLanguage]),
+          sql`${entries.lemma} ilike ${"%" + like + "%"}`,
+          availableInDirection(db, concepts.id, fromLanguage, toLanguage),
+          q.data.hideInDeck === "1" && req.user
+            ? not(
+                exists(
+                  db
+                    .select({ one: sql`1` })
+                    .from(userCards)
+                    .where(
+                      and(
+                        eq(userCards.userId, req.user.id),
+                        eq(userCards.conceptId, entries.conceptId),
+                        eq(userCards.fromLanguage, fromLanguage),
+                        eq(userCards.toLanguage, toLanguage),
+                      ),
+                    ),
+                ),
+              )
+            : undefined,
+        ),
+      )
+      .groupBy(entries.conceptId)
+      .orderBy(
+        rank,
+        sql`min(length(${entries.lemma}))`,
+        sql`min(${entries.lemma})`,
+        entries.conceptId,
+      )
+      .limit(limit + 1)
+      .offset(offset);
+
+    // One extra row tells us whether there is another page.
+    const hasMore = matches.length > limit;
+    const conceptIds = matches.slice(0, limit).map((m) => m.conceptId);
+    const entryMap = await loadEntries(db, conceptIds, [fromLanguage, toLanguage]);
+
+    const inDeck = new Set<string>();
+    if (req.user && conceptIds.length > 0) {
+      const rows = await db
+        .select({ conceptId: userCards.conceptId })
+        .from(userCards)
+        .where(
+          and(
+            eq(userCards.userId, req.user.id),
+            eq(userCards.fromLanguage, fromLanguage),
+            eq(userCards.toLanguage, toLanguage),
+            inArray(userCards.conceptId, conceptIds),
+          ),
+        );
+      for (const r of rows) inDeck.add(r.conceptId);
+    }
+
+    return {
+      concepts: conceptIds.map((id) => ({
+        conceptId: id,
+        entries: entryMap.get(id) ?? [],
+        ...(req.user ? { inDeck: inDeck.has(id) } : {}),
+      })),
+      hasMore,
     };
   });
 

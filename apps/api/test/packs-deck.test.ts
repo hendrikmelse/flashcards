@@ -238,3 +238,62 @@ describe("GET /deck", () => {
     expect(res.json().cards).toEqual([]);
   });
 });
+
+describe("GET /concepts/search", () => {
+  const search = (params: Record<string, string>, withCookies = false) =>
+    app.inject({
+      method: "GET",
+      url: `/concepts/search?${q({ ...EN_NL, ...params })}`,
+      ...(withCookies ? { cookies } : {}),
+    });
+  const lemmas = (body: { concepts: { entries: { lemma: string }[] }[] }) =>
+    body.concepts.map((c) => c.entries.map((e) => e.lemma).join("/"));
+
+  it("finds words by either language, and only ones usable in the direction", async () => {
+    expect(lemmas((await search({ q: "hond" })).json())).toEqual(["dog/hond"]);
+    expect(lemmas((await search({ q: "HOUSE" })).json())).toEqual(["house/huis"]);
+    // "orphan" has no Dutch entry, so it cannot become a card.
+    expect((await search({ q: "orphan" })).json().concepts).toEqual([]);
+  });
+
+  it("puts exact matches before prefix matches before substring matches", async () => {
+    // "o" is inside both words; the shorter one comes first.
+    expect(lemmas((await search({ q: "o" })).json())).toEqual(["dog/hond", "house/huis"]);
+  });
+
+  it("treats % and _ literally", async () => {
+    expect((await search({ q: "%" })).json().concepts).toEqual([]);
+    expect((await search({ q: "_" })).json().concepts).toEqual([]);
+  });
+
+  it("pages with offset and reports whether more exist", async () => {
+    const first = (await search({ q: "o", limit: "1" })).json();
+    expect(lemmas(first)).toEqual(["dog/hond"]);
+    expect(first.hasMore).toBe(true);
+    const second = (await search({ q: "o", limit: "1", offset: "1" })).json();
+    expect(lemmas(second)).toEqual(["house/huis"]);
+    expect(second.hasMore).toBe(false);
+  });
+
+  it("reports deck status for a signed-in user, and can hide what they have", async () => {
+    const anon = (await search({ q: "hond" })).json();
+    expect(anon.concepts[0].inDeck).toBeUndefined();
+
+    const mine = (await search({ q: "hond" }, true)).json();
+    expect(mine.concepts[0].inDeck).toBe(true);
+
+    const hidden = (await search({ q: "hond", hideInDeck: "1" }, true)).json();
+    expect(hidden.concepts).toEqual([]);
+    // Anonymous visitors have no deck to hide from.
+    expect((await search({ q: "hond", hideInDeck: "1" })).json().concepts).toHaveLength(1);
+  });
+
+  it("rejects a missing term and the same language on both sides", async () => {
+    expect((await search({ q: "" })).statusCode).toBe(400);
+    const same = await app.inject({
+      method: "GET",
+      url: `/concepts/search?${q({ q: "dog", fromLanguage: "en", toLanguage: "en" })}`,
+    });
+    expect(same.statusCode).toBe(400);
+  });
+});

@@ -56,9 +56,23 @@ export const directionQuerySchema = z
   });
 
 export const pageQuerySchema = z.object({
-  limit: z.coerce.number().int().min(1).max(500).default(100),
+  limit: z.coerce.number().int().min(1).max(1000).default(100),
   offset: z.coerce.number().int().min(0).default(0),
 });
+
+export const conceptSearchQuerySchema = z
+  .object({
+    q: z.string().trim().min(1).max(100),
+    fromLanguage: languageCodeSchema,
+    toLanguage: languageCodeSchema,
+    limit: z.coerce.number().int().min(1).max(50).default(50),
+    offset: z.coerce.number().int().min(0).default(0),
+    // "1" leaves out words the signed-in user already has a card for.
+    hideInDeck: z.enum(["0", "1"]).default("0"),
+  })
+  .refine((v) => v.fromLanguage !== v.toLanguage, {
+    message: "fromLanguage and toLanguage must differ",
+  });
 
 export const uuidParamSchema = z.object({ id: z.string().uuid() });
 
@@ -130,6 +144,17 @@ export type PackConceptView = {
   entries: EntryView[];
   available?: boolean;
   inDeck?: boolean;
+};
+
+export type ConceptSearchResult = {
+  conceptId: string;
+  entries: EntryView[];
+  inDeck?: boolean;
+};
+export type ConceptSearchResponse = {
+  concepts: ConceptSearchResult[];
+  /** True when more matches exist after this page. */
+  hasMore: boolean;
 };
 
 export type PackDetailResponse = {

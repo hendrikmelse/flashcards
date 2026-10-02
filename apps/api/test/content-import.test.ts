@@ -91,8 +91,8 @@ describe("shipped content", () => {
     const { concepts: cs } = loadContent("../../content");
     const offenders = cs
       .filter((c) => {
-        const english = c.entries.en.map((e) => slug(e.lemma));
-        return c.entries.nl.some((e) => {
+        const english = (c.entries.en ?? []).map((e) => slug(e.lemma));
+        return (c.entries.nl ?? []).some((e) => {
           const nl = slug(e.lemma);
           return !english.includes(nl) && new RegExp(`(^|-)${nl}(-[0-9]+)?$`).test(c.key) && !c.key.startsWith(nl);
         });
