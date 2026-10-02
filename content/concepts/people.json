@@ -2495,6 +2495,222 @@
         {"lemma": "patriot", "pos": "noun", "details": {"article": "de", "plural": "patriotten"}, "sentences": ["Hij is een patriot."]}
         ]
       }
+    },
+    {
+      "key": "sister-in-law",
+      "gloss": "sister-in-law (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "sister-in-law", "pos": "noun", "details": {"plural": "sister-in-laws"}, "sentences": ["My sister-in-law is nice."]}
+        ],
+        "nl": [
+        {"lemma": "schoonzus", "pos": "noun", "details": {"article": "de", "plural": "schoonzussen"}, "sentences": ["Mijn schoonzus is aardig."]}
+        ]
+      }
+    },
+    {
+      "key": "father-in-law",
+      "gloss": "father-in-law (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "father-in-law", "pos": "noun", "details": {"plural": "father-in-laws"}, "sentences": ["My father-in-law is kind."]}
+        ],
+        "nl": [
+        {"lemma": "schoonvader", "pos": "noun", "details": {"article": "de", "plural": "schoonvaders"}, "sentences": ["Mijn schoonvader is aardig."]}
+        ]
+      }
+    },
+    {
+      "key": "daughter-in-law",
+      "gloss": "daughter-in-law (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "daughter-in-law", "pos": "noun", "details": {"plural": "daughter-in-laws"}, "sentences": ["My daughter-in-law is friendly."]}
+        ],
+        "nl": [
+        {"lemma": "schoondochter", "pos": "noun", "details": {"article": "de", "plural": "schoondochters"}, "sentences": ["Mijn schoondochter is vriendelijk."]}
+        ]
+      }
+    },
+    {
+      "key": "stepbrother",
+      "gloss": "stepbrother (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "stepbrother", "pos": "noun", "details": {"plural": "stepbrothers"}, "sentences": ["My stepbrother is older."]}
+        ],
+        "nl": [
+        {"lemma": "stiefbroer", "pos": "noun", "details": {"article": "de", "plural": "stiefbroers"}, "sentences": ["Mijn stiefbroer is ouder."]}
+        ]
+      }
+    },
+    {
+      "key": "stepsister",
+      "gloss": "stepsister (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "stepsister", "pos": "noun", "details": {"plural": "stepsisters"}, "sentences": ["My stepsister is younger."]}
+        ],
+        "nl": [
+        {"lemma": "stiefzus", "pos": "noun", "details": {"article": "de", "plural": "stiefzussen"}, "sentences": ["Mijn stiefzus is jonger."]}
+        ]
+      }
+    },
+    {
+      "key": "half-brother",
+      "gloss": "half-brother (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "half-brother", "pos": "noun", "details": {"plural": "half-brothers"}, "sentences": ["My half-brother lives abroad."]}
+        ],
+        "nl": [
+        {"lemma": "halfbroer", "pos": "noun", "details": {"article": "de", "plural": "halfbroers"}, "sentences": ["Mijn halfbroer woont in het buitenland."]}
+        ]
+      }
+    },
+    {
+      "key": "half-sister",
+      "gloss": "half-sister (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "half-sister", "pos": "noun", "details": {"plural": "half-sisters"}, "sentences": ["My half-sister is twelve."]}
+        ],
+        "nl": [
+        {"lemma": "halfzus", "pos": "noun", "details": {"article": "de", "plural": "halfzussen"}, "sentences": ["Mijn halfzus is twaalf."]}
+        ]
+      }
+    },
+    {
+      "key": "nephew",
+      "gloss": "nephew (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "nephew", "pos": "noun", "details": {"plural": "nephews"}, "sentences": ["My nephew is eight."]}
+        ],
+        "nl": [
+        {"lemma": "neef", "pos": "noun", "details": {"article": "de", "plural": "neven"}, "sentences": ["Mijn neef is acht."]}
+        ]
+      }
+    },
+    {
+      "key": "cousin-noun-neef",
+      "gloss": "cousin (male)",
+      "entries": {
+        "en": [
+        {"lemma": "cousin (male)", "pos": "noun", "details": {"plural": "cousins"}, "sentences": ["I visit my cousin."]}
+        ],
+        "nl": [
+        {"lemma": "neef", "pos": "noun", "details": {"article": "de", "plural": "neven"}, "sentences": ["Ik bezoek mijn neef."]}
+        ]
+      }
+    },
+    {
+      "key": "cousin-noun-nicht",
+      "gloss": "cousin (female)",
+      "entries": {
+        "en": [
+        {"lemma": "cousin (female)", "pos": "noun", "details": {"plural": "cousins"}, "sentences": ["My cousin lives in Utrecht."]}
+        ],
+        "nl": [
+        {"lemma": "nicht", "pos": "noun", "details": {"article": "de", "plural": "nichten"}, "sentences": ["Mijn nicht woont in Utrecht."]}
+        ]
+      }
+    },
+    {
+      "key": "godmother",
+      "gloss": "godmother (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "godmother", "pos": "noun", "details": {"plural": "godmothers"}, "sentences": ["My godmother gives me a gift."]}
+        ],
+        "nl": [
+        {"lemma": "peetmoeder", "pos": "noun", "details": {"article": "de", "plural": "peetmoeders"}, "sentences": ["Mijn peetmoeder geeft mij een cadeau."]}
+        ]
+      }
+    },
+    {
+      "key": "widower",
+      "gloss": "widower (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "widower", "pos": "noun", "details": {"plural": "widowers"}, "sentences": ["The widower lives alone."]}
+        ],
+        "nl": [
+        {"lemma": "weduwnaar", "pos": "noun", "details": {"article": "de", "plural": "weduwnaars"}, "sentences": ["De weduwnaar woont alleen."]}
+        ]
+      }
+    },
+    {
+      "key": "orphan",
+      "gloss": "orphan (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "orphan", "pos": "noun", "details": {"plural": "orphans"}, "sentences": ["The orphan lives with his aunt."]}
+        ],
+        "nl": [
+        {"lemma": "wees", "pos": "noun", "details": {"article": "de", "plural": "wezen"}, "sentences": ["De wees woont bij zijn tante."]}
+        ]
+      }
+    },
+    {
+      "key": "toddler",
+      "gloss": "toddler (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "toddler", "pos": "noun", "details": {"plural": "toddlers"}, "sentences": ["The toddler plays."]}
+        ],
+        "nl": [
+        {"lemma": "peuter", "pos": "noun", "details": {"article": "de", "plural": "peuters"}, "sentences": ["De peuter speelt."]}
+        ]
+      }
+    },
+    {
+      "key": "siblings",
+      "gloss": "siblings (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "siblings", "pos": "noun", "details": {"pluralOnly": true}, "sentences": ["I have two siblings."]}
+        ],
+        "nl": [
+        {"lemma": "broers en zussen", "pos": "noun", "details": {"article": "de", "pluralOnly": true}, "sentences": ["Ik heb twee broers en zussen."]}
+        ]
+      }
+    },
+    {
+      "key": "elderly-person",
+      "gloss": "elderly person (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "elderly person", "pos": "noun", "details": {"plural": "elderly people"}, "sentences": ["The elderly person sits on a bench."]}
+        ],
+        "nl": [
+        {"lemma": "bejaarde", "pos": "noun", "details": {"article": "de", "plural": "bejaarden"}, "sentences": ["De bejaarde zit op een bankje."]}
+        ]
+      }
+    },
+    {
+      "key": "family-tree",
+      "gloss": "family tree (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "family tree", "pos": "noun", "details": {"plural": "family trees"}, "sentences": ["I draw a family tree."]}
+        ],
+        "nl": [
+        {"lemma": "stamboom", "pos": "noun", "details": {"article": "de", "plural": "stambomen"}, "sentences": ["Ik teken een stamboom."]}
+        ]
+      }
+    },
+    {
+      "key": "in-laws",
+      "gloss": "in-laws (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "in-laws", "pos": "noun", "details": {"pluralOnly": true}, "sentences": ["I visit my in-laws."]}
+        ],
+        "nl": [
+        {"lemma": "schoonfamilie", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Ik bezoek mijn schoonfamilie."]}
+        ]
+      }
     }
   ]
 }

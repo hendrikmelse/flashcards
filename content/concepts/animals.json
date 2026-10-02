@@ -637,7 +637,7 @@
       }
     },
     {
-      "key": "bark",
+      "key": "bark-verb",
       "gloss": "bark (verb)",
       "entries": {
         "en": [
@@ -1305,6 +1305,354 @@
         ],
         "nl": [
         {"lemma": "krab", "pos": "noun", "details": {"article": "de", "plural": "krabben"}, "sentences": ["De krab leeft in de zee."]}
+        ]
+      }
+    },
+    {
+      "key": "crow",
+      "gloss": "crow (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "crow", "pos": "noun", "details": {"plural": "crows"}, "sentences": ["The crow sits on the roof."]}
+        ],
+        "nl": [
+        {"lemma": "kraai", "pos": "noun", "details": {"article": "de", "plural": "kraaien"}, "sentences": ["De kraai zit op het dak."]}
+        ]
+      }
+    },
+    {
+      "key": "sparrow",
+      "gloss": "sparrow (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "sparrow", "pos": "noun", "details": {"plural": "sparrows"}, "sentences": ["The sparrow eats bread."]}
+        ],
+        "nl": [
+        {"lemma": "mus", "pos": "noun", "details": {"article": "de", "plural": "mussen"}, "sentences": ["De mus eet brood."]}
+        ]
+      }
+    },
+    {
+      "key": "swan",
+      "gloss": "swan (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "swan", "pos": "noun", "details": {"plural": "swans"}, "sentences": ["The swan swims in the pond."]}
+        ],
+        "nl": [
+        {"lemma": "zwaan", "pos": "noun", "details": {"article": "de", "plural": "zwanen"}, "sentences": ["De zwaan zwemt in de vijver."]}
+        ]
+      }
+    },
+    {
+      "key": "seagull",
+      "gloss": "seagull (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "seagull", "pos": "noun", "details": {"plural": "seagulls"}, "sentences": ["The seagull flies over the sea."]}
+        ],
+        "nl": [
+        {"lemma": "meeuw", "pos": "noun", "details": {"article": "de", "plural": "meeuwen"}, "sentences": ["De meeuw vliegt over de zee."]}
+        ]
+      }
+    },
+    {
+      "key": "stork",
+      "gloss": "stork (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "stork", "pos": "noun", "details": {"plural": "storks"}, "sentences": ["The stork has a nest."]}
+        ],
+        "nl": [
+        {"lemma": "ooievaar", "pos": "noun", "details": {"article": "de", "plural": "ooievaars"}, "sentences": ["De ooievaar heeft een nest."]}
+        ]
+      }
+    },
+    {
+      "key": "goose",
+      "gloss": "goose (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "goose", "pos": "noun", "details": {"plural": "geese"}, "sentences": ["The goose walks on the grass."]}
+        ],
+        "nl": [
+        {"lemma": "gans", "pos": "noun", "details": {"article": "de", "plural": "ganzen"}, "sentences": ["De gans loopt over het gras."]}
+        ]
+      }
+    },
+    {
+      "key": "hawk",
+      "gloss": "hawk (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "hawk", "pos": "noun", "details": {"plural": "hawks"}, "sentences": ["The hawk hunts."]}
+        ],
+        "nl": [
+        {"lemma": "havik", "pos": "noun", "details": {"article": "de", "plural": "haviken"}, "sentences": ["De havik jaagt."]}
+        ]
+      }
+    },
+    {
+      "key": "peacock",
+      "gloss": "peacock (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "peacock", "pos": "noun", "details": {"plural": "peacocks"}, "sentences": ["The peacock has a beautiful tail."]}
+        ],
+        "nl": [
+        {"lemma": "pauw", "pos": "noun", "details": {"article": "de", "plural": "pauwen"}, "sentences": ["De pauw heeft een mooie staart."]}
+        ]
+      }
+    },
+    {
+      "key": "blackbird",
+      "gloss": "blackbird (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "blackbird", "pos": "noun", "details": {"plural": "blackbirds"}, "sentences": ["The blackbird sings."]}
+        ],
+        "nl": [
+        {"lemma": "merel", "pos": "noun", "details": {"article": "de", "plural": "merels"}, "sentences": ["De merel zingt."]}
+        ]
+      }
+    },
+    {
+      "key": "woodpecker",
+      "gloss": "woodpecker (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "woodpecker", "pos": "noun", "details": {"plural": "woodpeckers"}, "sentences": ["The woodpecker knocks on the tree."]}
+        ],
+        "nl": [
+        {"lemma": "specht", "pos": "noun", "details": {"article": "de", "plural": "spechten"}, "sentences": ["De specht klopt op de boom."]}
+        ]
+      }
+    },
+    {
+      "key": "nightingale",
+      "gloss": "nightingale (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "nightingale", "pos": "noun", "details": {"plural": "nightingales"}, "sentences": ["The nightingale sings at night."]}
+        ],
+        "nl": [
+        {"lemma": "nachtegaal", "pos": "noun", "details": {"article": "de", "plural": "nachtegalen"}, "sentences": ["De nachtegaal zingt 's nachts."]}
+        ]
+      }
+    },
+    {
+      "key": "heron",
+      "gloss": "heron (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "heron", "pos": "noun", "details": {"plural": "herons"}, "sentences": ["The heron stands in the water."]}
+        ],
+        "nl": [
+        {"lemma": "reiger", "pos": "noun", "details": {"article": "de", "plural": "reigers"}, "sentences": ["De reiger staat in het water."]}
+        ]
+      }
+    },
+    {
+      "key": "ostrich",
+      "gloss": "ostrich (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "ostrich", "pos": "noun", "details": {"plural": "ostriches"}, "sentences": ["The ostrich runs fast."]}
+        ],
+        "nl": [
+        {"lemma": "struisvogel", "pos": "noun", "details": {"article": "de", "plural": "struisvogels"}, "sentences": ["De struisvogel rent snel."]}
+        ]
+      }
+    },
+    {
+      "key": "cuckoo",
+      "gloss": "cuckoo (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "cuckoo", "pos": "noun", "details": {"plural": "cuckoos"}, "sentences": ["The cuckoo calls."]}
+        ],
+        "nl": [
+        {"lemma": "koekoek", "pos": "noun", "details": {"article": "de", "plural": "koekoeken"}, "sentences": ["De koekoek roept."]}
+        ]
+      }
+    },
+    {
+      "key": "fly-noun",
+      "gloss": "fly (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "fly", "pos": "noun", "details": {"plural": "flies"}, "sentences": ["A fly sits on the window."]}
+        ],
+        "nl": [
+        {"lemma": "vlieg", "pos": "noun", "details": {"article": "de", "plural": "vliegen"}, "sentences": ["Een vlieg zit op het raam."]}
+        ]
+      }
+    },
+    {
+      "key": "wasp",
+      "gloss": "wasp (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "wasp", "pos": "noun", "details": {"plural": "wasps"}, "sentences": ["The wasp stings me."]}
+        ],
+        "nl": [
+        {"lemma": "wesp", "pos": "noun", "details": {"article": "de", "plural": "wespen"}, "sentences": ["De wesp steekt mij."]}
+        ]
+      }
+    },
+    {
+      "key": "ladybug",
+      "gloss": "ladybug (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "ladybug", "pos": "noun", "details": {"plural": "ladybugs"}, "sentences": ["The ladybug is red."]}
+        ],
+        "nl": [
+        {"lemma": "lieveheersbeestje", "pos": "noun", "details": {"article": "het", "plural": "lieveheersbeestjes"}, "sentences": ["Het lieveheersbeestje is rood."]}
+        ]
+      }
+    },
+    {
+      "key": "dragonfly",
+      "gloss": "dragonfly (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "dragonfly", "pos": "noun", "details": {"plural": "dragonflies"}, "sentences": ["The dragonfly flies over the pond."]}
+        ],
+        "nl": [
+        {"lemma": "libel", "pos": "noun", "details": {"article": "de", "plural": "libellen"}, "sentences": ["De libel vliegt over de vijver."]}
+        ]
+      }
+    },
+    {
+      "key": "flea",
+      "gloss": "flea (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "flea", "pos": "noun", "details": {"plural": "fleas"}, "sentences": ["The dog has a flea."]}
+        ],
+        "nl": [
+        {"lemma": "vlo", "pos": "noun", "details": {"article": "de", "plural": "vlooien"}, "sentences": ["De hond heeft een vlo."]}
+        ]
+      }
+    },
+    {
+      "key": "cricket",
+      "gloss": "cricket (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "cricket", "pos": "noun", "details": {"plural": "crickets"}, "sentences": ["The cricket chirps."]}
+        ],
+        "nl": [
+        {"lemma": "krekel", "pos": "noun", "details": {"article": "de", "plural": "krekels"}, "sentences": ["De krekel tsjirpt."]}
+        ]
+      }
+    },
+    {
+      "key": "bumblebee",
+      "gloss": "bumblebee (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "bumblebee", "pos": "noun", "details": {"plural": "bumblebees"}, "sentences": ["The bumblebee flies to the flower."]}
+        ],
+        "nl": [
+        {"lemma": "hommel", "pos": "noun", "details": {"article": "de", "plural": "hommels"}, "sentences": ["De hommel vliegt naar de bloem."]}
+        ]
+      }
+    },
+    {
+      "key": "octopus",
+      "gloss": "octopus (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "octopus", "pos": "noun", "details": {"plural": "octopuses"}, "sentences": ["The octopus has eight arms."]}
+        ],
+        "nl": [
+        {"lemma": "octopus", "pos": "noun", "details": {"article": "de", "plural": "octopussen"}, "sentences": ["De octopus heeft acht armen."]}
+        ]
+      }
+    },
+    {
+      "key": "jellyfish",
+      "gloss": "jellyfish (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "jellyfish", "pos": "noun", "details": {"plural": "jellyfishes"}, "sentences": ["The jellyfish floats in the sea."]}
+        ],
+        "nl": [
+        {"lemma": "kwal", "pos": "noun", "details": {"article": "de", "plural": "kwallen"}, "sentences": ["De kwal drijft in de zee."]}
+        ]
+      }
+    },
+    {
+      "key": "seal-noun-zeehond",
+      "gloss": "seal (noun, zeehond)",
+      "entries": {
+        "en": [
+        {"lemma": "seal", "pos": "noun", "details": {"plural": "seals"}, "sentences": ["The seal swims."]}
+        ],
+        "nl": [
+        {"lemma": "zeehond", "pos": "noun", "details": {"article": "de", "plural": "zeehonden"}, "sentences": ["De zeehond zwemt."]}
+        ]
+      }
+    },
+    {
+      "key": "starfish",
+      "gloss": "starfish (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "starfish", "pos": "noun", "details": {"plural": "starfishes"}, "sentences": ["The starfish lies on the beach."]}
+        ],
+        "nl": [
+        {"lemma": "zeester", "pos": "noun", "details": {"article": "de", "plural": "zeesterren"}, "sentences": ["De zeester ligt op het strand."]}
+        ]
+      }
+    },
+    {
+      "key": "eel",
+      "gloss": "eel (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "eel", "pos": "noun", "details": {"plural": "eels"}, "sentences": ["The eel lives in the canal."]}
+        ],
+        "nl": [
+        {"lemma": "paling", "pos": "noun", "details": {"article": "de", "plural": "palingen"}, "sentences": ["De paling leeft in het kanaal."]}
+        ]
+      }
+    },
+    {
+      "key": "squid",
+      "gloss": "squid (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "squid", "pos": "noun", "details": {"plural": "squids"}, "sentences": ["The squid has ten arms."]}
+        ],
+        "nl": [
+        {"lemma": "inktvis", "pos": "noun", "details": {"article": "de", "plural": "inktvissen"}, "sentences": ["De inktvis heeft tien armen."]}
+        ]
+      }
+    },
+    {
+      "key": "seahorse",
+      "gloss": "seahorse (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "seahorse", "pos": "noun", "details": {"plural": "seahorses"}, "sentences": ["The seahorse is small."]}
+        ],
+        "nl": [
+        {"lemma": "zeepaardje", "pos": "noun", "details": {"article": "het", "plural": "zeepaardjes"}, "sentences": ["Het zeepaardje is klein."]}
+        ]
+      }
+    },
+    {
+      "key": "walrus",
+      "gloss": "walrus (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "walrus", "pos": "noun", "details": {"plural": "walruses"}, "sentences": ["The walrus has long teeth."]}
+        ],
+        "nl": [
+        {"lemma": "walrus", "pos": "noun", "details": {"article": "de", "plural": "walrussen"}, "sentences": ["De walrus heeft lange tanden."]}
         ]
       }
     }

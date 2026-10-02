@@ -277,7 +277,7 @@
       }
     },
     {
-      "key": "season",
+      "key": "season-noun",
       "gloss": "season (noun)",
       "entries": {
         "en": [
@@ -621,6 +621,246 @@
         ],
         "nl": [
         {"lemma": "wekelijks", "pos": "adjective", "sentences": ["Dit is een wekelijkse vergadering."]}
+        ]
+      }
+    },
+    {
+      "key": "monday",
+      "gloss": "Monday (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "Monday", "pos": "noun", "details": {"plural": "Mondays"}, "sentences": ["On Monday I work."]}
+        ],
+        "nl": [
+        {"lemma": "maandag", "pos": "noun", "details": {"article": "de", "plural": "maandagen"}, "sentences": ["Op maandag werk ik."]}
+        ]
+      }
+    },
+    {
+      "key": "tuesday",
+      "gloss": "Tuesday (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "Tuesday", "pos": "noun", "details": {"plural": "Tuesdays"}, "sentences": ["On Tuesday I swim."]}
+        ],
+        "nl": [
+        {"lemma": "dinsdag", "pos": "noun", "details": {"article": "de", "plural": "dinsdagen"}, "sentences": ["Op dinsdag zwem ik."]}
+        ]
+      }
+    },
+    {
+      "key": "wednesday",
+      "gloss": "Wednesday (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "Wednesday", "pos": "noun", "details": {"plural": "Wednesdays"}, "sentences": ["On Wednesday I study."]}
+        ],
+        "nl": [
+        {"lemma": "woensdag", "pos": "noun", "details": {"article": "de", "plural": "woensdagen"}, "sentences": ["Op woensdag studeer ik."]}
+        ]
+      }
+    },
+    {
+      "key": "thursday",
+      "gloss": "Thursday (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "Thursday", "pos": "noun", "details": {"plural": "Thursdays"}, "sentences": ["On Thursday I cook."]}
+        ],
+        "nl": [
+        {"lemma": "donderdag", "pos": "noun", "details": {"article": "de", "plural": "donderdagen"}, "sentences": ["Op donderdag kook ik."]}
+        ]
+      }
+    },
+    {
+      "key": "friday",
+      "gloss": "Friday (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "Friday", "pos": "noun", "details": {"plural": "Fridays"}, "sentences": ["On Friday I go out."]}
+        ],
+        "nl": [
+        {"lemma": "vrijdag", "pos": "noun", "details": {"article": "de", "plural": "vrijdagen"}, "sentences": ["Op vrijdag ga ik uit."]}
+        ]
+      }
+    },
+    {
+      "key": "saturday",
+      "gloss": "Saturday (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "Saturday", "pos": "noun", "details": {"plural": "Saturdays"}, "sentences": ["On Saturday I sleep in."]}
+        ],
+        "nl": [
+        {"lemma": "zaterdag", "pos": "noun", "details": {"article": "de", "plural": "zaterdagen"}, "sentences": ["Op zaterdag slaap ik uit."]}
+        ]
+      }
+    },
+    {
+      "key": "sunday",
+      "gloss": "Sunday (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "Sunday", "pos": "noun", "details": {"plural": "Sundays"}, "sentences": ["On Sunday I rest."]}
+        ],
+        "nl": [
+        {"lemma": "zondag", "pos": "noun", "details": {"article": "de", "plural": "zondagen"}, "sentences": ["Op zondag rust ik."]}
+        ]
+      }
+    },
+    {
+      "key": "weekday",
+      "gloss": "weekday (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "weekday", "pos": "noun", "details": {"plural": "weekdays"}, "sentences": ["A weekday is a working day."]}
+        ],
+        "nl": [
+        {"lemma": "werkdag", "pos": "noun", "details": {"article": "de", "plural": "werkdagen"}, "sentences": ["Een werkdag is een dag om te werken."]}
+        ]
+      }
+    },
+    {
+      "key": "january",
+      "gloss": "January (proper noun)",
+      "entries": {
+        "en": [
+        {"lemma": "January", "pos": "proper noun", "sentences": ["January is cold."]}
+        ],
+        "nl": [
+        {"lemma": "januari", "pos": "proper noun", "sentences": ["Januari is koud."]}
+        ]
+      }
+    },
+    {
+      "key": "february",
+      "gloss": "February (proper noun)",
+      "entries": {
+        "en": [
+        {"lemma": "February", "pos": "proper noun", "sentences": ["February is short."]}
+        ],
+        "nl": [
+        {"lemma": "februari", "pos": "proper noun", "sentences": ["Februari is kort."]}
+        ]
+      }
+    },
+    {
+      "key": "march-proper-noun",
+      "gloss": "March (proper noun)",
+      "entries": {
+        "en": [
+        {"lemma": "March", "pos": "proper noun", "sentences": ["In March spring begins."]}
+        ],
+        "nl": [
+        {"lemma": "maart", "pos": "proper noun", "sentences": ["In maart begint de lente."]}
+        ]
+      }
+    },
+    {
+      "key": "april",
+      "gloss": "April (proper noun)",
+      "entries": {
+        "en": [
+        {"lemma": "April", "pos": "proper noun", "sentences": ["April has rain."]}
+        ],
+        "nl": [
+        {"lemma": "april", "pos": "proper noun", "sentences": ["April heeft regen."]}
+        ]
+      }
+    },
+    {
+      "key": "may-proper-noun",
+      "gloss": "May (proper noun)",
+      "entries": {
+        "en": [
+        {"lemma": "May", "pos": "proper noun", "sentences": ["May is warm."]}
+        ],
+        "nl": [
+        {"lemma": "mei", "pos": "proper noun", "sentences": ["Mei is warm."]}
+        ]
+      }
+    },
+    {
+      "key": "june",
+      "gloss": "June (proper noun)",
+      "entries": {
+        "en": [
+        {"lemma": "June", "pos": "proper noun", "sentences": ["June has long days."]}
+        ],
+        "nl": [
+        {"lemma": "juni", "pos": "proper noun", "sentences": ["Juni heeft lange dagen."]}
+        ]
+      }
+    },
+    {
+      "key": "july",
+      "gloss": "July (proper noun)",
+      "entries": {
+        "en": [
+        {"lemma": "July", "pos": "proper noun", "sentences": ["July is hot."]}
+        ],
+        "nl": [
+        {"lemma": "juli", "pos": "proper noun", "sentences": ["Juli is heet."]}
+        ]
+      }
+    },
+    {
+      "key": "august",
+      "gloss": "August (proper noun)",
+      "entries": {
+        "en": [
+        {"lemma": "August", "pos": "proper noun", "sentences": ["August is vacation time."]}
+        ],
+        "nl": [
+        {"lemma": "augustus", "pos": "proper noun", "sentences": ["Augustus is vakantietijd."]}
+        ]
+      }
+    },
+    {
+      "key": "september",
+      "gloss": "September (proper noun)",
+      "entries": {
+        "en": [
+        {"lemma": "September", "pos": "proper noun", "sentences": ["In September school starts."]}
+        ],
+        "nl": [
+        {"lemma": "september", "pos": "proper noun", "sentences": ["In september begint school."]}
+        ]
+      }
+    },
+    {
+      "key": "october",
+      "gloss": "October (proper noun)",
+      "entries": {
+        "en": [
+        {"lemma": "October", "pos": "proper noun", "sentences": ["October is colorful."]}
+        ],
+        "nl": [
+        {"lemma": "oktober", "pos": "proper noun", "sentences": ["Oktober is kleurrijk."]}
+        ]
+      }
+    },
+    {
+      "key": "november",
+      "gloss": "November (proper noun)",
+      "entries": {
+        "en": [
+        {"lemma": "November", "pos": "proper noun", "sentences": ["November is gray."]}
+        ],
+        "nl": [
+        {"lemma": "november", "pos": "proper noun", "sentences": ["November is grijs."]}
+        ]
+      }
+    },
+    {
+      "key": "december",
+      "gloss": "December (proper noun)",
+      "entries": {
+        "en": [
+        {"lemma": "December", "pos": "proper noun", "sentences": ["December has Christmas."]}
+        ],
+        "nl": [
+        {"lemma": "december", "pos": "proper noun", "sentences": ["December heeft kerst."]}
         ]
       }
     }

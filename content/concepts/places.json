@@ -971,6 +971,126 @@
         {"lemma": "uitverkopen", "pos": "verb", "details": {"pastSingular": "verkocht uit", "pastPlural": "verkochten uit", "participle": "uitverkocht", "auxiliary": "hebben"}, "sentences": ["De winkel verkoopt de kaartjes uit."]}
         ]
       }
+    },
+    {
+      "key": "cashier",
+      "gloss": "cashier (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "cashier", "pos": "noun", "details": {"plural": "cashiers"}, "sentences": ["The cashier scans the items."]}
+        ],
+        "nl": [
+        {"lemma": "kassier", "pos": "noun", "details": {"article": "de", "plural": "kassiers"}, "sentences": ["De kassier scant de artikelen."]}
+        ]
+      }
+    },
+    {
+      "key": "shopping-cart",
+      "gloss": "shopping cart (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "shopping cart", "pos": "noun", "details": {"plural": "shopping carts"}, "sentences": ["I push the shopping cart."]}
+        ],
+        "nl": [
+        {"lemma": "winkelwagentje", "pos": "noun", "details": {"article": "het", "plural": "winkelwagentjes"}, "sentences": ["Ik duw het winkelwagentje."]}
+        ]
+      }
+    },
+    {
+      "key": "refund",
+      "gloss": "refund (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "refund", "pos": "noun", "details": {"plural": "refunds"}, "sentences": ["I ask for a refund."]}
+        ],
+        "nl": [
+        {"lemma": "terugbetaling", "pos": "noun", "details": {"article": "de", "plural": "terugbetalingen"}, "sentences": ["Ik vraag om een terugbetaling."]}
+        ]
+      }
+    },
+    {
+      "key": "brand",
+      "gloss": "brand (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "brand", "pos": "noun", "details": {"plural": "brands"}, "sentences": ["This brand is expensive."]}
+        ],
+        "nl": [
+        {"lemma": "merk", "pos": "noun", "details": {"article": "het", "plural": "merken"}, "sentences": ["Dit merk is duur."]}
+        ]
+      }
+    },
+    {
+      "key": "window-display",
+      "gloss": "window display (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "window display", "pos": "noun", "details": {"plural": "window displays"}, "sentences": ["The window display is beautiful."]}
+        ],
+        "nl": [
+        {"lemma": "etalage", "pos": "noun", "details": {"article": "de", "plural": "etalages"}, "sentences": ["De etalage is mooi."]}
+        ]
+      }
+    },
+    {
+      "key": "shopping-list",
+      "gloss": "shopping list (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "shopping list", "pos": "noun", "details": {"plural": "shopping lists"}, "sentences": ["I write a shopping list."]}
+        ],
+        "nl": [
+        {"lemma": "boodschappenlijstje", "pos": "noun", "details": {"article": "het", "plural": "boodschappenlijstjes"}, "sentences": ["Ik schrijf een boodschappenlijstje."]}
+        ]
+      }
+    },
+    {
+      "key": "market-stall",
+      "gloss": "market stall (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "market stall", "pos": "noun", "details": {"plural": "market stalls"}, "sentences": ["The market stall sells fish."]}
+        ],
+        "nl": [
+        {"lemma": "kraam", "pos": "noun", "details": {"article": "de", "plural": "kramen"}, "sentences": ["De kraam verkoopt vis."]}
+        ]
+      }
+    },
+    {
+      "key": "bakery",
+      "gloss": "bakery (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "bakery", "pos": "noun", "details": {"plural": "bakeries"}, "sentences": ["The bakery smells good."]}
+        ],
+        "nl": [
+        {"lemma": "bakkerij", "pos": "noun", "details": {"article": "de", "plural": "bakkerijen"}, "sentences": ["De bakkerij ruikt lekker."]}
+        ]
+      }
+    },
+    {
+      "key": "butcher-shop",
+      "gloss": "butcher shop (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "butcher shop", "pos": "noun", "details": {"plural": "butcher shops"}, "sentences": ["The butcher shop is open."]}
+        ],
+        "nl": [
+        {"lemma": "slagerij", "pos": "noun", "details": {"article": "de", "plural": "slagerijen"}, "sentences": ["De slagerij is open."]}
+        ]
+      }
+    },
+    {
+      "key": "haggle",
+      "gloss": "haggle (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "haggle", "pos": "verb", "details": {"past": "haggled", "participle": "haggled"}, "sentences": ["He haggles over the price."]}
+        ],
+        "nl": [
+        {"lemma": "afdingen", "pos": "verb", "details": {"pastSingular": "dong af", "pastPlural": "dongen af", "participle": "afgedongen", "auxiliary": "hebben"}, "sentences": ["Hij dingt af op de prijs."]}
+        ]
+      }
     }
   ]
 }

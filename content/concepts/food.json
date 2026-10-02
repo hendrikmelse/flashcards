@@ -13,7 +13,7 @@
       }
     },
     {
-      "key": "water",
+      "key": "water-noun",
       "gloss": "water (liquid)",
       "entries": {
         "en": [
@@ -757,7 +757,7 @@
       }
     },
     {
-      "key": "toast",
+      "key": "toast-noun",
       "gloss": "toast (noun)",
       "entries": {
         "en": [
@@ -817,7 +817,7 @@
       }
     },
     {
-      "key": "turkey",
+      "key": "turkey-noun",
       "gloss": "turkey (noun)",
       "entries": {
         "en": [
@@ -2181,6 +2181,1482 @@
         ],
         "nl": [
         {"lemma": "rantsoen", "pos": "noun", "details": {"article": "het", "plural": "rantsoenen"}, "sentences": ["Elke soldaat krijgt een rantsoen."]}
+        ]
+      }
+    },
+    {
+      "key": "boil",
+      "gloss": "boil (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "boil", "pos": "verb", "details": {"past": "boiled", "participle": "boiled"}, "sentences": ["The water boils."]}
+        ],
+        "nl": [
+        {"lemma": "koken", "pos": "verb", "details": {"pastSingular": "kookte", "pastPlural": "kookten", "participle": "gekookt", "auxiliary": "hebben"}, "sentences": ["Het water kookt."]}
+        ]
+      }
+    },
+    {
+      "key": "peel",
+      "gloss": "peel (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "peel", "pos": "verb", "details": {"past": "peeled", "participle": "peeled"}, "sentences": ["I peel the potatoes."]}
+        ],
+        "nl": [
+        {"lemma": "schillen", "pos": "verb", "details": {"pastSingular": "schilde", "pastPlural": "schilden", "participle": "geschild", "auxiliary": "hebben"}, "sentences": ["Ik schil de aardappels."]}
+        ]
+      }
+    },
+    {
+      "key": "grate",
+      "gloss": "grate (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "grate", "pos": "verb", "details": {"past": "grated", "participle": "grated"}, "sentences": ["I grate the cheese."]}
+        ],
+        "nl": [
+        {"lemma": "raspen", "pos": "verb", "details": {"pastSingular": "raspte", "pastPlural": "raspten", "participle": "geraspt", "auxiliary": "hebben"}, "sentences": ["Ik rasp de kaas."]}
+        ]
+      }
+    },
+    {
+      "key": "whisk-verb",
+      "gloss": "whisk (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "whisk", "pos": "verb", "details": {"past": "whisked", "participle": "whisked"}, "sentences": ["I whisk the eggs."]}
+        ],
+        "nl": [
+        {"lemma": "kloppen", "pos": "verb", "details": {"pastSingular": "klopte", "pastPlural": "klopten", "participle": "geklopt", "auxiliary": "hebben"}, "sentences": ["Ik klop de eieren."]}
+        ]
+      }
+    },
+    {
+      "key": "knead",
+      "gloss": "knead (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "knead", "pos": "verb", "details": {"past": "kneaded", "participle": "kneaded"}, "sentences": ["I knead the dough."]}
+        ],
+        "nl": [
+        {"lemma": "kneden", "pos": "verb", "details": {"pastSingular": "kneedde", "pastPlural": "kneedden", "participle": "gekneed", "auxiliary": "hebben"}, "sentences": ["Ik kneed het deeg."]}
+        ]
+      }
+    },
+    {
+      "key": "roll-out",
+      "gloss": "roll out (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "roll out", "pos": "verb", "details": {"past": "rolled out", "participle": "rolled out"}, "sentences": ["I roll out the dough."]}
+        ],
+        "nl": [
+        {"lemma": "uitrollen", "pos": "verb", "details": {"pastSingular": "rolde uit", "pastPlural": "rolden uit", "participle": "uitgerold", "auxiliary": "hebben"}, "sentences": ["Ik rol het deeg uit."]}
+        ]
+      }
+    },
+    {
+      "key": "season-verb",
+      "gloss": "season (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "season", "pos": "verb", "details": {"past": "seasoned", "participle": "seasoned"}, "sentences": ["I season the soup."]}
+        ],
+        "nl": [
+        {"lemma": "kruiden", "pos": "verb", "details": {"pastSingular": "kruidde", "pastPlural": "kruidden", "participle": "gekruid", "auxiliary": "hebben"}, "sentences": ["Ik kruid de soep."]}
+        ]
+      }
+    },
+    {
+      "key": "simmer",
+      "gloss": "simmer (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "simmer", "pos": "verb", "details": {"past": "simmered", "participle": "simmered"}, "sentences": ["The sauce simmers."]}
+        ],
+        "nl": [
+        {"lemma": "sudderen", "pos": "verb", "details": {"pastSingular": "sudderde", "pastPlural": "sudderden", "participle": "gesudderd", "auxiliary": "hebben"}, "sentences": ["De saus suddert."]}
+        ]
+      }
+    },
+    {
+      "key": "marinate",
+      "gloss": "marinate (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "marinate", "pos": "verb", "details": {"past": "marinated", "participle": "marinated"}, "sentences": ["I marinate the meat."]}
+        ],
+        "nl": [
+        {"lemma": "marineren", "pos": "verb", "details": {"pastSingular": "marineerde", "pastPlural": "marineerden", "participle": "gemarineerd", "auxiliary": "hebben"}, "sentences": ["Ik marineer het vlees."]}
+        ]
+      }
+    },
+    {
+      "key": "pot-noun-pot",
+      "gloss": "pot (noun, pot)",
+      "entries": {
+        "en": [
+        {"lemma": "pot", "pos": "noun", "details": {"plural": "pots"}, "sentences": ["The soup is in the pot."]}
+        ],
+        "nl": [
+        {"lemma": "pot", "pos": "noun", "details": {"article": "de", "plural": "potten"}, "sentences": ["De soep zit in de pot."]}
+        ]
+      }
+    },
+    {
+      "key": "colander",
+      "gloss": "colander (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "colander", "pos": "noun", "details": {"plural": "colanders"}, "sentences": ["I use the colander."]}
+        ],
+        "nl": [
+        {"lemma": "vergiet", "pos": "noun", "details": {"article": "het", "plural": "vergieten"}, "sentences": ["Ik gebruik het vergiet."]}
+        ]
+      }
+    },
+    {
+      "key": "grater",
+      "gloss": "grater (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "grater", "pos": "noun", "details": {"plural": "graters"}, "sentences": ["The grater is sharp."]}
+        ],
+        "nl": [
+        {"lemma": "rasp", "pos": "noun", "details": {"article": "de", "plural": "raspen"}, "sentences": ["De rasp is scherp."]}
+        ]
+      }
+    },
+    {
+      "key": "whisk-noun",
+      "gloss": "whisk (tool)",
+      "entries": {
+        "en": [
+        {"lemma": "whisk (tool)", "pos": "noun", "details": {"plural": "whisks"}, "sentences": ["I use a whisk."]}
+        ],
+        "nl": [
+        {"lemma": "garde", "pos": "noun", "details": {"article": "de", "plural": "gardes"}, "sentences": ["Ik gebruik een garde."]}
+        ]
+      }
+    },
+    {
+      "key": "rolling-pin",
+      "gloss": "rolling pin (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "rolling pin", "pos": "noun", "details": {"plural": "rolling pins"}, "sentences": ["I roll the dough with a rolling pin."]}
+        ],
+        "nl": [
+        {"lemma": "deegroller", "pos": "noun", "details": {"article": "de", "plural": "deegrollers"}, "sentences": ["Ik rol het deeg met een deegroller."]}
+        ]
+      }
+    },
+    {
+      "key": "cutting-board",
+      "gloss": "cutting board (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "cutting board", "pos": "noun", "details": {"plural": "cutting boards"}, "sentences": ["I cut the bread on the cutting board."]}
+        ],
+        "nl": [
+        {"lemma": "snijplank", "pos": "noun", "details": {"article": "de", "plural": "snijplanken"}, "sentences": ["Ik snijd het brood op de snijplank."]}
+        ]
+      }
+    },
+    {
+      "key": "stove-noun-fornuis",
+      "gloss": "stove (cooktop)",
+      "entries": {
+        "en": [
+        {"lemma": "stove (cooktop)", "pos": "noun", "details": {"plural": "stoves"}, "sentences": ["The pot is on the stove."]}
+        ],
+        "nl": [
+        {"lemma": "fornuis", "pos": "noun", "details": {"article": "het", "plural": "fornuizen"}, "sentences": ["De pan staat op het fornuis."]}
+        ]
+      }
+    },
+    {
+      "key": "toaster",
+      "gloss": "toaster (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "toaster", "pos": "noun", "details": {"plural": "toasters"}, "sentences": ["The toaster is hot."]}
+        ],
+        "nl": [
+        {"lemma": "broodrooster", "pos": "noun", "details": {"article": "de", "plural": "broodroosters"}, "sentences": ["De broodrooster is heet."]}
+        ]
+      }
+    },
+    {
+      "key": "blender",
+      "gloss": "blender (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "blender", "pos": "noun", "details": {"plural": "blenders"}, "sentences": ["I use the blender."]}
+        ],
+        "nl": [
+        {"lemma": "blender", "pos": "noun", "details": {"article": "de", "plural": "blenders"}, "sentences": ["Ik gebruik de blender."]}
+        ]
+      }
+    },
+    {
+      "key": "dishwasher",
+      "gloss": "dishwasher (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "dishwasher", "pos": "noun", "details": {"plural": "dishwashers"}, "sentences": ["The dishes are in the dishwasher."]}
+        ],
+        "nl": [
+        {"lemma": "vaatwasser", "pos": "noun", "details": {"article": "de", "plural": "vaatwassers"}, "sentences": ["De borden zitten in de vaatwasser."]}
+        ]
+      }
+    },
+    {
+      "key": "tablespoon",
+      "gloss": "tablespoon (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "tablespoon", "pos": "noun", "details": {"plural": "tablespoons"}, "sentences": ["Add a tablespoon of sugar."]}
+        ],
+        "nl": [
+        {"lemma": "eetlepel", "pos": "noun", "details": {"article": "de", "plural": "eetlepels"}, "sentences": ["Voeg een eetlepel suiker toe."]}
+        ]
+      }
+    },
+    {
+      "key": "teaspoon",
+      "gloss": "teaspoon (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "teaspoon", "pos": "noun", "details": {"plural": "teaspoons"}, "sentences": ["I stir with a teaspoon."]}
+        ],
+        "nl": [
+        {"lemma": "theelepel", "pos": "noun", "details": {"article": "de", "plural": "theelepels"}, "sentences": ["Ik roer met een theelepel."]}
+        ]
+      }
+    },
+    {
+      "key": "dough",
+      "gloss": "dough (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "dough", "pos": "noun", "details": {"uncountable": true}, "sentences": ["The dough is soft."]}
+        ],
+        "nl": [
+        {"lemma": "deeg", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["Het deeg is zacht."]}
+        ]
+      }
+    },
+    {
+      "key": "baking-tray",
+      "gloss": "baking tray (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "baking tray", "pos": "noun", "details": {"plural": "baking trays"}, "sentences": ["The cake is on the baking tray."]}
+        ],
+        "nl": [
+        {"lemma": "bakblik", "pos": "noun", "details": {"article": "het", "plural": "bakblikken"}, "sentences": ["De taart ligt op het bakblik."]}
+        ]
+      }
+    },
+    {
+      "key": "apron",
+      "gloss": "apron (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "apron", "pos": "noun", "details": {"plural": "aprons"}, "sentences": ["I wear an apron."]}
+        ],
+        "nl": [
+        {"lemma": "schort", "pos": "noun", "details": {"article": "de", "plural": "schorten"}, "sentences": ["Ik draag een schort."]}
+        ]
+      }
+    },
+    {
+      "key": "tap-water",
+      "gloss": "tap water (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "tap water", "pos": "noun", "details": {"uncountable": true}, "sentences": ["I drink tap water."]}
+        ],
+        "nl": [
+        {"lemma": "kraanwater", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["Ik drink kraanwater."]}
+        ]
+      }
+    },
+    {
+      "key": "mineral-water",
+      "gloss": "mineral water (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "mineral water", "pos": "noun", "details": {"uncountable": true}, "sentences": ["I want mineral water."]}
+        ],
+        "nl": [
+        {"lemma": "mineraalwater", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["Ik wil mineraalwater."]}
+        ]
+      }
+    },
+    {
+      "key": "sparkling-water",
+      "gloss": "sparkling water (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "sparkling water", "pos": "noun", "details": {"uncountable": true}, "sentences": ["I drink sparkling water."]}
+        ],
+        "nl": [
+        {"lemma": "bruiswater", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["Ik drink bruiswater."]}
+        ]
+      }
+    },
+    {
+      "key": "orange-juice",
+      "gloss": "orange juice (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "orange juice", "pos": "noun", "details": {"uncountable": true}, "sentences": ["I drink orange juice."]}
+        ],
+        "nl": [
+        {"lemma": "sinaasappelsap", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["Ik drink sinaasappelsap."]}
+        ]
+      }
+    },
+    {
+      "key": "apple-juice",
+      "gloss": "apple juice (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "apple juice", "pos": "noun", "details": {"uncountable": true}, "sentences": ["I like apple juice."]}
+        ],
+        "nl": [
+        {"lemma": "appelsap", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["Ik hou van appelsap."]}
+        ]
+      }
+    },
+    {
+      "key": "smoothie",
+      "gloss": "smoothie (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "smoothie", "pos": "noun", "details": {"plural": "smoothies"}, "sentences": ["I drink a smoothie."]}
+        ],
+        "nl": [
+        {"lemma": "smoothie", "pos": "noun", "details": {"article": "de", "plural": "smoothies"}, "sentences": ["Ik drink een smoothie."]}
+        ]
+      }
+    },
+    {
+      "key": "milkshake",
+      "gloss": "milkshake (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "milkshake", "pos": "noun", "details": {"plural": "milkshakes"}, "sentences": ["The milkshake is cold."]}
+        ],
+        "nl": [
+        {"lemma": "milkshake", "pos": "noun", "details": {"article": "de", "plural": "milkshakes"}, "sentences": ["De milkshake is koud."]}
+        ]
+      }
+    },
+    {
+      "key": "espresso",
+      "gloss": "espresso (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "espresso", "pos": "noun", "details": {"plural": "espressos"}, "sentences": ["I drink an espresso."]}
+        ],
+        "nl": [
+        {"lemma": "espresso", "pos": "noun", "details": {"article": "de", "plural": "espresso's"}, "sentences": ["Ik drink een espresso."]}
+        ]
+      }
+    },
+    {
+      "key": "cappuccino",
+      "gloss": "cappuccino (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "cappuccino", "pos": "noun", "details": {"plural": "cappuccinos"}, "sentences": ["She orders a cappuccino."]}
+        ],
+        "nl": [
+        {"lemma": "cappuccino", "pos": "noun", "details": {"article": "de", "plural": "cappuccino's"}, "sentences": ["Zij bestelt een cappuccino."]}
+        ]
+      }
+    },
+    {
+      "key": "latte",
+      "gloss": "latte (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "latte", "pos": "noun", "details": {"plural": "lattes"}, "sentences": ["I order a latte."]}
+        ],
+        "nl": [
+        {"lemma": "koffie verkeerd", "pos": "noun", "details": {"article": "de", "plural": "koffies verkeerd"}, "sentences": ["Ik bestel een koffie verkeerd."]}
+        ]
+      }
+    },
+    {
+      "key": "herbal-tea",
+      "gloss": "herbal tea (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "herbal tea", "pos": "noun", "details": {"uncountable": true}, "sentences": ["I drink herbal tea."]}
+        ],
+        "nl": [
+        {"lemma": "kruidenthee", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Ik drink kruidenthee."]}
+        ]
+      }
+    },
+    {
+      "key": "green-tea",
+      "gloss": "green tea (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "green tea", "pos": "noun", "details": {"uncountable": true}, "sentences": ["I like green tea."]}
+        ],
+        "nl": [
+        {"lemma": "groene thee", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Ik hou van groene thee."]}
+        ]
+      }
+    },
+    {
+      "key": "iced-tea",
+      "gloss": "iced tea (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "iced tea", "pos": "noun", "details": {"uncountable": true}, "sentences": ["The iced tea is cold."]}
+        ],
+        "nl": [
+        {"lemma": "ijsthee", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["De ijsthee is koud."]}
+        ]
+      }
+    },
+    {
+      "key": "cider",
+      "gloss": "cider (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "cider", "pos": "noun", "details": {"uncountable": true}, "sentences": ["He drinks cider."]}
+        ],
+        "nl": [
+        {"lemma": "cider", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Hij drinkt cider."]}
+        ]
+      }
+    },
+    {
+      "key": "red-wine",
+      "gloss": "red wine (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "red wine", "pos": "noun", "details": {"uncountable": true}, "sentences": ["I drink red wine."]}
+        ],
+        "nl": [
+        {"lemma": "rode wijn", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Ik drink rode wijn."]}
+        ]
+      }
+    },
+    {
+      "key": "white-wine",
+      "gloss": "white wine (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "white wine", "pos": "noun", "details": {"uncountable": true}, "sentences": ["She likes white wine."]}
+        ],
+        "nl": [
+        {"lemma": "witte wijn", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Zij houdt van witte wijn."]}
+        ]
+      }
+    },
+    {
+      "key": "ros",
+      "gloss": "rosé (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "rosé", "pos": "noun", "details": {"uncountable": true}, "sentences": ["We drink rosé."]}
+        ],
+        "nl": [
+        {"lemma": "rosé", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Wij drinken rosé."]}
+        ]
+      }
+    },
+    {
+      "key": "liqueur",
+      "gloss": "liqueur (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "liqueur", "pos": "noun", "details": {"plural": "liqueurs"}, "sentences": ["The liqueur is sweet."]}
+        ],
+        "nl": [
+        {"lemma": "likeur", "pos": "noun", "details": {"article": "de", "plural": "likeuren"}, "sentences": ["De likeur is zoet."]}
+        ]
+      }
+    },
+    {
+      "key": "jenever",
+      "gloss": "jenever (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "jenever", "pos": "noun", "details": {"uncountable": true}, "sentences": ["He drinks jenever."]}
+        ],
+        "nl": [
+        {"lemma": "jenever", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Hij drinkt jenever."]}
+        ]
+      }
+    },
+    {
+      "key": "port-wine",
+      "gloss": "port wine (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "port wine", "pos": "noun", "details": {"uncountable": true}, "sentences": ["I drink port wine after dinner."]}
+        ],
+        "nl": [
+        {"lemma": "port", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Ik drink port na het eten."]}
+        ]
+      }
+    },
+    {
+      "key": "ice-cube",
+      "gloss": "ice cube (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "ice cube", "pos": "noun", "details": {"plural": "ice cubes"}, "sentences": ["I put an ice cube in the glass."]}
+        ],
+        "nl": [
+        {"lemma": "ijsblokje", "pos": "noun", "details": {"article": "het", "plural": "ijsblokjes"}, "sentences": ["Ik doe een ijsblokje in het glas."]}
+        ]
+      }
+    },
+    {
+      "key": "beer-glass",
+      "gloss": "beer glass (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "beer glass", "pos": "noun", "details": {"plural": "beer glasses"}, "sentences": ["The beer glass is empty."]}
+        ],
+        "nl": [
+        {"lemma": "bierglas", "pos": "noun", "details": {"article": "het", "plural": "bierglazen"}, "sentences": ["Het bierglas is leeg."]}
+        ]
+      }
+    },
+    {
+      "key": "toast-verb",
+      "gloss": "toast (raise a glass)",
+      "entries": {
+        "en": [
+        {"lemma": "toast (raise a glass)", "pos": "verb", "details": {"past": "toasted", "participle": "toasted"}, "sentences": ["We toast to your health."]}
+        ],
+        "nl": [
+        {"lemma": "toosten", "pos": "verb", "details": {"pastSingular": "toastte", "pastPlural": "toastten", "participle": "getoast", "auxiliary": "hebben"}, "sentences": ["Wij toosten op je gezondheid."]}
+        ]
+      }
+    },
+    {
+      "key": "cucumber",
+      "gloss": "cucumber (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "cucumber", "pos": "noun", "details": {"plural": "cucumbers"}, "sentences": ["I cut a cucumber."]}
+        ],
+        "nl": [
+        {"lemma": "komkommer", "pos": "noun", "details": {"article": "de", "plural": "komkommers"}, "sentences": ["Ik snijd een komkommer."]}
+        ]
+      }
+    },
+    {
+      "key": "cauliflower",
+      "gloss": "cauliflower (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "cauliflower", "pos": "noun", "details": {"plural": "cauliflowers"}, "sentences": ["We eat cauliflower."]}
+        ],
+        "nl": [
+        {"lemma": "bloemkool", "pos": "noun", "details": {"article": "de", "plural": "bloemkolen"}, "sentences": ["Wij eten bloemkool."]}
+        ]
+      }
+    },
+    {
+      "key": "broccoli",
+      "gloss": "broccoli (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "broccoli", "pos": "noun", "details": {"uncountable": true}, "sentences": ["The broccoli is green."]}
+        ],
+        "nl": [
+        {"lemma": "broccoli", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["De broccoli is groen."]}
+        ]
+      }
+    },
+    {
+      "key": "spinach",
+      "gloss": "spinach (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "spinach", "pos": "noun", "details": {"uncountable": true}, "sentences": ["I cook spinach."]}
+        ],
+        "nl": [
+        {"lemma": "spinazie", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Ik kook spinazie."]}
+        ]
+      }
+    },
+    {
+      "key": "lettuce",
+      "gloss": "lettuce (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "lettuce", "pos": "noun", "details": {"uncountable": true}, "sentences": ["The lettuce is fresh."]}
+        ],
+        "nl": [
+        {"lemma": "sla", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["De sla is vers."]}
+        ]
+      }
+    },
+    {
+      "key": "leek",
+      "gloss": "leek (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "leek", "pos": "noun", "details": {"plural": "leeks"}, "sentences": ["The soup has leek."]}
+        ],
+        "nl": [
+        {"lemma": "prei", "pos": "noun", "details": {"article": "de", "plural": "preien"}, "sentences": ["De soep heeft prei."]}
+        ]
+      }
+    },
+    {
+      "key": "zucchini",
+      "gloss": "zucchini (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "zucchini", "pos": "noun", "details": {"plural": "zucchinis"}, "sentences": ["I fry a zucchini."]}
+        ],
+        "nl": [
+        {"lemma": "courgette", "pos": "noun", "details": {"article": "de", "plural": "courgettes"}, "sentences": ["Ik bak een courgette."]}
+        ]
+      }
+    },
+    {
+      "key": "eggplant",
+      "gloss": "eggplant (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "eggplant", "pos": "noun", "details": {"plural": "eggplants"}, "sentences": ["The eggplant is purple."]}
+        ],
+        "nl": [
+        {"lemma": "aubergine", "pos": "noun", "details": {"article": "de", "plural": "aubergines"}, "sentences": ["De aubergine is paars."]}
+        ]
+      }
+    },
+    {
+      "key": "bell-pepper",
+      "gloss": "bell pepper (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "bell pepper", "pos": "noun", "details": {"plural": "bell peppers"}, "sentences": ["I eat a red bell pepper."]}
+        ],
+        "nl": [
+        {"lemma": "paprika", "pos": "noun", "details": {"article": "de", "plural": "paprika's"}, "sentences": ["Ik eet een rode paprika."]}
+        ]
+      }
+    },
+    {
+      "key": "mushroom-noun-champignon",
+      "gloss": "mushroom (edible)",
+      "entries": {
+        "en": [
+        {"lemma": "mushroom (edible)", "pos": "noun", "details": {"plural": "mushrooms"}, "sentences": ["I fry the mushrooms."]}
+        ],
+        "nl": [
+        {"lemma": "champignon", "pos": "noun", "details": {"article": "de", "plural": "champignons"}, "sentences": ["Ik bak de champignons."]}
+        ]
+      }
+    },
+    {
+      "key": "beet",
+      "gloss": "beet (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "beet", "pos": "noun", "details": {"plural": "beets"}, "sentences": ["The beet is red."]}
+        ],
+        "nl": [
+        {"lemma": "biet", "pos": "noun", "details": {"article": "de", "plural": "bieten"}, "sentences": ["De biet is rood."]}
+        ]
+      }
+    },
+    {
+      "key": "radish",
+      "gloss": "radish (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "radish", "pos": "noun", "details": {"plural": "radishes"}, "sentences": ["The radish is spicy."]}
+        ],
+        "nl": [
+        {"lemma": "radijs", "pos": "noun", "details": {"article": "de", "plural": "radijzen"}, "sentences": ["De radijs is pittig."]}
+        ]
+      }
+    },
+    {
+      "key": "asparagus",
+      "gloss": "asparagus (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "asparagus", "pos": "noun", "details": {"uncountable": true}, "sentences": ["We eat asparagus in spring."]}
+        ],
+        "nl": [
+        {"lemma": "asperge", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Wij eten in de lente asperges."]}
+        ]
+      }
+    },
+    {
+      "key": "pineapple",
+      "gloss": "pineapple (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "pineapple", "pos": "noun", "details": {"plural": "pineapples"}, "sentences": ["The pineapple is sweet."]}
+        ],
+        "nl": [
+        {"lemma": "ananas", "pos": "noun", "details": {"article": "de", "plural": "ananassen"}, "sentences": ["De ananas is zoet."]}
+        ]
+      }
+    },
+    {
+      "key": "mango",
+      "gloss": "mango (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "mango", "pos": "noun", "details": {"plural": "mangos"}, "sentences": ["I eat a mango."]}
+        ],
+        "nl": [
+        {"lemma": "mango", "pos": "noun", "details": {"article": "de", "plural": "mango's"}, "sentences": ["Ik eet een mango."]}
+        ]
+      }
+    },
+    {
+      "key": "kiwi",
+      "gloss": "kiwi (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "kiwi", "pos": "noun", "details": {"plural": "kiwis"}, "sentences": ["The kiwi is green."]}
+        ],
+        "nl": [
+        {"lemma": "kiwi", "pos": "noun", "details": {"article": "de", "plural": "kiwi's"}, "sentences": ["De kiwi is groen."]}
+        ]
+      }
+    },
+    {
+      "key": "blueberry",
+      "gloss": "blueberry (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "blueberry", "pos": "noun", "details": {"plural": "blueberries"}, "sentences": ["I eat a blueberry."]}
+        ],
+        "nl": [
+        {"lemma": "bosbes", "pos": "noun", "details": {"article": "de", "plural": "bosbessen"}, "sentences": ["Ik eet een bosbes."]}
+        ]
+      }
+    },
+    {
+      "key": "raspberry",
+      "gloss": "raspberry (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "raspberry", "pos": "noun", "details": {"plural": "raspberries"}, "sentences": ["The raspberry is red."]}
+        ],
+        "nl": [
+        {"lemma": "framboos", "pos": "noun", "details": {"article": "de", "plural": "frambozen"}, "sentences": ["De framboos is rood."]}
+        ]
+      }
+    },
+    {
+      "key": "blackberry",
+      "gloss": "blackberry (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "blackberry", "pos": "noun", "details": {"plural": "blackberries"}, "sentences": ["I pick a blackberry."]}
+        ],
+        "nl": [
+        {"lemma": "braam", "pos": "noun", "details": {"article": "de", "plural": "bramen"}, "sentences": ["Ik pluk een braam."]}
+        ]
+      }
+    },
+    {
+      "key": "plum",
+      "gloss": "plum (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "plum", "pos": "noun", "details": {"plural": "plums"}, "sentences": ["The plum is purple."]}
+        ],
+        "nl": [
+        {"lemma": "pruim", "pos": "noun", "details": {"article": "de", "plural": "pruimen"}, "sentences": ["De pruim is paars."]}
+        ]
+      }
+    },
+    {
+      "key": "apricot",
+      "gloss": "apricot (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "apricot", "pos": "noun", "details": {"plural": "apricots"}, "sentences": ["The apricot is orange."]}
+        ],
+        "nl": [
+        {"lemma": "abrikoos", "pos": "noun", "details": {"article": "de", "plural": "abrikozen"}, "sentences": ["De abrikoos is oranje."]}
+        ]
+      }
+    },
+    {
+      "key": "grapefruit",
+      "gloss": "grapefruit (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "grapefruit", "pos": "noun", "details": {"plural": "grapefruits"}, "sentences": ["I eat a grapefruit."]}
+        ],
+        "nl": [
+        {"lemma": "grapefruit", "pos": "noun", "details": {"article": "de", "plural": "grapefruits"}, "sentences": ["Ik eet een grapefruit."]}
+        ]
+      }
+    },
+    {
+      "key": "tangerine",
+      "gloss": "tangerine (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "tangerine", "pos": "noun", "details": {"plural": "tangerines"}, "sentences": ["I peel a tangerine."]}
+        ],
+        "nl": [
+        {"lemma": "mandarijn", "pos": "noun", "details": {"article": "de", "plural": "mandarijnen"}, "sentences": ["Ik schil een mandarijn."]}
+        ]
+      }
+    },
+    {
+      "key": "almond",
+      "gloss": "almond (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "almond", "pos": "noun", "details": {"plural": "almonds"}, "sentences": ["I eat an almond."]}
+        ],
+        "nl": [
+        {"lemma": "amandel", "pos": "noun", "details": {"article": "de", "plural": "amandelen"}, "sentences": ["Ik eet een amandel."]}
+        ]
+      }
+    },
+    {
+      "key": "walnut",
+      "gloss": "walnut (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "walnut", "pos": "noun", "details": {"plural": "walnuts"}, "sentences": ["The walnut is hard."]}
+        ],
+        "nl": [
+        {"lemma": "walnoot", "pos": "noun", "details": {"article": "de", "plural": "walnoten"}, "sentences": ["De walnoot is hard."]}
+        ]
+      }
+    },
+    {
+      "key": "hazelnut",
+      "gloss": "hazelnut (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "hazelnut", "pos": "noun", "details": {"plural": "hazelnuts"}, "sentences": ["I like hazelnut."]}
+        ],
+        "nl": [
+        {"lemma": "hazelnoot", "pos": "noun", "details": {"article": "de", "plural": "hazelnoten"}, "sentences": ["Ik hou van hazelnoot."]}
+        ]
+      }
+    },
+    {
+      "key": "raisin",
+      "gloss": "raisin (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "raisin", "pos": "noun", "details": {"plural": "raisins"}, "sentences": ["I put raisins in the bread."]}
+        ],
+        "nl": [
+        {"lemma": "rozijn", "pos": "noun", "details": {"article": "de", "plural": "rozijnen"}, "sentences": ["Ik doe rozijnen in het brood."]}
+        ]
+      }
+    },
+    {
+      "key": "cinnamon",
+      "gloss": "cinnamon (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "cinnamon", "pos": "noun", "details": {"uncountable": true}, "sentences": ["I put cinnamon on the apple."]}
+        ],
+        "nl": [
+        {"lemma": "kaneel", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Ik doe kaneel op de appel."]}
+        ]
+      }
+    },
+    {
+      "key": "nutmeg",
+      "gloss": "nutmeg (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "nutmeg", "pos": "noun", "details": {"uncountable": true}, "sentences": ["I add nutmeg."]}
+        ],
+        "nl": [
+        {"lemma": "nootmuskaat", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Ik voeg nootmuskaat toe."]}
+        ]
+      }
+    },
+    {
+      "key": "ginger",
+      "gloss": "ginger (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "ginger", "pos": "noun", "details": {"uncountable": true}, "sentences": ["I drink ginger tea."]}
+        ],
+        "nl": [
+        {"lemma": "gember", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Ik drink gemberthee."]}
+        ]
+      }
+    },
+    {
+      "key": "parsley",
+      "gloss": "parsley (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "parsley", "pos": "noun", "details": {"uncountable": true}, "sentences": ["I put parsley on the soup."]}
+        ],
+        "nl": [
+        {"lemma": "peterselie", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Ik doe peterselie op de soep."]}
+        ]
+      }
+    },
+    {
+      "key": "basil",
+      "gloss": "basil (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "basil", "pos": "noun", "details": {"uncountable": true}, "sentences": ["The basil smells good."]}
+        ],
+        "nl": [
+        {"lemma": "basilicum", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["De basilicum ruikt lekker."]}
+        ]
+      }
+    },
+    {
+      "key": "mint",
+      "gloss": "mint (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "mint", "pos": "noun", "details": {"uncountable": true}, "sentences": ["I put mint in the tea."]}
+        ],
+        "nl": [
+        {"lemma": "munt", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Ik doe munt in de thee."]}
+        ]
+      }
+    },
+    {
+      "key": "vinegar",
+      "gloss": "vinegar (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "vinegar", "pos": "noun", "details": {"uncountable": true}, "sentences": ["I add vinegar."]}
+        ],
+        "nl": [
+        {"lemma": "azijn", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Ik voeg azijn toe."]}
+        ]
+      }
+    },
+    {
+      "key": "olive-oil",
+      "gloss": "olive oil (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "olive oil", "pos": "noun", "details": {"uncountable": true}, "sentences": ["I fry in olive oil."]}
+        ],
+        "nl": [
+        {"lemma": "olijfolie", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Ik bak in olijfolie."]}
+        ]
+      }
+    },
+    {
+      "key": "flour",
+      "gloss": "flour (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "flour", "pos": "noun", "details": {"uncountable": true}, "sentences": ["I need flour."]}
+        ],
+        "nl": [
+        {"lemma": "meel", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["Ik heb meel nodig."]}
+        ]
+      }
+    },
+    {
+      "key": "yeast",
+      "gloss": "yeast (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "yeast", "pos": "noun", "details": {"uncountable": true}, "sentences": ["The bread needs yeast."]}
+        ],
+        "nl": [
+        {"lemma": "gist", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Het brood heeft gist nodig."]}
+        ]
+      }
+    },
+    {
+      "key": "yogurt",
+      "gloss": "yogurt (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "yogurt", "pos": "noun", "details": {"uncountable": true}, "sentences": ["I eat yogurt for breakfast."]}
+        ],
+        "nl": [
+        {"lemma": "yoghurt", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Ik eet yoghurt bij het ontbijt."]}
+        ]
+      }
+    },
+    {
+      "key": "cream-cheese",
+      "gloss": "cream cheese (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "cream cheese", "pos": "noun", "details": {"uncountable": true}, "sentences": ["I put cream cheese on the bread."]}
+        ],
+        "nl": [
+        {"lemma": "roomkaas", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Ik doe roomkaas op het brood."]}
+        ]
+      }
+    },
+    {
+      "key": "croissant",
+      "gloss": "croissant (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "croissant", "pos": "noun", "details": {"plural": "croissants"}, "sentences": ["I eat a croissant."]}
+        ],
+        "nl": [
+        {"lemma": "croissant", "pos": "noun", "details": {"article": "de", "plural": "croissants"}, "sentences": ["Ik eet een croissant."]}
+        ]
+      }
+    },
+    {
+      "key": "baguette",
+      "gloss": "baguette (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "baguette", "pos": "noun", "details": {"plural": "baguettes"}, "sentences": ["The baguette is fresh."]}
+        ],
+        "nl": [
+        {"lemma": "stokbrood", "pos": "noun", "details": {"article": "het", "plural": "stokbroden"}, "sentences": ["Het stokbrood is vers."]}
+        ]
+      }
+    },
+    {
+      "key": "lasagna",
+      "gloss": "lasagna (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "lasagna", "pos": "noun", "details": {"uncountable": true}, "sentences": ["We eat lasagna."]}
+        ],
+        "nl": [
+        {"lemma": "lasagne", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Wij eten lasagne."]}
+        ]
+      }
+    },
+    {
+      "key": "stew",
+      "gloss": "stew (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "stew", "pos": "noun", "details": {"plural": "stews"}, "sentences": ["The stew is warm."]}
+        ],
+        "nl": [
+        {"lemma": "stoofpot", "pos": "noun", "details": {"article": "de", "plural": "stoofpotten"}, "sentences": ["De stoofpot is warm."]}
+        ]
+      }
+    },
+    {
+      "key": "apple-pie",
+      "gloss": "apple pie (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "apple pie", "pos": "noun", "details": {"plural": "apple pies"}, "sentences": ["I bake an apple pie."]}
+        ],
+        "nl": [
+        {"lemma": "appeltaart", "pos": "noun", "details": {"article": "de", "plural": "appeltaarten"}, "sentences": ["Ik bak een appeltaart."]}
+        ]
+      }
+    },
+    {
+      "key": "pastry",
+      "gloss": "pastry (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "pastry", "pos": "noun", "details": {"uncountable": true}, "sentences": ["I eat pastry."]}
+        ],
+        "nl": [
+        {"lemma": "gebak", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["Ik eet gebak."]}
+        ]
+      }
+    },
+    {
+      "key": "muffin",
+      "gloss": "muffin (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "muffin", "pos": "noun", "details": {"plural": "muffins"}, "sentences": ["I eat a muffin."]}
+        ],
+        "nl": [
+        {"lemma": "muffin", "pos": "noun", "details": {"article": "de", "plural": "muffins"}, "sentences": ["Ik eet een muffin."]}
+        ]
+      }
+    },
+    {
+      "key": "oatmeal",
+      "gloss": "oatmeal (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "oatmeal", "pos": "noun", "details": {"uncountable": true}, "sentences": ["I eat oatmeal."]}
+        ],
+        "nl": [
+        {"lemma": "havermout", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Ik eet havermout."]}
+        ]
+      }
+    },
+    {
+      "key": "noodles",
+      "gloss": "noodles (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "noodles", "pos": "noun", "details": {"pluralOnly": true}, "sentences": ["I cook noodles."]}
+        ],
+        "nl": [
+        {"lemma": "noedels", "pos": "noun", "details": {"article": "de", "pluralOnly": true}, "sentences": ["Ik kook noedels."]}
+        ]
+      }
+    },
+    {
+      "key": "smoked-sausage",
+      "gloss": "smoked sausage (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "smoked sausage", "pos": "noun", "details": {"plural": "smoked sausages"}, "sentences": ["We eat smoked sausage."]}
+        ],
+        "nl": [
+        {"lemma": "rookworst", "pos": "noun", "details": {"article": "de", "plural": "rookworsten"}, "sentences": ["Wij eten rookworst."]}
+        ]
+      }
+    },
+    {
+      "key": "meatball",
+      "gloss": "meatball (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "meatball", "pos": "noun", "details": {"plural": "meatballs"}, "sentences": ["I eat a meatball."]}
+        ],
+        "nl": [
+        {"lemma": "gehaktbal", "pos": "noun", "details": {"article": "de", "plural": "gehaktballen"}, "sentences": ["Ik eet een gehaktbal."]}
+        ]
+      }
+    },
+    {
+      "key": "cod",
+      "gloss": "cod (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "cod", "pos": "noun", "details": {"uncountable": true}, "sentences": ["We eat cod."]}
+        ],
+        "nl": [
+        {"lemma": "kabeljauw", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Wij eten kabeljauw."]}
+        ]
+      }
+    },
+    {
+      "key": "mussel",
+      "gloss": "mussel (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "mussel", "pos": "noun", "details": {"plural": "mussels"}, "sentences": ["I eat a mussel."]}
+        ],
+        "nl": [
+        {"lemma": "mossel", "pos": "noun", "details": {"article": "de", "plural": "mosselen"}, "sentences": ["Ik eet een mossel."]}
+        ]
+      }
+    },
+    {
+      "key": "herring",
+      "gloss": "herring (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "herring", "pos": "noun", "details": {"plural": "herrings"}, "sentences": ["I eat a herring."]}
+        ],
+        "nl": [
+        {"lemma": "haring", "pos": "noun", "details": {"article": "de", "plural": "haringen"}, "sentences": ["Ik eet een haring."]}
+        ]
+      }
+    },
+    {
+      "key": "syrup",
+      "gloss": "syrup (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "syrup", "pos": "noun", "details": {"uncountable": true}, "sentences": ["I put syrup on the pancake."]}
+        ],
+        "nl": [
+        {"lemma": "stroop", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Ik doe stroop op de pannenkoek."]}
+        ]
+      }
+    },
+    {
+      "key": "sprinkles",
+      "gloss": "sprinkles (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "sprinkles", "pos": "noun", "details": {"pluralOnly": true}, "sentences": ["I put sprinkles on the bread."]}
+        ],
+        "nl": [
+        {"lemma": "hagelslag", "pos": "noun", "details": {"article": "de", "pluralOnly": true}, "sentences": ["Ik doe hagelslag op het brood."]}
+        ]
+      }
+    },
+    {
+      "key": "licorice",
+      "gloss": "licorice (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "licorice", "pos": "noun", "details": {"uncountable": true}, "sentences": ["I like licorice."]}
+        ],
+        "nl": [
+        {"lemma": "drop", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Ik hou van drop."]}
+        ]
+      }
+    },
+    {
+      "key": "stroopwafel",
+      "gloss": "stroopwafel (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "stroopwafel", "pos": "noun", "details": {"plural": "stroopwafels"}, "sentences": ["I eat a stroopwafel."]}
+        ],
+        "nl": [
+        {"lemma": "stroopwafel", "pos": "noun", "details": {"article": "de", "plural": "stroopwafels"}, "sentences": ["Ik eet een stroopwafel."]}
+        ]
+      }
+    },
+    {
+      "key": "mini-pancakes",
+      "gloss": "mini pancakes (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "mini pancakes", "pos": "noun", "details": {"pluralOnly": true}, "sentences": ["We eat mini pancakes."]}
+        ],
+        "nl": [
+        {"lemma": "poffertjes", "pos": "noun", "details": {"article": "de", "pluralOnly": true}, "sentences": ["Wij eten poffertjes."]}
+        ]
+      }
+    },
+    {
+      "key": "croquette",
+      "gloss": "croquette (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "croquette", "pos": "noun", "details": {"plural": "croquettes"}, "sentences": ["I eat a croquette."]}
+        ],
+        "nl": [
+        {"lemma": "kroket", "pos": "noun", "details": {"article": "de", "plural": "kroketten"}, "sentences": ["Ik eet een kroket."]}
+        ]
+      }
+    },
+    {
+      "key": "bitterballen",
+      "gloss": "bitterballen (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "bitterballen", "pos": "noun", "details": {"pluralOnly": true}, "sentences": ["We eat bitterballen with mustard."]}
+        ],
+        "nl": [
+        {"lemma": "bitterballen", "pos": "noun", "details": {"article": "de", "pluralOnly": true}, "sentences": ["Wij eten bitterballen met mosterd."]}
+        ]
+      }
+    },
+    {
+      "key": "mashed-potato-dish",
+      "gloss": "mashed potato dish (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "mashed potato dish", "pos": "noun", "details": {"plural": "mashed potato dishes"}, "sentences": ["We eat a mashed potato dish."]}
+        ],
+        "nl": [
+        {"lemma": "stamppot", "pos": "noun", "details": {"article": "de", "plural": "stamppotten"}, "sentences": ["Wij eten een stamppot."]}
+        ]
+      }
+    },
+    {
+      "key": "pea-soup",
+      "gloss": "pea soup (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "pea soup", "pos": "noun", "details": {"uncountable": true}, "sentences": ["The pea soup is thick."]}
+        ],
+        "nl": [
+        {"lemma": "erwtensoep", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["De erwtensoep is dik."]}
+        ]
+      }
+    },
+    {
+      "key": "buttermilk",
+      "gloss": "buttermilk (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "buttermilk", "pos": "noun", "details": {"uncountable": true}, "sentences": ["I drink buttermilk."]}
+        ],
+        "nl": [
+        {"lemma": "karnemelk", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Ik drink karnemelk."]}
+        ]
+      }
+    },
+    {
+      "key": "custard",
+      "gloss": "custard (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "custard", "pos": "noun", "details": {"uncountable": true}, "sentences": ["I eat custard for dessert."]}
+        ],
+        "nl": [
+        {"lemma": "vla", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Ik eet vla als toetje."]}
+        ]
+      }
+    },
+    {
+      "key": "applesauce",
+      "gloss": "applesauce (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "applesauce", "pos": "noun", "details": {"uncountable": true}, "sentences": ["We eat applesauce with the meat."]}
+        ],
+        "nl": [
+        {"lemma": "appelmoes", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Wij eten appelmoes bij het vlees."]}
+        ]
+      }
+    },
+    {
+      "key": "kale",
+      "gloss": "kale (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "kale", "pos": "noun", "details": {"uncountable": true}, "sentences": ["We cook kale."]}
+        ],
+        "nl": [
+        {"lemma": "boerenkool", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Wij koken boerenkool."]}
+        ]
+      }
+    },
+    {
+      "key": "stuffed-apple-pastry",
+      "gloss": "stuffed apple pastry (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "stuffed apple pastry", "pos": "noun", "details": {"plural": "stuffed apple pastries"}, "sentences": ["I eat a stuffed apple pastry."]}
+        ],
+        "nl": [
+        {"lemma": "appelflap", "pos": "noun", "details": {"article": "de", "plural": "appelflappen"}, "sentences": ["Ik eet een appelflap."]}
+        ]
+      }
+    },
+    {
+      "key": "salty",
+      "gloss": "salty (adjective)",
+      "entries": {
+        "en": [
+        {"lemma": "salty", "pos": "adjective", "sentences": ["The soup is salty."]}
+        ],
+        "nl": [
+        {"lemma": "zout", "pos": "adjective", "sentences": ["De soep is zout."]}
+        ]
+      }
+    },
+    {
+      "key": "fried-fish-pieces",
+      "gloss": "fried fish pieces (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "fried fish pieces", "pos": "noun", "details": {"pluralOnly": true}, "sentences": ["We eat fried fish pieces at the market."]}
+        ],
+        "nl": [
+        {"lemma": "kibbeling", "pos": "noun", "details": {"article": "de", "pluralOnly": true}, "sentences": ["Wij eten kibbeling op de markt."]}
+        ]
+      }
+    },
+    {
+      "key": "dutch-meat-snack",
+      "gloss": "Dutch meat snack (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "Dutch meat snack", "pos": "noun", "details": {"plural": "Dutch meat snacks"}, "sentences": ["I eat a Dutch meat snack."]}
+        ],
+        "nl": [
+        {"lemma": "frikandel", "pos": "noun", "details": {"article": "de", "plural": "frikandellen"}, "sentences": ["Ik eet een frikandel."]}
+        ]
+      }
+    },
+    {
+      "key": "carrot-and-potato-stew",
+      "gloss": "carrot and potato stew (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "carrot and potato stew", "pos": "noun", "details": {"plural": "carrot and potato stews"}, "sentences": ["The carrot and potato stew is warm."]}
+        ],
+        "nl": [
+        {"lemma": "hutspot", "pos": "noun", "details": {"article": "de", "plural": "hutspotten"}, "sentences": ["De hutspot is warm."]}
+        ]
+      }
+    },
+    {
+      "key": "fruit-pie",
+      "gloss": "fruit pie (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "fruit pie", "pos": "noun", "details": {"plural": "fruit pies"}, "sentences": ["I eat a piece of fruit pie."]}
+        ],
+        "nl": [
+        {"lemma": "vlaai", "pos": "noun", "details": {"article": "de", "plural": "vlaaien"}, "sentences": ["Ik eet een stuk vlaai."]}
+        ]
+      }
+    },
+    {
+      "key": "custard-slice",
+      "gloss": "custard slice (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "custard slice", "pos": "noun", "details": {"plural": "custard slices"}, "sentences": ["I eat a custard slice."]}
+        ],
+        "nl": [
+        {"lemma": "tompouce", "pos": "noun", "details": {"article": "de", "plural": "tompouces"}, "sentences": ["Ik eet een tompouce."]}
+        ]
+      }
+    },
+    {
+      "key": "rye-bread",
+      "gloss": "rye bread (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "rye bread", "pos": "noun", "details": {"uncountable": true}, "sentences": ["I eat rye bread."]}
+        ],
+        "nl": [
+        {"lemma": "roggebrood", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["Ik eet roggebrood."]}
+        ]
+      }
+    },
+    {
+      "key": "cheese-souffl",
+      "gloss": "cheese soufflé (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "cheese soufflé", "pos": "noun", "details": {"plural": "cheese soufflés"}, "sentences": ["I eat a cheese soufflé."]}
+        ],
+        "nl": [
+        {"lemma": "kaassoufflé", "pos": "noun", "details": {"article": "de", "plural": "kaassouffles"}, "sentences": ["Ik eet een kaassoufflé."]}
+        ]
+      }
+    },
+    {
+      "key": "gouda-cheese",
+      "gloss": "Gouda cheese (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "Gouda cheese", "pos": "noun", "details": {"uncountable": true}, "sentences": ["Gouda cheese is famous."]}
+        ],
+        "nl": [
+        {"lemma": "Goudse kaas", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Goudse kaas is beroemd."]}
         ]
       }
     }

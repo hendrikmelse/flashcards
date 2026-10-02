@@ -1,0 +1,712 @@
+{
+  "concepts": [
+    {
+      "key": "how-are-you",
+      "gloss": "How are you? (phrase)",
+      "entries": {
+        "en": [
+        {"lemma": "How are you?", "pos": "phrase", "sentences": ["Hello Anna, how are you?"]}
+        ],
+        "nl": [
+        {"lemma": "Hoe gaat het met je?", "pos": "phrase", "sentences": ["Hallo Anna, hoe gaat het met je?"]}
+        ]
+      }
+    },
+    {
+      "key": "i-am-fine-thank-you",
+      "gloss": "I am fine, thank you. (phrase)",
+      "entries": {
+        "en": [
+        {"lemma": "I am fine, thank you.", "pos": "phrase", "sentences": ["How are you? I am fine, thank you."]}
+        ],
+        "nl": [
+        {"lemma": "Het gaat goed, dank je.", "pos": "phrase", "sentences": ["Hoe gaat het? Het gaat goed, dank je."]}
+        ]
+      }
+    },
+    {
+      "key": "what-is-your-name",
+      "gloss": "What is your name? (phrase)",
+      "entries": {
+        "en": [
+        {"lemma": "What is your name?", "pos": "phrase", "sentences": ["Hello, what is your name?"]}
+        ],
+        "nl": [
+        {"lemma": "Hoe heet je?", "pos": "phrase", "sentences": ["Hallo, hoe heet je?"]}
+        ]
+      }
+    },
+    {
+      "key": "my-name-is",
+      "gloss": "My name is ... (phrase)",
+      "entries": {
+        "en": [
+        {"lemma": "My name is ...", "pos": "phrase", "sentences": ["My name is Anna."]}
+        ],
+        "nl": [
+        {"lemma": "Ik heet ...", "pos": "phrase", "sentences": ["Ik heet Anna."]}
+        ]
+      }
+    },
+    {
+      "key": "nice-to-meet-you",
+      "gloss": "Nice to meet you. (phrase)",
+      "entries": {
+        "en": [
+        {"lemma": "Nice to meet you.", "pos": "phrase", "sentences": ["Nice to meet you, I am John."]}
+        ],
+        "nl": [
+        {"lemma": "Aangenaam.", "pos": "phrase", "sentences": ["Aangenaam, ik ben Jan."]}
+        ]
+      }
+    },
+    {
+      "key": "welcome-phrase",
+      "gloss": "Welcome! (phrase)",
+      "entries": {
+        "en": [
+        {"lemma": "Welcome!", "pos": "phrase", "sentences": ["Welcome to my house!"]}
+        ],
+        "nl": [
+        {"lemma": "Welkom!", "pos": "phrase", "sentences": ["Welkom in mijn huis!"]}
+        ]
+      }
+    },
+    {
+      "key": "congratulations",
+      "gloss": "Congratulations! (phrase)",
+      "entries": {
+        "en": [
+        {"lemma": "Congratulations!", "pos": "phrase", "sentences": ["Congratulations on your new job!"]}
+        ],
+        "nl": [
+        {"lemma": "Gefeliciteerd!", "pos": "phrase", "sentences": ["Gefeliciteerd met je nieuwe baan!"]}
+        ]
+      }
+    },
+    {
+      "key": "thank-you-very-much",
+      "gloss": "Thank you very much. (phrase)",
+      "entries": {
+        "en": [
+        {"lemma": "Thank you very much.", "pos": "phrase", "sentences": ["Thank you very much for your help."]}
+        ],
+        "nl": [
+        {"lemma": "Hartelijk dank.", "pos": "phrase", "sentences": ["Hartelijk dank voor je hulp."]}
+        ]
+      }
+    },
+    {
+      "key": "you-are-welcome",
+      "gloss": "You are welcome. (phrase)",
+      "entries": {
+        "en": [
+        {"lemma": "You are welcome.", "pos": "phrase", "sentences": ["Thank you! You are welcome."]}
+        ],
+        "nl": [
+        {"lemma": "Graag gedaan.", "pos": "phrase", "sentences": ["Dank je! Graag gedaan."]}
+        ]
+      }
+    },
+    {
+      "key": "see-you-tomorrow",
+      "gloss": "See you tomorrow. (phrase)",
+      "entries": {
+        "en": [
+        {"lemma": "See you tomorrow.", "pos": "phrase", "sentences": ["I have to go. See you tomorrow."]}
+        ],
+        "nl": [
+        {"lemma": "Tot morgen.", "pos": "phrase", "sentences": ["Ik moet gaan. Tot morgen."]}
+        ]
+      }
+    },
+    {
+      "key": "see-you-later",
+      "gloss": "See you later. (phrase)",
+      "entries": {
+        "en": [
+        {"lemma": "See you later.", "pos": "phrase", "sentences": ["I have to go. See you later."]}
+        ],
+        "nl": [
+        {"lemma": "Tot straks.", "pos": "phrase", "sentences": ["Ik moet gaan. Tot straks."]}
+        ]
+      }
+    },
+    {
+      "key": "have-a-nice-day",
+      "gloss": "Have a nice day! (phrase)",
+      "entries": {
+        "en": [
+        {"lemma": "Have a nice day!", "pos": "phrase", "sentences": ["Goodbye, have a nice day!"]}
+        ],
+        "nl": [
+        {"lemma": "Fijne dag!", "pos": "phrase", "sentences": ["Doei, fijne dag!"]}
+        ]
+      }
+    },
+    {
+      "key": "good-luck",
+      "gloss": "Good luck! (phrase)",
+      "entries": {
+        "en": [
+        {"lemma": "Good luck!", "pos": "phrase", "sentences": ["Good luck with your exam!"]}
+        ],
+        "nl": [
+        {"lemma": "Succes!", "pos": "phrase", "sentences": ["Succes met je examen!"]}
+        ]
+      }
+    },
+    {
+      "key": "get-well-soon",
+      "gloss": "Get well soon! (phrase)",
+      "entries": {
+        "en": [
+        {"lemma": "Get well soon!", "pos": "phrase", "sentences": ["You are ill? Get well soon!"]}
+        ],
+        "nl": [
+        {"lemma": "Beterschap!", "pos": "phrase", "sentences": ["Ben je ziek? Beterschap!"]}
+        ]
+      }
+    },
+    {
+      "key": "bless-you",
+      "gloss": "Bless you! (phrase)",
+      "entries": {
+        "en": [
+        {"lemma": "Bless you!", "pos": "phrase", "sentences": ["Achoo! Bless you!"]}
+        ],
+        "nl": [
+        {"lemma": "Gezondheid!", "pos": "phrase", "sentences": ["Hatsjie! Gezondheid!"]}
+        ]
+      }
+    },
+    {
+      "key": "i-do-not-understand",
+      "gloss": "I do not understand. (phrase)",
+      "entries": {
+        "en": [
+        {"lemma": "I do not understand.", "pos": "phrase", "sentences": ["Sorry, I do not understand."]}
+        ],
+        "nl": [
+        {"lemma": "Ik begrijp het niet.", "pos": "phrase", "sentences": ["Sorry, ik begrijp het niet."]}
+        ]
+      }
+    },
+    {
+      "key": "can-you-repeat-that",
+      "gloss": "Can you repeat that? (phrase)",
+      "entries": {
+        "en": [
+        {"lemma": "Can you repeat that?", "pos": "phrase", "sentences": ["Can you repeat that, please?"]}
+        ],
+        "nl": [
+        {"lemma": "Kunt u dat herhalen?", "pos": "phrase", "sentences": ["Kunt u dat herhalen, alstublieft?"]}
+        ]
+      }
+    },
+    {
+      "key": "do-you-speak-english",
+      "gloss": "Do you speak English? (phrase)",
+      "entries": {
+        "en": [
+        {"lemma": "Do you speak English?", "pos": "phrase", "sentences": ["Excuse me, do you speak English?"]}
+        ],
+        "nl": [
+        {"lemma": "Spreekt u Engels?", "pos": "phrase", "sentences": ["Pardon, spreekt u Engels?"]}
+        ]
+      }
+    },
+    {
+      "key": "i-speak-a-little-dutch",
+      "gloss": "I speak a little Dutch. (phrase)",
+      "entries": {
+        "en": [
+        {"lemma": "I speak a little Dutch.", "pos": "phrase", "sentences": ["I speak a little Dutch, sorry."]}
+        ],
+        "nl": [
+        {"lemma": "Ik spreek een beetje Nederlands.", "pos": "phrase", "sentences": ["Ik spreek een beetje Nederlands, sorry."]}
+        ]
+      }
+    },
+    {
+      "key": "where-is-the-toilet",
+      "gloss": "Where is the toilet? (phrase)",
+      "entries": {
+        "en": [
+        {"lemma": "Where is the toilet?", "pos": "phrase", "sentences": ["Excuse me, where is the toilet?"]}
+        ],
+        "nl": [
+        {"lemma": "Waar is het toilet?", "pos": "phrase", "sentences": ["Pardon, waar is het toilet?"]}
+        ]
+      }
+    },
+    {
+      "key": "how-much-does-it-cost",
+      "gloss": "How much does it cost? (phrase)",
+      "entries": {
+        "en": [
+        {"lemma": "How much does it cost?", "pos": "phrase", "sentences": ["How much does this book cost?"]}
+        ],
+        "nl": [
+        {"lemma": "Hoeveel kost het?", "pos": "phrase", "sentences": ["Hoeveel kost dit boek?"]}
+        ]
+      }
+    },
+    {
+      "key": "i-would-like-a-coffee",
+      "gloss": "I would like a coffee. (phrase)",
+      "entries": {
+        "en": [
+        {"lemma": "I would like a coffee.", "pos": "phrase", "sentences": ["I would like a coffee, please."]}
+        ],
+        "nl": [
+        {"lemma": "Ik wil graag een koffie.", "pos": "phrase", "sentences": ["Ik wil graag een koffie, alsjeblieft."]}
+        ]
+      }
+    },
+    {
+      "key": "the-bill-please",
+      "gloss": "The bill, please. (phrase)",
+      "entries": {
+        "en": [
+        {"lemma": "The bill, please.", "pos": "phrase", "sentences": ["Waiter, the bill, please."]}
+        ],
+        "nl": [
+        {"lemma": "De rekening, alstublieft.", "pos": "phrase", "sentences": ["Ober, de rekening, alstublieft."]}
+        ]
+      }
+    },
+    {
+      "key": "i-am-lost",
+      "gloss": "I am lost. (phrase)",
+      "entries": {
+        "en": [
+        {"lemma": "I am lost.", "pos": "phrase", "sentences": ["I am lost. Can you help me?"]}
+        ],
+        "nl": [
+        {"lemma": "Ik ben verdwaald.", "pos": "phrase", "sentences": ["Ik ben verdwaald. Kunt u mij helpen?"]}
+        ]
+      }
+    },
+    {
+      "key": "can-you-help-me",
+      "gloss": "Can you help me? (phrase)",
+      "entries": {
+        "en": [
+        {"lemma": "Can you help me?", "pos": "phrase", "sentences": ["Excuse me, can you help me?"]}
+        ],
+        "nl": [
+        {"lemma": "Kunt u mij helpen?", "pos": "phrase", "sentences": ["Pardon, kunt u mij helpen?"]}
+        ]
+      }
+    },
+    {
+      "key": "help-interjection",
+      "gloss": "help (interjection)",
+      "entries": {
+        "en": [
+        {"lemma": "help", "pos": "interjection", "sentences": ["Help! There is a fire!"]}
+        ],
+        "nl": [
+        {"lemma": "help", "pos": "interjection", "sentences": ["Help! Er is brand!"]}
+        ]
+      }
+    },
+    {
+      "key": "i-am-hungry",
+      "gloss": "I am hungry. (phrase)",
+      "entries": {
+        "en": [
+        {"lemma": "I am hungry.", "pos": "phrase", "sentences": ["I am hungry. Let us eat."]}
+        ],
+        "nl": [
+        {"lemma": "Ik heb honger.", "pos": "phrase", "sentences": ["Ik heb honger. Laten we eten."]}
+        ]
+      }
+    },
+    {
+      "key": "i-am-thirsty",
+      "gloss": "I am thirsty. (phrase)",
+      "entries": {
+        "en": [
+        {"lemma": "I am thirsty.", "pos": "phrase", "sentences": ["I am thirsty. I want water."]}
+        ],
+        "nl": [
+        {"lemma": "Ik heb dorst.", "pos": "phrase", "sentences": ["Ik heb dorst. Ik wil water."]}
+        ]
+      }
+    },
+    {
+      "key": "i-am-cold",
+      "gloss": "I am cold. (phrase)",
+      "entries": {
+        "en": [
+        {"lemma": "I am cold.", "pos": "phrase", "sentences": ["Close the window, I am cold."]}
+        ],
+        "nl": [
+        {"lemma": "Ik heb het koud.", "pos": "phrase", "sentences": ["Sluit het raam, ik heb het koud."]}
+        ]
+      }
+    },
+    {
+      "key": "i-think-so",
+      "gloss": "I think so. (phrase)",
+      "entries": {
+        "en": [
+        {"lemma": "I think so.", "pos": "phrase", "sentences": ["Is he home? I think so."]}
+        ],
+        "nl": [
+        {"lemma": "Dat denk ik wel.", "pos": "phrase", "sentences": ["Is hij thuis? Dat denk ik wel."]}
+        ]
+      }
+    },
+    {
+      "key": "of-course-phrase",
+      "gloss": "Of course! (phrase)",
+      "entries": {
+        "en": [
+        {"lemma": "Of course!", "pos": "phrase", "sentences": ["Can you help me? Of course!"]}
+        ],
+        "nl": [
+        {"lemma": "Natuurlijk!", "pos": "phrase", "sentences": ["Kun je me helpen? Natuurlijk!"]}
+        ]
+      }
+    },
+    {
+      "key": "no-problem",
+      "gloss": "No problem. (phrase)",
+      "entries": {
+        "en": [
+        {"lemma": "No problem.", "pos": "phrase", "sentences": ["Thank you! No problem."]}
+        ],
+        "nl": [
+        {"lemma": "Geen probleem.", "pos": "phrase", "sentences": ["Dank je! Geen probleem."]}
+        ]
+      }
+    },
+    {
+      "key": "what-is-that",
+      "gloss": "What is that? (phrase)",
+      "entries": {
+        "en": [
+        {"lemma": "What is that?", "pos": "phrase", "sentences": ["What is that on the table?"]}
+        ],
+        "nl": [
+        {"lemma": "Wat is dat?", "pos": "phrase", "sentences": ["Wat is dat op de tafel?"]}
+        ]
+      }
+    },
+    {
+      "key": "what-time-is-it",
+      "gloss": "What time is it? (phrase)",
+      "entries": {
+        "en": [
+        {"lemma": "What time is it?", "pos": "phrase", "sentences": ["Excuse me, what time is it?"]}
+        ],
+        "nl": [
+        {"lemma": "Hoe laat is het?", "pos": "phrase", "sentences": ["Pardon, hoe laat is het?"]}
+        ]
+      }
+    },
+    {
+      "key": "how-do-you-say-that-in-dutch",
+      "gloss": "How do you say that in Dutch? (phrase)",
+      "entries": {
+        "en": [
+        {"lemma": "How do you say that in Dutch?", "pos": "phrase", "sentences": ["How do you say thank you in Dutch?"]}
+        ],
+        "nl": [
+        {"lemma": "Hoe zeg je dat in het Nederlands?", "pos": "phrase", "sentences": ["Hoe zeg je thank you in het Nederlands?"]}
+        ]
+      }
+    },
+    {
+      "key": "it-is-delicious",
+      "gloss": "It is delicious! (phrase)",
+      "entries": {
+        "en": [
+        {"lemma": "It is delicious!", "pos": "phrase", "sentences": ["The soup is delicious!"]}
+        ],
+        "nl": [
+        {"lemma": "Het is lekker!", "pos": "phrase", "sentences": ["De soep is lekker!"]}
+        ]
+      }
+    },
+    {
+      "key": "be-careful",
+      "gloss": "Be careful! (phrase)",
+      "entries": {
+        "en": [
+        {"lemma": "Be careful!", "pos": "phrase", "sentences": ["Be careful, the floor is wet!"]}
+        ],
+        "nl": [
+        {"lemma": "Pas op!", "pos": "phrase", "sentences": ["Pas op, de vloer is nat!"]}
+        ]
+      }
+    },
+    {
+      "key": "one-moment-please",
+      "gloss": "One moment, please. (phrase)",
+      "entries": {
+        "en": [
+        {"lemma": "One moment, please.", "pos": "phrase", "sentences": ["One moment, please. I am coming."]}
+        ],
+        "nl": [
+        {"lemma": "Een momentje, alstublieft.", "pos": "phrase", "sentences": ["Een momentje, alstublieft. Ik kom eraan."]}
+        ]
+      }
+    },
+    {
+      "key": "i-agree",
+      "gloss": "I agree. (phrase)",
+      "entries": {
+        "en": [
+        {"lemma": "I agree.", "pos": "phrase", "sentences": ["I agree with you."]}
+        ],
+        "nl": [
+        {"lemma": "Ik ben het ermee eens.", "pos": "phrase", "sentences": ["Ik ben het met je eens."]}
+        ]
+      }
+    },
+    {
+      "key": "i-do-not-agree",
+      "gloss": "I do not agree. (phrase)",
+      "entries": {
+        "en": [
+        {"lemma": "I do not agree.", "pos": "phrase", "sentences": ["I do not agree with this plan."]}
+        ],
+        "nl": [
+        {"lemma": "Ik ben het er niet mee eens.", "pos": "phrase", "sentences": ["Ik ben het niet eens met dit plan."]}
+        ]
+      }
+    },
+    {
+      "key": "happy-birthday",
+      "gloss": "Happy birthday! (phrase)",
+      "entries": {
+        "en": [
+        {"lemma": "Happy birthday!", "pos": "phrase", "sentences": ["Happy birthday, Anna!"]}
+        ],
+        "nl": [
+        {"lemma": "Gefeliciteerd met je verjaardag!", "pos": "phrase", "sentences": ["Gefeliciteerd met je verjaardag, Anna!"]}
+        ]
+      }
+    },
+    {
+      "key": "merry-christmas",
+      "gloss": "Merry Christmas! (phrase)",
+      "entries": {
+        "en": [
+        {"lemma": "Merry Christmas!", "pos": "phrase", "sentences": ["Merry Christmas to you!"]}
+        ],
+        "nl": [
+        {"lemma": "Prettige kerstdagen!", "pos": "phrase", "sentences": ["Prettige kerstdagen voor jou!"]}
+        ]
+      }
+    },
+    {
+      "key": "happy-new-year",
+      "gloss": "Happy New Year! (phrase)",
+      "entries": {
+        "en": [
+        {"lemma": "Happy New Year!", "pos": "phrase", "sentences": ["Happy New Year, everyone!"]}
+        ],
+        "nl": [
+        {"lemma": "Gelukkig nieuwjaar!", "pos": "phrase", "sentences": ["Gelukkig nieuwjaar, allemaal!"]}
+        ]
+      }
+    },
+    {
+      "key": "enjoy-your-meal",
+      "gloss": "Enjoy your meal! (phrase)",
+      "entries": {
+        "en": [
+        {"lemma": "Enjoy your meal!", "pos": "phrase", "sentences": ["Dinner is ready. Enjoy your meal!"]}
+        ],
+        "nl": [
+        {"lemma": "Eet smakelijk!", "pos": "phrase", "sentences": ["Het eten is klaar. Eet smakelijk!"]}
+        ]
+      }
+    },
+    {
+      "key": "i-am-sorry",
+      "gloss": "I am sorry. (phrase)",
+      "entries": {
+        "en": [
+        {"lemma": "I am sorry.", "pos": "phrase", "sentences": ["I am sorry for the noise."]}
+        ],
+        "nl": [
+        {"lemma": "Het spijt me.", "pos": "phrase", "sentences": ["Het spijt me van het lawaai."]}
+        ]
+      }
+    },
+    {
+      "key": "that-is-fine",
+      "gloss": "That is fine. (phrase)",
+      "entries": {
+        "en": [
+        {"lemma": "That is fine.", "pos": "phrase", "sentences": ["Shall we meet at six? That is fine."]}
+        ],
+        "nl": [
+        {"lemma": "Dat is goed.", "pos": "phrase", "sentences": ["Zullen we om zes uur afspreken? Dat is goed."]}
+        ]
+      }
+    },
+    {
+      "key": "where-do-you-live",
+      "gloss": "Where do you live? (phrase)",
+      "entries": {
+        "en": [
+        {"lemma": "Where do you live?", "pos": "phrase", "sentences": ["Where do you live? In Utrecht."]}
+        ],
+        "nl": [
+        {"lemma": "Waar woon je?", "pos": "phrase", "sentences": ["Waar woon je? In Utrecht."]}
+        ]
+      }
+    },
+    {
+      "key": "where-are-you-from",
+      "gloss": "Where are you from? (phrase)",
+      "entries": {
+        "en": [
+        {"lemma": "Where are you from?", "pos": "phrase", "sentences": ["Where are you from? I am from Spain."]}
+        ],
+        "nl": [
+        {"lemma": "Waar kom je vandaan?", "pos": "phrase", "sentences": ["Waar kom je vandaan? Ik kom uit Spanje."]}
+        ]
+      }
+    },
+    {
+      "key": "i-am-from-the-netherlands",
+      "gloss": "I am from the Netherlands. (phrase)",
+      "entries": {
+        "en": [
+        {"lemma": "I am from the Netherlands.", "pos": "phrase", "sentences": ["I am from the Netherlands."]}
+        ],
+        "nl": [
+        {"lemma": "Ik kom uit Nederland.", "pos": "phrase", "sentences": ["Ik kom uit Nederland."]}
+        ]
+      }
+    },
+    {
+      "key": "how-old-are-you",
+      "gloss": "How old are you? (phrase)",
+      "entries": {
+        "en": [
+        {"lemma": "How old are you?", "pos": "phrase", "sentences": ["How old are you? I am twenty."]}
+        ],
+        "nl": [
+        {"lemma": "Hoe oud ben je?", "pos": "phrase", "sentences": ["Hoe oud ben je? Ik ben twintig."]}
+        ]
+      }
+    },
+    {
+      "key": "i-have-a-question",
+      "gloss": "I have a question. (phrase)",
+      "entries": {
+        "en": [
+        {"lemma": "I have a question.", "pos": "phrase", "sentences": ["Excuse me, I have a question."]}
+        ],
+        "nl": [
+        {"lemma": "Ik heb een vraag.", "pos": "phrase", "sentences": ["Pardon, ik heb een vraag."]}
+        ]
+      }
+    },
+    {
+      "key": "i-do-not-have-time",
+      "gloss": "I do not have time. (phrase)",
+      "entries": {
+        "en": [
+        {"lemma": "I do not have time.", "pos": "phrase", "sentences": ["Sorry, I do not have time today."]}
+        ],
+        "nl": [
+        {"lemma": "Ik heb geen tijd.", "pos": "phrase", "sentences": ["Sorry, ik heb vandaag geen tijd."]}
+        ]
+      }
+    },
+    {
+      "key": "i-like-it",
+      "gloss": "I like it. (phrase)",
+      "entries": {
+        "en": [
+        {"lemma": "I like it.", "pos": "phrase", "sentences": ["This is a nice game. I like it."]}
+        ],
+        "nl": [
+        {"lemma": "Ik vind het leuk.", "pos": "phrase", "sentences": ["Dit is een leuk spel. Ik vind het leuk."]}
+        ]
+      }
+    },
+    {
+      "key": "i-do-not-like-it",
+      "gloss": "I do not like it. (phrase)",
+      "entries": {
+        "en": [
+        {"lemma": "I do not like it.", "pos": "phrase", "sentences": ["I do not like this film."]}
+        ],
+        "nl": [
+        {"lemma": "Ik vind het niet leuk.", "pos": "phrase", "sentences": ["Ik vind deze film niet leuk."]}
+        ]
+      }
+    },
+    {
+      "key": "can-i-pay-by-card",
+      "gloss": "Can I pay by card? (phrase)",
+      "entries": {
+        "en": [
+        {"lemma": "Can I pay by card?", "pos": "phrase", "sentences": ["Can I pay by card here?"]}
+        ],
+        "nl": [
+        {"lemma": "Kan ik met de pin betalen?", "pos": "phrase", "sentences": ["Kan ik hier met de pin betalen?"]}
+        ]
+      }
+    },
+    {
+      "key": "is-this-seat-taken",
+      "gloss": "Is this seat taken? (phrase)",
+      "entries": {
+        "en": [
+        {"lemma": "Is this seat taken?", "pos": "phrase", "sentences": ["Excuse me, is this seat taken?"]}
+        ],
+        "nl": [
+        {"lemma": "Is deze stoel bezet?", "pos": "phrase", "sentences": ["Pardon, is deze stoel bezet?"]}
+        ]
+      }
+    },
+    {
+      "key": "which-way-to-the-station",
+      "gloss": "Which way to the station? (phrase)",
+      "entries": {
+        "en": [
+        {"lemma": "Which way to the station?", "pos": "phrase", "sentences": ["Excuse me, which way to the station?"]}
+        ],
+        "nl": [
+        {"lemma": "Hoe kom ik bij het station?", "pos": "phrase", "sentences": ["Pardon, hoe kom ik bij het station?"]}
+        ]
+      }
+    },
+    {
+      "key": "i-need-a-doctor",
+      "gloss": "I need a doctor. (phrase)",
+      "entries": {
+        "en": [
+        {"lemma": "I need a doctor.", "pos": "phrase", "sentences": ["I need a doctor, please."]}
+        ],
+        "nl": [
+        {"lemma": "Ik heb een dokter nodig.", "pos": "phrase", "sentences": ["Ik heb een dokter nodig, alstublieft."]}
+        ]
+      }
+    },
+    {
+      "key": "what-do-you-recommend",
+      "gloss": "What do you recommend? (phrase)",
+      "entries": {
+        "en": [
+        {"lemma": "What do you recommend?", "pos": "phrase", "sentences": ["What do you recommend on the menu?"]}
+        ],
+        "nl": [
+        {"lemma": "Wat raadt u aan?", "pos": "phrase", "sentences": ["Wat raadt u aan op de kaart?"]}
+        ]
+      }
+    }
+  ]
+}

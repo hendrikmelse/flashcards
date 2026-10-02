@@ -1,0 +1,400 @@
+{
+  "concepts": [
+    {
+      "key": "dike",
+      "gloss": "dike (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "dike", "pos": "noun", "details": {"plural": "dikes"}, "sentences": ["The dike protects the land."]}
+        ],
+        "nl": [
+        {"lemma": "dijk", "pos": "noun", "details": {"article": "de", "plural": "dijken"}, "sentences": ["De dijk beschermt het land."]}
+        ]
+      }
+    },
+    {
+      "key": "polder",
+      "gloss": "polder (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "polder", "pos": "noun", "details": {"plural": "polders"}, "sentences": ["The polder is flat."]}
+        ],
+        "nl": [
+        {"lemma": "polder", "pos": "noun", "details": {"article": "de", "plural": "polders"}, "sentences": ["De polder is vlak."]}
+        ]
+      }
+    },
+    {
+      "key": "canal-noun-gracht",
+      "gloss": "canal (city canal)",
+      "entries": {
+        "en": [
+        {"lemma": "canal (city canal)", "pos": "noun", "details": {"plural": "canals"}, "sentences": ["The canal runs through the city."]}
+        ],
+        "nl": [
+        {"lemma": "gracht", "pos": "noun", "details": {"article": "de", "plural": "grachten"}, "sentences": ["De gracht loopt door de stad."]}
+        ]
+      }
+    },
+    {
+      "key": "lock-noun-sluis",
+      "gloss": "lock (canal)",
+      "entries": {
+        "en": [
+        {"lemma": "lock (canal)", "pos": "noun", "details": {"plural": "locks"}, "sentences": ["The boat goes through the lock."]}
+        ],
+        "nl": [
+        {"lemma": "sluis", "pos": "noun", "details": {"article": "de", "plural": "sluizen"}, "sentences": ["De boot vaart door de sluis."]}
+        ]
+      }
+    },
+    {
+      "key": "windmill",
+      "gloss": "windmill (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "windmill", "pos": "noun", "details": {"plural": "windmills"}, "sentences": ["The windmill turns."]}
+        ],
+        "nl": [
+        {"lemma": "windmolen", "pos": "noun", "details": {"article": "de", "plural": "windmolens"}, "sentences": ["De windmolen draait."]}
+        ]
+      }
+    },
+    {
+      "key": "clog",
+      "gloss": "clog (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "clog", "pos": "noun", "details": {"plural": "clogs"}, "sentences": ["He wears clogs."]}
+        ],
+        "nl": [
+        {"lemma": "klomp", "pos": "noun", "details": {"article": "de", "plural": "klompen"}, "sentences": ["Hij draagt klompen."]}
+        ]
+      }
+    },
+    {
+      "key": "bicycle-path",
+      "gloss": "bicycle path (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "bicycle path", "pos": "noun", "details": {"plural": "bicycle paths"}, "sentences": ["I ride on the bicycle path."]}
+        ],
+        "nl": [
+        {"lemma": "fietspad", "pos": "noun", "details": {"article": "het", "plural": "fietspaden"}, "sentences": ["Ik fiets op het fietspad."]}
+        ]
+      }
+    },
+    {
+      "key": "cyclist",
+      "gloss": "cyclist (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "cyclist", "pos": "noun", "details": {"plural": "cyclists"}, "sentences": ["The cyclist stops."]}
+        ],
+        "nl": [
+        {"lemma": "fietser", "pos": "noun", "details": {"article": "de", "plural": "fietsers"}, "sentences": ["De fietser stopt."]}
+        ]
+      }
+    },
+    {
+      "key": "houseboat",
+      "gloss": "houseboat (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "houseboat", "pos": "noun", "details": {"plural": "houseboats"}, "sentences": ["We live on a houseboat."]}
+        ],
+        "nl": [
+        {"lemma": "woonboot", "pos": "noun", "details": {"article": "de", "plural": "woonboten"}, "sentences": ["Wij wonen op een woonboot."]}
+        ]
+      }
+    },
+    {
+      "key": "ferry",
+      "gloss": "ferry (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "ferry", "pos": "noun", "details": {"plural": "ferries"}, "sentences": ["We take the ferry."]}
+        ],
+        "nl": [
+        {"lemma": "veerboot", "pos": "noun", "details": {"article": "de", "plural": "veerboten"}, "sentences": ["Wij nemen de veerboot."]}
+        ]
+      }
+    },
+    {
+      "key": "sea-level",
+      "gloss": "sea level (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "sea level", "pos": "noun", "details": {"plural": "sea levels"}, "sentences": ["The land lies below sea level."]}
+        ],
+        "nl": [
+        {"lemma": "zeespiegel", "pos": "noun", "details": {"article": "de", "plural": "zeespiegels"}, "sentences": ["Het land ligt onder de zeespiegel."]}
+        ]
+      }
+    },
+    {
+      "key": "storm-surge-barrier",
+      "gloss": "storm surge barrier (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "storm surge barrier", "pos": "noun", "details": {"plural": "storm surge barriers"}, "sentences": ["The storm surge barrier protects the coast."]}
+        ],
+        "nl": [
+        {"lemma": "stormvloedkering", "pos": "noun", "details": {"article": "de", "plural": "stormvloedkeringen"}, "sentences": ["De stormvloedkering beschermt de kust."]}
+        ]
+      }
+    },
+    {
+      "key": "cheese-market",
+      "gloss": "cheese market (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "cheese market", "pos": "noun", "details": {"plural": "cheese markets"}, "sentences": ["We visit the cheese market."]}
+        ],
+        "nl": [
+        {"lemma": "kaasmarkt", "pos": "noun", "details": {"article": "de", "plural": "kaasmarkten"}, "sentences": ["Wij bezoeken de kaasmarkt."]}
+        ]
+      }
+    },
+    {
+      "key": "cheese-slicer",
+      "gloss": "cheese slicer (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "cheese slicer", "pos": "noun", "details": {"plural": "cheese slicers"}, "sentences": ["I use a cheese slicer."]}
+        ],
+        "nl": [
+        {"lemma": "kaasschaaf", "pos": "noun", "details": {"article": "de", "plural": "kaasschaven"}, "sentences": ["Ik gebruik een kaasschaaf."]}
+        ]
+      }
+    },
+    {
+      "key": "herring-cart",
+      "gloss": "herring cart (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "herring cart", "pos": "noun", "details": {"plural": "herring carts"}, "sentences": ["The herring cart stands on the corner."]}
+        ],
+        "nl": [
+        {"lemma": "haringkar", "pos": "noun", "details": {"article": "de", "plural": "haringkarren"}, "sentences": ["De haringkar staat op de hoek."]}
+        ]
+      }
+    },
+    {
+      "key": "tulip-field",
+      "gloss": "tulip field (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "tulip field", "pos": "noun", "details": {"plural": "tulip fields"}, "sentences": ["The tulip field is beautiful."]}
+        ],
+        "nl": [
+        {"lemma": "tulpenveld", "pos": "noun", "details": {"article": "het", "plural": "tulpenvelden"}, "sentences": ["Het tulpenveld is mooi."]}
+        ]
+      }
+    },
+    {
+      "key": "delft-blue",
+      "gloss": "Delft blue (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "Delft blue", "pos": "noun", "details": {"uncountable": true}, "sentences": ["The plate is Delft blue."]}
+        ],
+        "nl": [
+        {"lemma": "Delfts blauw", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["Het bord is Delfts blauw."]}
+        ]
+      }
+    },
+    {
+      "key": "national-anthem",
+      "gloss": "national anthem (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "national anthem", "pos": "noun", "details": {"plural": "national anthems"}, "sentences": ["We sing the national anthem."]}
+        ],
+        "nl": [
+        {"lemma": "volkslied", "pos": "noun", "details": {"article": "het", "plural": "volksliederen"}, "sentences": ["Wij zingen het volkslied."]}
+        ]
+      }
+    },
+    {
+      "key": "royal-family",
+      "gloss": "royal family (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "royal family", "pos": "noun", "details": {"plural": "royal families"}, "sentences": ["The royal family is in the palace."]}
+        ],
+        "nl": [
+        {"lemma": "koninklijke familie", "pos": "noun", "details": {"article": "de", "plural": "koninklijke families"}, "sentences": ["De koninklijke familie is in het paleis."]}
+        ]
+      }
+    },
+    {
+      "key": "king-s-day",
+      "gloss": "King's Day (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "King's Day", "pos": "noun", "details": {"uncountable": true}, "sentences": ["King's Day is in April."]}
+        ],
+        "nl": [
+        {"lemma": "Koningsdag", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Koningsdag is in april."]}
+        ]
+      }
+    },
+    {
+      "key": "liberation-day",
+      "gloss": "Liberation Day (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "Liberation Day", "pos": "noun", "details": {"uncountable": true}, "sentences": ["Liberation Day is in May."]}
+        ],
+        "nl": [
+        {"lemma": "Bevrijdingsdag", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Bevrijdingsdag is in mei."]}
+        ]
+      }
+    },
+    {
+      "key": "easter",
+      "gloss": "Easter (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "Easter", "pos": "noun", "details": {"uncountable": true}, "sentences": ["We celebrate Easter."]}
+        ],
+        "nl": [
+        {"lemma": "Pasen", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["Wij vieren Pasen."]}
+        ]
+      }
+    },
+    {
+      "key": "saint-nicholas-eve",
+      "gloss": "Saint Nicholas' Eve (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "Saint Nicholas' Eve", "pos": "noun", "details": {"plural": "Saint Nicholas' Eves"}, "sentences": ["On Saint Nicholas' Eve we get gifts."]}
+        ],
+        "nl": [
+        {"lemma": "pakjesavond", "pos": "noun", "details": {"article": "de", "plural": "pakjesavonden"}, "sentences": ["Op pakjesavond krijgen wij cadeaus."]}
+        ]
+      }
+    },
+    {
+      "key": "ginger-nuts",
+      "gloss": "ginger nuts (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "ginger nuts", "pos": "noun", "details": {"pluralOnly": true}, "sentences": ["We eat ginger nuts in December."]}
+        ],
+        "nl": [
+        {"lemma": "pepernoten", "pos": "noun", "details": {"article": "de", "pluralOnly": true}, "sentences": ["Wij eten in december pepernoten."]}
+        ]
+      }
+    },
+    {
+      "key": "spiced-cookie",
+      "gloss": "spiced cookie (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "spiced cookie", "pos": "noun", "details": {"uncountable": true}, "sentences": ["I like spiced cookies."]}
+        ],
+        "nl": [
+        {"lemma": "speculaas", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Ik hou van speculaas."]}
+        ]
+      }
+    },
+    {
+      "key": "oliebol",
+      "gloss": "oliebol (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "oliebol", "pos": "noun", "details": {"plural": "oliebols"}, "sentences": ["We eat oliebollen on New Year's Eve."]}
+        ],
+        "nl": [
+        {"lemma": "oliebol", "pos": "noun", "details": {"article": "de", "plural": "oliebollen"}, "sentences": ["Wij eten oliebollen met oudjaar."]}
+        ]
+      }
+    },
+    {
+      "key": "new-year-s-eve",
+      "gloss": "New Year's Eve (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "New Year's Eve", "pos": "noun", "details": {"plural": "New Year's Eves"}, "sentences": ["New Year's Eve is a party."]}
+        ],
+        "nl": [
+        {"lemma": "oudejaarsavond", "pos": "noun", "details": {"article": "de", "plural": "oudejaarsavonden"}, "sentences": ["Oudejaarsavond is een feest."]}
+        ]
+      }
+    },
+    {
+      "key": "coffee-break",
+      "gloss": "coffee break (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "coffee break", "pos": "noun", "details": {"plural": "coffee breaks"}, "sentences": ["We have a coffee break."]}
+        ],
+        "nl": [
+        {"lemma": "koffiepauze", "pos": "noun", "details": {"article": "de", "plural": "koffiepauzes"}, "sentences": ["Wij hebben een koffiepauze."]}
+        ]
+      }
+    },
+    {
+      "key": "birthday-calendar",
+      "gloss": "birthday calendar (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "birthday calendar", "pos": "noun", "details": {"plural": "birthday calendars"}, "sentences": ["The birthday calendar hangs in the toilet."]}
+        ],
+        "nl": [
+        {"lemma": "verjaardagskalender", "pos": "noun", "details": {"article": "de", "plural": "verjaardagskalenders"}, "sentences": ["De verjaardagskalender hangt op het toilet."]}
+        ]
+      }
+    },
+    {
+      "key": "bike-lock",
+      "gloss": "bike lock (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "bike lock", "pos": "noun", "details": {"plural": "bike locks"}, "sentences": ["I buy a bike lock."]}
+        ],
+        "nl": [
+        {"lemma": "fietsslot", "pos": "noun", "details": {"article": "het", "plural": "fietssloten"}, "sentences": ["Ik koop een fietsslot."]}
+        ]
+      }
+    },
+    {
+      "key": "bike-bell",
+      "gloss": "bike bell (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "bike bell", "pos": "noun", "details": {"plural": "bike bells"}, "sentences": ["I ring my bike bell."]}
+        ],
+        "nl": [
+        {"lemma": "fietsbel", "pos": "noun", "details": {"article": "de", "plural": "fietsbellen"}, "sentences": ["Ik bel met mijn fietsbel."]}
+        ]
+      }
+    },
+    {
+      "key": "bike-rack",
+      "gloss": "bike rack (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "bike rack", "pos": "noun", "details": {"plural": "bike racks"}, "sentences": ["The bike is in the bike rack."]}
+        ],
+        "nl": [
+        {"lemma": "fietsenrek", "pos": "noun", "details": {"article": "het", "plural": "fietsenrekken"}, "sentences": ["De fiets staat in het fietsenrek."]}
+        ]
+      }
+    },
+    {
+      "key": "bike-lane",
+      "gloss": "bike lane (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "bike lane", "pos": "noun", "details": {"plural": "bike lanes"}, "sentences": ["The bike lane is red."]}
+        ],
+        "nl": [
+        {"lemma": "fietsstrook", "pos": "noun", "details": {"article": "de", "plural": "fietsstroken"}, "sentences": ["De fietsstrook is rood."]}
+        ]
+      }
+    }
+  ]
+}

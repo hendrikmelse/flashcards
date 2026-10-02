@@ -52,3 +52,4 @@ Delete an item once checked; delete this file when it is empty.
 - `drop-off` (wegbrengen / drop off): wegbrengen: take (something/someone) somewhere
 - `beef-noun-rund` (rund / beef): 'rund' = cattle/ox; beef is 'rundvlees'
 - `milk-verb` (melken / milk): melken: molk or melkte (both forms occur)
+- `birthday-calendar` (verjaardagskalender / birthday calendar): a typical Dutch household item

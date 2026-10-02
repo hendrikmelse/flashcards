@@ -2371,7 +2371,7 @@
       }
     },
     {
-      "key": "light-adjective",
+      "key": "light-adjective-licht",
       "gloss": "light (not heavy)",
       "entries": {
         "en": [
@@ -5383,7 +5383,7 @@
       }
     },
     {
-      "key": "colorful",
+      "key": "colorful-adjective-bont",
       "gloss": "colorful (adjective)",
       "entries": {
         "en": [
@@ -5727,6 +5727,354 @@
         ],
         "nl": [
         {"lemma": "fundamenteel", "pos": "adjective", "sentences": ["Dit is een fundamentele vraag."]}
+        ]
+      }
+    },
+    {
+      "key": "light-blue",
+      "gloss": "light blue (adjective)",
+      "entries": {
+        "en": [
+        {"lemma": "light blue", "pos": "adjective", "sentences": ["The sky is light blue."]}
+        ],
+        "nl": [
+        {"lemma": "lichtblauw", "pos": "adjective", "sentences": ["De lucht is lichtblauw."]}
+        ]
+      }
+    },
+    {
+      "key": "dark-blue",
+      "gloss": "dark blue (adjective)",
+      "entries": {
+        "en": [
+        {"lemma": "dark blue", "pos": "adjective", "sentences": ["The coat is dark blue."]}
+        ],
+        "nl": [
+        {"lemma": "donkerblauw", "pos": "adjective", "sentences": ["De jas is donkerblauw."]}
+        ]
+      }
+    },
+    {
+      "key": "light-green",
+      "gloss": "light green (adjective)",
+      "entries": {
+        "en": [
+        {"lemma": "light green", "pos": "adjective", "sentences": ["The leaf is light green."]}
+        ],
+        "nl": [
+        {"lemma": "lichtgroen", "pos": "adjective", "sentences": ["Het blad is lichtgroen."]}
+        ]
+      }
+    },
+    {
+      "key": "dark-green",
+      "gloss": "dark green (adjective)",
+      "entries": {
+        "en": [
+        {"lemma": "dark green", "pos": "adjective", "sentences": ["The forest is dark green."]}
+        ],
+        "nl": [
+        {"lemma": "donkergroen", "pos": "adjective", "sentences": ["Het bos is donkergroen."]}
+        ]
+      }
+    },
+    {
+      "key": "beige",
+      "gloss": "beige (adjective)",
+      "entries": {
+        "en": [
+        {"lemma": "beige", "pos": "adjective", "sentences": ["The sofa is beige."]}
+        ],
+        "nl": [
+        {"lemma": "beige", "pos": "adjective", "sentences": ["De bank is beige."]}
+        ]
+      }
+    },
+    {
+      "key": "turquoise",
+      "gloss": "turquoise (adjective)",
+      "entries": {
+        "en": [
+        {"lemma": "turquoise", "pos": "adjective", "sentences": ["The sea is turquoise."]}
+        ],
+        "nl": [
+        {"lemma": "turquoise", "pos": "adjective", "sentences": ["De zee is turquoise."]}
+        ]
+      }
+    },
+    {
+      "key": "navy-blue",
+      "gloss": "navy blue (adjective)",
+      "entries": {
+        "en": [
+        {"lemma": "navy blue", "pos": "adjective", "sentences": ["The uniform is navy blue."]}
+        ],
+        "nl": [
+        {"lemma": "marineblauw", "pos": "adjective", "sentences": ["Het uniform is marineblauw."]}
+        ]
+      }
+    },
+    {
+      "key": "burgundy",
+      "gloss": "burgundy (adjective)",
+      "entries": {
+        "en": [
+        {"lemma": "burgundy", "pos": "adjective", "sentences": ["The wine is burgundy."]}
+        ],
+        "nl": [
+        {"lemma": "bordeauxrood", "pos": "adjective", "sentences": ["De wijn is bordeauxrood."]}
+        ]
+      }
+    },
+    {
+      "key": "khaki",
+      "gloss": "khaki (adjective)",
+      "entries": {
+        "en": [
+        {"lemma": "khaki", "pos": "adjective", "sentences": ["The pants are khaki."]}
+        ],
+        "nl": [
+        {"lemma": "kaki", "pos": "adjective", "sentences": ["De broek is kaki."]}
+        ]
+      }
+    },
+    {
+      "key": "lilac",
+      "gloss": "lilac (adjective)",
+      "entries": {
+        "en": [
+        {"lemma": "lilac", "pos": "adjective", "sentences": ["The flower is lilac."]}
+        ],
+        "nl": [
+        {"lemma": "lila", "pos": "adjective", "sentences": ["De bloem is lila."]}
+        ]
+      }
+    },
+    {
+      "key": "multicolored",
+      "gloss": "multicolored (adjective)",
+      "entries": {
+        "en": [
+        {"lemma": "multicolored", "pos": "adjective", "sentences": ["The bird is multicolored."]}
+        ],
+        "nl": [
+        {"lemma": "veelkleurig", "pos": "adjective", "sentences": ["De vogel is veelkleurig."]}
+        ]
+      }
+    },
+    {
+      "key": "colorful-adjective-kleurrijk",
+      "gloss": "colorful (adjective, kleurrijk)",
+      "entries": {
+        "en": [
+        {"lemma": "colorful", "pos": "adjective", "sentences": ["The market is colorful."]}
+        ],
+        "nl": [
+        {"lemma": "kleurrijk", "pos": "adjective", "sentences": ["De markt is kleurrijk."]}
+        ]
+      }
+    },
+    {
+      "key": "transparent",
+      "gloss": "transparent (adjective)",
+      "entries": {
+        "en": [
+        {"lemma": "transparent", "pos": "adjective", "sentences": ["The glass is transparent."]}
+        ],
+        "nl": [
+        {"lemma": "transparant", "pos": "adjective", "sentences": ["Het glas is transparant."]}
+        ]
+      }
+    },
+    {
+      "key": "shiny",
+      "gloss": "shiny (adjective)",
+      "entries": {
+        "en": [
+        {"lemma": "shiny", "pos": "adjective", "sentences": ["The car is shiny."]}
+        ],
+        "nl": [
+        {"lemma": "glanzend", "pos": "adjective", "sentences": ["De auto is glanzend."]}
+        ]
+      }
+    },
+    {
+      "key": "matte",
+      "gloss": "matte (adjective)",
+      "entries": {
+        "en": [
+        {"lemma": "matte", "pos": "adjective", "sentences": ["The paint is matte."]}
+        ],
+        "nl": [
+        {"lemma": "mat", "pos": "adjective", "sentences": ["De verf is mat."]}
+        ]
+      }
+    },
+    {
+      "key": "striped",
+      "gloss": "striped (adjective)",
+      "entries": {
+        "en": [
+        {"lemma": "striped", "pos": "adjective", "sentences": ["The shirt is striped."]}
+        ],
+        "nl": [
+        {"lemma": "gestreept", "pos": "adjective", "sentences": ["Het shirt is gestreept."]}
+        ]
+      }
+    },
+    {
+      "key": "polka-dotted",
+      "gloss": "polka-dotted (adjective)",
+      "entries": {
+        "en": [
+        {"lemma": "polka-dotted", "pos": "adjective", "sentences": ["The dress is polka-dotted."]}
+        ],
+        "nl": [
+        {"lemma": "gestippeld", "pos": "adjective", "sentences": ["De jurk is gestippeld."]}
+        ]
+      }
+    },
+    {
+      "key": "checked",
+      "gloss": "checked (adjective)",
+      "entries": {
+        "en": [
+        {"lemma": "checked", "pos": "adjective", "sentences": ["The shirt is checked."]}
+        ],
+        "nl": [
+        {"lemma": "geruit", "pos": "adjective", "sentences": ["Het shirt is geruit."]}
+        ]
+      }
+    },
+    {
+      "key": "plain-adjective",
+      "gloss": "plain (one color)",
+      "entries": {
+        "en": [
+        {"lemma": "plain (one color)", "pos": "adjective", "sentences": ["The tablecloth is plain."]}
+        ],
+        "nl": [
+        {"lemma": "effen", "pos": "adjective", "sentences": ["Het tafelkleed is effen."]}
+        ]
+      }
+    },
+    {
+      "key": "washed-out",
+      "gloss": "washed-out (adjective)",
+      "entries": {
+        "en": [
+        {"lemma": "washed-out", "pos": "adjective", "sentences": ["The color is washed-out."]}
+        ],
+        "nl": [
+        {"lemma": "vaal", "pos": "adjective", "sentences": ["De kleur is vaal."]}
+        ]
+      }
+    },
+    {
+      "key": "light-adjective-licht-2",
+      "gloss": "light (pale in color)",
+      "entries": {
+        "en": [
+        {"lemma": "light (pale in color)", "pos": "adjective", "sentences": ["The color is light."]}
+        ],
+        "nl": [
+        {"lemma": "licht", "pos": "adjective", "sentences": ["De kleur is licht."]}
+        ]
+      }
+    },
+    {
+      "key": "gold-colored",
+      "gloss": "gold-colored (adjective)",
+      "entries": {
+        "en": [
+        {"lemma": "gold-colored", "pos": "adjective", "sentences": ["The frame is gold-colored."]}
+        ],
+        "nl": [
+        {"lemma": "goudkleurig", "pos": "adjective", "sentences": ["De lijst is goudkleurig."]}
+        ]
+      }
+    },
+    {
+      "key": "silver-colored",
+      "gloss": "silver-colored (adjective)",
+      "entries": {
+        "en": [
+        {"lemma": "silver-colored", "pos": "adjective", "sentences": ["The car is silver-colored."]}
+        ],
+        "nl": [
+        {"lemma": "zilverkleurig", "pos": "adjective", "sentences": ["De auto is zilverkleurig."]}
+        ]
+      }
+    },
+    {
+      "key": "black-and-white",
+      "gloss": "black-and-white (adjective)",
+      "entries": {
+        "en": [
+        {"lemma": "black-and-white", "pos": "adjective", "sentences": ["The film is black-and-white."]}
+        ],
+        "nl": [
+        {"lemma": "zwart-wit", "pos": "adjective", "sentences": ["De film is zwart-wit."]}
+        ]
+      }
+    },
+    {
+      "key": "tint",
+      "gloss": "tint (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "tint", "pos": "noun", "details": {"plural": "tints"}, "sentences": ["The tint is soft."]}
+        ],
+        "nl": [
+        {"lemma": "tint", "pos": "noun", "details": {"article": "de", "plural": "tinten"}, "sentences": ["De tint is zacht."]}
+        ]
+      }
+    },
+    {
+      "key": "shade",
+      "gloss": "shade (of a color)",
+      "entries": {
+        "en": [
+        {"lemma": "shade (of a color)", "pos": "noun", "details": {"plural": "shades"}, "sentences": ["There are many shades of green."]}
+        ],
+        "nl": [
+        {"lemma": "schakering", "pos": "noun", "details": {"article": "de", "plural": "schakeringen"}, "sentences": ["Er zijn veel schakeringen van groen."]}
+        ]
+      }
+    },
+    {
+      "key": "spectrum",
+      "gloss": "spectrum (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "spectrum", "pos": "noun", "details": {"plural": "spectrums"}, "sentences": ["The spectrum has many colors."]}
+        ],
+        "nl": [
+        {"lemma": "spectrum", "pos": "noun", "details": {"article": "het", "plural": "spectra"}, "sentences": ["Het spectrum heeft veel kleuren."]}
+        ]
+      }
+    },
+    {
+      "key": "color-in",
+      "gloss": "color in (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "color in", "pos": "verb", "details": {"past": "colored in", "participle": "colored in"}, "sentences": ["I color in the picture."]}
+        ],
+        "nl": [
+        {"lemma": "inkleuren", "pos": "verb", "details": {"pastSingular": "kleurde in", "pastPlural": "kleurden in", "participle": "ingekleurd", "auxiliary": "hebben"}, "sentences": ["Ik kleur de tekening in."]}
+        ]
+      }
+    },
+    {
+      "key": "fade-verb-verbleken",
+      "gloss": "fade (lose color)",
+      "entries": {
+        "en": [
+        {"lemma": "fade (lose color)", "pos": "verb", "details": {"past": "faded", "participle": "faded"}, "sentences": ["The color fades."]}
+        ],
+        "nl": [
+        {"lemma": "verbleken", "pos": "verb", "details": {"pastSingular": "verbleekte", "pastPlural": "verbleekten", "participle": "verbleekt", "auxiliary": "zijn"}, "sentences": ["De kleur verbleekt."]}
         ]
       }
     }

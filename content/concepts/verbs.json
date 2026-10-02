@@ -651,7 +651,7 @@
       }
     },
     {
-      "key": "may",
+      "key": "may-verb",
       "gloss": "may (be allowed)",
       "entries": {
         "en": [
@@ -1311,7 +1311,7 @@
       }
     },
     {
-      "key": "fly",
+      "key": "fly-verb",
       "gloss": "fly (verb)",
       "entries": {
         "en": [
@@ -7107,7 +7107,7 @@
       }
     },
     {
-      "key": "fade",
+      "key": "fade-verb-vervagen",
       "gloss": "fade (verb)",
       "entries": {
         "en": [
@@ -8495,6 +8495,90 @@
         ],
         "nl": [
         {"lemma": "alarmeren", "pos": "verb", "details": {"pastSingular": "alarmeerde", "pastPlural": "alarmeerden", "participle": "gealarmeerd", "auxiliary": "hebben"}, "sentences": ["Ik alarmeer de politie."]}
+        ]
+      }
+    },
+    {
+      "key": "sew",
+      "gloss": "sew (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "sew", "pos": "verb", "details": {"past": "sewed", "participle": "sewn"}, "sentences": ["I sew a button on."]}
+        ],
+        "nl": [
+        {"lemma": "naaien", "pos": "verb", "details": {"pastSingular": "naaide", "pastPlural": "naaiden", "participle": "genaaid", "auxiliary": "hebben"}, "sentences": ["Ik naai een knoop aan."]}
+        ]
+      }
+    },
+    {
+      "key": "knit",
+      "gloss": "knit (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "knit", "pos": "verb", "details": {"past": "knited", "participle": "knited"}, "sentences": ["She knits a scarf."]}
+        ],
+        "nl": [
+        {"lemma": "breien", "pos": "verb", "details": {"pastSingular": "breide", "pastPlural": "breiden", "participle": "gebreid", "auxiliary": "hebben"}, "sentences": ["Zij breit een sjaal."]}
+        ]
+      }
+    },
+    {
+      "key": "weave",
+      "gloss": "weave (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "weave", "pos": "verb", "details": {"past": "wove", "participle": "woven"}, "sentences": ["They weave a carpet."]}
+        ],
+        "nl": [
+        {"lemma": "weven", "pos": "verb", "details": {"pastSingular": "weefde", "pastPlural": "weefden", "participle": "geweven", "auxiliary": "hebben"}, "sentences": ["Zij weven een tapijt."]}
+        ]
+      }
+    },
+    {
+      "key": "glue-verb",
+      "gloss": "glue (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "glue", "pos": "verb", "details": {"past": "glued", "participle": "glued"}, "sentences": ["I glue the pieces together."]}
+        ],
+        "nl": [
+        {"lemma": "lijmen", "pos": "verb", "details": {"pastSingular": "lijmde", "pastPlural": "lijmden", "participle": "gelijmd", "auxiliary": "hebben"}, "sentences": ["Ik lijm de stukken aan elkaar."]}
+        ]
+      }
+    },
+    {
+      "key": "carve",
+      "gloss": "carve (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "carve", "pos": "verb", "details": {"past": "carved", "participle": "carved"}, "sentences": ["He carves a figure."]}
+        ],
+        "nl": [
+        {"lemma": "kerven", "pos": "verb", "details": {"pastSingular": "kerfde", "pastPlural": "kerfden", "participle": "gekerfd", "auxiliary": "hebben"}, "sentences": ["Hij kerft een figuur."]}
+        ]
+      }
+    },
+    {
+      "key": "sand-verb",
+      "gloss": "sand (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "sand", "pos": "verb", "details": {"past": "sanded", "participle": "sanded"}, "sentences": ["I sand the table."]}
+        ],
+        "nl": [
+        {"lemma": "schuren", "pos": "verb", "details": {"pastSingular": "schuurde", "pastPlural": "schuurden", "participle": "geschuurd", "auxiliary": "hebben"}, "sentences": ["Ik schuur de tafel."]}
+        ]
+      }
+    },
+    {
+      "key": "weld",
+      "gloss": "weld (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "weld", "pos": "verb", "details": {"past": "welded", "participle": "welded"}, "sentences": ["He welds the pipe."]}
+        ],
+        "nl": [
+        {"lemma": "lassen", "pos": "verb", "details": {"pastSingular": "laste", "pastPlural": "lasten", "participle": "gelast", "auxiliary": "hebben"}, "sentences": ["Hij last de pijp."]}
         ]
       }
     }

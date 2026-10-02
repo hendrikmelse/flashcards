@@ -779,6 +779,150 @@
         {"lemma": "goedendag", "pos": "interjection", "sentences": ["Goedendag, meneer."]}
         ]
       }
+    },
+    {
+      "key": "hi",
+      "gloss": "hi (interjection)",
+      "entries": {
+        "en": [
+        {"lemma": "hi", "pos": "interjection", "sentences": ["Hi, how are you?"]}
+        ],
+        "nl": [
+        {"lemma": "hoi", "pos": "interjection", "sentences": ["Hoi, hoe gaat het?"]}
+        ]
+      }
+    },
+    {
+      "key": "hello-interjection-dag",
+      "gloss": "hello (informal, hi or bye)",
+      "entries": {
+        "en": [
+        {"lemma": "hello (informal, hi or bye)", "pos": "interjection", "sentences": ["Hello, how are you?"]}
+        ],
+        "nl": [
+        {"lemma": "dag", "pos": "interjection", "sentences": ["Dag, hoe gaat het?"]}
+        ]
+      }
+    },
+    {
+      "key": "good-evening",
+      "gloss": "good evening (interjection)",
+      "entries": {
+        "en": [
+        {"lemma": "good evening", "pos": "interjection", "sentences": ["Good evening, madam."]}
+        ],
+        "nl": [
+        {"lemma": "goedenavond", "pos": "interjection", "sentences": ["Goedenavond, mevrouw."]}
+        ]
+      }
+    },
+    {
+      "key": "thanks-interjection-bedankt",
+      "gloss": "thanks (interjection)",
+      "entries": {
+        "en": [
+        {"lemma": "thanks", "pos": "interjection", "sentences": ["Thanks for your help."]}
+        ],
+        "nl": [
+        {"lemma": "bedankt", "pos": "interjection", "sentences": ["Bedankt voor je hulp."]}
+        ]
+      }
+    },
+    {
+      "key": "thanks-interjection-dankjewel",
+      "gloss": "thanks (informal)",
+      "entries": {
+        "en": [
+        {"lemma": "thanks (informal)", "pos": "interjection", "sentences": ["Thanks for the gift."]}
+        ],
+        "nl": [
+        {"lemma": "dankjewel", "pos": "interjection", "sentences": ["Dankjewel voor het cadeau."]}
+        ]
+      }
+    },
+    {
+      "key": "hooray",
+      "gloss": "hooray (interjection)",
+      "entries": {
+        "en": [
+        {"lemma": "hooray", "pos": "interjection", "sentences": ["Hooray, we won!"]}
+        ],
+        "nl": [
+        {"lemma": "hoera", "pos": "interjection", "sentences": ["Hoera, we hebben gewonnen!"]}
+        ]
+      }
+    },
+    {
+      "key": "ouch",
+      "gloss": "ouch (interjection)",
+      "entries": {
+        "en": [
+        {"lemma": "ouch", "pos": "interjection", "sentences": ["Ouch, that hurts!"]}
+        ],
+        "nl": [
+        {"lemma": "au", "pos": "interjection", "sentences": ["Au, dat doet pijn!"]}
+        ]
+      }
+    },
+    {
+      "key": "wow",
+      "gloss": "wow (interjection)",
+      "entries": {
+        "en": [
+        {"lemma": "wow", "pos": "interjection", "sentences": ["Wow, how beautiful!"]}
+        ],
+        "nl": [
+        {"lemma": "wauw", "pos": "interjection", "sentences": ["Wauw, wat mooi!"]}
+        ]
+      }
+    },
+    {
+      "key": "shame-on-you",
+      "gloss": "shame on you (interjection)",
+      "entries": {
+        "en": [
+        {"lemma": "shame on you", "pos": "interjection", "sentences": ["Shame on you!"]}
+        ],
+        "nl": [
+        {"lemma": "foei", "pos": "interjection", "sentences": ["Foei, dat doe je niet!"]}
+        ]
+      }
+    },
+    {
+      "key": "shh",
+      "gloss": "shh (interjection)",
+      "entries": {
+        "en": [
+        {"lemma": "shh", "pos": "interjection", "sentences": ["Shh, the baby sleeps."]}
+        ],
+        "nl": [
+        {"lemma": "sst", "pos": "interjection", "sentences": ["Sst, de baby slaapt."]}
+        ]
+      }
+    },
+    {
+      "key": "yippee",
+      "gloss": "yippee (interjection)",
+      "entries": {
+        "en": [
+        {"lemma": "yippee", "pos": "interjection", "sentences": ["Yippee, it is vacation!"]}
+        ],
+        "nl": [
+        {"lemma": "jippie", "pos": "interjection", "sentences": ["Jippie, het is vakantie!"]}
+        ]
+      }
+    },
+    {
+      "key": "well-interjection",
+      "gloss": "well (hesitation)",
+      "entries": {
+        "en": [
+        {"lemma": "well (hesitation)", "pos": "interjection", "sentences": ["Well, I do not know."]}
+        ],
+        "nl": [
+        {"lemma": "tja", "pos": "interjection", "sentences": ["Tja, ik weet het niet."]}
+        ]
+      }
     }
   ]
 }
