@@ -37,7 +37,7 @@
       }
     },
     {
-      "key": "tire",
+      "key": "tire-noun",
       "gloss": "tire (noun)",
       "entries": {
         "en": [
@@ -349,7 +349,7 @@
       }
     },
     {
-      "key": "pack",
+      "key": "pack-verb-inpakken",
       "gloss": "pack (verb)",
       "entries": {
         "en": [
@@ -433,7 +433,7 @@
       }
     },
     {
-      "key": "land",
+      "key": "land-verb-landen",
       "gloss": "land (verb)",
       "entries": {
         "en": [
@@ -1653,6 +1653,186 @@
         ],
         "nl": [
         {"lemma": "inchecken", "pos": "verb", "details": {"pastSingular": "checkte in", "pastPlural": "checkten in", "participle": "ingecheckt", "auxiliary": "hebben"}, "sentences": ["Wij checken in bij het hotel."]}
+        ]
+      }
+    },
+    {
+      "key": "port",
+      "gloss": "port (left side)",
+      "entries": {
+        "en": [
+        {"lemma": "port (left side)", "pos": "noun", "details": {"uncountable": true}, "sentences": ["The ship turns to port."]}
+        ],
+        "nl": [
+        {"lemma": "bakboord", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["Het schip draait naar bakboord."]}
+        ]
+      }
+    },
+    {
+      "key": "hood",
+      "gloss": "hood (car)",
+      "entries": {
+        "en": [
+        {"lemma": "hood (car)", "pos": "noun", "details": {"plural": "hoods"}, "sentences": ["The hood is open."]}
+        ],
+        "nl": [
+        {"lemma": "motorkap", "pos": "noun", "details": {"article": "de", "plural": "motorkappen"}, "sentences": ["De motorkap is open."]}
+        ]
+      }
+    },
+    {
+      "key": "engine-room",
+      "gloss": "engine room (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "engine room", "pos": "noun", "details": {"plural": "engine rooms"}, "sentences": ["The engine room is hot."]}
+        ],
+        "nl": [
+        {"lemma": "machinekamer", "pos": "noun", "details": {"article": "de", "plural": "machinekamers"}, "sentences": ["De machinekamer is heet."]}
+        ]
+      }
+    },
+    {
+      "key": "gas-station",
+      "gloss": "gas station (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "gas station", "pos": "noun", "details": {"plural": "gas stations"}, "sentences": ["We stop at the gas station."]}
+        ],
+        "nl": [
+        {"lemma": "tankstation", "pos": "noun", "details": {"article": "het", "plural": "tankstations"}, "sentences": ["Wij stoppen bij het tankstation."]}
+        ]
+      }
+    },
+    {
+      "key": "inn",
+      "gloss": "inn (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "inn", "pos": "noun", "details": {"plural": "inns"}, "sentences": ["We sleep in an inn."]}
+        ],
+        "nl": [
+        {"lemma": "herberg", "pos": "noun", "details": {"article": "de", "plural": "herbergen"}, "sentences": ["Wij slapen in een herberg."]}
+        ]
+      }
+    },
+    {
+      "key": "helmsman",
+      "gloss": "helmsman (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "helmsman", "pos": "noun", "details": {"plural": "helmsmans"}, "sentences": ["The helmsman steers the ship."]}
+        ],
+        "nl": [
+        {"lemma": "stuurman", "pos": "noun", "details": {"article": "de", "plural": "stuurlieden"}, "sentences": ["De stuurman stuurt het schip."]}
+        ]
+      }
+    },
+    {
+      "key": "railway",
+      "gloss": "railway (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "railway", "pos": "noun", "details": {"plural": "railways"}, "sentences": ["The railway is old."]}
+        ],
+        "nl": [
+        {"lemma": "spoorweg", "pos": "noun", "details": {"article": "de", "plural": "spoorwegen"}, "sentences": ["De spoorweg is oud."]}
+        ]
+      }
+    },
+    {
+      "key": "guesthouse",
+      "gloss": "guesthouse (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "guesthouse", "pos": "noun", "details": {"plural": "guesthouses"}, "sentences": ["We sleep in a guesthouse."]}
+        ],
+        "nl": [
+        {"lemma": "pension", "pos": "noun", "details": {"article": "het", "plural": "pensions"}, "sentences": ["Wij slapen in een pension."]}
+        ]
+      }
+    },
+    {
+      "key": "roadblock",
+      "gloss": "roadblock (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "roadblock", "pos": "noun", "details": {"plural": "roadblocks"}, "sentences": ["There is a roadblock."]}
+        ],
+        "nl": [
+        {"lemma": "wegversperring", "pos": "noun", "details": {"article": "de", "plural": "wegversperringen"}, "sentences": ["Er is een wegversperring."]}
+        ]
+      }
+    },
+    {
+      "key": "van",
+      "gloss": "van (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "van", "pos": "noun", "details": {"plural": "vans"}, "sentences": ["The van is white."]}
+        ],
+        "nl": [
+        {"lemma": "bestelwagen", "pos": "noun", "details": {"article": "de", "plural": "bestelwagens"}, "sentences": ["De bestelwagen is wit."]}
+        ]
+      }
+    },
+    {
+      "key": "tractor",
+      "gloss": "tractor (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "tractor", "pos": "noun", "details": {"plural": "tractors"}, "sentences": ["The farmer drives a tractor."]}
+        ],
+        "nl": [
+        {"lemma": "tractor", "pos": "noun", "details": {"article": "de", "plural": "tractors"}, "sentences": ["De boer rijdt op een tractor."]}
+        ]
+      }
+    },
+    {
+      "key": "intersection",
+      "gloss": "intersection (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "intersection", "pos": "noun", "details": {"plural": "intersections"}, "sentences": ["Turn left at the intersection."]}
+        ],
+        "nl": [
+        {"lemma": "kruispunt", "pos": "noun", "details": {"article": "het", "plural": "kruispunten"}, "sentences": ["Ga bij het kruispunt linksaf."]}
+        ]
+      }
+    },
+    {
+      "key": "main-road",
+      "gloss": "main road (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "main road", "pos": "noun", "details": {"plural": "main roads"}, "sentences": ["We take the main road."]}
+        ],
+        "nl": [
+        {"lemma": "hoofdweg", "pos": "noun", "details": {"article": "de", "plural": "hoofdwegen"}, "sentences": ["Wij nemen de hoofdweg."]}
+        ]
+      }
+    },
+    {
+      "key": "run-aground",
+      "gloss": "run aground (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "run aground", "pos": "verb", "details": {"past": "ran aground", "participle": "run aground"}, "sentences": ["The ship ran aground."]}
+        ],
+        "nl": [
+        {"lemma": "stranden", "pos": "verb", "details": {"pastSingular": "strandde", "pastPlural": "strandden", "participle": "gestrand", "auxiliary": "zijn"}, "sentences": ["Het schip strandde."]}
+        ]
+      }
+    },
+    {
+      "key": "windshield",
+      "gloss": "windshield (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "windshield", "pos": "noun", "details": {"plural": "windshields"}, "sentences": ["The windshield is dirty."]}
+        ],
+        "nl": [
+        {"lemma": "voorruit", "pos": "noun", "details": {"article": "de", "plural": "voorruiten"}, "sentences": ["De voorruit is vuil."]}
         ]
       }
     }

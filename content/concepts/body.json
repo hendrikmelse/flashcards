@@ -839,6 +839,54 @@
         {"lemma": "enkel", "pos": "noun", "details": {"article": "de", "plural": "enkels"}, "sentences": ["Mijn enkel doet pijn."]}
         ]
       }
+    },
+    {
+      "key": "artery",
+      "gloss": "artery (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "artery", "pos": "noun", "details": {"plural": "arteries"}, "sentences": ["The artery carries blood."]}
+        ],
+        "nl": [
+        {"lemma": "slagader", "pos": "noun", "details": {"article": "de", "plural": "slagaders"}, "sentences": ["De slagader voert bloed."]}
+        ]
+      }
+    },
+    {
+      "key": "limbs",
+      "gloss": "limbs (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "limbs", "pos": "noun", "details": {"pluralOnly": true}, "sentences": ["His limbs hurt."]}
+        ],
+        "nl": [
+        {"lemma": "ledematen", "pos": "noun", "details": {"article": "de", "pluralOnly": true}, "sentences": ["Zijn ledematen doen pijn."]}
+        ]
+      }
+    },
+    {
+      "key": "curl",
+      "gloss": "curl (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "curl", "pos": "noun", "details": {"plural": "curls"}, "sentences": ["She has a curl in her hair."]}
+        ],
+        "nl": [
+        {"lemma": "krul", "pos": "noun", "details": {"article": "de", "plural": "krullen"}, "sentences": ["Zij heeft een krul in haar haar."]}
+        ]
+      }
+    },
+    {
+      "key": "mole-noun-moedervlek",
+      "gloss": "mole (skin)",
+      "entries": {
+        "en": [
+        {"lemma": "mole (skin)", "pos": "noun", "details": {"plural": "moles"}, "sentences": ["I have a mole on my arm."]}
+        ],
+        "nl": [
+        {"lemma": "moedervlek", "pos": "noun", "details": {"article": "de", "plural": "moedervlekken"}, "sentences": ["Ik heb een moedervlek op mijn arm."]}
+        ]
+      }
     }
   ]
 }

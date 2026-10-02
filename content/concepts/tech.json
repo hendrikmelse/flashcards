@@ -2087,6 +2087,282 @@
         {"lemma": "folder", "pos": "noun", "details": {"article": "de", "plural": "folders"}, "sentences": ["Ik lees de folder."]}
         ]
       }
+    },
+    {
+      "key": "control-room",
+      "gloss": "control room (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "control room", "pos": "noun", "details": {"plural": "control rooms"}, "sentences": ["The control room is quiet."]}
+        ],
+        "nl": [
+        {"lemma": "controlekamer", "pos": "noun", "details": {"article": "de", "plural": "controlekamers"}, "sentences": ["De controlekamer is stil."]}
+        ]
+      }
+    },
+    {
+      "key": "floppy-disk",
+      "gloss": "floppy disk (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "floppy disk", "pos": "noun", "details": {"plural": "floppy disks"}, "sentences": ["The floppy disk is old."]}
+        ],
+        "nl": [
+        {"lemma": "diskette", "pos": "noun", "details": {"article": "de", "plural": "disketten"}, "sentences": ["De diskette is oud."]}
+        ]
+      }
+    },
+    {
+      "key": "cover-noun-omslag",
+      "gloss": "cover (of a book)",
+      "entries": {
+        "en": [
+        {"lemma": "cover (of a book)", "pos": "noun", "details": {"plural": "covers"}, "sentences": ["The cover of the book is red."]}
+        ],
+        "nl": [
+        {"lemma": "omslag", "pos": "noun", "details": {"article": "de", "plural": "omslagen"}, "sentences": ["De omslag van het boek is rood."]}
+        ]
+      }
+    },
+    {
+      "key": "column",
+      "gloss": "column (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "column", "pos": "noun", "details": {"plural": "columns"}, "sentences": ["I read the column."]}
+        ],
+        "nl": [
+        {"lemma": "column", "pos": "noun", "details": {"article": "de", "plural": "columns"}, "sentences": ["Ik lees de column."]}
+        ]
+      }
+    },
+    {
+      "key": "voicemail",
+      "gloss": "voicemail (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "voicemail", "pos": "noun", "details": {"uncountable": true}, "sentences": ["I leave a voicemail."]}
+        ],
+        "nl": [
+        {"lemma": "voicemail", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Ik laat een voicemail achter."]}
+        ]
+      }
+    },
+    {
+      "key": "fax",
+      "gloss": "fax (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "fax", "pos": "verb", "details": {"past": "faxed", "participle": "faxed"}, "sentences": ["I fax the letter."]}
+        ],
+        "nl": [
+        {"lemma": "faxen", "pos": "verb", "details": {"pastSingular": "faxte", "pastPlural": "faxten", "participle": "gefaxt", "auxiliary": "hebben"}, "sentences": ["Ik fax de brief."]}
+        ]
+      }
+    },
+    {
+      "key": "stereo",
+      "gloss": "stereo (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "stereo", "pos": "noun", "details": {"plural": "stereos"}, "sentences": ["The stereo is loud."]}
+        ],
+        "nl": [
+        {"lemma": "stereo", "pos": "noun", "details": {"article": "de", "plural": "stereo's"}, "sentences": ["De stereo staat hard."]}
+        ]
+      }
+    },
+    {
+      "key": "news-bulletin",
+      "gloss": "news bulletin (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "news bulletin", "pos": "noun", "details": {"plural": "news bulletins"}, "sentences": ["I watch the news bulletin."]}
+        ],
+        "nl": [
+        {"lemma": "journaal", "pos": "noun", "details": {"article": "het", "plural": "journaals"}, "sentences": ["Ik kijk naar het journaal."]}
+        ]
+      }
+    },
+    {
+      "key": "report-noun-reportage",
+      "gloss": "report (coverage)",
+      "entries": {
+        "en": [
+        {"lemma": "report (coverage)", "pos": "noun", "details": {"plural": "reports"}, "sentences": ["The report is on TV."]}
+        ],
+        "nl": [
+        {"lemma": "reportage", "pos": "noun", "details": {"article": "de", "plural": "reportages"}, "sentences": ["De reportage staat op tv."]}
+        ]
+      }
+    },
+    {
+      "key": "coupling",
+      "gloss": "coupling (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "coupling", "pos": "noun", "details": {"plural": "couplings"}, "sentences": ["The coupling is broken."]}
+        ],
+        "nl": [
+        {"lemma": "koppeling", "pos": "noun", "details": {"article": "de", "plural": "koppelingen"}, "sentences": ["De koppeling is kapot."]}
+        ]
+      }
+    },
+    {
+      "key": "flash",
+      "gloss": "flash (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "flash", "pos": "noun", "details": {"plural": "flashes"}, "sentences": ["The flash is bright."]}
+        ],
+        "nl": [
+        {"lemma": "flits", "pos": "noun", "details": {"article": "de", "plural": "flitsen"}, "sentences": ["De flits is fel."]}
+        ]
+      }
+    },
+    {
+      "key": "short-circuit",
+      "gloss": "short circuit (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "short circuit", "pos": "noun", "details": {"plural": "short circuits"}, "sentences": ["There is a short circuit."]}
+        ],
+        "nl": [
+        {"lemma": "kortsluiting", "pos": "noun", "details": {"article": "de", "plural": "kortsluitingen"}, "sentences": ["Er is een kortsluiting."]}
+        ]
+      }
+    },
+    {
+      "key": "put-through",
+      "gloss": "put through (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "put through", "pos": "verb", "details": {"past": "put through", "participle": "put through"}, "sentences": ["I put you through."]}
+        ],
+        "nl": [
+        {"lemma": "doorverbinden", "pos": "verb", "details": {"pastSingular": "verbond door", "pastPlural": "verbonden door", "participle": "doorverbonden", "auxiliary": "hebben"}, "sentences": ["Ik verbind u door."]}
+        ]
+      }
+    },
+    {
+      "key": "pamphlet",
+      "gloss": "pamphlet (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "pamphlet", "pos": "noun", "details": {"plural": "pamphlets"}, "sentences": ["I read a pamphlet."]}
+        ],
+        "nl": [
+        {"lemma": "pamflet", "pos": "noun", "details": {"article": "het", "plural": "pamfletten"}, "sentences": ["Ik lees een pamflet."]}
+        ]
+      }
+    },
+    {
+      "key": "cartoon",
+      "gloss": "cartoon (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "cartoon", "pos": "noun", "details": {"plural": "cartoons"}, "sentences": ["The child watches a cartoon."]}
+        ],
+        "nl": [
+        {"lemma": "tekenfilm", "pos": "noun", "details": {"article": "de", "plural": "tekenfilms"}, "sentences": ["Het kind kijkt naar een tekenfilm."]}
+        ]
+      }
+    },
+    {
+      "key": "mechanical",
+      "gloss": "mechanical (adjective)",
+      "entries": {
+        "en": [
+        {"lemma": "mechanical", "pos": "adjective", "sentences": ["The device is mechanical."]}
+        ],
+        "nl": [
+        {"lemma": "mechanisch", "pos": "adjective", "sentences": ["Het apparaat is mechanisch."]}
+        ]
+      }
+    },
+    {
+      "key": "subtitles",
+      "gloss": "subtitles (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "subtitles", "pos": "noun", "details": {"pluralOnly": true}, "sentences": ["I read the subtitles."]}
+        ],
+        "nl": [
+        {"lemma": "ondertiteling", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Ik lees de ondertiteling."]}
+        ]
+      }
+    },
+    {
+      "key": "platform",
+      "gloss": "platform (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "platform", "pos": "noun", "details": {"plural": "platforms"}, "sentences": ["The platform is new."]}
+        ],
+        "nl": [
+        {"lemma": "platform", "pos": "noun", "details": {"article": "het", "plural": "platforms"}, "sentences": ["Het platform is nieuw."]}
+        ]
+      }
+    },
+    {
+      "key": "writing",
+      "gloss": "writing (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "writing", "pos": "noun", "details": {"plural": "writings"}, "sentences": ["This is an old writing."]}
+        ],
+        "nl": [
+        {"lemma": "geschrift", "pos": "noun", "details": {"article": "het", "plural": "geschriften"}, "sentences": ["Dit is een oud geschrift."]}
+        ]
+      }
+    },
+    {
+      "key": "user",
+      "gloss": "user (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "user", "pos": "noun", "details": {"plural": "users"}, "sentences": ["The user logs in."]}
+        ],
+        "nl": [
+        {"lemma": "gebruiker", "pos": "noun", "details": {"article": "de", "plural": "gebruikers"}, "sentences": ["De gebruiker logt in."]}
+        ]
+      }
+    },
+    {
+      "key": "binoculars",
+      "gloss": "binoculars (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "binoculars", "pos": "noun", "details": {"pluralOnly": true}, "sentences": ["I look through binoculars."]}
+        ],
+        "nl": [
+        {"lemma": "verrekijker", "pos": "noun", "details": {"article": "de", "plural": "verrekijkers"}, "sentences": ["Ik kijk door een verrekijker."]}
+        ]
+      }
+    },
+    {
+      "key": "transmission",
+      "gloss": "transmission (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "transmission", "pos": "noun", "details": {"plural": "transmissions"}, "sentences": ["The transmission is clear."]}
+        ],
+        "nl": [
+        {"lemma": "transmissie", "pos": "noun", "details": {"article": "de", "plural": "transmissies"}, "sentences": ["De transmissie is helder."]}
+        ]
+      }
+    },
+    {
+      "key": "catalog",
+      "gloss": "catalog (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "catalog", "pos": "noun", "details": {"plural": "catalogs"}, "sentences": ["I read the catalog."]}
+        ],
+        "nl": [
+        {"lemma": "catalogus", "pos": "noun", "details": {"article": "de", "plural": "catalogi"}, "sentences": ["Ik lees de catalogus."]}
+        ]
+      }
     }
   ]
 }

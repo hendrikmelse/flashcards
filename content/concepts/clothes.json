@@ -911,6 +911,78 @@
         {"lemma": "panty", "pos": "noun", "details": {"article": "de", "plural": "panty's"}, "sentences": ["Ik draag een panty."]}
         ]
       }
+    },
+    {
+      "key": "collar-noun-kraag",
+      "gloss": "collar (shirt)",
+      "entries": {
+        "en": [
+        {"lemma": "collar (shirt)", "pos": "noun", "details": {"plural": "collars"}, "sentences": ["The collar is white."]}
+        ],
+        "nl": [
+        {"lemma": "kraag", "pos": "noun", "details": {"article": "de", "plural": "kragen"}, "sentences": ["De kraag is wit."]}
+        ]
+      }
+    },
+    {
+      "key": "outfit",
+      "gloss": "outfit (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "outfit", "pos": "noun", "details": {"plural": "outfits"}, "sentences": ["I like your outfit."]}
+        ],
+        "nl": [
+        {"lemma": "outfit", "pos": "noun", "details": {"article": "de", "plural": "outfits"}, "sentences": ["Ik hou van je outfit."]}
+        ]
+      }
+    },
+    {
+      "key": "veil",
+      "gloss": "veil (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "veil", "pos": "noun", "details": {"plural": "veils"}, "sentences": ["The bride wears a veil."]}
+        ],
+        "nl": [
+        {"lemma": "sluier", "pos": "noun", "details": {"article": "de", "plural": "sluiers"}, "sentences": ["De bruid draagt een sluier."]}
+        ]
+      }
+    },
+    {
+      "key": "wool",
+      "gloss": "wool (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "wool", "pos": "noun", "details": {"uncountable": true}, "sentences": ["The sweater is made of wool."]}
+        ],
+        "nl": [
+        {"lemma": "wol", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["De trui is van wol."]}
+        ]
+      }
+    },
+    {
+      "key": "cape",
+      "gloss": "cape (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "cape", "pos": "noun", "details": {"plural": "capes"}, "sentences": ["He wears a cape."]}
+        ],
+        "nl": [
+        {"lemma": "cape", "pos": "noun", "details": {"article": "de", "plural": "capes"}, "sentences": ["Hij draagt een cape."]}
+        ]
+      }
+    },
+    {
+      "key": "robe",
+      "gloss": "robe (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "robe", "pos": "noun", "details": {"plural": "robes"}, "sentences": ["He wears a robe."]}
+        ],
+        "nl": [
+        {"lemma": "gewaad", "pos": "noun", "details": {"article": "het", "plural": "gewaden"}, "sentences": ["Hij draagt een gewaad."]}
+        ]
+      }
     }
   ]
 }

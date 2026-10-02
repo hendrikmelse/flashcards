@@ -328,7 +328,7 @@
       }
     },
     {
-      "key": "empty",
+      "key": "empty-adjective",
       "gloss": "empty (containing nothing)",
       "entries": {
         "en": [
@@ -2275,7 +2275,7 @@
       }
     },
     {
-      "key": "professional",
+      "key": "professional-adjective",
       "gloss": "professional (adjective)",
       "entries": {
         "en": [
@@ -5367,6 +5367,366 @@
         ],
         "nl": [
         {"lemma": "objectief", "pos": "adjective", "sentences": ["Hij is objectief."]}
+        ]
+      }
+    },
+    {
+      "key": "animal-like",
+      "gloss": "animal-like (adjective)",
+      "entries": {
+        "en": [
+        {"lemma": "animal-like", "pos": "adjective", "sentences": ["The sound is animal-like."]}
+        ],
+        "nl": [
+        {"lemma": "dierlijk", "pos": "adjective", "sentences": ["Het geluid is dierlijk."]}
+        ]
+      }
+    },
+    {
+      "key": "colorful",
+      "gloss": "colorful (adjective)",
+      "entries": {
+        "en": [
+        {"lemma": "colorful", "pos": "adjective", "sentences": ["The bird is colorful."]}
+        ],
+        "nl": [
+        {"lemma": "bont", "pos": "adjective", "sentences": ["De vogel is bont."]}
+        ]
+      }
+    },
+    {
+      "key": "imaginary",
+      "gloss": "imaginary (adjective)",
+      "entries": {
+        "en": [
+        {"lemma": "imaginary", "pos": "adjective", "sentences": ["The friend is imaginary."]}
+        ],
+        "nl": [
+        {"lemma": "denkbeeldig", "pos": "adjective", "sentences": ["De vriend is denkbeeldig."]}
+        ]
+      }
+    },
+    {
+      "key": "insignificant",
+      "gloss": "insignificant (adjective)",
+      "entries": {
+        "en": [
+        {"lemma": "insignificant", "pos": "adjective", "sentences": ["The problem is insignificant."]}
+        ],
+        "nl": [
+        {"lemma": "nietig", "pos": "adjective", "sentences": ["Het probleem is nietig."]}
+        ]
+      }
+    },
+    {
+      "key": "unwanted",
+      "gloss": "unwanted (adjective)",
+      "entries": {
+        "en": [
+        {"lemma": "unwanted", "pos": "adjective", "sentences": ["The guest is unwanted."]}
+        ],
+        "nl": [
+        {"lemma": "ongewenst", "pos": "adjective", "sentences": ["De gast is ongewenst."]}
+        ]
+      }
+    },
+    {
+      "key": "invincible",
+      "gloss": "invincible (adjective)",
+      "entries": {
+        "en": [
+        {"lemma": "invincible", "pos": "adjective", "sentences": ["The army is invincible."]}
+        ],
+        "nl": [
+        {"lemma": "onoverwinnelijk", "pos": "adjective", "sentences": ["Het leger is onoverwinnelijk."]}
+        ]
+      }
+    },
+    {
+      "key": "defective",
+      "gloss": "defective (adjective)",
+      "entries": {
+        "en": [
+        {"lemma": "defective", "pos": "adjective", "sentences": ["The phone is defective."]}
+        ],
+        "nl": [
+        {"lemma": "defect", "pos": "adjective", "sentences": ["De telefoon is defect."]}
+        ]
+      }
+    },
+    {
+      "key": "triple",
+      "gloss": "triple (adjective)",
+      "entries": {
+        "en": [
+        {"lemma": "triple", "pos": "adjective", "sentences": ["The price is triple."]}
+        ],
+        "nl": [
+        {"lemma": "drievoudig", "pos": "adjective", "sentences": ["De prijs is drievoudig."]}
+        ]
+      }
+    },
+    {
+      "key": "defenseless",
+      "gloss": "defenseless (adjective)",
+      "entries": {
+        "en": [
+        {"lemma": "defenseless", "pos": "adjective", "sentences": ["The child is defenseless."]}
+        ],
+        "nl": [
+        {"lemma": "weerloos", "pos": "adjective", "sentences": ["Het kind is weerloos."]}
+        ]
+      }
+    },
+    {
+      "key": "everyday",
+      "gloss": "everyday (adjective)",
+      "entries": {
+        "en": [
+        {"lemma": "everyday", "pos": "adjective", "sentences": ["This is an everyday event."]}
+        ],
+        "nl": [
+        {"lemma": "alledaags", "pos": "adjective", "sentences": ["Dit is een alledaagse gebeurtenis."]}
+        ]
+      }
+    },
+    {
+      "key": "disastrous",
+      "gloss": "disastrous (adjective)",
+      "entries": {
+        "en": [
+        {"lemma": "disastrous", "pos": "adjective", "sentences": ["The result is disastrous."]}
+        ],
+        "nl": [
+        {"lemma": "rampzalig", "pos": "adjective", "sentences": ["Het resultaat is rampzalig."]}
+        ]
+      }
+    },
+    {
+      "key": "inconspicuous",
+      "gloss": "inconspicuous (adjective)",
+      "entries": {
+        "en": [
+        {"lemma": "inconspicuous", "pos": "adjective", "sentences": ["He is inconspicuous."]}
+        ],
+        "nl": [
+        {"lemma": "onopvallend", "pos": "adjective", "sentences": ["Hij is onopvallend."]}
+        ]
+      }
+    },
+    {
+      "key": "nocturnal",
+      "gloss": "nocturnal (adjective)",
+      "entries": {
+        "en": [
+        {"lemma": "nocturnal", "pos": "adjective", "sentences": ["The owl is nocturnal."]}
+        ],
+        "nl": [
+        {"lemma": "nachtelijk", "pos": "adjective", "sentences": ["De uil is nachtelijk."]}
+        ]
+      }
+    },
+    {
+      "key": "relative-adjective",
+      "gloss": "relative (adjective)",
+      "entries": {
+        "en": [
+        {"lemma": "relative", "pos": "adjective", "sentences": ["The price is relative."]}
+        ],
+        "nl": [
+        {"lemma": "relatief", "pos": "adjective", "sentences": ["De prijs is relatief."]}
+        ]
+      }
+    },
+    {
+      "key": "individual-adjective",
+      "gloss": "individual (adjective)",
+      "entries": {
+        "en": [
+        {"lemma": "individual", "pos": "adjective", "sentences": ["This is an individual choice."]}
+        ],
+        "nl": [
+        {"lemma": "individueel", "pos": "adjective", "sentences": ["Dit is een individuele keuze."]}
+        ]
+      }
+    },
+    {
+      "key": "unnatural",
+      "gloss": "unnatural (adjective)",
+      "entries": {
+        "en": [
+        {"lemma": "unnatural", "pos": "adjective", "sentences": ["The color is unnatural."]}
+        ],
+        "nl": [
+        {"lemma": "onnatuurlijk", "pos": "adjective", "sentences": ["De kleur is onnatuurlijk."]}
+        ]
+      }
+    },
+    {
+      "key": "perfectly-ordinary",
+      "gloss": "perfectly ordinary (adjective)",
+      "entries": {
+        "en": [
+        {"lemma": "perfectly ordinary", "pos": "adjective", "sentences": ["It is perfectly ordinary."]}
+        ],
+        "nl": [
+        {"lemma": "doodgewoon", "pos": "adjective", "sentences": ["Het is doodgewoon."]}
+        ]
+      }
+    },
+    {
+      "key": "critical",
+      "gloss": "critical (adjective)",
+      "entries": {
+        "en": [
+        {"lemma": "critical", "pos": "adjective", "sentences": ["He is critical."]}
+        ],
+        "nl": [
+        {"lemma": "kritisch", "pos": "adjective", "sentences": ["Hij is kritisch."]}
+        ]
+      }
+    },
+    {
+      "key": "regional",
+      "gloss": "regional (adjective)",
+      "entries": {
+        "en": [
+        {"lemma": "regional", "pos": "adjective", "sentences": ["This is a regional dish."]}
+        ],
+        "nl": [
+        {"lemma": "regionaal", "pos": "adjective", "sentences": ["Dit is een regionaal gerecht."]}
+        ]
+      }
+    },
+    {
+      "key": "potential",
+      "gloss": "potential (adjective)",
+      "entries": {
+        "en": [
+        {"lemma": "potential", "pos": "adjective", "sentences": ["This is a potential problem."]}
+        ],
+        "nl": [
+        {"lemma": "potentieel", "pos": "adjective", "sentences": ["Dit is een potentieel probleem."]}
+        ]
+      }
+    },
+    {
+      "key": "experimental",
+      "gloss": "experimental (adjective)",
+      "entries": {
+        "en": [
+        {"lemma": "experimental", "pos": "adjective", "sentences": ["This is an experimental film."]}
+        ],
+        "nl": [
+        {"lemma": "experimenteel", "pos": "adjective", "sentences": ["Dit is een experimentele film."]}
+        ]
+      }
+    },
+    {
+      "key": "drastic",
+      "gloss": "drastic (adjective)",
+      "entries": {
+        "en": [
+        {"lemma": "drastic", "pos": "adjective", "sentences": ["The change is drastic."]}
+        ],
+        "nl": [
+        {"lemma": "drastisch", "pos": "adjective", "sentences": ["De verandering is drastisch."]}
+        ]
+      }
+    },
+    {
+      "key": "concrete-adjective",
+      "gloss": "concrete (adjective)",
+      "entries": {
+        "en": [
+        {"lemma": "concrete", "pos": "adjective", "sentences": ["I need a concrete example."]}
+        ],
+        "nl": [
+        {"lemma": "concreet", "pos": "adjective", "sentences": ["Ik heb een concreet voorbeeld nodig."]}
+        ]
+      }
+    },
+    {
+      "key": "finite",
+      "gloss": "finite (adjective)",
+      "entries": {
+        "en": [
+        {"lemma": "finite", "pos": "adjective", "sentences": ["The supply is finite."]}
+        ],
+        "nl": [
+        {"lemma": "eindig", "pos": "adjective", "sentences": ["De voorraad is eindig."]}
+        ]
+      }
+    },
+    {
+      "key": "strategic",
+      "gloss": "strategic (adjective)",
+      "entries": {
+        "en": [
+        {"lemma": "strategic", "pos": "adjective", "sentences": ["This is a strategic choice."]}
+        ],
+        "nl": [
+        {"lemma": "strategisch", "pos": "adjective", "sentences": ["Dit is een strategische keuze."]}
+        ]
+      }
+    },
+    {
+      "key": "unconditional",
+      "gloss": "unconditional (adjective)",
+      "entries": {
+        "en": [
+        {"lemma": "unconditional", "pos": "adjective", "sentences": ["The love is unconditional."]}
+        ],
+        "nl": [
+        {"lemma": "onvoorwaardelijk", "pos": "adjective", "sentences": ["De liefde is onvoorwaardelijk."]}
+        ]
+      }
+    },
+    {
+      "key": "operational",
+      "gloss": "operational (adjective)",
+      "entries": {
+        "en": [
+        {"lemma": "operational", "pos": "adjective", "sentences": ["The system is operational."]}
+        ],
+        "nl": [
+        {"lemma": "operationeel", "pos": "adjective", "sentences": ["Het systeem is operationeel."]}
+        ]
+      }
+    },
+    {
+      "key": "domestic",
+      "gloss": "domestic (adjective)",
+      "entries": {
+        "en": [
+        {"lemma": "domestic", "pos": "adjective", "sentences": ["The atmosphere is domestic."]}
+        ],
+        "nl": [
+        {"lemma": "huiselijk", "pos": "adjective", "sentences": ["De sfeer is huiselijk."]}
+        ]
+      }
+    },
+    {
+      "key": "sensational",
+      "gloss": "sensational (adjective)",
+      "entries": {
+        "en": [
+        {"lemma": "sensational", "pos": "adjective", "sentences": ["The news is sensational."]}
+        ],
+        "nl": [
+        {"lemma": "sensationeel", "pos": "adjective", "sentences": ["Het nieuws is sensationeel."]}
+        ]
+      }
+    },
+    {
+      "key": "fundamental",
+      "gloss": "fundamental (adjective)",
+      "entries": {
+        "en": [
+        {"lemma": "fundamental", "pos": "adjective", "sentences": ["This is a fundamental question."]}
+        ],
+        "nl": [
+        {"lemma": "fundamenteel", "pos": "adjective", "sentences": ["Dit is een fundamentele vraag."]}
         ]
       }
     }

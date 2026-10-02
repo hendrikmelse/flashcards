@@ -421,7 +421,7 @@
       }
     },
     {
-      "key": "exercise",
+      "key": "exercise-noun",
       "gloss": "exercise (noun)",
       "entries": {
         "en": [
@@ -1417,7 +1417,7 @@
       }
     },
     {
-      "key": "concrete",
+      "key": "concrete-noun",
       "gloss": "concrete (noun)",
       "entries": {
         "en": [
@@ -1593,6 +1593,222 @@
         ],
         "nl": [
         {"lemma": "opgraving", "pos": "noun", "details": {"article": "de", "plural": "opgravingen"}, "sentences": ["De opgraving duurt een jaar."]}
+        ]
+      }
+    },
+    {
+      "key": "coal",
+      "gloss": "coal (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "coal", "pos": "noun", "details": {"uncountable": true}, "sentences": ["The stove burns coal."]}
+        ],
+        "nl": [
+        {"lemma": "kolen", "pos": "noun", "details": {"article": "de", "pluralOnly": true}, "sentences": ["De kachel brandt op kolen."]}
+        ]
+      }
+    },
+    {
+      "key": "rubber",
+      "gloss": "rubber (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "rubber", "pos": "noun", "details": {"uncountable": true}, "sentences": ["The tire is made of rubber."]}
+        ],
+        "nl": [
+        {"lemma": "rubber", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["De band is van rubber."]}
+        ]
+      }
+    },
+    {
+      "key": "hectare",
+      "gloss": "hectare (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "hectare", "pos": "noun", "details": {"plural": "hectares"}, "sentences": ["The farm is ten hectares."]}
+        ],
+        "nl": [
+        {"lemma": "hectare", "pos": "noun", "details": {"article": "de", "plural": "hectares"}, "sentences": ["De boerderij is tien hectare."]}
+        ]
+      }
+    },
+    {
+      "key": "life-form",
+      "gloss": "life form (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "life form", "pos": "noun", "details": {"plural": "life forms"}, "sentences": ["This is a strange life form."]}
+        ],
+        "nl": [
+        {"lemma": "levensvorm", "pos": "noun", "details": {"article": "de", "plural": "levensvormen"}, "sentences": ["Dit is een vreemde levensvorm."]}
+        ]
+      }
+    },
+    {
+      "key": "medicine-noun-geneeskunde",
+      "gloss": "medicine (science)",
+      "entries": {
+        "en": [
+        {"lemma": "medicine (science)", "pos": "noun", "details": {"uncountable": true}, "sentences": ["I study medicine."]}
+        ],
+        "nl": [
+        {"lemma": "geneeskunde", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Ik studeer geneeskunde."]}
+        ]
+      }
+    },
+    {
+      "key": "mathematical",
+      "gloss": "mathematical (adjective)",
+      "entries": {
+        "en": [
+        {"lemma": "mathematical", "pos": "adjective", "sentences": ["This is a mathematical problem."]}
+        ],
+        "nl": [
+        {"lemma": "wiskundig", "pos": "adjective", "sentences": ["Dit is een wiskundig probleem."]}
+        ]
+      }
+    },
+    {
+      "key": "fiber",
+      "gloss": "fiber (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "fiber", "pos": "noun", "details": {"plural": "fibers"}, "sentences": ["The fiber is strong."]}
+        ],
+        "nl": [
+        {"lemma": "vezel", "pos": "noun", "details": {"article": "de", "plural": "vezels"}, "sentences": ["De vezel is sterk."]}
+        ]
+      }
+    },
+    {
+      "key": "revise",
+      "gloss": "revise (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "revise", "pos": "verb", "details": {"past": "revised", "participle": "revised"}, "sentences": ["I revise the text."]}
+        ],
+        "nl": [
+        {"lemma": "herzien", "pos": "verb", "details": {"pastSingular": "herzag", "pastPlural": "herzagen", "participle": "herzien", "auxiliary": "hebben"}, "sentences": ["Ik herzie de tekst."]}
+        ]
+      }
+    },
+    {
+      "key": "academic",
+      "gloss": "academic (adjective)",
+      "entries": {
+        "en": [
+        {"lemma": "academic", "pos": "adjective", "sentences": ["This is an academic question."]}
+        ],
+        "nl": [
+        {"lemma": "academisch", "pos": "adjective", "sentences": ["Dit is een academische vraag."]}
+        ]
+      }
+    },
+    {
+      "key": "faculty",
+      "gloss": "faculty (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "faculty", "pos": "noun", "details": {"plural": "faculties"}, "sentences": ["The faculty is large."]}
+        ],
+        "nl": [
+        {"lemma": "faculteit", "pos": "noun", "details": {"article": "de", "plural": "faculteiten"}, "sentences": ["De faculteit is groot."]}
+        ]
+      }
+    },
+    {
+      "key": "particle",
+      "gloss": "particle (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "particle", "pos": "noun", "details": {"plural": "particles"}, "sentences": ["The particle is small."]}
+        ],
+        "nl": [
+        {"lemma": "deeltje", "pos": "noun", "details": {"article": "het", "plural": "deeltjes"}, "sentences": ["Het deeltje is klein."]}
+        ]
+      }
+    },
+    {
+      "key": "infrared",
+      "gloss": "infrared (adjective)",
+      "entries": {
+        "en": [
+        {"lemma": "infrared", "pos": "adjective", "sentences": ["The camera is infrared."]}
+        ],
+        "nl": [
+        {"lemma": "infrarood", "pos": "adjective", "sentences": ["De camera is infrarood."]}
+        ]
+      }
+    },
+    {
+      "key": "boarding-school",
+      "gloss": "boarding school (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "boarding school", "pos": "noun", "details": {"plural": "boarding schools"}, "sentences": ["He goes to boarding school."]}
+        ],
+        "nl": [
+        {"lemma": "kostschool", "pos": "noun", "details": {"article": "de", "plural": "kostscholen"}, "sentences": ["Hij gaat naar een kostschool."]}
+        ]
+      }
+    },
+    {
+      "key": "time-machine",
+      "gloss": "time machine (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "time machine", "pos": "noun", "details": {"plural": "time machines"}, "sentences": ["The time machine is a dream."]}
+        ],
+        "nl": [
+        {"lemma": "tijdmachine", "pos": "noun", "details": {"article": "de", "plural": "tijdmachines"}, "sentences": ["De tijdmachine is een droom."]}
+        ]
+      }
+    },
+    {
+      "key": "exploration",
+      "gloss": "exploration (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "exploration", "pos": "noun", "details": {"plural": "explorations"}, "sentences": ["The exploration starts tomorrow."]}
+        ],
+        "nl": [
+        {"lemma": "verkenning", "pos": "noun", "details": {"article": "de", "plural": "verkenningen"}, "sentences": ["De verkenning begint morgen."]}
+        ]
+      }
+    },
+    {
+      "key": "multiply",
+      "gloss": "multiply (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "multiply", "pos": "verb", "details": {"past": "multiplied", "participle": "multiplied"}, "sentences": ["I multiply two by three."]}
+        ],
+        "nl": [
+        {"lemma": "vermenigvuldigen", "pos": "verb", "details": {"pastSingular": "vermenigvuldigde", "pastPlural": "vermenigvuldigden", "participle": "vermenigvuldigd", "auxiliary": "hebben"}, "sentences": ["Ik vermenigvuldig twee met drie."]}
+        ]
+      }
+    },
+    {
+      "key": "mutation",
+      "gloss": "mutation (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "mutation", "pos": "noun", "details": {"plural": "mutations"}, "sentences": ["The mutation is rare."]}
+        ],
+        "nl": [
+        {"lemma": "mutatie", "pos": "noun", "details": {"article": "de", "plural": "mutaties"}, "sentences": ["De mutatie is zeldzaam."]}
+        ]
+      }
+    },
+    {
+      "key": "synthetic",
+      "gloss": "synthetic (adjective)",
+      "entries": {
+        "en": [
+        {"lemma": "synthetic", "pos": "adjective", "sentences": ["The fabric is synthetic."]}
+        ],
+        "nl": [
+        {"lemma": "synthetisch", "pos": "adjective", "sentences": ["De stof is synthetisch."]}
         ]
       }
     }

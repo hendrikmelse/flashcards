@@ -911,6 +911,66 @@
         {"lemma": "leverancier", "pos": "noun", "details": {"article": "de", "plural": "leveranciers"}, "sentences": ["De leverancier levert de goederen."]}
         ]
       }
+    },
+    {
+      "key": "slum",
+      "gloss": "slum (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "slum", "pos": "noun", "details": {"plural": "slums"}, "sentences": ["They live in a slum."]}
+        ],
+        "nl": [
+        {"lemma": "krot", "pos": "noun", "details": {"article": "het", "plural": "krotten"}, "sentences": ["Zij wonen in een krot."]}
+        ]
+      }
+    },
+    {
+      "key": "terrace",
+      "gloss": "terrace (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "terrace", "pos": "noun", "details": {"plural": "terraces"}, "sentences": ["We drink coffee on the terrace."]}
+        ],
+        "nl": [
+        {"lemma": "terras", "pos": "noun", "details": {"article": "het", "plural": "terrassen"}, "sentences": ["Wij drinken koffie op het terras."]}
+        ]
+      }
+    },
+    {
+      "key": "bargain",
+      "gloss": "bargain (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "bargain", "pos": "noun", "details": {"plural": "bargains"}, "sentences": ["That is a bargain."]}
+        ],
+        "nl": [
+        {"lemma": "koopje", "pos": "noun", "details": {"article": "het", "plural": "koopjes"}, "sentences": ["Dat is een koopje."]}
+        ]
+      }
+    },
+    {
+      "key": "suburb",
+      "gloss": "suburb (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "suburb", "pos": "noun", "details": {"plural": "suburbs"}, "sentences": ["We live in a suburb."]}
+        ],
+        "nl": [
+        {"lemma": "buitenwijk", "pos": "noun", "details": {"article": "de", "plural": "buitenwijken"}, "sentences": ["Wij wonen in een buitenwijk."]}
+        ]
+      }
+    },
+    {
+      "key": "sell-out",
+      "gloss": "sell out (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "sell out", "pos": "verb", "details": {"past": "sold out", "participle": "sold out"}, "sentences": ["The shop sells out the tickets."]}
+        ],
+        "nl": [
+        {"lemma": "uitverkopen", "pos": "verb", "details": {"pastSingular": "verkocht uit", "pastPlural": "verkochten uit", "participle": "uitverkocht", "auxiliary": "hebben"}, "sentences": ["De winkel verkoopt de kaartjes uit."]}
+        ]
+      }
     }
   ]
 }

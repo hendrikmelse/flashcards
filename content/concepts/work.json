@@ -253,7 +253,7 @@
       }
     },
     {
-      "key": "report-noun",
+      "key": "report-noun-rapport",
       "gloss": "report (noun)",
       "entries": {
         "en": [
@@ -385,7 +385,7 @@
       }
     },
     {
-      "key": "writer",
+      "key": "writer-noun-schrijver",
       "gloss": "writer (noun)",
       "entries": {
         "en": [
@@ -601,7 +601,7 @@
       }
     },
     {
-      "key": "journalist",
+      "key": "journalist-noun-journalist",
       "gloss": "journalist (noun)",
       "entries": {
         "en": [
@@ -1669,7 +1669,7 @@
       }
     },
     {
-      "key": "transfer",
+      "key": "transfer-verb-overplaatsen",
       "gloss": "transfer (verb)",
       "entries": {
         "en": [
@@ -1849,7 +1849,7 @@
       }
     },
     {
-      "key": "token",
+      "key": "token-noun-penning",
       "gloss": "token (noun)",
       "entries": {
         "en": [
@@ -3037,7 +3037,7 @@
       }
     },
     {
-      "key": "stamp",
+      "key": "stamp-noun-stempel",
       "gloss": "stamp (noun)",
       "entries": {
         "en": [
@@ -3909,6 +3909,354 @@
         ],
         "nl": [
         {"lemma": "uitbreiden", "pos": "verb", "details": {"pastSingular": "breidde uit", "pastPlural": "breidden uit", "participle": "uitgebreid", "auxiliary": "hebben"}, "sentences": ["Wij breiden de winkel uit."]}
+        ]
+      }
+    },
+    {
+      "key": "nominate",
+      "gloss": "nominate (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "nominate", "pos": "verb", "details": {"past": "nominated", "participle": "nominated"}, "sentences": ["They nominate him."]}
+        ],
+        "nl": [
+        {"lemma": "nomineren", "pos": "verb", "details": {"pastSingular": "nomineerde", "pastPlural": "nomineerden", "participle": "genomineerd", "auxiliary": "hebben"}, "sentences": ["Zij nomineren hem."]}
+        ]
+      }
+    },
+    {
+      "key": "transfer-verb-overmaken",
+      "gloss": "transfer (money)",
+      "entries": {
+        "en": [
+        {"lemma": "transfer (money)", "pos": "verb", "details": {"past": "transfered", "participle": "transfered"}, "sentences": ["I transfer the money."]}
+        ],
+        "nl": [
+        {"lemma": "overmaken", "pos": "verb", "details": {"pastSingular": "maakte over", "pastPlural": "maakten over", "participle": "overgemaakt", "auxiliary": "hebben"}, "sentences": ["Ik maak het geld over."]}
+        ]
+      }
+    },
+    {
+      "key": "cash",
+      "gloss": "cash (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "cash", "pos": "noun", "details": {"uncountable": true}, "sentences": ["I pay in cash."]}
+        ],
+        "nl": [
+        {"lemma": "contanten", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Ik betaal met contanten."]}
+        ]
+      }
+    },
+    {
+      "key": "premium",
+      "gloss": "premium (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "premium", "pos": "noun", "details": {"plural": "premiums"}, "sentences": ["I pay a premium."]}
+        ],
+        "nl": [
+        {"lemma": "premie", "pos": "noun", "details": {"article": "de", "plural": "premies"}, "sentences": ["Ik betaal een premie."]}
+        ]
+      }
+    },
+    {
+      "key": "writer-noun-schrijfster",
+      "gloss": "writer (female)",
+      "entries": {
+        "en": [
+        {"lemma": "writer (female)", "pos": "noun", "details": {"plural": "writers"}, "sentences": ["The writer writes a novel."]}
+        ],
+        "nl": [
+        {"lemma": "schrijfster", "pos": "noun", "details": {"article": "de", "plural": "schrijfsters"}, "sentences": ["De schrijfster schrijft een roman."]}
+        ]
+      }
+    },
+    {
+      "key": "journalist-noun-journaliste",
+      "gloss": "journalist (female)",
+      "entries": {
+        "en": [
+        {"lemma": "journalist (female)", "pos": "noun", "details": {"plural": "journalists"}, "sentences": ["The journalist asks a question."]}
+        ],
+        "nl": [
+        {"lemma": "journaliste", "pos": "noun", "details": {"article": "de", "plural": "journalistes"}, "sentences": ["De journaliste stelt een vraag."]}
+        ]
+      }
+    },
+    {
+      "key": "resume",
+      "gloss": "resume (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "resume", "pos": "noun", "details": {"plural": "resumes"}, "sentences": ["I send my resume."]}
+        ],
+        "nl": [
+        {"lemma": "cv", "pos": "noun", "details": {"article": "het", "plural": "cv's"}, "sentences": ["Ik stuur mijn cv."]}
+        ]
+      }
+    },
+    {
+      "key": "supervisor",
+      "gloss": "supervisor (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "supervisor", "pos": "noun", "details": {"plural": "supervisors"}, "sentences": ["The supervisor checks the work."]}
+        ],
+        "nl": [
+        {"lemma": "opzichter", "pos": "noun", "details": {"article": "de", "plural": "opzichters"}, "sentences": ["De opzichter controleert het werk."]}
+        ]
+      }
+    },
+    {
+      "key": "interpreter",
+      "gloss": "interpreter (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "interpreter", "pos": "noun", "details": {"plural": "interpreters"}, "sentences": ["The interpreter translates."]}
+        ],
+        "nl": [
+        {"lemma": "tolk", "pos": "noun", "details": {"article": "de", "plural": "tolken"}, "sentences": ["De tolk vertaalt."]}
+        ]
+      }
+    },
+    {
+      "key": "contractor",
+      "gloss": "contractor (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "contractor", "pos": "noun", "details": {"plural": "contractors"}, "sentences": ["The contractor builds a house."]}
+        ],
+        "nl": [
+        {"lemma": "aannemer", "pos": "noun", "details": {"article": "de", "plural": "aannemers"}, "sentences": ["De aannemer bouwt een huis."]}
+        ]
+      }
+    },
+    {
+      "key": "association",
+      "gloss": "association (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "association", "pos": "noun", "details": {"plural": "associations"}, "sentences": ["I am a member of the association."]}
+        ],
+        "nl": [
+        {"lemma": "vereniging", "pos": "noun", "details": {"article": "de", "plural": "verenigingen"}, "sentences": ["Ik ben lid van de vereniging."]}
+        ]
+      }
+    },
+    {
+      "key": "capital-noun-kapitaal",
+      "gloss": "capital (noun, kapitaal)",
+      "entries": {
+        "en": [
+        {"lemma": "capital", "pos": "noun", "details": {"plural": "capitals"}, "sentences": ["The company needs capital."]}
+        ],
+        "nl": [
+        {"lemma": "kapitaal", "pos": "noun", "details": {"article": "het", "plural": "kapitalen"}, "sentences": ["Het bedrijf heeft kapitaal nodig."]}
+        ]
+      }
+    },
+    {
+      "key": "shareholder",
+      "gloss": "shareholder (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "shareholder", "pos": "noun", "details": {"plural": "shareholders"}, "sentences": ["The shareholder votes."]}
+        ],
+        "nl": [
+        {"lemma": "aandeelhouder", "pos": "noun", "details": {"article": "de", "plural": "aandeelhouders"}, "sentences": ["De aandeelhouder stemt."]}
+        ]
+      }
+    },
+    {
+      "key": "down-payment",
+      "gloss": "down payment (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "down payment", "pos": "noun", "details": {"plural": "down payments"}, "sentences": ["I make a down payment."]}
+        ],
+        "nl": [
+        {"lemma": "aanbetaling", "pos": "noun", "details": {"article": "de", "plural": "aanbetalingen"}, "sentences": ["Ik doe een aanbetaling."]}
+        ]
+      }
+    },
+    {
+      "key": "pay-out",
+      "gloss": "pay out (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "pay out", "pos": "verb", "details": {"past": "paid out", "participle": "paid out"}, "sentences": ["They pay out the money."]}
+        ],
+        "nl": [
+        {"lemma": "uitbetalen", "pos": "verb", "details": {"pastSingular": "betaalde uit", "pastPlural": "betaalden uit", "participle": "uitbetaald", "auxiliary": "hebben"}, "sentences": ["Zij betalen het geld uit."]}
+        ]
+      }
+    },
+    {
+      "key": "business-partner",
+      "gloss": "business partner (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "business partner", "pos": "noun", "details": {"plural": "business partners"}, "sentences": ["My business partner calls."]}
+        ],
+        "nl": [
+        {"lemma": "zakenpartner", "pos": "noun", "details": {"article": "de", "plural": "zakenpartners"}, "sentences": ["Mijn zakenpartner belt."]}
+        ]
+      }
+    },
+    {
+      "key": "industrial",
+      "gloss": "industrial (adjective)",
+      "entries": {
+        "en": [
+        {"lemma": "industrial", "pos": "adjective", "sentences": ["This is an industrial area."]}
+        ],
+        "nl": [
+        {"lemma": "industrieel", "pos": "adjective", "sentences": ["Dit is een industrieel gebied."]}
+        ]
+      }
+    },
+    {
+      "key": "night-shift",
+      "gloss": "night shift (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "night shift", "pos": "noun", "details": {"plural": "night shifts"}, "sentences": ["I work a night shift."]}
+        ],
+        "nl": [
+        {"lemma": "nachtdienst", "pos": "noun", "details": {"article": "de", "plural": "nachtdiensten"}, "sentences": ["Ik werk een nachtdienst."]}
+        ]
+      }
+    },
+    {
+      "key": "business-trip",
+      "gloss": "business trip (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "business trip", "pos": "noun", "details": {"plural": "business trips"}, "sentences": ["I go on a business trip."]}
+        ],
+        "nl": [
+        {"lemma": "zakenreis", "pos": "noun", "details": {"article": "de", "plural": "zakenreizen"}, "sentences": ["Ik ga op zakenreis."]}
+        ]
+      }
+    },
+    {
+      "key": "business-card",
+      "gloss": "business card (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "business card", "pos": "noun", "details": {"plural": "business cards"}, "sentences": ["I give him my business card."]}
+        ],
+        "nl": [
+        {"lemma": "visitekaartje", "pos": "noun", "details": {"article": "het", "plural": "visitekaartjes"}, "sentences": ["Ik geef hem mijn visitekaartje."]}
+        ]
+      }
+    },
+    {
+      "key": "professional-noun",
+      "gloss": "professional (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "professional", "pos": "noun", "details": {"plural": "professionals"}, "sentences": ["He is a professional."]}
+        ],
+        "nl": [
+        {"lemma": "professional", "pos": "noun", "details": {"article": "de", "plural": "professionals"}, "sentences": ["Hij is een professional."]}
+        ]
+      }
+    },
+    {
+      "key": "assemble",
+      "gloss": "assemble (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "assemble", "pos": "verb", "details": {"past": "assembled", "participle": "assembled"}, "sentences": ["I assemble the cabinet."]}
+        ],
+        "nl": [
+        {"lemma": "monteren", "pos": "verb", "details": {"pastSingular": "monteerde", "pastPlural": "monteerden", "participle": "gemonteerd", "auxiliary": "hebben"}, "sentences": ["Ik monteer de kast."]}
+        ]
+      }
+    },
+    {
+      "key": "retire",
+      "gloss": "retire (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "retire", "pos": "verb", "details": {"past": "retired", "participle": "retired"}, "sentences": ["He retires at sixty-five."]}
+        ],
+        "nl": [
+        {"lemma": "pensioneren", "pos": "verb", "details": {"pastSingular": "pensioneerde", "pastPlural": "pensioneerden", "participle": "gepensioneerd", "auxiliary": "hebben"}, "sentences": ["Hij pensioneert op zijn vijfenzestigste."]}
+        ]
+      }
+    },
+    {
+      "key": "critic",
+      "gloss": "critic (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "critic", "pos": "noun", "details": {"plural": "critics"}, "sentences": ["The critic writes a review."]}
+        ],
+        "nl": [
+        {"lemma": "criticus", "pos": "noun", "details": {"article": "de", "plural": "critici"}, "sentences": ["De criticus schrijft een recensie."]}
+        ]
+      }
+    },
+    {
+      "key": "job-application",
+      "gloss": "job application (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "job application", "pos": "noun", "details": {"plural": "job applications"}, "sentences": ["I write a job application."]}
+        ],
+        "nl": [
+        {"lemma": "sollicitatie", "pos": "noun", "details": {"article": "de", "plural": "sollicitaties"}, "sentences": ["Ik schrijf een sollicitatie."]}
+        ]
+      }
+    },
+    {
+      "key": "resign",
+      "gloss": "resign (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "resign", "pos": "verb", "details": {"past": "resigned", "participle": "resigned"}, "sentences": ["The minister resigns."]}
+        ],
+        "nl": [
+        {"lemma": "aftreden", "pos": "verb", "details": {"pastSingular": "trad af", "pastPlural": "traden af", "participle": "afgetreden", "auxiliary": "zijn"}, "sentences": ["De minister treedt af."]}
+        ]
+      }
+    },
+    {
+      "key": "internship",
+      "gloss": "internship (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "internship", "pos": "noun", "details": {"plural": "internships"}, "sentences": ["I do an internship."]}
+        ],
+        "nl": [
+        {"lemma": "stage", "pos": "noun", "details": {"article": "de", "plural": "stages"}, "sentences": ["Ik loop stage."]}
+        ]
+      }
+    },
+    {
+      "key": "bond",
+      "gloss": "bond (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "bond", "pos": "noun", "details": {"plural": "bonds"}, "sentences": ["I buy a bond."]}
+        ],
+        "nl": [
+        {"lemma": "obligatie", "pos": "noun", "details": {"article": "de", "plural": "obligaties"}, "sentences": ["Ik koop een obligatie."]}
+        ]
+      }
+    },
+    {
+      "key": "obstruct",
+      "gloss": "obstruct (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "obstruct", "pos": "verb", "details": {"past": "obstructed", "participle": "obstructed"}, "sentences": ["They obstruct my work."]}
+        ],
+        "nl": [
+        {"lemma": "tegenwerken", "pos": "verb", "details": {"pastSingular": "werkte tegen", "pastPlural": "werkten tegen", "participle": "tegengewerkt", "auxiliary": "hebben"}, "sentences": ["Zij werken mijn werk tegen."]}
         ]
       }
     }

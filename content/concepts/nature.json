@@ -541,7 +541,7 @@
       }
     },
     {
-      "key": "plant",
+      "key": "plant-noun",
       "gloss": "plant (noun)",
       "entries": {
         "en": [
@@ -1773,6 +1773,222 @@
         ],
         "nl": [
         {"lemma": "klif", "pos": "noun", "details": {"article": "de", "plural": "kliffen"}, "sentences": ["De klif is hoog."]}
+        ]
+      }
+    },
+    {
+      "key": "footprint",
+      "gloss": "footprint (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "footprint", "pos": "noun", "details": {"plural": "footprints"}, "sentences": ["I see a footprint in the sand."]}
+        ],
+        "nl": [
+        {"lemma": "voetafdruk", "pos": "noun", "details": {"article": "de", "plural": "voetafdrukken"}, "sentences": ["Ik zie een voetafdruk in het zand."]}
+        ]
+      }
+    },
+    {
+      "key": "mainland",
+      "gloss": "mainland (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "mainland", "pos": "noun", "details": {"plural": "mainlands"}, "sentences": ["The ship sails to the mainland."]}
+        ],
+        "nl": [
+        {"lemma": "vasteland", "pos": "noun", "details": {"article": "het", "plural": "vastelanden"}, "sentences": ["Het schip vaart naar het vasteland."]}
+        ]
+      }
+    },
+    {
+      "key": "mold",
+      "gloss": "mold (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "mold", "pos": "noun", "details": {"plural": "molds"}, "sentences": ["There is mold on the bread."]}
+        ],
+        "nl": [
+        {"lemma": "schimmel", "pos": "noun", "details": {"article": "de", "plural": "schimmels"}, "sentences": ["Er zit schimmel op het brood."]}
+        ]
+      }
+    },
+    {
+      "key": "footstep",
+      "gloss": "footstep (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "footstep", "pos": "noun", "details": {"plural": "footsteps"}, "sentences": ["I hear a footstep."]}
+        ],
+        "nl": [
+        {"lemma": "voetstap", "pos": "noun", "details": {"article": "de", "plural": "voetstappen"}, "sentences": ["Ik hoor een voetstap."]}
+        ]
+      }
+    },
+    {
+      "key": "shell",
+      "gloss": "shell (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "shell", "pos": "noun", "details": {"plural": "shells"}, "sentences": ["I find a shell on the beach."]}
+        ],
+        "nl": [
+        {"lemma": "schelp", "pos": "noun", "details": {"article": "de", "plural": "schelpen"}, "sentences": ["Ik vind een schelp op het strand."]}
+        ]
+      }
+    },
+    {
+      "key": "eruption",
+      "gloss": "eruption (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "eruption", "pos": "noun", "details": {"plural": "eruptions"}, "sentences": ["The eruption is violent."]}
+        ],
+        "nl": [
+        {"lemma": "uitbarsting", "pos": "noun", "details": {"article": "de", "plural": "uitbarstingen"}, "sentences": ["De uitbarsting is hevig."]}
+        ]
+      }
+    },
+    {
+      "key": "rural",
+      "gloss": "rural (adjective)",
+      "entries": {
+        "en": [
+        {"lemma": "rural", "pos": "adjective", "sentences": ["The area is rural."]}
+        ],
+        "nl": [
+        {"lemma": "landelijk", "pos": "adjective", "sentences": ["Het gebied is landelijk."]}
+        ]
+      }
+    },
+    {
+      "key": "swarm",
+      "gloss": "swarm (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "swarm", "pos": "verb", "details": {"past": "swarmed", "participle": "swarmed"}, "sentences": ["The street swarms with people."]}
+        ],
+        "nl": [
+        {"lemma": "wemelen", "pos": "verb", "details": {"pastSingular": "wemelde", "pastPlural": "wemelden", "participle": "gewemeld", "auxiliary": "hebben"}, "sentences": ["De straat wemelt van de mensen."]}
+        ]
+      }
+    },
+    {
+      "key": "sparkle",
+      "gloss": "sparkle (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "sparkle", "pos": "verb", "details": {"past": "sparkled", "participle": "sparkled"}, "sentences": ["The stars sparkle."]}
+        ],
+        "nl": [
+        {"lemma": "schitteren", "pos": "verb", "details": {"pastSingular": "schitterde", "pastPlural": "schitterden", "participle": "geschitterd", "auxiliary": "hebben"}, "sentences": ["De sterren schitteren."]}
+        ]
+      }
+    },
+    {
+      "key": "weeds",
+      "gloss": "weeds (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "weeds", "pos": "noun", "details": {"uncountable": true}, "sentences": ["There are weeds in the garden."]}
+        ],
+        "nl": [
+        {"lemma": "onkruid", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["Er zit onkruid in de tuin."]}
+        ]
+      }
+    },
+    {
+      "key": "slope",
+      "gloss": "slope (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "slope", "pos": "noun", "details": {"plural": "slopes"}, "sentences": ["The slope is steep."]}
+        ],
+        "nl": [
+        {"lemma": "helling", "pos": "noun", "details": {"article": "de", "plural": "hellingen"}, "sentences": ["De helling is steil."]}
+        ]
+      }
+    },
+    {
+      "key": "plant-verb",
+      "gloss": "plant (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "plant", "pos": "verb", "details": {"past": "planted", "participle": "planted"}, "sentences": ["I plant a tree."]}
+        ],
+        "nl": [
+        {"lemma": "planten", "pos": "verb", "details": {"pastSingular": "plantte", "pastPlural": "plantten", "participle": "geplant", "auxiliary": "hebben"}, "sentences": ["Ik plant een boom."]}
+        ]
+      }
+    },
+    {
+      "key": "pollute",
+      "gloss": "pollute (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "pollute", "pos": "verb", "details": {"past": "polluted", "participle": "polluted"}, "sentences": ["The factory pollutes the river."]}
+        ],
+        "nl": [
+        {"lemma": "vervuilen", "pos": "verb", "details": {"pastSingular": "vervuilde", "pastPlural": "vervuilden", "participle": "vervuild", "auxiliary": "hebben"}, "sentences": ["De fabriek vervuilt de rivier."]}
+        ]
+      }
+    },
+    {
+      "key": "galaxy",
+      "gloss": "galaxy (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "galaxy", "pos": "noun", "details": {"plural": "galaxies"}, "sentences": ["The galaxy is huge."]}
+        ],
+        "nl": [
+        {"lemma": "melkweg", "pos": "noun", "details": {"article": "de", "plural": "melkwegen"}, "sentences": ["De melkweg is enorm."]}
+        ]
+      }
+    },
+    {
+      "key": "flood",
+      "gloss": "flood (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "flood", "pos": "verb", "details": {"past": "flooded", "participle": "flooded"}, "sentences": ["The water floods the street."]}
+        ],
+        "nl": [
+        {"lemma": "overspoelen", "pos": "verb", "details": {"pastSingular": "overspoelde", "pastPlural": "overspoelden", "participle": "overspoeld", "auxiliary": "hebben"}, "sentences": ["Het water overspoelt de straat."]}
+        ]
+      }
+    },
+    {
+      "key": "iceberg",
+      "gloss": "iceberg (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "iceberg", "pos": "noun", "details": {"plural": "icebergs"}, "sentences": ["The ship hits an iceberg."]}
+        ],
+        "nl": [
+        {"lemma": "ijsberg", "pos": "noun", "details": {"article": "de", "plural": "ijsbergen"}, "sentences": ["Het schip raakt een ijsberg."]}
+        ]
+      }
+    },
+    {
+      "key": "tropical",
+      "gloss": "tropical (adjective)",
+      "entries": {
+        "en": [
+        {"lemma": "tropical", "pos": "adjective", "sentences": ["The island is tropical."]}
+        ],
+        "nl": [
+        {"lemma": "tropisch", "pos": "adjective", "sentences": ["Het eiland is tropisch."]}
+        ]
+      }
+    },
+    {
+      "key": "thorn",
+      "gloss": "thorn (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "thorn", "pos": "noun", "details": {"plural": "thorns"}, "sentences": ["The rose has a thorn."]}
+        ],
+        "nl": [
+        {"lemma": "doorn", "pos": "noun", "details": {"article": "de", "plural": "doorns"}, "sentences": ["De roos heeft een doorn."]}
         ]
       }
     }

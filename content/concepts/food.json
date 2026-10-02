@@ -25,7 +25,7 @@
       }
     },
     {
-      "key": "milk",
+      "key": "milk-noun",
       "gloss": "milk (drink)",
       "entries": {
         "en": [
@@ -1657,7 +1657,7 @@
       }
     },
     {
-      "key": "slaughter",
+      "key": "slaughter-verb",
       "gloss": "slaughter (verb)",
       "entries": {
         "en": [
@@ -1861,7 +1861,7 @@
       }
     },
     {
-      "key": "beef",
+      "key": "beef-noun-rund",
       "gloss": "beef (noun)",
       "entries": {
         "en": [
@@ -1989,6 +1989,198 @@
         ],
         "nl": [
         {"lemma": "meloen", "pos": "noun", "details": {"article": "de", "plural": "meloenen"}, "sentences": ["Ik eet een meloen."]}
+        ]
+      }
+    },
+    {
+      "key": "foam",
+      "gloss": "foam (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "foam", "pos": "noun", "details": {"uncountable": true}, "sentences": ["The beer has foam."]}
+        ],
+        "nl": [
+        {"lemma": "schuim", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["Het bier heeft schuim."]}
+        ]
+      }
+    },
+    {
+      "key": "caviar",
+      "gloss": "caviar (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "caviar", "pos": "noun", "details": {"uncountable": true}, "sentences": ["We eat caviar."]}
+        ],
+        "nl": [
+        {"lemma": "kaviaar", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Wij eten kaviaar."]}
+        ]
+      }
+    },
+    {
+      "key": "chocolate-milk",
+      "gloss": "chocolate milk (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "chocolate milk", "pos": "noun", "details": {"uncountable": true}, "sentences": ["I drink chocolate milk."]}
+        ],
+        "nl": [
+        {"lemma": "chocolademelk", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Ik drink chocolademelk."]}
+        ]
+      }
+    },
+    {
+      "key": "pork",
+      "gloss": "pork (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "pork", "pos": "noun", "details": {"uncountable": true}, "sentences": ["I eat pork."]}
+        ],
+        "nl": [
+        {"lemma": "varkensvlees", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["Ik eet varkensvlees."]}
+        ]
+      }
+    },
+    {
+      "key": "berries",
+      "gloss": "berries (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "berries", "pos": "noun", "details": {"pluralOnly": true}, "sentences": ["I pick berries."]}
+        ],
+        "nl": [
+        {"lemma": "bessen", "pos": "noun", "details": {"article": "de", "pluralOnly": true}, "sentences": ["Ik pluk bessen."]}
+        ]
+      }
+    },
+    {
+      "key": "grind",
+      "gloss": "grind (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "grind", "pos": "verb", "details": {"past": "ground", "participle": "ground"}, "sentences": ["I grind the coffee."]}
+        ],
+        "nl": [
+        {"lemma": "malen", "pos": "verb", "details": {"pastSingular": "maalde", "pastPlural": "maalden", "participle": "gemalen", "auxiliary": "hebben"}, "sentences": ["Ik maal de koffie."]}
+        ]
+      }
+    },
+    {
+      "key": "coconut",
+      "gloss": "coconut (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "coconut", "pos": "noun", "details": {"plural": "coconuts"}, "sentences": ["I drink a coconut."]}
+        ],
+        "nl": [
+        {"lemma": "kokosnoot", "pos": "noun", "details": {"article": "de", "plural": "kokosnoten"}, "sentences": ["Ik drink een kokosnoot."]}
+        ]
+      }
+    },
+    {
+      "key": "banquet",
+      "gloss": "banquet (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "banquet", "pos": "noun", "details": {"plural": "banquets"}, "sentences": ["The banquet is on Friday."]}
+        ],
+        "nl": [
+        {"lemma": "banket", "pos": "noun", "details": {"article": "het", "plural": "banketten"}, "sentences": ["Het banket is op vrijdag."]}
+        ]
+      }
+    },
+    {
+      "key": "buffet",
+      "gloss": "buffet (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "buffet", "pos": "noun", "details": {"plural": "buffets"}, "sentences": ["The buffet is open."]}
+        ],
+        "nl": [
+        {"lemma": "buffet", "pos": "noun", "details": {"article": "het", "plural": "buffetten"}, "sentences": ["Het buffet is open."]}
+        ]
+      }
+    },
+    {
+      "key": "pea",
+      "gloss": "pea (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "pea", "pos": "noun", "details": {"plural": "peas"}, "sentences": ["I eat a pea."]}
+        ],
+        "nl": [
+        {"lemma": "erwt", "pos": "noun", "details": {"article": "de", "plural": "erwten"}, "sentences": ["Ik eet een erwt."]}
+        ]
+      }
+    },
+    {
+      "key": "milk-verb",
+      "gloss": "milk (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "milk", "pos": "verb", "details": {"past": "milked", "participle": "milked"}, "sentences": ["The farmer milks the cow."]}
+        ],
+        "nl": [
+        {"lemma": "melken", "pos": "verb", "details": {"pastSingular": "molk", "pastPlural": "molken", "participle": "gemolken", "auxiliary": "hebben"}, "sentences": ["De boer molk de koe."]}
+        ]
+      }
+    },
+    {
+      "key": "whipped-cream",
+      "gloss": "whipped cream (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "whipped cream", "pos": "noun", "details": {"uncountable": true}, "sentences": ["I eat cake with whipped cream."]}
+        ],
+        "nl": [
+        {"lemma": "slagroom", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Ik eet taart met slagroom."]}
+        ]
+      }
+    },
+    {
+      "key": "beef-noun-rundvlees",
+      "gloss": "beef (meat)",
+      "entries": {
+        "en": [
+        {"lemma": "beef (meat)", "pos": "noun", "details": {"uncountable": true}, "sentences": ["I cook beef."]}
+        ],
+        "nl": [
+        {"lemma": "rundvlees", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["Ik kook rundvlees."]}
+        ]
+      }
+    },
+    {
+      "key": "olive",
+      "gloss": "olive (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "olive", "pos": "noun", "details": {"plural": "olives"}, "sentences": ["I eat an olive."]}
+        ],
+        "nl": [
+        {"lemma": "olijf", "pos": "noun", "details": {"article": "de", "plural": "olijven"}, "sentences": ["Ik eet een olijf."]}
+        ]
+      }
+    },
+    {
+      "key": "pickle",
+      "gloss": "pickle (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "pickle", "pos": "noun", "details": {"plural": "pickles"}, "sentences": ["I eat a pickle."]}
+        ],
+        "nl": [
+        {"lemma": "augurk", "pos": "noun", "details": {"article": "de", "plural": "augurken"}, "sentences": ["Ik eet een augurk."]}
+        ]
+      }
+    },
+    {
+      "key": "ration",
+      "gloss": "ration (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "ration", "pos": "noun", "details": {"plural": "rations"}, "sentences": ["Each soldier gets a ration."]}
+        ],
+        "nl": [
+        {"lemma": "rantsoen", "pos": "noun", "details": {"article": "het", "plural": "rantsoenen"}, "sentences": ["Elke soldaat krijgt een rantsoen."]}
         ]
       }
     }

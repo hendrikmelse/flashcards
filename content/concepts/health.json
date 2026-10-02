@@ -169,7 +169,7 @@
       }
     },
     {
-      "key": "medicine",
+      "key": "medicine-noun-medicijn",
       "gloss": "medicine (noun)",
       "entries": {
         "en": [
@@ -1297,7 +1297,7 @@
       }
     },
     {
-      "key": "shiver",
+      "key": "shiver-verb",
       "gloss": "shiver (verb)",
       "entries": {
         "en": [
@@ -2049,6 +2049,234 @@
         ],
         "nl": [
         {"lemma": "pleister", "pos": "noun", "details": {"article": "de", "plural": "pleisters"}, "sentences": ["Ik doe een pleister op."]}
+        ]
+      }
+    },
+    {
+      "key": "cramp",
+      "gloss": "cramp (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "cramp", "pos": "noun", "details": {"plural": "cramps"}, "sentences": ["I have a cramp in my leg."]}
+        ],
+        "nl": [
+        {"lemma": "kramp", "pos": "noun", "details": {"article": "de", "plural": "krampen"}, "sentences": ["Ik heb kramp in mijn been."]}
+        ]
+      }
+    },
+    {
+      "key": "sneeze",
+      "gloss": "sneeze (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "sneeze", "pos": "verb", "details": {"past": "sneezed", "participle": "sneezed"}, "sentences": ["I sneeze."]}
+        ],
+        "nl": [
+        {"lemma": "niezen", "pos": "verb", "details": {"pastSingular": "niesde", "pastPlural": "niesden", "participle": "geniesd", "auxiliary": "hebben"}, "sentences": ["Ik nies."]}
+        ]
+      }
+    },
+    {
+      "key": "handicap",
+      "gloss": "handicap (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "handicap", "pos": "noun", "details": {"plural": "handicaps"}, "sentences": ["He has a handicap."]}
+        ],
+        "nl": [
+        {"lemma": "handicap", "pos": "noun", "details": {"article": "de", "plural": "handicaps"}, "sentences": ["Hij heeft een handicap."]}
+        ]
+      }
+    },
+    {
+      "key": "x-ray",
+      "gloss": "X-ray (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "X-ray", "pos": "noun", "details": {"plural": "X-rays"}, "sentences": ["I get an X-ray."]}
+        ],
+        "nl": [
+        {"lemma": "röntgenfoto", "pos": "noun", "details": {"article": "de", "plural": "röntgenfoto's"}, "sentences": ["Ik krijg een röntgenfoto."]}
+        ]
+      }
+    },
+    {
+      "key": "disorder",
+      "gloss": "disorder (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "disorder", "pos": "noun", "details": {"plural": "disorders"}, "sentences": ["He has a heart disorder."]}
+        ],
+        "nl": [
+        {"lemma": "aandoening", "pos": "noun", "details": {"article": "de", "plural": "aandoeningen"}, "sentences": ["Hij heeft een hartaandoening."]}
+        ]
+      }
+    },
+    {
+      "key": "hypnosis",
+      "gloss": "hypnosis (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "hypnosis", "pos": "noun", "details": {"uncountable": true}, "sentences": ["He is under hypnosis."]}
+        ],
+        "nl": [
+        {"lemma": "hypnose", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Hij staat onder hypnose."]}
+        ]
+      }
+    },
+    {
+      "key": "drip",
+      "gloss": "drip (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "drip", "pos": "noun", "details": {"plural": "drips"}, "sentences": ["He has a drip."]}
+        ],
+        "nl": [
+        {"lemma": "infuus", "pos": "noun", "details": {"article": "het", "plural": "infusen"}, "sentences": ["Hij heeft een infuus."]}
+        ]
+      }
+    },
+    {
+      "key": "shiver-noun",
+      "gloss": "shiver (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "shiver", "pos": "noun", "details": {"plural": "shivers"}, "sentences": ["I feel a shiver."]}
+        ],
+        "nl": [
+        {"lemma": "rilling", "pos": "noun", "details": {"article": "de", "plural": "rillingen"}, "sentences": ["Ik voel een rilling."]}
+        ]
+      }
+    },
+    {
+      "key": "contamination",
+      "gloss": "contamination (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "contamination", "pos": "noun", "details": {"plural": "contaminations"}, "sentences": ["The contamination spreads."]}
+        ],
+        "nl": [
+        {"lemma": "besmetting", "pos": "noun", "details": {"article": "de", "plural": "besmettingen"}, "sentences": ["De besmetting verspreidt zich."]}
+        ]
+      }
+    },
+    {
+      "key": "pneumonia",
+      "gloss": "pneumonia (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "pneumonia", "pos": "noun", "details": {"plural": "pneumonias"}, "sentences": ["He has pneumonia."]}
+        ],
+        "nl": [
+        {"lemma": "longontsteking", "pos": "noun", "details": {"article": "de", "plural": "longontstekingen"}, "sentences": ["Hij heeft een longontsteking."]}
+        ]
+      }
+    },
+    {
+      "key": "blood-type",
+      "gloss": "blood type (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "blood type", "pos": "noun", "details": {"plural": "blood types"}, "sentences": ["What is your blood type?"]}
+        ],
+        "nl": [
+        {"lemma": "bloedgroep", "pos": "noun", "details": {"article": "de", "plural": "bloedgroepen"}, "sentences": ["Wat is je bloedgroep?"]}
+        ]
+      }
+    },
+    {
+      "key": "asthma",
+      "gloss": "asthma (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "asthma", "pos": "noun", "details": {"uncountable": true}, "sentences": ["He has asthma."]}
+        ],
+        "nl": [
+        {"lemma": "astma", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Hij heeft astma."]}
+        ]
+      }
+    },
+    {
+      "key": "exhausted",
+      "gloss": "exhausted (adjective)",
+      "entries": {
+        "en": [
+        {"lemma": "exhausted", "pos": "adjective", "sentences": ["I am exhausted."]}
+        ],
+        "nl": [
+        {"lemma": "doodmoe", "pos": "adjective", "sentences": ["Ik ben doodmoe."]}
+        ]
+      }
+    },
+    {
+      "key": "sleepy",
+      "gloss": "sleepy (adjective)",
+      "entries": {
+        "en": [
+        {"lemma": "sleepy", "pos": "adjective", "sentences": ["I am sleepy."]}
+        ],
+        "nl": [
+        {"lemma": "slaperig", "pos": "adjective", "sentences": ["Ik ben slaperig."]}
+        ]
+      }
+    },
+    {
+      "key": "pale",
+      "gloss": "pale (adjective)",
+      "entries": {
+        "en": [
+        {"lemma": "pale", "pos": "adjective", "sentences": ["She is pale."]}
+        ],
+        "nl": [
+        {"lemma": "bleek", "pos": "adjective", "sentences": ["Zij is bleek."]}
+        ]
+      }
+    },
+    {
+      "key": "mucus",
+      "gloss": "mucus (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "mucus", "pos": "noun", "details": {"uncountable": true}, "sentences": ["He has mucus in his throat."]}
+        ],
+        "nl": [
+        {"lemma": "slijm", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["Hij heeft slijm in zijn keel."]}
+        ]
+      }
+    },
+    {
+      "key": "filling",
+      "gloss": "filling (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "filling", "pos": "noun", "details": {"plural": "fillings"}, "sentences": ["I get a filling."]}
+        ],
+        "nl": [
+        {"lemma": "vulling", "pos": "noun", "details": {"article": "de", "plural": "vullingen"}, "sentences": ["Ik krijg een vulling."]}
+        ]
+      }
+    },
+    {
+      "key": "tire-verb",
+      "gloss": "tire (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "tire", "pos": "verb", "details": {"past": "tired", "participle": "tired"}, "sentences": ["The walk tires me."]}
+        ],
+        "nl": [
+        {"lemma": "vermoeien", "pos": "verb", "details": {"pastSingular": "vermoeide", "pastPlural": "vermoeiden", "participle": "vermoeid", "auxiliary": "hebben"}, "sentences": ["De wandeling vermoeit mij."]}
+        ]
+      }
+    },
+    {
+      "key": "cardiac-arrest",
+      "gloss": "cardiac arrest (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "cardiac arrest", "pos": "noun", "details": {"plural": "cardiac arrests"}, "sentences": ["He has a cardiac arrest."]}
+        ],
+        "nl": [
+        {"lemma": "hartstilstand", "pos": "noun", "details": {"article": "de", "plural": "hartstilstanden"}, "sentences": ["Hij heeft een hartstilstand."]}
         ]
       }
     }

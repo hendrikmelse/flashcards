@@ -563,6 +563,66 @@
         {"lemma": "kalender", "pos": "noun", "details": {"article": "de", "plural": "kalenders"}, "sentences": ["De kalender hangt aan de muur."]}
         ]
       }
+    },
+    {
+      "key": "half-year",
+      "gloss": "half year (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "half year", "pos": "noun", "details": {"plural": "half years"}, "sentences": ["I stay a half year."]}
+        ],
+        "nl": [
+        {"lemma": "halfjaar", "pos": "noun", "details": {"article": "het", "plural": "halfjaren"}, "sentences": ["Ik blijf een halfjaar."]}
+        ]
+      }
+    },
+    {
+      "key": "school-days",
+      "gloss": "school days (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "school days", "pos": "noun", "details": {"pluralOnly": true}, "sentences": ["I remember my school days."]}
+        ],
+        "nl": [
+        {"lemma": "schooltijd", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Ik herinner mij mijn schooltijd."]}
+        ]
+      }
+    },
+    {
+      "key": "millennium",
+      "gloss": "millennium (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "millennium", "pos": "noun", "details": {"plural": "millenniums"}, "sentences": ["A millennium has a thousand years."]}
+        ],
+        "nl": [
+        {"lemma": "millennium", "pos": "noun", "details": {"article": "het", "plural": "millennia"}, "sentences": ["Een millennium heeft duizend jaar."]}
+        ]
+      }
+    },
+    {
+      "key": "stay-up",
+      "gloss": "stay up (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "stay up", "pos": "verb", "details": {"past": "stayed up", "participle": "stayed up"}, "sentences": ["I stay up late."]}
+        ],
+        "nl": [
+        {"lemma": "opblijven", "pos": "verb", "details": {"pastSingular": "bleef op", "pastPlural": "bleven op", "participle": "opgebleven", "auxiliary": "zijn"}, "sentences": ["Ik blijf laat op."]}
+        ]
+      }
+    },
+    {
+      "key": "weekly",
+      "gloss": "weekly (adjective)",
+      "entries": {
+        "en": [
+        {"lemma": "weekly", "pos": "adjective", "sentences": ["This is a weekly meeting."]}
+        ],
+        "nl": [
+        {"lemma": "wekelijks", "pos": "adjective", "sentences": ["Dit is een wekelijkse vergadering."]}
+        ]
+      }
     }
   ]
 }

@@ -769,7 +769,7 @@
       }
     },
     {
-      "key": "fan",
+      "key": "fan-noun-fan",
       "gloss": "fan (noun)",
       "entries": {
         "en": [
@@ -1213,7 +1213,7 @@
       }
     },
     {
-      "key": "relative",
+      "key": "relative-noun",
       "gloss": "relative (noun)",
       "entries": {
         "en": [
@@ -1849,7 +1849,7 @@
       }
     },
     {
-      "key": "individual",
+      "key": "individual-noun",
       "gloss": "individual (noun)",
       "entries": {
         "en": [
@@ -2265,6 +2265,234 @@
         ],
         "nl": [
         {"lemma": "bruidsmeisje", "pos": "noun", "details": {"article": "het", "plural": "bruidsmeisjes"}, "sentences": ["Het bruidsmeisje houdt het boeket vast."]}
+        ]
+      }
+    },
+    {
+      "key": "elite",
+      "gloss": "elite (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "elite", "pos": "noun", "details": {"plural": "elites"}, "sentences": ["The elite lives here."]}
+        ],
+        "nl": [
+        {"lemma": "elite", "pos": "noun", "details": {"article": "de", "plural": "elites"}, "sentences": ["De elite woont hier."]}
+        ]
+      }
+    },
+    {
+      "key": "collector",
+      "gloss": "collector (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "collector", "pos": "noun", "details": {"plural": "collectors"}, "sentences": ["The collector has many stamps."]}
+        ],
+        "nl": [
+        {"lemma": "verzamelaar", "pos": "noun", "details": {"article": "de", "plural": "verzamelaars"}, "sentences": ["De verzamelaar heeft veel postzegels."]}
+        ]
+      }
+    },
+    {
+      "key": "remarry",
+      "gloss": "remarry (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "remarry", "pos": "verb", "details": {"past": "remarried", "participle": "remarried"}, "sentences": ["She remarries."]}
+        ],
+        "nl": [
+        {"lemma": "hertrouwen", "pos": "verb", "details": {"pastSingular": "hertrouwde", "pastPlural": "hertrouwden", "participle": "hertrouwd", "auxiliary": "hebben/zijn"}, "sentences": ["Zij hertrouwt."]}
+        ]
+      }
+    },
+    {
+      "key": "godfather",
+      "gloss": "godfather (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "godfather", "pos": "noun", "details": {"plural": "godfathers"}, "sentences": ["He is the godfather."]}
+        ],
+        "nl": [
+        {"lemma": "peetvader", "pos": "noun", "details": {"article": "de", "plural": "peetvaders"}, "sentences": ["Hij is de peetvader."]}
+        ]
+      }
+    },
+    {
+      "key": "supporter",
+      "gloss": "supporter (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "supporter", "pos": "noun", "details": {"plural": "supporters"}, "sentences": ["The supporter cheers."]}
+        ],
+        "nl": [
+        {"lemma": "aanhanger", "pos": "noun", "details": {"article": "de", "plural": "aanhangers"}, "sentences": ["De aanhanger juicht."]}
+        ]
+      }
+    },
+    {
+      "key": "intermediary",
+      "gloss": "intermediary (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "intermediary", "pos": "noun", "details": {"plural": "intermediaries"}, "sentences": ["He is the intermediary."]}
+        ],
+        "nl": [
+        {"lemma": "tussenpersoon", "pos": "noun", "details": {"article": "de", "plural": "tussenpersonen"}, "sentences": ["Hij is de tussenpersoon."]}
+        ]
+      }
+    },
+    {
+      "key": "dreamer",
+      "gloss": "dreamer (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "dreamer", "pos": "noun", "details": {"plural": "dreamers"}, "sentences": ["He is a dreamer."]}
+        ],
+        "nl": [
+        {"lemma": "dromer", "pos": "noun", "details": {"article": "de", "plural": "dromers"}, "sentences": ["Hij is een dromer."]}
+        ]
+      }
+    },
+    {
+      "key": "spectator",
+      "gloss": "spectator (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "spectator", "pos": "noun", "details": {"plural": "spectators"}, "sentences": ["The spectator claps."]}
+        ],
+        "nl": [
+        {"lemma": "toeschouwer", "pos": "noun", "details": {"article": "de", "plural": "toeschouwers"}, "sentences": ["De toeschouwer klapt."]}
+        ]
+      }
+    },
+    {
+      "key": "clan",
+      "gloss": "clan (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "clan", "pos": "noun", "details": {"plural": "clans"}, "sentences": ["The clan is large."]}
+        ],
+        "nl": [
+        {"lemma": "clan", "pos": "noun", "details": {"article": "de", "plural": "clans"}, "sentences": ["De clan is groot."]}
+        ]
+      }
+    },
+    {
+      "key": "scholar",
+      "gloss": "scholar (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "scholar", "pos": "noun", "details": {"plural": "scholars"}, "sentences": ["The scholar reads a book."]}
+        ],
+        "nl": [
+        {"lemma": "geleerde", "pos": "noun", "details": {"article": "de", "plural": "geleerden"}, "sentences": ["De geleerde leest een boek."]}
+        ]
+      }
+    },
+    {
+      "key": "immigrant",
+      "gloss": "immigrant (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "immigrant", "pos": "noun", "details": {"plural": "immigrants"}, "sentences": ["The immigrant learns Dutch."]}
+        ],
+        "nl": [
+        {"lemma": "immigrant", "pos": "noun", "details": {"article": "de", "plural": "immigranten"}, "sentences": ["De immigrant leert Nederlands."]}
+        ]
+      }
+    },
+    {
+      "key": "baroness",
+      "gloss": "baroness (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "baroness", "pos": "noun", "details": {"plural": "baronesses"}, "sentences": ["The baroness lives in the castle."]}
+        ],
+        "nl": [
+        {"lemma": "barones", "pos": "noun", "details": {"article": "de", "plural": "baronessen"}, "sentences": ["De barones woont in het kasteel."]}
+        ]
+      }
+    },
+    {
+      "key": "rival",
+      "gloss": "rival (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "rival", "pos": "noun", "details": {"plural": "rivals"}, "sentences": ["He is my rival."]}
+        ],
+        "nl": [
+        {"lemma": "rivaal", "pos": "noun", "details": {"article": "de", "plural": "rivalen"}, "sentences": ["Hij is mijn rivaal."]}
+        ]
+      }
+    },
+    {
+      "key": "sultan",
+      "gloss": "sultan (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "sultan", "pos": "noun", "details": {"plural": "sultans"}, "sentences": ["The sultan lives in a palace."]}
+        ],
+        "nl": [
+        {"lemma": "sultan", "pos": "noun", "details": {"article": "de", "plural": "sultans"}, "sentences": ["De sultan woont in een paleis."]}
+        ]
+      }
+    },
+    {
+      "key": "caller",
+      "gloss": "caller (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "caller", "pos": "noun", "details": {"plural": "callers"}, "sentences": ["The caller hangs up."]}
+        ],
+        "nl": [
+        {"lemma": "beller", "pos": "noun", "details": {"article": "de", "plural": "bellers"}, "sentences": ["De beller hangt op."]}
+        ]
+      }
+    },
+    {
+      "key": "senior",
+      "gloss": "senior (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "senior", "pos": "noun", "details": {"plural": "seniors"}, "sentences": ["The senior gets a discount."]}
+        ],
+        "nl": [
+        {"lemma": "senior", "pos": "noun", "details": {"article": "de", "plural": "senioren"}, "sentences": ["De senior krijgt korting."]}
+        ]
+      }
+    },
+    {
+      "key": "descendant",
+      "gloss": "descendant (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "descendant", "pos": "noun", "details": {"plural": "descendants"}, "sentences": ["He is a descendant of the king."]}
+        ],
+        "nl": [
+        {"lemma": "afstammeling", "pos": "noun", "details": {"article": "de", "plural": "afstammelingen"}, "sentences": ["Hij is een afstammeling van de koning."]}
+        ]
+      }
+    },
+    {
+      "key": "brunette",
+      "gloss": "brunette (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "brunette", "pos": "noun", "details": {"plural": "brunettes"}, "sentences": ["She is a brunette."]}
+        ],
+        "nl": [
+        {"lemma": "brunette", "pos": "noun", "details": {"article": "de", "plural": "brunettes"}, "sentences": ["Zij is een brunette."]}
+        ]
+      }
+    },
+    {
+      "key": "patriot",
+      "gloss": "patriot (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "patriot", "pos": "noun", "details": {"plural": "patriots"}, "sentences": ["He is a patriot."]}
+        ],
+        "nl": [
+        {"lemma": "patriot", "pos": "noun", "details": {"article": "de", "plural": "patriotten"}, "sentences": ["Hij is een patriot."]}
         ]
       }
     }

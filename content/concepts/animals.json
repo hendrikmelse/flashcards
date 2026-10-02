@@ -517,7 +517,7 @@
       }
     },
     {
-      "key": "pet",
+      "key": "pet-noun",
       "gloss": "pet (noun)",
       "entries": {
         "en": [
@@ -733,7 +733,7 @@
       }
     },
     {
-      "key": "mole",
+      "key": "mole-noun-mol",
       "gloss": "mole (noun)",
       "entries": {
         "en": [
@@ -901,7 +901,7 @@
       }
     },
     {
-      "key": "collar",
+      "key": "collar-noun-halsband",
       "gloss": "collar (noun)",
       "entries": {
         "en": [
@@ -1089,6 +1089,222 @@
         ],
         "nl": [
         {"lemma": "alligator", "pos": "noun", "details": {"article": "de", "plural": "alligators"}, "sentences": ["De alligator leeft in het moeras."]}
+        ]
+      }
+    },
+    {
+      "key": "muzzle",
+      "gloss": "muzzle (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "muzzle", "pos": "noun", "details": {"plural": "muzzles"}, "sentences": ["The dog has a big muzzle."]}
+        ],
+        "nl": [
+        {"lemma": "muil", "pos": "noun", "details": {"article": "de", "plural": "muilen"}, "sentences": ["De hond heeft een grote muil."]}
+        ]
+      }
+    },
+    {
+      "key": "leech",
+      "gloss": "leech (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "leech", "pos": "noun", "details": {"plural": "leeches"}, "sentences": ["The leech sucks blood."]}
+        ],
+        "nl": [
+        {"lemma": "bloedzuiger", "pos": "noun", "details": {"article": "de", "plural": "bloedzuigers"}, "sentences": ["De bloedzuiger zuigt bloed."]}
+        ]
+      }
+    },
+    {
+      "key": "owl",
+      "gloss": "owl (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "owl", "pos": "noun", "details": {"plural": "owls"}, "sentences": ["The owl hoots at night."]}
+        ],
+        "nl": [
+        {"lemma": "uil", "pos": "noun", "details": {"article": "de", "plural": "uilen"}, "sentences": ["De uil hoeft 's nachts."]}
+        ]
+      }
+    },
+    {
+      "key": "chimpanzee",
+      "gloss": "chimpanzee (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "chimpanzee", "pos": "noun", "details": {"plural": "chimpanzees"}, "sentences": ["The chimpanzee eats a banana."]}
+        ],
+        "nl": [
+        {"lemma": "chimpansee", "pos": "noun", "details": {"article": "de", "plural": "chimpansees"}, "sentences": ["De chimpansee eet een banaan."]}
+        ]
+      }
+    },
+    {
+      "key": "roar",
+      "gloss": "roar (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "roar", "pos": "verb", "details": {"past": "roared", "participle": "roared"}, "sentences": ["The lion roars."]}
+        ],
+        "nl": [
+        {"lemma": "brullen", "pos": "verb", "details": {"pastSingular": "brulde", "pastPlural": "brulden", "participle": "gebruld", "auxiliary": "hebben"}, "sentences": ["De leeuw brult."]}
+        ]
+      }
+    },
+    {
+      "key": "reindeer",
+      "gloss": "reindeer (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "reindeer", "pos": "noun", "details": {"plural": "reindeers"}, "sentences": ["The reindeer pulls the sled."]}
+        ],
+        "nl": [
+        {"lemma": "rendier", "pos": "noun", "details": {"article": "het", "plural": "rendieren"}, "sentences": ["Het rendier trekt de slee."]}
+        ]
+      }
+    },
+    {
+      "key": "unicorn",
+      "gloss": "unicorn (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "unicorn", "pos": "noun", "details": {"plural": "unicorns"}, "sentences": ["The unicorn is a myth."]}
+        ],
+        "nl": [
+        {"lemma": "eenhoorn", "pos": "noun", "details": {"article": "de", "plural": "eenhoorns"}, "sentences": ["De eenhoorn is een mythe."]}
+        ]
+      }
+    },
+    {
+      "key": "moth",
+      "gloss": "moth (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "moth", "pos": "noun", "details": {"plural": "moths"}, "sentences": ["The moth flies around the lamp."]}
+        ],
+        "nl": [
+        {"lemma": "mot", "pos": "noun", "details": {"article": "de", "plural": "motten"}, "sentences": ["De mot vliegt rond de lamp."]}
+        ]
+      }
+    },
+    {
+      "key": "guinea-pig",
+      "gloss": "guinea pig (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "guinea pig", "pos": "noun", "details": {"plural": "guinea pigs"}, "sentences": ["The guinea pig is small."]}
+        ],
+        "nl": [
+        {"lemma": "proefkonijn", "pos": "noun", "details": {"article": "het", "plural": "proefkonijnen"}, "sentences": ["Het proefkonijn is klein."]}
+        ]
+      }
+    },
+    {
+      "key": "beaver",
+      "gloss": "beaver (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "beaver", "pos": "noun", "details": {"plural": "beavers"}, "sentences": ["The beaver builds a dam."]}
+        ],
+        "nl": [
+        {"lemma": "bever", "pos": "noun", "details": {"article": "de", "plural": "bevers"}, "sentences": ["De bever bouwt een dam."]}
+        ]
+      }
+    },
+    {
+      "key": "rhinoceros",
+      "gloss": "rhinoceros (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "rhinoceros", "pos": "noun", "details": {"plural": "rhinoceroses"}, "sentences": ["The rhinoceros is big."]}
+        ],
+        "nl": [
+        {"lemma": "neushoorn", "pos": "noun", "details": {"article": "de", "plural": "neushoorns"}, "sentences": ["De neushoorn is groot."]}
+        ]
+      }
+    },
+    {
+      "key": "ram",
+      "gloss": "ram (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "ram", "pos": "noun", "details": {"plural": "rams"}, "sentences": ["The ram is strong."]}
+        ],
+        "nl": [
+        {"lemma": "ram", "pos": "noun", "details": {"article": "de", "plural": "rammen"}, "sentences": ["De ram is sterk."]}
+        ]
+      }
+    },
+    {
+      "key": "hare",
+      "gloss": "hare (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "hare", "pos": "noun", "details": {"plural": "hares"}, "sentences": ["The hare runs fast."]}
+        ],
+        "nl": [
+        {"lemma": "haas", "pos": "noun", "details": {"article": "de", "plural": "hazen"}, "sentences": ["De haas rent snel."]}
+        ]
+      }
+    },
+    {
+      "key": "mermaid",
+      "gloss": "mermaid (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "mermaid", "pos": "noun", "details": {"plural": "mermaids"}, "sentences": ["The mermaid lives in the sea."]}
+        ],
+        "nl": [
+        {"lemma": "zeemeermin", "pos": "noun", "details": {"article": "de", "plural": "zeemeerminnen"}, "sentences": ["De zeemeermin woont in de zee."]}
+        ]
+      }
+    },
+    {
+      "key": "grasshopper",
+      "gloss": "grasshopper (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "grasshopper", "pos": "noun", "details": {"plural": "grasshoppers"}, "sentences": ["The grasshopper jumps."]}
+        ],
+        "nl": [
+        {"lemma": "sprinkhaan", "pos": "noun", "details": {"article": "de", "plural": "sprinkhanen"}, "sentences": ["De sprinkhaan springt."]}
+        ]
+      }
+    },
+    {
+      "key": "gnaw",
+      "gloss": "gnaw (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "gnaw", "pos": "verb", "details": {"past": "gnawed", "participle": "gnawed"}, "sentences": ["The mouse gnaws the cheese."]}
+        ],
+        "nl": [
+        {"lemma": "knagen", "pos": "verb", "details": {"pastSingular": "knaagde", "pastPlural": "knaagden", "participle": "geknaagd", "auxiliary": "hebben"}, "sentences": ["De muis knaagt aan de kaas."]}
+        ]
+      }
+    },
+    {
+      "key": "moose",
+      "gloss": "moose (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "moose", "pos": "noun", "details": {"plural": "mooses"}, "sentences": ["The moose lives in the forest."]}
+        ],
+        "nl": [
+        {"lemma": "eland", "pos": "noun", "details": {"article": "de", "plural": "elanden"}, "sentences": ["De eland leeft in het bos."]}
+        ]
+      }
+    },
+    {
+      "key": "crab",
+      "gloss": "crab (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "crab", "pos": "noun", "details": {"plural": "crabs"}, "sentences": ["The crab lives in the sea."]}
+        ],
+        "nl": [
+        {"lemma": "krab", "pos": "noun", "details": {"article": "de", "plural": "krabben"}, "sentences": ["De krab leeft in de zee."]}
         ]
       }
     }
