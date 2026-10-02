@@ -74,6 +74,17 @@ beforeEach(() => {
 
 afterEach(() => vi.unstubAllGlobals());
 
+describe("studying one direction", () => {
+  it("asks only for that direction when the URL names one", async () => {
+    mock.handlers["GET /study?limit=20&fromLanguage=nl&toLanguage=en"] = () =>
+      json(200, { now: "x", counts: { learning: 0, review: 0, new: 1 }, cards: [dog] });
+    renderApp("/study?from=nl&to=en");
+    expect(await screen.findByText("dog")).toBeInTheDocument();
+    expect(mock.calls).toContain("GET /study?limit=20&fromLanguage=nl&toLanguage=en");
+    expect(mock.calls).not.toContain("GET /study?limit=20");
+  });
+});
+
 describe("study session", () => {
   it("shows the prompt first and only reveals the answer on request", async () => {
     const user = userEvent.setup();

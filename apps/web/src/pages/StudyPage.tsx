@@ -1,6 +1,6 @@
 import { useMutation } from "@tanstack/react-query";
 import { useEffect, useReducer, useRef, useState } from "react";
-import { Link } from "react-router";
+import { Link, useSearchParams } from "react-router";
 import type {
   EntryView,
   LanguageInfo,
@@ -35,6 +35,12 @@ type ReviewVars = { cardId: string; rating: Rating; clientReviewId: string; time
 
 function useStudySession() {
   const [state, dispatch] = useReducer(reducer, initialState);
+  // ?from=en&to=nl studies one direction; without them every direction is mixed.
+  const [params] = useSearchParams();
+  const from = params.get("from");
+  const to = params.get("to");
+  const direction =
+    from && to ? `&fromLanguage=${encodeURIComponent(from)}&toLanguage=${encodeURIComponent(to)}` : "";
   const fetching = useRef(false);
   const shownAt = useRef(Date.now());
 
@@ -42,7 +48,7 @@ function useStudySession() {
   useEffect(() => {
     if (state.queue.length > 0 || state.exhausted || state.fetchError || fetching.current) return;
     fetching.current = true;
-    api<StudyResponse>(`/study?limit=${BATCH_SIZE}`)
+    api<StudyResponse>(`/study?limit=${BATCH_SIZE}${direction}`)
       .then(
         (r) => dispatch({ type: "fetched", cards: r.cards }),
         () => dispatch({ type: "fetchFailed" }),
@@ -50,7 +56,7 @@ function useStudySession() {
       .finally(() => {
         fetching.current = false;
       });
-  }, [state.queue.length, state.exhausted, state.fetchError]);
+  }, [state.queue.length, state.exhausted, state.fetchError, direction]);
 
   // Show the next card as soon as there is one.
   useEffect(() => {
