@@ -157,7 +157,7 @@
       }
     },
     {
-      "key": "practice-verb",
+      "key": "practice-verb-oefenen",
       "gloss": "practice (verb)",
       "entries": {
         "en": [
@@ -385,7 +385,7 @@
       }
     },
     {
-      "key": "study-noun",
+      "key": "study-noun-studie",
       "gloss": "study (noun)",
       "entries": {
         "en": [
@@ -1401,6 +1401,198 @@
         ],
         "nl": [
         {"lemma": "lood", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["De pijp is van lood."]}
+        ]
+      }
+    },
+    {
+      "key": "physics",
+      "gloss": "physics (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "physics", "pos": "noun", "details": {"uncountable": true}, "sentences": ["I study physics."]}
+        ],
+        "nl": [
+        {"lemma": "natuurkunde", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Ik studeer natuurkunde."]}
+        ]
+      }
+    },
+    {
+      "key": "concrete",
+      "gloss": "concrete (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "concrete", "pos": "noun", "details": {"uncountable": true}, "sentences": ["The wall is made of concrete."]}
+        ],
+        "nl": [
+        {"lemma": "beton", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["De muur is van beton."]}
+        ]
+      }
+    },
+    {
+      "key": "scholarship",
+      "gloss": "scholarship (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "scholarship", "pos": "noun", "details": {"plural": "scholarships"}, "sentences": ["I get a scholarship."]}
+        ],
+        "nl": [
+        {"lemma": "studiebeurs", "pos": "noun", "details": {"article": "de", "plural": "studiebeurzen"}, "sentences": ["Ik krijg een studiebeurs."]}
+        ]
+      }
+    },
+    {
+      "key": "classroom",
+      "gloss": "classroom (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "classroom", "pos": "noun", "details": {"plural": "classrooms"}, "sentences": ["The classroom is empty."]}
+        ],
+        "nl": [
+        {"lemma": "lokaal", "pos": "noun", "details": {"article": "het", "plural": "lokalen"}, "sentences": ["Het lokaal is leeg."]}
+        ]
+      }
+    },
+    {
+      "key": "radioactive",
+      "gloss": "radioactive (adjective)",
+      "entries": {
+        "en": [
+        {"lemma": "radioactive", "pos": "adjective", "sentences": ["The material is radioactive."]}
+        ],
+        "nl": [
+        {"lemma": "radioactief", "pos": "adjective", "sentences": ["Het materiaal is radioactief."]}
+        ]
+      }
+    },
+    {
+      "key": "organism",
+      "gloss": "organism (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "organism", "pos": "noun", "details": {"plural": "organisms"}, "sentences": ["The organism is small."]}
+        ],
+        "nl": [
+        {"lemma": "organisme", "pos": "noun", "details": {"article": "het", "plural": "organismen"}, "sentences": ["Het organisme is klein."]}
+        ]
+      }
+    },
+    {
+      "key": "dean",
+      "gloss": "dean (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "dean", "pos": "noun", "details": {"plural": "deans"}, "sentences": ["The dean speaks."]}
+        ],
+        "nl": [
+        {"lemma": "decaan", "pos": "noun", "details": {"article": "de", "plural": "decanen"}, "sentences": ["De decaan spreekt."]}
+        ]
+      }
+    },
+    {
+      "key": "biology",
+      "gloss": "biology (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "biology", "pos": "noun", "details": {"uncountable": true}, "sentences": ["I study biology."]}
+        ],
+        "nl": [
+        {"lemma": "biologie", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Ik studeer biologie."]}
+        ]
+      }
+    },
+    {
+      "key": "chemicals",
+      "gloss": "chemicals (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "chemicals", "pos": "noun", "details": {"pluralOnly": true}, "sentences": ["The chemicals are dangerous."]}
+        ],
+        "nl": [
+        {"lemma": "chemicaliën", "pos": "noun", "details": {"article": "de", "pluralOnly": true}, "sentences": ["De chemicaliën zijn gevaarlijk."]}
+        ]
+      }
+    },
+    {
+      "key": "rewrite",
+      "gloss": "rewrite (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "rewrite", "pos": "verb", "details": {"past": "rewrote", "participle": "rewritten"}, "sentences": ["I rewrite the text."]}
+        ],
+        "nl": [
+        {"lemma": "herschrijven", "pos": "verb", "details": {"pastSingular": "herschreef", "pastPlural": "herschreven", "participle": "herschreven", "auxiliary": "hebben"}, "sentences": ["Ik herschrijf de tekst."]}
+        ]
+      }
+    },
+    {
+      "key": "essay",
+      "gloss": "essay (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "essay", "pos": "noun", "details": {"plural": "essays"}, "sentences": ["I write an essay."]}
+        ],
+        "nl": [
+        {"lemma": "opstel", "pos": "noun", "details": {"article": "het", "plural": "opstellen"}, "sentences": ["Ik schrijf een opstel."]}
+        ]
+      }
+    },
+    {
+      "key": "handbook",
+      "gloss": "handbook (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "handbook", "pos": "noun", "details": {"plural": "handbooks"}, "sentences": ["I read the handbook."]}
+        ],
+        "nl": [
+        {"lemma": "handboek", "pos": "noun", "details": {"article": "het", "plural": "handboeken"}, "sentences": ["Ik lees het handboek."]}
+        ]
+      }
+    },
+    {
+      "key": "notebook",
+      "gloss": "notebook (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "notebook", "pos": "noun", "details": {"plural": "notebooks"}, "sentences": ["I write in my notebook."]}
+        ],
+        "nl": [
+        {"lemma": "schrift", "pos": "noun", "details": {"article": "het", "plural": "schriften"}, "sentences": ["Ik schrijf in mijn schrift."]}
+        ]
+      }
+    },
+    {
+      "key": "dictionary",
+      "gloss": "dictionary (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "dictionary", "pos": "noun", "details": {"plural": "dictionaries"}, "sentences": ["I look in the dictionary."]}
+        ],
+        "nl": [
+        {"lemma": "woordenboek", "pos": "noun", "details": {"article": "het", "plural": "woordenboeken"}, "sentences": ["Ik kijk in het woordenboek."]}
+        ]
+      }
+    },
+    {
+      "key": "statistics",
+      "gloss": "statistics (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "statistics", "pos": "noun", "details": {"plural": "statisticses"}, "sentences": ["The statistics are clear."]}
+        ],
+        "nl": [
+        {"lemma": "statistiek", "pos": "noun", "details": {"article": "de", "plural": "statistieken"}, "sentences": ["De statistiek is duidelijk."]}
+        ]
+      }
+    },
+    {
+      "key": "excavation",
+      "gloss": "excavation (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "excavation", "pos": "noun", "details": {"plural": "excavations"}, "sentences": ["The excavation takes a year."]}
+        ],
+        "nl": [
+        {"lemma": "opgraving", "pos": "noun", "details": {"article": "de", "plural": "opgravingen"}, "sentences": ["De opgraving duurt een jaar."]}
         ]
       }
     }

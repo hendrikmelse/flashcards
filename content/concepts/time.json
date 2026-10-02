@@ -527,6 +527,42 @@
         {"lemma": "nieuwjaar", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["Wij vieren nieuwjaar."]}
         ]
       }
+    },
+    {
+      "key": "interim",
+      "gloss": "interim (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "interim", "pos": "noun", "details": {"uncountable": true}, "sentences": ["In the interim we wait."]}
+        ],
+        "nl": [
+        {"lemma": "tussentijd", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["In de tussentijd wachten wij."]}
+        ]
+      }
+    },
+    {
+      "key": "dawn",
+      "gloss": "dawn (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "dawn", "pos": "noun", "details": {"uncountable": true}, "sentences": ["We leave at dawn."]}
+        ],
+        "nl": [
+        {"lemma": "dageraad", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Wij vertrekken bij de dageraad."]}
+        ]
+      }
+    },
+    {
+      "key": "calendar",
+      "gloss": "calendar (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "calendar", "pos": "noun", "details": {"plural": "calendars"}, "sentences": ["The calendar hangs on the wall."]}
+        ],
+        "nl": [
+        {"lemma": "kalender", "pos": "noun", "details": {"article": "de", "plural": "kalenders"}, "sentences": ["De kalender hangt aan de muur."]}
+        ]
+      }
     }
   ]
 }

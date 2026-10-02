@@ -815,6 +815,102 @@
         {"lemma": "label", "pos": "noun", "details": {"article": "het", "plural": "labels"}, "sentences": ["Op het label staat de prijs."]}
         ]
       }
+    },
+    {
+      "key": "monument",
+      "gloss": "monument (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "monument", "pos": "noun", "details": {"plural": "monuments"}, "sentences": ["The monument is old."]}
+        ],
+        "nl": [
+        {"lemma": "monument", "pos": "noun", "details": {"article": "het", "plural": "monumenten"}, "sentences": ["Het monument is oud."]}
+        ]
+      }
+    },
+    {
+      "key": "floor-plan",
+      "gloss": "floor plan (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "floor plan", "pos": "noun", "details": {"plural": "floor plans"}, "sentences": ["I look at the floor plan."]}
+        ],
+        "nl": [
+        {"lemma": "plattegrond", "pos": "noun", "details": {"article": "de", "plural": "plattegronden"}, "sentences": ["Ik kijk naar de plattegrond."]}
+        ]
+      }
+    },
+    {
+      "key": "city-hall",
+      "gloss": "city hall (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "city hall", "pos": "noun", "details": {"plural": "city halls"}, "sentences": ["The city hall is old."]}
+        ],
+        "nl": [
+        {"lemma": "stadhuis", "pos": "noun", "details": {"article": "het", "plural": "stadhuizen"}, "sentences": ["Het stadhuis is oud."]}
+        ]
+      }
+    },
+    {
+      "key": "dry-cleaner",
+      "gloss": "dry cleaner (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "dry cleaner", "pos": "noun", "details": {"plural": "dry cleaners"}, "sentences": ["I bring the coat to the dry cleaner."]}
+        ],
+        "nl": [
+        {"lemma": "stomerij", "pos": "noun", "details": {"article": "de", "plural": "stomerijen"}, "sentences": ["Ik breng de jas naar de stomerij."]}
+        ]
+      }
+    },
+    {
+      "key": "fountain",
+      "gloss": "fountain (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "fountain", "pos": "noun", "details": {"plural": "fountains"}, "sentences": ["The fountain is in the square."]}
+        ],
+        "nl": [
+        {"lemma": "fontein", "pos": "noun", "details": {"article": "de", "plural": "fonteinen"}, "sentences": ["De fontein staat op het plein."]}
+        ]
+      }
+    },
+    {
+      "key": "sale",
+      "gloss": "sale (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "sale", "pos": "noun", "details": {"plural": "sales"}, "sentences": ["The shop has a sale."]}
+        ],
+        "nl": [
+        {"lemma": "uitverkoop", "pos": "noun", "details": {"article": "de", "plural": "uitverkopen"}, "sentences": ["De winkel heeft uitverkoop."]}
+        ]
+      }
+    },
+    {
+      "key": "department-store",
+      "gloss": "department store (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "department store", "pos": "noun", "details": {"plural": "department stores"}, "sentences": ["We go to the department store."]}
+        ],
+        "nl": [
+        {"lemma": "warenhuis", "pos": "noun", "details": {"article": "het", "plural": "warenhuizen"}, "sentences": ["Wij gaan naar het warenhuis."]}
+        ]
+      }
+    },
+    {
+      "key": "supplier",
+      "gloss": "supplier (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "supplier", "pos": "noun", "details": {"plural": "suppliers"}, "sentences": ["The supplier delivers the goods."]}
+        ],
+        "nl": [
+        {"lemma": "leverancier", "pos": "noun", "details": {"article": "de", "plural": "leveranciers"}, "sentences": ["De leverancier levert de goederen."]}
+        ]
+      }
     }
   ]
 }

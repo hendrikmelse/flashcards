@@ -779,6 +779,66 @@
         {"lemma": "achterhoofd", "pos": "noun", "details": {"article": "het", "plural": "achterhoofden"}, "sentences": ["Zij heeft een bult op haar achterhoofd."]}
         ]
       }
+    },
+    {
+      "key": "skeleton",
+      "gloss": "skeleton (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "skeleton", "pos": "noun", "details": {"plural": "skeletons"}, "sentences": ["The skeleton is white."]}
+        ],
+        "nl": [
+        {"lemma": "skelet", "pos": "noun", "details": {"article": "het", "plural": "skeletten"}, "sentences": ["Het skelet is wit."]}
+        ]
+      }
+    },
+    {
+      "key": "teeth",
+      "gloss": "teeth (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "teeth", "pos": "noun", "details": {"pluralOnly": true}, "sentences": ["He has healthy teeth."]}
+        ],
+        "nl": [
+        {"lemma": "gebit", "pos": "noun", "details": {"article": "het", "plural": "gebitten"}, "sentences": ["Hij heeft een gezond gebit."]}
+        ]
+      }
+    },
+    {
+      "key": "body-part",
+      "gloss": "body part (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "body part", "pos": "noun", "details": {"plural": "body parts"}, "sentences": ["The arm is a body part."]}
+        ],
+        "nl": [
+        {"lemma": "lichaamsdeel", "pos": "noun", "details": {"article": "het", "plural": "lichaamsdelen"}, "sentences": ["De arm is een lichaamsdeel."]}
+        ]
+      }
+    },
+    {
+      "key": "wrinkle",
+      "gloss": "wrinkle (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "wrinkle", "pos": "noun", "details": {"plural": "wrinkles"}, "sentences": ["She has a wrinkle."]}
+        ],
+        "nl": [
+        {"lemma": "rimpel", "pos": "noun", "details": {"article": "de", "plural": "rimpels"}, "sentences": ["Zij heeft een rimpel."]}
+        ]
+      }
+    },
+    {
+      "key": "ankle",
+      "gloss": "ankle (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "ankle", "pos": "noun", "details": {"plural": "ankles"}, "sentences": ["My ankle hurts."]}
+        ],
+        "nl": [
+        {"lemma": "enkel", "pos": "noun", "details": {"article": "de", "plural": "enkels"}, "sentences": ["Mijn enkel doet pijn."]}
+        ]
+      }
     }
   ]
 }

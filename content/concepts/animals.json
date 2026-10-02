@@ -947,6 +947,150 @@
         {"lemma": "haan", "pos": "noun", "details": {"article": "de", "plural": "hanen"}, "sentences": ["De haan kraait."]}
         ]
       }
+    },
+    {
+      "key": "dolphin",
+      "gloss": "dolphin (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "dolphin", "pos": "noun", "details": {"plural": "dolphins"}, "sentences": ["The dolphin swims."]}
+        ],
+        "nl": [
+        {"lemma": "dolfijn", "pos": "noun", "details": {"article": "de", "plural": "dolfijnen"}, "sentences": ["De dolfijn zwemt."]}
+        ]
+      }
+    },
+    {
+      "key": "lizard",
+      "gloss": "lizard (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "lizard", "pos": "noun", "details": {"plural": "lizards"}, "sentences": ["The lizard sits in the sun."]}
+        ],
+        "nl": [
+        {"lemma": "hagedis", "pos": "noun", "details": {"article": "de", "plural": "hagedissen"}, "sentences": ["De hagedis zit in de zon."]}
+        ]
+      }
+    },
+    {
+      "key": "mosquito",
+      "gloss": "mosquito (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "mosquito", "pos": "noun", "details": {"plural": "mosquitos"}, "sentences": ["The mosquito bites me."]}
+        ],
+        "nl": [
+        {"lemma": "mug", "pos": "noun", "details": {"article": "de", "plural": "muggen"}, "sentences": ["De mug bijt mij."]}
+        ]
+      }
+    },
+    {
+      "key": "tame",
+      "gloss": "tame (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "tame", "pos": "verb", "details": {"past": "tamed", "participle": "tamed"}, "sentences": ["He tames the horse."]}
+        ],
+        "nl": [
+        {"lemma": "temmen", "pos": "verb", "details": {"pastSingular": "temde", "pastPlural": "temden", "participle": "getemd", "auxiliary": "hebben"}, "sentences": ["Hij temt het paard."]}
+        ]
+      }
+    },
+    {
+      "key": "parrot",
+      "gloss": "parrot (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "parrot", "pos": "noun", "details": {"plural": "parrots"}, "sentences": ["The parrot talks."]}
+        ],
+        "nl": [
+        {"lemma": "papegaai", "pos": "noun", "details": {"article": "de", "plural": "papegaaien"}, "sentences": ["De papegaai praat."]}
+        ]
+      }
+    },
+    {
+      "key": "scorpion",
+      "gloss": "scorpion (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "scorpion", "pos": "noun", "details": {"plural": "scorpions"}, "sentences": ["The scorpion has a sting."]}
+        ],
+        "nl": [
+        {"lemma": "schorpioen", "pos": "noun", "details": {"article": "de", "plural": "schorpioenen"}, "sentences": ["De schorpioen heeft een angel."]}
+        ]
+      }
+    },
+    {
+      "key": "penguin",
+      "gloss": "penguin (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "penguin", "pos": "noun", "details": {"plural": "penguins"}, "sentences": ["The penguin lives in the cold."]}
+        ],
+        "nl": [
+        {"lemma": "pinguïn", "pos": "noun", "details": {"article": "de", "plural": "pinguïns"}, "sentences": ["De pinguïn leeft in de kou."]}
+        ]
+      }
+    },
+    {
+      "key": "beetle",
+      "gloss": "beetle (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "beetle", "pos": "noun", "details": {"plural": "beetles"}, "sentences": ["The beetle crawls."]}
+        ],
+        "nl": [
+        {"lemma": "kever", "pos": "noun", "details": {"article": "de", "plural": "kevers"}, "sentences": ["De kever kruipt."]}
+        ]
+      }
+    },
+    {
+      "key": "fur",
+      "gloss": "fur (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "fur", "pos": "noun", "details": {"plural": "furs"}, "sentences": ["The cat has soft fur."]}
+        ],
+        "nl": [
+        {"lemma": "vacht", "pos": "noun", "details": {"article": "de", "plural": "vachten"}, "sentences": ["De kat heeft een zachte vacht."]}
+        ]
+      }
+    },
+    {
+      "key": "reptile",
+      "gloss": "reptile (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "reptile", "pos": "noun", "details": {"plural": "reptiles"}, "sentences": ["The snake is a reptile."]}
+        ],
+        "nl": [
+        {"lemma": "reptiel", "pos": "noun", "details": {"article": "het", "plural": "reptielen"}, "sentences": ["De slang is een reptiel."]}
+        ]
+      }
+    },
+    {
+      "key": "mare",
+      "gloss": "mare (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "mare", "pos": "noun", "details": {"plural": "mares"}, "sentences": ["The mare has a foal."]}
+        ],
+        "nl": [
+        {"lemma": "merrie", "pos": "noun", "details": {"article": "de", "plural": "merries"}, "sentences": ["De merrie heeft een veulen."]}
+        ]
+      }
+    },
+    {
+      "key": "alligator",
+      "gloss": "alligator (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "alligator", "pos": "noun", "details": {"plural": "alligators"}, "sentences": ["The alligator lives in the swamp."]}
+        ],
+        "nl": [
+        {"lemma": "alligator", "pos": "noun", "details": {"article": "de", "plural": "alligators"}, "sentences": ["De alligator leeft in het moeras."]}
+        ]
+      }
     }
   ]
 }

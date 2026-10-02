@@ -289,7 +289,7 @@
       }
     },
     {
-      "key": "silk",
+      "key": "silk-noun",
       "gloss": "silk (noun)",
       "entries": {
         "en": [
@@ -825,6 +825,90 @@
         ],
         "nl": [
         {"lemma": "tasje", "pos": "noun", "details": {"article": "het", "plural": "tasjes"}, "sentences": ["Ik heb een tasje."]}
+        ]
+      }
+    },
+    {
+      "key": "locket",
+      "gloss": "locket (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "locket", "pos": "noun", "details": {"plural": "lockets"}, "sentences": ["She wears a locket."]}
+        ],
+        "nl": [
+        {"lemma": "medaillon", "pos": "noun", "details": {"article": "het", "plural": "medaillons"}, "sentences": ["Zij draagt een medaillon."]}
+        ]
+      }
+    },
+    {
+      "key": "umbrella",
+      "gloss": "umbrella (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "umbrella", "pos": "noun", "details": {"plural": "umbrellas"}, "sentences": ["I take an umbrella."]}
+        ],
+        "nl": [
+        {"lemma": "paraplu", "pos": "noun", "details": {"article": "de", "plural": "paraplu's"}, "sentences": ["Ik neem een paraplu mee."]}
+        ]
+      }
+    },
+    {
+      "key": "zipper",
+      "gloss": "zipper (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "zipper", "pos": "noun", "details": {"plural": "zippers"}, "sentences": ["The zipper is broken."]}
+        ],
+        "nl": [
+        {"lemma": "rits", "pos": "noun", "details": {"article": "de", "plural": "ritsen"}, "sentences": ["De rits is kapot."]}
+        ]
+      }
+    },
+    {
+      "key": "shoelace",
+      "gloss": "shoelace (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "shoelace", "pos": "noun", "details": {"plural": "shoelaces"}, "sentences": ["My shoelace is loose."]}
+        ],
+        "nl": [
+        {"lemma": "veter", "pos": "noun", "details": {"article": "de", "plural": "veters"}, "sentences": ["Mijn veter zit los."]}
+        ]
+      }
+    },
+    {
+      "key": "blouse",
+      "gloss": "blouse (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "blouse", "pos": "noun", "details": {"plural": "blouses"}, "sentences": ["She wears a blue blouse."]}
+        ],
+        "nl": [
+        {"lemma": "blouse", "pos": "noun", "details": {"article": "de", "plural": "blouses"}, "sentences": ["Zij draagt een blauwe blouse."]}
+        ]
+      }
+    },
+    {
+      "key": "leather",
+      "gloss": "leather (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "leather", "pos": "noun", "details": {"uncountable": true}, "sentences": ["The bag is made of leather."]}
+        ],
+        "nl": [
+        {"lemma": "leder", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["De tas is van leder."]}
+        ]
+      }
+    },
+    {
+      "key": "tights",
+      "gloss": "tights (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "tights", "pos": "noun", "details": {"pluralOnly": true}, "sentences": ["I wear tights."]}
+        ],
+        "nl": [
+        {"lemma": "panty", "pos": "noun", "details": {"article": "de", "plural": "panty's"}, "sentences": ["Ik draag een panty."]}
         ]
       }
     }

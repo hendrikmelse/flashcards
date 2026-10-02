@@ -50,3 +50,4 @@ Delete an item once checked; delete this file when it is empty.
 - `steel-adjective` (stalen / steel): stalen is the attributive form (een stalen brug); predicate is "van staal"
 - `cold-adjective-verkouden` (verkouden / cold): verkouden zijn = to have a cold; the adjective form
 - `drop-off` (wegbrengen / drop off): wegbrengen: take (something/someone) somewhere
+- `beef` (rund / beef): 'rund' = cattle/ox; beef is 'rundvlees'

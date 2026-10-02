@@ -241,7 +241,7 @@
       }
     },
     {
-      "key": "ride",
+      "key": "ride-noun",
       "gloss": "ride (noun)",
       "entries": {
         "en": [
@@ -865,7 +865,7 @@
       }
     },
     {
-      "key": "brake",
+      "key": "brake-verb",
       "gloss": "brake (verb)",
       "entries": {
         "en": [
@@ -1473,6 +1473,186 @@
         ],
         "nl": [
         {"lemma": "scooter", "pos": "noun", "details": {"article": "de", "plural": "scooters"}, "sentences": ["Hij rijdt op een scooter."]}
+        ]
+      }
+    },
+    {
+      "key": "cruise",
+      "gloss": "cruise (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "cruise", "pos": "noun", "details": {"plural": "cruises"}, "sentences": ["We go on a cruise."]}
+        ],
+        "nl": [
+        {"lemma": "cruise", "pos": "noun", "details": {"article": "de", "plural": "cruises"}, "sentences": ["Wij gaan op een cruise."]}
+        ]
+      }
+    },
+    {
+      "key": "logbook",
+      "gloss": "logbook (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "logbook", "pos": "noun", "details": {"plural": "logbooks"}, "sentences": ["The captain writes in the logbook."]}
+        ],
+        "nl": [
+        {"lemma": "logboek", "pos": "noun", "details": {"article": "het", "plural": "logboeken"}, "sentences": ["De kapitein schrijft in het logboek."]}
+        ]
+      }
+    },
+    {
+      "key": "detour",
+      "gloss": "detour (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "detour", "pos": "noun", "details": {"plural": "detours"}, "sentences": ["We take a detour."]}
+        ],
+        "nl": [
+        {"lemma": "omweg", "pos": "noun", "details": {"article": "de", "plural": "omwegen"}, "sentences": ["Wij nemen een omweg."]}
+        ]
+      }
+    },
+    {
+      "key": "room-service",
+      "gloss": "room service (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "room service", "pos": "noun", "details": {"uncountable": true}, "sentences": ["We call room service."]}
+        ],
+        "nl": [
+        {"lemma": "roomservice", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Wij bellen de roomservice."]}
+        ]
+      }
+    },
+    {
+      "key": "camper",
+      "gloss": "camper (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "camper", "pos": "noun", "details": {"plural": "campers"}, "sentences": ["We travel in a camper."]}
+        ],
+        "nl": [
+        {"lemma": "camper", "pos": "noun", "details": {"article": "de", "plural": "campers"}, "sentences": ["Wij reizen in een camper."]}
+        ]
+      }
+    },
+    {
+      "key": "pass-noun-pas",
+      "gloss": "pass (mountain)",
+      "entries": {
+        "en": [
+        {"lemma": "pass (mountain)", "pos": "noun", "details": {"plural": "passes"}, "sentences": ["We cross the pass."]}
+        ],
+        "nl": [
+        {"lemma": "pas", "pos": "noun", "details": {"article": "de", "plural": "passen"}, "sentences": ["Wij steken de pas over."]}
+        ]
+      }
+    },
+    {
+      "key": "reservation",
+      "gloss": "reservation (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "reservation", "pos": "noun", "details": {"plural": "reservations"}, "sentences": ["I make a reservation."]}
+        ],
+        "nl": [
+        {"lemma": "reservering", "pos": "noun", "details": {"article": "de", "plural": "reserveringen"}, "sentences": ["Ik maak een reservering."]}
+        ]
+      }
+    },
+    {
+      "key": "runway",
+      "gloss": "runway (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "runway", "pos": "noun", "details": {"plural": "runways"}, "sentences": ["The plane is on the runway."]}
+        ],
+        "nl": [
+        {"lemma": "landingsbaan", "pos": "noun", "details": {"article": "de", "plural": "landingsbanen"}, "sentences": ["Het vliegtuig staat op de landingsbaan."]}
+        ]
+      }
+    },
+    {
+      "key": "collision",
+      "gloss": "collision (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "collision", "pos": "noun", "details": {"plural": "collisions"}, "sentences": ["The collision is serious."]}
+        ],
+        "nl": [
+        {"lemma": "botsing", "pos": "noun", "details": {"article": "de", "plural": "botsingen"}, "sentences": ["De botsing is ernstig."]}
+        ]
+      }
+    },
+    {
+      "key": "gear",
+      "gloss": "gear (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "gear", "pos": "noun", "details": {"plural": "gears"}, "sentences": ["I shift gears."]}
+        ],
+        "nl": [
+        {"lemma": "versnelling", "pos": "noun", "details": {"article": "de", "plural": "versnellingen"}, "sentences": ["Ik schakel een versnelling."]}
+        ]
+      }
+    },
+    {
+      "key": "toll",
+      "gloss": "toll (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "toll", "pos": "noun", "details": {"plural": "tolls"}, "sentences": ["We pay a toll."]}
+        ],
+        "nl": [
+        {"lemma": "tol", "pos": "noun", "details": {"article": "de", "plural": "tollen"}, "sentences": ["Wij betalen tol."]}
+        ]
+      }
+    },
+    {
+      "key": "lighthouse",
+      "gloss": "lighthouse (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "lighthouse", "pos": "noun", "details": {"plural": "lighthouses"}, "sentences": ["The lighthouse shines."]}
+        ],
+        "nl": [
+        {"lemma": "vuurtoren", "pos": "noun", "details": {"article": "de", "plural": "vuurtorens"}, "sentences": ["De vuurtoren schijnt."]}
+        ]
+      }
+    },
+    {
+      "key": "dent",
+      "gloss": "dent (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "dent", "pos": "noun", "details": {"plural": "dents"}, "sentences": ["The car has a dent."]}
+        ],
+        "nl": [
+        {"lemma": "deuk", "pos": "noun", "details": {"article": "de", "plural": "deuken"}, "sentences": ["De auto heeft een deuk."]}
+        ]
+      }
+    },
+    {
+      "key": "brake-noun",
+      "gloss": "brake (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "brake", "pos": "noun", "details": {"plural": "brakes"}, "sentences": ["The brake is broken."]}
+        ],
+        "nl": [
+        {"lemma": "rem", "pos": "noun", "details": {"article": "de", "plural": "remmen"}, "sentences": ["De rem is kapot."]}
+        ]
+      }
+    },
+    {
+      "key": "check-in",
+      "gloss": "check in (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "check in", "pos": "verb", "details": {"past": "checked in", "participle": "checked in"}, "sentences": ["We check in at the hotel."]}
+        ],
+        "nl": [
+        {"lemma": "inchecken", "pos": "verb", "details": {"pastSingular": "checkte in", "pastPlural": "checkten in", "participle": "ingecheckt", "auxiliary": "hebben"}, "sentences": ["Wij checken in bij het hotel."]}
         ]
       }
     }

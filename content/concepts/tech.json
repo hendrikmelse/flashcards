@@ -1693,7 +1693,7 @@
       }
     },
     {
-      "key": "scan",
+      "key": "scan-verb",
       "gloss": "scan (verb)",
       "entries": {
         "en": [
@@ -1821,6 +1821,270 @@
         ],
         "nl": [
         {"lemma": "kompas", "pos": "noun", "details": {"article": "het", "plural": "kompassen"}, "sentences": ["Het kompas wijst naar het noorden."]}
+        ]
+      }
+    },
+    {
+      "key": "direct",
+      "gloss": "direct (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "direct", "pos": "verb", "details": {"past": "directed", "participle": "directed"}, "sentences": ["He directs a film."]}
+        ],
+        "nl": [
+        {"lemma": "regisseren", "pos": "verb", "details": {"pastSingular": "regisseerde", "pastPlural": "regisseerden", "participle": "geregisseerd", "auxiliary": "hebben"}, "sentences": ["Hij regisseert een film."]}
+        ]
+      }
+    },
+    {
+      "key": "tablet",
+      "gloss": "tablet (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "tablet", "pos": "noun", "details": {"plural": "tablets"}, "sentences": ["I read on a tablet."]}
+        ],
+        "nl": [
+        {"lemma": "tablet", "pos": "noun", "details": {"article": "de", "plural": "tablets"}, "sentences": ["Ik lees op een tablet."]}
+        ]
+      }
+    },
+    {
+      "key": "encode",
+      "gloss": "encode (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "encode", "pos": "verb", "details": {"past": "encoded", "participle": "encoded"}, "sentences": ["I encode the message."]}
+        ],
+        "nl": [
+        {"lemma": "coderen", "pos": "verb", "details": {"pastSingular": "codeerde", "pastPlural": "codeerden", "participle": "gecodeerd", "auxiliary": "hebben"}, "sentences": ["Ik codeer het bericht."]}
+        ]
+      }
+    },
+    {
+      "key": "prototype",
+      "gloss": "prototype (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "prototype", "pos": "noun", "details": {"plural": "prototypes"}, "sentences": ["The prototype works."]}
+        ],
+        "nl": [
+        {"lemma": "prototype", "pos": "noun", "details": {"article": "het", "plural": "prototypes"}, "sentences": ["Het prototype werkt."]}
+        ]
+      }
+    },
+    {
+      "key": "lever",
+      "gloss": "lever (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "lever", "pos": "noun", "details": {"plural": "levers"}, "sentences": ["I pull the lever."]}
+        ],
+        "nl": [
+        {"lemma": "hendel", "pos": "noun", "details": {"article": "de", "plural": "hendels"}, "sentences": ["Ik trek aan de hendel."]}
+        ]
+      }
+    },
+    {
+      "key": "site",
+      "gloss": "site (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "site", "pos": "noun", "details": {"plural": "sites"}, "sentences": ["I visit the site."]}
+        ],
+        "nl": [
+        {"lemma": "site", "pos": "noun", "details": {"article": "de", "plural": "sites"}, "sentences": ["Ik bezoek de site."]}
+        ]
+      }
+    },
+    {
+      "key": "enter-verb-invoeren",
+      "gloss": "enter (data)",
+      "entries": {
+        "en": [
+        {"lemma": "enter (data)", "pos": "verb", "details": {"past": "entered", "participle": "entered"}, "sentences": ["I enter the data."]}
+        ],
+        "nl": [
+        {"lemma": "invoeren", "pos": "verb", "details": {"pastSingular": "voerde in", "pastPlural": "voerden in", "participle": "ingevoerd", "auxiliary": "hebben"}, "sentences": ["Ik voer de gegevens in."]}
+        ]
+      }
+    },
+    {
+      "key": "quote-noun",
+      "gloss": "quote (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "quote", "pos": "noun", "details": {"plural": "quotes"}, "sentences": ["I read a quote."]}
+        ],
+        "nl": [
+        {"lemma": "citaat", "pos": "noun", "details": {"article": "het", "plural": "citaten"}, "sentences": ["Ik lees een citaat."]}
+        ]
+      }
+    },
+    {
+      "key": "fiction",
+      "gloss": "fiction (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "fiction", "pos": "noun", "details": {"uncountable": true}, "sentences": ["I read fiction."]}
+        ],
+        "nl": [
+        {"lemma": "fictie", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Ik lees fictie."]}
+        ]
+      }
+    },
+    {
+      "key": "receiver",
+      "gloss": "receiver (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "receiver", "pos": "noun", "details": {"plural": "receivers"}, "sentences": ["The receiver is on."]}
+        ],
+        "nl": [
+        {"lemma": "ontvanger", "pos": "noun", "details": {"article": "de", "plural": "ontvangers"}, "sentences": ["De ontvanger staat aan."]}
+        ]
+      }
+    },
+    {
+      "key": "cameraman",
+      "gloss": "cameraman (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "cameraman", "pos": "noun", "details": {"plural": "cameramans"}, "sentences": ["The cameraman films the scene."]}
+        ],
+        "nl": [
+        {"lemma": "cameraman", "pos": "noun", "details": {"article": "de", "plural": "cameramannen"}, "sentences": ["De cameraman filmt de scène."]}
+        ]
+      }
+    },
+    {
+      "key": "trailer",
+      "gloss": "trailer (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "trailer", "pos": "noun", "details": {"plural": "trailers"}, "sentences": ["I watch the trailer."]}
+        ],
+        "nl": [
+        {"lemma": "trailer", "pos": "noun", "details": {"article": "de", "plural": "trailers"}, "sentences": ["Ik kijk naar de trailer."]}
+        ]
+      }
+    },
+    {
+      "key": "phone-book",
+      "gloss": "phone book (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "phone book", "pos": "noun", "details": {"plural": "phone books"}, "sentences": ["I look in the phone book."]}
+        ],
+        "nl": [
+        {"lemma": "telefoonboek", "pos": "noun", "details": {"article": "het", "plural": "telefoonboeken"}, "sentences": ["Ik kijk in het telefoonboek."]}
+        ]
+      }
+    },
+    {
+      "key": "cassette",
+      "gloss": "cassette (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "cassette", "pos": "noun", "details": {"plural": "cassettes"}, "sentences": ["I listen to a cassette."]}
+        ],
+        "nl": [
+        {"lemma": "cassette", "pos": "noun", "details": {"article": "de", "plural": "cassettes"}, "sentences": ["Ik luister naar een cassette."]}
+        ]
+      }
+    },
+    {
+      "key": "probe",
+      "gloss": "probe (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "probe", "pos": "noun", "details": {"plural": "probes"}, "sentences": ["The probe goes into space."]}
+        ],
+        "nl": [
+        {"lemma": "sonde", "pos": "noun", "details": {"article": "de", "plural": "sondes"}, "sentences": ["De sonde gaat de ruimte in."]}
+        ]
+      }
+    },
+    {
+      "key": "locate",
+      "gloss": "locate (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "locate", "pos": "verb", "details": {"past": "located", "participle": "located"}, "sentences": ["We locate the problem."]}
+        ],
+        "nl": [
+        {"lemma": "lokaliseren", "pos": "verb", "details": {"pastSingular": "lokaliseerde", "pastPlural": "lokaliseerden", "participle": "gelokaliseerd", "auxiliary": "hebben"}, "sentences": ["Wij lokaliseren het probleem."]}
+        ]
+      }
+    },
+    {
+      "key": "comic-book",
+      "gloss": "comic book (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "comic book", "pos": "noun", "details": {"plural": "comic books"}, "sentences": ["I read a comic book."]}
+        ],
+        "nl": [
+        {"lemma": "stripboek", "pos": "noun", "details": {"article": "het", "plural": "stripboeken"}, "sentences": ["Ik lees een stripboek."]}
+        ]
+      }
+    },
+    {
+      "key": "charge-verb",
+      "gloss": "charge (a battery)",
+      "entries": {
+        "en": [
+        {"lemma": "charge (a battery)", "pos": "verb", "details": {"past": "charged", "participle": "charged"}, "sentences": ["I charge my phone."]}
+        ],
+        "nl": [
+        {"lemma": "opladen", "pos": "verb", "details": {"pastSingular": "laadde op", "pastPlural": "laadden op", "participle": "opgeladen", "auxiliary": "hebben"}, "sentences": ["Ik laad mijn telefoon op."]}
+        ]
+      }
+    },
+    {
+      "key": "manual",
+      "gloss": "manual (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "manual", "pos": "noun", "details": {"plural": "manuals"}, "sentences": ["I read the manual."]}
+        ],
+        "nl": [
+        {"lemma": "handleiding", "pos": "noun", "details": {"article": "de", "plural": "handleidingen"}, "sentences": ["Ik lees de handleiding."]}
+        ]
+      }
+    },
+    {
+      "key": "timer",
+      "gloss": "timer (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "timer", "pos": "noun", "details": {"plural": "timers"}, "sentences": ["I set the timer."]}
+        ],
+        "nl": [
+        {"lemma": "timer", "pos": "noun", "details": {"article": "de", "plural": "timers"}, "sentences": ["Ik stel de timer in."]}
+        ]
+      }
+    },
+    {
+      "key": "antenna",
+      "gloss": "antenna (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "antenna", "pos": "noun", "details": {"plural": "antennas"}, "sentences": ["The antenna is on the roof."]}
+        ],
+        "nl": [
+        {"lemma": "antenne", "pos": "noun", "details": {"article": "de", "plural": "antennes"}, "sentences": ["De antenne staat op het dak."]}
+        ]
+      }
+    },
+    {
+      "key": "brochure",
+      "gloss": "brochure (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "brochure", "pos": "noun", "details": {"plural": "brochures"}, "sentences": ["I read the brochure."]}
+        ],
+        "nl": [
+        {"lemma": "folder", "pos": "noun", "details": {"article": "de", "plural": "folders"}, "sentences": ["Ik lees de folder."]}
         ]
       }
     }
