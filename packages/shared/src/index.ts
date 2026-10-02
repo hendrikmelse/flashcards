@@ -114,6 +114,29 @@ export type StudyCardView = {
 };
 export type StudyResponse = { now: string; counts: StudyCounts; cards: StudyCardView[] };
 
+export type DirectionSummary = {
+  fromLanguage: string;
+  toLanguage: string;
+  total: number;
+  new: number;
+  /** Learning and relearning. */
+  learning: number;
+  review: number;
+  dueNow: number;
+  /** When the next not-yet-due card in this direction comes due, if any. */
+  nextDueAt: string | null;
+};
+
+export type StatsResponse = {
+  now: string;
+  /** Answers submitted since the study day began (all directions). */
+  reviewsToday: number;
+  /** When the next card comes due in any direction. Null if none is scheduled. */
+  nextDueAt: string | null;
+  /** One row per direction the user has cards in. */
+  directions: DirectionSummary[];
+};
+
 export type ReviewResponse = {
   userCardId: string;
   state: CardStateName;

@@ -110,6 +110,7 @@ All routes live under `/api`.
 | `POST /packs/:id/add`, `POST /concepts/:id/add` | Add to the deck for a direction. Idempotent; skips concepts missing an entry in either language |
 | `GET /deck` | Progress summary and a page of cards, filterable by direction |
 | `GET /study` | Read-only batch: learning cards due within 20 minutes, overdue reviews, then new cards up to the daily limit |
+| `GET /stats` | Reviews today, when the next card is due, and a per-direction breakdown of the deck |
 | `POST /reviews` | Transactional. Locks the card, runs FSRS, updates state and appends to the log. Idempotent via `clientReviewId` |
 
 ### Production hardening
@@ -174,7 +175,7 @@ The full runbook, including server setup, rollback, backups and how to invite so
 - Native review of `content/review-notes.md` and a spot check of the bands; then more languages or more levels
 
 **Features still to build**
-- `GET /stats` and a stats page (cards learned, reviews per day, retention, streak)
+- A stats page (cards learned, reviews per day, retention); `GET /stats` already serves the dashboard
 - My deck page (list and search cards)
 - Settings (daily limits, account)
 - Responsive polish, accessibility basics, optimistic updates on review submission

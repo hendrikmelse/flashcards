@@ -10,6 +10,7 @@ import { authRoutes } from "./routes/auth.js";
 import { deckRoutes } from "./routes/deck.js";
 import { healthRoutes } from "./routes/health.js";
 import { packRoutes } from "./routes/packs.js";
+import { statsRoutes } from "./routes/stats.js";
 import { studyRoutes } from "./routes/study.js";
 import { helmetOptions, originCheck } from "./security.js";
 import { createFsrsScheduler, type Scheduler } from "./srs/engine.js";
@@ -54,6 +55,7 @@ export async function buildApp({
       await api.register(packRoutes, { db });
       await api.register(deckRoutes, { db });
       await api.register(studyRoutes, { db, scheduler });
+      await api.register(statsRoutes, { db });
     },
     { prefix },
   );
