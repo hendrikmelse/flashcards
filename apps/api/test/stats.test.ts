@@ -152,3 +152,121 @@ describe("GET /stats", () => {
     });
   });
 });
+
+describe("GET /deck list filters", () => {
+  const list = async (params: string) => {
+    const res = await app.inject({ method: "GET", url: `/deck?${params}`, cookies });
+    return { status: res.statusCode, body: res.json() };
+  };
+  const states = (body: { cards: { state: string }[] }) => body.cards.map((c) => c.state);
+
+  it("filters by stage, with learning including relearning", async () => {
+    expect(states((await list("state=new")).body)).toEqual(["new"]);
+    expect((await list("state=review")).body.cards).toHaveLength(2);
+    expect(states((await list("state=learning&sort=due")).body)).toEqual(["learning", "relearning"]);
+  });
+
+  it("searches the words in either language of each card", async () => {
+    const hond = (await list("q=hond")).body.cards;
+    expect(hond).toHaveLength(2); // dog, in both directions
+    expect(hond.every((c: { front: { lemma: string }[] }) => ["dog", "hond"].includes(c.front[0]!.lemma))).toBe(true);
+    expect((await list("q=HUIS")).body.cards).toHaveLength(2);
+    expect((await list("q=zzz")).body.cards).toEqual([]);
+    expect((await list("q=%25")).body.cards).toEqual([]); // % is literal
+  });
+
+  it("combines the direction, stage and search filters", async () => {
+    const { body } = await list("fromLanguage=nl&toLanguage=en&state=review&q=hond");
+    expect(body.cards).toHaveLength(1);
+    expect(body.cards[0]).toMatchObject({ fromLanguage: "nl", state: "review" });
+  });
+
+  it("can sort by due date, soonest first with unstudied cards last", async () => {
+    expect(states((await list("sort=due")).body)).toEqual([
+      "review",
+      "learning",
+      "relearning",
+      "review",
+      "new",
+    ]);
+  });
+
+  it("pages and reports whether more cards match", async () => {
+    const first = (await list("sort=due&limit=2")).body;
+    expect(first.cards).toHaveLength(2);
+    expect(first.hasMore).toBe(true);
+    const last = (await list("sort=due&limit=2&offset=4")).body;
+    expect(last.cards).toHaveLength(1);
+    expect(last.hasMore).toBe(false);
+  });
+
+  it("keeps the summary for the whole direction, whatever the filters", async () => {
+    const { body } = await list("fromLanguage=en&toLanguage=nl&state=review&q=zzz");
+    expect(body.summary).toMatchObject({ total: 3, new: 1, learning: 1, review: 1 });
+  });
+
+  it("includes what the card list shows", async () => {
+    const [card] = (await list("state=review&fromLanguage=nl&toLanguage=en")).body.cards;
+    expect(card).toMatchObject({ state: "review", lapses: 0 });
+    expect(card).toHaveProperty("intervalDays");
+    expect(card).toHaveProperty("dueAt");
+  });
+
+  describe("sorting", () => {
+    // Cards: dog en>nl new (due 10:00), house en>nl learning (09:00), water en>nl review (08:00),
+    // hond nl>en review (15:00), huis nl>en relearning (12:00).
+    beforeAll(async () => {
+      const mine = await db.select().from(userCards).where(eq(userCards.userId, userId));
+      const set = async (conceptIndex: number, from: string, values: { intervalDays?: number; lapses?: number }) => {
+        const c = mine.find((x) => x.conceptId === conceptIds[conceptIndex] && x.fromLanguage === from)!;
+        await db.update(userCards).set(values).where(eq(userCards.id, c.id));
+      };
+      await set(0, "nl", { intervalDays: 30 });
+      await set(2, "en", { intervalDays: 7, lapses: 3 });
+      await set(1, "nl", { lapses: 1 });
+    });
+
+    const sorted = async (params: string) => states((await list(`sort=${params}`)).body);
+    const prompts = async (params: string) =>
+      (await list(`sort=${params}`)).body.cards.map((c: { front: { lemma: string }[] }) => c.front[0]!.lemma);
+
+    it("sorts by status, in order of progress", async () => {
+      expect(await sorted("status")).toEqual(["new", "learning", "relearning", "review", "review"]);
+      expect(await sorted("status&order=desc")).toEqual(["review", "review", "relearning", "learning", "new"]);
+    });
+
+    it("sorts by interval, longest first by default", async () => {
+      expect(await sorted("interval")).toEqual(["review", "review", "learning", "new", "relearning"]);
+      expect(await sorted("interval&order=asc")).toEqual(["learning", "new", "relearning", "review", "review"]);
+    });
+
+    it("sorts by lapses, most forgotten first by default", async () => {
+      expect(await sorted("lapses")).toEqual(["review", "relearning", "learning", "new", "review"]);
+    });
+
+    it("sorts alphabetically by the prompt word", async () => {
+      expect(await prompts("alpha")).toEqual(["dog", "hond", "house", "huis", "water"]);
+      expect(await prompts("alpha&order=desc")).toEqual(["water", "huis", "house", "hond", "dog"]);
+    });
+
+    it("can reverse the due order, still leaving unstudied cards last", async () => {
+      expect(await sorted("due&order=desc")).toEqual(["review", "relearning", "learning", "review", "new"]);
+    });
+
+    it("keeps pages consistent when sorting", async () => {
+      const first = (await list("sort=interval&limit=2")).body.cards.map((c: { id: string }) => c.id);
+      const rest = (await list("sort=interval&limit=3&offset=2")).body.cards.map((c: { id: string }) => c.id);
+      const all = (await list("sort=interval&limit=5")).body.cards.map((c: { id: string }) => c.id);
+      expect([...first, ...rest]).toEqual(all);
+    });
+
+    it("rejects an unknown sort or order", async () => {
+      expect((await list("sort=bogus")).status).toBe(400);
+      expect((await list("order=sideways")).status).toBe(400);
+    });
+  });
+
+  it("rejects an unknown stage", async () => {
+    expect((await list("state=bogus")).status).toBe(400);
+  });
+});

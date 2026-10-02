@@ -74,6 +74,27 @@ export const conceptSearchQuerySchema = z
     message: "fromLanguage and toLanguage must differ",
   });
 
+// Narrowing and ordering the deck list: a word to search for, a stage
+// ("learning" includes relearning), and a sort. Each sort has a natural
+// direction used when `order` is left out (see DECK_SORT_DEFAULT_ORDER).
+export const DECK_SORTS = ["added", "due", "status", "interval", "lapses", "alpha"] as const;
+export type DeckSort = (typeof DECK_SORTS)[number];
+export const DECK_SORT_DEFAULT_ORDER: Record<DeckSort, "asc" | "desc"> = {
+  added: "desc", // newest first
+  due: "asc", // soonest first; cards not yet studied always come last
+  status: "asc", // new, learning, relearning, review
+  interval: "desc", // longest first
+  lapses: "desc", // most forgotten first
+  alpha: "asc", // by the prompt word
+};
+
+export const deckFilterSchema = z.object({
+  q: z.string().trim().max(100).optional(),
+  state: z.enum(["new", "learning", "review"]).optional(),
+  sort: z.enum(DECK_SORTS).default("added"),
+  order: z.enum(["asc", "desc"]).optional(),
+});
+
 export const uuidParamSchema = z.object({ id: z.string().uuid() });
 
 export type EntryView = {
@@ -98,7 +119,27 @@ export type DeckSummary = {
   relearning: number;
   dueNow: number;
 };
-export type DeckResponse = { summary: DeckSummary };
+export type DeckCardView = {
+  id: string;
+  conceptId: string;
+  fromLanguage: string;
+  toLanguage: string;
+  state: CardStateName;
+  dueAt: string;
+  addedAt: string;
+  intervalDays: number;
+  lapses: number;
+  lastReviewedAt: string | null;
+  front: EntryView[];
+  back: EntryView[];
+};
+export type DeckResponse = {
+  /** Totals for the direction, regardless of the search and stage filters. */
+  summary: DeckSummary;
+  cards: DeckCardView[];
+  /** True when more cards match after this page. */
+  hasMore: boolean;
+};
 
 export type StudyCounts = { learning: number; review: number; new: number };
 export type StudyCardView = {

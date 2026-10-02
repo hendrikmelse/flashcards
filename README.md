@@ -108,7 +108,7 @@ All routes live under `/api`.
 | `GET /languages` | Available languages |
 | `GET /packs`, `GET /packs/:id` | Public browsing. With `fromLanguage` and `toLanguage` it adds availability and, when logged in, what is already in the deck |
 | `POST /packs/:id/add`, `POST /concepts/:id/add` | Add to the deck for a direction. Idempotent; skips concepts missing an entry in either language |
-| `GET /deck` | Progress summary and a page of cards, filterable by direction |
+| `GET /deck` | Progress summary and a page of cards, filterable by direction, stage (new, learning, review) and a search word, sortable by date added, next due, status, interval, lapses or the prompt word |
 | `GET /study` | Read-only batch: learning cards due within 20 minutes, overdue reviews, then new cards up to the daily limit |
 | `GET /stats` | Reviews today, when the next card is due, and a per-direction breakdown of the deck |
 | `POST /reviews` | Transactional. Locks the card, runs FSRS, updates state and appends to the log. Idempotent via `clientReviewId` |
@@ -162,7 +162,7 @@ The full runbook, including server setup, rollback, backups and how to invite so
 
 ## Status and roadmap
 
-**Done:** backend (auth, content model, packs, deck, study queue, reviews), frontend (auth, dashboard, pack browser, study session with 1-4 keys and learning cards returning within the session), and production deployment with CI and nightly backups.
+**Done:** backend (auth, content model, packs, deck, study queue, reviews), frontend (auth, dashboard, deck viewer, pack browser, study session with 1-4 keys and learning cards returning within the session), and production deployment with CI and nightly backups.
 
 **Before anyone other than the owner uses it**
 - Offsite database backups and a tested restore, plus an alert when a backup fails
@@ -176,7 +176,6 @@ The full runbook, including server setup, rollback, backups and how to invite so
 
 **Features still to build**
 - A stats page (cards learned, reviews per day, retention); `GET /stats` already serves the dashboard
-- My deck page (list and search cards)
 - Settings (daily limits, account)
 - Responsive polish, accessibility basics, optimistic updates on review submission
 - Account deletion and export
