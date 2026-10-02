@@ -745,7 +745,7 @@
       }
     },
     {
-      "key": "stable",
+      "key": "stable-noun",
       "gloss": "stable (noun)",
       "entries": {
         "en": [
@@ -813,6 +813,354 @@
         ],
         "nl": [
         {"lemma": "vlam", "pos": "noun", "details": {"article": "de", "plural": "vlammen"}, "sentences": ["De vlam is heet."]}
+        ]
+      }
+    },
+    {
+      "key": "ash",
+      "gloss": "ash (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "ash", "pos": "noun", "details": {"plural": "ashes"}, "sentences": ["The ash is cold."]}
+        ],
+        "nl": [
+        {"lemma": "as", "pos": "noun", "details": {"article": "de", "plural": "assen"}, "sentences": ["De as is koud."]}
+        ]
+      }
+    },
+    {
+      "key": "east",
+      "gloss": "east (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "east", "pos": "noun", "details": {"uncountable": true}, "sentences": ["The sun rises in the east."]}
+        ],
+        "nl": [
+        {"lemma": "oosten", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["De zon komt op in het oosten."]}
+        ]
+      }
+    },
+    {
+      "key": "temperature",
+      "gloss": "temperature (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "temperature", "pos": "noun", "details": {"plural": "temperatures"}, "sentences": ["The temperature is low."]}
+        ],
+        "nl": [
+        {"lemma": "temperatuur", "pos": "noun", "details": {"article": "de", "plural": "temperaturen"}, "sentences": ["De temperatuur is laag."]}
+        ]
+      }
+    },
+    {
+      "key": "pick",
+      "gloss": "pick (flowers)",
+      "entries": {
+        "en": [
+        {"lemma": "pick (flowers)", "pos": "verb", "details": {"past": "picked", "participle": "picked"}, "sentences": ["I pick flowers."]}
+        ],
+        "nl": [
+        {"lemma": "plukken", "pos": "verb", "details": {"pastSingular": "plukte", "pastPlural": "plukten", "participle": "geplukt", "auxiliary": "hebben"}, "sentences": ["Ik pluk bloemen."]}
+        ]
+      }
+    },
+    {
+      "key": "heat",
+      "gloss": "heat (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "heat", "pos": "noun", "details": {"uncountable": true}, "sentences": ["The heat is terrible."]}
+        ],
+        "nl": [
+        {"lemma": "hitte", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["De hitte is vreselijk."]}
+        ]
+      }
+    },
+    {
+      "key": "earthquake",
+      "gloss": "earthquake (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "earthquake", "pos": "noun", "details": {"plural": "earthquakes"}, "sentences": ["The earthquake is strong."]}
+        ],
+        "nl": [
+        {"lemma": "aardbeving", "pos": "noun", "details": {"article": "de", "plural": "aardbevingen"}, "sentences": ["De aardbeving is sterk."]}
+        ]
+      }
+    },
+    {
+      "key": "mud",
+      "gloss": "mud (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "mud", "pos": "noun", "details": {"uncountable": true}, "sentences": ["There is mud on the road."]}
+        ],
+        "nl": [
+        {"lemma": "modder", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Er ligt modder op de weg."]}
+        ]
+      }
+    },
+    {
+      "key": "root",
+      "gloss": "root (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "root", "pos": "noun", "details": {"plural": "roots"}, "sentences": ["The tree has deep roots."]}
+        ],
+        "nl": [
+        {"lemma": "wortel", "pos": "noun", "details": {"article": "de", "plural": "wortels"}, "sentences": ["De boom heeft diepe wortels."]}
+        ]
+      }
+    },
+    {
+      "key": "waste-noun",
+      "gloss": "waste (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "waste", "pos": "noun", "details": {"uncountable": true}, "sentences": ["The waste is in the bin."]}
+        ],
+        "nl": [
+        {"lemma": "afval", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["Het afval zit in de bak."]}
+        ]
+      }
+    },
+    {
+      "key": "branch",
+      "gloss": "branch (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "branch", "pos": "noun", "details": {"plural": "branches"}, "sentences": ["The bird sits on a branch."]}
+        ],
+        "nl": [
+        {"lemma": "tak", "pos": "noun", "details": {"article": "de", "plural": "takken"}, "sentences": ["De vogel zit op een tak."]}
+        ]
+      }
+    },
+    {
+      "key": "sunrise",
+      "gloss": "sunrise (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "sunrise", "pos": "noun", "details": {"plural": "sunrises"}, "sentences": ["The sunrise is beautiful."]}
+        ],
+        "nl": [
+        {"lemma": "zonsopgang", "pos": "noun", "details": {"article": "de", "plural": "zonsopgangen"}, "sentences": ["De zonsopgang is mooi."]}
+        ]
+      }
+    },
+    {
+      "key": "sunset",
+      "gloss": "sunset (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "sunset", "pos": "noun", "details": {"plural": "sunsets"}, "sentences": ["The sunset is red."]}
+        ],
+        "nl": [
+        {"lemma": "zonsondergang", "pos": "noun", "details": {"article": "de", "plural": "zonsondergangen"}, "sentences": ["De zonsondergang is rood."]}
+        ]
+      }
+    },
+    {
+      "key": "moisture",
+      "gloss": "moisture (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "moisture", "pos": "noun", "details": {"uncountable": true}, "sentences": ["There is moisture in the wall."]}
+        ],
+        "nl": [
+        {"lemma": "vocht", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["Er zit vocht in de muur."]}
+        ]
+      }
+    },
+    {
+      "key": "valley",
+      "gloss": "valley (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "valley", "pos": "noun", "details": {"plural": "valleys"}, "sentences": ["The village is in the valley."]}
+        ],
+        "nl": [
+        {"lemma": "vallei", "pos": "noun", "details": {"article": "de", "plural": "valleien"}, "sentences": ["Het dorp ligt in de vallei."]}
+        ]
+      }
+    },
+    {
+      "key": "stench",
+      "gloss": "stench (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "stench", "pos": "noun", "details": {"uncountable": true}, "sentences": ["The stench is terrible."]}
+        ],
+        "nl": [
+        {"lemma": "stank", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["De stank is vreselijk."]}
+        ]
+      }
+    },
+    {
+      "key": "lightning",
+      "gloss": "lightning (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "lightning", "pos": "noun", "details": {"uncountable": true}, "sentences": ["The lightning is bright."]}
+        ],
+        "nl": [
+        {"lemma": "bliksem", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["De bliksem is fel."]}
+        ]
+      }
+    },
+    {
+      "key": "swamp",
+      "gloss": "swamp (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "swamp", "pos": "noun", "details": {"plural": "swamps"}, "sentences": ["The swamp is wet."]}
+        ],
+        "nl": [
+        {"lemma": "moeras", "pos": "noun", "details": {"article": "het", "plural": "moerassen"}, "sentences": ["Het moeras is nat."]}
+        ]
+      }
+    },
+    {
+      "key": "seed",
+      "gloss": "seed (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "seed", "pos": "noun", "details": {"plural": "seeds"}, "sentences": ["I plant a seed."]}
+        ],
+        "nl": [
+        {"lemma": "zaad", "pos": "noun", "details": {"article": "het", "plural": "zaden"}, "sentences": ["Ik plant een zaad."]}
+        ]
+      }
+    },
+    {
+      "key": "well-noun",
+      "gloss": "well (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "well", "pos": "noun", "details": {"plural": "wells"}, "sentences": ["The water comes from a well."]}
+        ],
+        "nl": [
+        {"lemma": "put", "pos": "noun", "details": {"article": "de", "plural": "putten"}, "sentences": ["Het water komt uit een put."]}
+        ]
+      }
+    },
+    {
+      "key": "ranch",
+      "gloss": "ranch (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "ranch", "pos": "noun", "details": {"plural": "ranches"}, "sentences": ["The ranch is large."]}
+        ],
+        "nl": [
+        {"lemma": "ranch", "pos": "noun", "details": {"article": "de", "plural": "ranches"}, "sentences": ["De ranch is groot."]}
+        ]
+      }
+    },
+    {
+      "key": "ripe",
+      "gloss": "ripe (adjective)",
+      "entries": {
+        "en": [
+        {"lemma": "ripe", "pos": "adjective", "sentences": ["The fruit is ripe."]}
+        ],
+        "nl": [
+        {"lemma": "rijp", "pos": "adjective", "sentences": ["Het fruit is rijp."]}
+        ]
+      }
+    },
+    {
+      "key": "radiate",
+      "gloss": "radiate (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "radiate", "pos": "verb", "details": {"past": "radiated", "participle": "radiated"}, "sentences": ["The sun radiates warmth."]}
+        ],
+        "nl": [
+        {"lemma": "stralen", "pos": "verb", "details": {"pastSingular": "straalde", "pastPlural": "straalden", "participle": "gestraald", "auxiliary": "hebben"}, "sentences": ["De zon straalt warmte uit."]}
+        ]
+      }
+    },
+    {
+      "key": "countryside",
+      "gloss": "countryside (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "countryside", "pos": "noun", "details": {"uncountable": true}, "sentences": ["I live in the countryside."]}
+        ],
+        "nl": [
+        {"lemma": "platteland", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["Ik woon op het platteland."]}
+        ]
+      }
+    },
+    {
+      "key": "hurricane",
+      "gloss": "hurricane (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "hurricane", "pos": "noun", "details": {"plural": "hurricanes"}, "sentences": ["The hurricane is coming."]}
+        ],
+        "nl": [
+        {"lemma": "orkaan", "pos": "noun", "details": {"article": "de", "plural": "orkanen"}, "sentences": ["De orkaan komt eraan."]}
+        ]
+      }
+    },
+    {
+      "key": "blow-verb-waaien",
+      "gloss": "blow (of wind)",
+      "entries": {
+        "en": [
+        {"lemma": "blow (of wind)", "pos": "verb", "details": {"past": "blew", "participle": "blown"}, "sentences": ["The wind blows."]}
+        ],
+        "nl": [
+        {"lemma": "waaien", "pos": "verb", "details": {"pastSingular": "waaide", "pastPlural": "waaiden", "participle": "gewaaid", "auxiliary": "hebben"}, "sentences": ["De wind waait."]}
+        ]
+      }
+    },
+    {
+      "key": "estate",
+      "gloss": "estate (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "estate", "pos": "noun", "details": {"plural": "estates"}, "sentences": ["The estate is beautiful."]}
+        ],
+        "nl": [
+        {"lemma": "landgoed", "pos": "noun", "details": {"article": "het", "plural": "landgoederen"}, "sentences": ["Het landgoed is mooi."]}
+        ]
+      }
+    },
+    {
+      "key": "bank-noun-wal",
+      "gloss": "bank (of a river)",
+      "entries": {
+        "en": [
+        {"lemma": "bank (of a river)", "pos": "noun", "details": {"plural": "banks"}, "sentences": ["The boat is at the bank."]}
+        ],
+        "nl": [
+        {"lemma": "wal", "pos": "noun", "details": {"article": "de", "plural": "wallen"}, "sentences": ["De boot ligt aan de wal."]}
+        ]
+      }
+    },
+    {
+      "key": "brook",
+      "gloss": "brook (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "brook", "pos": "noun", "details": {"plural": "brooks"}, "sentences": ["The brook is clear."]}
+        ],
+        "nl": [
+        {"lemma": "beek", "pos": "noun", "details": {"article": "de", "plural": "beken"}, "sentences": ["De beek is helder."]}
+        ]
+      }
+    },
+    {
+      "key": "shower-noun-bui",
+      "gloss": "shower (rain)",
+      "entries": {
+        "en": [
+        {"lemma": "shower (rain)", "pos": "noun", "details": {"plural": "showers"}, "sentences": ["There is a shower of rain."]}
+        ],
+        "nl": [
+        {"lemma": "bui", "pos": "noun", "details": {"article": "de", "plural": "buien"}, "sentences": ["Er komt een bui."]}
         ]
       }
     }

@@ -157,7 +157,7 @@
       }
     },
     {
-      "key": "future",
+      "key": "future-noun",
       "gloss": "future (noun)",
       "entries": {
         "en": [
@@ -357,6 +357,78 @@
         ],
         "nl": [
         {"lemma": "datum", "pos": "noun", "details": {"article": "de", "plural": "data"}, "sentences": ["Wat is de datum?"]}
+        ]
+      }
+    },
+    {
+      "key": "recent",
+      "gloss": "recent (adjective)",
+      "entries": {
+        "en": [
+        {"lemma": "recent", "pos": "adjective", "sentences": ["The news is recent."]}
+        ],
+        "nl": [
+        {"lemma": "recent", "pos": "adjective", "sentences": ["Het nieuws is recent."]}
+        ]
+      }
+    },
+    {
+      "key": "little-while",
+      "gloss": "little while (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "little while", "pos": "noun", "details": {"plural": "little whiles"}, "sentences": ["Wait a little while."]}
+        ],
+        "nl": [
+        {"lemma": "poosje", "pos": "noun", "details": {"article": "het", "plural": "poosjes"}, "sentences": ["Wacht een poosje."]}
+        ]
+      }
+    },
+    {
+      "key": "historical",
+      "gloss": "historical (adjective)",
+      "entries": {
+        "en": [
+        {"lemma": "historical", "pos": "adjective", "sentences": ["This is a historical building."]}
+        ],
+        "nl": [
+        {"lemma": "historisch", "pos": "adjective", "sentences": ["Dit is een historisch gebouw."]}
+        ]
+      }
+    },
+    {
+      "key": "early",
+      "gloss": "early (adjective)",
+      "entries": {
+        "en": [
+        {"lemma": "early", "pos": "adjective", "sentences": ["I get up early."]}
+        ],
+        "nl": [
+        {"lemma": "vroeg", "pos": "adjective", "sentences": ["Ik sta vroeg op."]}
+        ]
+      }
+    },
+    {
+      "key": "autumn",
+      "gloss": "autumn (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "autumn", "pos": "noun", "details": {"plural": "autumns"}, "sentences": ["The autumn is colorful."]}
+        ],
+        "nl": [
+        {"lemma": "herfst", "pos": "noun", "details": {"article": "de", "plural": "herfsten"}, "sentences": ["De herfst is kleurrijk."]}
+        ]
+      }
+    },
+    {
+      "key": "era",
+      "gloss": "era (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "era", "pos": "noun", "details": {"plural": "eras"}, "sentences": ["This is a new era."]}
+        ],
+        "nl": [
+        {"lemma": "tijdperk", "pos": "noun", "details": {"article": "het", "plural": "tijdperken"}, "sentences": ["Dit is een nieuw tijdperk."]}
         ]
       }
     }

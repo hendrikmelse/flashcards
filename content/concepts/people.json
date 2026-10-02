@@ -157,7 +157,7 @@
       }
     },
     {
-      "key": "teacher",
+      "key": "teacher-noun-leraar",
       "gloss": "teacher (person who teaches)",
       "entries": {
         "en": [
@@ -625,7 +625,7 @@
       }
     },
     {
-      "key": "kiss-noun",
+      "key": "kiss-noun-kus",
       "gloss": "kiss (noun)",
       "entries": {
         "en": [
@@ -721,7 +721,7 @@
       }
     },
     {
-      "key": "neighbor",
+      "key": "neighbor-noun-buur",
       "gloss": "neighbor (noun)",
       "entries": {
         "en": [
@@ -1077,6 +1077,426 @@
         ],
         "nl": [
         {"lemma": "rebel", "pos": "noun", "details": {"article": "de", "plural": "rebellen"}, "sentences": ["De rebel vlucht."]}
+        ]
+      }
+    },
+    {
+      "key": "widow",
+      "gloss": "widow (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "widow", "pos": "noun", "details": {"plural": "widows"}, "sentences": ["The widow lives alone."]}
+        ],
+        "nl": [
+        {"lemma": "weduwe", "pos": "noun", "details": {"article": "de", "plural": "weduwen"}, "sentences": ["De weduwe woont alleen."]}
+        ]
+      }
+    },
+    {
+      "key": "society-noun-maatschappij",
+      "gloss": "society (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "society", "pos": "noun", "details": {"plural": "societies"}, "sentences": ["Society changes."]}
+        ],
+        "nl": [
+        {"lemma": "maatschappij", "pos": "noun", "details": {"article": "de", "plural": "maatschappijen"}, "sentences": ["De maatschappij verandert."]}
+        ]
+      }
+    },
+    {
+      "key": "wife",
+      "gloss": "wife (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "wife", "pos": "noun", "details": {"plural": "wives"}, "sentences": ["My wife is at home."]}
+        ],
+        "nl": [
+        {"lemma": "echtgenote", "pos": "noun", "details": {"article": "de", "plural": "echtgenotes"}, "sentences": ["Mijn echtgenote is thuis."]}
+        ]
+      }
+    },
+    {
+      "key": "neighbor-noun-buurman",
+      "gloss": "neighbor (male)",
+      "entries": {
+        "en": [
+        {"lemma": "neighbor (male)", "pos": "noun", "details": {"plural": "neighbors"}, "sentences": ["My neighbor is nice."]}
+        ],
+        "nl": [
+        {"lemma": "buurman", "pos": "noun", "details": {"article": "de", "plural": "buurmannen"}, "sentences": ["Mijn buurman is aardig."]}
+        ]
+      }
+    },
+    {
+      "key": "crowd",
+      "gloss": "crowd (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "crowd", "pos": "noun", "details": {"plural": "crowds"}, "sentences": ["The crowd cheers."]}
+        ],
+        "nl": [
+        {"lemma": "menigte", "pos": "noun", "details": {"article": "de", "plural": "menigten"}, "sentences": ["De menigte juicht."]}
+        ]
+      }
+    },
+    {
+      "key": "hug",
+      "gloss": "hug (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "hug", "pos": "noun", "details": {"plural": "hugs"}, "sentences": ["She gives me a hug."]}
+        ],
+        "nl": [
+        {"lemma": "knuffel", "pos": "noun", "details": {"article": "de", "plural": "knuffels"}, "sentences": ["Zij geeft mij een knuffel."]}
+        ]
+      }
+    },
+    {
+      "key": "flirt",
+      "gloss": "flirt (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "flirt", "pos": "verb", "details": {"past": "flirted", "participle": "flirted"}, "sentences": ["They flirt."]}
+        ],
+        "nl": [
+        {"lemma": "flirten", "pos": "verb", "details": {"pastSingular": "flirtte", "pastPlural": "flirtten", "participle": "geflirt", "auxiliary": "hebben"}, "sentences": ["Zij flirten."]}
+        ]
+      }
+    },
+    {
+      "key": "single",
+      "gloss": "single (unmarried)",
+      "entries": {
+        "en": [
+        {"lemma": "single (unmarried)", "pos": "adjective", "sentences": ["He is single."]}
+        ],
+        "nl": [
+        {"lemma": "vrijgezel", "pos": "adjective", "sentences": ["Hij is vrijgezel."]}
+        ]
+      }
+    },
+    {
+      "key": "volunteer",
+      "gloss": "volunteer (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "volunteer", "pos": "noun", "details": {"plural": "volunteers"}, "sentences": ["The volunteer helps."]}
+        ],
+        "nl": [
+        {"lemma": "vrijwilliger", "pos": "noun", "details": {"article": "de", "plural": "vrijwilligers"}, "sentences": ["De vrijwilliger helpt."]}
+        ]
+      }
+    },
+    {
+      "key": "grandmother",
+      "gloss": "grandmother (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "grandmother", "pos": "noun", "details": {"plural": "grandmothers"}, "sentences": ["My grandmother is old."]}
+        ],
+        "nl": [
+        {"lemma": "grootmoeder", "pos": "noun", "details": {"article": "de", "plural": "grootmoeders"}, "sentences": ["Mijn grootmoeder is oud."]}
+        ]
+      }
+    },
+    {
+      "key": "survivor",
+      "gloss": "survivor (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "survivor", "pos": "noun", "details": {"plural": "survivors"}, "sentences": ["The survivor tells his story."]}
+        ],
+        "nl": [
+        {"lemma": "overlevende", "pos": "noun", "details": {"article": "de", "plural": "overlevenden"}, "sentences": ["De overlevende vertelt zijn verhaal."]}
+        ]
+      }
+    },
+    {
+      "key": "relative",
+      "gloss": "relative (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "relative", "pos": "noun", "details": {"plural": "relatives"}, "sentences": ["He is a relative."]}
+        ],
+        "nl": [
+        {"lemma": "familielid", "pos": "noun", "details": {"article": "het", "plural": "familieleden"}, "sentences": ["Hij is een familielid."]}
+        ]
+      }
+    },
+    {
+      "key": "last-name",
+      "gloss": "last name (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "last name", "pos": "noun", "details": {"plural": "last names"}, "sentences": ["What is your last name?"]}
+        ],
+        "nl": [
+        {"lemma": "achternaam", "pos": "noun", "details": {"article": "de", "plural": "achternamen"}, "sentences": ["Wat is je achternaam?"]}
+        ]
+      }
+    },
+    {
+      "key": "resident-noun-inwoner",
+      "gloss": "resident (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "resident", "pos": "noun", "details": {"plural": "residents"}, "sentences": ["The residents are friendly."]}
+        ],
+        "nl": [
+        {"lemma": "inwoner", "pos": "noun", "details": {"article": "de", "plural": "inwoners"}, "sentences": ["De inwoners zijn vriendelijk."]}
+        ]
+      }
+    },
+    {
+      "key": "amateur",
+      "gloss": "amateur (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "amateur", "pos": "noun", "details": {"plural": "amateurs"}, "sentences": ["He is an amateur."]}
+        ],
+        "nl": [
+        {"lemma": "amateur", "pos": "noun", "details": {"article": "de", "plural": "amateurs"}, "sentences": ["Hij is een amateur."]}
+        ]
+      }
+    },
+    {
+      "key": "intimate",
+      "gloss": "intimate (adjective)",
+      "entries": {
+        "en": [
+        {"lemma": "intimate", "pos": "adjective", "sentences": ["The dinner is intimate."]}
+        ],
+        "nl": [
+        {"lemma": "intiem", "pos": "adjective", "sentences": ["Het diner is intiem."]}
+        ]
+      }
+    },
+    {
+      "key": "giant",
+      "gloss": "giant (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "giant", "pos": "noun", "details": {"plural": "giants"}, "sentences": ["The giant is big."]}
+        ],
+        "nl": [
+        {"lemma": "reus", "pos": "noun", "details": {"article": "de", "plural": "reuzen"}, "sentences": ["De reus is groot."]}
+        ]
+      }
+    },
+    {
+      "key": "grandson",
+      "gloss": "grandson (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "grandson", "pos": "noun", "details": {"plural": "grandsons"}, "sentences": ["My grandson is five."]}
+        ],
+        "nl": [
+        {"lemma": "kleinzoon", "pos": "noun", "details": {"article": "de", "plural": "kleinzonen"}, "sentences": ["Mijn kleinzoon is vijf."]}
+        ]
+      }
+    },
+    {
+      "key": "population",
+      "gloss": "population (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "population", "pos": "noun", "details": {"plural": "populations"}, "sentences": ["The population grows."]}
+        ],
+        "nl": [
+        {"lemma": "bevolking", "pos": "noun", "details": {"article": "de", "plural": "bevolkingen"}, "sentences": ["De bevolking groeit."]}
+        ]
+      }
+    },
+    {
+      "key": "first-name",
+      "gloss": "first name (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "first name", "pos": "noun", "details": {"plural": "first names"}, "sentences": ["What is your first name?"]}
+        ],
+        "nl": [
+        {"lemma": "voornaam", "pos": "noun", "details": {"article": "de", "plural": "voornamen"}, "sentences": ["Wat is je voornaam?"]}
+        ]
+      }
+    },
+    {
+      "key": "grandchild",
+      "gloss": "grandchild (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "grandchild", "pos": "noun", "details": {"plural": "grandchilds"}, "sentences": ["My grandchild is young."]}
+        ],
+        "nl": [
+        {"lemma": "kleinkind", "pos": "noun", "details": {"article": "het", "plural": "kleinkinderen"}, "sentences": ["Mijn kleinkind is jong."]}
+        ]
+      }
+    },
+    {
+      "key": "kiss-noun-zoen",
+      "gloss": "kiss (smooch)",
+      "entries": {
+        "en": [
+        {"lemma": "kiss (smooch)", "pos": "noun", "details": {"plural": "kisses"}, "sentences": ["He gives her a kiss."]}
+        ],
+        "nl": [
+        {"lemma": "zoen", "pos": "noun", "details": {"article": "de", "plural": "zoenen"}, "sentences": ["Hij geeft haar een zoen."]}
+        ]
+      }
+    },
+    {
+      "key": "duke",
+      "gloss": "duke (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "duke", "pos": "noun", "details": {"plural": "dukes"}, "sentences": ["The duke lives in the castle."]}
+        ],
+        "nl": [
+        {"lemma": "hertog", "pos": "noun", "details": {"article": "de", "plural": "hertogen"}, "sentences": ["De hertog woont in het kasteel."]}
+        ]
+      }
+    },
+    {
+      "key": "roommate",
+      "gloss": "roommate (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "roommate", "pos": "noun", "details": {"plural": "roommates"}, "sentences": ["My roommate is nice."]}
+        ],
+        "nl": [
+        {"lemma": "kamergenoot", "pos": "noun", "details": {"article": "de", "plural": "kamergenoten"}, "sentences": ["Mijn kamergenoot is aardig."]}
+        ]
+      }
+    },
+    {
+      "key": "nickname",
+      "gloss": "nickname (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "nickname", "pos": "noun", "details": {"plural": "nicknames"}, "sentences": ["His nickname is Max."]}
+        ],
+        "nl": [
+        {"lemma": "bijnaam", "pos": "noun", "details": {"article": "de", "plural": "bijnamen"}, "sentences": ["Zijn bijnaam is Max."]}
+        ]
+      }
+    },
+    {
+      "key": "refugee",
+      "gloss": "refugee (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "refugee", "pos": "noun", "details": {"plural": "refugees"}, "sentences": ["The refugee seeks safety."]}
+        ],
+        "nl": [
+        {"lemma": "vluchteling", "pos": "noun", "details": {"article": "de", "plural": "vluchtelingen"}, "sentences": ["De vluchteling zoekt veiligheid."]}
+        ]
+      }
+    },
+    {
+      "key": "resident-noun-bewoner",
+      "gloss": "resident (inhabitant)",
+      "entries": {
+        "en": [
+        {"lemma": "resident (inhabitant)", "pos": "noun", "details": {"plural": "residents"}, "sentences": ["The residents are happy."]}
+        ],
+        "nl": [
+        {"lemma": "bewoner", "pos": "noun", "details": {"article": "de", "plural": "bewoners"}, "sentences": ["De bewoners zijn blij."]}
+        ]
+      }
+    },
+    {
+      "key": "society-noun-samenleving",
+      "gloss": "society (community)",
+      "entries": {
+        "en": [
+        {"lemma": "society (community)", "pos": "noun", "details": {"plural": "societies"}, "sentences": ["Society is changing."]}
+        ],
+        "nl": [
+        {"lemma": "samenleving", "pos": "noun", "details": {"article": "de", "plural": "samenlevingen"}, "sentences": ["De samenleving verandert."]}
+        ]
+      }
+    },
+    {
+      "key": "diaper",
+      "gloss": "diaper (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "diaper", "pos": "noun", "details": {"plural": "diapers"}, "sentences": ["The baby needs a diaper."]}
+        ],
+        "nl": [
+        {"lemma": "luier", "pos": "noun", "details": {"article": "de", "plural": "luiers"}, "sentences": ["De baby heeft een luier nodig."]}
+        ]
+      }
+    },
+    {
+      "key": "wedding-anniversary",
+      "gloss": "wedding anniversary (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "wedding anniversary", "pos": "noun", "details": {"plural": "wedding anniversaries"}, "sentences": ["Today is our wedding anniversary."]}
+        ],
+        "nl": [
+        {"lemma": "trouwdag", "pos": "noun", "details": {"article": "de", "plural": "trouwdagen"}, "sentences": ["Vandaag is onze trouwdag."]}
+        ]
+      }
+    },
+    {
+      "key": "movie-star",
+      "gloss": "movie star (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "movie star", "pos": "noun", "details": {"plural": "movie stars"}, "sentences": ["The movie star is famous."]}
+        ],
+        "nl": [
+        {"lemma": "filmster", "pos": "noun", "details": {"article": "de", "plural": "filmsterren"}, "sentences": ["De filmster is beroemd."]}
+        ]
+      }
+    },
+    {
+      "key": "host",
+      "gloss": "host (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "host", "pos": "noun", "details": {"plural": "hosts"}, "sentences": ["The host welcomes us."]}
+        ],
+        "nl": [
+        {"lemma": "gastheer", "pos": "noun", "details": {"article": "de", "plural": "gastheren"}, "sentences": ["De gastheer verwelkomt ons."]}
+        ]
+      }
+    },
+    {
+      "key": "celebrity",
+      "gloss": "celebrity (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "celebrity", "pos": "noun", "details": {"plural": "celebrities"}, "sentences": ["The celebrity arrives."]}
+        ],
+        "nl": [
+        {"lemma": "beroemdheid", "pos": "noun", "details": {"article": "de", "plural": "beroemdheden"}, "sentences": ["De beroemdheid komt aan."]}
+        ]
+      }
+    },
+    {
+      "key": "beloved-noun",
+      "gloss": "beloved (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "beloved", "pos": "noun", "details": {"plural": "beloveds"}, "sentences": ["She is my beloved."]}
+        ],
+        "nl": [
+        {"lemma": "geliefde", "pos": "noun", "details": {"article": "de", "plural": "geliefden"}, "sentences": ["Zij is mijn geliefde."]}
+        ]
+      }
+    },
+    {
+      "key": "little-kiss",
+      "gloss": "little kiss (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "little kiss", "pos": "noun", "details": {"plural": "little kisses"}, "sentences": ["She gives him a little kiss."]}
+        ],
+        "nl": [
+        {"lemma": "kusje", "pos": "noun", "details": {"article": "het", "plural": "kusjes"}, "sentences": ["Zij geeft hem een kusje."]}
         ]
       }
     }

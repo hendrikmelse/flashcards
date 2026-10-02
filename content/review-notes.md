@@ -12,7 +12,7 @@ Delete an item once checked; delete this file when it is empty.
 - `do-particle` (wel / do): wel stresses a positive against a negative; no clean English equivalent
 - `only-just` (pas / only just): pas = only just / not until; context-dependent
 - `pardon` (wablief / pardon?): wablief is old-fashioned/humorous for 'what?'
-- `will` (zullen / will): zullen has no participle; 'jij zult/zal' both used
+- `will-verb` (zullen / will): zullen has no participle; 'jij zult/zal' both used
 - `people` (mensen / people): Dutch 'mens' (singular) exists but 'mensen' is the form learners need
 - `ordinary` (gewoon / ordinary): gewoon is also an adverb ('just, simply')
 - `bad-adjective-erg` (erg / bad): erg is also an adverb ('very')
@@ -36,6 +36,11 @@ Delete an item once checked; delete this file when it is empty.
 - `slave` (slaaf / slave): historical/sensitive word
 - `husband` (echtgenoot / husband): echtgenoot is formal; 'man' is the everyday word
 - `brain` (hersenen / brain): Dutch plural-only 'hersenen'; English singular 'brain'
-- `neighbor` (buur / neighbor): buur / buurman / buurvrouw; 'buurman' is the everyday word
+- `neighbor-noun-buur` (buur / neighbor): buur / buurman / buurvrouw; 'buurman' is the everyday word
 - `belong` (behoren / belong): behoren is formal; 'van mij zijn' is more everyday
 - `risk-verb` (riskeren / risk): participle gerisqueerd/gerikseerd is uncertain
+- `bail` (borg / bail): borg = guarantee/bail/deposit; 'bail' is only one use
+- `death-penalty` (doodstraf / death penalty): sensitive topic
+- `furniture` (meubel / furniture): 'meubel' is a single piece; 'meubilair' is furniture in general
+- `raise-verb-heffen` (heffen / raise): 'heffen' is formal; 'omhoog doen/ heffen het glas'
+- `briefcase` (portefeuille / briefcase): 'portefeuille' = portfolio/ministerial post; 'aktetas' = briefcase

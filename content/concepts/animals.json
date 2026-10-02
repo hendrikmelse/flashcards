@@ -13,7 +13,7 @@
       }
     },
     {
-      "key": "cat",
+      "key": "cat-noun-kat",
       "gloss": "cat (domestic animal)",
       "entries": {
         "en": [
@@ -345,6 +345,318 @@
         ],
         "nl": [
         {"lemma": "ezel", "pos": "noun", "details": {"article": "de", "plural": "ezels"}, "sentences": ["De ezel draagt een tas."]}
+        ]
+      }
+    },
+    {
+      "key": "tiger",
+      "gloss": "tiger (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "tiger", "pos": "noun", "details": {"plural": "tigers"}, "sentences": ["The tiger is dangerous."]}
+        ],
+        "nl": [
+        {"lemma": "tijger", "pos": "noun", "details": {"article": "de", "plural": "tijgers"}, "sentences": ["De tijger is gevaarlijk."]}
+        ]
+      }
+    },
+    {
+      "key": "herd",
+      "gloss": "herd (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "herd", "pos": "noun", "details": {"plural": "herds"}, "sentences": ["The herd grazes."]}
+        ],
+        "nl": [
+        {"lemma": "kudde", "pos": "noun", "details": {"article": "de", "plural": "kuddes"}, "sentences": ["De kudde graast."]}
+        ]
+      }
+    },
+    {
+      "key": "duck",
+      "gloss": "duck (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "duck", "pos": "noun", "details": {"plural": "ducks"}, "sentences": ["The duck swims."]}
+        ],
+        "nl": [
+        {"lemma": "eend", "pos": "noun", "details": {"article": "de", "plural": "eenden"}, "sentences": ["De eend zwemt."]}
+        ]
+      }
+    },
+    {
+      "key": "cattle",
+      "gloss": "cattle (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "cattle", "pos": "noun", "details": {"pluralOnly": true}, "sentences": ["The cattle graze."]}
+        ],
+        "nl": [
+        {"lemma": "vee", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["Het vee graast."]}
+        ]
+      }
+    },
+    {
+      "key": "whale",
+      "gloss": "whale (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "whale", "pos": "noun", "details": {"plural": "whales"}, "sentences": ["The whale is big."]}
+        ],
+        "nl": [
+        {"lemma": "walvis", "pos": "noun", "details": {"article": "de", "plural": "walvissen"}, "sentences": ["De walvis is groot."]}
+        ]
+      }
+    },
+    {
+      "key": "frog",
+      "gloss": "frog (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "frog", "pos": "noun", "details": {"plural": "frogs"}, "sentences": ["The frog jumps."]}
+        ],
+        "nl": [
+        {"lemma": "kikker", "pos": "noun", "details": {"article": "de", "plural": "kikkers"}, "sentences": ["De kikker springt."]}
+        ]
+      }
+    },
+    {
+      "key": "goat",
+      "gloss": "goat (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "goat", "pos": "noun", "details": {"plural": "goats"}, "sentences": ["The goat eats grass."]}
+        ],
+        "nl": [
+        {"lemma": "geit", "pos": "noun", "details": {"article": "de", "plural": "geiten"}, "sentences": ["De geit eet gras."]}
+        ]
+      }
+    },
+    {
+      "key": "spider",
+      "gloss": "spider (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "spider", "pos": "noun", "details": {"plural": "spiders"}, "sentences": ["The spider has a web."]}
+        ],
+        "nl": [
+        {"lemma": "spin", "pos": "noun", "details": {"article": "de", "plural": "spinnen"}, "sentences": ["De spin heeft een web."]}
+        ]
+      }
+    },
+    {
+      "key": "feather",
+      "gloss": "feather (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "feather", "pos": "noun", "details": {"plural": "feathers"}, "sentences": ["The bird has a feather."]}
+        ],
+        "nl": [
+        {"lemma": "veer", "pos": "noun", "details": {"article": "de", "plural": "veren"}, "sentences": ["De vogel heeft een veer."]}
+        ]
+      }
+    },
+    {
+      "key": "pigeon",
+      "gloss": "pigeon (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "pigeon", "pos": "noun", "details": {"plural": "pigeons"}, "sentences": ["The pigeon sits on the roof."]}
+        ],
+        "nl": [
+        {"lemma": "duif", "pos": "noun", "details": {"article": "de", "plural": "duiven"}, "sentences": ["De duif zit op het dak."]}
+        ]
+      }
+    },
+    {
+      "key": "cat-noun-poes",
+      "gloss": "cat (female)",
+      "entries": {
+        "en": [
+        {"lemma": "cat (female)", "pos": "noun", "details": {"plural": "cats"}, "sentences": ["The cat sleeps."]}
+        ],
+        "nl": [
+        {"lemma": "poes", "pos": "noun", "details": {"article": "de", "plural": "poezen"}, "sentences": ["De poes slaapt."]}
+        ]
+      }
+    },
+    {
+      "key": "puppy",
+      "gloss": "puppy (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "puppy", "pos": "noun", "details": {"plural": "puppies"}, "sentences": ["The puppy plays."]}
+        ],
+        "nl": [
+        {"lemma": "puppy", "pos": "noun", "details": {"article": "de", "plural": "puppy's"}, "sentences": ["De puppy speelt."]}
+        ]
+      }
+    },
+    {
+      "key": "bull",
+      "gloss": "bull (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "bull", "pos": "noun", "details": {"plural": "bulls"}, "sentences": ["The bull is angry."]}
+        ],
+        "nl": [
+        {"lemma": "stier", "pos": "noun", "details": {"article": "de", "plural": "stieren"}, "sentences": ["De stier is boos."]}
+        ]
+      }
+    },
+    {
+      "key": "boar",
+      "gloss": "boar (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "boar", "pos": "noun", "details": {"plural": "boars"}, "sentences": ["The boar lives in the forest."]}
+        ],
+        "nl": [
+        {"lemma": "zwijn", "pos": "noun", "details": {"article": "het", "plural": "zwijnen"}, "sentences": ["Het zwijn leeft in het bos."]}
+        ]
+      }
+    },
+    {
+      "key": "pet",
+      "gloss": "pet (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "pet", "pos": "noun", "details": {"plural": "pets"}, "sentences": ["Our pet is a cat."]}
+        ],
+        "nl": [
+        {"lemma": "huisdier", "pos": "noun", "details": {"article": "het", "plural": "huisdieren"}, "sentences": ["Ons huisdier is een kat."]}
+        ]
+      }
+    },
+    {
+      "key": "butterfly",
+      "gloss": "butterfly (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "butterfly", "pos": "noun", "details": {"plural": "butterflies"}, "sentences": ["The butterfly is beautiful."]}
+        ],
+        "nl": [
+        {"lemma": "vlinder", "pos": "noun", "details": {"article": "de", "plural": "vlinders"}, "sentences": ["De vlinder is mooi."]}
+        ]
+      }
+    },
+    {
+      "key": "zoo",
+      "gloss": "zoo (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "zoo", "pos": "noun", "details": {"plural": "zoos"}, "sentences": ["We go to the zoo."]}
+        ],
+        "nl": [
+        {"lemma": "dierentuin", "pos": "noun", "details": {"article": "de", "plural": "dierentuinen"}, "sentences": ["Wij gaan naar de dierentuin."]}
+        ]
+      }
+    },
+    {
+      "key": "squirrel",
+      "gloss": "squirrel (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "squirrel", "pos": "noun", "details": {"plural": "squirrels"}, "sentences": ["The squirrel climbs the tree."]}
+        ],
+        "nl": [
+        {"lemma": "eekhoorn", "pos": "noun", "details": {"article": "de", "plural": "eekhoorns"}, "sentences": ["De eekhoorn klimt in de boom."]}
+        ]
+      }
+    },
+    {
+      "key": "ant",
+      "gloss": "ant (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "ant", "pos": "noun", "details": {"plural": "ants"}, "sentences": ["The ant is small."]}
+        ],
+        "nl": [
+        {"lemma": "mier", "pos": "noun", "details": {"article": "de", "plural": "mieren"}, "sentences": ["De mier is klein."]}
+        ]
+      }
+    },
+    {
+      "key": "claw",
+      "gloss": "claw (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "claw", "pos": "noun", "details": {"plural": "claws"}, "sentences": ["The cat has sharp claws."]}
+        ],
+        "nl": [
+        {"lemma": "klauw", "pos": "noun", "details": {"article": "de", "plural": "klauwen"}, "sentences": ["De kat heeft scherpe klauwen."]}
+        ]
+      }
+    },
+    {
+      "key": "prey",
+      "gloss": "prey (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "prey", "pos": "noun", "details": {"uncountable": true}, "sentences": ["The lion hunts its prey."]}
+        ],
+        "nl": [
+        {"lemma": "prooi", "pos": "noun", "details": {"article": "de", "plural": "prooien"}, "sentences": ["De leeuw jaagt op zijn prooi."]}
+        ]
+      }
+    },
+    {
+      "key": "deer",
+      "gloss": "deer (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "deer", "pos": "noun", "details": {"plural": "deer"}, "sentences": ["The deer runs through the forest."]}
+        ],
+        "nl": [
+        {"lemma": "hert", "pos": "noun", "details": {"article": "het", "plural": "herten"}, "sentences": ["Het hert rent door het bos."]}
+        ]
+      }
+    },
+    {
+      "key": "crocodile",
+      "gloss": "crocodile (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "crocodile", "pos": "noun", "details": {"plural": "crocodiles"}, "sentences": ["The crocodile is dangerous."]}
+        ],
+        "nl": [
+        {"lemma": "krokodil", "pos": "noun", "details": {"article": "de", "plural": "krokodillen"}, "sentences": ["De krokodil is gevaarlijk."]}
+        ]
+      }
+    },
+    {
+      "key": "creature",
+      "gloss": "creature (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "creature", "pos": "noun", "details": {"plural": "creatures"}, "sentences": ["The creature is small."]}
+        ],
+        "nl": [
+        {"lemma": "schepsel", "pos": "noun", "details": {"article": "het", "plural": "schepsels"}, "sentences": ["Het schepsel is klein."]}
+        ]
+      }
+    },
+    {
+      "key": "bark",
+      "gloss": "bark (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "bark", "pos": "verb", "details": {"past": "barked", "participle": "barked"}, "sentences": ["The dog barks."]}
+        ],
+        "nl": [
+        {"lemma": "blaffen", "pos": "verb", "details": {"pastSingular": "blafte", "pastPlural": "blaften", "participle": "geblaft", "auxiliary": "hebben"}, "sentences": ["De hond blaft."]}
+        ]
+      }
+    },
+    {
+      "key": "cockroach",
+      "gloss": "cockroach (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "cockroach", "pos": "noun", "details": {"plural": "cockroaches"}, "sentences": ["There is a cockroach in the kitchen."]}
+        ],
+        "nl": [
+        {"lemma": "kakkerlak", "pos": "noun", "details": {"article": "de", "plural": "kakkerlakken"}, "sentences": ["Er zit een kakkerlak in de keuken."]}
         ]
       }
     }

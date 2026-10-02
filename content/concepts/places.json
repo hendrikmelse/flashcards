@@ -443,6 +443,150 @@
         {"lemma": "product", "pos": "noun", "details": {"article": "het", "plural": "producten"}, "sentences": ["Dit product is nieuw."]}
         ]
       }
+    },
+    {
+      "key": "buyer",
+      "gloss": "buyer (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "buyer", "pos": "noun", "details": {"plural": "buyers"}, "sentences": ["The buyer pays."]}
+        ],
+        "nl": [
+        {"lemma": "koper", "pos": "noun", "details": {"article": "de", "plural": "kopers"}, "sentences": ["De koper betaalt."]}
+        ]
+      }
+    },
+    {
+      "key": "package",
+      "gloss": "package (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "package", "pos": "noun", "details": {"plural": "packages"}, "sentences": ["The package is here."]}
+        ],
+        "nl": [
+        {"lemma": "pakket", "pos": "noun", "details": {"article": "het", "plural": "pakketten"}, "sentences": ["Het pakket is er."]}
+        ]
+      }
+    },
+    {
+      "key": "shopping-mall",
+      "gloss": "shopping mall (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "shopping mall", "pos": "noun", "details": {"plural": "shopping malls"}, "sentences": ["We go to the shopping mall."]}
+        ],
+        "nl": [
+        {"lemma": "winkelcentrum", "pos": "noun", "details": {"article": "het", "plural": "winkelcentra"}, "sentences": ["Wij gaan naar het winkelcentrum."]}
+        ]
+      }
+    },
+    {
+      "key": "seller",
+      "gloss": "seller (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "seller", "pos": "noun", "details": {"plural": "sellers"}, "sentences": ["The seller is friendly."]}
+        ],
+        "nl": [
+        {"lemma": "verkoper", "pos": "noun", "details": {"article": "de", "plural": "verkopers"}, "sentences": ["De verkoper is vriendelijk."]}
+        ]
+      }
+    },
+    {
+      "key": "district",
+      "gloss": "district (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "district", "pos": "noun", "details": {"plural": "districts"}, "sentences": ["I live in this district."]}
+        ],
+        "nl": [
+        {"lemma": "wijk", "pos": "noun", "details": {"article": "de", "plural": "wijken"}, "sentences": ["Ik woon in deze wijk."]}
+        ]
+      }
+    },
+    {
+      "key": "pub",
+      "gloss": "pub (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "pub", "pos": "noun", "details": {"plural": "pubs"}, "sentences": ["We go to the pub."]}
+        ],
+        "nl": [
+        {"lemma": "kroeg", "pos": "noun", "details": {"article": "de", "plural": "kroegen"}, "sentences": ["Wij gaan naar de kroeg."]}
+        ]
+      }
+    },
+    {
+      "key": "parking-lot",
+      "gloss": "parking lot (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "parking lot", "pos": "noun", "details": {"plural": "parking lots"}, "sentences": ["The parking lot is full."]}
+        ],
+        "nl": [
+        {"lemma": "parkeerplaats", "pos": "noun", "details": {"article": "de", "plural": "parkeerplaatsen"}, "sentences": ["De parkeerplaats is vol."]}
+        ]
+      }
+    },
+    {
+      "key": "police-station",
+      "gloss": "police station (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "police station", "pos": "noun", "details": {"plural": "police stations"}, "sentences": ["The police station is open."]}
+        ],
+        "nl": [
+        {"lemma": "politiebureau", "pos": "noun", "details": {"article": "het", "plural": "politiebureaus"}, "sentences": ["Het politiebureau is open."]}
+        ]
+      }
+    },
+    {
+      "key": "alley",
+      "gloss": "alley (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "alley", "pos": "noun", "details": {"plural": "alleys"}, "sentences": ["The cat walks through the alley."]}
+        ],
+        "nl": [
+        {"lemma": "steeg", "pos": "noun", "details": {"article": "de", "plural": "stegen"}, "sentences": ["De kat loopt door de steeg."]}
+        ]
+      }
+    },
+    {
+      "key": "supermarket",
+      "gloss": "supermarket (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "supermarket", "pos": "noun", "details": {"plural": "supermarkets"}, "sentences": ["I go to the supermarket."]}
+        ],
+        "nl": [
+        {"lemma": "supermarkt", "pos": "noun", "details": {"article": "de", "plural": "supermarkten"}, "sentences": ["Ik ga naar de supermarkt."]}
+        ]
+      }
+    },
+    {
+      "key": "checkout",
+      "gloss": "checkout (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "checkout", "pos": "noun", "details": {"plural": "checkouts"}, "sentences": ["I pay at the checkout."]}
+        ],
+        "nl": [
+        {"lemma": "kassa", "pos": "noun", "details": {"article": "de", "plural": "kassa's"}, "sentences": ["Ik betaal bij de kassa."]}
+        ]
+      }
+    },
+    {
+      "key": "warehouse",
+      "gloss": "warehouse (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "warehouse", "pos": "noun", "details": {"plural": "warehouses"}, "sentences": ["The goods are in the warehouse."]}
+        ],
+        "nl": [
+        {"lemma": "magazijn", "pos": "noun", "details": {"article": "het", "plural": "magazijnen"}, "sentences": ["De goederen liggen in het magazijn."]}
+        ]
+      }
     }
   ]
 }
