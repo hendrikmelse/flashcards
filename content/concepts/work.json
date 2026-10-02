@@ -1,0 +1,364 @@
+{
+  "concepts": [
+    {
+      "key": "dollar",
+      "gloss": "dollar (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "dollar", "pos": "noun", "details": {"plural": "dollars"}, "sentences": ["It costs five dollars."]}
+        ],
+        "nl": [
+        {"lemma": "dollar", "pos": "noun", "details": {"article": "de", "plural": "dollars"}, "sentences": ["Het kost vijf dollar."]}
+        ]
+      }
+    },
+    {
+      "key": "earn",
+      "gloss": "earn (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "earn", "pos": "verb", "details": {"past": "earned", "participle": "earned"}, "sentences": ["I earn money."]}
+        ],
+        "nl": [
+        {"lemma": "verdienen", "pos": "verb", "details": {"pastSingular": "verdiende", "pastPlural": "verdienden", "participle": "verdiend", "auxiliary": "hebben"}, "sentences": ["Ik verdien geld."]}
+        ]
+      }
+    },
+    {
+      "key": "boss",
+      "gloss": "boss (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "boss", "pos": "noun", "details": {"plural": "bosses"}, "sentences": ["My boss is nice."]}
+        ],
+        "nl": [
+        {"lemma": "baas", "pos": "noun", "details": {"article": "de", "plural": "bazen"}, "sentences": ["Mijn baas is aardig."]}
+        ]
+      }
+    },
+    {
+      "key": "captain",
+      "gloss": "captain (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "captain", "pos": "noun", "details": {"plural": "captains"}, "sentences": ["The captain is on the ship."]}
+        ],
+        "nl": [
+        {"lemma": "kapitein", "pos": "noun", "details": {"article": "de", "plural": "kapiteins"}, "sentences": ["De kapitein is op het schip."]}
+        ]
+      }
+    },
+    {
+      "key": "appointment",
+      "gloss": "appointment (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "appointment", "pos": "noun", "details": {"plural": "appointments"}, "sentences": ["I have an appointment."]}
+        ],
+        "nl": [
+        {"lemma": "afspraak", "pos": "noun", "details": {"article": "de", "plural": "afspraken"}, "sentences": ["Ik heb een afspraak."]}
+        ]
+      }
+    },
+    {
+      "key": "office",
+      "gloss": "office (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "office", "pos": "noun", "details": {"plural": "offices"}, "sentences": ["I work at the office."]}
+        ],
+        "nl": [
+        {"lemma": "kantoor", "pos": "noun", "details": {"article": "het", "plural": "kantoren"}, "sentences": ["Ik werk op het kantoor."]}
+        ]
+      }
+    },
+    {
+      "key": "cost",
+      "gloss": "cost (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "cost", "pos": "verb", "details": {"past": "cost", "participle": "cost"}, "sentences": ["The book costs ten euros."]}
+        ],
+        "nl": [
+        {"lemma": "kosten", "pos": "verb", "details": {"pastSingular": "kostte", "pastPlural": "kostten", "participle": "gekost", "auxiliary": "hebben"}, "sentences": ["Het boek kost tien euro."]}
+        ]
+      }
+    },
+    {
+      "key": "shift",
+      "gloss": "shift (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "shift", "pos": "noun", "details": {"plural": "shifts"}, "sentences": ["I work the night shift."]}
+        ],
+        "nl": [
+        {"lemma": "dienst", "pos": "noun", "details": {"article": "de", "plural": "diensten"}, "sentences": ["Ik werk de nachtdienst."]}
+        ]
+      }
+    },
+    {
+      "key": "lawyer",
+      "gloss": "lawyer (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "lawyer", "pos": "noun", "details": {"plural": "lawyers"}, "sentences": ["The lawyer helps me."]}
+        ],
+        "nl": [
+        {"lemma": "advocaat", "pos": "noun", "details": {"article": "de", "plural": "advocaten"}, "sentences": ["De advocaat helpt mij."]}
+        ]
+      }
+    },
+    {
+      "key": "bank",
+      "gloss": "bank (financial)",
+      "entries": {
+        "en": [
+        {"lemma": "bank (financial)", "pos": "noun", "details": {"plural": "banks"}, "sentences": ["I go to the bank."]}
+        ],
+        "nl": [
+        {"lemma": "bank", "pos": "noun", "details": {"article": "de", "plural": "banken"}, "sentences": ["Ik ga naar de bank."]}
+        ]
+      }
+    },
+    {
+      "key": "company-noun-bedrijf",
+      "gloss": "company (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "company", "pos": "noun", "details": {"plural": "companies"}, "sentences": ["He works at a company."]}
+        ],
+        "nl": [
+        {"lemma": "bedrijf", "pos": "noun", "details": {"article": "het", "plural": "bedrijven"}, "sentences": ["Hij werkt bij een bedrijf."]}
+        ]
+      }
+    },
+    {
+      "key": "fire-verb",
+      "gloss": "fire (dismiss)",
+      "entries": {
+        "en": [
+        {"lemma": "fire (dismiss)", "pos": "verb", "details": {"past": "fired", "participle": "fired"}, "sentences": ["The boss fires him."]}
+        ],
+        "nl": [
+        {"lemma": "ontslaan", "pos": "verb", "details": {"pastSingular": "ontsloeg", "pastPlural": "ontsloegen", "participle": "ontslagen", "auxiliary": "hebben"}, "sentences": ["De baas ontslaat hem."]}
+        ]
+      }
+    },
+    {
+      "key": "desk",
+      "gloss": "desk (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "desk", "pos": "noun", "details": {"plural": "desks"}, "sentences": ["The book lies on the desk."]}
+        ],
+        "nl": [
+        {"lemma": "bureau", "pos": "noun", "details": {"article": "het", "plural": "bureaus"}, "sentences": ["Het boek ligt op het bureau."]}
+        ]
+      }
+    },
+    {
+      "key": "professor",
+      "gloss": "professor (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "professor", "pos": "noun", "details": {"plural": "professors"}, "sentences": ["The professor teaches."]}
+        ],
+        "nl": [
+        {"lemma": "professor", "pos": "noun", "details": {"article": "de", "plural": "professoren"}, "sentences": ["De professor geeft les."]}
+        ]
+      }
+    },
+    {
+      "key": "gold",
+      "gloss": "gold (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "gold", "pos": "noun", "details": {"uncountable": true}, "sentences": ["The ring is made of gold."]}
+        ],
+        "nl": [
+        {"lemma": "goud", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["De ring is van goud."]}
+        ]
+      }
+    },
+    {
+      "key": "file",
+      "gloss": "file (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "file", "pos": "noun", "details": {"plural": "files"}, "sentences": ["The file is on the desk."]}
+        ],
+        "nl": [
+        {"lemma": "dossier", "pos": "noun", "details": {"article": "het", "plural": "dossiers"}, "sentences": ["Het dossier ligt op het bureau."]}
+        ]
+      }
+    },
+    {
+      "key": "assignment",
+      "gloss": "assignment (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "assignment", "pos": "noun", "details": {"plural": "assignments"}, "sentences": ["The assignment is difficult."]}
+        ],
+        "nl": [
+        {"lemma": "opdracht", "pos": "noun", "details": {"article": "de", "plural": "opdrachten"}, "sentences": ["De opdracht is moeilijk."]}
+        ]
+      }
+    },
+    {
+      "key": "chore",
+      "gloss": "chore (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "chore", "pos": "noun", "details": {"plural": "chores"}, "sentences": ["I have a chore."]}
+        ],
+        "nl": [
+        {"lemma": "klus", "pos": "noun", "details": {"article": "de", "plural": "klussen"}, "sentences": ["Ik heb een klus."]}
+        ]
+      }
+    },
+    {
+      "key": "task",
+      "gloss": "task (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "task", "pos": "noun", "details": {"plural": "tasks"}, "sentences": ["This is my task."]}
+        ],
+        "nl": [
+        {"lemma": "taak", "pos": "noun", "details": {"article": "de", "plural": "taken"}, "sentences": ["Dit is mijn taak."]}
+        ]
+      }
+    },
+    {
+      "key": "physician",
+      "gloss": "physician (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "physician", "pos": "noun", "details": {"plural": "physicians"}, "sentences": ["The physician helps the patient."]}
+        ],
+        "nl": [
+        {"lemma": "arts", "pos": "noun", "details": {"article": "de", "plural": "artsen"}, "sentences": ["De arts helpt de patiënt."]}
+        ]
+      }
+    },
+    {
+      "key": "percent",
+      "gloss": "percent (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "percent", "pos": "noun", "details": {"plural": "percents"}, "sentences": ["Ten percent."]}
+        ],
+        "nl": [
+        {"lemma": "procent", "pos": "noun", "details": {"article": "het", "plural": "procenten"}, "sentences": ["Tien procent."]}
+        ]
+      }
+    },
+    {
+      "key": "report-noun",
+      "gloss": "report (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "report", "pos": "noun", "details": {"plural": "reports"}, "sentences": ["I read the report."]}
+        ],
+        "nl": [
+        {"lemma": "rapport", "pos": "noun", "details": {"article": "het", "plural": "rapporten"}, "sentences": ["Ik lees het rapport."]}
+        ]
+      }
+    },
+    {
+      "key": "colleague",
+      "gloss": "colleague (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "colleague", "pos": "noun", "details": {"plural": "colleagues"}, "sentences": ["My colleague is nice."]}
+        ],
+        "nl": [
+        {"lemma": "collega", "pos": "noun", "details": {"article": "de", "plural": "collega's"}, "sentences": ["Mijn collega is aardig."]}
+        ]
+      }
+    },
+    {
+      "key": "cent",
+      "gloss": "cent (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "cent", "pos": "noun", "details": {"plural": "cents"}, "sentences": ["It costs fifty cents."]}
+        ],
+        "nl": [
+        {"lemma": "cent", "pos": "noun", "details": {"article": "de", "plural": "centen"}, "sentences": ["Het kost vijftig cent."]}
+        ]
+      }
+    },
+    {
+      "key": "safe-noun",
+      "gloss": "safe (box)",
+      "entries": {
+        "en": [
+        {"lemma": "safe (box)", "pos": "noun", "details": {"plural": "safes"}, "sentences": ["The money is in the safe."]}
+        ],
+        "nl": [
+        {"lemma": "kluis", "pos": "noun", "details": {"article": "de", "plural": "kluizen"}, "sentences": ["Het geld zit in de kluis."]}
+        ]
+      }
+    },
+    {
+      "key": "contract",
+      "gloss": "contract (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "contract", "pos": "noun", "details": {"plural": "contracts"}, "sentences": ["I sign the contract."]}
+        ],
+        "nl": [
+        {"lemma": "contract", "pos": "noun", "details": {"article": "het", "plural": "contracten"}, "sentences": ["Ik teken het contract."]}
+        ]
+      }
+    },
+    {
+      "key": "owner",
+      "gloss": "owner (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "owner", "pos": "noun", "details": {"plural": "owners"}, "sentences": ["The owner is at home."]}
+        ],
+        "nl": [
+        {"lemma": "eigenaar", "pos": "noun", "details": {"article": "de", "plural": "eigenaren"}, "sentences": ["De eigenaar is thuis."]}
+        ]
+      }
+    },
+    {
+      "key": "director",
+      "gloss": "director (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "director", "pos": "noun", "details": {"plural": "directors"}, "sentences": ["The director is in a meeting."]}
+        ],
+        "nl": [
+        {"lemma": "directeur", "pos": "noun", "details": {"article": "de", "plural": "directeuren"}, "sentences": ["De directeur is in een vergadering."]}
+        ]
+      }
+    },
+    {
+      "key": "client",
+      "gloss": "client (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "client", "pos": "noun", "details": {"plural": "clients"}, "sentences": ["The client pays."]}
+        ],
+        "nl": [
+        {"lemma": "cliënt", "pos": "noun", "details": {"article": "de", "plural": "cliënten"}, "sentences": ["De cliënt betaalt."]}
+        ]
+      }
+    },
+    {
+      "key": "pilot",
+      "gloss": "pilot (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "pilot", "pos": "noun", "details": {"plural": "pilots"}, "sentences": ["The pilot flies the plane."]}
+        ],
+        "nl": [
+        {"lemma": "piloot", "pos": "noun", "details": {"article": "de", "plural": "piloten"}, "sentences": ["De piloot bestuurt het vliegtuig."]}
+        ]
+      }
+    }
+  ]
+}

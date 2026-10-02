@@ -109,7 +109,7 @@
       }
     },
     {
-      "key": "time",
+      "key": "time-noun-tijd",
       "gloss": "time (in general)",
       "entries": {
         "en": [
@@ -117,6 +117,126 @@
         ],
         "nl": [
         {"lemma": "tijd", "pos": "noun", "details": {"article": "de", "plural": "tijden"}, "sentences": ["Ik heb geen tijd."]}
+        ]
+      }
+    },
+    {
+      "key": "moment-noun-moment",
+      "gloss": "moment (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "moment", "pos": "noun", "details": {"plural": "moments"}, "sentences": ["Wait a moment."]}
+        ],
+        "nl": [
+        {"lemma": "moment", "pos": "noun", "details": {"article": "het", "plural": "momenten"}, "sentences": ["Wacht een moment."]}
+        ]
+      }
+    },
+    {
+      "key": "last-verb",
+      "gloss": "last (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "last", "pos": "verb", "details": {"past": "lasted", "participle": "lasted"}, "sentences": ["The film lasts two hours."]}
+        ],
+        "nl": [
+        {"lemma": "duren", "pos": "verb", "details": {"pastSingular": "duurde", "pastPlural": "duurden", "participle": "geduurd", "auxiliary": "hebben"}, "sentences": ["De film duurt twee uur."]}
+        ]
+      }
+    },
+    {
+      "key": "half-adjective",
+      "gloss": "half (adjective)",
+      "entries": {
+        "en": [
+        {"lemma": "half", "pos": "adjective", "sentences": ["It is half past two."]}
+        ],
+        "nl": [
+        {"lemma": "half", "pos": "adjective", "sentences": ["Het is half drie."]}
+        ]
+      }
+    },
+    {
+      "key": "future",
+      "gloss": "future (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "future", "pos": "noun", "details": {"plural": "futures"}, "sentences": ["I think about the future."]}
+        ],
+        "nl": [
+        {"lemma": "toekomst", "pos": "noun", "details": {"article": "de", "plural": "toekomsten"}, "sentences": ["Ik denk aan de toekomst."]}
+        ]
+      }
+    },
+    {
+      "key": "second-noun",
+      "gloss": "second (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "second", "pos": "noun", "details": {"plural": "seconds"}, "sentences": ["Wait one second."]}
+        ],
+        "nl": [
+        {"lemma": "seconde", "pos": "noun", "details": {"article": "de", "plural": "seconden"}, "sentences": ["Wacht één seconde."]}
+        ]
+      }
+    },
+    {
+      "key": "weekend",
+      "gloss": "weekend (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "weekend", "pos": "noun", "details": {"plural": "weekends"}, "sentences": ["I rest on the weekend."]}
+        ],
+        "nl": [
+        {"lemma": "weekend", "pos": "noun", "details": {"article": "het", "plural": "weekenden"}, "sentences": ["Ik rust in het weekend."]}
+        ]
+      }
+    },
+    {
+      "key": "past",
+      "gloss": "past (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "past", "pos": "noun", "details": {"uncountable": true}, "sentences": ["The past is gone."]}
+        ],
+        "nl": [
+        {"lemma": "verleden", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["Het verleden is voorbij."]}
+        ]
+      }
+    },
+    {
+      "key": "summer",
+      "gloss": "summer (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "summer", "pos": "noun", "details": {"plural": "summers"}, "sentences": ["The summer is warm."]}
+        ],
+        "nl": [
+        {"lemma": "zomer", "pos": "noun", "details": {"article": "de", "plural": "zomers"}, "sentences": ["De zomer is warm."]}
+        ]
+      }
+    },
+    {
+      "key": "century",
+      "gloss": "century (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "century", "pos": "noun", "details": {"plural": "centuries"}, "sentences": ["A century has a hundred years."]}
+        ],
+        "nl": [
+        {"lemma": "eeuw", "pos": "noun", "details": {"article": "de", "plural": "eeuwen"}, "sentences": ["Een eeuw heeft honderd jaar."]}
+        ]
+      }
+    },
+    {
+      "key": "moment-noun-ogenblik",
+      "gloss": "moment (instant)",
+      "entries": {
+        "en": [
+        {"lemma": "moment (instant)", "pos": "noun", "details": {"plural": "moments"}, "sentences": ["Just a moment."]}
+        ],
+        "nl": [
+        {"lemma": "ogenblik", "pos": "noun", "details": {"article": "het", "plural": "ogenblikken"}, "sentences": ["Een ogenblik, alstublieft."]}
         ]
       }
     }

@@ -1,0 +1,64 @@
+{
+  "concepts": [
+    {
+      "key": "bit",
+      "gloss": "bit (a little)",
+      "entries": {
+        "en": [
+        {"lemma": "bit (a little)", "pos": "noun", "details": {"plural": "bits"}, "sentences": ["Just a little bit."]}
+        ],
+        "nl": [
+        {"lemma": "beetje", "pos": "noun", "details": {"article": "het", "plural": "beetjes"}, "sentences": ["Een beetje maar."]}
+        ]
+      }
+    },
+    {
+      "key": "treasure",
+      "gloss": "treasure (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "treasure", "pos": "noun", "details": {"plural": "treasures"}, "sentences": ["The pirate finds a treasure."]}
+        ],
+        "nl": [
+        {"lemma": "schat", "pos": "noun", "details": {"article": "de", "plural": "schatten"}, "sentences": ["De piraat vindt een schat."]}
+        ]
+      }
+    },
+    {
+      "key": "piece",
+      "gloss": "piece (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "piece", "pos": "noun", "details": {"plural": "pieces"}, "sentences": ["A piece of cake."]}
+        ],
+        "nl": [
+        {"lemma": "stuk", "pos": "noun", "details": {"article": "het", "plural": "stukken"}, "sentences": ["Een stuk taart."]}
+        ]
+      }
+    },
+    {
+      "key": "dream-noun",
+      "gloss": "dream (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "dream", "pos": "noun", "details": {"plural": "dreams"}, "sentences": ["I had a strange dream."]}
+        ],
+        "nl": [
+        {"lemma": "droom", "pos": "noun", "details": {"article": "de", "plural": "dromen"}, "sentences": ["Ik had een vreemde droom."]}
+        ]
+      }
+    },
+    {
+      "key": "card",
+      "gloss": "card (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "card", "pos": "noun", "details": {"plural": "cards"}, "sentences": ["I send a card."]}
+        ],
+        "nl": [
+        {"lemma": "kaart", "pos": "noun", "details": {"article": "de", "plural": "kaarten"}, "sentences": ["Ik stuur een kaart."]}
+        ]
+      }
+    }
+  ]
+}

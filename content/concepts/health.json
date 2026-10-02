@@ -1,0 +1,316 @@
+{
+  "concepts": [
+    {
+      "key": "die-verb-sterven",
+      "gloss": "die (pass away)",
+      "entries": {
+        "en": [
+        {"lemma": "die (pass away)", "pos": "verb", "details": {"past": "died", "participle": "died"}, "sentences": ["The old man dies."]}
+        ],
+        "nl": [
+        {"lemma": "sterven", "pos": "verb", "details": {"pastSingular": "stierf", "pastPlural": "stierven", "participle": "gestorven", "auxiliary": "zijn"}, "sentences": ["De oude man sterft."]}
+        ]
+      }
+    },
+    {
+      "key": "pain",
+      "gloss": "pain (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "pain", "pos": "noun", "details": {"plural": "pains"}, "sentences": ["I have pain in my back."]}
+        ],
+        "nl": [
+        {"lemma": "pijn", "pos": "noun", "details": {"article": "de", "plural": "pijnen"}, "sentences": ["Ik heb pijn in mijn rug."]}
+        ]
+      }
+    },
+    {
+      "key": "ill",
+      "gloss": "ill (adjective)",
+      "entries": {
+        "en": [
+        {"lemma": "ill", "pos": "adjective", "sentences": ["I am ill."]}
+        ],
+        "nl": [
+        {"lemma": "ziek", "pos": "adjective", "sentences": ["Ik ben ziek."]}
+        ]
+      }
+    },
+    {
+      "key": "hospital",
+      "gloss": "hospital (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "hospital", "pos": "noun", "details": {"plural": "hospitals"}, "sentences": ["He is in the hospital."]}
+        ],
+        "nl": [
+        {"lemma": "ziekenhuis", "pos": "noun", "details": {"article": "het", "plural": "ziekenhuizen"}, "sentences": ["Hij is in het ziekenhuis."]}
+        ]
+      }
+    },
+    {
+      "key": "hunger",
+      "gloss": "hunger (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "hunger", "pos": "noun", "details": {"uncountable": true}, "sentences": ["Hunger hurts."]}
+        ],
+        "nl": [
+        {"lemma": "honger", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Honger doet pijn."]}
+        ]
+      }
+    },
+    {
+      "key": "nurse",
+      "gloss": "nurse (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "nurse", "pos": "noun", "details": {"plural": "nurses"}, "sentences": ["The nurse helps the patient."]}
+        ],
+        "nl": [
+        {"lemma": "zuster", "pos": "noun", "details": {"article": "de", "plural": "zusters"}, "sentences": ["De zuster helpt de patiënt."]}
+        ]
+      }
+    },
+    {
+      "key": "treat",
+      "gloss": "treat (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "treat", "pos": "verb", "details": {"past": "treated", "participle": "treated"}, "sentences": ["The doctor treats the patient."]}
+        ],
+        "nl": [
+        {"lemma": "behandelen", "pos": "verb", "details": {"pastSingular": "behandelde", "pastPlural": "behandelden", "participle": "behandeld", "auxiliary": "hebben"}, "sentences": ["De dokter behandelt de patiënt."]}
+        ]
+      }
+    },
+    {
+      "key": "injured",
+      "gloss": "injured (adjective)",
+      "entries": {
+        "en": [
+        {"lemma": "injured", "pos": "adjective", "sentences": ["The man is injured."]}
+        ],
+        "nl": [
+        {"lemma": "gewond", "pos": "adjective", "sentences": ["De man is gewond."]}
+        ]
+      }
+    },
+    {
+      "key": "rest-noun-rust",
+      "gloss": "rest (noun, rust)",
+      "entries": {
+        "en": [
+        {"lemma": "rest", "pos": "noun", "details": {"uncountable": true}, "sentences": ["I need rest."]}
+        ],
+        "nl": [
+        {"lemma": "rust", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Ik heb rust nodig."]}
+        ]
+      }
+    },
+    {
+      "key": "drunk",
+      "gloss": "drunk (adjective)",
+      "entries": {
+        "en": [
+        {"lemma": "drunk", "pos": "adjective", "sentences": ["He is drunk."]}
+        ],
+        "nl": [
+        {"lemma": "dronken", "pos": "adjective", "sentences": ["Hij is dronken."]}
+        ]
+      }
+    },
+    {
+      "key": "pregnant",
+      "gloss": "pregnant (adjective)",
+      "entries": {
+        "en": [
+        {"lemma": "pregnant", "pos": "adjective", "sentences": ["She is pregnant."]}
+        ],
+        "nl": [
+        {"lemma": "zwanger", "pos": "adjective", "sentences": ["Zij is zwanger."]}
+        ]
+      }
+    },
+    {
+      "key": "pass-away",
+      "gloss": "pass away (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "pass away", "pos": "verb", "details": {"past": "passed away", "participle": "passed away"}, "sentences": ["The old man passed away."]}
+        ],
+        "nl": [
+        {"lemma": "overlijden", "pos": "verb", "details": {"pastSingular": "overleed", "pastPlural": "overleden", "participle": "overleden", "auxiliary": "zijn"}, "sentences": ["De oude man overleed."]}
+        ]
+      }
+    },
+    {
+      "key": "sleep-noun",
+      "gloss": "sleep (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "sleep", "pos": "noun", "details": {"uncountable": true}, "sentences": ["I need sleep."]}
+        ],
+        "nl": [
+        {"lemma": "slaap", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Ik heb slaap nodig."]}
+        ]
+      }
+    },
+    {
+      "key": "suffer",
+      "gloss": "suffer (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "suffer", "pos": "verb", "details": {"past": "suffered", "participle": "suffered"}, "sentences": ["He suffers pain."]}
+        ],
+        "nl": [
+        {"lemma": "lijden", "pos": "verb", "details": {"pastSingular": "leed", "pastPlural": "leden", "participle": "geleden", "auxiliary": "hebben"}, "sentences": ["Hij lijdt pijn."]}
+        ]
+      }
+    },
+    {
+      "key": "medicine",
+      "gloss": "medicine (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "medicine", "pos": "noun", "details": {"plural": "medicines"}, "sentences": ["I take medicine."]}
+        ],
+        "nl": [
+        {"lemma": "medicijn", "pos": "noun", "details": {"article": "het", "plural": "medicijnen"}, "sentences": ["Ik neem medicijnen."]}
+        ]
+      }
+    },
+    {
+      "key": "cigarette",
+      "gloss": "cigarette (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "cigarette", "pos": "noun", "details": {"plural": "cigarettes"}, "sentences": ["He smokes a cigarette."]}
+        ],
+        "nl": [
+        {"lemma": "sigaret", "pos": "noun", "details": {"article": "de", "plural": "sigaretten"}, "sentences": ["Hij rookt een sigaret."]}
+        ]
+      }
+    },
+    {
+      "key": "patient",
+      "gloss": "patient (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "patient", "pos": "noun", "details": {"plural": "patients"}, "sentences": ["The patient is ill."]}
+        ],
+        "nl": [
+        {"lemma": "patiënt", "pos": "noun", "details": {"article": "de", "plural": "patiënten"}, "sentences": ["De patiënt is ziek."]}
+        ]
+      }
+    },
+    {
+      "key": "operation",
+      "gloss": "operation (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "operation", "pos": "noun", "details": {"plural": "operations"}, "sentences": ["The operation is tomorrow."]}
+        ],
+        "nl": [
+        {"lemma": "operatie", "pos": "noun", "details": {"article": "de", "plural": "operaties"}, "sentences": ["De operatie is morgen."]}
+        ]
+      }
+    },
+    {
+      "key": "illness",
+      "gloss": "illness (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "illness", "pos": "noun", "details": {"plural": "illnesses"}, "sentences": ["The illness is serious."]}
+        ],
+        "nl": [
+        {"lemma": "ziekte", "pos": "noun", "details": {"article": "de", "plural": "ziekten"}, "sentences": ["De ziekte is ernstig."]}
+        ]
+      }
+    },
+    {
+      "key": "blind",
+      "gloss": "blind (adjective)",
+      "entries": {
+        "en": [
+        {"lemma": "blind", "pos": "adjective", "sentences": ["The man is blind."]}
+        ],
+        "nl": [
+        {"lemma": "blind", "pos": "adjective", "sentences": ["De man is blind."]}
+        ]
+      }
+    },
+    {
+      "key": "healthy",
+      "gloss": "healthy (adjective)",
+      "entries": {
+        "en": [
+        {"lemma": "healthy", "pos": "adjective", "sentences": ["Fruit is healthy."]}
+        ],
+        "nl": [
+        {"lemma": "gezond", "pos": "adjective", "sentences": ["Fruit is gezond."]}
+        ]
+      }
+    },
+    {
+      "key": "rest-verb",
+      "gloss": "rest (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "rest", "pos": "verb", "details": {"past": "rested", "participle": "rested"}, "sentences": ["I rest on the couch."]}
+        ],
+        "nl": [
+        {"lemma": "rusten", "pos": "verb", "details": {"pastSingular": "rustte", "pastPlural": "rustten", "participle": "gerust", "auxiliary": "hebben"}, "sentences": ["Ik rust op de bank."]}
+        ]
+      }
+    },
+    {
+      "key": "die-verb-doodgaan",
+      "gloss": "die (go dead)",
+      "entries": {
+        "en": [
+        {"lemma": "die (go dead)", "pos": "verb", "details": {"past": "died", "participle": "died"}, "sentences": ["The flower dies."]}
+        ],
+        "nl": [
+        {"lemma": "doodgaan", "pos": "verb", "details": {"pastSingular": "ging dood", "pastPlural": "gingen dood", "participle": "doodgegaan", "auxiliary": "zijn"}, "sentences": ["De bloem gaat dood."]}
+        ]
+      }
+    },
+    {
+      "key": "medical",
+      "gloss": "medical (adjective)",
+      "entries": {
+        "en": [
+        {"lemma": "medical", "pos": "adjective", "sentences": ["He needs medical help."]}
+        ],
+        "nl": [
+        {"lemma": "medisch", "pos": "adjective", "sentences": ["Hij heeft medische hulp nodig."]}
+        ]
+      }
+    },
+    {
+      "key": "pill",
+      "gloss": "pill (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "pill", "pos": "noun", "details": {"plural": "pills"}, "sentences": ["I take a pill."]}
+        ],
+        "nl": [
+        {"lemma": "pil", "pos": "noun", "details": {"article": "de", "plural": "pillen"}, "sentences": ["Ik neem een pil."]}
+        ]
+      }
+    },
+    {
+      "key": "recover",
+      "gloss": "recover (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "recover", "pos": "verb", "details": {"past": "recovered", "participle": "recovered"}, "sentences": ["He recovers quickly."]}
+        ],
+        "nl": [
+        {"lemma": "genezen", "pos": "verb", "details": {"pastSingular": "genas", "pastPlural": "genazen", "participle": "genezen", "auxiliary": "zijn"}, "sentences": ["Hij geneest snel."]}
+        ]
+      }
+    }
+  ]
+}

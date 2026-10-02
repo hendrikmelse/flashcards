@@ -1,0 +1,580 @@
+{
+  "concepts": [
+    {
+      "key": "maybe",
+      "gloss": "maybe (adverb)",
+      "entries": {
+        "en": [
+        {"lemma": "maybe", "pos": "adverb", "sentences": ["Maybe it rains."]}
+        ],
+        "nl": [
+        {"lemma": "misschien", "pos": "adverb", "sentences": ["Misschien regent het."]}
+        ]
+      }
+    },
+    {
+      "key": "back-adverb",
+      "gloss": "back (adverb)",
+      "entries": {
+        "en": [
+        {"lemma": "back", "pos": "adverb", "sentences": ["I come back tomorrow."]}
+        ],
+        "nl": [
+        {"lemma": "terug", "pos": "adverb", "sentences": ["Ik kom morgen terug."]}
+        ]
+      }
+    },
+    {
+      "key": "away",
+      "gloss": "away (adverb)",
+      "entries": {
+        "en": [
+        {"lemma": "away", "pos": "adverb", "sentences": ["He goes away."]}
+        ],
+        "nl": [
+        {"lemma": "weg", "pos": "adverb", "sentences": ["Hij gaat weg."]}
+        ]
+      }
+    },
+    {
+      "key": "again-adverb-weer",
+      "gloss": "again (adverb)",
+      "entries": {
+        "en": [
+        {"lemma": "again", "pos": "adverb", "sentences": ["I am here again."]}
+        ],
+        "nl": [
+        {"lemma": "weer", "pos": "adverb", "sentences": ["Ik ben weer hier."]}
+        ]
+      }
+    },
+    {
+      "key": "enough",
+      "gloss": "enough (adverb)",
+      "entries": {
+        "en": [
+        {"lemma": "enough", "pos": "adverb", "sentences": ["I have enough."]}
+        ],
+        "nl": [
+        {"lemma": "genoeg", "pos": "adverb", "sentences": ["Ik heb genoeg."]}
+        ]
+      }
+    },
+    {
+      "key": "gladly-adverb-graag",
+      "gloss": "gladly (adverb)",
+      "entries": {
+        "en": [
+        {"lemma": "gladly", "pos": "adverb", "sentences": ["I would gladly help you."]}
+        ],
+        "nl": [
+        {"lemma": "graag", "pos": "adverb", "sentences": ["Ik help je graag."]}
+        ]
+      }
+    },
+    {
+      "key": "completely",
+      "gloss": "completely (adverb)",
+      "entries": {
+        "en": [
+        {"lemma": "completely", "pos": "adverb", "sentences": ["I completely agree."]}
+        ],
+        "nl": [
+        {"lemma": "helemaal", "pos": "adverb", "sentences": ["Ik ben het helemaal eens."]}
+        ]
+      }
+    },
+    {
+      "key": "differently",
+      "gloss": "differently (adverb)",
+      "entries": {
+        "en": [
+        {"lemma": "differently", "pos": "adverb", "sentences": ["She does it differently."]}
+        ],
+        "nl": [
+        {"lemma": "anders", "pos": "adverb", "sentences": ["Zij doet het anders."]}
+        ]
+      }
+    },
+    {
+      "key": "increasingly",
+      "gloss": "increasingly (adverb)",
+      "entries": {
+        "en": [
+        {"lemma": "increasingly", "pos": "adverb", "sentences": ["It is getting increasingly cold."]}
+        ],
+        "nl": [
+        {"lemma": "steeds", "pos": "adverb", "sentences": ["Het wordt steeds kouder."]}
+        ]
+      }
+    },
+    {
+      "key": "ever",
+      "gloss": "ever (adverb)",
+      "entries": {
+        "en": [
+        {"lemma": "ever", "pos": "adverb", "sentences": ["Have you ever been there?"]}
+        ],
+        "nl": [
+        {"lemma": "ooit", "pos": "adverb", "sentences": ["Ben je daar ooit geweest?"]}
+        ]
+      }
+    },
+    {
+      "key": "together",
+      "gloss": "together (adverb)",
+      "entries": {
+        "en": [
+        {"lemma": "together", "pos": "adverb", "sentences": ["We cook together."]}
+        ],
+        "nl": [
+        {"lemma": "samen", "pos": "adverb", "sentences": ["Wij koken samen."]}
+        ]
+      }
+    },
+    {
+      "key": "first-adverb",
+      "gloss": "first (at first)",
+      "entries": {
+        "en": [
+        {"lemma": "first (at first)", "pos": "adverb", "sentences": ["First I eat."]}
+        ],
+        "nl": [
+        {"lemma": "eerst", "pos": "adverb", "sentences": ["Eerst eet ik."]}
+        ]
+      }
+    },
+    {
+      "key": "almost-adverb-bijna",
+      "gloss": "almost (adverb)",
+      "entries": {
+        "en": [
+        {"lemma": "almost", "pos": "adverb", "sentences": ["I am almost ready."]}
+        ],
+        "nl": [
+        {"lemma": "bijna", "pos": "adverb", "sentences": ["Ik ben bijna klaar."]}
+        ]
+      }
+    },
+    {
+      "key": "immediately",
+      "gloss": "immediately (adverb)",
+      "entries": {
+        "en": [
+        {"lemma": "immediately", "pos": "adverb", "sentences": ["Come immediately."]}
+        ],
+        "nl": [
+        {"lemma": "meteen", "pos": "adverb", "sentences": ["Kom meteen."]}
+        ]
+      }
+    },
+    {
+      "key": "upward",
+      "gloss": "upward (adverb)",
+      "entries": {
+        "en": [
+        {"lemma": "upward", "pos": "adverb", "sentences": ["He looks upward."]}
+        ],
+        "nl": [
+        {"lemma": "omhoog", "pos": "adverb", "sentences": ["Hij kijkt omhoog."]}
+        ]
+      }
+    },
+    {
+      "key": "again-adverb-opnieuw",
+      "gloss": "again (anew)",
+      "entries": {
+        "en": [
+        {"lemma": "again (anew)", "pos": "adverb", "sentences": ["Try again."]}
+        ],
+        "nl": [
+        {"lemma": "opnieuw", "pos": "adverb", "sentences": ["Probeer het opnieuw."]}
+        ]
+      }
+    },
+    {
+      "key": "approximately",
+      "gloss": "approximately (adverb)",
+      "entries": {
+        "en": [
+        {"lemma": "approximately", "pos": "adverb", "sentences": ["It costs approximately ten euros."]}
+        ],
+        "nl": [
+        {"lemma": "ongeveer", "pos": "adverb", "sentences": ["Het kost ongeveer tien euro."]}
+        ]
+      }
+    },
+    {
+      "key": "on-the-way",
+      "gloss": "on the way (adverb)",
+      "entries": {
+        "en": [
+        {"lemma": "on the way", "pos": "adverb", "sentences": ["I am on the way."]}
+        ],
+        "nl": [
+        {"lemma": "onderweg", "pos": "adverb", "sentences": ["Ik ben onderweg."]}
+        ]
+      }
+    },
+    {
+      "key": "backward",
+      "gloss": "backward (adverb)",
+      "entries": {
+        "en": [
+        {"lemma": "backward", "pos": "adverb", "sentences": ["The car drives backward."]}
+        ],
+        "nl": [
+        {"lemma": "achteruit", "pos": "adverb", "sentences": ["De auto rijdt achteruit."]}
+        ]
+      }
+    },
+    {
+      "key": "again-adverb-alweer",
+      "gloss": "again (already)",
+      "entries": {
+        "en": [
+        {"lemma": "again (already)", "pos": "adverb", "sentences": ["It is raining again."]}
+        ],
+        "nl": [
+        {"lemma": "alweer", "pos": "adverb", "sentences": ["Het regent alweer."]}
+        ]
+      }
+    },
+    {
+      "key": "almost-adverb-haast",
+      "gloss": "almost (nearly)",
+      "entries": {
+        "en": [
+        {"lemma": "almost (nearly)", "pos": "adverb", "sentences": ["I am almost there."]}
+        ],
+        "nl": [
+        {"lemma": "haast (almost)", "pos": "adverb", "sentences": ["Ik ben haast klaar."]}
+        ]
+      }
+    },
+    {
+      "key": "hardly",
+      "gloss": "hardly (adverb)",
+      "entries": {
+        "en": [
+        {"lemma": "hardly", "pos": "adverb", "sentences": ["I hardly know him."]}
+        ],
+        "nl": [
+        {"lemma": "nauwelijks", "pos": "adverb", "sentences": ["Ik ken hem nauwelijks."]}
+        ]
+      }
+    },
+    {
+      "key": "once-more",
+      "gloss": "once more (adverb)",
+      "entries": {
+        "en": [
+        {"lemma": "once more", "pos": "adverb", "sentences": ["Thank you once more."]}
+        ],
+        "nl": [
+        {"lemma": "nogmaals", "pos": "adverb", "sentences": ["Nogmaals bedankt."]}
+        ]
+      }
+    },
+    {
+      "key": "at-the-same-time",
+      "gloss": "at the same time (adverb)",
+      "entries": {
+        "en": [
+        {"lemma": "at the same time", "pos": "adverb", "sentences": ["We arrive at the same time."]}
+        ],
+        "nl": [
+        {"lemma": "tegelijk", "pos": "adverb", "sentences": ["Wij komen tegelijk aan."]}
+        ]
+      }
+    },
+    {
+      "key": "at-least-adverb",
+      "gloss": "at least (minimum)",
+      "entries": {
+        "en": [
+        {"lemma": "at least (minimum)", "pos": "adverb", "sentences": ["It costs at least ten euros."]}
+        ],
+        "nl": [
+        {"lemma": "minstens", "pos": "adverb", "sentences": ["Het kost minstens tien euro."]}
+        ]
+      }
+    },
+    {
+      "key": "barely",
+      "gloss": "barely (adverb)",
+      "entries": {
+        "en": [
+        {"lemma": "barely", "pos": "adverb", "sentences": ["I can barely hear you."]}
+        ],
+        "nl": [
+        {"lemma": "amper", "pos": "adverb", "sentences": ["Ik kan je amper horen."]}
+        ]
+      }
+    },
+    {
+      "key": "already-adverb",
+      "gloss": "already (in advance)",
+      "entries": {
+        "en": [
+        {"lemma": "already (in advance)", "pos": "adverb", "sentences": ["You can already start."]}
+        ],
+        "nl": [
+        {"lemma": "alvast", "pos": "adverb", "sentences": ["Je kunt alvast beginnen."]}
+        ]
+      }
+    },
+    {
+      "key": "at-most",
+      "gloss": "at most (adverb)",
+      "entries": {
+        "en": [
+        {"lemma": "at most", "pos": "adverb", "sentences": ["I stay at most an hour."]}
+        ],
+        "nl": [
+        {"lemma": "hooguit", "pos": "adverb", "sentences": ["Ik blijf hooguit een uur."]}
+        ]
+      }
+    },
+    {
+      "key": "undoubtedly",
+      "gloss": "undoubtedly (adverb)",
+      "entries": {
+        "en": [
+        {"lemma": "undoubtedly", "pos": "adverb", "sentences": ["He will undoubtedly come."]}
+        ],
+        "nl": [
+        {"lemma": "ongetwijfeld", "pos": "adverb", "sentences": ["Hij komt ongetwijfeld."]}
+        ]
+      }
+    },
+    {
+      "key": "elsewhere",
+      "gloss": "elsewhere (adverb)",
+      "entries": {
+        "en": [
+        {"lemma": "elsewhere", "pos": "adverb", "sentences": ["He lives elsewhere."]}
+        ],
+        "nl": [
+        {"lemma": "elders", "pos": "adverb", "sentences": ["Hij woont elders."]}
+        ]
+      }
+    },
+    {
+      "key": "gladly-adverb-dolgraag",
+      "gloss": "gladly (love to)",
+      "entries": {
+        "en": [
+        {"lemma": "gladly (love to)", "pos": "adverb", "sentences": ["I would gladly come."]}
+        ],
+        "nl": [
+        {"lemma": "dolgraag", "pos": "adverb", "sentences": ["Ik kom dolgraag."]}
+        ]
+      }
+    },
+    {
+      "key": "aloud",
+      "gloss": "aloud (adverb)",
+      "entries": {
+        "en": [
+        {"lemma": "aloud", "pos": "adverb", "sentences": ["He reads aloud."]}
+        ],
+        "nl": [
+        {"lemma": "hardop", "pos": "adverb", "sentences": ["Hij leest hardop."]}
+        ]
+      }
+    },
+    {
+      "key": "most-of-all",
+      "gloss": "most of all (adverb)",
+      "entries": {
+        "en": [
+        {"lemma": "most of all", "pos": "adverb", "sentences": ["I like tea most of all."]}
+        ],
+        "nl": [
+        {"lemma": "liefst", "pos": "adverb", "sentences": ["Ik drink het liefst thee."]}
+        ]
+      }
+    },
+    {
+      "key": "plenty",
+      "gloss": "plenty (adverb)",
+      "entries": {
+        "en": [
+        {"lemma": "plenty", "pos": "adverb", "sentences": ["There are plenty of apples."]}
+        ],
+        "nl": [
+        {"lemma": "volop", "pos": "adverb", "sentences": ["Er zijn volop appels."]}
+        ]
+      }
+    },
+    {
+      "key": "to-the-right",
+      "gloss": "to the right (adverb)",
+      "entries": {
+        "en": [
+        {"lemma": "to the right", "pos": "adverb", "sentences": ["Turn to the right."]}
+        ],
+        "nl": [
+        {"lemma": "rechtsaf", "pos": "adverb", "sentences": ["Ga rechtsaf."]}
+        ]
+      }
+    },
+    {
+      "key": "to-the-left",
+      "gloss": "to the left (adverb)",
+      "entries": {
+        "en": [
+        {"lemma": "to the left", "pos": "adverb", "sentences": ["Turn to the left."]}
+        ],
+        "nl": [
+        {"lemma": "linksaf", "pos": "adverb", "sentences": ["Ga linksaf."]}
+        ]
+      }
+    },
+    {
+      "key": "straight-ahead",
+      "gloss": "straight ahead (adverb)",
+      "entries": {
+        "en": [
+        {"lemma": "straight ahead", "pos": "adverb", "sentences": ["Go straight ahead."]}
+        ],
+        "nl": [
+        {"lemma": "rechtdoor", "pos": "adverb", "sentences": ["Ga rechtdoor."]}
+        ]
+      }
+    },
+    {
+      "key": "downward",
+      "gloss": "downward (adverb)",
+      "entries": {
+        "en": [
+        {"lemma": "downward", "pos": "adverb", "sentences": ["He looks downward."]}
+        ],
+        "nl": [
+        {"lemma": "omlaag", "pos": "adverb", "sentences": ["Hij kijkt omlaag."]}
+        ]
+      }
+    },
+    {
+      "key": "by-itself",
+      "gloss": "by itself (adverb)",
+      "entries": {
+        "en": [
+        {"lemma": "by itself", "pos": "adverb", "sentences": ["That goes by itself."]}
+        ],
+        "nl": [
+        {"lemma": "vanzelf", "pos": "adverb", "sentences": ["Dat gaat vanzelf."]}
+        ]
+      }
+    },
+    {
+      "key": "for-good",
+      "gloss": "for good (adverb)",
+      "entries": {
+        "en": [
+        {"lemma": "for good", "pos": "adverb", "sentences": ["He leaves for good."]}
+        ],
+        "nl": [
+        {"lemma": "voorgoed", "pos": "adverb", "sentences": ["Hij vertrekt voorgoed."]}
+        ]
+      }
+    },
+    {
+      "key": "actually",
+      "gloss": "actually (adverb)",
+      "entries": {
+        "en": [
+        {"lemma": "actually", "pos": "adverb", "sentences": ["Actually, I do not know."]}
+        ],
+        "nl": [
+        {"lemma": "eigenlijk", "pos": "adverb", "sentences": ["Eigenlijk weet ik het niet."]}
+        ]
+      }
+    },
+    {
+      "key": "probably",
+      "gloss": "probably (adverb)",
+      "entries": {
+        "en": [
+        {"lemma": "probably", "pos": "adverb", "sentences": ["He is probably at home."]}
+        ],
+        "nl": [
+        {"lemma": "waarschijnlijk", "pos": "adverb", "sentences": ["Hij is waarschijnlijk thuis."]}
+        ]
+      }
+    },
+    {
+      "key": "absolutely",
+      "gloss": "absolutely (adverb)",
+      "entries": {
+        "en": [
+        {"lemma": "absolutely", "pos": "adverb", "sentences": ["That is absolutely right."]}
+        ],
+        "nl": [
+        {"lemma": "absoluut", "pos": "adverb", "sentences": ["Dat is absoluut juist."]}
+        ]
+      }
+    },
+    {
+      "key": "hopefully",
+      "gloss": "hopefully (adverb)",
+      "entries": {
+        "en": [
+        {"lemma": "hopefully", "pos": "adverb", "sentences": ["Hopefully it works."]}
+        ],
+        "nl": [
+        {"lemma": "hopelijk", "pos": "adverb", "sentences": ["Hopelijk lukt het."]}
+        ]
+      }
+    },
+    {
+      "key": "apparently",
+      "gloss": "apparently (adverb)",
+      "entries": {
+        "en": [
+        {"lemma": "apparently", "pos": "adverb", "sentences": ["Apparently he is ill."]}
+        ],
+        "nl": [
+        {"lemma": "blijkbaar", "pos": "adverb", "sentences": ["Blijkbaar is hij ziek."]}
+        ]
+      }
+    },
+    {
+      "key": "nearby",
+      "gloss": "nearby (adverb)",
+      "entries": {
+        "en": [
+        {"lemma": "nearby", "pos": "adverb", "sentences": ["The shop is nearby."]}
+        ],
+        "nl": [
+        {"lemma": "dichtbij", "pos": "adverb", "sentences": ["De winkel is dichtbij."]}
+        ]
+      }
+    },
+    {
+      "key": "by-chance",
+      "gloss": "by chance (adverb)",
+      "entries": {
+        "en": [
+        {"lemma": "by chance", "pos": "adverb", "sentences": ["I met him by chance."]}
+        ],
+        "nl": [
+        {"lemma": "toevallig", "pos": "adverb", "sentences": ["Ik ontmoette hem toevallig."]}
+        ]
+      }
+    },
+    {
+      "key": "quite",
+      "gloss": "quite (fairly)",
+      "entries": {
+        "en": [
+        {"lemma": "quite (fairly)", "pos": "adverb", "sentences": ["It is quite cold."]}
+        ],
+        "nl": [
+        {"lemma": "behoorlijk", "pos": "adverb", "sentences": ["Het is behoorlijk koud."]}
+        ]
+      }
+    }
+  ]
+}

@@ -275,6 +275,78 @@
         {"lemma": "restaurant", "pos": "noun", "details": {"article": "het", "plural": "restaurants"}, "sentences": ["Wij eten in een restaurant."]}
         ]
       }
+    },
+    {
+      "key": "cup",
+      "gloss": "cup (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "cup", "pos": "noun", "details": {"plural": "cups"}, "sentences": ["A cup of coffee, please."]}
+        ],
+        "nl": [
+        {"lemma": "kop", "pos": "noun", "details": {"article": "de", "plural": "koppen"}, "sentences": ["Een kop koffie, alsjeblieft."]}
+        ]
+      }
+    },
+    {
+      "key": "liquor",
+      "gloss": "liquor (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "liquor", "pos": "noun", "details": {"uncountable": true}, "sentences": ["He does not drink liquor."]}
+        ],
+        "nl": [
+        {"lemma": "drank", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Hij drinkt geen drank."]}
+        ]
+      }
+    },
+    {
+      "key": "chicken",
+      "gloss": "chicken (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "chicken", "pos": "noun", "details": {"plural": "chickens"}, "sentences": ["We eat chicken."]}
+        ],
+        "nl": [
+        {"lemma": "kip", "pos": "noun", "details": {"article": "de", "plural": "kippen"}, "sentences": ["Wij eten kip."]}
+        ]
+      }
+    },
+    {
+      "key": "eat-up",
+      "gloss": "eat up (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "eat up", "pos": "verb", "details": {"past": "ate up", "participle": "eaten up"}, "sentences": ["I eat up the soup."]}
+        ],
+        "nl": [
+        {"lemma": "opeten", "pos": "verb", "details": {"pastSingular": "at op", "pastPlural": "aten op", "participle": "opgegeten", "auxiliary": "hebben"}, "sentences": ["Ik eet de soep op."]}
+        ]
+      }
+    },
+    {
+      "key": "drink-noun",
+      "gloss": "drink (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "drink", "pos": "noun", "details": {"plural": "drinks"}, "sentences": ["I want a drink."]}
+        ],
+        "nl": [
+        {"lemma": "drankje", "pos": "noun", "details": {"article": "het", "plural": "drankjes"}, "sentences": ["Ik wil een drankje."]}
+        ]
+      }
+    },
+    {
+      "key": "spread",
+      "gloss": "spread (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "spread", "pos": "verb", "details": {"past": "spread", "participle": "spread"}, "sentences": ["I spread butter on the bread."]}
+        ],
+        "nl": [
+        {"lemma": "smeren", "pos": "verb", "details": {"pastSingular": "smeerde", "pastPlural": "smeerden", "participle": "gesmeerd", "auxiliary": "hebben"}, "sentences": ["Ik smeer boter op het brood."]}
+        ]
+      }
     }
   ]
 }

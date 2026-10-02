@@ -1,7 +1,7 @@
 {
   "concepts": [
     {
-      "key": "one",
+      "key": "one-numeral",
       "gloss": "one (number)",
       "entries": {
         "en": [
@@ -129,6 +129,378 @@
         ],
         "nl": [
         {"lemma": "honderd", "pos": "numeral", "sentences": ["Er zijn hier honderd mensen."]}
+        ]
+      }
+    },
+    {
+      "key": "zero",
+      "gloss": "zero (numeral)",
+      "entries": {
+        "en": [
+        {"lemma": "zero", "pos": "numeral", "sentences": ["I have zero euros."]}
+        ],
+        "nl": [
+        {"lemma": "nul", "pos": "numeral", "sentences": ["Ik heb nul euro."]}
+        ]
+      }
+    },
+    {
+      "key": "eleven",
+      "gloss": "eleven (numeral)",
+      "entries": {
+        "en": [
+        {"lemma": "eleven", "pos": "numeral", "sentences": ["There are eleven players."]}
+        ],
+        "nl": [
+        {"lemma": "elf", "pos": "numeral", "sentences": ["Er zijn elf spelers."]}
+        ]
+      }
+    },
+    {
+      "key": "twelve",
+      "gloss": "twelve (numeral)",
+      "entries": {
+        "en": [
+        {"lemma": "twelve", "pos": "numeral", "sentences": ["There are twelve months."]}
+        ],
+        "nl": [
+        {"lemma": "twaalf", "pos": "numeral", "sentences": ["Er zijn twaalf maanden."]}
+        ]
+      }
+    },
+    {
+      "key": "thirteen",
+      "gloss": "thirteen (numeral)",
+      "entries": {
+        "en": [
+        {"lemma": "thirteen", "pos": "numeral", "sentences": ["She is thirteen years old."]}
+        ],
+        "nl": [
+        {"lemma": "dertien", "pos": "numeral", "sentences": ["Zij is dertien jaar oud."]}
+        ]
+      }
+    },
+    {
+      "key": "fourteen",
+      "gloss": "fourteen (numeral)",
+      "entries": {
+        "en": [
+        {"lemma": "fourteen", "pos": "numeral", "sentences": ["I wait fourteen days."]}
+        ],
+        "nl": [
+        {"lemma": "veertien", "pos": "numeral", "sentences": ["Ik wacht veertien dagen."]}
+        ]
+      }
+    },
+    {
+      "key": "fifteen",
+      "gloss": "fifteen (numeral)",
+      "entries": {
+        "en": [
+        {"lemma": "fifteen", "pos": "numeral", "sentences": ["It costs fifteen euros."]}
+        ],
+        "nl": [
+        {"lemma": "vijftien", "pos": "numeral", "sentences": ["Het kost vijftien euro."]}
+        ]
+      }
+    },
+    {
+      "key": "sixteen",
+      "gloss": "sixteen (numeral)",
+      "entries": {
+        "en": [
+        {"lemma": "sixteen", "pos": "numeral", "sentences": ["He is sixteen years old."]}
+        ],
+        "nl": [
+        {"lemma": "zestien", "pos": "numeral", "sentences": ["Hij is zestien jaar oud."]}
+        ]
+      }
+    },
+    {
+      "key": "seventeen",
+      "gloss": "seventeen (numeral)",
+      "entries": {
+        "en": [
+        {"lemma": "seventeen", "pos": "numeral", "sentences": ["I have seventeen books."]}
+        ],
+        "nl": [
+        {"lemma": "zeventien", "pos": "numeral", "sentences": ["Ik heb zeventien boeken."]}
+        ]
+      }
+    },
+    {
+      "key": "eighteen",
+      "gloss": "eighteen (numeral)",
+      "entries": {
+        "en": [
+        {"lemma": "eighteen", "pos": "numeral", "sentences": ["She is eighteen years old."]}
+        ],
+        "nl": [
+        {"lemma": "achttien", "pos": "numeral", "sentences": ["Zij is achttien jaar oud."]}
+        ]
+      }
+    },
+    {
+      "key": "nineteen",
+      "gloss": "nineteen (numeral)",
+      "entries": {
+        "en": [
+        {"lemma": "nineteen", "pos": "numeral", "sentences": ["There are nineteen children."]}
+        ],
+        "nl": [
+        {"lemma": "negentien", "pos": "numeral", "sentences": ["Er zijn negentien kinderen."]}
+        ]
+      }
+    },
+    {
+      "key": "twenty",
+      "gloss": "twenty (numeral)",
+      "entries": {
+        "en": [
+        {"lemma": "twenty", "pos": "numeral", "sentences": ["I am twenty years old."]}
+        ],
+        "nl": [
+        {"lemma": "twintig", "pos": "numeral", "sentences": ["Ik ben twintig jaar oud."]}
+        ]
+      }
+    },
+    {
+      "key": "thirty",
+      "gloss": "thirty (numeral)",
+      "entries": {
+        "en": [
+        {"lemma": "thirty", "pos": "numeral", "sentences": ["The room is thirty degrees."]}
+        ],
+        "nl": [
+        {"lemma": "dertig", "pos": "numeral", "sentences": ["De kamer is dertig graden."]}
+        ]
+      }
+    },
+    {
+      "key": "forty",
+      "gloss": "forty (numeral)",
+      "entries": {
+        "en": [
+        {"lemma": "forty", "pos": "numeral", "sentences": ["He is forty years old."]}
+        ],
+        "nl": [
+        {"lemma": "veertig", "pos": "numeral", "sentences": ["Hij is veertig jaar oud."]}
+        ]
+      }
+    },
+    {
+      "key": "fifty",
+      "gloss": "fifty (numeral)",
+      "entries": {
+        "en": [
+        {"lemma": "fifty", "pos": "numeral", "sentences": ["It costs fifty euros."]}
+        ],
+        "nl": [
+        {"lemma": "vijftig", "pos": "numeral", "sentences": ["Het kost vijftig euro."]}
+        ]
+      }
+    },
+    {
+      "key": "sixty",
+      "gloss": "sixty (numeral)",
+      "entries": {
+        "en": [
+        {"lemma": "sixty", "pos": "numeral", "sentences": ["I wait sixty minutes."]}
+        ],
+        "nl": [
+        {"lemma": "zestig", "pos": "numeral", "sentences": ["Ik wacht zestig minuten."]}
+        ]
+      }
+    },
+    {
+      "key": "seventy",
+      "gloss": "seventy (numeral)",
+      "entries": {
+        "en": [
+        {"lemma": "seventy", "pos": "numeral", "sentences": ["My grandfather is seventy."]}
+        ],
+        "nl": [
+        {"lemma": "zeventig", "pos": "numeral", "sentences": ["Mijn opa is zeventig."]}
+        ]
+      }
+    },
+    {
+      "key": "eighty",
+      "gloss": "eighty (numeral)",
+      "entries": {
+        "en": [
+        {"lemma": "eighty", "pos": "numeral", "sentences": ["The road is eighty kilometers long."]}
+        ],
+        "nl": [
+        {"lemma": "tachtig", "pos": "numeral", "sentences": ["De weg is tachtig kilometer lang."]}
+        ]
+      }
+    },
+    {
+      "key": "ninety",
+      "gloss": "ninety (numeral)",
+      "entries": {
+        "en": [
+        {"lemma": "ninety", "pos": "numeral", "sentences": ["She is ninety years old."]}
+        ],
+        "nl": [
+        {"lemma": "negentig", "pos": "numeral", "sentences": ["Zij is negentig jaar oud."]}
+        ]
+      }
+    },
+    {
+      "key": "thousand",
+      "gloss": "thousand (numeral)",
+      "entries": {
+        "en": [
+        {"lemma": "thousand", "pos": "numeral", "sentences": ["It costs a thousand euros."]}
+        ],
+        "nl": [
+        {"lemma": "duizend", "pos": "numeral", "sentences": ["Het kost duizend euro."]}
+        ]
+      }
+    },
+    {
+      "key": "million",
+      "gloss": "million (numeral)",
+      "entries": {
+        "en": [
+        {"lemma": "million", "pos": "numeral", "sentences": ["The city has a million people."]}
+        ],
+        "nl": [
+        {"lemma": "miljoen", "pos": "numeral", "sentences": ["De stad heeft een miljoen inwoners."]}
+        ]
+      }
+    },
+    {
+      "key": "first-numeral",
+      "gloss": "first (numeral)",
+      "entries": {
+        "en": [
+        {"lemma": "first", "pos": "numeral", "sentences": ["He is the first."]}
+        ],
+        "nl": [
+        {"lemma": "eerste", "pos": "numeral", "sentences": ["Hij is de eerste."]}
+        ]
+      }
+    },
+    {
+      "key": "second-numeral",
+      "gloss": "second (numeral)",
+      "entries": {
+        "en": [
+        {"lemma": "second", "pos": "numeral", "sentences": ["She is second."]}
+        ],
+        "nl": [
+        {"lemma": "tweede", "pos": "numeral", "sentences": ["Zij is de tweede."]}
+        ]
+      }
+    },
+    {
+      "key": "third",
+      "gloss": "third (numeral)",
+      "entries": {
+        "en": [
+        {"lemma": "third", "pos": "numeral", "sentences": ["This is the third time."]}
+        ],
+        "nl": [
+        {"lemma": "derde", "pos": "numeral", "sentences": ["Dit is de derde keer."]}
+        ]
+      }
+    },
+    {
+      "key": "fourth",
+      "gloss": "fourth (numeral)",
+      "entries": {
+        "en": [
+        {"lemma": "fourth", "pos": "numeral", "sentences": ["The fourth day is cold."]}
+        ],
+        "nl": [
+        {"lemma": "vierde", "pos": "numeral", "sentences": ["De vierde dag is koud."]}
+        ]
+      }
+    },
+    {
+      "key": "fifth",
+      "gloss": "fifth (numeral)",
+      "entries": {
+        "en": [
+        {"lemma": "fifth", "pos": "numeral", "sentences": ["He lives on the fifth floor."]}
+        ],
+        "nl": [
+        {"lemma": "vijfde", "pos": "numeral", "sentences": ["Hij woont op de vijfde verdieping."]}
+        ]
+      }
+    },
+    {
+      "key": "sixth",
+      "gloss": "sixth (numeral)",
+      "entries": {
+        "en": [
+        {"lemma": "sixth", "pos": "numeral", "sentences": ["This is the sixth book."]}
+        ],
+        "nl": [
+        {"lemma": "zesde", "pos": "numeral", "sentences": ["Dit is het zesde boek."]}
+        ]
+      }
+    },
+    {
+      "key": "seventh",
+      "gloss": "seventh (numeral)",
+      "entries": {
+        "en": [
+        {"lemma": "seventh", "pos": "numeral", "sentences": ["She is the seventh in line."]}
+        ],
+        "nl": [
+        {"lemma": "zevende", "pos": "numeral", "sentences": ["Zij is de zevende in de rij."]}
+        ]
+      }
+    },
+    {
+      "key": "eighth",
+      "gloss": "eighth (numeral)",
+      "entries": {
+        "en": [
+        {"lemma": "eighth", "pos": "numeral", "sentences": ["It is the eighth of May."]}
+        ],
+        "nl": [
+        {"lemma": "achtste", "pos": "numeral", "sentences": ["Het is de achtste mei."]}
+        ]
+      }
+    },
+    {
+      "key": "ninth",
+      "gloss": "ninth (numeral)",
+      "entries": {
+        "en": [
+        {"lemma": "ninth", "pos": "numeral", "sentences": ["This is the ninth chapter."]}
+        ],
+        "nl": [
+        {"lemma": "negende", "pos": "numeral", "sentences": ["Dit is het negende hoofdstuk."]}
+        ]
+      }
+    },
+    {
+      "key": "tenth",
+      "gloss": "tenth (numeral)",
+      "entries": {
+        "en": [
+        {"lemma": "tenth", "pos": "numeral", "sentences": ["He is in tenth place."]}
+        ],
+        "nl": [
+        {"lemma": "tiende", "pos": "numeral", "sentences": ["Hij staat op de tiende plaats."]}
+        ]
+      }
+    },
+    {
+      "key": "so-much-so-many",
+      "gloss": "so much, so many (pronoun)",
+      "entries": {
+        "en": [
+        {"lemma": "so much, so many", "pos": "pronoun", "sentences": ["I have so much work."]}
+        ],
+        "nl": [
+        {"lemma": "zoveel", "pos": "pronoun", "sentences": ["Ik heb zoveel werk."]}
         ]
       }
     }

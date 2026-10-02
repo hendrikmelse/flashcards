@@ -83,6 +83,54 @@
         {"lemma": "dier", "pos": "noun", "details": {"article": "het", "plural": "dieren"}, "sentences": ["Een kat is een dier."]}
         ]
       }
+    },
+    {
+      "key": "beast",
+      "gloss": "beast (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "beast", "pos": "noun", "details": {"plural": "beasts"}, "sentences": ["The beast is dangerous."]}
+        ],
+        "nl": [
+        {"lemma": "beest", "pos": "noun", "details": {"article": "het", "plural": "beesten"}, "sentences": ["Het beest is gevaarlijk."]}
+        ]
+      }
+    },
+    {
+      "key": "monster",
+      "gloss": "monster (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "monster", "pos": "noun", "details": {"plural": "monsters"}, "sentences": ["The monster is big."]}
+        ],
+        "nl": [
+        {"lemma": "monster", "pos": "noun", "details": {"article": "het", "plural": "monsters"}, "sentences": ["Het monster is groot."]}
+        ]
+      }
+    },
+    {
+      "key": "monkey",
+      "gloss": "monkey (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "monkey", "pos": "noun", "details": {"plural": "monkeys"}, "sentences": ["The monkey eats a banana."]}
+        ],
+        "nl": [
+        {"lemma": "aap", "pos": "noun", "details": {"article": "de", "plural": "apen"}, "sentences": ["De aap eet een banaan."]}
+        ]
+      }
+    },
+    {
+      "key": "rat",
+      "gloss": "rat (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "rat", "pos": "noun", "details": {"plural": "rats"}, "sentences": ["The rat runs."]}
+        ],
+        "nl": [
+        {"lemma": "rat", "pos": "noun", "details": {"article": "de", "plural": "ratten"}, "sentences": ["De rat rent."]}
+        ]
+      }
     }
   ]
 }

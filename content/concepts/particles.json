@@ -1,0 +1,724 @@
+{
+  "concepts": [
+    {
+      "key": "do-particle",
+      "gloss": "do (emphatic)",
+      "entries": {
+        "en": [
+        {"lemma": "do (emphatic)", "pos": "particle", "sentences": ["He does come."]}
+        ],
+        "nl": [
+        {"lemma": "wel", "pos": "particle", "sentences": ["Hij komt wel."]}
+        ]
+      }
+    },
+    {
+      "key": "still",
+      "gloss": "still (particle)",
+      "entries": {
+        "en": [
+        {"lemma": "still", "pos": "particle", "sentences": ["I am still here."]}
+        ],
+        "nl": [
+        {"lemma": "nog", "pos": "particle", "sentences": ["Ik ben nog hier."]}
+        ]
+      }
+    },
+    {
+      "key": "so-particle-zo",
+      "gloss": "so (particle)",
+      "entries": {
+        "en": [
+        {"lemma": "so", "pos": "particle", "sentences": ["It is so beautiful."]}
+        ],
+        "nl": [
+        {"lemma": "zo", "pos": "particle", "sentences": ["Het is zo mooi."]}
+        ]
+      }
+    },
+    {
+      "key": "then",
+      "gloss": "then (particle)",
+      "entries": {
+        "en": [
+        {"lemma": "then", "pos": "particle", "sentences": ["First work, then play."]}
+        ],
+        "nl": [
+        {"lemma": "dan", "pos": "particle", "sentences": ["Eerst werken, dan spelen."]}
+        ]
+      }
+    },
+    {
+      "key": "anyway-particle-toch",
+      "gloss": "anyway (all the same)",
+      "entries": {
+        "en": [
+        {"lemma": "anyway (all the same)", "pos": "particle", "sentences": ["It is cold, but I am going anyway."]}
+        ],
+        "nl": [
+        {"lemma": "toch", "pos": "particle", "sentences": ["Het is koud, maar ik ga toch."]}
+        ]
+      }
+    },
+    {
+      "key": "well",
+      "gloss": "well (filler)",
+      "entries": {
+        "en": [
+        {"lemma": "well (filler)", "pos": "particle", "sentences": ["Well, I do not know."]}
+        ],
+        "nl": [
+        {"lemma": "nou", "pos": "particle", "sentences": ["Nou, ik weet het niet."]}
+        ]
+      }
+    },
+    {
+      "key": "only-particle-alleen",
+      "gloss": "only (particle)",
+      "entries": {
+        "en": [
+        {"lemma": "only", "pos": "particle", "sentences": ["I only want water."]}
+        ],
+        "nl": [
+        {"lemma": "alleen", "pos": "particle", "sentences": ["Ik wil alleen water."]}
+        ]
+      }
+    },
+    {
+      "key": "so-particle-dus",
+      "gloss": "so (therefore)",
+      "entries": {
+        "en": [
+        {"lemma": "so (therefore)", "pos": "particle", "sentences": ["It is raining, so I stay home."]}
+        ],
+        "nl": [
+        {"lemma": "dus", "pos": "particle", "sentences": ["Het regent, dus ik blijf thuis."]}
+        ]
+      }
+    },
+    {
+      "key": "for-a-moment",
+      "gloss": "for a moment (particle)",
+      "entries": {
+        "en": [
+        {"lemma": "for a moment", "pos": "particle", "sentences": ["Wait for a moment."]}
+        ],
+        "nl": [
+        {"lemma": "even", "pos": "particle", "sentences": ["Wacht even."]}
+        ]
+      }
+    },
+    {
+      "key": "for-once",
+      "gloss": "for once (particle)",
+      "entries": {
+        "en": [
+        {"lemma": "for once", "pos": "particle", "sentences": ["For once, I am on time."]}
+        ],
+        "nl": [
+        {"lemma": "eens", "pos": "particle", "sentences": ["Ik ben eens op tijd."]}
+        ]
+      }
+    },
+    {
+      "key": "just-particle-net",
+      "gloss": "just (a moment ago)",
+      "entries": {
+        "en": [
+        {"lemma": "just (a moment ago)", "pos": "particle", "sentences": ["He just left."]}
+        ],
+        "nl": [
+        {"lemma": "net", "pos": "particle", "sentences": ["Hij is net weggegaan."]}
+        ]
+      }
+    },
+    {
+      "key": "self",
+      "gloss": "self (emphatic)",
+      "entries": {
+        "en": [
+        {"lemma": "self (emphatic)", "pos": "particle", "sentences": ["I do it myself."]}
+        ],
+        "nl": [
+        {"lemma": "zelf", "pos": "particle", "sentences": ["Ik doe het zelf."]}
+        ]
+      }
+    },
+    {
+      "key": "even",
+      "gloss": "even (particle)",
+      "entries": {
+        "en": [
+        {"lemma": "even", "pos": "particle", "sentences": ["Even a child knows it."]}
+        ],
+        "nl": [
+        {"lemma": "zelfs", "pos": "particle", "sentences": ["Zelfs een kind weet het."]}
+        ]
+      }
+    },
+    {
+      "key": "only-just",
+      "gloss": "only just (particle)",
+      "entries": {
+        "en": [
+        {"lemma": "only just", "pos": "particle", "sentences": ["I only just arrived."]}
+        ],
+        "nl": [
+        {"lemma": "pas", "pos": "particle", "sentences": ["Ik ben pas aangekomen."]}
+        ]
+      }
+    },
+    {
+      "key": "indeed",
+      "gloss": "indeed (particle)",
+      "entries": {
+        "en": [
+        {"lemma": "indeed", "pos": "particle", "sentences": ["That is indeed true."]}
+        ],
+        "nl": [
+        {"lemma": "inderdaad", "pos": "particle", "sentences": ["Dat is inderdaad waar."]}
+        ]
+      }
+    },
+    {
+      "key": "rather",
+      "gloss": "rather (preferably)",
+      "entries": {
+        "en": [
+        {"lemma": "rather (preferably)", "pos": "particle", "sentences": ["I would rather drink tea."]}
+        ],
+        "nl": [
+        {"lemma": "liever", "pos": "particle", "sentences": ["Ik drink liever thee."]}
+        ]
+      }
+    },
+    {
+      "key": "very-particle",
+      "gloss": "very (formal)",
+      "entries": {
+        "en": [
+        {"lemma": "very (formal)", "pos": "particle", "sentences": ["He is very kind."]}
+        ],
+        "nl": [
+        {"lemma": "zeer", "pos": "particle", "sentences": ["Hij is zeer vriendelijk."]}
+        ]
+      }
+    },
+    {
+      "key": "rather-quite",
+      "gloss": "rather, quite (particle)",
+      "entries": {
+        "en": [
+        {"lemma": "rather, quite", "pos": "particle", "sentences": ["It is rather cold."]}
+        ],
+        "nl": [
+        {"lemma": "nogal", "pos": "particle", "sentences": ["Het is nogal koud."]}
+        ]
+      }
+    },
+    {
+      "key": "exactly",
+      "gloss": "exactly (particle)",
+      "entries": {
+        "en": [
+        {"lemma": "exactly", "pos": "particle", "sentences": ["That is exactly right."]}
+        ],
+        "nl": [
+        {"lemma": "juist", "pos": "particle", "sentences": ["Dat is juist."]}
+        ]
+      }
+    },
+    {
+      "key": "just-like-that",
+      "gloss": "just like that (particle)",
+      "entries": {
+        "en": [
+        {"lemma": "just like that", "pos": "particle", "sentences": ["He left just like that."]}
+        ],
+        "nl": [
+        {"lemma": "zomaar", "pos": "particle", "sentences": ["Hij ging zomaar weg."]}
+        ]
+      }
+    },
+    {
+      "key": "at-least-particle",
+      "gloss": "at least (particle)",
+      "entries": {
+        "en": [
+        {"lemma": "at least", "pos": "particle", "sentences": ["At least he called."]}
+        ],
+        "nl": [
+        {"lemma": "tenminste", "pos": "particle", "sentences": ["Hij belde tenminste."]}
+        ]
+      }
+    },
+    {
+      "key": "by-the-way",
+      "gloss": "by the way (particle)",
+      "entries": {
+        "en": [
+        {"lemma": "by the way", "pos": "particle", "sentences": ["By the way, I am home tomorrow."]}
+        ],
+        "nl": [
+        {"lemma": "trouwens", "pos": "particle", "sentences": ["Trouwens, ik ben morgen thuis."]}
+        ]
+      }
+    },
+    {
+      "key": "only-particle-slechts",
+      "gloss": "only (formal)",
+      "entries": {
+        "en": [
+        {"lemma": "only (formal)", "pos": "particle", "sentences": ["There is only one left."]}
+        ],
+        "nl": [
+        {"lemma": "slechts", "pos": "particle", "sentences": ["Er is slechts één over."]}
+        ]
+      }
+    },
+    {
+      "key": "especially",
+      "gloss": "especially (particle)",
+      "entries": {
+        "en": [
+        {"lemma": "especially", "pos": "particle", "sentences": ["I especially like cheese."]}
+        ],
+        "nl": [
+        {"lemma": "vooral", "pos": "particle", "sentences": ["Ik hou vooral van kaas."]}
+        ]
+      }
+    },
+    {
+      "key": "of-course-particle-tuurlijk",
+      "gloss": "of course (colloquial)",
+      "entries": {
+        "en": [
+        {"lemma": "of course (colloquial)", "pos": "particle", "sentences": ["Of course I will help you."]}
+        ],
+        "nl": [
+        {"lemma": "tuurlijk", "pos": "particle", "sentences": ["Tuurlijk help ik je."]}
+        ]
+      }
+    },
+    {
+      "key": "only-particle-enkel",
+      "gloss": "only (just)",
+      "entries": {
+        "en": [
+        {"lemma": "only (just)", "pos": "particle", "sentences": ["I want only one."]}
+        ],
+        "nl": [
+        {"lemma": "enkel", "pos": "particle", "sentences": ["Ik wil enkel één."]}
+        ]
+      }
+    },
+    {
+      "key": "for-example",
+      "gloss": "for example (particle)",
+      "entries": {
+        "en": [
+        {"lemma": "for example", "pos": "particle", "sentences": ["For example, a cat."]}
+        ],
+        "nl": [
+        {"lemma": "bijvoorbeeld", "pos": "particle", "sentences": ["Bijvoorbeeld een kat."]}
+        ]
+      }
+    },
+    {
+      "key": "really",
+      "gloss": "really (colloquial)",
+      "entries": {
+        "en": [
+        {"lemma": "really (colloquial)", "pos": "particle", "sentences": ["That is really good."]}
+        ],
+        "nl": [
+        {"lemma": "hartstikke", "pos": "particle", "sentences": ["Dat is hartstikke goed."]}
+        ]
+      }
+    },
+    {
+      "key": "of-course-particle-uiteraard",
+      "gloss": "of course (naturally)",
+      "entries": {
+        "en": [
+        {"lemma": "of course (naturally)", "pos": "particle", "sentences": ["Of course you may come."]}
+        ],
+        "nl": [
+        {"lemma": "uiteraard", "pos": "particle", "sentences": ["Je mag uiteraard komen."]}
+        ]
+      }
+    },
+    {
+      "key": "you-see",
+      "gloss": "you see (particle)",
+      "entries": {
+        "en": [
+        {"lemma": "you see", "pos": "particle", "sentences": ["I am tired; I slept badly, you see."]}
+        ],
+        "nl": [
+        {"lemma": "namelijk", "pos": "particle", "sentences": ["Ik ben moe; ik heb namelijk slecht geslapen."]}
+        ]
+      }
+    },
+    {
+      "key": "hence",
+      "gloss": "hence (particle)",
+      "entries": {
+        "en": [
+        {"lemma": "hence", "pos": "particle", "sentences": ["I was ill, hence my absence."]}
+        ],
+        "nl": [
+        {"lemma": "vandaar", "pos": "particle", "sentences": ["Ik was ziek, vandaar mijn afwezigheid."]}
+        ]
+      }
+    },
+    {
+      "key": "however",
+      "gloss": "however (particle)",
+      "entries": {
+        "en": [
+        {"lemma": "however", "pos": "particle", "sentences": ["He is rich; he is not happy, however."]}
+        ],
+        "nl": [
+        {"lemma": "echter", "pos": "particle", "sentences": ["Hij is rijk; hij is echter niet gelukkig."]}
+        ]
+      }
+    },
+    {
+      "key": "meanwhile",
+      "gloss": "meanwhile (particle)",
+      "entries": {
+        "en": [
+        {"lemma": "meanwhile", "pos": "particle", "sentences": ["Meanwhile I cook."]}
+        ],
+        "nl": [
+        {"lemma": "ondertussen", "pos": "particle", "sentences": ["Ondertussen kook ik."]}
+        ]
+      }
+    },
+    {
+      "key": "moreover",
+      "gloss": "moreover (particle)",
+      "entries": {
+        "en": [
+        {"lemma": "moreover", "pos": "particle", "sentences": ["Moreover, it is cheap."]}
+        ],
+        "nl": [
+        {"lemma": "bovendien", "pos": "particle", "sentences": ["Bovendien is het goedkoop."]}
+        ]
+      }
+    },
+    {
+      "key": "anyway-particle-sowieso",
+      "gloss": "anyway (in any case)",
+      "entries": {
+        "en": [
+        {"lemma": "anyway (in any case)", "pos": "particle", "sentences": ["I am coming anyway."]}
+        ],
+        "nl": [
+        {"lemma": "sowieso", "pos": "particle", "sentences": ["Ik kom sowieso."]}
+        ]
+      }
+    },
+    {
+      "key": "after-all",
+      "gloss": "after all (particle)",
+      "entries": {
+        "en": [
+        {"lemma": "after all", "pos": "particle", "sentences": ["I am coming; I did promise, after all."]}
+        ],
+        "nl": [
+        {"lemma": "immers", "pos": "particle", "sentences": ["Ik kom; ik heb het immers beloofd."]}
+        ]
+      }
+    },
+    {
+      "key": "on-the-contrary",
+      "gloss": "on the contrary (particle)",
+      "entries": {
+        "en": [
+        {"lemma": "on the contrary", "pos": "particle", "sentences": ["On the contrary, I like it."]}
+        ],
+        "nl": [
+        {"lemma": "integendeel", "pos": "particle", "sentences": ["Integendeel, ik vind het leuk."]}
+        ]
+      }
+    },
+    {
+      "key": "or-something",
+      "gloss": "or something (particle)",
+      "entries": {
+        "en": [
+        {"lemma": "or something", "pos": "particle", "sentences": ["Tea or something?"]}
+        ],
+        "nl": [
+        {"lemma": "ofzo", "pos": "particle", "sentences": ["Thee ofzo?"]}
+        ]
+      }
+    },
+    {
+      "key": "just-a-moment",
+      "gloss": "just a moment (particle)",
+      "entries": {
+        "en": [
+        {"lemma": "just a moment", "pos": "particle", "sentences": ["Wait just a moment."]}
+        ],
+        "nl": [
+        {"lemma": "eventjes", "pos": "particle", "sentences": ["Wacht eventjes."]}
+        ]
+      }
+    },
+    {
+      "key": "already-particle",
+      "gloss": "already (particle)",
+      "entries": {
+        "en": [
+        {"lemma": "already", "pos": "particle", "sentences": ["I am already here."]}
+        ],
+        "nl": [
+        {"lemma": "al", "pos": "particle", "sentences": ["Ik ben al hier."]}
+        ]
+      }
+    },
+    {
+      "key": "just-particle-maar",
+      "gloss": "just (encouraging)",
+      "entries": {
+        "en": [
+        {"lemma": "just (encouraging)", "pos": "particle", "sentences": ["Just come in."]}
+        ],
+        "nl": [
+        {"lemma": "maar", "pos": "particle", "sentences": ["Kom maar binnen."]}
+        ]
+      }
+    },
+    {
+      "key": "you-know",
+      "gloss": "you know (softener)",
+      "entries": {
+        "en": [
+        {"lemma": "you know (softener)", "pos": "particle", "sentences": ["That is fine, you know."]}
+        ],
+        "nl": [
+        {"lemma": "hoor", "pos": "particle", "sentences": ["Dat is goed, hoor."]}
+        ]
+      }
+    },
+    {
+      "key": "next",
+      "gloss": "next (then)",
+      "entries": {
+        "en": [
+        {"lemma": "next (then)", "pos": "particle", "sentences": ["Next we walk."]}
+        ],
+        "nl": [
+        {"lemma": "vervolgens", "pos": "particle", "sentences": ["Vervolgens lopen we."]}
+        ]
+      }
+    },
+    {
+      "key": "at-all",
+      "gloss": "at all (particle)",
+      "entries": {
+        "en": [
+        {"lemma": "at all", "pos": "particle", "sentences": ["I do not know at all."]}
+        ],
+        "nl": [
+        {"lemma": "überhaupt", "pos": "particle", "sentences": ["Ik weet het überhaupt niet."]}
+        ]
+      }
+    },
+    {
+      "key": "plus",
+      "gloss": "plus (particle)",
+      "entries": {
+        "en": [
+        {"lemma": "plus", "pos": "particle", "sentences": ["Two plus three is five."]}
+        ],
+        "nl": [
+        {"lemma": "plus", "pos": "particle", "sentences": ["Twee plus drie is vijf."]}
+        ]
+      }
+    },
+    {
+      "key": "oh",
+      "gloss": "oh (interjection)",
+      "entries": {
+        "en": [
+        {"lemma": "oh", "pos": "interjection", "sentences": ["Oh, I see."]}
+        ],
+        "nl": [
+        {"lemma": "oh", "pos": "interjection", "sentences": ["Oh, ik zie het."]}
+        ]
+      }
+    },
+    {
+      "key": "oh-well",
+      "gloss": "oh well (resignation)",
+      "entries": {
+        "en": [
+        {"lemma": "oh well (resignation)", "pos": "interjection", "sentences": ["Oh well, that is life."]}
+        ],
+        "nl": [
+        {"lemma": "ach", "pos": "interjection", "sentences": ["Ach, zo gaat het leven."]}
+        ]
+      }
+    },
+    {
+      "key": "isn-t-it",
+      "gloss": "isn't it (huh)",
+      "entries": {
+        "en": [
+        {"lemma": "isn't it (huh)", "pos": "interjection", "sentences": ["Nice, isn't it?"]}
+        ],
+        "nl": [
+        {"lemma": "hè", "pos": "interjection", "sentences": ["Mooi, hè?"]}
+        ]
+      }
+    },
+    {
+      "key": "hey",
+      "gloss": "hey (interjection)",
+      "entries": {
+        "en": [
+        {"lemma": "hey", "pos": "interjection", "sentences": ["Hey, wait for me!"]}
+        ],
+        "nl": [
+        {"lemma": "hé", "pos": "interjection", "sentences": ["Hé, wacht op mij!"]}
+        ]
+      }
+    },
+    {
+      "key": "ha",
+      "gloss": "ha (interjection)",
+      "entries": {
+        "en": [
+        {"lemma": "ha", "pos": "interjection", "sentences": ["Ha, I found it!"]}
+        ],
+        "nl": [
+        {"lemma": "ha", "pos": "interjection", "sentences": ["Ha, ik heb het gevonden!"]}
+        ]
+      }
+    },
+    {
+      "key": "come-on",
+      "gloss": "come on (interjection)",
+      "entries": {
+        "en": [
+        {"lemma": "come on", "pos": "interjection", "sentences": ["Come on, let's go!"]}
+        ],
+        "nl": [
+        {"lemma": "hup", "pos": "interjection", "sentences": ["Hup, we gaan!"]}
+        ]
+      }
+    },
+    {
+      "key": "uh",
+      "gloss": "uh (interjection)",
+      "entries": {
+        "en": [
+        {"lemma": "uh", "pos": "interjection", "sentences": ["Uh, I do not know."]}
+        ],
+        "nl": [
+        {"lemma": "euh", "pos": "interjection", "sentences": ["Euh, ik weet het niet."]}
+        ]
+      }
+    },
+    {
+      "key": "yuck",
+      "gloss": "yuck (interjection)",
+      "entries": {
+        "en": [
+        {"lemma": "yuck", "pos": "interjection", "sentences": ["Yuck, that smells bad!"]}
+        ],
+        "nl": [
+        {"lemma": "bah", "pos": "interjection", "sentences": ["Bah, dat stinkt!"]}
+        ]
+      }
+    },
+    {
+      "key": "pardon",
+      "gloss": "pardon? (interjection)",
+      "entries": {
+        "en": [
+        {"lemma": "pardon?", "pos": "interjection", "sentences": ["Pardon? I did not hear you."]}
+        ],
+        "nl": [
+        {"lemma": "wablief", "pos": "interjection", "sentences": ["Wablief? Ik heb je niet gehoord."]}
+        ]
+      }
+    },
+    {
+      "key": "gosh",
+      "gloss": "gosh (interjection)",
+      "entries": {
+        "en": [
+        {"lemma": "gosh", "pos": "interjection", "sentences": ["Gosh, how nice!"]}
+        ],
+        "nl": [
+        {"lemma": "goh", "pos": "interjection", "sentences": ["Goh, wat leuk!"]}
+        ]
+      }
+    },
+    {
+      "key": "okay",
+      "gloss": "okay (interjection)",
+      "entries": {
+        "en": [
+        {"lemma": "okay", "pos": "interjection", "sentences": ["Okay, I am coming."]}
+        ],
+        "nl": [
+        {"lemma": "oké", "pos": "interjection", "sentences": ["Oké, ik kom."]}
+        ]
+      }
+    },
+    {
+      "key": "oops",
+      "gloss": "oops (interjection)",
+      "entries": {
+        "en": [
+        {"lemma": "oops", "pos": "interjection", "sentences": ["Oops, I dropped it."]}
+        ],
+        "nl": [
+        {"lemma": "oei", "pos": "interjection", "sentences": ["Oei, ik heb het laten vallen."]}
+        ]
+      }
+    },
+    {
+      "key": "go-ahead",
+      "gloss": "go ahead (come on)",
+      "entries": {
+        "en": [
+        {"lemma": "go ahead (come on)", "pos": "interjection", "sentences": ["Go ahead, try it."]}
+        ],
+        "nl": [
+        {"lemma": "vooruit", "pos": "interjection", "sentences": ["Vooruit, probeer het."]}
+        ]
+      }
+    },
+    {
+      "key": "damn",
+      "gloss": "damn (interjection)",
+      "entries": {
+        "en": [
+        {"lemma": "damn", "pos": "interjection", "sentences": ["Damn, I forgot my keys!"]}
+        ],
+        "nl": [
+        {"lemma": "verdomme", "pos": "interjection", "sentences": ["Verdomme, ik ben mijn sleutels vergeten!"]}
+        ]
+      }
+    },
+    {
+      "key": "please-interjection-alstublieft",
+      "gloss": "please (formal)",
+      "entries": {
+        "en": [
+        {"lemma": "please (formal)", "pos": "interjection", "sentences": ["Your coffee, please."]}
+        ],
+        "nl": [
+        {"lemma": "alstublieft", "pos": "interjection", "sentences": ["Uw koffie, alstublieft."]}
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,208 @@
+{
+  "concepts": [
+    {
+      "key": "lesson",
+      "gloss": "lesson (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "lesson", "pos": "noun", "details": {"plural": "lessons"}, "sentences": ["The lesson starts now."]}
+        ],
+        "nl": [
+        {"lemma": "les", "pos": "noun", "details": {"article": "de", "plural": "lessen"}, "sentences": ["De les begint nu."]}
+        ]
+      }
+    },
+    {
+      "key": "count",
+      "gloss": "count (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "count", "pos": "verb", "details": {"past": "counted", "participle": "counted"}, "sentences": ["I count to ten."]}
+        ],
+        "nl": [
+        {"lemma": "tellen", "pos": "verb", "details": {"pastSingular": "telde", "pastPlural": "telden", "participle": "geteld", "auxiliary": "hebben"}, "sentences": ["Ik tel tot tien."]}
+        ]
+      }
+    },
+    {
+      "key": "calculate",
+      "gloss": "calculate (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "calculate", "pos": "verb", "details": {"past": "calculated", "participle": "calculated"}, "sentences": ["We calculate with numbers."]}
+        ],
+        "nl": [
+        {"lemma": "rekenen", "pos": "verb", "details": {"pastSingular": "rekende", "pastPlural": "rekenden", "participle": "gerekend", "auxiliary": "hebben"}, "sentences": ["Wij rekenen met getallen."]}
+        ]
+      }
+    },
+    {
+      "key": "meter",
+      "gloss": "meter (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "meter", "pos": "noun", "details": {"plural": "meters"}, "sentences": ["The wall is two meters high."]}
+        ],
+        "nl": [
+        {"lemma": "meter", "pos": "noun", "details": {"article": "de", "plural": "meters"}, "sentences": ["De muur is twee meter hoog."]}
+        ]
+      }
+    },
+    {
+      "key": "study",
+      "gloss": "study (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "study", "pos": "verb", "details": {"past": "studied", "participle": "studied"}, "sentences": ["I study law."]}
+        ],
+        "nl": [
+        {"lemma": "studeren", "pos": "verb", "details": {"pastSingular": "studeerde", "pastPlural": "studeerden", "participle": "gestudeerd", "auxiliary": "hebben"}, "sentences": ["Ik studeer rechten."]}
+        ]
+      }
+    },
+    {
+      "key": "memorize",
+      "gloss": "memorize (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "memorize", "pos": "verb", "details": {"past": "memorized", "participle": "memorized"}, "sentences": ["I memorize the words."]}
+        ],
+        "nl": [
+        {"lemma": "onthouden", "pos": "verb", "details": {"pastSingular": "onthield", "pastPlural": "onthielden", "participle": "onthouden", "auxiliary": "hebben"}, "sentences": ["Ik onthoud de woorden."]}
+        ]
+      }
+    },
+    {
+      "key": "knowledge",
+      "gloss": "knowledge (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "knowledge", "pos": "noun", "details": {"uncountable": true}, "sentences": ["Knowledge is power."]}
+        ],
+        "nl": [
+        {"lemma": "kennis", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Kennis is macht."]}
+        ]
+      }
+    },
+    {
+      "key": "kilometer",
+      "gloss": "kilometer (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "kilometer", "pos": "noun", "details": {"plural": "kilometers"}, "sentences": ["It is five kilometers."]}
+        ],
+        "nl": [
+        {"lemma": "kilometer", "pos": "noun", "details": {"article": "de", "plural": "kilometers"}, "sentences": ["Het is vijf kilometer."]}
+        ]
+      }
+    },
+    {
+      "key": "history",
+      "gloss": "history (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "history", "pos": "noun", "details": {"plural": "histories"}, "sentences": ["I like history."]}
+        ],
+        "nl": [
+        {"lemma": "geschiedenis", "pos": "noun", "details": {"article": "de", "plural": "geschiedenissen"}, "sentences": ["Ik hou van geschiedenis."]}
+        ]
+      }
+    },
+    {
+      "key": "class",
+      "gloss": "class (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "class", "pos": "noun", "details": {"plural": "classes"}, "sentences": ["The class is big."]}
+        ],
+        "nl": [
+        {"lemma": "klas", "pos": "noun", "details": {"article": "de", "plural": "klassen"}, "sentences": ["De klas is groot."]}
+        ]
+      }
+    },
+    {
+      "key": "fail",
+      "gloss": "fail (an exam)",
+      "entries": {
+        "en": [
+        {"lemma": "fail (an exam)", "pos": "verb", "details": {"past": "failed", "participle": "failed"}, "sentences": ["I failed the exam."]}
+        ],
+        "nl": [
+        {"lemma": "zakken", "pos": "verb", "details": {"pastSingular": "zakte", "pastPlural": "zakten", "participle": "gezakt", "auxiliary": "zijn"}, "sentences": ["Ik ben voor het examen gezakt."]}
+        ]
+      }
+    },
+    {
+      "key": "test",
+      "gloss": "test (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "test", "pos": "noun", "details": {"plural": "tests"}, "sentences": ["I take a test."]}
+        ],
+        "nl": [
+        {"lemma": "test", "pos": "noun", "details": {"article": "de", "plural": "tests"}, "sentences": ["Ik doe een test."]}
+        ]
+      }
+    },
+    {
+      "key": "student",
+      "gloss": "student (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "student", "pos": "noun", "details": {"plural": "students"}, "sentences": ["The student studies law."]}
+        ],
+        "nl": [
+        {"lemma": "student", "pos": "noun", "details": {"article": "de", "plural": "studenten"}, "sentences": ["De student studeert rechten."]}
+        ]
+      }
+    },
+    {
+      "key": "practice",
+      "gloss": "practice (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "practice", "pos": "verb", "details": {"past": "practiced", "participle": "practiced"}, "sentences": ["I practice every day."]}
+        ],
+        "nl": [
+        {"lemma": "oefenen", "pos": "verb", "details": {"pastSingular": "oefende", "pastPlural": "oefenden", "participle": "geoefend", "auxiliary": "hebben"}, "sentences": ["Ik oefen elke dag."]}
+        ]
+      }
+    },
+    {
+      "key": "university",
+      "gloss": "university (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "university", "pos": "noun", "details": {"plural": "universities"}, "sentences": ["I study at the university."]}
+        ],
+        "nl": [
+        {"lemma": "universiteit", "pos": "noun", "details": {"article": "de", "plural": "universiteiten"}, "sentences": ["Ik studeer aan de universiteit."]}
+        ]
+      }
+    },
+    {
+      "key": "succeed-verb-slagen",
+      "gloss": "succeed (pass)",
+      "entries": {
+        "en": [
+        {"lemma": "succeed (pass)", "pos": "verb", "details": {"past": "succeeded", "participle": "succeeded"}, "sentences": ["I succeeded."]}
+        ],
+        "nl": [
+        {"lemma": "slagen", "pos": "verb", "details": {"pastSingular": "slaagde", "pastPlural": "slaagden", "participle": "geslaagd", "auxiliary": "zijn"}, "sentences": ["Ik ben geslaagd."]}
+        ]
+      }
+    },
+    {
+      "key": "pound",
+      "gloss": "pound (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "pound", "pos": "noun", "details": {"plural": "pounds"}, "sentences": ["A pound of apples."]}
+        ],
+        "nl": [
+        {"lemma": "pond", "pos": "noun", "details": {"article": "het", "plural": "ponden"}, "sentences": ["Een pond appels."]}
+        ]
+      }
+    }
+  ]
+}

@@ -83,6 +83,198 @@
         {"lemma": "haar", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["Zij heeft lang haar."]}
         ]
       }
+    },
+    {
+      "key": "face",
+      "gloss": "face (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "face", "pos": "noun", "details": {"plural": "faces"}, "sentences": ["She has a nice face."]}
+        ],
+        "nl": [
+        {"lemma": "gezicht", "pos": "noun", "details": {"article": "het", "plural": "gezichten"}, "sentences": ["Zij heeft een mooi gezicht."]}
+        ]
+      }
+    },
+    {
+      "key": "blood",
+      "gloss": "blood (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "blood", "pos": "noun", "details": {"uncountable": true}, "sentences": ["There is blood on the floor."]}
+        ],
+        "nl": [
+        {"lemma": "bloed", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["Er is bloed op de vloer."]}
+        ]
+      }
+    },
+    {
+      "key": "body",
+      "gloss": "body (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "body", "pos": "noun", "details": {"plural": "bodies"}, "sentences": ["The body needs water."]}
+        ],
+        "nl": [
+        {"lemma": "lichaam", "pos": "noun", "details": {"article": "het", "plural": "lichamen"}, "sentences": ["Het lichaam heeft water nodig."]}
+        ]
+      }
+    },
+    {
+      "key": "arm",
+      "gloss": "arm (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "arm", "pos": "noun", "details": {"plural": "arms"}, "sentences": ["My arm hurts."]}
+        ],
+        "nl": [
+        {"lemma": "arm", "pos": "noun", "details": {"article": "de", "plural": "armen"}, "sentences": ["Mijn arm doet pijn."]}
+        ]
+      }
+    },
+    {
+      "key": "back-noun",
+      "gloss": "back (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "back", "pos": "noun", "details": {"plural": "backs"}, "sentences": ["My back hurts."]}
+        ],
+        "nl": [
+        {"lemma": "rug", "pos": "noun", "details": {"article": "de", "plural": "ruggen"}, "sentences": ["Mijn rug doet pijn."]}
+        ]
+      }
+    },
+    {
+      "key": "nose",
+      "gloss": "nose (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "nose", "pos": "noun", "details": {"plural": "noses"}, "sentences": ["I have a cold nose."]}
+        ],
+        "nl": [
+        {"lemma": "neus", "pos": "noun", "details": {"article": "de", "plural": "neuzen"}, "sentences": ["Ik heb een koude neus."]}
+        ]
+      }
+    },
+    {
+      "key": "ear",
+      "gloss": "ear (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "ear", "pos": "noun", "details": {"plural": "ears"}, "sentences": ["My ear hurts."]}
+        ],
+        "nl": [
+        {"lemma": "oor", "pos": "noun", "details": {"article": "het", "plural": "oren"}, "sentences": ["Mijn oor doet pijn."]}
+        ]
+      }
+    },
+    {
+      "key": "finger",
+      "gloss": "finger (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "finger", "pos": "noun", "details": {"plural": "fingers"}, "sentences": ["My finger hurts."]}
+        ],
+        "nl": [
+        {"lemma": "vinger", "pos": "noun", "details": {"article": "de", "plural": "vingers"}, "sentences": ["Mijn vinger doet pijn."]}
+        ]
+      }
+    },
+    {
+      "key": "leg",
+      "gloss": "leg (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "leg", "pos": "noun", "details": {"plural": "legs"}, "sentences": ["My leg hurts."]}
+        ],
+        "nl": [
+        {"lemma": "been", "pos": "noun", "details": {"article": "het", "plural": "benen"}, "sentences": ["Mijn been doet pijn."]}
+        ]
+      }
+    },
+    {
+      "key": "neck",
+      "gloss": "neck (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "neck", "pos": "noun", "details": {"plural": "necks"}, "sentences": ["My neck hurts."]}
+        ],
+        "nl": [
+        {"lemma": "nek", "pos": "noun", "details": {"article": "de", "plural": "nekken"}, "sentences": ["Mijn nek doet pijn."]}
+        ]
+      }
+    },
+    {
+      "key": "tooth",
+      "gloss": "tooth (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "tooth", "pos": "noun", "details": {"plural": "teeth"}, "sentences": ["My tooth hurts."]}
+        ],
+        "nl": [
+        {"lemma": "tand", "pos": "noun", "details": {"article": "de", "plural": "tanden"}, "sentences": ["Mijn tand doet pijn."]}
+        ]
+      }
+    },
+    {
+      "key": "chest",
+      "gloss": "chest (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "chest", "pos": "noun", "details": {"plural": "chests"}, "sentences": ["My chest hurts."]}
+        ],
+        "nl": [
+        {"lemma": "borst", "pos": "noun", "details": {"article": "de", "plural": "borsten"}, "sentences": ["Mijn borst doet pijn."]}
+        ]
+      }
+    },
+    {
+      "key": "breath",
+      "gloss": "breath (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "breath", "pos": "noun", "details": {"plural": "breaths"}, "sentences": ["I hold my breath."]}
+        ],
+        "nl": [
+        {"lemma": "adem", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Ik houd mijn adem in."]}
+        ]
+      }
+    },
+    {
+      "key": "skin",
+      "gloss": "skin (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "skin", "pos": "noun", "details": {"plural": "skins"}, "sentences": ["My skin is dry."]}
+        ],
+        "nl": [
+        {"lemma": "huid", "pos": "noun", "details": {"article": "de", "plural": "huiden"}, "sentences": ["Mijn huid is droog."]}
+        ]
+      }
+    },
+    {
+      "key": "knee",
+      "gloss": "knee (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "knee", "pos": "noun", "details": {"plural": "knees"}, "sentences": ["My knee hurts."]}
+        ],
+        "nl": [
+        {"lemma": "knie", "pos": "noun", "details": {"article": "de", "plural": "knieën"}, "sentences": ["Mijn knie doet pijn."]}
+        ]
+      }
+    },
+    {
+      "key": "brain",
+      "gloss": "brain (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "brain", "pos": "noun", "details": {"plural": "brains"}, "sentences": ["My brain is tired."]}
+        ],
+        "nl": [
+        {"lemma": "hersenen", "pos": "noun", "details": {"article": "de", "pluralOnly": true}, "sentences": ["Mijn hersenen zijn moe."]}
+        ]
+      }
     }
   ]
 }

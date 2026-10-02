@@ -1,0 +1,208 @@
+{
+  "concepts": [
+    {
+      "key": "ship",
+      "gloss": "ship (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "ship", "pos": "noun", "details": {"plural": "ships"}, "sentences": ["The ship sails."]}
+        ],
+        "nl": [
+        {"lemma": "schip", "pos": "noun", "details": {"article": "het", "plural": "schepen"}, "sentences": ["Het schip vaart."]}
+        ]
+      }
+    },
+    {
+      "key": "map",
+      "gloss": "map (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "map", "pos": "noun", "details": {"plural": "maps"}, "sentences": ["We look at the map."]}
+        ],
+        "nl": [
+        {"lemma": "kaart", "pos": "noun", "details": {"article": "de", "plural": "kaarten"}, "sentences": ["Wij kijken op de kaart."]}
+        ]
+      }
+    },
+    {
+      "key": "boat",
+      "gloss": "boat (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "boat", "pos": "noun", "details": {"plural": "boats"}, "sentences": ["We go by boat."]}
+        ],
+        "nl": [
+        {"lemma": "boot", "pos": "noun", "details": {"article": "de", "plural": "boten"}, "sentences": ["Wij gaan met de boot."]}
+        ]
+      }
+    },
+    {
+      "key": "tire",
+      "gloss": "tire (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "tire", "pos": "noun", "details": {"plural": "tires"}, "sentences": ["The tire is flat."]}
+        ],
+        "nl": [
+        {"lemma": "band", "pos": "noun", "details": {"article": "de", "plural": "banden"}, "sentences": ["De band is plat."]}
+        ]
+      }
+    },
+    {
+      "key": "hotel",
+      "gloss": "hotel (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "hotel", "pos": "noun", "details": {"plural": "hotels"}, "sentences": ["We stay in a hotel."]}
+        ],
+        "nl": [
+        {"lemma": "hotel", "pos": "noun", "details": {"article": "het", "plural": "hotels"}, "sentences": ["Wij blijven in een hotel."]}
+        ]
+      }
+    },
+    {
+      "key": "trip",
+      "gloss": "trip (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "trip", "pos": "noun", "details": {"plural": "trips"}, "sentences": ["The trip is long."]}
+        ],
+        "nl": [
+        {"lemma": "reis", "pos": "noun", "details": {"article": "de", "plural": "reizen"}, "sentences": ["De reis is lang."]}
+        ]
+      }
+    },
+    {
+      "key": "flight",
+      "gloss": "flight (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "flight", "pos": "noun", "details": {"plural": "flights"}, "sentences": ["The flight is long."]}
+        ],
+        "nl": [
+        {"lemma": "vlucht", "pos": "noun", "details": {"article": "de", "plural": "vluchten"}, "sentences": ["De vlucht is lang."]}
+        ]
+      }
+    },
+    {
+      "key": "engine",
+      "gloss": "engine (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "engine", "pos": "noun", "details": {"plural": "engines"}, "sentences": ["The engine is loud."]}
+        ],
+        "nl": [
+        {"lemma": "motor", "pos": "noun", "details": {"article": "de", "plural": "motoren"}, "sentences": ["De motor is luid."]}
+        ]
+      }
+    },
+    {
+      "key": "motorcycle",
+      "gloss": "motorcycle (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "motorcycle", "pos": "noun", "details": {"plural": "motorcycles"}, "sentences": ["He rides a motorcycle."]}
+        ],
+        "nl": [
+        {"lemma": "motor", "pos": "noun", "details": {"article": "de", "plural": "motoren"}, "sentences": ["Hij rijdt op een motor."]}
+        ]
+      }
+    },
+    {
+      "key": "suitcase",
+      "gloss": "suitcase (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "suitcase", "pos": "noun", "details": {"plural": "suitcases"}, "sentences": ["My suitcase is heavy."]}
+        ],
+        "nl": [
+        {"lemma": "koffer", "pos": "noun", "details": {"article": "de", "plural": "koffers"}, "sentences": ["Mijn koffer is zwaar."]}
+        ]
+      }
+    },
+    {
+      "key": "taxi",
+      "gloss": "taxi (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "taxi", "pos": "noun", "details": {"plural": "taxis"}, "sentences": ["We take a taxi."]}
+        ],
+        "nl": [
+        {"lemma": "taxi", "pos": "noun", "details": {"article": "de", "plural": "taxi's"}, "sentences": ["Wij nemen een taxi."]}
+        ]
+      }
+    },
+    {
+      "key": "border",
+      "gloss": "border (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "border", "pos": "noun", "details": {"plural": "borders"}, "sentences": ["We cross the border."]}
+        ],
+        "nl": [
+        {"lemma": "grens", "pos": "noun", "details": {"article": "de", "plural": "grenzen"}, "sentences": ["Wij steken de grens over."]}
+        ]
+      }
+    },
+    {
+      "key": "travel",
+      "gloss": "travel (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "travel", "pos": "verb", "details": {"past": "traveled", "participle": "traveled"}, "sentences": ["I travel a lot."]}
+        ],
+        "nl": [
+        {"lemma": "reizen", "pos": "verb", "details": {"pastSingular": "reisde", "pastPlural": "reisden", "participle": "gereisd", "auxiliary": "hebben/zijn"}, "sentences": ["Ik reis veel."]}
+        ]
+      }
+    },
+    {
+      "key": "tent",
+      "gloss": "tent (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "tent", "pos": "noun", "details": {"plural": "tents"}, "sentences": ["We sleep in a tent."]}
+        ],
+        "nl": [
+        {"lemma": "tent", "pos": "noun", "details": {"article": "de", "plural": "tenten"}, "sentences": ["Wij slapen in een tent."]}
+        ]
+      }
+    },
+    {
+      "key": "camp",
+      "gloss": "camp (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "camp", "pos": "noun", "details": {"plural": "camps"}, "sentences": ["We stay in a camp."]}
+        ],
+        "nl": [
+        {"lemma": "kamp", "pos": "noun", "details": {"article": "het", "plural": "kampen"}, "sentences": ["Wij verblijven in een kamp."]}
+        ]
+      }
+    },
+    {
+      "key": "track",
+      "gloss": "track (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "track", "pos": "noun", "details": {"plural": "tracks"}, "sentences": ["The train is on the track."]}
+        ],
+        "nl": [
+        {"lemma": "spoor", "pos": "noun", "details": {"article": "het", "plural": "sporen"}, "sentences": ["De trein staat op het spoor."]}
+        ]
+      }
+    },
+    {
+      "key": "truck",
+      "gloss": "truck (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "truck", "pos": "noun", "details": {"plural": "trucks"}, "sentences": ["The truck is big."]}
+        ],
+        "nl": [
+        {"lemma": "truck", "pos": "noun", "details": {"article": "de", "plural": "trucks"}, "sentences": ["De truck is groot."]}
+        ]
+      }
+    }
+  ]
+}

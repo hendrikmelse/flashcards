@@ -95,6 +95,222 @@
         {"lemma": "berg", "pos": "noun", "details": {"article": "de", "plural": "bergen"}, "sentences": ["Wij lopen in de bergen."]}
         ]
       }
+    },
+    {
+      "key": "ground",
+      "gloss": "ground (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "ground", "pos": "noun", "details": {"plural": "grounds"}, "sentences": ["The book falls on the ground."]}
+        ],
+        "nl": [
+        {"lemma": "grond", "pos": "noun", "details": {"article": "de", "plural": "gronden"}, "sentences": ["Het boek valt op de grond."]}
+        ]
+      }
+    },
+    {
+      "key": "fire-noun-vuur",
+      "gloss": "fire (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "fire", "pos": "noun", "details": {"plural": "fires"}, "sentences": ["The fire is hot."]}
+        ],
+        "nl": [
+        {"lemma": "vuur", "pos": "noun", "details": {"article": "het", "plural": "vuren"}, "sentences": ["Het vuur is heet."]}
+        ]
+      }
+    },
+    {
+      "key": "sky",
+      "gloss": "sky (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "sky", "pos": "noun", "details": {"plural": "skies"}, "sentences": ["The sky is blue."]}
+        ],
+        "nl": [
+        {"lemma": "lucht", "pos": "noun", "details": {"article": "de", "plural": "luchten"}, "sentences": ["De lucht is blauw."]}
+        ]
+      }
+    },
+    {
+      "key": "air",
+      "gloss": "air (what we breathe)",
+      "entries": {
+        "en": [
+        {"lemma": "air (what we breathe)", "pos": "noun", "details": {"uncountable": true}, "sentences": ["I need fresh air."]}
+        ],
+        "nl": [
+        {"lemma": "lucht", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Ik heb frisse lucht nodig."]}
+        ]
+      }
+    },
+    {
+      "key": "earth",
+      "gloss": "earth (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "earth", "pos": "noun", "details": {"uncountable": true}, "sentences": ["The earth is round."]}
+        ],
+        "nl": [
+        {"lemma": "aarde", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["De aarde is rond."]}
+        ]
+      }
+    },
+    {
+      "key": "star",
+      "gloss": "star (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "star", "pos": "noun", "details": {"plural": "stars"}, "sentences": ["I see a star."]}
+        ],
+        "nl": [
+        {"lemma": "ster", "pos": "noun", "details": {"article": "de", "plural": "sterren"}, "sentences": ["Ik zie een ster."]}
+        ]
+      }
+    },
+    {
+      "key": "forest",
+      "gloss": "forest (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "forest", "pos": "noun", "details": {"plural": "forests"}, "sentences": ["We walk in the forest."]}
+        ],
+        "nl": [
+        {"lemma": "bos", "pos": "noun", "details": {"article": "het", "plural": "bossen"}, "sentences": ["Wij lopen in het bos."]}
+        ]
+      }
+    },
+    {
+      "key": "ice",
+      "gloss": "ice (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "ice", "pos": "noun", "details": {"uncountable": true}, "sentences": ["The ice is thin."]}
+        ],
+        "nl": [
+        {"lemma": "ijs", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["Het ijs is dun."]}
+        ]
+      }
+    },
+    {
+      "key": "stone",
+      "gloss": "stone (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "stone", "pos": "noun", "details": {"plural": "stones"}, "sentences": ["The stone is heavy."]}
+        ],
+        "nl": [
+        {"lemma": "steen", "pos": "noun", "details": {"article": "de", "plural": "stenen"}, "sentences": ["De steen is zwaar."]}
+        ]
+      }
+    },
+    {
+      "key": "island",
+      "gloss": "island (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "island", "pos": "noun", "details": {"plural": "islands"}, "sentences": ["We live on an island."]}
+        ],
+        "nl": [
+        {"lemma": "eiland", "pos": "noun", "details": {"article": "het", "plural": "eilanden"}, "sentences": ["Wij wonen op een eiland."]}
+        ]
+      }
+    },
+    {
+      "key": "shine",
+      "gloss": "shine (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "shine", "pos": "verb", "details": {"past": "shone", "participle": "shone"}, "sentences": ["The sun shines."]}
+        ],
+        "nl": [
+        {"lemma": "schijnen", "pos": "verb", "details": {"pastSingular": "scheen", "pastPlural": "schenen", "participle": "geschenen", "auxiliary": "hebben"}, "sentences": ["De zon schijnt."]}
+        ]
+      }
+    },
+    {
+      "key": "planet",
+      "gloss": "planet (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "planet", "pos": "noun", "details": {"plural": "planets"}, "sentences": ["The earth is a planet."]}
+        ],
+        "nl": [
+        {"lemma": "planeet", "pos": "noun", "details": {"article": "de", "plural": "planeten"}, "sentences": ["De aarde is een planeet."]}
+        ]
+      }
+    },
+    {
+      "key": "burn-verb-branden",
+      "gloss": "burn (be on fire)",
+      "entries": {
+        "en": [
+        {"lemma": "burn (be on fire)", "pos": "verb", "details": {"past": "burned", "participle": "burned"}, "sentences": ["The house is burning."]}
+        ],
+        "nl": [
+        {"lemma": "branden", "pos": "verb", "details": {"pastSingular": "brandde", "pastPlural": "brandden", "participle": "gebrand", "auxiliary": "hebben"}, "sentences": ["Het huis brandt."]}
+        ]
+      }
+    },
+    {
+      "key": "path",
+      "gloss": "path (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "path", "pos": "noun", "details": {"plural": "paths"}, "sentences": ["The path is long."]}
+        ],
+        "nl": [
+        {"lemma": "pad", "pos": "noun", "details": {"article": "het", "plural": "paden"}, "sentences": ["Het pad is lang."]}
+        ]
+      }
+    },
+    {
+      "key": "wind",
+      "gloss": "wind (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "wind", "pos": "noun", "details": {"plural": "winds"}, "sentences": ["The wind is cold."]}
+        ],
+        "nl": [
+        {"lemma": "wind", "pos": "noun", "details": {"article": "de", "plural": "winden"}, "sentences": ["De wind is koud."]}
+        ]
+      }
+    },
+    {
+      "key": "beach",
+      "gloss": "beach (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "beach", "pos": "noun", "details": {"plural": "beaches"}, "sentences": ["We walk on the beach."]}
+        ],
+        "nl": [
+        {"lemma": "strand", "pos": "noun", "details": {"article": "het", "plural": "stranden"}, "sentences": ["Wij lopen op het strand."]}
+        ]
+      }
+    },
+    {
+      "key": "moon",
+      "gloss": "moon (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "moon", "pos": "noun", "details": {"plural": "moons"}, "sentences": ["The moon is bright."]}
+        ],
+        "nl": [
+        {"lemma": "maan", "pos": "noun", "details": {"article": "de", "plural": "manen"}, "sentences": ["De maan is helder."]}
+        ]
+      }
+    },
+    {
+      "key": "float",
+      "gloss": "float (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "float", "pos": "verb", "details": {"past": "floated", "participle": "floated"}, "sentences": ["The wood floats."]}
+        ],
+        "nl": [
+        {"lemma": "drijven", "pos": "verb", "details": {"pastSingular": "dreef", "pastPlural": "dreven", "participle": "gedreven", "auxiliary": "hebben"}, "sentences": ["Het hout drijft."]}
+        ]
+      }
     }
   ]
 }

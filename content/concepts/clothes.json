@@ -1,0 +1,148 @@
+{
+  "concepts": [
+    {
+      "key": "clothes",
+      "gloss": "clothes (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "clothes", "pos": "noun", "details": {"pluralOnly": true}, "sentences": ["I wash my clothes."]}
+        ],
+        "nl": [
+        {"lemma": "kleren", "pos": "noun", "details": {"article": "de", "pluralOnly": true}, "sentences": ["Ik was mijn kleren."]}
+        ]
+      }
+    },
+    {
+      "key": "pocket",
+      "gloss": "pocket (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "pocket", "pos": "noun", "details": {"plural": "pockets"}, "sentences": ["The key is in my pocket."]}
+        ],
+        "nl": [
+        {"lemma": "zak", "pos": "noun", "details": {"article": "de", "plural": "zakken"}, "sentences": ["De sleutel zit in mijn zak."]}
+        ]
+      }
+    },
+    {
+      "key": "shoe",
+      "gloss": "shoe (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "shoe", "pos": "noun", "details": {"plural": "shoes"}, "sentences": ["I buy new shoes."]}
+        ],
+        "nl": [
+        {"lemma": "schoen", "pos": "noun", "details": {"article": "de", "plural": "schoenen"}, "sentences": ["Ik koop nieuwe schoenen."]}
+        ]
+      }
+    },
+    {
+      "key": "put-on",
+      "gloss": "put on (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "put on", "pos": "verb", "details": {"past": "put on", "participle": "put on"}, "sentences": ["I put on my coat."]}
+        ],
+        "nl": [
+        {"lemma": "aandoen", "pos": "verb", "details": {"pastSingular": "deed aan", "pastPlural": "deden aan", "participle": "aangedaan", "auxiliary": "hebben"}, "sentences": ["Ik doe mijn jas aan."]}
+        ]
+      }
+    },
+    {
+      "key": "size",
+      "gloss": "size (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "size", "pos": "noun", "details": {"plural": "sizes"}, "sentences": ["What size are you?"]}
+        ],
+        "nl": [
+        {"lemma": "maat", "pos": "noun", "details": {"article": "de", "plural": "maten"}, "sentences": ["Welke maat heb je?"]}
+        ]
+      }
+    },
+    {
+      "key": "trousers",
+      "gloss": "trousers (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "trousers", "pos": "noun", "details": {"pluralOnly": true}, "sentences": ["I wear black trousers."]}
+        ],
+        "nl": [
+        {"lemma": "broek", "pos": "noun", "details": {"article": "de", "plural": "broeken"}, "sentences": ["Ik draag een zwarte broek."]}
+        ]
+      }
+    },
+    {
+      "key": "bag",
+      "gloss": "bag (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "bag", "pos": "noun", "details": {"plural": "bags"}, "sentences": ["My bag is heavy."]}
+        ],
+        "nl": [
+        {"lemma": "tas", "pos": "noun", "details": {"article": "de", "plural": "tassen"}, "sentences": ["Mijn tas is zwaar."]}
+        ]
+      }
+    },
+    {
+      "key": "dress-noun",
+      "gloss": "dress (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "dress", "pos": "noun", "details": {"plural": "dresses"}, "sentences": ["She wears a red dress."]}
+        ],
+        "nl": [
+        {"lemma": "jurk", "pos": "noun", "details": {"article": "de", "plural": "jurken"}, "sentences": ["Zij draagt een rode jurk."]}
+        ]
+      }
+    },
+    {
+      "key": "ring",
+      "gloss": "ring (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "ring", "pos": "noun", "details": {"plural": "rings"}, "sentences": ["She wears a gold ring."]}
+        ],
+        "nl": [
+        {"lemma": "ring", "pos": "noun", "details": {"article": "de", "plural": "ringen"}, "sentences": ["Zij draagt een gouden ring."]}
+        ]
+      }
+    },
+    {
+      "key": "coat",
+      "gloss": "coat (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "coat", "pos": "noun", "details": {"plural": "coats"}, "sentences": ["I wear my coat."]}
+        ],
+        "nl": [
+        {"lemma": "jas", "pos": "noun", "details": {"article": "de", "plural": "jassen"}, "sentences": ["Ik draag mijn jas."]}
+        ]
+      }
+    },
+    {
+      "key": "dress-verb",
+      "gloss": "dress (clothe)",
+      "entries": {
+        "en": [
+        {"lemma": "dress (clothe)", "pos": "verb", "details": {"past": "dressed", "participle": "dressed"}, "sentences": ["I dress the child."]}
+        ],
+        "nl": [
+        {"lemma": "kleden", "pos": "verb", "details": {"pastSingular": "kleedde", "pastPlural": "kleedden", "participle": "gekleed", "auxiliary": "hebben"}, "sentences": ["Ik kleed het kind."]}
+        ]
+      }
+    },
+    {
+      "key": "hat",
+      "gloss": "hat (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "hat", "pos": "noun", "details": {"plural": "hats"}, "sentences": ["He wears a hat."]}
+        ],
+        "nl": [
+        {"lemma": "hoed", "pos": "noun", "details": {"article": "de", "plural": "hoeden"}, "sentences": ["Hij draagt een hoed."]}
+        ]
+      }
+    }
+  ]
+}

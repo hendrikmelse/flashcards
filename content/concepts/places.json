@@ -1,0 +1,196 @@
+{
+  "concepts": [
+    {
+      "key": "spot",
+      "gloss": "spot (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "spot", "pos": "noun", "details": {"plural": "spots"}, "sentences": ["This is a nice spot."]}
+        ],
+        "nl": [
+        {"lemma": "plek", "pos": "noun", "details": {"article": "de", "plural": "plekken"}, "sentences": ["Dit is een mooie plek."]}
+        ]
+      }
+    },
+    {
+      "key": "neighborhood",
+      "gloss": "neighborhood (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "neighborhood", "pos": "noun", "details": {"plural": "neighborhoods"}, "sentences": ["I live in this neighborhood."]}
+        ],
+        "nl": [
+        {"lemma": "buurt", "pos": "noun", "details": {"article": "de", "plural": "buurten"}, "sentences": ["Ik woon in deze buurt."]}
+        ]
+      }
+    },
+    {
+      "key": "price",
+      "gloss": "price (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "price", "pos": "noun", "details": {"plural": "prices"}, "sentences": ["The price is high."]}
+        ],
+        "nl": [
+        {"lemma": "prijs", "pos": "noun", "details": {"article": "de", "plural": "prijzen"}, "sentences": ["De prijs is hoog."]}
+        ]
+      }
+    },
+    {
+      "key": "building",
+      "gloss": "building (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "building", "pos": "noun", "details": {"plural": "buildings"}, "sentences": ["The building is tall."]}
+        ],
+        "nl": [
+        {"lemma": "gebouw", "pos": "noun", "details": {"article": "het", "plural": "gebouwen"}, "sentences": ["Het gebouw is hoog."]}
+        ]
+      }
+    },
+    {
+      "key": "groceries",
+      "gloss": "groceries (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "groceries", "pos": "noun", "details": {"pluralOnly": true}, "sentences": ["I buy groceries."]}
+        ],
+        "nl": [
+        {"lemma": "boodschappen", "pos": "noun", "details": {"article": "de", "pluralOnly": true}, "sentences": ["Ik doe boodschappen."]}
+        ]
+      }
+    },
+    {
+      "key": "bill",
+      "gloss": "bill (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "bill", "pos": "noun", "details": {"plural": "bills"}, "sentences": ["The bill, please."]}
+        ],
+        "nl": [
+        {"lemma": "rekening", "pos": "noun", "details": {"article": "de", "plural": "rekeningen"}, "sentences": ["De rekening, alsjeblieft."]}
+        ]
+      }
+    },
+    {
+      "key": "customer",
+      "gloss": "customer (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "customer", "pos": "noun", "details": {"plural": "customers"}, "sentences": ["The customer pays."]}
+        ],
+        "nl": [
+        {"lemma": "klant", "pos": "noun", "details": {"article": "de", "plural": "klanten"}, "sentences": ["De klant betaalt."]}
+        ]
+      }
+    },
+    {
+      "key": "deliver-verb-leveren",
+      "gloss": "deliver (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "deliver", "pos": "verb", "details": {"past": "delivered", "participle": "delivered"}, "sentences": ["They deliver the bread."]}
+        ],
+        "nl": [
+        {"lemma": "leveren", "pos": "verb", "details": {"pastSingular": "leverde", "pastPlural": "leverden", "participle": "geleverd", "auxiliary": "hebben"}, "sentences": ["Zij leveren het brood."]}
+        ]
+      }
+    },
+    {
+      "key": "address",
+      "gloss": "address (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "address", "pos": "noun", "details": {"plural": "addresses"}, "sentences": ["What is your address?"]}
+        ],
+        "nl": [
+        {"lemma": "adres", "pos": "noun", "details": {"article": "het", "plural": "adressen"}, "sentences": ["Wat is je adres?"]}
+        ]
+      }
+    },
+    {
+      "key": "deal",
+      "gloss": "deal (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "deal", "pos": "noun", "details": {"plural": "deals"}, "sentences": ["We have a deal."]}
+        ],
+        "nl": [
+        {"lemma": "deal", "pos": "noun", "details": {"article": "de", "plural": "deals"}, "sentences": ["Wij hebben een deal."]}
+        ]
+      }
+    },
+    {
+      "key": "corner",
+      "gloss": "corner (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "corner", "pos": "noun", "details": {"plural": "corners"}, "sentences": ["The shop is on the corner."]}
+        ],
+        "nl": [
+        {"lemma": "hoek", "pos": "noun", "details": {"article": "de", "plural": "hoeken"}, "sentences": ["De winkel is op de hoek."]}
+        ]
+      }
+    },
+    {
+      "key": "bar",
+      "gloss": "bar (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "bar", "pos": "noun", "details": {"plural": "bars"}, "sentences": ["We go to a bar."]}
+        ],
+        "nl": [
+        {"lemma": "bar", "pos": "noun", "details": {"article": "de", "plural": "bars"}, "sentences": ["Wij gaan naar een bar."]}
+        ]
+      }
+    },
+    {
+      "key": "bridge",
+      "gloss": "bridge (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "bridge", "pos": "noun", "details": {"plural": "bridges"}, "sentences": ["We cross the bridge."]}
+        ],
+        "nl": [
+        {"lemma": "brug", "pos": "noun", "details": {"article": "de", "plural": "bruggen"}, "sentences": ["Wij steken de brug over."]}
+        ]
+      }
+    },
+    {
+      "key": "order-verb",
+      "gloss": "order (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "order", "pos": "verb", "details": {"past": "ordered", "participle": "ordered"}, "sentences": ["I order a coffee."]}
+        ],
+        "nl": [
+        {"lemma": "bestellen", "pos": "verb", "details": {"pastSingular": "bestelde", "pastPlural": "bestelden", "participle": "besteld", "auxiliary": "hebben"}, "sentences": ["Ik bestel een koffie."]}
+        ]
+      }
+    },
+    {
+      "key": "free-adjective-gratis",
+      "gloss": "free (no cost)",
+      "entries": {
+        "en": [
+        {"lemma": "free (no cost)", "pos": "adjective", "sentences": ["The coffee is free."]}
+        ],
+        "nl": [
+        {"lemma": "gratis", "pos": "adjective", "sentences": ["De koffie is gratis."]}
+        ]
+      }
+    },
+    {
+      "key": "deliver-verb-bezorgen",
+      "gloss": "deliver (to the door)",
+      "entries": {
+        "en": [
+        {"lemma": "deliver (to the door)", "pos": "verb", "details": {"past": "delivered", "participle": "delivered"}, "sentences": ["He delivers the pizza."]}
+        ],
+        "nl": [
+        {"lemma": "bezorgen", "pos": "verb", "details": {"pastSingular": "bezorgde", "pastPlural": "bezorgden", "participle": "bezorgd", "auxiliary": "hebben"}, "sentences": ["Hij bezorgt de pizza."]}
+        ]
+      }
+    }
+  ]
+}
