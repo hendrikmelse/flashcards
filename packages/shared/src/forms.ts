@@ -1,6 +1,6 @@
 // Word forms live in an entry's `details` (jsonb, so key order is NOT kept):
 //
-//   nouns (both languages): { plural } or { uncountable: true }
+//   nouns (both languages): { plural }, { uncountable: true } or { pluralOnly: true }
 //   nl: { pastSingular, pastPlural, participle, auxiliary, present? }
 //       auxiliary is "hebben", "zijn" or "hebben/zijn"
 //   en: { past, participle, present? }
@@ -44,6 +44,7 @@ export function formLines(language: string, details: Record<string, unknown>): F
   const plural = str(details["plural"]);
   if (plural) lines.push({ label: "plural", value: plural });
   else if (details["uncountable"] === true) lines.push({ label: "plural", value: "uncountable" });
+  else if (details["pluralOnly"] === true) lines.push({ label: "plural", value: "plural only" });
 
   const present = details["present"];
   const pronouns = PRESENT_PRONOUNS[language];

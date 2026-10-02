@@ -31,6 +31,8 @@ export const PARTS_OF_SPEECH = [
   "conjunction",
   "numeral",
   "interjection",
+  "determiner",
+  "particle",
   "phrase",
 ] as const;
 
@@ -100,7 +102,11 @@ export function checkConcept(concept: Concept): Check {
             errors.push(`${at}: Dutch nouns need details.article of "de" or "het"`);
           }
         }
-        if (typeof entry.details["plural"] !== "string" && entry.details["uncountable"] !== true) {
+        if (
+          typeof entry.details["plural"] !== "string" &&
+          entry.details["uncountable"] !== true &&
+          entry.details["pluralOnly"] !== true
+        ) {
           warnings.push(`${at}: no details.plural (set details.uncountable if it has none)`);
         }
       }
@@ -114,13 +120,32 @@ export function checkConcept(concept: Concept): Check {
       // so this is only a prompt to look, not an error. Verbs may use any
       // stored form instead.
       if (entry.pos !== "phrase") {
+        // A separable verb splits in a sentence ("belde ... op"), so each word
+        // of a stored form counts on its own too.
+        const forms = entry.pos === "verb" ? allVerbForms(lang, entry.details) : [];
+        // A lemma may carry a trailing qualifier, "bank (financial)", to tell
+        // homographs apart on the card; the sentence only has the word.
+        const bare = entry.lemma.replace(/\s*\([^)]*\)\s*$/, "");
+        // "of, from" lists alternatives; any one of them in the sentence will do.
+        const alternatives = bare.split(/,\s*/).filter(Boolean);
         const candidates =
           entry.pos === "verb"
-            ? [entry.lemma, ...stems(entry.lemma), ...allVerbForms(lang, entry.details)]
-            : [entry.lemma];
+            ? [
+                ...alternatives,
+                ...alternatives.flatMap(lang === "en" ? englishVerbForms : stems),
+                ...forms,
+                ...forms.flatMap((f) => f.split(" ").filter((w) => w.length >= 3)),
+              ]
+            : alternatives;
         for (const s of entry.sentences) {
           const hay = squash(s);
-          if (!candidates.some((c) => hay.includes(squash(c)))) {
+          // A multi-word lemma ("what for") may be split in a sentence
+          // ("What do you need it for?"), so all of its words appearing counts.
+          const hasAllWords = (alt: string) => {
+            const words = alt.split(/\s+/).filter((w) => w.length >= 2);
+            return words.length > 1 && words.every((w) => hay.includes(squash(w)));
+          };
+          if (!candidates.some((c) => hay.includes(squash(c))) && !alternatives.some(hasAllWords)) {
             warnings.push(`${at}: sentence does not contain the lemma or a stored form: "${s}"`);
           }
         }
@@ -142,9 +167,40 @@ function squash(s: string): string {
 // doubling). Lemmas such as "houden van" use the first word.
 function stems(lemma: string): string[] {
   const first = lemma.split(" ")[0]!;
-  const stem = first.replace(/(en|n)$/, "");
-  const devoiced = stem.replace(/v$/, "f").replace(/z$/, "s");
-  return [...new Set([stem, devoiced])].filter((s) => s.length >= 2);
+  // A separable verb keeps its stem apart from the prefix in a main clause
+  // ("Ik sta om zeven uur op"), so the stem without the prefix counts too.
+  const prefix = SEPARABLE_PREFIXES.find((p) => first.startsWith(p) && first.length - p.length >= 4);
+  const bases = prefix ? [first, first.slice(prefix.length)] : [first];
+  return [
+    ...new Set(
+      bases.flatMap((word) => {
+        const stem = word.replace(/(en|n)$/, "");
+        return [stem, stem.replace(/v$/, "f").replace(/z$/, "s")];
+      }),
+    ),
+  ].filter((s) => s.length >= 2);
+}
+
+const SEPARABLE_PREFIXES = [
+  "terug", "binnen", "buiten", "samen", "weg", "neer", "door", "mee", "los", "vast", "thuis",
+  "aan", "af", "bij", "in", "na", "om", "op", "uit", "toe", "voor", "over", "tegen", "achter",
+];
+
+// Regular English inflections that are not stored: third person (flies, goes,
+// watches), and -ing with or without a doubled final consonant (running).
+function englishVerbForms(lemma: string): string[] {
+  const [first = "", ...rest] = lemma.split(" ");
+  const tail = rest.length ? " " + rest.join(" ") : "";
+  const third = /[^aeiou]y$/.test(first)
+    ? first.slice(0, -1) + "ies"
+    : /(s|x|z|ch|sh|o)$/.test(first)
+      ? first + "es"
+      : first + "s";
+  const ing = [
+    first.replace(/ie$/, "y").replace(/([^e])e$/, "$1") + "ing",
+    first + first.slice(-1) + "ing",
+  ];
+  return [third, ...ing].map((f) => f + tail).concat(first);
 }
 
 function checkVerbForms(

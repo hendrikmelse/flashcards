@@ -300,6 +300,22 @@ describe("verb forms", () => {
     expect(screen.getByText("uncountable")).toBeInTheDocument();
   });
 
+  it("says when a noun only exists in the plural", async () => {
+    const user = userEvent.setup();
+    studyWith([
+      {
+        ...dog,
+        front: [entry("en", "people", { pluralOnly: true })],
+        back: [entry("nl", "mensen", { article: "de", pluralOnly: true })],
+      },
+    ]);
+    renderApp("/study");
+
+    await user.click(await screen.findByRole("button", { name: "Show answer" }));
+
+    expect(screen.getByText("plural only")).toBeInTheDocument();
+  });
+
   it("adds nothing for words without forms", async () => {
     const user = userEvent.setup();
     studyWith([dog]);
