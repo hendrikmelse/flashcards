@@ -33,6 +33,7 @@ export const PARTS_OF_SPEECH = [
   "interjection",
   "determiner",
   "particle",
+  "proper noun",
   "phrase",
 ] as const;
 
