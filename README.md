@@ -132,7 +132,17 @@ A concept's **key** (lowercase words joined by hyphens, such as `dog` or `know-f
 - The importer never deletes a concept or pack that the files stop mentioning, because user cards cascade-delete with their concept. It reports them instead, and cleanup is manual
 - In production the image contains the files; import them with the command in the runbook's "Importing content" section
 
-The library has 259 beginner concepts in 15 topic files (greetings, numbers, family, home, food, animals, time, nature, body, common verbs and adjectives). Three packs draw on it: `starter` (all of them, beginner-first), `food-and-eating` and `common-verbs`, which reuse concepts from `starter`. The drafts were written and then reviewed by Claude, not by a Dutch speaker, so a native check is still worthwhile before treating them as final.
+The library has about 5,900 concepts in 88 packs:
+
+- **Frequency bands** (`top-1-500` through `top-4501-5000`): the 5,000 most common Dutch content words (nouns, verbs, adjectives, adverbs), 500 at a time, easiest first. Words that are not content words are in separate packs and left out of the bands: pronouns and determiners, prepositions, conjunctions and question words, pronominal adverbs, numbers, everyday adverbs, particles and discourse words
+- **Topic packs** (about 70, 40 to 130 words each): food and drink (basic and advanced), Dutch culture, countries and languages, everyday phrases, family, home, town, travel, work, health, nature, animals, and so on. Large topics are split into levels (`-1`, `-2`, ...). A concept can be in a band and in a topic pack
+- `starter` (the original 259 beginner words), plus `food-and-eating` and `common-verbs`
+
+Parts of speech are noun, verb, adjective, adverb, pronoun, preposition, conjunction, interjection, numeral, determiner, particle, phrase and proper noun (a name without a Dutch article, such as a country). Where one word has several senses or parts of speech, the key says which (`water-noun`, `water-verb`).
+
+**Word selection and attribution.** Which words to include was chosen using the SUBTLEX-NL frequency list (Keuleers, Brysbaert & New, 2010, *Behavior Research Methods*; CC BY-NC-SA 4.0). It was used only to pick and order words. None of its data is in this repository.
+
+**Review status.** All entries, translations and sentences were written by Claude and checked by the validator, not by a Dutch speaker. `content/review-notes.md` lists the items Claude was least sure of, for a native-speaker pass.
 
 ## Deployment
 
@@ -160,8 +170,8 @@ The full runbook, including server setup, rollback, backups and how to invite so
 - Run the production CSP through a real browser pass
 
 **Content (the product)**
-- The importer and the first `starter` pack exist; it is not yet imported into production, and it has had no native Dutch review
-- Grow beyond the first slice: more packs, and a decision on sourcing at scale (open datasets such as Wiktionary, Open Multilingual WordNet and Tatoeba, or more drafting and review)
+- The importer and about 5,900 concepts in 88 packs exist (see Content); nothing is imported into production yet, and none of it has had a native Dutch review
+- Native review of `content/review-notes.md` and a spot check of the bands; then more languages or more levels
 
 **Features still to build**
 - `GET /stats` and a stats page (cards learned, reviews per day, retention, streak)
