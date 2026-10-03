@@ -74,7 +74,10 @@ function AuthForm({ mode }: { mode: Mode }) {
         {!isLogin && (
           <>
             <label>
-              Name <span className="optional">(optional)</span>
+              {/* One element, so the label's grid keeps "(optional)" on the same line as "Name". */}
+              <span>
+                Name <span className="optional">(optional)</span>
+              </span>
               <input
                 type="text"
                 autoComplete="name"

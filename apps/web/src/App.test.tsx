@@ -68,7 +68,11 @@ describe("auth flow", () => {
   it("asks for an optional name when signing up, but not when logging in", async () => {
     const view = renderApp("/register");
     expect(await screen.findByLabelText(/Name/)).toBeInTheDocument();
-    expect(screen.getByText("(optional)")).toBeInTheDocument();
+    const optional = screen.getByText("(optional)");
+    // On the same line as "Name": inside the same element as the word, not a row of its own.
+    expect(optional.parentElement).toHaveTextContent("Name (optional)");
+    expect(optional.parentElement?.parentElement).toBe(screen.getByLabelText(/Name/).parentElement);
+    expect(optional.parentElement?.children).toHaveLength(1);
     view.unmount();
 
     renderApp("/login");
