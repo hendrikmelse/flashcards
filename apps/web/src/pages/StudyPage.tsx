@@ -8,9 +8,10 @@ import type {
   StudyCardView,
   StudyResponse,
 } from "@flashcards/shared";
-import { SESSION_GAP_MS } from "@flashcards/shared";
+import { SESSION_GAP_MS, pairKey } from "@flashcards/shared";
 import { api } from "../api/client";
 import { useSettings } from "../api/hooks";
+import { useActiveLanguages } from "../hooks/useActiveLanguages";
 import { useLanguages } from "../api/packs";
 import { AnswerGuide } from "../components/AnswerGuide";
 import { Entries, Forms, Sentences } from "../components/CardParts";
@@ -42,10 +43,14 @@ function useStudySession() {
   const [state, dispatch] = useReducer(reducer, initialState);
   // ?from=en&to=nl studies one direction; without them every direction is mixed.
   const [params] = useSearchParams();
+  const { pair } = useActiveLanguages();
   const from = params.get("from");
   const to = params.get("to");
+  // A direction from an old link only counts if it is one of the pair being learned.
   const direction =
-    from && to ? `&fromLanguage=${encodeURIComponent(from)}&toLanguage=${encodeURIComponent(to)}` : "";
+    from && to && pairKey(from, to) === pair
+      ? `&fromLanguage=${encodeURIComponent(from)}&toLanguage=${encodeURIComponent(to)}`
+      : "";
   // ?early=1 starts the next session a little before the gap between sessions is over.
   const early = params.get("early") === "1" ? "&early=1" : "";
   const fetching = useRef(false);
@@ -55,7 +60,7 @@ function useStudySession() {
   useEffect(() => {
     if (state.ended || state.queue.length > 0 || state.exhausted || state.fetchError || fetching.current) return;
     fetching.current = true;
-    api<StudyResponse>(`/study?limit=${BATCH_SIZE}${direction}${early}`)
+    api<StudyResponse>(`/study?limit=${BATCH_SIZE}&pair=${pair}${direction}${early}`)
       .then(
         (r) => dispatch({ type: "fetched", cards: r.cards }),
         () => dispatch({ type: "fetchFailed" }),
@@ -63,7 +68,7 @@ function useStudySession() {
       .finally(() => {
         fetching.current = false;
       });
-  }, [state.ended, state.queue.length, state.exhausted, state.fetchError, direction, early]);
+  }, [state.ended, state.queue.length, state.exhausted, state.fetchError, pair, direction, early]);
 
   // Show the next card as soon as there is one.
   useEffect(() => {

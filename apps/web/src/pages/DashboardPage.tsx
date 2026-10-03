@@ -8,6 +8,7 @@ import {
 } from "@flashcards/shared";
 import { useDashboard } from "../api/hooks";
 import { usePacks } from "../api/packs";
+import { useActiveLanguages } from "../hooks/useActiveLanguages";
 import { formatClock, useCountdown } from "../hooks/useCountdown";
 import { shortDirection, sameDirection, useDeckFilter } from "../hooks/useDeckFilter";
 import { formatUntil } from "../lib/relativeTime";
@@ -126,7 +127,7 @@ export function DashboardPage() {
   const filter = useDeckFilter(directions);
   const { deck, deckAll, study, stats } = useDashboard(filter.selected);
   // The starter pack is where a new person is pointed first.
-  const packs = usePacks({ from: "en", to: "nl" });
+  const packs = usePacks(useActiveLanguages().direction);
   const starter = packs.data?.find((p) => p.slug === "starter");
   // Keep the last known directions so the filter doesn't vanish while stats refetch.
   if (stats.data && stats.data.directions !== directions) setDirections(stats.data.directions);

@@ -16,8 +16,6 @@ let cookies: { session: string };
 let userId: string;
 let conceptIds: string[];
 
-// Sign-ups are rate limited to 10 a minute, and this file makes exactly 10: add tests that
-// register more users to a new file (or reuse an account) rather than here.
 const register = async (email: string, extra: Record<string, unknown> = {}) => {
   const res = await app.inject({
     method: "POST",
@@ -36,7 +34,7 @@ beforeAll(async () => {
   db = drizzle(pg, { schema, casing: "snake_case" });
   await migrate(db, { migrationsFolder: "./drizzle" });
   await seed(db);
-  app = await buildApp({ db, logger: false });
+  app = await buildApp({ db, logger: false, authRateLimit: 1000 });
   const me = await register("settings@example.com");
   cookies = me.cookies;
   userId = me.id;
@@ -65,6 +63,7 @@ describe("GET /settings", () => {
       dailyNewCardLimit: 20,
       showSentences: true,
       showForms: true,
+      direction: { from: "en", to: "nl" },
     });
   });
 });
@@ -285,5 +284,51 @@ describe("registering with a time zone", () => {
   it("stays on UTC when none is given", async () => {
     const r = await register("tz-none@example.com");
     expect(await zoneOf(r.id)).toBe("UTC");
+  });
+});
+
+describe("the language direction being learned", () => {
+  const me = async () =>
+    (await app.inject({ method: "GET", url: "/auth/me", cookies })).json().user as { direction: { from: string; to: string } };
+
+  it("is English to Dutch until it is chosen, in the settings and for the signed-in user", async () => {
+    const reg = await app.inject({
+      method: "POST",
+      url: "/auth/register",
+      payload: { email: "direction-new@example.com", password: "correct horse battery" },
+    });
+    expect(reg.json().user.direction).toEqual({ from: "en", to: "nl" });
+    const fresh = { session: reg.cookies.find((c) => c.name === "session")!.value };
+    const settings = await app.inject({ method: "GET", url: "/settings", cookies: fresh });
+    expect(settings.json().direction).toEqual({ from: "en", to: "nl" });
+  });
+
+  it("can be changed, and is then what the settings, /auth/me and logging in again say", async () => {
+    const res = await patch({ direction: { from: "nl", to: "en" } });
+    expect(res.statusCode).toBe(200);
+    expect(res.json().direction).toEqual({ from: "nl", to: "en" });
+    expect((await get()).json().direction).toEqual({ from: "nl", to: "en" });
+    expect((await me()).direction).toEqual({ from: "nl", to: "en" });
+
+    const login = await app.inject({
+      method: "POST",
+      url: "/auth/login",
+      payload: { email: "settings@example.com", password: "correct horse battery" },
+    });
+    expect(login.json().user.direction).toEqual({ from: "nl", to: "en" });
+  });
+
+  it("does not change what else is set, and is not changed by changing something else", async () => {
+    await patch({ direction: { from: "en", to: "nl" } });
+    await patch({ dailyNewCardLimit: 7 });
+    expect((await get()).json()).toMatchObject({ direction: { from: "en", to: "nl" }, dailyNewCardLimit: 7 });
+    await patch({ dailyNewCardLimit: 20 });
+  });
+
+  it("rejects the same language twice, a language that is not supported, and a half direction", async () => {
+    for (const direction of [{ from: "en", to: "en" }, { from: "en", to: "xx" }, { from: "en" }, "en-nl", null]) {
+      expect((await patch({ direction })).statusCode, JSON.stringify(direction)).toBe(400);
+    }
+    expect((await me()).direction).toEqual({ from: "en", to: "nl" });
   });
 });

@@ -21,10 +21,11 @@ import type {
   StatsResponse,
   StudyCountsResponse,
 } from "@flashcards/shared";
+import { useActiveLanguages } from "../hooks/useActiveLanguages";
 import { clearRemembered } from "../hooks/useRemembered";
 import { api } from "./client";
 
-const ME = ["me"] as const;
+export const ME = ["me"] as const;
 
 // Swap the signed-in user and drop everything cached for the previous one.
 // The "me" query is updated in place (not removed) so mounted components that
@@ -121,26 +122,27 @@ export function useLogout() {
   });
 }
 
-// Dashboard numbers. What is ready to study and whether the deck is empty always
-// cover the whole deck. `deck` is the progress summary for the chosen direction
-// (or, with null, the whole deck, which is then the same query as `deckAll`).
+// Dashboard numbers, for the language pair being learned: each pair is a deck of its own. What is
+// ready to study and whether the deck is empty cover the whole pair. `deck` is the progress summary
+// for the chosen direction (or, with null, the whole pair, which is then the same query as `deckAll`).
 export function useDashboard(direction: { from: string; to: string } | null) {
+  const { pair } = useActiveLanguages();
   const deckAll = useQuery({
-    queryKey: ["deck", "summary", "all"],
-    queryFn: () => api<DeckResponse>("/deck?limit=1"),
+    queryKey: ["deck", "summary", pair, "all"],
+    queryFn: () => api<DeckResponse>(`/deck?limit=1&pair=${pair}`),
   });
   const deckDirection = useQuery({
-    queryKey: ["deck", "summary", direction?.from, direction?.to],
+    queryKey: ["deck", "summary", pair, direction?.from, direction?.to],
     enabled: direction !== null,
     queryFn: () =>
       api<DeckResponse>(
-        `/deck?limit=1&fromLanguage=${encodeURIComponent(direction!.from)}&toLanguage=${encodeURIComponent(direction!.to)}`,
+        `/deck?limit=1&pair=${pair}&fromLanguage=${encodeURIComponent(direction!.from)}&toLanguage=${encodeURIComponent(direction!.to)}`,
       ),
     placeholderData: (previous) => previous,
   });
   const study = useQuery({
-    queryKey: ["study", "counts", "all"],
-    queryFn: () => api<StudyCountsResponse>("/study/counts"),
+    queryKey: ["study", "counts", pair],
+    queryFn: () => api<StudyCountsResponse>(`/study/counts?pair=${pair}`),
   });
   // Extras: the dashboard still works without them.
   const stats = useStats();
@@ -148,9 +150,10 @@ export function useDashboard(direction: { from: string; to: string } | null) {
 }
 
 export function useStats() {
+  const { pair } = useActiveLanguages();
   return useQuery({
-    queryKey: ["stats"],
-    queryFn: () => api<StatsResponse>("/stats"),
+    queryKey: ["stats", pair],
+    queryFn: () => api<StatsResponse>(`/stats?pair=${pair}`),
   });
 }
 
@@ -185,13 +188,14 @@ export function useDeckCards(
   order: "asc" | "desc",
   missingMirror: boolean,
 ) {
+  const { pair } = useActiveLanguages();
   const key = direction ? [direction.from, direction.to] : ["all"];
   return useInfiniteQuery({
-    queryKey: ["deck", "list", ...key, stage, term, sort, order, missingMirror],
+    queryKey: ["deck", "list", pair, ...key, stage, term, sort, order, missingMirror],
     initialPageParam: 0,
     placeholderData: (previous) => previous,
     queryFn: async ({ pageParam }) => {
-      const params = new URLSearchParams({ limit: String(DECK_PAGE_SIZE), offset: String(pageParam) });
+      const params = new URLSearchParams({ limit: String(DECK_PAGE_SIZE), offset: String(pageParam), pair });
       if (direction) {
         params.set("fromLanguage", direction.from);
         params.set("toLanguage", direction.to);

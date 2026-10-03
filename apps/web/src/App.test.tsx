@@ -53,6 +53,43 @@ describe("auth flow", () => {
     expect(screen.queryByRole("img", { name: "English" })).not.toBeInTheDocument();
   });
 
+  it("takes you back to the dashboard when you press Settings while already looking at it", async () => {
+    mock.loggedIn = true;
+    const user = userEvent.setup();
+    renderApp("/");
+    await user.click(await screen.findByRole("link", { name: "Settings" }));
+    expect(await screen.findByRole("heading", { name: "Settings" })).toBeInTheDocument();
+    expect(screen.getByRole("link", { name: "Settings" })).toHaveAttribute("href", "/");
+
+    await user.click(screen.getByRole("link", { name: "Settings" }));
+    expect(await screen.findByRole("heading", { name: "Dashboard" })).toBeInTheDocument();
+    expect(screen.getByRole("link", { name: "Settings" })).toHaveAttribute("href", "/settings");
+  });
+
+  it("goes back to the dashboard from any tab of the settings, not just the first", async () => {
+    mock.loggedIn = true;
+    const user = userEvent.setup();
+    renderApp("/");
+    await user.click(await screen.findByRole("link", { name: "Settings" }));
+    for (const tab of ["Study", "Appearance", "Security", "Your data"]) {
+      await user.click(await screen.findByRole("tab", { name: tab }));
+      expect(screen.getByRole("tab", { name: tab })).toHaveAttribute("aria-selected", "true");
+      expect(screen.getByRole("link", { name: "Settings" })).toHaveAttribute("href", "/");
+    }
+    await user.click(screen.getByRole("link", { name: "Settings" }));
+    expect(await screen.findByRole("heading", { name: "Dashboard" })).toBeInTheDocument();
+    expect(screen.queryByRole("tab")).not.toBeInTheDocument();
+  });
+
+  it("goes back to the dashboard when the settings were opened on a tab by address", async () => {
+    mock.loggedIn = true;
+    const user = userEvent.setup();
+    renderApp("/settings?tab=study");
+    expect(await screen.findByRole("link", { name: "Settings" })).toHaveAttribute("href", "/");
+    await user.click(screen.getByRole("link", { name: "Settings" }));
+    expect(await screen.findByRole("heading", { name: "Dashboard" })).toBeInTheDocument();
+  });
+
   it("has Settings and Log out as icons in the top corner, not in the main navigation", async () => {
     mock.loggedIn = true;
     renderApp("/");
@@ -149,17 +186,17 @@ describe("auth flow", () => {
   it("forgets remembered filters when someone signs in, and when they sign out", async () => {
     const user = userEvent.setup();
     renderApp("/login");
-    sessionStorage.setItem("remembered:packs:category", JSON.stringify("topic"));
+    sessionStorage.setItem("remembered:en-nl:packs:category", JSON.stringify("topic"));
     await user.type(await screen.findByLabelText("Email"), "ann@example.com");
     await user.type(screen.getByLabelText("Password"), "hunter2hunter2");
     await user.click(screen.getByRole("button", { name: "Log in" }));
     await screen.findByRole("heading", { name: "Dashboard" });
-    expect(sessionStorage.getItem("remembered:packs:category")).toBeNull();
+    expect(sessionStorage.getItem("remembered:en-nl:packs:category")).toBeNull();
 
-    sessionStorage.setItem("remembered:deck:stage", JSON.stringify("review"));
+    sessionStorage.setItem("remembered:en-nl:deck:stage", JSON.stringify("review"));
     await user.click(screen.getByRole("button", { name: "Log out" }));
     await screen.findByRole("heading", { name: "Log in" });
-    expect(sessionStorage.getItem("remembered:deck:stage")).toBeNull();
+    expect(sessionStorage.getItem("remembered:en-nl:deck:stage")).toBeNull();
   });
 
   it("shows an error for wrong credentials and stays on the form", async () => {
@@ -376,7 +413,7 @@ describe("dashboard", () => {
     });
 
     beforeEach(() => {
-      localStorage.removeItem("dashboardDirection");
+      localStorage.removeItem("dashboardDirection:en-nl");
       mock.loggedIn = true;
       mock.handlers["GET /stats"] = () =>
         json(200, stats([dir("en", "nl"), dir("nl", "en", { dueNow: 0 })]));
@@ -396,7 +433,7 @@ describe("dashboard", () => {
       expect(within(hero).getByRole("link", { name: "Start studying" })).toHaveAttribute("href", "/study");
       expect(mock.calls.filter((c) => c.startsWith("GET /study"))).toEqual(["GET /study/counts"]);
       expect(screen.getByRole("button", { name: "NL → EN" })).toHaveAttribute("aria-pressed", "true");
-      expect(JSON.parse(localStorage.getItem("dashboardDirection")!)).toEqual({ from: "nl", to: "en" });
+      expect(JSON.parse(localStorage.getItem("dashboardDirection:en-nl")!)).toEqual({ from: "nl", to: "en" });
 
       await user.click(screen.getByRole("button", { name: "Both" }));
       expect(await screen.findByRole("button", { name: "Both" })).toHaveAttribute("aria-pressed", "true");

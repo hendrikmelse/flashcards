@@ -7,12 +7,19 @@ import { App } from "../App";
 export type Handler = (body: unknown) => { status: number; body?: unknown };
 export const json = (status: number, body?: unknown) => ({ status, body });
 
-export const USER = { id: "u1", email: "ann@example.com", name: null as string | null };
+export const USER = {
+  id: "u1",
+  email: "ann@example.com",
+  name: null as string | null,
+  direction: { from: "en" as "en" | "nl", to: "nl" as "en" | "nl" },
+};
 
 // Shared mutable state for one test; reset by installMockApi().
 export const mock = {
   loggedIn: false,
   calls: [] as string[],
+  /** Like `calls`, but exactly as sent, with the language pair in the address. */
+  requests: [] as string[],
   handlers: {} as Record<string, Handler>,
 };
 
@@ -72,15 +79,20 @@ export function installMockApi() {
   localStorage.clear(); // closed tips
   mock.loggedIn = false;
   mock.calls = [];
+  mock.requests = [];
   mock.handlers = defaultHandlers();
 
   vi.stubGlobal(
     "fetch",
     vi.fn(async (url: string, init?: RequestInit) => {
       const method = init?.method ?? "GET";
-      const path = url.replace(/^\/api/, "");
+      const full = url.replace(/^\/api/, "");
+      // Every request about the deck carries the language pair being learned. Handlers and
+      // `mock.calls` leave it out, so they read the same whatever the pair; `mock.requests` keeps it.
+      const path = full.replace(/([?&])pair=[^&]*&?/, "$1").replace(/[?&]$/, "");
       const key = `${method} ${path}`;
       mock.calls.push(key);
+      mock.requests.push(`${method} ${full}`);
       const handler = mock.handlers[key] ?? mock.handlers[`${method} ${path.split("?")[0]}`];
       if (!handler) throw new Error(`Unexpected request: ${key}`);
       const { status, body } = handler(init?.body ? JSON.parse(String(init.body)) : undefined);

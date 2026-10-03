@@ -1,9 +1,12 @@
 import {
   DUTCH_AUXILIARIES,
-  FORM_KEYS,
+  LANGUAGE_CODES,
   PACK_CATEGORIES,
-  PRESENT_PRONOUNS,
+  REQUIRED_LANGUAGES,
   allVerbForms,
+  languageCodeSchema,
+  presentPronouns,
+  verbFormKeys,
 } from "@flashcards/shared";
 import { z } from "zod";
 
@@ -38,10 +41,6 @@ export const PARTS_OF_SPEECH = [
   "phrase",
 ] as const;
 
-// Every concept must have entries in these, or a card in one of the directions
-// could not be built.
-export const REQUIRED_LANGUAGES = ["en", "nl"] as const;
-
 const entrySchema = z.object({
   lemma: z.string().trim().min(1),
   pos: z.enum(PARTS_OF_SPEECH),
@@ -62,11 +61,26 @@ export const conceptFileSchema = z.object({
   concepts: z.array(conceptSchema).min(1),
 });
 
+// content/languages/<code>/*.json: one language's entries for concepts defined in
+// content/concepts. Lets a language be added, reviewed and licensed on its own, without touching
+// the shared concept files.
+export const languageFileSchema = z.object({
+  language: z.string().trim().min(1),
+  concepts: z
+    .array(z.object({ key: keySchema, entries: z.array(entrySchema).min(1) }))
+    .min(1),
+});
+
+export type LanguageFile = z.infer<typeof languageFileSchema>;
+
 export const packFileSchema = z.object({
   slug: keySchema,
   name: z.string().trim().min(1),
   // How the pack is grouped when browsing; see PACK_CATEGORIES.
   category: z.enum(PACK_CATEGORIES),
+  // The language the pack was built for (a frequency list, a language's grammar words). Learners
+  // of other languages are not shown it. Leave out for a pack that suits any language.
+  language: languageCodeSchema.optional(),
   description: z.string().trim().min(1).optional(),
   // Concept keys, in study order.
   concepts: z.array(keySchema).min(1),
@@ -83,80 +97,94 @@ export interface Check {
 
 // Checks one concept beyond the JSON shape. Errors block the import; warnings
 // are things a reviewer should look at but that can be legitimate.
-export function checkConcept(concept: Concept): Check {
+export function checkConcept(concept: Concept, languages: readonly string[] = LANGUAGE_CODES): Check {
   const errors: string[] = [];
   const warnings: string[] = [];
   const where = `"${concept.key}"`;
 
+  // Every concept must have entries in the required languages, or a card in one of the
+  // directions could not be built.
   for (const lang of REQUIRED_LANGUAGES) {
     if (!concept.entries[lang]) errors.push(`${where}: no ${lang} entry`);
   }
 
   for (const [lang, entries] of Object.entries(concept.entries)) {
-    const lemmas = new Set<string>();
-    for (const entry of entries) {
-      const at = `${where} ${lang} "${entry.lemma}"`;
-      if (lemmas.has(entry.lemma)) errors.push(`${at}: duplicate lemma`);
-      lemmas.add(entry.lemma);
+    if (!languages.includes(lang)) {
+      errors.push(`${where}: unknown language "${lang}" (known: ${languages.join(", ")})`);
+      continue;
+    }
+    checkEntries(where, lang, entries, errors, warnings);
+  }
+  return { errors, warnings };
+}
 
-      if (entry.pos === "noun") {
-        if (lang === "nl") {
-          const article = entry.details["article"];
-          if (article !== "de" && article !== "het") {
-            errors.push(`${at}: Dutch nouns need details.article of "de" or "het"`);
-          }
-        }
-        if (
-          typeof entry.details["plural"] !== "string" &&
-          entry.details["uncountable"] !== true &&
-          entry.details["pluralOnly"] !== true
-        ) {
-          warnings.push(`${at}: no details.plural (set details.uncountable if it has none)`);
-        }
+// Checks one language's entries of a concept: what applies to every language, and what that
+// language's rules add. `where` names the concept for the messages.
+export function checkEntries(
+  where: string,
+  lang: string,
+  entries: ConceptEntry[],
+  errors: string[],
+  warnings: string[],
+) {
+  const rules = LANGUAGE_RULES[lang];
+  const lemmas = new Set<string>();
+  for (const entry of entries) {
+    const at = `${where} ${lang} "${entry.lemma}"`;
+    if (lemmas.has(entry.lemma)) errors.push(`${at}: duplicate lemma`);
+    lemmas.add(entry.lemma);
+
+    if (entry.pos === "noun") {
+      errors.push(...(rules?.nounErrors?.(entry.details) ?? []).map((e) => `${at}: ${e}`));
+      if (
+        typeof entry.details["plural"] !== "string" &&
+        entry.details["uncountable"] !== true &&
+        entry.details["pluralOnly"] !== true
+      ) {
+        warnings.push(`${at}: no details.plural (set details.uncountable if it has none)`);
       }
+    }
 
-      if (entry.pos === "verb") checkVerbForms(at, lang, entry, errors, warnings);
+    if (entry.pos === "verb") checkVerbForms(at, lang, entry, errors, warnings, rules);
 
-      if (entry.sentences.length === 0) {
-        warnings.push(`${at}: no example sentence`);
-      }
-      // Inflected forms (plurals, "an" for "a") legitimately miss the lemma,
-      // so this is only a prompt to look, not an error. Verbs may use any
-      // stored form instead.
-      if (entry.pos !== "phrase") {
-        // A separable verb splits in a sentence ("belde ... op"), so each word
-        // of a stored form counts on its own too.
-        const forms = entry.pos === "verb" ? allVerbForms(lang, entry.details) : [];
-        // A lemma may carry a trailing qualifier, "bank (financial)", to tell
-        // homographs apart on the card; the sentence only has the word.
-        const bare = entry.lemma.replace(/\s*\([^)]*\)\s*$/, "");
-        // "of, from" lists alternatives; any one of them in the sentence will do.
-        const alternatives = bare.split(/,\s*/).filter(Boolean);
-        const candidates =
-          entry.pos === "verb"
-            ? [
-                ...alternatives,
-                ...alternatives.flatMap(lang === "en" ? englishVerbForms : stems),
-                ...forms,
-                ...forms.flatMap((f) => f.split(" ").filter((w) => w.length >= 3)),
-              ]
-            : alternatives;
-        for (const s of entry.sentences) {
-          const hay = squash(s);
-          // A multi-word lemma ("what for") may be split in a sentence
-          // ("What do you need it for?"), so all of its words appearing counts.
-          const hasAllWords = (alt: string) => {
-            const words = alt.split(/\s+/).filter((w) => w.length >= 2);
-            return words.length > 1 && words.every((w) => hay.includes(squash(w)));
-          };
-          if (!candidates.some((c) => hay.includes(squash(c))) && !alternatives.some(hasAllWords)) {
-            warnings.push(`${at}: sentence does not contain the lemma or a stored form: "${s}"`);
-          }
+    if (entry.sentences.length === 0) {
+      warnings.push(`${at}: no example sentence`);
+    }
+    // Inflected forms (plurals, "an" for "a") legitimately miss the lemma,
+    // so this is only a prompt to look, not an error. Verbs may use any
+    // stored form instead.
+    if (entry.pos !== "phrase") {
+      // A separable verb splits in a sentence ("belde ... op"), so each word
+      // of a stored form counts on its own too.
+      const forms = entry.pos === "verb" ? allVerbForms(lang, entry.details) : [];
+      // A lemma may carry a trailing qualifier, "bank (financial)", to tell
+      // homographs apart on the card; the sentence only has the word.
+      const bare = entry.lemma.replace(/\s*\([^)]*\)\s*$/, "");
+      // "of, from" lists alternatives; any one of them in the sentence will do.
+      const alternatives = bare.split(/,\s*/).filter(Boolean);
+      const candidates =
+        entry.pos === "verb"
+          ? [
+              ...alternatives,
+              ...alternatives.flatMap(rules?.unstoredVerbForms ?? (() => [])),
+              ...forms,
+              ...forms.flatMap((f) => f.split(" ").filter((w) => w.length >= 3)),
+            ]
+          : alternatives;
+      for (const s of entry.sentences) {
+        const hay = squash(s);
+        // A multi-word lemma ("what for") may be split in a sentence
+        // ("What do you need it for?"), so all of its words appearing counts.
+        const hasAllWords = (alt: string) => {
+          const words = alt.split(/\s+/).filter((w) => w.length >= 2);
+          return words.length > 1 && words.every((w) => hay.includes(squash(w)));
+        };
+        if (!candidates.some((c) => hay.includes(squash(c))) && !alternatives.some(hasAllWords)) {
+          warnings.push(`${at}: sentence does not contain the lemma or a stored form: "${s}"`);
         }
       }
     }
   }
-  return { errors, warnings };
 }
 
 // Lowercase, drop accents and collapse doubled letters, so Dutch spelling
@@ -211,30 +239,56 @@ function englishVerbForms(lemma: string): string[] {
   return [third, ...ing].map((f) => f + tail).concat(first);
 }
 
+// Checks that depend on the language of an entry. A language without an entry here gets only the
+// checks that apply to every language.
+type LanguageRules = {
+  /** Problems with a noun's details, as sentences. */
+  nounErrors?: (details: Record<string, unknown>) => string[];
+  /** Problems with a verb's details beyond the keys every verb should have. */
+  verbErrors?: (details: Record<string, unknown>) => string[];
+  /** Regular forms of a verb that are not stored, so a sentence using one still counts as using it. */
+  unstoredVerbForms?: (lemma: string) => string[];
+};
+
+const LANGUAGE_RULES: Record<string, LanguageRules> = {
+  nl: {
+    nounErrors(details) {
+      const article = details["article"];
+      return article === "de" || article === "het" ? [] : [`Dutch nouns need details.article of "de" or "het"`];
+    },
+    verbErrors(details) {
+      const aux = details["auxiliary"];
+      if (aux === undefined || (DUTCH_AUXILIARIES as readonly string[]).includes(aux as string)) return [];
+      return [`details.auxiliary must be one of ${DUTCH_AUXILIARIES.join(", ")}`];
+    },
+    unstoredVerbForms: stems,
+  },
+  en: {
+    unstoredVerbForms: englishVerbForms,
+  },
+};
+
 function checkVerbForms(
   at: string,
   lang: string,
   entry: ConceptEntry,
   errors: string[],
   warnings: string[],
+  rules: LanguageRules | undefined,
 ) {
   const d = entry.details;
   if (d["defective"] === true) return;
 
-  for (const key of FORM_KEYS[lang] ?? []) {
+  for (const key of verbFormKeys(lang)) {
     const v = d[key];
     if (v === undefined) warnings.push(`${at}: no details.${key} (set details.defective if the verb lacks it)`);
     else if (typeof v !== "string" || !v.trim()) errors.push(`${at}: details.${key} must be a non-empty string`);
   }
-  if (lang === "nl" && d["auxiliary"] !== undefined) {
-    if (!(DUTCH_AUXILIARIES as readonly string[]).includes(d["auxiliary"] as string)) {
-      errors.push(`${at}: details.auxiliary must be one of ${DUTCH_AUXILIARIES.join(", ")}`);
-    }
-  }
+  errors.push(...(rules?.verbErrors?.(d) ?? []).map((e) => `${at}: ${e}`));
 
   const present = d["present"];
   if (present !== undefined) {
-    const pronouns = PRESENT_PRONOUNS[lang];
+    const pronouns = presentPronouns(lang);
     if (!pronouns || typeof present !== "object" || present === null || Array.isArray(present)) {
       errors.push(`${at}: details.present must be an object keyed by pronoun`);
     } else {

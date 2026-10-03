@@ -2,6 +2,7 @@ import type { FastifyInstance } from "fastify";
 import { eq, sql } from "drizzle-orm";
 import { updateSettingsSchema, type Settings } from "@flashcards/shared";
 import { userCards, users } from "../db/schema.js";
+import { activeDirection } from "../auth/public-user.js";
 import type { Db } from "../db/types.js";
 import { DAY_ROLLOVER_HOUR } from "../study/day.js";
 
@@ -15,16 +16,19 @@ export async function settingsRoutes(app: FastifyInstance, { db }: { db: Db }) {
         dailyNewCardLimit: users.dailyNewCardLimit,
         showSentences: users.showSentences,
         showForms: users.showForms,
+        activeFrom: users.activeFrom,
+        activeTo: users.activeTo,
       })
       .from(users)
       .where(eq(users.id, userId));
     if (!u) throw new Error("User not found");
-    return u;
+    const { activeFrom, activeTo, ...rest } = u;
+    return { ...rest, direction: activeDirection({ activeFrom, activeTo }) };
   };
 
   app.get("/settings", { preHandler: app.requireAuth }, async (req) => read(req.user!.id));
 
-  // Changes the name, the daily new-card limit, the time zone and/or what the study cards show. A new time zone moves the study
+  // Changes the name, the daily new-card limit, the time zone, the language direction being learned and/or what the study cards show. A new time zone moves the study
   // day, so review cards (which come due at the start of a study day) are moved to the start
   // of the same calendar day in the new zone rather than left at the old zone's 04:00.
   app.patch("/settings", { preHandler: app.requireAuth }, async (req, reply) => {
@@ -33,7 +37,7 @@ export async function settingsRoutes(app: FastifyInstance, { db }: { db: Db }) {
       return reply.code(400).send({ error: "Invalid input", issues: parsed.error.issues });
     }
     const userId = req.user!.id;
-    const { name, timezone, dailyNewCardLimit, showSentences, showForms } = parsed.data;
+    const { name, timezone, dailyNewCardLimit, showSentences, showForms, direction } = parsed.data;
 
     await db.transaction(async (tx) => {
       const [current] = await tx.select({ timezone: users.timezone }).from(users).where(eq(users.id, userId));
@@ -45,6 +49,7 @@ export async function settingsRoutes(app: FastifyInstance, { db }: { db: Db }) {
           ...(dailyNewCardLimit !== undefined ? { dailyNewCardLimit } : {}),
           ...(showSentences !== undefined ? { showSentences } : {}),
           ...(showForms !== undefined ? { showForms } : {}),
+          ...(direction !== undefined ? { activeFrom: direction.from, activeTo: direction.to } : {}),
         })
         .where(eq(users.id, userId));
 

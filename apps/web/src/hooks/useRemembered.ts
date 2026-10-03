@@ -1,10 +1,12 @@
 import { useState } from "react";
+import { useActiveLanguages } from "./useActiveLanguages";
 
 const PREFIX = "remembered:";
 
 // Filter choices are kept for the rest of the browser tab's life (sessionStorage), so leaving a
 // page and coming back, or reloading it, finds the filters as they were. Closing the tab, or
-// signing in as someone else, starts fresh.
+// signing in as someone else, starts fresh. Each language pair has its own, since each is a deck
+// of its own.
 function read<T>(key: string, accept: (value: unknown) => value is T): T | undefined {
   try {
     const raw = sessionStorage.getItem(PREFIX + key);
@@ -17,19 +19,24 @@ function read<T>(key: string, accept: (value: unknown) => value is T): T | undef
 }
 
 /**
- * Like useState, but the value is remembered under `key`. A remembered value that `accept`
- * does not recognise (an option that has since gone, say) is ignored in favor of `initial`.
+ * Like useState, but the value is remembered under `key`, separately for each language pair. A
+ * remembered value that `accept` does not recognise (an option that has since gone, say) is ignored
+ * in favor of `initial`. When the pair changes, the value is the one remembered for the new pair.
  */
 export function useRemembered<T>(
   key: string,
   initial: T,
   accept: (value: unknown) => value is T,
 ): [T, (value: T) => void] {
-  const [value, setValue] = useState<T>(() => read(key, accept) ?? initial);
+  const { pair } = useActiveLanguages();
+  const stored = `${pair}:${key}`;
+  // What was last chosen on this visit, and for which pair, so a choice is shown at once.
+  const [held, setHeld] = useState<{ stored: string; value: T } | null>(null);
+  const value = held?.stored === stored ? held.value : (read(stored, accept) ?? initial);
   function set(next: T) {
-    setValue(next);
+    setHeld({ stored, value: next });
     try {
-      sessionStorage.setItem(PREFIX + key, JSON.stringify(next));
+      sessionStorage.setItem(PREFIX + stored, JSON.stringify(next));
     } catch {
       // Not remembered, but it still applies on this visit.
     }

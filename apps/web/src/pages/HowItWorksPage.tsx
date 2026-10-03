@@ -122,7 +122,7 @@ export function HowItWorksPage() {
         the answer you saw a second ago.
       </p>
       <p>
-        The daily limit is <strong>20 new cards</strong> by default, shared across all your decks. It
+        The daily limit is <strong>20 new cards</strong> by default for each pair of languages you are learning, shared by both of its directions. It
         resets at <strong>4 a.m.</strong> in your time zone, so studying late at night still counts
         toward the same day. The dashboard’s “new available today” shows how many are left.
       </p>
@@ -138,9 +138,9 @@ export function HowItWorksPage() {
 
       <h2>Each direction is separate</h2>
       <p>
-        English to Dutch and Dutch to English are different cards with different schedules. Being
-        able to recognize a word doesn’t mean you can produce it, so knowing one direction does not
-        make the other easier in the schedule.
+        A word in one direction and the same word the other way round are different cards with
+        different schedules. Being able to recognize a word doesn’t mean you can produce it, so
+        knowing one direction does not make the other easier in the schedule.
       </p>
 
       <p className="footnote">

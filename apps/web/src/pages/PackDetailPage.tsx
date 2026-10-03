@@ -3,8 +3,6 @@ import { Link, useParams } from "react-router";
 import type { AddPackResult, EntryView } from "@flashcards/shared";
 import { ApiError } from "../api/client";
 import {
-  ADD_DIRECTION,
-  OTHER_WAY,
   useAddConcept,
   useAddPack,
   usePackConcepts,
@@ -12,6 +10,7 @@ import {
 } from "../api/packs";
 import { ConceptDialog } from "../components/CardDialog";
 import { ConceptRow } from "../components/ConceptRow";
+import { useActiveLanguages } from "../hooks/useActiveLanguages";
 
 function describeAdd(r: AddPackResult): string {
   const parts = [
@@ -31,10 +30,11 @@ function allInDeck(summary: { availableCount?: number; addedCount?: number } | u
 
 export function PackDetailPage() {
   const { id = "" } = useParams();
-  const concepts = usePackConcepts(id, ADD_DIRECTION);
+  const { direction, otherWay: otherDirection } = useActiveLanguages();
+  const concepts = usePackConcepts(id, direction);
   // Words are added both ways round, so the pack is done once both directions are in the deck.
-  const packs = usePacks(ADD_DIRECTION);
-  const otherWay = usePacks(OTHER_WAY);
+  const packs = usePacks(direction);
+  const otherWay = usePacks(otherDirection);
   const addPack = useAddPack(id);
   const addConcept = useAddConcept();
   // The word being looked at as a card, if any.
@@ -95,8 +95,8 @@ export function PackDetailPage() {
             <ConceptRow
               key={c.conceptId}
               entries={c.entries}
-              from={ADD_DIRECTION.from}
-              to={ADD_DIRECTION.to}
+              from={direction.from}
+              to={direction.to}
               available={c.available}
               inDeck={c.inDeck}
               adding={addConcept.isPending && addConcept.variables === c.conceptId}

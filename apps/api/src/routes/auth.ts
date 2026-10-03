@@ -1,3 +1,4 @@
+import { publicUserColumns, toPublicUser } from "../auth/public-user.js";
 import type { FastifyInstance, FastifyReply } from "fastify";
 import { eq } from "drizzle-orm";
 import { isValidTimeZone, loginSchema, registerSchema } from "@flashcards/shared";
@@ -52,11 +53,11 @@ export async function authRoutes(
         ...(timezone && isValidTimeZone(timezone) ? { timezone } : {}),
       })
       .onConflictDoNothing({ target: users.email })
-      .returning({ id: users.id, email: users.email, name: users.name });
+      .returning(publicUserColumns);
     if (!user) return reply.code(409).send({ error: "Email already registered" });
 
     await startSession(reply, user.id);
-    return reply.code(201).send({ user });
+    return reply.code(201).send({ user: toPublicUser(user) });
   });
 
   app.post("/auth/login", limit, async (req, reply) => {
@@ -71,7 +72,7 @@ export async function authRoutes(
     }
 
     await startSession(reply, user.id);
-    return { user: { id: user.id, email: user.email, name: user.name } };
+    return { user: toPublicUser(user) };
   });
 
   app.post("/auth/logout", async (req, reply) => {

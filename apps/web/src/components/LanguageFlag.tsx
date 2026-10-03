@@ -30,6 +30,8 @@ function UnionJack() {
   );
 }
 
+// The flag of each language that has one, by language code. Add a language's flag here; without
+// one its code is shown instead.
 const FLAGS: Record<string, () => ReactElement> = { nl: Netherlands, en: UnionJack };
 
 export function LanguageFlag({ code, label }: { code: string; label: string }) {
@@ -57,8 +59,8 @@ export function LanguageFlag({ code, label }: { code: string; label: string }) {
 }
 
 // Two flags in one picture, cut along a slash: the first shows to the left of it and the second to
-// the right, as if one were laid over the other. Used for the app's own pair of languages, English
-// and Dutch. Decoration, so it is hidden from screen readers.
+// the right, as if one were laid over the other. Used for the app's own pair of languages.
+// Decoration, so it is hidden from screen readers.
 const SLASH_TOP = 5.4;
 const SLASH_BOTTOM = 3.6;
 const SLASH_GAP = 0.6;
@@ -99,13 +101,13 @@ export function SplitFlag({ left, right }: { left: string; right: string }) {
           <Right />
         </g>
       </g>
-      {/* The slash itself, in the muted text color. It runs a little past the flag at both ends. */}
+      {/* The slash itself, in its own color (see .flag-split in the CSS). It runs a little past the flag at both ends. */}
       <line
         x1={SLASH_TOP + SLASH_OVERSHOOT * SLOPE}
         y1={-SLASH_OVERSHOOT}
         x2={SLASH_BOTTOM - SLASH_OVERSHOOT * SLOPE}
         y2={6 + SLASH_OVERSHOOT}
-        stroke="var(--muted)"
+        stroke="var(--flag-slash)"
         strokeWidth={SLASH_GAP}
       />
     </svg>

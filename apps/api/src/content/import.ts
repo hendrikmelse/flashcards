@@ -75,10 +75,16 @@ export async function importContent(
           name: pack.name,
           description: pack.description ?? null,
           category: pack.category,
+          language: pack.language ?? null,
         })
         .onConflictDoUpdate({
           target: packs.slug,
-          set: { name: pack.name, description: pack.description ?? null, category: pack.category },
+          set: {
+            name: pack.name,
+            description: pack.description ?? null,
+            category: pack.category,
+            language: pack.language ?? null,
+          },
         })
         .returning({ id: packs.id });
       if (!row) throw new Error(`could not upsert pack ${pack.slug}`);

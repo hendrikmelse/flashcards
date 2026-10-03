@@ -1,12 +1,10 @@
 import { z } from "zod";
+import { PAIR_PATTERN, languageCodeSchema, pairKey, pairLanguages, type LanguageCode } from "./languages.js";
 
 export const ratingSchema = z.enum(["again", "hard", "good", "easy"]);
 export type Rating = z.infer<typeof ratingSchema>;
 
-// Language codes are data (the `languages` table), not schema. Keep this list
-// in sync with what is seeded; it is only used for input validation.
-export const languageCodeSchema = z.enum(["en", "nl"]);
-export type LanguageCode = z.infer<typeof languageCodeSchema>;
+// The supported languages (and the schema for their codes) are defined in languages.ts.
 
 // Adding a pack (or a single concept) to the user's active deck in a direction.
 export const addToDeckSchema = z
@@ -100,7 +98,13 @@ export type ChangeEmailInput = z.infer<typeof changeEmailSchema>;
 export const deleteAccountSchema = z.object({ password: z.string().min(1).max(200) });
 export type DeleteAccountInput = z.infer<typeof deleteAccountSchema>;
 
-export type PublicUser = { id: string; email: string; name: string | null };
+export type PublicUser = {
+  id: string;
+  email: string;
+  name: string | null;
+  /** What the user is learning, prompt language first. Each language pair is a deck of its own. */
+  direction: { from: LanguageCode; to: LanguageCode };
+};
 
 /** The most new cards a day a user can ask for. */
 export const DAILY_NEW_CARD_MAX = 200;
@@ -114,6 +118,11 @@ export const updateSettingsSchema = z
     // What the study cards show.
     showSentences: z.boolean().optional(),
     showForms: z.boolean().optional(),
+    // What the user is learning: the pages and decks they see are for this pair of languages.
+    direction: z
+      .object({ from: languageCodeSchema, to: languageCodeSchema })
+      .refine((d) => d.from !== d.to, "The two languages must differ")
+      .optional(),
   })
   .refine(
     (v) =>
@@ -121,7 +130,8 @@ export const updateSettingsSchema = z
       v.timezone !== undefined ||
       v.dailyNewCardLimit !== undefined ||
       v.showSentences !== undefined ||
-      v.showForms !== undefined,
+      v.showForms !== undefined ||
+      v.direction !== undefined,
     { message: "Provide a setting to change" },
   );
 export type UpdateSettingsInput = z.infer<typeof updateSettingsSchema>;
@@ -132,12 +142,14 @@ export type Settings = {
   name: string | null;
   /** IANA name; the study day starts at 04:00 here. */
   timezone: string;
-  /** New cards introduced per study day, across all decks. */
+  /** New cards introduced per study day, for each language pair. */
   dailyNewCardLimit: number;
   /** Show the example sentences on study cards. */
   showSentences: boolean;
   /** Show the word forms (plural, verb forms) with the answer. */
   showForms: boolean;
+  /** What the user is learning, prompt language first. */
+  direction: { from: LanguageCode; to: LanguageCode };
 };
 
 // Optional direction for browsing: both languages or neither.
@@ -152,6 +164,43 @@ export const directionQuerySchema = z
   .refine((v) => v.fromLanguage === undefined || v.fromLanguage !== v.toLanguage, {
     message: "fromLanguage and toLanguage must differ",
   });
+
+// What part of the deck a request is about: everything, one language pair (both of its directions)
+// or one direction. `pair` is a pair key such as "en-nl", in either order. It is only a filter, so
+// a pair of languages the app does not know simply matches nothing. A direction together with a
+// pair must be one of that pair's directions.
+export const scopeQuerySchema = z
+  .object({
+    fromLanguage: languageCodeSchema.optional(),
+    toLanguage: languageCodeSchema.optional(),
+    pair: z
+      .string()
+      .regex(PAIR_PATTERN, "pair must be two language codes joined by a hyphen, such as en-nl")
+      .optional(),
+  })
+  .refine((v) => (v.fromLanguage === undefined) === (v.toLanguage === undefined), {
+    message: "Provide both fromLanguage and toLanguage, or neither",
+  })
+  .refine((v) => v.fromLanguage === undefined || v.fromLanguage !== v.toLanguage, {
+    message: "fromLanguage and toLanguage must differ",
+  })
+  .refine((v) => v.pair === undefined || pairLanguages(v.pair)[0] !== pairLanguages(v.pair)[1], {
+    message: "a pair needs two different languages",
+  })
+  .refine(
+    (v) =>
+      v.pair === undefined ||
+      v.fromLanguage === undefined ||
+      pairKey(...pairLanguages(v.pair)) === pairKey(v.fromLanguage, v.toLanguage!),
+    { message: "the direction is not one of the pair's directions" },
+  )
+  .transform((v) => (v.pair === undefined ? v : { ...v, pair: pairKey(...pairLanguages(v.pair)) }));
+export type Scope = {
+  fromLanguage?: string | undefined;
+  toLanguage?: string | undefined;
+  /** A pair key, such as "en-nl". */
+  pair?: string | undefined;
+};
 
 export const pageQuerySchema = z.object({
   limit: z.coerce.number().int().min(1).max(1000).default(100),
@@ -372,6 +421,8 @@ export type PackListItem = {
   name: string;
   description: string | null;
   category: PackCategory;
+  /** The language the pack was built for, or null if it suits any language. */
+  language: LanguageCode | null;
   conceptCount: number;
   /** Present when a direction was requested. */
   availableCount?: number;
@@ -407,3 +458,4 @@ export type AddPackResult = { added: number; alreadyInDeck: number; unavailable:
 export type AddConceptResult = { added: number; alreadyInDeck: number };
 
 export * from "./forms.js";
+export * from "./languages.js";

@@ -1,5 +1,6 @@
 import { Navigate, Route, Routes, useParams } from "react-router";
 import { Layout } from "./components/Layout";
+import { ActiveLanguagesProvider } from "./components/ActiveLanguagesProvider";
 import { PublicOnly, RequireAuth } from "./components/guards";
 import { DashboardPage } from "./pages/DashboardPage";
 import { DeckPage } from "./pages/DeckPage";
@@ -19,6 +20,14 @@ function LegacyPacksRedirect() {
 }
 
 export function App() {
+  return (
+    <ActiveLanguagesProvider>
+      <AppRoutes />
+    </ActiveLanguagesProvider>
+  );
+}
+
+function AppRoutes() {
   return (
     <Routes>
       <Route element={<PublicOnly />}>

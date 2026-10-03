@@ -7,7 +7,8 @@ import {
   type EntryView,
   type PackCategory,
 } from "@flashcards/shared";
-import { ADD_DIRECTION, useAddConcept, useConceptSearch, usePacks } from "../api/packs";
+import { useAddConcept, useConceptSearch, usePacks } from "../api/packs";
+import { useActiveLanguages } from "../hooks/useActiveLanguages";
 import { ConceptDialog } from "../components/CardDialog";
 import { ConceptRow } from "../components/ConceptRow";
 import { isBoolean, isOneOf, isString, useRemembered } from "../hooks/useRemembered";
@@ -17,7 +18,8 @@ type Mode = "packs" | "words";
 type CategoryFilter = PackCategory | "all";
 
 export function PacksPage() {
-  const packs = usePacks(ADD_DIRECTION);
+  const { direction } = useActiveLanguages();
+  const packs = usePacks(direction);
   // The filters are remembered, so leaving the page and coming back finds them as they were.
   const [mode, setMode] = useRemembered<Mode>("packs:mode", "packs", isOneOf("packs", "words"));
   const [query, setQuery] = useRemembered("packs:query", "", isString);
@@ -180,7 +182,7 @@ function PackResults({
 }
 
 function WordResults({ query, hideInDeck }: ResultProps) {
-  const direction = ADD_DIRECTION;
+  const { direction } = useActiveLanguages();
   // Starts from the typed text, so a remembered search shows its results straight away.
   const [term, setTerm] = useState(query.trim());
   const found = useConceptSearch(term, direction, hideInDeck);

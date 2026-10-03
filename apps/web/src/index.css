@@ -1351,14 +1351,28 @@ a.button.secondary {
   box-shadow: 0 0 0 1px color-mix(in srgb, var(--text) 25%, transparent);
 }
 
-/* Rests on a dark chip, so the white of the flags does not run into a light page. */
+/* Rests on a chip of its own colors, cut by a slash. In light mode the chip is pale and the slash
+   dark; in dark mode the other way round. (Written twice, like the theme colors at the top.) */
 .flag-split {
-  --flag-backdrop: #1c1c1a;
+  --flag-backdrop: #e9e9e2;
+  --flag-slash: #1c1c1a;
   box-sizing: content-box;
-  padding: 4px;
-  border-radius: 6px;
+  padding: 6px;
+  border-radius: 8px;
   background: var(--flag-backdrop);
   box-shadow: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .flag-split {
+    --flag-backdrop: #1c1c1a;
+    --flag-slash: var(--muted);
+  }
+}
+
+:root[data-theme="dark"] .flag-split {
+  --flag-backdrop: #1c1c1a;
+  --flag-slash: var(--muted);
 }
 
 .flag-code {

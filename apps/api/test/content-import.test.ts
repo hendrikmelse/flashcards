@@ -129,6 +129,20 @@ describe("shipped content", () => {
   }, 60_000);
 });
 
+describe("shipped packs built for Dutch", () => {
+  it("are tagged, so learners of other languages are not shown them", () => {
+    const { packs: ps } = loadContent("../../content");
+    const dutch = ps.filter((p) => p.language === "nl").map((p) => p.slug);
+    // The frequency bands come from a Dutch word list.
+    for (const p of ps.filter((p) => p.slug.startsWith("top-"))) expect(p.language, p.slug).toBe("nl");
+    expect(dutch).toEqual(expect.arrayContaining(["prepositions", "pronominal-adverbs", "dutch-culture"]));
+    // Topics and the starter words suit any language.
+    for (const slug of ["starter", "animals-basics", "colors"]) {
+      expect(ps.find((p) => p.slug === slug)?.language, slug).toBeUndefined();
+    }
+  });
+});
+
 describe("validateContent", () => {
   const files = (...cs: Concept[][]) => cs.map((concepts, i) => ({ file: `c${i}.json`, concepts }));
   const packFiles = (...ps: PackFile[]) => ps.map((p) => ({ file: `${p.slug}.json`, pack: p }));

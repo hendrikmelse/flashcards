@@ -1,3 +1,4 @@
+import { publicUserColumns, toPublicUser } from "../auth/public-user.js";
 import type { FastifyInstance, FastifyReply } from "fastify";
 import { and, asc, eq } from "drizzle-orm";
 import {
@@ -66,8 +67,8 @@ export async function accountRoutes(
         .update(users)
         .set({ email: parsed.data.email })
         .where(eq(users.id, userId))
-        .returning({ id: users.id, email: users.email, name: users.name });
-      return { user };
+        .returning(publicUserColumns);
+      return { user: toPublicUser(user!) };
     } catch (e) {
       if (isUniqueViolation(e)) return reply.code(409).send({ error: "Email already registered" });
       throw e;

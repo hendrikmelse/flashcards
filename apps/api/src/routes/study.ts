@@ -1,6 +1,6 @@
 import type { FastifyInstance, FastifyReply } from "fastify";
 import {
-  directionQuerySchema,
+  scopeQuerySchema,
   studyQuerySchema,
   submitReviewSchema,
 } from "@flashcards/shared";
@@ -19,7 +19,7 @@ export async function studyRoutes(
   // Read-only: the next batch of cards to study. Safe to call repeatedly;
   // unanswered cards simply come back.
   app.get("/study", { preHandler: app.requireAuth }, async (req, reply) => {
-    const d = directionQuerySchema.safeParse(req.query);
+    const d = scopeQuerySchema.safeParse(req.query);
     const l = studyQuerySchema.safeParse(req.query);
     if (!d.success) return invalid(reply, d.error.issues);
     if (!l.success) return invalid(reply, l.error.issues);
@@ -35,7 +35,7 @@ export async function studyRoutes(
 
   // Just the counts, for the dashboard: no cards are ranked or loaded.
   app.get("/study/counts", { preHandler: app.requireAuth }, async (req, reply) => {
-    const d = directionQuerySchema.safeParse(req.query);
+    const d = scopeQuerySchema.safeParse(req.query);
     if (!d.success) return invalid(reply, d.error.issues);
     return getStudyCounts(db, req.user!.id, d.data, new Date());
   });

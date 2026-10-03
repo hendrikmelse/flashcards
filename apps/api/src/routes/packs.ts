@@ -1,5 +1,5 @@
 import type { FastifyInstance, FastifyReply } from "fastify";
-import { and, asc, count, eq, exists, inArray, not, sql } from "drizzle-orm";
+import { and, asc, count, eq, exists, inArray, isNull, not, or, sql } from "drizzle-orm";
 import {
   addToDeckSchema,
   conceptCardQuerySchema,
@@ -7,6 +7,7 @@ import {
   directionQuerySchema,
   pageQuerySchema,
   uuidParamSchema,
+  type LanguageCode,
   type PackCategory,
 } from "@flashcards/shared";
 import {
@@ -63,10 +64,18 @@ export async function packRoutes(
         name: packs.name,
         description: packs.description,
         category: packs.category,
+        language: packs.language,
         conceptCount: count(packConcepts.conceptId),
       })
       .from(packs)
       .leftJoin(packConcepts, eq(packConcepts.packId, packs.id))
+      // With a direction, only the packs that suit it: those for no language in particular, and
+      // those built for one of its two languages.
+      .where(
+        fromLanguage && toLanguage
+          ? or(isNull(packs.language), inArray(packs.language, [fromLanguage, toLanguage]))
+          : undefined,
+      )
       .groupBy(packs.id)
       .orderBy(asc(packs.name));
 
@@ -110,6 +119,7 @@ export async function packRoutes(
       packs: rows.map((r) => ({
         ...r,
         category: r.category as PackCategory,
+        language: r.language as LanguageCode | null,
         availableCount: available.get(r.id) ?? 0,
         ...(req.user ? { addedCount: added.get(r.id) ?? 0 } : {}),
       })),

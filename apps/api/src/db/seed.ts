@@ -1,16 +1,15 @@
 import { sql } from "drizzle-orm";
+import { LANGUAGES } from "@flashcards/shared";
 import { concepts, entries, languages, packConcepts, packs } from "./schema.js";
 import type { Db } from "./types.js";
 
-// The languages the app supports. Needed in every environment, including
-// production, before any content or cards can exist. Idempotent.
+// The languages the app supports (see LANGUAGES in the shared package). Needed in every
+// environment, including production, before any content or cards can exist. Idempotent, so it is
+// also how a language added later reaches an existing database.
 export async function seedLanguages(db: Db) {
   await db
     .insert(languages)
-    .values([
-      { code: "en", name: "English" },
-      { code: "nl", name: "Nederlands" },
-    ])
+    .values(LANGUAGES.map((l) => ({ code: l.code, name: l.name })))
     .onConflictDoNothing();
 }
 

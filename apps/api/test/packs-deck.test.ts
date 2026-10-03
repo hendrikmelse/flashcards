@@ -442,3 +442,46 @@ describe("GET /concepts/:id", () => {
     expect(res.json().concepts).toBeDefined();
   });
 });
+
+describe("packs built for one language", () => {
+  const slugs = async (url: string) =>
+    ((await app.inject({ method: "GET", url })).json().packs as { slug: string }[]).map((p) => p.slug).sort();
+
+  beforeAll(async () => {
+    await pg.query(`insert into languages (code, name) values ('fr', 'Français') on conflict do nothing`);
+    for (const [slug, language] of [
+      ["for-dutch", "nl"],
+      ["for-english", "en"],
+      ["for-french", "fr"],
+    ] as const) {
+      await pg.query(`insert into packs (slug, name, category, language) values ($1, $1, 'topic', $2)`, [slug, language]);
+    }
+  });
+
+  it("lists every pack when no direction is asked for, with the language each was built for", async () => {
+    expect(await slugs("/packs")).toEqual(["for-dutch", "for-english", "for-french", "sample"]);
+    const all = (await app.inject({ method: "GET", url: "/packs" })).json().packs as { slug: string; language: string | null }[];
+    expect(Object.fromEntries(all.map((p) => [p.slug, p.language]))).toEqual({
+      sample: null,
+      "for-dutch": "nl",
+      "for-english": "en",
+      "for-french": "fr",
+    });
+  });
+
+  it("leaves out the packs built for a language that is not in the direction", async () => {
+    expect(await slugs(`/packs?${q(EN_NL)}`)).toEqual(["for-dutch", "for-english", "sample"]);
+    expect(await slugs(`/packs?${q(NL_EN)}`)).toEqual(["for-dutch", "for-english", "sample"]);
+  });
+
+  it("still lets a pack for any language through", async () => {
+    expect(await slugs(`/packs?${q(EN_NL)}`)).toContain("sample");
+  });
+
+  it("does not hide a pack from someone who opens it directly", async () => {
+    const list = (await app.inject({ method: "GET", url: "/packs" })).json().packs as { id: string; slug: string }[];
+    const french = list.find((p) => p.slug === "for-french")!;
+    const res = await app.inject({ method: "GET", url: `/packs/${french.id}` });
+    expect(res.statusCode).toBe(200);
+  });
+});

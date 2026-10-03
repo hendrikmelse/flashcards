@@ -4,14 +4,16 @@ import { alias, type PgColumn } from "drizzle-orm/pg-core";
 import {
   DECK_SORT_DEFAULT_ORDER,
   deckFilterSchema,
-  directionQuerySchema,
   pageQuerySchema,
+  scopeQuerySchema,
   uuidParamSchema,
   type EntryView,
+  type Scope,
 } from "@flashcards/shared";
 import { insertUserCards, loadEntries, loadSentences, sentenceKey } from "../content/queries.js";
 import { entries, userCards } from "../db/schema.js";
 import type { Db } from "../db/types.js";
+import { inScope } from "../study/scope.js";
 
 const invalid = (reply: FastifyReply, issues: unknown) =>
   reply.code(400).send({ error: "Invalid input", issues });
@@ -54,17 +56,16 @@ export async function deckRoutes(app: FastifyInstance, { db }: { db: Db }) {
         ),
     );
 
-  // The user's cards, narrowed by direction, stage and a search word.
+  // The user's cards, narrowed by language pair or direction, stage and a search word.
   const cardFilter = (
     userId: string,
-    direction: { fromLanguage?: string; toLanguage?: string },
+    scope: Scope,
     f: { state?: "new" | "learning" | "review"; q?: string },
   ) => {
     const like = f.q?.toLowerCase().replace(/[\\%_]/g, "\\$&");
     return and(
       eq(userCards.userId, userId),
-      direction.fromLanguage ? eq(userCards.fromLanguage, direction.fromLanguage) : undefined,
-      direction.toLanguage ? eq(userCards.toLanguage, direction.toLanguage) : undefined,
+      inScope(userCards, scope),
       f.state === "learning"
         ? inArray(userCards.state, ["learning", "relearning"])
         : f.state
@@ -90,19 +91,14 @@ export async function deckRoutes(app: FastifyInstance, { db }: { db: Db }) {
   // The user's active deck: progress summary plus a page of cards with their
   // entries resolved for each card's direction.
   app.get("/deck", { preHandler: app.requireAuth }, async (req, reply) => {
-    const d = directionQuerySchema.safeParse(req.query);
+    const d = scopeQuerySchema.safeParse(req.query);
     const page = pageQuerySchema.safeParse(req.query);
     const f = deckFilterSchema.safeParse(req.query);
     if (!d.success) return invalid(reply, d.error.issues);
     if (!page.success) return invalid(reply, page.error.issues);
     if (!f.success) return invalid(reply, f.error.issues);
-    const { fromLanguage, toLanguage } = d.data;
 
-    const where = and(
-      eq(userCards.userId, req.user!.id),
-      fromLanguage ? eq(userCards.fromLanguage, fromLanguage) : undefined,
-      toLanguage ? eq(userCards.toLanguage, toLanguage) : undefined,
-    );
+    const where = and(eq(userCards.userId, req.user!.id), inScope(userCards, d.data));
 
     const byState = await db
       .select({ state: userCards.state, n: count() })
@@ -120,7 +116,7 @@ export async function deckRoutes(app: FastifyInstance, { db }: { db: Db }) {
       summary.total += r.n;
     }
 
-    // The summary above covers the whole direction; the list is narrowed further.
+    // The summary above covers the whole scope; the list is narrowed further.
     const userId = req.user!.id;
     const narrowed = cardFilter(userId, d.data, f.data);
     const listWhere =
@@ -197,7 +193,7 @@ export async function deckRoutes(app: FastifyInstance, { db }: { db: Db }) {
   // direction, stage and search and has none yet. New cards join the new-card queue, so
   // they are introduced a few at a time like any other cards.
   app.post("/deck/mirrors", { preHandler: app.requireAuth }, async (req, reply) => {
-    const d = directionQuerySchema.safeParse(req.body ?? {});
+    const d = scopeQuerySchema.safeParse(req.body ?? {});
     const f = deckFilterSchema.pick({ q: true, state: true }).safeParse(req.body ?? {});
     if (!d.success) return invalid(reply, d.error.issues);
     if (!f.success) return invalid(reply, f.error.issues);

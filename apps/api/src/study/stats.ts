@@ -1,23 +1,34 @@
 import { and, count, eq, gte, sql } from "drizzle-orm";
-import type { DirectionSummary, StatsResponse } from "@flashcards/shared";
+import type { DirectionSummary, Scope, StatsResponse } from "@flashcards/shared";
 import { reviewLogs, userCards, users } from "../db/schema.js";
 import type { Db } from "../db/types.js";
 import { isValidTimeZone, studyDayStart } from "./day.js";
 import { getStudyCounts } from "./queue.js";
+import { inPair, inScope, pairOf } from "./scope.js";
 
+// The deck's numbers for a scope: a language pair, or with none, every deck.
 export async function getStats(
   db: Db,
   userId: string,
   now: Date,
+  scope: Scope = {},
 ): Promise<StatsResponse> {
   const [user] = await db.select().from(users).where(eq(users.id, userId));
   if (!user) throw new Error("User not found");
   const tz = isValidTimeZone(user.timezone) ? user.timezone : "UTC";
 
+  const pair = pairOf(scope);
   const [{ n: reviewsToday } = { n: 0 }] = await db
     .select({ n: count() })
     .from(reviewLogs)
-    .where(and(eq(reviewLogs.userId, userId), gte(reviewLogs.reviewedAt, studyDayStart(now, tz))));
+    .innerJoin(userCards, eq(userCards.id, reviewLogs.userCardId))
+    .where(
+      and(
+        eq(reviewLogs.userId, userId),
+        gte(reviewLogs.reviewedAt, studyDayStart(now, tz)),
+        pair ? inPair(userCards, pair) : undefined,
+      ),
+    );
 
   const nowIso = now.toISOString();
   const rows = await db
@@ -38,7 +49,7 @@ export async function getStats(
       nextDueAt: sql<string | null>`min(${userCards.dueAt}) filter (where ${userCards.state} <> 'new' and ${userCards.dueAt} > ${nowIso}::timestamptz)`,
     })
     .from(userCards)
-    .where(eq(userCards.userId, userId))
+    .where(and(eq(userCards.userId, userId), inScope(userCards, scope)))
     .groupBy(userCards.fromLanguage, userCards.toLanguage)
     .orderBy(userCards.fromLanguage, userCards.toLanguage);
   const directions: DirectionSummary[] = await Promise.all(

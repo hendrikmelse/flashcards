@@ -2,7 +2,8 @@ import { useEffect, useRef, type KeyboardEvent } from "react";
 import { createPortal } from "react-dom";
 import type { DeckCardView, EntryView, LanguageInfo } from "@flashcards/shared";
 import { useDeckCard } from "../api/hooks";
-import { ADD_DIRECTION, useConceptCard, useLanguages } from "../api/packs";
+import { useConceptCard, useLanguages } from "../api/packs";
+import { useActiveLanguages } from "../hooks/useActiveLanguages";
 import { formatUntil } from "../lib/relativeTime";
 import { Entries, Forms, Sentences } from "./CardParts";
 import { ReportProblem } from "./ReportProblem";
@@ -180,7 +181,7 @@ export function CardDialog({
   );
 }
 
-// A word from the Add words page, which may not be in the deck: shown English to Dutch, with the
+// A word from the Add words page, which may not be in the deck: shown in the direction being learned, with the
 // words the page already has until the example sentences arrive.
 export function ConceptDialog({
   conceptId,
@@ -192,8 +193,9 @@ export function ConceptDialog({
   onClose: () => void;
 }) {
   const languages = useLanguages();
-  const detail = useConceptCard(conceptId, ADD_DIRECTION);
-  const { from, to } = ADD_DIRECTION;
+  const { direction } = useActiveLanguages();
+  const detail = useConceptCard(conceptId, direction);
+  const { from, to } = direction;
   return (
     <CardFrame
       conceptId={conceptId}

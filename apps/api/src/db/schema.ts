@@ -39,6 +39,10 @@ export const users = pgTable("users", {
   // What the study cards show.
   showSentences: boolean().notNull().default(true),
   showForms: boolean().notNull().default(true),
+  // What the user is learning, prompt language first: the pages and decks they see are for this
+  // pair of languages. Null until they choose, which means ADD_WORDS_DIRECTION.
+  activeFrom: text().references(() => languages.code),
+  activeTo: text().references(() => languages.code),
   createdAt: timestamp({ withTimezone: true }).notNull().defaultNow(),
 });
 
@@ -144,6 +148,9 @@ export const packs = pgTable("packs", {
   description: text(),
   // One of PACK_CATEGORIES (see @flashcards/shared).
   category: text().notNull().default("topic"),
+  // The language the pack was built for (a frequency list, a language's grammar words), or null
+  // for a pack that suits any language. Learners of other languages are not shown it.
+  language: text().references(() => languages.code),
   createdAt: timestamp({ withTimezone: true }).notNull().defaultNow(),
 });
 

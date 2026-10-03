@@ -86,7 +86,7 @@ Each language's words point at a language-independent **concept** (a word sense)
 
 **Per-user state**
 - `User`: email, password hash, timezone, daily new-card limit
-- `UserCard`: one concept in one direction for one user, with its SRS state. The active deck is the set of a user's cards. Each direction is scheduled independently. Unique per (user, concept, from, to)
+- `UserCard`: one concept in one direction for one user, with its SRS state. The active deck is the set of a user's cards. Each direction is scheduled independently. Unique per (user, concept, from, to). The cards of a **language pair** (both directions, such as `en-nl`) are a deck of their own
 - `ReviewLog`: append-only, one row per answer, with rating, time taken, and state and interval before and after. A unique `client_review_id` per user makes retries safe. Keeping the full log means scheduling can be recomputed or re-tuned later
 
 Translations are not one-to-one (English "run" has many senses; Dutch "kennen" and "weten" both translate "know"), which is why concepts are senses rather than words and packs need curation. A card is valid only if the concept has an entry in both languages; the add-to-deck endpoints enforce this.
@@ -94,7 +94,7 @@ Translations are not one-to-one (English "run" has many senses; Dutch "kennen" a
 ### Scheduling
 
 - FSRS with learning steps 1m/10m, relearning 10m, and 90% target retention
-- The study day rolls over at 04:00 in the user's timezone, which drives the daily new-card limit. Only new cards whose first answer is Again or Hard count against it: one marked Good or Easy is already known, so it is free
+- The study day rolls over at 04:00 in the user's timezone, which drives the daily new-card limit. The limit and the 15-minute gap between sessions are worked out for each language pair, so studying one pair never uses up or holds back another. Only new cards whose first answer is Again or Hard count against it: one marked Good or Easy is already known, so it is free
 - The SRS engine is a set of pure functions (card state, rating and time in; new state and due date out), which keeps it easy to unit test
 - All timestamps are stored in UTC; the user's timezone only matters at the day boundary
 
@@ -112,11 +112,11 @@ All routes live under `/api`.
 | `POST /concepts/:id/report` | Report a problem with a word (wrong translation, forms or sentence, or something else, with optional details). Stored for the owner to read with `npm run reports`; rate limited like login |
 | `POST /packs/:id/add`, `POST /concepts/:id/add` | Add to the deck for a direction, and with `bothDirections: true` for its opposite too (the web app always does). Idempotent; skips concepts missing an entry in either language. Counts are in cards |
 | `GET /concepts/:id` | Public. A word as a card in a direction (`fromLanguage`, `toLanguage`): both sides' entries and all example sentences. Used by the card view on the Add words pages |
-| `GET /deck` | Progress summary and a page of cards, filterable by direction, stage (new, learning, review) and a search word, sortable by date added, next due, status or the prompt word. Each card says whether its reverse (same word, other direction) is in the deck, and `missingMirror=1` keeps only those without one |
+| `GET /deck` | Progress summary and a page of cards, for one language pair (`pair=en-nl`, either order; without it, every deck), filterable by direction, stage (new, learning, review) and a search word, sortable by date added, next due, status or the prompt word. Each card says whether its reverse (same word, other direction) is in the deck, and `missingMirror=1` keeps only those without one |
 | `POST /deck/mirrors` | Adds the reverse card for every card in a view of the deck (direction, stage and search, as in `GET /deck`) that has none. Idempotent |
 | `GET /study` | Read-only batch. Due learning and review cards (learning ones within 20 minutes) ranked by how likely each is to have been forgotten, with new cards (up to the daily limit) spread through the first half of the queue. Learning cards are held back until 15 minutes after the last answer (the gap between sessions); `early=1` lets the next session start in the last 5 minutes of that wait |
 | `GET /study/counts` | The counts of learning, review and new cards, for the dashboard, plus `nextSession` (when the held-back cards open and how many will be ready) while a session gap is running, and `tomorrow` (how many cards will be waiting by the end of tomorrow's study day) |
-| `GET /settings`, `PATCH /settings` | The account's email, name, time zone, daily new-card limit and card display options (example sentences, word forms); all but the email can be changed. A new time zone moves due review cards to the start of the same day there |
+| `GET /settings`, `PATCH /settings` | The account's email, name, time zone, daily new-card limit, the language direction being learned and card display options (example sentences, word forms); all but the email can be changed. A new time zone moves due review cards to the start of the same day there |
 | `POST /account/password`, `POST /account/email` | Change the password (signs out every other session) or the email address. Both need the current password and are rate limited like login. There is no email verification yet |
 | `POST /account/delete` | Deletes the account with its cards, review history and sessions. Needs the password |
 | `GET /account/export` | Everything held about the user as a JSON download: account details (never the password), every card with its schedule, and the full review history |
@@ -129,10 +129,11 @@ Helmet headers (CSP, HSTS), an Origin check on state-changing requests, `Secure`
 
 ## Content
 
-Content is authored as reviewed JSON files and imported into the database. The files are the source of truth; the importer makes the database match them. There are two kinds:
+Content is authored as reviewed JSON files and imported into the database. The files are the source of truth; the importer makes the database match them. There are three kinds:
 
 - `content/concepts/*.json` is the word library: `{ "concepts": [ { "key", "gloss", "entries" } ] }`. How the library is split across files (currently by topic) is only for organizing
-- `content/packs/*.json` defines packs: `{ "slug", "name", "category", "description", "concepts": [key, ...] }`, an ordered list of concept keys with no word data. The `category` is one of `common` (the most frequent words), `topic`, `verbs` or `grammar` (the small words that hold sentences together); the pack browser can filter by it, and the tests require every category to have at least five packs. Because packs only refer to concepts, the same word can be in any number of packs
+- `content/languages/<code>/*.json` (optional) adds one language's entries to concepts defined in `content/concepts`: `{ "language": "fr", "concepts": [ { "key", "entries": [ ... ] } ] }`, where the entries have the same shape as in a concept file and `language` must match the folder. This is how a language beyond English and Dutch is added: it keeps that language's words, review notes and licensing apart from the shared files, and covers only the concepts it has words for. Each concept and language is defined in exactly one place, so a language file cannot repeat what the concept files already hold, and it can only refer to keys that exist. The importer merges them into the concepts, so removing an entry from a language file removes it from the database like any other
+- `content/packs/*.json` defines packs: `{ "slug", "name", "category", "language"?, "description", "concepts": [key, ...] }`, an ordered list of concept keys with no word data. The `category` is one of `common` (the most frequent words), `topic`, `verbs` or `grammar` (the small words that hold sentences together); the pack browser can filter by it, and the tests require every category to have at least five packs. Because packs only refer to concepts, the same word can be in any number of packs
 
 A concept's **key** (lowercase words joined by hyphens, such as `dog` or `know-fact`) is its permanent identity. Packs refer to it, and the gloss is free text you can reword. Keys must be unique across all files, and a pack that lists an unknown key is an error.
 
@@ -154,6 +155,23 @@ Parts of speech are noun, verb, adjective, adverb, pronoun, preposition, conjunc
 **Word selection and attribution.** Which words to include was chosen using the SUBTLEX-NL frequency list (Keuleers, Brysbaert & New, 2010, *Behavior Research Methods*; CC BY-NC-SA 4.0). It was used only to pick and order words. None of its data is in this repository.
 
 **Review status.** All entries, translations and sentences were written by Claude and checked by the validator, not by a Dutch speaker. `content/review-notes.md` lists the items Claude was least sure of, for a native-speaker pass.
+
+### Decks per language pair
+
+Every request about the deck (`GET /deck`, `/study`, `/study/counts`, `/stats` and `POST /deck/mirrors`) takes an optional `pair`, such as `pair=en-nl`, which covers both directions of the pair and can be narrowed to one direction with `fromLanguage` and `toLanguage`. Without it a request covers every deck as one. The web app always sends the pair being learned, from `useActiveLanguages` (`apps/web/src/hooks/useActiveLanguages.tsx`), which is also where a language switcher would change it: the direction is an account setting (`direction` in `GET`/`PATCH /settings`, and on the user in `/auth/me`, English to Dutch until chosen), so it is the same on every device and arrives with the signed-in user, every query about the deck includes the pair in its cache key, remembered filters are kept for each pair, and the page behind the top bar starts afresh when the direction changes. Nothing changes the direction yet.
+
+### Adding a language
+
+English and Dutch are not hardcoded in the app's logic; the places that name them are all in one of these:
+
+1. **`packages/shared/src/languages.ts`** is the list of supported languages, the languages every word must have (`REQUIRED_LANGUAGES`), and the direction the Add words pages show (`ADD_WORDS_DIRECTION`). Add the code and name there. Input validation, the `seed-languages` command and the Add words pages all follow it. Make a new language optional in the content (leave it out of `REQUIRED_LANGUAGES`), so the existing words stay valid.
+2. **Run `seed-languages`** on each database (see the deploy runbook). It only inserts the languages that are missing.
+3. **Flag (optional):** add it to `FLAGS` in `apps/web/src/components/LanguageFlag.tsx`. Without one, the language code is shown in a small box.
+4. **Word forms (optional):** `LANGUAGE_FORMS` in `packages/shared/src/forms.ts` says which verb forms the language has and how they are shown on a card. Without an entry, only noun plurals are shown.
+5. **Content checks (optional):** `LANGUAGE_RULES` in `apps/api/src/content/content-schema.ts` holds checks specific to a language (the Dutch article, which regular verb forms are not stored). Without an entry, only the checks that apply to every language run.
+6. **Content:** add entries for the language in `content/languages/<code>/` (see Content above). A word becomes a card in a direction when both of its languages have an entry for it, so a new language grows by adding entries, not by changing anything else. Packs of topics work for any language as its entries arrive; give a pack a `language` only when it is built for one (a frequency list, that language's grammar words), as the Dutch frequency bands, grammar packs and Dutch culture pack are. A learner is shown a pack with no `language`, or one for either language of their direction.
+
+What stays English on purpose: the app's own text, and `Intl` formatting of dates (`apps/web/src/lib/relativeTime.ts`), which follow the interface language, not the languages being learned. The dev-only sample data in `apps/api/src/db/seed.ts` and the content files are English and Dutch because that is the content.
 
 ## Deployment
 

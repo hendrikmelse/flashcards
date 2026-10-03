@@ -1,12 +1,13 @@
 import { and, asc, count, eq, exists, gte, inArray, lte, max, or, sql } from "drizzle-orm";
 import { alias } from "drizzle-orm/pg-core";
-import { EARLY_START_WINDOW_MS, SESSION_GAP_MS, type EntryView } from "@flashcards/shared";
+import { EARLY_START_WINDOW_MS, SESSION_GAP_MS, type EntryView, type Scope } from "@flashcards/shared";
 import { loadEntries, loadSentences, sentenceKey } from "../content/queries.js";
 import { reviewLogs, userCards, users } from "../db/schema.js";
 import type { Db } from "../db/types.js";
 import type { Scheduler } from "../srs/engine.js";
 import { endOfTomorrow, studyDayStart } from "./day.js";
 import { interleaveNew } from "./order.js";
+import { inPair, inScope, pairOf } from "./scope.js";
 
 // Learning cards due within this window are offered now, so a card rated
 // "Again" can come back during the same session.
@@ -34,13 +35,19 @@ export interface StudyBatch {
   cards: StudyCard[];
 }
 
-type Options = { limit: number; fromLanguage?: string; toLanguage?: string; early?: boolean };
+// What to study: a scope (a language pair, or one direction of it; with neither, every deck) and
+// how many cards at most.
+type Options = Scope & { limit: number; early?: boolean };
 
 // The conditions that define what is studyable now, and how many of each kind.
 //
+// Each language pair is a deck of its own: its session gap and its daily new-card limit are
+// worked out from that pair's reviews only, so studying one pair never holds back or uses up
+// another. (Asking about no pair at all covers every deck as one.)
+//
 // Sessions are separated by SESSION_GAP_MS: after the last answer, cards still in
 // (re)learning are held back until the gap has passed, so they cannot trickle back
-// into the session that just ended. (The clock is the user's latest review, which is
+// into the session that just ended. (The clock is the deck's latest review, which is
 // when their session ended.) Reviews that are due and new cards are not held back.
 // With `early`, in the last EARLY_START_WINDOW_MS of the wait, the next session
 // starts now and offers what would be ready when the wait ends.
@@ -48,21 +55,22 @@ async function prepare(db: Db, userId: string, opts: Omit<Options, "limit">, now
   const [user] = await db.select().from(users).where(eq(users.id, userId));
   if (!user) throw new Error("User not found");
 
+  // The reviews of this deck: those of cards in the pair (all of them when there is no pair).
+  const pair = pairOf(opts);
+  const deckReviews = and(eq(reviewLogs.userId, userId), pair ? inPair(userCards, pair) : undefined);
+
   const [last] = await db
     .select({ at: max(reviewLogs.reviewedAt) })
     .from(reviewLogs)
-    .where(eq(reviewLogs.userId, userId));
+    .innerJoin(userCards, eq(userCards.id, reviewLogs.userCardId))
+    .where(deckReviews);
   const gateAt = last?.at ? new Date(last.at.getTime() + SESSION_GAP_MS) : null;
   const gated = gateAt !== null && now < gateAt;
   const early = gated && !!opts.early && gateAt.getTime() - now.getTime() <= EARLY_START_WINDOW_MS;
   // What counts as due is judged at the end of the wait when starting early.
   const asOf = early ? gateAt! : now;
 
-  const mine = and(
-    eq(userCards.userId, userId),
-    opts.fromLanguage ? eq(userCards.fromLanguage, opts.fromLanguage) : undefined,
-    opts.toLanguage ? eq(userCards.toLanguage, opts.toLanguage) : undefined,
-  );
+  const mine = and(eq(userCards.userId, userId), inScope(userCards, opts));
   const learningDue = and(
     mine,
     inArray(userCards.state, ["learning", "relearning"]),
@@ -72,16 +80,17 @@ async function prepare(db: Db, userId: string, opts: Omit<Options, "limit">, now
   const reviewDue = and(mine, eq(userCards.state, "review"), lte(userCards.dueAt, asOf));
   const isNew = and(mine, eq(userCards.state, "new"));
 
-  // The daily new-card limit is global, not per direction: it counts the cards the user
-  // saw for the first time since the study day began and had to learn. A new card marked
+  // The daily new-card limit is per language pair, not per direction: it counts the cards the
+  // user saw for the first time in the pair since the study day began and had to learn. A new card marked
   // Good or Easy on that first look is a word they already know, so it is free: only Again
   // and Hard count. (It is the first answer that decides; later ones are not first looks.)
   const [{ n: introducedToday } = { n: 0 }] = await db
     .select({ n: count() })
     .from(reviewLogs)
+    .innerJoin(userCards, eq(userCards.id, reviewLogs.userCardId))
     .where(
       and(
-        eq(reviewLogs.userId, userId),
+        deckReviews,
         eq(reviewLogs.stateBefore, "new"),
         inArray(reviewLogs.rating, ["again", "hard"]),
         gte(reviewLogs.reviewedAt, studyDayStart(now, user.timezone)),

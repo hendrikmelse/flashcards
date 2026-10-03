@@ -36,7 +36,7 @@ const lastList = () => mock.calls.filter((c) => c.startsWith("GET /deck?limit=50
 beforeEach(() => {
   installMockApi();
   mock.loggedIn = true;
-  localStorage.removeItem("dashboardDirection");
+  localStorage.removeItem("dashboardDirection:en-nl");
   mock.handlers["GET /deck"] = () =>
     json(200, {
       summary,
@@ -447,9 +447,9 @@ describe("deck page", () => {
     });
 
     it("starts clean when what was remembered is no longer valid", async () => {
-      sessionStorage.setItem("remembered:deck:stage", JSON.stringify("archived"));
-      sessionStorage.setItem("remembered:deck:sort", JSON.stringify("sparkle"));
-      sessionStorage.setItem("remembered:deck:missingOnly", JSON.stringify("yes"));
+      sessionStorage.setItem("remembered:en-nl:deck:stage", JSON.stringify("archived"));
+      sessionStorage.setItem("remembered:en-nl:deck:sort", JSON.stringify("sparkle"));
+      sessionStorage.setItem("remembered:en-nl:deck:missingOnly", JSON.stringify("yes"));
       renderApp("/deck");
       expect(await screen.findByRole("button", { name: /^All/ })).toHaveAttribute("aria-pressed", "true");
       expect(screen.getByRole("combobox", { name: "Sort by" })).toHaveValue("added");
@@ -575,7 +575,7 @@ describe("deck page", () => {
 
       await user.click(await screen.findByRole("button", { name: "Add reverse for all 2 cards in this view" }));
       expect(await screen.findByText("Added 2 reverse cards.")).toBeInTheDocument();
-      expect(body).toEqual({ state: "review", q: "hu" });
+      expect(body).toEqual({ state: "review", q: "hu", pair: "en-nl" });
     });
 
     it("says it plainly for a single card, and hides the button when there is nothing to add", async () => {

@@ -2,6 +2,7 @@ import { createHash, randomBytes } from "node:crypto";
 import { and, eq, gt, lt, ne } from "drizzle-orm";
 import type { Db } from "../db/types.js";
 import { sessions, users } from "../db/schema.js";
+import { publicUserColumns, toPublicUser } from "./public-user.js";
 
 export const SESSION_COOKIE = "session";
 export const SESSION_TTL_MS = 30 * 24 * 60 * 60 * 1000;
@@ -18,13 +19,13 @@ export async function createSession(db: Db, userId: string) {
 
 export async function getSessionUser(db: Db, token: string) {
   const [row] = await db
-    .select({ id: users.id, email: users.email, name: users.name })
+    .select(publicUserColumns)
     .from(sessions)
     .innerJoin(users, eq(users.id, sessions.userId))
     .where(
       and(eq(sessions.id, hashToken(token)), gt(sessions.expiresAt, new Date())),
     );
-  return row ?? null;
+  return row ? toPublicUser(row) : null;
 }
 
 /** Signs the user out everywhere except the session with this token. */
