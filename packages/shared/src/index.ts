@@ -38,9 +38,14 @@ export function isValidTimeZone(tz: string): boolean {
   }
 }
 
+/** The longest name a user can give. */
+export const NAME_MAX = 60;
+
 export const registerSchema = z.object({
   email: z.string().trim().toLowerCase().email().max(254),
   password: z.string().min(8).max(200),
+  // Optional. Shown in place of the email once given; empty counts as not given.
+  name: z.string().trim().max(NAME_MAX).optional(),
   // The browser's time zone, so the study day is right from the start. An unknown
   // value is ignored (the account keeps the default) rather than blocking sign-up.
   timezone: z.string().max(64).optional(),
@@ -53,23 +58,27 @@ export const loginSchema = z.object({
 });
 export type LoginInput = z.infer<typeof loginSchema>;
 
-export type PublicUser = { id: string; email: string };
+export type PublicUser = { id: string; email: string; name: string | null };
 
 /** The most new cards a day a user can ask for. */
 export const DAILY_NEW_CARD_MAX = 200;
 
 export const updateSettingsSchema = z
   .object({
+    // An empty name clears it.
+    name: z.string().trim().max(NAME_MAX).optional(),
     timezone: z.string().max(64).refine(isValidTimeZone, "Unknown time zone").optional(),
     dailyNewCardLimit: z.number().int().min(0).max(DAILY_NEW_CARD_MAX).optional(),
   })
-  .refine((v) => v.timezone !== undefined || v.dailyNewCardLimit !== undefined, {
+  .refine((v) => v.name !== undefined || v.timezone !== undefined || v.dailyNewCardLimit !== undefined, {
     message: "Provide a setting to change",
   });
 export type UpdateSettingsInput = z.infer<typeof updateSettingsSchema>;
 
 export type Settings = {
   email: string;
+  /** What to call the user; null when they have not given one. */
+  name: string | null;
   /** IANA name; the study day starts at 04:00 here. */
   timezone: string;
   /** New cards introduced per study day, across all decks. */

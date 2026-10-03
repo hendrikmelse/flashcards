@@ -16,6 +16,8 @@ let cookies: { session: string };
 let userId: string;
 let conceptIds: string[];
 
+// Sign-ups are rate limited to 10 a minute, and this file makes exactly 10: add tests that
+// register more users to a new file (or reuse an account) rather than here.
 const register = async (email: string, extra: Record<string, unknown> = {}) => {
   const res = await app.inject({
     method: "POST",
@@ -55,12 +57,46 @@ describe("GET /settings", () => {
     expect((await app.inject({ method: "PATCH", url: "/settings", payload: { dailyNewCardLimit: 5 } })).statusCode).toBe(401);
   });
 
-  it("returns the account's email, time zone and daily limit", async () => {
+  it("returns the account's email, name, time zone and daily limit", async () => {
     expect((await get()).json()).toEqual({
       email: "settings@example.com",
+      name: null,
       timezone: "UTC",
       dailyNewCardLimit: 20,
     });
+  });
+});
+
+describe("PATCH /settings: name", () => {
+  const me = async () =>
+    (await app.inject({ method: "GET", url: "/auth/me", cookies })).json().user as { name: string | null };
+
+  it("sets the name, trimmed, and the top-bar user follows", async () => {
+    const res = await patch({ name: "  Anna de Vries " });
+    expect(res.statusCode).toBe(200);
+    expect(res.json().name).toBe("Anna de Vries");
+    expect((await get()).json().name).toBe("Anna de Vries");
+    expect((await me()).name).toBe("Anna de Vries");
+  });
+
+  it("changes only the name, leaving the other settings alone", async () => {
+    await patch({ dailyNewCardLimit: 7, timezone: "Europe/Amsterdam" });
+    const res = await patch({ name: "Anna" });
+    expect(res.json()).toMatchObject({ name: "Anna", dailyNewCardLimit: 7, timezone: "Europe/Amsterdam" });
+    await patch({ dailyNewCardLimit: 20, timezone: "UTC" });
+  });
+
+  it("clears the name with an empty or blank value", async () => {
+    await patch({ name: "Anna" });
+    expect((await patch({ name: "   " })).json().name).toBeNull();
+    expect((await me()).name).toBeNull();
+  });
+
+  it("rejects a name that is too long, or not text", async () => {
+    expect((await patch({ name: "x".repeat(61) })).statusCode).toBe(400);
+    expect((await patch({ name: "x".repeat(60) })).statusCode).toBe(200);
+    expect((await patch({ name: 42 })).statusCode).toBe(400);
+    await patch({ name: "" });
   });
 });
 
@@ -155,6 +191,46 @@ describe("PATCH /settings: time zone", () => {
     const theirs = (await db.select().from(userCards).where(eq(userCards.userId, other.id)))[0]!;
     expect(theirs.dueAt.toISOString()).toBe("2026-03-12T04:00:00.000Z");
     await patch({ timezone: "UTC" });
+  });
+});
+
+describe("registering with a name", () => {
+  const nameOf = async (id: string) =>
+    (await db.select({ name: users.name }).from(users).where(eq(users.id, id)))[0]!.name;
+
+  it("keeps the name, and returns it with the new account", async () => {
+    const res = await app.inject({
+      method: "POST",
+      url: "/auth/register",
+      payload: { email: "named@example.com", password: "correct horse battery", name: "  Jan  " },
+    });
+    expect(res.statusCode).toBe(201);
+    expect(res.json().user).toMatchObject({ email: "named@example.com", name: "Jan" });
+    expect(await nameOf(res.json().user.id)).toBe("Jan");
+
+    // And again when logging in, and when asking who is signed in.
+    const login = await app.inject({
+      method: "POST",
+      url: "/auth/login",
+      payload: { email: "named@example.com", password: "correct horse battery" },
+    });
+    expect(login.json().user.name).toBe("Jan");
+    const session = { session: login.cookies.find((c) => c.name === "session")!.value };
+    const who = await app.inject({ method: "GET", url: "/auth/me", cookies: session });
+    expect(who.json().user.name).toBe("Jan");
+  });
+
+  it("is optional: nothing, an empty name and a blank one all mean no name", async () => {
+    for (const [i, extra] of [{}, { name: "" }, { name: "   " }].entries()) {
+      const r = await register(`unnamed-${i}@example.com`, extra);
+      expect(r.status).toBe(201);
+      expect(await nameOf(r.id)).toBeNull();
+    }
+  });
+
+  it("refuses a name that is too long", async () => {
+    const r = await register("longname@example.com", { name: "x".repeat(61) });
+    expect(r.status).toBe(400);
   });
 });
 

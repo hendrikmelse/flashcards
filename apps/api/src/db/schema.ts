@@ -29,6 +29,8 @@ export const ratingEnum = pgEnum("rating", ["again", "hard", "good", "easy"]);
 export const users = pgTable("users", {
   id: uuid().primaryKey().defaultRandom(),
   email: text().notNull().unique(),
+  // Optional display name; the app shows the email when there is none.
+  name: text(),
   passwordHash: text().notNull(),
   timezone: text().notNull().default("UTC"),
   dailyNewCardLimit: integer().notNull().default(20),

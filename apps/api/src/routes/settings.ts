@@ -8,7 +8,12 @@ import { DAY_ROLLOVER_HOUR } from "../study/day.js";
 export async function settingsRoutes(app: FastifyInstance, { db }: { db: Db }) {
   const read = async (userId: string): Promise<Settings> => {
     const [u] = await db
-      .select({ email: users.email, timezone: users.timezone, dailyNewCardLimit: users.dailyNewCardLimit })
+      .select({
+        email: users.email,
+        name: users.name,
+        timezone: users.timezone,
+        dailyNewCardLimit: users.dailyNewCardLimit,
+      })
       .from(users)
       .where(eq(users.id, userId));
     if (!u) throw new Error("User not found");
@@ -17,7 +22,7 @@ export async function settingsRoutes(app: FastifyInstance, { db }: { db: Db }) {
 
   app.get("/settings", { preHandler: app.requireAuth }, async (req) => read(req.user!.id));
 
-  // Changes the daily new-card limit and/or the time zone. A new time zone moves the study
+  // Changes the name, the daily new-card limit and/or the time zone. A new time zone moves the study
   // day, so review cards (which come due at the start of a study day) are moved to the start
   // of the same calendar day in the new zone rather than left at the old zone's 04:00.
   app.patch("/settings", { preHandler: app.requireAuth }, async (req, reply) => {
@@ -26,13 +31,14 @@ export async function settingsRoutes(app: FastifyInstance, { db }: { db: Db }) {
       return reply.code(400).send({ error: "Invalid input", issues: parsed.error.issues });
     }
     const userId = req.user!.id;
-    const { timezone, dailyNewCardLimit } = parsed.data;
+    const { name, timezone, dailyNewCardLimit } = parsed.data;
 
     await db.transaction(async (tx) => {
       const [current] = await tx.select({ timezone: users.timezone }).from(users).where(eq(users.id, userId));
       await tx
         .update(users)
         .set({
+          ...(name !== undefined ? { name: name || null } : {}),
           ...(timezone !== undefined ? { timezone } : {}),
           ...(dailyNewCardLimit !== undefined ? { dailyNewCardLimit } : {}),
         })

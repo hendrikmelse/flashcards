@@ -18,7 +18,7 @@ export async function createSession(db: Db, userId: string) {
 
 export async function getSessionUser(db: Db, token: string) {
   const [row] = await db
-    .select({ id: users.id, email: users.email })
+    .select({ id: users.id, email: users.email, name: users.name })
     .from(sessions)
     .innerJoin(users, eq(users.id, sessions.userId))
     .where(

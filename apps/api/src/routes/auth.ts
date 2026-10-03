@@ -36,7 +36,7 @@ export async function authRoutes(
   app.post("/auth/register", limit, async (req, reply) => {
     const parsed = registerSchema.safeParse(req.body);
     if (!parsed.success) return invalid(reply, parsed.error.issues);
-    const { email, password, timezone } = parsed.data;
+    const { email, password, timezone, name } = parsed.data;
     if (!mayRegister(registration, email)) {
       return reply.code(403).send({ error: "Registration is closed" });
     }
@@ -46,12 +46,13 @@ export async function authRoutes(
       .insert(users)
       .values({
         email,
+        name: name || null,
         passwordHash,
         // Without a (valid) time zone from the browser the account stays on the default.
         ...(timezone && isValidTimeZone(timezone) ? { timezone } : {}),
       })
       .onConflictDoNothing({ target: users.email })
-      .returning({ id: users.id, email: users.email });
+      .returning({ id: users.id, email: users.email, name: users.name });
     if (!user) return reply.code(409).send({ error: "Email already registered" });
 
     await startSession(reply, user.id);
@@ -70,7 +71,7 @@ export async function authRoutes(
     }
 
     await startSession(reply, user.id);
-    return { user: { id: user.id, email: user.email } };
+    return { user: { id: user.id, email: user.email, name: user.name } };
   });
 
   app.post("/auth/logout", async (req, reply) => {
