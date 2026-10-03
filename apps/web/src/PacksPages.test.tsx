@@ -155,6 +155,100 @@ describe("pack list", () => {
   });
 });
 
+describe("pack categories", () => {
+  const pack = (id: string, name: string, category: string, extra: Record<string, unknown> = {}) => ({
+    id,
+    slug: id,
+    name,
+    description: null,
+    category,
+    conceptCount: 10,
+    availableCount: 10,
+    addedCount: 0,
+    ...extra,
+  });
+  const packs = [
+    pack("b2", "Dutch words 501–1000", "common"),
+    pack("b3", "Dutch words 1001–1500", "common"),
+    pack("b1", "Dutch words 1–500", "common"),
+    pack("g1", "Prepositions", "grammar"),
+    pack("v1", "Verbs: movement", "verbs"),
+    pack("t1", "Food: the basics", "topic"),
+    pack("t2", "Weather", "topic", { description: "Rain, sun and snow" }),
+  ];
+  const names = () => screen.getAllByRole("heading", { level: 2 }).map((h) => h.textContent);
+
+  beforeEach(() => {
+    mock.handlers[`GET /packs?${EN_NL}`] = () => json(200, { packs });
+  });
+
+  it("offers each category with its pack count, and All", async () => {
+    renderApp("/packs");
+    const group = await screen.findByRole("group", { name: "Category" });
+    const labels = within(group).getAllByRole("button").map((b) => b.textContent);
+    expect(labels).toEqual(["All7", "Most common words3", "Topics2", "Verbs1", "Grammar words1"]);
+    expect(within(group).getByRole("button", { name: /^All/ })).toHaveAttribute("aria-pressed", "true");
+  });
+
+  it("shows only the chosen category, and all packs again on All", async () => {
+    const user = userEvent.setup();
+    renderApp("/packs");
+    await user.click(await screen.findByRole("button", { name: /^Topics/ }));
+    expect(names()).toEqual(["Food: the basics", "Weather"]);
+    expect(screen.getByRole("button", { name: /^Topics/ })).toHaveAttribute("aria-pressed", "true");
+
+    await user.click(screen.getByRole("button", { name: /^Grammar words/ }));
+    expect(names()).toEqual(["Prepositions"]);
+
+    await user.click(screen.getByRole("button", { name: /^All/ }));
+    expect(names()).toHaveLength(7);
+  });
+
+  it("lists the frequency packs in number order, not letter order", async () => {
+    const user = userEvent.setup();
+    renderApp("/packs");
+    await user.click(await screen.findByRole("button", { name: /^Most common words/ }));
+    expect(names()).toEqual(["Dutch words 1–500", "Dutch words 501–1000", "Dutch words 1001–1500"]);
+  });
+
+  it("combines the category with the search box", async () => {
+    const user = userEvent.setup();
+    renderApp("/packs");
+    await user.click(await screen.findByRole("button", { name: /^Topics/ }));
+    await user.type(screen.getByRole("searchbox", { name: "Search packs" }), "rain");
+    expect(names()).toEqual(["Weather"]);
+
+    await user.clear(screen.getByRole("searchbox", { name: "Search packs" }));
+    await user.type(screen.getByRole("searchbox", { name: "Search packs" }), "verbs");
+    expect(screen.getByText(/No packs match “verbs”/)).toBeInTheDocument(); // a verbs pack, but not a topic
+  });
+
+  it("says so when everything in the category is already in the deck and hidden", async () => {
+    mock.handlers[`GET /packs?${EN_NL}`] = () =>
+      json(200, { packs: packs.map((p) => (p.category === "verbs" ? { ...p, addedCount: 10 } : p)) });
+    const user = userEvent.setup();
+    renderApp("/packs");
+    await user.click(await screen.findByRole("button", { name: /^Verbs/ }));
+    await user.click(screen.getByRole("button", { name: "Hide already added results" }));
+    expect(screen.getByText("Every pack here is already in your deck.")).toBeInTheDocument();
+  });
+
+  it("does not offer the filter when every pack is in one category", async () => {
+    mock.handlers[`GET /packs?${EN_NL}`] = () => json(200, { packs: packs.filter((p) => p.category === "topic") });
+    renderApp("/packs");
+    await screen.findByRole("link", { name: "Weather" });
+    expect(screen.queryByRole("group", { name: "Category" })).not.toBeInTheDocument();
+  });
+
+  it("is only for packs: the word search has no category filter", async () => {
+    const user = userEvent.setup();
+    renderApp("/packs");
+    await screen.findByRole("group", { name: "Category" });
+    await user.click(screen.getByRole("button", { name: "Words" }));
+    expect(screen.queryByRole("group", { name: "Category" })).not.toBeInTheDocument();
+  });
+});
+
 describe("word search", () => {
   const word = (id: string, en: string, nl: string, inDeckNow = false) => ({
     conceptId: id,

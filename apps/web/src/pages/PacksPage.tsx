@@ -1,6 +1,12 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router";
-import type { ConceptSearchResult, LanguageInfo } from "@flashcards/shared";
+import {
+  PACK_CATEGORIES,
+  PACK_CATEGORY_LABELS,
+  type ConceptSearchResult,
+  type LanguageInfo,
+  type PackCategory,
+} from "@flashcards/shared";
 import { useAddConcept, useConceptSearch, useLanguages, usePacks } from "../api/packs";
 import { ConceptRow } from "../components/ConceptRow";
 import { DirectionPicker } from "../components/DirectionPicker";
@@ -18,11 +24,20 @@ export function PacksPage() {
 
 type Mode = "packs" | "words";
 
+type CategoryFilter = PackCategory | "all";
+
 function PackList({ languages }: { languages: LanguageInfo[] }) {
   const { direction, setDirection } = useDirection(languages);
+  const packs = usePacks(direction);
   const [mode, setMode] = useState<Mode>("packs");
   const [query, setQuery] = useState("");
   const [hideInDeck, setHideInDeck] = useState(false);
+  const [category, setCategory] = useState<CategoryFilter>("all");
+
+  // How many packs each category has, so empty categories are not offered.
+  const perCategory = new Map<PackCategory, number>();
+  for (const p of packs.data ?? []) perCategory.set(p.category, (perCategory.get(p.category) ?? 0) + 1);
+  const categories = PACK_CATEGORIES.filter((c) => perCategory.has(c));
 
   return (
     <>
@@ -52,9 +67,24 @@ function PackList({ languages }: { languages: LanguageInfo[] }) {
           </button>
         </div>
       </div>
+      {mode === "packs" && categories.length > 1 && (
+        <div className="search-options">
+          <div className="toggle" role="group" aria-label="Category">
+            <button type="button" aria-pressed={category === "all"} onClick={() => setCategory("all")}>
+              All<span className="count">{packs.data?.length ?? 0}</span>
+            </button>
+            {categories.map((c) => (
+              <button key={c} type="button" aria-pressed={category === c} onClick={() => setCategory(c)}>
+                {PACK_CATEGORY_LABELS[c]}
+                <span className="count">{perCategory.get(c)}</span>
+              </button>
+            ))}
+          </div>
+        </div>
+      )}
 
       {mode === "packs" ? (
-        <PackResults languages={languages} query={query} hideInDeck={hideInDeck} />
+        <PackResults languages={languages} packs={packs} category={category} query={query} hideInDeck={hideInDeck} />
       ) : (
         <WordResults languages={languages} query={query} hideInDeck={hideInDeck} />
       )}
@@ -64,15 +94,25 @@ function PackList({ languages }: { languages: LanguageInfo[] }) {
 
 type ResultProps = { languages: LanguageInfo[]; query: string; hideInDeck: boolean };
 
-function PackResults({ languages, query, hideInDeck }: ResultProps) {
-  const { direction, search } = useDirection(languages);
-  const packs = usePacks(direction);
+// Sorts "Dutch words 501–1000" before "Dutch words 1001–1500": numbers by value, not letter by letter.
+const byName = new Intl.Collator(undefined, { numeric: true, sensitivity: "base" });
+
+function PackResults({
+  languages,
+  packs,
+  category,
+  query,
+  hideInDeck,
+}: ResultProps & { packs: ReturnType<typeof usePacks>; category: CategoryFilter }) {
+  const { search } = useDirection(languages);
 
   const words = query.toLowerCase().split(/\s+/).filter(Boolean);
   // Packs whose name matches come first; the rest only match through the description.
-  // The API returns packs by name, and the sort is stable, so each group stays alphabetical.
-  const shown = packs.data
-    ?.map((pack) => {
+  // They start in name order (the sort is stable), so each group stays in that order.
+  const shown = [...(packs.data ?? [])]
+    .sort((a, b) => byName.compare(a.name, b.name))
+    .filter((pack) => category === "all" || pack.category === category)
+    .map((pack) => {
       const name = pack.name.toLowerCase();
       const text = `${name} ${(pack.description ?? "").toLowerCase()}`;
       return {
@@ -91,14 +131,18 @@ function PackResults({ languages, query, hideInDeck }: ResultProps) {
       {packs.isPending && <p className="status">Loading…</p>}
       {packs.isError && <p className="status error">Could not load packs. Please refresh.</p>}
       {packs.data?.length === 0 && <p className="empty">There are no packs yet.</p>}
-      {packs.data && packs.data.length > 0 && shown?.length === 0 && (
+      {packs.data && packs.data.length > 0 && shown.length === 0 && (
         <p className="empty">
-          {words.length > 0 ? `No packs match “${query.trim()}”.` : "Every pack is already in your deck."}
+          {words.length > 0
+            ? `No packs match “${query.trim()}”.`
+            : hideInDeck
+              ? "Every pack here is already in your deck."
+              : "There are no packs in this category."}
         </p>
       )}
 
       <ul className="pack-list">
-        {shown?.map((pack) => {
+        {shown.map((pack) => {
           const available = pack.availableCount ?? 0;
           const added = pack.addedCount ?? 0;
           return (
