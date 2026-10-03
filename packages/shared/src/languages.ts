@@ -35,6 +35,13 @@ export const LANGUAGES: readonly { code: LanguageCode; name: string }[] = LANGUA
 export const REQUIRED_LANGUAGES: readonly LanguageCode[] = ["en", "nl"];
 
 /**
+ * The language pack names and descriptions are written in, in the pack files. A pack can also have
+ * them in other languages (in the language files), which learners reading that language get
+ * instead; everyone else gets these.
+ */
+export const PACK_TEXT_LANGUAGE: LanguageCode = "en";
+
+/**
  * The direction the Add words pages show words in, prompt language first. Words are added in this
  * direction and its opposite.
  */

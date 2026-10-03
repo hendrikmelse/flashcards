@@ -15,9 +15,9 @@ import {
 } from "../src/content/content-schema.js";
 import { importContent } from "../src/content/import.js";
 import { loadContent } from "../src/content/load.js";
-import { mergeLanguageFiles, validateContent, type LanguageSource } from "../src/content/validate.js";
+import { collectPackTexts, mergeLanguageFiles, validateContent, type LanguageSource } from "../src/content/validate.js";
 import * as schema from "../src/db/schema.js";
-import { concepts, entries, languages, packs, sentences, userCards, users } from "../src/db/schema.js";
+import { concepts, entries, languages, packTexts, packs, sentences, userCards, users } from "../src/db/schema.js";
 import { seedLanguages } from "../src/db/seed.js";
 
 // A third language, which the app does not support yet: these tests give the checks a list that has it.
@@ -169,7 +169,7 @@ describe("language files: loading from disk", () => {
     write("languages/fr/b.json", { language: "fr", concepts: [] });
     const { errors } = loadContent(dir, WITH_FRENCH);
     expect(errors.some((e) => e.startsWith("languages/fr/a.json:"))).toBe(true);
-    expect(errors.some((e) => e.startsWith("languages/fr/b.json: concepts"))).toBe(true);
+    expect(errors.some((e) => e.startsWith("languages/fr/b.json:") && e.includes("neither concepts nor packs"))).toBe(true);
   });
 
   it("reports a language the app does not support", () => {
@@ -234,18 +234,148 @@ describe("language files: importing", () => {
     expect((await lemmas()).filter((l) => l.startsWith("fr:"))).toEqual(["fr:chien"]);
   });
 
-  it("stores the language a pack was built for, and updates it on a later import", async () => {
-    const tagged = (language?: string) => [
-      packFileSchema.parse({ slug: "p", name: "p", category: "topic", concepts: ["dog"], ...(language ? { language } : {}) }),
+  it("stores the language a pack teaches, and updates it on a later import", async () => {
+    const tagged = (target?: string) => [
+      packFileSchema.parse({ slug: "p", name: "p", category: "topic", concepts: ["dog"], ...(target ? { target } : {}) }),
     ];
-    const language = async () => (await db.select().from(packs))[0]!.language;
+    const target = async () => (await db.select().from(packs))[0]!.target;
     await importContent(db, { concepts: merged(), packs: tagged("nl") });
-    expect(await language()).toBe("nl");
+    expect(await target()).toBe("nl");
     await importContent(db, { concepts: merged(), packs: tagged() });
-    expect(await language()).toBeNull();
+    expect(await target()).toBeNull();
   });
 
   it("does not accept a pack for a language that is not supported", () => {
-    expect(packFileSchema.safeParse({ slug: "p", name: "p", category: "topic", language: "xx", concepts: ["dog"] }).success).toBe(false);
+    expect(packFileSchema.safeParse({ slug: "p", name: "p", category: "topic", target: "xx", concepts: ["dog"] }).success).toBe(false);
+  });
+});
+
+// ---- pack names and descriptions in other languages
+
+const packTextFile = (language: string, ...packs: { slug: string; name: string; description?: string }[]): LanguageFile =>
+  languageFileSchema.parse({ language, packs });
+
+describe("language files: pack names and descriptions", () => {
+  // Two packs, p0 and p1.
+  const check = (langFiles: LanguageSource[]) =>
+    validateContent(conceptFiles(dog, house), packFiles(["dog"], ["house"]), langFiles, WITH_FRENCH);
+
+  it("accepts a language's text for packs that exist, with or without a description", () => {
+    const file = packTextFile("fr", { slug: "p0", name: "Mots", description: "Des mots" }, { slug: "p1", name: "x" });
+    expect(check([source(file)]).errors).toEqual([]);
+  });
+
+  it("can hold concepts, packs or both, but not nothing", () => {
+    expect(languageFileSchema.safeParse({ language: "fr" }).success).toBe(false);
+    expect(languageFileSchema.safeParse({ language: "fr", concepts: [], packs: [] }).success).toBe(false);
+    expect(languageFileSchema.safeParse({ language: "fr", packs: [{ slug: "p0", name: "Mots" }] }).success).toBe(true);
+  });
+
+  it("rejects text for a pack that does not exist", () => {
+    const { errors } = check([source(packTextFile("fr", { slug: "nope", name: "Mots" }))]);
+    expect(errors).toEqual([expect.stringContaining('unknown pack "nope"')]);
+  });
+
+  it("rejects two texts for the same pack and language", () => {
+    const { errors } = check([
+      source(packTextFile("fr", { slug: "p0", name: "Mots" }), "languages/fr/a.json"),
+      source(packTextFile("fr", { slug: "p0", name: "Autres mots" }), "languages/fr/b.json"),
+    ]);
+    expect(errors).toEqual([expect.stringContaining('pack "p0" already has fr text in languages/fr/a.json')]);
+  });
+
+  it("rejects text in the language the pack files are written in", () => {
+    const english = packTextFile("en", { slug: "p0", name: "Words" });
+    const { errors } = check([source(english, "languages/en/a.json", "en")]);
+    expect(errors).toEqual([expect.stringContaining("belong in the pack files")]);
+  });
+
+  it("collects the texts of all the files", () => {
+    const texts = collectPackTexts([
+      source(packTextFile("fr", { slug: "p0", name: "Mots", description: "Des mots" })),
+      source(packTextFile("nl", { slug: "p0", name: "Woorden" }), "languages/nl/a.json", "nl"),
+    ]);
+    expect(texts).toEqual([
+      { slug: "p0", language: "fr", name: "Mots", description: "Des mots" },
+      { slug: "p0", language: "nl", name: "Woorden", description: undefined },
+    ]);
+  });
+});
+
+describe("language files: pack texts on disk and in the database", () => {
+  let dir: string;
+  const write = (path: string, data: unknown) => {
+    mkdirSync(join(dir, path, ".."), { recursive: true });
+    writeFileSync(join(dir, path), JSON.stringify(data));
+  };
+  beforeEach(() => {
+    dir = mkdtempSync(join(tmpdir(), "content-"));
+    write("concepts/a.json", { concepts: [dog, house] });
+    write("packs/p.json", { slug: "p", name: "Pack", description: "A pack", category: "topic", concepts: ["dog", "house"] });
+  });
+  afterAll(() => rmSync(dir, { recursive: true, force: true }));
+
+  it("loads the texts from a language folder, next to concepts in the same file", () => {
+    write("languages/fr/a.json", {
+      language: "fr",
+      packs: [{ slug: "p", name: "Paquet", description: "Un paquet" }],
+      concepts: fr({ key: "dog", lemma: "chien" }).concepts,
+    });
+    const loaded = loadContent(dir, WITH_FRENCH);
+    expect(loaded.errors).toEqual([]);
+    expect(loaded.packTexts).toEqual([{ slug: "p", language: "fr", name: "Paquet", description: "Un paquet" }]);
+    expect(Object.keys(loaded.concepts[0]!.entries).sort()).toEqual(["en", "fr", "nl"]);
+  });
+
+  it("has none when there is no languages folder", () => {
+    expect(loadContent(dir, WITH_FRENCH).packTexts).toEqual([]);
+  });
+
+  describe("importing", () => {
+    let pg: PGlite;
+    let db: ReturnType<typeof drizzle<typeof schema>>;
+    beforeAll(async () => {
+      pg = new PGlite();
+      db = drizzle(pg, { schema, casing: "snake_case" });
+      await migrate(db, { migrationsFolder: "./drizzle" });
+      await seedLanguages(db);
+      await db.insert(languages).values({ code: "fr", name: "Français" });
+    }, 60_000);
+    beforeEach(async () => {
+      await db.delete(packs);
+      await db.delete(concepts);
+    });
+    afterAll(async () => {
+      await pg.close();
+    });
+
+    const pack = [packFileSchema.parse({ slug: "p", name: "Pack", category: "topic", concepts: ["dog"] })];
+    const texts = async () =>
+      (await db.select().from(packTexts)).map((t) => `${t.language}:${t.name}:${t.description}`).sort();
+
+    it("stores the texts, rewrites them on a later import, and drops those no longer in the files", async () => {
+      const base = { concepts: [dog], packs: pack };
+      const summary = await importContent(db, {
+        ...base,
+        packTexts: [
+          { slug: "p", language: "fr", name: "Paquet", description: "Un paquet" },
+          { slug: "p", language: "nl", name: "Pakket" },
+        ],
+      });
+      expect(summary.packTexts).toBe(2);
+      expect(await texts()).toEqual(["fr:Paquet:Un paquet", "nl:Pakket:null"]);
+
+      await importContent(db, { ...base, packTexts: [{ slug: "p", language: "fr", name: "Lot", description: "Un lot" }] });
+      expect(await texts()).toEqual(["fr:Lot:Un lot"]);
+
+      await importContent(db, base);
+      expect(await texts()).toEqual([]);
+    });
+
+    it("goes with the pack when it is removed", async () => {
+      await importContent(db, { concepts: [dog], packs: pack, packTexts: [{ slug: "p", language: "fr", name: "Paquet" }] });
+      await db.delete(packs);
+      expect(await texts()).toEqual([]);
+    });
   });
 });

@@ -4,11 +4,13 @@ import {
   entries,
   entrySentences,
   packConcepts,
+  packTexts,
   packs,
   sentences,
 } from "../db/schema.js";
 import type { Db } from "../db/types.js";
 import type { Concept, PackFile } from "./content-schema.js";
+import type { PackText } from "./validate.js";
 
 export interface ImportSummary {
   concepts: number;
@@ -18,6 +20,8 @@ export interface ImportSummary {
   entries: number;
   sentences: number;
   packs: number;
+  // Names and descriptions of packs in other languages.
+  packTexts: number;
   // Present in the database but not in the files. Never deleted: user cards
   // point at concepts and would cascade away with them.
   conceptsNotInFiles: string[];
@@ -50,8 +54,9 @@ function chunks<T>(items: T[], size = CHUNK): T[][] {
 // per concept), because a full library is thousands of concepts.
 export async function importContent(
   db: Db,
-  content: { concepts: Concept[]; packs: PackFile[] },
+  content: { concepts: Concept[]; packs: PackFile[]; packTexts?: PackText[] },
 ): Promise<ImportSummary> {
+  const texts = content.packTexts ?? [];
   return db.transaction(async (tx) => {
     const summary: ImportSummary = {
       concepts: content.concepts.length,
@@ -60,6 +65,7 @@ export async function importContent(
       entries: 0,
       sentences: 0,
       packs: content.packs.length,
+      packTexts: texts.length,
       conceptsNotInFiles: [],
       packsNotInFiles: [],
     };
@@ -75,7 +81,7 @@ export async function importContent(
           name: pack.name,
           description: pack.description ?? null,
           category: pack.category,
-          language: pack.language ?? null,
+          target: pack.target ?? null,
         })
         .onConflictDoUpdate({
           target: packs.slug,
@@ -83,7 +89,7 @@ export async function importContent(
             name: pack.name,
             description: pack.description ?? null,
             category: pack.category,
-            language: pack.language ?? null,
+            target: pack.target ?? null,
           },
         })
         .returning({ id: packs.id });
@@ -96,6 +102,20 @@ export async function importContent(
       });
       for (const part of chunks(members)) await tx.insert(packConcepts).values(part);
     }
+
+    // The texts of the packs in the files, rewritten to exactly what the language files say.
+    const packIds = new Map(
+      (await tx.select({ id: packs.id, slug: packs.slug }).from(packs)).map((p) => [p.slug, p.id]),
+    );
+    for (const part of chunks([...packIds.values()])) {
+      await tx.delete(packTexts).where(inArray(packTexts.packId, part));
+    }
+    const rows = texts.map((t) => {
+      const packId = packIds.get(t.slug);
+      if (!packId) throw new Error(`pack text for unknown pack "${t.slug}"`);
+      return { packId, language: t.language, name: t.name, description: t.description ?? null };
+    });
+    for (const part of chunks(rows)) await tx.insert(packTexts).values(part);
 
     // Sentences that no entry uses any more.
     await tx.delete(sentences).where(

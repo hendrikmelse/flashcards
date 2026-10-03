@@ -1,2 +1,0 @@
-ALTER TABLE "packs" ADD COLUMN "language" text;--> statement-breakpoint
-ALTER TABLE "packs" ADD CONSTRAINT "packs_language_languages_code_fk" FOREIGN KEY ("language") REFERENCES "public"."languages"("code") ON DELETE no action ON UPDATE no action;

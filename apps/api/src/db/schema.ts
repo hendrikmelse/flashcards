@@ -148,11 +148,28 @@ export const packs = pgTable("packs", {
   description: text(),
   // One of PACK_CATEGORIES (see @flashcards/shared).
   category: text().notNull().default("topic"),
-  // The language the pack was built for (a frequency list, a language's grammar words), or null
-  // for a pack that suits any language. Learners of other languages are not shown it.
-  language: text().references(() => languages.code),
+  // The language the pack teaches (a frequency list, a language's grammar words), or null for a
+  // pack that suits any language. Only people learning that language are shown it.
+  target: text().references(() => languages.code),
   createdAt: timestamp({ withTimezone: true }).notNull().defaultNow(),
 });
+
+// A pack's name and description in other languages than the one in `packs` (PACK_TEXT_LANGUAGE),
+// for learners who read that language. A learner whose language has no row gets the `packs` text.
+export const packTexts = pgTable(
+  "pack_texts",
+  {
+    packId: uuid()
+      .notNull()
+      .references(() => packs.id, { onDelete: "cascade" }),
+    language: text()
+      .notNull()
+      .references(() => languages.code),
+    name: text().notNull(),
+    description: text(),
+  },
+  (t) => [primaryKey({ columns: [t.packId, t.language] })],
+);
 
 export const packConcepts = pgTable(
   "pack_concepts",

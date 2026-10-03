@@ -421,8 +421,8 @@ export type PackListItem = {
   name: string;
   description: string | null;
   category: PackCategory;
-  /** The language the pack was built for, or null if it suits any language. */
-  language: LanguageCode | null;
+  /** The language the pack teaches, or null if it suits any language. */
+  target: LanguageCode | null;
   conceptCount: number;
   /** Present when a direction was requested. */
   availableCount?: number;

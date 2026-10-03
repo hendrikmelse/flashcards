@@ -9,7 +9,7 @@ import { loadContent } from "../content/load.js";
 const dir = process.env["CONTENT_DIR"] ?? "../../content";
 const checkOnly = process.argv.includes("--check");
 
-const { concepts, packs, errors, warnings } = loadContent(dir);
+const { concepts, packs, packTexts, errors, warnings } = loadContent(dir);
 for (const w of warnings) console.warn(`warning: ${w}`);
 if (errors.length > 0) {
   for (const e of errors) console.error(`error: ${e}`);
@@ -22,10 +22,10 @@ if (!checkOnly) {
   // Loaded late so --check works without a database or DATABASE_URL.
   const { db, sql } = await import("./client.js");
   const { importContent } = await import("../content/import.js");
-  const s = await importContent(db, { concepts, packs });
+  const s = await importContent(db, { concepts, packs, packTexts });
   console.log(
     `imported ${s.concepts} concepts (${s.conceptsCreated} new, ${s.conceptsAdopted} adopted), ` +
-      `${s.entries} entries, ${s.sentences} sentences, ${s.packs} packs`,
+      `${s.entries} entries, ${s.sentences} sentences, ${s.packs} packs, ${s.packTexts} pack texts`,
   );
   if (s.conceptsNotInFiles.length > 0) {
     console.warn(

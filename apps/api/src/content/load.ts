@@ -8,16 +8,20 @@ import {
   type PackFile,
 } from "./content-schema.js";
 import {
+  collectPackTexts,
   mergeLanguageFiles,
   validateContent,
   type ConceptSource,
   type LanguageSource,
   type PackSource,
+  type PackText,
 } from "./validate.js";
 
 export interface LoadedContent {
   concepts: Concept[];
   packs: PackFile[];
+  /** Pack names and descriptions in languages other than the pack files'. */
+  packTexts: PackText[];
   errors: string[];
   warnings: string[];
 }
@@ -68,6 +72,7 @@ export function loadContent(dir: string, languages?: readonly string[]): LoadedC
   return {
     concepts: mergeLanguageFiles(conceptFiles, languageFiles),
     packs: packFiles.map((f) => f.pack),
+    packTexts: errors.length === 0 ? collectPackTexts(languageFiles) : [],
     errors: [...errors, ...cross.errors],
     warnings: cross.warnings,
   };

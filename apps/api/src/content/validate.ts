@@ -1,4 +1,4 @@
-import { LANGUAGE_CODES } from "@flashcards/shared";
+import { LANGUAGE_CODES, PACK_TEXT_LANGUAGE } from "@flashcards/shared";
 import {
   checkConcept,
   checkEntries,
@@ -16,7 +16,16 @@ export interface PackSource {
   file: string;
   pack: PackFile;
 }
-// A file under languages/<folder>/: one language's entries for concepts defined elsewhere.
+// A pack's name and description in a language other than PACK_TEXT_LANGUAGE.
+export interface PackText {
+  slug: string;
+  language: string;
+  name: string;
+  description?: string | undefined;
+}
+
+// A file under languages/<folder>/: one language's entries for concepts defined elsewhere, and its
+// texts for packs.
 export interface LanguageSource {
   file: string;
   /** The folder it was found in, which must match the language it says it is for. */
@@ -60,6 +69,9 @@ export function validateContent(
     }
   }
 
+  const packSlugs = new Set(packFiles.map((p) => p.pack.slug));
+  const textIn = new Map<string, string>();
+
   // Each (concept, language) is defined in exactly one place: the concept file, or one language file.
   const definedIn = new Map<string, string>();
   for (const { file, concepts } of conceptFiles) {
@@ -77,6 +89,21 @@ export function validateContent(
       errors.push(`${file}: unknown language "${lang}" (known: ${languages.join(", ")})`);
       continue;
     }
+    for (const text of content.packs) {
+      if (lang === PACK_TEXT_LANGUAGE) {
+        errors.push(`${file}: pack texts in ${lang} belong in the pack files, not a language file`);
+        break;
+      }
+      if (!packSlugs.has(text.slug)) {
+        errors.push(`${file}: unknown pack "${text.slug}"`);
+        continue;
+      }
+      const slot = `${text.slug}\u0000${lang}`;
+      const first = textIn.get(slot);
+      if (first) errors.push(`${file}: pack "${text.slug}" already has ${lang} text in ${first}`);
+      else textIn.set(slot, file);
+    }
+
     for (const concept of content.concepts) {
       if (!keyFile.has(concept.key)) {
         errors.push(`${file}: unknown concept "${concept.key}" (add it to content/concepts first)`);
@@ -116,6 +143,13 @@ export function validateContent(
     if (!inAPack.has(key)) warnings.push(`${file}: "${key}" is not in any pack`);
   }
   return { errors, warnings };
+}
+
+// The names and descriptions of packs that the language files give in their languages.
+export function collectPackTexts(languageFiles: LanguageSource[]): PackText[] {
+  return languageFiles.flatMap(({ content }) =>
+    content.packs.map((p) => ({ slug: p.slug, language: content.language, name: p.name, description: p.description })),
+  );
 }
 
 // The concepts with the entries from the language files added to them, in the order of the concept

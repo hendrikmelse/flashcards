@@ -443,25 +443,25 @@ describe("GET /concepts/:id", () => {
   });
 });
 
-describe("packs built for one language", () => {
+describe("packs that teach one language", () => {
   const slugs = async (url: string) =>
     ((await app.inject({ method: "GET", url })).json().packs as { slug: string }[]).map((p) => p.slug).sort();
 
   beforeAll(async () => {
     await pg.query(`insert into languages (code, name) values ('fr', 'Français') on conflict do nothing`);
-    for (const [slug, language] of [
+    for (const [slug, target] of [
       ["for-dutch", "nl"],
       ["for-english", "en"],
       ["for-french", "fr"],
     ] as const) {
-      await pg.query(`insert into packs (slug, name, category, language) values ($1, $1, 'topic', $2)`, [slug, language]);
+      await pg.query(`insert into packs (slug, name, category, target) values ($1, $1, 'topic', $2)`, [slug, target]);
     }
   });
 
-  it("lists every pack when no direction is asked for, with the language each was built for", async () => {
+  it("lists every pack when no direction is asked for, with the language each teaches", async () => {
     expect(await slugs("/packs")).toEqual(["for-dutch", "for-english", "for-french", "sample"]);
-    const all = (await app.inject({ method: "GET", url: "/packs" })).json().packs as { slug: string; language: string | null }[];
-    expect(Object.fromEntries(all.map((p) => [p.slug, p.language]))).toEqual({
+    const all = (await app.inject({ method: "GET", url: "/packs" })).json().packs as { slug: string; target: string | null }[];
+    expect(Object.fromEntries(all.map((p) => [p.slug, p.target]))).toEqual({
       sample: null,
       "for-dutch": "nl",
       "for-english": "en",
@@ -469,13 +469,16 @@ describe("packs built for one language", () => {
     });
   });
 
-  it("leaves out the packs built for a language that is not in the direction", async () => {
-    expect(await slugs(`/packs?${q(EN_NL)}`)).toEqual(["for-dutch", "for-english", "sample"]);
-    expect(await slugs(`/packs?${q(NL_EN)}`)).toEqual(["for-dutch", "for-english", "sample"]);
+  it("lists the packs for the language being learned, which is the direction's `to`", async () => {
+    // Learning Dutch from English: the Dutch packs, not the English ones.
+    expect(await slugs(`/packs?${q(EN_NL)}`)).toEqual(["for-dutch", "sample"]);
+    // Learning English from Dutch: the other way round.
+    expect(await slugs(`/packs?${q(NL_EN)}`)).toEqual(["for-english", "sample"]);
   });
 
   it("still lets a pack for any language through", async () => {
     expect(await slugs(`/packs?${q(EN_NL)}`)).toContain("sample");
+    expect(await slugs(`/packs?${q(NL_EN)}`)).toContain("sample");
   });
 
   it("does not hide a pack from someone who opens it directly", async () => {
@@ -483,5 +486,61 @@ describe("packs built for one language", () => {
     const french = list.find((p) => p.slug === "for-french")!;
     const res = await app.inject({ method: "GET", url: `/packs/${french.id}` });
     expect(res.statusCode).toBe(200);
+  });
+});
+
+describe("pack names and descriptions in the learner's language", () => {
+  let samplePack: { id: string; name: string; description: string | null };
+  const list = async (query: string) =>
+    (await app.inject({ method: "GET", url: `/packs?${query}` })).json().packs as { id: string; slug: string; name: string; description: string | null }[];
+
+  beforeAll(async () => {
+    const all = (await app.inject({ method: "GET", url: "/packs" })).json().packs as typeof samplePack[] & { slug: string }[];
+    samplePack = all.find((p) => (p as unknown as { slug: string }).slug === "sample")!;
+    await pg.query(`insert into languages (code, name) values ('fr', 'Français') on conflict do nothing`);
+    await pg.query(`insert into pack_texts (pack_id, language, name, description) values ($1, 'nl', 'Voorbeeldpakket', 'Een demo')`, [samplePack.id]);
+    await pg.query(`insert into pack_texts (pack_id, language, name, description) values ($1, 'fr', 'Paquet d''exemple', null)`, [samplePack.id]);
+  });
+
+  const sample = async (query: string) => (await list(query)).find((p) => p.slug === "sample")!;
+
+  it("uses the text in the pack file when no direction is given", async () => {
+    expect(await sample("")).toMatchObject({ name: samplePack.name, description: samplePack.description });
+  });
+
+  it("uses the text in the language the learner reads, which is the direction's `from`", async () => {
+    // Reading Dutch, learning English.
+    expect(await sample(q(NL_EN))).toMatchObject({ name: "Voorbeeldpakket", description: "Een demo" });
+  });
+
+  it("uses the pack file's text for a language that has none", async () => {
+    // Reading English: that is what the pack file is written in.
+    expect(await sample(q(EN_NL))).toMatchObject({ name: samplePack.name, description: samplePack.description });
+  });
+
+  it("gives no description, not another language's, when a translation has a name only", async () => {
+    await pg.query(`insert into packs (slug, name, description, category) values ('name-only', 'Name only', 'English description', 'topic')`);
+    const [row] = (await pg.query<{ id: string }>(`select id from packs where slug = 'name-only'`)).rows;
+    await pg.query(`insert into pack_texts (pack_id, language, name) values ($1, 'nl', 'Alleen een naam')`, [row!.id]);
+    const find = async (query: string) => (await list(query)).find((p) => p.slug === "name-only")!;
+    expect(await find(q(NL_EN))).toMatchObject({ name: "Alleen een naam", description: null });
+    expect(await find(q(EN_NL))).toMatchObject({ name: "Name only", description: "English description" });
+  });
+
+  it("sorts packs by the name the learner sees", async () => {
+    await pg.query(`insert into packs (slug, name, category) values ('zebra-pack', 'Zebra', 'topic')`);
+    const [zebra] = (await pg.query<{ id: string }>(`select id from packs where slug = 'zebra-pack'`)).rows;
+    await pg.query(`insert into pack_texts (pack_id, language, name) values ($1, 'nl', 'Aap')`, [zebra!.id]);
+    const names = (await list(q(NL_EN))).map((p) => p.name);
+    expect(names.indexOf("Aap")).toBeLessThan(names.indexOf("Voorbeeldpakket"));
+    const english = (await list(q(EN_NL))).map((p) => p.name);
+    expect(english.indexOf("Zebra")).toBeGreaterThan(english.indexOf(samplePack.name));
+  });
+
+  it("gives the translated name and description on the pack's own page too", async () => {
+    const res = await app.inject({ method: "GET", url: `/packs/${samplePack.id}?${q(NL_EN)}` });
+    expect(res.json().pack).toMatchObject({ name: "Voorbeeldpakket", description: "Een demo" });
+    const plain = await app.inject({ method: "GET", url: `/packs/${samplePack.id}` });
+    expect(plain.json().pack).toMatchObject({ name: samplePack.name });
   });
 });

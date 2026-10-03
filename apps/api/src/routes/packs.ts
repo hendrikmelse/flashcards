@@ -22,10 +22,24 @@ import {
   entries,
   languages,
   packConcepts,
+  packTexts,
   packs,
   userCards,
 } from "../db/schema.js";
 import type { Db } from "../db/types.js";
+
+// A pack's name and description for someone who reads `language`: its text in that language if it
+// has one, otherwise the text in the pack file (PACK_TEXT_LANGUAGE). Without a language, the pack
+// file's. A translated name with no description means no description, not the other language's.
+function packTextIn(language: string | undefined) {
+  if (!language) return { name: sql<string>`${packs.name}`, description: sql<string | null>`${packs.description}` };
+  const there = sql`${packTexts.packId} = ${packs.id} and ${packTexts.language} = ${language}`;
+  return {
+    name: sql<string>`coalesce((select ${packTexts.name} from ${packTexts} where ${there}), ${packs.name})`,
+    description: sql<string | null>`case when exists (select 1 from ${packTexts} where ${there})
+      then (select ${packTexts.description} from ${packTexts} where ${there}) else ${packs.description} end`,
+  };
+}
 
 const invalid = (reply: FastifyReply, issues: unknown) =>
   reply.code(400).send({ error: "Invalid input", issues });
@@ -46,38 +60,51 @@ export async function packRoutes(
   const read = perMinute(readRateLimit);
   const search = perMinute(searchRateLimit);
 
+  // One pack's name and description for a reader of `language` (see packTextIn).
+  const packTextFor = async (pack: { id: string; name: string; description: string | null }, language: string | undefined) => {
+    const [t] = language
+      ? await db
+          .select({ name: packTexts.name, description: packTexts.description })
+          .from(packTexts)
+          .where(and(eq(packTexts.packId, pack.id), eq(packTexts.language, language)))
+      : [];
+    return t ?? { name: pack.name, description: pack.description };
+  };
+
   app.get("/languages", read, async () => ({
     languages: await db.select().from(languages).orderBy(asc(languages.code)),
   }));
 
-  // Public. With a direction, also reports how many concepts can actually
-  // become cards in it and, for a logged-in user, how many they already have.
+  // Public. With a direction, only the packs that teach its `to` language (and those that suit any
+  // language) are listed, with their name and description in its `from` language where they have
+  // one. It also reports how many concepts can actually become cards in it and, for a logged-in
+  // user, how many they already have.
   app.get("/packs", read, async (req, reply) => {
     const q = directionQuerySchema.safeParse(req.query);
     if (!q.success) return invalid(reply, q.error.issues);
     const { fromLanguage, toLanguage } = q.data;
 
-    const rows = await db
+    const text = packTextIn(fromLanguage);
+    const found = await db
       .select({
         id: packs.id,
         slug: packs.slug,
-        name: packs.name,
-        description: packs.description,
+        name: text.name,
+        description: text.description,
         category: packs.category,
-        language: packs.language,
+        target: packs.target,
         conceptCount: count(packConcepts.conceptId),
       })
       .from(packs)
       .leftJoin(packConcepts, eq(packConcepts.packId, packs.id))
-      // With a direction, only the packs that suit it: those for no language in particular, and
-      // those built for one of its two languages.
       .where(
         fromLanguage && toLanguage
-          ? or(isNull(packs.language), inArray(packs.language, [fromLanguage, toLanguage]))
+          ? or(isNull(packs.target), eq(packs.target, toLanguage))
           : undefined,
       )
       .groupBy(packs.id)
-      .orderBy(asc(packs.name));
+      .orderBy(asc(text.name));
+    const rows = found.map((r) => ({ ...r, target: r.target as LanguageCode | null }));
 
     if (!fromLanguage || !toLanguage) return { packs: rows };
 
@@ -119,7 +146,6 @@ export async function packRoutes(
       packs: rows.map((r) => ({
         ...r,
         category: r.category as PackCategory,
-        language: r.language as LanguageCode | null,
         availableCount: available.get(r.id) ?? 0,
         ...(req.user ? { addedCount: added.get(r.id) ?? 0 } : {}),
       })),
@@ -174,7 +200,7 @@ export async function packRoutes(
     }
 
     return {
-      pack: { id: pack.id, slug: pack.slug, name: pack.name, description: pack.description },
+      pack: { id: pack.id, slug: pack.slug, ...(await packTextFor(pack, fromLanguage)) },
       concepts: members.map((m) => {
         const es = entryMap.get(m.conceptId) ?? [];
         return {

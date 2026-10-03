@@ -61,15 +61,30 @@ export const conceptFileSchema = z.object({
   concepts: z.array(conceptSchema).min(1),
 });
 
-// content/languages/<code>/*.json: one language's entries for concepts defined in
-// content/concepts. Lets a language be added, reviewed and licensed on its own, without touching
-// the shared concept files.
-export const languageFileSchema = z.object({
-  language: z.string().trim().min(1),
-  concepts: z
-    .array(z.object({ key: keySchema, entries: z.array(entrySchema).min(1) }))
-    .min(1),
-});
+// content/languages/<code>/*.json: one language's part of the content, so it can be added,
+// reviewed and licensed on its own without touching the shared files. It has either or both of:
+//   concepts: that language's entries for concepts defined in content/concepts
+//   packs:    the names and descriptions of packs in that language, for learners who read it
+//             (the pack files hold them in PACK_TEXT_LANGUAGE)
+export const languageFileSchema = z
+  .object({
+    language: z.string().trim().min(1),
+    concepts: z
+      .array(z.object({ key: keySchema, entries: z.array(entrySchema).min(1) }))
+      .default([]),
+    packs: z
+      .array(
+        z.object({
+          slug: keySchema,
+          name: z.string().trim().min(1),
+          description: z.string().trim().min(1).optional(),
+        }),
+      )
+      .default([]),
+  })
+  .refine((f) => f.concepts.length > 0 || f.packs.length > 0, {
+    message: "has neither concepts nor packs",
+  });
 
 export type LanguageFile = z.infer<typeof languageFileSchema>;
 
@@ -78,9 +93,9 @@ export const packFileSchema = z.object({
   name: z.string().trim().min(1),
   // How the pack is grouped when browsing; see PACK_CATEGORIES.
   category: z.enum(PACK_CATEGORIES),
-  // The language the pack was built for (a frequency list, a language's grammar words). Learners
-  // of other languages are not shown it. Leave out for a pack that suits any language.
-  language: languageCodeSchema.optional(),
+  // The language the pack teaches (a frequency list, a language's grammar words). Only people
+  // learning that language are shown it. Leave out for a pack that suits any language.
+  target: languageCodeSchema.optional(),
   description: z.string().trim().min(1).optional(),
   // Concept keys, in study order.
   concepts: z.array(keySchema).min(1),

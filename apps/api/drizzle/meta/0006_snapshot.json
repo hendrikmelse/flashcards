@@ -1,5 +1,5 @@
 {
-  "id": "7da14a7c-0367-4737-821c-aa3dea958b07",
+  "id": "6c0e230d-0b79-4628-8cc3-67b63841a47d",
   "prevId": "c022e940-05a5-4939-9408-26c4bdd95a68",
   "version": "7",
   "dialect": "postgresql",
@@ -497,6 +497,78 @@
       "checkConstraints": {},
       "isRLSEnabled": false
     },
+    "public.pack_texts": {
+      "name": "pack_texts",
+      "schema": "",
+      "columns": {
+        "pack_id": {
+          "name": "pack_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "language": {
+          "name": "language",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "name": {
+          "name": "name",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "description": {
+          "name": "description",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {
+        "pack_texts_pack_id_packs_id_fk": {
+          "name": "pack_texts_pack_id_packs_id_fk",
+          "tableFrom": "pack_texts",
+          "tableTo": "packs",
+          "columnsFrom": [
+            "pack_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "cascade",
+          "onUpdate": "no action"
+        },
+        "pack_texts_language_languages_code_fk": {
+          "name": "pack_texts_language_languages_code_fk",
+          "tableFrom": "pack_texts",
+          "tableTo": "languages",
+          "columnsFrom": [
+            "language"
+          ],
+          "columnsTo": [
+            "code"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {
+        "pack_texts_pack_id_language_pk": {
+          "name": "pack_texts_pack_id_language_pk",
+          "columns": [
+            "pack_id",
+            "language"
+          ]
+        }
+      },
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
     "public.packs": {
       "name": "packs",
       "schema": "",
@@ -533,8 +605,8 @@
           "notNull": true,
           "default": "'topic'"
         },
-        "language": {
-          "name": "language",
+        "target": {
+          "name": "target",
           "type": "text",
           "primaryKey": false,
           "notNull": false
@@ -549,12 +621,12 @@
       },
       "indexes": {},
       "foreignKeys": {
-        "packs_language_languages_code_fk": {
-          "name": "packs_language_languages_code_fk",
+        "packs_target_languages_code_fk": {
+          "name": "packs_target_languages_code_fk",
           "tableFrom": "packs",
           "tableTo": "languages",
           "columnsFrom": [
-            "language"
+            "target"
           ],
           "columnsTo": [
             "code"
@@ -1150,6 +1222,18 @@
           "notNull": true,
           "default": true
         },
+        "active_from": {
+          "name": "active_from",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "active_to": {
+          "name": "active_to",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
         "created_at": {
           "name": "created_at",
           "type": "timestamp with time zone",
@@ -1159,7 +1243,34 @@
         }
       },
       "indexes": {},
-      "foreignKeys": {},
+      "foreignKeys": {
+        "users_active_from_languages_code_fk": {
+          "name": "users_active_from_languages_code_fk",
+          "tableFrom": "users",
+          "tableTo": "languages",
+          "columnsFrom": [
+            "active_from"
+          ],
+          "columnsTo": [
+            "code"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        },
+        "users_active_to_languages_code_fk": {
+          "name": "users_active_to_languages_code_fk",
+          "tableFrom": "users",
+          "tableTo": "languages",
+          "columnsFrom": [
+            "active_to"
+          ],
+          "columnsTo": [
+            "code"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        }
+      },
       "compositePrimaryKeys": {},
       "uniqueConstraints": {
         "users_email_unique": {
