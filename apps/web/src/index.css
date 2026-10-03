@@ -707,9 +707,101 @@ button.link {
   font-size: 0.9rem;
 }
 
+/* The part of a deck row that opens the card. */
+button.row-open {
+  flex: 1;
+  min-width: 0;
+  align-self: stretch; /* the whole height of the row is the click target */
+  display: flex;
+  align-items: center;
+  padding: 0.65rem 0; /* the row's own padding, moved in so it counts as part of the button */
+  border: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+/* No outline box: it would show after closing a card with Escape, when focus returns here.
+   Keyboard focus is still marked, by the underline below. */
+button.row-open:focus-visible {
+  outline: none;
+}
+
+button.row-open:hover .prompt,
+button.row-open:focus-visible .prompt {
+  text-decoration: underline;
+}
+
+/* A card shown over the page. */
+.dialog-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+  background: rgb(0 0 0 / 0.45);
+}
+
+.dialog {
+  position: relative;
+  box-sizing: border-box;
+  width: min(36rem, 100%);
+  max-height: calc(100vh - 2rem);
+  overflow-y: auto;
+  padding: 1.5rem 1.5rem 1.25rem;
+  border: 1px solid var(--border);
+  border-radius: 0.9rem;
+  background: var(--surface);
+  box-shadow: 0 12px 40px rgb(0 0 0 / 0.3);
+}
+
+.dialog-close {
+  position: absolute;
+  top: 0.6rem;
+  right: 0.6rem;
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.card-facts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
+  gap: 0.75rem 1rem;
+  margin: 1.25rem 0 0;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+}
+
+.card-facts dt {
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+
+.card-facts dd {
+  margin: 0;
+  font-weight: 600;
+}
+
+/* Rows of the deck: the open button supplies the vertical padding. */
+.concept-list li.deck-row {
+  padding-block: 0;
+}
+
+/* Fixed widths, so the Add reverse button and the status stay put whatever the due text says. */
+.reverse-slot {
+  display: flex;
+  justify-content: flex-end;
+  min-width: 7.5rem;
+}
+
 .card-status {
   display: grid;
   flex-shrink: 0;
+  box-sizing: border-box;
+  width: 9.5rem;
   justify-items: end;
   text-align: right;
   font-size: 0.9rem;

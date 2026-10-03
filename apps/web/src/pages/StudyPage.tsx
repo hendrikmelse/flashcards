@@ -2,19 +2,18 @@ import { useMutation } from "@tanstack/react-query";
 import { useEffect, useReducer, useRef, useState } from "react";
 import { Link, useSearchParams } from "react-router";
 import type {
-  EntryView,
   LanguageInfo,
   Rating,
   ReviewResponse,
   StudyCardView,
   StudyResponse,
 } from "@flashcards/shared";
-import { formLines, SESSION_GAP_MS } from "@flashcards/shared";
+import { SESSION_GAP_MS } from "@flashcards/shared";
 import { api } from "../api/client";
 import { useSettings } from "../api/hooks";
 import { useLanguages } from "../api/packs";
-import { displayLemma } from "../components/entries";
-import { LanguageFlag } from "../components/LanguageFlag";
+import { Entries, Forms, Sentences } from "../components/CardParts";
+import { languageName } from "../components/entries";
 import {
   initialState,
   phaseOf,
@@ -198,79 +197,12 @@ function RepeatNotice({ onContinue }: { onContinue: () => void }) {
   );
 }
 
-function languageName(languages: LanguageInfo[], code: string) {
-  return languages.find((l) => l.code === code)?.name ?? code.toUpperCase();
-}
-
 const STATE_LABEL: Record<StudyCardView["state"], string> = {
   new: "New",
   learning: "Learning",
   relearning: "Relearning",
   review: "Review",
 };
-
-// The word, with a flag for the language it is in.
-function Entries({
-  entries,
-  language,
-  languages,
-}: {
-  entries: EntryView[];
-  language: string;
-  languages: LanguageInfo[];
-}) {
-  return (
-    <div className="flagged">
-      <LanguageFlag code={language} label={languageName(languages, language)} />
-      <p className="study-word">
-        {entries.map((e, i) => (
-          <span key={`${e.lemma}-${i}`}>
-            {i > 0 && ", "}
-            {displayLemma(e)}
-            {e.partOfSpeech && <span className="pos"> {e.partOfSpeech}</span>}
-          </span>
-        ))}
-      </p>
-    </div>
-  );
-}
-
-// Word forms (noun plural; verb past, participle and irregular present) for the
-// answer side. Shown only on the back of the card; entries without forms
-// render nothing.
-function Forms({ entries }: { entries: EntryView[] }) {
-  const withForms = entries
-    .map((e) => ({ e, lines: formLines(e.language, e.details) }))
-    .filter(({ lines }) => lines.length > 0);
-  if (withForms.length === 0) return null;
-  return (
-    <>
-      {withForms.map(({ e, lines }) => (
-        <dl key={e.lemma} className="forms" aria-label={`Forms of ${e.lemma}`}>
-          {withForms.length > 1 && <dt className="forms-lemma">{e.lemma}</dt>}
-          {lines.map((l) => (
-            <div key={l.label}>
-              <dt>{l.label}</dt>
-              <dd>{l.value}</dd>
-            </div>
-          ))}
-        </dl>
-      ))}
-    </>
-  );
-}
-
-function Sentences({ items }: { items: string[] }) {
-  return (
-    <>
-      {items.map((s) => (
-        <p key={s} className="sentence">
-          {s}
-        </p>
-      ))}
-    </>
-  );
-}
 
 type CardViewProps = {
   card: StudyCardView;

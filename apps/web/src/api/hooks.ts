@@ -8,6 +8,7 @@ import {
 import type {
   ChangeEmailInput,
   ChangePasswordInput,
+  DeckCardDetail,
   DeckResponse,
   DeleteAccountInput,
   DeckSort,
@@ -149,6 +150,14 @@ export function useStats() {
   return useQuery({
     queryKey: ["stats"],
     queryFn: () => api<StatsResponse>("/stats"),
+  });
+}
+
+// One deck card in full, with its example sentences, for the deck viewer's card view.
+export function useDeckCard(id: string) {
+  return useQuery({
+    queryKey: ["deck", "card", id],
+    queryFn: () => api<DeckCardDetail>(`/deck/${id}`),
   });
 }
 

@@ -149,14 +149,12 @@ export const conceptSearchQuerySchema = z
 // Narrowing and ordering the deck list: a word to search for, a stage
 // ("learning" includes relearning), and a sort. Each sort has a natural
 // direction used when `order` is left out (see DECK_SORT_DEFAULT_ORDER).
-export const DECK_SORTS = ["added", "due", "status", "interval", "lapses", "alpha"] as const;
+export const DECK_SORTS = ["added", "due", "status", "alpha"] as const;
 export type DeckSort = (typeof DECK_SORTS)[number];
 export const DECK_SORT_DEFAULT_ORDER: Record<DeckSort, "asc" | "desc"> = {
   added: "desc", // newest first
   due: "asc", // soonest first; cards not yet studied always come last
   status: "asc", // new, learning, relearning, review
-  interval: "desc", // longest first
-  lapses: "desc", // most forgotten first
   alpha: "asc", // by the prompt word
 };
 
@@ -220,6 +218,12 @@ export type DeckCardView = {
   front: EntryView[];
   back: EntryView[];
 };
+/** One card of the deck in full: both sides' words and forms, and all their example sentences. */
+export type DeckCardDetail = {
+  card: DeckCardView;
+  sentences: { front: string[]; back: string[] };
+};
+
 export type DeckResponse = {
   /** Totals for the direction, regardless of the search and stage filters. */
   summary: DeckSummary;

@@ -6,8 +6,10 @@ import {
   deckFilterSchema,
   directionQuerySchema,
   pageQuerySchema,
+  uuidParamSchema,
+  type EntryView,
 } from "@flashcards/shared";
-import { insertUserCards, loadEntries } from "../content/queries.js";
+import { insertUserCards, loadEntries, loadSentences, sentenceKey } from "../content/queries.js";
 import { entries, userCards } from "../db/schema.js";
 import type { Db } from "../db/types.js";
 
@@ -15,6 +17,25 @@ const invalid = (reply: FastifyReply, issues: unknown) =>
   reply.code(400).send({ error: "Invalid input", issues });
 
 const mirror = alias(userCards, "mirror");
+
+// How a card is shown to the client, in the deck list and on its own.
+function cardView(c: typeof userCards.$inferSelect & { mirrored: unknown }, entries: EntryView[]) {
+  return {
+    id: c.id,
+    conceptId: c.conceptId,
+    fromLanguage: c.fromLanguage,
+    toLanguage: c.toLanguage,
+    state: c.state,
+    dueAt: c.dueAt,
+    addedAt: c.addedAt,
+    intervalDays: c.intervalDays,
+    lapses: c.lapses,
+    lastReviewedAt: c.lastReviewedAt,
+    hasMirror: Boolean(c.mirrored),
+    front: entries.filter((e) => e.language === c.fromLanguage),
+    back: entries.filter((e) => e.language === c.toLanguage),
+  };
+}
 
 export async function deckRoutes(app: FastifyInstance, { db }: { db: Db }) {
   // SQL condition: the user also has this card's word in the opposite direction.
@@ -114,8 +135,6 @@ export async function deckRoutes(app: FastifyInstance, { db }: { db: Db }) {
       // Cards not studied yet have no real due date, so they go last either way.
       due: [sql`(${userCards.state} = 'new')`, dir(userCards.dueAt)],
       status: [dir(stageRank), asc(userCards.dueAt)],
-      interval: [dir(userCards.intervalDays), asc(userCards.dueAt)],
-      lapses: [dir(userCards.lapses), asc(userCards.dueAt)],
       alpha: [dir(promptWord)],
     }[f.data.sort];
 
@@ -145,24 +164,32 @@ export async function deckRoutes(app: FastifyInstance, { db }: { db: Db }) {
       summary,
       hasMore,
       mirrorable,
-      cards: cards.map((c) => {
-        const es = entryMap.get(c.conceptId) ?? [];
-        return {
-          id: c.id,
-          conceptId: c.conceptId,
-          fromLanguage: c.fromLanguage,
-          toLanguage: c.toLanguage,
-          state: c.state,
-          dueAt: c.dueAt,
-          addedAt: c.addedAt,
-          intervalDays: c.intervalDays,
-          lapses: c.lapses,
-          lastReviewedAt: c.lastReviewedAt,
-          hasMirror: c.mirrored,
-          front: es.filter((e) => e.language === c.fromLanguage),
-          back: es.filter((e) => e.language === c.toLanguage),
-        };
-      }),
+      cards: cards.map((c) => cardView(c, entryMap.get(c.conceptId) ?? [])),
+    };
+  });
+
+  // One of the user's cards in full, for looking at it outside a study session: both sides' words
+  // (with their forms) and every example sentence.
+  app.get("/deck/:id", { preHandler: app.requireAuth }, async (req, reply) => {
+    const p = uuidParamSchema.safeParse(req.params);
+    if (!p.success) return invalid(reply, p.error.issues);
+    const userId = req.user!.id;
+
+    const [row] = await db
+      .select({ ...getTableColumns(userCards), mirrored: hasMirror(userId) })
+      .from(userCards)
+      .where(and(eq(userCards.id, p.data.id), eq(userCards.userId, userId)));
+    if (!row) return reply.code(404).send({ error: "Card not found" });
+
+    const languages = [row.fromLanguage, row.toLanguage];
+    const entries = await loadEntries(db, [row.conceptId], languages);
+    const sentences = await loadSentences(db, [row.conceptId], languages, 50);
+    return {
+      card: cardView(row, entries.get(row.conceptId) ?? []),
+      sentences: {
+        front: sentences.get(sentenceKey(row.conceptId, row.fromLanguage)) ?? [],
+        back: sentences.get(sentenceKey(row.conceptId, row.toLanguage)) ?? [],
+      },
     };
   });
 

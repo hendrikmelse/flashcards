@@ -4,6 +4,8 @@ import { DECK_SORT_DEFAULT_ORDER, DECK_SORTS, type DeckCardView, type DeckSort, 
 import { useDeckCards, useStats, type DeckStage } from "../api/hooks";
 import { useAddMirror, useAddMirrors } from "../api/packs";
 import { BusyLabel } from "../components/BusyLabel";
+import { CardDialog } from "../components/CardDialog";
+import { useLanguages } from "../api/packs";
 import { displayLemma, entriesFor } from "../components/entries";
 import { sameDirection, shortDirection, useDeckFilter } from "../hooks/useDeckFilter";
 import { isBoolean, isOneOf, isOneOfOrNull, isString, useRemembered } from "../hooks/useRemembered";
@@ -24,8 +26,6 @@ const SORT_LABEL: Record<DeckSort, string> = {
   added: "Recently added",
   due: "Next due",
   status: "Status",
-  interval: "Interval",
-  lapses: "Lapses",
   alpha: "Alphabetical",
 };
 
@@ -34,8 +34,6 @@ const ORDER_LABEL: Record<DeckSort, Record<"asc" | "desc", string>> = {
   added: { desc: "Newest first", asc: "Oldest first" },
   due: { asc: "Soonest first", desc: "Latest first" },
   status: { asc: "New to review", desc: "Review to new" },
-  interval: { desc: "Longest first", asc: "Shortest first" },
-  lapses: { desc: "Most first", asc: "Fewest first" },
   alpha: { asc: "A to Z", desc: "Z to A" },
 };
 
@@ -47,16 +45,9 @@ function whenDue(card: DeckCardView): string {
   return Date.parse(card.dueAt) <= Date.parse(now) ? "Due now" : `Due ${formatUntil(card.dueAt, now)}`;
 }
 
-function details(card: DeckCardView): string | null {
-  if (card.state === "new") return null;
-  const parts = [];
-  if (card.intervalDays >= 1) parts.push(`${plural(Math.round(card.intervalDays), "day")} interval`);
-  if (card.lapses > 0) parts.push(plural(card.lapses, "lapse"));
-  return parts.length > 0 ? parts.join(" · ") : null;
-}
-
 type RowProps = {
   card: DeckCardView;
+  onOpen: () => void;
   showDirection: boolean;
   adding: boolean;
   justAdded: boolean;
@@ -64,46 +55,55 @@ type RowProps = {
   onAddReverse: () => void;
 };
 
-function CardRow({ card, showDirection, adding, justAdded, disabled, onAddReverse }: RowProps) {
+function CardRow({ card, onOpen, showDirection, adding, justAdded, disabled, onAddReverse }: RowProps) {
   const front = entriesFor(card.front, card.fromLanguage).map(displayLemma).join(", ");
   const back = entriesFor(card.back, card.toLanguage).map(displayLemma).join(", ");
-  const extra = details(card);
   return (
-    <li>
-      <span className="pair">
-        <span className="prompt">{front || "—"}</span>
-        <span className="arrow" aria-hidden="true">
-          →
-        </span>
-        <span className="answer">{back || "—"}</span>
-        {showDirection && (
-          <span className="direction-tag">
-            {shortDirection({ fromLanguage: card.fromLanguage, toLanguage: card.toLanguage })}
+    <li className="deck-row">
+      <button
+        type="button"
+        className="row-open"
+        aria-haspopup="dialog"
+        aria-label={`Open card: ${front}`}
+        onClick={onOpen}
+      >
+        <span className="pair">
+          <span className="prompt">{front || "—"}</span>
+          <span className="arrow" aria-hidden="true">
+            →
           </span>
-        )}
-      </span>
+          <span className="answer">{back || "—"}</span>
+          {showDirection && (
+            <span className="direction-tag">
+              {shortDirection({ fromLanguage: card.fromLanguage, toLanguage: card.toLanguage })}
+            </span>
+          )}
+        </span>
+      </button>
       <span className="card-actions">
-        {justAdded ? (
-          <span className="badge">Reverse added</span>
-        ) : (
-          !card.hasMirror && (
-            <button
-              className="secondary"
-              onClick={onAddReverse}
-              disabled={disabled}
-              aria-busy={adding}
-              aria-label={`Add reverse of ${front}`}
-            >
-              <BusyLabel busy={adding}>Add reverse</BusyLabel>
-            </button>
-          )
-        )}
+        <span className="reverse-slot">
+          {justAdded ? (
+            <span className="badge">Reverse added</span>
+          ) : (
+            !card.hasMirror && (
+              <button
+                className="secondary"
+                onClick={onAddReverse}
+                disabled={disabled}
+                aria-busy={adding}
+                aria-label={`Add reverse of ${front}`}
+              >
+                <BusyLabel busy={adding}>Add reverse</BusyLabel>
+              </button>
+            )
+          )}
+        </span>
         <span className="card-status">
           <span className="status-line">
             <span className={`dot ${STATE_TONE[card.state]}`} aria-hidden="true" />
             {STATE_LABEL[card.state]}
           </span>
-          <span className="muted">{[whenDue(card), extra].filter(Boolean).join(" · ")}</span>
+          <span className="muted">{whenDue(card)}</span>
         </span>
       </span>
     </li>
@@ -112,6 +112,7 @@ function CardRow({ card, showDirection, adding, justAdded, disabled, onAddRevers
 
 export function DeckPage() {
   const stats = useStats();
+  const languages = useLanguages();
   // Keep the last known directions so the toggle doesn't vanish while stats refetch.
   const [directions, setDirections] = useState<DirectionSummary[] | undefined>();
   if (stats.data && stats.data.directions !== directions) setDirections(stats.data.directions);
@@ -140,6 +141,9 @@ export function DeckPage() {
   const [missingOnly, setMissingOnly] = useRemembered("deck:missingOnly", false, isBoolean);
   const list = useDeckCards(filter.selected, stage, term, sort, order, missingOnly);
   const byDirection = directions ?? [];
+
+  // The card being looked at in full, if any.
+  const [openCard, setOpenCard] = useState<DeckCardView | null>(null);
 
   const addMirror = useAddMirror();
   const addMirrors = useAddMirrors();
@@ -349,6 +353,7 @@ export function DeckPage() {
                 <CardRow
                   key={c.id}
                   card={c}
+                  onOpen={() => setOpenCard(c)}
                   showDirection={!filter.selected && byDirection.length > 1}
                   adding={addMirror.isPending && addMirror.variables?.cardId === c.id}
                   justAdded={recent.get(c.id)?.done === true}
@@ -373,6 +378,8 @@ export function DeckPage() {
           )}
         </>
       )}
+
+      {openCard && <CardDialog card={openCard} languages={languages.data ?? []} onClose={() => setOpenCard(null)} />}
     </>
   );
 }

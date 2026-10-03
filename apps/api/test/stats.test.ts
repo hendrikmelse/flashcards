@@ -237,13 +237,9 @@ describe("GET /deck list filters", () => {
       expect(await sorted("status&order=desc")).toEqual(["review", "review", "relearning", "learning", "new"]);
     });
 
-    it("sorts by interval, longest first by default", async () => {
-      expect(await sorted("interval")).toEqual(["review", "review", "learning", "new", "relearning"]);
-      expect(await sorted("interval&order=asc")).toEqual(["learning", "new", "relearning", "review", "review"]);
-    });
-
-    it("sorts by lapses, most forgotten first by default", async () => {
-      expect(await sorted("lapses")).toEqual(["review", "relearning", "learning", "new", "review"]);
+    it("cannot be sorted by interval or lapses", async () => {
+      expect((await list("sort=interval")).status).toBe(400);
+      expect((await list("sort=lapses")).status).toBe(400);
     });
 
     it("sorts alphabetically by the prompt word", async () => {
@@ -256,9 +252,9 @@ describe("GET /deck list filters", () => {
     });
 
     it("keeps pages consistent when sorting", async () => {
-      const first = (await list("sort=interval&limit=2")).body.cards.map((c: { id: string }) => c.id);
-      const rest = (await list("sort=interval&limit=3&offset=2")).body.cards.map((c: { id: string }) => c.id);
-      const all = (await list("sort=interval&limit=5")).body.cards.map((c: { id: string }) => c.id);
+      const first = (await list("sort=status&limit=2")).body.cards.map((c: { id: string }) => c.id);
+      const rest = (await list("sort=status&limit=3&offset=2")).body.cards.map((c: { id: string }) => c.id);
+      const all = (await list("sort=status&limit=5")).body.cards.map((c: { id: string }) => c.id);
       expect([...first, ...rest]).toEqual(all);
     });
 

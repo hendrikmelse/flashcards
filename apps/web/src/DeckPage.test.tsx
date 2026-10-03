@@ -58,6 +58,191 @@ describe("dashboard link", () => {
   });
 });
 
+describe("looking at a card in full", () => {
+  const dogCard = () =>
+    card("a", "dog", "hond", {
+      state: "review",
+      dueAt: at(3 * DAY + 3_600_000),
+      intervalDays: 12,
+      lapses: 2,
+      front: [entry("en", "dog", { plural: "dogs" })],
+      back: [entry("nl", "hond", { article: "de", plural: "honden" })],
+    });
+  const houseCard = () => card("b", "house", "huis", { hasMirror: false });
+  const sentences = { front: ["The dog barks.", "I walk the dog.", "A big dog."], back: ["De hond blaft."] };
+
+  beforeEach(() => {
+    mock.handlers["GET /deck"] = () =>
+      json(200, { summary, hasMore: false, mirrorable: 1, cards: [dogCard(), houseCard()] });
+    mock.handlers["GET /deck/a"] = () => json(200, { card: dogCard(), sentences });
+    mock.handlers["GET /deck/b"] = () => json(200, { card: houseCard(), sentences: { front: [], back: [] } });
+  });
+  afterEach(() => {
+    document.body.style.overflow = "";
+  });
+
+  const open = async (user: ReturnType<typeof userEvent.setup>, name = "Open card: dog") => {
+    await user.click(await screen.findByRole("button", { name }));
+    return screen.findByRole("dialog");
+  };
+
+  it("opens the card when you click it, showing both sides with their flags", async () => {
+    const user = userEvent.setup();
+    renderApp("/deck");
+    const dialog = await open(user);
+
+    expect(dialog).toHaveAccessibleName("Card: dog");
+    const front = within(within(dialog).getByRole("region", { name: "Front" }));
+    expect(front.getByText("dog")).toBeInTheDocument();
+    expect(front.getByRole("img", { name: "English" })).toBeInTheDocument();
+    const back = within(within(dialog).getByRole("region", { name: "Back" }));
+    expect(back.getByText("de hond")).toBeInTheDocument();
+    expect(back.getByRole("img", { name: "Nederlands" })).toBeInTheDocument();
+    expect(within(dialog).getByText("English → Nederlands")).toBeInTheDocument();
+  });
+
+  it("shows every example sentence, each on its own side", async () => {
+    const user = userEvent.setup();
+    renderApp("/deck");
+    const dialog = await open(user);
+    const front = within(within(dialog).getByRole("region", { name: "Front" }));
+    expect(await front.findByText("The dog barks.")).toBeInTheDocument();
+    expect(front.getByText("I walk the dog.")).toBeInTheDocument();
+    expect(front.getByText("A big dog.")).toBeInTheDocument();
+    const back = within(within(dialog).getByRole("region", { name: "Back" }));
+    expect(back.getByText("De hond blaft.")).toBeInTheDocument();
+    expect(back.queryByText("The dog barks.")).not.toBeInTheDocument();
+  });
+
+  it("shows the word forms on both sides", async () => {
+    const user = userEvent.setup();
+    renderApp("/deck");
+    const dialog = await open(user);
+    const front = within(within(dialog).getByRole("region", { name: "Front" }));
+    expect(front.getByText("dogs")).toBeInTheDocument(); // the English plural, not hidden as it is in a study session
+    const back = within(within(dialog).getByRole("region", { name: "Back" }));
+    expect(back.getByText("honden")).toBeInTheDocument();
+  });
+
+  it("shows where the card stands", async () => {
+    const user = userEvent.setup();
+    renderApp("/deck");
+    const dialog = await open(user);
+    const facts = within(within(dialog).getByLabelText("Where this card stands"));
+    expect(facts.getByText("Status").nextSibling).toHaveTextContent("Review");
+    expect(facts.getByText("Due").nextSibling).toHaveTextContent("in 3 days");
+    expect(facts.getByText("Added")).toBeInTheDocument();
+    // How long the gap is and how often it was forgotten are not shown: the card has both (12 days, 2 lapses).
+    expect(facts.queryByText("Interval")).not.toBeInTheDocument();
+    expect(facts.queryByText("Forgotten")).not.toBeInTheDocument();
+    expect(within(dialog).queryByText(/lapse|forgot|interval|12/i)).not.toBeInTheDocument();
+  });
+
+  it("says so for a card that has not been studied", async () => {
+    const user = userEvent.setup();
+    renderApp("/deck");
+    const dialog = await open(user, "Open card: house");
+    const facts = within(dialog);
+    expect(facts.getByText("Status").nextSibling).toHaveTextContent("New");
+    expect(facts.getByText("Due").nextSibling).toHaveTextContent("Not studied yet");
+    expect(facts.queryByText("Forgotten")).not.toBeInTheDocument();
+    expect(await facts.findByText("No example sentences yet.")).toBeInTheDocument();
+  });
+
+  it("shows the words straight away, and says so if the sentences cannot be loaded", async () => {
+    mock.handlers["GET /deck/a"] = () => json(500, { error: "boom" });
+    const user = userEvent.setup();
+    renderApp("/deck");
+    const dialog = await open(user);
+    expect(within(dialog).getByText("de hond")).toBeInTheDocument();
+    expect(await within(dialog).findByText("Could not load the example sentences.")).toBeInTheDocument();
+    expect(within(dialog).queryByText("The dog barks.")).not.toBeInTheDocument();
+  });
+
+  it("shows the sentences whatever the study card settings say", async () => {
+    mock.handlers["GET /settings"] = () =>
+      json(200, { email: "a@b.c", name: null, timezone: "UTC", dailyNewCardLimit: 20, showSentences: false, showForms: false });
+    const user = userEvent.setup();
+    renderApp("/deck");
+    const dialog = await open(user);
+    expect(await within(dialog).findByText("The dog barks.")).toBeInTheDocument();
+    expect(within(dialog).getByText("honden")).toBeInTheDocument();
+  });
+
+  it("closes with the Close button, and focus goes back to the card", async () => {
+    const user = userEvent.setup();
+    renderApp("/deck");
+    await open(user);
+    expect(screen.getByRole("button", { name: "Close" })).toHaveFocus();
+    await user.click(screen.getByRole("button", { name: "Close" }));
+    expect(screen.queryByRole("dialog")).not.toBeInTheDocument();
+    expect(screen.getByRole("button", { name: "Open card: dog" })).toHaveFocus();
+  });
+
+  it("closes with Escape", async () => {
+    const user = userEvent.setup();
+    renderApp("/deck");
+    await open(user);
+    await user.keyboard("{Escape}");
+    expect(screen.queryByRole("dialog")).not.toBeInTheDocument();
+  });
+
+  it("closes when you click outside it, but not when you click inside", async () => {
+    const user = userEvent.setup();
+    renderApp("/deck");
+    const dialog = await open(user);
+    await user.click(within(dialog).getByText("English → Nederlands"));
+    expect(screen.getByRole("dialog")).toBeInTheDocument();
+    await user.click(dialog.parentElement!); // the dimmed area around it
+    expect(screen.queryByRole("dialog")).not.toBeInTheDocument();
+  });
+
+  it("keeps keyboard focus inside while it is open", async () => {
+    const user = userEvent.setup();
+    renderApp("/deck");
+    await open(user);
+    await user.tab();
+    expect(screen.getByRole("dialog")).toContainElement(document.activeElement as HTMLElement);
+    await user.tab({ shift: true });
+    expect(screen.getByRole("dialog")).toContainElement(document.activeElement as HTMLElement);
+  });
+
+  it("can be opened from the keyboard", async () => {
+    const user = userEvent.setup();
+    renderApp("/deck");
+    (await screen.findByRole("button", { name: "Open card: dog" })).focus();
+    await user.keyboard("{Enter}");
+    expect(await screen.findByRole("dialog")).toBeInTheDocument();
+  });
+
+  it("stops the page behind it from scrolling, and lets it again afterwards", async () => {
+    const user = userEvent.setup();
+    renderApp("/deck");
+    await open(user);
+    expect(document.body.style.overflow).toBe("hidden");
+    await user.keyboard("{Escape}");
+    expect(document.body.style.overflow).toBe("");
+  });
+
+  it("is not opened by the Add reverse button, which is its own control", async () => {
+    mock.handlers["POST /concepts/c-b/add"] = () => json(201, { added: 1, alreadyInDeck: 0 });
+    const user = userEvent.setup();
+    renderApp("/deck");
+    await user.click(await screen.findByRole("button", { name: "Add reverse of house" }));
+    expect(screen.queryByRole("dialog")).not.toBeInTheDocument();
+  });
+
+  it("opens a different card when another is chosen", async () => {
+    const user = userEvent.setup();
+    renderApp("/deck");
+    await open(user);
+    await user.keyboard("{Escape}");
+    const dialog = await open(user, "Open card: house");
+    expect(dialog).toHaveAccessibleName("Card: house");
+    expect(within(dialog).getByText("de huis")).toBeInTheDocument();
+  });
+});
+
 describe("deck page", () => {
   it("is reachable from My deck in the main navigation, which is highlighted while there", async () => {
     const user = userEvent.setup();
@@ -80,11 +265,12 @@ describe("deck page", () => {
     expect(rows[0]).toHaveTextContent("Not studied yet");
     expect(rows[1]).toHaveTextContent("Review");
     expect(rows[1]).toHaveTextContent("Due in 3 days");
-    expect(rows[1]).toHaveTextContent("12 days interval · 2 lapses");
+    // Nothing about intervals or how often a word was forgotten (this card has 12 days and 2 lapses).
+    expect(rows[1]).not.toHaveTextContent(/interval|lapse|12 days/i);
     expect(rows[2]).toHaveTextContent("Learning");
     expect(rows[2]).toHaveTextContent("Due now");
     expect(rows[3]).toHaveTextContent("Relearning");
-    expect(rows[3]).toHaveTextContent("1 lapse");
+    expect(rows[3]).not.toHaveTextContent(/lapse/i);
     expect(screen.getByText("12 cards")).toBeInTheDocument();
   });
 
@@ -150,8 +336,6 @@ describe("deck page", () => {
     for (const [value, order] of [
       ["due", "asc"],
       ["status", "asc"],
-      ["interval", "desc"],
-      ["lapses", "desc"],
       ["alpha", "asc"],
     ] as const) {
       await user.selectOptions(select, value);
@@ -163,10 +347,10 @@ describe("deck page", () => {
     const user = userEvent.setup();
     renderApp("/deck");
     const select = await screen.findByRole("combobox", { name: "Sort by" });
-    await user.selectOptions(select, "interval");
-    await user.click(await screen.findByRole("button", { name: /Reverse order, currently Longest first/ }));
-    await vi.waitFor(() => expect(lastList()).toContain("sort=interval&order=asc"));
-    expect(screen.getByRole("button", { name: /currently Shortest first/ })).toBeInTheDocument();
+    await user.selectOptions(select, "status");
+    await user.click(await screen.findByRole("button", { name: /Reverse order, currently New to review/ }));
+    await vi.waitFor(() => expect(lastList()).toContain("sort=status&order=desc"));
+    expect(screen.getByRole("button", { name: /currently Review to new/ })).toBeInTheDocument();
 
     await user.selectOptions(select, "alpha");
     await vi.waitFor(() => expect(lastList()).toContain("sort=alpha&order=asc"));
