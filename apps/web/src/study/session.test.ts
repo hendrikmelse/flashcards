@@ -6,6 +6,7 @@ import {
   phaseOf,
   reducer,
   remaining,
+  reReviewCount,
   type Action,
   type SessionState,
 } from "./session";
@@ -268,5 +269,75 @@ describe("the pause before the same card comes straight back", () => {
     ]);
     expect(s.current?.id).toBe("a");
     expect(s.repeatNotice).toBe(false);
+  });
+});
+
+describe("ending a session early", () => {
+  const started = () =>
+    run([{ type: "fetched", cards: ids(5) }, { type: "pick" }, answer("good", "learning"), { type: "pick" }]);
+
+  it("moves to the finished phase straight away, keeping what was answered", () => {
+    const s = reducer(started(), { type: "end" });
+    expect(phaseOf(s)).toBe("done");
+    expect(s.stats).toMatchObject({ reviewed: 1, good: 1 });
+    expect(s.handled).toEqual(["c1"]);
+  });
+
+  it("can be done from any phase, including before anything has loaded", () => {
+    expect(phaseOf(reducer(initialState, { type: "end" }))).toBe("done");
+    expect(phaseOf(reducer(reducer(initialState, { type: "fetchFailed" }), { type: "end" }))).toBe("done");
+  });
+
+  it("is harmless to do twice", () => {
+    const once = reducer(started(), { type: "end" });
+    expect(reducer(once, { type: "end" })).toBe(once);
+  });
+
+  it("still counts an answer that was being saved when the session ended", () => {
+    const s = run([{ type: "end" }, answer("easy", "review")], started());
+    expect(phaseOf(s)).toBe("done");
+    expect(s.stats).toMatchObject({ reviewed: 2, good: 1, easy: 1 });
+  });
+});
+
+describe("cards to look at again in a later session", () => {
+  it("counts the ones answered Hard or Good while still learning", () => {
+    const s = run([
+      { type: "fetched", cards: ids(3) },
+      { type: "pick" },
+      answer("good", "learning"),
+      { type: "pick" },
+      answer("hard", "learning"),
+    ]);
+    expect(reReviewCount(s)).toBe(2);
+  });
+
+  it("includes a missed card still waiting its turn, including the one showing", () => {
+    let s = run([{ type: "fetched", cards: ids(4) }, { type: "pick" }, answer("again", "learning")]);
+    expect(reReviewCount(s)).toBe(1); // c1 is back in the queue
+    s = run([{ type: "pick" }, { type: "pick" }], s); // c2 is showing; c1 still waits
+    expect(reReviewCount(s)).toBe(1);
+  });
+
+  it("leaves out cards that were never answered, and ones that graduated", () => {
+    const s = run([
+      { type: "fetched", cards: ids(4) },
+      { type: "pick" },
+      answer("easy", "review"),
+      { type: "pick" },
+    ]);
+    expect(reReviewCount(s)).toBe(0); // c1 graduated; c2 is showing but unanswered; c3, c4 are unseen
+  });
+
+  it("counts a card once, even if it was missed and later answered Good", () => {
+    const s = run([
+      { type: "fetched", cards: [card("a")] },
+      { type: "pick" },
+      answer("again", "learning"),
+      { type: "pick" },
+      { type: "acknowledgeRepeat" },
+      answer("good", "learning"),
+    ]);
+    expect(reReviewCount(s)).toBe(1);
   });
 });

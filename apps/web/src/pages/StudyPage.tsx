@@ -20,6 +20,7 @@ import {
   phaseOf,
   reducer,
   remaining,
+  reReviewCount,
   type SessionStats,
 } from "../study/session";
 
@@ -51,7 +52,7 @@ function useStudySession() {
 
   // Top up whenever the queue runs dry (this is also the initial load).
   useEffect(() => {
-    if (state.queue.length > 0 || state.exhausted || state.fetchError || fetching.current) return;
+    if (state.ended || state.queue.length > 0 || state.exhausted || state.fetchError || fetching.current) return;
     fetching.current = true;
     api<StudyResponse>(`/study?limit=${BATCH_SIZE}${direction}${early}`)
       .then(
@@ -61,12 +62,12 @@ function useStudySession() {
       .finally(() => {
         fetching.current = false;
       });
-  }, [state.queue.length, state.exhausted, state.fetchError, direction, early]);
+  }, [state.ended, state.queue.length, state.exhausted, state.fetchError, direction, early]);
 
   // Show the next card as soon as there is one.
   useEffect(() => {
-    if (!state.current && state.queue.length > 0) dispatch({ type: "pick" });
-  }, [state.current, state.queue]);
+    if (!state.ended && !state.current && state.queue.length > 0) dispatch({ type: "pick" });
+  }, [state.ended, state.current, state.queue]);
 
   // The clock for "time taken" starts when the card is actually in front of the user.
   useEffect(() => {
@@ -109,6 +110,7 @@ function useStudySession() {
     submitting: submit.isPending,
     submitError: submit.isError,
     acknowledgeRepeat: () => dispatch({ type: "acknowledgeRepeat" }),
+    end: () => dispatch({ type: "end" }),
     retryFetch: () => dispatch({ type: "retryFetch" }),
   };
 }
@@ -128,7 +130,10 @@ export function StudyPage() {
         <h1>Study</h1>
         {phase === "card" && (
           <p className="muted" aria-live="polite">
-            {remaining(state)} left · <Link to="/">End session</Link>
+            {remaining(state)} left ·{" "}
+            <button type="button" className="link" onClick={session.end}>
+              End session
+            </button>
           </p>
         )}
       </div>
@@ -164,7 +169,12 @@ export function StudyPage() {
       )}
 
       {phase === "done" && (
-        <Summary stats={state.stats} viewed={state.handled.length} reReview={state.pending.length} />
+        <Summary
+          stats={state.stats}
+          viewed={state.handled.length}
+          reReview={reReviewCount(state)}
+          ended={state.ended}
+        />
       )}
     </>
   );
@@ -366,14 +376,17 @@ function Summary({
   stats,
   viewed,
   reReview,
+  ended,
 }: {
   stats: SessionStats;
   /** Different cards seen this session (a missed card shown again counts once). */
   viewed: number;
   /** Cards still being learned, which come back in the next session. */
   reReview: number;
+  /** The user stopped early, so "nothing answered" does not mean "nothing to do". */
+  ended: boolean;
 }) {
-  if (stats.reviewed === 0) {
+  if (stats.reviewed === 0 && !ended) {
     return (
       <div className="study-wait">
         <h2>You&rsquo;re all caught up</h2>

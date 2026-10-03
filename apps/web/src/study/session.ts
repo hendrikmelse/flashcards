@@ -49,6 +49,8 @@ export interface SessionState {
   lastAgainId: string | null;
   /** The current card is the one just missed; show a pause before it instead of the card. */
   repeatNotice: boolean;
+  /** The user ended the session early; what is left of the queue is not studied. */
+  ended: boolean;
 }
 
 export const initialState: SessionState = {
@@ -62,6 +64,7 @@ export const initialState: SessionState = {
   fetchError: false,
   lastAgainId: null,
   repeatNotice: false,
+  ended: false,
 };
 
 export type Action =
@@ -71,6 +74,7 @@ export type Action =
   | { type: "pick" }
   | { type: "reveal" }
   | { type: "acknowledgeRepeat" }
+  | { type: "end" }
   /** `random` in [0, 1) is the jitter for where an "Again" card returns. */
   | { type: "answered"; rating: Rating; result: ReviewResponse; random: number };
 
@@ -120,6 +124,9 @@ export function reducer(state: SessionState, action: Action): SessionState {
     case "acknowledgeRepeat":
       return state.repeatNotice ? { ...state, repeatNotice: false } : state;
 
+    case "end":
+      return state.ended ? state : { ...state, ended: true };
+
     case "answered": {
       const card = state.current;
       if (!card) return state;
@@ -155,6 +162,7 @@ export function reducer(state: SessionState, action: Action): SessionState {
 export type Phase = "loading" | "card" | "done" | "error";
 
 export function phaseOf(state: SessionState): Phase {
+  if (state.ended) return "done"; // ended early: show how it went, whatever is left
   if (state.current) return "card";
   if (state.fetchError) return "error";
   if (state.exhausted && state.queue.length === 0) return "done";
@@ -164,4 +172,17 @@ export function phaseOf(state: SessionState): Phase {
 /** Cards still to be shown in the batch loaded so far, including the current one. */
 export function remaining(state: SessionState): number {
   return state.queue.length + (state.current ? 1 : 0);
+}
+
+/**
+ * Cards from this session that will come back for another look in a later one: those answered
+ * Hard or Good while still learning, plus any missed card (answered Again) that was still waiting
+ * its turn when the session ended.
+ */
+export function reReviewCount(state: SessionState): number {
+  const answered = new Set(state.handled);
+  const waiting = [...state.queue, ...(state.current ? [state.current] : [])].filter((c) =>
+    answered.has(c.id),
+  );
+  return state.pending.length + waiting.length;
 }
