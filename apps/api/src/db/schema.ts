@@ -1,5 +1,6 @@
 import { relations, sql } from "drizzle-orm";
 import {
+  boolean,
   check,
   index,
   integer,
@@ -34,6 +35,9 @@ export const users = pgTable("users", {
   passwordHash: text().notNull(),
   timezone: text().notNull().default("UTC"),
   dailyNewCardLimit: integer().notNull().default(20),
+  // What the study cards show.
+  showSentences: boolean().notNull().default(true),
+  showForms: boolean().notNull().default(true),
   createdAt: timestamp({ withTimezone: true }).notNull().defaultNow(),
 });
 

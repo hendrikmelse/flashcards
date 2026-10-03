@@ -13,6 +13,8 @@ export async function settingsRoutes(app: FastifyInstance, { db }: { db: Db }) {
         name: users.name,
         timezone: users.timezone,
         dailyNewCardLimit: users.dailyNewCardLimit,
+        showSentences: users.showSentences,
+        showForms: users.showForms,
       })
       .from(users)
       .where(eq(users.id, userId));
@@ -22,7 +24,7 @@ export async function settingsRoutes(app: FastifyInstance, { db }: { db: Db }) {
 
   app.get("/settings", { preHandler: app.requireAuth }, async (req) => read(req.user!.id));
 
-  // Changes the name, the daily new-card limit and/or the time zone. A new time zone moves the study
+  // Changes the name, the daily new-card limit, the time zone and/or what the study cards show. A new time zone moves the study
   // day, so review cards (which come due at the start of a study day) are moved to the start
   // of the same calendar day in the new zone rather than left at the old zone's 04:00.
   app.patch("/settings", { preHandler: app.requireAuth }, async (req, reply) => {
@@ -31,7 +33,7 @@ export async function settingsRoutes(app: FastifyInstance, { db }: { db: Db }) {
       return reply.code(400).send({ error: "Invalid input", issues: parsed.error.issues });
     }
     const userId = req.user!.id;
-    const { name, timezone, dailyNewCardLimit } = parsed.data;
+    const { name, timezone, dailyNewCardLimit, showSentences, showForms } = parsed.data;
 
     await db.transaction(async (tx) => {
       const [current] = await tx.select({ timezone: users.timezone }).from(users).where(eq(users.id, userId));
@@ -41,6 +43,8 @@ export async function settingsRoutes(app: FastifyInstance, { db }: { db: Db }) {
           ...(name !== undefined ? { name: name || null } : {}),
           ...(timezone !== undefined ? { timezone } : {}),
           ...(dailyNewCardLimit !== undefined ? { dailyNewCardLimit } : {}),
+          ...(showSentences !== undefined ? { showSentences } : {}),
+          ...(showForms !== undefined ? { showForms } : {}),
         })
         .where(eq(users.id, userId));
 

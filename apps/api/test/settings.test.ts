@@ -57,12 +57,14 @@ describe("GET /settings", () => {
     expect((await app.inject({ method: "PATCH", url: "/settings", payload: { dailyNewCardLimit: 5 } })).statusCode).toBe(401);
   });
 
-  it("returns the account's email, name, time zone and daily limit", async () => {
+  it("returns the account's email, name, time zone, daily limit and card display options", async () => {
     expect((await get()).json()).toEqual({
       email: "settings@example.com",
       name: null,
       timezone: "UTC",
       dailyNewCardLimit: 20,
+      showSentences: true,
+      showForms: true,
     });
   });
 });
@@ -97,6 +99,36 @@ describe("PATCH /settings: name", () => {
     expect((await patch({ name: "x".repeat(60) })).statusCode).toBe(200);
     expect((await patch({ name: 42 })).statusCode).toBe(400);
     await patch({ name: "" });
+  });
+});
+
+describe("PATCH /settings: what the study cards show", () => {
+  it("turns example sentences and word forms off and on, each on its own", async () => {
+    let res = await patch({ showSentences: false });
+    expect(res.statusCode).toBe(200);
+    expect(res.json()).toMatchObject({ showSentences: false, showForms: true });
+
+    res = await patch({ showForms: false });
+    expect(res.json()).toMatchObject({ showSentences: false, showForms: false });
+    expect((await get()).json()).toMatchObject({ showSentences: false, showForms: false });
+
+    res = await patch({ showSentences: true, showForms: true });
+    expect(res.json()).toMatchObject({ showSentences: true, showForms: true });
+  });
+
+  it("leaves the other settings alone", async () => {
+    await patch({ dailyNewCardLimit: 9, name: "Zed" });
+    const res = await patch({ showSentences: false });
+    expect(res.json()).toMatchObject({ dailyNewCardLimit: 9, name: "Zed", showSentences: false });
+    await patch({ dailyNewCardLimit: 20, name: "", showSentences: true });
+  });
+
+  it("rejects values that are not true or false", async () => {
+    for (const bad of ["yes", 1, 0, null, "false"]) {
+      expect((await patch({ showSentences: bad })).statusCode).toBe(400);
+      expect((await patch({ showForms: bad })).statusCode).toBe(400);
+    }
+    expect((await get()).json()).toMatchObject({ showSentences: true, showForms: true });
   });
 });
 

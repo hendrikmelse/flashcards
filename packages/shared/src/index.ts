@@ -58,6 +58,22 @@ export const loginSchema = z.object({
 });
 export type LoginInput = z.infer<typeof loginSchema>;
 
+export const changePasswordSchema = z.object({
+  currentPassword: z.string().min(1).max(200),
+  newPassword: z.string().min(8).max(200),
+});
+export type ChangePasswordInput = z.infer<typeof changePasswordSchema>;
+
+export const changeEmailSchema = z.object({
+  email: z.string().trim().toLowerCase().email().max(254),
+  // The current password, to confirm it is really the owner.
+  password: z.string().min(1).max(200),
+});
+export type ChangeEmailInput = z.infer<typeof changeEmailSchema>;
+
+export const deleteAccountSchema = z.object({ password: z.string().min(1).max(200) });
+export type DeleteAccountInput = z.infer<typeof deleteAccountSchema>;
+
 export type PublicUser = { id: string; email: string; name: string | null };
 
 /** The most new cards a day a user can ask for. */
@@ -69,10 +85,19 @@ export const updateSettingsSchema = z
     name: z.string().trim().max(NAME_MAX).optional(),
     timezone: z.string().max(64).refine(isValidTimeZone, "Unknown time zone").optional(),
     dailyNewCardLimit: z.number().int().min(0).max(DAILY_NEW_CARD_MAX).optional(),
+    // What the study cards show.
+    showSentences: z.boolean().optional(),
+    showForms: z.boolean().optional(),
   })
-  .refine((v) => v.name !== undefined || v.timezone !== undefined || v.dailyNewCardLimit !== undefined, {
-    message: "Provide a setting to change",
-  });
+  .refine(
+    (v) =>
+      v.name !== undefined ||
+      v.timezone !== undefined ||
+      v.dailyNewCardLimit !== undefined ||
+      v.showSentences !== undefined ||
+      v.showForms !== undefined,
+    { message: "Provide a setting to change" },
+  );
 export type UpdateSettingsInput = z.infer<typeof updateSettingsSchema>;
 
 export type Settings = {
@@ -83,6 +108,10 @@ export type Settings = {
   timezone: string;
   /** New cards introduced per study day, across all decks. */
   dailyNewCardLimit: number;
+  /** Show the example sentences on study cards. */
+  showSentences: boolean;
+  /** Show the word forms (plural, verb forms) with the answer. */
+  showForms: boolean;
 };
 
 // Optional direction for browsing: both languages or neither.

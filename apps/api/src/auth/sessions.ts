@@ -1,12 +1,12 @@
 import { createHash, randomBytes } from "node:crypto";
-import { and, eq, gt, lt } from "drizzle-orm";
+import { and, eq, gt, lt, ne } from "drizzle-orm";
 import type { Db } from "../db/types.js";
 import { sessions, users } from "../db/schema.js";
 
 export const SESSION_COOKIE = "session";
 export const SESSION_TTL_MS = 30 * 24 * 60 * 60 * 1000;
 
-const hashToken = (token: string) =>
+export const hashToken = (token: string) =>
   createHash("sha256").update(token).digest("hex");
 
 export async function createSession(db: Db, userId: string) {
@@ -25,6 +25,13 @@ export async function getSessionUser(db: Db, token: string) {
       and(eq(sessions.id, hashToken(token)), gt(sessions.expiresAt, new Date())),
     );
   return row ?? null;
+}
+
+/** Signs the user out everywhere except the session with this token. */
+export async function deleteOtherSessions(db: Db, userId: string, keepToken: string) {
+  await db
+    .delete(sessions)
+    .where(and(eq(sessions.userId, userId), ne(sessions.id, hashToken(keepToken))));
 }
 
 export async function deleteSession(db: Db, token: string) {

@@ -16,7 +16,7 @@ const invalid = (reply: FastifyReply, issues: unknown) =>
 
 export async function authRoutes(
   app: FastifyInstance,
-  { db, registration }: { db: Db; registration: RegistrationPolicy },
+  { db, registration, rateLimitMax }: { db: Db; registration: RegistrationPolicy; rateLimitMax: number },
 ) {
   const secure = process.env.NODE_ENV === "production";
 
@@ -31,7 +31,7 @@ export async function authRoutes(
     });
   }
 
-  const limit = { config: { rateLimit: { max: 10, timeWindow: "1 minute" } } };
+  const limit = { config: { rateLimit: { max: rateLimitMax, timeWindow: "1 minute" } } };
 
   app.post("/auth/register", limit, async (req, reply) => {
     const parsed = registerSchema.safeParse(req.body);

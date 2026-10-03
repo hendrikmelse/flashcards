@@ -6,6 +6,7 @@ import Fastify from "fastify";
 import { authPlugin } from "./auth/plugin.js";
 import { OPEN_REGISTRATION, type RegistrationPolicy } from "./auth/registration.js";
 import type { Db } from "./db/types.js";
+import { accountRoutes } from "./routes/account.js";
 import { authRoutes } from "./routes/auth.js";
 import { deckRoutes } from "./routes/deck.js";
 import { healthRoutes } from "./routes/health.js";
@@ -29,6 +30,11 @@ export interface AppOptions {
   staticDir?: string;
   /** Who may create an account. Defaults to open. */
   registration?: RegistrationPolicy;
+  /**
+   * How many sign-up, login and password-checking requests one client may make a minute.
+   * Tests that create many accounts raise it.
+   */
+  authRateLimit?: number;
 }
 
 export async function buildApp({
@@ -40,6 +46,7 @@ export async function buildApp({
   production = false,
   staticDir,
   registration = OPEN_REGISTRATION,
+  authRateLimit = 10,
 }: AppOptions) {
   const app = Fastify({ logger, trustProxy });
 
@@ -52,12 +59,13 @@ export async function buildApp({
   await app.register(
     async (api) => {
       await api.register(healthRoutes, { db });
-      await api.register(authRoutes, { db, registration });
+      await api.register(authRoutes, { db, registration, rateLimitMax: authRateLimit });
       await api.register(packRoutes, { db });
       await api.register(deckRoutes, { db });
       await api.register(studyRoutes, { db, scheduler });
       await api.register(statsRoutes, { db });
       await api.register(settingsRoutes, { db });
+      await api.register(accountRoutes, { db, rateLimitMax: authRateLimit });
     },
     { prefix },
   );
