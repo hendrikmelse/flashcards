@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { isValidTimeZone, studyDayStart } from "../src/study/day.js";
+import { endOfTomorrow, isValidTimeZone, studyDayStart } from "../src/study/day.js";
 
 const start = (now: string, tz: string) => studyDayStart(new Date(now), tz).toISOString();
 
@@ -40,5 +40,28 @@ describe("studyDayStart", () => {
   it("falls back to UTC for an invalid timezone", () => {
     expect(isValidTimeZone("Not/AZone")).toBe(false);
     expect(start("2026-03-10T10:00:00Z", "Not/AZone")).toBe("2026-03-10T04:00:00.000Z");
+  });
+});
+
+describe("endOfTomorrow", () => {
+  const end = (now: string, tz: string) => endOfTomorrow(new Date(now), tz).toISOString();
+
+  it("is when the day after tomorrow's study day begins", () => {
+    expect(end("2026-03-10T10:00:00Z", "UTC")).toBe("2026-03-12T04:00:00.000Z");
+  });
+
+  it("still belongs to the previous study day before 04:00", () => {
+    // 03:00 on the 10th is still the 9th's study day, so tomorrow is the 10th.
+    expect(end("2026-03-10T03:00:00Z", "UTC")).toBe("2026-03-11T04:00:00.000Z");
+  });
+
+  it("follows the user's time zone", () => {
+    // 04:00 in Amsterdam (UTC+1) is 03:00Z.
+    expect(end("2026-01-15T10:00:00Z", "Europe/Amsterdam")).toBe("2026-01-17T03:00:00.000Z");
+  });
+
+  it("handles the clocks changing", () => {
+    // Amsterdam springs forward on 29 March 2026, so 04:00 there on the 30th is 02:00Z.
+    expect(end("2026-03-28T10:00:00Z", "Europe/Amsterdam")).toBe("2026-03-30T02:00:00.000Z");
   });
 });

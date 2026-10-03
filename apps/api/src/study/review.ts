@@ -1,8 +1,9 @@
 import { and, eq } from "drizzle-orm";
 import type { SubmitReviewInput } from "@flashcards/shared";
-import { reviewLogs, userCards } from "../db/schema.js";
+import { reviewLogs, userCards, users } from "../db/schema.js";
 import type { Db } from "../db/types.js";
 import type { CardStateName, Scheduler } from "../srs/engine.js";
+import { studyDayStart } from "./day.js";
 
 export interface ReviewResult {
   userCardId: string;
@@ -62,7 +63,12 @@ export async function submitReview(
       };
     }
 
-    const next = scheduler.review(card, input.rating, now);
+    // Cards in review come due at the start of a study day, in the user's time zone.
+    const [owner] = await tx.select({ timezone: users.timezone }).from(users).where(eq(users.id, userId));
+    const timeZone = owner?.timezone ?? "UTC";
+    const next = scheduler.review(card, input.rating, now, {
+      dayStart: (date) => studyDayStart(date, timeZone),
+    });
 
     await tx
       .update(userCards)

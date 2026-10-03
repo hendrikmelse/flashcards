@@ -3,7 +3,7 @@ import type { DirectionSummary, StatsResponse } from "@flashcards/shared";
 import { reviewLogs, userCards, users } from "../db/schema.js";
 import type { Db } from "../db/types.js";
 import { isValidTimeZone, studyDayStart } from "./day.js";
-import { getStudyBatch } from "./queue.js";
+import { getStudyCounts } from "./queue.js";
 
 export async function getStats(
   db: Db,
@@ -43,11 +43,11 @@ export async function getStats(
     .orderBy(userCards.fromLanguage, userCards.toLanguage);
   const directions: DirectionSummary[] = await Promise.all(
     rows.map(async (r) => {
-      // The same counts a session in this direction would use; no cards are loaded.
-      const { counts } = await getStudyBatch(
+      // The same counts a session in this direction would use.
+      const { counts } = await getStudyCounts(
         db,
         userId,
-        { limit: 0, fromLanguage: r.fromLanguage, toLanguage: r.toLanguage },
+        { fromLanguage: r.fromLanguage, toLanguage: r.toLanguage },
         now,
       );
       return { ...r, nextDueAt: r.nextDueAt ? new Date(r.nextDueAt).toISOString() : null, ready: counts };

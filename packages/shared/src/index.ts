@@ -108,7 +108,18 @@ export type EntryView = {
 
 export const studyQuerySchema = z.object({
   limit: z.coerce.number().int().min(1).max(100).default(20),
+  // "1" starts the next session a little early (see EARLY_START_WINDOW_MS).
+  early: z.enum(["0", "1"]).default("0"),
 });
+
+/**
+ * The shortest time between study sessions. Cards still being learned (answered
+ * Hard or Good, or just seen) are held back until this long after the last answer,
+ * so each session is a distinct sitting rather than a trickle of minutes-long waits.
+ */
+export const SESSION_GAP_MS = 15 * 60 * 1000;
+/** In the last stretch of that wait, the next session may be started early. */
+export const EARLY_START_WINDOW_MS = 5 * 60 * 1000;
 
 // Response shapes of the API (dates arrive as ISO strings over JSON).
 export type CardStateName = "new" | "learning" | "review" | "relearning";
@@ -189,6 +200,24 @@ export type StatsResponse = {
   nextDueAt: string | null;
   /** One row per direction the user has cards in. */
   directions: DirectionSummary[];
+};
+
+/**
+ * The next session is held back until this time (SESSION_GAP_MS after the last answer),
+ * when `count` cards will be ready. Null when nothing is being held back.
+ */
+export type NextSession = { at: string; count: number };
+
+/** The dashboard's view of the study queue: how many cards of each kind, and what is coming. */
+export type StudyCountsResponse = {
+  now: string;
+  counts: StudyCounts;
+  nextSession: NextSession | null;
+  /**
+   * How many cards will be ready to study by the end of tomorrow's study day: those due
+   * by then, plus the new cards tomorrow's daily limit will allow.
+   */
+  tomorrow: number;
 };
 
 export type ReviewResponse = {

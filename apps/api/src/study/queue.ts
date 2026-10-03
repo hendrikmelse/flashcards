@@ -1,10 +1,12 @@
-import { and, asc, count, eq, exists, gte, inArray, lte, sql } from "drizzle-orm";
+import { and, asc, count, eq, exists, gte, inArray, lte, max, or, sql } from "drizzle-orm";
 import { alias } from "drizzle-orm/pg-core";
-import type { EntryView } from "@flashcards/shared";
+import { EARLY_START_WINDOW_MS, SESSION_GAP_MS, type EntryView } from "@flashcards/shared";
 import { loadEntries, loadSentences, sentenceKey } from "../content/queries.js";
 import { reviewLogs, userCards, users } from "../db/schema.js";
 import type { Db } from "../db/types.js";
-import { studyDayStart } from "./day.js";
+import type { Scheduler } from "../srs/engine.js";
+import { endOfTomorrow, studyDayStart } from "./day.js";
+import { interleaveNew } from "./order.js";
 
 // Learning cards due within this window are offered now, so a card rated
 // "Again" can come back during the same session.
@@ -24,20 +26,37 @@ export interface StudyCard {
   sentences: { front: string[]; back: string[] };
 }
 
+export type StudyCounts = { learning: number; review: number; new: number };
+
 export interface StudyBatch {
   now: Date;
-  counts: { learning: number; review: number; new: number };
+  counts: StudyCounts;
   cards: StudyCard[];
 }
 
-export async function getStudyBatch(
-  db: Db,
-  userId: string,
-  opts: { limit: number; fromLanguage?: string; toLanguage?: string },
-  now: Date,
-): Promise<StudyBatch> {
+type Options = { limit: number; fromLanguage?: string; toLanguage?: string; early?: boolean };
+
+// The conditions that define what is studyable now, and how many of each kind.
+//
+// Sessions are separated by SESSION_GAP_MS: after the last answer, cards still in
+// (re)learning are held back until the gap has passed, so they cannot trickle back
+// into the session that just ended. (The clock is the user's latest review, which is
+// when their session ended.) Reviews that are due and new cards are not held back.
+// With `early`, in the last EARLY_START_WINDOW_MS of the wait, the next session
+// starts now and offers what would be ready when the wait ends.
+async function prepare(db: Db, userId: string, opts: Omit<Options, "limit">, now: Date) {
   const [user] = await db.select().from(users).where(eq(users.id, userId));
   if (!user) throw new Error("User not found");
+
+  const [last] = await db
+    .select({ at: max(reviewLogs.reviewedAt) })
+    .from(reviewLogs)
+    .where(eq(reviewLogs.userId, userId));
+  const gateAt = last?.at ? new Date(last.at.getTime() + SESSION_GAP_MS) : null;
+  const gated = gateAt !== null && now < gateAt;
+  const early = gated && !!opts.early && gateAt.getTime() - now.getTime() <= EARLY_START_WINDOW_MS;
+  // What counts as due is judged at the end of the wait when starting early.
+  const asOf = early ? gateAt! : now;
 
   const mine = and(
     eq(userCards.userId, userId),
@@ -47,13 +66,10 @@ export async function getStudyBatch(
   const learningDue = and(
     mine,
     inArray(userCards.state, ["learning", "relearning"]),
-    lte(userCards.dueAt, new Date(now.getTime() + LEARN_AHEAD_MS)),
+    lte(userCards.dueAt, new Date(asOf.getTime() + LEARN_AHEAD_MS)),
+    gated && !early ? sql`false` : undefined,
   );
-  const reviewDue = and(
-    mine,
-    eq(userCards.state, "review"),
-    lte(userCards.dueAt, now),
-  );
+  const reviewDue = and(mine, eq(userCards.state, "review"), lte(userCards.dueAt, asOf));
   const isNew = and(mine, eq(userCards.state, "new"));
 
   // The daily new-card limit is global, not per direction: it counts every
@@ -74,19 +90,102 @@ export async function getStudyBatch(
     const [row] = await db.select({ n: count() }).from(userCards).where(where);
     return row?.n ?? 0;
   };
-  const counts = {
+  const counts: StudyCounts = {
     learning: await countWhere(learningDue),
     review: await countWhere(reviewDue),
     new: Math.min(newAllowed, await countWhere(isNew)),
   };
+  return {
+    learningDue,
+    reviewDue,
+    isNew,
+    counts,
+    gateAt: gated ? gateAt : null,
+    mine,
+    countWhere,
+    user,
+  };
+}
 
-  // Fill the batch in priority order: time-sensitive learning cards, then
-  // overdue reviews (most overdue first), then new cards.
-  const rows: (typeof userCards.$inferSelect)[] = [];
+/**
+ * How many cards of each kind a session would offer, without loading any cards, and,
+ * while the next session is being held back, when it opens and how many cards will be
+ * ready then.
+ */
+export async function getStudyCounts(
+  db: Db,
+  userId: string,
+  opts: Omit<Options, "limit">,
+  now: Date,
+): Promise<{
+  now: Date;
+  counts: StudyCounts;
+  nextSession: { at: Date; count: number } | null;
+  tomorrow: number;
+}> {
+  const { counts, gateAt, mine, countWhere, isNew, user } = await prepare(db, userId, opts, now);
+
+  let nextSession: { at: Date; count: number } | null = null;
+  if (gateAt) {
+    // Everything that will be due by the time the wait is over.
+    const ready =
+      (await countWhere(
+        and(
+          mine,
+          inArray(userCards.state, ["learning", "relearning"]),
+          lte(userCards.dueAt, new Date(gateAt.getTime() + LEARN_AHEAD_MS)),
+        ),
+      )) +
+      (await countWhere(and(mine, eq(userCards.state, "review"), lte(userCards.dueAt, gateAt))));
+    if (ready > 0) nextSession = { at: gateAt, count: ready };
+  }
+
+  // What will be waiting by the end of tomorrow's study day: everything due by then, plus
+  // the new cards tomorrow's daily limit (which starts afresh) will let in.
+  const end = endOfTomorrow(now, user.timezone);
+  const dueByTomorrow =
+    (await countWhere(
+      and(
+        mine,
+        inArray(userCards.state, ["learning", "relearning"]),
+        lte(userCards.dueAt, end),
+      ),
+    )) + (await countWhere(and(mine, eq(userCards.state, "review"), lte(userCards.dueAt, end))));
+  const newTomorrow = Math.min(user.dailyNewCardLimit, await countWhere(isNew));
+
+  return { now, counts, nextSession, tomorrow: dueByTomorrow + newTomorrow };
+}
+
+/**
+ * The next cards to study, in order. New cards are mixed in near the front
+ * (see interleaveNew); everything else that is due, learning cards and reviews
+ * alike, goes by how likely the user is to have forgotten it, most likely
+ * first, so what is left at the end of a session is what they probably know.
+ */
+export async function getStudyBatch(
+  db: Db,
+  userId: string,
+  opts: Options,
+  now: Date,
+  scheduler: Scheduler,
+): Promise<StudyBatch> {
+  const { learningDue, reviewDue, isNew, counts } = await prepare(db, userId, opts, now);
+
+  const due = await db.select().from(userCards).where(or(learningDue, reviewDue));
+  const ranked = due
+    .map((card) => ({ card, recall: scheduler.retrievability(card, now) }))
+    .sort(
+      (a, b) =>
+        a.recall - b.recall ||
+        a.card.dueAt.getTime() - b.card.dueAt.getTime() ||
+        a.card.id.localeCompare(b.card.id),
+    )
+    .map((x) => x.card);
+
   // A new card whose reverse (same word, other direction) is in review, or relearning
   // after a lapse, comes before other new cards: you have known the word one way, so
   // learn it the other way now. A reverse still in its first learning steps doesn't count.
-  const reverseInReview = exists(
+  const reverseKnown = exists(
     db
       .select({ one: sql`1` })
       .from(reverse)
@@ -100,29 +199,22 @@ export async function getStudyBatch(
         ),
       ),
   );
-  const take = (where: ReturnType<typeof and>, n: number, order: "due" | "added") =>
-    db
-      .select()
-      .from(userCards)
-      .where(where)
-      .orderBy(
-        ...(order === "due"
-          ? [asc(userCards.dueAt), asc(userCards.id)]
-          : [
-              sql`(case when ${reverseInReview} then 0 else 1 end)`,
-              asc(userCards.addedAt),
-              asc(userCards.sortKey),
-              asc(userCards.id),
-            ]),
-      )
-      .limit(n);
+  const newCards =
+    counts.new > 0
+      ? await db
+          .select()
+          .from(userCards)
+          .where(isNew)
+          .orderBy(
+            sql`(case when ${reverseKnown} then 0 else 1 end)`,
+            asc(userCards.addedAt),
+            asc(userCards.sortKey),
+            asc(userCards.id),
+          )
+          .limit(counts.new)
+      : [];
 
-  rows.push(...(await take(learningDue, opts.limit, "due")));
-  if (rows.length < opts.limit) {
-    rows.push(...(await take(reviewDue, opts.limit - rows.length, "due")));
-  }
-  const newRoom = Math.min(opts.limit - rows.length, newAllowed);
-  if (newRoom > 0) rows.push(...(await take(isNew, newRoom, "added")));
+  const rows = interleaveNew(newCards, ranked).slice(0, opts.limit);
 
   const conceptIds = [...new Set(rows.map((r) => r.conceptId))];
   const languages = [...new Set(rows.flatMap((r) => [r.fromLanguage, r.toLanguage]))];

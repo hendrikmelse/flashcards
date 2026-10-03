@@ -35,6 +35,13 @@ function offsetMs(instant: number, timeZone: string): number {
   return wallAsUtc - Math.floor(instant / 1000) * 1000;
 }
 
+/** The instant the study day after the one containing `now` ends, i.e. when the day after tomorrow begins. */
+export function endOfTomorrow(now: Date, timeZone: string): Date {
+  // 30 hours always lands inside the next study day, whatever DST does to day lengths.
+  const tomorrow = studyDayStart(new Date(studyDayStart(now, timeZone).getTime() + 30 * 3_600_000), timeZone);
+  return studyDayStart(new Date(tomorrow.getTime() + 30 * 3_600_000), timeZone);
+}
+
 /** The instant the current study day began for a user in `timeZone`. */
 export function studyDayStart(
   now: Date,

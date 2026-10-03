@@ -6,7 +6,7 @@ import {
 } from "@flashcards/shared";
 import type { Scheduler } from "../srs/engine.js";
 import type { Db } from "../db/types.js";
-import { getStudyBatch } from "../study/queue.js";
+import { getStudyBatch, getStudyCounts } from "../study/queue.js";
 import { submitReview } from "../study/review.js";
 
 const invalid = (reply: FastifyReply, issues: unknown) =>
@@ -27,9 +27,17 @@ export async function studyRoutes(
     return getStudyBatch(
       db,
       req.user!.id,
-      { limit: l.data.limit, ...d.data },
+      { limit: l.data.limit, early: l.data.early === "1", ...d.data },
       new Date(),
+      scheduler,
     );
+  });
+
+  // Just the counts, for the dashboard: no cards are ranked or loaded.
+  app.get("/study/counts", { preHandler: app.requireAuth }, async (req, reply) => {
+    const d = directionQuerySchema.safeParse(req.query);
+    if (!d.success) return invalid(reply, d.error.issues);
+    return getStudyCounts(db, req.user!.id, d.data, new Date());
   });
 
   app.post("/reviews", { preHandler: app.requireAuth }, async (req, reply) => {

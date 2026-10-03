@@ -1,5 +1,5 @@
 import { PGlite } from "@electric-sql/pglite";
-import { eq } from "drizzle-orm";
+import { eq, sql } from "drizzle-orm";
 import { drizzle } from "drizzle-orm/pglite";
 import { migrate } from "drizzle-orm/pglite/migrator";
 import type { FastifyInstance } from "fastify";
@@ -7,6 +7,7 @@ import { randomUUID } from "node:crypto";
 import { afterAll, beforeAll, describe, expect, it } from "vitest";
 import { buildApp } from "../src/app.js";
 import { createFsrsScheduler } from "../src/srs/engine.js";
+import { studyDayStart } from "../src/study/day.js";
 import { seed } from "../src/db/seed.js";
 import * as schema from "../src/db/schema.js";
 import {
@@ -248,12 +249,41 @@ describe("POST /reviews", () => {
 });
 
 describe("study queue after reviews", () => {
-  it("offers learning cards that are due soon, ahead of new cards", async () => {
+  it("holds learning cards back until 15 minutes after the last answer", async () => {
+    // dog was just answered, so it is in learning (due in 10 minutes), but the session gap holds it.
+    const batch = await study();
+    expect(batch.counts.learning).toBe(0);
+    expect(batch.cards.some((c) => c.state === "learning")).toBe(false);
+
+    const res = (await get("/study/counts")).json() as {
+      counts: { learning: number };
+      nextSession: { at: string; count: number } | null;
+    };
+    expect(res.nextSession).not.toBeNull();
+    expect(res.nextSession!.count).toBe(1); // dog, ready when the wait is over
+    const [last] = await db
+      .select({ at: sql<Date>`max(${reviewLogs.reviewedAt})` })
+      .from(reviewLogs)
+      .where(eq(reviewLogs.userId, userId));
+    expect(Date.parse(res.nextSession!.at)).toBe(new Date(last!.at).getTime() + 15 * 60_000);
+
+    // Age the reviews so the gap has passed, for the tests that follow.
+    await db
+      .update(reviewLogs)
+      .set({ reviewedAt: sql`${reviewLogs.reviewedAt} - interval '20 minutes'` })
+      .where(eq(reviewLogs.userId, userId));
+    const after = (await get("/study/counts")).json() as { nextSession: unknown };
+    expect(after.nextSession).toBeNull();
+  });
+
+  it("offers learning cards that are due soon, alongside new cards", async () => {
     const { counts, cards } = await study();
     // dog is learning (due in 10m, inside the 20m learn-ahead window)
     expect(counts.learning).toBe(1);
-    expect(cards[0]).toMatchObject({ state: "learning" });
-    expect(cards[0]!.front[0]!.lemma).toBe("dog");
+    const dog = cards.find((c) => c.state === "learning")!;
+    expect(dog.front[0]!.lemma).toBe("dog");
+    // With so few cards, the one new card (water) is mixed in at the very front.
+    expect(cards.map((c) => c.state)).toEqual(["new", "learning"]);
   });
 
   it("keeps graduated cards out until they are due, then offers them as reviews", async () => {
@@ -266,14 +296,20 @@ describe("study queue after reviews", () => {
       .from(userCards)
       .where(eq(userCards.state, "review"));
     expect(house).toBeDefined();
+    // A day overdue: last reviewed nine days ago, due yesterday.
     await db
       .update(userCards)
-      .set({ dueAt: new Date(Date.now() - 24 * 3_600_000) })
+      .set({
+        dueAt: new Date(Date.now() - 24 * 3_600_000),
+        lastReviewedAt: new Date(Date.now() - 9 * 24 * 3_600_000),
+      })
       .where(eq(userCards.id, house!.id));
 
     const after = await study();
     expect(after.counts.review).toBe(1);
-    expect(after.cards.map((c) => c.state)).toEqual(["learning", "review", "new"]);
+    // The review is the likeliest to be forgotten, so it leads; the new card is mixed in
+    // after it, and the learning card (recalled a moment ago) comes last.
+    expect(after.cards.map((c) => c.state)).toEqual(["review", "new", "learning"]);
   });
 
   it("counts cards first seen today against the daily new limit, across directions", async () => {
@@ -286,11 +322,19 @@ describe("study queue after reviews", () => {
   });
 });
 
+// Sign-ups are rate limited, so the tests below share one user and clear their cards each time.
+let scratch: { cookies: { session: string }; id: string } | undefined;
+async function scratchUser() {
+  scratch ??= await register("scratch@example.com");
+  await db.delete(userCards).where(eq(userCards.userId, scratch.id));
+  return scratch;
+}
+
 describe("new card priority", () => {
   // dog, house, water were added in that order, all en->nl and new. Which of them
   // comes first depends on the state of the reverse (nl->en) card.
   async function setup(email: string, reverseOf: "dog" | "house" | "water", reverseState: "review" | "learning" | "relearning" | "new") {
-    const me = await register(email);
+    const me = await scratchUser();
     const cs = await db.select().from(concepts);
     const id = (key: string) => cs.find((c) => c.key === key)!.id;
     const day = (n: number) => new Date(Date.now() - (10 - n) * 86_400_000);
@@ -336,5 +380,306 @@ describe("new card priority", () => {
     expect(await newOrder(c)).toEqual(["dog", "house", "water"]);
     const c2 = await setup("mixed2@example.com", "water", "review");
     expect(await newOrder(c2)).toEqual(["water", "dog", "house"]);
+  });
+});
+
+describe("study queue order", () => {
+  // A review due now, with a stability and age that make it more or less likely to be forgotten.
+  async function reviews(email: string, specs: { key: string; stability: number; daysAgo: number }[], newKeys: string[] = []) {
+    const me = await scratchUser();
+    const cs = await db.select().from(concepts);
+    const id = (key: string) => cs.find((c) => c.key === key)!.id;
+    const day = 86_400_000;
+    await db.insert(userCards).values([
+      ...specs.map((s) => ({
+        userId: me.id,
+        conceptId: id(s.key),
+        fromLanguage: "en",
+        toLanguage: "nl",
+        state: "review" as const,
+        stability: s.stability,
+        difficulty: 5,
+        intervalDays: s.stability,
+        repetitions: 3,
+        lastReviewedAt: new Date(Date.now() - s.daysAgo * day),
+        dueAt: new Date(Date.now() - 1000),
+      })),
+      ...newKeys.map((k) => ({ userId: me.id, conceptId: id(k), fromLanguage: "en", toLanguage: "nl" })),
+    ]);
+    return me.cookies;
+  }
+  const order = async (c: { session: string }) =>
+    ((await get("/study?limit=50", c)).json() as { cards: Card[] }).cards.map((x) => `${x.state}:${x.front[0]?.lemma}`);
+
+  it("puts the review most likely to be forgotten first, not the most overdue", async () => {
+    // dog: well learned (stability 100) and long overdue; house: shaky (stability 2), only a bit overdue.
+    const c = await reviews("rank@example.com", [
+      { key: "dog", stability: 100, daysAgo: 120 },
+      { key: "house", stability: 2, daysAgo: 6 },
+    ]);
+    expect(await order(c)).toEqual(["review:house", "review:dog"]);
+  });
+
+  it("mixes new cards in near the front of the queue", async () => {
+    const c = await reviews(
+      "mix@example.com",
+      [
+        { key: "dog", stability: 3, daysAgo: 8 },
+        { key: "house", stability: 4, daysAgo: 8 },
+      ],
+      ["water"],
+    );
+    const out = await order(c);
+    expect(out).toHaveLength(3);
+    // One new card among two reviews: the first half of the queue, after the likeliest-forgotten review.
+    expect(out[1]).toBe("new:water");
+  });
+});
+
+describe("GET /study/counts", () => {
+  it("requires authentication and a complete direction", async () => {
+    expect((await app.inject({ method: "GET", url: "/study/counts" })).statusCode).toBe(401);
+    expect((await get("/study/counts?fromLanguage=en")).statusCode).toBe(400);
+  });
+
+  it("returns the same counts as a study batch, without any cards", async () => {
+    const batch = (await get("/study")).json() as { counts: object };
+    const res = (await get("/study/counts")).json() as { counts: object; cards?: unknown };
+    expect(res.counts).toEqual(batch.counts);
+    expect(res.cards).toBeUndefined();
+  });
+});
+
+describe("the gap between sessions", () => {
+  const MIN = 60_000;
+  // A user with one learning card and one review card, both already due, whose last
+  // answer was `lastAnswerMinutesAgo` minutes ago.
+  async function user(_label: string, lastAnswerMinutesAgo: number, extra: { reviewDueInMin?: number } = {}) {
+    const me = await scratchUser(); // clears their cards, and with them their history
+    const cs = await db.select().from(concepts);
+    const id = (key: string) => cs.find((c) => c.key === key)!.id;
+    const [learning, review] = await db
+      .insert(userCards)
+      .values([
+        {
+          userId: me.id,
+          conceptId: id("dog"),
+          fromLanguage: "en",
+          toLanguage: "nl",
+          state: "learning",
+          stability: 0.5,
+          lastReviewedAt: new Date(Date.now() - lastAnswerMinutesAgo * MIN),
+          dueAt: new Date(Date.now() - 1 * MIN),
+        },
+        {
+          userId: me.id,
+          conceptId: id("house"),
+          fromLanguage: "en",
+          toLanguage: "nl",
+          state: "review",
+          stability: 5,
+          lastReviewedAt: new Date(Date.now() - 6 * 86_400_000),
+          dueAt: new Date(Date.now() + (extra.reviewDueInMin ?? -60) * MIN),
+        },
+      ])
+      .returning();
+    await db.insert(reviewLogs).values({
+      userCardId: learning!.id,
+      userId: me.id,
+      clientReviewId: randomUUID(),
+      rating: "good",
+      reviewedAt: new Date(Date.now() - lastAnswerMinutesAgo * MIN),
+      stateBefore: "new",
+      stateAfter: "learning",
+      intervalBeforeDays: 0,
+      intervalAfterDays: 0,
+      dueAfter: new Date(Date.now() - 1 * MIN),
+    });
+    void review;
+    return me.cookies;
+  }
+  const states = async (c: { session: string }, qs = "") =>
+    ((await get(`/study?limit=50${qs}`, c)).json() as { cards: Card[] }).cards.map((x) => x.state).sort();
+  const counts = async (c: { session: string }) =>
+    (await get("/study/counts", c)).json() as {
+      counts: { learning: number; review: number; new: number };
+      nextSession: { at: string; count: number } | null;
+    };
+
+  it("holds learning cards back during the gap but not due reviews", async () => {
+    const c = await user("gap-held@example.com", 2);
+    expect(await states(c)).toEqual(["review"]);
+    const res = await counts(c);
+    expect(res.counts).toEqual({ learning: 0, review: 1, new: 0 });
+    // Everything ready when the gap ends: the learning card, plus the review that is already due.
+    expect(res.nextSession!.count).toBe(2);
+    const wait = Date.parse(res.nextSession!.at) - Date.now();
+    expect(wait).toBeGreaterThan(12 * MIN);
+    expect(wait).toBeLessThanOrEqual(13 * MIN);
+  });
+
+  it("offers them once 15 minutes have passed since the last answer", async () => {
+    const c = await user("gap-open@example.com", 16);
+    expect(await states(c)).toEqual(["learning", "review"]);
+    expect((await counts(c)).nextSession).toBeNull();
+  });
+
+  it("counts reviews that fall due before the gap ends as part of the next session", async () => {
+    const c = await user("gap-soon@example.com", 2, { reviewDueInMin: 8 });
+    const res = await counts(c);
+    expect(res.counts).toEqual({ learning: 0, review: 0, new: 0 });
+    expect(res.nextSession!.count).toBe(2); // the learning card and the review due in 8 minutes
+  });
+
+  it("does not hold back a review that is due in more than the gap", async () => {
+    const c = await user("gap-far@example.com", 2, { reviewDueInMin: 120 });
+    expect((await counts(c)).nextSession!.count).toBe(1); // just the learning card
+  });
+
+  it("lets the next session start early in the last five minutes, with everything due by then", async () => {
+    // Last answer 11 minutes ago: the gap ends in 4 minutes. A review due in 3 minutes is part of it.
+    const c = await user("gap-early@example.com", 11, { reviewDueInMin: 3 });
+    expect(await states(c)).toEqual([]);
+    expect(await states(c, "&early=1")).toEqual(["learning", "review"]);
+  });
+
+  it("does not allow starting early with more than five minutes to go", async () => {
+    const c = await user("gap-toosoon@example.com", 5);
+    // Only the review that is already due; the held-back learning card does not come early.
+    expect(await states(c, "&early=1")).toEqual(["review"]);
+  });
+
+  it("ignores the early flag when there is no wait", async () => {
+    const c = await user("gap-none@example.com", 30);
+    expect(await states(c, "&early=1")).toEqual(await states(c));
+  });
+});
+
+describe("what is ready tomorrow", () => {
+  const HOUR = 3_600_000;
+  // Cards of the given states, due `dueInHours` from now, for a user with the given daily limit.
+  async function user(
+    cards: { state: "review" | "learning" | "new"; dueInHours?: number }[],
+    limit = 20,
+  ) {
+    const me = await scratchUser();
+    await db.update(users).set({ dailyNewCardLimit: limit }).where(eq(users.id, me.id));
+    const cs = await db.select().from(concepts);
+    await db.insert(userCards).values(
+      cards.map((c, i) => ({
+        userId: me.id,
+        conceptId: cs[i % cs.length]!.id,
+        // A different direction per lap, so the same word can be used more than once.
+        fromLanguage: i < cs.length ? "en" : "nl",
+        toLanguage: i < cs.length ? "nl" : "en",
+        state: c.state,
+        stability: c.state === "new" ? null : 5,
+        lastReviewedAt: c.state === "new" ? null : new Date(Date.now() - 3 * 24 * HOUR),
+        dueAt: new Date(Date.now() + (c.dueInHours ?? 0) * HOUR),
+      })),
+    );
+    return me.cookies;
+  }
+  const tomorrow = async (c: { session: string }) =>
+    ((await get("/study/counts", c)).json() as { tomorrow: number; counts: { review: number; new: number } });
+
+  it("counts cards due by the end of tomorrow, and not ones due later", async () => {
+    // 20 hours is always within tomorrow's study day; 60 hours never is.
+    const c = await user([
+      { state: "review", dueInHours: 20 },
+      { state: "review", dueInHours: 20 },
+      { state: "review", dueInHours: 60 },
+    ]);
+    const res = await tomorrow(c);
+    expect(res.counts.review).toBe(0); // nothing is ready right now
+    expect(res.tomorrow).toBe(2);
+  });
+
+  it("counts learning cards that fall due by then too", async () => {
+    const c = await user([{ state: "learning", dueInHours: 10 }]);
+    expect((await tomorrow(c)).tomorrow).toBe(1);
+  });
+
+  it("adds the new cards tomorrow's daily limit will let in", async () => {
+    const c = await user(
+      [{ state: "new" }, { state: "new" }, { state: "new" }],
+      2, // only two new cards a day
+    );
+    // Today's limit is not used up here, but tomorrow's is what matters: two of the three.
+    expect((await tomorrow(c)).tomorrow).toBe(2);
+  });
+
+  it("combines due cards and new cards", async () => {
+    const c = await user([{ state: "review", dueInHours: 20 }, { state: "new" }, { state: "new" }], 20);
+    expect((await tomorrow(c)).tomorrow).toBe(3);
+  });
+
+  it("is zero when there is nothing due soon and no new cards", async () => {
+    const c = await user([{ state: "review", dueInHours: 200 }]);
+    expect((await tomorrow(c)).tomorrow).toBe(0);
+  });
+});
+
+describe("review cards come due at the start of a study day", () => {
+  // A card on its last learning step, about to graduate when answered Good.
+  async function graduate(timezone: string) {
+    const me = await scratchUser();
+    await db.update(users).set({ timezone }).where(eq(users.id, me.id));
+    const cs = await db.select().from(concepts);
+    const [card] = await db
+      .insert(userCards)
+      .values({
+        userId: me.id,
+        conceptId: cs[0]!.id,
+        fromLanguage: "en",
+        toLanguage: "nl",
+        state: "learning",
+        stability: 0.5,
+        difficulty: 5,
+        learningStep: 1,
+        repetitions: 1,
+        lastReviewedAt: new Date(Date.now() - 10 * 60_000),
+        dueAt: new Date(Date.now() - 1000),
+      })
+      .returning();
+    const res = await review(card!.id, "good", {}, me.cookies);
+    expect(res.statusCode).toBe(200);
+    return res.json() as { state: string; dueAt: string; intervalDays: number };
+  }
+
+  it("makes a card that graduates due at 04:00, not mid-day", async () => {
+    const r = await graduate("UTC");
+    expect(r.state).toBe("review");
+    const due = new Date(r.dueAt);
+    expect(due.getTime()).toBe(studyDayStart(due, "UTC").getTime());
+    expect(due.getUTCHours()).toBe(4);
+    // Within a day before the interval was up.
+    const nominal = Date.now() + r.intervalDays * 86_400_000;
+    expect(nominal - due.getTime()).toBeGreaterThanOrEqual(-60_000);
+    expect(nominal - due.getTime()).toBeLessThan(24 * 3_600_000 + 60_000);
+  });
+
+  it("uses the user's time zone", async () => {
+    const r = await graduate("America/New_York");
+    const due = new Date(r.dueAt);
+    expect(due.getTime()).toBe(studyDayStart(due, "America/New_York").getTime());
+    expect([8, 9]).toContain(due.getUTCHours()); // 04:00 in New York is 08:00Z or 09:00Z
+  });
+
+  it("holds a card that comes due at 04:00 out of today's queue, and offers it from then", async () => {
+    const me = await scratchUser();
+    const cs = await db.select().from(concepts);
+    const startOfToday = studyDayStart(new Date(), "UTC");
+    const nextStart = new Date(studyDayStart(new Date(startOfToday.getTime() + 30 * 3_600_000), "UTC"));
+    await db
+      .insert(userCards)
+      .values([
+        // Became due when today's study day began, so it is available now.
+        { userId: me.id, conceptId: cs[0]!.id, fromLanguage: "en", toLanguage: "nl", state: "review", stability: 5, difficulty: 5, lastReviewedAt: new Date(startOfToday.getTime() - 3 * 86_400_000), dueAt: startOfToday },
+        // Due when tomorrow's begins, so not yet.
+        { userId: me.id, conceptId: cs[1]!.id, fromLanguage: "en", toLanguage: "nl", state: "review", stability: 5, difficulty: 5, lastReviewedAt: new Date(startOfToday.getTime() - 2 * 86_400_000), dueAt: nextStart },
+      ]);
+    const { cards } = (await get("/study?limit=20", me.cookies)).json() as { cards: Card[] };
+    expect(cards).toHaveLength(1);
   });
 });
