@@ -23,11 +23,12 @@ describe("auth flow", () => {
     expect(await screen.findByRole("heading", { name: "Your deck" })).toBeInTheDocument();
   });
 
-  it("has Dashboard and Add words in the main navigation, and no tab for studying", async () => {
+  it("has Dashboard, My deck and Add words in the main navigation, and no tab for studying", async () => {
     mock.loggedIn = true;
     renderApp("/");
     const nav = await screen.findByRole("navigation", { name: "Main" });
-    expect(within(nav).getAllByRole("link").map((l) => l.textContent)).toEqual(["Dashboard", "Add words"]);
+    expect(within(nav).getAllByRole("link").map((l) => l.textContent)).toEqual(["Dashboard", "My deck", "Add words"]);
+    expect(within(nav).getByRole("link", { name: "My deck" })).toHaveAttribute("href", "/deck");
     expect(within(nav).getByRole("link", { name: "Add words" })).toHaveAttribute("href", "/add-words");
     expect(within(nav).queryByRole("link", { name: "Study" })).not.toBeInTheDocument();
     // Studying starts from the dashboard.
@@ -248,6 +249,56 @@ describe("auth flow", () => {
 });
 
 describe("dashboard", () => {
+  it("uses the same header layout as the deck and Add words pages, so the buttons line up", async () => {
+    mock.loggedIn = true;
+    mock.handlers["GET /deck"] = () =>
+      json(200, {
+        summary: { total: 0, new: 0, learning: 0, relearning: 0, review: 0, dueNow: 0 },
+        hasMore: false,
+        mirrorable: 0,
+        cards: [],
+      });
+    const headerOf = async (route: string, heading: string) => {
+      const view = renderApp(route);
+      const h1 = await screen.findByRole("heading", { name: heading, level: 1 });
+      const head = h1.closest(".page-head");
+      const actions = head?.querySelector(".page-head-actions");
+      const markup = { head: head?.className, actions: actions?.className };
+      view.unmount();
+      return markup;
+    };
+    const expected = { head: "page-head", actions: "page-head-actions" };
+    expect(await headerOf("/", "Dashboard")).toEqual(expected);
+    expect(await headerOf("/deck", "My deck")).toEqual(expected);
+    expect(await headerOf("/add-words", "Add words")).toEqual(expected);
+  });
+
+  it("puts View deck and Add more words at the top right, level with the heading", async () => {
+    mock.loggedIn = true;
+    renderApp("/");
+    const view = await screen.findByRole("link", { name: "View deck" });
+    const add = screen.getByRole("link", { name: "Add more words" });
+    expect(view.parentElement).toBe(add.parentElement);
+    expect(view.parentElement).toHaveClass("page-head-actions");
+    expect(view.nextElementSibling).toBe(add);
+    const head = view.parentElement!.parentElement!;
+    expect(head).toHaveClass("page-head");
+    expect(head.firstElementChild).toBe(screen.getByRole("heading", { name: "Dashboard" }));
+    // Not repeated at the bottom of the deck section.
+    expect(screen.getAllByRole("link", { name: "View deck" })).toHaveLength(1);
+    expect(screen.getAllByRole("link", { name: "Add more words" })).toHaveLength(1);
+  });
+
+  it("leaves them out when the deck is empty, where Browse words does the job", async () => {
+    mock.loggedIn = true;
+    mock.handlers["GET /deck?limit=1"] = () =>
+      json(200, { summary: { total: 0, new: 0, learning: 0, relearning: 0, review: 0, dueNow: 0 } });
+    renderApp("/");
+    expect(await screen.findByRole("link", { name: "Browse words" })).toBeInTheDocument();
+    expect(screen.queryByRole("link", { name: "View deck" })).not.toBeInTheDocument();
+    expect(screen.queryByRole("link", { name: "Add more words" })).not.toBeInTheDocument();
+  });
+
   it("shows how the deck splits into review, learning and new", async () => {
     mock.loggedIn = true;
     renderApp("/");
@@ -265,11 +316,10 @@ describe("dashboard", () => {
     expect(hero).toHaveTextContent("11 cards ready to study"); // 4 due + 7 new
     expect(hero).toHaveTextContent("4 due now · 7 new");
     expect(within(hero).getByRole("link", { name: "Start studying" })).toHaveAttribute("href", "/study");
-    // "Add more words" lives next to "View deck", not in the hero.
+    // "Add more words" lives next to "View deck" at the top of the page, not in the hero.
     expect(within(hero).queryByRole("link", { name: "Add more words" })).not.toBeInTheDocument();
-    const yourDeck = screen.getByRole("heading", { name: "Your deck" }).parentElement!;
-    expect(within(yourDeck).getByRole("link", { name: "View deck" })).toHaveAttribute("href", "/deck");
-    expect(within(yourDeck).getByRole("link", { name: "Add more words" })).toHaveAttribute("href", "/add-words");
+    expect(screen.getByRole("link", { name: "View deck" })).toHaveAttribute("href", "/deck");
+    expect(screen.getByRole("link", { name: "Add more words" })).toHaveAttribute("href", "/add-words");
     expect(screen.getByRole("img", { name: /3 learning/ })).toBeInTheDocument();
   });
 

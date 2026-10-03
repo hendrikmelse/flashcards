@@ -217,19 +217,21 @@ export function DeckPage() {
 
   return (
     <>
-      <p>
-        <Link to="/">← Dashboard</Link>
-      </p>
       <div className="page-head">
         <div>
           <h1>My deck</h1>
           {deckTotal !== null && <p className="lead">{plural(deckTotal, "card")}</p>}
         </div>
-        {summary.total > 0 && (
-          <Link to="/add-words" className="button secondary">
-            Add more words
+        <div className="page-head-actions">
+          <Link to="/" className="button secondary">
+            Go to dashboard
           </Link>
-        )}
+          {summary.total > 0 && (
+            <Link to="/add-words" className="button secondary">
+              Add more words
+            </Link>
+          )}
+        </div>
       </div>
 
       {summary.total === 0 ? (

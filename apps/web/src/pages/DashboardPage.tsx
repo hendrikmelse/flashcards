@@ -121,7 +121,19 @@ export function DashboardPage() {
 
   return (
     <>
-      <h1>Dashboard</h1>
+      <div className="page-head">
+        <h1>Dashboard</h1>
+        {deckAll.data.summary.total > 0 && (
+          <div className="page-head-actions">
+            <Link to="/deck" className="button secondary">
+              View deck
+            </Link>
+            <Link to="/add-words" className="button secondary">
+              Add more words
+            </Link>
+          </div>
+        )}
+      </div>
 
       {deckAll.data.summary.total === 0 ? (
         <div className="hero">
@@ -204,14 +216,6 @@ export function DashboardPage() {
           ) : (
             <p className="status">{deck.isError ? "Could not load this view." : "Loading…"}</p>
           )}
-          <div className="deck-actions">
-            <Link to="/deck" className="button secondary">
-              View deck
-            </Link>
-            <Link to="/add-words" className="button secondary">
-              Add more words
-            </Link>
-          </div>
         </>
       )}
 

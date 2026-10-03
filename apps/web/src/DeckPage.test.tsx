@@ -59,6 +59,18 @@ describe("dashboard link", () => {
 });
 
 describe("deck page", () => {
+  it("is reachable from My deck in the main navigation, which is highlighted while there", async () => {
+    const user = userEvent.setup();
+    renderApp("/");
+    const nav = await screen.findByRole("navigation", { name: "Main" });
+    expect(within(nav).getByRole("link", { name: "My deck" })).not.toHaveClass("active");
+
+    await user.click(within(nav).getByRole("link", { name: "My deck" }));
+    expect(await screen.findByRole("heading", { name: "My deck" })).toBeInTheDocument();
+    expect(within(nav).getByRole("link", { name: "My deck" })).toHaveClass("active");
+    expect(within(nav).getByRole("link", { name: "Dashboard" })).not.toHaveClass("active");
+  });
+
   it("lists each card with its status and when it is due", async () => {
     renderApp("/deck");
     const rows = within(await screen.findByRole("list")).getAllByRole("listitem");
@@ -74,6 +86,30 @@ describe("deck page", () => {
     expect(rows[3]).toHaveTextContent("Relearning");
     expect(rows[3]).toHaveTextContent("1 lapse");
     expect(screen.getByText("12 cards")).toBeInTheDocument();
+  });
+
+  it("has Go to dashboard and Add more words as buttons together at the top right", async () => {
+    renderApp("/deck");
+    const back = await screen.findByRole("link", { name: "Go to dashboard" });
+    const add = screen.getByRole("link", { name: "Add more words" });
+    expect(back).toHaveAttribute("href", "/");
+    expect(back).toHaveClass("button");
+    expect(add).toHaveClass("button");
+    // Side by side in the page header, Back first.
+    expect(back.parentElement).toBe(add.parentElement);
+    expect(back.parentElement).toHaveClass("page-head-actions");
+    expect(back.nextElementSibling).toBe(add);
+    expect(back.parentElement?.parentElement).toHaveClass("page-head");
+    // The old text link above the heading is gone.
+    expect(screen.queryByRole("link", { name: "← Dashboard" })).not.toBeInTheDocument();
+  });
+
+  it("keeps Go to dashboard when the deck is empty", async () => {
+    mock.handlers["GET /deck"] = () =>
+      json(200, { summary: { total: 0, new: 0, learning: 0, relearning: 0, review: 0, dueNow: 0 }, hasMore: false, cards: [] });
+    renderApp("/deck");
+    expect(await screen.findByRole("link", { name: "Go to dashboard" })).toHaveAttribute("href", "/");
+    expect(screen.queryByRole("link", { name: "Add more words" })).not.toBeInTheDocument();
   });
 
   it("has a button to add more words", async () => {
@@ -148,7 +184,7 @@ describe("deck page", () => {
 
   describe("remembering the filters", () => {
     const leaveAndReturn = async (user: ReturnType<typeof userEvent.setup>) => {
-      await user.click(screen.getByRole("link", { name: "← Dashboard" }));
+      await user.click(screen.getByRole("link", { name: "Go to dashboard" }));
       await user.click(await screen.findByRole("link", { name: "View deck" }));
       await screen.findByRole("heading", { name: "My deck" });
     };

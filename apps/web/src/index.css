@@ -652,20 +652,22 @@ button.link {
   font-size: 0.9rem;
 }
 
-.deck-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-  margin: 0.25rem 0 0;
-}
-
+/* The heading, with the page's buttons to its right. The buttons sit at the top, level with the
+   heading, on every page: aligning them to the bottom put them lower on pages that have a line
+   of text under the heading than on the dashboard, which has none. */
 .page-head {
   display: flex;
   flex-wrap: wrap;
-  align-items: flex-end;
+  align-items: flex-start;
   justify-content: space-between;
   gap: 0.5rem 1rem;
   margin-bottom: 1rem;
+}
+
+.page-head-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
 }
 
 .page-head h1 {

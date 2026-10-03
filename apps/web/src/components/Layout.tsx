@@ -16,6 +16,7 @@ export function Layout() {
           <NavLink to="/" end>
             Dashboard
           </NavLink>
+          <NavLink to="/deck">My deck</NavLink>
           <NavLink to="/add-words">Add words</NavLink>
         </nav>
         <div className="account">

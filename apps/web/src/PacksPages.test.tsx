@@ -156,6 +156,46 @@ describe("pack list", () => {
   });
 });
 
+describe("the way back to the dashboard", () => {
+  it("has Go to dashboard and View deck buttons at the top right, level with the heading", async () => {
+    renderApp("/add-words");
+    const button = await screen.findByRole("link", { name: "Go to dashboard" });
+    const deck = screen.getByRole("link", { name: "View deck" });
+    expect(button).toHaveAttribute("href", "/");
+    expect(deck).toHaveAttribute("href", "/deck");
+    // Side by side in the page header, after the heading block, which the header lays out to the right.
+    expect(button.parentElement).toBe(deck.parentElement);
+    expect(button.nextElementSibling).toBe(deck);
+    const actions = button.parentElement!;
+    expect(actions).toHaveClass("page-head-actions");
+    const head = actions.parentElement!;
+    expect(head).toHaveClass("page-head");
+    expect(head.firstElementChild).toContainElement(screen.getByRole("heading", { name: "Add words" }));
+    expect(head.lastElementChild).toBe(actions);
+  });
+
+  it("takes you to the deck", async () => {
+    mock.handlers["GET /deck"] = () =>
+      json(200, {
+        summary: { total: 0, new: 0, learning: 0, relearning: 0, review: 0, dueNow: 0 },
+        hasMore: false,
+        mirrorable: 0,
+        cards: [],
+      });
+    const user = userEvent.setup();
+    renderApp("/add-words");
+    await user.click(await screen.findByRole("link", { name: "View deck" }));
+    expect(await screen.findByRole("heading", { name: "My deck" })).toBeInTheDocument();
+  });
+
+  it("goes to the dashboard", async () => {
+    const user = userEvent.setup();
+    renderApp("/add-words");
+    await user.click(await screen.findByRole("link", { name: "Go to dashboard" }));
+    expect(await screen.findByRole("heading", { name: "Dashboard" })).toBeInTheDocument();
+  });
+});
+
 describe("addresses", () => {
   it("lives at /add-words, with each pack under it", async () => {
     renderApp("/add-words?from=en&to=nl");

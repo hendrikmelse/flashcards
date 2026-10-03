@@ -47,8 +47,20 @@ function PackList({ languages }: { languages: LanguageInfo[] }) {
 
   return (
     <>
-      <h1>Add words</h1>
-      <p className="lead">Add word packs or individual words to your deck</p>
+      <div className="page-head">
+        <div>
+          <h1>Add words</h1>
+          <p className="lead">Add word packs or individual words to your deck</p>
+        </div>
+        <div className="page-head-actions">
+          <Link to="/" className="button secondary">
+            Go to dashboard
+          </Link>
+          <Link to="/deck" className="button secondary">
+            View deck
+          </Link>
+        </div>
+      </div>
       <DirectionPicker languages={languages} direction={direction} onChange={setDirection} />
 
       <input
