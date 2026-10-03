@@ -1,4 +1,4 @@
-import { screen } from "@testing-library/react";
+import { screen, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import { installMockApi, json, mock, renderApp } from "./test/harness";
@@ -73,6 +73,89 @@ beforeEach(() => {
 });
 
 afterEach(() => vi.unstubAllGlobals());
+
+describe("language flags", () => {
+  const flagIn = (region: string) => within(screen.getByRole("region", { name: region }));
+
+  it("shows the flag of the language being shown, beside the prompt", async () => {
+    renderApp("/study");
+    expect(await screen.findByText("dog")).toBeInTheDocument();
+    // The card is English to Dutch: the prompt is English.
+    expect(flagIn("Prompt").getByRole("img", { name: "English" })).toBeInTheDocument();
+    expect(flagIn("Prompt").queryByRole("img", { name: "Nederlands" })).not.toBeInTheDocument();
+  });
+
+  it("shows the answer's flag beside the answer once it is revealed", async () => {
+    const user = userEvent.setup();
+    renderApp("/study");
+    await screen.findByText("dog");
+    expect(screen.queryByRole("region", { name: "Answer" })).not.toBeInTheDocument();
+    await user.click(screen.getByRole("button", { name: "Show answer" }));
+    expect(flagIn("Answer").getByRole("img", { name: "Nederlands" })).toBeInTheDocument();
+    // The prompt keeps its own.
+    expect(flagIn("Prompt").getByRole("img", { name: "English" })).toBeInTheDocument();
+  });
+
+  it("follows the direction of the card: Dutch to English shows the Dutch flag first", async () => {
+    const user = userEvent.setup();
+    const reverse = {
+      ...dog,
+      fromLanguage: "nl",
+      toLanguage: "en",
+      front: [entry("nl", "hond", { article: "de" })],
+      back: [entry("en", "dog")],
+    };
+    studyWith([reverse]);
+    renderApp("/study");
+    await screen.findByText("de hond");
+    expect(flagIn("Prompt").getByRole("img", { name: "Nederlands" })).toBeInTheDocument();
+    await user.click(screen.getByRole("button", { name: "Show answer" }));
+    expect(flagIn("Answer").getByRole("img", { name: "English" })).toBeInTheDocument();
+  });
+
+  it("is drawn as an image next to the word, and the two flags differ", async () => {
+    const user = userEvent.setup();
+    renderApp("/study");
+    await screen.findByText("dog");
+    await user.click(screen.getByRole("button", { name: "Show answer" }));
+    const english = flagIn("Prompt").getByRole("img", { name: "English" });
+    const dutch = flagIn("Answer").getByRole("img", { name: "Nederlands" });
+    expect(english.tagName.toLowerCase()).toBe("svg");
+    expect(english.nextElementSibling).toHaveClass("study-word");
+    expect(english.innerHTML).not.toBe(dutch.innerHTML);
+  });
+
+  it("draws English as the Union Jack and Dutch as the Dutch flag", async () => {
+    const user = userEvent.setup();
+    renderApp("/study");
+    await screen.findByText("dog");
+    await user.click(screen.getByRole("button", { name: "Show answer" }));
+    const english = flagIn("Prompt").getByRole("img", { name: "English" });
+    const dutch = flagIn("Answer").getByRole("img", { name: "Nederlands" });
+    // The Union Jack's navy and red, and none of the stars-and-stripes colors.
+    expect(english.innerHTML).toContain("#012169");
+    expect(english.innerHTML).toContain("#C8102E");
+    expect(english.innerHTML).not.toContain("#B22234");
+    // Red, white and blue stripes for the Netherlands.
+    expect(dutch.innerHTML).toContain("#AE1C28");
+    expect(dutch.innerHTML).toContain("#21468B");
+  });
+
+  it("shows the language code for a language without a flag", async () => {
+    const user = userEvent.setup();
+    const german = {
+      ...dog,
+      toLanguage: "de",
+      back: [entry("de", "Hund")],
+    };
+    studyWith([german]);
+    renderApp("/study");
+    await screen.findByText("dog");
+    await user.click(screen.getByRole("button", { name: "Show answer" }));
+    const code = flagIn("Answer").getByRole("img", { name: "DE" });
+    expect(code).toHaveTextContent("DE");
+  });
+});
 
 describe("missed cards", () => {
   it("come back after the other cards, with no pause and no waiting", async () => {

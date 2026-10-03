@@ -14,6 +14,7 @@ import { api } from "../api/client";
 import { useSettings } from "../api/hooks";
 import { useLanguages } from "../api/packs";
 import { displayLemma } from "../components/entries";
+import { LanguageFlag } from "../components/LanguageFlag";
 import {
   initialState,
   phaseOf,
@@ -198,17 +199,29 @@ const STATE_LABEL: Record<StudyCardView["state"], string> = {
   review: "Review",
 };
 
-function Entries({ entries }: { entries: EntryView[] }) {
+// The word, with a flag for the language it is in.
+function Entries({
+  entries,
+  language,
+  languages,
+}: {
+  entries: EntryView[];
+  language: string;
+  languages: LanguageInfo[];
+}) {
   return (
-    <p className="study-word">
-      {entries.map((e, i) => (
-        <span key={`${e.lemma}-${i}`}>
-          {i > 0 && ", "}
-          {displayLemma(e)}
-          {e.partOfSpeech && <span className="pos"> {e.partOfSpeech}</span>}
-        </span>
-      ))}
-    </p>
+    <div className="flagged">
+      <LanguageFlag code={language} label={languageName(languages, language)} />
+      <p className="study-word">
+        {entries.map((e, i) => (
+          <span key={`${e.lemma}-${i}`}>
+            {i > 0 && ", "}
+            {displayLemma(e)}
+            {e.partOfSpeech && <span className="pos"> {e.partOfSpeech}</span>}
+          </span>
+        ))}
+      </p>
+    </div>
   );
 }
 
@@ -304,13 +317,13 @@ function CardView({
       </p>
 
       <section aria-label="Prompt">
-        <Entries entries={card.front} />
+        <Entries entries={card.front} language={card.fromLanguage} languages={languages} />
         {showSentences && <Sentences items={card.sentences.front} />}
       </section>
 
       {revealed ? (
         <section aria-label="Answer" className="study-answer">
-          <Entries entries={card.back} />
+          <Entries entries={card.back} language={card.toLanguage} languages={languages} />
           {showForms && <Forms entries={card.back} />}
           {showSentences && <Sentences items={card.sentences.back} />}
         </section>

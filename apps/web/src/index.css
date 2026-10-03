@@ -1208,6 +1208,30 @@ a.button.secondary {
   font-weight: 500;
 }
 
+/* A word with the flag of its language beside it. */
+.flagged {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.flag {
+  flex: none;
+  border-radius: 3px;
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--text) 25%, transparent);
+}
+
+.flag-code {
+  display: inline-grid;
+  place-items: center;
+  width: 28px;
+  height: 20px;
+  background: var(--surface);
+  color: var(--muted);
+  font-size: 0.65rem;
+  font-weight: 700;
+}
+
 .study-word {
   margin: 0.25rem 0;
   font-size: 2rem;
