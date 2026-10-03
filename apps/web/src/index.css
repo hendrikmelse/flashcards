@@ -91,11 +91,85 @@ input {
 .account {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
+  gap: 0.25rem;
   margin-left: auto;
+  /* In from the edge, so the centered tooltip under the last icon stays on screen. */
+  margin-right: 0.75rem;
+}
+
+.icon-button {
+  display: inline-grid;
+  place-items: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  padding: 0;
+  border: 0;
+  border-radius: 0.5rem;
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+/* A tooltip that shows straight away on hover and on keyboard focus (the browser's own title
+   tooltip waits about a second, and never appears on touch or keyboard). It hangs centered
+   below the icon, styled like the dropdown lists: the page's surface color with a border. */
+.icon-button {
+  position: relative;
+}
+
+.icon-button[data-tooltip]::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 50%;
+  z-index: 10;
+  padding: 0.3rem 0.6rem;
+  border: 1px solid var(--border);
+  border-radius: 0.4rem;
+  background: var(--surface);
+  color: var(--text);
+  box-shadow: 0 4px 12px rgb(0 0 0 / 0.15);
+  font-size: 0.8rem;
+  font-weight: 500;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  transform: translate(-50%, -2px);
+  transition:
+    opacity 0.12s,
+    transform 0.12s;
+}
+
+.icon-button[data-tooltip]:hover::after,
+.icon-button[data-tooltip]:focus-visible::after {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .icon-button[data-tooltip]::after {
+    transition: none;
+  }
+}
+
+.icon-button:hover,
+.icon-button:focus-visible {
+  background: color-mix(in srgb, var(--accent) 12%, transparent);
+  color: var(--text);
+}
+
+.icon-button.active {
+  color: var(--accent);
+}
+
+.icon-button:disabled {
+  opacity: 0.6;
+  cursor: default;
 }
 
 .account .email {
+  margin-right: 0.5rem;
   color: var(--muted);
   font-size: 0.9rem;
   overflow-wrap: anywhere;

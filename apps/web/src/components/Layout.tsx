@@ -1,5 +1,6 @@
 import { NavLink, Outlet } from "react-router";
 import { useLogout, useMe } from "../api/hooks";
+import { GearIcon, LogOutIcon } from "./icons";
 
 export function Layout() {
   const { data: user } = useMe();
@@ -17,12 +18,21 @@ export function Layout() {
           </NavLink>
           <NavLink to="/study">Study</NavLink>
           <NavLink to="/packs">Packs</NavLink>
-          <NavLink to="/settings">Settings</NavLink>
         </nav>
         <div className="account">
           <span className="email">{user?.email}</span>
-          <button className="link" onClick={() => logout.mutate()} disabled={logout.isPending}>
-            Log out
+          <NavLink to="/settings" className="icon-button" aria-label="Settings" data-tooltip="Settings">
+            <GearIcon />
+          </NavLink>
+          <button
+            type="button"
+            className="icon-button"
+            aria-label="Log out"
+            data-tooltip="Log out"
+            onClick={() => logout.mutate()}
+            disabled={logout.isPending}
+          >
+            <LogOutIcon />
           </button>
         </div>
       </header>

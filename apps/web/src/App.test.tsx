@@ -23,6 +23,32 @@ describe("auth flow", () => {
     expect(await screen.findByRole("heading", { name: "Your deck" })).toBeInTheDocument();
   });
 
+  it("has Settings and Log out as icons in the top corner, not in the main navigation", async () => {
+    mock.loggedIn = true;
+    renderApp("/");
+    const settings = await screen.findByRole("link", { name: "Settings" });
+    const logout = screen.getByRole("button", { name: "Log out" });
+
+    // Icons only: an image, no visible words.
+    for (const control of [settings, logout]) {
+      expect(control.querySelector("svg")).not.toBeNull();
+      expect(control.textContent).toBe("");
+    }
+    expect(settings).toHaveAttribute("href", "/settings");
+    // The tooltip text is drawn by CSS from data-tooltip, so it shows on hover and keyboard focus
+    // without the browser's delayed title tooltip (which would show a second one).
+    expect(settings).toHaveAttribute("data-tooltip", "Settings");
+    expect(logout).toHaveAttribute("data-tooltip", "Log out");
+    expect(settings).not.toHaveAttribute("title");
+    expect(logout).not.toHaveAttribute("title");
+
+    // They sit together with the account details, after the page links.
+    const account = settings.parentElement!;
+    expect(account).toContainElement(logout);
+    expect(account).toHaveTextContent("ann@example.com");
+    expect(within(screen.getByRole("navigation", { name: "Main" })).queryByRole("link", { name: "Settings" })).toBeNull();
+  });
+
   it("shows an error for wrong credentials and stays on the form", async () => {
     mock.handlers["POST /auth/login"] = () => json(401, { error: "Invalid email or password" });
     const user = userEvent.setup();
