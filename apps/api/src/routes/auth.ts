@@ -1,6 +1,6 @@
 import type { FastifyInstance, FastifyReply } from "fastify";
 import { eq } from "drizzle-orm";
-import { loginSchema, registerSchema } from "@flashcards/shared";
+import { isValidTimeZone, loginSchema, registerSchema } from "@flashcards/shared";
 import { DUMMY_HASH, hashPassword, verifyPassword } from "../auth/password.js";
 import { mayRegister, type RegistrationPolicy } from "../auth/registration.js";
 import {
@@ -36,7 +36,7 @@ export async function authRoutes(
   app.post("/auth/register", limit, async (req, reply) => {
     const parsed = registerSchema.safeParse(req.body);
     if (!parsed.success) return invalid(reply, parsed.error.issues);
-    const { email, password } = parsed.data;
+    const { email, password, timezone } = parsed.data;
     if (!mayRegister(registration, email)) {
       return reply.code(403).send({ error: "Registration is closed" });
     }
@@ -44,7 +44,12 @@ export async function authRoutes(
     const passwordHash = await hashPassword(password);
     const [user] = await db
       .insert(users)
-      .values({ email, passwordHash })
+      .values({
+        email,
+        passwordHash,
+        // Without a (valid) time zone from the browser the account stays on the default.
+        ...(timezone && isValidTimeZone(timezone) ? { timezone } : {}),
+      })
       .onConflictDoNothing({ target: users.email })
       .returning({ id: users.id, email: users.email });
     if (!user) return reply.code(409).send({ error: "Email already registered" });

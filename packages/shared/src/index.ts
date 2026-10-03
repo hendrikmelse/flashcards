@@ -28,9 +28,22 @@ export const submitReviewSchema = z.object({
 });
 export type SubmitReviewInput = z.infer<typeof submitReviewSchema>;
 
+/** Whether `tz` is an IANA time zone name this runtime knows ("Europe/Amsterdam"). */
+export function isValidTimeZone(tz: string): boolean {
+  try {
+    new Intl.DateTimeFormat("en-US", { timeZone: tz });
+    return true;
+  } catch {
+    return false;
+  }
+}
+
 export const registerSchema = z.object({
   email: z.string().trim().toLowerCase().email().max(254),
   password: z.string().min(8).max(200),
+  // The browser's time zone, so the study day is right from the start. An unknown
+  // value is ignored (the account keeps the default) rather than blocking sign-up.
+  timezone: z.string().max(64).optional(),
 });
 export type RegisterInput = z.infer<typeof registerSchema>;
 
@@ -41,6 +54,27 @@ export const loginSchema = z.object({
 export type LoginInput = z.infer<typeof loginSchema>;
 
 export type PublicUser = { id: string; email: string };
+
+/** The most new cards a day a user can ask for. */
+export const DAILY_NEW_CARD_MAX = 200;
+
+export const updateSettingsSchema = z
+  .object({
+    timezone: z.string().max(64).refine(isValidTimeZone, "Unknown time zone").optional(),
+    dailyNewCardLimit: z.number().int().min(0).max(DAILY_NEW_CARD_MAX).optional(),
+  })
+  .refine((v) => v.timezone !== undefined || v.dailyNewCardLimit !== undefined, {
+    message: "Provide a setting to change",
+  });
+export type UpdateSettingsInput = z.infer<typeof updateSettingsSchema>;
+
+export type Settings = {
+  email: string;
+  /** IANA name; the study day starts at 04:00 here. */
+  timezone: string;
+  /** New cards introduced per study day, across all decks. */
+  dailyNewCardLimit: number;
+};
 
 // Optional direction for browsing: both languages or neither.
 export const directionQuerySchema = z

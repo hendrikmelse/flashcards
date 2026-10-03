@@ -1,15 +1,10 @@
+import { isValidTimeZone } from "@flashcards/shared";
+
 // A "study day" runs from 04:00 to 04:00 in the user's timezone, so studying
 // shortly after midnight still counts toward the previous day.
 export const DAY_ROLLOVER_HOUR = 4;
 
-export function isValidTimeZone(tz: string): boolean {
-  try {
-    new Intl.DateTimeFormat("en-US", { timeZone: tz });
-    return true;
-  } catch {
-    return false;
-  }
-}
+export { isValidTimeZone };
 
 // Offset of `timeZone` from UTC at `instant`, in ms (east of UTC is positive).
 function offsetMs(instant: number, timeZone: string): number {
