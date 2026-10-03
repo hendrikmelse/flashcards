@@ -72,8 +72,10 @@ async function prepare(db: Db, userId: string, opts: Omit<Options, "limit">, now
   const reviewDue = and(mine, eq(userCards.state, "review"), lte(userCards.dueAt, asOf));
   const isNew = and(mine, eq(userCards.state, "new"));
 
-  // The daily new-card limit is global, not per direction: it counts every
-  // card the user saw for the first time since the study day began.
+  // The daily new-card limit is global, not per direction: it counts the cards the user
+  // saw for the first time since the study day began and had to learn. A new card marked
+  // Good or Easy on that first look is a word they already know, so it is free: only Again
+  // and Hard count. (It is the first answer that decides; later ones are not first looks.)
   const [{ n: introducedToday } = { n: 0 }] = await db
     .select({ n: count() })
     .from(reviewLogs)
@@ -81,6 +83,7 @@ async function prepare(db: Db, userId: string, opts: Omit<Options, "limit">, now
       and(
         eq(reviewLogs.userId, userId),
         eq(reviewLogs.stateBefore, "new"),
+        inArray(reviewLogs.rating, ["again", "hard"]),
         gte(reviewLogs.reviewedAt, studyDayStart(now, user.timezone)),
       ),
     );

@@ -360,6 +360,11 @@ describe("Study", () => {
     expect(screen.queryByText("Saved")).not.toBeInTheDocument();
   });
 
+  it("explains that words you already know do not count against the limit", async () => {
+    renderApp("/settings?tab=study");
+    expect(await screen.findByText(/Good or Easy the first time you see them/)).toBeInTheDocument();
+  });
+
   it("allows 0 to pause new words", async () => {
     const user = userEvent.setup();
     renderApp("/settings?tab=study");

@@ -90,7 +90,8 @@ function ScheduleSettings({ saved }: { saved: Settings }) {
           <FieldStatus flash={limitSave.flash} failed={limitSave.failed} />
         </div>
         <p id="daily-new-help" className="muted">
-          How many new words you are introduced to each day, across all your decks. Reviews are never limited. Set it
+          How many new words you are introduced to each day, across all your decks. Words you mark Good or Easy the
+          first time you see them are ones you already know, so they do not count. Reviews are never limited. Set it
           to 0 to pause new words.
         </p>
         {limitError && (

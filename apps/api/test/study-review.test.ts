@@ -312,12 +312,13 @@ describe("study queue after reviews", () => {
     expect(after.cards.map((c) => c.state)).toEqual(["review", "new", "learning"]);
   });
 
-  it("counts cards first seen today against the daily new limit, across directions", async () => {
-    // dog and house were introduced today (2 cards); with a limit of 2, no new cards remain.
-    await setLimit(2);
+  it("does not count new cards that were marked Good or Easy against the daily limit", async () => {
+    // dog (Good) and house (Easy) were new cards seen today, but they were already known.
+    // With a limit of 1 the one remaining new card is still available; if they counted, none would be.
+    await setLimit(1);
     const { counts, cards } = await study();
-    expect(counts.new).toBe(0);
-    expect(cards.some((c) => c.state === "new")).toBe(false);
+    expect(counts.new).toBe(1);
+    expect(cards.some((c) => c.state === "new")).toBe(true);
     await setLimit(20);
   });
 });
@@ -681,5 +682,93 @@ describe("review cards come due at the start of a study day", () => {
       ]);
     const { cards } = (await get("/study?limit=20", me.cookies)).json() as { cards: Card[] };
     expect(cards).toHaveLength(1);
+  });
+});
+
+describe("the daily new-card limit", () => {
+  // Six new cards (three words, both directions) and a limit of 2. `logs` are first looks at new
+  // cards today, or at the given time, with the rating given.
+  async function setup(
+    logs: { rating: "again" | "hard" | "good" | "easy"; stateBefore?: "new" | "learning"; when?: Date }[],
+    limit = 2,
+  ) {
+    const me = await scratchUser();
+    await db.update(users).set({ dailyNewCardLimit: limit }).where(eq(users.id, me.id));
+    const cs = await db.select().from(concepts);
+    // The first cards are the ones that were looked at; they are no longer new.
+    const cards = await db
+      .insert(userCards)
+      .values(
+        ["en", "nl"].flatMap((from) =>
+          cs.map((c) => ({ userId: me.id, conceptId: c.id, fromLanguage: from, toLanguage: from === "en" ? "nl" : "en" })),
+        ),
+      )
+      .returning();
+    for (const card of cards.slice(0, logs.length)) {
+      await db
+        .update(userCards)
+        .set({ state: "learning", dueAt: new Date(Date.now() + 600_000) })
+        .where(eq(userCards.id, card.id));
+    }
+    if (logs.length > 0)
+      await db.insert(reviewLogs).values(
+      logs.map((l, i) => ({
+        userCardId: cards[i]!.id,
+        userId: me.id,
+        clientReviewId: randomUUID(),
+        rating: l.rating,
+        reviewedAt: l.when ?? new Date(Date.now() - 1000),
+        stateBefore: l.stateBefore ?? "new",
+        stateAfter: "learning" as const,
+        intervalBeforeDays: 0,
+        intervalAfterDays: 0,
+        dueAfter: new Date(Date.now() + 600_000),
+      })),
+    );
+    return me.cookies;
+  }
+  const newCount = async (c: { session: string }) =>
+    ((await get("/study/counts", c)).json() as { counts: { new: number } }).counts.new;
+
+  it("starts at the limit", async () => {
+    expect(await newCount(await setup([]))).toBe(2);
+  });
+
+  it("does not count a new card marked Good or Easy, however many there are", async () => {
+    expect(await newCount(await setup([{ rating: "good" }, { rating: "easy" }, { rating: "good" }, { rating: "easy" }]))).toBe(2);
+  });
+
+  it("counts a new card marked Again or Hard", async () => {
+    expect(await newCount(await setup([{ rating: "hard" }]))).toBe(1);
+    expect(await newCount(await setup([{ rating: "again" }]))).toBe(1);
+    expect(await newCount(await setup([{ rating: "again" }, { rating: "hard" }]))).toBe(0);
+  });
+
+  it("counts only the ones that needed learning when the answers are mixed", async () => {
+    expect(await newCount(await setup([{ rating: "easy" }, { rating: "hard" }, { rating: "good" }, { rating: "easy" }]))).toBe(1);
+  });
+
+  it("goes by the first look only: a later answer to the same card does not count", async () => {
+    // Answered Again later, but not as a new card (it was already in learning).
+    expect(await newCount(await setup([{ rating: "again", stateBefore: "learning" }, { rating: "hard", stateBefore: "learning" }]))).toBe(2);
+  });
+
+  it("only counts today: a hard first look yesterday is forgotten", async () => {
+    const yesterday = new Date(Date.now() - 2 * 86_400_000);
+    expect(await newCount(await setup([{ rating: "hard", when: yesterday }, { rating: "again" }]))).toBe(1);
+  });
+
+  it("shows up as fewer new cards offered in a session, and none once the limit is used by Again and Hard", async () => {
+    const c = await setup([{ rating: "easy" }, { rating: "again" }, { rating: "hard" }]);
+    const { cards } = (await get("/study?limit=50", c)).json() as { cards: Card[] };
+    expect(cards.filter((x) => x.state === "new")).toHaveLength(0);
+  });
+
+  it("lets a known word through without using up the allowance, so a run of known words keeps going", async () => {
+    // Limit 2, five new cards each marked Good: the allowance is untouched, so two more are offered.
+    const c = await setup([{ rating: "good" }, { rating: "good" }, { rating: "good" }, { rating: "good" }, { rating: "good" }]);
+    const { cards } = (await get("/study?limit=50", c)).json() as { cards: Card[] };
+    expect(cards.filter((x) => x.state === "new")).toHaveLength(1); // the one new card left (six minus five seen)
+    expect(await newCount(c)).toBe(1);
   });
 });

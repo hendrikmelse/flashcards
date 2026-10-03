@@ -127,6 +127,11 @@ export function HowItWorksPage() {
         toward the same day. The dashboard’s “new available today” shows how many are left.
       </p>
       <p>
+        The limit is for words you have to learn. A new card you mark <strong>Good</strong> or{" "}
+        <strong>Easy</strong> the first time you see it is a word you already know, so it does not use
+        up your limit; one you mark Again or Hard does.
+      </p>
+      <p>
         Reviews are never capped. If you skip a few days, they wait for you, and the ones you’re
         likeliest to have forgotten are shown first. A big backlog is not a problem, just work through it a little at a time.
       </p>

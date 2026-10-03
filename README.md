@@ -93,7 +93,7 @@ Translations are not one-to-one (English "run" has many senses; Dutch "kennen" a
 ### Scheduling
 
 - FSRS with learning steps 1m/10m, relearning 10m, and 90% target retention
-- The study day rolls over at 04:00 in the user's timezone, which drives the daily new-card limit
+- The study day rolls over at 04:00 in the user's timezone, which drives the daily new-card limit. Only new cards whose first answer is Again or Hard count against it: one marked Good or Easy is already known, so it is free
 - The SRS engine is a set of pure functions (card state, rating and time in; new state and due date out), which keeps it easy to unit test
 - All timestamps are stored in UTC; the user's timezone only matters at the day boundary
 
