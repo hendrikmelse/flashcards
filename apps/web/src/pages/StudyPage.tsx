@@ -11,6 +11,7 @@ import type {
 } from "@flashcards/shared";
 import { formLines, SESSION_GAP_MS } from "@flashcards/shared";
 import { api } from "../api/client";
+import { useSettings } from "../api/hooks";
 import { useLanguages } from "../api/packs";
 import { displayLemma } from "../components/entries";
 import {
@@ -114,6 +115,10 @@ function useStudySession() {
 export function StudyPage() {
   const session = useStudySession();
   const languages = useLanguages();
+  // What the cards show is an account setting. Wait for it so a card never shows something and
+  // then hides it; if it cannot be loaded, show everything.
+  const settings = useSettings();
+  const settingsReady = !settings.isPending;
   const { state, phase } = session;
 
   return (
@@ -127,7 +132,7 @@ export function StudyPage() {
         )}
       </div>
 
-      {phase === "loading" && <p className="status">Loading…</p>}
+      {(phase === "loading" || (phase === "card" && !settingsReady)) && <p className="status">Loading…</p>}
 
       {phase === "error" && (
         <div className="status error">
@@ -142,11 +147,13 @@ export function StudyPage() {
         <RepeatNotice onContinue={session.acknowledgeRepeat} />
       )}
 
-      {phase === "card" && state.current && !state.repeatNotice && (
+      {phase === "card" && state.current && !state.repeatNotice && settingsReady && (
         <CardView
           card={state.current}
           revealed={state.revealed}
           languages={languages.data ?? []}
+          showSentences={settings.data?.showSentences ?? true}
+          showForms={settings.data?.showForms ?? true}
           submitting={session.submitting}
           submitError={session.submitError}
           onReveal={session.reveal}
@@ -246,6 +253,9 @@ type CardViewProps = {
   card: StudyCardView;
   revealed: boolean;
   languages: LanguageInfo[];
+  /** From the account's settings. */
+  showSentences: boolean;
+  showForms: boolean;
   submitting: boolean;
   submitError: boolean;
   onReveal: () => void;
@@ -257,6 +267,8 @@ function CardView({
   card,
   revealed,
   languages,
+  showSentences,
+  showForms,
   submitting,
   submitError,
   onReveal,
@@ -293,14 +305,14 @@ function CardView({
 
       <section aria-label="Prompt">
         <Entries entries={card.front} />
-        <Sentences items={card.sentences.front} />
+        {showSentences && <Sentences items={card.sentences.front} />}
       </section>
 
       {revealed ? (
         <section aria-label="Answer" className="study-answer">
           <Entries entries={card.back} />
-          <Forms entries={card.back} />
-          <Sentences items={card.sentences.back} />
+          {showForms && <Forms entries={card.back} />}
+          {showSentences && <Sentences items={card.sentences.back} />}
         </section>
       ) : (
         <button ref={revealRef} className="primary reveal" onClick={onReveal}>

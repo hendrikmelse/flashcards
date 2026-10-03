@@ -379,6 +379,70 @@ describe("verb forms", () => {
     expect(screen.queryByText("dogs")).not.toBeInTheDocument();
   });
 
+  describe("the display settings", () => {
+    const hond = {
+      ...dog,
+      front: [entry("en", "dog", { plural: "dogs" })],
+      back: [entry("nl", "hond", { article: "de", plural: "honden" })],
+    };
+    const accountSettings = (extra: Record<string, unknown>) => () =>
+      json(200, {
+        email: "ann@example.com",
+        name: null,
+        timezone: "UTC",
+        dailyNewCardLimit: 20,
+        showSentences: true,
+        showForms: true,
+        ...extra,
+      });
+
+    it("hide the example sentences on both sides when turned off in the account", async () => {
+      mock.handlers["GET /settings"] = accountSettings({ showSentences: false });
+      const user = userEvent.setup();
+      studyWith([hond]);
+      renderApp("/study");
+      expect(await screen.findByText("dog")).toBeInTheDocument();
+      expect(screen.queryByText("The dog barks.")).not.toBeInTheDocument();
+      await user.click(screen.getByRole("button", { name: "Show answer" }));
+      expect(screen.getByText("de hond")).toBeInTheDocument();
+      expect(screen.queryByText("De hond blaft.")).not.toBeInTheDocument();
+      // The word forms are a separate setting, so they still show.
+      expect(screen.getByText("honden")).toBeInTheDocument();
+    });
+
+    it("hide the word forms when turned off, but keep the sentences", async () => {
+      mock.handlers["GET /settings"] = accountSettings({ showForms: false });
+      const user = userEvent.setup();
+      studyWith([hond]);
+      renderApp("/study");
+      expect(await screen.findByText("The dog barks.")).toBeInTheDocument();
+      await user.click(screen.getByRole("button", { name: "Show answer" }));
+      expect(screen.getByText("De hond blaft.")).toBeInTheDocument();
+      expect(screen.queryByText("plural")).not.toBeInTheDocument();
+      expect(screen.queryByText("honden")).not.toBeInTheDocument();
+    });
+
+    it("show everything by default", async () => {
+      const user = userEvent.setup();
+      studyWith([hond]);
+      renderApp("/study");
+      expect(await screen.findByText("The dog barks.")).toBeInTheDocument();
+      await user.click(screen.getByRole("button", { name: "Show answer" }));
+      expect(screen.getByText("De hond blaft.")).toBeInTheDocument();
+      expect(screen.getByText("honden")).toBeInTheDocument();
+    });
+
+    it("show everything if the settings cannot be loaded", async () => {
+      mock.handlers["GET /settings"] = () => json(500, { error: "boom" });
+      const user = userEvent.setup();
+      studyWith([hond]);
+      renderApp("/study");
+      expect(await screen.findByText("The dog barks.")).toBeInTheDocument();
+      await user.click(screen.getByRole("button", { name: "Show answer" }));
+      expect(screen.getByText("honden")).toBeInTheDocument();
+    });
+  });
+
   it("says when a noun is uncountable", async () => {
     const user = userEvent.setup();
     studyWith([

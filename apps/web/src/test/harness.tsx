@@ -45,6 +45,15 @@ function defaultHandlers(): Record<string, Handler> {
           { fromLanguage: "en", toLanguage: "nl", total: 12, new: 5, learning: 3, review: 4, dueNow: 4, nextDueAt: null, ready: { learning: 1, review: 3, new: 7 } },
         ],
       }),
+    "GET /settings": () =>
+      json(200, {
+        email: USER.email,
+        name: null,
+        timezone: "UTC",
+        dailyNewCardLimit: 20,
+        showSentences: true,
+        showForms: true,
+      }),
     "GET /languages": () =>
       json(200, {
         languages: [

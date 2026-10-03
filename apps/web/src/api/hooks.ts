@@ -6,7 +6,10 @@ import {
   type QueryClient,
 } from "@tanstack/react-query";
 import type {
+  ChangeEmailInput,
+  ChangePasswordInput,
   DeckResponse,
+  DeleteAccountInput,
   DeckSort,
   LoginInput,
   PublicUser,
@@ -75,6 +78,34 @@ export function useUpdateSettings() {
       qc.setQueryData<PublicUser | null | undefined>(ME, (user) => (user ? { ...user, name: settings.name } : user));
       for (const key of ["study", "stats", "deck"]) qc.invalidateQueries({ queryKey: [key] });
     },
+  });
+}
+
+// Account changes that need the current password.
+export function useChangePassword() {
+  return useMutation({
+    mutationFn: (input: ChangePasswordInput) => api<void>("/account/password", { method: "POST", body: input }),
+  });
+}
+
+export function useChangeEmail() {
+  const qc = useQueryClient();
+  return useMutation({
+    mutationFn: (input: ChangeEmailInput) =>
+      api<{ user: PublicUser }>("/account/email", { method: "POST", body: input }),
+    onSuccess: ({ user }) => {
+      qc.setQueryData(ME, user);
+      qc.setQueryData<Settings | undefined>(["settings"], (s) => (s ? { ...s, email: user.email } : s));
+    },
+  });
+}
+
+// Deleting the account signs the user out, which sends them to the login page.
+export function useDeleteAccount() {
+  const qc = useQueryClient();
+  return useMutation({
+    mutationFn: (input: DeleteAccountInput) => api<void>("/account/delete", { method: "POST", body: input }),
+    onSuccess: () => setUser(qc, null),
   });
 }
 

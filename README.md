@@ -112,7 +112,10 @@ All routes live under `/api`.
 | `POST /deck/mirrors` | Adds the reverse card for every card in a view of the deck (direction, stage and search, as in `GET /deck`) that has none. Idempotent |
 | `GET /study` | Read-only batch. Due learning and review cards (learning ones within 20 minutes) ranked by how likely each is to have been forgotten, with new cards (up to the daily limit) spread through the first half of the queue. Learning cards are held back until 15 minutes after the last answer (the gap between sessions); `early=1` lets the next session start in the last 5 minutes of that wait |
 | `GET /study/counts` | The counts of learning, review and new cards, for the dashboard, plus `nextSession` (when the held-back cards open and how many will be ready) while a session gap is running, and `tomorrow` (how many cards will be waiting by the end of tomorrow's study day) |
-| `GET /settings`, `PATCH /settings` | The account's email, name, time zone and daily new-card limit; all but the email can be changed. A new time zone moves due review cards to the start of the same day there |
+| `GET /settings`, `PATCH /settings` | The account's email, name, time zone, daily new-card limit and card display options (example sentences, word forms); all but the email can be changed. A new time zone moves due review cards to the start of the same day there |
+| `POST /account/password`, `POST /account/email` | Change the password (signs out every other session) or the email address. Both need the current password and are rate limited like login. There is no email verification yet |
+| `POST /account/delete` | Deletes the account with its cards, review history and sessions. Needs the password |
+| `GET /account/export` | Everything held about the user as a JSON download: account details (never the password), every card with its schedule, and the full review history |
 | `GET /stats` | Reviews today, when the next card is due, and a per-direction breakdown of the deck, including what is ready to study in each |
 | `POST /reviews` | Transactional. A card in review comes due at the start of a study day (04:00 in the user's time zone) and the scheduler counts whole days between reviews; cards still learning keep real-time steps. Locks the card, runs FSRS, updates state and appends to the log. Idempotent via `clientReviewId` |
 
@@ -165,7 +168,7 @@ The full runbook, including server setup, rollback, backups and how to invite so
 
 ## Status and roadmap
 
-**Built:** auth with invite-only registration, a settings page (name, daily new cards, time zone), an optional name at sign-up shown in the top corner, the content model and importer (about 5,900 concepts in 88 packs, in four categories), the pack browser with pack and word search, the deck viewer (search, filters, sorting, adding reverse cards), the dashboard, study sessions (FSRS scheduling, queue ordered by chance of forgetting, a 15-minute gap between sessions, a pause before a missed card repeats), the explainer page, and production deployment with CI and nightly backups.
+**Built:** auth with invite-only registration, a tabbed settings page (profile and email, study options, theme, password, data export and account deletion), an optional name at sign-up shown in the top corner, the content model and importer (about 5,900 concepts in 88 packs, in four categories), the pack browser with pack and word search, the deck viewer (search, filters, sorting, adding reverse cards), the dashboard, study sessions (FSRS scheduling, queue ordered by chance of forgetting, a 15-minute gap between sessions, a pause before a missed card repeats), the explainer page, and production deployment with CI and nightly backups.
 
 ### Before anyone other than the owner uses it
 
@@ -179,8 +182,8 @@ The full runbook, including server setup, rollback, backups and how to invite so
 
 ### Should have for friends and family
 
-- Password reset and email verification (needs an email provider)
-- ~~Settings: daily new-card limit and time zone~~ (done); account deletion, data export and changing your password (still to do)
+- Password reset and email verification (needs an email provider). Verification also has to cover changing the email address, which is unchecked today
+- ~~Settings: name, email, password, daily new-card limit, time zone, theme, data export and account deletion~~ (done). The theme is kept per device, not per account; everything else, including what the study cards show, follows the account
 - A "report a problem with this card" button, since the content is unreviewed
 - First-run guidance: suggest the starter pack, and explain directions and the answer buttons
 - Rate limits on the public pack and search endpoints (only sign-in and sign-up are limited)

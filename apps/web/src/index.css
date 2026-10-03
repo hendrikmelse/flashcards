@@ -10,8 +10,10 @@
   color-scheme: light;
 }
 
+/* Dark colors are written twice: once when the browser prefers dark and no theme was chosen, and
+   once when dark is chosen. A chosen theme sets data-theme on <html> (see hooks/useTheme.ts). */
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not([data-theme="light"]) {
     --bg: #171716;
     --surface: #222220;
     --text: #ececea;
@@ -22,6 +24,18 @@
     --error: #f2b8b5;
     color-scheme: dark;
   }
+}
+
+:root[data-theme="dark"] {
+  --bg: #171716;
+  --surface: #222220;
+  --text: #ececea;
+  --muted: #a3a39b;
+  --border: #3a3a36;
+  --accent: #7fb5a3;
+  --accent-text: #11201b;
+  --error: #f2b8b5;
+  color-scheme: dark;
 }
 
 * {
@@ -286,7 +300,9 @@ input {
   font-size: 0.9rem;
 }
 
-.setting input[type="text"] {
+.setting input[type="text"],
+.setting input[type="email"],
+.setting input[type="password"] {
   width: 22rem;
   max-width: 100%;
   height: 2.5rem;
@@ -326,6 +342,159 @@ button.primary .check {
   display: grid;
   place-items: center;
   font-weight: 700;
+}
+
+.tabs {
+  display: flex;
+  gap: 0.25rem;
+  margin-bottom: 1.5rem;
+  overflow-x: auto;
+  /* The divider is drawn inside the bar, under the tabs, rather than as a border the tabs
+     overlap with a negative margin: that overlap made the bar one pixel too tall to fit, and
+     gave it a scrollbar. */
+  box-shadow: inset 0 -1px 0 var(--border);
+}
+
+.tabs button {
+  flex: none;
+  padding: 0.6rem 1rem;
+  border: 0;
+  border-bottom: 2px solid transparent;
+  background: none;
+  color: var(--muted);
+  cursor: pointer;
+}
+
+.tabs button:hover {
+  color: var(--text);
+}
+
+.tabs button[aria-selected="true"] {
+  border-bottom-color: var(--accent);
+  color: var(--text);
+  font-weight: 600;
+}
+
+.tab-panel {
+  display: grid;
+  gap: 0;
+  max-width: 34rem;
+}
+
+.section-gap {
+  margin-top: 1.75rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+}
+
+fieldset.setting {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  gap: 0.1rem;
+}
+
+/* A section of its own below another: a divider with room above and below. (Spelled out for
+   fieldsets because the plain fieldset rule above would otherwise cancel the margin and border.) */
+fieldset.section-gap {
+  margin-top: 2.25rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+}
+
+/* The title of a fieldset sits close to the options under it. */
+fieldset .setting-title {
+  margin-bottom: 0;
+}
+
+/* Room for the "browser is set to ..." note, so the page does not shift when it comes and goes. */
+.zone-hint {
+  min-height: 1.4rem;
+}
+
+.setting-title {
+  margin: 0 0 0.25rem;
+  padding: 0;
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.check-row {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.25rem 0;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.check-row input {
+  width: 1.05rem;
+  height: 1.05rem;
+  accent-color: var(--accent);
+}
+
+button.danger {
+  position: relative;
+  padding: 0.65rem 1rem;
+  border: 0;
+  border-radius: 0.5rem;
+  background: var(--error);
+  color: var(--bg);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button.danger:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+button.danger[aria-busy="true"]:disabled {
+  opacity: 1;
+}
+
+button.danger .spinner {
+  border-color: color-mix(in srgb, var(--bg) 30%, transparent);
+  border-top-color: var(--bg);
+}
+
+button.secondary.danger-outline {
+  border-color: var(--error);
+  color: var(--error);
+}
+
+button.secondary.danger-outline:hover:not(:disabled) {
+  background: color-mix(in srgb, var(--error) 12%, transparent);
+}
+
+/* A control with its "Saved" (or error) text to the right of it. */
+.inline-field {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 0.75rem;
+}
+
+.inline-field input {
+  flex: 0 1 auto;
+}
+
+.field-status {
+  font-size: 0.9rem;
+  white-space: nowrap;
+  color: var(--accent);
+}
+
+.field-status.form-error {
+  color: var(--error);
+}
+
+.check-line {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0 0.75rem;
 }
 
 .setting-actions {
