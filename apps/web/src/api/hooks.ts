@@ -11,6 +11,8 @@ import type {
   LoginInput,
   PublicUser,
   RegisterInput,
+  Settings,
+  UpdateSettingsInput,
   StatsResponse,
   StudyCountsResponse,
 } from "@flashcards/shared";
@@ -49,6 +51,31 @@ function useStartSession(path: "/auth/login" | "/auth/register") {
 
 export const useLogin = () => useStartSession("/auth/login");
 export const useRegister = () => useStartSession("/auth/register");
+
+export function useSettings() {
+  return useQuery({
+    queryKey: ["settings"],
+    queryFn: () => api<Settings>("/settings"),
+  });
+}
+
+// Both settings change what is ready to study (the daily limit, and where the study day starts).
+export function useUpdateSettings() {
+  const qc = useQueryClient();
+  return useMutation({
+    mutationFn: async (input: UpdateSettingsInput) => {
+      const [settings] = await Promise.all([
+        api<Settings>("/settings", { method: "PATCH", body: input }),
+        new Promise((resolve) => setTimeout(resolve, MIN_SPINNER_MS)),
+      ]);
+      return settings;
+    },
+    onSuccess: (settings) => {
+      qc.setQueryData(["settings"], settings);
+      for (const key of ["study", "stats", "deck"]) qc.invalidateQueries({ queryKey: [key] });
+    },
+  });
+}
 
 export function useLogout() {
   const qc = useQueryClient();

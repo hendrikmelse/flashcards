@@ -56,6 +56,42 @@ describe("auth flow", () => {
     expect(await screen.findByRole("heading", { name: "Dashboard" })).toBeInTheDocument();
   });
 
+  it("sends the browser's time zone when registering, but not when logging in", async () => {
+    const zone = vi
+      .spyOn(Intl.DateTimeFormat.prototype, "resolvedOptions")
+      .mockReturnValue({ timeZone: "America/Chicago" } as Intl.ResolvedDateTimeFormatOptions);
+    let registered: unknown;
+    let loggedIn: unknown;
+    mock.handlers["POST /auth/register"] = (b) => {
+      registered = b;
+      return json(201, { user: { id: "u1", email: "ann@example.com" } });
+    };
+    mock.handlers["POST /auth/login"] = (b) => {
+      loggedIn = b;
+      return json(200, { user: { id: "u1", email: "ann@example.com" } });
+    };
+    try {
+      const user = userEvent.setup();
+      const view = renderApp("/register");
+      await user.type(await screen.findByLabelText("Email"), "ann@example.com");
+      await user.type(screen.getByLabelText("Password"), "correct horse battery");
+      await user.click(screen.getByRole("button", { name: "Sign up" }));
+      await screen.findByRole("heading", { name: "Dashboard" });
+      expect(registered).toMatchObject({ email: "ann@example.com", timezone: "America/Chicago" });
+      view.unmount();
+
+      mock.loggedIn = false;
+      renderApp("/login");
+      await user.type(await screen.findByLabelText("Email"), "ann@example.com");
+      await user.type(screen.getByLabelText("Password"), "correct horse battery");
+      await user.click(screen.getByRole("button", { name: "Log in" }));
+      await screen.findByRole("heading", { name: "Dashboard" });
+      expect(loggedIn).not.toHaveProperty("timezone");
+    } finally {
+      zone.mockRestore();
+    }
+  });
+
   it("explains when the email is already registered", async () => {
     mock.handlers["POST /auth/register"] = () => json(409, { error: "Email already registered" });
     const user = userEvent.setup();

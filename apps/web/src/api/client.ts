@@ -8,7 +8,7 @@ export class ApiError extends Error {
   }
 }
 
-type Options = { method?: "GET" | "POST"; body?: unknown };
+type Options = { method?: "GET" | "POST" | "PATCH"; body?: unknown };
 
 // All requests go to the same origin under /api (see vite.config.ts), so the
 // session cookie is sent automatically.

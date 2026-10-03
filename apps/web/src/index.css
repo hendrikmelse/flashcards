@@ -187,6 +187,63 @@ input {
   border-color: var(--error);
 }
 
+.settings {
+  display: grid;
+  gap: 1.5rem;
+  max-width: 34rem;
+}
+
+.setting {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.setting > label {
+  font-weight: 600;
+}
+
+.setting p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.setting input[type="number"] {
+  width: 8rem;
+  height: 2.5rem;
+  padding: 0 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  background: var(--surface);
+  color: var(--text);
+}
+
+.setting input[aria-invalid="true"] {
+  border-color: var(--error);
+}
+
+.setting select.dropdown {
+  max-width: 100%;
+  width: 22rem;
+}
+
+button.primary.done:disabled {
+  opacity: 1;
+}
+
+button.primary .check {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+}
+
+.setting-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
 .field-error,
 .form-error {
   margin: 0;

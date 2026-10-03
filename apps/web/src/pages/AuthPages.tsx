@@ -51,7 +51,11 @@ function AuthForm({ mode }: { mode: Mode }) {
       return;
     }
     setFieldErrors({});
-    mutation.mutate(parsed.data, { onSuccess: () => navigate(from, { replace: true }) });
+    // New accounts start with the browser's time zone, so the study day is right from the start.
+    const data = isLogin
+      ? parsed.data
+      : { ...parsed.data, timezone: Intl.DateTimeFormat().resolvedOptions().timeZone };
+    mutation.mutate(data, { onSuccess: () => navigate(from, { replace: true }) });
   }
 
   return (

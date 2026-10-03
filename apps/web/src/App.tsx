@@ -8,6 +8,7 @@ import { LoginPage, RegisterPage } from "./pages/AuthPages";
 import { NotFoundPage } from "./pages/NotFoundPage";
 import { PackDetailPage } from "./pages/PackDetailPage";
 import { PacksPage } from "./pages/PacksPage";
+import { SettingsPage } from "./pages/SettingsPage";
 import { StudyPage } from "./pages/StudyPage";
 
 export function App() {
@@ -24,6 +25,7 @@ export function App() {
           <Route path="study" element={<StudyPage />} />
           <Route path="how-it-works" element={<HowItWorksPage />} />
           <Route path="packs" element={<PacksPage />} />
+          <Route path="settings" element={<SettingsPage />} />
           <Route path="packs/:id" element={<PackDetailPage />} />
         </Route>
       </Route>

@@ -112,6 +112,7 @@ All routes live under `/api`.
 | `POST /deck/mirrors` | Adds the reverse card for every card in a view of the deck (direction, stage and search, as in `GET /deck`) that has none. Idempotent |
 | `GET /study` | Read-only batch. Due learning and review cards (learning ones within 20 minutes) ranked by how likely each is to have been forgotten, with new cards (up to the daily limit) spread through the first half of the queue. Learning cards are held back until 15 minutes after the last answer (the gap between sessions); `early=1` lets the next session start in the last 5 minutes of that wait |
 | `GET /study/counts` | The counts of learning, review and new cards, for the dashboard, plus `nextSession` (when the held-back cards open and how many will be ready) while a session gap is running, and `tomorrow` (how many cards will be waiting by the end of tomorrow's study day) |
+| `GET /settings`, `PATCH /settings` | The account's email, time zone and daily new-card limit; the two can be changed. A new time zone moves due review cards to the start of the same day there |
 | `GET /stats` | Reviews today, when the next card is due, and a per-direction breakdown of the deck, including what is ready to study in each |
 | `POST /reviews` | Transactional. A card in review comes due at the start of a study day (04:00 in the user's time zone) and the scheduler counts whole days between reviews; cards still learning keep real-time steps. Locks the card, runs FSRS, updates state and appends to the log. Idempotent via `clientReviewId` |
 
@@ -164,27 +165,43 @@ The full runbook, including server setup, rollback, backups and how to invite so
 
 ## Status and roadmap
 
-**Done:** backend (auth, content model, packs, deck, study queue, reviews), frontend (auth, dashboard, deck viewer, pack browser, study session with 1-4 keys and learning cards returning within the session), and production deployment with CI and nightly backups.
+**Built:** auth with invite-only registration, a settings page (daily new cards, time zone), the content model and importer (about 5,900 concepts in 88 packs, in four categories), the pack browser with pack and word search, the deck viewer (search, filters, sorting, adding reverse cards), the dashboard, study sessions (FSRS scheduling, queue ordered by chance of forgetting, a 15-minute gap between sessions, a pause before a missed card repeats), the explainer page, and production deployment with CI and nightly backups.
 
-**Before anyone other than the owner uses it**
-- Offsite database backups and a tested restore, plus an alert when a backup fails
-- Email verification and password reset (needs an email provider)
-- Replace the email allowlist with invite codes, so outsiders cannot probe which addresses are allowed
-- Run the production CSP through a real browser pass
+### Before anyone other than the owner uses it
 
-**Content (the product)**
-- The importer and about 5,900 concepts in 88 packs exist (see Content); nothing is imported into production yet, and none of it has had a native Dutch review
-- Native review of `content/review-notes.md` and a spot check of the bands; then more languages or more levels
+1. ~~**Time zones.**~~ Done: new accounts take the browser's time zone, and the settings page changes it (review cards move to the start of the same day in the new zone). Accounts created earlier are still on UTC until their owner picks a zone in Settings; the page suggests the browser's.
+2. **Push and deploy.** Production runs an old build. Pushing `main` deploys it, and the new migrations (`concept_key`, `pack_category`) must apply cleanly.
+3. **Check the Docker image builds.** `content/` was added to the image after the last verified build; CI builds it on push, but it is untested.
+4. **Import the content into production** (manual, see the runbook). Do any final key renames first: once users have cards, concept keys are permanent.
+5. **Native Dutch review of the content.** Nothing has been checked by a Dutch speaker. Work through `content/review-notes.md` (about 50 items) and spot-check the frequency bands.
+6. **Offsite database backups with a failure alert, and a tested restore.** The first unattended backup run is also unverified.
+7. **A real browser pass on the live site** over HTTPS (registering, studying, the Content-Security-Policy, a phone).
 
-**Features still to build**
-- A stats page (cards learned, reviews per day, retention); `GET /stats` already serves the dashboard
-- Settings (daily limits, account)
-- Responsive polish, accessibility basics, optimistic updates on review submission
-- Account deletion and export
+### Should have for friends and family
 
-**Hardening:** uptime monitoring and error tracking.
+- Password reset and email verification (needs an email provider)
+- ~~Settings: daily new-card limit and time zone~~ (done); account deletion, data export and changing your password (still to do)
+- A "report a problem with this card" button, since the content is unreviewed
+- First-run guidance: suggest the starter pack, and explain directions and the answer buttons
+- Rate limits on the public pack and search endpoints (only sign-in and sign-up are limited)
+- Uptime monitoring and error tracking
+- Mobile and accessibility pass (there are only two small-screen layout rules today)
 
-**Out of scope for v1, possible later:** user-created cards, audio and images, social features, native apps and offline mode, Anki/CSV import, more languages, FSRS parameter tuning from the review history.
+### Before a wider launch
+
+- Invite codes instead of the email allowlist, which reveals whether an address is on it
+- Privacy policy and terms
+- End-to-end browser tests (today everything is unit and API tests)
+- Verify updating a running production deploy, and a production rollback (both only verified locally)
+
+### After launch
+
+A stats page (reviews per day, retention; `GET /stats` already serves the dashboard), optimistic updates on answers, removing cards from the deck, audio, and more languages or levels. Possibly later: user-created cards, images, social features, native apps and offline mode, Anki/CSV import, FSRS parameter tuning from the review history.
+
+### Housekeeping
+
+- The study rules changed a lot recently (the 15-minute gap, where a missed card returns, how new cards are spread, start-of-day due times). Use them for a while before others do, then tune the constants.
+- Update this list as items are done.
 
 ## Notes
 
