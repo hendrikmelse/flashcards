@@ -9,20 +9,21 @@ import type {
   StudyCardView,
   StudyResponse,
 } from "@flashcards/shared";
-import { formLines } from "@flashcards/shared";
+import { formLines, SESSION_GAP_MS } from "@flashcards/shared";
 import { api } from "../api/client";
 import { useLanguages } from "../api/packs";
 import { displayLemma } from "../components/entries";
 import {
   initialState,
-  nextReadyAt,
   phaseOf,
   reducer,
   remaining,
   type SessionStats,
 } from "../study/session";
 
-const BATCH_SIZE = 20;
+// The server orders the whole queue; a big batch lets "Again" cards slot back in
+// among enough other cards, and the new ones spread through it as intended.
+const BATCH_SIZE = 100;
 
 const RATINGS: { rating: Rating; label: string }[] = [
   { rating: "again", label: "Again" },
@@ -41,6 +42,8 @@ function useStudySession() {
   const to = params.get("to");
   const direction =
     from && to ? `&fromLanguage=${encodeURIComponent(from)}&toLanguage=${encodeURIComponent(to)}` : "";
+  // ?early=1 starts the next session a little before the gap between sessions is over.
+  const early = params.get("early") === "1" ? "&early=1" : "";
   const fetching = useRef(false);
   const shownAt = useRef(Date.now());
 
@@ -48,7 +51,7 @@ function useStudySession() {
   useEffect(() => {
     if (state.queue.length > 0 || state.exhausted || state.fetchError || fetching.current) return;
     fetching.current = true;
-    api<StudyResponse>(`/study?limit=${BATCH_SIZE}${direction}`)
+    api<StudyResponse>(`/study?limit=${BATCH_SIZE}${direction}${early}`)
       .then(
         (r) => dispatch({ type: "fetched", cards: r.cards }),
         () => dispatch({ type: "fetchFailed" }),
@@ -56,29 +59,17 @@ function useStudySession() {
       .finally(() => {
         fetching.current = false;
       });
-  }, [state.queue.length, state.exhausted, state.fetchError, direction]);
+  }, [state.queue.length, state.exhausted, state.fetchError, direction, early]);
 
   // Show the next card as soon as there is one.
   useEffect(() => {
-    if (!state.current && (state.queue.length > 0 || state.waiting.length > 0)) {
-      dispatch({ type: "pick", now: Date.now() });
-    }
-  }, [state.current, state.queue, state.waiting]);
+    if (!state.current && state.queue.length > 0) dispatch({ type: "pick" });
+  }, [state.current, state.queue]);
 
-  // When only waiting cards remain, wake up when the first is ready.
-  useEffect(() => {
-    const readyAt = nextReadyAt(state);
-    if (state.current || state.queue.length > 0 || readyAt === null) return;
-    const t = setTimeout(
-      () => dispatch({ type: "pick", now: Date.now() }),
-      Math.max(0, readyAt - Date.now()),
-    );
-    return () => clearTimeout(t);
-  }, [state]);
-
+  // The clock for "time taken" starts when the card is actually in front of the user.
   useEffect(() => {
     shownAt.current = Date.now();
-  }, [state.current]);
+  }, [state.current, state.repeatNotice]);
 
   const submit = useMutation({
     mutationFn: (v: ReviewVars) =>
@@ -92,7 +83,7 @@ function useStudySession() {
         },
       }),
     onSuccess: (result, v) =>
-      dispatch({ type: "answered", rating: v.rating, result, now: Date.now() }),
+      dispatch({ type: "answered", rating: v.rating, result, random: Math.random() }),
   });
 
   function rate(rating: Rating) {
@@ -115,7 +106,7 @@ function useStudySession() {
     retrySubmit: () => submit.variables && submit.mutate(submit.variables),
     submitting: submit.isPending,
     submitError: submit.isError,
-    continueNow: () => dispatch({ type: "pick", now: Infinity }),
+    acknowledgeRepeat: () => dispatch({ type: "acknowledgeRepeat" }),
     retryFetch: () => dispatch({ type: "retryFetch" }),
   };
 }
@@ -129,7 +120,7 @@ export function StudyPage() {
     <>
       <div className="study-header">
         <h1>Study</h1>
-        {(phase === "card" || phase === "waiting") && (
+        {phase === "card" && (
           <p className="muted" aria-live="polite">
             {remaining(state)} left · <Link to="/">End session</Link>
           </p>
@@ -147,7 +138,11 @@ export function StudyPage() {
         </div>
       )}
 
-      {phase === "card" && state.current && (
+      {phase === "card" && state.current && state.repeatNotice && (
+        <RepeatNotice onContinue={session.acknowledgeRepeat} />
+      )}
+
+      {phase === "card" && state.current && !state.repeatNotice && (
         <CardView
           card={state.current}
           revealed={state.revealed}
@@ -160,20 +155,28 @@ export function StudyPage() {
         />
       )}
 
-      {phase === "waiting" && (
-        <div className="study-wait">
-          <p>Nothing else is ready right now.</p>
-          <p className="muted">
-            Next card in <Countdown readyAt={nextReadyAt(state)!} />
-          </p>
-          <button className="secondary" onClick={session.continueNow}>
-            Continue now
-          </button>
-        </div>
+      {phase === "done" && (
+        <Summary stats={state.stats} viewed={state.handled.length} reReview={state.pending.length} />
       )}
-
-      {phase === "done" && <Summary stats={state.stats} />}
     </>
+  );
+}
+
+// Shown when the card you just missed is the only one left, so it would come
+// straight back: a short pause so you aren't just re-reading the answer you saw.
+function RepeatNotice({ onContinue }: { onContinue: () => void }) {
+  const ref = useRef<HTMLButtonElement>(null);
+  useEffect(() => ref.current?.focus(), []);
+  return (
+    <div className="study-wait" role="status">
+      <p>You’re about to be shown the exact same card again!</p>
+      <p className="muted">
+        Take a few seconds to clear your mind, then click “Continue” when you’re ready.
+      </p>
+      <button ref={ref} className="primary" onClick={onContinue}>
+        Continue
+      </button>
+    </div>
   );
 }
 
@@ -334,21 +337,17 @@ function CardView({
   );
 }
 
-function Countdown({ readyAt }: { readyAt: number }) {
-  const [now, setNow] = useState(Date.now());
-  useEffect(() => {
-    const t = setInterval(() => setNow(Date.now()), 1000);
-    return () => clearInterval(t);
-  }, []);
-  const secs = Math.max(0, Math.ceil((readyAt - now) / 1000));
-  return (
-    <span>
-      {Math.floor(secs / 60)}:{String(secs % 60).padStart(2, "0")}
-    </span>
-  );
-}
-
-function Summary({ stats }: { stats: SessionStats }) {
+function Summary({
+  stats,
+  viewed,
+  reReview,
+}: {
+  stats: SessionStats;
+  /** Different cards seen this session (a missed card shown again counts once). */
+  viewed: number;
+  /** Cards still being learned, which come back in the next session. */
+  reReview: number;
+}) {
   if (stats.reviewed === 0) {
     return (
       <div className="study-wait">
@@ -360,14 +359,17 @@ function Summary({ stats }: { stats: SessionStats }) {
       </div>
     );
   }
-  const correct = Math.round(((stats.good + stats.easy) / stats.reviewed) * 100);
+  const minutes = SESSION_GAP_MS / 60_000;
   return (
     <div className="study-wait">
-      <h2>Session complete</h2>
-      <p>
-        You answered {stats.reviewed} card{stats.reviewed === 1 ? "" : "s"}, {correct}% rated Good
-        or Easy.
-      </p>
+      <h2>Session complete!</h2>
+      <p>You viewed {viewed} card{viewed === 1 ? "" : "s"}</p>
+      {reReview > 0 && (
+        <p>
+          {reReview} card{reReview === 1 ? "" : "s"} will be available for re-review in {minutes}{" "}
+          minutes
+        </p>
+      )}
       <dl className="summary">
         {(["again", "hard", "good", "easy"] as const).map((r) => (
           <div key={r}>

@@ -1,7 +1,13 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useQueryClient } from "@tanstack/react-query";
 import { Link } from "react-router";
-import type { DirectionSummary } from "@flashcards/shared";
+import {
+  EARLY_START_WINDOW_MS,
+  type DirectionSummary,
+  type StudyCountsResponse,
+} from "@flashcards/shared";
 import { useDashboard } from "../api/hooks";
+import { formatClock, useCountdown } from "../hooks/useCountdown";
 import { shortDirection, sameDirection, useDeckFilter } from "../hooks/useDeckFilter";
 import { formatUntil } from "../lib/relativeTime";
 
@@ -33,6 +39,61 @@ function DeckBar({ counts }: { counts: { new: number; learning: number; review: 
         <span key={k} className={`seg ${k}`} style={{ flexGrow: counts[k] }} />
       ))}
     </div>
+  );
+}
+
+// Nothing is ready, but a session may be on its way: cards you were just learning
+// come back once the gap since your last session has passed. Counts down to then,
+// and in the last few minutes offers to start the next session early.
+function NothingToStudy({
+  study,
+  fetchedAt,
+  nextDueAt,
+  serverNow,
+}: {
+  study: StudyCountsResponse;
+  fetchedAt: number;
+  nextDueAt: string | null;
+  serverNow: string | null;
+}) {
+  const qc = useQueryClient();
+  const next = study.nextSession;
+  // The server's clock tells how long is left; the countdown then runs on this device's clock.
+  const deadline = next ? fetchedAt + (Date.parse(next.at) - Date.parse(study.now)) : null;
+  const left = useCountdown(deadline);
+  const over = left === 0;
+
+  // When the wait is over, look again: the cards are ready.
+  useEffect(() => {
+    if (!over) return;
+    for (const key of ["study", "stats", "deck"]) qc.invalidateQueries({ queryKey: [key] });
+  }, [over, qc]);
+
+  const early = left !== null && left > 0 && left <= EARLY_START_WINDOW_MS;
+  return (
+    <>
+      <p className="hero-title">No cards to study right now</p>
+      {next && left !== null ? (
+        <p className="muted">
+          {plural(next.count, "card")} will be ready in <strong>{formatClock(left)}</strong>.
+        </p>
+      ) : (
+        nextDueAt && serverNow && <p className="muted">Next card {formatUntil(nextDueAt, serverNow)}.</p>
+      )}
+      {study.tomorrow > 0 && (
+        <p className="muted">{plural(study.tomorrow, "card")} will be ready tomorrow.</p>
+      )}
+      {!next && !(nextDueAt && serverNow) && study.tomorrow === 0 && (
+        <p className="muted">Come back later or add more words.</p>
+      )}
+      {early && (
+        <div className="hero-actions">
+          <Link to="/study?early=1" className="button primary">
+            Start next session now
+          </Link>
+        </div>
+      )}
+    </>
   );
 }
 
@@ -85,13 +146,12 @@ export function DashboardPage() {
                 </p>
               </>
             ) : (
-              <>
-                <p className="hero-title">You’re all caught up</p>
-                <p className="muted">Nothing to study right now. Come back later or add more words.</p>
-                {nextDueAt && stats.data && (
-                  <p className="muted">Next card {formatUntil(nextDueAt, stats.data.now)}.</p>
-                )}
-              </>
+              <NothingToStudy
+                study={study.data}
+                fetchedAt={study.dataUpdatedAt}
+                nextDueAt={nextDueAt}
+                serverNow={stats.data?.now ?? null}
+              />
             )}
             {ready > 0 && (
               <div className="hero-actions">

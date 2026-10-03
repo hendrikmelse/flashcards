@@ -53,7 +53,7 @@ const graduated = (id: string) => ({
 });
 
 function studyWith(cards: unknown[]) {
-  mock.handlers["GET /study?limit=20"] = () => {
+  mock.handlers["GET /study?limit=100"] = () => {
     studyCalls++;
     return json(200, { now: "x", counts: { learning: 0, review: 0, new: cards.length }, cards });
   };
@@ -74,14 +74,66 @@ beforeEach(() => {
 
 afterEach(() => vi.unstubAllGlobals());
 
+describe("missed cards", () => {
+  it("come back after the other cards, with no pause and no waiting", async () => {
+    const user = userEvent.setup();
+    renderApp("/study");
+
+    // dog: Again. house is next; dog is placed behind it.
+    await user.click(await screen.findByRole("button", { name: "Show answer" }));
+    await user.click(screen.getByRole("button", { name: "Again" }));
+    expect(await screen.findByText("house")).toBeInTheDocument();
+    expect(screen.queryByText(/exact same card/)).not.toBeInTheDocument();
+    expect(screen.getByText(/2 left/)).toBeInTheDocument();
+
+    await user.click(screen.getByRole("button", { name: "Show answer" }));
+    await user.click(screen.getByRole("button", { name: "Easy" }));
+
+    // Straight to dog again: no countdown screen, no notice.
+    expect(await screen.findByText("dog")).toBeInTheDocument();
+    expect(screen.queryByText("Nothing else is ready right now.")).not.toBeInTheDocument();
+    expect(screen.queryByText(/exact same card/)).not.toBeInTheDocument();
+    expect(screen.getByRole("button", { name: "Show answer" })).toBeInTheDocument();
+  });
+
+  it("pause with a notice first when it would be the very same card again", async () => {
+    studyWith([dog]);
+    const user = userEvent.setup();
+    renderApp("/study");
+
+    await user.click(await screen.findByRole("button", { name: "Show answer" }));
+    await user.click(screen.getByRole("button", { name: "Again" }));
+
+    expect(await screen.findByText(/You’re about to be shown the exact same card again!/)).toBeInTheDocument();
+    expect(screen.getByText(/clear your mind, then click “Continue” when you’re ready/)).toBeInTheDocument();
+    // The card itself is not showing yet.
+    expect(screen.queryByRole("button", { name: "Show answer" })).not.toBeInTheDocument();
+    expect(screen.queryByText("dog")).not.toBeInTheDocument();
+
+    await user.click(screen.getByRole("button", { name: "Continue" }));
+    expect(await screen.findByText("dog")).toBeInTheDocument();
+    expect(screen.getByRole("button", { name: "Show answer" })).toBeInTheDocument();
+    expect(screen.queryByText(/exact same card/)).not.toBeInTheDocument();
+  });
+});
+
 describe("studying one direction", () => {
+  it("starts the next session early when the URL says so", async () => {
+    mock.handlers["GET /study?limit=100&early=1"] = () =>
+      json(200, { now: "x", counts: { learning: 1, review: 0, new: 0 }, cards: [dog] });
+    renderApp("/study?early=1");
+    expect(await screen.findByText("dog")).toBeInTheDocument();
+    expect(mock.calls).toContain("GET /study?limit=100&early=1");
+    expect(mock.calls).not.toContain("GET /study?limit=100");
+  });
+
   it("asks only for that direction when the URL names one", async () => {
-    mock.handlers["GET /study?limit=20&fromLanguage=nl&toLanguage=en"] = () =>
+    mock.handlers["GET /study?limit=100&fromLanguage=nl&toLanguage=en"] = () =>
       json(200, { now: "x", counts: { learning: 0, review: 0, new: 1 }, cards: [dog] });
     renderApp("/study?from=nl&to=en");
     expect(await screen.findByText("dog")).toBeInTheDocument();
-    expect(mock.calls).toContain("GET /study?limit=20&fromLanguage=nl&toLanguage=en");
-    expect(mock.calls).not.toContain("GET /study?limit=20");
+    expect(mock.calls).toContain("GET /study?limit=100&fromLanguage=nl&toLanguage=en");
+    expect(mock.calls).not.toContain("GET /study?limit=100");
   });
 });
 
@@ -104,11 +156,11 @@ describe("study session", () => {
     expect(screen.getByRole("button", { name: "Good" })).toBeInTheDocument();
   });
 
-  it("runs a full session, bringing a learning card back before finishing", async () => {
+  it("runs a session to the end, then shows the summary, with the cards still being learned", async () => {
     const user = userEvent.setup();
     renderApp("/study");
 
-    // dog: Good -> server says learning (10 min), so it will return.
+    // dog: Good -> the server says learning (10 min). It will not come back in this session.
     await user.click(await screen.findByRole("button", { name: "Show answer" }));
     await user.click(screen.getByRole("button", { name: "Good" }));
     expect(reviews[0]).toMatchObject({ userCardId: "card-dog", rating: "good" });
@@ -121,20 +173,48 @@ describe("study session", () => {
     await user.keyboard("4");
     expect(reviews[1]).toMatchObject({ userCardId: "card-house", rating: "easy" });
 
-    // Only the waiting dog is left. The server lists it again; it must not be duplicated.
-    expect(await screen.findByText("Nothing else is ready right now.")).toBeInTheDocument();
-    expect(studyCalls).toBe(2);
-    expect(screen.getByText(/1 left/)).toBeInTheDocument();
+    // Nothing is left to show now, so no countdown: the session is over.
+    expect(await screen.findByRole("heading", { name: "Session complete!" })).toBeInTheDocument();
+    expect(screen.queryByText("Nothing else is ready right now.")).not.toBeInTheDocument();
+    expect(screen.getByText("You viewed 2 cards")).toBeInTheDocument();
+    // dog is still being learned; it will be back in the next session.
+    expect(screen.getByText("1 card will be available for re-review in 15 minutes")).toBeInTheDocument();
+    expect(screen.queryByText(/rated Good or Easy/)).not.toBeInTheDocument();
+    expect(screen.getByRole("link", { name: "Back to the dashboard" })).toHaveAttribute("href", "/");
+    expect(reviews).toHaveLength(2); // dog was not shown a second time
+  });
 
-    await user.click(screen.getByRole("button", { name: "Continue now" }));
-    expect(await screen.findByText("dog")).toBeInTheDocument();
-    expect(screen.getByText("Learning")).toBeInTheDocument();
-    await user.click(screen.getByRole("button", { name: "Show answer" }));
+  it("shows the session summary when every card is finished", async () => {
+    const user = userEvent.setup();
+    studyWith([dog]);
+    renderApp("/study");
+    await user.click(await screen.findByRole("button", { name: "Show answer" }));
     await user.click(screen.getByRole("button", { name: "Easy" }));
 
-    expect(await screen.findByRole("heading", { name: "Session complete" })).toBeInTheDocument();
-    expect(screen.getByText(/You answered 3 cards, 100% rated Good or Easy/)).toBeInTheDocument();
-    expect(reviews).toHaveLength(3);
+    expect(await screen.findByRole("heading", { name: "Session complete!" })).toBeInTheDocument();
+    expect(screen.getByText("You viewed 1 card")).toBeInTheDocument();
+    // Nothing to re-review, so no line about it.
+    expect(screen.queryByText(/re-review/)).not.toBeInTheDocument();
+    expect(screen.getByText("Easy").nextSibling).toHaveTextContent("1");
+  });
+
+  it("counts each card once however often it was shown, and lists every card to re-review", async () => {
+    const user = userEvent.setup();
+    renderApp("/study");
+
+    // dog: Again (comes back after house), then Good. house: Good.
+    await user.click(await screen.findByRole("button", { name: "Show answer" }));
+    await user.click(screen.getByRole("button", { name: "Again" }));
+    await user.click(await screen.findByRole("button", { name: "Show answer" }));
+    await user.click(screen.getByRole("button", { name: "Good" }));
+    await user.click(await screen.findByRole("button", { name: "Show answer" }));
+    await user.click(screen.getByRole("button", { name: "Good" }));
+
+    expect(await screen.findByRole("heading", { name: "Session complete!" })).toBeInTheDocument();
+    expect(screen.getByText("You viewed 2 cards")).toBeInTheDocument(); // three answers, two cards
+    expect(screen.getByText("2 cards will be available for re-review in 15 minutes")).toBeInTheDocument();
+    expect(screen.getByText("Again").nextSibling).toHaveTextContent("1");
+    expect(screen.getByText("Good").nextSibling).toHaveTextContent("2");
   });
 
   it("rates with the number keys", async () => {
@@ -196,7 +276,7 @@ describe("study session", () => {
   });
 
   it("recovers from a failed load", async () => {
-    mock.handlers["GET /study?limit=20"] = () => json(500, { error: "boom" });
+    mock.handlers["GET /study?limit=100"] = () => json(500, { error: "boom" });
     const user = userEvent.setup();
     renderApp("/study");
     expect(await screen.findByText("Could not load your cards.")).toBeInTheDocument();
@@ -345,10 +425,10 @@ describe("dashboard entry point", () => {
   });
 
   it("says so when there is nothing to study", async () => {
-    mock.handlers["GET /study?limit=1"] = () =>
+    mock.handlers["GET /study/counts"] = () =>
       json(200, { now: "x", counts: { learning: 0, review: 0, new: 0 }, cards: [] });
     renderApp("/");
-    expect(await screen.findByText(/Nothing to study right now/)).toBeInTheDocument();
+    expect(await screen.findByText("No cards to study right now")).toBeInTheDocument();
     expect(screen.queryByRole("link", { name: "Start studying" })).not.toBeInTheDocument();
   });
 });

@@ -119,10 +119,10 @@ describe("dashboard", () => {
 
   it("says you are caught up when nothing is due", async () => {
     mock.loggedIn = true;
-    mock.handlers["GET /study?limit=1"] = () =>
+    mock.handlers["GET /study/counts"] = () =>
       json(200, { now: "x", counts: { learning: 0, review: 0, new: 0 } });
     renderApp("/");
-    expect(await screen.findByText("You’re all caught up")).toBeInTheDocument();
+    expect(await screen.findByText("No cards to study right now")).toBeInTheDocument();
     expect(screen.queryByRole("link", { name: "Start studying" })).not.toBeInTheDocument();
     expect(screen.getByRole("link", { name: "Add more words" })).toHaveAttribute("href", "/packs");
   });
@@ -170,7 +170,7 @@ describe("dashboard", () => {
       expect(await within(screen.getByRole("region", { name: "Progress" })).findByText("6")).toBeInTheDocument();
       expect(hero).toHaveTextContent("11 cards ready to study");
       expect(within(hero).getByRole("link", { name: "Start studying" })).toHaveAttribute("href", "/study");
-      expect(mock.calls.filter((c) => c.startsWith("GET /study"))).toEqual(["GET /study?limit=1"]);
+      expect(mock.calls.filter((c) => c.startsWith("GET /study"))).toEqual(["GET /study/counts"]);
       expect(screen.getByRole("button", { name: "NL → EN" })).toHaveAttribute("aria-pressed", "true");
       expect(JSON.parse(localStorage.getItem("dashboardDirection")!)).toEqual({ from: "nl", to: "en" });
 
@@ -211,8 +211,143 @@ describe("dashboard", () => {
       expect(screen.queryByRole("group", { name: "Deck view" })).not.toBeInTheDocument();
     });
 
+    describe("when a session is on its way", () => {
+      const nothingReady = () =>
+        (mock.handlers["GET /study/counts"] = () => json(200, countsWith(7 * 60_000)));
+      // The server says the next session opens in `ms`, with 4 cards ready then.
+      const countsWith = (ms: number) => ({
+        now: "2026-01-15T10:00:00.000Z",
+        counts: { learning: 0, review: 0, new: 0 },
+        nextSession: { at: new Date(Date.parse("2026-01-15T10:00:00.000Z") + ms).toISOString(), count: 4 },
+        tomorrow: 0,
+      });
+
+      it("counts down to when the cards will be ready, and says how many", async () => {
+        nothingReady();
+        renderApp("/");
+        const hero = await screen.findByRole("region", { name: "Ready to study" });
+        expect(await within(hero).findByText("No cards to study right now")).toBeInTheDocument();
+        await waitFor(() => expect(hero).toHaveTextContent(/4 cards will be ready in (7:00|6:59)\./));
+        // More than five minutes to go: no way to start early.
+        expect(within(hero).queryByRole("link", { name: "Start next session now" })).not.toBeInTheDocument();
+      });
+
+      it("offers to start the next session now in the last five minutes", async () => {
+        mock.handlers["GET /study/counts"] = () => json(200, countsWith(4 * 60_000 + 30_000));
+        renderApp("/");
+        const hero = await screen.findByRole("region", { name: "Ready to study" });
+        await waitFor(() => expect(hero).toHaveTextContent(/4 cards will be ready in 4:(30|29)\./));
+        expect(within(hero).getByRole("link", { name: "Start next session now" })).toHaveAttribute(
+          "href",
+          "/study?early=1",
+        );
+      });
+
+      it("shows exactly five minutes as early enough, and ten as not", async () => {
+        mock.handlers["GET /study/counts"] = () => json(200, countsWith(5 * 60_000));
+        const view = renderApp("/");
+        expect(await screen.findByRole("link", { name: "Start next session now" })).toBeInTheDocument();
+        view.unmount();
+
+        mock.handlers["GET /study/counts"] = () => json(200, countsWith(10 * 60_000));
+        renderApp("/");
+        const hero = await screen.findByRole("region", { name: "Ready to study" });
+        await waitFor(() => expect(hero).toHaveTextContent(/will be ready in (10:00|9:59)/));
+        expect(screen.queryByRole("link", { name: "Start next session now" })).not.toBeInTheDocument();
+      });
+
+      it("uses the singular for a single card", async () => {
+        mock.handlers["GET /study/counts"] = () => {
+          const c = countsWith(7 * 60_000);
+          return json(200, { ...c, nextSession: { ...c.nextSession, count: 1 } });
+        };
+        renderApp("/");
+        const hero = await screen.findByRole("region", { name: "Ready to study" });
+        await waitFor(() => expect(hero).toHaveTextContent(/1 card will be ready in (7:00|6:59)\./));
+      });
+
+      it("looks again for the cards when the countdown reaches zero", async () => {
+        vi.useFakeTimers({ shouldAdvanceTime: true });
+        try {
+          let calls = 0;
+          mock.handlers["GET /study/counts"] = () => {
+            calls++;
+            return calls === 1
+              ? json(200, countsWith(2_000))
+              : json(200, { now: "x", counts: { learning: 4, review: 0, new: 0 }, nextSession: null });
+          };
+          renderApp("/");
+          const hero = await screen.findByRole("region", { name: "Ready to study" });
+          await waitFor(() => expect(hero).toHaveTextContent(/will be ready in 0:0\d/));
+          await vi.advanceTimersByTimeAsync(3_000);
+          expect(await screen.findByText("4 cards ready to study")).toBeInTheDocument();
+          expect(calls).toBeGreaterThanOrEqual(2);
+        } finally {
+          vi.useRealTimers();
+        }
+      });
+
+      describe("with no countdown", () => {
+        const idle = (tomorrow: number, nextDueAt: string | null = null) => {
+          mock.handlers["GET /study/counts"] = () =>
+            json(200, {
+              now: "2026-01-15T10:00:00.000Z",
+              counts: { learning: 0, review: 0, new: 0 },
+              nextSession: null,
+              tomorrow,
+            });
+          mock.handlers["GET /stats"] = () => json(200, stats([dir("en", "nl")], { nextDueAt }));
+        };
+
+        it("says how many cards will be ready tomorrow", async () => {
+          idle(28);
+          renderApp("/");
+          expect(await screen.findByText("28 cards will be ready tomorrow.")).toBeInTheDocument();
+          expect(screen.getByText("No cards to study right now")).toBeInTheDocument();
+          expect(screen.queryByText("Come back later or add more words.")).not.toBeInTheDocument();
+        });
+
+        it("uses the singular, and shows it alongside when the next card is due", async () => {
+          idle(1, "2026-01-15T13:00:00.000Z");
+          renderApp("/");
+          expect(await screen.findByText("1 card will be ready tomorrow.")).toBeInTheDocument();
+          expect(screen.getByText("Next card in 3 hours.")).toBeInTheDocument();
+        });
+
+        it("says nothing about tomorrow when nothing will be ready", async () => {
+          idle(0);
+          renderApp("/");
+          expect(await screen.findByText("Come back later or add more words.")).toBeInTheDocument();
+          expect(screen.queryByText(/ready tomorrow/)).not.toBeInTheDocument();
+        });
+
+        it("also shows it while a countdown is running", async () => {
+          mock.handlers["GET /study/counts"] = () =>
+            json(200, {
+              now: "2026-01-15T10:00:00.000Z",
+              counts: { learning: 0, review: 0, new: 0 },
+              nextSession: { at: "2026-01-15T10:07:00.000Z", count: 4 },
+              tomorrow: 28,
+            });
+          renderApp("/");
+          const hero = await screen.findByRole("region", { name: "Ready to study" });
+          await waitFor(() => expect(hero).toHaveTextContent(/4 cards will be ready in/));
+          expect(hero).toHaveTextContent("28 cards will be ready tomorrow.");
+        });
+      });
+
+      it("falls back to when the next card is due when no session is held back", async () => {
+        mock.handlers["GET /study/counts"] = () =>
+          json(200, { now: "2026-01-15T10:00:00.000Z", counts: { learning: 0, review: 0, new: 0 }, nextSession: null });
+        mock.handlers["GET /stats"] = () =>
+          json(200, stats([dir("en", "nl")], { nextDueAt: "2026-01-15T13:00:00.000Z" }));
+        renderApp("/");
+        expect(await screen.findByText("Next card in 3 hours.")).toBeInTheDocument();
+      });
+    });
+
     it("says when the next card is due if nothing is ready", async () => {
-      mock.handlers["GET /study?limit=1"] = () =>
+      mock.handlers["GET /study/counts"] = () =>
         json(200, { now: "x", counts: { learning: 0, review: 0, new: 0 }, cards: [] });
       mock.handlers["GET /stats"] = () =>
         json(200, stats([dir("en", "nl")], { nextDueAt: "2026-01-15T13:00:00.000Z" }));
@@ -244,7 +379,7 @@ describe("dashboard", () => {
       json(200, {
         summary: { total: 0, new: 0, learning: 0, relearning: 0, review: 0, dueNow: 0 },
       });
-    mock.handlers["GET /study?limit=1"] = () =>
+    mock.handlers["GET /study/counts"] = () =>
       json(200, { now: "x", counts: { learning: 0, review: 0, new: 0 } });
     renderApp("/");
     expect(await screen.findByText(/Your deck is empty/)).toBeInTheDocument();

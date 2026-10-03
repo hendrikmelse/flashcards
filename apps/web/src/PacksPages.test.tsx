@@ -345,7 +345,7 @@ describe("dashboard link", () => {
   it("points new users with an empty deck to the packs", async () => {
     mock.handlers["GET /deck?limit=1"] = () =>
       json(200, { summary: { total: 0, new: 0, learning: 0, relearning: 0, review: 0, dueNow: 0 } });
-    mock.handlers["GET /study?limit=1"] = () =>
+    mock.handlers["GET /study/counts"] = () =>
       json(200, { now: "x", counts: { learning: 0, review: 0, new: 0 } });
     renderApp("/");
     expect(await screen.findByRole("link", { name: "Browse packs" })).toHaveAttribute("href", "/packs");

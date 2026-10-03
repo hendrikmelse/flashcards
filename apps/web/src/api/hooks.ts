@@ -12,7 +12,7 @@ import type {
   PublicUser,
   RegisterInput,
   StatsResponse,
-  StudyResponse,
+  StudyCountsResponse,
 } from "@flashcards/shared";
 import { api } from "./client";
 
@@ -77,7 +77,7 @@ export function useDashboard(direction: { from: string; to: string } | null) {
   });
   const study = useQuery({
     queryKey: ["study", "counts", "all"],
-    queryFn: () => api<StudyResponse>("/study?limit=1"),
+    queryFn: () => api<StudyCountsResponse>("/study/counts"),
   });
   // Extras: the dashboard still works without them.
   const stats = useStats();

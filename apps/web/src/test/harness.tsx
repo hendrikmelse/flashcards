@@ -35,7 +35,7 @@ function defaultHandlers(): Record<string, Handler> {
       json(200, {
         summary: { total: 12, new: 5, learning: 2, relearning: 1, review: 4, dueNow: 3 },
       }),
-    "GET /study?limit=1": () => json(200, { now: "x", counts: { learning: 1, review: 3, new: 7 } }),
+    "GET /study/counts": () => json(200, { now: "2026-01-15T10:00:00.000Z", counts: { learning: 1, review: 3, new: 7 }, nextSession: null, tomorrow: 0 }),
     "GET /stats": () =>
       json(200, {
         now: "2026-01-15T10:00:00.000Z",

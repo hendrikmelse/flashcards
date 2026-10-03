@@ -1,13 +1,28 @@
 import type { Rating, ReviewResponse, StudyCardView } from "@flashcards/shared";
 
 // The client-side model of one study session. The server decides what each
-// answer means (POST /reviews); this decides what to show next, including
-// bringing "learning" cards back a few minutes after they were answered.
+// answer means (POST /reviews); this decides what to show next. A card answered
+// "Again" goes back into the queue a few cards later. A card answered Hard or Good
+// that is still being learned leaves the session: the server holds it back until
+// the gap between sessions has passed. The session ends when the queue is empty.
 
-export interface WaitingCard {
-  card: StudyCardView;
-  /** Client-clock time (ms) when the card becomes ready to show again. */
-  readyAt: number;
+/** With fewer cards than this left in the queue, an "Again" card goes to the very end. */
+export const MIN_CARDS_BACK = 5;
+/** How far an "Again" card's position can wander from halfway, as a share of the queue. */
+export const AGAIN_FUZZ = 0.2;
+
+/**
+ * How many cards to show before an "Again" card returns, given how many are left in
+ * the queue: halfway, but at least MIN_CARDS_BACK, with some jitter so a run of
+ * missed cards doesn't come back in the order it left. With fewer than
+ * MIN_CARDS_BACK left it returns after all of them. `random` is in [0, 1).
+ */
+export function againPosition(queueLength: number, random: number): number {
+  if (queueLength < MIN_CARDS_BACK) return queueLength;
+  const base = Math.max(MIN_CARDS_BACK, Math.floor(queueLength / 2));
+  const spread = Math.max(1, Math.round(queueLength * AGAIN_FUZZ));
+  const jitter = Math.round((random * 2 - 1) * spread);
+  return Math.min(queueLength, Math.max(MIN_CARDS_BACK, base + jitter));
 }
 
 export interface SessionStats {
@@ -20,35 +35,44 @@ export interface SessionStats {
 
 export interface SessionState {
   queue: StudyCardView[];
-  waiting: WaitingCard[];
   current: StudyCardView | null;
   revealed: boolean;
   /** Ids answered at least once this session; never re-added from server data. */
   handled: string[];
+  /** Ids that left the session still being learned; they come back in a later session. */
+  pending: string[];
   stats: SessionStats;
   /** The server had nothing new to offer the last time we asked. */
   exhausted: boolean;
   fetchError: boolean;
+  /** The card just answered "Again", so we can tell when it is about to come straight back. */
+  lastAgainId: string | null;
+  /** The current card is the one just missed; show a pause before it instead of the card. */
+  repeatNotice: boolean;
 }
 
 export const initialState: SessionState = {
   queue: [],
-  waiting: [],
   current: null,
   revealed: false,
   handled: [],
+  pending: [],
   stats: { reviewed: 0, again: 0, hard: 0, good: 0, easy: 0 },
   exhausted: false,
   fetchError: false,
+  lastAgainId: null,
+  repeatNotice: false,
 };
 
 export type Action =
   | { type: "fetched"; cards: StudyCardView[] }
   | { type: "fetchFailed" }
   | { type: "retryFetch" }
-  | { type: "pick"; now: number }
+  | { type: "pick" }
   | { type: "reveal" }
-  | { type: "answered"; rating: Rating; result: ReviewResponse; now: number };
+  | { type: "acknowledgeRepeat" }
+  /** `random` in [0, 1) is the jitter for where an "Again" card returns. */
+  | { type: "answered"; rating: Rating; result: ReviewResponse; random: number };
 
 export function reducer(state: SessionState, action: Action): SessionState {
   switch (action.type) {
@@ -58,7 +82,6 @@ export function reducer(state: SessionState, action: Action): SessionState {
       const known = new Set<string>([
         ...state.handled,
         ...state.queue.map((c) => c.id),
-        ...state.waiting.map((w) => w.card.id),
         ...(state.current ? [state.current.id] : []),
       ]);
       const fresh = action.cards.filter((c) => !known.has(c.id));
@@ -78,45 +101,46 @@ export function reducer(state: SessionState, action: Action): SessionState {
 
     case "pick": {
       if (state.current) return state;
-
-      // A card that has finished waiting comes first, earliest first; otherwise
-      // the next fresh card.
-      const ready = state.waiting
-        .filter((w) => w.readyAt <= action.now)
-        .sort((a, b) => a.readyAt - b.readyAt)[0];
-      if (ready) {
-        return {
-          ...state,
-          current: ready.card,
-          revealed: false,
-          waiting: state.waiting.filter((w) => w !== ready),
-        };
-      }
       const [next, ...rest] = state.queue;
-      if (next) return { ...state, current: next, revealed: false, queue: rest };
-      return state; // nothing ready: caller waits or fetches
+      if (!next) return state; // nothing to show: the caller fetches more, or the session is over
+      return {
+        ...state,
+        current: next,
+        revealed: false,
+        repeatNotice: next.id === state.lastAgainId,
+        queue: rest,
+      };
     }
 
     case "reveal":
-      return state.current && !state.revealed ? { ...state, revealed: true } : state;
+      return state.current && !state.revealed && !state.repeatNotice
+        ? { ...state, revealed: true }
+        : state;
+
+    case "acknowledgeRepeat":
+      return state.repeatNotice ? { ...state, repeatNotice: false } : state;
 
     case "answered": {
       const card = state.current;
       if (!card) return state;
-      const { rating, result, now } = action;
+      const { rating, result, random } = action;
 
-      // Cards still being learned return within this session, after the delay
-      // the server chose (measured on the server clock, so skew can't matter).
-      const comesBack = result.state === "learning" || result.state === "relearning";
-      const delay = Math.max(0, Date.parse(result.dueAt) - Date.parse(result.reviewedAt));
+      const stillLearning = result.state === "learning" || result.state === "relearning";
+      const missed = rating === "again" && stillLearning;
+      const returning = { ...card, state: result.state };
+      const at = againPosition(state.queue.length, random);
 
       return {
         ...state,
         current: null,
         revealed: false,
-        waiting: comesBack
-          ? [...state.waiting, { card: { ...card, state: result.state }, readyAt: now + delay }]
-          : state.waiting,
+        repeatNotice: false,
+        lastAgainId: missed ? card.id : null,
+        queue: missed ? [...state.queue.slice(0, at), returning, ...state.queue.slice(at)] : state.queue,
+        pending:
+          stillLearning && !missed && !state.pending.includes(card.id)
+            ? [...state.pending, card.id]
+            : state.pending,
         handled: state.handled.includes(card.id) ? state.handled : [...state.handled, card.id],
         stats: {
           ...state.stats,
@@ -128,22 +152,16 @@ export function reducer(state: SessionState, action: Action): SessionState {
   }
 }
 
-export type Phase = "loading" | "card" | "waiting" | "done" | "error";
+export type Phase = "loading" | "card" | "done" | "error";
 
 export function phaseOf(state: SessionState): Phase {
   if (state.current) return "card";
-  if (state.waiting.length > 0) return "waiting";
   if (state.fetchError) return "error";
   if (state.exhausted && state.queue.length === 0) return "done";
   return "loading";
 }
 
-/** Earliest time a waiting card becomes ready, or null if none are waiting. */
-export function nextReadyAt(state: SessionState): number | null {
-  return state.waiting.length === 0 ? null : Math.min(...state.waiting.map((w) => w.readyAt));
-}
-
 /** Cards still to be shown in the batch loaded so far, including the current one. */
 export function remaining(state: SessionState): number {
-  return state.queue.length + state.waiting.length + (state.current ? 1 : 0);
+  return state.queue.length + (state.current ? 1 : 0);
 }

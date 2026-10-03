@@ -1,8 +1,8 @@
 import type { ReviewResponse, StudyCardView } from "@flashcards/shared";
 import { describe, expect, it } from "vitest";
 import {
+  againPosition,
   initialState,
-  nextReadyAt,
   phaseOf,
   reducer,
   remaining,
@@ -22,7 +22,9 @@ const card = (id: string): StudyCardView => ({
   sentences: { front: [], back: [] },
 });
 
-const result = (state: ReviewResponse["state"], delayMs: number): ReviewResponse => ({
+const MIN = 60_000;
+
+const result = (state: ReviewResponse["state"], delayMs = MIN): ReviewResponse => ({
   userCardId: "x",
   state,
   intervalDays: 0,
@@ -31,11 +33,15 @@ const result = (state: ReviewResponse["state"], delayMs: number): ReviewResponse
   replayed: false,
 });
 
-const run = (actions: Action[], from: SessionState = initialState) =>
-  actions.reduce(reducer, from);
+const run = (actions: Action[], from: SessionState = initialState) => actions.reduce(reducer, from);
 
-const T = 1_000_000;
-const MIN = 60_000;
+const answer = (
+  rating: "again" | "hard" | "good" | "easy",
+  state: ReviewResponse["state"],
+  random = 0.5,
+): Action => ({ type: "answered", rating, result: result(state), random });
+
+const ids = (n: number, from = 1) => Array.from({ length: n }, (_, i) => card(`c${from + i}`));
 
 describe("session reducer", () => {
   it("starts in the loading phase", () => {
@@ -43,7 +49,7 @@ describe("session reducer", () => {
   });
 
   it("takes cards from the fetched batch in order", () => {
-    const s = run([{ type: "fetched", cards: [card("a"), card("b")] }, { type: "pick", now: T }]);
+    const s = run([{ type: "fetched", cards: [card("a"), card("b")] }, { type: "pick" }]);
     expect(s.current?.id).toBe("a");
     expect(s.queue.map((c) => c.id)).toEqual(["b"]);
     expect(phaseOf(s)).toBe("card");
@@ -51,102 +57,37 @@ describe("session reducer", () => {
   });
 
   it("does not replace the current card when picking again", () => {
-    const s = run([
-      { type: "fetched", cards: [card("a"), card("b")] },
-      { type: "pick", now: T },
-      { type: "pick", now: T },
-    ]);
+    const s = run([{ type: "fetched", cards: [card("a"), card("b")] }, { type: "pick" }, { type: "pick" }]);
     expect(s.current?.id).toBe("a");
   });
 
   it("reveals only once a card is showing", () => {
     expect(run([{ type: "reveal" }]).revealed).toBe(false);
-    const s = run([{ type: "fetched", cards: [card("a")] }, { type: "pick", now: T }, { type: "reveal" }]);
+    const s = run([{ type: "fetched", cards: [card("a")] }, { type: "pick" }, { type: "reveal" }]);
     expect(s.revealed).toBe(true);
   });
 
   it("counts answers and finishes cards that graduate to review", () => {
-    const s = run([
-      { type: "fetched", cards: [card("a")] },
-      { type: "pick", now: T },
-      { type: "answered", rating: "easy", result: result("review", 8 * 24 * 60 * MIN), now: T },
-    ]);
+    const s = run([{ type: "fetched", cards: [card("a")] }, { type: "pick" }, answer("easy", "review")]);
     expect(s.current).toBeNull();
-    expect(s.waiting).toEqual([]);
+    expect(s.pending).toEqual([]);
     expect(s.stats).toMatchObject({ reviewed: 1, easy: 1, again: 0 });
     expect(s.handled).toEqual(["a"]);
   });
 
-  it("brings learning cards back after the server's delay", () => {
-    const s = run([
-      { type: "fetched", cards: [card("a")] },
-      { type: "pick", now: T },
-      { type: "answered", rating: "good", result: result("learning", 10 * MIN), now: T },
-    ]);
-    expect(s.waiting).toHaveLength(1);
-    expect(s.waiting[0]).toMatchObject({ readyAt: T + 10 * MIN });
-    expect(s.waiting[0]!.card.state).toBe("learning");
-    expect(nextReadyAt(s)).toBe(T + 10 * MIN);
-    expect(phaseOf(s)).toBe("waiting");
-
-    // Not ready yet: nothing is picked.
-    expect(reducer(s, { type: "pick", now: T + 9 * MIN }).current).toBeNull();
-    // Ready: it is shown again.
-    const again = reducer(s, { type: "pick", now: T + 10 * MIN });
-    expect(again.current?.id).toBe("a");
-    expect(again.waiting).toEqual([]);
-  });
-
-  it("also requeues relearning cards", () => {
-    const s = run([
-      { type: "fetched", cards: [card("a")] },
-      { type: "pick", now: T },
-      { type: "answered", rating: "again", result: result("relearning", 10 * MIN), now: T },
-    ]);
-    expect(s.waiting).toHaveLength(1);
-  });
-
-  it("shows a card whose wait is over before fresh cards", () => {
-    let s = run([
-      { type: "fetched", cards: [card("a"), card("b"), card("c")] },
-      { type: "pick", now: T },
-      { type: "answered", rating: "again", result: result("learning", MIN), now: T },
-      { type: "pick", now: T }, // b
-    ]);
-    expect(s.current?.id).toBe("b");
-    s = run([{ type: "answered", rating: "easy", result: result("review", 1e9), now: T + 2 * MIN }], s);
-    s = reducer(s, { type: "pick", now: T + 2 * MIN });
-    expect(s.current?.id).toBe("a"); // finished waiting, so it beats c
-  });
-
-  it("can be forced early with an infinite clock (Continue now)", () => {
-    const s = run([
-      { type: "fetched", cards: [card("a")] },
-      { type: "pick", now: T },
-      { type: "answered", rating: "again", result: result("learning", MIN), now: T },
-      { type: "pick", now: Infinity },
-    ]);
-    expect(s.current?.id).toBe("a");
-  });
-
   it("never re-adds cards answered this session when the server returns them again", () => {
-    let s = run([
-      { type: "fetched", cards: [card("a")] },
-      { type: "pick", now: T },
-      { type: "answered", rating: "good", result: result("learning", 10 * MIN), now: T },
-    ]);
-    // The server still lists "a" (learning, due within its look-ahead window).
+    let s = run([{ type: "fetched", cards: [card("a")] }, { type: "pick" }, answer("good", "learning")]);
+    // The server may still list "a" (for instance, if the gap between sessions is over).
     s = reducer(s, { type: "fetched", cards: [card("a")] });
     expect(s.queue).toEqual([]);
-    expect(s.waiting).toHaveLength(1);
     expect(s.exhausted).toBe(true);
   });
 
-  it("is done once the server has nothing more and nothing is waiting", () => {
+  it("is done once the server has nothing more", () => {
     const s = run([
       { type: "fetched", cards: [card("a")] },
-      { type: "pick", now: T },
-      { type: "answered", rating: "easy", result: result("review", 1e9), now: T },
+      { type: "pick" },
+      answer("easy", "review"),
       { type: "fetched", cards: [card("a")] },
     ]);
     expect(phaseOf(s)).toBe("done");
@@ -170,5 +111,162 @@ describe("session reducer", () => {
     expect(phaseOf(s)).toBe("error");
     s = reducer(s, { type: "retryFetch" });
     expect(phaseOf(s)).toBe("loading");
+  });
+});
+
+describe("cards still being learned", () => {
+  it("leave the session after Hard or Good, to come back in a later one", () => {
+    for (const rating of ["hard", "good"] as const) {
+      const s = run([{ type: "fetched", cards: [card("a"), card("b")] }, { type: "pick" }, answer(rating, "learning")]);
+      expect(s.queue.map((c) => c.id)).toEqual(["b"]); // not put back
+      expect(s.pending).toEqual(["a"]);
+    }
+  });
+
+  it("end the session when the queue runs out, with those cards left for later", () => {
+    const s = run([
+      { type: "fetched", cards: [card("a"), card("b")] },
+      { type: "pick" },
+      answer("good", "learning"),
+      { type: "pick" },
+      answer("easy", "review"),
+      { type: "fetched", cards: [] },
+    ]);
+    expect(phaseOf(s)).toBe("done");
+    expect(s.pending).toEqual(["a"]); // so the study page sends you to the dashboard
+  });
+
+  it("are not pending when a missed card is still in the queue", () => {
+    const s = run([{ type: "fetched", cards: [card("a"), card("b")] }, { type: "pick" }, answer("again", "learning")]);
+    expect(s.pending).toEqual([]);
+  });
+
+  it("become pending once a missed card is finally answered Good", () => {
+    const s = run([
+      { type: "fetched", cards: [card("a")] },
+      { type: "pick" },
+      answer("again", "learning"),
+      { type: "pick" },
+      { type: "acknowledgeRepeat" },
+      answer("good", "learning"),
+    ]);
+    expect(s.pending).toEqual(["a"]);
+    expect(s.queue).toEqual([]);
+  });
+});
+
+describe("againPosition", () => {
+  it("sends the card to the very end when fewer than five cards are left", () => {
+    for (const n of [0, 1, 2, 3, 4]) {
+      for (const r of [0, 0.5, 0.99]) expect(againPosition(n, r)).toBe(n);
+    }
+  });
+
+  it("goes about halfway back, but never closer than five cards", () => {
+    expect(againPosition(5, 0.5)).toBe(5);
+    expect(againPosition(8, 0)).toBe(5);
+    expect(againPosition(10, 0.5)).toBe(5);
+    expect(againPosition(20, 0.5)).toBe(10);
+    expect(againPosition(40, 0.5)).toBe(20);
+    expect(againPosition(100, 0.5)).toBe(50);
+  });
+
+  it("varies with the random jitter, within about a fifth of the queue either way", () => {
+    expect(againPosition(40, 0)).toBe(12); // 20 - 8
+    expect(againPosition(40, 0.999)).toBe(28); // 20 + 8
+    expect(againPosition(100, 0)).toBe(30);
+    // Never before five, never past the end.
+    expect(againPosition(12, 0)).toBe(5);
+    expect(againPosition(6, 0.999)).toBe(6);
+  });
+
+  it("is monotonic in the random value", () => {
+    let last = -1;
+    for (let r = 0; r < 1; r += 0.05) {
+      const p = againPosition(60, r);
+      expect(p).toBeGreaterThanOrEqual(last);
+      last = p;
+    }
+  });
+});
+
+describe("missed cards", () => {
+  it("go back into the queue instead of waiting", () => {
+    const s = run([{ type: "fetched", cards: [card("a"), card("b"), card("c")] }, { type: "pick" }, answer("again", "learning")]);
+    // Only two cards were left, so it goes after both.
+    expect(s.queue.map((c) => c.id)).toEqual(["b", "c", "a"]);
+    expect(s.queue[2]!.state).toBe("learning");
+    expect(s.stats.again).toBe(1);
+    expect(s.handled).toEqual(["a"]);
+  });
+
+  it("treat a forgotten review card (relearning) the same way", () => {
+    const s = run([{ type: "fetched", cards: [card("a"), card("b")] }, { type: "pick" }, answer("again", "relearning")]);
+    expect(s.queue.map((c) => c.id)).toEqual(["b", "a"]);
+  });
+
+  it("return about halfway back through the cards that are left", () => {
+    const s = run([{ type: "fetched", cards: ids(21) }, { type: "pick" }, answer("again", "learning", 0.5)]);
+    expect(s.queue).toHaveLength(21);
+    expect(s.queue[10]!.id).toBe("c1"); // 20 left: halfway is 10
+    expect(s.queue.slice(0, 10).map((c) => c.id)).toEqual(ids(10, 2).map((c) => c.id));
+  });
+
+  it("do not come back in the order they were missed", () => {
+    // Miss c1, c2 and c3 in turn, with different jitter each time.
+    let s = run([{ type: "fetched", cards: ids(30) }]);
+    for (const random of [0.9, 0.1, 0.5]) {
+      s = reducer(s, { type: "pick" });
+      s = reducer(s, answer("again", "learning", random));
+    }
+    const order = s.queue.map((c) => c.id).filter((id) => ["c1", "c2", "c3"].includes(id));
+    expect(order).not.toEqual(["c1", "c2", "c3"]);
+    expect(new Set(order).size).toBe(3);
+  });
+
+  it("do not trigger a pause when other cards come first", () => {
+    const s = run([{ type: "fetched", cards: ids(3) }, { type: "pick" }, answer("again", "learning"), { type: "pick" }]);
+    expect(s.current?.id).toBe("c2");
+    expect(s.repeatNotice).toBe(false);
+  });
+});
+
+describe("the pause before the same card comes straight back", () => {
+  const missOnlyCard = () =>
+    run([{ type: "fetched", cards: [card("a")] }, { type: "pick" }, answer("again", "learning"), { type: "pick" }]);
+
+  it("holds the card behind a notice when it is the only one left", () => {
+    const s = missOnlyCard();
+    expect(s.current?.id).toBe("a");
+    expect(s.repeatNotice).toBe(true);
+    expect(phaseOf(s)).toBe("card");
+  });
+
+  it("cannot be revealed until the notice is acknowledged", () => {
+    let s = reducer(missOnlyCard(), { type: "reveal" });
+    expect(s.revealed).toBe(false);
+    s = reducer(s, { type: "acknowledgeRepeat" });
+    expect(s.repeatNotice).toBe(false);
+    s = reducer(s, { type: "reveal" });
+    expect(s.revealed).toBe(true);
+  });
+
+  it("goes away once the card is answered, and a second miss shows it again", () => {
+    let s = reducer(missOnlyCard(), { type: "acknowledgeRepeat" });
+    s = run([{ type: "reveal" }, answer("again", "learning"), { type: "pick" }], s);
+    expect(s.repeatNotice).toBe(true);
+  });
+
+  it("is not shown for a card that was not just missed", () => {
+    const s = run([
+      { type: "fetched", cards: [card("a"), card("b")] },
+      { type: "pick" },
+      answer("again", "learning"),
+      { type: "pick" }, // b
+      answer("easy", "review"),
+      { type: "pick" }, // a
+    ]);
+    expect(s.current?.id).toBe("a");
+    expect(s.repeatNotice).toBe(false);
   });
 });
