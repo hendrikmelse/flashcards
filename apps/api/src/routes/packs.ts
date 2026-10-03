@@ -2,6 +2,7 @@ import type { FastifyInstance, FastifyReply } from "fastify";
 import { and, asc, count, eq, exists, inArray, not, sql } from "drizzle-orm";
 import {
   addToDeckSchema,
+  conceptCardQuerySchema,
   conceptSearchQuerySchema,
   directionQuerySchema,
   pageQuerySchema,
@@ -12,6 +13,8 @@ import {
   availableInDirection,
   insertUserCards,
   loadEntries,
+  loadSentences,
+  sentenceKey,
 } from "../content/queries.js";
 import {
   concepts,
@@ -26,14 +29,29 @@ import type { Db } from "../db/types.js";
 const invalid = (reply: FastifyReply, issues: unknown) =>
   reply.code(400).send({ error: "Invalid input", issues });
 
-export async function packRoutes(app: FastifyInstance, { db }: { db: Db }) {
-  app.get("/languages", async () => ({
+// These are public (no sign-in), so each client is limited to so many requests a minute.
+const perMinute = (max: number) => ({ config: { rateLimit: { max, timeWindow: "1 minute" } } });
+
+// The direction asked for, and its opposite too when `bothDirections` is set.
+function directionsToAdd(b: { fromLanguage: string; toLanguage: string; bothDirections?: boolean | undefined }) {
+  const forward = { fromLanguage: b.fromLanguage, toLanguage: b.toLanguage };
+  return b.bothDirections ? [forward, { fromLanguage: b.toLanguage, toLanguage: b.fromLanguage }] : [forward];
+}
+
+export async function packRoutes(
+  app: FastifyInstance,
+  { db, searchRateLimit, readRateLimit }: { db: Db; searchRateLimit: number; readRateLimit: number },
+) {
+  const read = perMinute(readRateLimit);
+  const search = perMinute(searchRateLimit);
+
+  app.get("/languages", read, async () => ({
     languages: await db.select().from(languages).orderBy(asc(languages.code)),
   }));
 
   // Public. With a direction, also reports how many concepts can actually
   // become cards in it and, for a logged-in user, how many they already have.
-  app.get("/packs", async (req, reply) => {
+  app.get("/packs", read, async (req, reply) => {
     const q = directionQuerySchema.safeParse(req.query);
     if (!q.success) return invalid(reply, q.error.issues);
     const { fromLanguage, toLanguage } = q.data;
@@ -101,7 +119,7 @@ export async function packRoutes(app: FastifyInstance, { db }: { db: Db }) {
   // Public. Concepts in pack order with their entries. With a direction, only
   // the two languages' entries are returned, plus `available` and (for a
   // logged-in user) `inDeck` flags.
-  app.get("/packs/:id", async (req, reply) => {
+  app.get("/packs/:id", read, async (req, reply) => {
     const p = uuidParamSchema.safeParse(req.params);
     const d = directionQuerySchema.safeParse(req.query);
     const page = pageQuerySchema.safeParse(req.query);
@@ -174,6 +192,7 @@ export async function packRoutes(app: FastifyInstance, { db }: { db: Db }) {
     if (!p.success) return invalid(reply, p.error.issues);
     if (!b.success) return invalid(reply, b.error.issues);
     const { fromLanguage, toLanguage } = b.data;
+    const directions = directionsToAdd(b.data);
 
     const [pack] = await db.select().from(packs).where(eq(packs.id, p.data.id));
     if (!pack) return reply.code(404).send({ error: "Pack not found" });
@@ -194,17 +213,21 @@ export async function packRoutes(app: FastifyInstance, { db }: { db: Db }) {
       )
       .orderBy(asc(packConcepts.position));
 
-    const added = await insertUserCards(
-      db,
-      req.user!.id,
-      available.map((a) => ({ conceptId: a.conceptId, sortKey: a.position })),
-      fromLanguage,
-      toLanguage,
-    );
+    // Counts are in cards: with both directions, each word is two.
+    let added = 0;
+    for (const d of directions) {
+      added += await insertUserCards(
+        db,
+        req.user!.id,
+        available.map((a) => ({ conceptId: a.conceptId, sortKey: a.position })),
+        d.fromLanguage,
+        d.toLanguage,
+      );
+    }
 
     return {
       added,
-      alreadyInDeck: available.length - added,
+      alreadyInDeck: available.length * directions.length - added,
       unavailable: total - available.length,
     };
   });
@@ -212,7 +235,7 @@ export async function packRoutes(app: FastifyInstance, { db }: { db: Db }) {
   // Public. Finds words by lemma in either language of the direction, best
   // matches first (exact, then prefix, then anywhere in the word). Only concepts
   // that can become a card in the direction are returned.
-  app.get("/concepts/search", async (req, reply) => {
+  app.get("/concepts/search", search, async (req, reply) => {
     const q = conceptSearchQuerySchema.safeParse(req.query);
     if (!q.success) return invalid(reply, q.error.issues);
     const { fromLanguage, toLanguage, limit, offset } = q.data;
@@ -294,6 +317,34 @@ export async function packRoutes(app: FastifyInstance, { db }: { db: Db }) {
     };
   });
 
+  // Public. A word as a card in a direction, with all its example sentences: what the card view on
+  // the Add words page shows for a word that may not be in the deck yet.
+  app.get("/concepts/:id", read, async (req, reply) => {
+    const p = uuidParamSchema.safeParse(req.params);
+    const d = conceptCardQuerySchema.safeParse(req.query);
+    if (!p.success) return invalid(reply, p.error.issues);
+    if (!d.success) return invalid(reply, d.error.issues);
+    const { fromLanguage, toLanguage } = d.data;
+
+    const [concept] = await db.select({ id: concepts.id }).from(concepts).where(eq(concepts.id, p.data.id));
+    if (!concept) return reply.code(404).send({ error: "Word not found" });
+
+    const languagePair = [fromLanguage, toLanguage];
+    const words = (await loadEntries(db, [concept.id], languagePair)).get(concept.id) ?? [];
+    const sentences = await loadSentences(db, [concept.id], languagePair, 50);
+    return {
+      conceptId: concept.id,
+      fromLanguage,
+      toLanguage,
+      front: words.filter((e) => e.language === fromLanguage),
+      back: words.filter((e) => e.language === toLanguage),
+      sentences: {
+        front: sentences.get(sentenceKey(concept.id, fromLanguage)) ?? [],
+        back: sentences.get(sentenceKey(concept.id, toLanguage)) ?? [],
+      },
+    };
+  });
+
   app.post("/concepts/:id/add", { preHandler: app.requireAuth }, async (req, reply) => {
     const p = uuidParamSchema.safeParse(req.params);
     const b = addToDeckSchema.safeParse(req.body);
@@ -320,13 +371,17 @@ export async function packRoutes(app: FastifyInstance, { db }: { db: Db }) {
         : reply.code(404).send({ error: "Concept not found" });
     }
 
-    const added = await insertUserCards(
-      db,
-      req.user!.id,
-      [{ conceptId: concept.id, sortKey: 0 }],
-      fromLanguage,
-      toLanguage,
-    );
-    return reply.code(added ? 201 : 200).send({ added, alreadyInDeck: 1 - added });
+    const directions = directionsToAdd(b.data);
+    let added = 0;
+    for (const d of directions) {
+      added += await insertUserCards(
+        db,
+        req.user!.id,
+        [{ conceptId: concept.id, sortKey: 0 }],
+        d.fromLanguage,
+        d.toLanguage,
+      );
+    }
+    return reply.code(added ? 201 : 200).send({ added, alreadyInDeck: directions.length - added });
   });
 }

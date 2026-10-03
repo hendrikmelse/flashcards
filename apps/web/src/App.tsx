@@ -1,4 +1,4 @@
-import { Navigate, Route, Routes, useLocation, useParams } from "react-router";
+import { Navigate, Route, Routes, useParams } from "react-router";
 import { Layout } from "./components/Layout";
 import { PublicOnly, RequireAuth } from "./components/guards";
 import { DashboardPage } from "./pages/DashboardPage";
@@ -12,11 +12,10 @@ import { SettingsPage } from "./pages/SettingsPage";
 import { StudyPage } from "./pages/StudyPage";
 
 // The pack browser used to live at /packs. Old links and bookmarks still work: they go to
-// /add-words, keeping the direction in the query string.
+// /add-words.
 function LegacyPacksRedirect() {
   const { id } = useParams();
-  const { search } = useLocation();
-  return <Navigate to={`/add-words${id ? `/${id}` : ""}${search}`} replace />;
+  return <Navigate to={`/add-words${id ? `/${id}` : ""}`} replace />;
 }
 
 export function App() {

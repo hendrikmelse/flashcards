@@ -243,7 +243,7 @@ export function DeckPage() {
           <p className="hero-title">Your deck is empty</p>
           <p className="muted">Add a pack or a few words and they will show up here.</p>
           <Link to="/add-words" className="button primary">
-            Browse packs
+            Browse words
           </Link>
         </div>
       ) : (

@@ -54,6 +54,7 @@ Registration is open in development. In production it is controlled by `REGISTRA
 | `npm run db:seed` | Load the sample data (development only) |
 | `npm run content:check` | Validate the files in `content/` (no database needed) |
 | `npm run content:import` | Import the content files into the database |
+| `npm run reports -w @flashcards/api` | List the problems users reported with words (`-- --all` includes handled ones; `-- resolve <id>` marks reports handled) |
 
 ### Configuration
 
@@ -81,7 +82,7 @@ Each language's words point at a language-independent **concept** (a word sense)
 - `Concept`: a word sense, with a permanent `key` (such as `dog`) that the content files and packs refer to, and a curator-facing gloss such as "run (move fast on foot)"
 - `Entry`: a concept's word in one language (lemma, part of speech, and a jsonb `details` for extras such as the Dutch article or plural). A concept can have several entries per language (synonyms)
 - `Sentence` and `EntrySentence`: example sentences linked to entries
-- `Pack` and `PackConcept`: an ordered list of concepts. Packs are language-agnostic; the user picks the direction when adding one
+- `Pack` and `PackConcept`: an ordered list of concepts. Packs are language-agnostic. The Add words pages show words English to Dutch and add them in both directions; the API can also add a single direction
 
 **Per-user state**
 - `User`: email, password hash, timezone, daily new-card limit
@@ -105,10 +106,13 @@ All routes live under `/api`.
 |---|---|
 | `GET /health`, `GET /ready` | Liveness; readiness (checks the database) |
 | `POST /auth/register`, `/auth/login`, `/auth/logout`; `GET /auth/me` | Auth, with rate limiting on login and register |
-| `GET /languages` | Available languages |
+| `GET /languages` | Available languages. This and the other public reads are rate limited per client: word search to 120 a minute, the language and pack lists and pack pages to 240 |
 | `GET /packs`, `GET /packs/:id` | Public browsing; each pack lists its category. With `fromLanguage` and `toLanguage` it adds availability and, when logged in, what is already in the deck |
-| `POST /packs/:id/add`, `POST /concepts/:id/add` | Add to the deck for a direction. Idempotent; skips concepts missing an entry in either language |
-| `GET /deck` | Progress summary and a page of cards, filterable by direction, stage (new, learning, review) and a search word, sortable by date added, next due, status, interval, lapses or the prompt word. Each card says whether its reverse (same word, other direction) is in the deck, and `missingMirror=1` keeps only those without one |
+| `GET /deck/:id` | One of the user's cards in full: both sides' words and forms, and every example sentence |
+| `POST /concepts/:id/report` | Report a problem with a word (wrong translation, forms or sentence, or something else, with optional details). Stored for the owner to read with `npm run reports`; rate limited like login |
+| `POST /packs/:id/add`, `POST /concepts/:id/add` | Add to the deck for a direction, and with `bothDirections: true` for its opposite too (the web app always does). Idempotent; skips concepts missing an entry in either language. Counts are in cards |
+| `GET /concepts/:id` | Public. A word as a card in a direction (`fromLanguage`, `toLanguage`): both sides' entries and all example sentences. Used by the card view on the Add words pages |
+| `GET /deck` | Progress summary and a page of cards, filterable by direction, stage (new, learning, review) and a search word, sortable by date added, next due, status or the prompt word. Each card says whether its reverse (same word, other direction) is in the deck, and `missingMirror=1` keeps only those without one |
 | `POST /deck/mirrors` | Adds the reverse card for every card in a view of the deck (direction, stage and search, as in `GET /deck`) that has none. Idempotent |
 | `GET /study` | Read-only batch. Due learning and review cards (learning ones within 20 minutes) ranked by how likely each is to have been forgotten, with new cards (up to the daily limit) spread through the first half of the queue. Learning cards are held back until 15 minutes after the last answer (the gap between sessions); `early=1` lets the next session start in the last 5 minutes of that wait |
 | `GET /study/counts` | The counts of learning, review and new cards, for the dashboard, plus `nextSession` (when the held-back cards open and how many will be ready) while a session gap is running, and `tomorrow` (how many cards will be waiting by the end of tomorrow's study day) |
@@ -172,8 +176,8 @@ The full runbook, including server setup, rollback, backups and how to invite so
 
 ### Before anyone other than the owner uses it
 
-1. ~~**Time zones.**~~ Done: new accounts take the browser's time zone, and the settings page changes it (review cards move to the start of the same day in the new zone). Accounts created earlier are still on UTC until their owner picks a zone in Settings; the page suggests the browser's.
-2. **Push and deploy.** Production runs an old build. Pushing `main` deploys it, and the new migrations (`concept_key`, `pack_category`) must apply cleanly.
+1. ~~**Time zones.**~~ Done: new accounts take the browser's time zone, and the settings page changes it (review cards move to the start of the same day in the new zone). Production has no accounts yet, so there is nothing to migrate.
+2. **Push and deploy.** Production runs an old build. Pushing `main` deploys it, and the new migrations (`concept_key`, `pack_category`, `user_name`, `card_display_prefs`, `card_reports`) must apply cleanly.
 3. **Check the Docker image builds.** `content/` was added to the image after the last verified build; CI builds it on push, but it is untested.
 4. **Import the content into production** (manual, see the runbook). Do any final key renames first: once users have cards, concept keys are permanent.
 5. **Native Dutch review of the content.** Nothing has been checked by a Dutch speaker. Work through `content/review-notes.md` (about 50 items) and spot-check the frequency bands.
@@ -184,9 +188,9 @@ The full runbook, including server setup, rollback, backups and how to invite so
 
 - Password reset and email verification (needs an email provider). Verification also has to cover changing the email address, which is unchecked today
 - ~~Settings: name, email, password, daily new-card limit, time zone, theme, data export and account deletion~~ (done). The theme is kept per device, not per account; everything else, including what the study cards show, follows the account
-- A "report a problem with this card" button, since the content is unreviewed
-- First-run guidance: suggest the starter pack, and explain directions and the answer buttons
-- Rate limits on the public pack and search endpoints (only sign-in and sign-up are limited)
+- ~~A "report a problem with this card" button, since the content is unreviewed~~ (done: in the study screen and the card view; read the reports with `npm run reports`, see `deploy/README.md`). Reports are not emailed, so check them now and then
+- ~~First-run guidance~~ (done: an empty dashboard points to the starter words and explains adding words and the answer buttons; the study screen shows what the answer buttons mean until closed)
+- ~~Rate limits on the public pack and search endpoints~~ (done: per client, 120 searches and 240 pack or language reads a minute). Signed-in endpoints (deck, study) are not limited
 - Uptime monitoring and error tracking
 - Mobile and accessibility pass (there are only two small-screen layout rules today)
 

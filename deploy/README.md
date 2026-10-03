@@ -469,6 +469,24 @@ you can clean up by hand.
 `--check` validates without a database: add it to the command above, or run
 `npm run content:check` locally.
 
+## Reading problem reports
+
+Users can report a problem with a word (a wrong translation, forms or example
+sentence) from the study screen and the card view. Nothing is emailed; read them
+on the server:
+
+```bash
+cd /srv/flashcards
+export IMAGE="$(cat current-image)"
+docker compose run --rm --no-deps api node apps/api/dist/reports.js
+```
+
+Each report shows its short id, the reason, the word in both languages with its
+content key, the user's note and who sent it. Fix the word in `content/`, deploy,
+re-import (see above), then mark the reports handled with
+`... reports.js resolve <id> [<id>...]` (the first 8 characters of the id are
+enough). `reports.js --all` also lists handled ones.
+
 ## Inviting someone
 
 1. Add their email to `ALLOWED_EMAILS` (comma-separated) in `/srv/flashcards/.env`.

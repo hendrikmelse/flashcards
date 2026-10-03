@@ -297,3 +297,148 @@ describe("GET /concepts/search", () => {
     expect(same.statusCode).toBe(400);
   });
 });
+
+describe("adding in both directions", () => {
+  let both: { session: string };
+  let conceptIds: string[];
+
+  const post = (url: string, payload: object) => app.inject({ method: "POST", url, payload, cookies: both });
+  const deckCards = async () =>
+    (await app.inject({ method: "GET", url: "/deck?limit=100", cookies: both })).json().cards as {
+      conceptId: string;
+      fromLanguage: string;
+    }[];
+
+  beforeAll(async () => {
+    const reg = await app.inject({
+      method: "POST",
+      url: "/auth/register",
+      payload: { email: "both@example.com", password: "correct horse battery" },
+    });
+    both = { session: reg.cookies.find((c) => c.name === "session")!.value };
+    const detail = await app.inject({ method: "GET", url: `/packs/${packId}?${q(EN_NL)}` });
+    conceptIds = detail.json().concepts.map((c: { conceptId: string }) => c.conceptId);
+  });
+
+  it("adds a whole pack both ways, counting cards", async () => {
+    const res = await post(`/packs/${packId}/add`, { ...EN_NL, bothDirections: true });
+    expect(res.statusCode).toBe(200);
+    // Three words are available, so six cards; one word cannot be added.
+    expect(res.json()).toEqual({ added: 6, alreadyInDeck: 0, unavailable: 1 });
+    const cards = await deckCards();
+    expect(cards.filter((c) => c.fromLanguage === "en")).toHaveLength(3);
+    expect(cards.filter((c) => c.fromLanguage === "nl")).toHaveLength(3);
+  });
+
+  it("is idempotent", async () => {
+    const res = await post(`/packs/${packId}/add`, { ...EN_NL, bothDirections: true });
+    expect(res.json()).toEqual({ added: 0, alreadyInDeck: 6, unavailable: 1 });
+  });
+
+  it("only adds the direction that is missing", async () => {
+    // A word that has just one of its two cards gets the other.
+    const reg = await app.inject({
+      method: "POST",
+      url: "/auth/register",
+      payload: { email: "half@example.com", password: "correct horse battery" },
+    });
+    const half = { session: reg.cookies.find((c) => c.name === "session")!.value };
+    await app.inject({ method: "POST", url: `/concepts/${conceptIds[0]}/add`, payload: NL_EN, cookies: half });
+    const res = await app.inject({
+      method: "POST",
+      url: `/packs/${packId}/add`,
+      payload: { ...EN_NL, bothDirections: true },
+      cookies: half,
+    });
+    expect(res.json()).toEqual({ added: 5, alreadyInDeck: 1, unavailable: 1 });
+  });
+
+  it("adds a single word both ways", async () => {
+    const reg = await app.inject({
+      method: "POST",
+      url: "/auth/register",
+      payload: { email: "single@example.com", password: "correct horse battery" },
+    });
+    const single = { session: reg.cookies.find((c) => c.name === "session")!.value };
+    const url = `/concepts/${conceptIds[1]}/add`;
+    const first = await app.inject({ method: "POST", url, payload: { ...EN_NL, bothDirections: true }, cookies: single });
+    expect(first.statusCode).toBe(201);
+    expect(first.json()).toEqual({ added: 2, alreadyInDeck: 0 });
+    const again = await app.inject({ method: "POST", url, payload: { ...EN_NL, bothDirections: true }, cookies: single });
+    expect(again.statusCode).toBe(200);
+    expect(again.json()).toEqual({ added: 0, alreadyInDeck: 2 });
+  });
+
+  it("still adds just one direction when not asked for both", async () => {
+    const reg = await app.inject({
+      method: "POST",
+      url: "/auth/register",
+      payload: { email: "one@example.com", password: "correct horse battery" },
+    });
+    const one = { session: reg.cookies.find((c) => c.name === "session")!.value };
+    const res = await app.inject({
+      method: "POST",
+      url: `/concepts/${conceptIds[2]}/add`,
+      payload: EN_NL,
+      cookies: one,
+    });
+    expect(res.json()).toEqual({ added: 1, alreadyInDeck: 0 });
+  });
+
+  it("rejects a bothDirections that is not a boolean", async () => {
+    const res = await post(`/packs/${packId}/add`, { ...EN_NL, bothDirections: "yes" });
+    expect(res.statusCode).toBe(400);
+  });
+});
+
+describe("GET /concepts/:id", () => {
+  let conceptId: string;
+  beforeAll(async () => {
+    const detail = await app.inject({ method: "GET", url: `/packs/${packId}?${q(EN_NL)}` });
+    conceptId = detail.json().concepts[0].conceptId;
+  });
+
+  it("is public, and returns both sides of the word in the direction asked for", async () => {
+    const res = await app.inject({ method: "GET", url: `/concepts/${conceptId}?${q(EN_NL)}` });
+    expect(res.statusCode).toBe(200);
+    const body = res.json();
+    expect(body.conceptId).toBe(conceptId);
+    expect(body.front.every((e: { language: string }) => e.language === "en")).toBe(true);
+    expect(body.back.every((e: { language: string }) => e.language === "nl")).toBe(true);
+    expect(body.front.length).toBeGreaterThan(0);
+    expect(body.back.length).toBeGreaterThan(0);
+    expect(Array.isArray(body.sentences.front)).toBe(true);
+    expect(Array.isArray(body.sentences.back)).toBe(true);
+  });
+
+  it("swaps the sides for the other direction", async () => {
+    const forward = (await app.inject({ method: "GET", url: `/concepts/${conceptId}?${q(EN_NL)}` })).json();
+    const reverse = (await app.inject({ method: "GET", url: `/concepts/${conceptId}?${q(NL_EN)}` })).json();
+    expect(reverse.front).toEqual(forward.back);
+    expect(reverse.back).toEqual(forward.front);
+  });
+
+  it("works for a word that has no Dutch entry yet, with an empty back", async () => {
+    const res = await app.inject({ method: "GET", url: `/concepts/${orphanConceptId}?${q(EN_NL)}` });
+    expect(res.statusCode).toBe(200);
+    expect(res.json().front).toHaveLength(1);
+    expect(res.json().back).toEqual([]);
+  });
+
+  it("needs a direction, and 404s for an unknown word", async () => {
+    expect((await app.inject({ method: "GET", url: `/concepts/${conceptId}` })).statusCode).toBe(400);
+    expect(
+      (await app.inject({ method: "GET", url: `/concepts/${conceptId}?${q({ fromLanguage: "en", toLanguage: "en" })}` })).statusCode,
+    ).toBe(400);
+    expect((await app.inject({ method: "GET", url: `/concepts/nope?${q(EN_NL)}` })).statusCode).toBe(400);
+    expect(
+      (await app.inject({ method: "GET", url: `/concepts/00000000-0000-4000-8000-000000000000?${q(EN_NL)}` })).statusCode,
+    ).toBe(404);
+  });
+
+  it("does not get in the way of word search", async () => {
+    const res = await app.inject({ method: "GET", url: `/concepts/search?q=dog&${q(EN_NL)}` });
+    expect(res.statusCode).toBe(200);
+    expect(res.json().concepts).toBeDefined();
+  });
+});

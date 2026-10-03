@@ -13,11 +13,37 @@ export const addToDeckSchema = z
   .object({
     fromLanguage: languageCodeSchema,
     toLanguage: languageCodeSchema,
+    // Also add the opposite direction (the same words, studied the other way around).
+    bothDirections: z.boolean().optional(),
   })
   .refine((v) => v.fromLanguage !== v.toLanguage, {
     message: "fromLanguage and toLanguage must differ",
   });
 export type AddToDeckInput = z.infer<typeof addToDeckSchema>;
+
+// A problem someone found with a word's card: a wrong translation, missing or wrong forms, an odd
+// example sentence. About the word (concept), in the direction it was shown.
+export const REPORT_REASONS = ["translation", "forms", "sentence", "other"] as const;
+export type ReportReason = (typeof REPORT_REASONS)[number];
+export const REPORT_REASON_LABELS: Record<ReportReason, string> = {
+  translation: "The translation is wrong",
+  forms: "The word forms are wrong",
+  sentence: "An example sentence is wrong",
+  other: "Something else",
+};
+export const REPORT_NOTE_MAX = 1000;
+export const reportCardSchema = z
+  .object({
+    fromLanguage: languageCodeSchema,
+    toLanguage: languageCodeSchema,
+    reason: z.enum(REPORT_REASONS),
+    note: z.string().trim().max(REPORT_NOTE_MAX).default(""),
+  })
+  .refine((v) => v.reason !== "other" || v.note.length > 0, {
+    message: "Please say what is wrong",
+    path: ["note"],
+  });
+export type ReportCardInput = z.input<typeof reportCardSchema>;
 
 export const submitReviewSchema = z.object({
   userCardId: z.string().uuid(),
@@ -132,6 +158,12 @@ export const pageQuerySchema = z.object({
   offset: z.coerce.number().int().min(0).default(0),
 });
 
+export const conceptCardQuerySchema = z
+  .object({ fromLanguage: languageCodeSchema, toLanguage: languageCodeSchema })
+  .refine((v) => v.fromLanguage !== v.toLanguage, {
+    message: "fromLanguage and toLanguage must differ",
+  });
+
 export const conceptSearchQuerySchema = z
   .object({
     q: z.string().trim().min(1).max(100),
@@ -218,6 +250,16 @@ export type DeckCardView = {
   front: EntryView[];
   back: EntryView[];
 };
+/** A word as a card in a direction, whether or not it is in anyone's deck: both sides and all sentences. */
+export type ConceptCardDetail = {
+  conceptId: string;
+  fromLanguage: string;
+  toLanguage: string;
+  front: EntryView[];
+  back: EntryView[];
+  sentences: { front: string[]; back: string[] };
+};
+
 /** One card of the deck in full: both sides' words and forms, and all their example sentences. */
 export type DeckCardDetail = {
   card: DeckCardView;

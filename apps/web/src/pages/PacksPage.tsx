@@ -4,32 +4,20 @@ import {
   PACK_CATEGORIES,
   PACK_CATEGORY_LABELS,
   type ConceptSearchResult,
-  type LanguageInfo,
+  type EntryView,
   type PackCategory,
 } from "@flashcards/shared";
-import { useAddConcept, useConceptSearch, useLanguages, usePacks } from "../api/packs";
+import { ADD_DIRECTION, useAddConcept, useConceptSearch, usePacks } from "../api/packs";
+import { ConceptDialog } from "../components/CardDialog";
 import { ConceptRow } from "../components/ConceptRow";
-import { DirectionPicker } from "../components/DirectionPicker";
-import { useDirection } from "../hooks/useDirection";
 import { isBoolean, isOneOf, isString, useRemembered } from "../hooks/useRemembered";
-
-export function PacksPage() {
-  const languages = useLanguages();
-  if (languages.isPending) return <p className="status">Loading…</p>;
-  if (languages.isError) return <p className="status error">Could not load languages.</p>;
-  if (languages.data.length < 2) {
-    return <p className="status">Packs need at least two languages to be available.</p>;
-  }
-  return <PackList languages={languages.data} />;
-}
 
 type Mode = "packs" | "words";
 
 type CategoryFilter = PackCategory | "all";
 
-function PackList({ languages }: { languages: LanguageInfo[] }) {
-  const { direction, setDirection } = useDirection(languages);
-  const packs = usePacks(direction);
+export function PacksPage() {
+  const packs = usePacks(ADD_DIRECTION);
   // The filters are remembered, so leaving the page and coming back finds them as they were.
   const [mode, setMode] = useRemembered<Mode>("packs:mode", "packs", isOneOf("packs", "words"));
   const [query, setQuery] = useRemembered("packs:query", "", isString);
@@ -61,7 +49,6 @@ function PackList({ languages }: { languages: LanguageInfo[] }) {
           </Link>
         </div>
       </div>
-      <DirectionPicker languages={languages} direction={direction} onChange={setDirection} />
 
       <input
         type="search"
@@ -102,28 +89,25 @@ function PackList({ languages }: { languages: LanguageInfo[] }) {
       )}
 
       {mode === "packs" ? (
-        <PackResults languages={languages} packs={packs} category={category} query={query} hideInDeck={hideInDeck} />
+        <PackResults packs={packs} category={category} query={query} hideInDeck={hideInDeck} />
       ) : (
-        <WordResults languages={languages} query={query} hideInDeck={hideInDeck} />
+        <WordResults query={query} hideInDeck={hideInDeck} />
       )}
     </>
   );
 }
 
-type ResultProps = { languages: LanguageInfo[]; query: string; hideInDeck: boolean };
+type ResultProps = { query: string; hideInDeck: boolean };
 
 // Sorts "Dutch words 501–1000" before "Dutch words 1001–1500": numbers by value, not letter by letter.
 const byName = new Intl.Collator(undefined, { numeric: true, sensitivity: "base" });
 
 function PackResults({
-  languages,
   packs,
   category,
   query,
   hideInDeck,
 }: ResultProps & { packs: ReturnType<typeof usePacks>; category: CategoryFilter }) {
-  const { search } = useDirection(languages);
-
   const words = query.toLowerCase().split(/\s+/).filter(Boolean);
   // Packs whose name matches come first; the rest only match through the description.
   // They start in name order (the sort is stable), so each group stays in that order.
@@ -166,11 +150,11 @@ function PackResults({
           return (
             <li key={pack.id} className="pack-card">
               <h2>
-                <Link to={`/add-words/${pack.id}${search}`}>{pack.name}</Link>
+                <Link to={`/add-words/${pack.id}`}>{pack.name}</Link>
               </h2>
               {pack.description && <p className="muted">{pack.description}</p>}
               {available === 0 ? (
-                <p className="muted">No words available in this direction yet.</p>
+                <p className="muted">No words available yet.</p>
               ) : (
                 <>
                   <progress
@@ -183,7 +167,7 @@ function PackResults({
                       ? `All ${available} words are in your deck`
                       : `${added} of ${available} words in your deck`}
                     {pack.conceptCount > available &&
-                      ` · ${pack.conceptCount - available} not available in this direction yet`}
+                      ` · ${pack.conceptCount - available} not available yet`}
                   </p>
                 </>
               )}
@@ -195,12 +179,14 @@ function PackResults({
   );
 }
 
-function WordResults({ languages, query, hideInDeck }: ResultProps) {
-  const { direction } = useDirection(languages);
+function WordResults({ query, hideInDeck }: ResultProps) {
+  const direction = ADD_DIRECTION;
   // Starts from the typed text, so a remembered search shows its results straight away.
   const [term, setTerm] = useState(query.trim());
   const found = useConceptSearch(term, direction, hideInDeck);
-  const addConcept = useAddConcept(direction);
+  const addConcept = useAddConcept();
+  // The word being looked at as a card, if any.
+  const [open, setOpen] = useState<{ conceptId: string; entries: EntryView[] } | null>(null);
 
   // With "hide already added" on, a word you just added would vanish from the
   // results. Keep it (as "In deck") so the list doesn't move under the cursor,
@@ -266,6 +252,7 @@ function WordResults({ languages, query, hideInDeck }: ResultProps) {
                 adding={addConcept.isPending && addConcept.variables === c.conceptId}
                 disabled={addConcept.isPending}
                 onAdd={() => add(c, i)}
+                onOpen={() => setOpen({ conceptId: c.conceptId, entries: c.entries })}
               />
             );
           })}
@@ -290,6 +277,7 @@ function WordResults({ languages, query, hideInDeck }: ResultProps) {
           Could not add that word. Please try again.
         </p>
       )}
+      {open && <ConceptDialog conceptId={open.conceptId} entries={open.entries} onClose={() => setOpen(null)} />}
     </>
   );
 }

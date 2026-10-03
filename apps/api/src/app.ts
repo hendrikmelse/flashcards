@@ -11,6 +11,7 @@ import { authRoutes } from "./routes/auth.js";
 import { deckRoutes } from "./routes/deck.js";
 import { healthRoutes } from "./routes/health.js";
 import { packRoutes } from "./routes/packs.js";
+import { reportRoutes } from "./routes/reports.js";
 import { settingsRoutes } from "./routes/settings.js";
 import { statsRoutes } from "./routes/stats.js";
 import { studyRoutes } from "./routes/study.js";
@@ -31,10 +32,15 @@ export interface AppOptions {
   /** Who may create an account. Defaults to open. */
   registration?: RegistrationPolicy;
   /**
-   * How many sign-up, login and password-checking requests one client may make a minute.
-   * Tests that create many accounts raise it.
+   * How many sign-up, login, password-checking and problem-report requests one client may make a
+   * minute. Tests that create many accounts raise it.
    */
   authRateLimit?: number;
+  /**
+   * How many word searches one client may make a minute. The public pack and language lists, which
+   * need no sign-in either, get twice as many. Tests that search a lot raise it.
+   */
+  publicRateLimit?: number;
 }
 
 export async function buildApp({
@@ -47,6 +53,7 @@ export async function buildApp({
   staticDir,
   registration = OPEN_REGISTRATION,
   authRateLimit = 10,
+  publicRateLimit = 120,
 }: AppOptions) {
   const app = Fastify({ logger, trustProxy });
 
@@ -60,7 +67,8 @@ export async function buildApp({
     async (api) => {
       await api.register(healthRoutes, { db });
       await api.register(authRoutes, { db, registration, rateLimitMax: authRateLimit });
-      await api.register(packRoutes, { db });
+      await api.register(packRoutes, { db, searchRateLimit: publicRateLimit, readRateLimit: publicRateLimit * 2 });
+      await api.register(reportRoutes, { db, rateLimitMax: authRateLimit });
       await api.register(deckRoutes, { db });
       await api.register(studyRoutes, { db, scheduler });
       await api.register(statsRoutes, { db });

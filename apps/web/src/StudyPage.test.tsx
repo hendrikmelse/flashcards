@@ -657,3 +657,139 @@ describe("dashboard entry point", () => {
     expect(screen.queryByRole("link", { name: "Start studying" })).not.toBeInTheDocument();
   });
 });
+
+describe("the answer guide", () => {
+  const reveal = async (user: ReturnType<typeof userEvent.setup>) =>
+    user.click(await screen.findByRole("button", { name: "Show answer" }));
+
+  it("explains the four answer buttons once the answer is showing, not before", async () => {
+    const user = userEvent.setup();
+    renderApp("/study");
+    await screen.findByRole("button", { name: "Show answer" });
+    expect(screen.queryByRole("complementary", { name: "What the answer buttons mean" })).not.toBeInTheDocument();
+
+    await reveal(user);
+    const guide = within(screen.getByRole("complementary", { name: "What the answer buttons mean" }));
+    for (const word of ["Again", "Hard", "Good", "Easy"]) expect(guide.getByText(word)).toBeInTheDocument();
+    expect(guide.getByRole("link", { name: "More about scheduling" })).toHaveAttribute("href", "/how-it-works");
+  });
+
+  it("stays closed for good once dismissed", async () => {
+    const user = userEvent.setup();
+    const first = renderApp("/study");
+    await reveal(user);
+    await user.click(screen.getByRole("button", { name: "Got it" }));
+    expect(screen.queryByRole("complementary", { name: "What the answer buttons mean" })).not.toBeInTheDocument();
+
+    // The next card, and a later visit, do not bring it back.
+    await user.click(screen.getByRole("button", { name: "Good" }));
+    await reveal(user);
+    expect(screen.queryByRole("complementary", { name: "What the answer buttons mean" })).not.toBeInTheDocument();
+    first.unmount();
+    renderApp("/study");
+    await reveal(user);
+    expect(screen.queryByRole("complementary", { name: "What the answer buttons mean" })).not.toBeInTheDocument();
+  });
+
+  it("does not stop the number keys from answering", async () => {
+    const user = userEvent.setup();
+    renderApp("/study");
+    await reveal(user);
+    await user.keyboard("3");
+    await vi.waitFor(() => expect(reviews.map((r) => r.rating)).toEqual(["good"]));
+  });
+});
+
+describe("reporting a problem with a card", () => {
+  type Report = { fromLanguage: string; toLanguage: string; reason: string; note: string };
+  let reports: Report[];
+  beforeEach(() => {
+    reports = [];
+    mock.handlers["POST /concepts/c1/report"] = (body) => {
+      reports.push(body as Report);
+      return json(201, { ok: true });
+    };
+  });
+  const reveal = async (user: ReturnType<typeof userEvent.setup>) =>
+    user.click(await screen.findByRole("button", { name: "Show answer" }));
+
+  it("is offered once the answer is showing", async () => {
+    const user = userEvent.setup();
+    renderApp("/study");
+    await screen.findByRole("button", { name: "Show answer" });
+    expect(screen.queryByRole("button", { name: "Report a problem" })).not.toBeInTheDocument();
+    await reveal(user);
+    expect(screen.getByRole("button", { name: "Report a problem" })).toBeInTheDocument();
+  });
+
+  it("sends the reason and details for the word, in the direction shown, then says thanks", async () => {
+    const user = userEvent.setup();
+    renderApp("/study");
+    await reveal(user);
+    await user.click(screen.getByRole("button", { name: "Report a problem" }));
+    const form = within(screen.getByRole("form", { name: "Report a problem" }));
+    await user.selectOptions(form.getByLabelText("What is wrong?"), "The word forms are wrong");
+    await user.type(form.getByLabelText(/Details/), "The plural is honden");
+    await user.click(form.getByRole("button", { name: "Send report" }));
+
+    expect(await screen.findByText("Thanks! We’ll take a look.")).toBeInTheDocument();
+    expect(reports).toEqual([
+      { fromLanguage: "en", toLanguage: "nl", reason: "forms", note: "The plural is honden" },
+    ]);
+    expect(screen.queryByRole("form", { name: "Report a problem" })).not.toBeInTheDocument();
+  });
+
+  it("can be sent without details, except for “Something else”", async () => {
+    const user = userEvent.setup();
+    renderApp("/study");
+    await reveal(user);
+    await user.click(screen.getByRole("button", { name: "Report a problem" }));
+    const send = screen.getByRole("button", { name: "Send report" });
+    expect(send).toBeEnabled();
+    await user.selectOptions(screen.getByLabelText("What is wrong?"), "Something else");
+    expect(send).toBeDisabled();
+    await user.type(screen.getByLabelText("Details"), "Hmm");
+    expect(send).toBeEnabled();
+    await user.click(send);
+    await screen.findByText("Thanks! We’ll take a look.");
+    expect(reports[0]).toMatchObject({ reason: "other", note: "Hmm" });
+  });
+
+  it("can be cancelled, and typing in it does not answer the card", async () => {
+    const user = userEvent.setup();
+    renderApp("/study");
+    await reveal(user);
+    await user.click(screen.getByRole("button", { name: "Report a problem" }));
+    expect(screen.getByLabelText("What is wrong?")).toHaveFocus();
+    await user.type(screen.getByLabelText(/Details/), "1234");
+    expect(reviews).toEqual([]);
+    await user.click(screen.getByRole("button", { name: "Cancel" }));
+    expect(screen.queryByRole("form", { name: "Report a problem" })).not.toBeInTheDocument();
+    expect(screen.getByRole("button", { name: "Report a problem" })).toHaveFocus();
+    expect(reports).toEqual([]);
+  });
+
+  it("says so when it could not be sent, and keeps what was typed", async () => {
+    mock.handlers["POST /concepts/c1/report"] = () => json(500, { error: "boom" });
+    const user = userEvent.setup();
+    renderApp("/study");
+    await reveal(user);
+    await user.click(screen.getByRole("button", { name: "Report a problem" }));
+    await user.type(screen.getByLabelText(/Details/), "Wrong");
+    await user.click(screen.getByRole("button", { name: "Send report" }));
+    expect(await screen.findByText("Could not send your report. Please try again.")).toBeInTheDocument();
+    expect(screen.getByLabelText(/Details/)).toHaveValue("Wrong");
+  });
+
+  it("starts fresh on the next card", async () => {
+    const user = userEvent.setup();
+    renderApp("/study");
+    await reveal(user);
+    await user.click(screen.getByRole("button", { name: "Report a problem" }));
+    await user.click(screen.getByRole("button", { name: "Cancel" }));
+    await user.click(screen.getByRole("button", { name: "Good" }));
+    await screen.findByText("house");
+    expect(screen.queryByRole("button", { name: "Report a problem" })).not.toBeInTheDocument();
+    expect(screen.queryByText("Thanks! We’ll take a look.")).not.toBeInTheDocument();
+  });
+});

@@ -7,6 +7,7 @@ import {
   type StudyCountsResponse,
 } from "@flashcards/shared";
 import { useDashboard } from "../api/hooks";
+import { usePacks } from "../api/packs";
 import { formatClock, useCountdown } from "../hooks/useCountdown";
 import { shortDirection, sameDirection, useDeckFilter } from "../hooks/useDeckFilter";
 import { formatUntil } from "../lib/relativeTime";
@@ -97,10 +98,36 @@ function NothingToStudy({
   );
 }
 
+// For someone with an empty deck: where to start, and how the app works, in two steps.
+function GettingStarted() {
+  return (
+    <section className="getting-started" aria-label="Getting started">
+      <h2 className="section-title">How it works</h2>
+      <ol className="steps">
+        <li>
+          <strong>Add some words.</strong> Packs are ready-made lists, from everyday starter words
+          to the most common 5,000. Add a whole pack, or look up single words.
+        </li>
+        <li>
+          <strong>Study a little each day.</strong> Reveal the answer, then say how it went: Again,
+          Hard, Good or Easy. The app uses your answers to bring each word back just before you
+          would forget it.
+        </li>
+      </ol>
+      <p className="getting-started-more">
+        <Link to="/how-it-works">Learn more about scheduling</Link>
+      </p>
+    </section>
+  );
+}
+
 export function DashboardPage() {
   const [directions, setDirections] = useState<DirectionSummary[] | undefined>();
   const filter = useDeckFilter(directions);
   const { deck, deckAll, study, stats } = useDashboard(filter.selected);
+  // The starter pack is where a new person is pointed first.
+  const packs = usePacks({ from: "en", to: "nl" });
+  const starter = packs.data?.find((p) => p.slug === "starter");
   // Keep the last known directions so the filter doesn't vanish while stats refetch.
   if (stats.data && stats.data.directions !== directions) setDirections(stats.data.directions);
 
@@ -136,15 +163,25 @@ export function DashboardPage() {
       </div>
 
       {deckAll.data.summary.total === 0 ? (
-        <div className="hero">
-          <p className="hero-title">Your deck is empty</p>
-          <p className="muted">
-            Add a pack or a few words and what to study next will show up here.
-          </p>
-          <Link to="/add-words" className="button primary">
-            Browse words
-          </Link>
-        </div>
+        <>
+          <div className="hero">
+            <p className="hero-title">Your deck is empty</p>
+            <p className="muted">
+              Add a pack or a few words and what to study next will show up here.
+            </p>
+            <div className="hero-actions">
+              {starter && (
+                <Link to={`/add-words/${starter.id}`} className="button primary">
+                  Start with the starter words
+                </Link>
+              )}
+              <Link to="/add-words" className={`button ${starter ? "secondary" : "primary"}`}>
+                Browse words
+              </Link>
+            </div>
+          </div>
+          <GettingStarted />
+        </>
       ) : (
         <>
           <section className="hero" aria-label="Ready to study">

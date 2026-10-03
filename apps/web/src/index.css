@@ -909,6 +909,69 @@ button.row-open:focus-visible .prompt {
   margin-top: 0.5rem;
 }
 
+.getting-started .steps {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+.getting-started-more {
+  text-align: center;
+}
+
+.getting-started .steps li + li {
+  margin-top: 0.6rem;
+}
+
+.answer-guide {
+  margin-top: 1.25rem;
+  font-size: 0.9rem;
+  text-align: left;
+}
+
+.answer-guide .rating-help {
+  margin-bottom: 0.75rem;
+}
+
+/* Reporting a problem with a card */
+.report,
+.report-done {
+  margin: 1rem 0 0;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.report-form {
+  display: grid;
+  gap: 0.4rem;
+  margin-top: 1.25rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+  font-size: 0.9rem;
+}
+
+.report-form select.dropdown {
+  justify-self: start;
+  margin-bottom: 0.4rem;
+}
+
+.report-form textarea {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0.5rem 0.65rem;
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  background: var(--bg);
+  color: inherit;
+  font: inherit;
+  resize: vertical;
+}
+
+.report-actions {
+  display: flex;
+  gap: 0.6rem;
+  margin-top: 0.4rem;
+}
+
 .rating-help {
   display: grid;
   grid-template-columns: max-content 1fr;
@@ -936,21 +999,6 @@ button.row-open:focus-visible .prompt {
 }
 
 .muted {
-  color: var(--muted);
-}
-
-.direction {
-  display: flex;
-  align-items: flex-end;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-  margin: 1rem 0 1.5rem;
-}
-
-.direction label {
-  display: grid;
-  gap: 0.25rem;
-  font-size: 0.9rem;
   color: var(--muted);
 }
 
@@ -1022,16 +1070,6 @@ select.dropdown {
   select.dropdown option::checkmark {
     display: none;
   }
-}
-
-button.swap {
-  height: 2.5rem;
-  padding: 0 0.7rem;
-  border: 1px solid var(--border);
-  border-radius: 0.5rem;
-  background: var(--surface);
-  color: var(--text);
-  cursor: pointer;
 }
 
 .search {
@@ -1311,6 +1349,16 @@ a.button.secondary {
   flex: none;
   border-radius: 3px;
   box-shadow: 0 0 0 1px color-mix(in srgb, var(--text) 25%, transparent);
+}
+
+/* Rests on a dark chip, so the white of the flags does not run into a light page. */
+.flag-split {
+  --flag-backdrop: #1c1c1a;
+  box-sizing: content-box;
+  padding: 4px;
+  border-radius: 6px;
+  background: var(--flag-backdrop);
+  box-shadow: none;
 }
 
 .flag-code {

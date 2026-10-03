@@ -35,6 +35,24 @@ describe("auth flow", () => {
     expect(await screen.findByRole("link", { name: "Start studying" })).toHaveAttribute("href", "/study");
   });
 
+  it("shows English and Dutch flags cut along a slash between the site name and the tabs, as decoration", async () => {
+    mock.loggedIn = true;
+    renderApp("/");
+    const nav = await screen.findByRole("navigation", { name: "Main" });
+    const brand = screen.getByRole("link", { name: "Flashcards" });
+    const flags = brand.parentElement!.querySelector("svg.flag-split")!;
+    // One picture: the first flag clipped to the left of the slash, the second to the right.
+    const clips = [...flags.querySelectorAll("clipPath")].map((c) => c.id);
+    expect(clips.some((id) => id.endsWith("-left"))).toBe(true);
+    expect(clips.some((id) => id.endsWith("-right"))).toBe(true);
+    expect(flags.querySelectorAll("line")).toHaveLength(1);
+    expect(brand.compareDocumentPosition(flags) & Node.DOCUMENT_POSITION_FOLLOWING).toBeTruthy();
+    expect(flags.compareDocumentPosition(nav) & Node.DOCUMENT_POSITION_FOLLOWING).toBeTruthy();
+    // Hidden from screen readers, so they do not add to the flags on a card.
+    expect(flags).toHaveAttribute("aria-hidden", "true");
+    expect(screen.queryByRole("img", { name: "English" })).not.toBeInTheDocument();
+  });
+
   it("has Settings and Log out as icons in the top corner, not in the main navigation", async () => {
     mock.loggedIn = true;
     renderApp("/");
@@ -589,6 +607,63 @@ describe("dashboard", () => {
       json(200, { now: "x", counts: { learning: 0, review: 0, new: 0 } });
     renderApp("/");
     expect(await screen.findByText(/Your deck is empty/)).toBeInTheDocument();
+  });
+
+  describe("for someone with an empty deck", () => {
+    beforeEach(() => {
+      mock.loggedIn = true;
+      mock.handlers["GET /deck?limit=1"] = () =>
+        json(200, { summary: { total: 0, new: 0, learning: 0, relearning: 0, review: 0, dueNow: 0 } });
+    });
+    const pack = (slug: string, id: string, name: string) => ({
+      id, slug, name, description: null, category: "common", conceptCount: 10,
+    });
+
+    it("points to the starter words first, with Browse words beside it", async () => {
+      mock.handlers["GET /packs"] = () =>
+        json(200, { packs: [pack("animals", "p-animals", "Animals"), pack("starter", "p-starter", "Starter words")] });
+      renderApp("/");
+      const starter = await screen.findByRole("link", { name: "Start with the starter words" });
+      expect(starter).toHaveAttribute("href", "/add-words/p-starter");
+      expect(starter).toHaveClass("primary");
+      expect(screen.getByRole("link", { name: "Browse words" })).toHaveClass("secondary");
+    });
+
+    it("keeps Browse words as the main button when there is no starter pack", async () => {
+      mock.handlers["GET /packs"] = () => json(200, { packs: [pack("animals", "p-animals", "Animals")] });
+      renderApp("/");
+      expect(await screen.findByRole("link", { name: "Browse words" })).toHaveClass("primary");
+      expect(screen.queryByRole("link", { name: "Start with the starter words" })).not.toBeInTheDocument();
+    });
+
+    it("still works when the packs cannot be loaded", async () => {
+      mock.handlers["GET /packs"] = () => json(500, { error: "boom" });
+      renderApp("/");
+      expect(await screen.findByRole("link", { name: "Browse words" })).toBeInTheDocument();
+    });
+
+    it("explains adding words and the answer buttons", async () => {
+      renderApp("/");
+      const guide = within(await screen.findByRole("region", { name: "Getting started" }));
+      const steps = guide.getAllByRole("listitem").map((li) => li.textContent);
+      expect(steps).toHaveLength(2);
+      expect(steps[0]).toMatch(/Add some words/);
+      expect(steps[1]).toMatch(/Again,\s+Hard, Good or Easy/);
+      expect(guide.queryByText(/direction/i)).not.toBeInTheDocument();
+      // The link is on a line of its own, after the steps.
+      const link = guide.getByRole("link", { name: "Learn more about scheduling" });
+      expect(link).toHaveAttribute("href", "/how-it-works");
+      expect(link.closest("li")).toBeNull();
+      expect(link.parentElement!.textContent).toBe("Learn more about scheduling");
+      expect(link.parentElement).toHaveClass("getting-started-more"); // centered
+    });
+  });
+
+  it("does not show the getting started guide once there are cards", async () => {
+    mock.loggedIn = true;
+    renderApp("/");
+    await screen.findByRole("heading", { name: "Your deck" });
+    expect(screen.queryByRole("region", { name: "Getting started" })).not.toBeInTheDocument();
   });
 
   it("shows an error when the data cannot be loaded", async () => {

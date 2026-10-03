@@ -54,6 +54,7 @@ function defaultHandlers(): Record<string, Handler> {
         showSentences: true,
         showForms: true,
       }),
+    "GET /packs": () => json(200, { packs: [] }),
     "GET /languages": () =>
       json(200, {
         languages: [
@@ -68,6 +69,7 @@ function defaultHandlers(): Record<string, Handler> {
 // exact "METHOD /path?query" first, then by "METHOD /path".
 export function installMockApi() {
   sessionStorage.clear(); // remembered filters
+  localStorage.clear(); // closed tips
   mock.loggedIn = false;
   mock.calls = [];
   mock.handlers = defaultHandlers();

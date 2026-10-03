@@ -1,6 +1,7 @@
 import { NavLink, Outlet } from "react-router";
 import { useLogout, useMe } from "../api/hooks";
 import { GearIcon, LogOutIcon } from "./icons";
+import { SplitFlag } from "./LanguageFlag";
 
 export function Layout() {
   const { data: user } = useMe();
@@ -12,6 +13,8 @@ export function Layout() {
         <NavLink to="/" className="brand">
           Flashcards
         </NavLink>
+        {/* Decoration only: the app is English and Dutch. */}
+        <SplitFlag left="en" right="nl" />
         <nav aria-label="Main">
           <NavLink to="/" end>
             Dashboard

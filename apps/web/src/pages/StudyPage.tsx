@@ -12,8 +12,10 @@ import { SESSION_GAP_MS } from "@flashcards/shared";
 import { api } from "../api/client";
 import { useSettings } from "../api/hooks";
 import { useLanguages } from "../api/packs";
+import { AnswerGuide } from "../components/AnswerGuide";
 import { Entries, Forms, Sentences } from "../components/CardParts";
 import { languageName } from "../components/entries";
+import { ReportProblem } from "../components/ReportProblem";
 import {
   initialState,
   phaseOf,
@@ -290,6 +292,17 @@ function CardView({
             </button>
           ))}
         </div>
+      )}
+
+      {revealed && <AnswerGuide />}
+
+      {revealed && (
+        <ReportProblem
+          key={card.id}
+          conceptId={card.conceptId}
+          fromLanguage={card.fromLanguage}
+          toLanguage={card.toLanguage}
+        />
       )}
 
       {submitError && (

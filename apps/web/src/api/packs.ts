@@ -8,6 +8,7 @@ import type {
   AddConceptResult,
   AddMirrorsResult,
   AddPackResult,
+  ConceptCardDetail,
   ConceptSearchResponse,
   LanguageInfo,
   PackDetailResponse,
@@ -16,6 +17,10 @@ import type {
 import { api } from "./client";
 
 export type Direction = { from: string; to: string };
+
+// The Add words pages always show words English to Dutch, and add them both ways round.
+export const ADD_DIRECTION: Direction = { from: "en", to: "nl" };
+export const OTHER_WAY: Direction = { from: ADD_DIRECTION.to, to: ADD_DIRECTION.from };
 
 const dirQuery = ({ from, to }: Direction) =>
   `fromLanguage=${encodeURIComponent(from)}&toLanguage=${encodeURIComponent(to)}`;
@@ -75,6 +80,14 @@ export function usePackConcepts(packId: string, direction: Direction) {
   });
 }
 
+// One word as a card, with all its example sentences, for the card view on the Add words pages.
+export function useConceptCard(conceptId: string, direction: Direction) {
+  return useQuery({
+    queryKey: ["concept", conceptId, direction.from, direction.to],
+    queryFn: () => api<ConceptCardDetail>(`/concepts/${conceptId}?${dirQuery(direction)}`),
+  });
+}
+
 // Anything that changes the deck also changes pack progress, the dashboard
 // and the study queue.
 function useInvalidateAfterDeckChange() {
@@ -85,14 +98,15 @@ function useInvalidateAfterDeckChange() {
     );
 }
 
-export function useAddPack(packId: string, direction: Direction) {
+// Adds the pack's words in both directions. The counts are in cards, so two for each word.
+export function useAddPack(packId: string) {
   const invalidate = useInvalidateAfterDeckChange();
   return useMutation({
     mutationFn: async () => {
       const [result] = await Promise.all([
         api<AddPackResult>(`/packs/${packId}/add`, {
           method: "POST",
-          body: { fromLanguage: direction.from, toLanguage: direction.to },
+          body: { fromLanguage: ADD_DIRECTION.from, toLanguage: ADD_DIRECTION.to, bothDirections: true },
         }),
         new Promise((resolve) => setTimeout(resolve, MIN_SPINNER_MS)),
       ]);
@@ -136,14 +150,15 @@ export function useAddMirrors() {
   });
 }
 
-export function useAddConcept(direction: Direction) {
+// Adds one word in both directions.
+export function useAddConcept() {
   const invalidate = useInvalidateAfterDeckChange();
   return useMutation({
     mutationFn: async (conceptId: string) => {
       const [result] = await Promise.all([
         api<AddConceptResult>(`/concepts/${conceptId}/add`, {
           method: "POST",
-          body: { fromLanguage: direction.from, toLanguage: direction.to },
+          body: { fromLanguage: ADD_DIRECTION.from, toLanguage: ADD_DIRECTION.to, bothDirections: true },
         }),
         new Promise((resolve) => setTimeout(resolve, MIN_SPINNER_MS)),
       ]);

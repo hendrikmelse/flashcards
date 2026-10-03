@@ -36,8 +36,8 @@ function DeleteAccount() {
     <div className="setting danger-zone section-gap">
       <h2 className="setting-title">Delete your account</h2>
       <p className="muted">
-        This permanently deletes your account, your cards and your review history. It cannot be undone. Download your
-        data first if you want to keep it.
+        This permanently deletes your account, your cards, and your review history. It cannot be undone. Download your
+        data first if you want to keep it. Problem reports you made are kept, but will no longer be linked to your account.
       </p>
       {!open ? (
         <p>

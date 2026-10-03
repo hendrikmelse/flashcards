@@ -224,6 +224,35 @@ describe("looking at a card in full", () => {
     expect(document.body.style.overflow).toBe("");
   });
 
+  it("lets you report a problem with the card", async () => {
+    const reports: unknown[] = [];
+    mock.handlers["POST /concepts/c-a/report"] = (body) => {
+      reports.push(body);
+      return json(201, { ok: true });
+    };
+    const user = userEvent.setup();
+    renderApp("/deck");
+    const dialog = await open(user);
+    await user.click(within(dialog).getByRole("button", { name: "Report a problem" }));
+    await user.type(within(dialog).getByLabelText(/Details/), "Should be hond");
+    await user.click(within(dialog).getByRole("button", { name: "Send report" }));
+    expect(await within(dialog).findByText("Thanks! We’ll take a look.")).toBeInTheDocument();
+    expect(reports).toEqual([
+      { fromLanguage: "en", toLanguage: "nl", reason: "translation", note: "Should be hond" },
+    ]);
+    // Still open: sending a report does not close the card.
+    expect(screen.getByRole("dialog")).toBeInTheDocument();
+  });
+
+  it("closes the card with Escape even with the report form open", async () => {
+    const user = userEvent.setup();
+    renderApp("/deck");
+    const dialog = await open(user);
+    await user.click(within(dialog).getByRole("button", { name: "Report a problem" }));
+    await user.keyboard("{Escape}");
+    expect(screen.queryByRole("dialog")).not.toBeInTheDocument();
+  });
+
   it("is not opened by the Add reverse button, which is its own control", async () => {
     mock.handlers["POST /concepts/c-b/add"] = () => json(201, { added: 1, alreadyInDeck: 0 });
     const user = userEvent.setup();
@@ -582,7 +611,7 @@ describe("deck page", () => {
       json(200, { summary: { total: 0, new: 0, learning: 0, relearning: 0, review: 0, dueNow: 0 }, hasMore: false, cards: [] });
     renderApp("/deck");
     expect(await screen.findByText("Your deck is empty")).toBeInTheDocument();
-    expect(screen.getByRole("link", { name: "Browse packs" })).toHaveAttribute("href", "/add-words");
+    expect(screen.getByRole("link", { name: "Browse words" })).toHaveAttribute("href", "/add-words");
   });
 
   it("shows an error when the deck cannot be loaded", async () => {

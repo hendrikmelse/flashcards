@@ -10,6 +10,7 @@
     "db:migrate": "tsx --env-file-if-exists=../../.env src/db/migrate.ts",
     "test": "vitest run",
     "db:seed": "tsx --env-file-if-exists=../../.env src/db/seed-cli.ts",
+    "reports": "tsx --env-file-if-exists=../../.env src/db/reports-cli.ts",
     "content:check": "tsx src/db/import-content-cli.ts --check",
     "content:import": "tsx --env-file-if-exists=../../.env src/db/import-content-cli.ts",
     "build": "node build.mjs",

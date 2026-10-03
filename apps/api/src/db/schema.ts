@@ -22,6 +22,7 @@ export const cardStateEnum = pgEnum("card_state", [
   "relearning",
 ]);
 export const ratingEnum = pgEnum("rating", ["again", "hard", "good", "easy"]);
+export const reportReasonEnum = pgEnum("report_reason", ["translation", "forms", "sentence", "other"]);
 
 // ---------------------------------------------------------------------------
 // Users & auth
@@ -247,6 +248,33 @@ export const reviewLogs = pgTable(
     index("review_logs_card_idx").on(t.userCardId, t.reviewedAt),
     index("review_logs_user_idx").on(t.userId, t.reviewedAt),
   ],
+);
+
+// Problems users have reported with a word's card. Read by the owner (`npm run reports`), who
+// fixes the content and marks the report resolved.
+export const cardReports = pgTable(
+  "card_reports",
+  {
+    id: uuid().primaryKey().defaultRandom(),
+    // Who sent it. Cleared when they delete their account: the report is about the word, and
+    // is still worth reading, but it should no longer be tied to a person.
+    userId: uuid().references(() => users.id, { onDelete: "set null" }),
+    conceptId: uuid()
+      .notNull()
+      .references(() => concepts.id, { onDelete: "cascade" }),
+    // The direction the card was shown in.
+    fromLanguage: text()
+      .notNull()
+      .references(() => languages.code),
+    toLanguage: text()
+      .notNull()
+      .references(() => languages.code),
+    reason: reportReasonEnum().notNull(),
+    note: text().notNull().default(""),
+    createdAt: timestamp({ withTimezone: true }).notNull().defaultNow(),
+    resolvedAt: timestamp({ withTimezone: true }),
+  },
+  (t) => [index("card_reports_open_idx").on(t.resolvedAt, t.createdAt)],
 );
 
 // ---------------------------------------------------------------------------

@@ -1,42 +1,17 @@
 import { useState } from "react";
 import { Link, useParams } from "react-router";
-import type { AddPackResult, LanguageInfo } from "@flashcards/shared";
+import type { AddPackResult, EntryView } from "@flashcards/shared";
 import { ApiError } from "../api/client";
 import {
+  ADD_DIRECTION,
+  OTHER_WAY,
   useAddConcept,
   useAddPack,
-  useLanguages,
   usePackConcepts,
   usePacks,
-  type Direction,
 } from "../api/packs";
-import { DirectionPicker } from "../components/DirectionPicker";
-import { BusyLabel } from "../components/BusyLabel";
+import { ConceptDialog } from "../components/CardDialog";
 import { ConceptRow } from "../components/ConceptRow";
-import { useDirection } from "../hooks/useDirection";
-
-export function PackDetailPage() {
-  const languages = useLanguages();
-  if (languages.isPending) return <p className="status">Loading…</p>;
-  if (languages.isError || languages.data.length < 2) {
-    return <p className="status error">Could not load languages.</p>;
-  }
-  return <PackDetailShell languages={languages.data} />;
-}
-
-function PackDetailShell({ languages }: { languages: LanguageInfo[] }) {
-  const { direction, setDirection, search } = useDirection(languages);
-  return (
-    <>
-      <p>
-        <Link to={`/add-words${search}`}>← All packs</Link>
-      </p>
-      <DirectionPicker languages={languages} direction={direction} onChange={setDirection} />
-      {/* Remount on direction change so results from the old direction vanish. */}
-      <PackDetail key={`${direction.from}-${direction.to}`} direction={direction} />
-    </>
-  );
-}
 
 function describeAdd(r: AddPackResult): string {
   const parts = [
@@ -45,22 +20,25 @@ function describeAdd(r: AddPackResult): string {
       : `Added ${r.added} new card${r.added === 1 ? "" : "s"}.`,
   ];
   if (r.alreadyInDeck > 0) parts.push(`${r.alreadyInDeck} already in your deck.`);
-  if (r.unavailable > 0) parts.push(`${r.unavailable} not available in this direction yet.`);
+  if (r.unavailable > 0) parts.push(`${r.unavailable} not available yet.`);
   return parts.join(" ");
 }
 
-function PackDetail({ direction }: { direction: Direction }) {
-  const { id = "" } = useParams();
-  const concepts = usePackConcepts(id, direction);
-  const packs = usePacks(direction);
-  const addPack = useAddPack(id, direction);
-  const addConcept = useAddConcept(direction);
+// Every word that can be a card in the direction is in the deck.
+function allInDeck(summary: { availableCount?: number; addedCount?: number } | undefined) {
+  return summary !== undefined && (summary.availableCount ?? 0) > 0 && summary.addedCount === summary.availableCount;
+}
 
-  // The same pack the other way around, for cards you want to study in both directions.
-  const reverse = { from: direction.to, to: direction.from };
-  const reversePacks = usePacks(reverse);
-  const addReverse = useAddPack(id, reverse);
-  const [last, setLast] = useState<"forward" | "reverse">("forward");
+export function PackDetailPage() {
+  const { id = "" } = useParams();
+  const concepts = usePackConcepts(id, ADD_DIRECTION);
+  // Words are added both ways round, so the pack is done once both directions are in the deck.
+  const packs = usePacks(ADD_DIRECTION);
+  const otherWay = usePacks(OTHER_WAY);
+  const addPack = useAddPack(id);
+  const addConcept = useAddConcept();
+  // The word being looked at as a card, if any.
+  const [open, setOpen] = useState<{ conceptId: string; entries: EntryView[] } | null>(null);
 
   if (concepts.isPending) return <p className="status">Loading…</p>;
   if (concepts.isError) {
@@ -75,32 +53,21 @@ function PackDetail({ direction }: { direction: Direction }) {
 
   const { pack, concepts: rows } = concepts.data;
   const summary = packs.data?.find((p) => p.id === id);
-  const allAdded =
-    summary !== undefined &&
-    (summary.availableCount ?? 0) > 0 &&
-    summary.addedCount === summary.availableCount;
+  const allAdded = allInDeck(summary) && allInDeck(otherWay.data?.find((p) => p.id === id));
   const nothingAvailable = summary !== undefined && (summary.availableCount ?? 0) === 0;
-  const reverseSummary = reversePacks.data?.find((p) => p.id === id);
-  const allReverseAdded =
-    reverseSummary !== undefined &&
-    (reverseSummary.availableCount ?? 0) > 0 &&
-    reverseSummary.addedCount === reverseSummary.availableCount;
-  const noReverseAvailable = reverseSummary !== undefined && (reverseSummary.availableCount ?? 0) === 0;
-  const reverseName = `${reverse.from.toUpperCase()} → ${reverse.to.toUpperCase()}`;
-  const shown = last === "reverse" ? addReverse : addPack;
 
   return (
     <>
+      <p>
+        <Link to="/add-words">← All packs</Link>
+      </p>
       <h1>{pack.name}</h1>
       {pack.description && <p className="lead">{pack.description}</p>}
 
       <div className="pack-actions">
         <button
           className="primary"
-          onClick={() => {
-            setLast("forward");
-            addPack.mutate();
-          }}
+          onClick={() => addPack.mutate()}
           disabled={addPack.isPending || allAdded || nothingAvailable}
           aria-busy={addPack.isPending}
           aria-label={addPack.isPending ? "Adding words to my deck" : undefined}
@@ -111,31 +78,11 @@ function PackDetail({ direction }: { direction: Direction }) {
           </span>
           {addPack.isPending && <span className="spinner" aria-hidden="true" />}
         </button>
-        <button
-          className="secondary"
-          onClick={() => {
-            setLast("reverse");
-            addReverse.mutate();
-          }}
-          disabled={addReverse.isPending || allReverseAdded || noReverseAvailable}
-          aria-busy={addReverse.isPending}
-          aria-label={
-            addReverse.isPending
-              ? `Adding reverse cards (${reverseName})`
-              : allReverseAdded
-                ? "All reverse cards added"
-                : `Add reverse cards (${reverseName})`
-          }
-        >
-          <BusyLabel busy={addReverse.isPending}>
-            {allReverseAdded ? "All reverse cards added" : `Add reverse (${reverseName})`}
-          </BusyLabel>
-        </button>
-        <div role="status" className={shown.isError ? "form-error" : "muted"}>
-          {shown.isError
+        <div role="status" className={addPack.isError ? "form-error" : "muted"}>
+          {addPack.isError
             ? "Could not add this pack. Please try again."
-            : shown.data
-              ? `${last === "reverse" ? `${reverseName}: ` : ""}${describeAdd(shown.data)}`
+            : addPack.data
+              ? describeAdd(addPack.data)
               : null}
         </div>
       </div>
@@ -148,13 +95,14 @@ function PackDetail({ direction }: { direction: Direction }) {
             <ConceptRow
               key={c.conceptId}
               entries={c.entries}
-              from={direction.from}
-              to={direction.to}
+              from={ADD_DIRECTION.from}
+              to={ADD_DIRECTION.to}
               available={c.available}
               inDeck={c.inDeck}
               adding={addConcept.isPending && addConcept.variables === c.conceptId}
               disabled={addConcept.isPending}
               onAdd={() => addConcept.mutate(c.conceptId)}
+              onOpen={() => setOpen({ conceptId: c.conceptId, entries: c.entries })}
             />
           ))}
         </ul>
@@ -165,6 +113,8 @@ function PackDetail({ direction }: { direction: Direction }) {
           Could not add that word. Please try again.
         </p>
       )}
+
+      {open && <ConceptDialog conceptId={open.conceptId} entries={open.entries} onClose={() => setOpen(null)} />}
     </>
   );
 }

@@ -47,10 +47,19 @@ beforeEach(() => {
         },
       ],
     });
+  // Words are added both ways round, so the other direction has the same progress.
   mock.handlers[`GET /packs?${NL_EN}`] = () =>
     json(200, {
       packs: [
-        { id: "p1", slug: "sample", name: "Sample pack", description: null, conceptCount: 4, availableCount: 0, addedCount: 0 },
+        {
+          id: "p1",
+          slug: "sample",
+          name: "Sample pack",
+          description: null,
+          conceptCount: 4,
+          availableCount: 3,
+          addedCount: inDeck.size,
+        },
       ],
     });
   mock.handlers[`GET /packs/p1?${EN_NL}&limit=1000`] = () => json(200, packDetail());
@@ -67,7 +76,7 @@ beforeEach(() => {
 afterEach(() => vi.unstubAllGlobals());
 
 describe("pack list", () => {
-  it("is reachable from the nav and shows progress in the chosen direction", async () => {
+  it("is reachable from the nav and shows progress for English to Dutch", async () => {
     const user = userEvent.setup();
     renderApp("/");
     await user.click(await screen.findByRole("link", { name: "Add words" }));
@@ -76,39 +85,22 @@ describe("pack list", () => {
     expect(screen.getByText("Add word packs or individual words to your deck")).toBeInTheDocument();
     expect(await screen.findByRole("link", { name: "Sample pack" })).toBeInTheDocument();
     expect(screen.getByText(/1 of 3 words in your deck/)).toBeInTheDocument();
-    expect(screen.getByText(/1 not available in this direction yet/)).toBeInTheDocument();
-    expect(screen.getByRole("combobox", { name: "Prompt language" })).toHaveValue("en");
-    expect(screen.getByRole("combobox", { name: "Answer language" })).toHaveValue("nl");
+    expect(screen.getByText(/1 not available yet/)).toBeInTheDocument();
   });
 
-  it("re-queries when the direction is swapped, and remembers it", async () => {
-    const user = userEvent.setup();
+  it("has no direction to choose: it is always English to Dutch", async () => {
     renderApp("/add-words");
     await screen.findByRole("link", { name: "Sample pack" });
-
-    await user.click(screen.getByRole("button", { name: "Swap languages" }));
-
-    expect(await screen.findByText(/No words available in this direction yet/)).toBeInTheDocument();
-    expect(mock.calls).toContain(`GET /packs?${NL_EN}`);
-    expect(screen.getByRole("combobox", { name: "Prompt language" })).toHaveValue("nl");
-    expect(JSON.parse(localStorage.getItem("direction")!)).toEqual({ from: "nl", to: "en" });
+    expect(screen.queryByRole("group", { name: "Study direction" })).not.toBeInTheDocument();
+    expect(screen.queryByRole("combobox")).not.toBeInTheDocument();
+    expect(mock.calls).toContain(`GET /packs?${EN_NL}`);
+    expect(mock.calls).not.toContain(`GET /packs?${NL_EN}`);
   });
 
-  it("swaps instead of allowing the same language on both sides", async () => {
-    const user = userEvent.setup();
-    renderApp("/add-words");
-    await screen.findByRole("link", { name: "Sample pack" });
-
-    await user.selectOptions(screen.getByRole("combobox", { name: "Prompt language" }), "nl");
-
-    expect(screen.getByRole("combobox", { name: "Prompt language" })).toHaveValue("nl");
-    expect(screen.getByRole("combobox", { name: "Answer language" })).toHaveValue("en");
-  });
-
-  it("uses a direction from the URL", async () => {
+  it("ignores a direction left in the address by an old link", async () => {
     renderApp("/add-words?from=nl&to=en");
-    await screen.findByText(/No words available in this direction yet/);
-    expect(screen.getByRole("combobox", { name: "Prompt language" })).toHaveValue("nl");
+    expect(await screen.findByText(/1 of 3 words in your deck/)).toBeInTheDocument();
+    expect(mock.calls).not.toContain(`GET /packs?${NL_EN}`);
   });
 
   it("filters packs by name or description as you type", async () => {
@@ -198,30 +190,26 @@ describe("the way back to the dashboard", () => {
 
 describe("addresses", () => {
   it("lives at /add-words, with each pack under it", async () => {
-    renderApp("/add-words?from=en&to=nl");
+    renderApp("/add-words");
     const link = await screen.findByRole("link", { name: "Sample pack" });
-    expect(link).toHaveAttribute("href", "/add-words/p1?from=en&to=nl");
+    expect(link).toHaveAttribute("href", "/add-words/p1");
   });
 
-  it("links back from a pack to the list, keeping the direction", async () => {
-    renderApp("/add-words/p1?from=nl&to=en");
-    expect(await screen.findByRole("link", { name: "← All packs" })).toHaveAttribute(
-      "href",
-      "/add-words?from=nl&to=en",
-    );
+  it("links back from a pack to the list", async () => {
+    renderApp("/add-words/p1");
+    expect(await screen.findByRole("link", { name: "← All packs" })).toHaveAttribute("href", "/add-words");
   });
 
-  it("sends the old /packs address to /add-words, keeping the direction", async () => {
+  it("sends the old /packs address to /add-words", async () => {
     renderApp("/packs?from=nl&to=en");
     expect(await screen.findByRole("heading", { name: "Add words" })).toBeInTheDocument();
-    expect(screen.getByRole("combobox", { name: "Prompt language" })).toHaveValue("nl");
-    expect(screen.getByRole("combobox", { name: "Answer language" })).toHaveValue("en");
+    expect(await screen.findByText(/1 of 3 words in your deck/)).toBeInTheDocument();
   });
 
   it("sends an old pack address to the pack under /add-words", async () => {
     renderApp("/packs/p1?from=en&to=nl");
     expect(await screen.findByRole("heading", { name: "Sample pack" })).toBeInTheDocument();
-    expect(screen.getByRole("link", { name: "← All packs" })).toHaveAttribute("href", "/add-words?from=en&to=nl");
+    expect(screen.getByRole("link", { name: "← All packs" })).toHaveAttribute("href", "/add-words");
   });
 });
 
@@ -464,7 +452,7 @@ describe("word search", () => {
 
 describe("pack detail", () => {
   it("lists words with articles and per-word status", async () => {
-    renderApp(`/add-words/p1?from=en&to=nl`);
+    renderApp(`/add-words/p1`);
     expect(await screen.findByRole("heading", { name: "Sample pack" })).toBeInTheDocument();
 
     const items = await screen.findAllByRole("listitem");
@@ -477,73 +465,72 @@ describe("pack detail", () => {
     expect(within(items[3]!).getByText("Not available yet")).toBeInTheDocument();
   });
 
-  it("adds a single word and updates its status", async () => {
+  it("adds a single word in both directions, and updates its status", async () => {
+    const bodies: unknown[] = [];
+    mock.handlers["POST /concepts/c2/add"] = (b) => {
+      bodies.push(b);
+      inDeck.add("c2");
+      return json(201, { added: 2, alreadyInDeck: 0 });
+    };
     const user = userEvent.setup();
-    renderApp(`/add-words/p1?from=en&to=nl`);
+    renderApp(`/add-words/p1`);
     await user.click(await screen.findByRole("button", { name: "Add house to my deck" }));
 
-    expect(mock.calls).toContain("POST /concepts/c2/add");
+    expect(bodies).toEqual([{ fromLanguage: "en", toLanguage: "nl", bothDirections: true }]);
     const house = (await screen.findAllByRole("listitem"))[1]!;
     expect(await within(house).findByText("In deck")).toBeInTheDocument();
   });
 
-  it("adds the whole pack and reports what happened", async () => {
+  it("adds the whole pack in both directions and reports what happened", async () => {
+    const bodies: unknown[] = [];
+    mock.handlers["POST /packs/p1/add"] = (b) => {
+      bodies.push(b);
+      inDeck.add("c2").add("c3");
+      return json(200, { added: 4, alreadyInDeck: 2, unavailable: 1 });
+    };
     const user = userEvent.setup();
-    renderApp(`/add-words/p1?from=en&to=nl`);
+    renderApp(`/add-words/p1`);
     await user.click(await screen.findByRole("button", { name: "Add all to my deck" }));
 
     // The spinner holds the request for a moment, so wait for the message itself.
-    expect(await screen.findByText(/Added 2 new cards/)).toHaveTextContent(
-      "Added 2 new cards. 1 already in your deck. 1 not available in this direction yet.",
+    expect(await screen.findByText(/Added 4 new cards/)).toHaveTextContent(
+      "Added 4 new cards. 2 already in your deck. 1 not available yet.",
     );
+    expect(bodies).toEqual([{ fromLanguage: "en", toLanguage: "nl", bothDirections: true }]);
     expect(await screen.findByRole("button", { name: "All words added" })).toBeDisabled();
   });
 
-  it("adds the whole pack in the reverse direction too", async () => {
-    const bodies: unknown[] = [];
-    mock.handlers[`GET /packs?${NL_EN}`] = () =>
-      json(200, {
-        packs: [
-          { id: "p1", slug: "sample", name: "Sample pack", description: null, conceptCount: 4, availableCount: 3, addedCount: 0 },
-        ],
-      });
-    mock.handlers["POST /packs/p1/add"] = (b) => {
-      bodies.push(b);
-      return json(200, { added: 3, alreadyInDeck: 0, unavailable: 1 });
-    };
-    const user = userEvent.setup();
-    renderApp(`/add-words/p1?from=en&to=nl`);
-    await user.click(await screen.findByRole("button", { name: "Add reverse cards (NL → EN)" }));
-
-    expect(await screen.findByText(/NL → EN: Added 3 new cards/)).toBeInTheDocument();
-    expect(bodies).toEqual([{ fromLanguage: "nl", toLanguage: "en" }]);
+  it("has no separate button for the reverse direction", async () => {
+    renderApp(`/add-words/p1`);
+    await screen.findByRole("button", { name: "Add all to my deck" });
+    expect(screen.queryByRole("button", { name: /reverse/i })).not.toBeInTheDocument();
   });
 
-  it("disables the reverse button when the reverse is already in the deck or unavailable", async () => {
-    mock.handlers[`GET /packs?${NL_EN}`] = () =>
-      json(200, {
-        packs: [
-          { id: "p1", slug: "sample", name: "Sample pack", description: null, conceptCount: 4, availableCount: 3, addedCount: 3 },
-        ],
-      });
-    const view = renderApp(`/add-words/p1?from=en&to=nl`);
-    expect(await screen.findByRole("button", { name: "All reverse cards added" })).toBeDisabled();
+  it("is only done once both directions are in the deck", async () => {
+    const pack = (added: number, available = 3) => ({
+      packs: [{ id: "p1", slug: "sample", name: "Sample pack", description: null, conceptCount: 4, availableCount: available, addedCount: added }],
+    });
+    // English to Dutch is complete, but the other way round is missing a word: there is still work to do.
+    mock.handlers[`GET /packs?${EN_NL}`] = () => json(200, pack(3));
+    mock.handlers[`GET /packs?${NL_EN}`] = () => json(200, pack(2));
+    const view = renderApp(`/add-words/p1`);
+    expect(await screen.findByRole("button", { name: "Add all to my deck" })).toBeEnabled();
     view.unmount();
 
-    mock.handlers[`GET /packs?${NL_EN}`] = () =>
-      json(200, {
-        packs: [
-          { id: "p1", slug: "sample", name: "Sample pack", description: null, conceptCount: 4, availableCount: 0, addedCount: 0 },
-        ],
-      });
-    renderApp(`/add-words/p1?from=en&to=nl`);
-    expect(await screen.findByRole("button", { name: "Add reverse cards (NL → EN)" })).toBeDisabled();
+    mock.handlers[`GET /packs?${NL_EN}`] = () => json(200, pack(3));
+    const done = renderApp(`/add-words/p1`);
+    expect(await screen.findByRole("button", { name: "All words added" })).toBeDisabled();
+    done.unmount();
+
+    mock.handlers[`GET /packs?${EN_NL}`] = () => json(200, pack(0, 0));
+    renderApp(`/add-words/p1`);
+    await waitFor(() => expect(screen.getByRole("button", { name: "Add all to my deck" })).toBeDisabled());
   });
 
   it("explains when the pack does not exist", async () => {
     mock.handlers[`GET /packs/nope?${EN_NL}&limit=1000`] = () =>
       json(404, { error: "Pack not found" });
-    renderApp(`/add-words/nope?from=en&to=nl`);
+    renderApp(`/add-words/nope`);
     expect(await screen.findByText("That pack was not found.")).toBeInTheDocument();
   });
 
@@ -560,7 +547,7 @@ describe("pack detail", () => {
     mock.handlers[`GET /packs/p1?${EN_NL}&limit=1000`] = () =>
       json(200, { pack, concepts: page(0, 53) });
 
-    renderApp(`/add-words/p1?from=en&to=nl`);
+    renderApp(`/add-words/p1`);
     expect(await screen.findByText("word52")).toBeInTheDocument();
     expect(screen.getByText("word0")).toBeInTheDocument();
     expect(screen.queryByRole("button", { name: "Load more" })).not.toBeInTheDocument();
@@ -575,5 +562,139 @@ describe("dashboard link", () => {
       json(200, { now: "x", counts: { learning: 0, review: 0, new: 0 } });
     renderApp("/");
     expect(await screen.findByRole("link", { name: "Browse words" })).toHaveAttribute("href", "/add-words");
+  });
+});
+
+describe("looking at a word as a card", () => {
+  const detail = (conceptId: string, front: unknown[], back: unknown[], sentences = { front: [] as string[], back: [] as string[] }) => ({
+    conceptId,
+    fromLanguage: "en",
+    toLanguage: "nl",
+    front,
+    back,
+    sentences,
+  });
+  const dogCard = () =>
+    detail(
+      "c1",
+      [entry("en", "dog", { plural: "dogs" })],
+      [entry("nl", "hond", { article: "de", plural: "honden" })],
+      { front: ["The dog barks.", "I walk the dog."], back: ["De hond blaft."] },
+    );
+
+  beforeEach(() => {
+    mock.handlers[`GET /concepts/c1?${EN_NL}`] = () => json(200, dogCard());
+    mock.handlers[`GET /concepts/c2?${EN_NL}`] = () =>
+      json(200, detail("c2", [entry("en", "house")], [entry("nl", "huis", { article: "het" })]));
+    mock.handlers[`GET /concepts/c4?${EN_NL}`] = () => json(200, detail("c4", [entry("en", "orphan")], []));
+  });
+
+  const open = async (user: ReturnType<typeof userEvent.setup>, name = "Open card: dog") => {
+    await user.click(await screen.findByRole("button", { name }));
+    return screen.findByRole("dialog");
+  };
+
+  describe("on a pack", () => {
+    it("opens the card, English to Dutch, with its sentences and forms", async () => {
+      const user = userEvent.setup();
+      renderApp("/add-words/p1");
+      const dialog = await open(user);
+
+      expect(dialog).toHaveAccessibleName("Card: dog");
+      expect(within(dialog).getByText("English → Nederlands")).toBeInTheDocument();
+      const front = within(within(dialog).getByRole("region", { name: "Front" }));
+      expect(front.getByRole("img", { name: "English" })).toBeInTheDocument();
+      expect(await front.findByText("The dog barks.")).toBeInTheDocument();
+      expect(front.getByText("I walk the dog.")).toBeInTheDocument();
+      expect(front.getByText("dogs")).toBeInTheDocument();
+      const back = within(within(dialog).getByRole("region", { name: "Back" }));
+      expect(back.getByText("de hond")).toBeInTheDocument();
+      expect(back.getByText("De hond blaft.")).toBeInTheDocument();
+      expect(back.getByText("honden")).toBeInTheDocument();
+    });
+
+    it("has no deck status, since the word may not be in the deck", async () => {
+      const user = userEvent.setup();
+      renderApp("/add-words/p1");
+      const dialog = await open(user, "Open card: house");
+      expect(await within(dialog).findByText("No example sentences yet.")).toBeInTheDocument();
+      expect(within(dialog).queryByLabelText("Where this card stands")).not.toBeInTheDocument();
+      expect(within(dialog).queryByText("Status")).not.toBeInTheDocument();
+    });
+
+    it("shows the words straight away, and says so if the sentences cannot be loaded", async () => {
+      mock.handlers[`GET /concepts/c1?${EN_NL}`] = () => json(500, { error: "boom" });
+      const user = userEvent.setup();
+      renderApp("/add-words/p1");
+      const dialog = await open(user);
+      expect(within(dialog).getByText("de hond")).toBeInTheDocument();
+      expect(await within(dialog).findByText("Could not load the example sentences.")).toBeInTheDocument();
+    });
+
+    it("opens a word that has no Dutch yet, with an empty back", async () => {
+      const user = userEvent.setup();
+      renderApp("/add-words/p1");
+      const dialog = await open(user, "Open card: orphan");
+      expect(dialog).toHaveAccessibleName("Card: orphan");
+      // The front shows the word; the back has nothing to show yet.
+      expect(within(dialog).getByRole("region", { name: "Front" })).toHaveTextContent("orphan");
+      expect(within(dialog).getByRole("region", { name: "Back" }).textContent).toBe("");
+    });
+
+    it("closes with Escape or Close, and focus goes back to the word", async () => {
+      const user = userEvent.setup();
+      renderApp("/add-words/p1");
+      await open(user);
+      await user.keyboard("{Escape}");
+      expect(screen.queryByRole("dialog")).not.toBeInTheDocument();
+      expect(screen.getByRole("button", { name: "Open card: dog" })).toHaveFocus();
+
+      await open(user, "Open card: house");
+      await user.click(screen.getByRole("button", { name: "Close" }));
+      expect(screen.queryByRole("dialog")).not.toBeInTheDocument();
+    });
+
+    it("is not opened by the Add button, which is its own control", async () => {
+      const user = userEvent.setup();
+      renderApp("/add-words/p1");
+      await user.click(await screen.findByRole("button", { name: "Add house to my deck" }));
+      expect(screen.queryByRole("dialog")).not.toBeInTheDocument();
+    });
+
+    it("lets you report a problem with the word", async () => {
+      const reports: unknown[] = [];
+      mock.handlers["POST /concepts/c1/report"] = (body) => {
+        reports.push(body);
+        return json(201, { ok: true });
+      };
+      const user = userEvent.setup();
+      renderApp("/add-words/p1");
+      const dialog = await open(user);
+      await user.click(within(dialog).getByRole("button", { name: "Report a problem" }));
+      await user.click(within(dialog).getByRole("button", { name: "Send report" }));
+      expect(await within(dialog).findByText("Thanks! We’ll take a look.")).toBeInTheDocument();
+      expect(reports).toEqual([{ fromLanguage: "en", toLanguage: "nl", reason: "translation", note: "" }]);
+    });
+  });
+
+  describe("in word search results", () => {
+    it("opens the card for a result", async () => {
+      mock.handlers["GET /concepts/search"] = () =>
+        json(200, {
+          concepts: [{ conceptId: "c1", entries: [entry("en", "dog"), entry("nl", "hond", { article: "de" })], inDeck: false }],
+          hasMore: false,
+        });
+      const user = userEvent.setup();
+      renderApp("/add-words");
+      await screen.findByRole("link", { name: "Sample pack" });
+      await user.click(screen.getByRole("button", { name: "Words" }));
+      await user.type(screen.getByRole("searchbox", { name: "Search words" }), "hond");
+
+      const dialog = await open(user);
+      expect(dialog).toHaveAccessibleName("Card: dog");
+      expect(await within(dialog).findByText("De hond blaft.")).toBeInTheDocument();
+      await user.keyboard("{Escape}");
+      expect(screen.queryByRole("dialog")).not.toBeInTheDocument();
+    });
   });
 });

@@ -55,3 +55,59 @@ export function LanguageFlag({ code, label }: { code: string; label: string }) {
     </svg>
   );
 }
+
+// Two flags in one picture, cut along a slash: the first shows to the left of it and the second to
+// the right, as if one were laid over the other. Used for the app's own pair of languages, English
+// and Dutch. Decoration, so it is hidden from screen readers.
+const SLASH_TOP = 5.4;
+const SLASH_BOTTOM = 3.6;
+const SLASH_GAP = 0.6;
+const SLASH_OVERSHOOT = 0.8; // how far it sticks out above and below, in flag units
+const SLOPE = (SLASH_TOP - SLASH_BOTTOM) / 6; // how far the slash moves sideways per unit of height
+
+export function SplitFlag({ left, right }: { left: string; right: string }) {
+  const Left = FLAGS[left];
+  const Right = FLAGS[right];
+  if (!Left || !Right) return null;
+  const id = `split-${left}-${right}`;
+  return (
+    <svg
+      className="flag flag-split"
+      aria-hidden="true"
+      width={HEIGHT * 1.2 * 1.5}
+      height={HEIGHT * 1.2}
+      viewBox="0 0 9 6"
+      preserveAspectRatio="none"
+      overflow="visible"
+    >
+      <defs>
+        <clipPath id={`${id}-shape`}>
+          <rect width="9" height="6" rx="0.45" />
+        </clipPath>
+        <clipPath id={`${id}-left`}>
+          <polygon points={`0,0 ${SLASH_TOP},0 ${SLASH_BOTTOM},6 0,6`} />
+        </clipPath>
+        <clipPath id={`${id}-right`}>
+          <polygon points={`${SLASH_TOP},0 9,0 9,6 ${SLASH_BOTTOM},6`} />
+        </clipPath>
+      </defs>
+      <g clipPath={`url(#${id}-shape)`}>
+        <g clipPath={`url(#${id}-left)`}>
+          <Left />
+        </g>
+        <g clipPath={`url(#${id}-right)`}>
+          <Right />
+        </g>
+      </g>
+      {/* The slash itself, in the muted text color. It runs a little past the flag at both ends. */}
+      <line
+        x1={SLASH_TOP + SLASH_OVERSHOOT * SLOPE}
+        y1={-SLASH_OVERSHOOT}
+        x2={SLASH_BOTTOM - SLASH_OVERSHOOT * SLOPE}
+        y2={6 + SLASH_OVERSHOOT}
+        stroke="var(--muted)"
+        strokeWidth={SLASH_GAP}
+      />
+    </svg>
+  );
+}

@@ -15,6 +15,7 @@ import type {
   LoginInput,
   PublicUser,
   RegisterInput,
+  ReportCardInput,
   Settings,
   UpdateSettingsInput,
   StatsResponse,
@@ -158,6 +159,14 @@ export function useDeckCard(id: string) {
   return useQuery({
     queryKey: ["deck", "card", id],
     queryFn: () => api<DeckCardDetail>(`/deck/${id}`),
+  });
+}
+
+// A problem someone found with a word's card.
+export function useReportCard(conceptId: string) {
+  return useMutation({
+    mutationFn: (input: Omit<ReportCardInput, "fromLanguage" | "toLanguage"> & { fromLanguage: string; toLanguage: string }) =>
+      api<{ ok: true }>(`/concepts/${conceptId}/report`, { method: "POST", body: input }),
   });
 }
 
