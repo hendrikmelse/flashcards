@@ -3718,7 +3718,7 @@
         {"lemma": "belong", "pos": "verb", "details": {"past": "belonged", "participle": "belonged"}, "sentences": ["This book belongs to me."]}
         ],
         "nl": [
-        {"lemma": "behoren", "pos": "verb", "details": {"pastSingular": "behoorde", "pastPlural": "behoorden", "participle": "behoord", "auxiliary": "hebben"}, "sentences": ["Dit boek behoort mij toe."]}
+        {"lemma": "horen bij", "pos": "verb", "details": {"pastSingular": "hoorde bij", "pastPlural": "hoorden bij", "participle": "gehoord", "auxiliary": "hebben"}, "sentences": ["Dit boek hoort bij mij."]}
         ]
       }
     },
@@ -3838,7 +3838,7 @@
         {"lemma": "risk", "pos": "verb", "details": {"past": "risked", "participle": "risked"}, "sentences": ["I do not risk it."]}
         ],
         "nl": [
-        {"lemma": "riskeren", "pos": "verb", "details": {"pastSingular": "riskeerde", "pastPlural": "riskeerden", "participle": "gerisqueerd", "auxiliary": "hebben"}, "sentences": ["Ik riskeer het niet."]}
+        {"lemma": "riskeren", "pos": "verb", "details": {"pastSingular": "riskeerde", "pastPlural": "riskeerden", "participle": "geriskeerd", "auxiliary": "hebben"}, "sentences": ["Ik riskeer het niet."]}
         ]
       }
     },
@@ -5482,6 +5482,7 @@
         {"lemma": "raise (lift up)", "pos": "verb", "details": {"past": "raised", "participle": "raised"}, "sentences": ["I raise my glass."]}
         ],
         "nl": [
+        {"lemma": "optillen", "pos": "verb", "details": {"pastSingular": "tilde op", "pastPlural": "tilden op", "participle": "opgetild", "auxiliary": "hebben"}, "sentences": ["Hij tilt de doos op."]},
         {"lemma": "heffen", "pos": "verb", "details": {"pastSingular": "hief", "pastPlural": "hieven", "participle": "geheven", "auxiliary": "hebben"}, "sentences": ["Ik heb mijn glas geheven."]}
         ]
       }
@@ -6286,7 +6287,7 @@
         {"lemma": "scold", "pos": "verb", "details": {"past": "scolded", "participle": "scolded"}, "sentences": ["The father scolds the boy."]}
         ],
         "nl": [
-        {"lemma": "schelden", "pos": "verb", "details": {"pastSingular": "schold", "pastPlural": "scholden", "participle": "gescholden", "auxiliary": "hebben"}, "sentences": ["De vader scheldt de jongen uit."]}
+        {"lemma": "berispen", "pos": "verb", "details": {"pastSingular": "berispte", "pastPlural": "berispten", "participle": "berispt", "auxiliary": "hebben"}, "sentences": ["De vader berispt de jongen."]}
         ]
       }
     },
@@ -7198,7 +7199,8 @@
         {"lemma": "drop off", "pos": "verb", "details": {"past": "dropped off", "participle": "dropped off"}, "sentences": ["I drop off the child at school."]}
         ],
         "nl": [
-        {"lemma": "wegbrengen", "pos": "verb", "details": {"pastSingular": "bracht weg", "pastPlural": "brachten weg", "participle": "weggebracht", "auxiliary": "hebben"}, "sentences": ["Ik breng het kind naar school weg."]}
+        {"lemma": "wegbrengen", "pos": "verb", "details": {"pastSingular": "bracht weg", "pastPlural": "brachten weg", "participle": "weggebracht", "auxiliary": "hebben"}, "sentences": ["Ik breng het kind naar school weg."]},
+        {"lemma": "afzetten", "pos": "verb", "details": {"pastSingular": "zette af", "pastPlural": "zetten af", "participle": "afgezet", "auxiliary": "hebben"}, "sentences": ["Ik zet het kind bij school af."]}
         ]
       }
     },

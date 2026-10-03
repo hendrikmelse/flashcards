@@ -1496,7 +1496,7 @@
         {"lemma": "bail", "pos": "noun", "details": {"uncountable": true}, "sentences": ["He pays bail."]}
         ],
         "nl": [
-        {"lemma": "borg", "pos": "noun", "details": {"article": "de", "plural": "borgen"}, "sentences": ["Hij betaalt borg."]}
+        {"lemma": "borgtocht", "pos": "noun", "details": {"article": "de", "plural": "borgtochten"}, "sentences": ["Hij betaalt de borgtocht."]}
         ]
       }
     },
@@ -3812,7 +3812,8 @@
         {"lemma": "donation", "pos": "noun", "details": {"plural": "donations"}, "sentences": ["I make a donation."]}
         ],
         "nl": [
-        {"lemma": "donatie", "pos": "noun", "details": {"article": "de", "plural": "donaties"}, "sentences": ["Ik doe een donatie."]}
+        {"lemma": "donatie", "pos": "noun", "details": {"article": "de", "plural": "donaties"}, "sentences": ["Ik doe een donatie."]},
+        {"lemma": "gift", "pos": "noun", "details": {"article": "de", "plural": "giften"}, "sentences": ["Hij doet een gift aan het goede doel."]}
         ]
       }
     },

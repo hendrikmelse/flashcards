@@ -1861,18 +1861,6 @@
       }
     },
     {
-      "key": "beef",
-      "gloss": "beef (noun)",
-      "entries": {
-        "en": [
-        {"lemma": "beef", "pos": "noun", "details": {"uncountable": true}, "sentences": ["I eat beef."]}
-        ],
-        "nl": [
-        {"lemma": "rund", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["Ik eet rundvlees."]}
-        ]
-      }
-    },
-    {
       "key": "mayonnaise",
       "gloss": "mayonnaise (noun)",
       "entries": {
@@ -2120,7 +2108,7 @@
         {"lemma": "milk", "pos": "verb", "details": {"past": "milked", "participle": "milked"}, "sentences": ["The farmer milks the cow."]}
         ],
         "nl": [
-        {"lemma": "melken", "pos": "verb", "details": {"pastSingular": "molk", "pastPlural": "molken", "participle": "gemolken", "auxiliary": "hebben"}, "sentences": ["De boer molk de koe."]}
+        {"lemma": "melken", "pos": "verb", "details": {"pastSingular": "melkte", "pastPlural": "melkten", "participle": "gemolken", "auxiliary": "hebben"}, "sentences": ["De boer melkte de koe."]}
         ]
       }
     },

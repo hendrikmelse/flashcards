@@ -392,7 +392,8 @@
         {"lemma": "cattle", "pos": "noun", "details": {"pluralOnly": true}, "sentences": ["The cattle graze."]}
         ],
         "nl": [
-        {"lemma": "vee", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["Het vee graast."]}
+        {"lemma": "vee", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["Het vee graast."]},
+        {"lemma": "rund", "pos": "noun", "details": {"article": "het", "plural": "runderen"}, "sentences": ["De boer heeft veel runderen."]}
         ]
       }
     },

@@ -154,7 +154,7 @@ Parts of speech are noun, verb, adjective, adverb, pronoun, preposition, conjunc
 
 **Word selection and attribution.** Which words to include was chosen using the SUBTLEX-NL frequency list (Keuleers, Brysbaert & New, 2010, *Behavior Research Methods*; CC BY-NC-SA 4.0). It was used only to pick and order words. None of its data is in this repository.
 
-**Review status.** All entries, translations and sentences were written by Claude and checked by the validator, not by a Dutch speaker. `content/review-notes.md` lists the items Claude was least sure of, for a native-speaker pass.
+**Review status.** All entries, translations and sentences were written by Claude and checked by the validator. The words Claude was least sure of (about 50) were reviewed by a native Dutch speaker and corrected; the rest of the content has not been read through by one.
 
 ### Decks per language pair
 
@@ -198,7 +198,7 @@ The full runbook, including server setup, rollback, backups and how to invite so
 2. **Push and deploy.** Production runs an old build. Pushing `main` deploys it, and the new migrations (`concept_key`, `pack_category`, `user_name`, `card_display_prefs`, `card_reports`) must apply cleanly.
 3. **Check the Docker image builds.** `content/` was added to the image after the last verified build; CI builds it on push, but it is untested.
 4. **Import the content into production** (manual, see the runbook). Do any final key renames first: once users have cards, concept keys are permanent.
-5. **Native Dutch review of the content.** Nothing has been checked by a Dutch speaker. Work through `content/review-notes.md` (about 50 items) and spot-check the frequency bands.
+5. **Native Dutch review of the content.** The words flagged as uncertain have been reviewed and fixed. Beyond those, nothing has been read through by a Dutch speaker: spot-check the frequency bands and a sample of the topic packs.
 6. **Offsite database backups with a failure alert, and a tested restore.** The first unattended backup run is also unverified.
 7. **A real browser pass on the live site** over HTTPS (registering, studying, the Content-Security-Policy, a phone).
 

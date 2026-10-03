@@ -1225,18 +1225,6 @@
       }
     },
     {
-      "key": "poison-toxin",
-      "gloss": "poison (toxin)",
-      "entries": {
-        "en": [
-        {"lemma": "poison (toxin)", "pos": "noun", "details": {"plural": "poisons"}, "sentences": ["The poison is dangerous."]}
-        ],
-        "nl": [
-        {"lemma": "gift", "pos": "noun", "details": {"article": "de", "plural": "giften"}, "sentences": ["De gift is gevaarlijk."]}
-        ]
-      }
-    },
-    {
       "key": "faint",
       "gloss": "faint (verb)",
       "entries": {
@@ -1625,10 +1613,10 @@
       "gloss": "cold (illness)",
       "entries": {
         "en": [
-        {"lemma": "cold (illness)", "pos": "adjective", "sentences": ["I have a cold."]}
+        {"lemma": "cold (illness)", "pos": "noun", "details": {"plural": "colds"}, "sentences": ["I have a cold."]}
         ],
         "nl": [
-        {"lemma": "verkouden", "pos": "adjective", "sentences": ["Ik ben verkouden."]}
+        {"lemma": "verkoudheid", "pos": "noun", "details": {"article": "de", "plural": "verkoudheden"}, "sentences": ["Ik heb een verkoudheid."]}
         ]
       }
     },
