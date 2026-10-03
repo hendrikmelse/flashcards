@@ -29,7 +29,7 @@ function PackDetailShell({ languages }: { languages: LanguageInfo[] }) {
   return (
     <>
       <p>
-        <Link to={`/packs${search}`}>← All packs</Link>
+        <Link to={`/add-words${search}`}>← All packs</Link>
       </p>
       <DirectionPicker languages={languages} direction={direction} onChange={setDirection} />
       {/* Remount on direction change so results from the old direction vanish. */}

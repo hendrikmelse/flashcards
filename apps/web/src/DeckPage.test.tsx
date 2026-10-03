@@ -78,7 +78,7 @@ describe("deck page", () => {
 
   it("has a button to add more words", async () => {
     renderApp("/deck");
-    expect(await screen.findByRole("link", { name: "Add more words" })).toHaveAttribute("href", "/packs");
+    expect(await screen.findByRole("link", { name: "Add more words" })).toHaveAttribute("href", "/add-words");
   });
 
   it("shows how many cards are in each stage, counting relearning as learning", async () => {
@@ -362,7 +362,7 @@ describe("deck page", () => {
       json(200, { summary: { total: 0, new: 0, learning: 0, relearning: 0, review: 0, dueNow: 0 }, hasMore: false, cards: [] });
     renderApp("/deck");
     expect(await screen.findByText("Your deck is empty")).toBeInTheDocument();
-    expect(screen.getByRole("link", { name: "Browse packs" })).toHaveAttribute("href", "/packs");
+    expect(screen.getByRole("link", { name: "Browse packs" })).toHaveAttribute("href", "/add-words");
   });
 
   it("shows an error when the deck cannot be loaded", async () => {

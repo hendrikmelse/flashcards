@@ -129,8 +129,8 @@ export function DashboardPage() {
           <p className="muted">
             Add a pack or a few words and what to study next will show up here.
           </p>
-          <Link to="/packs" className="button primary">
-            Browse packs
+          <Link to="/add-words" className="button primary">
+            Browse words
           </Link>
         </div>
       ) : (
@@ -208,7 +208,7 @@ export function DashboardPage() {
             <Link to="/deck" className="button secondary">
               View deck
             </Link>
-            <Link to="/packs" className="button secondary">
+            <Link to="/add-words" className="button secondary">
               Add more words
             </Link>
           </div>

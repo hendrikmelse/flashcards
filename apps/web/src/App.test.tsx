@@ -23,6 +23,17 @@ describe("auth flow", () => {
     expect(await screen.findByRole("heading", { name: "Your deck" })).toBeInTheDocument();
   });
 
+  it("has Dashboard and Add words in the main navigation, and no tab for studying", async () => {
+    mock.loggedIn = true;
+    renderApp("/");
+    const nav = await screen.findByRole("navigation", { name: "Main" });
+    expect(within(nav).getAllByRole("link").map((l) => l.textContent)).toEqual(["Dashboard", "Add words"]);
+    expect(within(nav).getByRole("link", { name: "Add words" })).toHaveAttribute("href", "/add-words");
+    expect(within(nav).queryByRole("link", { name: "Study" })).not.toBeInTheDocument();
+    // Studying starts from the dashboard.
+    expect(await screen.findByRole("link", { name: "Start studying" })).toHaveAttribute("href", "/study");
+  });
+
   it("has Settings and Log out as icons in the top corner, not in the main navigation", async () => {
     mock.loggedIn = true;
     renderApp("/");
@@ -258,7 +269,7 @@ describe("dashboard", () => {
     expect(within(hero).queryByRole("link", { name: "Add more words" })).not.toBeInTheDocument();
     const yourDeck = screen.getByRole("heading", { name: "Your deck" }).parentElement!;
     expect(within(yourDeck).getByRole("link", { name: "View deck" })).toHaveAttribute("href", "/deck");
-    expect(within(yourDeck).getByRole("link", { name: "Add more words" })).toHaveAttribute("href", "/packs");
+    expect(within(yourDeck).getByRole("link", { name: "Add more words" })).toHaveAttribute("href", "/add-words");
     expect(screen.getByRole("img", { name: /3 learning/ })).toBeInTheDocument();
   });
 
@@ -269,7 +280,7 @@ describe("dashboard", () => {
     renderApp("/");
     expect(await screen.findByText("No cards to study right now")).toBeInTheDocument();
     expect(screen.queryByRole("link", { name: "Start studying" })).not.toBeInTheDocument();
-    expect(screen.getByRole("link", { name: "Add more words" })).toHaveAttribute("href", "/packs");
+    expect(screen.getByRole("link", { name: "Add more words" })).toHaveAttribute("href", "/add-words");
   });
 
   describe("with several decks", () => {

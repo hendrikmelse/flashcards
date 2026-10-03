@@ -226,7 +226,7 @@ export function DeckPage() {
           {deckTotal !== null && <p className="lead">{plural(deckTotal, "card")}</p>}
         </div>
         {summary.total > 0 && (
-          <Link to="/packs" className="button secondary">
+          <Link to="/add-words" className="button secondary">
             Add more words
           </Link>
         )}
@@ -236,7 +236,7 @@ export function DeckPage() {
         <div className="hero">
           <p className="hero-title">Your deck is empty</p>
           <p className="muted">Add a pack or a few words and they will show up here.</p>
-          <Link to="/packs" className="button primary">
+          <Link to="/add-words" className="button primary">
             Browse packs
           </Link>
         </div>

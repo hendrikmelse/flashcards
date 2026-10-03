@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router";
+import { Navigate, Route, Routes, useLocation, useParams } from "react-router";
 import { Layout } from "./components/Layout";
 import { PublicOnly, RequireAuth } from "./components/guards";
 import { DashboardPage } from "./pages/DashboardPage";
@@ -10,6 +10,14 @@ import { PackDetailPage } from "./pages/PackDetailPage";
 import { PacksPage } from "./pages/PacksPage";
 import { SettingsPage } from "./pages/SettingsPage";
 import { StudyPage } from "./pages/StudyPage";
+
+// The pack browser used to live at /packs. Old links and bookmarks still work: they go to
+// /add-words, keeping the direction in the query string.
+function LegacyPacksRedirect() {
+  const { id } = useParams();
+  const { search } = useLocation();
+  return <Navigate to={`/add-words${id ? `/${id}` : ""}${search}`} replace />;
+}
 
 export function App() {
   return (
@@ -24,9 +32,11 @@ export function App() {
           <Route path="deck" element={<DeckPage />} />
           <Route path="study" element={<StudyPage />} />
           <Route path="how-it-works" element={<HowItWorksPage />} />
-          <Route path="packs" element={<PacksPage />} />
+          <Route path="add-words" element={<PacksPage />} />
           <Route path="settings" element={<SettingsPage />} />
-          <Route path="packs/:id" element={<PackDetailPage />} />
+          <Route path="add-words/:id" element={<PackDetailPage />} />
+          <Route path="packs" element={<LegacyPacksRedirect />} />
+          <Route path="packs/:id" element={<LegacyPacksRedirect />} />
         </Route>
       </Route>
       <Route path="*" element={<NotFoundPage />} />

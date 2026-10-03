@@ -70,9 +70,10 @@ describe("pack list", () => {
   it("is reachable from the nav and shows progress in the chosen direction", async () => {
     const user = userEvent.setup();
     renderApp("/");
-    await user.click(await screen.findByRole("link", { name: "Packs" }));
+    await user.click(await screen.findByRole("link", { name: "Add words" }));
 
-    expect(await screen.findByRole("heading", { name: "Packs" })).toBeInTheDocument();
+    expect(await screen.findByRole("heading", { name: "Add words" })).toBeInTheDocument();
+    expect(screen.getByText("Add word packs or individual words to your deck")).toBeInTheDocument();
     expect(await screen.findByRole("link", { name: "Sample pack" })).toBeInTheDocument();
     expect(screen.getByText(/1 of 3 words in your deck/)).toBeInTheDocument();
     expect(screen.getByText(/1 not available in this direction yet/)).toBeInTheDocument();
@@ -82,7 +83,7 @@ describe("pack list", () => {
 
   it("re-queries when the direction is swapped, and remembers it", async () => {
     const user = userEvent.setup();
-    renderApp("/packs");
+    renderApp("/add-words");
     await screen.findByRole("link", { name: "Sample pack" });
 
     await user.click(screen.getByRole("button", { name: "Swap languages" }));
@@ -95,7 +96,7 @@ describe("pack list", () => {
 
   it("swaps instead of allowing the same language on both sides", async () => {
     const user = userEvent.setup();
-    renderApp("/packs");
+    renderApp("/add-words");
     await screen.findByRole("link", { name: "Sample pack" });
 
     await user.selectOptions(screen.getByRole("combobox", { name: "Prompt language" }), "nl");
@@ -105,14 +106,14 @@ describe("pack list", () => {
   });
 
   it("uses a direction from the URL", async () => {
-    renderApp("/packs?from=nl&to=en");
+    renderApp("/add-words?from=nl&to=en");
     await screen.findByText(/No words available in this direction yet/);
     expect(screen.getByRole("combobox", { name: "Prompt language" })).toHaveValue("nl");
   });
 
   it("filters packs by name or description as you type", async () => {
     const user = userEvent.setup();
-    renderApp("/packs");
+    renderApp("/add-words");
     await screen.findByRole("link", { name: "Sample pack" });
     const box = screen.getByRole("searchbox", { name: "Search packs" });
 
@@ -139,7 +140,7 @@ describe("pack list", () => {
           pack("d", "Fish and sea", "Sea life"),
         ],
       });
-    renderApp("/packs");
+    renderApp("/add-words");
     await screen.findByRole("link", { name: "Cooking" });
 
     await user.type(screen.getByRole("searchbox", { name: "Search packs" }), "fish");
@@ -150,8 +151,37 @@ describe("pack list", () => {
 
   it("shows an error when packs cannot be loaded", async () => {
     mock.handlers[`GET /packs?${EN_NL}`] = () => json(500, { error: "boom" });
-    renderApp("/packs");
+    renderApp("/add-words");
     expect(await screen.findByText(/Could not load packs/)).toBeInTheDocument();
+  });
+});
+
+describe("addresses", () => {
+  it("lives at /add-words, with each pack under it", async () => {
+    renderApp("/add-words?from=en&to=nl");
+    const link = await screen.findByRole("link", { name: "Sample pack" });
+    expect(link).toHaveAttribute("href", "/add-words/p1?from=en&to=nl");
+  });
+
+  it("links back from a pack to the list, keeping the direction", async () => {
+    renderApp("/add-words/p1?from=nl&to=en");
+    expect(await screen.findByRole("link", { name: "← All packs" })).toHaveAttribute(
+      "href",
+      "/add-words?from=nl&to=en",
+    );
+  });
+
+  it("sends the old /packs address to /add-words, keeping the direction", async () => {
+    renderApp("/packs?from=nl&to=en");
+    expect(await screen.findByRole("heading", { name: "Add words" })).toBeInTheDocument();
+    expect(screen.getByRole("combobox", { name: "Prompt language" })).toHaveValue("nl");
+    expect(screen.getByRole("combobox", { name: "Answer language" })).toHaveValue("en");
+  });
+
+  it("sends an old pack address to the pack under /add-words", async () => {
+    renderApp("/packs/p1?from=en&to=nl");
+    expect(await screen.findByRole("heading", { name: "Sample pack" })).toBeInTheDocument();
+    expect(screen.getByRole("link", { name: "← All packs" })).toHaveAttribute("href", "/add-words?from=en&to=nl");
   });
 });
 
@@ -183,7 +213,7 @@ describe("pack categories", () => {
   });
 
   it("offers each category with its pack count, and All", async () => {
-    renderApp("/packs");
+    renderApp("/add-words");
     const group = await screen.findByRole("group", { name: "Category" });
     const labels = within(group).getAllByRole("button").map((b) => b.textContent);
     expect(labels).toEqual(["All7", "Most common words3", "Topics2", "Verbs1", "Grammar words1"]);
@@ -192,7 +222,7 @@ describe("pack categories", () => {
 
   it("shows only the chosen category, and all packs again on All", async () => {
     const user = userEvent.setup();
-    renderApp("/packs");
+    renderApp("/add-words");
     await user.click(await screen.findByRole("button", { name: /^Topics/ }));
     expect(names()).toEqual(["Food: the basics", "Weather"]);
     expect(screen.getByRole("button", { name: /^Topics/ })).toHaveAttribute("aria-pressed", "true");
@@ -206,14 +236,14 @@ describe("pack categories", () => {
 
   it("lists the frequency packs in number order, not letter order", async () => {
     const user = userEvent.setup();
-    renderApp("/packs");
+    renderApp("/add-words");
     await user.click(await screen.findByRole("button", { name: /^Most common words/ }));
     expect(names()).toEqual(["Dutch words 1–500", "Dutch words 501–1000", "Dutch words 1001–1500"]);
   });
 
   it("combines the category with the search box", async () => {
     const user = userEvent.setup();
-    renderApp("/packs");
+    renderApp("/add-words");
     await user.click(await screen.findByRole("button", { name: /^Topics/ }));
     await user.type(screen.getByRole("searchbox", { name: "Search packs" }), "rain");
     expect(names()).toEqual(["Weather"]);
@@ -227,7 +257,7 @@ describe("pack categories", () => {
     mock.handlers[`GET /packs?${EN_NL}`] = () =>
       json(200, { packs: packs.map((p) => (p.category === "verbs" ? { ...p, addedCount: 10 } : p)) });
     const user = userEvent.setup();
-    renderApp("/packs");
+    renderApp("/add-words");
     await user.click(await screen.findByRole("button", { name: /^Verbs/ }));
     await user.click(screen.getByRole("button", { name: "Hide already added results" }));
     expect(screen.getByText("Every pack here is already in your deck.")).toBeInTheDocument();
@@ -235,7 +265,7 @@ describe("pack categories", () => {
 
   it("does not offer the filter when every pack is in one category", async () => {
     mock.handlers[`GET /packs?${EN_NL}`] = () => json(200, { packs: packs.filter((p) => p.category === "topic") });
-    renderApp("/packs");
+    renderApp("/add-words");
     await screen.findByRole("link", { name: "Weather" });
     expect(screen.queryByRole("group", { name: "Category" })).not.toBeInTheDocument();
   });
@@ -244,13 +274,13 @@ describe("pack categories", () => {
     const goToDashboardAndBack = async (user: ReturnType<typeof userEvent.setup>) => {
       await user.click(screen.getByRole("link", { name: "Dashboard" }));
       await screen.findByRole("heading", { name: "Dashboard" });
-      await user.click(screen.getByRole("link", { name: "Packs" }));
-      await screen.findByRole("heading", { name: "Packs" });
+      await user.click(screen.getByRole("link", { name: "Add words" }));
+      await screen.findByRole("heading", { name: "Add words" });
     };
 
     it("finds the category, search text and hide toggle as they were after leaving and coming back", async () => {
       const user = userEvent.setup();
-      renderApp("/packs");
+      renderApp("/add-words");
       await user.click(await screen.findByRole("button", { name: /^Topics/ }));
       await user.click(screen.getByRole("button", { name: "Hide already added results" }));
       await user.type(screen.getByRole("searchbox", { name: "Search packs" }), "rain");
@@ -267,7 +297,7 @@ describe("pack categories", () => {
     it("remembers that you were searching for words", async () => {
       mock.handlers["GET /concepts/search"] = () => json(200, { concepts: [], hasMore: false });
       const user = userEvent.setup();
-      renderApp("/packs");
+      renderApp("/add-words");
       await user.click(await screen.findByRole("button", { name: "Words" }));
       await user.type(screen.getByRole("searchbox", { name: "Search words" }), "hond");
 
@@ -281,11 +311,11 @@ describe("pack categories", () => {
 
     it("survives reloading the page", async () => {
       const user = userEvent.setup();
-      const view = renderApp("/packs");
+      const view = renderApp("/add-words");
       await user.click(await screen.findByRole("button", { name: /^Verbs/ }));
       view.unmount();
 
-      renderApp("/packs");
+      renderApp("/add-words");
       expect(await screen.findByRole("button", { name: /^Verbs/ })).toHaveAttribute("aria-pressed", "true");
       expect(names()).toEqual(["Verbs: movement"]);
     });
@@ -294,7 +324,7 @@ describe("pack categories", () => {
       sessionStorage.setItem("remembered:packs:category", JSON.stringify("bogus"));
       sessionStorage.setItem("remembered:packs:mode", JSON.stringify("nonsense"));
       sessionStorage.setItem("remembered:packs:query", "{not json");
-      renderApp("/packs");
+      renderApp("/add-words");
       expect(await screen.findByRole("button", { name: /^All/ })).toHaveAttribute("aria-pressed", "true");
       expect(screen.getByRole("button", { name: "Packs" })).toHaveAttribute("aria-pressed", "true");
       expect(screen.getByRole("searchbox", { name: "Search packs" })).toHaveValue("");
@@ -304,7 +334,7 @@ describe("pack categories", () => {
 
   it("is only for packs: the word search has no category filter", async () => {
     const user = userEvent.setup();
-    renderApp("/packs");
+    renderApp("/add-words");
     await screen.findByRole("group", { name: "Category" });
     await user.click(screen.getByRole("button", { name: "Words" }));
     expect(screen.queryByRole("group", { name: "Category" })).not.toBeInTheDocument();
@@ -320,7 +350,7 @@ describe("word search", () => {
   const lastSearch = () => mock.calls.filter((c) => c.startsWith("GET /concepts/search")).at(-1)!;
 
   async function openWords(user: ReturnType<typeof userEvent.setup>) {
-    renderApp("/packs");
+    renderApp("/add-words");
     await screen.findByRole("link", { name: "Sample pack" });
     await user.click(screen.getByRole("button", { name: "Words" }));
     return screen.getByRole("searchbox", { name: "Search words" });
@@ -394,7 +424,7 @@ describe("word search", () => {
 
 describe("pack detail", () => {
   it("lists words with articles and per-word status", async () => {
-    renderApp(`/packs/p1?from=en&to=nl`);
+    renderApp(`/add-words/p1?from=en&to=nl`);
     expect(await screen.findByRole("heading", { name: "Sample pack" })).toBeInTheDocument();
 
     const items = await screen.findAllByRole("listitem");
@@ -409,7 +439,7 @@ describe("pack detail", () => {
 
   it("adds a single word and updates its status", async () => {
     const user = userEvent.setup();
-    renderApp(`/packs/p1?from=en&to=nl`);
+    renderApp(`/add-words/p1?from=en&to=nl`);
     await user.click(await screen.findByRole("button", { name: "Add house to my deck" }));
 
     expect(mock.calls).toContain("POST /concepts/c2/add");
@@ -419,7 +449,7 @@ describe("pack detail", () => {
 
   it("adds the whole pack and reports what happened", async () => {
     const user = userEvent.setup();
-    renderApp(`/packs/p1?from=en&to=nl`);
+    renderApp(`/add-words/p1?from=en&to=nl`);
     await user.click(await screen.findByRole("button", { name: "Add all to my deck" }));
 
     // The spinner holds the request for a moment, so wait for the message itself.
@@ -442,7 +472,7 @@ describe("pack detail", () => {
       return json(200, { added: 3, alreadyInDeck: 0, unavailable: 1 });
     };
     const user = userEvent.setup();
-    renderApp(`/packs/p1?from=en&to=nl`);
+    renderApp(`/add-words/p1?from=en&to=nl`);
     await user.click(await screen.findByRole("button", { name: "Add reverse cards (NL → EN)" }));
 
     expect(await screen.findByText(/NL → EN: Added 3 new cards/)).toBeInTheDocument();
@@ -456,7 +486,7 @@ describe("pack detail", () => {
           { id: "p1", slug: "sample", name: "Sample pack", description: null, conceptCount: 4, availableCount: 3, addedCount: 3 },
         ],
       });
-    const view = renderApp(`/packs/p1?from=en&to=nl`);
+    const view = renderApp(`/add-words/p1?from=en&to=nl`);
     expect(await screen.findByRole("button", { name: "All reverse cards added" })).toBeDisabled();
     view.unmount();
 
@@ -466,14 +496,14 @@ describe("pack detail", () => {
           { id: "p1", slug: "sample", name: "Sample pack", description: null, conceptCount: 4, availableCount: 0, addedCount: 0 },
         ],
       });
-    renderApp(`/packs/p1?from=en&to=nl`);
+    renderApp(`/add-words/p1?from=en&to=nl`);
     expect(await screen.findByRole("button", { name: "Add reverse cards (NL → EN)" })).toBeDisabled();
   });
 
   it("explains when the pack does not exist", async () => {
     mock.handlers[`GET /packs/nope?${EN_NL}&limit=1000`] = () =>
       json(404, { error: "Pack not found" });
-    renderApp(`/packs/nope?from=en&to=nl`);
+    renderApp(`/add-words/nope?from=en&to=nl`);
     expect(await screen.findByText("That pack was not found.")).toBeInTheDocument();
   });
 
@@ -490,7 +520,7 @@ describe("pack detail", () => {
     mock.handlers[`GET /packs/p1?${EN_NL}&limit=1000`] = () =>
       json(200, { pack, concepts: page(0, 53) });
 
-    renderApp(`/packs/p1?from=en&to=nl`);
+    renderApp(`/add-words/p1?from=en&to=nl`);
     expect(await screen.findByText("word52")).toBeInTheDocument();
     expect(screen.getByText("word0")).toBeInTheDocument();
     expect(screen.queryByRole("button", { name: "Load more" })).not.toBeInTheDocument();
@@ -504,6 +534,6 @@ describe("dashboard link", () => {
     mock.handlers["GET /study/counts"] = () =>
       json(200, { now: "x", counts: { learning: 0, review: 0, new: 0 } });
     renderApp("/");
-    expect(await screen.findByRole("link", { name: "Browse packs" })).toHaveAttribute("href", "/packs");
+    expect(await screen.findByRole("link", { name: "Browse words" })).toHaveAttribute("href", "/add-words");
   });
 });

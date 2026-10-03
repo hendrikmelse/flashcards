@@ -47,8 +47,8 @@ function PackList({ languages }: { languages: LanguageInfo[] }) {
 
   return (
     <>
-      <h1>Packs</h1>
-      <p className="lead">Pick a pack of words to add to your deck, or look up a single word.</p>
+      <h1>Add words</h1>
+      <p className="lead">Add word packs or individual words to your deck</p>
       <DirectionPicker languages={languages} direction={direction} onChange={setDirection} />
 
       <input
@@ -154,7 +154,7 @@ function PackResults({
           return (
             <li key={pack.id} className="pack-card">
               <h2>
-                <Link to={`/packs/${pack.id}${search}`}>{pack.name}</Link>
+                <Link to={`/add-words/${pack.id}${search}`}>{pack.name}</Link>
               </h2>
               {pack.description && <p className="muted">{pack.description}</p>}
               {available === 0 ? (

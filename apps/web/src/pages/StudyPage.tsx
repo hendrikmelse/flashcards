@@ -366,7 +366,7 @@ function Summary({
         <h2>You&rsquo;re all caught up</h2>
         <p className="muted">Nothing is due right now. Add more words to keep learning.</p>
         <p>
-          <Link to="/packs">Browse packs</Link> · <Link to="/">Back to the dashboard</Link>
+          <Link to="/add-words">Browse packs</Link> · <Link to="/">Back to the dashboard</Link>
         </p>
       </div>
     );

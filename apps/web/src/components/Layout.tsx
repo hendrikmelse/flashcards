@@ -16,8 +16,7 @@ export function Layout() {
           <NavLink to="/" end>
             Dashboard
           </NavLink>
-          <NavLink to="/study">Study</NavLink>
-          <NavLink to="/packs">Packs</NavLink>
+          <NavLink to="/add-words">Add words</NavLink>
         </nav>
         <div className="account">
           <span className="email">{user?.name ? `Hi, ${user.name}` : user?.email}</span>
