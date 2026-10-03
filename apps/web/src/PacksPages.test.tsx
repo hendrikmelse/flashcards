@@ -171,7 +171,6 @@ describe("the way back to the dashboard", () => {
       json(200, {
         summary: { total: 0, new: 0, learning: 0, relearning: 0, review: 0, dueNow: 0 },
         hasMore: false,
-        mirrorable: 0,
         cards: [],
       });
     const user = userEvent.setup();

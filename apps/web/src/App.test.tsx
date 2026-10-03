@@ -310,7 +310,6 @@ describe("dashboard", () => {
       json(200, {
         summary: { total: 0, new: 0, learning: 0, relearning: 0, review: 0, dueNow: 0 },
         hasMore: false,
-        mirrorable: 0,
         cards: [],
       });
     const headerOf = async (route: string, heading: string) => {

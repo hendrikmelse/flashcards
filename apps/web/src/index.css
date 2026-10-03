@@ -695,18 +695,6 @@ button.link {
   gap: 1rem;
 }
 
-.mirror-bar {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 0.5rem 1rem;
-  margin: 0 0 1rem;
-}
-
-.mirror-bar .muted {
-  font-size: 0.9rem;
-}
-
 /* The part of a deck row that opens the card. */
 button.row-open {
   flex: 1;
@@ -790,18 +778,9 @@ button.row-open:focus-visible .prompt {
   padding-block: 0;
 }
 
-/* Fixed widths, so the Add reverse button and the status stay put whatever the due text says. */
-.reverse-slot {
-  display: flex;
-  justify-content: flex-end;
-  min-width: 7.5rem;
-}
-
 .card-status {
   display: grid;
   flex-shrink: 0;
-  box-sizing: border-box;
-  width: 9.5rem;
   justify-items: end;
   text-align: right;
   font-size: 0.9rem;
@@ -1504,3 +1483,54 @@ button.rating kbd {
   font-size: 1.5rem;
   font-weight: 700;
 }
+
+/* Phones. The top bar fits on two rows instead of three, the segmented controls fit the screen
+   (and scroll if they still do not), and a deck row puts the word on its own line with the status
+   and the Add reverse button beneath it, instead of squeezing the word into what is left. */
+@media (max-width: 36rem) {
+  .topbar {
+    gap: 0.5rem 0.75rem;
+  }
+
+  .topbar .account {
+    order: 2;
+  }
+
+  .topbar nav {
+    order: 3;
+    flex-basis: 100%;
+  }
+
+  .toggle {
+    max-width: 100%;
+    overflow-x: auto;
+    scrollbar-width: none; /* it scrolls if it must, without a bar across the buttons */
+  }
+
+  .toggle button {
+    padding: 0.4rem 0.5rem;
+    font-size: 0.9rem;
+    white-space: nowrap;
+  }
+
+  .toggle .count {
+    margin-left: 0.3rem;
+  }
+
+  .concept-list li.card-row {
+    flex-wrap: wrap;
+    gap: 0;
+  }
+
+  .concept-list li.card-row button.row-open {
+    flex: 1 1 100%;
+    padding-bottom: 0.25rem;
+  }
+
+  .concept-list li.card-row .card-actions {
+    flex: 1 1 100%;
+    justify-content: flex-end;
+    padding-bottom: 0.65rem;
+  }
+}
+

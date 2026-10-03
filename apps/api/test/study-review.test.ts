@@ -686,7 +686,8 @@ describe("review cards come due at the start of a study day", () => {
 });
 
 describe("the daily new-card limit", () => {
-  // Six new cards (three words, both directions) and a limit of 2. `logs` are first looks at new
+  // Six new cards (six different words, one direction: a word is not offered both ways on the same
+  // day, which would change what these tests count) and a limit of 2. `logs` are first looks at new
   // cards today, or at the given time, with the rating given.
   async function setup(
     logs: { rating: "again" | "hard" | "good" | "easy"; stateBefore?: "new" | "learning"; when?: Date }[],
@@ -694,15 +695,15 @@ describe("the daily new-card limit", () => {
   ) {
     const me = await scratchUser();
     await db.update(users).set({ dailyNewCardLimit: limit }).where(eq(users.id, me.id));
-    const cs = await db.select().from(concepts);
+    const stamp = randomUUID();
+    const cs = await db
+      .insert(concepts)
+      .values(Array.from({ length: 6 }, (_, i) => ({ key: `limit-${stamp}-${i}`, gloss: `limit ${stamp} ${i}` })))
+      .returning();
     // The first cards are the ones that were looked at; they are no longer new.
     const cards = await db
       .insert(userCards)
-      .values(
-        ["en", "nl"].flatMap((from) =>
-          cs.map((c) => ({ userId: me.id, conceptId: c.id, fromLanguage: from, toLanguage: from === "en" ? "nl" : "en" })),
-        ),
-      )
+      .values(cs.map((c) => ({ userId: me.id, conceptId: c.id, fromLanguage: "en", toLanguage: "nl" })))
       .returning();
     for (const card of cards.slice(0, logs.length)) {
       await db

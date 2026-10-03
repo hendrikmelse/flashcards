@@ -92,7 +92,6 @@ describe("GET /deck/:id", () => {
       state: "review",
       intervalDays: 12,
       lapses: 2,
-      hasMirror: true,
     });
     expect(card.front).toHaveLength(1);
     expect(card.front[0]).toMatchObject({ language: "en", lemma: "dog" });

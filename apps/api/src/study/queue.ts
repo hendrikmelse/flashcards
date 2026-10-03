@@ -1,4 +1,4 @@
-import { and, asc, count, eq, exists, gte, inArray, lte, max, or, sql } from "drizzle-orm";
+import { and, asc, count, eq, exists, gte, inArray, lte, max, not, or, sql } from "drizzle-orm";
 import { alias } from "drizzle-orm/pg-core";
 import { EARLY_START_WINDOW_MS, SESSION_GAP_MS, type EntryView, type Scope } from "@flashcards/shared";
 import { loadEntries, loadSentences, sentenceKey } from "../content/queries.js";
@@ -14,6 +14,8 @@ import { inPair, inScope, pairOf } from "./scope.js";
 export const LEARN_AHEAD_MS = 20 * 60 * 1000;
 
 const reverse = alias(userCards, "reverse");
+// The other direction of a card's word, when looking for one that was first shown today.
+const introduced = alias(userCards, "introduced");
 
 export interface StudyCard {
   id: string;
@@ -78,7 +80,28 @@ async function prepare(db: Db, userId: string, opts: Omit<Options, "limit">, now
     gated && !early ? sql`false` : undefined,
   );
   const reviewDue = and(mine, eq(userCards.state, "review"), lte(userCards.dueAt, asOf));
-  const isNew = and(mine, eq(userCards.state, "new"));
+  const dayStart = studyDayStart(now, user.timezone);
+  const isNewAtAll = and(mine, eq(userCards.state, "new"));
+  // A new card whose reverse (same word, other direction) was first shown today waits until the
+  // next study day: seeing a word both ways in one day is not much of a test of either, and the
+  // second look would just be the first one again. Only a first look counts, whatever the answer.
+  const reverseIntroducedToday = exists(
+    db
+      .select({ one: sql`1` })
+      .from(reviewLogs)
+      .innerJoin(introduced, eq(introduced.id, reviewLogs.userCardId))
+      .where(
+        and(
+          eq(reviewLogs.userId, userId),
+          eq(reviewLogs.stateBefore, "new"),
+          gte(reviewLogs.reviewedAt, dayStart),
+          eq(introduced.conceptId, userCards.conceptId),
+          eq(introduced.fromLanguage, userCards.toLanguage),
+          eq(introduced.toLanguage, userCards.fromLanguage),
+        ),
+      ),
+  );
+  const isNew = and(isNewAtAll, not(reverseIntroducedToday));
 
   // The daily new-card limit is per language pair, not per direction: it counts the cards the
   // user saw for the first time in the pair since the study day began and had to learn. A new card marked
@@ -93,7 +116,7 @@ async function prepare(db: Db, userId: string, opts: Omit<Options, "limit">, now
         deckReviews,
         eq(reviewLogs.stateBefore, "new"),
         inArray(reviewLogs.rating, ["again", "hard"]),
-        gte(reviewLogs.reviewedAt, studyDayStart(now, user.timezone)),
+        gte(reviewLogs.reviewedAt, dayStart),
       ),
     );
   const newAllowed = Math.max(0, user.dailyNewCardLimit - introducedToday);
@@ -111,6 +134,8 @@ async function prepare(db: Db, userId: string, opts: Omit<Options, "limit">, now
     learningDue,
     reviewDue,
     isNew,
+    // New cards as they will be tomorrow, when none is held back for its reverse any more.
+    isNewTomorrow: isNewAtAll,
     counts,
     gateAt: gated ? gateAt : null,
     mine,
@@ -135,7 +160,7 @@ export async function getStudyCounts(
   nextSession: { at: Date; count: number } | null;
   tomorrow: number;
 }> {
-  const { counts, gateAt, mine, countWhere, isNew, user } = await prepare(db, userId, opts, now);
+  const { counts, gateAt, mine, countWhere, isNewTomorrow, user } = await prepare(db, userId, opts, now);
 
   let nextSession: { at: Date; count: number } | null = null;
   if (gateAt) {
@@ -163,7 +188,7 @@ export async function getStudyCounts(
         lte(userCards.dueAt, end),
       ),
     )) + (await countWhere(and(mine, eq(userCards.state, "review"), lte(userCards.dueAt, end))));
-  const newTomorrow = Math.min(user.dailyNewCardLimit, await countWhere(isNew));
+  const newTomorrow = Math.min(user.dailyNewCardLimit, await countWhere(isNewTomorrow));
 
   return { now, counts, nextSession, tomorrow: dueByTomorrow + newTomorrow };
 }

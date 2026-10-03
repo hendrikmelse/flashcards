@@ -186,12 +186,11 @@ export function useDeckCards(
   term: string,
   sort: DeckSort,
   order: "asc" | "desc",
-  missingMirror: boolean,
 ) {
   const { pair } = useActiveLanguages();
   const key = direction ? [direction.from, direction.to] : ["all"];
   return useInfiniteQuery({
-    queryKey: ["deck", "list", pair, ...key, stage, term, sort, order, missingMirror],
+    queryKey: ["deck", "list", pair, ...key, stage, term, sort, order],
     initialPageParam: 0,
     placeholderData: (previous) => previous,
     queryFn: async ({ pageParam }) => {
@@ -204,7 +203,6 @@ export function useDeckCards(
       if (term) params.set("q", term);
       params.set("sort", sort);
       params.set("order", order);
-      if (missingMirror) params.set("missingMirror", "1");
       const request = api<DeckResponse>(`/deck?${params}`);
       const wait = pageParam === 0 ? 0 : MIN_SPINNER_MS;
       const [page] = await Promise.all([request, new Promise((r) => setTimeout(r, wait))]);

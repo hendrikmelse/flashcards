@@ -49,7 +49,9 @@ export function HowItWorksPage() {
           <strong>New.</strong> You haven’t seen it yet. New cards are introduced in the order you
           added them, and pack order within a pack. The exception: if you already know a word one
           way (its reverse card is in review, or relearning after a slip), the new card for the
-          other direction jumps to the front of the line.
+          other direction jumps to the front of the line. But a word never comes both ways on the
+          same day: once you have seen one direction of a new word, the other waits until the
+          next day.
         </li>
         <li>
           <strong>Learning.</strong> A new card goes through two short steps before it graduates. A

@@ -7,7 +7,7 @@ import { afterAll, beforeAll, describe, expect, it } from "vitest";
 import { buildApp } from "../src/app.js";
 import { insertUserCards } from "../src/content/queries.js";
 import * as schema from "../src/db/schema.js";
-import { concepts, entries, languages, userCards } from "../src/db/schema.js";
+import { concepts, languages, userCards } from "../src/db/schema.js";
 import { seedLanguages } from "../src/db/seed.js";
 
 // Each language pair is a deck of its own. The app only supports English and Dutch so far, so a
@@ -51,12 +51,6 @@ beforeAll(async () => {
       .values(Array.from({ length: 12 }, (_, i) => ({ key: `word-${i}`, gloss: `word ${i}` })))
       .returning({ id: concepts.id })
   ).map((c) => c.id);
-  // Words 1 to 3 have a word in all three languages, so a reverse card can be made for them.
-  await db.insert(entries).values(
-    conceptIds.slice(1, 4).flatMap((conceptId, i) =>
-      ["en", "nl", "fr"].map((language) => ({ conceptId, language, lemma: `${language}-${i + 1}`, partOfSpeech: "noun" })),
-    ),
-  );
   app = await buildApp({ db, logger: false, authRateLimit: 1000 });
 }, 60_000);
 
@@ -129,14 +123,6 @@ describe("scoping to a language pair", () => {
     ]);
     const all = (await get("/stats")).json();
     expect(all.directions).toHaveLength(4);
-  });
-
-  it("adds the reverse cards within the pair only", async () => {
-    // English to Dutch has one card without a reverse (word 2), and English to French has three.
-    const res = await post("/deck/mirrors", { pair: "en-nl" });
-    expect(res.json()).toEqual({ added: 1 });
-    expect((await get("/deck?limit=1&pair=en-nl")).json().summary.total).toBe(6);
-    expect((await get("/deck?limit=1&pair=en-fr")).json().summary.total).toBe(5);
   });
 
   it("rejects a pair that is not written as two codes, or a direction outside it", async () => {

@@ -6,7 +6,6 @@ import {
 } from "@tanstack/react-query";
 import type {
   AddConceptResult,
-  AddMirrorsResult,
   AddPackResult,
   ConceptCardDetail,
   ConceptSearchResponse,
@@ -116,42 +115,6 @@ export function useAddPack(packId: string) {
   });
 }
 
-// One card's reverse: the same word, studied the other way around.
-export function useAddMirror() {
-  const invalidate = useInvalidateAfterDeckChange();
-  return useMutation({
-    mutationFn: async (v: { cardId: string; conceptId: string; fromLanguage: string; toLanguage: string }) => {
-      const [result] = await Promise.all([
-        api<AddConceptResult>(`/concepts/${v.conceptId}/add`, {
-          method: "POST",
-          body: { fromLanguage: v.fromLanguage, toLanguage: v.toLanguage },
-        }),
-        new Promise((resolve) => setTimeout(resolve, MIN_SPINNER_MS)),
-      ]);
-      return result;
-    },
-    onSuccess: invalidate,
-  });
-}
-
-// The reverse of every card in a view of the deck that does not have one yet.
-export type MirrorFilter = { fromLanguage?: string; toLanguage?: string; state?: string; q?: string };
-export function useAddMirrors() {
-  const invalidate = useInvalidateAfterDeckChange();
-  const { pair } = useActiveLanguages();
-  return useMutation({
-    mutationFn: async (filter: MirrorFilter) => {
-      const [result] = await Promise.all([
-        api<AddMirrorsResult>("/deck/mirrors", { method: "POST", body: { ...filter, pair } }),
-        new Promise((resolve) => setTimeout(resolve, MIN_SPINNER_MS)),
-      ]);
-      return result;
-    },
-    onSuccess: invalidate,
-  });
-}
-
-// Adds one word in both directions.
 export function useAddConcept() {
   const invalidate = useInvalidateAfterDeckChange();
   const { direction } = useActiveLanguages();
