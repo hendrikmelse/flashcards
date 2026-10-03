@@ -72,6 +72,7 @@ export function useUpdateSettings() {
     },
     onSuccess: (settings) => {
       qc.setQueryData(["settings"], settings);
+      qc.setQueryData<PublicUser | null | undefined>(ME, (user) => (user ? { ...user, name: settings.name } : user));
       for (const key of ["study", "stats", "deck"]) qc.invalidateQueries({ queryKey: [key] });
     },
   });

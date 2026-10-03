@@ -112,7 +112,7 @@ All routes live under `/api`.
 | `POST /deck/mirrors` | Adds the reverse card for every card in a view of the deck (direction, stage and search, as in `GET /deck`) that has none. Idempotent |
 | `GET /study` | Read-only batch. Due learning and review cards (learning ones within 20 minutes) ranked by how likely each is to have been forgotten, with new cards (up to the daily limit) spread through the first half of the queue. Learning cards are held back until 15 minutes after the last answer (the gap between sessions); `early=1` lets the next session start in the last 5 minutes of that wait |
 | `GET /study/counts` | The counts of learning, review and new cards, for the dashboard, plus `nextSession` (when the held-back cards open and how many will be ready) while a session gap is running, and `tomorrow` (how many cards will be waiting by the end of tomorrow's study day) |
-| `GET /settings`, `PATCH /settings` | The account's email, time zone and daily new-card limit; the two can be changed. A new time zone moves due review cards to the start of the same day there |
+| `GET /settings`, `PATCH /settings` | The account's email, name, time zone and daily new-card limit; all but the email can be changed. A new time zone moves due review cards to the start of the same day there |
 | `GET /stats` | Reviews today, when the next card is due, and a per-direction breakdown of the deck, including what is ready to study in each |
 | `POST /reviews` | Transactional. A card in review comes due at the start of a study day (04:00 in the user's time zone) and the scheduler counts whole days between reviews; cards still learning keep real-time steps. Locks the card, runs FSRS, updates state and appends to the log. Idempotent via `clientReviewId` |
 
@@ -165,7 +165,7 @@ The full runbook, including server setup, rollback, backups and how to invite so
 
 ## Status and roadmap
 
-**Built:** auth with invite-only registration, a settings page (daily new cards, time zone), the content model and importer (about 5,900 concepts in 88 packs, in four categories), the pack browser with pack and word search, the deck viewer (search, filters, sorting, adding reverse cards), the dashboard, study sessions (FSRS scheduling, queue ordered by chance of forgetting, a 15-minute gap between sessions, a pause before a missed card repeats), the explainer page, and production deployment with CI and nightly backups.
+**Built:** auth with invite-only registration, a settings page (name, daily new cards, time zone), an optional name at sign-up shown in the top corner, the content model and importer (about 5,900 concepts in 88 packs, in four categories), the pack browser with pack and word search, the deck viewer (search, filters, sorting, adding reverse cards), the dashboard, study sessions (FSRS scheduling, queue ordered by chance of forgetting, a 15-minute gap between sessions, a pause before a missed card repeats), the explainer page, and production deployment with CI and nightly backups.
 
 ### Before anyone other than the owner uses it
 

@@ -20,7 +20,7 @@ export function Layout() {
           <NavLink to="/packs">Packs</NavLink>
         </nav>
         <div className="account">
-          <span className="email">{user?.email}</span>
+          <span className="email">{user?.name ? `Hi, ${user.name}` : user?.email}</span>
           <NavLink to="/settings" className="icon-button" aria-label="Settings" data-tooltip="Settings">
             <GearIcon />
           </NavLink>

@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState, type FormEvent } from "react";
-import { DAILY_NEW_CARD_MAX, updateSettingsSchema, type Settings } from "@flashcards/shared";
+import { DAILY_NEW_CARD_MAX, NAME_MAX, updateSettingsSchema, type Settings } from "@flashcards/shared";
 import { useSettings, useUpdateSettings } from "../api/hooks";
 
 // How long the checkmark replaces the "Save" label after a save.
@@ -23,32 +23,41 @@ export function SettingsPage() {
 
 function SettingsForm({ saved }: { saved: Settings }) {
   const update = useUpdateSettings();
+  const [name, setName] = useState(saved.name ?? "");
   const [limit, setLimit] = useState(String(saved.dailyNewCardLimit));
   const [timezone, setTimezone] = useState(saved.timezone);
   const [limitError, setLimitError] = useState<string | null>(null);
+  const [nameError, setNameError] = useState<string | null>(null);
   // Shows a checkmark on the button for a moment after a successful save.
   const [checked, setChecked] = useState(false);
   const timer = useRef<number | undefined>(undefined);
   useEffect(() => () => window.clearTimeout(timer.current), []);
 
   const detected = browserZone();
-  const changed = limit.trim() !== String(saved.dailyNewCardLimit) || timezone !== saved.timezone;
+  const changed =
+    name.trim() !== (saved.name ?? "") ||
+    limit.trim() !== String(saved.dailyNewCardLimit) ||
+    timezone !== saved.timezone;
 
   function onSubmit(e: FormEvent) {
     e.preventDefault();
     const number = Number(limit);
     const parsed = updateSettingsSchema.safeParse({
+      name,
       dailyNewCardLimit: limit.trim() === "" ? NaN : number,
       timezone,
     });
     if (!parsed.success) {
-      const bad = parsed.error.issues.some((i) => i.path[0] === "dailyNewCardLimit");
-      setLimitError(bad ? `Enter a whole number from 0 to ${DAILY_NEW_CARD_MAX}.` : null);
-      if (bad) return;
+      const badLimit = parsed.error.issues.some((i) => i.path[0] === "dailyNewCardLimit");
+      const badName = parsed.error.issues.some((i) => i.path[0] === "name");
+      setLimitError(badLimit ? `Enter a whole number from 0 to ${DAILY_NEW_CARD_MAX}.` : null);
+      setNameError(badName ? `Use ${NAME_MAX} characters or fewer.` : null);
+      if (badLimit || badName) return;
     }
     setLimitError(null);
+    setNameError(null);
     update.mutate(
-      { dailyNewCardLimit: number, timezone },
+      { name: name.trim(), dailyNewCardLimit: number, timezone },
       {
         onSuccess: () => {
           setChecked(true);
@@ -65,6 +74,23 @@ function SettingsForm({ saved }: { saved: Settings }) {
       <p className="lead">{saved.email}</p>
 
       <form className="settings" onSubmit={onSubmit} noValidate>
+        <div className="setting">
+          <label htmlFor="display-name">What should we call you?</label>
+          <input
+            id="display-name"
+            type="text"
+            autoComplete="name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            aria-invalid={nameError ? true : undefined}
+          />
+          {nameError && (
+            <p role="alert" className="field-error">
+              {nameError}
+            </p>
+          )}
+        </div>
+
         <div className="setting">
           <label htmlFor="daily-new">New cards per day</label>
           <input

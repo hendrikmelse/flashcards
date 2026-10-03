@@ -49,6 +49,69 @@ describe("auth flow", () => {
     expect(within(screen.getByRole("navigation", { name: "Main" })).queryByRole("link", { name: "Settings" })).toBeNull();
   });
 
+  it("greets you by name in the top right when there is one, and shows the email when there is not", async () => {
+    mock.loggedIn = true;
+    mock.handlers["GET /auth/me"] = () => json(200, { user: { id: "u1", email: "ann@example.com", name: "Anna" } });
+    const view = renderApp("/");
+    await screen.findByRole("heading", { name: "Dashboard" });
+    const account = () => document.querySelector(".account .email")!;
+    expect(account()).toHaveTextContent("Hi, Anna");
+    expect(account()).not.toHaveTextContent("ann@example.com");
+    view.unmount();
+
+    mock.handlers["GET /auth/me"] = () => json(200, { user: { id: "u1", email: "ann@example.com", name: null } });
+    renderApp("/");
+    await screen.findByRole("heading", { name: "Dashboard" });
+    expect(account()).toHaveTextContent("ann@example.com");
+  });
+
+  it("asks for an optional name when signing up, but not when logging in", async () => {
+    const view = renderApp("/register");
+    expect(await screen.findByLabelText(/Name/)).toBeInTheDocument();
+    expect(screen.getByText("(optional)")).toBeInTheDocument();
+    view.unmount();
+
+    renderApp("/login");
+    await screen.findByLabelText("Email");
+    expect(screen.queryByLabelText(/Name/)).not.toBeInTheDocument();
+  });
+
+  it("sends the name when one is entered, and leaves it out when not", async () => {
+    const bodies: Record<string, unknown>[] = [];
+    mock.handlers["POST /auth/register"] = (b) => {
+      bodies.push(b as Record<string, unknown>);
+      return json(201, { user: { id: "u1", email: "ann@example.com", name: null } });
+    };
+    const user = userEvent.setup();
+    const view = renderApp("/register");
+    await user.type(await screen.findByLabelText(/Name/), "  Anna ");
+    await user.type(screen.getByLabelText("Email"), "ann@example.com");
+    await user.type(screen.getByLabelText("Password"), "correct horse battery");
+    await user.click(screen.getByRole("button", { name: "Sign up" }));
+    await screen.findByRole("heading", { name: "Dashboard" });
+    expect(bodies[0]).toMatchObject({ name: "Anna", email: "ann@example.com" });
+    view.unmount();
+
+    mock.loggedIn = false;
+    renderApp("/register");
+    await user.type(await screen.findByLabelText("Email"), "bob@example.com");
+    await user.type(screen.getByLabelText("Password"), "correct horse battery");
+    await user.click(screen.getByRole("button", { name: "Sign up" }));
+    await screen.findByRole("heading", { name: "Dashboard" });
+    expect(bodies[1]).not.toHaveProperty("name");
+  });
+
+  it("refuses a name that is too long when signing up", async () => {
+    const user = userEvent.setup();
+    renderApp("/register");
+    await user.type(await screen.findByLabelText(/Name/), "x".repeat(61));
+    await user.type(screen.getByLabelText("Email"), "ann@example.com");
+    await user.type(screen.getByLabelText("Password"), "correct horse battery");
+    await user.click(screen.getByRole("button", { name: "Sign up" }));
+    expect(screen.getByText("Use 60 characters or fewer.")).toBeInTheDocument();
+    expect(mock.calls).not.toContain("POST /auth/register");
+  });
+
   it("shows an error for wrong credentials and stays on the form", async () => {
     mock.handlers["POST /auth/login"] = () => json(401, { error: "Invalid email or password" });
     const user = userEvent.setup();

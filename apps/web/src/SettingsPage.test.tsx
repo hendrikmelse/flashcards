@@ -3,7 +3,7 @@ import userEvent from "@testing-library/user-event";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import { installMockApi, json, mock, renderApp } from "./test/harness";
 
-let saved: { email: string; timezone: string; dailyNewCardLimit: number };
+let saved: { email: string; name: string | null; timezone: string; dailyNewCardLimit: number };
 let patches: unknown[];
 
 // Pretend the browser is set to this time zone.
@@ -15,7 +15,7 @@ const browserZone = (timeZone: string) =>
 beforeEach(() => {
   installMockApi();
   mock.loggedIn = true;
-  saved = { email: "ann@example.com", timezone: "Europe/Amsterdam", dailyNewCardLimit: 20 };
+  saved = { email: "ann@example.com", name: null, timezone: "Europe/Amsterdam", dailyNewCardLimit: 20 };
   patches = [];
   mock.handlers["GET /settings"] = () => json(200, saved);
   mock.handlers["PATCH /settings"] = (body) => {
@@ -43,6 +43,50 @@ describe("settings page", () => {
     expect(screen.getByRole("button", { name: "Save" })).toBeDisabled(); // nothing changed yet
   });
 
+  it("saves a name, and the top bar greets you with it straight away", async () => {
+    browserZone("Europe/Amsterdam");
+    mock.handlers["GET /auth/me"] = () => json(200, { user: { id: "u1", email: "ann@example.com", name: saved.name } });
+    const user = userEvent.setup();
+    renderApp("/settings");
+    const topBar = () => document.querySelector(".account .email")!;
+    expect(await screen.findByLabelText("What should we call you?")).toHaveValue("");
+    expect(topBar()).toHaveTextContent("ann@example.com");
+
+    await user.type(screen.getByLabelText("What should we call you?"), "  Anna  ");
+    await user.click(screen.getByRole("button", { name: "Save" }));
+    await screen.findByRole("button", { name: "Saved" });
+    expect(patches).toEqual([{ name: "Anna", dailyNewCardLimit: 20, timezone: "Europe/Amsterdam" }]);
+    expect(topBar()).toHaveTextContent("Hi, Anna");
+    expect(topBar()).not.toHaveTextContent("ann@example.com");
+  });
+
+  it("clears the name, so the top bar goes back to the email", async () => {
+    browserZone("Europe/Amsterdam");
+    saved.name = "Anna";
+    mock.handlers["GET /auth/me"] = () => json(200, { user: { id: "u1", email: "ann@example.com", name: "Anna" } });
+    const user = userEvent.setup();
+    renderApp("/settings");
+    const input = await screen.findByLabelText("What should we call you?");
+    expect(input).toHaveValue("Anna");
+    expect(document.querySelector(".account .email")).toHaveTextContent("Hi, Anna");
+
+    await user.clear(input);
+    await user.click(screen.getByRole("button", { name: "Save" }));
+    await screen.findByRole("button", { name: "Saved" });
+    expect(patches[0]).toMatchObject({ name: "" });
+    expect(document.querySelector(".account .email")).toHaveTextContent("ann@example.com");
+  });
+
+  it("refuses a name that is too long, without calling the server", async () => {
+    browserZone("Europe/Amsterdam");
+    const user = userEvent.setup();
+    renderApp("/settings");
+    await user.type(await screen.findByLabelText("What should we call you?"), "x".repeat(61));
+    await user.click(screen.getByRole("button", { name: "Save" }));
+    expect(await screen.findByRole("alert")).toHaveTextContent("Use 60 characters or fewer.");
+    expect(patches).toEqual([]);
+  });
+
   it("saves a new daily limit", async () => {
     browserZone("Europe/Amsterdam");
     const user = userEvent.setup();
@@ -53,7 +97,7 @@ describe("settings page", () => {
     await user.click(screen.getByRole("button", { name: "Save" }));
 
     expect(await screen.findByRole("button", { name: "Saved" })).toBeInTheDocument();
-    expect(patches).toEqual([{ dailyNewCardLimit: 35, timezone: "Europe/Amsterdam" }]);
+    expect(patches).toEqual([{ name: "", dailyNewCardLimit: 35, timezone: "Europe/Amsterdam" }]);
     expect(screen.getByLabelText("New cards per day")).toHaveValue(35);
     expect(screen.getByRole("button", { name: "Saved" })).toBeDisabled();
   });
@@ -119,7 +163,7 @@ describe("settings page", () => {
     await user.selectOptions(await screen.findByLabelText("Time zone"), "America/New_York");
     await user.click(screen.getByRole("button", { name: "Save" }));
     await screen.findByRole("button", { name: "Saved" });
-    expect(patches).toEqual([{ dailyNewCardLimit: 20, timezone: "America/New_York" }]);
+    expect(patches).toEqual([{ name: "", dailyNewCardLimit: 20, timezone: "America/New_York" }]);
   });
 
   it("offers the browser's time zone when it differs from the saved one", async () => {

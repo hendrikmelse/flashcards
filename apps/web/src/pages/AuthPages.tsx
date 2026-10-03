@@ -1,11 +1,11 @@
 import { useState, type FormEvent } from "react";
 import { Link, useLocation, useNavigate } from "react-router";
-import { loginSchema, registerSchema } from "@flashcards/shared";
+import { NAME_MAX, loginSchema, registerSchema } from "@flashcards/shared";
 import { ApiError } from "../api/client";
 import { useLogin, useRegister } from "../api/hooks";
 
 type Mode = "login" | "register";
-type FieldErrors = { email?: string; password?: string };
+type FieldErrors = { name?: string; email?: string; password?: string };
 
 function describeError(mode: Mode, e: unknown): string {
   if (e instanceof ApiError) {
@@ -29,6 +29,7 @@ function AuthForm({ mode }: { mode: Mode }) {
   const register = useRegister();
   const mutation = mode === "login" ? login : register;
 
+  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [fieldErrors, setFieldErrors] = useState<FieldErrors>({});
@@ -38,10 +39,13 @@ function AuthForm({ mode }: { mode: Mode }) {
 
   function onSubmit(e: FormEvent) {
     e.preventDefault();
-    const parsed = (isLogin ? loginSchema : registerSchema).safeParse({ email, password });
+    const parsed = (isLogin ? loginSchema : registerSchema).safeParse(
+      isLogin ? { email, password } : { name, email, password },
+    );
     if (!parsed.success) {
       const errors: FieldErrors = {};
       for (const issue of parsed.error.issues) {
+        if (issue.path[0] === "name") errors.name = `Use ${NAME_MAX} characters or fewer.`;
         if (issue.path[0] === "email") errors.email = "Enter a valid email address.";
         if (issue.path[0] === "password") {
           errors.password = isLogin ? "Enter your password." : "Use at least 8 characters.";
@@ -54,7 +58,12 @@ function AuthForm({ mode }: { mode: Mode }) {
     // New accounts start with the browser's time zone, so the study day is right from the start.
     const data = isLogin
       ? parsed.data
-      : { ...parsed.data, timezone: Intl.DateTimeFormat().resolvedOptions().timeZone };
+      : {
+          ...parsed.data,
+          // A blank name means none: leave it out rather than send an empty one.
+          name: ("name" in parsed.data && parsed.data.name) || undefined,
+          timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
+        };
     mutation.mutate(data, { onSuccess: () => navigate(from, { replace: true }) });
   }
 
@@ -62,6 +71,27 @@ function AuthForm({ mode }: { mode: Mode }) {
     <main className="auth">
       <h1>{isLogin ? "Log in" : "Create your account"}</h1>
       <form onSubmit={onSubmit} noValidate>
+        {!isLogin && (
+          <>
+            <label>
+              Name <span className="optional">(optional)</span>
+              <input
+                type="text"
+                autoComplete="name"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                aria-invalid={fieldErrors.name ? true : undefined}
+                aria-describedby={fieldErrors.name ? "name-error" : undefined}
+              />
+            </label>
+            {fieldErrors.name && (
+              <p id="name-error" className="field-error">
+                {fieldErrors.name}
+              </p>
+            )}
+          </>
+        )}
+
         <label>
           Email
           <input

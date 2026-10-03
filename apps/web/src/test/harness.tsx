@@ -7,7 +7,7 @@ import { App } from "../App";
 export type Handler = (body: unknown) => { status: number; body?: unknown };
 export const json = (status: number, body?: unknown) => ({ status, body });
 
-export const USER = { id: "u1", email: "ann@example.com" };
+export const USER = { id: "u1", email: "ann@example.com", name: null as string | null };
 
 // Shared mutable state for one test; reset by installMockApi().
 export const mock = {
