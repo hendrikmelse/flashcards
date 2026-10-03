@@ -6,6 +6,7 @@ import { useAddMirror, useAddMirrors } from "../api/packs";
 import { BusyLabel } from "../components/BusyLabel";
 import { displayLemma, entriesFor } from "../components/entries";
 import { sameDirection, shortDirection, useDeckFilter } from "../hooks/useDeckFilter";
+import { isBoolean, isOneOf, isOneOfOrNull, isString, useRemembered } from "../hooks/useRemembered";
 import { formatUntil } from "../lib/relativeTime";
 
 const STAGES: { stage: DeckStage; label: string }[] = [
@@ -116,9 +117,10 @@ export function DeckPage() {
   if (stats.data && stats.data.directions !== directions) setDirections(stats.data.directions);
   const filter = useDeckFilter(directions);
 
-  const [stage, setStage] = useState<DeckStage>("all");
-  const [query, setQuery] = useState("");
-  const [term, setTerm] = useState("");
+  // The filters are remembered, so leaving the page and coming back finds them as they were.
+  const [stage, setStage] = useRemembered<DeckStage>("deck:stage", "all", isOneOf("all", "new", "learning", "review"));
+  const [query, setQuery] = useRemembered("deck:query", "", isString);
+  const [term, setTerm] = useState(query.trim());
   // Search once typing pauses.
   useEffect(() => {
     const id = setTimeout(() => setTerm(query.trim()), 250);
@@ -126,12 +128,16 @@ export function DeckPage() {
   }, [query]);
 
   // Until the user picks a sort, studied stages read best soonest-due first and the rest newest first.
-  const [sortChoice, setSortChoice] = useState<DeckSort | null>(null);
-  const [orderChoice, setOrderChoice] = useState<"asc" | "desc" | null>(null);
+  const [sortChoice, setSortChoice] = useRemembered<DeckSort | null>("deck:sort", null, isOneOfOrNull(...DECK_SORTS));
+  const [orderChoice, setOrderChoice] = useRemembered<"asc" | "desc" | null>(
+    "deck:order",
+    null,
+    isOneOfOrNull("asc", "desc"),
+  );
   const sort = sortChoice ?? (stage === "learning" || stage === "review" ? "due" : "added");
   const order = orderChoice ?? DECK_SORT_DEFAULT_ORDER[sort];
 
-  const [missingOnly, setMissingOnly] = useState(false);
+  const [missingOnly, setMissingOnly] = useRemembered("deck:missingOnly", false, isBoolean);
   const list = useDeckCards(filter.selected, stage, term, sort, order, missingOnly);
   const byDirection = directions ?? [];
 

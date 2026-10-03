@@ -146,6 +146,68 @@ describe("deck page", () => {
     expect(lastList()).toContain("sort=alpha");
   });
 
+  describe("remembering the filters", () => {
+    const leaveAndReturn = async (user: ReturnType<typeof userEvent.setup>) => {
+      await user.click(screen.getByRole("link", { name: "← Dashboard" }));
+      await user.click(await screen.findByRole("link", { name: "View deck" }));
+      await screen.findByRole("heading", { name: "My deck" });
+    };
+
+    it("finds the stage, search, sort and missing-reverse filter as they were", async () => {
+      const user = userEvent.setup();
+      renderApp("/deck");
+      await user.click(await screen.findByRole("button", { name: /^Review/ }));
+      await user.type(screen.getByRole("searchbox", { name: "Search your deck" }), "hu");
+      await user.selectOptions(screen.getByRole("combobox", { name: "Sort by" }), "alpha");
+      await user.click(screen.getByRole("button", { name: /Reverse order/ })); // A to Z becomes Z to A
+      await user.click(screen.getByRole("button", { name: "Missing reverse" }));
+      await vi.waitFor(() => expect(lastList()).toContain("missingMirror=1"));
+
+      await leaveAndReturn(user);
+
+      expect(await screen.findByRole("button", { name: /^Review/ })).toHaveAttribute("aria-pressed", "true");
+      expect(screen.getByRole("searchbox", { name: "Search your deck" })).toHaveValue("hu");
+      expect(screen.getByRole("combobox", { name: "Sort by" })).toHaveValue("alpha");
+      expect(screen.getByRole("button", { name: /currently Z to A/ })).toBeInTheDocument();
+      expect(screen.getByRole("button", { name: "Missing reverse" })).toHaveAttribute("aria-pressed", "true");
+      // And the list is asked for with them straight away.
+      await vi.waitFor(() => {
+        expect(lastList()).toContain("state=review");
+        expect(lastList()).toContain("q=hu");
+        expect(lastList()).toContain("sort=alpha&order=desc");
+        expect(lastList()).toContain("missingMirror=1");
+      });
+    });
+
+    it("keeps the default sort for a stage until a sort is chosen", async () => {
+      const user = userEvent.setup();
+      renderApp("/deck");
+      await user.click(await screen.findByRole("button", { name: /^Learning/ }));
+      await leaveAndReturn(user);
+      expect(await screen.findByRole("button", { name: /^Learning/ })).toHaveAttribute("aria-pressed", "true");
+      expect(screen.getByRole("combobox", { name: "Sort by" })).toHaveValue("due"); // the stage's own default
+    });
+
+    it("survives reloading the page", async () => {
+      const user = userEvent.setup();
+      const view = renderApp("/deck");
+      await user.click(await screen.findByRole("button", { name: /^New/ }));
+      view.unmount();
+      renderApp("/deck");
+      expect(await screen.findByRole("button", { name: /^New/ })).toHaveAttribute("aria-pressed", "true");
+    });
+
+    it("starts clean when what was remembered is no longer valid", async () => {
+      sessionStorage.setItem("remembered:deck:stage", JSON.stringify("archived"));
+      sessionStorage.setItem("remembered:deck:sort", JSON.stringify("sparkle"));
+      sessionStorage.setItem("remembered:deck:missingOnly", JSON.stringify("yes"));
+      renderApp("/deck");
+      expect(await screen.findByRole("button", { name: /^All/ })).toHaveAttribute("aria-pressed", "true");
+      expect(screen.getByRole("combobox", { name: "Sort by" })).toHaveValue("added");
+      expect(screen.getByRole("button", { name: "Missing reverse" })).toHaveAttribute("aria-pressed", "false");
+    });
+  });
+
   it("searches the deck", async () => {
     const user = userEvent.setup();
     renderApp("/deck");

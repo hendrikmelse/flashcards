@@ -116,6 +116,22 @@ describe("auth flow", () => {
     expect(mock.calls).not.toContain("POST /auth/register");
   });
 
+  it("forgets remembered filters when someone signs in, and when they sign out", async () => {
+    const user = userEvent.setup();
+    renderApp("/login");
+    sessionStorage.setItem("remembered:packs:category", JSON.stringify("topic"));
+    await user.type(await screen.findByLabelText("Email"), "ann@example.com");
+    await user.type(screen.getByLabelText("Password"), "hunter2hunter2");
+    await user.click(screen.getByRole("button", { name: "Log in" }));
+    await screen.findByRole("heading", { name: "Dashboard" });
+    expect(sessionStorage.getItem("remembered:packs:category")).toBeNull();
+
+    sessionStorage.setItem("remembered:deck:stage", JSON.stringify("review"));
+    await user.click(screen.getByRole("button", { name: "Log out" }));
+    await screen.findByRole("heading", { name: "Log in" });
+    expect(sessionStorage.getItem("remembered:deck:stage")).toBeNull();
+  });
+
   it("shows an error for wrong credentials and stays on the form", async () => {
     mock.handlers["POST /auth/login"] = () => json(401, { error: "Invalid email or password" });
     const user = userEvent.setup();

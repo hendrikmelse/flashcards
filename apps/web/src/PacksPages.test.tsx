@@ -240,6 +240,68 @@ describe("pack categories", () => {
     expect(screen.queryByRole("group", { name: "Category" })).not.toBeInTheDocument();
   });
 
+  describe("remembering the filters", () => {
+    const goToDashboardAndBack = async (user: ReturnType<typeof userEvent.setup>) => {
+      await user.click(screen.getByRole("link", { name: "Dashboard" }));
+      await screen.findByRole("heading", { name: "Dashboard" });
+      await user.click(screen.getByRole("link", { name: "Packs" }));
+      await screen.findByRole("heading", { name: "Packs" });
+    };
+
+    it("finds the category, search text and hide toggle as they were after leaving and coming back", async () => {
+      const user = userEvent.setup();
+      renderApp("/packs");
+      await user.click(await screen.findByRole("button", { name: /^Topics/ }));
+      await user.click(screen.getByRole("button", { name: "Hide already added results" }));
+      await user.type(screen.getByRole("searchbox", { name: "Search packs" }), "rain");
+      expect(names()).toEqual(["Weather"]);
+
+      await goToDashboardAndBack(user);
+
+      expect(await screen.findByRole("button", { name: /^Topics/ })).toHaveAttribute("aria-pressed", "true");
+      expect(screen.getByRole("button", { name: "Hide already added results" })).toHaveAttribute("aria-pressed", "true");
+      expect(screen.getByRole("searchbox", { name: "Search packs" })).toHaveValue("rain");
+      expect(names()).toEqual(["Weather"]);
+    });
+
+    it("remembers that you were searching for words", async () => {
+      mock.handlers["GET /concepts/search"] = () => json(200, { concepts: [], hasMore: false });
+      const user = userEvent.setup();
+      renderApp("/packs");
+      await user.click(await screen.findByRole("button", { name: "Words" }));
+      await user.type(screen.getByRole("searchbox", { name: "Search words" }), "hond");
+
+      await goToDashboardAndBack(user);
+
+      expect(await screen.findByRole("button", { name: "Words" })).toHaveAttribute("aria-pressed", "true");
+      expect(screen.getByRole("searchbox", { name: "Search words" })).toHaveValue("hond");
+      // The results for the remembered text are fetched at once, without waiting for a pause.
+      await waitFor(() => expect(mock.calls.some((c) => c.includes("/concepts/search?q=hond"))).toBe(true));
+    });
+
+    it("survives reloading the page", async () => {
+      const user = userEvent.setup();
+      const view = renderApp("/packs");
+      await user.click(await screen.findByRole("button", { name: /^Verbs/ }));
+      view.unmount();
+
+      renderApp("/packs");
+      expect(await screen.findByRole("button", { name: /^Verbs/ })).toHaveAttribute("aria-pressed", "true");
+      expect(names()).toEqual(["Verbs: movement"]);
+    });
+
+    it("starts clean the first time, and when what was remembered is no longer valid", async () => {
+      sessionStorage.setItem("remembered:packs:category", JSON.stringify("bogus"));
+      sessionStorage.setItem("remembered:packs:mode", JSON.stringify("nonsense"));
+      sessionStorage.setItem("remembered:packs:query", "{not json");
+      renderApp("/packs");
+      expect(await screen.findByRole("button", { name: /^All/ })).toHaveAttribute("aria-pressed", "true");
+      expect(screen.getByRole("button", { name: "Packs" })).toHaveAttribute("aria-pressed", "true");
+      expect(screen.getByRole("searchbox", { name: "Search packs" })).toHaveValue("");
+      expect(names()).toHaveLength(7);
+    });
+  });
+
   it("is only for packs: the word search has no category filter", async () => {
     const user = userEvent.setup();
     renderApp("/packs");

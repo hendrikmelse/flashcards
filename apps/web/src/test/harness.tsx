@@ -67,6 +67,7 @@ function defaultHandlers(): Record<string, Handler> {
 // Replaces fetch with a router over mock.handlers. A handler is found by the
 // exact "METHOD /path?query" first, then by "METHOD /path".
 export function installMockApi() {
+  sessionStorage.clear(); // remembered filters
   mock.loggedIn = false;
   mock.calls = [];
   mock.handlers = defaultHandlers();

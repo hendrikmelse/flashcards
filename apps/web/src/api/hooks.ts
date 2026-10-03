@@ -19,6 +19,7 @@ import type {
   StatsResponse,
   StudyCountsResponse,
 } from "@flashcards/shared";
+import { clearRemembered } from "../hooks/useRemembered";
 import { api } from "./client";
 
 const ME = ["me"] as const;
@@ -27,6 +28,7 @@ const ME = ["me"] as const;
 // The "me" query is updated in place (not removed) so mounted components that
 // observe it re-render.
 function setUser(qc: QueryClient, user: PublicUser | null) {
+  clearRemembered(); // the next person does not inherit the last one's filters
   qc.removeQueries({ predicate: (q) => q.queryKey[0] !== ME[0] });
   qc.setQueryData(ME, user);
 }

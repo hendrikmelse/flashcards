@@ -11,6 +11,7 @@ import { useAddConcept, useConceptSearch, useLanguages, usePacks } from "../api/
 import { ConceptRow } from "../components/ConceptRow";
 import { DirectionPicker } from "../components/DirectionPicker";
 import { useDirection } from "../hooks/useDirection";
+import { isBoolean, isOneOf, isString, useRemembered } from "../hooks/useRemembered";
 
 export function PacksPage() {
   const languages = useLanguages();
@@ -29,10 +30,15 @@ type CategoryFilter = PackCategory | "all";
 function PackList({ languages }: { languages: LanguageInfo[] }) {
   const { direction, setDirection } = useDirection(languages);
   const packs = usePacks(direction);
-  const [mode, setMode] = useState<Mode>("packs");
-  const [query, setQuery] = useState("");
-  const [hideInDeck, setHideInDeck] = useState(false);
-  const [category, setCategory] = useState<CategoryFilter>("all");
+  // The filters are remembered, so leaving the page and coming back finds them as they were.
+  const [mode, setMode] = useRemembered<Mode>("packs:mode", "packs", isOneOf("packs", "words"));
+  const [query, setQuery] = useRemembered("packs:query", "", isString);
+  const [hideInDeck, setHideInDeck] = useRemembered("packs:hideInDeck", false, isBoolean);
+  const [category, setCategory] = useRemembered<CategoryFilter>(
+    "packs:category",
+    "all",
+    isOneOf("all", ...PACK_CATEGORIES),
+  );
 
   // How many packs each category has, so empty categories are not offered.
   const perCategory = new Map<PackCategory, number>();
@@ -179,7 +185,8 @@ function PackResults({
 
 function WordResults({ languages, query, hideInDeck }: ResultProps) {
   const { direction } = useDirection(languages);
-  const [term, setTerm] = useState("");
+  // Starts from the typed text, so a remembered search shows its results straight away.
+  const [term, setTerm] = useState(query.trim());
   const found = useConceptSearch(term, direction, hideInDeck);
   const addConcept = useAddConcept(direction);
 
