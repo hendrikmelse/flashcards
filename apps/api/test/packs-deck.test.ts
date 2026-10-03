@@ -59,7 +59,7 @@ describe("public content", () => {
 
   it("lists packs with concept counts, and availability for a direction", async () => {
     const plain = await app.inject({ method: "GET", url: "/packs" });
-    expect(plain.json().packs[0]).toMatchObject({ slug: "sample", conceptCount: 4 });
+    expect(plain.json().packs[0]).toMatchObject({ slug: "sample", conceptCount: 4, category: "topic" });
     expect(plain.json().packs[0].availableCount).toBeUndefined();
 
     const dir = await app.inject({ method: "GET", url: `/packs?${q(EN_NL)}` });

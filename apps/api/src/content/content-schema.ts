@@ -1,6 +1,7 @@
 import {
   DUTCH_AUXILIARIES,
   FORM_KEYS,
+  PACK_CATEGORIES,
   PRESENT_PRONOUNS,
   allVerbForms,
 } from "@flashcards/shared";
@@ -64,6 +65,8 @@ export const conceptFileSchema = z.object({
 export const packFileSchema = z.object({
   slug: keySchema,
   name: z.string().trim().min(1),
+  // How the pack is grouped when browsing; see PACK_CATEGORIES.
+  category: z.enum(PACK_CATEGORIES),
   description: z.string().trim().min(1).optional(),
   // Concept keys, in study order.
   concepts: z.array(keySchema).min(1),

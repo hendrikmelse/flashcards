@@ -232,11 +232,28 @@ export type ReviewResponse = {
 
 export type LanguageInfo = { code: string; name: string };
 
+/**
+ * What kind of pack it is, for browsing. Every pack has exactly one.
+ * - common: the most frequent words, in order (the frequency bands and the starter pack)
+ * - topic: words about a subject, such as food or travel
+ * - verbs: verbs, grouped by what they do
+ * - grammar: the small words that hold sentences together (pronouns, prepositions, ...)
+ */
+export const PACK_CATEGORIES = ["common", "topic", "verbs", "grammar"] as const;
+export type PackCategory = (typeof PACK_CATEGORIES)[number];
+export const PACK_CATEGORY_LABELS: Record<PackCategory, string> = {
+  common: "Most common words",
+  topic: "Topics",
+  verbs: "Verbs",
+  grammar: "Grammar words",
+};
+
 export type PackListItem = {
   id: string;
   slug: string;
   name: string;
   description: string | null;
+  category: PackCategory;
   conceptCount: number;
   /** Present when a direction was requested. */
   availableCount?: number;

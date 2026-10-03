@@ -70,10 +70,15 @@ export async function importContent(
     for (const pack of content.packs) {
       const [row] = await tx
         .insert(packs)
-        .values({ slug: pack.slug, name: pack.name, description: pack.description ?? null })
+        .values({
+          slug: pack.slug,
+          name: pack.name,
+          description: pack.description ?? null,
+          category: pack.category,
+        })
         .onConflictDoUpdate({
           target: packs.slug,
-          set: { name: pack.name, description: pack.description ?? null },
+          set: { name: pack.name, description: pack.description ?? null, category: pack.category },
         })
         .returning({ id: packs.id });
       if (!row) throw new Error(`could not upsert pack ${pack.slug}`);

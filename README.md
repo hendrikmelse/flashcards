@@ -106,7 +106,7 @@ All routes live under `/api`.
 | `GET /health`, `GET /ready` | Liveness; readiness (checks the database) |
 | `POST /auth/register`, `/auth/login`, `/auth/logout`; `GET /auth/me` | Auth, with rate limiting on login and register |
 | `GET /languages` | Available languages |
-| `GET /packs`, `GET /packs/:id` | Public browsing. With `fromLanguage` and `toLanguage` it adds availability and, when logged in, what is already in the deck |
+| `GET /packs`, `GET /packs/:id` | Public browsing; each pack lists its category. With `fromLanguage` and `toLanguage` it adds availability and, when logged in, what is already in the deck |
 | `POST /packs/:id/add`, `POST /concepts/:id/add` | Add to the deck for a direction. Idempotent; skips concepts missing an entry in either language |
 | `GET /deck` | Progress summary and a page of cards, filterable by direction, stage (new, learning, review) and a search word, sortable by date added, next due, status, interval, lapses or the prompt word. Each card says whether its reverse (same word, other direction) is in the deck, and `missingMirror=1` keeps only those without one |
 | `POST /deck/mirrors` | Adds the reverse card for every card in a view of the deck (direction, stage and search, as in `GET /deck`) that has none. Idempotent |
@@ -124,7 +124,7 @@ Helmet headers (CSP, HSTS), an Origin check on state-changing requests, `Secure`
 Content is authored as reviewed JSON files and imported into the database. The files are the source of truth; the importer makes the database match them. There are two kinds:
 
 - `content/concepts/*.json` is the word library: `{ "concepts": [ { "key", "gloss", "entries" } ] }`. How the library is split across files (currently by topic) is only for organizing
-- `content/packs/*.json` defines packs: `{ "slug", "name", "description", "concepts": [key, ...] }`, an ordered list of concept keys with no word data. Because packs only refer to concepts, the same word can be in any number of packs
+- `content/packs/*.json` defines packs: `{ "slug", "name", "category", "description", "concepts": [key, ...] }`, an ordered list of concept keys with no word data. The `category` is one of `common` (the most frequent words), `topic`, `verbs` or `grammar` (the small words that hold sentences together); the pack browser can filter by it, and the tests require every category to have at least five packs. Because packs only refer to concepts, the same word can be in any number of packs
 
 A concept's **key** (lowercase words joined by hyphens, such as `dog` or `know-fact`) is its permanent identity. Packs refer to it, and the gloss is free text you can reword. Keys must be unique across all files, and a pack that lists an unknown key is an error.
 

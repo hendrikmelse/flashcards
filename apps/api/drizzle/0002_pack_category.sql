@@ -1,0 +1,1 @@
+ALTER TABLE "packs" ADD COLUMN "category" text DEFAULT 'topic' NOT NULL;

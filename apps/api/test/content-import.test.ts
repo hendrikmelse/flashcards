@@ -3,6 +3,7 @@ import { eq, sql } from "drizzle-orm";
 import type { PgTable } from "drizzle-orm/pg-core";
 import { drizzle } from "drizzle-orm/pglite";
 import { migrate } from "drizzle-orm/pglite/migrator";
+import { PACK_CATEGORIES } from "@flashcards/shared";
 import { afterAll, beforeAll, beforeEach, describe, expect, it } from "vitest";
 import {
   checkConcept,
@@ -70,8 +71,8 @@ const noun = (key: string, en: string, nl: string, article = "de"): Concept =>
     },
   });
 
-const pack = (slug: string, keys: string[]): PackFile =>
-  packFileSchema.parse({ slug, name: slug, concepts: keys });
+const pack = (slug: string, keys: string[], category = "topic"): PackFile =>
+  packFileSchema.parse({ slug, name: slug, category, concepts: keys });
 
 describe("shipped content", () => {
   it("validates, and shares concepts between packs", () => {
@@ -100,6 +101,23 @@ describe("shipped content", () => {
       .map((c) => c.key);
     // "comic-strip" ends in the Dutch word "strip" by coincidence
     expect(offenders.filter((k) => k !== "comic-strip")).toEqual([]);
+  });
+
+  it("gives every pack a category, and every category a handful of packs", () => {
+    const { packs: ps } = loadContent("../../content");
+    const perCategory = new Map<string, number>();
+    for (const p of ps) perCategory.set(p.category, (perCategory.get(p.category) ?? 0) + 1);
+    // Only categories with at least a handful of packs are worth having.
+    for (const category of PACK_CATEGORIES) expect(perCategory.get(category) ?? 0).toBeGreaterThanOrEqual(5);
+    expect([...perCategory.keys()].every((c) => (PACK_CATEGORIES as readonly string[]).includes(c))).toBe(true);
+    // The frequency bands are the most common words.
+    expect(ps.filter((p) => p.slug.startsWith("top-")).every((p) => p.category === "common")).toBe(true);
+  });
+
+  it("rejects a pack with a missing or unknown category", () => {
+    expect(packFileSchema.safeParse({ slug: "a", name: "A", concepts: ["x"] }).success).toBe(false);
+    expect(packFileSchema.safeParse({ slug: "a", name: "A", category: "misc", concepts: ["x"] }).success).toBe(false);
+    expect(packFileSchema.safeParse({ slug: "a", name: "A", category: "topic", concepts: ["x"] }).success).toBe(true);
   });
 
   it("imports into an empty database", async () => {
@@ -216,6 +234,17 @@ describe("checkConcept", () => {
 });
 
 describe("importContent", () => {
+  it("stores each pack's category, and updates it on a later import", async () => {
+    const cs = [noun("dog", "dog", "hond")];
+    await importContent(db, { concepts: cs, packs: [pack("a", ["dog"], "common"), pack("b", ["dog"], "verbs")] });
+    const byCategory = async () =>
+      Object.fromEntries((await db.select().from(packs)).map((p) => [p.slug, p.category]));
+    expect(await byCategory()).toEqual({ a: "common", b: "verbs" });
+
+    await importContent(db, { concepts: cs, packs: [pack("a", ["dog"], "grammar"), pack("b", ["dog"], "verbs")] });
+    expect(await byCategory()).toEqual({ a: "grammar", b: "verbs" });
+  });
+
   it("puts one concept in several packs without duplicating it", async () => {
     const cs = [noun("dog", "dog", "hond"), noun("house", "house", "huis", "het")];
     const summary = await importContent(db, {

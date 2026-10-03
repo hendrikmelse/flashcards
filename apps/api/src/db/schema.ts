@@ -135,6 +135,8 @@ export const packs = pgTable("packs", {
   slug: text().notNull().unique(),
   name: text().notNull(),
   description: text(),
+  // One of PACK_CATEGORIES (see @flashcards/shared).
+  category: text().notNull().default("topic"),
   createdAt: timestamp({ withTimezone: true }).notNull().defaultNow(),
 });
 

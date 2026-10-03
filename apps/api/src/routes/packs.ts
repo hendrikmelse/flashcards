@@ -6,6 +6,7 @@ import {
   directionQuerySchema,
   pageQuerySchema,
   uuidParamSchema,
+  type PackCategory,
 } from "@flashcards/shared";
 import {
   availableInDirection,
@@ -43,6 +44,7 @@ export async function packRoutes(app: FastifyInstance, { db }: { db: Db }) {
         slug: packs.slug,
         name: packs.name,
         description: packs.description,
+        category: packs.category,
         conceptCount: count(packConcepts.conceptId),
       })
       .from(packs)
@@ -89,6 +91,7 @@ export async function packRoutes(app: FastifyInstance, { db }: { db: Db }) {
     return {
       packs: rows.map((r) => ({
         ...r,
+        category: r.category as PackCategory,
         availableCount: available.get(r.id) ?? 0,
         ...(req.user ? { addedCount: added.get(r.id) ?? 0 } : {}),
       })),
