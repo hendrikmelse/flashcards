@@ -194,7 +194,7 @@ The full runbook, including server setup, rollback, backups and how to invite so
 ### Before anyone other than the owner uses it
 
 1. ~~**Time zones.**~~ Done: new accounts take the browser's time zone, and the settings page changes it (review cards move to the start of the same day in the new zone). Production has no accounts yet, so there is nothing to migrate.
-2. **Push and deploy.** Production runs an old build. Pushing `main` deploys it, and the new migrations (`concept_key`, `pack_category`, `user_name`, `card_display_prefs`, `card_reports`) must apply cleanly.
+2. **Push and deploy.** Production runs an old build. Pushing `main` deploys it, and the new migrations (`concept_key`, `pack_category`, `user_name`, `card_display_prefs`, `card_reports`, `languages_and_decks`) must apply cleanly. Checked before the first push: the image builds, all seven migrations apply to an empty Postgres 17, and `seed-languages`, `import-content`, the server (health, readiness, the app shell and client routes) and the `reports` command all run from the built image.
 3. **Check the Docker image builds.** `content/` was added to the image after the last verified build; CI builds it on push, but it is untested.
 4. **Import the content into production** (manual, see the runbook). Do any final key renames first: once users have cards, concept keys are permanent.
 5. **Native Dutch review of the content.** The words flagged as uncertain have been reviewed and fixed. Beyond those, nothing has been read through by a Dutch speaker: spot-check the frequency bands and a sample of the topic packs.
