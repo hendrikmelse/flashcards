@@ -169,14 +169,24 @@ export const directionQuerySchema = z
 // or one direction. `pair` is a pair key such as "en-nl", in either order. It is only a filter, so
 // a pair of languages the app does not know simply matches nothing. A direction together with a
 // pair must be one of that pair's directions.
+const pairParam = z
+  .string()
+  .regex(PAIR_PATTERN, "pair must be two language codes joined by a hyphen, such as en-nl");
+
+// Just the language pair, for what is about a whole deck and not part of one: studying and the
+// stats. Anything else in the query is ignored.
+export const pairQuerySchema = z
+  .object({ pair: pairParam.optional() })
+  .refine((v) => v.pair === undefined || pairLanguages(v.pair)[0] !== pairLanguages(v.pair)[1], {
+    message: "a pair needs two different languages",
+  })
+  .transform((v) => (v.pair === undefined ? {} : { pair: pairKey(...pairLanguages(v.pair)) }));
+
 export const scopeQuerySchema = z
   .object({
     fromLanguage: languageCodeSchema.optional(),
     toLanguage: languageCodeSchema.optional(),
-    pair: z
-      .string()
-      .regex(PAIR_PATTERN, "pair must be two language codes joined by a hyphen, such as en-nl")
-      .optional(),
+    pair: pairParam.optional(),
   })
   .refine((v) => (v.fromLanguage === undefined) === (v.toLanguage === undefined), {
     message: "Provide both fromLanguage and toLanguage, or neither",
@@ -331,7 +341,19 @@ export type StudyCardView = {
   back: EntryView[];
   sentences: { front: string[]; back: string[] };
 };
-export type StudyResponse = { now: string; counts: StudyCounts; cards: StudyCardView[] };
+export type StudyResponse = {
+  now: string;
+  counts: StudyCounts;
+  cards: StudyCardView[];
+  /** The user has never answered a card, in any language pair: this is their very first session. */
+  firstSession: boolean;
+  /**
+   * New cards in the deck beyond the ones in `counts.new`, held back by the daily limit. A new card
+   * answered Good or Easy on its first look does not use the limit up, so each one brings another of
+   * these into today's session.
+   */
+  moreNew: number;
+};
 
 export type DirectionSummary = {
   fromLanguage: string;
@@ -344,12 +366,6 @@ export type DirectionSummary = {
   dueNow: number;
   /** When the next not-yet-due card in this direction comes due, if any. */
   nextDueAt: string | null;
-  /**
-   * What a study session in just this direction would offer right now. The daily
-   * new-card limit is shared across directions, so `new` here can add up to more
-   * than the whole-deck figure.
-   */
-  ready: { learning: number; review: number; new: number };
 };
 
 export type StatsResponse = {
@@ -372,6 +388,8 @@ export type NextSession = { at: string; count: number };
 export type StudyCountsResponse = {
   now: string;
   counts: StudyCounts;
+  /** There are new cards in the deck, but today's daily new-card limit has been reached. */
+  newLimitReached: boolean;
   nextSession: NextSession | null;
   /**
    * How many cards will be ready to study by the end of tomorrow's study day: those due

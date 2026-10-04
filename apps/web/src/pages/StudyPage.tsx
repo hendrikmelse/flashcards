@@ -1,6 +1,6 @@
 import { useMutation } from "@tanstack/react-query";
 import { useEffect, useReducer, useRef, useState } from "react";
-import { Link, useSearchParams } from "react-router";
+import { Link, useNavigate, useSearchParams } from "react-router";
 import type {
   LanguageInfo,
   Rating,
@@ -8,13 +8,13 @@ import type {
   StudyCardView,
   StudyResponse,
 } from "@flashcards/shared";
-import { SESSION_GAP_MS, pairKey } from "@flashcards/shared";
+import { SESSION_GAP_MS } from "@flashcards/shared";
 import { api } from "../api/client";
 import { useSettings } from "../api/hooks";
 import { useActiveLanguages } from "../hooks/useActiveLanguages";
 import { useLanguages } from "../api/packs";
-import { AnswerGuide } from "../components/AnswerGuide";
 import { Entries, Forms, Sentences } from "../components/CardParts";
+import { FirstSessionIntro } from "../components/FirstSessionIntro";
 import { languageName } from "../components/entries";
 import { ReportProblem } from "../components/ReportProblem";
 import {
@@ -41,34 +41,36 @@ type ReviewVars = { cardId: string; rating: Rating; clientReviewId: string; time
 
 function useStudySession() {
   const [state, dispatch] = useReducer(reducer, initialState);
-  // ?from=en&to=nl studies one direction; without them every direction is mixed.
-  const [params] = useSearchParams();
   const { pair } = useActiveLanguages();
-  const from = params.get("from");
-  const to = params.get("to");
-  // A direction from an old link only counts if it is one of the pair being learned.
-  const direction =
-    from && to && pairKey(from, to) === pair
-      ? `&fromLanguage=${encodeURIComponent(from)}&toLanguage=${encodeURIComponent(to)}`
-      : "";
+  const [params] = useSearchParams();
   // ?early=1 starts the next session a little before the gap between sessions is over.
   const early = params.get("early") === "1" ? "&early=1" : "";
   const fetching = useRef(false);
   const shownAt = useRef(Date.now());
+  // The explanation shown before the very first card of someone's very first session. It is looked
+  // for in the first batch only; a later top-up cannot be the first session, as cards were answered.
+  const [intro, setIntro] = useState(false);
+  const introChecked = useRef(false);
 
   // Top up whenever the queue runs dry (this is also the initial load).
   useEffect(() => {
     if (state.ended || state.queue.length > 0 || state.exhausted || state.fetchError || fetching.current) return;
     fetching.current = true;
-    api<StudyResponse>(`/study?limit=${BATCH_SIZE}&pair=${pair}${direction}${early}`)
+    api<StudyResponse>(`/study?limit=${BATCH_SIZE}&pair=${pair}${early}`)
       .then(
-        (r) => dispatch({ type: "fetched", cards: r.cards }),
+        (r) => {
+          if (!introChecked.current) {
+            introChecked.current = true;
+            if (r.firstSession && r.cards.length > 0) setIntro(true);
+          }
+          dispatch({ type: "fetched", cards: r.cards, moreNew: r.moreNew });
+        },
         () => dispatch({ type: "fetchFailed" }),
       )
       .finally(() => {
         fetching.current = false;
       });
-  }, [state.ended, state.queue.length, state.exhausted, state.fetchError, pair, direction, early]);
+  }, [state.ended, state.queue.length, state.exhausted, state.fetchError, pair, early]);
 
   // Show the next card as soon as there is one.
   useEffect(() => {
@@ -115,6 +117,11 @@ function useStudySession() {
     retrySubmit: () => submit.variables && submit.mutate(submit.variables),
     submitting: submit.isPending,
     submitError: submit.isError,
+    intro,
+    startStudying: () => {
+      setIntro(false);
+      shownAt.current = Date.now(); // the time taken starts now, not while the explanation was read
+    },
     acknowledgeRepeat: () => dispatch({ type: "acknowledgeRepeat" }),
     end: () => dispatch({ type: "end" }),
     retryFetch: () => dispatch({ type: "retryFetch" }),
@@ -129,6 +136,9 @@ export function StudyPage() {
   const settings = useSettings();
   const settingsReady = !settings.isPending;
   const { state, phase } = session;
+  const navigate = useNavigate();
+  // Ending a session in which nothing was answered: there is nothing to sum up, so go straight back.
+  const endSession = () => (state.stats.reviewed === 0 ? navigate("/") : session.end());
 
   return (
     <>
@@ -137,7 +147,7 @@ export function StudyPage() {
         {phase === "card" && (
           <p className="muted" aria-live="polite">
             {remaining(state)} left ·{" "}
-            <button type="button" className="link" onClick={session.end}>
+            <button type="button" className="link" onClick={endSession}>
               End session
             </button>
           </p>
@@ -159,7 +169,11 @@ export function StudyPage() {
         <RepeatNotice onContinue={session.acknowledgeRepeat} />
       )}
 
-      {phase === "card" && state.current && !state.repeatNotice && settingsReady && (
+      {phase === "card" && state.current && session.intro && settingsReady && (
+        <FirstSessionIntro onStart={session.startStudying} />
+      )}
+
+      {phase === "card" && state.current && !state.repeatNotice && !session.intro && settingsReady && (
         <CardView
           card={state.current}
           revealed={state.revealed}
@@ -299,8 +313,6 @@ function CardView({
         </div>
       )}
 
-      {revealed && <AnswerGuide />}
-
       {revealed && (
         <ReportProblem
           key={card.id}
@@ -341,9 +353,14 @@ function Summary({
       <div className="study-wait">
         <h2>You&rsquo;re all caught up</h2>
         <p className="muted">Nothing is due right now. Add more words to keep learning.</p>
-        <p>
-          <Link to="/add-words">Browse packs</Link> · <Link to="/">Back to the dashboard</Link>
-        </p>
+        <div className="hero-actions">
+          <Link to="/add-words" className="button primary">
+            Browse words
+          </Link>
+          <Link to="/" className="button secondary">
+            Back to the dashboard
+          </Link>
+        </div>
       </div>
     );
   }
@@ -351,7 +368,7 @@ function Summary({
   return (
     <div className="study-wait">
       <h2>Session complete!</h2>
-      <p>You viewed {viewed} card{viewed === 1 ? "" : "s"}</p>
+      <p>You viewed {viewed} unique card{viewed === 1 ? "" : "s"}</p>
       {reReview > 0 && (
         <p>
           {reReview} card{reReview === 1 ? "" : "s"} will be available for re-review in {minutes}{" "}
@@ -367,7 +384,9 @@ function Summary({
         ))}
       </dl>
       <p>
-        <Link to="/">Back to the dashboard</Link>
+        <Link to="/" className="button primary">
+          Back to the dashboard
+        </Link>
       </p>
     </div>
   );

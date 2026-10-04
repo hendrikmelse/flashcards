@@ -49,7 +49,7 @@ function defaultHandlers(): Record<string, Handler> {
         reviewsToday: 9,
         nextDueAt: null,
         directions: [
-          { fromLanguage: "en", toLanguage: "nl", total: 12, new: 5, learning: 3, review: 4, dueNow: 4, nextDueAt: null, ready: { learning: 1, review: 3, new: 7 } },
+          { fromLanguage: "en", toLanguage: "nl", total: 12, new: 5, learning: 3, review: 4, dueNow: 4, nextDueAt: null },
         ],
       }),
     "GET /settings": () =>
@@ -76,7 +76,7 @@ function defaultHandlers(): Record<string, Handler> {
 // exact "METHOD /path?query" first, then by "METHOD /path".
 export function installMockApi() {
   sessionStorage.clear(); // remembered filters
-  localStorage.clear(); // closed tips
+  localStorage.clear(); // remembered choices
   mock.loggedIn = false;
   mock.calls = [];
   mock.requests = [];

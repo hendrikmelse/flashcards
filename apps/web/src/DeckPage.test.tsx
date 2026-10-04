@@ -470,7 +470,7 @@ describe("deck page", () => {
 
   it("narrows to one direction with the toggle, and labels the direction when showing both", async () => {
     const dir = (from: string, to: string) => ({
-      fromLanguage: from, toLanguage: to, total: 6, new: 3, learning: 1, review: 2, dueNow: 1, nextDueAt: null, ready: { learning: 0, review: 0, new: 0 },
+      fromLanguage: from, toLanguage: to, total: 6, new: 3, learning: 1, review: 2, dueNow: 1, nextDueAt: null,
     });
     mock.handlers["GET /stats"] = () =>
       json(200, { now: at(0), reviewsToday: 0, nextDueAt: null, directions: [dir("en", "nl"), dir("nl", "en")] });
@@ -485,7 +485,7 @@ describe("deck page", () => {
 
   it("always shows the whole deck's size at the top, whichever direction is selected", async () => {
     const dir = (from: string, to: string, total: number) => ({
-      fromLanguage: from, toLanguage: to, total, new: total, learning: 0, review: 0, dueNow: 0, nextDueAt: null, ready: { learning: 0, review: 0, new: 0 },
+      fromLanguage: from, toLanguage: to, total, new: total, learning: 0, review: 0, dueNow: 0, nextDueAt: null,
     });
     mock.handlers["GET /stats"] = () =>
       json(200, { now: at(0), reviewsToday: 0, nextDueAt: null, directions: [dir("en", "nl", 300), dir("nl", "en", 66)] });

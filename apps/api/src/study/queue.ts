@@ -1,12 +1,12 @@
-import { and, asc, count, eq, exists, gte, inArray, lte, max, not, or, sql } from "drizzle-orm";
+import { and, asc, count, eq, exists, getTableColumns, gte, inArray, lte, max, or, sql } from "drizzle-orm";
 import { alias } from "drizzle-orm/pg-core";
-import { EARLY_START_WINDOW_MS, SESSION_GAP_MS, type EntryView, type Scope } from "@flashcards/shared";
+import { EARLY_START_WINDOW_MS, SESSION_GAP_MS, type EntryView } from "@flashcards/shared";
 import { loadEntries, loadSentences, sentenceKey } from "../content/queries.js";
 import { reviewLogs, userCards, users } from "../db/schema.js";
 import type { Db } from "../db/types.js";
 import type { Scheduler } from "../srs/engine.js";
 import { endOfTomorrow, studyDayStart } from "./day.js";
-import { interleaveNew } from "./order.js";
+import { interleaveNew, pickNew } from "./order.js";
 import { inPair, inScope, pairOf } from "./scope.js";
 
 // Learning cards due within this window are offered now, so a card rated
@@ -35,11 +35,15 @@ export interface StudyBatch {
   now: Date;
   counts: StudyCounts;
   cards: StudyCard[];
+  /** The user has never answered a card, in any language pair. */
+  firstSession: boolean;
+  /** New cards beyond the daily limit's share, which first looks rated Good or Easy make room for. */
+  moreNew: number;
 }
 
 // What to study: a scope (a language pair, or one direction of it; with neither, every deck) and
 // how many cards at most.
-type Options = Scope & { limit: number; early?: boolean };
+type Options = { pair?: string | undefined; limit: number; early?: boolean };
 
 // The conditions that define what is studyable now, and how many of each kind.
 //
@@ -81,10 +85,11 @@ async function prepare(db: Db, userId: string, opts: Omit<Options, "limit">, now
   );
   const reviewDue = and(mine, eq(userCards.state, "review"), lte(userCards.dueAt, asOf));
   const dayStart = studyDayStart(now, user.timezone);
-  const isNewAtAll = and(mine, eq(userCards.state, "new"));
-  // A new card whose reverse (same word, other direction) was first shown today waits until the
-  // next study day: seeing a word both ways in one day is not much of a test of either, and the
-  // second look would just be the first one again. Only a first look counts, whatever the answer.
+  const isNew = and(mine, eq(userCards.state, "new"));
+  // A new card whose reverse (same word, other direction) was first shown today comes after the
+  // other new cards: seeing a word both ways in one day is not much of a test of either, and the
+  // second look would just be the first one again. It is still offered when there is nothing else
+  // new to show. Only a first look counts, whatever the answer.
   const reverseIntroducedToday = exists(
     db
       .select({ one: sql`1` })
@@ -101,7 +106,6 @@ async function prepare(db: Db, userId: string, opts: Omit<Options, "limit">, now
         ),
       ),
   );
-  const isNew = and(isNewAtAll, not(reverseIntroducedToday));
 
   // The daily new-card limit is per language pair, not per direction: it counts the cards the
   // user saw for the first time in the pair since the study day began and had to learn. A new card marked
@@ -125,18 +129,21 @@ async function prepare(db: Db, userId: string, opts: Omit<Options, "limit">, now
     const [row] = await db.select({ n: count() }).from(userCards).where(where);
     return row?.n ?? 0;
   };
+  const newInDeck = await countWhere(isNew);
   const counts: StudyCounts = {
     learning: await countWhere(learningDue),
     review: await countWhere(reviewDue),
-    new: Math.min(newAllowed, await countWhere(isNew)),
+    new: Math.min(newAllowed, newInDeck),
   };
   return {
     learningDue,
     reviewDue,
     isNew,
-    // New cards as they will be tomorrow, when none is held back for its reverse any more.
-    isNewTomorrow: isNewAtAll,
+    reverseIntroducedToday,
     counts,
+    // There are new cards, but today's allowance of them has been used up (or is nothing).
+    newLimitReached: newAllowed === 0 && newInDeck > 0,
+    newInDeck,
     gateAt: gated ? gateAt : null,
     mine,
     countWhere,
@@ -157,10 +164,11 @@ export async function getStudyCounts(
 ): Promise<{
   now: Date;
   counts: StudyCounts;
+  newLimitReached: boolean;
   nextSession: { at: Date; count: number } | null;
   tomorrow: number;
 }> {
-  const { counts, gateAt, mine, countWhere, isNewTomorrow, user } = await prepare(db, userId, opts, now);
+  const { counts, newLimitReached, gateAt, mine, countWhere, isNew, user } = await prepare(db, userId, opts, now);
 
   let nextSession: { at: Date; count: number } | null = null;
   if (gateAt) {
@@ -188,9 +196,9 @@ export async function getStudyCounts(
         lte(userCards.dueAt, end),
       ),
     )) + (await countWhere(and(mine, eq(userCards.state, "review"), lte(userCards.dueAt, end))));
-  const newTomorrow = Math.min(user.dailyNewCardLimit, await countWhere(isNewTomorrow));
+  const newTomorrow = Math.min(user.dailyNewCardLimit, await countWhere(isNew));
 
-  return { now, counts, nextSession, tomorrow: dueByTomorrow + newTomorrow };
+  return { now, counts, newLimitReached, nextSession, tomorrow: dueByTomorrow + newTomorrow };
 }
 
 /**
@@ -206,7 +214,7 @@ export async function getStudyBatch(
   now: Date,
   scheduler: Scheduler,
 ): Promise<StudyBatch> {
-  const { learningDue, reviewDue, isNew, counts } = await prepare(db, userId, opts, now);
+  const { learningDue, reviewDue, isNew, reverseIntroducedToday, counts, newInDeck } = await prepare(db, userId, opts, now);
 
   const due = await db.select().from(userCards).where(or(learningDue, reviewDue));
   const ranked = due
@@ -236,20 +244,24 @@ export async function getStudyBatch(
         ),
       ),
   );
-  const newCards =
+  // More than are needed are loaded, so that when a word has both of its directions among the first
+  // few, there are other words to choose instead (see pickNew).
+  const candidates =
     counts.new > 0
       ? await db
-          .select()
+          .select({ ...getTableColumns(userCards), held: sql<boolean>`${reverseIntroducedToday}` })
           .from(userCards)
           .where(isNew)
           .orderBy(
-            sql`(case when ${reverseKnown} then 0 else 1 end)`,
+            // Last: cards whose reverse was first shown today. First: cards whose reverse is known.
+            sql`(case when ${reverseIntroducedToday} then 2 when ${reverseKnown} then 0 else 1 end)`,
             asc(userCards.addedAt),
             asc(userCards.sortKey),
             asc(userCards.id),
           )
-          .limit(counts.new)
+          .limit(counts.new * 2)
       : [];
+  const newCards = pickNew(candidates, counts.new);
 
   const rows = interleaveNew(newCards, ranked).slice(0, opts.limit);
 
@@ -276,5 +288,11 @@ export async function getStudyBatch(
     };
   });
 
-  return { now, counts, cards };
+  const [answered] = await db
+    .select({ one: sql`1` })
+    .from(reviewLogs)
+    .where(eq(reviewLogs.userId, userId))
+    .limit(1);
+
+  return { now, counts, cards, firstSession: !answered, moreNew: Math.max(0, newInDeck - counts.new) };
 }

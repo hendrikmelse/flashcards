@@ -30,6 +30,7 @@ let userId: string;
 type Card = {
   id: string;
   state: string;
+  fromLanguage: string;
   front: { lemma: string }[];
   sentences: { front: string[]; back: string[] };
 };
@@ -125,7 +126,7 @@ describe("GET /study", () => {
   it("honors the batch limit and validates query params", async () => {
     expect(((await get("/study?limit=2")).json() as { cards: Card[] }).cards).toHaveLength(2);
     expect((await get("/study?limit=0")).statusCode).toBe(400);
-    expect((await get("/study?fromLanguage=en")).statusCode).toBe(400);
+    expect((await get("/study?pair=english")).statusCode).toBe(400);
   });
 
   it("caps new cards at the daily limit", async () => {
@@ -355,24 +356,29 @@ describe("new card priority", () => {
     ]);
     return me.cookies;
   }
-  const newOrder = async (c: { session: string }, qs = "") =>
-    ((await get(`/study?limit=20${qs}`, c)).json() as { cards: Card[] }).cards
-      .filter((x) => x.state === "new")
+  // The new English to Dutch cards, in the order a session offers them.
+  const newOrder = async (c: { session: string }) =>
+    ((await get("/study?limit=20", c)).json() as { cards: Card[] }).cards
+      .filter((x) => x.state === "new" && x.fromLanguage === "en")
       .map((x) => `${x.front[0]?.lemma}`);
 
   it("puts a new card first when its reverse is in review or relearning", async () => {
     for (const state of ["review", "relearning"] as const) {
       const c = await setup(`priority-${state}@example.com`, "house", state);
       // house was added after dog, but its reverse is known.
-      expect(await newOrder(c, "&fromLanguage=en&toLanguage=nl")).toEqual(["house", "dog", "water"]);
+      expect(await newOrder(c)).toEqual(["house", "dog", "water"]);
     }
   });
 
-  it("keeps the usual order otherwise, including when the reverse is only learning or new", async () => {
-    for (const state of ["learning", "new"] as const) {
-      const c = await setup(`no-priority-${state}@example.com`, "house", state);
-      expect(await newOrder(c, "&fromLanguage=en&toLanguage=nl")).toEqual(["dog", "house", "water"]);
-    }
+  it("keeps the usual order when the reverse is only learning", async () => {
+    const c = await setup("no-priority-learning@example.com", "house", "learning");
+    expect(await newOrder(c)).toEqual(["dog", "house", "water"]);
+  });
+
+  it("puts a word last when its other direction is also new, as that is offered after the other words", async () => {
+    // house is new both ways, so only one direction of it comes before the other words are all shown.
+    const c = await setup("no-priority-new@example.com", "house", "new");
+    expect(await newOrder(c)).toEqual(["dog", "water", "house"]);
   });
 
   it("applies in a mixed session too, ahead of older new cards", async () => {
@@ -438,9 +444,15 @@ describe("study queue order", () => {
 });
 
 describe("GET /study/counts", () => {
-  it("requires authentication and a complete direction", async () => {
+  it("requires authentication, and a language pair written as two codes if there is one", async () => {
     expect((await app.inject({ method: "GET", url: "/study/counts" })).statusCode).toBe(401);
-    expect((await get("/study/counts?fromLanguage=en")).statusCode).toBe(400);
+    expect((await get("/study/counts?pair=english")).statusCode).toBe(400);
+    expect((await get("/study/counts?pair=en-en")).statusCode).toBe(400);
+  });
+
+  it("is about whole decks: a direction in the query is ignored", async () => {
+    const all = (await get("/study/counts")).json() as { counts: object };
+    expect(((await get("/study/counts?fromLanguage=en&toLanguage=nl")).json() as { counts: object }).counts).toEqual(all.counts);
   });
 
   it("returns the same counts as a study batch, without any cards", async () => {
@@ -686,8 +698,7 @@ describe("review cards come due at the start of a study day", () => {
 });
 
 describe("the daily new-card limit", () => {
-  // Six new cards (six different words, one direction: a word is not offered both ways on the same
-  // day, which would change what these tests count) and a limit of 2. `logs` are first looks at new
+  // Six new cards (three words, both directions) and a limit of 2. `logs` are first looks at new
   // cards today, or at the given time, with the rating given.
   async function setup(
     logs: { rating: "again" | "hard" | "good" | "easy"; stateBefore?: "new" | "learning"; when?: Date }[],
@@ -695,15 +706,15 @@ describe("the daily new-card limit", () => {
   ) {
     const me = await scratchUser();
     await db.update(users).set({ dailyNewCardLimit: limit }).where(eq(users.id, me.id));
-    const stamp = randomUUID();
-    const cs = await db
-      .insert(concepts)
-      .values(Array.from({ length: 6 }, (_, i) => ({ key: `limit-${stamp}-${i}`, gloss: `limit ${stamp} ${i}` })))
-      .returning();
+    const cs = await db.select().from(concepts);
     // The first cards are the ones that were looked at; they are no longer new.
     const cards = await db
       .insert(userCards)
-      .values(cs.map((c) => ({ userId: me.id, conceptId: c.id, fromLanguage: "en", toLanguage: "nl" })))
+      .values(
+        ["en", "nl"].flatMap((from) =>
+          cs.map((c) => ({ userId: me.id, conceptId: c.id, fromLanguage: from, toLanguage: from === "en" ? "nl" : "en" })),
+        ),
+      )
       .returning();
     for (const card of cards.slice(0, logs.length)) {
       await db
@@ -730,6 +741,68 @@ describe("the daily new-card limit", () => {
   }
   const newCount = async (c: { session: string }) =>
     ((await get("/study/counts", c)).json() as { counts: { new: number } }).counts.new;
+
+  const limitReached = async (c: { session: string }) =>
+    ((await get("/study/counts", c)).json() as { newLimitReached: boolean }).newLimitReached;
+
+  it("says the limit has been reached once the allowance is used up and there are still new cards", async () => {
+    // Limit 2, both used by words that needed learning: four new cards are left, none available.
+    const c = await setup([{ rating: "again" }, { rating: "hard" }]);
+    expect(await newCount(c)).toBe(0);
+    expect(await limitReached(c)).toBe(true);
+  });
+
+  it("does not say so while some of the allowance is left, or when it has not been touched", async () => {
+    expect(await limitReached(await setup([]))).toBe(false);
+    expect(await limitReached(await setup([{ rating: "again" }]))).toBe(false);
+    // Known words (Good or Easy) do not use the allowance up.
+    expect(await limitReached(await setup([{ rating: "good" }, { rating: "easy" }, { rating: "good" }]))).toBe(false);
+  });
+
+  it("does not say so when the allowance is used up but there are no new cards left", async () => {
+    // All six cards have been looked at: nothing new is waiting, so the limit is not what is stopping anything.
+    const c = await setup([
+      { rating: "again" }, { rating: "hard" }, { rating: "again" },
+      { rating: "hard" }, { rating: "again" }, { rating: "hard" },
+    ]);
+    expect(await limitReached(c)).toBe(false);
+  });
+
+  it("says so for a limit of nothing, while there are new cards", async () => {
+    expect(await limitReached(await setup([], 0))).toBe(true);
+  });
+
+  it("is forgotten the next day", async () => {
+    const yesterday = new Date(Date.now() - 2 * 86_400_000);
+    expect(await limitReached(await setup([{ rating: "again", when: yesterday }, { rating: "hard", when: yesterday }]))).toBe(false);
+  });
+
+  const moreNew = async (c: { session: string }) =>
+    ((await get("/study?limit=50", c)).json() as { moreNew: number }).moreNew;
+
+  it("reports the new cards beyond the day's share, which known words make room for", async () => {
+    // Six new cards and a limit of 2: two are offered, four wait.
+    expect(await moreNew(await setup([]))).toBe(4);
+    // Two looked at and known (Good, Easy): the limit is untouched, so two of the four are offered.
+    expect(await moreNew(await setup([{ rating: "good" }, { rating: "easy" }]))).toBe(2);
+    // Two that needed learning use the limit up: nothing is offered, and all four wait.
+    expect(await moreNew(await setup([{ rating: "again" }, { rating: "hard" }]))).toBe(4);
+  });
+
+  it("is exactly the new cards over the limit, never more than there are", async () => {
+    // Six new cards: a limit of 5 leaves one waiting, a limit of 6 or more leaves none.
+    expect(await moreNew(await setup([], 5))).toBe(1);
+    expect(await moreNew(await setup([], 6))).toBe(0);
+    expect(await moreNew(await setup([], 7))).toBe(0);
+    // Two looked at and known leave four new cards: a limit of 3 leaves one waiting, 4 leaves none.
+    expect(await moreNew(await setup([{ rating: "good" }, { rating: "easy" }], 3))).toBe(1);
+    expect(await moreNew(await setup([{ rating: "good" }, { rating: "easy" }], 4))).toBe(0);
+  });
+
+  it("reports nothing beyond the limit when every new card is offered, or there is none", async () => {
+    expect(await moreNew(await setup([], 20))).toBe(0);
+    expect(await moreNew(await setup([{ rating: "good" }, { rating: "good" }, { rating: "good" }, { rating: "good" }, { rating: "good" }, { rating: "good" }]))).toBe(0);
+  });
 
   it("starts at the limit", async () => {
     expect(await newCount(await setup([]))).toBe(2);

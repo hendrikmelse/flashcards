@@ -304,6 +304,47 @@ describe("auth flow", () => {
 });
 
 describe("dashboard", () => {
+  describe("the daily new card limit", () => {
+    const counts = (newLimitReached: boolean) => ({
+      now: "x",
+      counts: { learning: 0, review: 3, new: 0 },
+      newLimitReached,
+      nextSession: null,
+      tomorrow: 0,
+    });
+
+    it("says that no new cards are available today, with a link to the settings, below the deck", async () => {
+      mock.loggedIn = true;
+      mock.handlers["GET /study/counts"] = () => json(200, counts(true));
+      renderApp("/");
+      const note = await screen.findByText(/No new cards are available to study today because you have reached your daily new card limit/);
+      const link = within(note).getByRole("link", { name: "Settings" });
+      expect(link).toHaveAttribute("href", "/settings?tab=study");
+      // Just below the progress figures of the deck.
+      const progress = await screen.findByRole("region", { name: "Progress" });
+      expect(progress.compareDocumentPosition(note) & Node.DOCUMENT_POSITION_FOLLOWING).toBeTruthy();
+    });
+
+    it("says nothing about it otherwise", async () => {
+      mock.loggedIn = true;
+      mock.handlers["GET /study/counts"] = () => json(200, counts(false));
+      renderApp("/");
+      await screen.findByRole("region", { name: "Progress" });
+      expect(screen.queryByText(/daily new card limit/)).not.toBeInTheDocument();
+    });
+
+    it("goes to the study tab of the settings when the link is followed", async () => {
+      mock.loggedIn = true;
+      mock.handlers["GET /study/counts"] = () => json(200, counts(true));
+      const user = userEvent.setup();
+      renderApp("/");
+      const note = await screen.findByText(/daily new card limit/);
+      await user.click(within(note).getByRole("link", { name: "Settings" }));
+      expect(await screen.findByRole("heading", { name: "Settings" })).toBeInTheDocument();
+      expect(await screen.findByRole("tab", { name: "Study" })).toHaveAttribute("aria-selected", "true");
+    });
+  });
+
   it("uses the same header layout as the deck and Add words pages, so the buttons line up", async () => {
     mock.loggedIn = true;
     mock.handlers["GET /deck"] = () =>
@@ -400,7 +441,6 @@ describe("dashboard", () => {
       review: 5,
       dueNow: 3,
       nextDueAt: null,
-      ready: { learning: 1, review: 2, new: 4 },
       ...extra,
     });
     const stats = (directions: unknown[], extra = {}) => ({
@@ -440,27 +480,12 @@ describe("dashboard", () => {
       expect(hero).toHaveTextContent("11 cards ready to study");
     });
 
-    it("offers a button per direction with its ready count, next to Start studying", async () => {
-      mock.handlers["GET /stats"] = () =>
-        json(200, stats([dir("en", "nl", { ready: { learning: 1, review: 2, new: 4 } }), dir("nl", "en", { ready: { learning: 0, review: 1, new: 2 } })]));
-      renderApp("/");
-      const hero = await screen.findByRole("region", { name: "Ready to study" });
-      const en = await within(hero).findByRole("link", { name: "Study EN → NL, 7 ready" });
-      expect(en).toHaveAttribute("href", "/study?from=en&to=nl");
-      expect(en).toHaveTextContent("7");
-      expect(within(hero).getByRole("link", { name: "Study NL → EN, 3 ready" })).toHaveAttribute(
-        "href",
-        "/study?from=nl&to=en",
-      );
-      expect(within(hero).getByRole("link", { name: "Start studying" })).toHaveAttribute("href", "/study");
-    });
-
-    it("leaves out a direction with nothing ready, and the buttons when it is no real choice", async () => {
-      mock.handlers["GET /stats"] = () =>
-        json(200, stats([dir("en", "nl"), dir("nl", "en", { ready: { learning: 0, review: 0, new: 0 } })]));
+    it("has one Start studying button, however many directions the deck has", async () => {
       renderApp("/");
       const hero = await screen.findByRole("region", { name: "Ready to study" });
       await screen.findByRole("button", { name: "NL → EN" }); // stats have loaded
+      expect(within(hero).getAllByRole("link")).toHaveLength(1);
+      expect(within(hero).getByRole("link", { name: "Start studying" })).toHaveAttribute("href", "/study");
       expect(within(hero).queryByRole("link", { name: /^Study / })).not.toBeInTheDocument();
     });
 

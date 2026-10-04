@@ -56,16 +56,18 @@ export async function loadEntries(
 // Inserts cards for the user, skipping any they already have. Returns how many
 // were actually created. Callers must have verified the concepts are available
 // in the direction. All cards in one call share an addedAt, and sortKey keeps
-// their order (new cards are studied by addedAt, then sortKey).
+// their order (new cards are studied by addedAt, then sortKey). A caller adding
+// several directions at once gives each a later addedAt, so one direction is
+// always studied before the next however fast the inserts are.
 export async function insertUserCards(
   db: Db,
   userId: string,
   items: { conceptId: string; sortKey: number }[],
   fromLanguage: string,
   toLanguage: string,
+  addedAt: Date = new Date(),
 ): Promise<number> {
   let added = 0;
-  const addedAt = new Date();
   const CHUNK = 1000;
   for (let i = 0; i < items.length; i += CHUNK) {
     const rows = await db

@@ -3,7 +3,6 @@ import type { DirectionSummary, Scope, StatsResponse } from "@flashcards/shared"
 import { reviewLogs, userCards, users } from "../db/schema.js";
 import type { Db } from "../db/types.js";
 import { isValidTimeZone, studyDayStart } from "./day.js";
-import { getStudyCounts } from "./queue.js";
 import { inPair, inScope, pairOf } from "./scope.js";
 
 // The deck's numbers for a scope: a language pair, or with none, every deck.
@@ -52,18 +51,10 @@ export async function getStats(
     .where(and(eq(userCards.userId, userId), inScope(userCards, scope)))
     .groupBy(userCards.fromLanguage, userCards.toLanguage)
     .orderBy(userCards.fromLanguage, userCards.toLanguage);
-  const directions: DirectionSummary[] = await Promise.all(
-    rows.map(async (r) => {
-      // The same counts a session in this direction would use.
-      const { counts } = await getStudyCounts(
-        db,
-        userId,
-        { fromLanguage: r.fromLanguage, toLanguage: r.toLanguage },
-        now,
-      );
-      return { ...r, nextDueAt: r.nextDueAt ? new Date(r.nextDueAt).toISOString() : null, ready: counts };
-    }),
-  );
+  const directions: DirectionSummary[] = rows.map((r) => ({
+    ...r,
+    nextDueAt: r.nextDueAt ? new Date(r.nextDueAt).toISOString() : null,
+  }));
   const nextDueAt = directions
     .map((d) => d.nextDueAt)
     .filter((d): d is string => d !== null)

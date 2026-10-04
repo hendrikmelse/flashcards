@@ -197,7 +197,7 @@ describe("every request about the deck is for the pair", () => {
   const pairOfLastRequest = () => /pair=([^&]+)/.exec(mock.requests.at(-1)!)?.[1];
   const directions = (pair: string): DirectionSummary[] =>
     pair === "en-nl"
-      ? [{ fromLanguage: "en", toLanguage: "nl", total: 4, new: 4, learning: 0, review: 0, dueNow: 0, nextDueAt: null, ready: { learning: 0, review: 0, new: 4 } }]
+      ? [{ fromLanguage: "en", toLanguage: "nl", total: 4, new: 4, learning: 0, review: 0, dueNow: 0, nextDueAt: null }]
       : [];
 
   beforeEach(() => {

@@ -20,11 +20,15 @@ export function Layout() {
         {/* Decoration only: the language pair being learned. */}
         <SplitFlag left={direction.from} right={direction.to} />
         <nav aria-label="Main">
-          <NavLink to="/" end>
+          <NavLink to="/" end data-label="Dashboard">
             Dashboard
           </NavLink>
-          <NavLink to="/deck">My deck</NavLink>
-          <NavLink to="/add-words">Add words</NavLink>
+          <NavLink to="/deck" data-label="My deck">
+            My deck
+          </NavLink>
+          <NavLink to="/add-words" data-label="Add words">
+            Add words
+          </NavLink>
         </nav>
         <div className="account">
           <span className="email">{user?.name ? `Hi, ${user.name}` : user?.email}</span>

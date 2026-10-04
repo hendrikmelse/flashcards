@@ -330,6 +330,17 @@ describe("adding in both directions", () => {
     expect(cards.filter((c) => c.fromLanguage === "nl")).toHaveLength(3);
   });
 
+  it("studies all the forward cards before any reverse card, however quickly they were added", async () => {
+    const { rows } = await pg.query<{ from_language: string; first: string; last: string }>(
+      `select c.from_language, min(c.added_at) as first, max(c.added_at) as last
+       from user_cards c join users u on u.id = c.user_id
+       where u.email = 'both@example.com' group by c.from_language`,
+    );
+    const en = rows.find((r) => r.from_language === "en")!;
+    const nl = rows.find((r) => r.from_language === "nl")!;
+    expect(new Date(en.last).getTime()).toBeLessThan(new Date(nl.first).getTime());
+  });
+
   it("is idempotent", async () => {
     const res = await post(`/packs/${packId}/add`, { ...EN_NL, bothDirections: true });
     expect(res.json()).toEqual({ added: 0, alreadyInDeck: 6, unavailable: 1 });

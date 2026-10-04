@@ -251,13 +251,15 @@ export async function packRoutes(
 
     // Counts are in cards: with both directions, each word is two.
     let added = 0;
-    for (const d of directions) {
+    const stamp = Date.now();
+    for (const [i, d] of directions.entries()) {
       added += await insertUserCards(
         db,
         req.user!.id,
         available.map((a) => ({ conceptId: a.conceptId, sortKey: a.position })),
         d.fromLanguage,
         d.toLanguage,
+        new Date(stamp + i), // the reverse cards come after all the forward ones
       );
     }
 
@@ -409,13 +411,15 @@ export async function packRoutes(
 
     const directions = directionsToAdd(b.data);
     let added = 0;
-    for (const d of directions) {
+    const stamp = Date.now();
+    for (const [i, d] of directions.entries()) {
       added += await insertUserCards(
         db,
         req.user!.id,
         [{ conceptId: concept.id, sortKey: 0 }],
         d.fromLanguage,
         d.toLanguage,
+        new Date(stamp + i),
       );
     }
     return reply.code(added ? 201 : 200).send({ added, alreadyInDeck: directions.length - added });

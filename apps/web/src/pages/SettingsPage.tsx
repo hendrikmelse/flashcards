@@ -60,6 +60,7 @@ function Settings_({ settings }: { settings: Settings }) {
           <button
             key={t.id}
             id={`tab-${t.id}`}
+            data-label={t.label}
             type="button"
             role="tab"
             aria-selected={tab === t.id}

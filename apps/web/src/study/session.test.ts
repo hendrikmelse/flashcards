@@ -341,3 +341,61 @@ describe("cards to look at again in a later session", () => {
     expect(reReviewCount(s)).toBe(1);
   });
 });
+
+describe("the number of cards left", () => {
+  const fetchedNew = (n: number, moreNew: number): Action => ({ type: "fetched", cards: ids(n), moreNew });
+  const left = (actions: Action[]) => remaining(run(actions));
+
+  it("counts down for every answered card when there are no more new cards to come", () => {
+    const start: Action[] = [fetchedNew(3, 0), { type: "pick" }];
+    expect(left(start)).toBe(3);
+    expect(left([...start, answer("good", "learning")])).toBe(2);
+    expect(left([...start, answer("easy", "review")])).toBe(2);
+  });
+
+  it("does not count down for a new card answered Good or Easy, since another new card takes its place", () => {
+    const start: Action[] = [fetchedNew(3, 5), { type: "pick" }];
+    expect(left(start)).toBe(3);
+    expect(left([...start, answer("good", "learning")])).toBe(3);
+    expect(left([...start, answer("easy", "review")])).toBe(3);
+  });
+
+  it("does count down for a new card answered Hard, which uses up the daily limit", () => {
+    const start: Action[] = [fetchedNew(3, 5), { type: "pick" }];
+    expect(left([...start, answer("hard", "learning")])).toBe(2);
+  });
+
+  it("stays the same for Again, as the card is shown once more", () => {
+    const start: Action[] = [fetchedNew(3, 5), { type: "pick" }];
+    expect(left([...start, answer("again", "learning")])).toBe(3);
+  });
+
+  it("only makes room for as many new cards as there are", () => {
+    const start: Action[] = [fetchedNew(4, 2), { type: "pick" }];
+    const two = [...start, answer("good", "learning"), { type: "pick" } as Action, answer("good", "learning")];
+    expect(left(two)).toBe(4 - 2 + 2); // two answered, two made room for
+    const three = [...two, { type: "pick" } as Action, answer("good", "learning")];
+    expect(left(three)).toBe(4 - 3 + 2); // no more room: it counts down again
+  });
+
+  it("does not count down for a card that was already being studied", () => {
+    const studied = { ...card("s"), state: "review" as const };
+    const actions: Action[] = [{ type: "fetched", cards: [studied, card("b"), card("c")], moreNew: 5 }, { type: "pick" }];
+    expect(left([...actions, answer("good", "review")])).toBe(2); // it counts down: not a new card
+  });
+
+  it("forgets what was made room for once the next batch arrives, and takes the new figure", () => {
+    const s = run([fetchedNew(2, 3), { type: "pick" }, answer("good", "learning"), { type: "pick" }, answer("good", "learning")]);
+    expect(s.unlocked).toBe(2);
+    const next = reducer(s, { type: "fetched", cards: ids(2, 10), moreNew: 1 });
+    expect(next.unlocked).toBe(0);
+    expect(next.moreNew).toBe(1);
+    expect(remaining(next)).toBe(2);
+  });
+
+  it("treats a batch with no figure as having no more new cards", () => {
+    const s = run([{ type: "fetched", cards: ids(2) }, { type: "pick" }, answer("good", "learning")]);
+    expect(remaining(s)).toBe(1);
+  });
+});
+

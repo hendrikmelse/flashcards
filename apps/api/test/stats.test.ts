@@ -103,7 +103,6 @@ describe("getStats", () => {
         review: 1,
         dueNow: 2,
         nextDueAt: null, // everything there is new or already due
-        ready: { learning: 1, review: 1, new: 1 },
       },
       {
         fromLanguage: "nl",
@@ -114,7 +113,6 @@ describe("getStats", () => {
         review: 1,
         dueNow: 0,
         nextDueAt: new Date(NOW.getTime() + 2 * HOUR).toISOString(),
-        ready: { learning: 0, review: 0, new: 0 }, // nothing due yet in this direction
       },
     ]);
   });

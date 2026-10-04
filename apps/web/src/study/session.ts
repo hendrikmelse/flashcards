@@ -51,6 +51,14 @@ export interface SessionState {
   repeatNotice: boolean;
   /** The user ended the session early; what is left of the queue is not studied. */
   ended: boolean;
+  /** New cards beyond the daily limit that the last batch left out (see StudyResponse.moreNew). */
+  moreNew: number;
+  /**
+   * How many of those the answers so far have made room for: a new card answered Good or Easy on its
+   * first look does not use the daily limit up, so another new card will take its place. They are
+   * fetched when the queue runs dry, and are counted among the cards left in the meantime.
+   */
+  unlocked: number;
 }
 
 export const initialState: SessionState = {
@@ -65,10 +73,12 @@ export const initialState: SessionState = {
   lastAgainId: null,
   repeatNotice: false,
   ended: false,
+  moreNew: 0,
+  unlocked: 0,
 };
 
 export type Action =
-  | { type: "fetched"; cards: StudyCardView[] }
+  | { type: "fetched"; cards: StudyCardView[]; moreNew?: number }
   | { type: "fetchFailed" }
   | { type: "retryFetch" }
   | { type: "pick" }
@@ -94,6 +104,9 @@ export function reducer(state: SessionState, action: Action): SessionState {
         fetchError: false,
         queue: [...state.queue, ...fresh],
         exhausted: fresh.length === 0 && state.queue.length === 0,
+        // What was made room for has arrived with the batch (or is not coming).
+        moreNew: action.moreNew ?? 0,
+        unlocked: 0,
       };
     }
 
@@ -136,6 +149,8 @@ export function reducer(state: SessionState, action: Action): SessionState {
       const missed = rating === "again" && stillLearning;
       const returning = { ...card, state: result.state };
       const at = againPosition(state.queue.length, random);
+      // A new card that is already known does not use up the daily limit, so another one follows it.
+      const makesRoom = card.state === "new" && (rating === "good" || rating === "easy");
 
       return {
         ...state,
@@ -149,6 +164,7 @@ export function reducer(state: SessionState, action: Action): SessionState {
             ? [...state.pending, card.id]
             : state.pending,
         handled: state.handled.includes(card.id) ? state.handled : [...state.handled, card.id],
+        unlocked: makesRoom ? Math.min(state.moreNew, state.unlocked + 1) : state.unlocked,
         stats: {
           ...state.stats,
           reviewed: state.stats.reviewed + 1,
@@ -169,9 +185,14 @@ export function phaseOf(state: SessionState): Phase {
   return "loading";
 }
 
-/** Cards still to be shown in the batch loaded so far, including the current one. */
+/**
+ * Cards still to be shown today, including the current one: those in the batch loaded so far, and the
+ * new cards that known words have made room for, which are fetched when the queue runs dry. Without
+ * the second part the number would count down on words that do not use up the daily limit, only to
+ * jump back up when the next batch arrived.
+ */
 export function remaining(state: SessionState): number {
-  return state.queue.length + (state.current ? 1 : 0);
+  return state.queue.length + (state.current ? 1 : 0) + state.unlocked;
 }
 
 /**

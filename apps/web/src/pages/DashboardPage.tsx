@@ -143,9 +143,6 @@ export function DashboardPage() {
   const ready = dueNow + counts.new;
   const byDirection = stats.data?.directions ?? [];
   const nextDueAt = stats.data?.nextDueAt ?? null;
-  // One button per direction with something ready, but only when that is a real choice.
-  const readyIn = (d: DirectionSummary) => d.ready.learning + d.ready.review + d.ready.new;
-  const studyable = byDirection.filter((d) => readyIn(d) > 0);
 
   return (
     <>
@@ -208,18 +205,6 @@ export function DashboardPage() {
                 <Link to="/study" className="button primary">
                   Start studying
                 </Link>
-                {studyable.length > 1 &&
-                  studyable.map((d) => (
-                    <Link
-                      key={`${d.fromLanguage}-${d.toLanguage}`}
-                      to={`/study?from=${encodeURIComponent(d.fromLanguage)}&to=${encodeURIComponent(d.toLanguage)}`}
-                      className="button secondary"
-                      aria-label={`Study ${shortDirection(d)}, ${readyIn(d)} ready`}
-                    >
-                      {shortDirection(d)}
-                      <span className="count">{readyIn(d)}</span>
-                    </Link>
-                  ))}
               </div>
             )}
           </section>
@@ -253,6 +238,13 @@ export function DashboardPage() {
             </>
           ) : (
             <p className="status">{deck.isError ? "Could not load this view." : "Loading…"}</p>
+          )}
+          {study.data.newLimitReached && (
+            <p className="muted limit-note">
+              No new cards are available to study today because you have reached your daily new card limit.
+              <br />
+              You can change the limit in <Link to="/settings?tab=study">Settings</Link>.
+            </p>
           )}
         </>
       )}

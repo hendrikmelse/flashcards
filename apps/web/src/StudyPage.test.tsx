@@ -86,9 +86,11 @@ describe("ending a session early", () => {
     await user.click(screen.getByRole("button", { name: "End session" }));
 
     expect(await screen.findByRole("heading", { name: "Session complete!" })).toBeInTheDocument();
-    expect(screen.getByText("You viewed 1 card")).toBeInTheDocument();
+    expect(screen.getByText("You viewed 1 unique card")).toBeInTheDocument();
     expect(screen.getByText("1 card will be available for re-review in 15 minutes")).toBeInTheDocument();
-    expect(screen.getByRole("link", { name: "Back to the dashboard" })).toHaveAttribute("href", "/");
+    const back = screen.getByRole("link", { name: "Back to the dashboard" });
+    expect(back).toHaveAttribute("href", "/");
+    expect(back).toHaveClass("button", "primary"); // looks and works like the other page buttons
     expect(screen.getByText("Good").nextSibling).toHaveTextContent("1");
     // Still on the study page: nothing sent you away, and the card is gone.
     expect(screen.queryByRole("heading", { name: "Dashboard" })).not.toBeInTheDocument();
@@ -103,14 +105,32 @@ describe("ending a session early", () => {
     expect(screen.queryByRole("link", { name: "End session" })).not.toBeInTheDocument();
   });
 
-  it("works before anything was answered, without claiming you are all caught up", async () => {
+  it("goes straight back to the dashboard when nothing was answered, with no summary", async () => {
     const user = userEvent.setup();
     renderApp("/study");
     await user.click(await screen.findByRole("button", { name: "End session" }));
-    expect(await screen.findByRole("heading", { name: "Session complete!" })).toBeInTheDocument();
-    expect(screen.getByText("You viewed 0 cards")).toBeInTheDocument();
-    expect(screen.queryByText(/all caught up/)).not.toBeInTheDocument();
-    expect(screen.queryByText(/re-review/)).not.toBeInTheDocument();
+    expect(await screen.findByRole("heading", { name: "Dashboard" })).toBeInTheDocument();
+    expect(screen.queryByRole("heading", { name: "Session complete!" })).not.toBeInTheDocument();
+    expect(reviews).toEqual([]);
+  });
+
+  it("does the same when a card was looked at but not answered", async () => {
+    const user = userEvent.setup();
+    renderApp("/study");
+    await user.click(await screen.findByRole("button", { name: "Show answer" }));
+    await user.click(screen.getByRole("button", { name: "End session" }));
+    expect(await screen.findByRole("heading", { name: "Dashboard" })).toBeInTheDocument();
+    expect(screen.queryByText(/Session complete/)).not.toBeInTheDocument();
+  });
+
+  it("does the same from the explanation shown in a first session", async () => {
+    mock.handlers["GET /study?limit=100"] = () =>
+      json(200, { now: "x", counts: { learning: 0, review: 0, new: 2 }, cards: [dog, house], firstSession: true });
+    const user = userEvent.setup();
+    renderApp("/study");
+    await screen.findByRole("article", { name: "How studying works" });
+    await user.click(screen.getByRole("button", { name: "End session" }));
+    expect(await screen.findByRole("heading", { name: "Dashboard" })).toBeInTheDocument();
   });
 
   it("counts a missed card that was still waiting its turn as one to look at again", async () => {
@@ -121,14 +141,16 @@ describe("ending a session early", () => {
     await screen.findByText("house");
     await user.click(screen.getByRole("button", { name: "End session" }));
 
-    expect(await screen.findByText("You viewed 1 card")).toBeInTheDocument();
+    expect(await screen.findByText("You viewed 1 unique card")).toBeInTheDocument();
     expect(screen.getByText("1 card will be available for re-review in 15 minutes")).toBeInTheDocument();
   });
 
   it("stops asking for more cards once the session has ended", async () => {
     const user = userEvent.setup();
     renderApp("/study");
-    await screen.findByText("dog");
+    await user.click(await screen.findByRole("button", { name: "Show answer" }));
+    await user.click(screen.getByRole("button", { name: "Good" })); // something answered, so there is a summary
+    await screen.findByText("house");
     const calls = studyCalls;
     await user.click(screen.getByRole("button", { name: "End session" }));
     await screen.findByRole("heading", { name: "Session complete!" });
@@ -147,7 +169,7 @@ describe("ending a session early", () => {
     await user.click(screen.getByRole("button", { name: "End session" }));
     expect(await screen.findByRole("heading", { name: "Session complete!" })).toBeInTheDocument();
     expect(screen.queryByText(/exact same card again/)).not.toBeInTheDocument();
-    expect(screen.getByText("You viewed 1 card")).toBeInTheDocument();
+    expect(screen.getByText("You viewed 1 unique card")).toBeInTheDocument();
     expect(screen.getByText("1 card will be available for re-review in 15 minutes")).toBeInTheDocument();
   });
 });
@@ -278,7 +300,59 @@ describe("missed cards", () => {
   });
 });
 
-describe("studying one direction", () => {
+describe("the number of cards left", () => {
+  const cat = { ...house, id: "card-cat", conceptId: "c3", front: [entry("en", "cat")], back: [entry("nl", "kat", { article: "de" })] };
+  // Like the server: the first batch is dog and house, with `moreNew` more waiting behind the daily
+  // limit. When the queue runs dry (the last card is on screen) it asks again, and gets what is still on
+  // offer: house, which is already being shown, and, if an answer made room, one more.
+  const withMoreNew = (moreNew: number, madeRoom = true) => {
+    let calls = 0;
+    mock.handlers["GET /study?limit=100"] = () => {
+      calls++;
+      const cards = calls === 1 ? [dog, house] : madeRoom && moreNew > 0 ? [house, cat] : [house];
+      return json(200, {
+        now: "x",
+        counts: { learning: 0, review: 0, new: cards.length },
+        cards,
+        firstSession: false,
+        moreNew: calls === 1 ? moreNew : Math.max(0, moreNew - 1),
+      });
+    };
+  };
+
+  it("does not count down when a new card is answered Good or Easy, as another new card is coming", async () => {
+    withMoreNew(4);
+    const user = userEvent.setup();
+    renderApp("/study");
+    expect(await screen.findByText(/2 left/)).toBeInTheDocument();
+    await user.click(await screen.findByRole("button", { name: "Show answer" }));
+    await user.click(screen.getByRole("button", { name: "Good" }));
+    expect(await screen.findByText("house")).toBeInTheDocument();
+    expect(screen.getByText(/2 left/)).toBeInTheDocument();
+  });
+
+  it("counts down when a new card is answered Hard, which uses up the daily limit", async () => {
+    withMoreNew(4, false);
+    const user = userEvent.setup();
+    renderApp("/study");
+    await user.click(await screen.findByRole("button", { name: "Show answer" }));
+    await user.click(screen.getByRole("button", { name: "Hard" }));
+    expect(await screen.findByText("house")).toBeInTheDocument();
+    expect(screen.getByText(/1 left/)).toBeInTheDocument();
+  });
+
+  it("counts down as usual when there are no more new cards beyond the limit", async () => {
+    withMoreNew(0);
+    const user = userEvent.setup();
+    renderApp("/study");
+    await user.click(await screen.findByRole("button", { name: "Show answer" }));
+    await user.click(screen.getByRole("button", { name: "Good" }));
+    expect(await screen.findByText("house")).toBeInTheDocument();
+    expect(screen.getByText(/1 left/)).toBeInTheDocument();
+  });
+});
+
+describe("starting a session", () => {
   it("starts the next session early when the URL says so", async () => {
     mock.handlers["GET /study?limit=100&early=1"] = () =>
       json(200, { now: "x", counts: { learning: 1, review: 0, new: 0 }, cards: [dog] });
@@ -288,13 +362,12 @@ describe("studying one direction", () => {
     expect(mock.calls).not.toContain("GET /study?limit=100");
   });
 
-  it("asks only for that direction when the URL names one", async () => {
-    mock.handlers["GET /study?limit=100&fromLanguage=nl&toLanguage=en"] = () =>
-      json(200, { now: "x", counts: { learning: 0, review: 0, new: 1 }, cards: [dog] });
+  it("always studies the whole deck of the language pair: a direction in the address is ignored", async () => {
     renderApp("/study?from=nl&to=en");
     expect(await screen.findByText("dog")).toBeInTheDocument();
-    expect(mock.calls).toContain("GET /study?limit=100&fromLanguage=nl&toLanguage=en");
-    expect(mock.calls).not.toContain("GET /study?limit=100");
+    expect(mock.calls).toContain("GET /study?limit=100");
+    expect(mock.requests.some((r) => r.includes("fromLanguage") || r.includes("toLanguage"))).toBe(false);
+    expect(mock.requests).toContain("GET /study?limit=100&pair=en-nl");
   });
 });
 
@@ -337,7 +410,7 @@ describe("study session", () => {
     // Nothing is left to show now, so no countdown: the session is over.
     expect(await screen.findByRole("heading", { name: "Session complete!" })).toBeInTheDocument();
     expect(screen.queryByText("Nothing else is ready right now.")).not.toBeInTheDocument();
-    expect(screen.getByText("You viewed 2 cards")).toBeInTheDocument();
+    expect(screen.getByText("You viewed 2 unique cards")).toBeInTheDocument();
     // dog is still being learned; it will be back in the next session.
     expect(screen.getByText("1 card will be available for re-review in 15 minutes")).toBeInTheDocument();
     expect(screen.queryByText(/rated Good or Easy/)).not.toBeInTheDocument();
@@ -353,7 +426,7 @@ describe("study session", () => {
     await user.click(screen.getByRole("button", { name: "Easy" }));
 
     expect(await screen.findByRole("heading", { name: "Session complete!" })).toBeInTheDocument();
-    expect(screen.getByText("You viewed 1 card")).toBeInTheDocument();
+    expect(screen.getByText("You viewed 1 unique card")).toBeInTheDocument();
     // Nothing to re-review, so no line about it.
     expect(screen.queryByText(/re-review/)).not.toBeInTheDocument();
     expect(screen.getByText("Easy").nextSibling).toHaveTextContent("1");
@@ -372,7 +445,7 @@ describe("study session", () => {
     await user.click(screen.getByRole("button", { name: "Good" }));
 
     expect(await screen.findByRole("heading", { name: "Session complete!" })).toBeInTheDocument();
-    expect(screen.getByText("You viewed 2 cards")).toBeInTheDocument(); // three answers, two cards
+    expect(screen.getByText("You viewed 2 unique cards")).toBeInTheDocument(); // three answers, two cards
     expect(screen.getByText("2 cards will be available for re-review in 15 minutes")).toBeInTheDocument();
     expect(screen.getByText("Again").nextSibling).toHaveTextContent("1");
     expect(screen.getByText("Good").nextSibling).toHaveTextContent("2");
@@ -433,7 +506,13 @@ describe("study session", () => {
     studyWith([]);
     renderApp("/study");
     expect(await screen.findByText(/all caught up/)).toBeInTheDocument();
-    expect(screen.getByRole("link", { name: "Browse packs" })).toBeInTheDocument();
+    const browse = screen.getByRole("link", { name: "Browse words" });
+    expect(browse).toHaveAttribute("href", "/add-words");
+    expect(browse).toHaveClass("button");
+    const back = screen.getByRole("link", { name: "Back to the dashboard" });
+    expect(back).toHaveAttribute("href", "/");
+    expect(back).toHaveClass("button");
+    expect(screen.queryByRole("link", { name: "Browse packs" })).not.toBeInTheDocument();
   });
 
   it("recovers from a failed load", async () => {
@@ -658,45 +737,99 @@ describe("dashboard entry point", () => {
   });
 });
 
-describe("the answer guide", () => {
+describe("the answer buttons", () => {
   const reveal = async (user: ReturnType<typeof userEvent.setup>) =>
     user.click(await screen.findByRole("button", { name: "Show answer" }));
 
-  it("explains the four answer buttons once the answer is showing, not before", async () => {
+  it("have no explanation under them: the study screen is just the card and the buttons", async () => {
     const user = userEvent.setup();
     renderApp("/study");
-    await screen.findByRole("button", { name: "Show answer" });
-    expect(screen.queryByRole("complementary", { name: "What the answer buttons mean" })).not.toBeInTheDocument();
-
     await reveal(user);
-    const guide = within(screen.getByRole("complementary", { name: "What the answer buttons mean" }));
-    for (const word of ["Again", "Hard", "Good", "Easy"]) expect(guide.getByText(word)).toBeInTheDocument();
-    expect(guide.getByRole("link", { name: "More about scheduling" })).toHaveAttribute("href", "/how-it-works");
+    const buttons = screen.getByRole("group", { name: "How well did you know it?" });
+    expect(within(buttons).getAllByRole("button").map((b) => b.textContent)).toEqual(["Again1", "Hard2", "Good3", "Easy4"]);
+    expect(screen.queryByRole("complementary")).not.toBeInTheDocument();
+    expect(screen.queryByText(/I didn.t remember it|How did it go/)).not.toBeInTheDocument();
+    expect(screen.queryByRole("button", { name: "Got it" })).not.toBeInTheDocument();
   });
 
-  it("stays closed for good once dismissed", async () => {
-    const user = userEvent.setup();
-    const first = renderApp("/study");
-    await reveal(user);
-    await user.click(screen.getByRole("button", { name: "Got it" }));
-    expect(screen.queryByRole("complementary", { name: "What the answer buttons mean" })).not.toBeInTheDocument();
-
-    // The next card, and a later visit, do not bring it back.
-    await user.click(screen.getByRole("button", { name: "Good" }));
-    await reveal(user);
-    expect(screen.queryByRole("complementary", { name: "What the answer buttons mean" })).not.toBeInTheDocument();
-    first.unmount();
-    renderApp("/study");
-    await reveal(user);
-    expect(screen.queryByRole("complementary", { name: "What the answer buttons mean" })).not.toBeInTheDocument();
-  });
-
-  it("does not stop the number keys from answering", async () => {
+  it("can be answered with the number keys", async () => {
     const user = userEvent.setup();
     renderApp("/study");
     await reveal(user);
     await user.keyboard("3");
     await vi.waitFor(() => expect(reviews.map((r) => r.rating)).toEqual(["good"]));
+  });
+});
+
+describe("the first study session", () => {
+  const firstSession = (cards: unknown[], first = true) => {
+    let calls = 0;
+    mock.handlers["GET /study?limit=100"] = () => {
+      calls++;
+      // Only the first request can be the first session: after that, cards have been answered.
+      return json(200, { now: "x", counts: { learning: 0, review: 0, new: cards.length }, cards, firstSession: first && calls === 1 });
+    };
+  };
+
+  it("opens with how studying works and what the buttons mean, in place of the first card", async () => {
+    firstSession([dog, house]);
+    renderApp("/study");
+    const intro = within(await screen.findByRole("article", { name: "How studying works" }));
+    expect(screen.queryByRole("button", { name: "Show answer" })).not.toBeInTheDocument();
+    expect(screen.queryByText("dog")).not.toBeInTheDocument();
+    for (const word of ["Again", "Hard", "Good", "Easy"]) expect(intro.getByText(word)).toBeInTheDocument();
+    expect(intro.getByText("Show answer")).toBeInTheDocument();
+    expect(intro.getByRole("link", { name: "More about scheduling" })).toHaveAttribute("href", "/how-it-works");
+  });
+
+  it("has a button to start, which is focused, and then shows the first card", async () => {
+    firstSession([dog, house]);
+    const user = userEvent.setup();
+    renderApp("/study");
+    const start = await screen.findByRole("button", { name: "Start studying" });
+    expect(start).toHaveFocus();
+    await user.click(start);
+    expect(await screen.findByText("dog")).toBeInTheDocument();
+    expect(screen.queryByRole("article", { name: "How studying works" })).not.toBeInTheDocument();
+    expect(screen.getByRole("button", { name: "Show answer" })).toBeInTheDocument();
+  });
+
+  it("is not shown again for the rest of the session", async () => {
+    firstSession([dog, house]);
+    const user = userEvent.setup();
+    renderApp("/study");
+    await user.click(await screen.findByRole("button", { name: "Start studying" }));
+    await user.click(await screen.findByRole("button", { name: "Show answer" }));
+    await user.click(screen.getByRole("button", { name: "Good" }));
+    await screen.findByText("house");
+    expect(screen.queryByRole("article", { name: "How studying works" })).not.toBeInTheDocument();
+  });
+
+  it("is not shown to anyone who has studied before", async () => {
+    firstSession([dog, house], false);
+    renderApp("/study");
+    expect(await screen.findByText("dog")).toBeInTheDocument();
+    expect(screen.queryByRole("article", { name: "How studying works" })).not.toBeInTheDocument();
+  });
+
+  it("is not shown when there is nothing to study", async () => {
+    firstSession([]);
+    renderApp("/study");
+    expect(await screen.findByText(/all caught up/i)).toBeInTheDocument();
+    expect(screen.queryByRole("article", { name: "How studying works" })).not.toBeInTheDocument();
+  });
+
+  it("does not take the number keys until it has been dismissed", async () => {
+    firstSession([dog, house]);
+    const user = userEvent.setup();
+    renderApp("/study");
+    await screen.findByRole("article", { name: "How studying works" });
+    await user.keyboard("3");
+    expect(reviews).toEqual([]);
+    await user.click(screen.getByRole("button", { name: "Start studying" }));
+    await user.click(await screen.findByRole("button", { name: "Show answer" }));
+    await user.keyboard("3");
+    await vi.waitFor(() => expect(reviews).toHaveLength(1));
   });
 });
 
