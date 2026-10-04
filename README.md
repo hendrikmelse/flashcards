@@ -182,6 +182,7 @@ One Docker image: the API serves `/api/*` and the built web app (falling back to
 - **Security:** a non-root user, SSH keys only, firewall (only ports 22, 80 and 443), fail2ban, unattended upgrades. The CI deploy key is restricted to one validated command
 - **Logs:** container logs go to the host journal (capped at 500 MB / 30 days), so they survive deploys
 - **Backups:** nightly `pg_dump` at 03:00 Pacific via a systemd timer, 14 days kept locally, then copied encrypted to Backblaze B2 with `restic` (7 daily, 4 weekly, 6 monthly), a Healthchecks.io alert if a night is missed or fails, restore drill verified from the offsite copy
+- **Uptime:** UptimeRobot checks `/api/ready` (app and database) and the home page every 5 minutes and emails on failure; see the runbook's section 8
 - **Access:** invite-only through `REGISTRATION_MODE=allowlist` and `ALLOWED_EMAILS`
 - **Production data:** a separate `seed-languages` command creates the languages without sample data
 
@@ -195,10 +196,10 @@ The full runbook, including server setup, rollback, backups and how to invite so
 
 1. ~~**Time zones.**~~ Done: new accounts take the browser's time zone, and the settings page changes it (review cards move to the start of the same day in the new zone). Production has no accounts yet, so there is nothing to migrate.
 2. ~~**Push and deploy.**~~ Done 2026-10-04: production runs the current build, migrations included.
-3. **Check the Docker image builds.** `content/` was added to the image after the last verified build; CI builds it on push, but it is untested.
+3. ~~**Check the Docker image builds.**~~ Done: CI builds the image and production has been running it since 2026-10-04.
 4. ~~**Import the content into production**~~ Done 2026-10-04, along with removing the retired concepts.
-5. **Native Dutch review of the content.** The words flagged as uncertain have been reviewed and fixed. Beyond those, nothing has been read through by a Dutch speaker: spot-check the frequency bands and a sample of the topic packs.
-6. **A real browser pass on the live site** over HTTPS (registering, studying, the Content-Security-Policy, a phone).
+5. **Native Dutch review of the content.** The words flagged as uncertain were reviewed and fixed, and a native speaker looked through a few packs online (2026-10-04) and found no issues. That is a spot check, not a full read-through; more can be done before a wider launch.
+6. ~~**A real browser pass on the live site**~~ Done 2026-10-04 over HTTPS: no console errors, and zoom and keyboard-only use worked.
 
 ### Should have for friends and family
 
@@ -207,7 +208,7 @@ The full runbook, including server setup, rollback, backups and how to invite so
 - ~~A "report a problem with this card" button, since the content is unreviewed~~ (done: in the study screen and the card view; read the reports with `npm run reports`, see `deploy/README.md`). Reports are not emailed, so check them now and then
 - ~~First-run guidance~~ (done: an empty dashboard points to the starter words and explains adding words and the answer buttons; the very first study session opens with a short explanation of how the cards and answer buttons work). Every page header (dashboard, My deck, Add words) has a "Start studying" button with the number of cards ready (disabled, saying "No cards ready to study", when there are none), above its navigation buttons, and the main navigation has a Study tab
 - ~~Rate limits on the public pack and search endpoints~~ (done: per client, 120 searches and 240 pack or language reads a minute). Signed-in endpoints (deck, study) are not limited
-- Uptime monitoring and error tracking
+- ~~Uptime monitoring~~ (done: UptimeRobot, see the runbook). Error tracking is still to do
 - ~~Mobile and accessibility pass~~ (mostly done: the phone layout; card words, forms and sentences carry `lang` and `dir` through `langAttrs` in `components/entries.ts` (a new language needs no change there); a title per page, a skip link and focus moved to the content after each navigation; the answer read when it appears; number-key rating shortcuts that can be turned off in the settings (per device); form errors tied to their fields; axe checks on every page in `Accessibility.test.tsx`. Zoom and keyboard-only use were checked by hand. Still to do by hand: a screen reader run (NVDA) and colour contrast and touch target sizes in a browser, since jsdom cannot measure them)
 
 ### Before a wider launch

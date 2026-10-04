@@ -356,6 +356,28 @@ The `deploy` user can omit `sudo` after logging in again, since it is in the
 shows the current container. The app logs one JSON object per line; add
 `-o cat` for clean output.
 
+### Uptime monitoring
+
+An outside check is the only thing that notices when the whole server is down, so
+the site is watched from UptimeRobot (free plan, a check every 5 minutes, alerts by
+email to the owner). It has two monitors:
+
+| Monitor | URL | What a failure means |
+| --- | --- | --- |
+| API and database | `https://flashcards.hendrikmelse.com/api/ready` | the app is down, or it cannot reach Postgres |
+| The web app | `https://flashcards.hendrikmelse.com/` | Caddy, DNS, the certificate or the web app is broken, even when the API is fine |
+
+`/api/ready` is the right one to watch: it runs `select 1` and answers 503 when the
+database is unreachable, where `/api/health` only says the process is up (and is
+what the container's own health check uses, so a database outage does not restart
+the app for nothing). Both return only a status, so leaving them public leaks
+nothing.
+
+During planned downtime (a Postgres major upgrade, say), pause the monitors in the
+UptimeRobot dashboard first, so the alerts are not noise. The backup check at
+Healthchecks.io (section 9) is separate: it watches that the nightly backup ran,
+not that the site is reachable.
+
 ## 9. Backups
 
 > **Plan:** the nightly dump below runs from day one (it is free and guards
@@ -465,6 +487,7 @@ ones only in a later one.
 - Keep an eye on disk: `df -h` and `docker system df`. `deploy.sh` keeps only
   the current and the previous app image (so a rollback needs no download) and
   removes older ones itself.
+- Pause the UptimeRobot monitors (section 8) before any planned downtime.
 - To redeploy without making a commit, use the **Run workflow** button on the
   CI workflow in the Actions tab (on `main`). It rebuilds and redeploys.
 
@@ -609,11 +632,12 @@ The first unattended runs (Oct 2 to 4, 10:00 UTC) happened on schedule. On
 the same counts as production (users, concepts, cards), and a deliberate wrong
 password made the script fail and send the failure ping.
 
+The live site was also used in a browser over HTTPS on 2026-10-04 (no console
+errors, and nothing from the Content-Security-Policy). The two UptimeRobot monitors
+were set up the same day; no outage has been simulated to see the alert arrive.
+
 ## Not yet verified
 
-- The production site used in a browser over HTTPS (registering and studying).
-  The Content-Security-Policy was checked in a browser against the local stack
-  over plain http only.
 - Updating an already-running production deploy, and a production rollback
   (both were verified locally).
 
