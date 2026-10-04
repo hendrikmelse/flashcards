@@ -1,9 +1,11 @@
 import { Link } from "react-router";
+import { usePageTitle } from "../hooks/usePageTitle";
 
 // Explains the scheduler in plain language. The numbers here mirror the server:
 // apps/api/src/srs/engine.ts (steps, target retention) and src/study/queue.ts
 // (daily new-card limit, order).
 export function HowItWorksPage() {
+  usePageTitle("How scheduling works");
   return (
     <article className="prose">
       <p>

@@ -1,4 +1,5 @@
 import { Link } from "react-router";
+import { usePageTitle } from "../hooks/usePageTitle";
 import type { StudyCountsResponse } from "@flashcards/shared";
 import { useDashboard } from "../api/hooks";
 import { usePacks } from "../api/packs";
@@ -85,6 +86,7 @@ function GettingStarted() {
 }
 
 export function DashboardPage() {
+  usePageTitle("Dashboard");
   const { deck, study, stats } = useDashboard();
   // The starter pack is where a new person is pointed first.
   const packs = usePacks(useActiveLanguages().direction);

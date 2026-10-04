@@ -116,13 +116,13 @@ function CardFrame({
         <section aria-label="Front">
           <Entries entries={front} language={fromLanguage} languages={languages} />
           <Forms entries={front} />
-          {sentences ? <Sentences items={sentences.front} /> : !failed && <SentencePlaceholder />}
+          {sentences ? <Sentences items={sentences.front} language={fromLanguage} /> : !failed && <SentencePlaceholder />}
         </section>
 
         <section aria-label="Back" className="study-answer">
           <Entries entries={back} language={toLanguage} languages={languages} />
           <Forms entries={back} />
-          {sentences ? <Sentences items={sentences.back} /> : !failed && <SentencePlaceholder />}
+          {sentences ? <Sentences items={sentences.back} language={toLanguage} /> : !failed && <SentencePlaceholder />}
         </section>
 
         {/* A blank line is kept here while loading, so the card does not change height when the

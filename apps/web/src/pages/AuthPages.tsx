@@ -1,4 +1,5 @@
 import { useState, type FormEvent } from "react";
+import { usePageTitle } from "../hooks/usePageTitle";
 import { Link, useLocation, useNavigate } from "react-router";
 import { NAME_MAX, loginSchema, registerSchema } from "@flashcards/shared";
 import { ApiError } from "../api/client";
@@ -36,6 +37,7 @@ function AuthForm({ mode }: { mode: Mode }) {
 
   const from = (location.state as { from?: string } | null)?.from ?? "/";
   const isLogin = mode === "login";
+  usePageTitle(isLogin ? "Log in" : "Create your account");
 
   function onSubmit(e: FormEvent) {
     e.preventDefault();

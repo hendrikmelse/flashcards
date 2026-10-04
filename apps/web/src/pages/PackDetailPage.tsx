@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { usePageTitle } from "../hooks/usePageTitle";
 import { Link, useParams } from "react-router";
 import type { AddPackResult, EntryView } from "@flashcards/shared";
 import { ApiError } from "../api/client";
@@ -57,6 +58,7 @@ export function PackDetailPage() {
   const { id = "" } = useParams();
   const { direction, otherWay: otherDirection } = useActiveLanguages();
   const concepts = usePackConcepts(id, direction);
+  usePageTitle(concepts.data?.pack.name ?? "Add words");
   // Words are added both ways round, so the pack is done once both directions are in the deck.
   const packs = usePacks(direction);
   const otherWay = usePacks(otherDirection);

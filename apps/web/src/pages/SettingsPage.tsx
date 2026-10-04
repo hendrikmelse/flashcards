@@ -1,4 +1,5 @@
 import { useEffect, useRef, type KeyboardEvent } from "react";
+import { usePageTitle } from "../hooks/usePageTitle";
 import { useSearchParams } from "react-router";
 import type { Settings } from "@flashcards/shared";
 import { useSettings } from "../api/hooks";
@@ -20,6 +21,7 @@ type TabId = (typeof TABS)[number]["id"];
 const isTab = (value: string | null): value is TabId => TABS.some((t) => t.id === value);
 
 export function SettingsPage() {
+  usePageTitle("Settings");
   const settings = useSettings();
   if (settings.isPending) return <p className="status">Loading…</p>;
   if (settings.isError) return <p className="status error">Could not load your settings. Please refresh.</p>;

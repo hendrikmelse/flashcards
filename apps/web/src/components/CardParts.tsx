@@ -1,27 +1,31 @@
-import { formLines, type EntryView, type LanguageInfo } from "@flashcards/shared";
-import { displayLemma, languageName } from "./entries";
+import { formLines, isFormNote, type EntryView, type LanguageInfo } from "@flashcards/shared";
+import { displayLemma, langAttrs, languageName } from "./entries";
 import { LanguageFlag } from "./LanguageFlag";
 
 // The pieces of a card's face, shared by the study screen and the deck viewer's card view.
 
 // The word, with a flag for the language it is in.
+// `id` lets something else point at the word (the Good button reads the answer through it).
 export function Entries({
   entries,
   language,
   languages,
+  id,
 }: {
   entries: EntryView[];
   language: string;
   languages: LanguageInfo[];
+  id?: string;
 }) {
   return (
     <div className="flagged">
       <LanguageFlag code={language} label={languageName(languages, language)} />
-      <p className="study-word">
+      <p className="study-word" id={id}>
         {entries.map((e, i) => (
           <span key={`${e.lemma}-${i}`}>
             {i > 0 && ", "}
-            {displayLemma(e)}
+            {/* The word is in its own language, so a screen reader pronounces it that way. */}
+            <span {...langAttrs(language)}>{displayLemma(e)}</span>
             {e.partOfSpeech && <span className="pos"> {e.partOfSpeech}</span>}
           </span>
         ))}
@@ -41,11 +45,15 @@ export function Forms({ entries }: { entries: EntryView[] }) {
     <>
       {withForms.map(({ e, lines }) => (
         <dl key={e.lemma} className="forms" aria-label={`Forms of ${e.lemma}`}>
-          {withForms.length > 1 && <dt className="forms-lemma">{e.lemma}</dt>}
+          {withForms.length > 1 && (
+            <dt className="forms-lemma" {...langAttrs(e.language)}>
+              {e.lemma}
+            </dt>
+          )}
           {lines.map((l) => (
             <div key={l.label}>
               <dt>{l.label}</dt>
-              <dd>{l.value}</dd>
+              <dd {...(isFormNote(l.value) ? {} : langAttrs(e.language))}>{l.value}</dd>
             </div>
           ))}
         </dl>
@@ -59,11 +67,11 @@ export function SentencePlaceholder() {
   return <p className="sentence sentence-placeholder" aria-hidden="true" />;
 }
 
-export function Sentences({ items }: { items: string[] }) {
+export function Sentences({ items, language }: { items: string[]; language: string }) {
   return (
     <>
       {items.map((s) => (
-        <p key={s} className="sentence">
+        <p key={s} className="sentence" {...langAttrs(language)}>
           {s}
         </p>
       ))}

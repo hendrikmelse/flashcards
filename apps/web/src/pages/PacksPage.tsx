@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { usePageTitle } from "../hooks/usePageTitle";
 import { Link } from "react-router";
 import {
   PACK_CATEGORIES,
@@ -20,6 +21,7 @@ type Mode = "packs" | "words";
 type CategoryFilter = PackCategory | "all";
 
 export function PacksPage() {
+  usePageTitle("Add words");
   const { direction } = useActiveLanguages();
   const intro = useAddWordsIntro();
   const packs = usePacks(direction);

@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
+import { usePageTitle } from "../hooks/usePageTitle";
 import { Link } from "react-router";
 import { DECK_SORT_DEFAULT_ORDER, DECK_SORTS, type DeckCardView, type DeckSort, type DirectionSummary } from "@flashcards/shared";
 import { useDeckCards, useStats, type DeckStage } from "../api/hooks";
 import { CardDialog } from "../components/CardDialog";
 import { PageHeadActions } from "../components/PageHeadActions";
 import { useLanguages } from "../api/packs";
-import { displayLemma, entriesFor } from "../components/entries";
+import { displayLemma, entriesFor, langAttrs } from "../components/entries";
 import { sameDirection, shortDirection, useDeckFilter } from "../hooks/useDeckFilter";
 import { isOneOf, isOneOfOrNull, isString, useRemembered } from "../hooks/useRemembered";
 import { formatUntil } from "../lib/relativeTime";
@@ -63,11 +64,15 @@ function CardRow({ card, onOpen, showDirection }: RowProps) {
         onClick={onOpen}
       >
         <span className="pair">
-          <span className="prompt">{front || "—"}</span>
+          <span className="prompt" {...langAttrs(card.fromLanguage)}>
+            {front || "—"}
+          </span>
           <span className="arrow" aria-hidden="true">
             →
           </span>
-          <span className="answer">{back || "—"}</span>
+          <span className="answer" {...langAttrs(card.toLanguage)}>
+            {back || "—"}
+          </span>
           {showDirection && (
             <span className="direction-tag">
               {shortDirection({ fromLanguage: card.fromLanguage, toLanguage: card.toLanguage })}
@@ -87,6 +92,7 @@ function CardRow({ card, onOpen, showDirection }: RowProps) {
 }
 
 export function DeckPage() {
+  usePageTitle("My deck");
   const stats = useStats();
   const languages = useLanguages();
   // Keep the last known directions so the toggle doesn't vanish while stats refetch.

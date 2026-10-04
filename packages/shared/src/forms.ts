@@ -14,6 +14,15 @@
 
 type FormLine = { label: string; value: string };
 
+// Some plural lines are a note in the app's own language rather than a word form ("uncountable"
+// is not a Dutch or English word form). Named so the UI can tell them apart: a word form is shown
+// as being in the entry's language, a note is not.
+export const UNCOUNTABLE_NOTE = "uncountable";
+export const PLURAL_ONLY_NOTE = "plural only";
+
+/** Whether a form line's value is a note in the app's language, not a form of the word. */
+export const isFormNote = (value: string): boolean => value === UNCOUNTABLE_NOTE || value === PLURAL_ONLY_NOTE;
+
 const str = (v: unknown): string | undefined =>
   typeof v === "string" && v.trim() ? v : undefined;
 
@@ -84,8 +93,8 @@ export function formLines(language: string, details: Record<string, unknown>): F
 
   const plural = str(details["plural"]);
   if (plural) lines.push({ label: "plural", value: plural });
-  else if (details["uncountable"] === true) lines.push({ label: "plural", value: "uncountable" });
-  else if (details["pluralOnly"] === true) lines.push({ label: "plural", value: "plural only" });
+  else if (details["uncountable"] === true) lines.push({ label: "plural", value: UNCOUNTABLE_NOTE });
+  else if (details["pluralOnly"] === true) lines.push({ label: "plural", value: PLURAL_ONLY_NOTE });
 
   const present = details["present"];
   const pronouns = presentPronouns(language);

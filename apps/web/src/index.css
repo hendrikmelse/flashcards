@@ -45,6 +45,9 @@
 /* Reserve room for the scrollbar so pages don't shift sideways when one appears. */
 html {
   scrollbar-gutter: stable;
+  /* No blue flash over what is tapped on a phone (it is inherited by everything). Hover and focus
+     styles still show what was pressed. */
+  -webkit-tap-highlight-color: transparent;
 }
 
 body {
@@ -439,6 +442,9 @@ button.primary .check {
   max-width: 34rem;
 }
 
+/* A section of its own below another: a divider with room above and below. Put it on a div (or the
+   form) around the section, not on a fieldset: a fieldset draws its top border through its legend,
+   so the line would cut through the heading instead of sitting above it. */
 .section-gap {
   margin-top: 1.75rem;
   padding-top: 1.5rem;
@@ -452,17 +458,9 @@ fieldset.setting {
   gap: 0.1rem;
 }
 
-/* A section of its own below another: a divider with room above and below. (Spelled out for
-   fieldsets because the plain fieldset rule above would otherwise cancel the margin and border.) */
-fieldset.section-gap {
-  margin-top: 2.25rem;
-  padding-top: 1.5rem;
-  border-top: 1px solid var(--border);
-}
-
-/* The title of a fieldset sits close to the options under it. */
+/* The title of a fieldset sits close to the options under it, with a little room. */
 fieldset .setting-title {
-  margin-bottom: 0;
+  margin-bottom: 0.5rem;
 }
 
 /* Room for the "browser is set to ..." note, so the page does not shift when it comes and goes. */
@@ -619,6 +617,42 @@ button.link {
 :focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 2px;
+}
+
+/* Hidden but still read by screen readers. */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* The first thing a keyboard user tabs to: jumps past the navigation. Off screen until focused. */
+.skip-link {
+  position: absolute;
+  left: 0.5rem;
+  top: -4rem;
+  z-index: 100;
+  padding: 0.5rem 0.9rem;
+  border-radius: 6px;
+  background: var(--accent);
+  color: var(--bg, #fff);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.skip-link:focus {
+  top: 0.5rem;
+}
+
+/* The main area takes focus after a page change; it is not a control, so no outline box. */
+main:focus {
+  outline: none;
 }
 
 /* Dashboard */

@@ -11,6 +11,8 @@ import type {
 import { api } from "../api/client";
 import { useSettings } from "../api/hooks";
 import { useActiveLanguages } from "../hooks/useActiveLanguages";
+import { usePageTitle } from "../hooks/usePageTitle";
+import { useRatingShortcuts } from "../hooks/useRatingShortcuts";
 import { useLanguages } from "../api/packs";
 import { Entries, Forms, Sentences } from "../components/CardParts";
 import { FirstSessionIntro } from "../components/FirstSessionIntro";
@@ -125,6 +127,7 @@ function useStudySession() {
 }
 
 export function StudyPage() {
+  usePageTitle("Study");
   const session = useStudySession();
   const languages = useLanguages();
   // What the cards show is an account setting. Wait for it so a card never shows something and
@@ -248,14 +251,16 @@ function CardView({
 }: CardViewProps) {
   const revealRef = useRef<HTMLButtonElement>(null);
   const goodRef = useRef<HTMLButtonElement>(null);
+  const [shortcuts] = useRatingShortcuts();
 
   // Keep keyboard flow natural: Space/Enter act on the focused button.
   useEffect(() => {
     (revealed ? goodRef : revealRef).current?.focus();
   }, [card.id, revealed]);
 
-  // 1-4 rate the card once the answer is showing.
+  // 1-4 rate the card once the answer is showing (unless turned off in the settings).
   useEffect(() => {
+    if (!shortcuts) return;
     function onKey(e: KeyboardEvent) {
       if (e.ctrlKey || e.metaKey || e.altKey) return;
       const t = e.target as HTMLElement | null;
@@ -265,7 +270,7 @@ function CardView({
     }
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
-  }, [revealed, onRate]);
+  }, [revealed, onRate, shortcuts]);
 
   return (
     <article className="study-card">
@@ -276,14 +281,14 @@ function CardView({
 
       <section aria-label="Prompt">
         <Entries entries={card.front} language={card.fromLanguage} languages={languages} />
-        {showSentences && <Sentences items={card.sentences.front} />}
+        {showSentences && <Sentences items={card.sentences.front} language={card.fromLanguage} />}
       </section>
 
       {revealed ? (
         <section aria-label="Answer" className="study-answer">
-          <Entries entries={card.back} language={card.toLanguage} languages={languages} />
+          <Entries entries={card.back} language={card.toLanguage} languages={languages} id="answer-word" />
           {showForms && <Forms entries={card.back} />}
-          {showSentences && <Sentences items={card.sentences.back} />}
+          {showSentences && <Sentences items={card.sentences.back} language={card.toLanguage} />}
         </section>
       ) : (
         <button ref={revealRef} className="primary reveal" onClick={onReveal}>
@@ -297,12 +302,14 @@ function CardView({
             <button
               key={rating}
               ref={rating === "good" ? goodRef : undefined}
+              // Focus lands here when the answer appears, so the button reads the answer too.
+              aria-describedby={rating === "good" ? "answer-word" : undefined}
               className={`rating ${rating}`}
               onClick={() => onRate(rating)}
               disabled={submitting}
             >
               {label}
-              <kbd aria-hidden="true">{i + 1}</kbd>
+              {shortcuts && <kbd aria-hidden="true">{i + 1}</kbd>}
             </button>
           ))}
         </div>

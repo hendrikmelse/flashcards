@@ -85,7 +85,7 @@ function ScheduleSettings({ saved }: { saved: Settings }) {
             onChange={(e) => onLimitChange(e.target.value)}
             onBlur={commitLimit}
             aria-invalid={limitError ? true : undefined}
-            aria-describedby="daily-new-help"
+            aria-describedby={limitError ? "daily-new-help daily-new-error" : "daily-new-help"}
           />
           <FieldStatus failed={limitSave.failed} />
         </div>
@@ -95,7 +95,7 @@ function ScheduleSettings({ saved }: { saved: Settings }) {
           to 0 to pause new words.
         </p>
         {limitError && (
-          <p role="alert" className="field-error">
+          <p id="daily-new-error" role="alert" className="field-error">
             {limitError}
           </p>
         )}
@@ -147,38 +147,40 @@ function CardDisplay({ saved }: { saved: Settings }) {
   const [forms, setForms] = useState(saved.showForms);
 
   return (
-    <fieldset className="setting section-gap">
-      <legend className="setting-title">On the study cards</legend>
-      <div className="check-line">
-        <label className="check-row">
-          <input
-            type="checkbox"
-            checked={sentences}
-            onChange={(e) => {
-              const value = e.target.checked;
-              setSentences(value);
-              sentencesSave.save({ showSentences: value }, () => setSentences(!value));
-            }}
-          />
-          Show example sentences
-        </label>
-        <FieldStatus failed={sentencesSave.failed} />
-      </div>
-      <div className="check-line">
-        <label className="check-row">
-          <input
-            type="checkbox"
-            checked={forms}
-            onChange={(e) => {
-              const value = e.target.checked;
-              setForms(value);
-              formsSave.save({ showForms: value }, () => setForms(!value));
-            }}
-          />
-          Show word forms (plurals, verb forms) with the answer
-        </label>
-        <FieldStatus failed={formsSave.failed} />
-      </div>
-    </fieldset>
+    <div className="section-gap">
+      <fieldset className="setting">
+        <legend className="setting-title">On the study cards</legend>
+        <div className="check-line">
+          <label className="check-row">
+            <input
+              type="checkbox"
+              checked={sentences}
+              onChange={(e) => {
+                const value = e.target.checked;
+                setSentences(value);
+                sentencesSave.save({ showSentences: value }, () => setSentences(!value));
+              }}
+            />
+            Show example sentences
+          </label>
+          <FieldStatus failed={sentencesSave.failed} />
+        </div>
+        <div className="check-line">
+          <label className="check-row">
+            <input
+              type="checkbox"
+              checked={forms}
+              onChange={(e) => {
+                const value = e.target.checked;
+                setForms(value);
+                formsSave.save({ showForms: value }, () => setForms(!value));
+              }}
+            />
+            Show word forms (plurals, verb forms) with the answer
+          </label>
+          <FieldStatus failed={formsSave.failed} />
+        </div>
+      </fieldset>
+    </div>
   );
 }

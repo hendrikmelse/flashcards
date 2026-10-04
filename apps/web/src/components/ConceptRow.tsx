@@ -1,5 +1,5 @@
 import type { EntryView } from "@flashcards/shared";
-import { displayLemma, entriesFor } from "./entries";
+import { displayLemma, entriesFor, langAttrs } from "./entries";
 
 type Props = {
   entries: EntryView[];
@@ -28,11 +28,15 @@ export function ConceptRow({ entries, from, to, available = true, inDeck, adding
         onClick={onOpen}
       >
         <span className="pair">
-          <span className="prompt">{front || "—"}</span>
+          <span className="prompt" {...langAttrs(from)}>
+            {front || "—"}
+          </span>
           <span className="arrow" aria-hidden="true">
             →
           </span>
-          <span className="answer">{back || "—"}</span>
+          <span className="answer" {...langAttrs(to)}>
+            {back || "—"}
+          </span>
         </span>
       </button>
       {inDeck ? (

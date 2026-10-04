@@ -60,11 +60,12 @@ function NameForm({ saved }: { saved: string | null }) {
             }}
             onBlur={commit}
             aria-invalid={error ? true : undefined}
+            aria-describedby={error ? "display-name-error" : undefined}
           />
           <FieldStatus failed={failed} />
         </div>
         {error && (
-          <p role="alert" className="field-error">
+          <p id="display-name-error" role="alert" className="field-error">
             {error}
           </p>
         )}
