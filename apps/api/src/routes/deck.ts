@@ -1,6 +1,5 @@
 import type { FastifyInstance, FastifyReply } from "fastify";
-import { and, asc, count, desc, eq, exists, getTableColumns, inArray, lte, not, or, sql } from "drizzle-orm";
-import { alias, type PgColumn } from "drizzle-orm/pg-core";
+import { and, asc, count, desc, eq, exists, getTableColumns, inArray, lte, or, sql } from "drizzle-orm";
 import {
   DECK_SORT_DEFAULT_ORDER,
   deckFilterSchema,
@@ -10,7 +9,7 @@ import {
   type EntryView,
   type Scope,
 } from "@flashcards/shared";
-import { insertUserCards, loadEntries, loadSentences, sentenceKey } from "../content/queries.js";
+import { loadEntries, loadSentences, sentenceKey } from "../content/queries.js";
 import { entries, userCards } from "../db/schema.js";
 import type { Db } from "../db/types.js";
 import { inScope } from "../study/scope.js";
@@ -28,9 +27,6 @@ function cardView(c: typeof userCards.$inferSelect, entries: EntryView[]) {
     state: c.state,
     dueAt: c.dueAt,
     addedAt: c.addedAt,
-    intervalDays: c.intervalDays,
-    lapses: c.lapses,
-    lastReviewedAt: c.lastReviewedAt,
     front: entries.filter((e) => e.language === c.fromLanguage),
     back: entries.filter((e) => e.language === c.toLanguage),
   };

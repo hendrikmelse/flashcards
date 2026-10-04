@@ -764,13 +764,6 @@ button.link {
   font-weight: 600;
 }
 
-.card-actions {
-  display: flex;
-  flex-shrink: 0;
-  align-items: center;
-  gap: 1rem;
-}
-
 /* The part of a deck row that opens the card. */
 button.row-open {
   flex: 1;

@@ -18,7 +18,7 @@ export interface SrsState {
 
 // Pure: same input, same output. The algorithm lives behind this interface so
 // it can be swapped (e.g. SM-2) without touching the endpoints.
-export interface ReviewOptions {
+interface ReviewOptions {
   /**
    * The start of the study day containing a moment. When given, a card in review is
    * scheduled in whole study days: it comes due at the start of the day it falls on

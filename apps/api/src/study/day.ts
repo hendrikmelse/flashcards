@@ -4,8 +4,6 @@ import { isValidTimeZone } from "@flashcards/shared";
 // shortly after midnight still counts toward the previous day.
 export const DAY_ROLLOVER_HOUR = 4;
 
-export { isValidTimeZone };
-
 // Offset of `timeZone` from UTC at `instant`, in ms (east of UTC is positive).
 function offsetMs(instant: number, timeZone: string): number {
   const parts = new Intl.DateTimeFormat("en-US", {

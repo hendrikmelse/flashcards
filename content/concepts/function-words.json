@@ -1,18 +1,6 @@
 {
   "concepts": [
     {
-      "key": "you-unstressed",
-      "gloss": "you (unstressed)",
-      "entries": {
-        "en": [
-        {"lemma": "you (unstressed)", "pos": "pronoun", "sentences": ["Do you have time?"]}
-        ],
-        "nl": [
-        {"lemma": "je", "pos": "pronoun", "sentences": ["Heb je tijd?"]}
-        ]
-      }
-    },
-    {
       "key": "it",
       "gloss": "it (pronoun)",
       "entries": {
@@ -38,25 +26,14 @@
     },
     {
       "key": "they",
-      "gloss": "they (unstressed)",
+      "gloss": "they",
       "entries": {
         "en": [
-        {"lemma": "they (unstressed)", "pos": "pronoun", "sentences": ["They live in Utrecht."]}
+        {"lemma": "they", "pos": "pronoun", "sentences": ["They live in Utrecht."]}
         ],
         "nl": [
+        {"lemma": "zij", "pos": "pronoun", "sentences": ["Zij wonen in Utrecht."]},
         {"lemma": "ze", "pos": "pronoun", "sentences": ["Ze wonen in Utrecht."]}
-        ]
-      }
-    },
-    {
-      "key": "me-unstressed",
-      "gloss": "me (unstressed)",
-      "entries": {
-        "en": [
-        {"lemma": "me (unstressed)", "pos": "pronoun", "sentences": ["He sees me."]}
-        ],
-        "nl": [
-        {"lemma": "me", "pos": "pronoun", "sentences": ["Hij ziet me."]}
         ]
       }
     },
@@ -181,14 +158,15 @@
       }
     },
     {
-      "key": "me-stressed",
-      "gloss": "me (stressed)",
+      "key": "me",
+      "gloss": "me",
       "entries": {
         "en": [
-        {"lemma": "me (stressed)", "pos": "pronoun", "sentences": ["He gave it to me."]}
+        {"lemma": "me", "pos": "pronoun", "sentences": ["He sees me.", "He gave it to me."]}
         ],
         "nl": [
-        {"lemma": "mij", "pos": "pronoun", "sentences": ["Hij gaf het aan mij."]}
+        {"lemma": "mij", "pos": "pronoun", "sentences": ["Hij gaf het aan mij."]},
+        {"lemma": "me", "pos": "pronoun", "sentences": ["Hij ziet me."]}
         ]
       }
     },
@@ -241,14 +219,15 @@
       }
     },
     {
-      "key": "you-stressed-object",
-      "gloss": "you (stressed object)",
+      "key": "you-object",
+      "gloss": "you (object)",
       "entries": {
         "en": [
-        {"lemma": "you (stressed object)", "pos": "pronoun", "sentences": ["I see you."]}
+        {"lemma": "you (object)", "pos": "pronoun", "sentences": ["I see you."]}
         ],
         "nl": [
-        {"lemma": "jou", "pos": "pronoun", "sentences": ["Ik zie jou."]}
+        {"lemma": "jou", "pos": "pronoun", "sentences": ["Ik zie jou."]},
+        {"lemma": "je", "pos": "pronoun", "sentences": ["Ik zie je."]}
         ]
       }
     },
@@ -404,7 +383,8 @@
         {"lemma": "them", "pos": "pronoun", "sentences": ["I see them."]}
         ],
         "nl": [
-        {"lemma": "hen", "pos": "pronoun", "sentences": ["Ik zie hen."]}
+        {"lemma": "hen", "pos": "pronoun", "sentences": ["Ik zie hen."]},
+        {"lemma": "ze", "pos": "pronoun", "sentences": ["Ik zie ze."]}
         ]
       }
     },

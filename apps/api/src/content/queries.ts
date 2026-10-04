@@ -5,7 +5,7 @@ import { entries, entrySentences, sentences, userCards } from "../db/schema.js";
 import type { Db } from "../db/types.js";
 
 // SQL condition: the concept has at least one entry in the given language.
-export const hasEntry = (db: Db, conceptId: PgColumn, language: string) =>
+const hasEntry = (db: Db, conceptId: PgColumn, language: string) =>
   exists(
     db
       .select({ one: sql`1` })

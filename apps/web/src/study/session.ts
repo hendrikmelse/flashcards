@@ -3,13 +3,13 @@ import type { Rating, ReviewResponse, StudyCardView } from "@flashcards/shared";
 // The client-side model of one study session. The server decides what each
 // answer means (POST /reviews); this decides what to show next. A card answered
 // "Again" goes back into the queue a few cards later. A card answered Hard or Good
-// that is still being learned leaves the session: the server holds it back until
-// the gap between sessions has passed. The session ends when the queue is empty.
+// that is still being learned leaves the session, and is offered again, by the server, once it is
+// due. The session ends when the queue is empty.
 
 /** With fewer cards than this left in the queue, an "Again" card goes to the very end. */
-export const MIN_CARDS_BACK = 5;
+const MIN_CARDS_BACK = 5;
 /** How far an "Again" card's position can wander from halfway, as a share of the queue. */
-export const AGAIN_FUZZ = 0.2;
+const AGAIN_FUZZ = 0.2;
 
 /**
  * How many cards to show before an "Again" card returns, given how many are left in
@@ -39,8 +39,6 @@ export interface SessionState {
   revealed: boolean;
   /** Ids answered at least once this session; never re-added from server data. */
   handled: string[];
-  /** Ids that left the session still being learned; they come back in a later session. */
-  pending: string[];
   stats: SessionStats;
   /** The server had nothing new to offer the last time we asked. */
   exhausted: boolean;
@@ -66,7 +64,6 @@ export const initialState: SessionState = {
   current: null,
   revealed: false,
   handled: [],
-  pending: [],
   stats: { reviewed: 0, again: 0, hard: 0, good: 0, easy: 0 },
   exhausted: false,
   fetchError: false,
@@ -146,7 +143,7 @@ export function reducer(state: SessionState, action: Action): SessionState {
       const { rating, result, random } = action;
 
       const stillLearning = result.state === "learning" || result.state === "relearning";
-      const missed = rating === "again" && stillLearning;
+      const missed = rating === "again" && stillLearning; // it comes back later in this same session
       const returning = { ...card, state: result.state };
       const at = againPosition(state.queue.length, random);
       // A new card that is already known does not use up the daily limit, so another one follows it.
@@ -159,10 +156,6 @@ export function reducer(state: SessionState, action: Action): SessionState {
         repeatNotice: false,
         lastAgainId: missed ? card.id : null,
         queue: missed ? [...state.queue.slice(0, at), returning, ...state.queue.slice(at)] : state.queue,
-        pending:
-          stillLearning && !missed && !state.pending.includes(card.id)
-            ? [...state.pending, card.id]
-            : state.pending,
         handled: state.handled.includes(card.id) ? state.handled : [...state.handled, card.id],
         unlocked: makesRoom ? Math.min(state.moreNew, state.unlocked + 1) : state.unlocked,
         stats: {

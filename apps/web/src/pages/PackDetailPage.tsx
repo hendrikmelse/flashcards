@@ -12,6 +12,7 @@ import { ConceptDialog } from "../components/CardDialog";
 import { ConceptRow } from "../components/ConceptRow";
 import { PageHeadActions } from "../components/PageHeadActions";
 import { useActiveLanguages } from "../hooks/useActiveLanguages";
+import { useAddWordsIntro } from "../hooks/useAddWordsIntro";
 
 function describeAdd(r: AddPackResult): string {
   const parts = [
@@ -63,7 +64,10 @@ export function PackDetailPage() {
   const addConcept = useAddConcept();
   // The word being looked at as a card, if any.
   const [open, setOpen] = useState<{ conceptId: string; entries: EntryView[] } | null>(null);
+  const intro = useAddWordsIntro();
 
+  // The dashboard links straight here, so the explainer has to stand in for this page as well.
+  if (intro) return intro;
   if (concepts.isPending) return <p className="status">Loading…</p>;
   if (concepts.isError) {
     const missing =

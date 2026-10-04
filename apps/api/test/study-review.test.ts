@@ -1,5 +1,5 @@
 import { PGlite } from "@electric-sql/pglite";
-import { eq, sql } from "drizzle-orm";
+import { eq } from "drizzle-orm";
 import { drizzle } from "drizzle-orm/pglite";
 import { migrate } from "drizzle-orm/pglite/migrator";
 import type { FastifyInstance } from "fastify";
@@ -256,9 +256,8 @@ describe("study queue after reviews", () => {
     expect(batch.counts.learning).toBe(0);
     expect(batch.cards.some((c) => c.state === "learning")).toBe(false);
 
-    const res = (await get("/study/counts")).json() as { counts: { learning: number }; nextSession?: unknown };
+    const res = (await get("/study/counts")).json() as { counts: { learning: number } };
     expect(res.counts.learning).toBe(0);
-    expect(res.nextSession).toBeUndefined();
 
     // Let it come due, for the tests that follow.
     await db
@@ -324,7 +323,7 @@ async function scratchUser() {
 describe("new card priority", () => {
   // dog, house, water were added in that order, all en->nl and new. Which of them
   // comes first depends on the state of the reverse (nl->en) card.
-  async function setup(email: string, reverseOf: "dog" | "house" | "water", reverseState: "review" | "learning" | "relearning" | "new") {
+  async function setup(reverseOf: "dog" | "house" | "water", reverseState: "review" | "learning" | "relearning" | "new") {
     const me = await scratchUser();
     const cs = await db.select().from(concepts);
     const id = (key: string) => cs.find((c) => c.key === key)!.id;
@@ -353,35 +352,35 @@ describe("new card priority", () => {
 
   it("puts a new card first when its reverse is in review or relearning", async () => {
     for (const state of ["review", "relearning"] as const) {
-      const c = await setup(`priority-${state}@example.com`, "house", state);
+      const c = await setup("house", state);
       // house was added after dog, but its reverse is known.
       expect(await newOrder(c)).toEqual(["house", "dog", "water"]);
     }
   });
 
   it("keeps the usual order when the reverse is only learning", async () => {
-    const c = await setup("no-priority-learning@example.com", "house", "learning");
+    const c = await setup("house", "learning");
     expect(await newOrder(c)).toEqual(["dog", "house", "water"]);
   });
 
   it("puts a word last when its other direction is also new, as that is offered after the other words", async () => {
     // house is new both ways, so only one direction of it comes before the other words are all shown.
-    const c = await setup("no-priority-new@example.com", "house", "new");
+    const c = await setup("house", "new");
     expect(await newOrder(c)).toEqual(["dog", "water", "house"]);
   });
 
   it("applies in a mixed session too, ahead of older new cards", async () => {
-    const c = await setup("mixed@example.com", "dog", "review");
+    const c = await setup("dog", "review");
     // The nl->en dog card is a review that is not due, so only the new cards are offered.
     expect(await newOrder(c)).toEqual(["dog", "house", "water"]);
-    const c2 = await setup("mixed2@example.com", "water", "review");
+    const c2 = await setup("water", "review");
     expect(await newOrder(c2)).toEqual(["water", "dog", "house"]);
   });
 });
 
 describe("study queue order", () => {
   // A review due now, with a stability and age that make it more or less likely to be forgotten.
-  async function reviews(email: string, specs: { key: string; stability: number; daysAgo: number }[], newKeys: string[] = []) {
+  async function reviews(specs: { key: string; stability: number; daysAgo: number }[], newKeys: string[] = []) {
     const me = await scratchUser();
     const cs = await db.select().from(concepts);
     const id = (key: string) => cs.find((c) => c.key === key)!.id;
@@ -409,7 +408,7 @@ describe("study queue order", () => {
 
   it("puts the review most likely to be forgotten first, not the most overdue", async () => {
     // dog: well learned (stability 100) and long overdue; house: shaky (stability 2), only a bit overdue.
-    const c = await reviews("rank@example.com", [
+    const c = await reviews([
       { key: "dog", stability: 100, daysAgo: 120 },
       { key: "house", stability: 2, daysAgo: 6 },
     ]);
@@ -418,7 +417,6 @@ describe("study queue order", () => {
 
   it("mixes new cards in near the front of the queue", async () => {
     const c = await reviews(
-      "mix@example.com",
       [
         { key: "dog", stability: 3, daysAgo: 8 },
         { key: "house", stability: 4, daysAgo: 8 },
@@ -456,7 +454,7 @@ describe("no gap between sessions", () => {
   const MIN = 60_000;
   // A user with one learning card and one review card, both already due, whose last
   // answer was `lastAnswerMinutesAgo` minutes ago.
-  async function user(_label: string, lastAnswerMinutesAgo: number, extra: { reviewDueInMin?: number; learningDueInMin?: number } = {}) {
+  async function user(lastAnswerMinutesAgo: number, extra: { reviewDueInMin?: number; learningDueInMin?: number } = {}) {
     const me = await scratchUser(); // clears their cards, and with them their history
     const cs = await db.select().from(concepts);
     const id = (key: string) => cs.find((c) => c.key === key)!.id;
@@ -505,25 +503,23 @@ describe("no gap between sessions", () => {
   const counts = async (c: { session: string }) =>
     (await get("/study/counts", c)).json() as {
       counts: { learning: number; review: number; new: number };
-      nextSession?: unknown;
     };
 
   it("offers a learning card moments after the last answer, along with due reviews", async () => {
-    const c = await user("gap-none@example.com", 2);
+    const c = await user(2);
     expect(await states(c)).toEqual(["learning", "review"]);
     const res = await counts(c);
     expect(res.counts).toEqual({ learning: 1, review: 1, new: 0 });
-    expect(res.nextSession).toBeUndefined();
   });
 
   it("does not offer a learning card before it is due, even moments away", async () => {
-    const c = await user("gap-ahead@example.com", 2, { learningDueInMin: 2 });
+    const c = await user(2, { learningDueInMin: 2 });
     expect(await states(c)).toEqual(["review"]);
     expect((await counts(c)).counts).toEqual({ learning: 0, review: 1, new: 0 });
   });
 
   it("does not offer a review before it is due", async () => {
-    const c = await user("gap-soon@example.com", 2, { reviewDueInMin: 8 });
+    const c = await user(2, { reviewDueInMin: 8 });
     expect((await counts(c)).counts).toEqual({ learning: 1, review: 0, new: 0 });
   });
 });

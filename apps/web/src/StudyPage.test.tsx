@@ -87,8 +87,6 @@ describe("ending a session early", () => {
 
     expect(await screen.findByRole("heading", { name: "Session complete!" })).toBeInTheDocument();
     expect(screen.getByText("You viewed 1 unique card")).toBeInTheDocument();
-    // Nothing is held back between sessions, so there is no line about cards coming back later.
-    expect(screen.queryByText(/re-review/)).not.toBeInTheDocument();
     const back = screen.getByRole("link", { name: "Back to the dashboard" });
     expect(back).toHaveAttribute("href", "/");
     expect(back).toHaveClass("button", "primary"); // looks and works like the other page buttons
@@ -143,8 +141,6 @@ describe("ending a session early", () => {
     await user.click(screen.getByRole("button", { name: "End session" }));
 
     expect(await screen.findByText("You viewed 1 unique card")).toBeInTheDocument();
-    // Nothing is held back between sessions, so there is no line about cards coming back later.
-    expect(screen.queryByText(/re-review/)).not.toBeInTheDocument();
   });
 
   it("stops asking for more cards once the session has ended", async () => {
@@ -172,8 +168,6 @@ describe("ending a session early", () => {
     expect(await screen.findByRole("heading", { name: "Session complete!" })).toBeInTheDocument();
     expect(screen.queryByText(/exact same card again/)).not.toBeInTheDocument();
     expect(screen.getByText("You viewed 1 unique card")).toBeInTheDocument();
-    // Nothing is held back between sessions, so there is no line about cards coming back later.
-    expect(screen.queryByText(/re-review/)).not.toBeInTheDocument();
   });
 });
 
@@ -275,7 +269,7 @@ describe("missed cards", () => {
     await user.click(screen.getByRole("button", { name: "Show answer" }));
     await user.click(screen.getByRole("button", { name: "Easy" }));
 
-    // Straight to dog again: no countdown screen, no notice.
+    // Straight to dog again, with no notice.
     expect(await screen.findByText("dog")).toBeInTheDocument();
     expect(screen.queryByText("Nothing else is ready right now.")).not.toBeInTheDocument();
     expect(screen.queryByText(/exact same card/)).not.toBeInTheDocument();
@@ -405,8 +399,6 @@ describe("study session", () => {
     expect(await screen.findByRole("heading", { name: "Session complete!" })).toBeInTheDocument();
     expect(screen.queryByText("Nothing else is ready right now.")).not.toBeInTheDocument();
     expect(screen.getByText("You viewed 2 unique cards")).toBeInTheDocument();
-    // Nothing is held back between sessions, so there is no line about cards coming back later.
-    expect(screen.queryByText(/re-review/)).not.toBeInTheDocument();
     expect(screen.queryByText(/rated Good or Easy/)).not.toBeInTheDocument();
     expect(screen.getByRole("link", { name: "Back to the dashboard" })).toHaveAttribute("href", "/");
     expect(reviews).toHaveLength(2); // dog was not shown a second time
@@ -438,8 +430,6 @@ describe("study session", () => {
 
     expect(await screen.findByRole("heading", { name: "Session complete!" })).toBeInTheDocument();
     expect(screen.getByText("You viewed 2 unique cards")).toBeInTheDocument(); // three answers, two cards
-    // Nothing is held back between sessions, so there is no line about cards coming back later.
-    expect(screen.queryByText(/re-review/)).not.toBeInTheDocument();
     expect(screen.getByText("Again").nextSibling).toHaveTextContent("1");
     expect(screen.getByText("Good").nextSibling).toHaveTextContent("2");
   });

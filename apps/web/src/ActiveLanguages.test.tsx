@@ -197,7 +197,7 @@ describe("every request about the deck is for the pair", () => {
   const pairOfLastRequest = () => /pair=([^&]+)/.exec(mock.requests.at(-1)!)?.[1];
   const directions = (pair: string): DirectionSummary[] =>
     pair === "en-nl"
-      ? [{ fromLanguage: "en", toLanguage: "nl", total: 4, new: 4, learning: 0, review: 0, dueNow: 0, nextDueAt: null }]
+      ? [{ fromLanguage: "en", toLanguage: "nl", total: 4 }]
       : [];
 
   beforeEach(() => {
@@ -208,7 +208,7 @@ describe("every request about the deck is for the pair", () => {
     mock.handlers["GET /study/counts"] = () =>
       json(200, { now: "x", counts: { learning: 0, review: 0, new: pairOfLastRequest() === "en-nl" ? 4 : 0 }, tomorrow: 0 });
     mock.handlers["GET /stats"] = () =>
-      json(200, { now: "x", reviewsToday: 0, nextDueAt: null, directions: directions(pairOfLastRequest()!) });
+      json(200, { now: "x", nextDueAt: null, directions: directions(pairOfLastRequest()!) });
   });
 
   it("asks for the deck, the counts and the stats of the pair", async () => {

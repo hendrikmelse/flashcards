@@ -5,7 +5,7 @@ import type { Db } from "../db/types.js";
 import type { CardStateName, Scheduler } from "../srs/engine.js";
 import { studyDayStart } from "./day.js";
 
-export interface ReviewResult {
+interface ReviewResult {
   userCardId: string;
   state: CardStateName;
   dueAt: Date;

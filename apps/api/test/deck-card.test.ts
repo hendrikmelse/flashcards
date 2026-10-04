@@ -90,8 +90,6 @@ describe("GET /deck/:id", () => {
       fromLanguage: "en",
       toLanguage: "nl",
       state: "review",
-      intervalDays: 12,
-      lapses: 2,
     });
     expect(card.front).toHaveLength(1);
     expect(card.front[0]).toMatchObject({ language: "en", lemma: "dog" });

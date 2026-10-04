@@ -2,7 +2,7 @@
 //   open      anyone (development default)
 //   allowlist only the emails in ALLOWED_EMAILS (invite-only)
 //   closed    nobody; accounts can only be created another way
-export type RegistrationMode = "open" | "allowlist" | "closed";
+type RegistrationMode = "open" | "allowlist" | "closed";
 
 export interface RegistrationPolicy {
   mode: RegistrationMode;

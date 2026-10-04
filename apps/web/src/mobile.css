@@ -4,7 +4,7 @@
 
 /* Phones. The top bar fits on two rows instead of three, the segmented controls fit the screen
    (and scroll if they still do not), and a deck row puts the word on its own line with the status
-   and the Add reverse button beneath it, instead of squeezing the word into what is left. */
+   beneath it, instead of squeezing the word into what is left. */
 @media (max-width: 36rem) {
   .topbar {
     gap: 0.5rem 0.75rem;
@@ -49,6 +49,37 @@
     align-items: flex-start;
   }
 
+  /* A pack's page: the way back at the top left and the Start studying button at the top right, on one
+     row, with the pack's name on a row of its own beneath them. The left column's two children join the
+     header's grid, so the button does not drop below a long name. */
+  .pack-head {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: start;
+    gap: 0.75rem 0.5rem;
+  }
+
+  .pack-head-left {
+    display: contents;
+  }
+
+  .pack-head-left > a.button {
+    grid-column: 1;
+    grid-row: 1;
+    justify-self: start;
+  }
+
+  .pack-head > .page-head-right {
+    grid-column: 2;
+    grid-row: 1;
+    align-items: flex-end;
+  }
+
+  .pack-head .pack-title {
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
+
   /* The nav bar is enough for getting around on a phone, so the page buttons (Go to dashboard,
      View deck, Add more words) are not shown. "Start studying" stays. */
   .page-head-actions {
@@ -57,6 +88,18 @@
 
   .page-head-start {
     min-height: 0;
+  }
+
+  /* Smaller text and a little less width, so that "No cards ready to study" fits on the heading's row
+     instead of dropping below it, but the same height as before, level with the buttons beside it. */
+  .page-head-start a.button.primary,
+  .page-head-start button.primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 2.8rem;
+    padding: 0 0.8rem;
+    font-size: 0.9rem;
   }
 
   /* The settings tabs scroll sideways if they do not fit, without a scroll bar: its thumb showed up
@@ -178,9 +221,8 @@
     padding-bottom: 0.25rem;
   }
 
-  .concept-list li.card-row .card-actions {
+  .concept-list li.card-row .card-status {
     flex: 1 1 100%;
-    justify-content: flex-end;
     padding-bottom: 0.65rem;
   }
 }

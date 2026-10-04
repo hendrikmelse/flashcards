@@ -875,10 +875,17 @@ describe("the explainer on the Add words page", () => {
     expect(screen.queryByRole("button", { name: "Got it" })).not.toBeInTheDocument();
   });
 
-  it("is only on the Add words page, not on a pack's page", async () => {
+  it("also stands in for a pack's page, which the dashboard links to directly", async () => {
+    const user = userEvent.setup();
     renderApp("/add-words/p1");
-    await screen.findByRole("heading", { name: "Sample pack", level: 1 });
-    expect(screen.queryByRole("button", { name: "Got it" })).not.toBeInTheDocument();
+    expect(await screen.findByRole("region", { name: "How adding words works" })).toBeInTheDocument();
+    expect(screen.queryByRole("heading", { name: "Sample pack", level: 1 })).not.toBeInTheDocument();
+    expect(screen.queryByRole("button", { name: "Add all to my deck" })).not.toBeInTheDocument();
+
+    await user.click(screen.getByRole("button", { name: "Got it" }));
+    // Then the pack the link was for, not the list of packs.
+    expect(await screen.findByRole("heading", { name: "Sample pack", level: 1 })).toBeInTheDocument();
+    await waitFor(() => expect(patches).toEqual([{ addWordsIntroSeen: true }]));
   });
 
   it("comes back if saving the dismissal fails, so it is not lost silently", async () => {

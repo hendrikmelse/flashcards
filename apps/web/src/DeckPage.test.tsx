@@ -21,9 +21,6 @@ const card = (id: string, en: string, nl: string, extra: Record<string, unknown>
   state: "new",
   dueAt: at(0),
   addedAt: at(-DAY),
-  intervalDays: 0,
-  lapses: 0,
-  lastReviewedAt: null,
   front: [entry("en", en)],
   back: [entry("nl", nl, { article: "de" })],
   ...extra,
@@ -42,9 +39,9 @@ beforeEach(() => {
       hasMore: false,
       cards: [
         card("a", "dog", "hond"),
-        card("b", "house", "huis", { state: "review", dueAt: at(3 * DAY + 3_600_000), intervalDays: 12, lapses: 2 }),
+        card("b", "house", "huis", { state: "review", dueAt: at(3 * DAY + 3_600_000) }),
         card("c", "water", "water", { state: "learning", dueAt: at(-60_000) }),
-        card("d", "cat", "kat", { state: "relearning", dueAt: at(-60_000), lapses: 1 }),
+        card("d", "cat", "kat", { state: "relearning", dueAt: at(-60_000) }),
       ],
     });
 });
@@ -65,8 +62,6 @@ describe("looking at a card in full", () => {
     card("a", "dog", "hond", {
       state: "review",
       dueAt: at(3 * DAY + 3_600_000),
-      intervalDays: 12,
-      lapses: 2,
       front: [entry("en", "dog", { plural: "dogs" })],
       back: [entry("nl", "hond", { article: "de", plural: "honden" })],
     });
@@ -134,10 +129,6 @@ describe("looking at a card in full", () => {
     expect(facts.getByText("Status").nextSibling).toHaveTextContent("Review");
     expect(facts.getByText("Due").nextSibling).toHaveTextContent("in 3 days");
     expect(facts.getByText("Added")).toBeInTheDocument();
-    // How long the gap is and how often it was forgotten are not shown: the card has both (12 days, 2 lapses).
-    expect(facts.queryByText("Interval")).not.toBeInTheDocument();
-    expect(facts.queryByText("Forgotten")).not.toBeInTheDocument();
-    expect(within(dialog).queryByText(/lapse|forgot|interval|12/i)).not.toBeInTheDocument();
   });
 
   it("says so for a card that has not been studied", async () => {
@@ -288,8 +279,6 @@ describe("deck page", () => {
     expect(rows[0]).toHaveTextContent("Not studied yet");
     expect(rows[1]).toHaveTextContent("Review");
     expect(rows[1]).toHaveTextContent("Due in 3 days");
-    // Nothing about intervals or how often a word was forgotten (this card has 12 days and 2 lapses).
-    expect(rows[1]).not.toHaveTextContent(/interval|lapse|12 days/i);
     expect(rows[2]).toHaveTextContent("Learning");
     expect(rows[2]).toHaveTextContent("Due now");
     expect(rows[3]).toHaveTextContent("Relearning");
@@ -446,15 +435,6 @@ describe("deck page", () => {
     });
   });
 
-  it("has no controls for adding reverse cards: both directions are always added together", async () => {
-    renderApp("/deck");
-    await screen.findByText("dog");
-    // (The sort button that reverses the order is a different thing, and stays.)
-    expect(screen.queryByRole("button", { name: /add reverse|missing reverse|reverse (of|for)/i })).not.toBeInTheDocument();
-    expect(screen.queryByText(/reverse added|missing reverse|add reverse/i)).not.toBeInTheDocument();
-    expect(mock.calls.some((c) => c.includes("missingMirror") || c.includes("/deck/mirrors"))).toBe(false);
-  });
-
   it("searches the deck", async () => {
     const user = userEvent.setup();
     renderApp("/deck");
@@ -473,10 +453,10 @@ describe("deck page", () => {
 
   it("narrows to one direction with the toggle, and labels the direction when showing both", async () => {
     const dir = (from: string, to: string) => ({
-      fromLanguage: from, toLanguage: to, total: 6, new: 3, learning: 1, review: 2, dueNow: 1, nextDueAt: null,
+      fromLanguage: from, toLanguage: to, total: 6,
     });
     mock.handlers["GET /stats"] = () =>
-      json(200, { now: at(0), reviewsToday: 0, nextDueAt: null, directions: [dir("en", "nl"), dir("nl", "en")] });
+      json(200, { now: at(0), nextDueAt: null, directions: [dir("en", "nl"), dir("nl", "en")] });
     const user = userEvent.setup();
     renderApp("/deck");
     expect(await screen.findAllByText("EN → NL")).not.toHaveLength(0); // tag on each row, and the toggle
@@ -488,10 +468,10 @@ describe("deck page", () => {
 
   it("always shows the whole deck's size at the top, whichever direction is selected", async () => {
     const dir = (from: string, to: string, total: number) => ({
-      fromLanguage: from, toLanguage: to, total, new: total, learning: 0, review: 0, dueNow: 0, nextDueAt: null,
+      fromLanguage: from, toLanguage: to, total,
     });
     mock.handlers["GET /stats"] = () =>
-      json(200, { now: at(0), reviewsToday: 0, nextDueAt: null, directions: [dir("en", "nl", 300), dir("nl", "en", 66)] });
+      json(200, { now: at(0), nextDueAt: null, directions: [dir("en", "nl", 300), dir("nl", "en", 66)] });
     // The list's own summary is for the selected direction only.
     mock.handlers["GET /deck"] = () =>
       json(200, { summary: { ...summary, total: 66 }, hasMore: false, cards: [card("a", "dog", "hond")] });

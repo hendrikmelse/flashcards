@@ -177,7 +177,7 @@ export function useReportCard(conceptId: string) {
   });
 }
 
-export const DECK_PAGE_SIZE = 50;
+const DECK_PAGE_SIZE = 50;
 // Shortest time a "load more" spinner shows, so a fast response doesn't flash it.
 const MIN_SPINNER_MS = 300;
 

@@ -7,10 +7,9 @@ import {
   type EntryView,
   type PackCategory,
 } from "@flashcards/shared";
-import { useSettings, useUpdateSettings } from "../api/hooks";
 import { useAddConcept, useConceptSearch, usePacks } from "../api/packs";
 import { useActiveLanguages } from "../hooks/useActiveLanguages";
-import { AddWordsIntro } from "../components/AddWordsIntro";
+import { useAddWordsIntro } from "../hooks/useAddWordsIntro";
 import { ConceptDialog } from "../components/CardDialog";
 import { PageHeadActions } from "../components/PageHeadActions";
 import { ConceptRow } from "../components/ConceptRow";
@@ -22,12 +21,7 @@ type CategoryFilter = PackCategory | "all";
 
 export function PacksPage() {
   const { direction } = useActiveLanguages();
-  // The explainer shows until it is dismissed, once, for the account. It is hidden at once on the
-  // click, while the change is being saved, and never while the settings are still loading.
-  const settings = useSettings();
-  const updateSettings = useUpdateSettings();
-  const [introDismissed, setIntroDismissed] = useState(false);
-  const showIntro = settings.data?.addWordsIntroSeen === false && !introDismissed;
+  const intro = useAddWordsIntro();
   const packs = usePacks(direction);
   // The filters are remembered, so leaving the page and coming back finds them as they were.
   const [mode, setMode] = useRemembered<Mode>("packs:mode", "packs", isOneOf("packs", "words"));
@@ -45,16 +39,7 @@ export function PacksPage() {
   const categories = PACK_CATEGORIES.filter((c) => perCategory.has(c));
 
   // Until it is dismissed, the explainer is all there is: nothing can be added before it is read.
-  if (showIntro) {
-    return (
-      <AddWordsIntro
-        onDismiss={() => {
-          setIntroDismissed(true);
-          updateSettings.mutate({ addWordsIntroSeen: true }, { onError: () => setIntroDismissed(false) });
-        }}
-      />
-    );
-  }
+  if (intro) return intro;
 
   return (
     <>

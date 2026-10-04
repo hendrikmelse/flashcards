@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
-import { endOfTomorrow, isValidTimeZone, studyDayStart } from "../src/study/day.js";
+import { isValidTimeZone } from "@flashcards/shared";
+import { endOfTomorrow, studyDayStart } from "../src/study/day.js";
 
 const start = (now: string, tz: string) => studyDayStart(new Date(now), tz).toISOString();
 

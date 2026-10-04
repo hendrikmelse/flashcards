@@ -1,4 +1,3 @@
-import type { FastifyReply, FastifyRequest } from "fastify";
 import fp from "fastify-plugin";
 import type { PublicUser } from "@flashcards/shared";
 import type { Db } from "../db/types.js";

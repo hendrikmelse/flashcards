@@ -42,7 +42,7 @@ export function usePacks(direction: Direction) {
 // Shortest time a spinner shows, so a fast response doesn't flash it.
 const MIN_SPINNER_MS = 300;
 
-export const SEARCH_PAGE_SIZE = 50;
+const SEARCH_PAGE_SIZE = 50;
 
 // Words matching `term` (either language of the direction), a page at a time.
 // Waits for a term of two or more characters, and keeps the previous results

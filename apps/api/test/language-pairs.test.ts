@@ -191,10 +191,4 @@ describe("decks do not share a daily limit", () => {
     const all = await counts();
     expect(all.counts.learning).toBe(1); // the French card; the Dutch one is not due yet
   });
-
-  it("counts a day's reviews in the pair only", async () => {
-    expect((await get("/stats?pair=en-nl")).json().reviewsToday).toBe(1);
-    expect((await get("/stats?pair=en-fr")).json().reviewsToday).toBe(0);
-    expect((await get("/stats")).json().reviewsToday).toBe(1);
-  });
 });

@@ -5,9 +5,9 @@ import { sessions, users } from "../db/schema.js";
 import { publicUserColumns, toPublicUser } from "./public-user.js";
 
 export const SESSION_COOKIE = "session";
-export const SESSION_TTL_MS = 30 * 24 * 60 * 60 * 1000;
+const SESSION_TTL_MS = 30 * 24 * 60 * 60 * 1000;
 
-export const hashToken = (token: string) =>
+const hashToken = (token: string) =>
   createHash("sha256").update(token).digest("hex");
 
 export async function createSession(db: Db, userId: string) {

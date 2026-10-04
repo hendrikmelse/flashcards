@@ -3,7 +3,7 @@ import { DAILY_NEW_CARD_MAX, updateSettingsSchema, type Settings } from "@flashc
 import { FieldStatus, useFieldSave } from "./useFieldSave";
 
 /** How long after the last keystroke the daily limit is saved. */
-export const LIMIT_DEBOUNCE_MS = 600;
+const LIMIT_DEBOUNCE_MS = 600;
 
 const browserZone = () => Intl.DateTimeFormat().resolvedOptions().timeZone;
 

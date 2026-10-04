@@ -319,7 +319,7 @@ describe("Start studying in the page header", () => {
   const nothingReady = () =>
     (mock.handlers["GET /study/counts"] = () =>
       json(200, { now: "x", counts: { learning: 0, review: 0, new: 0 }, newLimitReached: false, tomorrow: 0 }));
-  const headerButton = async (route: string, heading: string) => {
+  const headerButton = async (heading: string) => {
     const head = (await screen.findByRole("heading", { name: heading, level: 1 })).closest(".page-head")!;
     return within(head as HTMLElement).queryByRole("link", { name: /^Start studying/ });
   };
@@ -382,7 +382,7 @@ describe("Start studying in the page header", () => {
     expect(none).toBeDisabled();
     expect(none).toHaveClass("primary");
     // Not a way to study, and in the same place as the button it stands in for.
-    expect(await headerButton(route, heading)).toBeNull();
+    expect(await headerButton(heading)).toBeNull();
     expect(head.querySelector(".page-head-start")).toContainElement(none);
   });
 
@@ -549,23 +549,9 @@ describe("dashboard", () => {
   });
 
   describe("with several decks", () => {
-    const summary = (n: number) => ({
-      summary: { total: n, new: 1, learning: 1, relearning: 0, review: n - 2, dueNow: 2 },
-    });
-    const dir = (from: string, to: string, extra = {}) => ({
-      fromLanguage: from,
-      toLanguage: to,
-      total: 8,
-      new: 2,
-      learning: 1,
-      review: 5,
-      dueNow: 3,
-      nextDueAt: null,
-      ...extra,
-    });
+    const dir = (from: string, to: string) => ({ fromLanguage: from, toLanguage: to, total: 8 });
     const stats = (directions: unknown[], extra = {}) => ({
       now: "2026-01-15T10:00:00.000Z",
-      reviewsToday: 9,
       nextDueAt: null,
       directions,
       ...extra,
@@ -575,7 +561,7 @@ describe("dashboard", () => {
       localStorage.removeItem("dashboardDirection:en-nl");
       mock.loggedIn = true;
       mock.handlers["GET /stats"] = () =>
-        json(200, stats([dir("en", "nl"), dir("nl", "en", { dueNow: 0 })]));
+        json(200, stats([dir("en", "nl"), dir("nl", "en")]));
     });
 
     it("shows the whole deck with no filter by direction, however many directions it has", async () => {
@@ -649,15 +635,6 @@ describe("dashboard", () => {
         renderApp("/");
         expect(await screen.findByText("Come back later or add more words.")).toBeInTheDocument();
         expect(screen.queryByText(/ready tomorrow/)).not.toBeInTheDocument();
-      });
-
-      it("has no countdown and no way to start early: nothing is held back between sessions", async () => {
-        idle(28);
-        renderApp("/");
-        const hero = await screen.findByRole("region", { name: "Ready to study" });
-        expect(await within(hero).findByText("No cards to study right now")).toBeInTheDocument();
-        expect(hero).not.toHaveTextContent(/will be ready in/);
-        expect(within(hero).queryAllByRole("link")).toHaveLength(0);
       });
     });
 

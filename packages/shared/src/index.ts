@@ -1,7 +1,7 @@
 import { z } from "zod";
 import { PAIR_PATTERN, languageCodeSchema, pairKey, pairLanguages, type LanguageCode } from "./languages.js";
 
-export const ratingSchema = z.enum(["again", "hard", "good", "easy"]);
+const ratingSchema = z.enum(["again", "hard", "good", "easy"]);
 export type Rating = z.infer<typeof ratingSchema>;
 
 // The supported languages (and the schema for their codes) are defined in languages.ts.
@@ -17,7 +17,6 @@ export const addToDeckSchema = z
   .refine((v) => v.fromLanguage !== v.toLanguage, {
     message: "fromLanguage and toLanguage must differ",
   });
-export type AddToDeckInput = z.infer<typeof addToDeckSchema>;
 
 // A problem someone found with a word's card: a wrong translation, missing or wrong forms, an odd
 // example sentence. About the word (concept), in the direction it was shown.
@@ -277,7 +276,7 @@ export const studyQuerySchema = z.object({
 // Response shapes of the API (dates arrive as ISO strings over JSON).
 export type CardStateName = "new" | "learning" | "review" | "relearning";
 
-export type DeckSummary = {
+type DeckSummary = {
   total: number;
   new: number;
   learning: number;
@@ -293,9 +292,6 @@ export type DeckCardView = {
   state: CardStateName;
   dueAt: string;
   addedAt: string;
-  intervalDays: number;
-  lapses: number;
-  lastReviewedAt: string | null;
   front: EntryView[];
   back: EntryView[];
 };
@@ -352,20 +348,12 @@ export type StudyResponse = {
 export type DirectionSummary = {
   fromLanguage: string;
   toLanguage: string;
+  /** How many cards the user has in this direction. */
   total: number;
-  new: number;
-  /** Learning and relearning. */
-  learning: number;
-  review: number;
-  dueNow: number;
-  /** When the next not-yet-due card in this direction comes due, if any. */
-  nextDueAt: string | null;
 };
 
 export type StatsResponse = {
   now: string;
-  /** Answers submitted since the study day began (all directions). */
-  reviewsToday: number;
   /** When the next card comes due in any direction. Null if none is scheduled. */
   nextDueAt: string | null;
   /** One row per direction the user has cards in. */
@@ -428,7 +416,7 @@ export type PackListItem = {
   addedCount?: number;
 };
 
-export type PackConceptView = {
+type PackConceptView = {
   conceptId: string;
   position: number;
   entries: EntryView[];

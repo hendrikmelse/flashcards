@@ -70,14 +70,13 @@ describe("session reducer", () => {
   it("counts answers and finishes cards that graduate to review", () => {
     const s = run([{ type: "fetched", cards: [card("a")] }, { type: "pick" }, answer("easy", "review")]);
     expect(s.current).toBeNull();
-    expect(s.pending).toEqual([]);
     expect(s.stats).toMatchObject({ reviewed: 1, easy: 1, again: 0 });
     expect(s.handled).toEqual(["a"]);
   });
 
   it("never re-adds cards answered this session when the server returns them again", () => {
     let s = run([{ type: "fetched", cards: [card("a")] }, { type: "pick" }, answer("good", "learning")]);
-    // The server may still list "a" (for instance, if the gap between sessions is over).
+    // The server may still list "a", as a card being learned can still be due.
     s = reducer(s, { type: "fetched", cards: [card("a")] });
     expect(s.queue).toEqual([]);
     expect(s.exhausted).toBe(true);
@@ -115,15 +114,14 @@ describe("session reducer", () => {
 });
 
 describe("cards still being learned", () => {
-  it("leave the session after Hard or Good, to come back in a later one", () => {
+  it("are not put back in the session after Hard or Good", () => {
     for (const rating of ["hard", "good"] as const) {
       const s = run([{ type: "fetched", cards: [card("a"), card("b")] }, { type: "pick" }, answer(rating, "learning")]);
-      expect(s.queue.map((c) => c.id)).toEqual(["b"]); // not put back
-      expect(s.pending).toEqual(["a"]);
+      expect(s.queue.map((c) => c.id)).toEqual(["b"]);
     }
   });
 
-  it("end the session when the queue runs out, with those cards left for later", () => {
+  it("end the session when the queue runs out", () => {
     const s = run([
       { type: "fetched", cards: [card("a"), card("b")] },
       { type: "pick" },
@@ -133,15 +131,9 @@ describe("cards still being learned", () => {
       { type: "fetched", cards: [] },
     ]);
     expect(phaseOf(s)).toBe("done");
-    expect(s.pending).toEqual(["a"]); // so the study page sends you to the dashboard
   });
 
-  it("are not pending when a missed card is still in the queue", () => {
-    const s = run([{ type: "fetched", cards: [card("a"), card("b")] }, { type: "pick" }, answer("again", "learning")]);
-    expect(s.pending).toEqual([]);
-  });
-
-  it("become pending once a missed card is finally answered Good", () => {
+  it("are not put back once a missed card is finally answered Good", () => {
     const s = run([
       { type: "fetched", cards: [card("a")] },
       { type: "pick" },
@@ -150,7 +142,6 @@ describe("cards still being learned", () => {
       { type: "acknowledgeRepeat" },
       answer("good", "learning"),
     ]);
-    expect(s.pending).toEqual(["a"]);
     expect(s.queue).toEqual([]);
   });
 });

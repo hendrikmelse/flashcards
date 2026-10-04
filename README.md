@@ -119,7 +119,7 @@ All routes live under `/api`.
 | `POST /account/password`, `POST /account/email` | Change the password (signs out every other session) or the email address. Both need the current password and are rate limited like login. There is no email verification yet |
 | `POST /account/delete` | Deletes the account with its cards, review history and sessions. Needs the password |
 | `GET /account/export` | Everything held about the user as a JSON download: account details (never the password), every card with its schedule, and the full review history |
-| `GET /stats` | Reviews today, when the next card is due, and a per-direction breakdown of the deck |
+| `GET /stats` | When the next card is due, and the directions the deck has cards in, with how many |
 | `POST /reviews` | Transactional. A card in review comes due at the start of a study day (04:00 in the user's time zone) and the scheduler counts whole days between reviews; cards still learning keep real-time steps. Locks the card, runs FSRS, updates state and appends to the log. Idempotent via `clientReviewId` |
 
 ### Production hardening
@@ -143,7 +143,7 @@ A concept's **key** (lowercase words joined by hyphens, such as `dog` or `know-f
 - The importer never deletes a concept or pack that the files stop mentioning, because user cards cascade-delete with their concept. It reports them instead, and cleanup is manual
 - In production the image contains the files; import them with the command in the runbook's "Importing content" section
 
-The library has about 5,900 concepts in 88 packs:
+The library has about 6,000 concepts in 89 packs:
 
 - **Frequency bands** (`top-1-500` through `top-4501-5000`): the 5,000 most common Dutch content words (nouns, verbs, adjectives, adverbs), 500 at a time, easiest first. Words that are not content words are in separate packs and left out of the bands: pronouns and determiners, prepositions, conjunctions and question words, pronominal adverbs, numbers, everyday adverbs, particles and discourse words
 - **Topic packs** (about 70, 40 to 130 words each): food and drink (basic and advanced), Dutch culture, countries and languages, everyday phrases, family, home, town, travel, work, health, nature, animals, and so on. Large topics are split into levels (`-1`, `-2`, ...). A concept can be in a band and in a topic pack
@@ -189,7 +189,7 @@ The full runbook, including server setup, rollback, backups and how to invite so
 
 ## Status and roadmap
 
-**Built:** auth with invite-only registration, a tabbed settings page (profile and email, study options, theme, password, data export and account deletion), an optional name at sign-up shown in the top corner, the content model and importer (about 5,900 concepts in 88 packs, in four categories), the pack browser with pack and word search, the deck viewer (search, filters, sorting, adding words in both directions), the dashboard, study sessions (FSRS scheduling, queue ordered by chance of forgetting, a pause before a missed card repeats), the explainer page, and production deployment with CI and nightly backups.
+**Built:** auth with invite-only registration, a tabbed settings page (profile and email, study options, theme, password, data export and account deletion), an optional name at sign-up shown in the top corner, the content model and importer (about 6,000 concepts in 89 packs, in four categories), the pack browser with pack and word search, the deck viewer (search, filters, sorting, adding words in both directions), the dashboard, study sessions (FSRS scheduling, queue ordered by chance of forgetting, a pause before a missed card repeats), the explainer page, and production deployment with CI and nightly backups.
 
 ### Before anyone other than the owner uses it
 

@@ -13,7 +13,7 @@ const reverse = alias(userCards, "reverse");
 // The other direction of a card's word, when looking for one that was first shown today.
 const introduced = alias(userCards, "introduced");
 
-export interface StudyCard {
+interface StudyCard {
   id: string;
   conceptId: string;
   fromLanguage: string;

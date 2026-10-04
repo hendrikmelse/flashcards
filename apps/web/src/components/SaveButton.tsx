@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState, type ReactNode } from "react";
 
 /** How long the checkmark shows after a successful save. */
-export const FLASH_MS = 1500;
+const FLASH_MS = 1500;
 
 /** A flag that turns on when fired and off again after `ms`. */
 export function useFlash(ms = FLASH_MS): [boolean, () => void] {

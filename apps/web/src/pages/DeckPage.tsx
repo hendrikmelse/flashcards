@@ -75,14 +75,12 @@ function CardRow({ card, onOpen, showDirection }: RowProps) {
           )}
         </span>
       </button>
-      <span className="card-actions">
-        <span className="card-status">
-          <span className="status-line">
-            <span className={`dot ${STATE_TONE[card.state]}`} aria-hidden="true" />
-            {STATE_LABEL[card.state]}
-          </span>
-          <span className="muted">{whenDue(card)}</span>
+      <span className="card-status">
+        <span className="status-line">
+          <span className={`dot ${STATE_TONE[card.state]}`} aria-hidden="true" />
+          {STATE_LABEL[card.state]}
         </span>
+        <span className="muted">{whenDue(card)}</span>
       </span>
     </li>
   );

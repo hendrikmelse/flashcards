@@ -46,10 +46,9 @@ function defaultHandlers(): Record<string, Handler> {
     "GET /stats": () =>
       json(200, {
         now: "2026-01-15T10:00:00.000Z",
-        reviewsToday: 9,
         nextDueAt: null,
         directions: [
-          { fromLanguage: "en", toLanguage: "nl", total: 12, new: 5, learning: 3, review: 4, dueNow: 4, nextDueAt: null },
+          { fromLanguage: "en", toLanguage: "nl", total: 12 },
         ],
       }),
     "GET /settings": () =>

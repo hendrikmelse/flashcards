@@ -87,37 +87,15 @@ afterAll(async () => {
 });
 
 describe("getStats", () => {
-  it("counts the reviews since the study day began", async () => {
-    expect((await getStats(db, userId, NOW)).reviewsToday).toBe(2);
-  });
-
-  it("breaks down the deck by direction, with when each next comes due", async () => {
+  it("lists the directions the deck has cards in, with how many", async () => {
     const { directions } = await getStats(db, userId, NOW);
     expect(directions).toEqual([
-      {
-        fromLanguage: "en",
-        toLanguage: "nl",
-        total: 3,
-        new: 1,
-        learning: 1,
-        review: 1,
-        dueNow: 2,
-        nextDueAt: null, // everything there is new or already due
-      },
-      {
-        fromLanguage: "nl",
-        toLanguage: "en",
-        total: 2,
-        new: 0,
-        learning: 1,
-        review: 1,
-        dueNow: 0,
-        nextDueAt: new Date(NOW.getTime() + 2 * HOUR).toISOString(),
-      },
+      { fromLanguage: "en", toLanguage: "nl", total: 3 },
+      { fromLanguage: "nl", toLanguage: "en", total: 2 },
     ]);
   });
 
-  it("reports the earliest next due time across directions", async () => {
+  it("reports the earliest time a card not yet due comes due", async () => {
     expect((await getStats(db, userId, NOW)).nextDueAt).toBe(
       new Date(NOW.getTime() + 2 * HOUR).toISOString(),
     );
@@ -134,7 +112,7 @@ describe("GET /stats", () => {
     expect(res.statusCode).toBe(200);
     const body = res.json();
     expect(body.directions).toHaveLength(2);
-    expect(body.reviewsToday).toEqual(expect.any(Number));
+    expect(body).toHaveProperty("nextDueAt");
   });
 
   it("is empty for a user with no history", async () => {
@@ -146,7 +124,6 @@ describe("GET /stats", () => {
     const c = { session: other.cookies.find((x) => x.name === "session")!.value };
     const body = (await app.inject({ method: "GET", url: "/stats", cookies: c })).json();
     expect(body).toMatchObject({
-      reviewsToday: 0,
       nextDueAt: null,
       directions: [],
     });
@@ -207,25 +184,13 @@ describe("GET /deck list filters", () => {
 
   it("includes what the card list shows", async () => {
     const [card] = (await list("state=review&fromLanguage=nl&toLanguage=en")).body.cards;
-    expect(card).toMatchObject({ state: "review", lapses: 0 });
-    expect(card).toHaveProperty("intervalDays");
+    expect(card).toMatchObject({ state: "review" });
     expect(card).toHaveProperty("dueAt");
   });
 
   describe("sorting", () => {
     // Cards: dog en>nl new (due 10:00), house en>nl learning (09:00), water en>nl review (08:00),
     // hond nl>en review (15:00), huis nl>en relearning (12:00).
-    beforeAll(async () => {
-      const mine = await db.select().from(userCards).where(eq(userCards.userId, userId));
-      const set = async (conceptIndex: number, from: string, values: { intervalDays?: number; lapses?: number }) => {
-        const c = mine.find((x) => x.conceptId === conceptIds[conceptIndex] && x.fromLanguage === from)!;
-        await db.update(userCards).set(values).where(eq(userCards.id, c.id));
-      };
-      await set(0, "nl", { intervalDays: 30 });
-      await set(2, "en", { intervalDays: 7, lapses: 3 });
-      await set(1, "nl", { lapses: 1 });
-    });
-
     const sorted = async (params: string) => states((await list(`sort=${params}`)).body);
     const prompts = async (params: string) =>
       (await list(`sort=${params}`)).body.cards.map((c: { front: { lemma: string }[] }) => c.front[0]!.lemma);
@@ -233,11 +198,6 @@ describe("GET /deck list filters", () => {
     it("sorts by status, in order of progress", async () => {
       expect(await sorted("status")).toEqual(["new", "learning", "relearning", "review", "review"]);
       expect(await sorted("status&order=desc")).toEqual(["review", "review", "relearning", "learning", "new"]);
-    });
-
-    it("cannot be sorted by interval or lapses", async () => {
-      expect((await list("sort=interval")).status).toBe(400);
-      expect((await list("sort=lapses")).status).toBe(400);
     });
 
     it("sorts alphabetically by the prompt word", async () => {

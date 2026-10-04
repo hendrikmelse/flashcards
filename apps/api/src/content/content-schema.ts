@@ -23,9 +23,9 @@ import { z } from "zod";
 // are matched within their concept by language and lemma / text.
 
 // Lowercase words joined by hyphens, e.g. "dog" or "know-fact".
-export const KEY_PATTERN = /^[a-z0-9]+(-[a-z0-9]+)*$/;
+const KEY_PATTERN = /^[a-z0-9]+(-[a-z0-9]+)*$/;
 
-export const PARTS_OF_SPEECH = [
+const PARTS_OF_SPEECH = [
   "noun",
   "verb",
   "adjective",

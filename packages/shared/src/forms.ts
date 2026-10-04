@@ -12,7 +12,7 @@
 // What each language's verbs have is described by its entry in LANGUAGE_FORMS below. A language
 // with no entry has noun plurals only.
 
-export type FormLine = { label: string; value: string };
+type FormLine = { label: string; value: string };
 
 const str = (v: unknown): string | undefined =>
   typeof v === "string" && v.trim() ? v : undefined;

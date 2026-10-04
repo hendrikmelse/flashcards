@@ -95,31 +95,43 @@ function Settings_({ settings }: { settings: Settings }) {
     <>
       <h1>Settings</h1>
       <div className="tabs-wrap">
-      <div ref={bar} className="tabs" role="tablist" aria-label="Settings sections" onKeyDown={onKeyDown}>
-        {TABS.map((t) => (
-          <button
-            key={t.id}
-            id={`tab-${t.id}`}
-            data-label={t.label}
-            type="button"
-            role="tab"
-            aria-selected={tab === t.id}
-            aria-controls={`panel-${t.id}`}
-            tabIndex={tab === t.id ? 0 : -1}
-            onClick={() => open(t.id)}
-          >
-            {t.label}
-          </button>
-        ))}
-      </div>
-      {/* Arrows for the phone styles, shown at a side that has more tabs beyond it. They are for
-          touch; the arrow keys already move between the tabs, so they stay out of the tab order. */}
-      <button type="button" className="tabs-arrow tabs-arrow-start" tabIndex={-1} aria-hidden="true" onClick={() => scrollBar(-1)}>
-        ‹
-      </button>
-      <button type="button" className="tabs-arrow tabs-arrow-end" tabIndex={-1} aria-hidden="true" onClick={() => scrollBar(1)}>
-        ›
-      </button>
+        <div ref={bar} className="tabs" role="tablist" aria-label="Settings sections" onKeyDown={onKeyDown}>
+          {TABS.map((t) => (
+            <button
+              key={t.id}
+              id={`tab-${t.id}`}
+              data-label={t.label}
+              type="button"
+              role="tab"
+              aria-selected={tab === t.id}
+              aria-controls={`panel-${t.id}`}
+              tabIndex={tab === t.id ? 0 : -1}
+              onClick={() => open(t.id)}
+            >
+              {t.label}
+            </button>
+          ))}
+        </div>
+        {/* Arrows for the phone styles, shown at a side that has more tabs beyond it. They are for
+            touch; the arrow keys already move between the tabs, so they stay out of the tab order. */}
+        <button
+          type="button"
+          className="tabs-arrow tabs-arrow-start"
+          tabIndex={-1}
+          aria-hidden="true"
+          onClick={() => scrollBar(-1)}
+        >
+          ‹
+        </button>
+        <button
+          type="button"
+          className="tabs-arrow tabs-arrow-end"
+          tabIndex={-1}
+          aria-hidden="true"
+          onClick={() => scrollBar(1)}
+        >
+          ›
+        </button>
       </div>
       <section className="tab-panel" role="tabpanel" id={`panel-${tab}`} aria-labelledby={`tab-${tab}`}>
         {tab === "profile" && <ProfileSection settings={settings} />}
