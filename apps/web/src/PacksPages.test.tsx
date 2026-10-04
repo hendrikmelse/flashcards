@@ -82,7 +82,7 @@ describe("pack list", () => {
     await user.click(await screen.findByRole("link", { name: "Add words" }));
 
     expect(await screen.findByRole("heading", { name: "Add words" })).toBeInTheDocument();
-    expect(screen.getByText("Add word packs or individual words to your deck")).toBeInTheDocument();
+    expect(screen.queryByText("Add word packs or individual words to your deck")).not.toBeInTheDocument();
     expect(await screen.findByRole("link", { name: "Sample pack" })).toBeInTheDocument();
     expect(screen.getByText(/1 of 3 words in your deck/)).toBeInTheDocument();
     expect(screen.getByText(/1 not available yet/)).toBeInTheDocument();
@@ -148,6 +148,105 @@ describe("pack list", () => {
   });
 });
 
+describe("navigation on a single pack's page", () => {
+  const headOf = async () => {
+    const dashboard = await screen.findByRole("link", { name: "Go to dashboard" });
+    return dashboard.closest(".page-head") as HTMLElement;
+  };
+
+  it("has the buttons to the dashboard and the deck at the top right", async () => {
+    renderApp("/add-words/p1");
+    const head = await headOf();
+    expect(head).toBeTruthy();
+    const dashboard = within(head).getByRole("link", { name: "Go to dashboard" });
+    const deck = within(head).getByRole("link", { name: "View deck" });
+    expect(dashboard).toHaveAttribute("href", "/");
+    expect(dashboard).toHaveClass("button");
+    expect(deck).toHaveAttribute("href", "/deck");
+    expect(dashboard.parentElement).toBe(deck.parentElement);
+    expect(dashboard.parentElement).toHaveClass("page-head-actions");
+    expect(head.lastElementChild).toContainElement(dashboard);
+  });
+
+  it("has Back to all packs as a button at the very top left, above the card of the pack", async () => {
+    renderApp("/add-words/p1");
+    const title = await screen.findByRole("heading", { name: "Sample pack", level: 1 });
+    const back = await screen.findByRole("link", { name: "Back to all packs" });
+    expect(back).toHaveAttribute("href", "/add-words");
+    expect(back).toHaveClass("button", "secondary");
+    // First thing in the page header, level with the buttons at the right, and before the pack's name.
+    const head = back.closest(".page-head") as HTMLElement;
+    expect(head.firstElementChild).toContainElement(back);
+    expect(head.firstElementChild!.firstElementChild).toBe(back);
+    expect(back.compareDocumentPosition(title) & Node.DOCUMENT_POSITION_FOLLOWING).toBeTruthy();
+    expect(screen.queryByText("← All packs")).not.toBeInTheDocument();
+    expect(screen.queryByRole("link", { name: "All packs" })).not.toBeInTheDocument();
+  });
+
+  it("has the name in the header, beside the page buttons, and the description and Add all inside the card with the words", async () => {
+    renderApp("/add-words/p1");
+    const title = await screen.findByRole("heading", { name: "Sample pack", level: 1 });
+    // The name is under the way back, in the left of the header, level with the buttons at the right...
+    const head = title.closest(".page-head") as HTMLElement;
+    expect(head).toBeTruthy();
+    expect(head.firstElementChild).toContainElement(title);
+    expect(head.lastElementChild).toContainElement(screen.getByRole("link", { name: "Go to dashboard" }));
+    // ...and so outside the card, which comes straight after the header.
+    const card = head.nextElementSibling as HTMLElement;
+    expect(card).toHaveClass("pack-page-card");
+    expect(title.closest(".pack-page-card")).toBeNull();
+    // The description, the button and the words are inside.
+    expect(within(card).getByText("Demo data")).toBeInTheDocument();
+    expect(within(card).getByText("dog")).toBeInTheDocument();
+    const add = within(card).getByRole("button", { name: "Add all to my deck" });
+    const words = card.querySelector(".concept-list")!;
+    expect(add.compareDocumentPosition(words) & Node.DOCUMENT_POSITION_FOLLOWING).toBeTruthy();
+    // Add all is on the same row as the description, after it, which the card's styles put at the right edge.
+    const intro = card.querySelector(".pack-intro")!;
+    expect(intro).toContainElement(screen.getByText("Demo data"));
+    expect(intro).toContainElement(add);
+    expect(screen.getByText("Demo data").compareDocumentPosition(add) & Node.DOCUMENT_POSITION_FOLLOWING).toBeTruthy();
+    expect(add.closest(".pack-actions")).toBeTruthy();
+    // The card is named for the pack, for a screen reader.
+    expect(card).toHaveAccessibleName("Sample pack");
+    // The way back and the page buttons are outside it.
+    expect(card).not.toContainElement(screen.getByRole("link", { name: "Back to all packs" }));
+    expect(card).not.toContainElement(screen.getByRole("link", { name: "Go to dashboard" }));
+  });
+
+  it("takes you back to the list of packs", async () => {
+    const user = userEvent.setup();
+    renderApp("/add-words/p1");
+    await user.click(await screen.findByRole("link", { name: "Back to all packs" }));
+    expect(await screen.findByRole("heading", { name: "Add words", level: 1 })).toBeInTheDocument();
+  });
+
+  it("has Start studying above them, like the other pages", async () => {
+    renderApp("/add-words/p1");
+    const head = await headOf();
+    const start = await within(head).findByRole("link", { name: /^Start studying/ });
+    expect(start).toHaveAttribute("href", "/study");
+    const actions = head.querySelector(".page-head-actions")!;
+    expect(start.compareDocumentPosition(actions) & Node.DOCUMENT_POSITION_FOLLOWING).toBeTruthy();
+  });
+
+  it("goes where the buttons say", async () => {
+    const user = userEvent.setup();
+    renderApp("/add-words/p1");
+    await user.click(await screen.findByRole("link", { name: "Go to dashboard" }));
+    expect(await screen.findByRole("heading", { name: "Dashboard", level: 1 })).toBeInTheDocument();
+  });
+
+  it("is still there when the pack is not found, with the way back to the list", async () => {
+    mock.handlers[`GET /packs/nope?${EN_NL}&limit=1000`] = () => json(404, { error: "Pack not found" });
+    renderApp("/add-words/nope");
+    expect(await screen.findByText("That pack was not found.")).toBeInTheDocument();
+    expect(screen.getByRole("link", { name: "Go to dashboard" })).toHaveAttribute("href", "/");
+    expect(screen.getByRole("link", { name: "View deck" })).toHaveAttribute("href", "/deck");
+    expect(screen.getByRole("link", { name: "Back to all packs" })).toHaveAttribute("href", "/add-words");
+  });
+});
+
 describe("the way back to the dashboard", () => {
   it("has Go to dashboard and View deck buttons at the top right, level with the heading", async () => {
     renderApp("/add-words");
@@ -160,10 +259,10 @@ describe("the way back to the dashboard", () => {
     expect(button.nextElementSibling).toBe(deck);
     const actions = button.parentElement!;
     expect(actions).toHaveClass("page-head-actions");
-    const head = actions.parentElement!;
-    expect(head).toHaveClass("page-head");
+    const head = actions.closest(".page-head")!;
+    expect(head).toBeTruthy();
     expect(head.firstElementChild).toContainElement(screen.getByRole("heading", { name: "Add words" }));
-    expect(head.lastElementChild).toBe(actions);
+    expect(head.lastElementChild).toContainElement(actions);
   });
 
   it("takes you to the deck", async () => {
@@ -196,7 +295,7 @@ describe("addresses", () => {
 
   it("links back from a pack to the list", async () => {
     renderApp("/add-words/p1");
-    expect(await screen.findByRole("link", { name: "← All packs" })).toHaveAttribute("href", "/add-words");
+    expect(await screen.findByRole("link", { name: "Back to all packs" })).toHaveAttribute("href", "/add-words");
   });
 
   it("sends the old /packs address to /add-words", async () => {
@@ -208,7 +307,7 @@ describe("addresses", () => {
   it("sends an old pack address to the pack under /add-words", async () => {
     renderApp("/packs/p1?from=en&to=nl");
     expect(await screen.findByRole("heading", { name: "Sample pack" })).toBeInTheDocument();
-    expect(screen.getByRole("link", { name: "← All packs" })).toHaveAttribute("href", "/add-words");
+    expect(screen.getByRole("link", { name: "Back to all packs" })).toHaveAttribute("href", "/add-words");
   });
 });
 
@@ -286,7 +385,7 @@ describe("pack categories", () => {
     const user = userEvent.setup();
     renderApp("/add-words");
     await user.click(await screen.findByRole("button", { name: /^Verbs/ }));
-    await user.click(screen.getByRole("button", { name: "Hide already added results" }));
+    await user.click(screen.getByRole("button", { name: "Hide packs already in deck" }));
     expect(screen.getByText("Every pack here is already in your deck.")).toBeInTheDocument();
   });
 
@@ -309,14 +408,14 @@ describe("pack categories", () => {
       const user = userEvent.setup();
       renderApp("/add-words");
       await user.click(await screen.findByRole("button", { name: /^Topics/ }));
-      await user.click(screen.getByRole("button", { name: "Hide already added results" }));
+      await user.click(screen.getByRole("button", { name: "Hide packs already in deck" }));
       await user.type(screen.getByRole("searchbox", { name: "Search packs" }), "rain");
       expect(names()).toEqual(["Weather"]);
 
       await goToDashboardAndBack(user);
 
       expect(await screen.findByRole("button", { name: /^Topics/ })).toHaveAttribute("aria-pressed", "true");
-      expect(screen.getByRole("button", { name: "Hide already added results" })).toHaveAttribute("aria-pressed", "true");
+      expect(screen.getByRole("button", { name: "Hide packs already in deck" })).toHaveAttribute("aria-pressed", "true");
       expect(screen.getByRole("searchbox", { name: "Search packs" })).toHaveValue("rain");
       expect(names()).toEqual(["Weather"]);
     });
@@ -416,7 +515,7 @@ describe("word search", () => {
     };
 
     const box = await openWords(user);
-    await user.click(screen.getByRole("button", { name: "Hide already added results" }));
+    await user.click(screen.getByRole("button", { name: "Hide words already in deck" }));
     await user.type(box, "hond");
     await user.click(await screen.findByRole("button", { name: "Add dog to my deck" }));
 
@@ -425,8 +524,8 @@ describe("word search", () => {
     // The server no longer returns it, but it stays put.
     expect(screen.getByText("de hond")).toBeInTheDocument();
 
-    await user.click(screen.getByRole("button", { name: "Hide already added results" }));
-    await user.click(screen.getByRole("button", { name: "Hide already added results" }));
+    await user.click(screen.getByRole("button", { name: "Hide words already in deck" }));
+    await user.click(screen.getByRole("button", { name: "Hide words already in deck" }));
     await waitFor(() => expect(screen.queryByText("de hond")).not.toBeInTheDocument());
   });
 
@@ -695,5 +794,98 @@ describe("looking at a word as a card", () => {
       await user.keyboard("{Escape}");
       expect(screen.queryByRole("dialog")).not.toBeInTheDocument();
     });
+  });
+});
+
+describe("the explainer on the Add words page", () => {
+  let seen: boolean;
+  let patches: unknown[];
+  const settings = () => ({
+    email: "ann@example.com",
+    name: null,
+    timezone: "UTC",
+    dailyNewCardLimit: 20,
+    showSentences: true,
+    showForms: true,
+    addWordsIntroSeen: seen,
+  });
+
+  beforeEach(() => {
+    seen = false;
+    patches = [];
+    mock.handlers["GET /settings"] = () => json(200, settings());
+    mock.handlers["PATCH /settings"] = (body) => {
+      patches.push(body);
+      seen = (body as { addWordsIntroSeen?: boolean }).addWordsIntroSeen ?? seen;
+      return json(200, settings());
+    };
+  });
+
+  it("explains adding words the first time, in place of the page", async () => {
+    renderApp("/add-words");
+    const intro = await screen.findByRole("region", { name: "How adding words works" });
+    expect(intro).toHaveTextContent("pre-made packs");
+    expect(intro).toHaveTextContent("individual words");
+    expect(intro).toHaveTextContent("Adding a word adds two cards:");
+    expect(within(intro).getAllByRole("listitem").map((li) => li.textContent)).toEqual([
+      "The forward direction tests your ability to produce a word on command.",
+      "The reverse direction tests your ability to recognize a word when you see it.",
+    ]);
+    expect(intro).toHaveTextContent("completely independent flashcards");
+    expect(intro).not.toHaveTextContent("food"); // no examples of packs
+    expect(within(intro).getByRole("button", { name: "Got it" })).toBeInTheDocument();
+    // Nothing else of the page is there to use until it has been read.
+    expect(screen.queryByRole("heading", { name: "Add words" })).not.toBeInTheDocument();
+    expect(screen.queryByRole("searchbox")).not.toBeInTheDocument();
+    expect(screen.queryByRole("link", { name: "Sample pack" })).not.toBeInTheDocument();
+  });
+
+  it("shows the page itself after Got it", async () => {
+    const user = userEvent.setup();
+    renderApp("/add-words");
+    await user.click(await screen.findByRole("button", { name: "Got it" }));
+    expect(await screen.findByRole("heading", { name: "Add words" })).toBeInTheDocument();
+    expect(await screen.findByRole("link", { name: "Sample pack" })).toBeInTheDocument();
+  });
+
+  it("goes away at once on Got it, and is saved for the account", async () => {
+    const user = userEvent.setup();
+    renderApp("/add-words");
+    await user.click(await screen.findByRole("button", { name: "Got it" }));
+    expect(screen.queryByRole("region", { name: "How adding words works" })).not.toBeInTheDocument();
+    await waitFor(() => expect(patches).toEqual([{ addWordsIntroSeen: true }]));
+  });
+
+  it("is not shown again once dismissed, however the page is reached", async () => {
+    const user = userEvent.setup();
+    const view = renderApp("/add-words");
+    await user.click(await screen.findByRole("button", { name: "Got it" }));
+    await waitFor(() => expect(patches).toHaveLength(1));
+    view.unmount();
+
+    renderApp("/add-words");
+    await screen.findByRole("searchbox", { name: "Search packs" });
+    expect(screen.queryByRole("region", { name: "How adding words works" })).not.toBeInTheDocument();
+  });
+
+  it("is not shown to someone who has already dismissed it", async () => {
+    seen = true;
+    renderApp("/add-words");
+    await screen.findByRole("searchbox", { name: "Search packs" });
+    expect(screen.queryByRole("button", { name: "Got it" })).not.toBeInTheDocument();
+  });
+
+  it("is only on the Add words page, not on a pack's page", async () => {
+    renderApp("/add-words/p1");
+    await screen.findByRole("heading", { name: "Sample pack", level: 1 });
+    expect(screen.queryByRole("button", { name: "Got it" })).not.toBeInTheDocument();
+  });
+
+  it("comes back if saving the dismissal fails, so it is not lost silently", async () => {
+    mock.handlers["PATCH /settings"] = () => json(500, { error: "boom" });
+    const user = userEvent.setup();
+    renderApp("/add-words");
+    await user.click(await screen.findByRole("button", { name: "Got it" }));
+    expect(await screen.findByRole("region", { name: "How adding words works" })).toBeInTheDocument();
   });
 });

@@ -1,44 +1,32 @@
 import { useState } from "react";
 import type { UpdateSettingsInput } from "@flashcards/shared";
 import { useUpdateSettings } from "../../api/hooks";
-import { useFlash } from "../../components/SaveButton";
 
-/** How long "Saved" stays on screen. */
-export const SAVED_MS = 1200;
-
-// Saves one setting on its own and tracks how it went, so the result can be shown right next to
-// the control that changed. Use one per control.
+// Saves one setting on its own and tracks whether it failed, so the error can be shown right next
+// to the control that changed. A setting that saves says nothing: the change just stays. Use one
+// per control.
 export function useFieldSave() {
   const update = useUpdateSettings();
-  const [flash, fire] = useFlash(SAVED_MS);
   const [failed, setFailed] = useState(false);
 
   function save(input: UpdateSettingsInput, onError?: () => void) {
     setFailed(false);
     update.mutate(input, {
-      onSuccess: fire,
       onError: () => {
         setFailed(true);
         onError?.();
       },
     });
   }
-  return { save, flash, failed };
+  return { save, failed };
 }
 
-// "✓ Saved" for a moment after a save, or a short error, to sit beside the control.
-export function FieldStatus({ flash, failed }: { flash: boolean; failed: boolean }) {
+// A short error beside the control when a save did not go through, and nothing otherwise.
+export function FieldStatus({ failed }: { failed: boolean }) {
+  if (!failed) return null;
   return (
-    <span role="status" className={failed ? "field-status form-error" : "field-status"}>
-      {failed ? (
-        "Could not save. Try again."
-      ) : flash ? (
-        <>
-          <span aria-hidden="true">✓</span> Saved
-        </>
-      ) : (
-        ""
-      )}
+    <span role="alert" className="field-status form-error">
+      Could not save. Try again.
     </span>
   );
 }

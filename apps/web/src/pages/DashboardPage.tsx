@@ -1,16 +1,9 @@
-import { useEffect, useState } from "react";
-import { useQueryClient } from "@tanstack/react-query";
 import { Link } from "react-router";
-import {
-  EARLY_START_WINDOW_MS,
-  type DirectionSummary,
-  type StudyCountsResponse,
-} from "@flashcards/shared";
+import type { StudyCountsResponse } from "@flashcards/shared";
 import { useDashboard } from "../api/hooks";
 import { usePacks } from "../api/packs";
+import { PageHeadActions } from "../components/PageHeadActions";
 import { useActiveLanguages } from "../hooks/useActiveLanguages";
-import { formatClock, useCountdown } from "../hooks/useCountdown";
-import { shortDirection, sameDirection, useDeckFilter } from "../hooks/useDeckFilter";
 import { formatUntil } from "../lib/relativeTime";
 
 function Stat({ label, value, tone }: { label: string; value: number; tone?: "new" | "learning" | "review" }) {
@@ -44,56 +37,25 @@ function DeckBar({ counts }: { counts: { new: number; learning: number; review: 
   );
 }
 
-// Nothing is ready, but a session may be on its way: cards you were just learning
-// come back once the gap since your last session has passed. Counts down to then,
-// and in the last few minutes offers to start the next session early.
+// Nothing is ready: say when the next card comes due, and what tomorrow will bring.
 function NothingToStudy({
   study,
-  fetchedAt,
   nextDueAt,
   serverNow,
 }: {
   study: StudyCountsResponse;
-  fetchedAt: number;
   nextDueAt: string | null;
   serverNow: string | null;
 }) {
-  const qc = useQueryClient();
-  const next = study.nextSession;
-  // The server's clock tells how long is left; the countdown then runs on this device's clock.
-  const deadline = next ? fetchedAt + (Date.parse(next.at) - Date.parse(study.now)) : null;
-  const left = useCountdown(deadline);
-  const over = left === 0;
-
-  // When the wait is over, look again: the cards are ready.
-  useEffect(() => {
-    if (!over) return;
-    for (const key of ["study", "stats", "deck"]) qc.invalidateQueries({ queryKey: [key] });
-  }, [over, qc]);
-
-  const early = left !== null && left > 0 && left <= EARLY_START_WINDOW_MS;
   return (
     <>
       <p className="hero-title">No cards to study right now</p>
-      {next && left !== null ? (
-        <p className="muted">
-          {plural(next.count, "card")} will be ready in <strong>{formatClock(left)}</strong>.
-        </p>
-      ) : (
-        nextDueAt && serverNow && <p className="muted">Next card {formatUntil(nextDueAt, serverNow)}.</p>
-      )}
+      {nextDueAt && serverNow && <p className="muted">Next card {formatUntil(nextDueAt, serverNow)}.</p>}
       {study.tomorrow > 0 && (
         <p className="muted">{plural(study.tomorrow, "card")} will be ready tomorrow.</p>
       )}
-      {!next && !(nextDueAt && serverNow) && study.tomorrow === 0 && (
+      {!(nextDueAt && serverNow) && study.tomorrow === 0 && (
         <p className="muted">Come back later or add more words.</p>
-      )}
-      {early && (
-        <div className="hero-actions">
-          <Link to="/study?early=1" className="button primary">
-            Start next session now
-          </Link>
-        </div>
       )}
     </>
   );
@@ -123,17 +85,13 @@ function GettingStarted() {
 }
 
 export function DashboardPage() {
-  const [directions, setDirections] = useState<DirectionSummary[] | undefined>();
-  const filter = useDeckFilter(directions);
-  const { deck, deckAll, study, stats } = useDashboard(filter.selected);
+  const { deck, study, stats } = useDashboard();
   // The starter pack is where a new person is pointed first.
   const packs = usePacks(useActiveLanguages().direction);
   const starter = packs.data?.find((p) => p.slug === "starter");
-  // Keep the last known directions so the filter doesn't vanish while stats refetch.
-  if (stats.data && stats.data.directions !== directions) setDirections(stats.data.directions);
 
-  if (deckAll.isPending || study.isPending) return <p className="status">Loading…</p>;
-  if (deckAll.isError || study.isError) {
+  if (deck.isPending || study.isPending) return <p className="status">Loading…</p>;
+  if (deck.isError || study.isError) {
     return <p className="status error">Could not load your dashboard. Please refresh.</p>;
   }
 
@@ -141,28 +99,25 @@ export function DashboardPage() {
   const { counts } = study.data;
   const dueNow = counts.learning + counts.review;
   const ready = dueNow + counts.new;
-  const byDirection = stats.data?.directions ?? [];
   const nextDueAt = stats.data?.nextDueAt ?? null;
 
   return (
     <>
       <div className="page-head">
         <h1>Dashboard</h1>
-        {deckAll.data.summary.total > 0 && (
-          <div className="page-head-actions">
-            <Link to="/deck" className="button secondary">
-              View deck
-            </Link>
-            <Link to="/add-words" className="button secondary">
-              Add more words
-            </Link>
-          </div>
-        )}
+        <PageHeadActions>
+          <Link to="/deck" className="button secondary">
+            View deck
+          </Link>
+          <Link to="/add-words" className="button secondary">
+            Add more words
+          </Link>
+        </PageHeadActions>
       </div>
 
-      {deckAll.data.summary.total === 0 ? (
+      {deck.data.summary.total === 0 ? (
         <>
-          <div className="hero">
+          <div className="hero hero-empty">
             <p className="hero-title">Your deck is empty</p>
             <p className="muted">
               Add a pack or a few words and what to study next will show up here.
@@ -187,7 +142,7 @@ export function DashboardPage() {
               <>
                 <p className="hero-title">{plural(ready, "card")} ready to study</p>
                 <p className="muted">
-                  {dueNow > 0 && `${dueNow} due now`}
+                  {dueNow > 0 && `${dueNow} due for review`}
                   {dueNow > 0 && counts.new > 0 && " · "}
                   {counts.new > 0 && `${counts.new} new`}
                 </p>
@@ -195,57 +150,37 @@ export function DashboardPage() {
             ) : (
               <NothingToStudy
                 study={study.data}
-                fetchedAt={study.dataUpdatedAt}
                 nextDueAt={nextDueAt}
                 serverNow={stats.data?.now ?? null}
               />
             )}
-            {ready > 0 && (
-              <div className="hero-actions">
-                <Link to="/study" className="button primary">
-                  Start studying
-                </Link>
-              </div>
-            )}
           </section>
 
-          <h2 className="section-title">Your deck</h2>
-          {byDirection.length > 1 && (
-            <div className="toggle deck-view" role="group" aria-label="Deck view">
-              {byDirection.map((d) => (
-                <button
-                  key={`${d.fromLanguage}-${d.toLanguage}`}
-                  type="button"
-                  aria-pressed={sameDirection(d, filter.selected)}
-                  onClick={() => filter.select({ from: d.fromLanguage, to: d.toLanguage })}
-                >
-                  {shortDirection(d)}
-                </button>
-              ))}
-              <button type="button" aria-pressed={!filter.selected} onClick={() => filter.select(null)}>
-                {byDirection.length === 2 ? "Both" : "All"}
-              </button>
-            </div>
-          )}
-          {deck.data ? (
-            <>
-              <DeckBar counts={{ new: deck.data.summary.new, learning: deck.data.summary.learning + deck.data.summary.relearning, review: deck.data.summary.review }} />
-              <section aria-label="Progress" className="stats secondary">
-                <Stat label="Review" value={deck.data.summary.review} tone="review" />
-                <Stat label="Learning" value={deck.data.summary.learning + deck.data.summary.relearning} tone="learning" />
-                <Stat label="New" value={deck.data.summary.new} tone="new" />
-              </section>
-            </>
-          ) : (
-            <p className="status">{deck.isError ? "Could not load this view." : "Loading…"}</p>
-          )}
-          {study.data.newLimitReached && (
+          {/* Only worth saying when the limit is why there is nothing to study: with cards due, there is. */}
+          {study.data.newLimitReached && ready === 0 && (
             <p className="muted limit-note">
               No new cards are available to study today because you have reached your daily new card limit.
               <br />
               You can change the limit in <Link to="/settings?tab=study">Settings</Link>.
             </p>
           )}
+
+          <div className="section-head">
+            <div className="section-head-title">
+              <h2 className="section-title">Your deck</h2>
+              <span className="muted">{plural(deck.data.summary.total, "card")}</span>
+            </div>
+            {/* On a phone the page's own buttons are hidden, so the deck is one tap away from here. */}
+            <Link to="/deck" className="button secondary section-head-deck">
+              View deck
+            </Link>
+          </div>
+          <DeckBar counts={{ new: deck.data.summary.new, learning: deck.data.summary.learning + deck.data.summary.relearning, review: deck.data.summary.review }} />
+          <section aria-label="Progress" className="stats secondary">
+            <Stat label="Review" value={deck.data.summary.review} tone="review" />
+            <Stat label="Learning" value={deck.data.summary.learning + deck.data.summary.relearning} tone="learning" />
+            <Stat label="New" value={deck.data.summary.new} tone="new" />
+          </section>
         </>
       )}
 

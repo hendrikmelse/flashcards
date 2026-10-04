@@ -27,7 +27,7 @@ export async function studyRoutes(
     return getStudyBatch(
       db,
       req.user!.id,
-      { limit: l.data.limit, early: l.data.early === "1", ...d.data },
+      { limit: l.data.limit, ...d.data },
       new Date(),
       scheduler,
     );

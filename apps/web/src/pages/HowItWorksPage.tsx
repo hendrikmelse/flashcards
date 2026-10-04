@@ -2,7 +2,7 @@ import { Link } from "react-router";
 
 // Explains the scheduler in plain language. The numbers here mirror the server:
 // apps/api/src/srs/engine.ts (steps, target retention) and src/study/queue.ts
-// (daily new-card limit, learn-ahead window, order).
+// (daily new-card limit, order).
 export function HowItWorksPage() {
   return (
     <article className="prose">
@@ -98,7 +98,7 @@ export function HowItWorksPage() {
       <ol className="steps">
         <li>
           <strong>Cards you’re likeliest to have forgotten.</strong> Learning and review cards that
-          are due (or due within the next 20 minutes) go in order of how likely you are to have
+          are due go in order of how likely you are to have
           forgotten them, most likely first. That is not the same as the most overdue: a word you
           know very well can be weeks late and still be safer than one you barely know that is a day
           late. If you stop early, the cards you skip are the ones you probably remember.
@@ -111,10 +111,9 @@ export function HowItWorksPage() {
       </ol>
       <p>
         A session ends when there are no more cards to show right now. Cards you answered Hard or
-        Good while still learning them do not come back in the same session: they are held until
-        your next one, which opens <strong>15 minutes</strong> after you finish. The summary at the
-        end of a session says how many cards will be available for re-review, and the dashboard
-        counts down to that moment. With five minutes or less to go, you can start the next session early.
+        Good while still learning them do not come back in the same session. Nothing is held back
+        between sessions, though: start another one whenever you like and they are offered again as
+        soon as they are due, not before.
       </p>
       <p>
         When you press Again, the card returns about halfway through the cards still to come, never

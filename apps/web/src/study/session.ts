@@ -194,16 +194,3 @@ export function phaseOf(state: SessionState): Phase {
 export function remaining(state: SessionState): number {
   return state.queue.length + (state.current ? 1 : 0) + state.unlocked;
 }
-
-/**
- * Cards from this session that will come back for another look in a later one: those answered
- * Hard or Good while still learning, plus any missed card (answered Again) that was still waiting
- * its turn when the session ended.
- */
-export function reReviewCount(state: SessionState): number {
-  const answered = new Set(state.handled);
-  const waiting = [...state.queue, ...(state.current ? [state.current] : [])].filter((c) =>
-    answered.has(c.id),
-  );
-  return state.pending.length + waiting.length;
-}

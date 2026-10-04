@@ -71,6 +71,10 @@ input {
 /* Layout */
 
 .topbar {
+  /* Stays at the top of the screen while the page scrolls beneath it, under a card shown over the page. */
+  position: sticky;
+  top: 0;
+  z-index: 20;
   display: flex;
   align-items: center;
   gap: 1.5rem;
@@ -88,13 +92,18 @@ input {
 
 .topbar nav {
   display: flex;
-  gap: 1rem;
   flex: 1;
 }
 
+/* A thin vertical line between the tabs. */
 .topbar nav a {
+  padding: 0.1rem 1rem 0;
   text-decoration: none;
   color: var(--muted);
+}
+
+.topbar nav a + a {
+  border-left: 1px solid var(--border);
 }
 
 .topbar nav a.active {
@@ -121,6 +130,22 @@ input {
   font-weight: 600;
   user-select: none;
   pointer-events: none;
+}
+
+/* In the top bar that same copy is also the underline: it is exactly as wide as the word, and its
+   bottom border is transparent, or the accent color for the current tab, so the tabs keep their
+   height when the current one changes. Its text is clipped away (height 0) rather than hidden. */
+.topbar nav a::after {
+  content: attr(data-label);
+  content: attr(data-label) / "";
+  visibility: visible;
+  margin-top: 0.2rem;
+  border-bottom: 2px solid transparent;
+  color: transparent;
+}
+
+.topbar nav a.active::after {
+  border-bottom-color: var(--accent);
 }
 
 .account {
@@ -365,6 +390,18 @@ button.primary .check {
   font-weight: 700;
 }
 
+/* Holds the tabs and, on a phone, the arrows that hint they scroll (see mobile.css). */
+.tabs-wrap {
+  position: relative;
+}
+
+.tabs-arrow {
+  display: none;
+  padding: 0;
+  border: 0;
+  background: none;
+}
+
 .tabs {
   display: flex;
   gap: 0.25rem;
@@ -504,7 +541,6 @@ button.secondary.danger-outline:hover:not(:disabled) {
 .field-status {
   font-size: 0.9rem;
   white-space: nowrap;
-  color: var(--accent);
 }
 
 .field-status.form-error {
@@ -685,9 +721,28 @@ button.link {
   margin-bottom: 1rem;
 }
 
+/* The top right of a page header: "Start studying" above the page's navigation buttons. */
+.page-head-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.75rem;
+}
+
+/* Keeps the room for the button until it is shown, so the header does not change height. */
+.page-head-start {
+  min-height: 2.8rem;
+}
+
+/* The disabled version is a button, not a link: the same size as the link beside it. */
+.page-head-start button.primary {
+  padding: 0.65rem 1.25rem;
+}
+
 .page-head-actions {
   display: flex;
   flex-wrap: wrap;
+  justify-content: flex-end;
   gap: 0.75rem;
 }
 
@@ -749,8 +804,10 @@ button.row-open:focus-visible .prompt {
   inset: 0;
   z-index: 50;
   display: grid;
-  place-items: center;
-  padding: 1rem;
+  /* Anchored near the top, not centered: when the example sentences arrive and the card grows, the
+     top edge stays put instead of the whole card shifting up and re-centering. */
+  place-items: start center;
+  padding: clamp(1rem, 12vh, 6rem) 1rem 1rem;
   background: rgb(0 0 0 / 0.45);
 }
 
@@ -758,7 +815,7 @@ button.row-open:focus-visible .prompt {
   position: relative;
   box-sizing: border-box;
   width: min(36rem, 100%);
-  max-height: calc(100vh - 2rem);
+  max-height: calc(100vh - clamp(1rem, 12vh, 6rem) - 1rem);
   overflow-y: auto;
   padding: 1.5rem 1.5rem 1.25rem;
   border: 1px solid var(--border);
@@ -796,7 +853,21 @@ button.row-open:focus-visible .prompt {
 
 /* Rows of the deck: the open button supplies the vertical padding. */
 .concept-list li.deck-row {
+  position: relative;
   padding-block: 0;
+}
+
+/* The open button's click area is stretched over the whole row, status and due date included, and on
+   a phone the lines below the word too. The Add button stays on top of it so it can still be pressed. */
+button.row-open::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+
+.concept-list li.deck-row > button:not(.row-open) {
+  position: relative;
+  z-index: 1;
 }
 
 .card-status {
@@ -822,8 +893,29 @@ button.row-open:focus-visible .prompt {
   white-space: nowrap;
 }
 
-.deck-view {
-  margin-bottom: 0.75rem;
+/* A section's heading, with room for a button across from it (shown on a phone only). */
+.section-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin: 1.5rem 0 0.6rem;
+}
+
+.section-head .section-title {
+  margin: 0;
+}
+
+/* The heading with the size of the deck beside it. */
+.section-head-title {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0 0.6rem;
+}
+
+a.button.section-head-deck {
+  display: none;
 }
 
 .section-title {
@@ -915,7 +1007,7 @@ button.row-open:focus-visible .prompt {
 }
 
 .limit-note {
-  margin-top: 1rem;
+  margin-top: 0; /* the "ready to study" card above it has its own bottom margin */
   text-align: center;
 }
 
@@ -946,6 +1038,37 @@ button.row-open:focus-visible .prompt {
   align-items: center;
   gap: 0.75rem 1.5rem;
   margin-top: 1.25rem;
+}
+
+/* The explainer that stands in for the Add words page until it is dismissed */
+.add-intro {
+  max-width: 40rem;
+  margin: 0 auto;
+  padding: 1.25rem 1.5rem 1.5rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 0.9rem;
+}
+
+.add-intro h1 {
+  margin: 0 0 0.75rem;
+}
+
+.add-intro p {
+  margin: 0 0 0.9rem;
+}
+
+.add-intro ul {
+  margin: 0 0 0.9rem;
+  padding-left: 1.4rem;
+}
+
+.add-intro li + li {
+  margin-top: 0.35rem;
+}
+
+.add-intro button {
+  margin-top: 0.5rem;
 }
 
 /* Reporting a problem with a card */
@@ -1166,12 +1289,67 @@ progress {
   accent-color: var(--accent);
 }
 
+/* A pack's page is one card: its name, description and Add all button at the top, and the words below. */
+.pack-page-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+  overflow: hidden;
+}
+
+/* The way back and the pack's name stack at the left of the header, beside the buttons at the right,
+   so the name does not need a row of its own beneath them. */
+.pack-head {
+  margin-bottom: 0.75rem;
+}
+
+.pack-head-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.pack-title {
+  margin: 0;
+}
+
+/* The description at the left and the Add all button at the right edge. */
+.pack-intro {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75rem 1rem;
+  padding: 1rem;
+}
+
+.pack-intro .lead {
+  flex: 1 1 18rem;
+  margin: 0;
+}
+
+.pack-page-card .concept-list {
+  border: 0;
+  border-top: 1px solid var(--border);
+  border-radius: 0;
+  background: none;
+}
+
+.pack-page-card .empty {
+  margin: 0;
+  border: 0;
+  border-top: 1px solid var(--border);
+  border-radius: 0;
+}
+
 .pack-actions {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  gap: 1rem;
-  margin: 1rem 0 1.25rem;
+  justify-content: flex-end;
+  gap: 0.75rem 1rem;
+  margin-left: auto;
 }
 
 .pack-actions [role="status"]:empty {
@@ -1425,6 +1603,18 @@ a.button.secondary {
   font-style: italic;
 }
 
+.sentence-placeholder {
+  min-height: 1lh;
+}
+
+.sentence-status {
+  min-height: 1lh;
+}
+
+.sentence-status p {
+  margin: 0;
+}
+
 .study-answer {
   margin-top: 1.25rem;
   padding-top: 1.25rem;
@@ -1524,54 +1714,3 @@ button.rating kbd {
   font-size: 1.5rem;
   font-weight: 700;
 }
-
-/* Phones. The top bar fits on two rows instead of three, the segmented controls fit the screen
-   (and scroll if they still do not), and a deck row puts the word on its own line with the status
-   and the Add reverse button beneath it, instead of squeezing the word into what is left. */
-@media (max-width: 36rem) {
-  .topbar {
-    gap: 0.5rem 0.75rem;
-  }
-
-  .topbar .account {
-    order: 2;
-  }
-
-  .topbar nav {
-    order: 3;
-    flex-basis: 100%;
-  }
-
-  .toggle {
-    max-width: 100%;
-    overflow-x: auto;
-    scrollbar-width: none; /* it scrolls if it must, without a bar across the buttons */
-  }
-
-  .toggle button {
-    padding: 0.4rem 0.5rem;
-    font-size: 0.9rem;
-    white-space: nowrap;
-  }
-
-  .toggle .count {
-    margin-left: 0.3rem;
-  }
-
-  .concept-list li.card-row {
-    flex-wrap: wrap;
-    gap: 0;
-  }
-
-  .concept-list li.card-row button.row-open {
-    flex: 1 1 100%;
-    padding-bottom: 0.25rem;
-  }
-
-  .concept-list li.card-row .card-actions {
-    flex: 1 1 100%;
-    justify-content: flex-end;
-    padding-bottom: 0.65rem;
-  }
-}
-

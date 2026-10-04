@@ -87,7 +87,8 @@ describe("ending a session early", () => {
 
     expect(await screen.findByRole("heading", { name: "Session complete!" })).toBeInTheDocument();
     expect(screen.getByText("You viewed 1 unique card")).toBeInTheDocument();
-    expect(screen.getByText("1 card will be available for re-review in 15 minutes")).toBeInTheDocument();
+    // Nothing is held back between sessions, so there is no line about cards coming back later.
+    expect(screen.queryByText(/re-review/)).not.toBeInTheDocument();
     const back = screen.getByRole("link", { name: "Back to the dashboard" });
     expect(back).toHaveAttribute("href", "/");
     expect(back).toHaveClass("button", "primary"); // looks and works like the other page buttons
@@ -142,7 +143,8 @@ describe("ending a session early", () => {
     await user.click(screen.getByRole("button", { name: "End session" }));
 
     expect(await screen.findByText("You viewed 1 unique card")).toBeInTheDocument();
-    expect(screen.getByText("1 card will be available for re-review in 15 minutes")).toBeInTheDocument();
+    // Nothing is held back between sessions, so there is no line about cards coming back later.
+    expect(screen.queryByText(/re-review/)).not.toBeInTheDocument();
   });
 
   it("stops asking for more cards once the session has ended", async () => {
@@ -170,7 +172,8 @@ describe("ending a session early", () => {
     expect(await screen.findByRole("heading", { name: "Session complete!" })).toBeInTheDocument();
     expect(screen.queryByText(/exact same card again/)).not.toBeInTheDocument();
     expect(screen.getByText("You viewed 1 unique card")).toBeInTheDocument();
-    expect(screen.getByText("1 card will be available for re-review in 15 minutes")).toBeInTheDocument();
+    // Nothing is held back between sessions, so there is no line about cards coming back later.
+    expect(screen.queryByText(/re-review/)).not.toBeInTheDocument();
   });
 });
 
@@ -353,15 +356,6 @@ describe("the number of cards left", () => {
 });
 
 describe("starting a session", () => {
-  it("starts the next session early when the URL says so", async () => {
-    mock.handlers["GET /study?limit=100&early=1"] = () =>
-      json(200, { now: "x", counts: { learning: 1, review: 0, new: 0 }, cards: [dog] });
-    renderApp("/study?early=1");
-    expect(await screen.findByText("dog")).toBeInTheDocument();
-    expect(mock.calls).toContain("GET /study?limit=100&early=1");
-    expect(mock.calls).not.toContain("GET /study?limit=100");
-  });
-
   it("always studies the whole deck of the language pair: a direction in the address is ignored", async () => {
     renderApp("/study?from=nl&to=en");
     expect(await screen.findByText("dog")).toBeInTheDocument();
@@ -407,12 +401,12 @@ describe("study session", () => {
     await user.keyboard("4");
     expect(reviews[1]).toMatchObject({ userCardId: "card-house", rating: "easy" });
 
-    // Nothing is left to show now, so no countdown: the session is over.
+    // Nothing is left to show now: the session is over.
     expect(await screen.findByRole("heading", { name: "Session complete!" })).toBeInTheDocument();
     expect(screen.queryByText("Nothing else is ready right now.")).not.toBeInTheDocument();
     expect(screen.getByText("You viewed 2 unique cards")).toBeInTheDocument();
-    // dog is still being learned; it will be back in the next session.
-    expect(screen.getByText("1 card will be available for re-review in 15 minutes")).toBeInTheDocument();
+    // Nothing is held back between sessions, so there is no line about cards coming back later.
+    expect(screen.queryByText(/re-review/)).not.toBeInTheDocument();
     expect(screen.queryByText(/rated Good or Easy/)).not.toBeInTheDocument();
     expect(screen.getByRole("link", { name: "Back to the dashboard" })).toHaveAttribute("href", "/");
     expect(reviews).toHaveLength(2); // dog was not shown a second time
@@ -427,12 +421,10 @@ describe("study session", () => {
 
     expect(await screen.findByRole("heading", { name: "Session complete!" })).toBeInTheDocument();
     expect(screen.getByText("You viewed 1 unique card")).toBeInTheDocument();
-    // Nothing to re-review, so no line about it.
-    expect(screen.queryByText(/re-review/)).not.toBeInTheDocument();
     expect(screen.getByText("Easy").nextSibling).toHaveTextContent("1");
   });
 
-  it("counts each card once however often it was shown, and lists every card to re-review", async () => {
+  it("counts each card once however often it was shown", async () => {
     const user = userEvent.setup();
     renderApp("/study");
 
@@ -446,7 +438,8 @@ describe("study session", () => {
 
     expect(await screen.findByRole("heading", { name: "Session complete!" })).toBeInTheDocument();
     expect(screen.getByText("You viewed 2 unique cards")).toBeInTheDocument(); // three answers, two cards
-    expect(screen.getByText("2 cards will be available for re-review in 15 minutes")).toBeInTheDocument();
+    // Nothing is held back between sessions, so there is no line about cards coming back later.
+    expect(screen.queryByText(/re-review/)).not.toBeInTheDocument();
     expect(screen.getByText("Again").nextSibling).toHaveTextContent("1");
     expect(screen.getByText("Good").nextSibling).toHaveTextContent("2");
   });
@@ -725,7 +718,7 @@ describe("verb forms", () => {
 describe("dashboard entry point", () => {
   it("offers to start studying when cards are due", async () => {
     renderApp("/");
-    expect(await screen.findByRole("link", { name: "Start studying" })).toHaveAttribute("href", "/study");
+    expect((await screen.findAllByRole("link", { name: /^Start studying/ }))[0]!).toHaveAttribute("href", "/study");
   });
 
   it("says so when there is nothing to study", async () => {
@@ -733,7 +726,7 @@ describe("dashboard entry point", () => {
       json(200, { now: "x", counts: { learning: 0, review: 0, new: 0 }, cards: [] });
     renderApp("/");
     expect(await screen.findByText("No cards to study right now")).toBeInTheDocument();
-    expect(screen.queryByRole("link", { name: "Start studying" })).not.toBeInTheDocument();
+    expect(screen.queryByRole("link", { name: /^Start studying/ })).not.toBeInTheDocument();
   });
 });
 

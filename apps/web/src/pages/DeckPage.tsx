@@ -3,6 +3,7 @@ import { Link } from "react-router";
 import { DECK_SORT_DEFAULT_ORDER, DECK_SORTS, type DeckCardView, type DeckSort, type DirectionSummary } from "@flashcards/shared";
 import { useDeckCards, useStats, type DeckStage } from "../api/hooks";
 import { CardDialog } from "../components/CardDialog";
+import { PageHeadActions } from "../components/PageHeadActions";
 import { useLanguages } from "../api/packs";
 import { displayLemma, entriesFor } from "../components/entries";
 import { sameDirection, shortDirection, useDeckFilter } from "../hooks/useDeckFilter";
@@ -149,16 +150,14 @@ export function DeckPage() {
           <h1>My deck</h1>
           {deckTotal !== null && <p className="lead">{plural(deckTotal, "card")}</p>}
         </div>
-        <div className="page-head-actions">
+        <PageHeadActions>
           <Link to="/" className="button secondary">
             Go to dashboard
           </Link>
-          {summary.total > 0 && (
-            <Link to="/add-words" className="button secondary">
-              Add more words
-            </Link>
-          )}
-        </div>
+          <Link to="/add-words" className="button secondary">
+            Add more words
+          </Link>
+        </PageHeadActions>
       </div>
 
       {summary.total === 0 ? (

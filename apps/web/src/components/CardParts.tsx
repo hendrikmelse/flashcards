@@ -54,6 +54,11 @@ export function Forms({ entries }: { entries: EntryView[] }) {
   );
 }
 
+// Holds the room of one sentence while the sentences load, so what follows does not jump when they arrive.
+export function SentencePlaceholder() {
+  return <p className="sentence sentence-placeholder" aria-hidden="true" />;
+}
+
 export function Sentences({ items }: { items: string[] }) {
   return (
     <>

@@ -1,0 +1,1 @@
+ALTER TABLE "users" ADD COLUMN "add_words_intro_seen" boolean DEFAULT false NOT NULL;

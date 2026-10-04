@@ -134,7 +134,7 @@ describe("scoping to a language pair", () => {
   });
 });
 
-describe("decks do not share a daily limit or a session gap", () => {
+describe("decks do not share a daily limit", () => {
   const counts = async (query = "") => (await get(`/study/counts${query}`)).json();
 
   beforeAll(async () => {
@@ -178,21 +178,18 @@ describe("decks do not share a daily limit or a session gap", () => {
     expect((await counts("?pair=en-fr")).counts.new).toBe(1);
   });
 
-  it("does not hold back one pair's learning cards because of a session in another", async () => {
-    // The Dutch card is now being learned and, as the last answer was moments ago, held back.
+  it("offers a pair's learning cards once they are due, in each deck on its own", async () => {
+    // The Dutch card was just missed, so it is being learned and is not due yet.
     const dutch = await counts("?pair=en-nl");
     expect(dutch.counts.learning).toBe(0);
-    expect(dutch.nextSession).not.toBeNull();
-    // The French deck had no session: its learning card is ready now.
+    // The French deck's learning card is due, and that does not depend on the Dutch deck.
     const french = await counts("?pair=en-fr");
     expect(french.counts.learning).toBe(1);
-    expect(french.nextSession).toBeNull();
   });
 
   it("treats every deck as one when no pair is given", async () => {
     const all = await counts();
-    expect(all.counts.learning).toBe(0); // held back by the Dutch session
-    expect(all.nextSession).not.toBeNull();
+    expect(all.counts.learning).toBe(1); // the French card; the Dutch one is not due yet
   });
 
   it("counts a day's reviews in the pair only", async () => {

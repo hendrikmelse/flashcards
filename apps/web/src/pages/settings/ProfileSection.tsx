@@ -16,7 +16,7 @@ export function ProfileSection({ settings }: { settings: Settings }) {
 
 // The name saves when the box loses focus after a change (or on Enter), with "Saved" beside it.
 function NameForm({ saved }: { saved: string | null }) {
-  const { save, flash, failed } = useFieldSave();
+  const { save, failed } = useFieldSave();
   const [name, setName] = useState(saved ?? "");
   const [error, setError] = useState<string | null>(null);
   // The last value sent, so Enter followed by leaving the box does not save it twice.
@@ -61,7 +61,7 @@ function NameForm({ saved }: { saved: string | null }) {
             onBlur={commit}
             aria-invalid={error ? true : undefined}
           />
-          <FieldStatus flash={flash} failed={failed} />
+          <FieldStatus failed={failed} />
         </div>
         {error && (
           <p role="alert" className="field-error">

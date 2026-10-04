@@ -206,14 +206,14 @@ describe("every request about the deck is for the pair", () => {
     // Each deck is its own: four cards in English to Dutch, none in English to French.
     mock.handlers["GET /deck?limit=1"] = () => json(200, { summary: summary(pairOfLastRequest() === "en-nl" ? 4 : 0) });
     mock.handlers["GET /study/counts"] = () =>
-      json(200, { now: "x", counts: { learning: 0, review: 0, new: pairOfLastRequest() === "en-nl" ? 4 : 0 }, nextSession: null, tomorrow: 0 });
+      json(200, { now: "x", counts: { learning: 0, review: 0, new: pairOfLastRequest() === "en-nl" ? 4 : 0 }, tomorrow: 0 });
     mock.handlers["GET /stats"] = () =>
       json(200, { now: "x", reviewsToday: 0, nextDueAt: null, directions: directions(pairOfLastRequest()!) });
   });
 
   it("asks for the deck, the counts and the stats of the pair", async () => {
     wrap(<DashboardPage />);
-    expect(await screen.findByRole("link", { name: "Start studying" })).toBeInTheDocument();
+    expect((await screen.findAllByRole("link", { name: /^Start studying/ }))[0]!).toBeInTheDocument();
     for (const path of ["/deck?limit=1", "/study/counts", "/stats"]) {
       expect(mock.requests.some((r) => r.startsWith(`GET ${path}`) && r.includes("pair=en-nl")), path).toBe(true);
     }
@@ -229,17 +229,17 @@ describe("every request about the deck is for the pair", () => {
         <DashboardPage />
       </>,
     );
-    expect(await screen.findByRole("link", { name: "Start studying" })).toBeInTheDocument();
+    expect((await screen.findAllByRole("link", { name: /^Start studying/ }))[0]!).toBeInTheDocument();
 
     await user.click(screen.getByRole("button", { name: "English to French" }));
     // The French deck is empty, so the page greets someone starting out and the old counts are gone.
     expect(await screen.findByText("Your deck is empty")).toBeInTheDocument();
-    expect(screen.queryByRole("link", { name: "Start studying" })).not.toBeInTheDocument();
+    expect(screen.queryByRole("link", { name: /^Start studying/ })).not.toBeInTheDocument();
     await waitFor(() => expect(mock.requests.some((r) => r.startsWith("GET /study/counts") && r.includes("pair=en-fr"))).toBe(true));
 
     // Back again: the Dutch deck is there as it was.
     await user.click(screen.getByRole("button", { name: "Dutch to English" }));
-    expect(await screen.findByRole("link", { name: "Start studying" })).toBeInTheDocument();
+    expect((await screen.findAllByRole("link", { name: /^Start studying/ }))[0]!).toBeInTheDocument();
   });
 });
 

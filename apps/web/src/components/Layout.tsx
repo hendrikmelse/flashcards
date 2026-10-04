@@ -23,6 +23,9 @@ export function Layout() {
           <NavLink to="/" end data-label="Dashboard">
             Dashboard
           </NavLink>
+          <NavLink to="/study" data-label="Study">
+            Study
+          </NavLink>
           <NavLink to="/deck" data-label="My deck">
             My deck
           </NavLink>

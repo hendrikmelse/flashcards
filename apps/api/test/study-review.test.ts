@@ -250,36 +250,25 @@ describe("POST /reviews", () => {
 });
 
 describe("study queue after reviews", () => {
-  it("holds learning cards back until 15 minutes after the last answer", async () => {
-    // dog was just answered, so it is in learning (due in 10 minutes), but the session gap holds it.
+  it("does not offer a card being learned before it is due", async () => {
+    // dog was just answered, so it is in learning and due in 10 minutes: not yet.
     const batch = await study();
     expect(batch.counts.learning).toBe(0);
     expect(batch.cards.some((c) => c.state === "learning")).toBe(false);
 
-    const res = (await get("/study/counts")).json() as {
-      counts: { learning: number };
-      nextSession: { at: string; count: number } | null;
-    };
-    expect(res.nextSession).not.toBeNull();
-    expect(res.nextSession!.count).toBe(1); // dog, ready when the wait is over
-    const [last] = await db
-      .select({ at: sql<Date>`max(${reviewLogs.reviewedAt})` })
-      .from(reviewLogs)
-      .where(eq(reviewLogs.userId, userId));
-    expect(Date.parse(res.nextSession!.at)).toBe(new Date(last!.at).getTime() + 15 * 60_000);
+    const res = (await get("/study/counts")).json() as { counts: { learning: number }; nextSession?: unknown };
+    expect(res.counts.learning).toBe(0);
+    expect(res.nextSession).toBeUndefined();
 
-    // Age the reviews so the gap has passed, for the tests that follow.
+    // Let it come due, for the tests that follow.
     await db
-      .update(reviewLogs)
-      .set({ reviewedAt: sql`${reviewLogs.reviewedAt} - interval '20 minutes'` })
-      .where(eq(reviewLogs.userId, userId));
-    const after = (await get("/study/counts")).json() as { nextSession: unknown };
-    expect(after.nextSession).toBeNull();
+      .update(userCards)
+      .set({ dueAt: new Date(Date.now() - 60_000) })
+      .where(eq(userCards.state, "learning"));
   });
 
-  it("offers learning cards that are due soon, alongside new cards", async () => {
+  it("offers a learning card once it is due, alongside new cards", async () => {
     const { counts, cards } = await study();
-    // dog is learning (due in 10m, inside the 20m learn-ahead window)
     expect(counts.learning).toBe(1);
     const dog = cards.find((c) => c.state === "learning")!;
     expect(dog.front[0]!.lemma).toBe("dog");
@@ -463,11 +452,11 @@ describe("GET /study/counts", () => {
   });
 });
 
-describe("the gap between sessions", () => {
+describe("no gap between sessions", () => {
   const MIN = 60_000;
   // A user with one learning card and one review card, both already due, whose last
   // answer was `lastAnswerMinutesAgo` minutes ago.
-  async function user(_label: string, lastAnswerMinutesAgo: number, extra: { reviewDueInMin?: number } = {}) {
+  async function user(_label: string, lastAnswerMinutesAgo: number, extra: { reviewDueInMin?: number; learningDueInMin?: number } = {}) {
     const me = await scratchUser(); // clears their cards, and with them their history
     const cs = await db.select().from(concepts);
     const id = (key: string) => cs.find((c) => c.key === key)!.id;
@@ -482,7 +471,7 @@ describe("the gap between sessions", () => {
           state: "learning",
           stability: 0.5,
           lastReviewedAt: new Date(Date.now() - lastAnswerMinutesAgo * MIN),
-          dueAt: new Date(Date.now() - 1 * MIN),
+          dueAt: new Date(Date.now() + (extra.learningDueInMin ?? -1) * MIN),
         },
         {
           userId: me.id,
@@ -511,60 +500,31 @@ describe("the gap between sessions", () => {
     void review;
     return me.cookies;
   }
-  const states = async (c: { session: string }, qs = "") =>
-    ((await get(`/study?limit=50${qs}`, c)).json() as { cards: Card[] }).cards.map((x) => x.state).sort();
+  const states = async (c: { session: string }) =>
+    ((await get("/study?limit=50", c)).json() as { cards: Card[] }).cards.map((x) => x.state).sort();
   const counts = async (c: { session: string }) =>
     (await get("/study/counts", c)).json() as {
       counts: { learning: number; review: number; new: number };
-      nextSession: { at: string; count: number } | null;
+      nextSession?: unknown;
     };
 
-  it("holds learning cards back during the gap but not due reviews", async () => {
-    const c = await user("gap-held@example.com", 2);
-    expect(await states(c)).toEqual(["review"]);
-    const res = await counts(c);
-    expect(res.counts).toEqual({ learning: 0, review: 1, new: 0 });
-    // Everything ready when the gap ends: the learning card, plus the review that is already due.
-    expect(res.nextSession!.count).toBe(2);
-    const wait = Date.parse(res.nextSession!.at) - Date.now();
-    expect(wait).toBeGreaterThan(12 * MIN);
-    expect(wait).toBeLessThanOrEqual(13 * MIN);
-  });
-
-  it("offers them once 15 minutes have passed since the last answer", async () => {
-    const c = await user("gap-open@example.com", 16);
+  it("offers a learning card moments after the last answer, along with due reviews", async () => {
+    const c = await user("gap-none@example.com", 2);
     expect(await states(c)).toEqual(["learning", "review"]);
-    expect((await counts(c)).nextSession).toBeNull();
-  });
-
-  it("counts reviews that fall due before the gap ends as part of the next session", async () => {
-    const c = await user("gap-soon@example.com", 2, { reviewDueInMin: 8 });
     const res = await counts(c);
-    expect(res.counts).toEqual({ learning: 0, review: 0, new: 0 });
-    expect(res.nextSession!.count).toBe(2); // the learning card and the review due in 8 minutes
+    expect(res.counts).toEqual({ learning: 1, review: 1, new: 0 });
+    expect(res.nextSession).toBeUndefined();
   });
 
-  it("does not hold back a review that is due in more than the gap", async () => {
-    const c = await user("gap-far@example.com", 2, { reviewDueInMin: 120 });
-    expect((await counts(c)).nextSession!.count).toBe(1); // just the learning card
+  it("does not offer a learning card before it is due, even moments away", async () => {
+    const c = await user("gap-ahead@example.com", 2, { learningDueInMin: 2 });
+    expect(await states(c)).toEqual(["review"]);
+    expect((await counts(c)).counts).toEqual({ learning: 0, review: 1, new: 0 });
   });
 
-  it("lets the next session start early in the last five minutes, with everything due by then", async () => {
-    // Last answer 11 minutes ago: the gap ends in 4 minutes. A review due in 3 minutes is part of it.
-    const c = await user("gap-early@example.com", 11, { reviewDueInMin: 3 });
-    expect(await states(c)).toEqual([]);
-    expect(await states(c, "&early=1")).toEqual(["learning", "review"]);
-  });
-
-  it("does not allow starting early with more than five minutes to go", async () => {
-    const c = await user("gap-toosoon@example.com", 5);
-    // Only the review that is already due; the held-back learning card does not come early.
-    expect(await states(c, "&early=1")).toEqual(["review"]);
-  });
-
-  it("ignores the early flag when there is no wait", async () => {
-    const c = await user("gap-none@example.com", 30);
-    expect(await states(c, "&early=1")).toEqual(await states(c));
+  it("does not offer a review before it is due", async () => {
+    const c = await user("gap-soon@example.com", 2, { reviewDueInMin: 8 });
+    expect((await counts(c)).counts).toEqual({ learning: 1, review: 0, new: 0 });
   });
 });
 

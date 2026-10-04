@@ -118,6 +118,8 @@ export const updateSettingsSchema = z
     // What the study cards show.
     showSentences: z.boolean().optional(),
     showForms: z.boolean().optional(),
+    // The explainer on the Add words page has been read.
+    addWordsIntroSeen: z.boolean().optional(),
     // What the user is learning: the pages and decks they see are for this pair of languages.
     direction: z
       .object({ from: languageCodeSchema, to: languageCodeSchema })
@@ -131,6 +133,7 @@ export const updateSettingsSchema = z
       v.dailyNewCardLimit !== undefined ||
       v.showSentences !== undefined ||
       v.showForms !== undefined ||
+      v.addWordsIntroSeen !== undefined ||
       v.direction !== undefined,
     { message: "Provide a setting to change" },
   );
@@ -148,6 +151,8 @@ export type Settings = {
   showSentences: boolean;
   /** Show the word forms (plural, verb forms) with the answer. */
   showForms: boolean;
+  /** The user has dismissed the explainer on the Add words page, which is then not shown again. */
+  addWordsIntroSeen: boolean;
   /** What the user is learning, prompt language first. */
   direction: { from: LanguageCode; to: LanguageCode };
 };
@@ -267,18 +272,7 @@ export type EntryView = {
 
 export const studyQuerySchema = z.object({
   limit: z.coerce.number().int().min(1).max(100).default(20),
-  // "1" starts the next session a little early (see EARLY_START_WINDOW_MS).
-  early: z.enum(["0", "1"]).default("0"),
 });
-
-/**
- * The shortest time between study sessions. Cards still being learned (answered
- * Hard or Good, or just seen) are held back until this long after the last answer,
- * so each session is a distinct sitting rather than a trickle of minutes-long waits.
- */
-export const SESSION_GAP_MS = 15 * 60 * 1000;
-/** In the last stretch of that wait, the next session may be started early. */
-export const EARLY_START_WINDOW_MS = 5 * 60 * 1000;
 
 // Response shapes of the API (dates arrive as ISO strings over JSON).
 export type CardStateName = "new" | "learning" | "review" | "relearning";
@@ -378,19 +372,12 @@ export type StatsResponse = {
   directions: DirectionSummary[];
 };
 
-/**
- * The next session is held back until this time (SESSION_GAP_MS after the last answer),
- * when `count` cards will be ready. Null when nothing is being held back.
- */
-export type NextSession = { at: string; count: number };
-
 /** The dashboard's view of the study queue: how many cards of each kind, and what is coming. */
 export type StudyCountsResponse = {
   now: string;
   counts: StudyCounts;
   /** There are new cards in the deck, but today's daily new-card limit has been reached. */
   newLimitReached: boolean;
-  nextSession: NextSession | null;
   /**
    * How many cards will be ready to study by the end of tomorrow's study day: those due
    * by then, plus the new cards tomorrow's daily limit will allow.

@@ -5,7 +5,7 @@ import { useDeckCard } from "../api/hooks";
 import { useConceptCard, useLanguages } from "../api/packs";
 import { useActiveLanguages } from "../hooks/useActiveLanguages";
 import { formatUntil } from "../lib/relativeTime";
-import { Entries, Forms, Sentences } from "./CardParts";
+import { Entries, Forms, SentencePlaceholder, Sentences } from "./CardParts";
 import { ReportProblem } from "./ReportProblem";
 import { displayLemma, entriesFor, languageName } from "./entries";
 
@@ -116,18 +116,21 @@ function CardFrame({
         <section aria-label="Front">
           <Entries entries={front} language={fromLanguage} languages={languages} />
           <Forms entries={front} />
-          {sentences && <Sentences items={sentences.front} />}
+          {sentences ? <Sentences items={sentences.front} /> : !failed && <SentencePlaceholder />}
         </section>
 
         <section aria-label="Back" className="study-answer">
           <Entries entries={back} language={toLanguage} languages={languages} />
           <Forms entries={back} />
-          {sentences && <Sentences items={sentences.back} />}
+          {sentences ? <Sentences items={sentences.back} /> : !failed && <SentencePlaceholder />}
         </section>
 
-        {!sentences && !failed && <p className="muted">Loading example sentences…</p>}
-        {failed && <p className="form-error">Could not load the example sentences.</p>}
-        {noSentences && <p className="muted">No example sentences yet.</p>}
+        {/* A blank line is kept here while loading, so the card does not change height when the
+            sentences arrive (or the status below appears). */}
+        <div className="sentence-status">
+          {failed && <p className="form-error">Could not load the example sentences.</p>}
+          {noSentences && <p className="muted">No example sentences yet.</p>}
+        </div>
 
         {facts && (
           <dl className="card-facts" aria-label="Where this card stands">

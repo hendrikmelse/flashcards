@@ -7,9 +7,12 @@ import {
   type EntryView,
   type PackCategory,
 } from "@flashcards/shared";
+import { useSettings, useUpdateSettings } from "../api/hooks";
 import { useAddConcept, useConceptSearch, usePacks } from "../api/packs";
 import { useActiveLanguages } from "../hooks/useActiveLanguages";
+import { AddWordsIntro } from "../components/AddWordsIntro";
 import { ConceptDialog } from "../components/CardDialog";
+import { PageHeadActions } from "../components/PageHeadActions";
 import { ConceptRow } from "../components/ConceptRow";
 import { isBoolean, isOneOf, isString, useRemembered } from "../hooks/useRemembered";
 
@@ -19,6 +22,12 @@ type CategoryFilter = PackCategory | "all";
 
 export function PacksPage() {
   const { direction } = useActiveLanguages();
+  // The explainer shows until it is dismissed, once, for the account. It is hidden at once on the
+  // click, while the change is being saved, and never while the settings are still loading.
+  const settings = useSettings();
+  const updateSettings = useUpdateSettings();
+  const [introDismissed, setIntroDismissed] = useState(false);
+  const showIntro = settings.data?.addWordsIntroSeen === false && !introDismissed;
   const packs = usePacks(direction);
   // The filters are remembered, so leaving the page and coming back finds them as they were.
   const [mode, setMode] = useRemembered<Mode>("packs:mode", "packs", isOneOf("packs", "words"));
@@ -35,21 +44,32 @@ export function PacksPage() {
   for (const p of packs.data ?? []) perCategory.set(p.category, (perCategory.get(p.category) ?? 0) + 1);
   const categories = PACK_CATEGORIES.filter((c) => perCategory.has(c));
 
+  // Until it is dismissed, the explainer is all there is: nothing can be added before it is read.
+  if (showIntro) {
+    return (
+      <AddWordsIntro
+        onDismiss={() => {
+          setIntroDismissed(true);
+          updateSettings.mutate({ addWordsIntroSeen: true }, { onError: () => setIntroDismissed(false) });
+        }}
+      />
+    );
+  }
+
   return (
     <>
       <div className="page-head">
         <div>
           <h1>Add words</h1>
-          <p className="lead">Add word packs or individual words to your deck</p>
         </div>
-        <div className="page-head-actions">
+        <PageHeadActions>
           <Link to="/" className="button secondary">
             Go to dashboard
           </Link>
           <Link to="/deck" className="button secondary">
             View deck
           </Link>
-        </div>
+        </PageHeadActions>
       </div>
 
       <input
@@ -70,7 +90,7 @@ export function PacksPage() {
         </div>
         <div className="toggle">
           <button type="button" aria-pressed={hideInDeck} onClick={() => setHideInDeck(!hideInDeck)}>
-            Hide already added results
+            {mode === "packs" ? "Hide packs already in deck" : "Hide words already in deck"}
           </button>
         </div>
       </div>

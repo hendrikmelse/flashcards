@@ -122,23 +122,13 @@ export function useLogout() {
   });
 }
 
-// Dashboard numbers, for the language pair being learned: each pair is a deck of its own. What is
-// ready to study and whether the deck is empty cover the whole pair. `deck` is the progress summary
-// for the chosen direction (or, with null, the whole pair, which is then the same query as `deckAll`).
-export function useDashboard(direction: { from: string; to: string } | null) {
+// Dashboard numbers, for the language pair being learned: each pair is a deck of its own, and `deck`
+// is the progress summary of the whole pair, both directions together.
+export function useDashboard() {
   const { pair } = useActiveLanguages();
-  const deckAll = useQuery({
+  const deck = useQuery({
     queryKey: ["deck", "summary", pair, "all"],
     queryFn: () => api<DeckResponse>(`/deck?limit=1&pair=${pair}`),
-  });
-  const deckDirection = useQuery({
-    queryKey: ["deck", "summary", pair, direction?.from, direction?.to],
-    enabled: direction !== null,
-    queryFn: () =>
-      api<DeckResponse>(
-        `/deck?limit=1&pair=${pair}&fromLanguage=${encodeURIComponent(direction!.from)}&toLanguage=${encodeURIComponent(direction!.to)}`,
-      ),
-    placeholderData: (previous) => previous,
   });
   const study = useQuery({
     queryKey: ["study", "counts", pair],
@@ -146,7 +136,21 @@ export function useDashboard(direction: { from: string; to: string } | null) {
   });
   // Extras: the dashboard still works without them.
   const stats = useStats();
-  return { deck: direction ? deckDirection : deckAll, deckAll, study, stats };
+  return { deck, study, stats };
+}
+
+// What is ready to study, for the language pair being learned. The dashboard asks the same question
+// (the same cache entry), so a page that only wants to know whether to offer "Start studying" costs
+// nothing extra after it.
+export function useStudyCounts() {
+  const { pair } = useActiveLanguages();
+  return useQuery({
+    queryKey: ["study", "counts", pair],
+    queryFn: () => api<StudyCountsResponse>(`/study/counts?pair=${pair}`),
+    // Only the page header asks this way, to decide whether to offer a button: what the dashboard
+    // fetched a moment ago is good enough, so arriving on a page does not ask the server again.
+    staleTime: 30_000,
+  });
 }
 
 export function useStats() {

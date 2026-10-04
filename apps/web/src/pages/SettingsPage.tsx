@@ -1,4 +1,4 @@
-import type { KeyboardEvent } from "react";
+import { useEffect, useRef, type KeyboardEvent } from "react";
 import { useSearchParams } from "react-router";
 import type { Settings } from "@flashcards/shared";
 import { useSettings } from "../api/hooks";
@@ -33,6 +33,45 @@ function Settings_({ settings }: { settings: Settings }) {
   const asked = params.get("tab");
   const tab: TabId = isTab(asked) ? asked : "profile";
 
+  // On a narrow screen the tabs scroll sideways. The bar says which side has more tabs beyond it
+  // (data-more-start / data-more-end), and the phone styles fade that edge as a cue to swipe.
+  const bar = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    const el = bar.current;
+    if (!el) return;
+    const update = () => {
+      const more = el.scrollWidth - el.clientWidth > 1;
+      el.toggleAttribute("data-more-start", more && el.scrollLeft > 1);
+      el.toggleAttribute("data-more-end", more && el.scrollLeft + el.clientWidth < el.scrollWidth - 1);
+    };
+    update();
+    el.addEventListener("scroll", update, { passive: true });
+    window.addEventListener("resize", update);
+    return () => {
+      el.removeEventListener("scroll", update);
+      window.removeEventListener("resize", update);
+    };
+  }, []);
+
+  const smooth = () => (window.matchMedia?.("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth");
+
+  // The tab that is opened scrolls toward the middle of the bar, as far as the bar allows.
+  useEffect(() => {
+    const el = bar.current;
+    const selected = document.getElementById(`tab-${tab}`);
+    if (!el || !selected || el.scrollWidth <= el.clientWidth) return;
+    const at = selected.getBoundingClientRect();
+    const barAt = el.getBoundingClientRect();
+    const left = el.scrollLeft + (at.left - barAt.left) - (el.clientWidth - at.width) / 2;
+    el.scrollTo?.({ left, behavior: smooth() });
+  }, [tab]);
+
+  // The arrows at the sides move the bar most of a screenful toward that side.
+  function scrollBar(direction: -1 | 1) {
+    const el = bar.current;
+    el?.scrollBy?.({ left: direction * el.clientWidth * 0.6, behavior: smooth() });
+  }
+
   function open(id: TabId) {
     setParams(id === "profile" ? {} : { tab: id }, { replace: true });
   }
@@ -55,7 +94,8 @@ function Settings_({ settings }: { settings: Settings }) {
   return (
     <>
       <h1>Settings</h1>
-      <div className="tabs" role="tablist" aria-label="Settings sections" onKeyDown={onKeyDown}>
+      <div className="tabs-wrap">
+      <div ref={bar} className="tabs" role="tablist" aria-label="Settings sections" onKeyDown={onKeyDown}>
         {TABS.map((t) => (
           <button
             key={t.id}
@@ -71,6 +111,15 @@ function Settings_({ settings }: { settings: Settings }) {
             {t.label}
           </button>
         ))}
+      </div>
+      {/* Arrows for the phone styles, shown at a side that has more tabs beyond it. They are for
+          touch; the arrow keys already move between the tabs, so they stay out of the tab order. */}
+      <button type="button" className="tabs-arrow tabs-arrow-start" tabIndex={-1} aria-hidden="true" onClick={() => scrollBar(-1)}>
+        ‹
+      </button>
+      <button type="button" className="tabs-arrow tabs-arrow-end" tabIndex={-1} aria-hidden="true" onClick={() => scrollBar(1)}>
+        ›
+      </button>
       </div>
       <section className="tab-panel" role="tabpanel" id={`panel-${tab}`} aria-labelledby={`tab-${tab}`}>
         {tab === "profile" && <ProfileSection settings={settings} />}

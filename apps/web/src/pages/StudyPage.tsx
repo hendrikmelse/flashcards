@@ -1,6 +1,6 @@
 import { useMutation } from "@tanstack/react-query";
 import { useEffect, useReducer, useRef, useState } from "react";
-import { Link, useNavigate, useSearchParams } from "react-router";
+import { Link, useNavigate } from "react-router";
 import type {
   LanguageInfo,
   Rating,
@@ -8,7 +8,6 @@ import type {
   StudyCardView,
   StudyResponse,
 } from "@flashcards/shared";
-import { SESSION_GAP_MS } from "@flashcards/shared";
 import { api } from "../api/client";
 import { useSettings } from "../api/hooks";
 import { useActiveLanguages } from "../hooks/useActiveLanguages";
@@ -17,12 +16,12 @@ import { Entries, Forms, Sentences } from "../components/CardParts";
 import { FirstSessionIntro } from "../components/FirstSessionIntro";
 import { languageName } from "../components/entries";
 import { ReportProblem } from "../components/ReportProblem";
+import { randomUUID } from "../lib/uuid";
 import {
   initialState,
   phaseOf,
   reducer,
   remaining,
-  reReviewCount,
   type SessionStats,
 } from "../study/session";
 
@@ -42,9 +41,6 @@ type ReviewVars = { cardId: string; rating: Rating; clientReviewId: string; time
 function useStudySession() {
   const [state, dispatch] = useReducer(reducer, initialState);
   const { pair } = useActiveLanguages();
-  const [params] = useSearchParams();
-  // ?early=1 starts the next session a little before the gap between sessions is over.
-  const early = params.get("early") === "1" ? "&early=1" : "";
   const fetching = useRef(false);
   const shownAt = useRef(Date.now());
   // The explanation shown before the very first card of someone's very first session. It is looked
@@ -56,7 +52,7 @@ function useStudySession() {
   useEffect(() => {
     if (state.ended || state.queue.length > 0 || state.exhausted || state.fetchError || fetching.current) return;
     fetching.current = true;
-    api<StudyResponse>(`/study?limit=${BATCH_SIZE}&pair=${pair}${early}`)
+    api<StudyResponse>(`/study?limit=${BATCH_SIZE}&pair=${pair}`)
       .then(
         (r) => {
           if (!introChecked.current) {
@@ -70,7 +66,7 @@ function useStudySession() {
       .finally(() => {
         fetching.current = false;
       });
-  }, [state.ended, state.queue.length, state.exhausted, state.fetchError, pair, early]);
+  }, [state.ended, state.queue.length, state.exhausted, state.fetchError, pair]);
 
   // Show the next card as soon as there is one.
   useEffect(() => {
@@ -102,7 +98,7 @@ function useStudySession() {
     submit.mutate({
       cardId: state.current.id,
       rating,
-      clientReviewId: crypto.randomUUID(),
+      clientReviewId: randomUUID(),
       timeTakenMs: Math.max(0, Date.now() - shownAt.current),
     });
   }
@@ -192,7 +188,6 @@ export function StudyPage() {
         <Summary
           stats={state.stats}
           viewed={state.handled.length}
-          reReview={reReviewCount(state)}
           ended={state.ended}
         />
       )}
@@ -337,14 +332,11 @@ function CardView({
 function Summary({
   stats,
   viewed,
-  reReview,
   ended,
 }: {
   stats: SessionStats;
   /** Different cards seen this session (a missed card shown again counts once). */
   viewed: number;
-  /** Cards still being learned, which come back in the next session. */
-  reReview: number;
   /** The user stopped early, so "nothing answered" does not mean "nothing to do". */
   ended: boolean;
 }) {
@@ -364,17 +356,10 @@ function Summary({
       </div>
     );
   }
-  const minutes = SESSION_GAP_MS / 60_000;
   return (
     <div className="study-wait">
       <h2>Session complete!</h2>
       <p>You viewed {viewed} unique card{viewed === 1 ? "" : "s"}</p>
-      {reReview > 0 && (
-        <p>
-          {reReview} card{reReview === 1 ? "" : "s"} will be available for re-review in {minutes}{" "}
-          minutes
-        </p>
-      )}
       <dl className="summary">
         {(["again", "hard", "good", "easy"] as const).map((r) => (
           <div key={r}>

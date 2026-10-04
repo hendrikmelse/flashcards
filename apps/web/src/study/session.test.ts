@@ -6,7 +6,6 @@ import {
   phaseOf,
   reducer,
   remaining,
-  reReviewCount,
   type Action,
   type SessionState,
 } from "./session";
@@ -297,48 +296,6 @@ describe("ending a session early", () => {
     const s = run([{ type: "end" }, answer("easy", "review")], started());
     expect(phaseOf(s)).toBe("done");
     expect(s.stats).toMatchObject({ reviewed: 2, good: 1, easy: 1 });
-  });
-});
-
-describe("cards to look at again in a later session", () => {
-  it("counts the ones answered Hard or Good while still learning", () => {
-    const s = run([
-      { type: "fetched", cards: ids(3) },
-      { type: "pick" },
-      answer("good", "learning"),
-      { type: "pick" },
-      answer("hard", "learning"),
-    ]);
-    expect(reReviewCount(s)).toBe(2);
-  });
-
-  it("includes a missed card still waiting its turn, including the one showing", () => {
-    let s = run([{ type: "fetched", cards: ids(4) }, { type: "pick" }, answer("again", "learning")]);
-    expect(reReviewCount(s)).toBe(1); // c1 is back in the queue
-    s = run([{ type: "pick" }, { type: "pick" }], s); // c2 is showing; c1 still waits
-    expect(reReviewCount(s)).toBe(1);
-  });
-
-  it("leaves out cards that were never answered, and ones that graduated", () => {
-    const s = run([
-      { type: "fetched", cards: ids(4) },
-      { type: "pick" },
-      answer("easy", "review"),
-      { type: "pick" },
-    ]);
-    expect(reReviewCount(s)).toBe(0); // c1 graduated; c2 is showing but unanswered; c3, c4 are unseen
-  });
-
-  it("counts a card once, even if it was missed and later answered Good", () => {
-    const s = run([
-      { type: "fetched", cards: [card("a")] },
-      { type: "pick" },
-      answer("again", "learning"),
-      { type: "pick" },
-      { type: "acknowledgeRepeat" },
-      answer("good", "learning"),
-    ]);
-    expect(reReviewCount(s)).toBe(1);
   });
 });
 

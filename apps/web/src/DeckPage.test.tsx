@@ -53,7 +53,10 @@ afterEach(() => vi.unstubAllGlobals());
 describe("dashboard link", () => {
   it("has a button that opens the deck", async () => {
     renderApp("/");
-    expect(await screen.findByRole("link", { name: "View deck" })).toHaveAttribute("href", "/deck");
+    // One in the page header, and one across from the "Your deck" heading that a phone shows.
+    for (const link of await screen.findAllByRole("link", { name: "View deck" })) {
+      expect(link).toHaveAttribute("href", "/deck");
+    }
   });
 });
 
@@ -305,17 +308,17 @@ describe("deck page", () => {
     expect(back.parentElement).toBe(add.parentElement);
     expect(back.parentElement).toHaveClass("page-head-actions");
     expect(back.nextElementSibling).toBe(add);
-    expect(back.parentElement?.parentElement).toHaveClass("page-head");
+    expect(back.closest(".page-head")).toBeTruthy();
     // The old text link above the heading is gone.
     expect(screen.queryByRole("link", { name: "← Dashboard" })).not.toBeInTheDocument();
   });
 
-  it("keeps Go to dashboard when the deck is empty", async () => {
+  it("keeps Go to dashboard and Add more words when the deck is empty", async () => {
     mock.handlers["GET /deck"] = () =>
       json(200, { summary: { total: 0, new: 0, learning: 0, relearning: 0, review: 0, dueNow: 0 }, hasMore: false, cards: [] });
     renderApp("/deck");
     expect(await screen.findByRole("link", { name: "Go to dashboard" })).toHaveAttribute("href", "/");
-    expect(screen.queryByRole("link", { name: "Add more words" })).not.toBeInTheDocument();
+    expect(screen.getByRole("link", { name: "Add more words" })).toHaveAttribute("href", "/add-words");
   });
 
   it("has a button to add more words", async () => {
@@ -389,7 +392,7 @@ describe("deck page", () => {
   describe("remembering the filters", () => {
     const leaveAndReturn = async (user: ReturnType<typeof userEvent.setup>) => {
       await user.click(screen.getByRole("link", { name: "Go to dashboard" }));
-      await user.click(await screen.findByRole("link", { name: "View deck" }));
+      await user.click((await screen.findAllByRole("link", { name: "View deck" }))[0]!);
       await screen.findByRole("heading", { name: "My deck" });
     };
 

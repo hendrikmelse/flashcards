@@ -10,6 +10,7 @@ let saved: {
   dailyNewCardLimit: number;
   showSentences: boolean;
   showForms: boolean;
+  addWordsIntroSeen: boolean;
 };
 let patches: unknown[];
 let posts: Record<string, unknown[]>;
@@ -35,6 +36,7 @@ beforeEach(() => {
     dailyNewCardLimit: 20,
     showSentences: true,
     showForms: true,
+    addWordsIntroSeen: true,
   };
   patches = [];
   posts = {};
@@ -135,22 +137,21 @@ describe("Profile", () => {
     await user.type(input, "  Anna  ");
     expect(patches).toEqual([]); // not while still typing
     await user.tab();
-    await screen.findByText("Saved");
-    expect(patches).toEqual([{ name: "Anna" }]);
+    await waitFor(() => expect(patches).toEqual([{ name: "Anna" }]));
     expect(input).toHaveValue("Anna"); // the stray spaces are gone
-    expect(topBar()).toHaveTextContent("Hi, Anna");
+    await waitFor(() => expect(topBar()).toHaveTextContent("Hi, Anna"));
   });
 
-  it("shows Saved right beside the box, and it goes away again by itself", async () => {
+  it("says nothing when the name has saved: the change just stays", async () => {
     const user = userEvent.setup();
     renderApp("/settings");
     const input = await screen.findByLabelText("What should we call you?");
     await user.type(input, "Anna");
     await user.tab();
 
-    await waitFor(() => expect(input.nextElementSibling).toHaveTextContent("✓ Saved"));
-    expect(input.nextElementSibling?.getAttribute("role")).toBe("status");
-    await waitFor(() => expect(input.nextElementSibling?.textContent).toBe(""), { timeout: 3000 });
+    await waitFor(() => expect(patches).toEqual([{ name: "Anna" }]));
+    expect(screen.queryByText("Saved")).not.toBeInTheDocument();
+    expect(document.querySelector(".field-status")).toBeNull();
   });
 
   it("does not save when the name has not changed", async () => {
@@ -172,7 +173,7 @@ describe("Profile", () => {
     const user = userEvent.setup();
     renderApp("/settings");
     await user.type(await screen.findByLabelText("What should we call you?"), "Anna{Enter}");
-    await screen.findByText("Saved");
+    await waitFor(() => expect(patches).toEqual([{ name: "Anna" }]));
     await user.tab();
     await new Promise((r) => setTimeout(r, 300));
     expect(patches).toEqual([{ name: "Anna" }]);
@@ -187,9 +188,8 @@ describe("Profile", () => {
     expect(topBar()).toHaveTextContent("Hi, Anna");
     await user.clear(input);
     await user.tab();
-    await screen.findByText("Saved");
-    expect(patches).toEqual([{ name: "" }]);
-    expect(topBar()).toHaveTextContent("ann@example.com");
+    await waitFor(() => expect(patches).toEqual([{ name: "" }]));
+    await waitFor(() => expect(topBar()).toHaveTextContent("ann@example.com"));
   });
 
   it("refuses a name that is too long, without calling the server", async () => {
@@ -297,18 +297,15 @@ describe("Study", () => {
     expect(screen.queryByRole("button", { name: "Save" })).not.toBeInTheDocument();
   });
 
-  it("saves the time zone as soon as it changes, and shows Saved right beside it for a moment", async () => {
+  it("saves the time zone as soon as it changes, with nothing shown beside it", async () => {
     const user = userEvent.setup();
     renderApp("/settings?tab=study");
     const select = await screen.findByLabelText("Time zone");
     await user.selectOptions(select, "America/New_York");
 
-    await waitFor(() => expect(select.nextElementSibling).toHaveTextContent("✓ Saved"));
-    expect(patches).toEqual([{ timezone: "America/New_York" }]);
-    // The daily limit's own spot stays empty.
-    expect(screen.getByLabelText("New cards per day").nextElementSibling?.textContent).toBe("");
-    // ... and the message goes away by itself.
-    await waitFor(() => expect(select.nextElementSibling?.textContent).toBe(""), { timeout: 3000 });
+    await waitFor(() => expect(patches).toEqual([{ timezone: "America/New_York" }]));
+    expect(screen.queryByText("Saved")).not.toBeInTheDocument();
+    expect(document.querySelector(".field-status")).toBeNull();
   });
 
   it("saves the daily limit shortly after typing stops, as one request", async () => {
@@ -320,11 +317,9 @@ describe("Study", () => {
 
     // Not on every keystroke: nothing has been sent yet.
     expect(patches).toEqual([]);
-    expect(await screen.findByText("Saved", {}, { timeout: 3000 })).toBeInTheDocument();
-    expect(patches).toEqual([{ dailyNewCardLimit: 35 }]);
+    await waitFor(() => expect(patches).toEqual([{ dailyNewCardLimit: 35 }]), { timeout: 3000 });
     expect(screen.getByLabelText("New cards per day")).toHaveValue(35);
-    // Right beside the number box, not elsewhere on the page.
-    expect(input.nextElementSibling).toHaveTextContent("✓ Saved");
+    expect(screen.queryByText("Saved")).not.toBeInTheDocument();
   });
 
   it("saves the daily limit at once when the box loses focus", async () => {
@@ -413,8 +408,7 @@ describe("Study", () => {
     await user.click(screen.getByRole("button", { name: "Use it" }));
     expect(screen.getByLabelText("Time zone")).toHaveValue("Europe/Amsterdam");
     expect(screen.queryByText(/Your browser is set to/)).not.toBeInTheDocument();
-    await screen.findByText("Saved");
-    expect(patches).toEqual([{ timezone: "Europe/Amsterdam" }]);
+    await waitFor(() => expect(patches).toEqual([{ timezone: "Europe/Amsterdam" }]));
   });
 
   it("does not suggest the browser's time zone when it already matches", async () => {
@@ -465,7 +459,7 @@ describe("Study", () => {
       expect(await formsBox()).toBeChecked();
     });
 
-    it("saves to the account as soon as a box is ticked, with Saved beside that box", async () => {
+    it("saves to the account as soon as a box is ticked, with nothing shown beside it", async () => {
       const user = userEvent.setup();
       renderApp("/settings?tab=study");
       const sentences = await sentencesBox();
@@ -474,13 +468,12 @@ describe("Study", () => {
 
       await user.click(sentences);
       expect(sentences).not.toBeChecked();
-      await waitFor(() => expect(statusAfter(sentences)).toHaveTextContent("✓ Saved"));
-      expect(patches).toEqual([{ showSentences: false }]);
-      expect(statusAfter(forms).textContent).toBe(""); // the other box says nothing
+      await waitFor(() => expect(patches).toEqual([{ showSentences: false }]));
 
       await user.click(forms);
       await waitFor(() => expect(patches).toEqual([{ showSentences: false }, { showForms: false }]));
-      await waitFor(() => expect(statusAfter(forms)).toHaveTextContent("✓ Saved"));
+      expect(screen.queryByText("Saved")).not.toBeInTheDocument();
+      expect(document.querySelector(".field-status")).toBeNull();
     });
 
     it("turns them back on", async () => {

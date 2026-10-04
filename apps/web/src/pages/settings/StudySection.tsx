@@ -87,7 +87,7 @@ function ScheduleSettings({ saved }: { saved: Settings }) {
             aria-invalid={limitError ? true : undefined}
             aria-describedby="daily-new-help"
           />
-          <FieldStatus flash={limitSave.flash} failed={limitSave.failed} />
+          <FieldStatus failed={limitSave.failed} />
         </div>
         <p id="daily-new-help" className="muted">
           How many new words you are introduced to each day, across all your decks. Words you mark Good or Easy the
@@ -117,7 +117,7 @@ function ScheduleSettings({ saved }: { saved: Settings }) {
               </option>
             ))}
           </select>
-          <FieldStatus flash={zoneSave.flash} failed={zoneSave.failed} />
+          <FieldStatus failed={zoneSave.failed} />
         </div>
         <p id="time-zone-help" className="muted">
           Your study day starts at 4 a.m. in this time zone: that is when your new cards for the day are refreshed
@@ -162,7 +162,7 @@ function CardDisplay({ saved }: { saved: Settings }) {
           />
           Show example sentences
         </label>
-        <FieldStatus flash={sentencesSave.flash} failed={sentencesSave.failed} />
+        <FieldStatus failed={sentencesSave.failed} />
       </div>
       <div className="check-line">
         <label className="check-row">
@@ -177,7 +177,7 @@ function CardDisplay({ saved }: { saved: Settings }) {
           />
           Show word forms (plurals, verb forms) with the answer
         </label>
-        <FieldStatus flash={formsSave.flash} failed={formsSave.failed} />
+        <FieldStatus failed={formsSave.failed} />
       </div>
     </fieldset>
   );

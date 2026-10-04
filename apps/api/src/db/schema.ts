@@ -39,6 +39,8 @@ export const users = pgTable("users", {
   // What the study cards show.
   showSentences: boolean().notNull().default(true),
   showForms: boolean().notNull().default(true),
+  // The user has read the explainer on the Add words page and dismissed it.
+  addWordsIntroSeen: boolean().notNull().default(false),
   // What the user is learning, prompt language first: the pages and decks they see are for this
   // pair of languages. Null until they choose, which means ADD_WORDS_DIRECTION.
   activeFrom: text().references(() => languages.code),

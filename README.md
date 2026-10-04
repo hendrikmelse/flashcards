@@ -94,7 +94,7 @@ Translations are not one-to-one (English "run" has many senses; Dutch "kennen" a
 ### Scheduling
 
 - FSRS with learning steps 1m/10m, relearning 10m, and 90% target retention
-- The study day rolls over at 04:00 in the user's timezone, which drives the daily new-card limit. The limit and the 15-minute gap between sessions are worked out for each language pair, so studying one pair never uses up or holds back another. Only new cards whose first answer is Again or Hard count against it: one marked Good or Easy is already known, so it is free
+- The study day rolls over at 04:00 in the user's timezone, which drives the daily new-card limit. The limit is worked out for each language pair, so studying one pair never uses up another. Only new cards whose first answer is Again or Hard count against it: one marked Good or Easy is already known, so it is free
 - The SRS engine is a set of pure functions (card state, rating and time in; new state and due date out), which keeps it easy to unit test
 - All timestamps are stored in UTC; the user's timezone only matters at the day boundary
 
@@ -113,9 +113,9 @@ All routes live under `/api`.
 | `POST /packs/:id/add`, `POST /concepts/:id/add` | Add to the deck for a direction, and with `bothDirections: true` for its opposite too (the web app always does). Idempotent; skips concepts missing an entry in either language. Counts are in cards |
 | `GET /concepts/:id` | Public. A word as a card in a direction (`fromLanguage`, `toLanguage`): both sides' entries and all example sentences. Used by the card view on the Add words pages |
 | `GET /deck` | Progress summary and a page of cards, for one language pair (`pair=en-nl`, either order; without it, every deck), filterable by direction, stage (new, learning, review) and a search word, sortable by date added, next due, status or the prompt word. |
-| `GET /study` | Read-only batch. Due learning and review cards (learning ones within 20 minutes) ranked by how likely each is to have been forgotten, with new cards (up to the daily limit) spread through the first half of the queue. A word is not offered both ways on one day while there is another new word to show: a session takes one direction of each new word before any second direction (so words added one at a time are not paired), and a new card whose reverse was first shown today goes to the back of the new cards. The response also says whether this is the user's very first session (`firstSession`) and how many new cards wait behind the daily limit (`moreNew`): a new card answered Good or Easy on its first look does not use the limit, so each one brings another into the session, and the "left" counter on the study page counts them. Learning cards are held back until 15 minutes after the last answer (the gap between sessions); `early=1` lets the next session start in the last 5 minutes of that wait |
-| `GET /study/counts` | The counts of learning, review and new cards, for the dashboard, plus `nextSession` (when the held-back cards open and how many will be ready) while a session gap is running, and `tomorrow` (how many cards will be waiting by the end of tomorrow's study day) |
-| `GET /settings`, `PATCH /settings` | The account's email, name, time zone, daily new-card limit, the language direction being learned and card display options (example sentences, word forms); all but the email can be changed. A new time zone moves due review cards to the start of the same day there |
+| `GET /study` | Read-only batch. Due learning and review cards ranked by how likely each is to have been forgotten, with new cards (up to the daily limit) spread through the first half of the queue. A word is not offered both ways on one day while there is another new word to show: a session takes one direction of each new word before any second direction (so words added one at a time are not paired), and a new card whose reverse was first shown today goes to the back of the new cards. The response also says whether this is the user's very first session (`firstSession`) and how many new cards wait behind the daily limit (`moreNew`): a new card answered Good or Easy on its first look does not use the limit, so each one brings another into the session, and the "left" counter on the study page counts them. Nothing is held back between sessions: what is due, or nearly due, is offered as soon as it is asked for |
+| `GET /study/counts` | The counts of learning, review and new cards, for the dashboard, plus `tomorrow` (how many cards will be waiting by the end of tomorrow's study day) |
+| `GET /settings`, `PATCH /settings` | The account's email, name, time zone, daily new-card limit, the language direction being learned and card display options (example sentences, word forms) and whether the Add words explainer has been dismissed (`addWordsIntroSeen`, shown once per account); all but the email can be changed. A new time zone moves due review cards to the start of the same day there |
 | `POST /account/password`, `POST /account/email` | Change the password (signs out every other session) or the email address. Both need the current password and are rate limited like login. There is no email verification yet |
 | `POST /account/delete` | Deletes the account with its cards, review history and sessions. Needs the password |
 | `GET /account/export` | Everything held about the user as a JSON download: account details (never the password), every card with its schedule, and the full review history |
@@ -189,7 +189,7 @@ The full runbook, including server setup, rollback, backups and how to invite so
 
 ## Status and roadmap
 
-**Built:** auth with invite-only registration, a tabbed settings page (profile and email, study options, theme, password, data export and account deletion), an optional name at sign-up shown in the top corner, the content model and importer (about 5,900 concepts in 88 packs, in four categories), the pack browser with pack and word search, the deck viewer (search, filters, sorting, adding words in both directions), the dashboard, study sessions (FSRS scheduling, queue ordered by chance of forgetting, a 15-minute gap between sessions, a pause before a missed card repeats), the explainer page, and production deployment with CI and nightly backups.
+**Built:** auth with invite-only registration, a tabbed settings page (profile and email, study options, theme, password, data export and account deletion), an optional name at sign-up shown in the top corner, the content model and importer (about 5,900 concepts in 88 packs, in four categories), the pack browser with pack and word search, the deck viewer (search, filters, sorting, adding words in both directions), the dashboard, study sessions (FSRS scheduling, queue ordered by chance of forgetting, a pause before a missed card repeats), the explainer page, and production deployment with CI and nightly backups.
 
 ### Before anyone other than the owner uses it
 
@@ -206,7 +206,7 @@ The full runbook, including server setup, rollback, backups and how to invite so
 - Password reset and email verification (needs an email provider). Verification also has to cover changing the email address, which is unchecked today
 - ~~Settings: name, email, password, daily new-card limit, time zone, theme, data export and account deletion~~ (done). The theme is kept per device, not per account; everything else, including what the study cards show, follows the account
 - ~~A "report a problem with this card" button, since the content is unreviewed~~ (done: in the study screen and the card view; read the reports with `npm run reports`, see `deploy/README.md`). Reports are not emailed, so check them now and then
-- ~~First-run guidance~~ (done: an empty dashboard points to the starter words and explains adding words and the answer buttons; the very first study session opens with a short explanation of how the cards and answer buttons work)
+- ~~First-run guidance~~ (done: an empty dashboard points to the starter words and explains adding words and the answer buttons; the very first study session opens with a short explanation of how the cards and answer buttons work). Every page header (dashboard, My deck, Add words) has a "Start studying" button with the number of cards ready (disabled, saying "No cards ready to study", when there are none), above its navigation buttons, and the main navigation has a Study tab
 - ~~Rate limits on the public pack and search endpoints~~ (done: per client, 120 searches and 240 pack or language reads a minute). Signed-in endpoints (deck, study) are not limited
 - Uptime monitoring and error tracking
 - Mobile and accessibility pass (there are only two small-screen layout rules today)
@@ -224,7 +224,7 @@ A stats page (reviews per day, retention; `GET /stats` already serves the dashbo
 
 ### Housekeeping
 
-- The study rules changed a lot recently (the 15-minute gap, where a missed card returns, how new cards are spread, start-of-day due times). Use them for a while before others do, then tune the constants.
+- The study rules changed a lot recently (where a missed card returns, how new cards are spread, start-of-day due times). Use them for a while before others do, then tune the constants.
 - Update this list as items are done.
 
 ## Notes

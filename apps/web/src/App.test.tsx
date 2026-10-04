@@ -1,4 +1,4 @@
-import { screen, waitFor, within } from "@testing-library/react";
+import { screen, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import { installMockApi, json, mock, renderApp } from "./test/harness";
@@ -23,16 +23,24 @@ describe("auth flow", () => {
     expect(await screen.findByRole("heading", { name: "Your deck" })).toBeInTheDocument();
   });
 
-  it("has Dashboard, My deck and Add words in the main navigation, and no tab for studying", async () => {
+  it("has Dashboard, Study, My deck and Add words in the main navigation", async () => {
     mock.loggedIn = true;
     renderApp("/");
     const nav = await screen.findByRole("navigation", { name: "Main" });
-    expect(within(nav).getAllByRole("link").map((l) => l.textContent)).toEqual(["Dashboard", "My deck", "Add words"]);
+    expect(within(nav).getAllByRole("link").map((l) => l.textContent)).toEqual(["Dashboard", "Study", "My deck", "Add words"]);
+    expect(within(nav).getByRole("link", { name: "Study" })).toHaveAttribute("href", "/study");
     expect(within(nav).getByRole("link", { name: "My deck" })).toHaveAttribute("href", "/deck");
     expect(within(nav).getByRole("link", { name: "Add words" })).toHaveAttribute("href", "/add-words");
-    expect(within(nav).queryByRole("link", { name: "Study" })).not.toBeInTheDocument();
-    // Studying starts from the dashboard.
-    expect(await screen.findByRole("link", { name: "Start studying" })).toHaveAttribute("href", "/study");
+    // Studying also starts from the dashboard.
+    expect((await screen.findAllByRole("link", { name: /^Start studying/ }))[0]!).toHaveAttribute("href", "/study");
+  });
+
+  it("marks Study as the current tab while studying, and nothing else", async () => {
+    mock.loggedIn = true;
+    renderApp("/study");
+    const nav = await screen.findByRole("navigation", { name: "Main" });
+    expect(within(nav).getByRole("link", { name: "Study" })).toHaveAttribute("aria-current", "page");
+    expect(within(nav).getByRole("link", { name: "Dashboard" })).not.toHaveAttribute("aria-current");
   });
 
   it("shows English and Dutch flags cut along a slash between the site name and the tabs, as decoration", async () => {
@@ -303,31 +311,139 @@ describe("auth flow", () => {
   });
 });
 
+describe("Start studying in the page header", () => {
+  beforeEach(() => {
+    mock.handlers["GET /deck"] = () =>
+      json(200, { summary: { total: 3, new: 3, learning: 0, relearning: 0, review: 0, dueNow: 0 }, hasMore: false, cards: [] });
+  });
+  const nothingReady = () =>
+    (mock.handlers["GET /study/counts"] = () =>
+      json(200, { now: "x", counts: { learning: 0, review: 0, new: 0 }, newLimitReached: false, tomorrow: 0 }));
+  const headerButton = async (route: string, heading: string) => {
+    const head = (await screen.findByRole("heading", { name: heading, level: 1 })).closest(".page-head")!;
+    return within(head as HTMLElement).queryByRole("link", { name: /^Start studying/ });
+  };
+
+  it.each([
+    ["/", "Dashboard"],
+    ["/deck", "My deck"],
+    ["/add-words", "Add words"],
+  ])("is above the navigation buttons at the top right of %s", async (route, heading) => {
+    mock.loggedIn = true;
+    renderApp(route);
+    const head = (await screen.findByRole("heading", { name: heading, level: 1 })).closest(".page-head") as HTMLElement;
+    const start = await within(head).findByRole("link", { name: /^Start studying/ });
+    expect(start).toHaveAttribute("href", "/study");
+    expect(start).toHaveClass("button", "primary");
+    // In the right-hand column of the header, before the buttons that take you to other pages.
+    const right = head.querySelector(".page-head-right")!;
+    expect(right).toContainElement(start);
+    const nav = right.querySelector(".page-head-actions")!;
+    expect(start.compareDocumentPosition(nav) & Node.DOCUMENT_POSITION_FOLLOWING).toBeTruthy();
+    expect(nav).not.toContainElement(start);
+    expect(head.lastElementChild).toBe(right);
+  });
+
+  it("takes you straight to a study session", async () => {
+    mock.loggedIn = true;
+    const user = userEvent.setup();
+    renderApp("/deck");
+    const head = (await screen.findByRole("heading", { name: "My deck", level: 1 })).closest(".page-head") as HTMLElement;
+    await user.click(await within(head).findByRole("link", { name: /^Start studying/ }));
+    expect(await screen.findByRole("heading", { name: "Study" })).toBeInTheDocument();
+  });
+
+  it("has a tag showing how many cards are ready, like the counts on the filters of My deck", async () => {
+    mock.loggedIn = true;
+    // 2 learning and 3 to review are due now, and 5 new cards can be started: 10 in all.
+    mock.handlers["GET /study/counts"] = () =>
+      json(200, { now: "x", counts: { learning: 2, review: 3, new: 5 }, newLimitReached: false, tomorrow: 0 });
+    renderApp("/deck");
+    const head = (await screen.findByRole("heading", { name: "My deck", level: 1 })).closest(".page-head") as HTMLElement;
+    const start = await within(head).findByRole("link", { name: /^Start studying/ });
+    const tag = start.querySelector(".count")!;
+    expect(tag).toHaveTextContent("10");
+    // Said once to a screen reader, as part of the button's name.
+    expect(start).toHaveAccessibleName("Start studying, 10 ready");
+    // The same tag as the filters on the deck page.
+    expect(within(head).queryByText("10", { selector: ".toggle .count" })).not.toBeInTheDocument();
+  });
+
+  it.each([
+    ["/", "Dashboard"],
+    ["/deck", "My deck"],
+    ["/add-words", "Add words"],
+  ])("is disabled on %s, saying so, when there is nothing to study", async (route, heading) => {
+    mock.loggedIn = true;
+    nothingReady();
+    renderApp(route);
+    const head = (await screen.findByRole("heading", { name: heading, level: 1 })).closest(".page-head") as HTMLElement;
+    const none = await within(head).findByRole("button", { name: "No cards ready to study" });
+    expect(none).toBeDisabled();
+    expect(none).toHaveClass("primary");
+    // Not a way to study, and in the same place as the button it stands in for.
+    expect(await headerButton(route, heading)).toBeNull();
+    expect(head.querySelector(".page-head-start")).toContainElement(none);
+  });
+
+  it("goes back to a link when cards become ready", async () => {
+    mock.loggedIn = true;
+    let ready = false;
+    mock.handlers["GET /study/counts"] = () =>
+      json(200, { now: "x", counts: { learning: 0, review: 0, new: ready ? 3 : 0 }, newLimitReached: false, tomorrow: 0 });
+    const user = userEvent.setup();
+    renderApp("/deck");
+    const head = (await screen.findByRole("heading", { name: "My deck", level: 1 })).closest(".page-head") as HTMLElement;
+    expect(await within(head).findByRole("button", { name: "No cards ready to study" })).toBeDisabled();
+    ready = true;
+    await user.click(within(head).getByRole("link", { name: "Go to dashboard" }));
+    await user.click((await screen.findAllByRole("link", { name: "View deck" }))[0]!); // the page header's
+    expect(await screen.findByRole("link", { name: /^Start studying/ })).toBeInTheDocument();
+  });
+
+  it("does not ask the server again for what the dashboard just fetched", async () => {
+    mock.loggedIn = true;
+    renderApp("/");
+    await screen.findByRole("region", { name: "Ready to study" });
+    await screen.findAllByRole("link", { name: /^Start studying/ });
+    expect(mock.calls.filter((c) => c === "GET /study/counts")).toHaveLength(1);
+  });
+});
+
 describe("dashboard", () => {
   describe("the daily new card limit", () => {
-    const counts = (newLimitReached: boolean) => ({
+    // `due` cards are ready to study besides the new ones, which the limit has shut out.
+    const counts = (newLimitReached: boolean, due = 0) => ({
       now: "x",
-      counts: { learning: 0, review: 3, new: 0 },
+      counts: { learning: 0, review: due, new: 0 },
       newLimitReached,
-      nextSession: null,
       tomorrow: 0,
     });
 
-    it("says that no new cards are available today, with a link to the settings, below the deck", async () => {
+    it("says that no new cards are available today, with a link to the settings, above the deck", async () => {
       mock.loggedIn = true;
       mock.handlers["GET /study/counts"] = () => json(200, counts(true));
       renderApp("/");
       const note = await screen.findByText(/No new cards are available to study today because you have reached your daily new card limit/);
       const link = within(note).getByRole("link", { name: "Settings" });
       expect(link).toHaveAttribute("href", "/settings?tab=study");
-      // Just below the progress figures of the deck.
-      const progress = await screen.findByRole("region", { name: "Progress" });
-      expect(progress.compareDocumentPosition(note) & Node.DOCUMENT_POSITION_FOLLOWING).toBeTruthy();
+      // Just above the "Your deck" section, which comes straight after it.
+      const heading = await screen.findByRole("heading", { name: "Your deck" });
+      expect(note.nextElementSibling).toContainElement(heading);
+    });
+
+    it("says nothing about it while cards are due, as there is something to study", async () => {
+      mock.loggedIn = true;
+      mock.handlers["GET /study/counts"] = () => json(200, counts(true, 3));
+      renderApp("/");
+      await screen.findByRole("region", { name: "Progress" });
+      expect(await screen.findByText("3 cards ready to study")).toBeInTheDocument();
+      expect(screen.queryByText(/daily new card limit/)).not.toBeInTheDocument();
     });
 
     it("says nothing about it otherwise", async () => {
       mock.loggedIn = true;
-      mock.handlers["GET /study/counts"] = () => json(200, counts(false));
+      mock.handlers["GET /study/counts"] = () => json(200, counts(false, 3));
       renderApp("/");
       await screen.findByRole("region", { name: "Progress" });
       expect(screen.queryByText(/daily new card limit/)).not.toBeInTheDocument();
@@ -371,27 +487,29 @@ describe("dashboard", () => {
   it("puts View deck and Add more words at the top right, level with the heading", async () => {
     mock.loggedIn = true;
     renderApp("/");
-    const view = await screen.findByRole("link", { name: "View deck" });
+    const view = (await screen.findAllByRole("link", { name: "View deck" }))[0]!; // the first is the header's
     const add = screen.getByRole("link", { name: "Add more words" });
     expect(view.parentElement).toBe(add.parentElement);
     expect(view.parentElement).toHaveClass("page-head-actions");
     expect(view.nextElementSibling).toBe(add);
-    const head = view.parentElement!.parentElement!;
-    expect(head).toHaveClass("page-head");
+    const head = view.closest(".page-head")!;
+    expect(head).toBeTruthy();
     expect(head.firstElementChild).toBe(screen.getByRole("heading", { name: "Dashboard" }));
-    // Not repeated at the bottom of the deck section.
-    expect(screen.getAllByRole("link", { name: "View deck" })).toHaveLength(1);
+    // Repeated only across from the "Your deck" heading, where a phone shows it in place of these.
+    const all = screen.getAllByRole("link", { name: "View deck" });
+    expect(all).toHaveLength(2);
+    expect(all[1]!.closest(".section-head")).toBeTruthy();
     expect(screen.getAllByRole("link", { name: "Add more words" })).toHaveLength(1);
   });
 
-  it("leaves them out when the deck is empty, where Browse words does the job", async () => {
+  it("keeps View deck and Add more words when the deck is empty, next to Browse words", async () => {
     mock.loggedIn = true;
     mock.handlers["GET /deck?limit=1"] = () =>
       json(200, { summary: { total: 0, new: 0, learning: 0, relearning: 0, review: 0, dueNow: 0 } });
     renderApp("/");
     expect(await screen.findByRole("link", { name: "Browse words" })).toBeInTheDocument();
-    expect(screen.queryByRole("link", { name: "View deck" })).not.toBeInTheDocument();
-    expect(screen.queryByRole("link", { name: "Add more words" })).not.toBeInTheDocument();
+    expect(screen.getByRole("link", { name: "View deck" })).toHaveAttribute("href", "/deck");
+    expect(screen.getByRole("link", { name: "Add more words" })).toHaveAttribute("href", "/add-words");
   });
 
   it("shows how the deck splits into review, learning and new", async () => {
@@ -409,11 +527,13 @@ describe("dashboard", () => {
     renderApp("/");
     const hero = await screen.findByRole("region", { name: "Ready to study" });
     expect(hero).toHaveTextContent("11 cards ready to study"); // 4 due + 7 new
-    expect(hero).toHaveTextContent("4 due now · 7 new");
-    expect(within(hero).getByRole("link", { name: "Start studying" })).toHaveAttribute("href", "/study");
+    expect(hero).toHaveTextContent("4 due for review · 7 new");
+    // Starting is done from the button at the top of the page, not from the hero.
+    expect(within(hero).queryByRole("link", { name: /^Start studying/ })).not.toBeInTheDocument();
+    expect(screen.getByRole("link", { name: /^Start studying/ })).toHaveAttribute("href", "/study");
     // "Add more words" lives next to "View deck" at the top of the page, not in the hero.
     expect(within(hero).queryByRole("link", { name: "Add more words" })).not.toBeInTheDocument();
-    expect(screen.getByRole("link", { name: "View deck" })).toHaveAttribute("href", "/deck");
+    expect(screen.getAllByRole("link", { name: "View deck" })[0]).toHaveAttribute("href", "/deck");
     expect(screen.getByRole("link", { name: "Add more words" })).toHaveAttribute("href", "/add-words");
     expect(screen.getByRole("img", { name: /3 learning/ })).toBeInTheDocument();
   });
@@ -424,7 +544,7 @@ describe("dashboard", () => {
       json(200, { now: "x", counts: { learning: 0, review: 0, new: 0 } });
     renderApp("/");
     expect(await screen.findByText("No cards to study right now")).toBeInTheDocument();
-    expect(screen.queryByRole("link", { name: "Start studying" })).not.toBeInTheDocument();
+    expect(screen.queryByRole("link", { name: /^Start studying/ })).not.toBeInTheDocument();
     expect(screen.getByRole("link", { name: "Add more words" })).toHaveAttribute("href", "/add-words");
   });
 
@@ -458,176 +578,86 @@ describe("dashboard", () => {
         json(200, stats([dir("en", "nl"), dir("nl", "en", { dueNow: 0 })]));
     });
 
-    it("narrows only the deck section to one direction, leaving what is ready to study alone", async () => {
-      mock.handlers["GET /deck?limit=1&fromLanguage=nl&toLanguage=en"] = () =>
-        json(200, { summary: { total: 8, new: 1, learning: 1, relearning: 0, review: 6, dueNow: 2 } });
-      const user = userEvent.setup();
+    it("shows the whole deck with no filter by direction, however many directions it has", async () => {
       renderApp("/");
       const hero = await screen.findByRole("region", { name: "Ready to study" });
       expect(hero).toHaveTextContent("11 cards ready to study");
+      await screen.findByRole("heading", { name: "Your deck" });
+      expect(screen.queryByRole("group", { name: "Deck view" })).not.toBeInTheDocument();
+      expect(screen.queryByRole("button", { name: "NL → EN" })).not.toBeInTheDocument();
+      expect(screen.queryByRole("button", { name: "Both" })).not.toBeInTheDocument();
+      // Only the whole deck is asked about: no request is for one direction.
+      expect(mock.calls.filter((c) => c.startsWith("GET /deck") && c.includes("fromLanguage"))).toEqual([]);
+    });
 
-      await user.click(await screen.findByRole("button", { name: "NL → EN" }));
-      expect(await within(screen.getByRole("region", { name: "Progress" })).findByText("6")).toBeInTheDocument();
-      expect(hero).toHaveTextContent("11 cards ready to study");
-      expect(within(hero).getByRole("link", { name: "Start studying" })).toHaveAttribute("href", "/study");
-      expect(mock.calls.filter((c) => c.startsWith("GET /study"))).toEqual(["GET /study/counts"]);
-      expect(screen.getByRole("button", { name: "NL → EN" })).toHaveAttribute("aria-pressed", "true");
-      expect(JSON.parse(localStorage.getItem("dashboardDirection:en-nl")!)).toEqual({ from: "nl", to: "en" });
+    it("says how many cards the deck has, beside the Your deck heading", async () => {
+      renderApp("/");
+      const heading = await screen.findByRole("heading", { name: "Your deck" });
+      expect(heading.nextElementSibling).toHaveTextContent(/^\d+ cards?$/);
+    });
 
-      await user.click(screen.getByRole("button", { name: "Both" }));
-      expect(await screen.findByRole("button", { name: "Both" })).toHaveAttribute("aria-pressed", "true");
-      expect(screen.getByRole("button", { name: "NL → EN" })).toHaveAttribute("aria-pressed", "false");
-      expect(hero).toHaveTextContent("11 cards ready to study");
+    it("has a View deck button across from the Your deck heading, which a phone's styles show", async () => {
+      renderApp("/");
+      const heading = await screen.findByRole("heading", { name: "Your deck" });
+      const head = heading.closest(".section-head") as HTMLElement;
+      expect(head).toBeTruthy();
+      const button = within(head).getByRole("link", { name: "View deck" });
+      expect(button).toHaveAttribute("href", "/deck");
+      expect(head.firstElementChild).toContainElement(heading);
+      expect(head.lastElementChild).toBe(button);
     });
 
     it("has one Start studying button, however many directions the deck has", async () => {
       renderApp("/");
       const hero = await screen.findByRole("region", { name: "Ready to study" });
-      await screen.findByRole("button", { name: "NL → EN" }); // stats have loaded
-      expect(within(hero).getAllByRole("link")).toHaveLength(1);
-      expect(within(hero).getByRole("link", { name: "Start studying" })).toHaveAttribute("href", "/study");
-      expect(within(hero).queryByRole("link", { name: /^Study / })).not.toBeInTheDocument();
-    });
-
-    it("hides the deck filter when there is only one direction", async () => {
-      mock.handlers["GET /stats"] = () => json(200, stats([dir("en", "nl")]));
-      renderApp("/");
       await screen.findByRole("heading", { name: "Your deck" });
-      expect(screen.queryByRole("group", { name: "Deck view" })).not.toBeInTheDocument();
+      // The hero has no buttons of its own; the one at the top of the page is the only way to start.
+      expect(within(hero).queryAllByRole("link")).toHaveLength(0);
+      expect(screen.getAllByRole("link", { name: /^Start studying/ })).toHaveLength(1);
+      expect(screen.getByRole("link", { name: /^Start studying/ })).toHaveAttribute("href", "/study");
+      expect(screen.queryByRole("link", { name: /^Study / })).not.toBeInTheDocument();
     });
 
-    describe("when a session is on its way", () => {
-      const nothingReady = () =>
-        (mock.handlers["GET /study/counts"] = () => json(200, countsWith(7 * 60_000)));
-      // The server says the next session opens in `ms`, with 4 cards ready then.
-      const countsWith = (ms: number) => ({
-        now: "2026-01-15T10:00:00.000Z",
-        counts: { learning: 0, review: 0, new: 0 },
-        nextSession: { at: new Date(Date.parse("2026-01-15T10:00:00.000Z") + ms).toISOString(), count: 4 },
-        tomorrow: 0,
+    describe("when nothing is ready", () => {
+      const idle = (tomorrow: number, nextDueAt: string | null = null) => {
+        mock.handlers["GET /study/counts"] = () =>
+          json(200, {
+            now: "2026-01-15T10:00:00.000Z",
+            counts: { learning: 0, review: 0, new: 0 },
+            tomorrow,
+          });
+        mock.handlers["GET /stats"] = () => json(200, stats([dir("en", "nl")], { nextDueAt }));
+      };
+
+      it("says how many cards will be ready tomorrow", async () => {
+        idle(28);
+        renderApp("/");
+        expect(await screen.findByText("28 cards will be ready tomorrow.")).toBeInTheDocument();
+        expect(screen.getByText("No cards to study right now")).toBeInTheDocument();
+        expect(screen.queryByText("Come back later or add more words.")).not.toBeInTheDocument();
       });
 
-      it("counts down to when the cards will be ready, and says how many", async () => {
-        nothingReady();
+      it("uses the singular, and shows it alongside when the next card is due", async () => {
+        idle(1, "2026-01-15T13:00:00.000Z");
+        renderApp("/");
+        expect(await screen.findByText("1 card will be ready tomorrow.")).toBeInTheDocument();
+        expect(screen.getByText("Next card in 3 hours.")).toBeInTheDocument();
+      });
+
+      it("says nothing about tomorrow when nothing will be ready", async () => {
+        idle(0);
+        renderApp("/");
+        expect(await screen.findByText("Come back later or add more words.")).toBeInTheDocument();
+        expect(screen.queryByText(/ready tomorrow/)).not.toBeInTheDocument();
+      });
+
+      it("has no countdown and no way to start early: nothing is held back between sessions", async () => {
+        idle(28);
         renderApp("/");
         const hero = await screen.findByRole("region", { name: "Ready to study" });
         expect(await within(hero).findByText("No cards to study right now")).toBeInTheDocument();
-        await waitFor(() => expect(hero).toHaveTextContent(/4 cards will be ready in (7:00|6:59)\./));
-        // More than five minutes to go: no way to start early.
-        expect(within(hero).queryByRole("link", { name: "Start next session now" })).not.toBeInTheDocument();
-      });
-
-      it("offers to start the next session now in the last five minutes", async () => {
-        mock.handlers["GET /study/counts"] = () => json(200, countsWith(4 * 60_000 + 30_000));
-        renderApp("/");
-        const hero = await screen.findByRole("region", { name: "Ready to study" });
-        await waitFor(() => expect(hero).toHaveTextContent(/4 cards will be ready in 4:(30|29)\./));
-        expect(within(hero).getByRole("link", { name: "Start next session now" })).toHaveAttribute(
-          "href",
-          "/study?early=1",
-        );
-      });
-
-      it("shows exactly five minutes as early enough, and ten as not", async () => {
-        mock.handlers["GET /study/counts"] = () => json(200, countsWith(5 * 60_000));
-        const view = renderApp("/");
-        expect(await screen.findByRole("link", { name: "Start next session now" })).toBeInTheDocument();
-        view.unmount();
-
-        mock.handlers["GET /study/counts"] = () => json(200, countsWith(10 * 60_000));
-        renderApp("/");
-        const hero = await screen.findByRole("region", { name: "Ready to study" });
-        await waitFor(() => expect(hero).toHaveTextContent(/will be ready in (10:00|9:59)/));
-        expect(screen.queryByRole("link", { name: "Start next session now" })).not.toBeInTheDocument();
-      });
-
-      it("uses the singular for a single card", async () => {
-        mock.handlers["GET /study/counts"] = () => {
-          const c = countsWith(7 * 60_000);
-          return json(200, { ...c, nextSession: { ...c.nextSession, count: 1 } });
-        };
-        renderApp("/");
-        const hero = await screen.findByRole("region", { name: "Ready to study" });
-        await waitFor(() => expect(hero).toHaveTextContent(/1 card will be ready in (7:00|6:59)\./));
-      });
-
-      it("looks again for the cards when the countdown reaches zero", async () => {
-        vi.useFakeTimers({ shouldAdvanceTime: true });
-        try {
-          let calls = 0;
-          mock.handlers["GET /study/counts"] = () => {
-            calls++;
-            return calls === 1
-              ? json(200, countsWith(2_000))
-              : json(200, { now: "x", counts: { learning: 4, review: 0, new: 0 }, nextSession: null });
-          };
-          renderApp("/");
-          const hero = await screen.findByRole("region", { name: "Ready to study" });
-          await waitFor(() => expect(hero).toHaveTextContent(/will be ready in 0:0\d/));
-          await vi.advanceTimersByTimeAsync(3_000);
-          expect(await screen.findByText("4 cards ready to study")).toBeInTheDocument();
-          expect(calls).toBeGreaterThanOrEqual(2);
-        } finally {
-          vi.useRealTimers();
-        }
-      });
-
-      describe("with no countdown", () => {
-        const idle = (tomorrow: number, nextDueAt: string | null = null) => {
-          mock.handlers["GET /study/counts"] = () =>
-            json(200, {
-              now: "2026-01-15T10:00:00.000Z",
-              counts: { learning: 0, review: 0, new: 0 },
-              nextSession: null,
-              tomorrow,
-            });
-          mock.handlers["GET /stats"] = () => json(200, stats([dir("en", "nl")], { nextDueAt }));
-        };
-
-        it("says how many cards will be ready tomorrow", async () => {
-          idle(28);
-          renderApp("/");
-          expect(await screen.findByText("28 cards will be ready tomorrow.")).toBeInTheDocument();
-          expect(screen.getByText("No cards to study right now")).toBeInTheDocument();
-          expect(screen.queryByText("Come back later or add more words.")).not.toBeInTheDocument();
-        });
-
-        it("uses the singular, and shows it alongside when the next card is due", async () => {
-          idle(1, "2026-01-15T13:00:00.000Z");
-          renderApp("/");
-          expect(await screen.findByText("1 card will be ready tomorrow.")).toBeInTheDocument();
-          expect(screen.getByText("Next card in 3 hours.")).toBeInTheDocument();
-        });
-
-        it("says nothing about tomorrow when nothing will be ready", async () => {
-          idle(0);
-          renderApp("/");
-          expect(await screen.findByText("Come back later or add more words.")).toBeInTheDocument();
-          expect(screen.queryByText(/ready tomorrow/)).not.toBeInTheDocument();
-        });
-
-        it("also shows it while a countdown is running", async () => {
-          mock.handlers["GET /study/counts"] = () =>
-            json(200, {
-              now: "2026-01-15T10:00:00.000Z",
-              counts: { learning: 0, review: 0, new: 0 },
-              nextSession: { at: "2026-01-15T10:07:00.000Z", count: 4 },
-              tomorrow: 28,
-            });
-          renderApp("/");
-          const hero = await screen.findByRole("region", { name: "Ready to study" });
-          await waitFor(() => expect(hero).toHaveTextContent(/4 cards will be ready in/));
-          expect(hero).toHaveTextContent("28 cards will be ready tomorrow.");
-        });
-      });
-
-      it("falls back to when the next card is due when no session is held back", async () => {
-        mock.handlers["GET /study/counts"] = () =>
-          json(200, { now: "2026-01-15T10:00:00.000Z", counts: { learning: 0, review: 0, new: 0 }, nextSession: null });
-        mock.handlers["GET /stats"] = () =>
-          json(200, stats([dir("en", "nl")], { nextDueAt: "2026-01-15T13:00:00.000Z" }));
-        renderApp("/");
-        expect(await screen.findByText("Next card in 3 hours.")).toBeInTheDocument();
+        expect(hero).not.toHaveTextContent(/will be ready in/);
+        expect(within(hero).queryAllByRole("link")).toHaveLength(0);
       });
     });
 
@@ -643,8 +673,7 @@ describe("dashboard", () => {
     it("still works when the extra stats cannot be loaded", async () => {
       mock.handlers["GET /stats"] = () => json(500, { error: "boom" });
       renderApp("/");
-      expect(await screen.findByRole("link", { name: "Start studying" })).toBeInTheDocument();
-      expect(screen.queryByRole("group", { name: "Deck view" })).not.toBeInTheDocument();
+      expect((await screen.findAllByRole("link", { name: /^Start studying/ }))[0]!).toBeInTheDocument();
     });
   });
 

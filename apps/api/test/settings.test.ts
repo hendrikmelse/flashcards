@@ -63,8 +63,20 @@ describe("GET /settings", () => {
       dailyNewCardLimit: 20,
       showSentences: true,
       showForms: true,
+      addWordsIntroSeen: false,
       direction: { from: "en", to: "nl" },
     });
+  });
+
+  it("remembers that the Add words explainer was dismissed", async () => {
+    expect((await get()).json()).toMatchObject({ addWordsIntroSeen: false });
+    const res = await patch({ addWordsIntroSeen: true });
+    expect(res.statusCode).toBe(200);
+    expect(res.json()).toMatchObject({ addWordsIntroSeen: true });
+    expect((await get()).json()).toMatchObject({ addWordsIntroSeen: true });
+    // It is on the account, not the session: other settings leave it alone.
+    expect((await patch({ showForms: true })).json()).toMatchObject({ addWordsIntroSeen: true });
+    expect((await patch({ addWordsIntroSeen: "yes" })).statusCode).toBe(400);
   });
 });
 

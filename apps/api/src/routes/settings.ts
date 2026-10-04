@@ -16,6 +16,7 @@ export async function settingsRoutes(app: FastifyInstance, { db }: { db: Db }) {
         dailyNewCardLimit: users.dailyNewCardLimit,
         showSentences: users.showSentences,
         showForms: users.showForms,
+        addWordsIntroSeen: users.addWordsIntroSeen,
         activeFrom: users.activeFrom,
         activeTo: users.activeTo,
       })
@@ -37,7 +38,7 @@ export async function settingsRoutes(app: FastifyInstance, { db }: { db: Db }) {
       return reply.code(400).send({ error: "Invalid input", issues: parsed.error.issues });
     }
     const userId = req.user!.id;
-    const { name, timezone, dailyNewCardLimit, showSentences, showForms, direction } = parsed.data;
+    const { name, timezone, dailyNewCardLimit, showSentences, showForms, addWordsIntroSeen, direction } = parsed.data;
 
     await db.transaction(async (tx) => {
       const [current] = await tx.select({ timezone: users.timezone }).from(users).where(eq(users.id, userId));
@@ -49,6 +50,7 @@ export async function settingsRoutes(app: FastifyInstance, { db }: { db: Db }) {
           ...(dailyNewCardLimit !== undefined ? { dailyNewCardLimit } : {}),
           ...(showSentences !== undefined ? { showSentences } : {}),
           ...(showForms !== undefined ? { showForms } : {}),
+          ...(addWordsIntroSeen !== undefined ? { addWordsIntroSeen } : {}),
           ...(direction !== undefined ? { activeFrom: direction.from, activeTo: direction.to } : {}),
         })
         .where(eq(users.id, userId));
