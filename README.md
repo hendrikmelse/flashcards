@@ -181,7 +181,7 @@ One Docker image: the API serves `/api/*` and the built web app (falling back to
 - **Deploys:** images are tagged by git SHA. `deploy.sh` migrates, restarts, health-checks and rolls back automatically. Only the current and previous image are kept
 - **Security:** a non-root user, SSH keys only, firewall (only ports 22, 80 and 443), fail2ban, unattended upgrades. The CI deploy key is restricted to one validated command
 - **Logs:** container logs go to the host journal (capped at 500 MB / 30 days), so they survive deploys
-- **Backups:** nightly `pg_dump` at 03:00 Pacific via a systemd timer, 14 days kept, restore drill verified. Nothing alerts on a failed backup yet
+- **Backups:** nightly `pg_dump` at 03:00 Pacific via a systemd timer, 14 days kept locally, then copied encrypted to Backblaze B2 with `restic` (7 daily, 4 weekly, 6 monthly), a Healthchecks.io alert if a night is missed or fails, restore drill verified from the offsite copy
 - **Access:** invite-only through `REGISTRATION_MODE=allowlist` and `ALLOWED_EMAILS`
 - **Production data:** a separate `seed-languages` command creates the languages without sample data
 
@@ -194,12 +194,11 @@ The full runbook, including server setup, rollback, backups and how to invite so
 ### Before anyone other than the owner uses it
 
 1. ~~**Time zones.**~~ Done: new accounts take the browser's time zone, and the settings page changes it (review cards move to the start of the same day in the new zone). Production has no accounts yet, so there is nothing to migrate.
-2. **Push and deploy.** Production runs an old build. Pushing `main` deploys it, and the new migrations (`concept_key`, `pack_category`, `user_name`, `card_display_prefs`, `card_reports`, `languages_and_decks`) must apply cleanly. Checked before the first push: the image builds, all seven migrations apply to an empty Postgres 17, and `seed-languages`, `import-content`, the server (health, readiness, the app shell and client routes) and the `reports` command all run from the built image.
+2. ~~**Push and deploy.**~~ Done 2026-10-04: production runs the current build, migrations included.
 3. **Check the Docker image builds.** `content/` was added to the image after the last verified build; CI builds it on push, but it is untested.
-4. **Import the content into production** (manual, see the runbook). Do any final key renames first: once users have cards, concept keys are permanent.
+4. ~~**Import the content into production**~~ Done 2026-10-04, along with removing the retired concepts.
 5. **Native Dutch review of the content.** The words flagged as uncertain have been reviewed and fixed. Beyond those, nothing has been read through by a Dutch speaker: spot-check the frequency bands and a sample of the topic packs.
-6. **Offsite database backups with a failure alert, and a tested restore.** The first unattended backup run is also unverified.
-7. **A real browser pass on the live site** over HTTPS (registering, studying, the Content-Security-Policy, a phone).
+6. **A real browser pass on the live site** over HTTPS (registering, studying, the Content-Security-Policy, a phone).
 
 ### Should have for friends and family
 

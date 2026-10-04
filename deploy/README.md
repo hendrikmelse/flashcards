@@ -190,7 +190,7 @@ From the repository root on your machine:
 ```bash
 ssh deploy@<ip> "sudo mkdir -p /srv && sudo chown deploy:deploy /srv"
 scp -r deploy/server/caddy deploy/server/postgres deploy/server/flashcards deploy@<ip>:/srv/
-ssh deploy@<ip> "chmod +x /srv/flashcards/deploy.sh /srv/flashcards/ci-entrypoint.sh /srv/postgres/backup.sh"
+ssh deploy@<ip> "chmod +x /srv/flashcards/deploy.sh /srv/flashcards/ci-entrypoint.sh /srv/postgres/backup.sh /srv/postgres/offsite.sh"
 ```
 
 Then set up the host journal, where all container logs go (see "Logs" below):
@@ -386,11 +386,12 @@ sudo systemctl start flashcards-backup.service     # run one now
 ls -lh /srv/postgres/backups                       # the dumps (the directory is mode 700)
 ```
 
-**Nothing alerts you if a backup fails.** A failed run only shows up in the
-status and journal above, so look at `list-timers` and the newest file in
-`backups/` now and then, until monitoring is added (a before-launch item). The
-roles file (`globals-*.sql`) contains password hashes: keep the directory
-private, and encrypt dumps before copying them off the server.
+**Alerts.** `offsite.sh` pings a Healthchecks.io check when it starts, when it
+succeeds and when it fails. The check expects a ping about daily, so a failed
+run, a failed dump (the offsite step only runs after a good one), a stopped
+timer or a dead server all lead to an email. The roles file (`globals-*.sql`)
+contains password hashes: keep the directory private; `restic` encrypts
+everything it copies off the server.
 
 **Practice a restore before you need one.** This restores into a scratch
 database and never touches the live one:
@@ -404,13 +405,34 @@ docker compose exec -T postgres psql -U postgres -d restore_test -c "select coun
 docker compose exec -T postgres psql -U postgres -c "drop database restore_test"
 ```
 
-### Offsite backups (not set up yet)
+### Offsite backups (Backblaze B2 through restic)
 
-Dumps on the same disk do not survive losing the server. Copy them elsewhere
-too, for example with `restic` to an S3-compatible bucket (Backblaze B2 is cheap)
-or `rsync` to a provider storage box, run right after `backup.sh` (for example as an `ExecStartPost=` line in the backup service). This
-needs an account and credentials from you, so it is left for when you choose a
-destination.
+`offsite.sh` runs right after `backup.sh` as an `ExecStartPost=` of the backup
+service. It copies `/srv/postgres/backups` into an encrypted `restic` repository
+in a private B2 bucket, keeps 7 daily, 4 weekly and 6 monthly snapshots, checks
+the repository (plus a 10% slice of its data) each night and pings Healthchecks.
+
+One-time setup, besides the unit files in section 9:
+
+1. In Backblaze: a private bucket with the lifecycle rule "keep only the last
+   version" (otherwise files `restic` removes stay as hidden versions and storage
+   grows), and an application key limited to that bucket (not the master key).
+2. Invent a long random `restic` password and **keep it outside the server** (a
+   password manager). Without it the backups cannot be read.
+3. A Healthchecks.io check (period 1 day, grace about 6 hours) and its ping URL.
+4. Put the secrets in a root-only file the unit reads, `/etc/flashcards-backup.env`
+   (mode 600, owner root): `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` (the B2
+   key id and key), `RESTIC_REPOSITORY=s3:https://<endpoint>/<bucket>`,
+   `RESTIC_PASSWORD` and `HC_PING_URL`.
+5. `sudo apt-get install restic`, then once, with that file loaded as root,
+   `restic init`. Copy `offsite.sh` to `/srv/postgres`, install the updated unit
+   file and `sudo systemctl daemon-reload`.
+
+Look at the offsite copies with `restic snapshots`, and restore with
+`restic restore latest --target <dir>`, both with the variables from the env file
+set (`sudo bash -c 'set -a; . /etc/flashcards-backup.env; set +a; restic snapshots'`).
+Restoring the dump from there into a scratch database is the same procedure as
+the drill above.
 
 To rebuild after a total loss: create a new server (steps 1 to 6), restore the
 roles with `psql -U postgres < globals-<stamp>.sql`, create the database, then
@@ -581,6 +603,11 @@ systemd computed the right next run for summer (10:00 UTC) and winter (11:00 UTC
 the service ran by hand under the same unit as the timer will use (as the `deploy`
 user, exit 0, output in the journal, a 26 KB dump), and that dump restored into
 a scratch database with row and table counts identical to the live database.
+The first unattended runs (Oct 2 to 4, 10:00 UTC) happened on schedule. On
+2026-10-04 the offsite copy was added and checked: one run through the service
+(exit 0, snapshot in B2), the dump restored from B2 into a scratch database with
+the same counts as production (users, concepts, cards), and a deliberate wrong
+password made the script fail and send the failure ping.
 
 ## Not yet verified
 
@@ -589,8 +616,6 @@ a scratch database with row and table counts identical to the live database.
   over plain http only.
 - Updating an already-running production deploy, and a production rollback
   (both were verified locally).
-- The first scheduled (unattended) backup run, due at 03:00 Pacific; offsite
-  backups (not built yet) and failure alerts for backups.
 
 ## Repeating the local test
 
