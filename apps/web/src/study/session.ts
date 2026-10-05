@@ -147,17 +147,21 @@ export function reducer(state: SessionState, action: Action): SessionState {
       const returning = { ...card, state: result.state };
       const at = againPosition(state.queue.length, random);
       // A new card that is already known does not use up the daily limit, so another one follows it.
-      const makesRoom = card.state === "new" && (rating === "good" || rating === "easy");
+      const makesRoom =
+        card.state === "new" && (rating === "good" || rating === "easy") && state.unlocked < state.moreNew;
 
       return {
         ...state,
+        // The queue ran dry while this card was on screen, so the top-up fetch came back empty and
+        // marked the session exhausted; the new card this answer makes room for needs another fetch.
+        exhausted: makesRoom ? false : state.exhausted,
         current: null,
         revealed: false,
         repeatNotice: false,
         lastAgainId: missed ? card.id : null,
         queue: missed ? [...state.queue.slice(0, at), returning, ...state.queue.slice(at)] : state.queue,
         handled: state.handled.includes(card.id) ? state.handled : [...state.handled, card.id],
-        unlocked: makesRoom ? Math.min(state.moreNew, state.unlocked + 1) : state.unlocked,
+        unlocked: makesRoom ? state.unlocked + 1 : state.unlocked,
         stats: {
           ...state.stats,
           reviewed: state.stats.reviewed + 1,
