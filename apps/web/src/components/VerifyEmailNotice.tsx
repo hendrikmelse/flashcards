@@ -16,7 +16,7 @@ export function VerifyEmailNotice() {
         Please confirm your email address: we sent a link to <strong>{user.email}</strong>. Without it, a
         forgotten password cannot be reset.
       </p>
-      <button type="button" onClick={() => resend.mutate()} disabled={resend.isPending || resend.isSuccess}>
+      <button type="button" className="secondary" onClick={() => resend.mutate()} disabled={resend.isPending || resend.isSuccess}>
         {resend.isSuccess ? "Link sent" : resend.isPending ? "Sending…" : "Send the link again"}
       </button>
       <span role="status" className="form-error">
