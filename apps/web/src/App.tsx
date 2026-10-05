@@ -6,6 +6,7 @@ import { DashboardPage } from "./pages/DashboardPage";
 import { DeckPage } from "./pages/DeckPage";
 import { HowItWorksPage } from "./pages/HowItWorksPage";
 import { LoginPage, RegisterPage } from "./pages/AuthPages";
+import { ForgotPasswordPage, ResetPasswordPage, VerifyEmailPage } from "./pages/EmailLinkPages";
 import { NotFoundPage } from "./pages/NotFoundPage";
 import { PackDetailPage } from "./pages/PackDetailPage";
 import { PacksPage } from "./pages/PacksPage";
@@ -33,7 +34,12 @@ function AppRoutes() {
       <Route element={<PublicOnly />}>
         <Route path="/login" element={<LoginPage />} />
         <Route path="/register" element={<RegisterPage />} />
+        <Route path="/forgot-password" element={<ForgotPasswordPage />} />
       </Route>
+      {/* The links in emails work signed in or out: they are opened from a mailbox, often on
+          another device. */}
+      <Route path="/reset-password" element={<ResetPasswordPage />} />
+      <Route path="/verify-email" element={<VerifyEmailPage />} />
       <Route element={<RequireAuth />}>
         <Route element={<Layout />}>
           <Route index element={<DashboardPage />} />

@@ -12,10 +12,13 @@ import type {
   DeckResponse,
   DeleteAccountInput,
   DeckSort,
+  ForgotPasswordInput,
   LoginInput,
   PublicUser,
   RegisterInput,
   ReportCardInput,
+  ResetPasswordInput,
+  VerifyEmailInput,
   Settings,
   UpdateSettingsInput,
   StatsResponse,
@@ -93,14 +96,43 @@ export function useChangePassword() {
   });
 }
 
+// Asks for a new address. It only takes effect when the link sent to it is opened, so nothing
+// in the cache changes here.
 export function useChangeEmail() {
-  const qc = useQueryClient();
   return useMutation({
     mutationFn: (input: ChangeEmailInput) =>
-      api<{ user: PublicUser }>("/account/email", { method: "POST", body: input }),
-    onSuccess: ({ user }) => {
-      qc.setQueryData(ME, user);
-      qc.setQueryData<Settings | undefined>(["settings"], (s) => (s ? { ...s, email: user.email } : s));
+      api<{ pendingEmail: string }>("/account/email", { method: "POST", body: input }),
+  });
+}
+
+export function useResendVerification() {
+  return useMutation({
+    mutationFn: () => api<void>("/account/verification", { method: "POST" }),
+  });
+}
+
+export function useForgotPassword() {
+  return useMutation({
+    mutationFn: (input: ForgotPasswordInput) => api<void>("/auth/forgot-password", { method: "POST", body: input }),
+  });
+}
+
+export function useResetPassword() {
+  return useMutation({
+    mutationFn: (input: ResetPasswordInput) => api<void>("/auth/reset-password", { method: "POST", body: input }),
+  });
+}
+
+// Opens a link from a verification email. The address may be new (a change of email), so the
+// signed-in user and the settings are read again.
+export function useVerifyEmail() {
+  const qc = useQueryClient();
+  return useMutation({
+    mutationFn: (input: VerifyEmailInput) =>
+      api<{ status: "verified" | "changed" }>("/auth/verify-email", { method: "POST", body: input }),
+    onSuccess: () => {
+      qc.invalidateQueries({ queryKey: ME });
+      qc.invalidateQueries({ queryKey: ["settings"] });
     },
   });
 }

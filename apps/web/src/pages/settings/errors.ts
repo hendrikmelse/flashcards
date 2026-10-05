@@ -6,6 +6,7 @@ export function accountError(e: unknown, messages: { forbidden: string; conflict
     if (e.status === 403) return messages.forbidden;
     if (e.status === 409 && messages.conflict) return messages.conflict;
     if (e.status === 429) return "Too many attempts. Please wait a minute and try again.";
+    if (e.status === 502) return "We could not send the email. Please try again later.";
     if (e.status === 400) return "Please check what you entered and try again.";
   }
   return "Something went wrong. Please try again.";

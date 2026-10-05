@@ -13,6 +13,11 @@ services:
       TRUST_PROXY: "true"
       # Invite-only: only the emails in ALLOWED_EMAILS (set in .env) may register.
       REGISTRATION_MODE: allowlist
+      # Email (verification, password reset) goes out through Resend. The API key is a secret,
+      # so it is in .env; the rest is not. The links in emails start with PUBLIC_URL: change it
+      # and MAIL_FROM when the app moves to another domain.
+      PUBLIC_URL: https://flashcards.hendrikmelse.com
+      MAIL_FROM: Language Flashcards <noreply@mail.hendrikmelse.com>
     networks:
       - web # reached by Caddy
       - db # reaches Postgres

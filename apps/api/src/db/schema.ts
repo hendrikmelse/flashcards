@@ -34,6 +34,8 @@ export const users = pgTable("users", {
   // Optional display name; the app shows the email when there is none.
   name: text(),
   passwordHash: text().notNull(),
+  // When the user followed the link sent to this address; null until then.
+  emailVerifiedAt: timestamp({ withTimezone: true }),
   timezone: text().notNull().default("UTC"),
   dailyNewCardLimit: integer().notNull().default(20),
   // What the study cards show.
@@ -47,6 +49,30 @@ export const users = pgTable("users", {
   activeTo: text().references(() => languages.code),
   createdAt: timestamp({ withTimezone: true }).notNull().defaultNow(),
 });
+
+export const emailTokenPurposeEnum = pgEnum("email_token_purpose", [
+  "verify_email",
+  "reset_password",
+  "change_email",
+]);
+
+// One-time links sent by email. Only the hash of the token is stored, like sessions.
+export const emailTokens = pgTable(
+  "email_tokens",
+  {
+    id: text().primaryKey(), // hash of the token
+    userId: uuid()
+      .notNull()
+      .references(() => users.id, { onDelete: "cascade" }),
+    purpose: emailTokenPurposeEnum().notNull(),
+    // The address the email went to. For change_email this is the new address; the others
+    // are only valid while it is still the account's address.
+    email: text().notNull(),
+    expiresAt: timestamp({ withTimezone: true }).notNull(),
+    createdAt: timestamp({ withTimezone: true }).notNull().defaultNow(),
+  },
+  (t) => [index("email_tokens_user_idx").on(t.userId, t.purpose)],
+);
 
 export const sessions = pgTable(
   "sessions",

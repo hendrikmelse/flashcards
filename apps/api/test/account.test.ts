@@ -102,19 +102,19 @@ describe("changing the email address", () => {
     expect(await whoAmI(cookies)).toMatchObject({ email: "em1@example.com" });
   });
 
-  it("changes it, in lower case, and signing in follows", async () => {
+  it("only asks for confirmation: the address stays until the link is opened (see email-flows.test.ts)", async () => {
     const { cookies } = await register("em2@example.com", "Em");
     const res = await post("/account/email", cookies, { email: "  Em.New@Example.com ", password: PASSWORD });
-    expect(res.statusCode).toBe(200);
-    expect(res.json().user).toMatchObject({ email: "em.new@example.com", name: "Em" });
-    expect(await whoAmI(cookies)).toMatchObject({ email: "em.new@example.com" });
-    expect((await login("em.new@example.com")).status).toBe(200);
-    expect((await login("em2@example.com")).status).toBe(401);
+    expect(res.statusCode).toBe(202);
+    expect(res.json()).toEqual({ pendingEmail: "em.new@example.com" });
+    expect(await whoAmI(cookies)).toMatchObject({ email: "em2@example.com" });
+    expect((await login("em2@example.com")).status).toBe(200);
+    expect((await login("em.new@example.com")).status).toBe(401);
   });
 
-  it("accepts the address the account already has", async () => {
+  it("refuses the address the account already has", async () => {
     const { cookies } = await register("em3@example.com");
-    expect((await post("/account/email", cookies, { email: "em3@example.com", password: PASSWORD })).statusCode).toBe(200);
+    expect((await post("/account/email", cookies, { email: "em3@example.com", password: PASSWORD })).statusCode).toBe(400);
   });
 });
 

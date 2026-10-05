@@ -1,8 +1,10 @@
 import { buildApp } from "./app.js";
 import { registrationPolicyFromEnv } from "./auth/registration.js";
 import { deleteExpiredSessions } from "./auth/sessions.js";
+import { deleteExpiredEmailTokens } from "./auth/email-tokens.js";
 import { config } from "./config.js";
 import { db, sql } from "./db/client.js";
+import { mailSettingsFromEnv } from "./mail/config.js";
 
 const app = await buildApp({
   db,
@@ -11,18 +13,21 @@ const app = await buildApp({
   production: config.NODE_ENV === "production",
   staticDir: config.WEB_DIST,
   registration: registrationPolicyFromEnv(process.env),
+  ...mailSettingsFromEnv(process.env),
 });
 
-async function cleanUpSessions() {
+async function cleanUp() {
   try {
     const removed = await deleteExpiredSessions(db);
     if (removed > 0) app.log.info({ removed }, "removed expired sessions");
+    const tokens = await deleteExpiredEmailTokens(db);
+    if (tokens > 0) app.log.info({ removed: tokens }, "removed expired email tokens");
   } catch (err) {
-    app.log.error({ err }, "session cleanup failed");
+    app.log.error({ err }, "cleanup of expired sessions and email tokens failed");
   }
 }
-await cleanUpSessions();
-setInterval(cleanUpSessions, 60 * 60 * 1000).unref();
+await cleanUp();
+setInterval(cleanUp, 60 * 60 * 1000).unref();
 
 // Finish in-flight requests and close the database pool when the platform
 // stops the container (docker stop sends SIGTERM).

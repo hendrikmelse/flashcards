@@ -142,6 +142,8 @@ function AuthForm({ mode }: { mode: Mode }) {
       <p className="alt">
         {isLogin ? (
           <>
+            <Link to="/forgot-password">Forgot your password?</Link>
+            <br />
             New here? <Link to="/register">Create an account</Link>
           </>
         ) : (

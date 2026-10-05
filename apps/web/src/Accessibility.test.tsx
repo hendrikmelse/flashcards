@@ -2,7 +2,7 @@ import { screen, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import { a11yViolations } from "./test/axe";
-import { installMockApi, json, mock, renderApp } from "./test/harness";
+import { installMockApi, json, mock, renderApp, USER } from "./test/harness";
 
 const EN_NL = "fromLanguage=en&toLanguage=nl";
 
@@ -110,10 +110,20 @@ describe("automated accessibility checks (axe)", () => {
   it.each([
     ["the login page", "/login", "Log in"],
     ["the sign-up page", "/register", "Create your account"],
+    ["the forgot password page", "/forgot-password", "Reset your password"],
+    ["the choose a new password page", `/reset-password?token=${"a".repeat(43)}`, "Choose a new password"],
+    ["the page for a link that does not work", "/reset-password", "This link does not work"],
   ])("finds nothing on %s", async (_name, route, heading) => {
     mock.loggedIn = false;
     renderApp(route);
     await screen.findByRole("heading", { name: heading });
+    expect(await a11yViolations()).toEqual([]);
+  });
+
+  it("finds nothing under the reminder to confirm the email address", async () => {
+    mock.handlers["GET /auth/me"] = () => json(200, { user: { ...USER, emailVerified: false } });
+    renderApp("/");
+    await screen.findByRole("region", { name: "Confirm your email" });
     expect(await a11yViolations()).toEqual([]);
   });
 
@@ -150,6 +160,17 @@ describe("page titles", () => {
     renderApp("/login");
     await screen.findByRole("heading", { name: "Log in" });
     expect(document.title).toBe("Log in · Flashcards");
+  });
+
+  it.each([
+    ["/forgot-password", "Reset your password"],
+    ["/reset-password?token=" + "a".repeat(43), "Choose a new password"],
+    ["/verify-email", "Confirm your email"],
+  ])("titles the email link page %s", async (route, title) => {
+    mock.loggedIn = false;
+    renderApp(route);
+    await screen.findByRole("heading", { level: 1 });
+    expect(document.title).toBe(`${title} · Flashcards`);
   });
 });
 

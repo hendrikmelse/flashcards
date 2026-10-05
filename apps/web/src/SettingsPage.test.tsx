@@ -218,9 +218,7 @@ describe("Profile", () => {
       posts["/account/email"] = [];
       mock.handlers["POST /account/email"] = (body) => {
         posts["/account/email"]!.push(body);
-        const { email } = body as { email: string };
-        saved = { ...saved, email };
-        return json(200, { user: { id: "u1", email, name: saved.name } });
+        return json(202, { pendingEmail: (body as { email: string }).email });
       };
     });
 
@@ -241,18 +239,29 @@ describe("Profile", () => {
       expect(button).toBeEnabled();
     });
 
-    it("changes it, shows a checkmark, clears the fields, and the top bar and page follow", async () => {
+    it("sends a link instead of changing it: the address stays until the link is opened", async () => {
       const user = userEvent.setup();
       renderApp("/settings");
       await fill(user, "new@example.com", "my password");
       await user.click(screen.getByRole("button", { name: "Change email" }));
 
-      await screen.findByRole("button", { name: "Email changed" });
+      await screen.findByRole("button", { name: "Link sent" });
       expect(posts["/account/email"]).toEqual([{ email: "new@example.com", password: "my password" }]);
       expect(screen.getByLabelText("New email address")).toHaveValue("");
       expect(screen.getByLabelText("Current password")).toHaveValue("");
-      expect(screen.getByText("new@example.com", { selector: "strong" })).toBeInTheDocument();
-      expect(topBar()).toHaveTextContent("new@example.com");
+      const status = screen.getByRole("status");
+      expect(status).toHaveTextContent("We sent a link to new@example.com");
+      expect(status).toHaveTextContent("your email stays ann@example.com");
+      expect(topBar()).toHaveTextContent("ann@example.com");
+    });
+
+    it("says when the email could not be sent", async () => {
+      mock.handlers["POST /account/email"] = () => json(502, { error: "Could not send the email" });
+      const user = userEvent.setup();
+      renderApp("/settings");
+      await fill(user, "new@example.com", "pw");
+      await user.click(screen.getByRole("button", { name: "Change email" }));
+      expect(await screen.findByText(/could not send the email/i)).toBeInTheDocument();
     });
 
     it("refuses an invalid address without calling the server", async () => {

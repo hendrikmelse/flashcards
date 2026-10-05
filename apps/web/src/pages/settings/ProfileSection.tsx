@@ -79,6 +79,8 @@ function EmailForm({ email }: { email: string }) {
   const [next, setNext] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState<string | null>(null);
+  // The address a confirmation link was last sent to; the email only changes when it is opened.
+  const [sentTo, setSentTo] = useState<string | null>(null);
   const [flash, fire] = useFlash();
 
   function onSubmit(e: FormEvent) {
@@ -94,9 +96,10 @@ function EmailForm({ email }: { email: string }) {
     }
     setError(null);
     change.mutate(parsed.data, {
-      onSuccess: () => {
+      onSuccess: ({ pendingEmail }) => {
         setNext("");
         setPassword("");
+        setSentTo(pendingEmail);
         fire();
       },
     });
@@ -108,7 +111,14 @@ function EmailForm({ email }: { email: string }) {
         <h2 className="setting-title">Email address</h2>
         <p className="muted">
           Your email is <strong>{email}</strong>. To change it, enter the new address and your password.
+          We will send a link to the new address; the change happens when you open it.
         </p>
+        {sentTo && (
+          <p role="status">
+            We sent a link to <strong>{sentTo}</strong>. Open it to finish the change. Until then, your email
+            stays <strong>{email}</strong>.
+          </p>
+        )}
       </div>
       <div className="setting">
         <label htmlFor="new-email">New email address</label>
@@ -136,8 +146,8 @@ function EmailForm({ email }: { email: string }) {
           flash={flash}
           disabled={next.trim() === "" || password === ""}
           label="Change email"
-          pendingLabel="Changing email"
-          doneLabel="Email changed"
+          pendingLabel="Sending link"
+          doneLabel="Link sent"
         />
         <span role="alert" className="form-error">
           {error ??
