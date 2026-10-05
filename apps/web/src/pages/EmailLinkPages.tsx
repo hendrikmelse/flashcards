@@ -34,8 +34,10 @@ export function ForgotPasswordPage() {
           choose a new password. The link works for one hour.
         </p>
         <p className="muted">Nothing there? Look in your spam folder, or wait a minute and ask again.</p>
-        <p className="alt">
-          <Link to="/login">Back to log in</Link>
+        <p>
+          <Link to="/login" className="button primary">
+            Back to log in
+          </Link>
         </p>
       </main>
     );
@@ -103,9 +105,13 @@ export function ResetPasswordPage() {
     return (
       <main className="auth">
         <h1>Password changed</h1>
-        <p>Your password has been changed and you have been signed out everywhere. Log in with the new one.</p>
+        <p className="muted">
+          Your password has been changed and you have been signed out everywhere. Log in with the new one.
+        </p>
         <p>
-          <Link to="/login">Log in</Link>
+          <Link to="/login" className="button primary">
+            Log in
+          </Link>
         </p>
       </main>
     );
@@ -117,9 +123,13 @@ export function ResetPasswordPage() {
     return (
       <main className="auth">
         <h1>This link does not work</h1>
-        <p>It may have expired (they last an hour), or it may already have been used. You can ask for a new one.</p>
+        <p className="muted">
+          It may have expired (they last an hour), or it may already have been used. You can ask for a new one.
+        </p>
         <p>
-          <Link to="/forgot-password">Send a new link</Link>
+          <Link to="/forgot-password" className="button primary">
+            Send a new link
+          </Link>
         </p>
       </main>
     );
@@ -181,25 +191,29 @@ export function VerifyEmailPage() {
       {verify.isSuccess ? (
         <>
           <h1>{verify.data.status === "changed" ? "Email changed" : "Email confirmed"}</h1>
-          <p>
+          <p className="muted">
             {verify.data.status === "changed"
               ? "Your account now uses this address. Log in with it from now on."
               : "Thank you. Your email address is confirmed."}
           </p>
           <p>
-            <Link to="/">Continue</Link>
+            <Link to="/" className="button primary">
+              Return to dashboard
+            </Link>
           </p>
         </>
       ) : !token || verify.isError ? (
         <>
           <h1>{taken ? "That address is taken" : "This link does not work"}</h1>
-          <p>
+          <p className="muted">
             {taken
               ? "Another account has started using this email address since you asked for the change."
-              : "It may have expired, or it may already have been used. Log in and ask for a new one from Settings."}
+              : "It may have expired, or it may already have been used. Log in and click “Send the link again” in the banner at the top of the page."}
           </p>
           <p>
-            <Link to="/">Continue</Link>
+            <Link to="/" className="button primary">
+              Return to dashboard
+            </Link>
           </p>
         </>
       ) : (

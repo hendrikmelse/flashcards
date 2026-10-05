@@ -302,9 +302,9 @@ input {
   flex: 1 1 20rem;
 }
 
+/* The look comes from button.secondary; this only keeps the touch target tall enough. */
 .notice button {
   min-height: 2.75rem;
-  padding: 0.4rem 0.9rem;
 }
 
 .empty {
@@ -321,6 +321,15 @@ input {
   max-width: 22rem;
   margin: 0 auto;
   padding: 3rem 1rem;
+}
+
+/* Text stays left-aligned; a button that is a link sits centered on its own line. */
+.auth p:has(> a.button) {
+  text-align: center;
+}
+
+.auth p > a.button {
+  margin-top: 0.75rem;
 }
 
 .auth form {
@@ -593,6 +602,14 @@ button.secondary.danger-outline:hover:not(:disabled) {
 .alt {
   margin-top: 1.25rem;
   color: var(--muted);
+}
+
+.alt-line {
+  display: block;
+}
+
+.alt-line + .alt-line {
+  margin-top: 0.75rem;
 }
 
 /* Buttons */
