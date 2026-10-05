@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-# Deploys one image: pull, migrate, restart, wait for health, roll back if the
-# new version never becomes healthy. Called by CI over SSH, or by hand:
+# Deploys one image: pull, migrate, restart, wait for health and readiness, roll back if the
+# new version never becomes healthy and ready. Called by CI over SSH, or by hand:
 #   ./deploy.sh ghcr.io/hendrikmelse/flashcards:<commit-sha>
 #
 # Rolling back by hand is the same command with the previous tag.
@@ -31,6 +31,22 @@ wait_healthy() {
   return 1
 }
 
+# Waits up to ~30s for /api/ready, which also needs the database. The container's own healthcheck
+# is liveness only, so a release that starts but cannot use the database would pass it and stay
+# live. (The port is not published, so this asks from inside the container.) If the database itself
+# is down, the new version fails this check too: the deploy then fails and the old version keeps
+# running; deploy again once the database is back.
+READY_CHECK="fetch('http://127.0.0.1:'+process.env.PORT+'/api/ready').then(r=>process.exit(r.ok?0:1),()=>process.exit(1))"
+wait_ready() {
+  for _ in $(seq 1 15); do
+    if docker exec flashcards-api node -e "$READY_CHECK" >/dev/null 2>&1; then
+      return 0
+    fi
+    sleep 2
+  done
+  return 1
+}
+
 echo "==> pulling $NEW"
 docker compose pull api
 
@@ -40,8 +56,8 @@ docker compose run --rm --no-deps api node apps/api/dist/migrate.js
 echo "==> starting $NEW"
 docker compose up -d --no-deps api
 
-if ! wait_healthy; then
-  echo "!! $NEW did not become healthy" >&2
+if ! { wait_healthy && wait_ready; }; then
+  echo "!! $NEW did not become healthy and ready" >&2
   docker compose logs --tail 50 api >&2 || true
   if [ -n "$PREV" ]; then
     echo "==> rolling back to $PREV" >&2

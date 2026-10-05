@@ -469,13 +469,45 @@ Deploy the previous image tag (commit SHA) with the same script:
 ```
 
 `deploy.sh` also rolls back automatically if a new version never becomes
-healthy, and then waits to confirm the old version is healthy again (it prints
-`rollback succeeded` or `rollback FAILED`). If a migration fails, the deploy
+healthy **and ready** (the container's liveness check, then `/api/ready`, which
+needs the database), and then waits to confirm the old version is healthy again
+(it prints `rollback succeeded` or `rollback FAILED`). A failed deploy exits with
+an error, so the CI run fails. If the database itself is down during a deploy, the
+new version cannot become ready either, so the deploy fails and the old version
+keeps running: deploy again when the database is back. If a migration fails, the deploy
 stops before touching the running app. Because the app is a single container,
 every deploy has a few seconds of downtime while it restarts.
 **Database migrations are not undone by a rollback.** Keep them
 backward compatible: add columns and tables in one deploy, and remove the old
 ones only in a later one.
+
+### Trying a bad release (a drill for the rollback and the alert)
+
+To check that a bad release is rejected, or that the uptime alert still works,
+deploy one that cannot reach the database, without touching the repository or CI:
+build a throwaway image from the live one with a bad `DATABASE_URL`, and deploy it
+with a copy of `deploy.sh` that skips the registry pull (the image only exists
+on the server). Put the commands in a script file and copy it to the server, since
+docker reads stdin and would swallow a script piped over ssh.
+
+```bash
+cd /srv/flashcards
+LIVE="$(cat current-image)"
+docker build -q -t flashcards-breaktest:1 - <<DOCKERFILE
+FROM $LIVE
+CMD ["sh","-c","export DATABASE_URL=postgres://nobody:wrong@db-does-not-exist:5432/flashcards; exec node apps/api/dist/server.js"]
+DOCKERFILE
+grep -v '^docker compose pull api$' deploy.sh > deploy-test.sh && chmod +x deploy-test.sh
+./deploy-test.sh flashcards-breaktest:1 </dev/null    # expect: "did not become healthy and ready", then "rollback succeeded", exit 1
+rm deploy-test.sh && docker image rm flashcards-breaktest:1
+```
+
+With the readiness check in `deploy.sh`, this is rolled back by the script, in
+about a minute. To test the **alert** instead, the bad release has to stay up for
+longer than the monitor's 5-minute interval: use a copy of `deploy.sh` without the
+`wait_ready` call (before that check existed, this very release passed the deploy
+and stayed live). Roll back by hand with the command above (previous tag), then
+clean up as shown.
 
 ## 11. Routine maintenance
 
@@ -634,12 +666,18 @@ password made the script fail and send the failure ping.
 
 The live site was also used in a browser over HTTPS on 2026-10-04 (no console
 errors, and nothing from the Content-Security-Policy). The two UptimeRobot monitors
-were set up the same day; no outage has been simulated to see the alert arrive.
+were set up the same day, and tested with a deliberately bad release.
 
-## Not yet verified
-
-- Updating an already-running production deploy, and a production rollback
-  (both were verified locally).
+That release started normally but could not reach the database (built on the server
+from the live image with a bad `DATABASE_URL`, with no repository change). The deploy
+script of the time only waited for `/api/health`, so it counted the release as
+healthy and left it live: `/api/health` answered 200 while `/api/ready` answered 503.
+UptimeRobot's down email arrived within about five minutes of the outage starting.
+Rolling back by hand with the documented command (`deploy.sh` with the previous tag)
+took 12 seconds and `/api/ready` was 200 again. `deploy.sh` was then changed to also
+wait for `/api/ready` and roll back if it never answers 200. The same bad release was
+rejected by the new script, rolled back automatically in about 52 seconds with
+`rollback succeeded` and exit status 1, and a normal redeploy through it succeeded.
 
 ## Repeating the local test
 

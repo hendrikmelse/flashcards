@@ -178,11 +178,11 @@ One Docker image: the API serves `/api/*` and the built web app (falling back to
 
 - **Host:** an IONOS VPS (Ubuntu 24.04, x86) running Docker Compose. One shared Caddy and one shared Postgres (a database and user per app) so more apps can be added cheaply
 - **CI** (`.github/workflows/ci.yml`): typecheck, tests and build on every push; Docker build on every run; image pushed to GHCR from `main`; deploy over SSH. Markdown-only and `deploy/**`-only pushes skip builds and deploys. The workflow can be run by hand to redeploy
-- **Deploys:** images are tagged by git SHA. `deploy.sh` migrates, restarts, health-checks and rolls back automatically. Only the current and previous image are kept
+- **Deploys:** images are tagged by git SHA. `deploy.sh` migrates, restarts, waits until the app is healthy and can reach the database (`/api/ready`), and rolls back automatically if not. Only the current and previous image are kept
 - **Security:** a non-root user, SSH keys only, firewall (only ports 22, 80 and 443), fail2ban, unattended upgrades. The CI deploy key is restricted to one validated command
 - **Logs:** container logs go to the host journal (capped at 500 MB / 30 days), so they survive deploys
 - **Backups:** nightly `pg_dump` at 03:00 Pacific via a systemd timer, 14 days kept locally, then copied encrypted to Backblaze B2 with `restic` (7 daily, 4 weekly, 6 monthly), a Healthchecks.io alert if a night is missed or fails, restore drill verified from the offsite copy
-- **Uptime:** UptimeRobot checks `/api/ready` (app and database) and the home page every 5 minutes and emails on failure; see the runbook's section 8
+- **Uptime:** UptimeRobot checks `/api/ready` (app and database) and the home page every 5 minutes and emails on failure (tested with a deliberately bad release); see the runbook's section 8
 - **Access:** invite-only through `REGISTRATION_MODE=allowlist` and `ALLOWED_EMAILS`
 - **Production data:** a separate `seed-languages` command creates the languages without sample data
 
@@ -216,7 +216,6 @@ The full runbook, including server setup, rollback, backups and how to invite so
 - Invite codes instead of the email allowlist, which reveals whether an address is on it
 - Privacy policy and terms
 - End-to-end browser tests (today everything is unit and API tests)
-- Verify updating a running production deploy, and a production rollback (both only verified locally)
 
 ### After launch
 
