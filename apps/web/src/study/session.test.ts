@@ -341,6 +341,23 @@ describe("the number of cards left", () => {
     expect(remaining(next)).toBe(2);
   });
 
+  it("fetches again when the last card is a new one answered Good or Easy, instead of ending", () => {
+    // The top-up fetch that runs while the last card is on screen finds nothing and marks the session exhausted.
+    const last: Action[] = [fetchedNew(1, 1), { type: "pick" }, { type: "fetched", cards: [], moreNew: 1 }];
+    expect(run(last).exhausted).toBe(true);
+    for (const rating of ["good", "easy"] as const) {
+      const s = run([...last, answer(rating, "review")]);
+      expect(s.exhausted).toBe(false);
+      expect(phaseOf(s)).toBe("loading");
+      expect(remaining(s)).toBe(1);
+    }
+  });
+
+  it("still ends after the last card when there are no more new cards to come", () => {
+    const s = run([fetchedNew(1, 0), { type: "pick" }, { type: "fetched", cards: [], moreNew: 0 }, answer("good", "review")]);
+    expect(phaseOf(s)).toBe("done");
+  });
+
   it("treats a batch with no figure as having no more new cards", () => {
     const s = run([{ type: "fetched", cards: ids(2) }, { type: "pick" }, answer("good", "learning")]);
     expect(remaining(s)).toBe(1);
