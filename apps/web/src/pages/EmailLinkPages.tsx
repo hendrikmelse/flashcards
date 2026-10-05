@@ -208,7 +208,7 @@ export function VerifyEmailPage() {
           <p className="muted">
             {taken
               ? "Another account has started using this email address since you asked for the change."
-              : "It may have expired, or it may already have been used. Log in and click “Send the link again” in the banner at the top of the page."}
+              : "It may have expired, or it may already have been used. Log in to send a new link."}
           </p>
           <p>
             <Link to="/" className="button primary">
