@@ -66,6 +66,7 @@ Set in `.env` (see `.env.example`):
 | `PORT` | API port (default 3000) |
 | `REGISTRATION_MODE` | `open`, `allowlist` or `closed`. Production refuses to start unless this is set explicitly |
 | `ALLOWED_EMAILS` | Comma-separated emails, used with `allowlist` |
+| `RESEND_API_KEY`, `MAIL_FROM`, `PUBLIC_URL` | Email (verification, password reset) goes out through [Resend](https://resend.com). `MAIL_FROM` is the sender (`Name <noreply@mail.example.com>`) and `PUBLIC_URL` is where the app is reached from outside (links in emails start with it). Production refuses to start without all three; in development, without them, each email is printed to the API's console and `PUBLIC_URL` defaults to Vite's address |
 | `NODE_ENV=production` | Enables HSTS and `Secure` cookies |
 | `TRUST_PROXY=true` | Rate limits key on the real client IP. Only enable behind a trusted proxy (Caddy), never when the app is exposed directly |
 | `WEB_DIST` | Directory of the built web app for the API to serve |
@@ -85,7 +86,8 @@ Each language's words point at a language-independent **concept** (a word sense)
 - `Pack` and `PackConcept`: an ordered list of concepts. Packs are language-agnostic. The Add words pages show words English to Dutch and add them in both directions; the API can also add a single direction
 
 **Per-user state**
-- `User`: email, password hash, timezone, daily new-card limit
+- `User`: email (and when it was confirmed), password hash, timezone, daily new-card limit
+- `EmailToken`: a one-time link sent by email, for confirming an address, resetting a password or confirming a new address. Only the hash of the token is stored; a reset link lasts an hour, the others three days, and a new email of one kind cancels the earlier one
 - `UserCard`: one concept in one direction for one user, with its SRS state. The active deck is the set of a user's cards. Each direction is scheduled independently. Unique per (user, concept, from, to). The cards of a **language pair** (both directions, such as `en-nl`) are a deck of their own
 - `ReviewLog`: append-only, one row per answer, with rating, time taken, and state and interval before and after. A unique `client_review_id` per user makes retries safe. Keeping the full log means scheduling can be recomputed or re-tuned later
 
@@ -116,7 +118,9 @@ All routes live under `/api`.
 | `GET /study` | Read-only batch. Due learning and review cards ranked by how likely each is to have been forgotten, with new cards (up to the daily limit) spread through the first half of the queue. A word is not offered both ways on one day while there is another new word to show: a session takes one direction of each new word before any second direction (so words added one at a time are not paired), and a new card whose reverse was first shown today goes to the back of the new cards. The response also says whether this is the user's very first session (`firstSession`) and how many new cards wait behind the daily limit (`moreNew`): a new card answered Good or Easy on its first look does not use the limit, so each one brings another into the session, and the "left" counter on the study page counts them. Nothing is held back between sessions: what is due, or nearly due, is offered as soon as it is asked for |
 | `GET /study/counts` | The counts of learning, review and new cards, for the dashboard, plus `tomorrow` (how many cards will be waiting by the end of tomorrow's study day) |
 | `GET /settings`, `PATCH /settings` | The account's email, name, time zone, daily new-card limit, the language direction being learned and card display options (example sentences, word forms) and whether the Add words explainer has been dismissed (`addWordsIntroSeen`, shown once per account); all but the email can be changed. A new time zone moves due review cards to the start of the same day there |
-| `POST /account/password`, `POST /account/email` | Change the password (signs out every other session) or the email address. Both need the current password and are rate limited like login. There is no email verification yet |
+| `POST /auth/forgot-password`, `POST /auth/reset-password` | Password reset by email. The first always answers 204, whether or not the address has an account, and sends nothing more often than once a minute for an address. The second takes the token from the link and a new password, works once, and signs the account out everywhere. Rate limited like login |
+| `POST /auth/verify-email` | Opens a link from a verification email, or from the one sent to a new address (which is when the address changes). Needs no login. Rate limited like login |
+| `POST /account/password`, `POST /account/email`, `POST /account/verification` | Change the password (signs out every other session); ask for a new email address (answers 202 and emails a link to the new address, and the address changes only when it is opened); send the verification email again. All need a login, the first two need the current password, and all are rate limited like login |
 | `POST /account/delete` | Deletes the account with its cards, review history and sessions. Needs the password |
 | `GET /account/export` | Everything held about the user as a JSON download: account details (never the password), every card with its schedule, and the full review history |
 | `GET /stats` | When the next card is due, and the directions the deck has cards in, with how many |
@@ -203,7 +207,7 @@ The full runbook, including server setup, rollback, backups and how to invite so
 
 ### Should have for friends and family
 
-- Password reset and email verification (needs an email provider). Verification also has to cover changing the email address, which is unchecked today
+- ~~Password reset and email verification~~ (built: email goes out through Resend; a new account gets a confirmation link and a reminder under the top bar until it is opened, "Forgot your password?" is on the login page, and a new email address only takes effect when the link sent to it is opened). **Not live until** the Resend key and the sending domain are set up on the server and a real reset and verification have been tried end to end (runbook, "Email"). Confirming the address does not block anything yet
 - ~~Settings: name, email, password, daily new-card limit, time zone, theme, data export and account deletion~~ (done). The theme is kept per device, not per account; everything else, including what the study cards show, follows the account
 - ~~A "report a problem with this card" button, since the content is unreviewed~~ (done: in the study screen and the card view; read the reports with `npm run reports`, see `deploy/README.md`). Reports are not emailed, so check them now and then
 - ~~First-run guidance~~ (done: an empty dashboard points to the starter words and explains adding words and the answer buttons; the very first study session opens with a short explanation of how the cards and answer buttons work). Every page header (dashboard, My deck, Add words) has a "Start studying" button with the number of cards ready (disabled, saying "No cards ready to study", when there are none), above its navigation buttons, and the main navigation has a Study tab

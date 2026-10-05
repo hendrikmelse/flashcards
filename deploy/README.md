@@ -239,6 +239,7 @@ cd /srv/flashcards
 cp .env.example .env && chmod 600 .env
 nano .env    # 1) replace change-me in DATABASE_URL with the password printed above
              # 2) set ALLOWED_EMAILS to the email(s) allowed to register
+             # 3) set RESEND_API_KEY (see "Email (Resend)" in section 8)
 ```
 
 The app is **invite-only**: `compose.yaml` sets `REGISTRATION_MODE=allowlist`, so
@@ -377,6 +378,57 @@ During planned downtime (a Postgres major upgrade, say), pause the monitors in t
 UptimeRobot dashboard first, so the alerts are not noise. The backup check at
 Healthchecks.io (section 9) is separate: it watches that the nightly backup ran,
 not that the site is reachable.
+
+### Email (Resend)
+
+The app sends three kinds of email: a confirmation link for a new account, a
+password reset link, and a confirmation link for a new address. They go out
+through [Resend](https://resend.com) (free plan: 100 a day, 3,000 a month, far
+more than this app sends), from `noreply@mail.hendrikmelse.com`, a subdomain
+used only for this, so the app's mail reputation stays apart from the rest of
+`hendrikmelse.com`.
+
+The app **refuses to start** without `RESEND_API_KEY` (a secret, in
+`/srv/flashcards/.env`), `MAIL_FROM` and `PUBLIC_URL` (not secret, in
+`compose.yaml`), like it does without `REGISTRATION_MODE`. So do the setup below
+**before** deploying a release that includes email; if the key is missing, the
+new release never becomes healthy and `deploy.sh` rolls back (the old version
+keeps running).
+
+One-time setup:
+
+1. In Resend, add the domain `mail.hendrikmelse.com` (region: the one closest to
+   the server). It shows DNS records (an MX and an SPF TXT for the `send`
+   subdomain, and a DKIM TXT at `resend._domainkey.mail`).
+2. Add them in Namecheap, Advanced DNS, **exactly as shown**. Namecheap wants only
+   the host part (`send.mail`, `resend._domainkey.mail`), not the full name. Click
+   Verify in Resend; it can take a few minutes. Optionally add a DMARC record:
+   host `_dmarc`, TXT `v=DMARC1; p=none; rua=mailto:<your address>`.
+3. Create an API key in Resend with **sending access** limited to that domain.
+4. On the server, add it to `/srv/flashcards/.env` as `RESEND_API_KEY=re_...`
+   (the file is mode 600). Never commit it or paste it into a chat.
+5. `scp` the updated `deploy/server/flashcards/compose.yaml`, then deploy as
+   usual (push to `main`, or run the workflow).
+
+Try it from the outside: on the login page, "Forgot your password?" with your
+own address. The email should arrive in a minute (check spam the first time), the
+link should open the choose-a-password page at
+`https://flashcards.hendrikmelse.com/reset-password?token=...`, and the new
+password should work. Then sign up with a second address (or change the email in
+Settings) to check the confirmation link.
+
+If an email does not arrive: `sudo journalctl -t flashcards-api -o cat --since "10 min ago" | grep -i email`
+shows what Resend answered (an unverified domain or a revoked key are the usual
+causes), and the Resend dashboard, Emails, lists every message and what happened
+to it. Sign-up and "Forgot your password?" never tell the visitor an email failed
+(the first so it cannot be used to learn who has an account, the second so
+sign-up does not depend on Resend being up); the account page can send the
+confirmation again.
+
+To move to another domain later: add and verify the new sending domain in Resend,
+then change `MAIL_FROM` and `PUBLIC_URL` in `compose.yaml`, `scp` it and redeploy.
+Links already sent point at the old `PUBLIC_URL` and expire on their own (an hour
+for a reset, three days for the others).
 
 ## 9. Backups
 

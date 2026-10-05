@@ -4,6 +4,7 @@ import { useLogout, useMe } from "../api/hooks";
 import { useActiveLanguages } from "../hooks/useActiveLanguages";
 import { GearIcon, LogOutIcon } from "./icons";
 import { SplitFlag } from "./LanguageFlag";
+import { VerifyEmailNotice } from "./VerifyEmailNotice";
 
 export function Layout() {
   const { data: user } = useMe();
@@ -74,6 +75,7 @@ export function Layout() {
           </button>
         </div>
       </header>
+      <VerifyEmailNotice />
       <main className="page" id="main" tabIndex={-1} ref={main}>
         {/* A new page for each direction being learned, so nothing of the last one (a study session,
             an open card, search results) is left over when it changes. */}

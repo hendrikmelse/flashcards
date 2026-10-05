@@ -35,6 +35,11 @@ export async function deleteOtherSessions(db: Db, userId: string, keepToken: str
     .where(and(eq(sessions.userId, userId), ne(sessions.id, hashToken(keepToken))));
 }
 
+/** Signs the user out everywhere. */
+export async function deleteAllSessions(db: Db, userId: string) {
+  await db.delete(sessions).where(eq(sessions.userId, userId));
+}
+
 export async function deleteSession(db: Db, token: string) {
   await db.delete(sessions).where(eq(sessions.id, hashToken(token)));
 }

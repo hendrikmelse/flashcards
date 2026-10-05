@@ -5,7 +5,9 @@ import fastifyStatic from "@fastify/static";
 import Fastify from "fastify";
 import { authPlugin } from "./auth/plugin.js";
 import { OPEN_REGISTRATION, type RegistrationPolicy } from "./auth/registration.js";
+import type { MailDeps } from "./auth/email-flows.js";
 import type { Db } from "./db/types.js";
+import { createMemoryMailer, type Mailer } from "./mail/mailer.js";
 import { accountRoutes } from "./routes/account.js";
 import { authRoutes } from "./routes/auth.js";
 import { deckRoutes } from "./routes/deck.js";
@@ -31,6 +33,10 @@ export interface AppOptions {
   staticDir?: string;
   /** Who may create an account. Defaults to open. */
   registration?: RegistrationPolicy;
+  /** Sends the emails (verification, password reset). Defaults to one that keeps them to itself. */
+  mailer?: Mailer;
+  /** The address the app is reached at, which the links in emails start with. */
+  publicUrl?: string;
   /**
    * How many sign-up, login, password-checking and problem-report requests one client may make a
    * minute. Tests that create many accounts raise it.
@@ -52,9 +58,12 @@ export async function buildApp({
   production = false,
   staticDir,
   registration = OPEN_REGISTRATION,
+  mailer = createMemoryMailer(),
+  publicUrl = "http://localhost:5173",
   authRateLimit = 10,
   publicRateLimit = 120,
 }: AppOptions) {
+  const mail: MailDeps = { db, mailer, publicUrl };
   const app = Fastify({ logger, trustProxy });
 
   await app.register(helmet, helmetOptions(production));
@@ -66,14 +75,14 @@ export async function buildApp({
   await app.register(
     async (api) => {
       await api.register(healthRoutes, { db });
-      await api.register(authRoutes, { db, registration, rateLimitMax: authRateLimit });
+      await api.register(authRoutes, { db, registration, rateLimitMax: authRateLimit, mail });
       await api.register(packRoutes, { db, searchRateLimit: publicRateLimit, readRateLimit: publicRateLimit * 2 });
       await api.register(reportRoutes, { db, rateLimitMax: authRateLimit });
       await api.register(deckRoutes, { db });
       await api.register(studyRoutes, { db, scheduler });
       await api.register(statsRoutes, { db });
       await api.register(settingsRoutes, { db });
-      await api.register(accountRoutes, { db, rateLimitMax: authRateLimit });
+      await api.register(accountRoutes, { db, rateLimitMax: authRateLimit, mail });
     },
     { prefix },
   );

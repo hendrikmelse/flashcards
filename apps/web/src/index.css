@@ -285,6 +285,28 @@ input {
   color: var(--error);
 }
 
+/* A reminder under the top bar (confirm your email). Plain surface colours, so contrast holds in both themes. */
+.notice {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+  padding: 0.75rem 1rem;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  border-left: 4px solid var(--accent);
+}
+
+.notice p {
+  margin: 0;
+  flex: 1 1 20rem;
+}
+
+.notice button {
+  min-height: 2.75rem;
+  padding: 0.4rem 0.9rem;
+}
+
 .empty {
   padding: 1.5rem;
   background: var(--surface);

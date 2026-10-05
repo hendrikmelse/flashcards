@@ -1,4 +1,3 @@
-import { publicUserColumns, toPublicUser } from "../auth/public-user.js";
 import type { FastifyInstance, FastifyReply } from "fastify";
 import { and, asc, eq } from "drizzle-orm";
 import {
@@ -6,6 +5,8 @@ import {
   changePasswordSchema,
   deleteAccountSchema,
 } from "@flashcards/shared";
+import { sendChangeEmailEmail, sendVerificationEmail, type MailDeps } from "../auth/email-flows.js";
+import { sentRecently } from "../auth/email-tokens.js";
 import { hashPassword, verifyPassword } from "../auth/password.js";
 import { deleteOtherSessions, SESSION_COOKIE } from "../auth/sessions.js";
 import { loadEntries } from "../content/queries.js";
@@ -15,19 +16,12 @@ import type { Db } from "../db/types.js";
 const invalid = (reply: FastifyReply, issues: unknown) =>
   reply.code(400).send({ error: "Invalid input", issues });
 
-// The database error (code 23505) may be wrapped by the query layer, so look through its causes.
-const isUniqueViolation = (e: unknown): boolean => {
-  if (typeof e !== "object" || e === null) return false;
-  if ((e as { code?: unknown }).code === "23505") return true;
-  return isUniqueViolation((e as { cause?: unknown }).cause);
-};
-
 // Rows are read in chunks so a large deck does not become one enormous query.
 const CHUNK = 5000;
 
 export async function accountRoutes(
   app: FastifyInstance,
-  { db, rateLimitMax }: { db: Db; rateLimitMax: number },
+  { db, rateLimitMax, mail }: { db: Db; rateLimitMax: number; mail: MailDeps },
 ) {
   // Routes that check a password are limited like login, so they cannot be used to guess one.
   const limit = { config: { rateLimit: { max: rateLimitMax, timeWindow: "1 minute" } } };
@@ -38,6 +32,10 @@ export async function accountRoutes(
   }
   const wrongPassword = (reply: FastifyReply) =>
     reply.code(403).send({ error: "Incorrect password" });
+  const tooSoon = (reply: FastifyReply) =>
+    reply.code(429).send({ error: "An email was sent a moment ago. Wait a minute and try again" });
+  const couldNotSend = (reply: FastifyReply) =>
+    reply.code(502).send({ error: "Could not send the email. Please try again later" });
 
   // Changes the password. Every other session is signed out, so a stolen session does not
   // survive the change; this one stays.
@@ -54,25 +52,41 @@ export async function accountRoutes(
     return reply.code(204).send();
   });
 
-  // Changes the email address. There is no verification step yet, so this only proves that
-  // the person is signed in and knows the password.
+  // Starts an email change. The address stays as it is until the link sent to the new one is
+  // opened (POST /auth/verify-email), so a typo cannot lock the person out of password reset.
   app.post("/account/email", { ...limit, preHandler: app.requireAuth }, async (req, reply) => {
     const parsed = changeEmailSchema.safeParse(req.body);
     if (!parsed.success) return invalid(reply, parsed.error.issues);
     const userId = req.user!.id;
     if (!(await passwordMatches(userId, parsed.data.password))) return wrongPassword(reply);
 
+    const { email } = parsed.data;
+    if (email === req.user!.email) return reply.code(400).send({ error: "That is already your email" });
+    const [taken] = await db.select({ id: users.id }).from(users).where(eq(users.email, email));
+    if (taken) return reply.code(409).send({ error: "Email already registered" });
+    if (await sentRecently(db, userId, "change_email")) return tooSoon(reply);
+
     try {
-      const [user] = await db
-        .update(users)
-        .set({ email: parsed.data.email })
-        .where(eq(users.id, userId))
-        .returning(publicUserColumns);
-      return { user: toPublicUser(user!) };
-    } catch (e) {
-      if (isUniqueViolation(e)) return reply.code(409).send({ error: "Email already registered" });
-      throw e;
+      await sendChangeEmailEmail(mail, userId, email);
+    } catch (err) {
+      req.log.error({ err }, "could not send the change-of-email email");
+      return couldNotSend(reply);
     }
+    return reply.code(202).send({ pendingEmail: email });
+  });
+
+  // Sends the verification email again, for an account whose address is not verified yet.
+  app.post("/account/verification", { ...limit, preHandler: app.requireAuth }, async (req, reply) => {
+    const user = req.user!;
+    if (user.emailVerified) return reply.code(204).send();
+    if (await sentRecently(db, user.id, "verify_email")) return tooSoon(reply);
+    try {
+      await sendVerificationEmail(mail, user);
+    } catch (err) {
+      req.log.error({ err }, "could not send the verification email");
+      return couldNotSend(reply);
+    }
+    return reply.code(204).send();
   });
 
   // Deletes the account and everything that belongs to it (cards, review history, sessions).

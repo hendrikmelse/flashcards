@@ -94,6 +94,23 @@ export const changeEmailSchema = z.object({
 });
 export type ChangeEmailInput = z.infer<typeof changeEmailSchema>;
 
+export const forgotPasswordSchema = z.object({
+  email: z.string().trim().toLowerCase().email().max(254),
+});
+export type ForgotPasswordInput = z.infer<typeof forgotPasswordSchema>;
+
+// The token from the link in an email (reset, verify or confirm a new address).
+const emailTokenSchema = z.string().min(20).max(200);
+
+export const resetPasswordSchema = z.object({
+  token: emailTokenSchema,
+  newPassword: z.string().min(8).max(200),
+});
+export type ResetPasswordInput = z.infer<typeof resetPasswordSchema>;
+
+export const verifyEmailSchema = z.object({ token: emailTokenSchema });
+export type VerifyEmailInput = z.infer<typeof verifyEmailSchema>;
+
 export const deleteAccountSchema = z.object({ password: z.string().min(1).max(200) });
 export type DeleteAccountInput = z.infer<typeof deleteAccountSchema>;
 
@@ -101,6 +118,8 @@ export type PublicUser = {
   id: string;
   email: string;
   name: string | null;
+  /** Whether the user has proved they own the email address by following the link sent to it. */
+  emailVerified: boolean;
   /** What the user is learning, prompt language first. Each language pair is a deck of its own. */
   direction: { from: LanguageCode; to: LanguageCode };
 };
