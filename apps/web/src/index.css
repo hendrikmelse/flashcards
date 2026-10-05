@@ -302,9 +302,9 @@ input {
   flex: 1 1 20rem;
 }
 
+/* The look comes from button.secondary; this only keeps the touch target tall enough. */
 .notice button {
   min-height: 2.75rem;
-  padding: 0.4rem 0.9rem;
 }
 
 .empty {
