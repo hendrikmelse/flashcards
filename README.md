@@ -68,6 +68,7 @@ Set in `.env` (see `.env.example`):
 | `REGISTRATION_MODE` | `open`, `allowlist`, or `closed`. Production refuses to start unless this is set explicitly |
 | `ALLOWED_EMAILS` | Comma-separated emails, used with `allowlist` |
 | `RESEND_API_KEY`, `MAIL_FROM`, `PUBLIC_URL` | Email (verification, password reset) goes out through [Resend](https://resend.com). `MAIL_FROM` is the sender (`Name <noreply@mail.example.com>`) and `PUBLIC_URL` is where the app is reached from outside (links in emails start with it). Production refuses to start without all three; in development, without them, each email is printed to the API's console and `PUBLIC_URL` defaults to Vite's address |
+| `REPORT_NOTIFY_EMAIL` | Optional. Where to email each report, bug report, suggestion, pack request, and comment as it comes in (sent from `MAIL_FROM`, best effort). Without it, reports are only stored |
 | `NODE_ENV=production` | Enables HSTS and `Secure` cookies |
 | `TRUST_PROXY=true` | Rate limits key on the real client IP. Only enable behind a trusted proxy (Caddy), never when the app is exposed directly |
 | `WEB_DIST` | Directory of the built web app for the API to serve |
@@ -87,9 +88,11 @@ Each language's words point at a language-independent **concept** (a word sense)
 - `Pack` and `PackConcept`: an ordered list of concepts. Packs are language-agnostic. The Add words pages show words English to Dutch and add them in both directions; the API can also add a single direction
 
 **Per-user state**
-- `User`: email (and when it was confirmed), password hash, timezone, daily new-card limit
+- `User`: email (and when it was confirmed), password hash, account type (`user` or `admin`), timezone, daily new-card limit
 - `EmailToken`: a one-time link sent by email, for confirming an address, resetting a password, or confirming a new address. Only the hash of the token is stored; a reset link lasts an hour, the others three days, and a new email of one kind cancels the earlier one
 - `UserCard`: one concept in one direction for one user, with its SRS state. The active deck is the set of a user's cards. Each direction is scheduled independently. Unique per (user, concept, from, to). The cards of a **language pair** (both directions, such as `en-nl`) are a deck of their own
+- `Report` (table `card_reports`): what a user sent in, of a `kind`: a problem with a word (`card`, with the word, the direction it was shown in, and what was wrong), a `bug`, a `suggestion`, or a `pack_request` (these have a title and details instead). It is open until an admin resolves it, and it outlives its sender's account
+- `ReportComment`: one message in a report's conversation, either from the sender (while it is open) or an admin's reply (`fromAdmin`)
 - `ReviewLog`: append-only, one row per answer, with rating, time taken, and state and interval before and after. A unique `client_review_id` per user makes retries safe. Keeping the full log means scheduling can be recomputed or re-tuned later
 
 Translations are not one-to-one (English "run" has many senses; Dutch "kennen" and "weten" both translate "know"), which is why concepts are senses rather than words and packs need curation. A card is valid only if the concept has an entry in both languages; the add-to-deck endpoints enforce this.
@@ -100,6 +103,12 @@ Translations are not one-to-one (English "run" has many senses; Dutch "kennen" a
 - The study day rolls over at 04:00 in the user's timezone, which drives the daily new-card limit. The limit is worked out for each language pair, so studying one pair never uses up another. Only new cards whose first answer is Again or Hard count against it: one marked Good or Easy is already known, so it is free
 - The SRS engine is a set of pure functions (card state, rating, and time in; new state and due date out), which keeps it easy to unit test
 - All timestamps are stored in UTC; the user's timezone only matters at the day boundary
+
+### Reports and admins
+
+Users can send in four kinds of reports: a problem with a word (from the study screen or the card view), a bug, a feature suggestion, and a request for a pack (from a pack search that found nothing). The first three are sent from the Reports page, which the flag button in the header opens; it lists everything the user has sent, with its status and conversation, and can be filtered and sorted. A report is a conversation: while it is open its sender can add comments, and an admin replies. An admin can resolve a report once it has been replied to, and reopen it later. Each report and comment is emailed to `REPORT_NOTIFY_EMAIL` when that is set.
+
+Every account is a user unless it is made an admin with `npm run user-role` (the app never changes an account's type itself). Admins get an Admin dashboard, from the shield button next to the flag: usage statistics (accounts, accounts that studied in the last 7 days, and reviews, all time and in the last 7 days) and the open reports by type, with a button to the Manage reports page, where everyone's reports can be read, answered, and resolved. To anyone else `/admin` is a 404, and the admin routes refuse them on the server. The same can be done from the command line with `reports.js` (see `deploy/README.md`).
 
 ### API
 
@@ -202,7 +211,7 @@ The full runbook, including server setup, rollback, backups, and how to invite s
 
 ## Status and roadmap
 
-**Built:** auth with invite-only registration, a tabbed settings page (profile and email, study options, theme, password, data export, and account deletion), an optional name at sign-up shown in the top corner, the content model and importer (about 6,000 concepts in 89 packs, in four categories), the pack browser with pack and word search, the deck viewer (search, filters, sorting, adding words in both directions), the dashboard, study sessions (FSRS scheduling, queue ordered by chance of forgetting, a pause before a missed card repeats), the explainer page, and production deployment with CI and nightly backups.
+**Built:** auth with invite-only registration, a tabbed settings page (profile and email, study options, theme, password, data export, and account deletion), an optional name at sign-up shown in the top corner, the content model and importer (about 6,000 concepts in 89 packs, in four categories), the pack browser with pack and word search, the deck viewer (search, filters, sorting, adding words in both directions), the dashboard, study sessions (FSRS scheduling, queue ordered by chance of forgetting, a pause before a missed card repeats), the explainer page, reports and feedback (bugs, suggestions, and pack requests) with an admin dashboard, and production deployment with CI and nightly backups.
 
 ### Before anyone other than the owner uses it
 
@@ -217,7 +226,7 @@ The full runbook, including server setup, rollback, backups, and how to invite s
 
 - ~~Password reset and email verification~~ (built: email goes out through Resend; a new account gets a confirmation link and a reminder under the top bar until it is opened, "Forgot your password?" is on the login page, and a new email address only takes effect when the link sent to it is opened). **Not live until** the Resend key and the sending domain are set up on the server and a real reset and verification have been tried end to end (runbook, "Email"). Confirming the address does not block anything yet
 - ~~Settings: name, email, password, daily new-card limit, time zone, theme, data export, and account deletion~~ (done). The theme is kept per device, not per account; everything else, including what the study cards show, follows the account
-- ~~A "report a problem with this card" button, since the content is unreviewed~~ (done: in the study screen and the card view; read the reports with `npm run reports`, see `deploy/README.md`). Reports are not emailed, so check them now and then
+- ~~A "report a problem with this card" button, since the content is unreviewed~~ (done: in the study screen and the card view; each report is emailed to `REPORT_NOTIFY_EMAIL` when it is set, and is answered in the admin dashboard or with `npm run reports`; see `deploy/README.md`)
 - ~~First-run guidance~~ (done: an empty dashboard points to the starter words and explains adding words and the answer buttons; the very first study session opens with a short explanation of how the cards and answer buttons work). Every page header (dashboard, My deck, Add words) has a "Start studying" button with the number of cards ready (disabled, saying "No cards ready to study", when there are none), above its navigation buttons, and the main navigation has a Study tab
 - ~~Rate limits on the public pack and search endpoints~~ (done: per client, 120 searches and 240 pack or language reads a minute). Signed-in endpoints (deck, study) are not limited
 - ~~Uptime monitoring~~ (done: UptimeRobot, see the runbook). Error tracking is still to do
