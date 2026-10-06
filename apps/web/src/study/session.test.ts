@@ -222,6 +222,53 @@ describe("missed cards", () => {
   });
 });
 
+describe("missed cards when the server has more cards than are loaded", () => {
+  const loaded = (n: number, more = true) => run([{ type: "fetched", cards: ids(n), more }, { type: "pick" }]);
+
+  it("wait for the next batch instead of going in among the few cards loaded", () => {
+    const s = reducer(loaded(10), answer("again", "learning"));
+    expect(s.queue.map((c) => c.id)).toEqual(ids(9, 2).map((c) => c.id));
+    expect(s.deferred.map((d) => d.card.id)).toEqual(["c1"]);
+    expect(remaining(s)).toBe(10);
+  });
+
+  it("are slotted in among the whole queue once the batch arrives", () => {
+    let s = reducer(loaded(10), answer("again", "learning", 0.5));
+    s = reducer(s, { type: "fetched", cards: [...ids(10), ...ids(90, 11)], more: false });
+    expect(s.deferred).toEqual([]);
+    expect(s.queue).toHaveLength(100); // 9 left, 90 new ones, and the missed card
+    expect(s.queue.findIndex((c) => c.id === "c1")).toBe(49); // about halfway through the 99 others
+  });
+
+  it("are not held back once the queue is long enough", () => {
+    const s = reducer(loaded(60), answer("again", "learning", 0.5));
+    expect(s.deferred).toEqual([]);
+    expect(s.queue).toHaveLength(60);
+  });
+
+  it("are not held back when the last batch was not full", () => {
+    const s = reducer(loaded(10, false), answer("again", "learning"));
+    expect(s.deferred).toEqual([]);
+    expect(s.queue.map((c) => c.id)).toContain("c1");
+  });
+
+  it("come back anyway if the batch cannot be fetched", () => {
+    let s = reducer(loaded(10), answer("again", "learning"));
+    s = reducer(s, { type: "fetchFailed" });
+    expect(s.deferred).toEqual([]);
+    expect(s.queue.map((c) => c.id)).toContain("c1");
+  });
+
+  it("keep the session going when the batch brings nothing else", () => {
+    let s = reducer(loaded(1), answer("again", "learning"));
+    expect(phaseOf(s)).toBe("loading");
+    s = reducer(s, { type: "fetched", cards: [], more: false });
+    expect(s.queue.map((c) => c.id)).toEqual(["c1"]);
+    expect(phaseOf(s)).toBe("loading"); // the card is about to be picked
+    expect(reducer(s, { type: "pick" }).repeatNotice).toBe(true);
+  });
+});
+
 describe("the pause before the same card comes straight back", () => {
   const missOnlyCard = () =>
     run([{ type: "fetched", cards: [card("a")] }, { type: "pick" }, answer("again", "learning"), { type: "pick" }]);

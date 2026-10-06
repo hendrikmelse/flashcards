@@ -52,7 +52,9 @@ function useStudySession() {
 
   // Top up whenever the queue runs dry (this is also the initial load).
   useEffect(() => {
-    if (state.ended || state.queue.length > 0 || state.exhausted || state.fetchError || fetching.current) return;
+    // Also when a missed card is waiting for more cards to be slotted in among.
+    const waiting = state.deferred.length > 0;
+    if (state.ended || (state.queue.length > 0 && !waiting) || state.exhausted || state.fetchError || fetching.current) return;
     fetching.current = true;
     api<StudyResponse>(`/study?limit=${BATCH_SIZE}&pair=${pair}`)
       .then(
@@ -61,14 +63,15 @@ function useStudySession() {
             introChecked.current = true;
             if (r.firstSession && r.cards.length > 0) setIntro(true);
           }
-          dispatch({ type: "fetched", cards: r.cards, moreNew: r.moreNew });
+          // A full batch means the server probably has more than it sent.
+          dispatch({ type: "fetched", cards: r.cards, moreNew: r.moreNew, more: r.cards.length >= BATCH_SIZE });
         },
         () => dispatch({ type: "fetchFailed" }),
       )
       .finally(() => {
         fetching.current = false;
       });
-  }, [state.ended, state.queue.length, state.exhausted, state.fetchError, pair]);
+  }, [state.ended, state.queue.length, state.deferred.length, state.exhausted, state.fetchError, pair]);
 
   // Show the next card as soon as there is one.
   useEffect(() => {
