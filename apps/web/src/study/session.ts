@@ -25,6 +25,19 @@ export function againPosition(queueLength: number, random: number): number {
   return Math.min(queueLength, Math.max(MIN_CARDS_BACK, base + jitter));
 }
 
+/**
+ * With the server holding more cards than were loaded and fewer than this left in the queue, an
+ * "Again" card waits for the next batch before it is slotted in, so it lands among enough other
+ * cards instead of just behind the few that happen to be loaded.
+ */
+export const REFILL_BELOW = 50;
+
+/** Puts an "Again" card back into a queue, a few cards later. */
+function insertAgain(queue: StudyCardView[], card: StudyCardView, random: number): StudyCardView[] {
+  const at = againPosition(queue.length, random);
+  return [...queue.slice(0, at), card, ...queue.slice(at)];
+}
+
 export interface SessionStats {
   reviewed: number;
   again: number;
@@ -57,6 +70,10 @@ export interface SessionState {
    * fetched when the queue runs dry, and are counted among the cards left in the meantime.
    */
   unlocked: number;
+  /** The last batch was full, so the server probably has more cards than are loaded. */
+  more: boolean;
+  /** Cards answered "Again" that are waiting for the next batch to arrive before they go back in. */
+  deferred: { card: StudyCardView; random: number }[];
 }
 
 export const initialState: SessionState = {
@@ -72,10 +89,12 @@ export const initialState: SessionState = {
   ended: false,
   moreNew: 0,
   unlocked: 0,
+  more: false,
+  deferred: [],
 };
 
 export type Action =
-  | { type: "fetched"; cards: StudyCardView[]; moreNew?: number }
+  | { type: "fetched"; cards: StudyCardView[]; moreNew?: number; more?: boolean }
   | { type: "fetchFailed" }
   | { type: "retryFetch" }
   | { type: "pick" }
@@ -96,11 +115,18 @@ export function reducer(state: SessionState, action: Action): SessionState {
         ...(state.current ? [state.current.id] : []),
       ]);
       const fresh = action.cards.filter((c) => !known.has(c.id));
+      // Missed cards that were waiting for this batch go in now, among the cards that came with it.
+      const queue = state.deferred.reduce(
+        (q, d) => insertAgain(q, d.card, d.random),
+        [...state.queue, ...fresh],
+      );
       return {
         ...state,
         fetchError: false,
-        queue: [...state.queue, ...fresh],
-        exhausted: fresh.length === 0 && state.queue.length === 0,
+        queue,
+        deferred: [],
+        more: action.more ?? false,
+        exhausted: fresh.length === 0 && queue.length === 0,
         // What was made room for has arrived with the batch (or is not coming).
         moreNew: action.moreNew ?? 0,
         unlocked: 0,
@@ -108,7 +134,13 @@ export function reducer(state: SessionState, action: Action): SessionState {
     }
 
     case "fetchFailed":
-      return { ...state, fetchError: true };
+      // The missed cards cannot wait for a batch that is not coming; put them back among what is loaded.
+      return {
+        ...state,
+        fetchError: true,
+        queue: state.deferred.reduce((q, d) => insertAgain(q, d.card, d.random), state.queue),
+        deferred: [],
+      };
 
     case "retryFetch":
       return { ...state, fetchError: false };
@@ -145,7 +177,8 @@ export function reducer(state: SessionState, action: Action): SessionState {
       const stillLearning = result.state === "learning" || result.state === "relearning";
       const missed = rating === "again" && stillLearning; // it comes back later in this same session
       const returning = { ...card, state: result.state };
-      const at = againPosition(state.queue.length, random);
+      // With more cards on the server than are loaded, and few loaded, fetch before slotting it in.
+      const defer = missed && state.more && !state.exhausted && state.queue.length < REFILL_BELOW;
       // A new card that is already known does not use up the daily limit, so another one follows it.
       const makesRoom =
         card.state === "new" && (rating === "good" || rating === "easy") && state.unlocked < state.moreNew;
@@ -159,7 +192,8 @@ export function reducer(state: SessionState, action: Action): SessionState {
         revealed: false,
         repeatNotice: false,
         lastAgainId: missed ? card.id : null,
-        queue: missed ? [...state.queue.slice(0, at), returning, ...state.queue.slice(at)] : state.queue,
+        queue: missed && !defer ? insertAgain(state.queue, returning, random) : state.queue,
+        deferred: defer ? [...state.deferred, { card: returning, random }] : state.deferred,
         handled: state.handled.includes(card.id) ? state.handled : [...state.handled, card.id],
         unlocked: makesRoom ? state.unlocked + 1 : state.unlocked,
         stats: {
@@ -189,5 +223,5 @@ export function phaseOf(state: SessionState): Phase {
  * jump back up when the next batch arrived.
  */
 export function remaining(state: SessionState): number {
-  return state.queue.length + (state.current ? 1 : 0) + state.unlocked;
+  return state.queue.length + state.deferred.length + (state.current ? 1 : 0) + state.unlocked;
 }
