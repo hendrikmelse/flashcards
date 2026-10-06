@@ -95,7 +95,7 @@ describe("the settings page", () => {
     expect(await screen.findByRole("tab", { name: "Profile" })).toHaveAttribute("aria-selected", "true");
   });
 
-  it("moves between the sections with the arrow keys, Home and End", async () => {
+  it("moves between the sections with the arrow keys, Home, and End", async () => {
     const user = userEvent.setup();
     renderApp("/settings");
     const profile = await screen.findByRole("tab", { name: "Profile" });
@@ -569,7 +569,7 @@ describe("Security", () => {
     await user.type(screen.getByLabelText("Confirm new password"), confirm);
   };
 
-  it("changes the password, clears the fields and says other devices were signed out", async () => {
+  it("changes the password, clears the fields, and says other devices were signed out", async () => {
     const user = userEvent.setup();
     renderApp("/settings?tab=security");
     await fill(user, "old password", "a brand new password");

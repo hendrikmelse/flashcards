@@ -204,7 +204,7 @@ describe("missed cards", () => {
   });
 
   it("do not come back in the order they were missed", () => {
-    // Miss c1, c2 and c3 in turn, with different jitter each time.
+    // Miss c1, c2, and c3 in turn, with different jitter each time.
     let s = run([{ type: "fetched", cards: ids(30) }]);
     for (const random of [0.9, 0.1, 0.5]) {
       s = reducer(s, { type: "pick" });

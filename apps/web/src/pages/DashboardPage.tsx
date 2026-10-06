@@ -74,7 +74,7 @@ function GettingStarted() {
         </li>
         <li>
           <strong>Study a little each day.</strong> Reveal the answer, then say how it went: Again,
-          Hard, Good or Easy. The app uses your answers to bring each word back just before you
+          Hard, Good, or Easy. The app uses your answers to bring each word back just before you
           would forget it.
         </li>
       </ol>

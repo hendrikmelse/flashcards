@@ -2,7 +2,7 @@
 //
 //   nouns (every language): { plural }, { uncountable: true } or { pluralOnly: true }
 //   nl: { pastSingular, pastPlural, participle, auxiliary, present? }
-//       auxiliary is "hebben", "zijn" or "hebben/zijn"
+//       auxiliary is "hebben", "zijn", or "hebben/zijn"
 //   en: { past, participle, present? }
 //
 // `present` is only stored for verbs whose present tense is irregular, as a
@@ -86,7 +86,7 @@ export const presentPronouns = (language: string): readonly string[] | undefined
 export const verbFormKeys = (language: string): readonly string[] => LANGUAGE_FORMS[language]?.verbKeys ?? [];
 
 // The lines shown on the back of a card: the plural for nouns, and for verbs
-// the present (when irregular), past and participle. Empty for entries with no
+// the present (when irregular), past, and participle. Empty for entries with no
 // forms.
 export function formLines(language: string, details: Record<string, unknown>): FormLine[] {
   const lines: FormLine[] = [];

@@ -49,7 +49,7 @@ const entrySchema = z.object({
   sentences: z.array(z.string().trim().min(1)).default([]),
 });
 
-const keySchema = z.string().regex(KEY_PATTERN, "lowercase letters, digits and hyphens");
+const keySchema = z.string().regex(KEY_PATTERN, "lowercase letters, digits, and hyphens");
 
 export const conceptSchema = z.object({
   key: keySchema,
@@ -202,7 +202,7 @@ export function checkEntries(
   }
 }
 
-// Lowercase, drop accents and collapse doubled letters, so Dutch spelling
+// Lowercase, drop accents, and collapse doubled letters, so Dutch spelling
 // alternations (woon / won, maak / mak, kopiëren / kopieer) do not hide a match.
 function squash(s: string): string {
   return s

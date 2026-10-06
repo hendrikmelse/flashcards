@@ -41,7 +41,7 @@ provider-specific wording is marked, the rest is generic.
   or Plesk preinstalled.
 - **Size:** at least 2 GB RAM and 40 GB disk is comfortable. **1 GB RAM and
   10 GB disk is the bare minimum** and needs the extra steps in "Small servers"
-  below. Memory matters because Postgres, the app, Caddy and Docker all run
+  below. Memory matters because Postgres, the app, Caddy, and Docker all run
   here; disk matters because the images alone are about 1.2 GB and a deploy
   briefly holds two copies of the app image.
 - **Location:** the US location closest to US West that the plan offers.
@@ -337,7 +337,7 @@ the compose file requires it; prefix them with
 
 ### Logs
 
-The app, Postgres and Caddy send their logs to the host's systemd journal
+The app, Postgres, and Caddy send their logs to the host's systemd journal
 instead of storing them inside the container. A container's own log is deleted
 with the container, and every deploy replaces the app container, so before this
 change a bug's evidence vanished on the next deploy. The journal outlives
@@ -366,7 +366,7 @@ email to the owner). It has two monitors:
 | Monitor | URL | What a failure means |
 | --- | --- | --- |
 | API and database | `https://flashcards.hendrikmelse.com/api/ready` | the app is down, or it cannot reach Postgres |
-| The web app | `https://flashcards.hendrikmelse.com/` | Caddy, DNS, the certificate or the web app is broken, even when the API is fine |
+| The web app | `https://flashcards.hendrikmelse.com/` | Caddy, DNS, the certificate, or the web app is broken, even when the API is fine |
 
 `/api/ready` is the right one to watch: it runs `select 1` and answers 503 when the
 database is unreachable, where `/api/health` only says the process is up (and is
@@ -389,7 +389,7 @@ used only for this, so the app's mail reputation stays apart from the rest of
 `hendrikmelse.com`.
 
 The app **refuses to start** without `RESEND_API_KEY` (a secret, in
-`/srv/flashcards/.env`), `MAIL_FROM` and `PUBLIC_URL` (not secret, in
+`/srv/flashcards/.env`), `MAIL_FROM`, and `PUBLIC_URL` (not secret, in
 `compose.yaml`), like it does without `REGISTRATION_MODE`. So do the setup below
 **before** deploying a release that includes email; if the key is missing, the
 new release never becomes healthy and `deploy.sh` rolls back (the old version
@@ -483,7 +483,7 @@ docker compose exec -T postgres psql -U postgres -c "drop database restore_test"
 
 `offsite.sh` runs right after `backup.sh` as an `ExecStartPost=` of the backup
 service. It copies `/srv/postgres/backups` into an encrypted `restic` repository
-in a private B2 bucket, keeps 7 daily, 4 weekly and 6 monthly snapshots, checks
+in a private B2 bucket, keeps 7 daily, 4 weekly, and 6 monthly snapshots, checks
 the repository (plus a 10% slice of its data) each night and pings Healthchecks.
 
 One-time setup, besides the unit files in section 9:
@@ -600,9 +600,15 @@ you can clean up by hand.
 
 ## Reading problem reports
 
-Users can report a problem with a word (a wrong translation, forms or example
-sentence) from the study screen and the card view. Nothing is emailed; read them
-on the server:
+Users can report a problem with a word (a wrong translation, forms, or example
+sentence) from the study screen and the card view. If `REPORT_NOTIFY_EMAIL` is set
+in `/srv/flashcards/.env` (restart the container after changing it), each report is
+also emailed to that address as it comes in. Reporters see their own reports, with
+the status and the conversation, on the Your reports page, where they can also send a
+bug report or a feature suggestion; those arrive the same way (emailed, listed by
+`reports.js`, and answered with `resolve` and `reply`). A report's conversation is its
+sender's comments (added while it is open; each is emailed to you too) and your
+replies, and `reports.js` lists both under the report. Read them on the server:
 
 ```bash
 cd /srv/flashcards
@@ -611,10 +617,30 @@ docker compose run --rm --no-deps api node apps/api/dist/reports.js
 ```
 
 Each report shows its short id, the reason, the word in both languages with its
-content key, the user's note and who sent it. Fix the word in `content/`, deploy,
+content key, the user's note, and who sent it. Fix the word in `content/`, deploy,
 re-import (see above), then mark the reports handled with
-`... reports.js resolve <id> [<id>...]` (the first 8 characters of the id are
-enough). `reports.js --all` also lists handled ones.
+`... reports.js resolve <id> [<id>...] [-m "reply"]` (the first 8 characters of
+the id are enough); the reply, if given, is added to the conversation for the person
+who reported. `... reports.js reply <id> "reply"` adds a reply without resolving the
+report. `reports.js --all` also lists handled ones. In the app, the Admin dashboard's
+Manage reports page does the same: click a report to open it, reply, then resolve it
+(which needs at least one reply).
+
+## Admins
+
+Every account is a user unless it is made an admin. Admins get an Admin dashboard (the shield
+button in the header, next to the reports button) where they can read everyone's reports and
+reply to, resolve, or reopen them in the app instead of with `reports.js`. Make an account an
+admin on the server, after the deploy that adds the feature has run its migration:
+
+```bash
+cd /srv/flashcards
+export IMAGE="$(cat current-image)"
+docker compose run --rm --no-deps api node apps/api/dist/user-role.js you@example.com admin
+```
+
+Use `user` instead of `admin` to take it away. The app never changes an account's type itself,
+and the admin routes check it on the server, so the button only being hidden is not the protection.
 
 ## Inviting someone
 
@@ -678,7 +704,7 @@ publishes no port), and Caddy obtained a real Let's Encrypt certificate for
 `flashcards.hendrikmelse.com` in about 6 seconds. From outside, HTTPS presents a
 valid certificate, plain HTTP redirects to HTTPS, and the site answers 502 until
 the app is deployed. The CI key was installed as a restricted key and tested: it
-cannot run arbitrary commands, open a terminal or forward ports, and the one
+cannot run arbitrary commands, open a terminal, or forward ports, and the one
 allowed command form passes validation and stops at the registry login when given
 a bad token, without ever reaching `deploy.sh`.
 
@@ -694,7 +720,7 @@ of 1.8 GB, with no swap in use, and 5.7 GB of 58 GB of disk.
 Checked from outside against the live site: HTTPS with a valid certificate,
 the app shell, client routes, security headers, immutable caching of hashed
 assets, gzip, the API, uninvited registration refused with 403, cross-origin
-writes refused with 403, and **only ports 22, 80 and 443 reachable** (3000,
+writes refused with 403, and **only ports 22, 80, and 443 reachable** (3000,
 5432 and 8080 are closed). Caddy does not serve the app for other hostnames or
 the bare IP.
 
@@ -733,7 +759,7 @@ rejected by the new script, rolled back automatically in about 52 seconds with
 
 ## Repeating the local test
 
-After changing the Dockerfile, compose files or `deploy.sh`, rerun the local
+After changing the Dockerfile, compose files, or `deploy.sh`, rerun the local
 stack before pushing. In outline:
 
 1. `docker build -t flashcards:local .`

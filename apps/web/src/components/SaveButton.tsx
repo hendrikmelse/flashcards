@@ -21,7 +21,7 @@ type Props = {
   /** Show the checkmark (see useFlash). */
   flash: boolean;
   disabled?: boolean;
-  /** The label at rest, while saving and just after, which also name the button for screen readers. */
+  /** The label at rest, while saving, and just after, which also name the button for screen readers. */
   label?: string;
   pendingLabel?: string;
   doneLabel?: string;

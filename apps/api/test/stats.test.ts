@@ -152,7 +152,7 @@ describe("GET /deck list filters", () => {
     expect((await list("q=%25")).body.cards).toEqual([]); // % is literal
   });
 
-  it("combines the direction, stage and search filters", async () => {
+  it("combines the direction, stage, and search filters", async () => {
     const { body } = await list("fromLanguage=nl&toLanguage=en&state=review&q=hond");
     expect(body.cards).toHaveLength(1);
     expect(body.cards[0]).toMatchObject({ fromLanguage: "nl", state: "review" });

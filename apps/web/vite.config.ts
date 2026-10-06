@@ -21,5 +21,7 @@ export default defineConfig({
   test: {
     environment: "jsdom",
     setupFiles: ["./src/test/setup.ts"],
+    // The axe checks take several seconds when all the test files run at once.
+    testTimeout: 15_000,
   },
 });

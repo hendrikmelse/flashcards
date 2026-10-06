@@ -18,6 +18,8 @@ services:
       # and MAIL_FROM when the app moves to another domain.
       PUBLIC_URL: https://flashcards.hendrikmelse.com
       MAIL_FROM: Language Flashcards <noreply@mail.hendrikmelse.com>
+      # Who is emailed about each problem report. Set REPORT_NOTIFY_EMAIL in .env (an address is
+      # personal, so it is not kept here); without it, reports are only stored.
     networks:
       - web # reached by Caddy
       - db # reaches Postgres

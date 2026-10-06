@@ -33,7 +33,7 @@ function cardView(c: typeof userCards.$inferSelect, entries: EntryView[]) {
 }
 
 export async function deckRoutes(app: FastifyInstance, { db }: { db: Db }) {
-  // The user's cards, narrowed by language pair or direction, stage and a search word.
+  // The user's cards, narrowed by language pair or direction, stage, and a search word.
   const cardFilter = (
     userId: string,
     scope: Scope,

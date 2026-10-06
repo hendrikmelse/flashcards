@@ -97,7 +97,7 @@ export async function accountRoutes(
     const userId = req.user!.id;
     if (!(await passwordMatches(userId, parsed.data.password))) return wrongPassword(reply);
 
-    await db.delete(users).where(eq(users.id, userId)); // cascades to cards, reviews and sessions
+    await db.delete(users).where(eq(users.id, userId)); // cascades to cards, reviews, and sessions
     reply.clearCookie(SESSION_COOKIE, { path: "/" });
     return reply.code(204).send();
   });

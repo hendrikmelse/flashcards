@@ -78,7 +78,7 @@ function Settings_({ settings }: { settings: Settings }) {
     setParams(id === "profile" ? {} : { tab: id }, { replace: true });
   }
 
-  // Arrow keys, Home and End move between the tabs, as in any tab list.
+  // Arrow keys, Home, and End move between the tabs, as in any tab list.
   function onKeyDown(e: KeyboardEvent<HTMLDivElement>) {
     const at = TABS.findIndex((t) => t.id === tab);
     const to =

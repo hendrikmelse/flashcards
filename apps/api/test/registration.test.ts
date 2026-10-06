@@ -54,7 +54,7 @@ describe("registrationPolicyFromEnv", () => {
   });
 
   it("rejects unknown modes", () => {
-    expect(() => registrationPolicyFromEnv({ REGISTRATION_MODE: "invite" })).toThrow(/open, allowlist or closed/);
+    expect(() => registrationPolicyFromEnv({ REGISTRATION_MODE: "invite" })).toThrow(/open, allowlist, or closed/);
   });
 
   it("parses and normalizes the allowlist", () => {

@@ -22,15 +22,23 @@ export const cardStateEnum = pgEnum("card_state", [
   "relearning",
 ]);
 export const ratingEnum = pgEnum("rating", ["again", "hard", "good", "easy"]);
+// What a report is about: a word's card, a bug in the app, an idea for it, or a pack of words someone
+// could not find.
+export const reportKindEnum = pgEnum("report_kind", ["card", "bug", "suggestion", "pack_request"]);
 export const reportReasonEnum = pgEnum("report_reason", ["translation", "forms", "sentence", "other"]);
 
 // ---------------------------------------------------------------------------
 // Users & auth
 // ---------------------------------------------------------------------------
 
+// What an account may do: everyone is a user; admins can also see and answer everyone's reports.
+// Set with the `user-role` script (see deploy/README.md), never by the app.
+export const userRoleEnum = pgEnum("user_role", ["user", "admin"]);
+
 export const users = pgTable("users", {
   id: uuid().primaryKey().defaultRandom(),
   email: text().notNull().unique(),
+  role: userRoleEnum().notNull().default("user"),
   // Optional display name; the app shows the email when there is none.
   name: text(),
   passwordHash: text().notNull(),
@@ -302,8 +310,10 @@ export const reviewLogs = pgTable(
   ],
 );
 
-// Problems users have reported with a word's card. Read by the owner (`npm run reports`), who
-// fixes the content and marks the report resolved.
+// What users send in: problems with a word's card, bugs, and feature suggestions (`kind`). The
+// table keeps its first name, card_reports. The owner is emailed about each one, reads them
+// with `npm run reports` or in the app's admin dashboard, talks to the sender through comments, fixes
+// the content and marks the report resolved. The sender sees its status and the conversation.
 export const cardReports = pgTable(
   "card_reports",
   {
@@ -311,22 +321,43 @@ export const cardReports = pgTable(
     // Who sent it. Cleared when they delete their account: the report is about the word, and
     // is still worth reading, but it should no longer be tied to a person.
     userId: uuid().references(() => users.id, { onDelete: "set null" }),
-    conceptId: uuid()
-      .notNull()
-      .references(() => concepts.id, { onDelete: "cascade" }),
-    // The direction the card was shown in.
-    fromLanguage: text()
-      .notNull()
-      .references(() => languages.code),
-    toLanguage: text()
-      .notNull()
-      .references(() => languages.code),
-    reason: reportReasonEnum().notNull(),
+    kind: reportKindEnum().notNull().default("card"),
+    // A short summary, for bugs and suggestions. Empty for a card problem, which is about a word.
+    title: text().notNull().default(""),
+    // The word, the direction the card was shown in, and what was wrong with it: only for a card
+    // problem (see the check below).
+    conceptId: uuid().references(() => concepts.id, { onDelete: "cascade" }),
+    fromLanguage: text().references(() => languages.code),
+    toLanguage: text().references(() => languages.code),
+    reason: reportReasonEnum(),
     note: text().notNull().default(""),
     createdAt: timestamp({ withTimezone: true }).notNull().defaultNow(),
     resolvedAt: timestamp({ withTimezone: true }),
   },
-  (t) => [index("card_reports_open_idx").on(t.resolvedAt, t.createdAt)],
+  (t) => [
+    index("card_reports_open_idx").on(t.resolvedAt, t.createdAt),
+    check(
+      "card_reports_card_has_word",
+      sql`${t.kind} <> 'card' or (${t.conceptId} is not null and ${t.fromLanguage} is not null and ${t.toLanguage} is not null and ${t.reason} is not null)`,
+    ),
+  ],
+);
+
+// The conversation about a report: what its sender adds while it is open (more details, an answer to
+// a question), and the owner's replies (`fromAdmin`), in the order they were written.
+export const reportComments = pgTable(
+  "report_comments",
+  {
+    id: uuid().primaryKey().defaultRandom(),
+    reportId: uuid()
+      .notNull()
+      .references(() => cardReports.id, { onDelete: "cascade" }),
+    body: text().notNull(),
+    // Written by an admin, not by the report's sender.
+    fromAdmin: boolean().notNull().default(false),
+    createdAt: timestamp({ withTimezone: true }).notNull().defaultNow(),
+  },
+  (t) => [index("report_comments_report_idx").on(t.reportId, t.createdAt)],
 );
 
 // ---------------------------------------------------------------------------

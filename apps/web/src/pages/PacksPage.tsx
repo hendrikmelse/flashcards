@@ -12,13 +12,18 @@ import { useAddConcept, useConceptSearch, usePacks } from "../api/packs";
 import { useActiveLanguages } from "../hooks/useActiveLanguages";
 import { useAddWordsIntro } from "../hooks/useAddWordsIntro";
 import { ConceptDialog } from "../components/CardDialog";
+import { PackRequest } from "../components/PackRequest";
 import { PageHeadActions } from "../components/PageHeadActions";
+import { SearchIcon } from "../components/icons";
 import { ConceptRow } from "../components/ConceptRow";
 import { isBoolean, isOneOf, isString, useRemembered } from "../hooks/useRemembered";
 
 type Mode = "packs" | "words";
 
 type CategoryFilter = PackCategory | "all";
+
+/** How long the All button flashes, which the animation in the stylesheet fits (three pulses). */
+const FLASH_MS = 1500;
 
 export function PacksPage() {
   usePageTitle("Add words");
@@ -35,10 +40,29 @@ export function PacksPage() {
     isOneOf("all", ...PACK_CATEGORIES),
   );
 
-  // How many packs each category has, so empty categories are not offered.
+  // The categories there are, so ones with no packs at all are not offered: they stay on offer
+  // while a search finds nothing in them, so the buttons do not come and go as you type.
+  const everyCategory = new Set((packs.data ?? []).map((p) => p.category));
+  const categories = PACK_CATEGORIES.filter((c) => everyCategory.has(c));
+  // How many packs the search finds in each category (and in all of them), counted the way the list
+  // is, so each count is how many packs choosing that category would show.
+  const found = matchPacks(packs.data ?? [], query, hideInDeck);
   const perCategory = new Map<PackCategory, number>();
-  for (const p of packs.data ?? []) perCategory.set(p.category, (perCategory.get(p.category) ?? 0) + 1);
-  const categories = PACK_CATEGORIES.filter((c) => perCategory.has(c));
+  for (const p of found) perCategory.set(p.category, (perCategory.get(p.category) ?? 0) + 1);
+
+  // A search that finds nothing in the category chosen, but does in others: the list looks empty
+  // for no reason a glance can tell, so the All button flashes to point at where the packs are. It
+  // flashes when that happens (the search moves on, or another category is chosen), not on every
+  // keystroke after.
+  const foundElsewhere =
+    mode === "packs" && category !== "all" && query.trim() !== "" && (perCategory.get(category) ?? 0) === 0 && found.length > 0;
+  const [flashAll, setFlashAll] = useState(false);
+  useEffect(() => {
+    setFlashAll(foundElsewhere);
+    if (!foundElsewhere) return;
+    const done = setTimeout(() => setFlashAll(false), FLASH_MS);
+    return () => clearTimeout(done);
+  }, [foundElsewhere, category]);
 
   // Until it is dismissed, the explainer is all there is: nothing can be added before it is read.
   if (intro) return intro;
@@ -84,13 +108,18 @@ export function PacksPage() {
       {mode === "packs" && categories.length > 1 && (
         <div className="search-options">
           <div className="toggle" role="group" aria-label="Category">
-            <button type="button" aria-pressed={category === "all"} onClick={() => setCategory("all")}>
-              All<span className="count">{packs.data?.length ?? 0}</span>
+            <button
+              type="button"
+              className={flashAll ? "flash" : undefined}
+              aria-pressed={category === "all"}
+              onClick={() => setCategory("all")}
+            >
+              All<span className="count">{found.length}</span>
             </button>
             {categories.map((c) => (
               <button key={c} type="button" aria-pressed={category === c} onClick={() => setCategory(c)}>
                 {PACK_CATEGORY_LABELS[c]}
-                <span className="count">{perCategory.get(c)}</span>
+                <span className="count">{perCategory.get(c) ?? 0}</span>
               </button>
             ))}
           </div>
@@ -98,7 +127,13 @@ export function PacksPage() {
       )}
 
       {mode === "packs" ? (
-        <PackResults packs={packs} category={category} query={query} hideInDeck={hideInDeck} />
+        <PackResults
+          packs={packs}
+          category={category}
+          query={query}
+          hideInDeck={hideInDeck}
+          onShowAll={() => setCategory("all")}
+        />
       ) : (
         <WordResults query={query} hideInDeck={hideInDeck} />
       )}
@@ -111,18 +146,20 @@ type ResultProps = { query: string; hideInDeck: boolean };
 // Sorts "Dutch words 501–1000" before "Dutch words 1001–1500": numbers by value, not letter by letter.
 const byName = new Intl.Collator(undefined, { numeric: true, sensitivity: "base" });
 
-function PackResults({
-  packs,
-  category,
-  query,
-  hideInDeck,
-}: ResultProps & { packs: ReturnType<typeof usePacks>; category: CategoryFilter }) {
-  const words = query.toLowerCase().split(/\s+/).filter(Boolean);
-  // Packs whose name matches come first; the rest only match through the description.
-  // They start in name order (the sort is stable), so each group stays in that order.
-  const shown = [...(packs.data ?? [])]
+type PackList = NonNullable<ReturnType<typeof usePacks>["data"]>;
+
+const searchWords = (query: string) => query.toLowerCase().split(/\s+/).filter(Boolean);
+
+/**
+ * The packs a search finds, in the order to show them, whatever their category: the filters beside
+ * the list count these, and the list narrows them to the category chosen.
+ * Packs whose name matches come first; the rest only match through the description. They start in
+ * name order (the sort is stable), so each group stays in that order.
+ */
+function matchPacks(packs: PackList, query: string, hideInDeck: boolean): PackList {
+  const words = searchWords(query);
+  return [...packs]
     .sort((a, b) => byName.compare(a.name, b.name))
-    .filter((pack) => category === "all" || pack.category === category)
     .map((pack) => {
       const name = pack.name.toLowerCase();
       const text = `${name} ${(pack.description ?? "").toLowerCase()}`;
@@ -136,6 +173,18 @@ function PackResults({
     .filter(({ pack }) => !hideInDeck || !(pack.availableCount && pack.addedCount === pack.availableCount))
     .sort((x, y) => x.rank - y.rank)
     .map((m) => m.pack);
+}
+
+function PackResults({
+  packs,
+  category,
+  query,
+  hideInDeck,
+  onShowAll,
+}: ResultProps & { packs: ReturnType<typeof usePacks>; category: CategoryFilter; onShowAll: () => void }) {
+  const words = searchWords(query);
+  const matching = matchPacks(packs.data ?? [], query, hideInDeck);
+  const shown = matching.filter((pack) => category === "all" || pack.category === category);
 
   return (
     <>
@@ -143,13 +192,33 @@ function PackResults({
       {packs.isError && <p className="status error">Could not load packs. Please refresh.</p>}
       {packs.data?.length === 0 && <p className="empty">There are no packs yet.</p>}
       {packs.data && packs.data.length > 0 && shown.length === 0 && (
-        <p className="empty">
-          {words.length > 0
-            ? `No packs match “${query.trim()}”.`
-            : hideInDeck
-              ? "Every pack here is already in your deck."
-              : "There are no packs in this category."}
-        </p>
+        words.length > 0 && category !== "all" && matching.length > 0 ? (
+          // The category chosen has nothing for this search, but other categories do: point there
+          // (the All filter flashes too) rather than offering to request a pack that may exist.
+          <div className="empty empty-state">
+            <SearchIcon />
+            <p className="empty-title">
+              No packs in <span className="category-name">{PACK_CATEGORY_LABELS[category]}</span> match “{query.trim()}”
+            </p>
+            <p>
+              {matching.length} {matching.length === 1 ? "pack matches" : "packs match"} in other categories.
+            </p>
+            <button type="button" className="secondary" onClick={onShowAll}>
+              Show results in all categories
+            </button>
+          </div>
+        ) : words.length > 0 ? (
+          <div className="empty empty-state">
+            <SearchIcon />
+            <p className="empty-title">No packs match “{query.trim()}”</p>
+            <p>Try different words, or ask for the pack you were hoping to find.</p>
+            <PackRequest key={query.trim()} query={query.trim()} />
+          </div>
+        ) : (
+          <p className="empty">
+            {hideInDeck ? "Every pack here is already in your deck." : "There are no packs in this category."}
+          </p>
+        )
       )}
 
       <ul className="pack-list">

@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 # Copies ./backups to the offsite restic repository (Backblaze B2), applies
-# retention, verifies the repository and pings Healthchecks.io. Run by the
+# retention, verifies the repository, and pings Healthchecks.io. Run by the
 # backup service right after backup.sh (ExecStartPost), so it only runs when
 # the dump itself succeeded; when it does not, the missing ping is what raises
 # the alert.
 #
-# The repository location, its password, the B2 key and the ping URL come from
+# The repository location, its password, the B2 key, and the ping URL come from
 # /etc/flashcards-backup.env (root only, loaded by systemd; see
 # deploy/README.md, "Offsite backups"). restic encrypts everything before it
 # leaves the server, which matters because globals-*.sql holds password hashes.
@@ -26,7 +26,7 @@ trap fail ERR
 ping /start
 
 restic backup backups --host flashcards --tag nightly --quiet
-# 7 daily, 4 weekly and 6 monthly snapshots; --prune frees what nothing uses.
+# 7 daily, 4 weekly, and 6 monthly snapshots; --prune frees what nothing uses.
 restic forget --host flashcards --keep-daily 7 --keep-weekly 4 --keep-monthly 6 --prune --quiet
 # Checks the repository structure each night; reads a slice of the data too, so
 # all of it gets read over a few weeks.

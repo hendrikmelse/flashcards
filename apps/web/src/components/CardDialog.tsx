@@ -37,7 +37,7 @@ type Frame = {
 };
 
 // A card, both sides, with its example sentences and word forms: what you would see while
-// studying it, without the studying. Opens over the page; Escape, the close button or a click
+// studying it, without the studying. Opens over the page; Escape, the close button, or a click
 // outside it closes it, and focus returns to where it was.
 function CardFrame({
   conceptId,

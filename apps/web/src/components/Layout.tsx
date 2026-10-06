@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 import { NavLink, Outlet, useLocation } from "react-router";
 import { useLogout, useMe } from "../api/hooks";
 import { useActiveLanguages } from "../hooks/useActiveLanguages";
-import { GearIcon, LogOutIcon } from "./icons";
+import { FlagIcon, GearIcon, LogOutIcon, ShieldIcon } from "./icons";
 import { SplitFlag } from "./LanguageFlag";
 import { VerifyEmailNotice } from "./VerifyEmailNotice";
 
@@ -10,9 +10,13 @@ export function Layout() {
   const { data: user } = useMe();
   const logout = useLogout();
   const { direction } = useActiveLanguages();
-  // The settings button toggles: on the settings page it goes back to the dashboard.
+  // The settings, reports, and admin buttons toggle: on their own page they go back to the dashboard.
+  // (On a page inside the admin area, the admin button goes up to the admin dashboard first.)
   const { pathname } = useLocation();
   const onSettings = pathname === "/settings";
+  const onReports = pathname === "/reports";
+  const onAdmin = pathname === "/admin" || pathname.startsWith("/admin/");
+  const isAdmin = user?.role === "admin";
   const main = useRef<HTMLElement>(null);
   const first = useRef(true);
 
@@ -60,7 +64,16 @@ export function Layout() {
         </nav>
         <div className="account">
           <span className="email">{user?.name ? `Hi, ${user.name}` : user?.email}</span>
-          <NavLink to={onSettings ? "/" : "/settings"} className="icon-button" aria-label="Settings" data-tooltip="Settings">
+          <NavLink to={onReports ? "/" : "/reports"} className={`icon-button${onReports ? " active" : ""}`} aria-label="Reports" data-tooltip="Reports">
+            <FlagIcon />
+          </NavLink>
+          {/* Only admin accounts have this button; the server refuses everyone else anyway. */}
+          {isAdmin && (
+            <NavLink to={pathname === "/admin" ? "/" : "/admin"} className={`icon-button${onAdmin ? " active" : ""}`} aria-label="Admin dashboard" data-tooltip="Admin dashboard">
+              <ShieldIcon />
+            </NavLink>
+          )}
+          <NavLink to={onSettings ? "/" : "/settings"} className={`icon-button${onSettings ? " active" : ""}`} aria-label="Settings" data-tooltip="Settings">
             <GearIcon />
           </NavLink>
           <button

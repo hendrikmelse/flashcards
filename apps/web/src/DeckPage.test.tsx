@@ -385,7 +385,7 @@ describe("deck page", () => {
       await screen.findByRole("heading", { name: "My deck" });
     };
 
-    it("finds the stage, search, sort and order as they were", async () => {
+    it("finds the stage, search, sort, and order as they were", async () => {
       const user = userEvent.setup();
       renderApp("/deck");
       await user.click(await screen.findByRole("button", { name: /^Review/ }));

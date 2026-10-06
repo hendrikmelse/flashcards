@@ -211,7 +211,7 @@ describe("every request about the deck is for the pair", () => {
       json(200, { now: "x", nextDueAt: null, directions: directions(pairOfLastRequest()!) });
   });
 
-  it("asks for the deck, the counts and the stats of the pair", async () => {
+  it("asks for the deck, the counts, and the stats of the pair", async () => {
     wrap(<DashboardPage />);
     expect((await screen.findAllByRole("link", { name: /^Start studying/ }))[0]!).toBeInTheDocument();
     for (const path of ["/deck?limit=1", "/study/counts", "/stats"]) {

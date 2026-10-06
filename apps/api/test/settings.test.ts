@@ -55,7 +55,7 @@ describe("GET /settings", () => {
     expect((await app.inject({ method: "PATCH", url: "/settings", payload: { dailyNewCardLimit: 5 } })).statusCode).toBe(401);
   });
 
-  it("returns the account's email, name, time zone, daily limit and card display options", async () => {
+  it("returns the account's email, name, time zone, daily limit, and card display options", async () => {
     expect((await get()).json()).toEqual({
       email: "settings@example.com",
       name: null,
@@ -164,7 +164,7 @@ describe("PATCH /settings: daily new cards", () => {
     await patch({ dailyNewCardLimit: 20 });
   });
 
-  it("rejects a limit that is negative, fractional, too big or not a number", async () => {
+  it("rejects a limit that is negative, fractional, too big, or not a number", async () => {
     for (const bad of [-1, 1.5, 201, "10", null]) {
       expect((await patch({ dailyNewCardLimit: bad })).statusCode).toBe(400);
     }
@@ -182,7 +182,7 @@ describe("PATCH /settings: time zone", () => {
     await patch({ timezone: "UTC" });
   });
 
-  it("rejects an unknown time zone, an empty body and unknown fields", async () => {
+  it("rejects an unknown time zone, an empty body, and unknown fields", async () => {
     expect((await patch({ timezone: "Mars/Phobos" })).statusCode).toBe(400);
     expect((await patch({ timezone: "" })).statusCode).toBe(400);
     expect((await patch({})).statusCode).toBe(400);
@@ -263,7 +263,7 @@ describe("registering with a name", () => {
     expect(who.json().user.name).toBe("Jan");
   });
 
-  it("is optional: nothing, an empty name and a blank one all mean no name", async () => {
+  it("is optional: nothing, an empty name, and a blank one all mean no name", async () => {
     for (const [i, extra] of [{}, { name: "" }, { name: "   " }].entries()) {
       const r = await register(`unnamed-${i}@example.com`, extra);
       expect(r.status).toBe(201);
@@ -315,7 +315,7 @@ describe("the language direction being learned", () => {
     expect(settings.json().direction).toEqual({ from: "en", to: "nl" });
   });
 
-  it("can be changed, and is then what the settings, /auth/me and logging in again say", async () => {
+  it("can be changed, and is then what the settings, /auth/me, and logging in again say", async () => {
     const res = await patch({ direction: { from: "nl", to: "en" } });
     expect(res.statusCode).toBe(200);
     expect(res.json().direction).toEqual({ from: "nl", to: "en" });

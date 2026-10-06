@@ -153,7 +153,7 @@ describe("deleting the account", () => {
     expect(await rows(me.id)).toMatchObject({ users: 1, cards: 1, logs: 1 });
   });
 
-  it("deletes the account with its cards, history and sessions, and signs out", async () => {
+  it("deletes the account with its cards, history, and sessions, and signs out", async () => {
     const me = await withData("del2@example.com");
     const bystander = await withData("bystander@example.com");
     const conceptsBefore = (await db.select().from(concepts)).length;
@@ -176,7 +176,7 @@ describe("exporting data", () => {
     expect((await app.inject({ method: "GET", url: "/account/export" })).statusCode).toBe(401);
   });
 
-  it("returns the account, every card and the review history, as a download", async () => {
+  it("returns the account, every card, and the review history, as a download", async () => {
     const me = await register("export1@example.com", "Ex");
     const other = await register("export2@example.com");
     const [dogCard, houseCard] = await db

@@ -222,8 +222,19 @@ input {
   color: var(--text);
 }
 
+/* The page the button belongs to is open: marked like the current tab in the top bar, with the
+   darker text and an accent underline. */
 .icon-button.active {
-  color: var(--accent);
+  color: var(--text);
+}
+
+.icon-button.active::before {
+  content: "";
+  position: absolute;
+  left: 0.45rem;
+  right: 0.45rem;
+  bottom: 0.2rem;
+  border-bottom: 2px solid var(--accent);
 }
 
 .icon-button:disabled {
@@ -1355,7 +1366,7 @@ progress {
   accent-color: var(--accent);
 }
 
-/* A pack's page is one card: its name, description and Add all button at the top, and the words below. */
+/* A pack's page is one card: its name, description, and Add all button at the top, and the words below. */
 .pack-page-card {
   background: var(--surface);
   border: 1px solid var(--border);
@@ -1779,4 +1790,392 @@ button.rating kbd {
   margin: 0;
   font-size: 1.5rem;
   font-weight: 700;
+}
+
+/* Your reports */
+.my-reports {
+  display: grid;
+  gap: 0.75rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Beats the reading-text list styles (an indent, and a gap between items), so the cards line up with
+   the filters above them and the grid gap alone spaces them. */
+.prose .my-reports {
+  padding: 0;
+}
+
+.prose .my-reports > li + li {
+  margin-top: 0;
+}
+
+.my-report {
+  padding: 0.85rem 1rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+}
+
+.my-report p {
+  margin: 0;
+}
+
+.my-report-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.my-report-word {
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+.my-report-meta {
+  margin-top: 0.2rem;
+  font-size: 0.85rem;
+}
+
+.my-report-note {
+  margin-top: 0.5rem;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+/* The title with the two buttons at the right, level with it. */
+.reports-head {
+  align-items: center;
+}
+
+.feedback-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 0.6rem;
+}
+
+/* A line below the form as well as above it (the form's own top border), so it reads as a block
+   set apart from the list. */
+.feedback-form {
+  margin-bottom: 1.25rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--border);
+}
+
+/* Cancel and Send at the right of the form, Send last. */
+.feedback-actions {
+  justify-content: flex-end;
+}
+
+.feedback-form input[type="text"] {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0.5rem 0.65rem;
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  background: var(--bg);
+  color: inherit;
+  font: inherit;
+}
+
+/* What the author added to a report after sending it. */
+.my-report-comment {
+  margin-top: 0.6rem;
+  padding: 0.5rem 0.75rem;
+  border-left: 3px solid var(--border);
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+/* An admin's reply in the conversation: marked with the accent color. */
+.my-report-comment.from-admin {
+  border-left-color: var(--accent);
+}
+
+.my-report-comment-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+/* The box is always there while the report is open, with its button at the right. Both stretch to
+   the row's height, so the one-line box is as tall as the button. */
+.my-report-comment-form {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: stretch;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+/* Once the box has grown, the button keeps its own size, at the bottom beside the last line. */
+.my-report-comment-form[data-grown] button {
+  align-self: end;
+}
+
+.my-report-comment-form .form-error {
+  grid-column: 1 / -1;
+  margin: 0;
+}
+
+.my-report-comment-form textarea {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 0;
+  max-height: 9rem;
+  /* The page script lets it scroll only once it has reached max-height. */
+  overflow-y: hidden;
+  resize: none;
+  padding: 0.5rem 0.65rem;
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  background: var(--bg);
+  color: inherit;
+  font: inherit;
+}
+
+/* The empty state of the reports page: centered, with the page's icon above a short explanation. */
+.empty-state {
+  display: grid;
+  justify-items: center;
+  gap: 0.5rem;
+  padding: 2rem 1.5rem;
+  text-align: center;
+}
+
+.empty-state svg {
+  width: 1.75rem;
+  height: 1.75rem;
+  opacity: 0.7;
+}
+
+.empty-state p {
+  max-width: 30rem;
+  margin: 0;
+}
+
+.empty-state .empty-title {
+  font-weight: 600;
+  color: var(--text);
+}
+
+.empty-state button {
+  margin-top: 0.5rem;
+}
+
+/* Admin dashboard: everyone's reports as a table, each row opening into the whole report. */
+.admin-table-wrap {
+  overflow-x: auto;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+}
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.admin-table th,
+.admin-table td {
+  padding: 0.6rem 0.75rem;
+  border-top: 1px solid var(--border);
+  text-align: left;
+  vertical-align: top;
+}
+
+.admin-table thead th {
+  border-top: 0;
+  white-space: nowrap;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.admin-table thead th .link {
+  color: inherit;
+  font: inherit;
+}
+
+.admin-table td.admin-from,
+.admin-table td.admin-about {
+  overflow-wrap: anywhere;
+}
+
+.admin-table td.admin-about {
+  min-width: 10rem;
+  font-weight: 600;
+}
+
+.admin-row.open td {
+  border-bottom: 0;
+}
+
+/* The opened report sits under its row, set a little apart from the table. */
+.admin-detail td {
+  padding: 0 0.75rem 1rem;
+  border-top: 0;
+}
+
+/* The opened report spans the table, so the reply row (and its buttons) reaches the right edge; the
+   text in it keeps to a readable width. */
+.admin-detail-body {
+  display: grid;
+  gap: 0.25rem;
+}
+
+.admin-detail-body > p,
+.admin-detail-body > .my-report-comment {
+  max-width: 42rem;
+}
+
+.admin-detail-body p {
+  margin: 0;
+}
+
+.stat-hint {
+  margin-top: 0.15rem;
+  font-size: 0.8rem;
+}
+
+/* Rows open when clicked anywhere on them. */
+.admin-row {
+  cursor: pointer;
+}
+
+.admin-row:hover td {
+  background: color-mix(in srgb, var(--accent) 6%, transparent);
+}
+
+/* The title is a button for the keyboard, but reads as the row's text. */
+.admin-row-button {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+/* A second button beside the send button, for the admin's Resolve. */
+.my-report-comment-form.has-extra {
+  grid-template-columns: 1fr auto auto;
+}
+
+/* Reopen, at the bottom right of an opened resolved report. */
+.admin-detail-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.75rem;
+  margin-top: 0.75rem;
+}
+
+.admin-detail-actions .form-error {
+  margin: 0;
+}
+
+/* The page not found page. */
+.not-found {
+  display: grid;
+  justify-items: center;
+  gap: 0.5rem;
+  max-width: 28rem;
+  margin: 0 auto;
+  padding: 4rem 1rem;
+  text-align: center;
+}
+
+.not-found h1,
+.not-found p {
+  margin: 0;
+}
+
+.not-found-code {
+  font-size: 4.5rem;
+  font-weight: 700;
+  line-height: 1;
+  color: color-mix(in srgb, var(--accent) 55%, var(--bg));
+}
+
+.not-found-actions {
+  margin-top: 1rem;
+}
+
+.not-found-report {
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+/* The button of the form that is open stays filled in, like a pressed toggle, so it is clear which
+   form it opened (and that pressing it again closes it). */
+.feedback-buttons button[aria-expanded="true"],
+.feedback-buttons button[aria-expanded="true"]:hover:not(:disabled) {
+  background: var(--accent);
+  color: var(--accent-text);
+}
+
+/* The form for asking for a pack, inside the pack search's empty state: left-aligned text in a
+   centered block. */
+.pack-request-form {
+  display: grid;
+  gap: 0.4rem;
+  width: 100%;
+  max-width: 28rem;
+  margin-top: 0.75rem;
+  text-align: left;
+}
+
+.pack-request-form label {
+  font-weight: 500;
+}
+
+.pack-request-form input[type="text"],
+.pack-request-form textarea {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0.5rem 0.65rem;
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  background: var(--bg);
+  color: inherit;
+  font: inherit;
+}
+
+.pack-request-form textarea {
+  resize: vertical;
+}
+
+.pack-request-done {
+  margin-top: 0.5rem;
+  color: var(--text);
+}
+
+/* The All filter flashing, to say the packs the search found are in other categories. Three pulses
+   of 0.5s, which is FLASH_MS in PacksPage. Without motion it is lit for the same time instead. */
+.toggle button.flash {
+  animation: toggle-flash 0.5s ease-in-out 3;
+}
+
+@keyframes toggle-flash {
+  50% {
+    background: color-mix(in srgb, var(--accent) 40%, transparent);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .toggle button.flash {
+    animation: none;
+    background: color-mix(in srgb, var(--accent) 40%, transparent);
+  }
+}
+
+/* The category's name in "No packs in Topics match…", picked out from the rest of the sentence. */
+.category-name {
+  color: var(--accent);
 }

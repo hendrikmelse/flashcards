@@ -31,12 +31,12 @@ export function registrationPolicyFromEnv(env: NodeJS.ProcessEnv): RegistrationP
 
   if (!raw) {
     if (env.NODE_ENV === "production") {
-      throw new Error("REGISTRATION_MODE must be set in production: open, allowlist or closed");
+      throw new Error("REGISTRATION_MODE must be set in production: open, allowlist, or closed");
     }
     return OPEN_REGISTRATION;
   }
   if (raw !== "open" && raw !== "allowlist" && raw !== "closed") {
-    throw new Error(`REGISTRATION_MODE must be open, allowlist or closed (got "${raw}")`);
+    throw new Error(`REGISTRATION_MODE must be open, allowlist, or closed (got "${raw}")`);
   }
 
   const allowedEmails = (env.ALLOWED_EMAILS ?? "")
