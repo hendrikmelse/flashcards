@@ -16,7 +16,13 @@ import type {
   LoginInput,
   PublicUser,
   RegisterInput,
+  MyReport,
   ReportCardInput,
+  AddCommentInput,
+  AdminReport,
+  AdminStats,
+  UpdateReportInput,
+  SubmitFeedbackInput,
   ResetPasswordInput,
   VerifyEmailInput,
   Settings,
@@ -203,9 +209,82 @@ export function useDeckCard(id: string) {
 
 // A problem someone found with a word's card.
 export function useReportCard(conceptId: string) {
+  const qc = useQueryClient();
   return useMutation({
     mutationFn: (input: Omit<ReportCardInput, "fromLanguage" | "toLanguage"> & { fromLanguage: string; toLanguage: string }) =>
       api<{ ok: true }>(`/concepts/${conceptId}/report`, { method: "POST", body: input }),
+    // The new report belongs in the list on the Your reports page.
+    onSuccess: () => qc.invalidateQueries({ queryKey: ["reports"] }),
+  });
+}
+
+// A bug report or a feature suggestion.
+export function useSendFeedback() {
+  const qc = useQueryClient();
+  return useMutation({
+    mutationFn: (input: SubmitFeedbackInput) => api<{ ok: true }>("/reports", { method: "POST", body: input }),
+    onSuccess: () => qc.invalidateQueries({ queryKey: ["reports"] }),
+  });
+}
+
+// Everyone's reports, for the admin dashboard. The server refuses anyone who is not an admin.
+export function useAdminReports() {
+  return useQuery({
+    queryKey: ["admin", "reports"],
+    queryFn: () => api<{ reports: AdminReport[] }>("/admin/reports"),
+  });
+}
+
+// The numbers for the admin dashboard.
+export function useAdminStats() {
+  return useQuery({
+    queryKey: ["admin", "stats"],
+    queryFn: () => api<AdminStats>("/admin/stats"),
+  });
+}
+
+const refreshAdmin = (qc: ReturnType<typeof useQueryClient>) => {
+  void qc.invalidateQueries({ queryKey: ["admin", "reports"] });
+  void qc.invalidateQueries({ queryKey: ["admin", "stats"] });
+  // The admin's own reports list shows the same conversation.
+  void qc.invalidateQueries({ queryKey: ["reports"] });
+};
+
+// An admin's reply to a report: a message in its conversation with the sender.
+export function useAdminReply(reportId: string) {
+  const qc = useQueryClient();
+  return useMutation({
+    mutationFn: (input: AddCommentInput) =>
+      api<{ ok: true }>(`/admin/reports/${reportId}/comments`, { method: "POST", body: input }),
+    onSuccess: () => refreshAdmin(qc),
+  });
+}
+
+// Resolving or reopening a report. The server only resolves one that has been replied to.
+export function useUpdateReport(reportId: string) {
+  const qc = useQueryClient();
+  return useMutation({
+    mutationFn: (input: UpdateReportInput) =>
+      api<{ ok: true }>(`/admin/reports/${reportId}`, { method: "PATCH", body: input }),
+    onSuccess: () => refreshAdmin(qc),
+  });
+}
+
+// A comment on one of the user's own open reports.
+export function useAddComment(reportId: string) {
+  const qc = useQueryClient();
+  return useMutation({
+    mutationFn: (input: AddCommentInput) =>
+      api<{ ok: true }>(`/reports/${reportId}/comments`, { method: "POST", body: input }),
+    onSuccess: () => qc.invalidateQueries({ queryKey: ["reports"] }),
+  });
+}
+
+// The reports the user has made, with their status and any response.
+export function useMyReports() {
+  return useQuery({
+    queryKey: ["reports"],
+    queryFn: () => api<{ reports: MyReport[] }>("/reports"),
   });
 }
 
@@ -215,7 +294,7 @@ const MIN_SPINNER_MS = 300;
 
 export type DeckStage = "all" | "new" | "learning" | "review";
 
-// The cards in the user's deck, a page at a time, narrowed by direction, stage and a search term.
+// The cards in the user's deck, a page at a time, narrowed by direction, stage, and a search term.
 export function useDeckCards(
   direction: { from: string; to: string } | null,
   stage: DeckStage,

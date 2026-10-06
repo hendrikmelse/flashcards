@@ -42,7 +42,7 @@ beforeAll(async () => {
 }, 60_000);
 
 beforeEach(async () => {
-  // Cascades remove entries, sentence links, pack membership and cards.
+  // Cascades remove entries, sentence links, pack membership, and cards.
   await db.delete(userCards);
   await db.delete(users);
   await db.delete(concepts);

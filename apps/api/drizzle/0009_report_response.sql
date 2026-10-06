@@ -1,0 +1,1 @@
+ALTER TABLE "card_reports" ADD COLUMN "response" text DEFAULT '' NOT NULL;

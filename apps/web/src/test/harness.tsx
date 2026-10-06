@@ -12,6 +12,7 @@ export const USER = {
   email: "ann@example.com",
   name: null as string | null,
   emailVerified: true,
+  role: "user",
   direction: { from: "en" as "en" | "nl", to: "nl" as "en" | "nl" },
 };
 

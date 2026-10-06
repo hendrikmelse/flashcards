@@ -58,6 +58,30 @@ beforeEach(() => {
       hasMore: false,
       cards: [dog, fish],
     });
+  mock.handlers["GET /reports"] = () =>
+    json(200, {
+      reports: [
+        {
+          id: "r1",
+          kind: "card",
+          title: "",
+          conceptId: "c1",
+          front: dog.front,
+          back: dog.back,
+          fromLanguage: "en",
+          toLanguage: "nl",
+          reason: "translation",
+          note: "It should say hond.",
+          status: "resolved",
+          comments: [
+            { id: "m1", body: "Thanks for looking.", fromAdmin: false, createdAt: "2026-10-02T10:00:00.000Z" },
+            { id: "m2", body: "Fixed, thanks!", fromAdmin: true, createdAt: "2026-10-03T09:00:00.000Z" },
+          ],
+          createdAt: "2026-10-01T10:00:00.000Z",
+          resolvedAt: "2026-10-03T10:00:00.000Z",
+        },
+      ],
+    });
   mock.handlers["GET /deck/card-dog"] = () => json(200, { card: dog, sentences: dog.sentences });
   mock.handlers[`GET /packs?${EN_NL}`] = () => json(200, { packs });
   mock.handlers[`GET /packs/p1?${EN_NL}&limit=1000`] = () =>
@@ -78,6 +102,7 @@ describe("automated accessibility checks (axe)", () => {
     ["the add words page", "/add-words", "Add words"],
     ["a pack's page", "/add-words/p1", "Sample pack"],
     ["how scheduling works", "/how-it-works", "How scheduling works"],
+    ["your reports", "/reports", "Your reports"],
   ])("finds nothing on %s", async (_name, route, heading) => {
     renderApp(route);
     await screen.findByRole("heading", { name: heading });
@@ -213,7 +238,7 @@ describe("moving around with the keyboard", () => {
 });
 
 describe("words marked with their language", () => {
-  it("marks the words, forms and sentences of a card with their language", async () => {
+  it("marks the words, forms, and sentences of a card with their language", async () => {
     const user = userEvent.setup();
     renderApp("/study");
     await user.click(await screen.findByRole("button", { name: "Show answer" }));

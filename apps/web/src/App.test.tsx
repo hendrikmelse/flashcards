@@ -23,7 +23,7 @@ describe("auth flow", () => {
     expect(await screen.findByRole("heading", { name: "Your deck" })).toBeInTheDocument();
   });
 
-  it("has Dashboard, Study, My deck and Add words in the main navigation", async () => {
+  it("has Dashboard, Study, My deck, and Add words in the main navigation", async () => {
     mock.loggedIn = true;
     renderApp("/");
     const nav = await screen.findByRole("navigation", { name: "Main" });
@@ -512,7 +512,7 @@ describe("dashboard", () => {
     expect(screen.getByRole("link", { name: "Add more words" })).toHaveAttribute("href", "/add-words");
   });
 
-  it("shows how the deck splits into review, learning and new", async () => {
+  it("shows how the deck splits into review, learning, and new", async () => {
     mock.loggedIn = true;
     renderApp("/");
     const progress = await screen.findByRole("region", { name: "Progress" });
@@ -715,7 +715,7 @@ describe("dashboard", () => {
       const steps = guide.getAllByRole("listitem").map((li) => li.textContent);
       expect(steps).toHaveLength(2);
       expect(steps[0]).toMatch(/Add some words/);
-      expect(steps[1]).toMatch(/Again,\s+Hard, Good or Easy/);
+      expect(steps[1]).toMatch(/Again,\s+Hard, Good, or Easy/);
       expect(guide.queryByText(/direction/i)).not.toBeInTheDocument();
       // The link is on a line of its own, after the steps.
       const link = guide.getByRole("link", { name: "Learn more about scheduling" });

@@ -34,7 +34,7 @@ export function Entries({
   );
 }
 
-// Word forms (noun plural; verb past, participle and irregular present). Entries without
+// Word forms (noun plural; verb past, participle, and irregular present). Entries without
 // forms render nothing.
 export function Forms({ entries }: { entries: EntryView[] }) {
   const withForms = entries

@@ -14,6 +14,7 @@ await build({
     "seed-languages": "src/db/seed-languages-cli.ts",
     "import-content": "src/db/import-content-cli.ts",
     reports: "src/db/reports-cli.ts",
+    "user-role": "src/db/user-role-cli.ts",
   },
   bundle: true,
   platform: "node",

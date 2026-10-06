@@ -1,7 +1,9 @@
 import { Navigate, Route, Routes, useParams } from "react-router";
 import { Layout } from "./components/Layout";
 import { ActiveLanguagesProvider } from "./components/ActiveLanguagesProvider";
-import { PublicOnly, RequireAuth } from "./components/guards";
+import { PublicOnly, RequireAdmin, RequireAuth } from "./components/guards";
+import { AdminDashboardPage } from "./pages/AdminDashboardPage";
+import { AdminReportsPage } from "./pages/AdminReportsPage";
 import { DashboardPage } from "./pages/DashboardPage";
 import { DeckPage } from "./pages/DeckPage";
 import { HowItWorksPage } from "./pages/HowItWorksPage";
@@ -10,6 +12,7 @@ import { ForgotPasswordPage, ResetPasswordPage, VerifyEmailPage } from "./pages/
 import { NotFoundPage } from "./pages/NotFoundPage";
 import { PackDetailPage } from "./pages/PackDetailPage";
 import { PacksPage } from "./pages/PacksPage";
+import { ReportsPage } from "./pages/ReportsPage";
 import { SettingsPage } from "./pages/SettingsPage";
 import { StudyPage } from "./pages/StudyPage";
 
@@ -47,10 +50,21 @@ function AppRoutes() {
           <Route path="study" element={<StudyPage />} />
           <Route path="how-it-works" element={<HowItWorksPage />} />
           <Route path="add-words" element={<PacksPage />} />
+          <Route path="reports" element={<ReportsPage />} />
           <Route path="settings" element={<SettingsPage />} />
           <Route path="add-words/:id" element={<PackDetailPage />} />
           <Route path="packs" element={<LegacyPacksRedirect />} />
           <Route path="packs/:id" element={<LegacyPacksRedirect />} />
+        </Route>
+      </Route>
+      {/* The admin area. To anyone who is not an admin it is simply not there: the guard shows the
+          same page as an address that does not exist. */}
+      <Route element={<RequireAuth />}>
+        <Route element={<RequireAdmin />}>
+          <Route element={<Layout />}>
+            <Route path="admin" element={<AdminDashboardPage />} />
+            <Route path="admin/reports" element={<AdminReportsPage />} />
+          </Route>
         </Route>
       </Route>
       <Route path="*" element={<NotFoundPage />} />

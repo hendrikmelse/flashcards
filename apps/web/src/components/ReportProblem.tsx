@@ -1,3 +1,4 @@
+import { Link } from "react-router";
 import { useEffect, useId, useRef, useState, type FormEvent } from "react";
 import { REPORT_NOTE_MAX, REPORT_REASONS, REPORT_REASON_LABELS, type ReportReason } from "@flashcards/shared";
 import { useReportCard } from "../api/hooks";
@@ -34,9 +35,14 @@ export function ReportProblem({
 
   if (report.isSuccess) {
     return (
-      <p className="report-done" role="status">
-        Thanks! We’ll take a look.
-      </p>
+      <>
+        <p className="report-done" role="status">
+          Thanks! We’ll take a look.
+        </p>
+        <p className="report-done">
+          <Link to="/reports">See your reports</Link>
+        </p>
+      </>
     );
   }
 

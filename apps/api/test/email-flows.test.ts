@@ -370,6 +370,12 @@ describe("the mail settings", () => {
     expect(mailSettingsFromEnv({} as NodeJS.ProcessEnv).publicUrl).toBe("http://localhost:5173");
   });
 
+  it("read who is emailed about reports, and refuse something that is not an address", () => {
+    expect(mailSettingsFromEnv({ ...full }).reportNotifyEmail).toBeUndefined();
+    expect(mailSettingsFromEnv({ ...full, REPORT_NOTIFY_EMAIL: " me@example.com " }).reportNotifyEmail).toBe("me@example.com");
+    expect(() => mailSettingsFromEnv({ ...full, REPORT_NOTIFY_EMAIL: "not an address" })).toThrow(/REPORT_NOTIFY_EMAIL/);
+  });
+
   it("refuse a PUBLIC_URL with a path or no scheme", () => {
     expect(() => mailSettingsFromEnv({ ...full, PUBLIC_URL: "flashcards.example.com" })).toThrow(/PUBLIC_URL/);
     expect(() => mailSettingsFromEnv({ ...full, PUBLIC_URL: "https://example.com/app" })).toThrow(/PUBLIC_URL/);

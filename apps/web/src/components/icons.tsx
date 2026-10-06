@@ -22,6 +22,32 @@ export function GearIcon() {
   );
 }
 
+export function FlagIcon() {
+  return (
+    <svg {...props}>
+      <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z" />
+      <line x1="4" y1="22" x2="4" y2="15" />
+    </svg>
+  );
+}
+
+export function ShieldIcon() {
+  return (
+    <svg {...props}>
+      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+    </svg>
+  );
+}
+
+export function SearchIcon() {
+  return (
+    <svg {...props}>
+      <circle cx="11" cy="11" r="7" />
+      <line x1="21" y1="21" x2="16.65" y2="16.65" />
+    </svg>
+  );
+}
+
 export function LogOutIcon() {
   return (
     <svg {...props}>

@@ -118,6 +118,79 @@ describe("pack list", () => {
     expect(screen.getByText(/No packs match/)).toBeInTheDocument();
   });
 
+  describe("when no pack matches the search", () => {
+    const posts: unknown[] = [];
+    beforeEach(() => {
+      posts.length = 0;
+      mock.handlers["POST /reports"] = (body) => {
+        posts.push(body);
+        return json(201, { ok: true });
+      };
+    });
+    const searchFor = async (term: string) => {
+      const user = userEvent.setup();
+      renderApp("/add-words");
+      await screen.findByRole("link", { name: "Sample pack" });
+      await user.type(screen.getByRole("searchbox", { name: "Search packs" }), term);
+      return user;
+    };
+
+    it("says so, and offers to request the pack, but not when something matches", async () => {
+      const user = await searchFor("demo");
+      expect(screen.queryByRole("button", { name: "Request this pack" })).not.toBeInTheDocument();
+
+      await user.clear(screen.getByRole("searchbox", { name: "Search packs" }));
+      await user.type(screen.getByRole("searchbox", { name: "Search packs" }), "cooking verbs");
+      expect(screen.getByText("No packs match “cooking verbs”")).toBeInTheDocument();
+      expect(screen.getByText(/ask for the pack you were hoping to find/)).toBeInTheDocument();
+      expect(screen.getByRole("button", { name: "Request this pack" })).toBeInTheDocument();
+    });
+
+    it("sends the request from here, starting from the search, with the details optional", async () => {
+      const user = await searchFor("cooking verbs");
+      await user.click(screen.getByRole("button", { name: "Request this pack" }));
+      const form = screen.getByRole("form", { name: "Request a pack" });
+      expect(within(form).getByLabelText("What pack would you like?")).toHaveValue("cooking verbs");
+      // Only the name is needed: it can be sent as it is.
+      await user.click(within(form).getByRole("button", { name: "Send request" }));
+      await waitFor(() => expect(posts).toEqual([{ kind: "pack_request", title: "cooking verbs", note: "" }]));
+      expect(await screen.findByText(/Your request is in/)).toBeInTheDocument();
+      expect(screen.getByRole("link", { name: "See your reports" })).toHaveAttribute("href", "/reports");
+    });
+
+    it("lets the name be changed and details added", async () => {
+      const user = await searchFor("cooking");
+      await user.click(screen.getByRole("button", { name: "Request this pack" }));
+      const form = screen.getByRole("form", { name: "Request a pack" });
+      const name = within(form).getByLabelText("What pack would you like?");
+      await user.type(name, " verbs");
+      await user.type(within(form).getByLabelText(/Details/), "  Chop, stir, fry. ");
+      await user.click(within(form).getByRole("button", { name: "Send request" }));
+      await waitFor(() => expect(posts).toEqual([{ kind: "pack_request", title: "cooking verbs", note: "Chop, stir, fry." }]));
+    });
+
+    it("cannot be sent without a name, and can be cancelled", async () => {
+      const user = await searchFor("cooking");
+      await user.click(screen.getByRole("button", { name: "Request this pack" }));
+      const form = within(screen.getByRole("form", { name: "Request a pack" }));
+      await user.clear(form.getByLabelText("What pack would you like?"));
+      expect(form.getByRole("button", { name: "Send request" })).toBeDisabled();
+      await user.click(form.getByRole("button", { name: "Cancel" }));
+      expect(screen.queryByRole("form", { name: "Request a pack" })).not.toBeInTheDocument();
+      expect(screen.getByRole("button", { name: "Request this pack" })).toBeInTheDocument();
+      expect(posts).toEqual([]);
+    });
+
+    it("starts afresh for a new search", async () => {
+      const user = await searchFor("cooking");
+      await user.click(screen.getByRole("button", { name: "Request this pack" }));
+      await user.type(screen.getByRole("searchbox", { name: "Search packs" }), " verbs");
+      expect(screen.queryByRole("form", { name: "Request a pack" })).not.toBeInTheDocument();
+      await user.click(screen.getByRole("button", { name: "Request this pack" }));
+      expect(screen.getByLabelText("What pack would you like?")).toHaveValue("cooking verbs");
+    });
+  });
+
   it("lists name matches before packs that only match in the description", async () => {
     const user = userEvent.setup();
     const pack = (id: string, name: string, description: string) => ({
@@ -195,7 +268,7 @@ describe("navigation on a single pack's page", () => {
     const card = head.nextElementSibling as HTMLElement;
     expect(card).toHaveClass("pack-page-card");
     expect(title.closest(".pack-page-card")).toBeNull();
-    // The description, the button and the words are inside.
+    // The description, the button, and the words are inside.
     expect(within(card).getByText("Demo data")).toBeInTheDocument();
     expect(within(card).getByText("dog")).toBeInTheDocument();
     const add = within(card).getByRole("button", { name: "Add all to my deck" });
@@ -330,7 +403,7 @@ describe("pack categories", () => {
     pack("g1", "Prepositions", "grammar"),
     pack("v1", "Verbs: movement", "verbs"),
     pack("t1", "Food: the basics", "topic"),
-    pack("t2", "Weather", "topic", { description: "Rain, sun and snow" }),
+    pack("t2", "Weather", "topic", { description: "Rain, sun, and snow" }),
   ];
   const names = () => screen.getAllByRole("heading", { level: 2 }).map((h) => h.textContent);
 
@@ -344,6 +417,134 @@ describe("pack categories", () => {
     const labels = within(group).getAllByRole("button").map((b) => b.textContent);
     expect(labels).toEqual(["All7", "Most common words3", "Topics2", "Verbs1", "Grammar words1"]);
     expect(within(group).getByRole("button", { name: /^All/ })).toHaveAttribute("aria-pressed", "true");
+  });
+
+  it("counts only the packs the search finds, keeping every category on offer", async () => {
+    const user = userEvent.setup();
+    renderApp("/add-words");
+    const group = await screen.findByRole("group", { name: "Category" });
+    const labels = () => within(group).getAllByRole("button").map((b) => b.textContent);
+
+    // "Dutch" is in the name of the three frequency packs only.
+    await user.type(screen.getByRole("searchbox", { name: "Search packs" }), "dutch");
+    expect(labels()).toEqual(["All3", "Most common words3", "Topics0", "Verbs0", "Grammar words0"]);
+
+    // "rain" is in one description.
+    await user.clear(screen.getByRole("searchbox", { name: "Search packs" }));
+    await user.type(screen.getByRole("searchbox", { name: "Search packs" }), "rain");
+    expect(labels()).toEqual(["All1", "Most common words0", "Topics1", "Verbs0", "Grammar words0"]);
+
+    // Nothing found: every count is 0, and the buttons are all still there.
+    await user.clear(screen.getByRole("searchbox", { name: "Search packs" }));
+    await user.type(screen.getByRole("searchbox", { name: "Search packs" }), "zebra");
+    expect(labels()).toEqual(["All0", "Most common words0", "Topics0", "Verbs0", "Grammar words0"]);
+
+    // Cleared: back to the totals.
+    await user.clear(screen.getByRole("searchbox", { name: "Search packs" }));
+    expect(labels()).toEqual(["All7", "Most common words3", "Topics2", "Verbs1", "Grammar words1"]);
+  });
+
+  describe("when the category chosen has no match but others do", () => {
+    it("says so, counts the matches elsewhere, and shows them all on request", async () => {
+      const user = userEvent.setup();
+      renderApp("/add-words");
+      await user.click(await screen.findByRole("button", { name: /^Topics/ }));
+      await user.type(screen.getByRole("searchbox", { name: "Search packs" }), "dutch");
+      expect(document.querySelector(".empty-title")).toHaveTextContent("No packs in Topics match “dutch”");
+      // The category's name is picked out from the rest of the sentence.
+      expect(screen.getByText("Topics", { selector: ".category-name" })).toBeInTheDocument();
+      expect(screen.getByText("3 packs match in other categories.")).toBeInTheDocument();
+      // Not the offer to request a pack: it may well exist.
+      expect(screen.queryByRole("button", { name: "Request this pack" })).not.toBeInTheDocument();
+
+      await user.click(screen.getByRole("button", { name: "Show results in all categories" }));
+      expect(names()).toEqual(["Dutch words 1–500", "Dutch words 501–1000", "Dutch words 1001–1500"]);
+      expect(screen.getByRole("button", { name: /^All/ })).toHaveAttribute("aria-pressed", "true");
+    });
+
+    it("says \"1 pack matches\" for a single match", async () => {
+      const user = userEvent.setup();
+      renderApp("/add-words");
+      await user.click(await screen.findByRole("button", { name: /^Topics/ }));
+      await user.type(screen.getByRole("searchbox", { name: "Search packs" }), "prepositions");
+      expect(screen.getByText("1 pack matches in other categories.")).toBeInTheDocument();
+    });
+
+    it("still offers to request the pack when no category has a match", async () => {
+      const user = userEvent.setup();
+      renderApp("/add-words");
+      await user.click(await screen.findByRole("button", { name: /^Topics/ }));
+      await user.type(screen.getByRole("searchbox", { name: "Search packs" }), "zebra");
+      expect(screen.getByText("No packs match “zebra”")).toBeInTheDocument();
+      expect(screen.getByRole("button", { name: "Request this pack" })).toBeInTheDocument();
+      expect(screen.queryByRole("button", { name: "Show results in all categories" })).not.toBeInTheDocument();
+    });
+  });
+
+  describe("the All filter flashing", () => {
+    const search = (term: string) =>
+      userEvent.type(screen.getByRole("searchbox", { name: "Search packs" }), term);
+    const all = () => screen.getByRole("button", { name: /^All/ });
+
+    it("flashes when the chosen category has no match but other categories do", async () => {
+      const user = userEvent.setup();
+      renderApp("/add-words");
+      await user.click(await screen.findByRole("button", { name: /^Topics/ }));
+      expect(all()).not.toHaveClass("flash");
+      // "dutch" is in the frequency packs, which are in Most common words, not in Topics.
+      await user.type(screen.getByRole("searchbox", { name: "Search packs" }), "dutch");
+      expect(all()).toHaveClass("flash");
+      // It is only a flash.
+      await waitFor(() => expect(all()).not.toHaveClass("flash"), { timeout: 3000 });
+    });
+
+    it("does not flash when the chosen category has a match", async () => {
+      const user = userEvent.setup();
+      renderApp("/add-words");
+      await user.click(await screen.findByRole("button", { name: /^Topics/ }));
+      await user.type(screen.getByRole("searchbox", { name: "Search packs" }), "rain");
+      expect(all()).not.toHaveClass("flash");
+    });
+
+    it("does not flash when no category has a match", async () => {
+      const user = userEvent.setup();
+      renderApp("/add-words");
+      await user.click(await screen.findByRole("button", { name: /^Topics/ }));
+      await user.type(screen.getByRole("searchbox", { name: "Search packs" }), "zebra");
+      expect(all()).not.toHaveClass("flash");
+    });
+
+    it("does not flash when All is chosen, or when nothing has been searched for", async () => {
+      const user = userEvent.setup();
+      renderApp("/add-words");
+      await screen.findByRole("button", { name: /^Topics/ });
+      await search("dutch");
+      expect(all()).not.toHaveClass("flash");
+      await user.clear(screen.getByRole("searchbox", { name: "Search packs" }));
+      await user.click(screen.getByRole("button", { name: /^Topics/ }));
+      expect(all()).not.toHaveClass("flash");
+    });
+
+    it("flashes again when another category with no match is chosen", async () => {
+      const user = userEvent.setup();
+      renderApp("/add-words");
+      await user.type(await screen.findByRole("searchbox", { name: "Search packs" }), "dutch");
+      await user.click(screen.getByRole("button", { name: /^Topics/ }));
+      expect(all()).toHaveClass("flash");
+      await user.click(screen.getByRole("button", { name: /^Verbs/ }));
+      expect(all()).toHaveClass("flash");
+    });
+  });
+
+  it("counts the way the list is shown, so hiding packs already in the deck lowers the counts", async () => {
+    mock.handlers[`GET /packs?${EN_NL}`] = () =>
+      json(200, { packs: packs.map((p) => (p.id === "t1" ? { ...p, addedCount: 10 } : p)) });
+    const user = userEvent.setup();
+    renderApp("/add-words");
+    const group = await screen.findByRole("group", { name: "Category" });
+    await user.click(screen.getByRole("button", { name: "Hide packs already in deck" }));
+    const labels = within(group).getAllByRole("button").map((b) => b.textContent);
+    expect(labels).toEqual(["All6", "Most common words3", "Topics1", "Verbs1", "Grammar words1"]);
   });
 
   it("shows only the chosen category, and all packs again on All", async () => {
@@ -376,7 +577,8 @@ describe("pack categories", () => {
 
     await user.clear(screen.getByRole("searchbox", { name: "Search packs" }));
     await user.type(screen.getByRole("searchbox", { name: "Search packs" }), "verbs");
-    expect(screen.getByText(/No packs match “verbs”/)).toBeInTheDocument(); // a verbs pack, but not a topic
+    // a verbs pack, but not a topic: the search is not empty, it is the category that has none
+    expect(document.querySelector(".empty-title")).toHaveTextContent("No packs in Topics match “verbs”");
   });
 
   it("says so when everything in the category is already in the deck and hidden", async () => {
@@ -404,7 +606,7 @@ describe("pack categories", () => {
       await screen.findByRole("heading", { name: "Add words" });
     };
 
-    it("finds the category, search text and hide toggle as they were after leaving and coming back", async () => {
+    it("finds the category, search text, and hide toggle as they were after leaving and coming back", async () => {
       const user = userEvent.setup();
       renderApp("/add-words");
       await user.click(await screen.findByRole("button", { name: /^Topics/ }));

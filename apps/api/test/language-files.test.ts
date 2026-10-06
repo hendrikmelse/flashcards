@@ -265,7 +265,7 @@ describe("language files: pack names and descriptions", () => {
     expect(check([source(file)]).errors).toEqual([]);
   });
 
-  it("can hold concepts, packs or both, but not nothing", () => {
+  it("can hold concepts, packs, or both, but not nothing", () => {
     expect(languageFileSchema.safeParse({ language: "fr" }).success).toBe(false);
     expect(languageFileSchema.safeParse({ language: "fr", concepts: [], packs: [] }).success).toBe(false);
     expect(languageFileSchema.safeParse({ language: "fr", packs: [{ slug: "p0", name: "Mots" }] }).success).toBe(true);
