@@ -116,3 +116,12 @@ export function renderApp(route = "/") {
     </QueryClientProvider>,
   );
 }
+
+/**
+ * A text matcher for an example sentence by its whole text. The card's word in a sentence sits in its
+ * own element, so the paragraph's own text is only the rest of it; this matches on all of it.
+ */
+export const sentence =
+  (text: string) =>
+  (_content: string, element: Element | null): boolean =>
+    element?.matches("p.sentence") === true && element.textContent === text;

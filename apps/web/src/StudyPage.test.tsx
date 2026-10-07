@@ -1,7 +1,7 @@
 import { screen, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
-import { installMockApi, json, mock, renderApp } from "./test/harness";
+import { installMockApi, json, mock, renderApp, sentence } from "./test/harness";
 
 const entry = (language: string, lemma: string, details: Record<string, unknown> = {}) => ({
   language,
@@ -365,7 +365,7 @@ describe("study session", () => {
     renderApp("/study");
 
     expect(await screen.findByText("dog")).toBeInTheDocument();
-    expect(screen.getByText("The dog barks.")).toBeInTheDocument();
+    expect(screen.getByText(sentence("The dog barks."))).toBeInTheDocument();
     expect(screen.getByText(/English → Nederlands/)).toBeInTheDocument();
     expect(screen.getByText("New")).toBeInTheDocument();
     expect(screen.queryByText("de hond")).not.toBeInTheDocument();
@@ -374,7 +374,7 @@ describe("study session", () => {
     await user.click(screen.getByRole("button", { name: "Show answer" }));
 
     expect(screen.getByText("de hond")).toBeInTheDocument();
-    expect(screen.getByText("De hond blaft.")).toBeInTheDocument();
+    expect(screen.getByText(sentence("De hond blaft."))).toBeInTheDocument();
     expect(screen.getByRole("button", { name: "Good" })).toBeInTheDocument();
   });
 
@@ -625,10 +625,10 @@ describe("verb forms", () => {
       studyWith([hond]);
       renderApp("/study");
       expect(await screen.findByText("dog")).toBeInTheDocument();
-      expect(screen.queryByText("The dog barks.")).not.toBeInTheDocument();
+      expect(screen.queryByText(sentence("The dog barks."))).not.toBeInTheDocument();
       await user.click(screen.getByRole("button", { name: "Show answer" }));
       expect(screen.getByText("de hond")).toBeInTheDocument();
-      expect(screen.queryByText("De hond blaft.")).not.toBeInTheDocument();
+      expect(screen.queryByText(sentence("De hond blaft."))).not.toBeInTheDocument();
       // The word forms are a separate setting, so they still show.
       expect(screen.getByText("honden")).toBeInTheDocument();
     });
@@ -638,9 +638,9 @@ describe("verb forms", () => {
       const user = userEvent.setup();
       studyWith([hond]);
       renderApp("/study");
-      expect(await screen.findByText("The dog barks.")).toBeInTheDocument();
+      expect(await screen.findByText(sentence("The dog barks."))).toBeInTheDocument();
       await user.click(screen.getByRole("button", { name: "Show answer" }));
-      expect(screen.getByText("De hond blaft.")).toBeInTheDocument();
+      expect(screen.getByText(sentence("De hond blaft."))).toBeInTheDocument();
       expect(screen.queryByText("plural")).not.toBeInTheDocument();
       expect(screen.queryByText("honden")).not.toBeInTheDocument();
     });
@@ -649,9 +649,9 @@ describe("verb forms", () => {
       const user = userEvent.setup();
       studyWith([hond]);
       renderApp("/study");
-      expect(await screen.findByText("The dog barks.")).toBeInTheDocument();
+      expect(await screen.findByText(sentence("The dog barks."))).toBeInTheDocument();
       await user.click(screen.getByRole("button", { name: "Show answer" }));
-      expect(screen.getByText("De hond blaft.")).toBeInTheDocument();
+      expect(screen.getByText(sentence("De hond blaft."))).toBeInTheDocument();
       expect(screen.getByText("honden")).toBeInTheDocument();
     });
 
@@ -660,7 +660,7 @@ describe("verb forms", () => {
       const user = userEvent.setup();
       studyWith([hond]);
       renderApp("/study");
-      expect(await screen.findByText("The dog barks.")).toBeInTheDocument();
+      expect(await screen.findByText(sentence("The dog barks."))).toBeInTheDocument();
       await user.click(screen.getByRole("button", { name: "Show answer" }));
       expect(screen.getByText("honden")).toBeInTheDocument();
     });

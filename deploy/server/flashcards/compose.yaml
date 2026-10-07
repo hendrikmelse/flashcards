@@ -11,8 +11,9 @@ services:
       # Safe because the only way to reach this container is through Caddy on
       # the internal network; never publish its port.
       TRUST_PROXY: "true"
-      # Invite-only: only the emails in ALLOWED_EMAILS (set in .env) may register.
-      REGISTRATION_MODE: allowlist
+      # Open sign-up: anyone may create an account. To limit it, use `allowlist` (only the emails in
+      # ALLOWED_EMAILS, set in .env) or `closed` (no new accounts); see deploy/README.md, "Who can register".
+      REGISTRATION_MODE: open
       # Email (verification, password reset) goes out through Resend. The API key is a secret,
       # so it is in .env; the rest is not. The links in emails start with PUBLIC_URL: change it
       # and MAIL_FROM when the app moves to another domain.

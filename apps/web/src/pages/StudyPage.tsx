@@ -284,14 +284,14 @@ function CardView({
 
       <section aria-label="Prompt">
         <Entries entries={card.front} language={card.fromLanguage} languages={languages} />
-        {showSentences && <Sentences items={card.sentences.front} language={card.fromLanguage} />}
+        {showSentences && <Sentences items={card.sentences.front} language={card.fromLanguage} entries={card.front} />}
       </section>
 
       {revealed ? (
         <section aria-label="Answer" className="study-answer">
           <Entries entries={card.back} language={card.toLanguage} languages={languages} id="answer-word" />
           {showForms && <Forms entries={card.back} />}
-          {showSentences && <Sentences items={card.sentences.back} language={card.toLanguage} />}
+          {showSentences && <Sentences items={card.sentences.back} language={card.toLanguage} entries={card.back} />}
         </section>
       ) : (
         <button ref={revealRef} className="primary reveal" onClick={onReveal}>

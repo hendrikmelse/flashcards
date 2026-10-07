@@ -1,12 +1,9 @@
 # Deployment runbook
 
 Runs the app at **https://flashcards.hendrikmelse.com** on a single VPS using
-Docker Compose, with Caddy in front for HTTPS.
-
-> **Status: live.** The app runs at https://flashcards.hendrikmelse.com on an
-> IONOS VPS, deployed by CI. Rollback and the backup/restore drill were verified
-> locally in Docker, not yet on the server (see the verification sections at the
-> end). Update this file with anything you learn.
+Docker Compose, with Caddy in front for HTTPS. This file is the runbook for
+setting the server up, deploying, and operating it. Keep it up to date with
+anything that changes.
 
 ## How it fits together
 
@@ -31,10 +28,22 @@ internet ─▶ Caddy (80/443, automatic HTTPS) ─▶ flashcards-api (Node, por
 - Two shared Docker networks: `web` (Caddy to apps) and `db` (apps to Postgres).
   Postgres is never on `web`, and Caddy is never on `db`.
 
+**Services this deployment depends on**
+
+| Service | Used for |
+|---|---|
+| A VPS (Ubuntu 24.04, x86) | Hosting |
+| GitHub Actions and the GitHub Container Registry | Testing, building, and deploying the image |
+| Let's Encrypt (through Caddy) | HTTPS certificates |
+| Resend | Email: verification, password reset, report notifications |
+| Backblaze B2, with `restic` | Encrypted offsite copies of the database backups |
+| Healthchecks.io | Alert when the nightly backup does not run or fails |
+| UptimeRobot | Alert when the site or the database is unreachable |
+| Namecheap | DNS for `hendrikmelse.com` |
+
 ## 1. Create the server
 
-Any Ubuntu VPS that meets the list below works. The plan is an **IONOS VPS**;
-provider-specific wording is marked, the rest is generic.
+Any Ubuntu VPS that meets the list below works.
 
 - **Image:** Ubuntu 24.04 LTS, with **root access** and real virtualization
   (KVM), which Docker needs. Avoid images with a control panel such as cPanel
@@ -44,21 +53,20 @@ provider-specific wording is marked, the rest is generic.
   below. Memory matters because Postgres, the app, Caddy, and Docker all run
   here; disk matters because the images alone are about 1.2 GB and a deploy
   briefly holds two copies of the app image.
-- **Location:** the US location closest to US West that the plan offers.
+- **Location:** close to your users.
 - **CPU architecture: choose x86 (amd64), not ARM.** CI builds an amd64 image;
   it will not run on an ARM server.
-- **SSH key:** add your public key when creating the server if the panel
-  offers it (IONOS has an SSH keys section). On Windows, `ssh-keygen -t ed25519`
-  creates one; the public half is `%USERPROFILE%\.ssh\id_ed25519.pub`. If the
-  server is created with only a root password, install the key right after the
-  first login and then turn password login off in step 3c.
-- **Network firewall** (if the provider offers one; IONOS has firewall policies
-  in its panel): allow inbound TCP 22 (ideally only from your IP), TCP 80,
-  TCP 443, and UDP 443. The host firewall below is the real protection, so this
-  is an extra layer, not a requirement.
-- **Optional but worthwhile:** the provider's automated backups or snapshots.
-  They cost a little extra and are a second safety net next to the database
-  dumps below. Check the renewal price, not just the first-term price.
+- **SSH key:** add your public key when creating the server if the provider
+  offers it. `ssh-keygen -t ed25519` creates one (on Windows the public half is
+  `%USERPROFILE%\.ssh\id_ed25519.pub`). If the server is created with only a
+  root password, install the key right after the first login and then turn
+  password login off in step 3c.
+- **Network firewall** (if the provider offers one): allow inbound TCP 22
+  (ideally only from your IP), TCP 80, TCP 443, and UDP 443. The host firewall
+  below is the real protection, so this is an extra layer, not a requirement.
+- **Optional but worthwhile:** the provider's automated backups or snapshots,
+  as a second safety net next to the database dumps below. Check the renewal
+  price, not just the first-term price.
 - Note the server's IPv4 address (and IPv6 if you want it).
 
 ### Small servers (under 2 GB RAM)
@@ -179,9 +187,8 @@ ssh root@<ip> true                                     # Permission denied (publ
 ssh -o PubkeyAuthentication=no deploy@<ip> true        # Permission denied (publickey)
 ```
 
-Expect a lot of noise from internet scanners: a server a couple of hours old
-had already logged about 200 failed login attempts, which is why password and
-root login are turned off. Lost access? Use the provider's web console.
+A new server is probed by internet scanners within hours, which is why password
+and root login are turned off. Lost access? Use the provider's web console.
 
 ## 4. Put the compose files on the server
 
@@ -238,14 +245,14 @@ Then configure the app with that password:
 cd /srv/flashcards
 cp .env.example .env && chmod 600 .env
 nano .env    # 1) replace change-me in DATABASE_URL with the password printed above
-             # 2) set ALLOWED_EMAILS to the email(s) allowed to register
-             # 3) set RESEND_API_KEY (see "Email (Resend)" in section 8)
+             # 2) set RESEND_API_KEY (see "Email (Resend)" below)
+             # 3) set REPORT_NOTIFY_EMAIL to where reports should be emailed (optional)
 ```
 
-The app is **invite-only**: `compose.yaml` sets `REGISTRATION_MODE=allowlist`, so
-only the emails in `ALLOWED_EMAILS` can create an account. The server refuses to
-start in production if no registration mode is set, so sign-ups can never be
-left open by accident.
+Sign-up is **open**: `compose.yaml` sets `REGISTRATION_MODE=open`, so anyone can
+create an account. The server refuses to start in production if no registration mode
+is set, so whether sign-up is open is always a choice. To limit it to a list of
+emails, or to close it, see "Who can register".
 
 ## 6. Caddy
 
@@ -317,14 +324,17 @@ networks that the app's compose file expects to exist.
    docker compose run --rm --no-deps api node apps/api/dist/seed-languages.js
    ```
 
-## 8. Verify
+7. **Import the content** (see "Importing content" below), and make your account
+   an admin if you want the admin dashboard (see "Admins").
+
+## 8. Verify and monitor
 
 ```bash
 curl -i https://flashcards.hendrikmelse.com/api/ready   # 200 {"status":"ok"}
 ```
 
-Then open https://flashcards.hendrikmelse.com, register with an email on the
-allowlist, and check the pack pages load. Look for a padlock, and in the
+Then open https://flashcards.hendrikmelse.com, create an account, and check the
+pack pages load. Look for a padlock, and in the
 browser's console for any Content-Security-Policy violations. (Errors that
 mention `triggerAutofillScriptInjection`, or whose source is a
 `chrome-extension://` or `moz-extension://` file, come from a password-manager
@@ -338,10 +348,9 @@ the compose file requires it; prefix them with
 ### Logs
 
 The app, Postgres, and Caddy send their logs to the host's systemd journal
-instead of storing them inside the container. A container's own log is deleted
-with the container, and every deploy replaces the app container, so before this
-change a bug's evidence vanished on the next deploy. The journal outlives
-containers and reboots, and is capped at 500 MB and 30 days
+instead of storing them inside the container, because a container's own log is
+deleted with the container and every deploy replaces the app container. The
+journal outlives containers and reboots, and is capped at 500 MB and 30 days
 (`/etc/systemd/journald.conf.d/flashcards.conf`).
 
 ```bash
@@ -357,10 +366,10 @@ The `deploy` user can omit `sudo` after logging in again, since it is in the
 shows the current container. The app logs one JSON object per line; add
 `-o cat` for clean output.
 
-### Uptime monitoring
+### Uptime monitoring (UptimeRobot)
 
-An outside check is the only thing that notices when the whole server is down, so
-the site is watched from UptimeRobot (free plan, a check every 5 minutes, alerts by
+An outside check is the only thing that notices when the whole server is down,
+so the site is watched from UptimeRobot (a check every 5 minutes, alerts by
 email to the owner). It has two monitors:
 
 | Monitor | URL | What a failure means |
@@ -376,24 +385,23 @@ nothing.
 
 During planned downtime (a Postgres major upgrade, say), pause the monitors in the
 UptimeRobot dashboard first, so the alerts are not noise. The backup check at
-Healthchecks.io (section 9) is separate: it watches that the nightly backup ran,
-not that the site is reachable.
+Healthchecks.io (see "Backups") is separate: it watches that the nightly backup
+ran, not that the site is reachable.
 
 ### Email (Resend)
 
-The app sends three kinds of email: a confirmation link for a new account, a
-password reset link, and a confirmation link for a new address. They go out
-through [Resend](https://resend.com) (free plan: 100 a day, 3,000 a month, far
-more than this app sends), from `noreply@mail.hendrikmelse.com`, a subdomain
-used only for this, so the app's mail reputation stays apart from the rest of
-`hendrikmelse.com`.
+The app sends three kinds of email to users: a confirmation link for a new
+account, a password reset link, and a confirmation link for a new address. It
+also emails the owner about each report and comment, when `REPORT_NOTIFY_EMAIL`
+is set. All of it goes out through [Resend](https://resend.com), from
+`noreply@mail.hendrikmelse.com`, a subdomain used only for this, so the app's
+mail reputation stays apart from the rest of `hendrikmelse.com`.
 
 The app **refuses to start** without `RESEND_API_KEY` (a secret, in
 `/srv/flashcards/.env`), `MAIL_FROM`, and `PUBLIC_URL` (not secret, in
-`compose.yaml`), like it does without `REGISTRATION_MODE`. So do the setup below
-**before** deploying a release that includes email; if the key is missing, the
-new release never becomes healthy and `deploy.sh` rolls back (the old version
-keeps running).
+`compose.yaml`), like it does without `REGISTRATION_MODE`. If the key is
+missing, a new release never becomes healthy and `deploy.sh` rolls back (the old
+version keeps running).
 
 One-time setup:
 
@@ -410,12 +418,11 @@ One-time setup:
 5. `scp` the updated `deploy/server/flashcards/compose.yaml`, then deploy as
    usual (push to `main`, or run the workflow).
 
-Try it from the outside: on the login page, "Forgot your password?" with your
-own address. The email should arrive in a minute (check spam the first time), the
-link should open the choose-a-password page at
+To check it from the outside: on the login page, use "Forgot your password?" with
+your own address. The email should arrive within a minute (check spam the first
+time), the link should open the choose-a-password page at
 `https://flashcards.hendrikmelse.com/reset-password?token=...`, and the new
-password should work. Then sign up with a second address (or change the email in
-Settings) to check the confirmation link.
+password should work.
 
 If an email does not arrive: `sudo journalctl -t flashcards-api -o cat --since "10 min ago" | grep -i email`
 shows what Resend answered (an unverified domain or a revoked key are the usual
@@ -425,17 +432,14 @@ to it. Sign-up and "Forgot your password?" never tell the visitor an email faile
 sign-up does not depend on Resend being up); the account page can send the
 confirmation again.
 
-To move to another domain later: add and verify the new sending domain in Resend,
+To move to another domain: add and verify the new sending domain in Resend,
 then change `MAIL_FROM` and `PUBLIC_URL` in `compose.yaml`, `scp` it and redeploy.
 Links already sent point at the old `PUBLIC_URL` and expire on their own (an hour
 for a reset, three days for the others).
 
 ## 9. Backups
 
-> **Plan:** the nightly dump below runs from day one (it is free and guards
-> against your own mistakes). Offsite copies can wait, but **must be in place
-> before anyone other than you uses the app.**
-
+A nightly dump runs from the first day, and an encrypted copy of it goes offsite.
 `backup.sh` writes compressed dumps of every app database (plus roles) to
 `/srv/postgres/backups` and keeps 14 days. A **systemd timer** runs it every
 night at **03:00 Pacific time**. It is a timer rather than cron because systemd
@@ -460,12 +464,12 @@ sudo systemctl start flashcards-backup.service     # run one now
 ls -lh /srv/postgres/backups                       # the dumps (the directory is mode 700)
 ```
 
-**Alerts.** `offsite.sh` pings a Healthchecks.io check when it starts, when it
-succeeds and when it fails. The check expects a ping about daily, so a failed
-run, a failed dump (the offsite step only runs after a good one), a stopped
-timer or a dead server all lead to an email. The roles file (`globals-*.sql`)
-contains password hashes: keep the directory private; `restic` encrypts
-everything it copies off the server.
+**Alerts (Healthchecks.io).** `offsite.sh` pings a Healthchecks.io check when it
+starts, when it succeeds, and when it fails. The check expects a ping about daily,
+so a failed run, a failed dump (the offsite step only runs after a good one), a
+stopped timer, or a dead server all lead to an email. The roles file
+(`globals-*.sql`) contains password hashes: keep the directory private; `restic`
+encrypts everything it copies off the server.
 
 **Practice a restore before you need one.** This restores into a scratch
 database and never touches the live one:
@@ -486,7 +490,7 @@ service. It copies `/srv/postgres/backups` into an encrypted `restic` repository
 in a private B2 bucket, keeps 7 daily, 4 weekly, and 6 monthly snapshots, checks
 the repository (plus a 10% slice of its data) each night and pings Healthchecks.
 
-One-time setup, besides the unit files in section 9:
+One-time setup, besides the unit files above:
 
 1. In Backblaze: a private bucket with the lifecycle rule "keep only the last
    version" (otherwise files `restic` removes stay as hidden versions and storage
@@ -497,7 +501,7 @@ One-time setup, besides the unit files in section 9:
 4. Put the secrets in a root-only file the unit reads, `/etc/flashcards-backup.env`
    (mode 600, owner root): `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` (the B2
    key id and key), `RESTIC_REPOSITORY=s3:https://<endpoint>/<bucket>`,
-   `RESTIC_PASSWORD` and `HC_PING_URL`.
+   `RESTIC_PASSWORD`, and `HC_PING_URL`.
 5. `sudo apt-get install restic`, then once, with that file loaded as root,
    `restic init`. Copy `offsite.sh` to `/srv/postgres`, install the updated unit
    file and `sudo systemctl daemon-reload`.
@@ -533,33 +537,14 @@ every deploy has a few seconds of downtime while it restarts.
 backward compatible: add columns and tables in one deploy, and remove the old
 ones only in a later one.
 
-### Trying a bad release (a drill for the rollback and the alert)
-
 To check that a bad release is rejected, or that the uptime alert still works,
-deploy one that cannot reach the database, without touching the repository or CI:
-build a throwaway image from the live one with a bad `DATABASE_URL`, and deploy it
-with a copy of `deploy.sh` that skips the registry pull (the image only exists
-on the server). Put the commands in a script file and copy it to the server, since
-docker reads stdin and would swallow a script piped over ssh.
-
-```bash
-cd /srv/flashcards
-LIVE="$(cat current-image)"
-docker build -q -t flashcards-breaktest:1 - <<DOCKERFILE
-FROM $LIVE
-CMD ["sh","-c","export DATABASE_URL=postgres://nobody:wrong@db-does-not-exist:5432/flashcards; exec node apps/api/dist/server.js"]
-DOCKERFILE
-grep -v '^docker compose pull api$' deploy.sh > deploy-test.sh && chmod +x deploy-test.sh
-./deploy-test.sh flashcards-breaktest:1 </dev/null    # expect: "did not become healthy and ready", then "rollback succeeded", exit 1
-rm deploy-test.sh && docker image rm flashcards-breaktest:1
-```
-
-With the readiness check in `deploy.sh`, this is rolled back by the script, in
-about a minute. To test the **alert** instead, the bad release has to stay up for
-longer than the monitor's 5-minute interval: use a copy of `deploy.sh` without the
-`wait_ready` call (before that check existed, this very release passed the deploy
-and stayed live). Roll back by hand with the command above (previous tag), then
-clean up as shown.
+deploy a throwaway image that cannot reach the database: build it on the server
+from the live image with a bad `DATABASE_URL`, and run a copy of `deploy.sh` that
+skips the registry pull. `deploy.sh` should report that it did not become healthy
+and ready, roll back, and exit with an error. To test the alert instead, the bad
+release has to stay up longer than the monitor's 5-minute interval, so use a copy
+of `deploy.sh` without the readiness check, then roll back by hand with the command
+above.
 
 ## 11. Routine maintenance
 
@@ -571,7 +556,7 @@ clean up as shown.
 - Keep an eye on disk: `df -h` and `docker system df`. `deploy.sh` keeps only
   the current and the previous app image (so a rollback needs no download) and
   removes older ones itself.
-- Pause the UptimeRobot monitors (section 8) before any planned downtime.
+- Pause the UptimeRobot monitors before any planned downtime.
 - To redeploy without making a commit, use the **Run workflow** button on the
   CI workflow in the Actions tab (on `main`). It rebuilds and redeploys.
 
@@ -579,9 +564,9 @@ clean up as shown.
 
 Word and pack content lives in the repo as reviewed JSON under `content/`
 (`concepts/` for the words, `packs/` for the packs) and is baked into the
-image, so a content change reaches the
-server through the normal deploy. Importing is a separate, manual step (like
-`seed-languages`), so nothing changes for users until you run it:
+image, so a content change reaches the server through the normal deploy.
+Importing is a separate, manual step (like `seed-languages`), so nothing changes
+for users until you run it:
 
 ```bash
 cd /srv/flashcards
@@ -600,15 +585,16 @@ you can clean up by hand.
 
 ## Reading problem reports
 
-Users can report a problem with a word (a wrong translation, forms, or example
-sentence) from the study screen and the card view. If `REPORT_NOTIFY_EMAIL` is set
-in `/srv/flashcards/.env` (restart the container after changing it), each report is
-also emailed to that address as it comes in. Reporters see their own reports, with
-the status and the conversation, on the Your reports page, where they can also send a
-bug report or a feature suggestion; those arrive the same way (emailed, listed by
-`reports.js`, and answered with `resolve` and `reply`). A report's conversation is its
-sender's comments (added while it is open; each is emailed to you too) and your
-replies, and `reports.js` lists both under the report. Read them on the server:
+Users can send in four kinds of reports: a problem with a word, a bug, a feature
+suggestion, and a request for a pack. If `REPORT_NOTIFY_EMAIL` is set in
+`/srv/flashcards/.env` (restart the container after changing it), each report is
+emailed to that address as it comes in. A report is a conversation: its sender can
+add comments while it is open (each is emailed to you too), and you reply. Senders
+see their own reports, with the status and the conversation, on the Reports page.
+
+In the app, the Admin dashboard's Manage reports page is the place to answer them:
+click a report to open it, reply, then resolve it (which needs at least one
+reply). The same can be done on the server:
 
 ```bash
 cd /srv/flashcards
@@ -616,22 +602,21 @@ export IMAGE="$(cat current-image)"
 docker compose run --rm --no-deps api node apps/api/dist/reports.js
 ```
 
-Each report shows its short id, the reason, the word in both languages with its
-content key, the user's note, and who sent it. Fix the word in `content/`, deploy,
-re-import (see above), then mark the reports handled with
-`... reports.js resolve <id> [<id>...] [-m "reply"]` (the first 8 characters of
-the id are enough); the reply, if given, is added to the conversation for the person
-who reported. `... reports.js reply <id> "reply"` adds a reply without resolving the
-report. `reports.js --all` also lists handled ones. In the app, the Admin dashboard's
-Manage reports page does the same: click a report to open it, reply, then resolve it
-(which needs at least one reply).
+Each report shows its short id, its kind or reason, what it is about (for a word,
+the word in both languages with its content key), the sender's note, and who sent it,
+with the conversation under it. To answer, run
+`... reports.js reply <id> "reply"`, or resolve with
+`... reports.js resolve <id> [<id>...] [-m "reply"]` (the first 8 characters of the
+id are enough; a reply given with `-m` is added to the conversation first).
+`reports.js --all` also lists resolved ones. For a problem with a word, fix it in
+`content/`, deploy, and import again (see above) before you resolve the report.
 
 ## Admins
 
 Every account is a user unless it is made an admin. Admins get an Admin dashboard (the shield
 button in the header, next to the reports button) where they can read everyone's reports and
 reply to, resolve, or reopen them in the app instead of with `reports.js`. Make an account an
-admin on the server, after the deploy that adds the feature has run its migration:
+admin on the server:
 
 ```bash
 cd /srv/flashcards
@@ -642,17 +627,34 @@ docker compose run --rm --no-deps api node apps/api/dist/user-role.js you@exampl
 Use `user` instead of `admin` to take it away. The app never changes an account's type itself,
 and the admin routes check it on the server, so the button only being hidden is not the protection.
 
-## Inviting someone
+## Who can register
 
-1. Add their email to `ALLOWED_EMAILS` (comma-separated) in `/srv/flashcards/.env`.
-2. Apply it: `cd /srv/flashcards && IMAGE="$(cat current-image)" docker compose up -d`
-   (compose recreates the container when its environment changes).
-3. Tell them to sign up at https://flashcards.hendrikmelse.com/register with
-   that exact email. Login for existing accounts never depends on the list.
+`REGISTRATION_MODE` in `compose.yaml` decides who can create an account. Logging in
+never depends on it.
 
-Anyone not on the list gets a 403 "Registration is closed". Note that this
-tells an outsider who guesses an address whether it is on the list; fine for a
-private test, but worth replacing with invite codes before a wider launch.
+| Mode | Who can register |
+|---|---|
+| `open` | Anyone. This is how the live site is set up. |
+| `allowlist` | Only the emails in `ALLOWED_EMAILS` (in `/srv/flashcards/.env`). Anyone else gets a 403 "Registration is closed". |
+| `closed` | No one. |
+
+To change the mode, edit `REGISTRATION_MODE` in `deploy/server/flashcards/compose.yaml`, `scp` it to
+`/srv/flashcards/`, and apply it:
+`cd /srv/flashcards && IMAGE="$(cat current-image)" docker compose up -d` (compose recreates the
+container when its environment changes). With `allowlist`, invite someone by adding their email to
+`ALLOWED_EMAILS` (comma-separated) and applying it the same way, then tell them to sign up at
+https://flashcards.hendrikmelse.com/register with that exact email. An allowlist tells an outsider
+who guesses an address whether it is on it.
+
+**Things to watch with open sign-up:**
+
+- Every sign-up sends a verification email through Resend, so the plan's limits (the free plan
+  allows 100 emails a day and 3,000 a month) cap how many people can sign up and reset
+  passwords. Watch the Resend dashboard, and switch to `allowlist` or `closed` if sign-up is being
+  abused.
+- Sign-up and sign-in are rate limited per client (10 a minute), which slows one source down but
+  not many. A confirmed email address is not required to use the app yet.
+- Reports arrive from anyone, so `REPORT_NOTIFY_EMAIL` can get busy.
 
 ## Adding another app to this server
 
@@ -663,104 +665,10 @@ private test, but worth replacing with invite codes before a wider launch.
    `docker compose exec caddy caddy reload --config /etc/caddy/Caddyfile`.
 4. Add the DNS record.
 
-## What has been verified
+## Testing changes to the deploy files locally
 
-Run locally with Docker Desktop, using the real compose files and scripts from
-this directory (only Caddy's port and site address were overridden, and a
-local registry container stood in for GHCR):
-
-- The image builds (about 25 s), is 405 MB, runs as the non-root `node` user,
-  and contains no dev tooling.
-- The real `Caddyfile` validates. Postgres and the app start on the shared
-  `web`/`db` networks; neither Postgres nor the app publishes a port.
-- Creating the role and database with the commands in step 5 works.
-- `deploy.sh`: a first deploy applies the migrations to an empty database and
-  the app turns healthy in about 11 s. A second deploy updates it. A release
-  that crashes is rolled back automatically, and the rollback is verified. A
-  release whose migration fails leaves the running app untouched. Verified
-  rollback takes about 13 s.
-- `seed-languages`, the app behind Caddy (app shell, client routes, cache and
-  security headers, the Origin check), and invite-only registration all work.
-  A spoofed `X-Forwarded-For` does not evade the login rate limit, because
-  Caddy overwrites it with the real client address.
-- Hardening: read-only root filesystem, zero capabilities, no-new-privileges.
-- `docker stop` shuts the app down cleanly in under a second (exit code 0).
-- `backup.sh`, the 14-day pruning, and the restore drill all work. The restored
-  database had the right data and ownership.
-- Editing `ALLOWED_EMAILS` and re-running `docker compose up -d` recreates the
-  container and the new address can register.
-
-## Verified on the real server
-
-Steps 1 to 3 were run on an IONOS VPS (Ubuntu 24.04.5, KVM, 1 vCPU, 2 GB RAM,
-60 GB disk): the `deploy` user and its key login, a 2 GB swap file, Docker 29
-from the official repository, UFW (22, 80, 443/tcp, 443/udp) and fail2ban, a
-reboot into the updated kernel, and SSH hardening. After the hardening, only key
-login as `deploy` works; root login and password login are refused.
-
-Steps 4 to 6 were also run there: the compose files were copied, Postgres
-started with the app role and database created (the app role can log in, Postgres
-publishes no port), and Caddy obtained a real Let's Encrypt certificate for
-`flashcards.hendrikmelse.com` in about 6 seconds. From outside, HTTPS presents a
-valid certificate, plain HTTP redirects to HTTPS, and the site answers 502 until
-the app is deployed. The CI key was installed as a restricted key and tested: it
-cannot run arbitrary commands, open a terminal, or forward ports, and the one
-allowed command form passes validation and stops at the registry login when given
-a bad token, without ever reaching `deploy.sh`.
-
-**The first real deploy worked.** After the secrets and `DEPLOY_ENABLED` were
-set, a push to `main` ran the tests, built the image, pushed it to GHCR, and
-deployed it over SSH. It took about 105 seconds from push to a healthy container.
-The server pulled the private image using the job's short-lived token, applied
-the migrations to the empty database (11 tables), and the one-time
-`seed-languages` command created `en` and `nl`. The whole stack then used about
-80 MB of RAM (app 30 MB, Postgres 41 MB, Caddy 11 MB) and the box about 600 MB
-of 1.8 GB, with no swap in use, and 5.7 GB of 58 GB of disk.
-
-Checked from outside against the live site: HTTPS with a valid certificate,
-the app shell, client routes, security headers, immutable caching of hashed
-assets, gzip, the API, uninvited registration refused with 403, cross-origin
-writes refused with 403, and **only ports 22, 80, and 443 reachable** (3000,
-5432 and 8080 are closed). Caddy does not serve the app for other hostnames or
-the bare IP.
-
-Logging and cleanup were added afterwards and checked on the real server: the three
-containers log to the host journal, and a log line written before the app
-container was destroyed was still readable afterwards (while `docker logs` had
-lost it). The image cleanup in `deploy.sh` was tested locally with five
-consecutive deploys and a failed one: it always kept the current and previous
-image and removed the rest.
-
-The nightly backup was set up as a systemd timer and checked on the real server:
-systemd computed the right next run for summer (10:00 UTC) and winter (11:00 UTC),
-the service ran by hand under the same unit as the timer will use (as the `deploy`
-user, exit 0, output in the journal, a 26 KB dump), and that dump restored into
-a scratch database with row and table counts identical to the live database.
-The first unattended runs (Oct 2 to 4, 10:00 UTC) happened on schedule. On
-2026-10-04 the offsite copy was added and checked: one run through the service
-(exit 0, snapshot in B2), the dump restored from B2 into a scratch database with
-the same counts as production (users, concepts, cards), and a deliberate wrong
-password made the script fail and send the failure ping.
-
-The live site was also used in a browser over HTTPS on 2026-10-04 (no console
-errors, and nothing from the Content-Security-Policy). The two UptimeRobot monitors
-were set up the same day, and tested with a deliberately bad release.
-
-That release started normally but could not reach the database (built on the server
-from the live image with a bad `DATABASE_URL`, with no repository change). The deploy
-script of the time only waited for `/api/health`, so it counted the release as
-healthy and left it live: `/api/health` answered 200 while `/api/ready` answered 503.
-UptimeRobot's down email arrived within about five minutes of the outage starting.
-Rolling back by hand with the documented command (`deploy.sh` with the previous tag)
-took 12 seconds and `/api/ready` was 200 again. `deploy.sh` was then changed to also
-wait for `/api/ready` and roll back if it never answers 200. The same bad release was
-rejected by the new script, rolled back automatically in about 52 seconds with
-`rollback succeeded` and exit status 1, and a normal redeploy through it succeeded.
-
-## Repeating the local test
-
-After changing the Dockerfile, compose files, or `deploy.sh`, rerun the local
-stack before pushing. In outline:
+After changing the Dockerfile, compose files, or `deploy.sh`, run the stack
+locally before pushing. In outline:
 
 1. `docker build -t flashcards:local .`
 2. Copy `deploy/server/*` to a scratch folder. Start `postgres` (real compose),
