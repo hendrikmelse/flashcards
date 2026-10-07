@@ -2,6 +2,7 @@ import { useEffect, useRef } from "react";
 import { NavLink, Outlet, useLocation } from "react-router";
 import { useLogout, useMe } from "../api/hooks";
 import { useActiveLanguages } from "../hooks/useActiveLanguages";
+import { useScrollCues } from "../hooks/useScrollCues";
 import { FlagIcon, GearIcon, LogOutIcon, ShieldIcon } from "./icons";
 import { SplitFlag } from "./LanguageFlag";
 import { VerifyEmailNotice } from "./VerifyEmailNotice";
@@ -10,6 +11,8 @@ export function Layout() {
   const { data: user } = useMe();
   const logout = useLogout();
   const { direction } = useActiveLanguages();
+  // The filter blocks on the page that scroll sideways on a phone show it, and keep what is selected in view.
+  useScrollCues();
   // The settings, reports, and admin buttons toggle: on their own page they go back to the dashboard.
   // (On a page inside the admin area, the admin button goes up to the admin dashboard first.)
   const { pathname } = useLocation();

@@ -2,7 +2,7 @@ import { screen, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import { a11yViolations } from "./test/axe";
-import { installMockApi, json, mock, renderApp, USER } from "./test/harness";
+import { installMockApi, json, mock, renderApp, USER, sentence } from "./test/harness";
 
 const EN_NL = "fromLanguage=en&toLanguage=nl";
 
@@ -128,7 +128,7 @@ describe("automated accessibility checks (axe)", () => {
     const user = userEvent.setup();
     renderApp("/deck");
     await user.click(await screen.findByRole("button", { name: "Open card: dog" }));
-    await screen.findByText("De hond blaft.");
+    await screen.findByText(sentence("De hond blaft."));
     expect(await a11yViolations()).toEqual([]);
   });
 
@@ -247,12 +247,12 @@ describe("words marked with their language", () => {
     const word = within(answer).getByText("de hond");
     expect(word).toHaveAttribute("lang", "nl");
     expect(word).toHaveAttribute("dir", "auto");
-    expect(within(answer).getByText("De hond blaft.")).toHaveAttribute("lang", "nl");
+    expect(within(answer).getByText(sentence("De hond blaft."))).toHaveAttribute("lang", "nl");
     expect(within(answer).getByText("honden")).toHaveAttribute("lang", "nl");
 
     const front = screen.getByText("dog");
     expect(front).toHaveAttribute("lang", "en");
-    expect(screen.getByText("The dog barks.")).toHaveAttribute("lang", "en");
+    expect(screen.getByText(sentence("The dog barks."))).toHaveAttribute("lang", "en");
   });
 
   it("does not mark the app's own notes about a word as being in its language", async () => {

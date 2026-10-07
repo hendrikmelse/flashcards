@@ -1,7 +1,7 @@
 import { screen, waitFor, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
-import { installMockApi, json, mock, renderApp } from "./test/harness";
+import { installMockApi, json, mock, renderApp, sentence } from "./test/harness";
 
 const EN_NL = "fromLanguage=en&toLanguage=nl";
 const NL_EN = "fromLanguage=nl&toLanguage=en";
@@ -904,12 +904,12 @@ describe("looking at a word as a card", () => {
       expect(within(dialog).getByText("English → Nederlands")).toBeInTheDocument();
       const front = within(within(dialog).getByRole("region", { name: "Front" }));
       expect(front.getByRole("img", { name: "English" })).toBeInTheDocument();
-      expect(await front.findByText("The dog barks.")).toBeInTheDocument();
-      expect(front.getByText("I walk the dog.")).toBeInTheDocument();
+      expect(await front.findByText(sentence("The dog barks."))).toBeInTheDocument();
+      expect(front.getByText(sentence("I walk the dog."))).toBeInTheDocument();
       expect(front.getByText("dogs")).toBeInTheDocument();
       const back = within(within(dialog).getByRole("region", { name: "Back" }));
       expect(back.getByText("de hond")).toBeInTheDocument();
-      expect(back.getByText("De hond blaft.")).toBeInTheDocument();
+      expect(back.getByText(sentence("De hond blaft."))).toBeInTheDocument();
       expect(back.getByText("honden")).toBeInTheDocument();
     });
 
@@ -992,7 +992,7 @@ describe("looking at a word as a card", () => {
 
       const dialog = await open(user);
       expect(dialog).toHaveAccessibleName("Card: dog");
-      expect(await within(dialog).findByText("De hond blaft.")).toBeInTheDocument();
+      expect(await within(dialog).findByText(sentence("De hond blaft."))).toBeInTheDocument();
       await user.keyboard("{Escape}");
       expect(screen.queryByRole("dialog")).not.toBeInTheDocument();
     });

@@ -1676,8 +1676,15 @@ a.button.secondary {
 
 .sentence {
   margin: 0.4rem 0;
+  /* A little larger than the text around it, so an example is easy to read. The card's word in it
+     is picked out in bold, in the same muted color. */
   color: var(--muted);
+  font-size: 1.1rem;
   font-style: italic;
+}
+
+.sentence .sentence-word {
+  font-weight: 700;
 }
 
 .sentence-placeholder {

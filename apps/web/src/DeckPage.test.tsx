@@ -1,7 +1,7 @@
 import { screen, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
-import { installMockApi, json, mock, renderApp } from "./test/harness";
+import { installMockApi, json, mock, renderApp, sentence } from "./test/harness";
 
 const DAY = 86_400_000;
 const at = (ms: number) => new Date(Date.now() + ms).toISOString();
@@ -103,12 +103,12 @@ describe("looking at a card in full", () => {
     renderApp("/deck");
     const dialog = await open(user);
     const front = within(within(dialog).getByRole("region", { name: "Front" }));
-    expect(await front.findByText("The dog barks.")).toBeInTheDocument();
-    expect(front.getByText("I walk the dog.")).toBeInTheDocument();
-    expect(front.getByText("A big dog.")).toBeInTheDocument();
+    expect(await front.findByText(sentence("The dog barks."))).toBeInTheDocument();
+    expect(front.getByText(sentence("I walk the dog."))).toBeInTheDocument();
+    expect(front.getByText(sentence("A big dog."))).toBeInTheDocument();
     const back = within(within(dialog).getByRole("region", { name: "Back" }));
-    expect(back.getByText("De hond blaft.")).toBeInTheDocument();
-    expect(back.queryByText("The dog barks.")).not.toBeInTheDocument();
+    expect(back.getByText(sentence("De hond blaft."))).toBeInTheDocument();
+    expect(back.queryByText(sentence("The dog barks."))).not.toBeInTheDocument();
   });
 
   it("shows the word forms on both sides", async () => {
@@ -149,7 +149,7 @@ describe("looking at a card in full", () => {
     const dialog = await open(user);
     expect(within(dialog).getByText("de hond")).toBeInTheDocument();
     expect(await within(dialog).findByText("Could not load the example sentences.")).toBeInTheDocument();
-    expect(within(dialog).queryByText("The dog barks.")).not.toBeInTheDocument();
+    expect(within(dialog).queryByText(sentence("The dog barks."))).not.toBeInTheDocument();
   });
 
   it("shows the sentences whatever the study card settings say", async () => {
@@ -158,7 +158,7 @@ describe("looking at a card in full", () => {
     const user = userEvent.setup();
     renderApp("/deck");
     const dialog = await open(user);
-    expect(await within(dialog).findByText("The dog barks.")).toBeInTheDocument();
+    expect(await within(dialog).findByText(sentence("The dog barks."))).toBeInTheDocument();
     expect(within(dialog).getByText("honden")).toBeInTheDocument();
   });
 
