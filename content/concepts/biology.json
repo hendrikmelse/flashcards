@@ -1,0 +1,1108 @@
+{
+  "concepts": [
+    {
+      "key": "atom",
+      "gloss": "atom (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "atom", "pos": "noun", "details": {"plural": "atoms"}, "sentences": ["An atom is very small."]}
+        ],
+        "nl": [
+        {"lemma": "atoom", "pos": "noun", "details": {"article": "het", "plural": "atomen"}, "sentences": ["Een atoom is heel klein."]}
+        ]
+      }
+    },
+    {
+      "key": "molecule",
+      "gloss": "molecule (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "molecule", "pos": "noun", "details": {"plural": "molecules"}, "sentences": ["Water is a molecule."]}
+        ],
+        "nl": [
+        {"lemma": "molecuul", "pos": "noun", "details": {"article": "het", "plural": "moleculen"}, "sentences": ["Water is een molecuul."]}
+        ]
+      }
+    },
+    {
+      "key": "periodic-table",
+      "gloss": "periodic table (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "periodic table", "pos": "noun", "details": {"plural": "periodic tables"}, "sentences": ["The periodic table lists all the elements."]}
+        ],
+        "nl": [
+        {"lemma": "periodiek systeem", "pos": "noun", "details": {"article": "het", "plural": "periodieke systemen"}, "sentences": ["Het periodiek systeem toont alle elementen."]}
+        ]
+      }
+    },
+    {
+      "key": "compound-chemical",
+      "gloss": "compound (chemical)",
+      "entries": {
+        "en": [
+        {"lemma": "compound", "pos": "noun", "details": {"plural": "compounds"}, "sentences": ["Salt is a compound of sodium and chlorine."]}
+        ],
+        "nl": [
+        {"lemma": "verbinding", "pos": "noun", "details": {"article": "de", "plural": "verbindingen"}, "sentences": ["Zout is een verbinding van natrium en chloor."]}
+        ]
+      }
+    },
+    {
+      "key": "mixture",
+      "gloss": "mixture (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "mixture", "pos": "noun", "details": {"plural": "mixtures"}, "sentences": ["Air is a mixture of gases."]}
+        ],
+        "nl": [
+        {"lemma": "mengsel", "pos": "noun", "details": {"article": "het", "plural": "mengsels"}, "sentences": ["Lucht is een mengsel van gassen."]}
+        ]
+      }
+    },
+    {
+      "key": "solution-liquid",
+      "gloss": "solution (liquid mixture)",
+      "entries": {
+        "en": [
+        {"lemma": "solution (liquid)", "pos": "noun", "details": {"plural": "solutions"}, "sentences": ["The salt makes a solution in the water."]}
+        ],
+        "nl": [
+        {"lemma": "oplossing (vloeistof)", "pos": "noun", "details": {"article": "de", "plural": "oplossingen"}, "sentences": ["Het zout vormt een oplossing in het water."]}
+        ]
+      }
+    },
+    {
+      "key": "acid",
+      "gloss": "acid (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "acid", "pos": "noun", "details": {"plural": "acids"}, "sentences": ["Lemon juice contains an acid."]}
+        ],
+        "nl": [
+        {"lemma": "zuur", "pos": "noun", "details": {"article": "het", "plural": "zuren"}, "sentences": ["Citroensap bevat een zuur."]}
+        ]
+      }
+    },
+    {
+      "key": "base-chemical",
+      "gloss": "base (chemistry)",
+      "entries": {
+        "en": [
+        {"lemma": "base (chemistry)", "pos": "noun", "details": {"plural": "bases"}, "sentences": ["Soap is a base."]}
+        ],
+        "nl": [
+        {"lemma": "base", "pos": "noun", "details": {"article": "de", "plural": "basen"}, "sentences": ["Zeep is een base."]}
+        ]
+      }
+    },
+    {
+      "key": "chemical-reaction",
+      "gloss": "chemical reaction (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "chemical reaction", "pos": "noun", "details": {"plural": "chemical reactions"}, "sentences": ["A chemical reaction makes new substances."]}
+        ],
+        "nl": [
+        {"lemma": "chemische reactie", "pos": "noun", "details": {"article": "de", "plural": "chemische reacties"}, "sentences": ["Een chemische reactie maakt nieuwe stoffen."]}
+        ]
+      }
+    },
+    {
+      "key": "catalyst",
+      "gloss": "catalyst (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "catalyst", "pos": "noun", "details": {"plural": "catalysts"}, "sentences": ["A catalyst speeds up a reaction."]}
+        ],
+        "nl": [
+        {"lemma": "katalysator", "pos": "noun", "details": {"article": "de", "plural": "katalysatoren"}, "sentences": ["Een katalysator versnelt een reactie."]}
+        ]
+      }
+    },
+    {
+      "key": "electron",
+      "gloss": "electron (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "electron", "pos": "noun", "details": {"plural": "electrons"}, "sentences": ["An electron has a negative charge."]}
+        ],
+        "nl": [
+        {"lemma": "elektron", "pos": "noun", "details": {"article": "het", "plural": "elektronen"}, "sentences": ["Een elektron heeft een negatieve lading."]}
+        ]
+      }
+    },
+    {
+      "key": "proton",
+      "gloss": "proton (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "proton", "pos": "noun", "details": {"plural": "protons"}, "sentences": ["A proton has a positive charge."]}
+        ],
+        "nl": [
+        {"lemma": "proton", "pos": "noun", "details": {"article": "het", "plural": "protonen"}, "sentences": ["Een proton heeft een positieve lading."]}
+        ]
+      }
+    },
+    {
+      "key": "neutron",
+      "gloss": "neutron (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "neutron", "pos": "noun", "details": {"plural": "neutrons"}, "sentences": ["A neutron has no charge."]}
+        ],
+        "nl": [
+        {"lemma": "neutron", "pos": "noun", "details": {"article": "het", "plural": "neutronen"}, "sentences": ["Een neutron heeft geen lading."]}
+        ]
+      }
+    },
+    {
+      "key": "ion",
+      "gloss": "ion (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "ion", "pos": "noun", "details": {"plural": "ions"}, "sentences": ["An ion has an electric charge."]}
+        ],
+        "nl": [
+        {"lemma": "ion", "pos": "noun", "details": {"article": "het", "plural": "ionen"}, "sentences": ["Een ion heeft een elektrische lading."]}
+        ]
+      }
+    },
+    {
+      "key": "isotope",
+      "gloss": "isotope (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "isotope", "pos": "noun", "details": {"plural": "isotopes"}, "sentences": ["This isotope is radioactive."]}
+        ],
+        "nl": [
+        {"lemma": "isotoop", "pos": "noun", "details": {"article": "de", "plural": "isotopen"}, "sentences": ["Deze isotoop is radioactief."]}
+        ]
+      }
+    },
+    {
+      "key": "carbon",
+      "gloss": "carbon (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "carbon", "pos": "noun", "details": {"uncountable": true}, "sentences": ["Diamonds are made of carbon."]}
+        ],
+        "nl": [
+        {"lemma": "koolstof", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Diamanten bestaan uit koolstof."]}
+        ]
+      }
+    },
+    {
+      "key": "hydrogen",
+      "gloss": "hydrogen (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "hydrogen", "pos": "noun", "details": {"uncountable": true}, "sentences": ["Water contains hydrogen and oxygen."]}
+        ],
+        "nl": [
+        {"lemma": "waterstof", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Water bevat waterstof en zuurstof."]}
+        ]
+      }
+    },
+    {
+      "key": "nitrogen",
+      "gloss": "nitrogen (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "nitrogen", "pos": "noun", "details": {"uncountable": true}, "sentences": ["Air is mostly nitrogen."]}
+        ],
+        "nl": [
+        {"lemma": "stikstof", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Lucht bestaat vooral uit stikstof."]}
+        ]
+      }
+    },
+    {
+      "key": "noble-gas",
+      "gloss": "noble gas (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "noble gas", "pos": "noun", "details": {"plural": "noble gases"}, "sentences": ["Helium is a noble gas."]}
+        ],
+        "nl": [
+        {"lemma": "edelgas", "pos": "noun", "details": {"article": "het", "plural": "edelgassen"}, "sentences": ["Helium is een edelgas."]}
+        ]
+      }
+    },
+    {
+      "key": "mass-matter",
+      "gloss": "mass (amount of matter)",
+      "entries": {
+        "en": [
+        {"lemma": "mass (matter)", "pos": "noun", "details": {"plural": "masses"}, "sentences": ["The mass of the sample is ten grams."]}
+        ],
+        "nl": [
+        {"lemma": "massa", "pos": "noun", "details": {"article": "de", "plural": "massa's"}, "sentences": ["De massa van het monster is tien gram."]}
+        ]
+      }
+    },
+    {
+      "key": "substance",
+      "gloss": "substance (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "substance", "pos": "noun", "details": {"plural": "substances"}, "sentences": ["This substance is toxic."]}
+        ],
+        "nl": [
+        {"lemma": "stof", "pos": "noun", "details": {"article": "de", "plural": "stoffen"}, "sentences": ["Deze stof is giftig."]}
+        ]
+      }
+    },
+    {
+      "key": "dissolve-liquid",
+      "gloss": "dissolve (in a liquid)",
+      "entries": {
+        "en": [
+        {"lemma": "dissolve (in a liquid)", "pos": "verb", "details": {"past": "dissolved", "participle": "dissolved"}, "sentences": ["Salt dissolves in water."]}
+        ],
+        "nl": [
+        {"lemma": "oplossen", "pos": "verb", "details": {"pastSingular": "loste op", "pastPlural": "losten op", "participle": "opgelost", "auxiliary": "hebben/zijn"}, "sentences": ["Zout lost op in water."]}
+        ]
+      }
+    },
+    {
+      "key": "cell-membrane",
+      "gloss": "cell membrane (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "cell membrane", "pos": "noun", "details": {"plural": "cell membranes"}, "sentences": ["The cell membrane protects the cell."]}
+        ],
+        "nl": [
+        {"lemma": "celmembraan", "pos": "noun", "details": {"article": "het", "plural": "celmembranen"}, "sentences": ["Het celmembraan beschermt de cel."]}
+        ]
+      }
+    },
+    {
+      "key": "cell-wall",
+      "gloss": "cell wall (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "cell wall", "pos": "noun", "details": {"plural": "cell walls"}, "sentences": ["Plant cells have a cell wall."]}
+        ],
+        "nl": [
+        {"lemma": "celwand", "pos": "noun", "details": {"article": "de", "plural": "celwanden"}, "sentences": ["Plantencellen hebben een celwand."]}
+        ]
+      }
+    },
+    {
+      "key": "cell-nucleus",
+      "gloss": "nucleus (of a cell)",
+      "entries": {
+        "en": [
+        {"lemma": "nucleus (of a cell)", "pos": "noun", "details": {"plural": "nuclei"}, "sentences": ["The nucleus contains the DNA."]}
+        ],
+        "nl": [
+        {"lemma": "celkern", "pos": "noun", "details": {"article": "de", "plural": "celkernen"}, "sentences": ["De celkern bevat het DNA."]}
+        ]
+      }
+    },
+    {
+      "key": "cytoplasm",
+      "gloss": "cytoplasm (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "cytoplasm", "pos": "noun", "details": {"uncountable": true}, "sentences": ["Cytoplasm fills the cell."]}
+        ],
+        "nl": [
+        {"lemma": "cytoplasma", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["Het cytoplasma vult de cel."]}
+        ]
+      }
+    },
+    {
+      "key": "organelle",
+      "gloss": "organelle (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "organelle", "pos": "noun", "details": {"plural": "organelles"}, "sentences": ["Every organelle has its own job."]}
+        ],
+        "nl": [
+        {"lemma": "organel", "pos": "noun", "details": {"article": "het", "plural": "organellen"}, "sentences": ["Elk organel heeft zijn eigen taak."]}
+        ]
+      }
+    },
+    {
+      "key": "mitochondrion",
+      "gloss": "mitochondrion (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "mitochondrion", "pos": "noun", "details": {"plural": "mitochondria"}, "sentences": ["A mitochondrion makes energy for the cell."]}
+        ],
+        "nl": [
+        {"lemma": "mitochondrium", "pos": "noun", "details": {"article": "het", "plural": "mitochondriën"}, "sentences": ["Een mitochondrium maakt energie voor de cel."]}
+        ]
+      }
+    },
+    {
+      "key": "chromosome",
+      "gloss": "chromosome (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "chromosome", "pos": "noun", "details": {"plural": "chromosomes"}, "sentences": ["Humans have forty-six chromosomes."]}
+        ],
+        "nl": [
+        {"lemma": "chromosoom", "pos": "noun", "details": {"article": "het", "plural": "chromosomen"}, "sentences": ["Mensen hebben zesenveertig chromosomen."]}
+        ]
+      }
+    },
+    {
+      "key": "dna",
+      "gloss": "DNA (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "DNA", "pos": "noun", "details": {"uncountable": true}, "sentences": ["DNA carries genetic information."]}
+        ],
+        "nl": [
+        {"lemma": "DNA", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["Het DNA bevat erfelijke informatie."]}
+        ]
+      }
+    },
+    {
+      "key": "rna",
+      "gloss": "RNA (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "RNA", "pos": "noun", "details": {"uncountable": true}, "sentences": ["RNA helps the cell make proteins."]}
+        ],
+        "nl": [
+        {"lemma": "RNA", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["Het RNA helpt de cel eiwitten te maken."]}
+        ]
+      }
+    },
+    {
+      "key": "double-helix",
+      "gloss": "double helix (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "double helix", "pos": "noun", "details": {"plural": "double helices"}, "sentences": ["DNA has the shape of a double helix."]}
+        ],
+        "nl": [
+        {"lemma": "dubbele helix", "pos": "noun", "details": {"article": "de", "plural": "dubbele helices"}, "sentences": ["DNA heeft de vorm van een dubbele helix."]}
+        ]
+      }
+    },
+    {
+      "key": "genome",
+      "gloss": "genome (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "genome", "pos": "noun", "details": {"plural": "genomes"}, "sentences": ["The human genome has been mapped."]}
+        ],
+        "nl": [
+        {"lemma": "genoom", "pos": "noun", "details": {"article": "het", "plural": "genomen"}, "sentences": ["Het menselijk genoom is in kaart gebracht."]}
+        ]
+      }
+    },
+    {
+      "key": "genetic-code",
+      "gloss": "genetic code (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "genetic code", "pos": "noun", "details": {"plural": "genetic codes"}, "sentences": ["The genetic code tells the cell how to build proteins."]}
+        ],
+        "nl": [
+        {"lemma": "genetische code", "pos": "noun", "details": {"article": "de", "plural": "genetische codes"}, "sentences": ["De genetische code vertelt de cel hoe ze eiwitten moet maken."]}
+        ]
+      }
+    },
+    {
+      "key": "protein",
+      "gloss": "protein (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "protein", "pos": "noun", "details": {"plural": "proteins"}, "sentences": ["Meat contains a lot of protein."]}
+        ],
+        "nl": [
+        {"lemma": "eiwit", "pos": "noun", "details": {"article": "het", "plural": "eiwitten"}, "sentences": ["Vlees bevat veel eiwit."]}
+        ]
+      }
+    },
+    {
+      "key": "enzyme",
+      "gloss": "enzyme (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "enzyme", "pos": "noun", "details": {"plural": "enzymes"}, "sentences": ["An enzyme speeds up a reaction in the body."]}
+        ],
+        "nl": [
+        {"lemma": "enzym", "pos": "noun", "details": {"article": "het", "plural": "enzymen"}, "sentences": ["Een enzym versnelt een reactie in het lichaam."]}
+        ]
+      }
+    },
+    {
+      "key": "amino-acid",
+      "gloss": "amino acid (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "amino acid", "pos": "noun", "details": {"plural": "amino acids"}, "sentences": ["Proteins are made of amino acids."]}
+        ],
+        "nl": [
+        {"lemma": "aminozuur", "pos": "noun", "details": {"article": "het", "plural": "aminozuren"}, "sentences": ["Eiwitten bestaan uit aminozuren."]}
+        ]
+      }
+    },
+    {
+      "key": "carbohydrate",
+      "gloss": "carbohydrate (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "carbohydrate", "pos": "noun", "details": {"plural": "carbohydrates"}, "sentences": ["Bread is rich in carbohydrates."]}
+        ],
+        "nl": [
+        {"lemma": "koolhydraat", "pos": "noun", "details": {"article": "het", "plural": "koolhydraten"}, "sentences": ["Brood is rijk aan koolhydraten."]}
+        ]
+      }
+    },
+    {
+      "key": "mineral",
+      "gloss": "mineral (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "mineral", "pos": "noun", "details": {"plural": "minerals"}, "sentences": ["The body needs minerals such as iron."]}
+        ],
+        "nl": [
+        {"lemma": "mineraal", "pos": "noun", "details": {"article": "het", "plural": "mineralen"}, "sentences": ["Het lichaam heeft mineralen nodig, zoals ijzer."]}
+        ]
+      }
+    },
+    {
+      "key": "cell-division",
+      "gloss": "cell division (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "cell division", "pos": "noun", "details": {"plural": "cell divisions"}, "sentences": ["Cell division makes new cells."]}
+        ],
+        "nl": [
+        {"lemma": "celdeling", "pos": "noun", "details": {"article": "de", "plural": "celdelingen"}, "sentences": ["Celdeling maakt nieuwe cellen."]}
+        ]
+      }
+    },
+    {
+      "key": "stem-cell",
+      "gloss": "stem cell (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "stem cell", "pos": "noun", "details": {"plural": "stem cells"}, "sentences": ["A stem cell can become any type of cell."]}
+        ],
+        "nl": [
+        {"lemma": "stamcel", "pos": "noun", "details": {"article": "de", "plural": "stamcellen"}, "sentences": ["Een stamcel kan elk type cel worden."]}
+        ]
+      }
+    },
+    {
+      "key": "egg-cell",
+      "gloss": "egg cell (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "egg cell", "pos": "noun", "details": {"plural": "egg cells"}, "sentences": ["The egg cell is the largest cell in the human body."]}
+        ],
+        "nl": [
+        {"lemma": "eicel", "pos": "noun", "details": {"article": "de", "plural": "eicellen"}, "sentences": ["De eicel is de grootste cel in het menselijk lichaam."]}
+        ]
+      }
+    },
+    {
+      "key": "sperm-cell",
+      "gloss": "sperm cell (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "sperm cell", "pos": "noun", "details": {"plural": "sperm cells"}, "sentences": ["A sperm cell has a tail."]}
+        ],
+        "nl": [
+        {"lemma": "zaadcel", "pos": "noun", "details": {"article": "de", "plural": "zaadcellen"}, "sentences": ["Een zaadcel heeft een staart."]}
+        ]
+      }
+    },
+    {
+      "key": "nerve-cell",
+      "gloss": "nerve cell (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "nerve cell", "pos": "noun", "details": {"plural": "nerve cells"}, "sentences": ["A nerve cell sends signals through the body."]}
+        ],
+        "nl": [
+        {"lemma": "zenuwcel", "pos": "noun", "details": {"article": "de", "plural": "zenuwcellen"}, "sentences": ["Een zenuwcel stuurt signalen door het lichaam."]}
+        ]
+      }
+    },
+    {
+      "key": "red-blood-cell",
+      "gloss": "red blood cell (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "red blood cell", "pos": "noun", "details": {"plural": "red blood cells"}, "sentences": ["Red blood cells carry oxygen."]}
+        ],
+        "nl": [
+        {"lemma": "rode bloedcel", "pos": "noun", "details": {"article": "de", "plural": "rode bloedcellen"}, "sentences": ["Rode bloedcellen vervoeren zuurstof."]}
+        ]
+      }
+    },
+    {
+      "key": "white-blood-cell",
+      "gloss": "white blood cell (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "white blood cell", "pos": "noun", "details": {"plural": "white blood cells"}, "sentences": ["White blood cells fight infection."]}
+        ],
+        "nl": [
+        {"lemma": "witte bloedcel", "pos": "noun", "details": {"article": "de", "plural": "witte bloedcellen"}, "sentences": ["Witte bloedcellen bestrijden infecties."]}
+        ]
+      }
+    },
+    {
+      "key": "microorganism",
+      "gloss": "microorganism (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "microorganism", "pos": "noun", "details": {"plural": "microorganisms"}, "sentences": ["A microorganism is too small to see."]}
+        ],
+        "nl": [
+        {"lemma": "micro-organisme", "pos": "noun", "details": {"article": "het", "plural": "micro-organismen"}, "sentences": ["Een micro-organisme is te klein om te zien."]}
+        ]
+      }
+    },
+    {
+      "key": "fungus",
+      "gloss": "fungus (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "fungus", "pos": "noun", "details": {"plural": "fungi"}, "sentences": ["A fungus grows on old bread."]}
+        ],
+        "nl": [
+        {"lemma": "schimmel", "pos": "noun", "details": {"article": "de", "plural": "schimmels"}, "sentences": ["Een schimmel groeit op oud brood."]}
+        ]
+      }
+    },
+    {
+      "key": "species",
+      "gloss": "species (biology)",
+      "entries": {
+        "en": [
+        {"lemma": "species", "pos": "noun", "details": {"plural": "species"}, "sentences": ["This species lives in the sea."]}
+        ],
+        "nl": [
+        {"lemma": "soort", "pos": "noun", "details": {"article": "de", "plural": "soorten"}, "sentences": ["Deze soort leeft in de zee."]}
+        ]
+      }
+    },
+    {
+      "key": "pathogen",
+      "gloss": "pathogen (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "pathogen", "pos": "noun", "details": {"plural": "pathogens"}, "sentences": ["A pathogen is something that causes disease."]}
+        ],
+        "nl": [
+        {"lemma": "ziekteverwekker", "pos": "noun", "details": {"article": "de", "plural": "ziekteverwekkers"}, "sentences": ["Een ziekteverwekker veroorzaakt een ziekte."]}
+        ]
+      }
+    },
+    {
+      "key": "photosynthesis",
+      "gloss": "photosynthesis (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "photosynthesis", "pos": "noun", "details": {"uncountable": true}, "sentences": ["Plants use photosynthesis to make food."]}
+        ],
+        "nl": [
+        {"lemma": "fotosynthese", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Planten gebruiken fotosynthese om voedsel te maken."]}
+        ]
+      }
+    },
+    {
+      "key": "chlorophyll",
+      "gloss": "chlorophyll (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "chlorophyll", "pos": "noun", "details": {"uncountable": true}, "sentences": ["Chlorophyll makes leaves green."]}
+        ],
+        "nl": [
+        {"lemma": "bladgroen", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["Bladgroen maakt bladeren groen."]}
+        ]
+      }
+    },
+    {
+      "key": "cellular-respiration",
+      "gloss": "cellular respiration (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "cellular respiration", "pos": "noun", "details": {"uncountable": true}, "sentences": ["Cellular respiration releases energy from food."]}
+        ],
+        "nl": [
+        {"lemma": "celademhaling", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Celademhaling maakt energie vrij uit voedsel."]}
+        ]
+      }
+    },
+    {
+      "key": "metabolism",
+      "gloss": "metabolism (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "metabolism", "pos": "noun", "details": {"uncountable": true}, "sentences": ["A fast metabolism burns energy quickly."]}
+        ],
+        "nl": [
+        {"lemma": "stofwisseling", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Een snelle stofwisseling verbrandt snel energie."]}
+        ]
+      }
+    },
+    {
+      "key": "digestion",
+      "gloss": "digestion (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "digestion", "pos": "noun", "details": {"uncountable": true}, "sentences": ["Digestion begins in the mouth."]}
+        ],
+        "nl": [
+        {"lemma": "spijsvertering", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["De spijsvertering begint in de mond."]}
+        ]
+      }
+    },
+    {
+      "key": "reproduction",
+      "gloss": "reproduction (biology)",
+      "entries": {
+        "en": [
+        {"lemma": "reproduction", "pos": "noun", "details": {"uncountable": true}, "sentences": ["Reproduction keeps a species alive."]}
+        ],
+        "nl": [
+        {"lemma": "voortplanting", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Voortplanting houdt een soort in stand."]}
+        ]
+      }
+    },
+    {
+      "key": "fertilization",
+      "gloss": "fertilization (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "fertilization", "pos": "noun", "details": {"uncountable": true}, "sentences": ["Fertilization happens when a sperm cell meets an egg cell."]}
+        ],
+        "nl": [
+        {"lemma": "bevruchting", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Bevruchting vindt plaats wanneer een zaadcel een eicel ontmoet."]}
+        ]
+      }
+    },
+    {
+      "key": "embryo",
+      "gloss": "embryo (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "embryo", "pos": "noun", "details": {"plural": "embryos"}, "sentences": ["An embryo grows into a baby."]}
+        ],
+        "nl": [
+        {"lemma": "embryo", "pos": "noun", "details": {"article": "het", "plural": "embryo's"}, "sentences": ["Een embryo groeit uit tot een baby."]}
+        ]
+      }
+    },
+    {
+      "key": "heredity",
+      "gloss": "heredity (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "heredity", "pos": "noun", "details": {"uncountable": true}, "sentences": ["Heredity explains why children look like their parents."]}
+        ],
+        "nl": [
+        {"lemma": "erfelijkheid", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Erfelijkheid verklaart waarom kinderen op hun ouders lijken."]}
+        ]
+      }
+    },
+    {
+      "key": "natural-selection",
+      "gloss": "natural selection (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "natural selection", "pos": "noun", "details": {"uncountable": true}, "sentences": ["Natural selection favors the traits that help an animal survive."]}
+        ],
+        "nl": [
+        {"lemma": "natuurlijke selectie", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Natuurlijke selectie bevoordeelt eigenschappen die een dier helpen overleven."]}
+        ]
+      }
+    },
+    {
+      "key": "evolve",
+      "gloss": "evolve (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "evolve", "pos": "verb", "details": {"past": "evolved", "participle": "evolved"}, "sentences": ["Species evolve over millions of years."]}
+        ],
+        "nl": [
+        {"lemma": "evolueren", "pos": "verb", "details": {"pastSingular": "evolueerde", "pastPlural": "evolueerden", "participle": "geëvolueerd", "auxiliary": "zijn"}, "sentences": ["Soorten evolueren over miljoenen jaren."]}
+        ]
+      }
+    },
+    {
+      "key": "mutate",
+      "gloss": "mutate (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "mutate", "pos": "verb", "details": {"past": "mutated", "participle": "mutated"}, "sentences": ["Viruses mutate quickly."]}
+        ],
+        "nl": [
+        {"lemma": "muteren", "pos": "verb", "details": {"pastSingular": "muteerde", "pastPlural": "muteerden", "participle": "gemuteerd", "auxiliary": "zijn"}, "sentences": ["Virussen muteren snel."]}
+        ]
+      }
+    },
+    {
+      "key": "ferment",
+      "gloss": "ferment (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "ferment", "pos": "verb", "details": {"past": "fermented", "participle": "fermented"}, "sentences": ["Yeast ferments sugar."]}
+        ],
+        "nl": [
+        {"lemma": "fermenteren", "pos": "verb", "details": {"pastSingular": "fermenteerde", "pastPlural": "fermenteerden", "participle": "gefermenteerd", "auxiliary": "hebben"}, "sentences": ["Gist fermenteert suiker."]}
+        ]
+      }
+    },
+    {
+      "key": "fermentation",
+      "gloss": "fermentation (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "fermentation", "pos": "noun", "details": {"uncountable": true}, "sentences": ["Fermentation turns sugar into alcohol."]}
+        ],
+        "nl": [
+        {"lemma": "fermentatie", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Fermentatie verandert suiker in alcohol."]}
+        ]
+      }
+    },
+    {
+      "key": "immune-system",
+      "gloss": "immune system (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "immune system", "pos": "noun", "details": {"plural": "immune systems"}, "sentences": ["A strong immune system fights disease."]}
+        ],
+        "nl": [
+        {"lemma": "immuunsysteem", "pos": "noun", "details": {"article": "het", "plural": "immuunsystemen"}, "sentences": ["Een sterk immuunsysteem bestrijdt ziekten."]}
+        ]
+      }
+    },
+    {
+      "key": "antibody",
+      "gloss": "antibody (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "antibody", "pos": "noun", "details": {"plural": "antibodies"}, "sentences": ["The body makes an antibody against the virus."]}
+        ],
+        "nl": [
+        {"lemma": "antilichaam", "pos": "noun", "details": {"article": "het", "plural": "antilichamen"}, "sentences": ["Het lichaam maakt een antilichaam tegen het virus."]}
+        ]
+      }
+    },
+    {
+      "key": "antibiotic",
+      "gloss": "antibiotic (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "antibiotic", "pos": "noun", "details": {"plural": "antibiotics"}, "sentences": ["The doctor gave me an antibiotic."]}
+        ],
+        "nl": [
+        {"lemma": "antibioticum", "pos": "noun", "details": {"article": "het", "plural": "antibiotica"}, "sentences": ["De dokter gaf mij een antibioticum."]}
+        ]
+      }
+    },
+    {
+      "key": "insulin",
+      "gloss": "insulin (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "insulin", "pos": "noun", "details": {"uncountable": true}, "sentences": ["People with diabetes need insulin."]}
+        ],
+        "nl": [
+        {"lemma": "insuline", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Mensen met diabetes hebben insuline nodig."]}
+        ]
+      }
+    },
+    {
+      "key": "clinical-trial",
+      "gloss": "clinical trial (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "clinical trial", "pos": "noun", "details": {"plural": "clinical trials"}, "sentences": ["A clinical trial tests a new drug on patients."]}
+        ],
+        "nl": [
+        {"lemma": "klinische studie", "pos": "noun", "details": {"article": "de", "plural": "klinische studies"}, "sentences": ["Een klinische studie test een nieuw medicijn op patiënten."]}
+        ]
+      }
+    },
+    {
+      "key": "gene-therapy",
+      "gloss": "gene therapy (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "gene therapy", "pos": "noun", "details": {"uncountable": true}, "sentences": ["Gene therapy tries to repair a faulty gene."]}
+        ],
+        "nl": [
+        {"lemma": "gentherapie", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Gentherapie probeert een defect gen te herstellen."]}
+        ]
+      }
+    },
+    {
+      "key": "ecosystem",
+      "gloss": "ecosystem (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "ecosystem", "pos": "noun", "details": {"plural": "ecosystems"}, "sentences": ["A forest is an ecosystem."]}
+        ],
+        "nl": [
+        {"lemma": "ecosysteem", "pos": "noun", "details": {"article": "het", "plural": "ecosystemen"}, "sentences": ["Een bos is een ecosysteem."]}
+        ]
+      }
+    },
+    {
+      "key": "habitat",
+      "gloss": "habitat (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "habitat", "pos": "noun", "details": {"plural": "habitats"}, "sentences": ["The frog's habitat is the pond."]}
+        ],
+        "nl": [
+        {"lemma": "leefgebied", "pos": "noun", "details": {"article": "het", "plural": "leefgebieden"}, "sentences": ["Het leefgebied van de kikker is de vijver."]}
+        ]
+      }
+    },
+    {
+      "key": "food-chain",
+      "gloss": "food chain (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "food chain", "pos": "noun", "details": {"plural": "food chains"}, "sentences": ["Grass is at the bottom of the food chain."]}
+        ],
+        "nl": [
+        {"lemma": "voedselketen", "pos": "noun", "details": {"article": "de", "plural": "voedselketens"}, "sentences": ["Gras staat onderaan de voedselketen."]}
+        ]
+      }
+    },
+    {
+      "key": "biodiversity",
+      "gloss": "biodiversity (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "biodiversity", "pos": "noun", "details": {"uncountable": true}, "sentences": ["The rainforest has great biodiversity."]}
+        ],
+        "nl": [
+        {"lemma": "biodiversiteit", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Het regenwoud heeft een grote biodiversiteit."]}
+        ]
+      }
+    },
+    {
+      "key": "extinct",
+      "gloss": "extinct (adjective)",
+      "entries": {
+        "en": [
+        {"lemma": "extinct", "pos": "adjective", "sentences": ["The dodo is extinct."]}
+        ],
+        "nl": [
+        {"lemma": "uitgestorven", "pos": "adjective", "sentences": ["De dodo is uitgestorven."]}
+        ]
+      }
+    },
+    {
+      "key": "endangered",
+      "gloss": "endangered (adjective)",
+      "entries": {
+        "en": [
+        {"lemma": "endangered", "pos": "adjective", "sentences": ["The tiger is an endangered species."]}
+        ],
+        "nl": [
+        {"lemma": "bedreigd", "pos": "adjective", "sentences": ["De tijger is een bedreigde diersoort."]}
+        ]
+      }
+    },
+    {
+      "key": "biotechnology",
+      "gloss": "biotechnology (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "biotechnology", "pos": "noun", "details": {"uncountable": true}, "sentences": ["Biotechnology uses living cells to make products."]}
+        ],
+        "nl": [
+        {"lemma": "biotechnologie", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Biotechnologie gebruikt levende cellen om producten te maken."]}
+        ]
+      }
+    },
+    {
+      "key": "bioreactor",
+      "gloss": "bioreactor (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "bioreactor", "pos": "noun", "details": {"plural": "bioreactors"}, "sentences": ["The cells grow in a bioreactor."]}
+        ],
+        "nl": [
+        {"lemma": "bioreactor", "pos": "noun", "details": {"article": "de", "plural": "bioreactoren"}, "sentences": ["De cellen groeien in een bioreactor."]}
+        ]
+      }
+    },
+    {
+      "key": "cell-culture",
+      "gloss": "cell culture (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "cell culture", "pos": "noun", "details": {"plural": "cell cultures"}, "sentences": ["The cell culture grows in a warm room."]}
+        ],
+        "nl": [
+        {"lemma": "celkweek", "pos": "noun", "details": {"article": "de", "plural": "celkweken"}, "sentences": ["De celkweek groeit in een warme ruimte."]}
+        ]
+      }
+    },
+    {
+      "key": "petri-dish",
+      "gloss": "petri dish (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "petri dish", "pos": "noun", "details": {"plural": "petri dishes"}, "sentences": ["The bacteria grow in a petri dish."]}
+        ],
+        "nl": [
+        {"lemma": "petrischaal", "pos": "noun", "details": {"article": "de", "plural": "petrischalen"}, "sentences": ["De bacteriën groeien in een petrischaal."]}
+        ]
+      }
+    },
+    {
+      "key": "microscope",
+      "gloss": "microscope (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "microscope", "pos": "noun", "details": {"plural": "microscopes"}, "sentences": ["I look at the cell through a microscope."]}
+        ],
+        "nl": [
+        {"lemma": "microscoop", "pos": "noun", "details": {"article": "de", "plural": "microscopen"}, "sentences": ["Ik kijk door een microscoop naar de cel."]}
+        ]
+      }
+    },
+    {
+      "key": "test-tube",
+      "gloss": "test tube (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "test tube", "pos": "noun", "details": {"plural": "test tubes"}, "sentences": ["She pours the liquid into a test tube."]}
+        ],
+        "nl": [
+        {"lemma": "reageerbuis", "pos": "noun", "details": {"article": "de", "plural": "reageerbuizen"}, "sentences": ["Zij giet de vloeistof in een reageerbuis."]}
+        ]
+      }
+    },
+    {
+      "key": "sample",
+      "gloss": "sample (specimen)",
+      "entries": {
+        "en": [
+        {"lemma": "sample", "pos": "noun", "details": {"plural": "samples"}, "sentences": ["The doctor takes a blood sample."]}
+        ],
+        "nl": [
+        {"lemma": "monster", "pos": "noun", "details": {"article": "het", "plural": "monsters"}, "sentences": ["De dokter neemt een bloedmonster."]}
+        ]
+      }
+    },
+    {
+      "key": "hypothesis",
+      "gloss": "hypothesis (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "hypothesis", "pos": "noun", "details": {"plural": "hypotheses"}, "sentences": ["The scientist tests her hypothesis."]}
+        ],
+        "nl": [
+        {"lemma": "hypothese", "pos": "noun", "details": {"article": "de", "plural": "hypotheses"}, "sentences": ["De wetenschapper test haar hypothese."]}
+        ]
+      }
+    },
+    {
+      "key": "genetic-modification",
+      "gloss": "genetic modification (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "genetic modification", "pos": "noun", "details": {"uncountable": true}, "sentences": ["Genetic modification changes the DNA of a plant."]}
+        ],
+        "nl": [
+        {"lemma": "genetische modificatie", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Genetische modificatie verandert het DNA van een plant."]}
+        ]
+      }
+    },
+    {
+      "key": "genetically-modified",
+      "gloss": "genetically modified (adjective)",
+      "entries": {
+        "en": [
+        {"lemma": "genetically modified", "pos": "adjective", "sentences": ["This corn is genetically modified."]}
+        ],
+        "nl": [
+        {"lemma": "genetisch gemodificeerd", "pos": "adjective", "sentences": ["Deze maïs is genetisch gemodificeerd."]}
+        ]
+      }
+    },
+    {
+      "key": "biofuel",
+      "gloss": "biofuel (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "biofuel", "pos": "noun", "details": {"plural": "biofuels"}, "sentences": ["Biofuel is made from plants."]}
+        ],
+        "nl": [
+        {"lemma": "biobrandstof", "pos": "noun", "details": {"article": "de", "plural": "biobrandstoffen"}, "sentences": ["Biobrandstof wordt gemaakt van planten."]}
+        ]
+      }
+    },
+    {
+      "key": "biodegradable",
+      "gloss": "biodegradable (adjective)",
+      "entries": {
+        "en": [
+        {"lemma": "biodegradable", "pos": "adjective", "sentences": ["Biodegradable plastic breaks down in nature."]}
+        ],
+        "nl": [
+        {"lemma": "biologisch afbreekbaar", "pos": "adjective", "sentences": ["Biologisch afbreekbaar plastic breekt af in de natuur."]}
+        ]
+      }
+    },
+    {
+      "key": "microscopic",
+      "gloss": "microscopic (adjective)",
+      "entries": {
+        "en": [
+        {"lemma": "microscopic", "pos": "adjective", "sentences": ["Bacteria are microscopic."]}
+        ],
+        "nl": [
+        {"lemma": "microscopisch", "pos": "adjective", "sentences": ["Bacteriën zijn microscopisch klein."]}
+        ]
+      }
+    },
+    {
+      "key": "sterile",
+      "gloss": "sterile (adjective)",
+      "entries": {
+        "en": [
+        {"lemma": "sterile", "pos": "adjective", "sentences": ["The instruments must be sterile."]}
+        ],
+        "nl": [
+        {"lemma": "steriel", "pos": "adjective", "sentences": ["De instrumenten moeten steriel zijn."]}
+        ]
+      }
+    },
+    {
+      "key": "clone-noun",
+      "gloss": "clone (noun)",
+      "entries": {
+        "en": [
+        {"lemma": "clone (noun)", "pos": "noun", "details": {"plural": "clones"}, "sentences": ["Dolly the sheep was a clone."]}
+        ],
+        "nl": [
+        {"lemma": "kloon", "pos": "noun", "details": {"article": "de", "plural": "klonen"}, "sentences": ["Dolly het schaap was een kloon."]}
+        ]
+      }
+    },
+    {
+      "key": "absorb",
+      "gloss": "absorb (verb)",
+      "entries": {
+        "en": [
+        {"lemma": "absorb", "pos": "verb", "details": {"past": "absorbed", "participle": "absorbed"}, "sentences": ["Plants absorb water through their roots."]}
+        ],
+        "nl": [
+        {"lemma": "absorberen", "pos": "verb", "details": {"pastSingular": "absorbeerde", "pastPlural": "absorbeerden", "participle": "geabsorbeerd", "auxiliary": "hebben"}, "sentences": ["Planten absorberen water via hun wortels."]}
+        ]
+      }
+    }
+  ]
+}
