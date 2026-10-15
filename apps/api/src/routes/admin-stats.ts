@@ -1,5 +1,5 @@
 import type { FastifyInstance } from "fastify";
-import { count, countDistinct, gte, isNull } from "drizzle-orm";
+import { and, count, countDistinct, gte, isNull } from "drizzle-orm";
 import type { AdminStats, ReportKind } from "@flashcards/shared";
 import { cardReports, reviewLogs, users } from "../db/schema.js";
 import type { Db } from "../db/types.js";
@@ -17,9 +17,13 @@ export async function adminStatsRoutes(app: FastifyInstance, { db }: { db: Db })
     const [active] = await db
       .select({ n: countDistinct(reviewLogs.userId) })
       .from(reviewLogs)
-      .where(gte(reviewLogs.reviewedAt, since));
-    const [reviews] = await db.select({ n: count() }).from(reviewLogs);
-    const [recent] = await db.select({ n: count() }).from(reviewLogs).where(gte(reviewLogs.reviewedAt, since));
+      .where(and(isNull(reviewLogs.undoneAt), gte(reviewLogs.reviewedAt, since)));
+    // An answer that was undone does not count as a review.
+    const [reviews] = await db.select({ n: count() }).from(reviewLogs).where(isNull(reviewLogs.undoneAt));
+    const [recent] = await db
+      .select({ n: count() })
+      .from(reviewLogs)
+      .where(and(isNull(reviewLogs.undoneAt), gte(reviewLogs.reviewedAt, since)));
 
     const open = await db
       .select({ kind: cardReports.kind, n: count() })

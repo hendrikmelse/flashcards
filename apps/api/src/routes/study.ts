@@ -3,11 +3,12 @@ import {
   pairQuerySchema,
   studyQuerySchema,
   submitReviewSchema,
+  undoReviewSchema,
 } from "@flashcards/shared";
 import type { Scheduler } from "../srs/engine.js";
 import type { Db } from "../db/types.js";
 import { getStudyBatch, getStudyCounts } from "../study/queue.js";
-import { submitReview } from "../study/review.js";
+import { submitReview, undoReview } from "../study/review.js";
 
 const invalid = (reply: FastifyReply, issues: unknown) =>
   reply.code(400).send({ error: "Invalid input", issues });
@@ -27,7 +28,7 @@ export async function studyRoutes(
     return getStudyBatch(
       db,
       req.user!.id,
-      { limit: l.data.limit, ...d.data },
+      { limit: l.data.limit, asOf: l.data.asOf, ...d.data },
       new Date(),
       scheduler,
     );
@@ -38,6 +39,26 @@ export async function studyRoutes(
     const d = pairQuerySchema.safeParse(req.query);
     if (!d.success) return invalid(reply, d.error.issues);
     return getStudyCounts(db, req.user!.id, d.data, new Date());
+  });
+
+  // Takes the latest answer to a card back, for a short while after it was given.
+  app.post("/reviews/undo", { preHandler: app.requireAuth }, async (req, reply) => {
+    const body = undoReviewSchema.safeParse(req.body);
+    if (!body.success) return invalid(reply, body.error.issues);
+
+    const outcome = await undoReview(db, req.user!.id, body.data.clientReviewId, new Date());
+    switch (outcome.kind) {
+      case "not_found":
+        return reply.code(404).send({ error: "Answer not found" });
+      case "expired":
+        return reply.code(409).send({ error: "Too late to undo this answer" });
+      case "superseded":
+        return reply.code(409).send({ error: "The card has been answered again since" });
+      case "unavailable":
+        return reply.code(409).send({ error: "This answer cannot be undone" });
+      case "ok":
+        return outcome.result;
+    }
   });
 
   app.post("/reviews", { preHandler: app.requireAuth }, async (req, reply) => {

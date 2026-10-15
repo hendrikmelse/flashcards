@@ -281,6 +281,19 @@ export const userCards = pgTable(
 
 // Append-only history of every answer. Never updated or deleted, so the
 // schedule can be recomputed if the algorithm changes.
+/** The scheduling fields of a card, as kept in a review log row so that the answer can be undone. Dates are ISO strings. */
+export interface CardBefore {
+  state: (typeof cardStateEnum.enumValues)[number];
+  dueAt: string;
+  intervalDays: number;
+  stability: number | null;
+  difficulty: number | null;
+  learningStep: number;
+  repetitions: number;
+  lapses: number;
+  lastReviewedAt: string | null;
+}
+
 export const reviewLogs = pgTable(
   "review_logs",
   {
@@ -302,6 +315,12 @@ export const reviewLogs = pgTable(
     intervalBeforeDays: real().notNull(),
     intervalAfterDays: real().notNull(),
     dueAfter: timestamp({ withTimezone: true }).notNull(),
+    // The card's scheduling fields as they were before this answer, so the answer can be undone
+    // exactly. Null for answers from before undo existed, which cannot be undone.
+    cardBefore: jsonb().$type<CardBefore>(),
+    // When the answer was undone. The row stays, since the log is append-only, but it no longer counts
+    // as a review: not toward the daily new-card limit, the statistics, or what was seen today.
+    undoneAt: timestamp({ withTimezone: true }),
   },
   (t) => [
     unique("review_logs_user_client_review_uq").on(t.userId, t.clientReviewId),

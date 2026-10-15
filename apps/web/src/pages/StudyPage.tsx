@@ -1,4 +1,4 @@
-import { useMutation } from "@tanstack/react-query";
+import { useMutation, useQuery } from "@tanstack/react-query";
 import { useEffect, useReducer, useRef, useState } from "react";
 import { Link, useNavigate } from "react-router";
 import type {
@@ -6,6 +6,7 @@ import type {
   Rating,
   ReviewResponse,
   StudyCardView,
+  StudyCountsResponse,
   StudyResponse,
 } from "@flashcards/shared";
 import { api } from "../api/client";
@@ -30,6 +31,9 @@ import {
 // The server orders the whole queue; a big batch lets "Again" cards slot back in
 // among enough other cards, and the new ones spread through it as intended.
 const BATCH_SIZE = 100;
+
+// How long the last answer can be taken back, once it has been given. The server allows longer.
+const UNDO_SHOWN_MS = 8000;
 
 const RATINGS: { rating: Rating; label: string }[] = [
   { rating: "again", label: "Again" },
@@ -56,7 +60,10 @@ function useStudySession() {
     const waiting = state.deferred.length > 0;
     if (state.ended || (state.queue.length > 0 && !waiting) || state.exhausted || state.fetchError || fetching.current) return;
     fetching.current = true;
-    api<StudyResponse>(`/study?limit=${BATCH_SIZE}&pair=${pair}`)
+    const answeredAtRequest = state.handled.length;
+    // After the first batch, ask for the cards that were due when the session began.
+    const asOf = state.asOf ? `&asOf=${encodeURIComponent(state.asOf)}` : "";
+    api<StudyResponse>(`/study?limit=${BATCH_SIZE}&pair=${pair}${asOf}`)
       .then(
         (r) => {
           if (!introChecked.current) {
@@ -64,14 +71,22 @@ function useStudySession() {
             if (r.firstSession && r.cards.length > 0) setIntro(true);
           }
           // A full batch means the server probably has more than it sent.
-          dispatch({ type: "fetched", cards: r.cards, moreNew: r.moreNew, more: r.cards.length >= BATCH_SIZE });
+          dispatch({
+            type: "fetched",
+            cards: r.cards,
+            moreNew: r.moreNew,
+            more: r.cards.length >= BATCH_SIZE,
+            now: r.now,
+            total: r.total,
+            answeredAtRequest,
+          });
         },
         () => dispatch({ type: "fetchFailed" }),
       )
       .finally(() => {
         fetching.current = false;
       });
-  }, [state.ended, state.queue.length, state.deferred.length, state.exhausted, state.fetchError, pair]);
+  }, [state.ended, state.queue.length, state.deferred.length, state.exhausted, state.fetchError, state.asOf, pair]);
 
   // Show the next card as soon as there is one.
   useEffect(() => {
@@ -95,11 +110,28 @@ function useStudySession() {
         },
       }),
     onSuccess: (result, v) =>
-      dispatch({ type: "answered", rating: v.rating, result, random: Math.random() }),
+      dispatch({ type: "answered", rating: v.rating, result, random: Math.random(), clientReviewId: v.clientReviewId }),
   });
+
+  // Takes the latest answer back, which puts its card on screen again, answer showing.
+  const undoAnswer = useMutation({
+    mutationFn: (clientReviewId: string) =>
+      api<ReviewResponse>("/reviews/undo", { method: "POST", body: { clientReviewId } }),
+    onSuccess: () => dispatch({ type: "undone" }),
+    onError: (_error, clientReviewId) => dispatch({ type: "undoExpired", clientReviewId }),
+  });
+
+  // The offer to undo goes away after a few seconds.
+  const answerId = state.lastAnswer?.clientReviewId;
+  useEffect(() => {
+    if (!answerId || undoAnswer.isPending) return;
+    const timer = setTimeout(() => dispatch({ type: "undoExpired", clientReviewId: answerId }), UNDO_SHOWN_MS);
+    return () => clearTimeout(timer);
+  }, [answerId, undoAnswer.isPending]);
 
   function rate(rating: Rating) {
     if (!state.current || !state.revealed || submit.isPending) return;
+    undoAnswer.reset();
     submit.mutate({
       cardId: state.current.id,
       rating,
@@ -118,6 +150,12 @@ function useStudySession() {
     retrySubmit: () => submit.variables && submit.mutate(submit.variables),
     submitting: submit.isPending,
     submitError: submit.isError,
+    lastAnswer: state.lastAnswer,
+    undo: () => {
+      if (state.lastAnswer && !undoAnswer.isPending && !submit.isPending) undoAnswer.mutate(state.lastAnswer.clientReviewId);
+    },
+    undoing: undoAnswer.isPending,
+    undoFailed: undoAnswer.isError,
     intro,
     startStudying: () => {
       setIntro(false);
@@ -125,6 +163,7 @@ function useStudySession() {
     },
     acknowledgeRepeat: () => dispatch({ type: "acknowledgeRepeat" }),
     end: () => dispatch({ type: "end" }),
+    restart: () => dispatch({ type: "restart" }),
     retryFetch: () => dispatch({ type: "retryFetch" }),
   };
 }
@@ -195,9 +234,53 @@ export function StudyPage() {
           stats={state.stats}
           viewed={state.handled.length}
           ended={state.ended}
+          onKeepGoing={session.restart}
         />
       )}
+
+      {session.lastAnswer && (
+        <UndoBar
+          rating={session.lastAnswer.rating}
+          onUndo={session.undo}
+          disabled={session.undoing || session.submitting}
+        />
+      )}
+      {session.undoFailed && !session.lastAnswer && (
+        <p className="undo-bar" role="status">
+          That answer can no longer be undone.
+        </p>
+      )}
     </>
+  );
+}
+
+// Offered for a few seconds after an answer: "Answered Good · Undo". Z or Backspace do the same, unless
+// the keyboard shortcuts are turned off in the settings.
+function UndoBar({ rating, onUndo, disabled }: { rating: Rating; onUndo: () => void; disabled: boolean }) {
+  const [shortcuts] = useRatingShortcuts();
+  useEffect(() => {
+    if (!shortcuts || disabled) return;
+    function onKey(e: KeyboardEvent) {
+      if (e.ctrlKey || e.metaKey || e.altKey) return;
+      const t = e.target as HTMLElement | null;
+      if (t && /^(INPUT|SELECT|TEXTAREA)$/.test(t.tagName)) return;
+      if (e.key === "z" || e.key === "Z" || e.key === "Backspace") {
+        e.preventDefault(); // Backspace must not take the browser back a page
+        onUndo();
+      }
+    }
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [shortcuts, disabled, onUndo]);
+
+  return (
+    <p className="undo-bar" role="status">
+      Answered {RATINGS.find((r) => r.rating === rating)!.label} ·{" "}
+      <button type="button" className="link" onClick={onUndo} disabled={disabled}>
+        Undo
+        {shortcuts && <kbd aria-hidden="true">Z</kbd>}
+      </button>
+    </p>
   );
 }
 
@@ -343,12 +426,15 @@ function Summary({
   stats,
   viewed,
   ended,
+  onKeepGoing,
 }: {
   stats: SessionStats;
   /** Different cards seen this session (a missed card shown again counts once). */
   viewed: number;
   /** The user stopped early, so "nothing answered" does not mean "nothing to do". */
   ended: boolean;
+  /** Start another session, with the cards that are ready now. */
+  onKeepGoing: () => void;
 }) {
   if (stats.reviewed === 0 && !ended) {
     return (
@@ -366,6 +452,19 @@ function Summary({
       </div>
     );
   }
+  return <SessionComplete stats={stats} viewed={viewed} onKeepGoing={onKeepGoing} />;
+}
+
+function SessionComplete({
+  stats,
+  viewed,
+  onKeepGoing,
+}: {
+  stats: SessionStats;
+  viewed: number;
+  onKeepGoing: () => void;
+}) {
+  const ready = useReadyCount();
   return (
     <div className="study-wait">
       <h2>Session complete!</h2>
@@ -378,11 +477,44 @@ function Summary({
           </div>
         ))}
       </dl>
+      <ReadyAgain ready={ready} onKeepGoing={onKeepGoing} />
       <p>
-        <Link to="/" className="button primary">
+        {/* The way on when there is nothing to keep studying; a quiet link when there is. */}
+        <Link to="/" className={ready > 0 ? "link" : "button primary"}>
           Back to the dashboard
         </Link>
       </p>
     </div>
+  );
+}
+
+// A session studies the cards that were due when it began, so a card still being learned (due again in
+// a few minutes) or one that fell due in the meantime is not in it. Offer them, if any are ready now.
+function useReadyCount(): number {
+  const { pair } = useActiveLanguages();
+  const ready = useQuery({
+    queryKey: ["study", "counts", pair, "after-session"],
+    queryFn: () => api<StudyCountsResponse>(`/study/counts?pair=${pair}`),
+    staleTime: 0,
+    gcTime: 0,
+  });
+  const { learning, review, new: fresh } = ready.data?.counts ?? { learning: 0, review: 0, new: 0 };
+  return learning + review + fresh;
+}
+
+function ReadyAgain({ ready: n, onKeepGoing }: { ready: number; onKeepGoing: () => void }) {
+  if (n === 0) return null;
+  return (
+    <>
+      <hr />
+      <div className="study-again" role="status">
+        <p>
+          {n} card{n === 1 ? "" : "s"} became available for review during your study session
+        </p>
+        <button type="button" className="primary" onClick={onKeepGoing}>
+          Keep studying
+        </button>
+      </div>
+    </>
   );
 }

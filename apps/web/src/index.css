@@ -655,6 +655,7 @@ button[aria-busy="true"]:disabled {
   cursor: progress;
 }
 
+a.link,
 button.link {
   border: 0;
   background: none;
@@ -1597,6 +1598,22 @@ a.button.secondary {
   justify-content: center;
 }
 
+.study-wait hr {
+  margin: 1.5rem 0;
+  border: 0;
+  border-top: 1px solid var(--border);
+}
+
+.study-again {
+  margin: 0 0 1.25rem;
+}
+
+.study-again p {
+  margin: 0 0 0.9rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
 .study-meta {
   display: flex;
   align-items: center;
@@ -1668,10 +1685,15 @@ a.button.secondary {
   overflow-wrap: anywhere;
 }
 
-.study-word .pos {
+.study-word .pos,
+.study-word .note {
   font-size: 0.85rem;
   font-weight: 400;
   color: var(--muted);
+}
+
+.study-word .note {
+  font-style: italic;
 }
 
 .sentence {
@@ -1768,12 +1790,26 @@ button.rating:disabled {
   cursor: progress;
 }
 
+.undo-bar {
+  margin: 0.75rem 0 0;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.undo-bar kbd,
 button.rating kbd {
   padding: 0 0.35rem;
   border: 1px solid var(--border);
   border-radius: 0.3rem;
   color: var(--muted);
   font: 0.8rem ui-monospace, monospace;
+}
+
+.undo-bar button kbd {
+  display: inline-block;
+  margin-left: 0.4rem;
+  text-decoration: none;
 }
 
 .summary {

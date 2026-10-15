@@ -24,7 +24,8 @@ export function AppearanceSection() {
             Rate a card with the number keys 1 to 4
           </label>
           <p className="muted">
-            Turn this off if single keys clash with voice control or assistive software. Only applies on this device
+            Z and Backspace undo your last answer, too. Turn this off if single keys clash with voice control or
+            assistive software. Only applies on this device
           </p>
         </fieldset>
       </div>

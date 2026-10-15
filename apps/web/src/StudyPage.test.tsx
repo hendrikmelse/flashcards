@@ -1,4 +1,4 @@
-import { screen, within } from "@testing-library/react";
+import { act, cleanup, screen, waitFor, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import { installMockApi, json, mock, renderApp, sentence } from "./test/harness";
@@ -77,6 +77,8 @@ afterEach(() => vi.unstubAllGlobals());
 describe("ending a session early", () => {
   it("shows the session complete screen instead of going back to the dashboard", async () => {
     const user = userEvent.setup();
+    mock.handlers["GET /study/counts"] = () =>
+      json(200, { now: "x", counts: { learning: 0, review: 0, new: 0 }, newLimitReached: false, tomorrow: 0 });
     renderApp("/study");
 
     // dog: Good (still learning, so it will come back in a later session). Then stop.
@@ -89,7 +91,7 @@ describe("ending a session early", () => {
     expect(screen.getByText("You viewed 1 unique card")).toBeInTheDocument();
     const back = screen.getByRole("link", { name: "Back to the dashboard" });
     expect(back).toHaveAttribute("href", "/");
-    expect(back).toHaveClass("button", "primary"); // looks and works like the other page buttons
+    expect(back).toHaveClass("button", "primary"); // nothing to keep studying: this is the way on
     expect(screen.getByText("Good").nextSibling).toHaveTextContent("1");
     // Still on the study page: nothing sent you away, and the card is gone.
     expect(screen.queryByRole("heading", { name: "Dashboard" })).not.toBeInTheDocument();
@@ -346,6 +348,255 @@ describe("the number of cards left", () => {
     await user.click(screen.getByRole("button", { name: "Good" }));
     expect(await screen.findByText("house")).toBeInTheDocument();
     expect(screen.getByText(/1 left/)).toBeInTheDocument();
+  });
+});
+
+describe("a session's cards and the number left", () => {
+  const START = "2026-01-15T10:00:00.000Z";
+  const batches = (list: { cards: unknown[]; total: number; now?: string }[]) => {
+    let calls = 0;
+    mock.handlers["GET /study?limit=100"] = () => {
+      const b = list[Math.min(calls++, list.length - 1)]!;
+      return json(200, {
+        now: b.now ?? START,
+        counts: { learning: 0, review: b.total, new: 0 },
+        cards: b.cards,
+        total: b.total,
+        firstSession: false,
+        moreNew: 0,
+      });
+    };
+  };
+
+  it("starts at the server's total, not at the size of the batch it loaded", async () => {
+    batches([{ cards: [dog, house], total: 7 }]);
+    renderApp("/study");
+    expect(await screen.findByText(/7 left/)).toBeInTheDocument();
+  });
+
+  it("asks for the cards that were due when the session began, from the second request on", async () => {
+    const user = userEvent.setup();
+    batches([{ cards: [dog], total: 2 }, { cards: [house], total: 1, now: "2026-01-15T10:05:00.000Z" }]);
+    renderApp("/study");
+    await user.click(await screen.findByRole("button", { name: "Show answer" }));
+    await user.click(screen.getByRole("button", { name: "Good" }));
+    expect(await screen.findByText("house")).toBeInTheDocument();
+
+    const asked = mock.requests.filter((r) => r.startsWith("GET /study?"));
+    expect(asked[0]).not.toContain("asOf");
+    expect(asked[1]).toContain(`asOf=${encodeURIComponent(START)}`);
+    // The server's time on the second batch does not move it.
+    expect(asked.every((r) => !r.includes("10%3A05"))).toBe(true);
+    expect(screen.getByText(/1 left/)).toBeInTheDocument();
+  });
+
+  it("offers the cards that are ready now when a session ends, and starts another on request", async () => {
+    const user = userEvent.setup();
+    // The top-up while the last card is on screen finds nothing; the new session finds house.
+    batches([{ cards: [dog], total: 1 }, { cards: [], total: 0 }, { cards: [house], total: 1, now: "2026-01-15T10:20:00.000Z" }]);
+    mock.handlers["GET /study/counts"] = () =>
+      json(200, { now: START, counts: { learning: 2, review: 1, new: 0 }, newLimitReached: false, tomorrow: 0 });
+    renderApp("/study");
+    await user.click(await screen.findByRole("button", { name: "Show answer" }));
+    await user.click(screen.getByRole("button", { name: "Easy" }));
+
+    expect(await screen.findByRole("heading", { name: "Session complete!" })).toBeInTheDocument();
+    expect(await screen.findByText("3 cards became available for review during your study session")).toBeInTheDocument();
+    expect(document.querySelector(".study-wait hr")).not.toBeNull();
+    expect(screen.getByRole("button", { name: "Keep studying" })).toHaveClass("primary");
+    expect(screen.getByRole("link", { name: "Back to the dashboard" })).toHaveClass("link");
+
+    await user.click(screen.getByRole("button", { name: "Keep studying" }));
+    expect(await screen.findByText("house")).toBeInTheDocument();
+    // The new session is not tied to the old one's start: its first request has no time, and its own
+    // later ones carry the time of its first batch.
+    const asked = mock.requests.filter((r) => r.startsWith("GET /study?"));
+    expect(asked[2]).not.toContain("asOf");
+    expect(asked[3]).toContain(`asOf=${encodeURIComponent("2026-01-15T10:20:00.000Z")}`);
+  });
+
+  it("offers nothing when nothing is ready", async () => {
+    const user = userEvent.setup();
+    batches([{ cards: [dog], total: 1 }]);
+    mock.handlers["GET /study/counts"] = () =>
+      json(200, { now: START, counts: { learning: 0, review: 0, new: 0 }, newLimitReached: false, tomorrow: 0 });
+    renderApp("/study");
+    await user.click(await screen.findByRole("button", { name: "Show answer" }));
+    await user.click(screen.getByRole("button", { name: "Easy" }));
+    expect(await screen.findByRole("heading", { name: "Session complete!" })).toBeInTheDocument();
+    await waitFor(() => expect(mock.calls).toContain("GET /study/counts"));
+    expect(screen.queryByRole("button", { name: "Keep studying" })).not.toBeInTheDocument();
+    expect(document.querySelector(".study-wait hr")).toBeNull(); // no line when there is nothing to keep going with
+    expect(screen.getByRole("link", { name: "Back to the dashboard" })).toHaveClass("button", "primary");
+  });
+});
+
+describe("undoing the last answer", () => {
+  let undone: { clientReviewId: string }[];
+  beforeEach(() => {
+    undone = [];
+    mock.handlers["POST /reviews/undo"] = (body) => {
+      undone.push(body as { clientReviewId: string });
+      return json(200, { ...learning("card-dog"), undone: true });
+    };
+  });
+
+  // Answers the first card Good, leaving the second on screen.
+  const answerFirst = async (user: ReturnType<typeof userEvent.setup>) => {
+    await user.click(await screen.findByRole("button", { name: "Show answer" }));
+    await user.click(screen.getByRole("button", { name: "Good" }));
+    expect(await screen.findByText("house")).toBeInTheDocument();
+  };
+
+  it("offers to undo the answer just given, and brings the card back with its answer showing", async () => {
+    const user = userEvent.setup();
+    renderApp("/study");
+    await answerFirst(user);
+
+    expect(screen.getByText(/Answered Good/)).toBeInTheDocument();
+    const button = screen.getByRole("button", { name: /Undo/ });
+    expect(button).toHaveTextContent("Z"); // the keyboard shortcut is shown on the button
+    await user.click(button);
+
+    expect(await screen.findByText("de hond")).toBeInTheDocument(); // dog, answer already showing
+    expect(screen.getByRole("button", { name: "Good" })).toBeInTheDocument();
+    expect(undone).toHaveLength(1);
+    expect(undone[0]!.clientReviewId).toBe(reviews[0]!.clientReviewId); // it names the answer that was sent
+    expect(screen.queryByText(/Answered Good/)).not.toBeInTheDocument();
+    expect(screen.getByText(/2 left/)).toBeInTheDocument(); // counted as not done again
+  });
+
+  it("can be answered again afterwards, as a new answer", async () => {
+    const user = userEvent.setup();
+    renderApp("/study");
+    await answerFirst(user);
+    await user.click(screen.getByRole("button", { name: /Undo/ }));
+    await user.click(await screen.findByRole("button", { name: "Easy" }));
+    expect(reviews).toHaveLength(2);
+    expect(reviews[1]).toMatchObject({ userCardId: "card-dog", rating: "easy" });
+    expect(reviews[1]!.clientReviewId).not.toBe(reviews[0]!.clientReviewId);
+  });
+
+  it("works with the Z key, and with Backspace", async () => {
+    for (const key of ["z", "{Backspace}"]) {
+      const user = userEvent.setup();
+      renderApp("/study");
+      await answerFirst(user);
+      await user.keyboard(key);
+      expect(await screen.findByText("de hond")).toBeInTheDocument();
+      cleanup();
+      undone = [];
+    }
+  });
+
+  it("does not react to the keys while typing in a field", async () => {
+    const user = userEvent.setup();
+    renderApp("/study");
+    await answerFirst(user);
+    const field = document.createElement("input");
+    document.body.append(field);
+    field.focus();
+    await user.keyboard("z{Backspace}");
+    expect(undone).toHaveLength(0);
+    field.remove();
+  });
+
+  it("has no keys, and shows none, when keyboard shortcuts are turned off", async () => {
+    localStorage.setItem("ratingShortcuts", "off");
+    const user = userEvent.setup();
+    renderApp("/study");
+    await answerFirst(user);
+    const button = screen.getByRole("button", { name: /Undo/ });
+    expect(button).not.toHaveTextContent("Z");
+    await user.keyboard("z{Backspace}");
+    expect(undone).toHaveLength(0);
+    await user.click(button); // the button still works
+    expect(await screen.findByText("de hond")).toBeInTheDocument();
+  });
+
+  it("is also there after the last card, and brings the session back from its summary", async () => {
+    const user = userEvent.setup();
+    studyWith([dog]);
+    renderApp("/study");
+    await user.click(await screen.findByRole("button", { name: "Show answer" }));
+    await user.click(screen.getByRole("button", { name: "Easy" }));
+    expect(await screen.findByRole("heading", { name: "Session complete!" })).toBeInTheDocument();
+    await user.click(screen.getByRole("button", { name: /Undo/ }));
+    expect(await screen.findByText("de hond")).toBeInTheDocument();
+    expect(screen.queryByRole("heading", { name: "Session complete!" })).not.toBeInTheDocument();
+  });
+
+  it("says so when the server will no longer undo it", async () => {
+    const user = userEvent.setup();
+    mock.handlers["POST /reviews/undo"] = () => json(409, { error: "Too late to undo this answer" });
+    renderApp("/study");
+    await answerFirst(user);
+    await user.click(screen.getByRole("button", { name: /Undo/ }));
+    expect(await screen.findByText("That answer can no longer be undone.")).toBeInTheDocument();
+    expect(screen.queryByRole("button", { name: /Undo/ })).not.toBeInTheDocument();
+    expect(screen.getByText("house")).toBeInTheDocument(); // the session carries on
+  });
+
+  it("stops offering it after a few seconds", async () => {
+    vi.useFakeTimers({ shouldAdvanceTime: true });
+    try {
+      const user = userEvent.setup({ advanceTimers: vi.advanceTimersByTime });
+      renderApp("/study");
+      await answerFirst(user);
+      expect(screen.getByRole("button", { name: /Undo/ })).toBeInTheDocument();
+      await act(async () => {
+        await vi.advanceTimersByTimeAsync(8100);
+      });
+      expect(screen.queryByRole("button", { name: /Undo/ })).not.toBeInTheDocument();
+    } finally {
+      vi.useRealTimers();
+    }
+  });
+
+  it("only offers the latest answer", async () => {
+    const user = userEvent.setup();
+    renderApp("/study");
+    await answerFirst(user);
+    await user.click(screen.getByRole("button", { name: "Show answer" }));
+    await user.click(screen.getByRole("button", { name: "Easy" }));
+    expect(await screen.findByRole("heading", { name: "Session complete!" })).toBeInTheDocument();
+    expect(screen.getAllByRole("button", { name: /Undo/ })).toHaveLength(1);
+    await user.click(screen.getByRole("button", { name: /Undo/ }));
+    expect(undone[0]!.clientReviewId).toBe(reviews[1]!.clientReviewId); // the second answer, not the first
+  });
+});
+
+describe("a word's note", () => {
+  const noted = (language: string, lemma: string, note: string | undefined, details: Record<string, unknown> = {}) =>
+    entry(language, lemma, note ? { ...details, note } : details);
+
+  it("shows which sense a word is, in its own language beside it, on the prompt and on the answer", async () => {
+    const user = userEvent.setup();
+    const klop = {
+      ...dog,
+      id: "card-klop",
+      fromLanguage: "nl",
+      toLanguage: "en",
+      front: [noted("nl", "kloppen", "op een deur")],
+      back: [noted("en", "to knock", "of a door", {})],
+      sentences: { front: [], back: [] },
+    };
+    studyWith([klop]);
+    renderApp("/study");
+
+    const onPrompt = await screen.findByText("[op een deur]");
+    expect(onPrompt).toBeInTheDocument();
+    expect(onPrompt).toHaveAttribute("lang", "nl"); // read in Dutch, like the word
+    expect(screen.queryByText("[of a door]")).not.toBeInTheDocument();
+    await user.click(screen.getByRole("button", { name: "Show answer" }));
+    expect(screen.getByText("[of a door]")).toHaveAttribute("lang", "en");
+    expect(screen.getByText("[op een deur]")).toBeInTheDocument();
+  });
+
+  it("shows nothing extra for a word without one", async () => {
+    renderApp("/study");
+    expect(await screen.findByText("dog")).toBeInTheDocument();
+    expect(document.querySelector(".study-word .note")).toBeNull();
   });
 });
 
