@@ -320,7 +320,7 @@
         {"lemma": "already (in advance)", "pos": "adverb", "sentences": ["You can already start."]}
         ],
         "nl": [
-        {"lemma": "alvast", "pos": "adverb", "sentences": ["Je kunt alvast beginnen."]}
+        {"lemma": "alvast", "pos": "adverb", "details": {"note": "van tevoren"}, "sentences": ["Je kunt alvast beginnen."]}
         ]
       }
     },

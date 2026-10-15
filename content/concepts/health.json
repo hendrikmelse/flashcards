@@ -5,7 +5,7 @@
       "gloss": "die (pass away)",
       "entries": {
         "en": [
-        {"lemma": "die (pass away)", "pos": "verb", "details": {"past": "died", "participle": "died"}, "sentences": ["The old man dies."]}
+        {"lemma": "to die (pass away)", "pos": "verb", "details": {"past": "died", "participle": "died"}, "sentences": ["The old man dies."]}
         ],
         "nl": [
         {"lemma": "sterven", "pos": "verb", "details": {"pastSingular": "stierf", "pastPlural": "stierven", "participle": "gestorven", "auxiliary": "zijn"}, "sentences": ["De oude man sterft."]}
@@ -77,10 +77,10 @@
       "gloss": "treat (verb)",
       "entries": {
         "en": [
-        {"lemma": "treat", "pos": "verb", "details": {"past": "treated", "participle": "treated"}, "sentences": ["The doctor treats the patient."]}
+        {"lemma": "to treat", "pos": "verb", "details": {"past": "treated", "participle": "treated"}, "sentences": ["The doctor treats the patient."]}
         ],
         "nl": [
-        {"lemma": "behandelen", "pos": "verb", "details": {"pastSingular": "behandelde", "pastPlural": "behandelden", "participle": "behandeld", "auxiliary": "hebben"}, "sentences": ["De dokter behandelt de patiënt."]}
+        {"lemma": "behandelen", "pos": "verb", "details": {"note": "medisch, of op een bepaalde manier", "pastSingular": "behandelde", "pastPlural": "behandelden", "participle": "behandeld", "auxiliary": "hebben"}, "sentences": ["De dokter behandelt de patiënt."]}
         ]
       }
     },
@@ -137,7 +137,7 @@
       "gloss": "pass away (verb)",
       "entries": {
         "en": [
-        {"lemma": "pass away", "pos": "verb", "details": {"past": "passed away", "participle": "passed away"}, "sentences": ["The old man passed away."]}
+        {"lemma": "to pass away", "pos": "verb", "details": {"past": "passed away", "participle": "passed away"}, "sentences": ["The old man passed away."]}
         ],
         "nl": [
         {"lemma": "overlijden", "pos": "verb", "details": {"pastSingular": "overleed", "pastPlural": "overleden", "participle": "overleden", "auxiliary": "zijn"}, "sentences": ["De oude man overleed."]}
@@ -161,7 +161,7 @@
       "gloss": "suffer (verb)",
       "entries": {
         "en": [
-        {"lemma": "suffer", "pos": "verb", "details": {"past": "suffered", "participle": "suffered"}, "sentences": ["He suffers pain."]}
+        {"lemma": "to suffer", "pos": "verb", "details": {"past": "suffered", "participle": "suffered"}, "sentences": ["He suffers pain."]}
         ],
         "nl": [
         {"lemma": "lijden", "pos": "verb", "details": {"pastSingular": "leed", "pastPlural": "leden", "participle": "geleden", "auxiliary": "hebben"}, "sentences": ["Hij lijdt pijn."]}
@@ -257,7 +257,7 @@
       "gloss": "rest (verb)",
       "entries": {
         "en": [
-        {"lemma": "rest", "pos": "verb", "details": {"past": "rested", "participle": "rested"}, "sentences": ["I rest on the couch."]}
+        {"lemma": "to rest", "pos": "verb", "details": {"past": "rested", "participle": "rested"}, "sentences": ["I rest on the couch."]}
         ],
         "nl": [
         {"lemma": "rusten", "pos": "verb", "details": {"pastSingular": "rustte", "pastPlural": "rustten", "participle": "gerust", "auxiliary": "hebben"}, "sentences": ["Ik rust op de bank."]}
@@ -269,7 +269,7 @@
       "gloss": "die (go dead)",
       "entries": {
         "en": [
-        {"lemma": "die (go dead)", "pos": "verb", "details": {"past": "died", "participle": "died"}, "sentences": ["The flower dies."]}
+        {"lemma": "to die (go dead)", "pos": "verb", "details": {"past": "died", "participle": "died"}, "sentences": ["The flower dies."]}
         ],
         "nl": [
         {"lemma": "doodgaan", "pos": "verb", "details": {"pastSingular": "ging dood", "pastPlural": "gingen dood", "participle": "doodgegaan", "auxiliary": "zijn"}, "sentences": ["De bloem gaat dood."]}
@@ -305,7 +305,7 @@
       "gloss": "recover (verb)",
       "entries": {
         "en": [
-        {"lemma": "recover", "pos": "verb", "details": {"past": "recovered", "participle": "recovered"}, "sentences": ["He recovers quickly."]}
+        {"lemma": "to recover", "pos": "verb", "details": {"past": "recovered", "participle": "recovered"}, "sentences": ["He recovers quickly."]}
         ],
         "nl": [
         {"lemma": "genezen", "pos": "verb", "details": {"pastSingular": "genas", "pastPlural": "genazen", "participle": "genezen", "auxiliary": "zijn"}, "sentences": ["Hij geneest snel."]}
@@ -317,7 +317,7 @@
       "gloss": "breathe (verb)",
       "entries": {
         "en": [
-        {"lemma": "breathe", "pos": "verb", "details": {"past": "breathed", "participle": "breathed"}, "sentences": ["I breathe deeply."]}
+        {"lemma": "to breathe", "pos": "verb", "details": {"past": "breathed", "participle": "breathed"}, "sentences": ["I breathe deeply."]}
         ],
         "nl": [
         {"lemma": "ademen", "pos": "verb", "details": {"pastSingular": "ademde", "pastPlural": "ademden", "participle": "geademd", "auxiliary": "hebben"}, "sentences": ["Ik adem diep."]}
@@ -329,7 +329,7 @@
       "gloss": "bleed (verb)",
       "entries": {
         "en": [
-        {"lemma": "bleed", "pos": "verb", "details": {"past": "bled", "participle": "bled"}, "sentences": ["The wound bleeds."]}
+        {"lemma": "to bleed", "pos": "verb", "details": {"past": "bled", "participle": "bled"}, "sentences": ["The wound bleeds."]}
         ],
         "nl": [
         {"lemma": "bloeden", "pos": "verb", "details": {"pastSingular": "bloedde", "pastPlural": "bloedden", "participle": "gebloed", "auxiliary": "hebben"}, "sentences": ["De wond bloedt."]}
@@ -353,7 +353,7 @@
       "gloss": "drown (verb)",
       "entries": {
         "en": [
-        {"lemma": "drown", "pos": "verb", "details": {"past": "drowned", "participle": "drowned"}, "sentences": ["The boy drowned."]}
+        {"lemma": "to drown", "pos": "verb", "details": {"past": "drowned", "participle": "drowned"}, "sentences": ["The boy drowned."]}
         ],
         "nl": [
         {"lemma": "verdrinken", "pos": "verb", "details": {"pastSingular": "verdronk", "pastPlural": "verdronken", "participle": "verdronken", "auxiliary": "zijn"}, "sentences": ["De jongen verdronk."]}
@@ -392,7 +392,7 @@
         {"lemma": "bandage", "pos": "noun", "details": {"plural": "bandages"}, "sentences": ["I put on a bandage."]}
         ],
         "nl": [
-        {"lemma": "verband", "pos": "noun", "details": {"article": "het", "plural": "verbanden"}, "sentences": ["Ik doe een verband om."]}
+        {"lemma": "verband", "pos": "noun", "details": {"note": "om een wond", "article": "het", "plural": "verbanden"}, "sentences": ["Ik doe een verband om."]}
         ]
       }
     },
@@ -425,7 +425,7 @@
       "gloss": "take (medicine)",
       "entries": {
         "en": [
-        {"lemma": "take (medicine)", "pos": "verb", "details": {"past": "took", "participle": "taken"}, "sentences": ["I take my medicine."]}
+        {"lemma": "to take (medicine)", "pos": "verb", "details": {"past": "took", "participle": "taken"}, "sentences": ["I take my medicine."]}
         ],
         "nl": [
         {"lemma": "innemen", "pos": "verb", "details": {"pastSingular": "nam in", "pastPlural": "namen in", "participle": "ingenomen", "auxiliary": "hebben"}, "sentences": ["Ik neem mijn medicijnen in."]}
@@ -437,7 +437,7 @@
       "gloss": "vomit (verb)",
       "entries": {
         "en": [
-        {"lemma": "vomit", "pos": "verb", "details": {"past": "vomited", "participle": "vomited"}, "sentences": ["The child vomits."]}
+        {"lemma": "to vomit", "pos": "verb", "details": {"past": "vomited", "participle": "vomited"}, "sentences": ["The child vomits."]}
         ],
         "nl": [
         {"lemma": "overgeven", "pos": "verb", "details": {"pastSingular": "gaf over", "pastPlural": "gaven over", "participle": "overgegeven", "auxiliary": "hebben"}, "sentences": ["Het kind geeft over."]}
@@ -473,7 +473,7 @@
       "gloss": "choke (verb)",
       "entries": {
         "en": [
-        {"lemma": "choke", "pos": "verb", "details": {"past": "choked", "participle": "choked"}, "sentences": ["He chokes on a bone."]}
+        {"lemma": "to choke", "pos": "verb", "details": {"past": "choked", "participle": "choked"}, "sentences": ["He chokes on a bone."]}
         ],
         "nl": [
         {"lemma": "stikken", "pos": "verb", "details": {"pastSingular": "stikte", "pastPlural": "stikten", "participle": "gestikt", "auxiliary": "zijn"}, "sentences": ["Hij stikt in een bot."]}
@@ -557,7 +557,7 @@
       "gloss": "operate (verb)",
       "entries": {
         "en": [
-        {"lemma": "operate", "pos": "verb", "details": {"past": "operated", "participle": "operated"}, "sentences": ["The doctor operates."]}
+        {"lemma": "to operate", "pos": "verb", "details": {"past": "operated", "participle": "operated"}, "sentences": ["The doctor operates."]}
         ],
         "nl": [
         {"lemma": "opereren", "pos": "verb", "details": {"pastSingular": "opereerde", "pastPlural": "opereerden", "participle": "geopereerd", "auxiliary": "hebben"}, "sentences": ["De dokter opereert."]}
@@ -665,7 +665,7 @@
       "gloss": "undergo (verb)",
       "entries": {
         "en": [
-        {"lemma": "undergo", "pos": "verb", "details": {"past": "underwent", "participle": "undergone"}, "sentences": ["He undergoes surgery."]}
+        {"lemma": "to undergo", "pos": "verb", "details": {"past": "underwent", "participle": "undergone"}, "sentences": ["He undergoes surgery."]}
         ],
         "nl": [
         {"lemma": "ondergaan", "pos": "verb", "details": {"pastSingular": "onderging", "pastPlural": "ondergingen", "participle": "ondergaan", "auxiliary": "hebben"}, "sentences": ["Hij ondergaat een operatie."]}
@@ -689,7 +689,7 @@
       "gloss": "infect (verb)",
       "entries": {
         "en": [
-        {"lemma": "infect", "pos": "verb", "details": {"past": "infected", "participle": "infected"}, "sentences": ["The virus infects people."]}
+        {"lemma": "to infect", "pos": "verb", "details": {"past": "infected", "participle": "infected"}, "sentences": ["The virus infects people."]}
         ],
         "nl": [
         {"lemma": "besmetten", "pos": "verb", "details": {"pastSingular": "besmette", "pastPlural": "besmetten", "participle": "besmet", "auxiliary": "hebben"}, "sentences": ["Het virus besmet mensen."]}
@@ -737,7 +737,7 @@
       "gloss": "injure (verb)",
       "entries": {
         "en": [
-        {"lemma": "injure", "pos": "verb", "details": {"past": "injured", "participle": "injured"}, "sentences": ["The fall injures him."]}
+        {"lemma": "to injure", "pos": "verb", "details": {"past": "injured", "participle": "injured"}, "sentences": ["The fall injures him."]}
         ],
         "nl": [
         {"lemma": "verwonden", "pos": "verb", "details": {"pastSingular": "verwondde", "pastPlural": "verwondden", "participle": "verwond", "auxiliary": "hebben"}, "sentences": ["De val verwondt hem."]}
@@ -749,7 +749,7 @@
       "gloss": "tremble (verb)",
       "entries": {
         "en": [
-        {"lemma": "tremble", "pos": "verb", "details": {"past": "trembled", "participle": "trembled"}, "sentences": ["My hands tremble."]}
+        {"lemma": "to tremble", "pos": "verb", "details": {"past": "trembled", "participle": "trembled"}, "sentences": ["My hands tremble."]}
         ],
         "nl": [
         {"lemma": "trillen", "pos": "verb", "details": {"pastSingular": "trilde", "pastPlural": "trilden", "participle": "getrild", "auxiliary": "hebben"}, "sentences": ["Mijn handen trillen."]}
@@ -785,7 +785,7 @@
       "gloss": "awaken (verb)",
       "entries": {
         "en": [
-        {"lemma": "awaken", "pos": "verb", "details": {"past": "awakened", "participle": "awakened"}, "sentences": ["He awakens at dawn."]}
+        {"lemma": "to awaken", "pos": "verb", "details": {"past": "awakened", "participle": "awakened"}, "sentences": ["He awakens at dawn."]}
         ],
         "nl": [
         {"lemma": "ontwaken", "pos": "verb", "details": {"pastSingular": "ontwaakte", "pastPlural": "ontwaakten", "participle": "ontwaakt", "auxiliary": "zijn"}, "sentences": ["Hij ontwaakt bij zonsopgang."]}
@@ -833,7 +833,7 @@
       "gloss": "ease (verb)",
       "entries": {
         "en": [
-        {"lemma": "ease", "pos": "verb", "details": {"past": "eased", "participle": "eased"}, "sentences": ["The medicine eases the pain."]}
+        {"lemma": "to ease", "pos": "verb", "details": {"past": "eased", "participle": "eased"}, "sentences": ["The medicine eases the pain."]}
         ],
         "nl": [
         {"lemma": "verlichten", "pos": "verb", "details": {"pastSingular": "verlichtte", "pastPlural": "verlichtten", "participle": "verlicht", "auxiliary": "hebben"}, "sentences": ["De medicijnen verlichten de pijn."]}
@@ -905,7 +905,7 @@
       "gloss": "prick (verb)",
       "entries": {
         "en": [
-        {"lemma": "prick", "pos": "verb", "details": {"past": "pricked", "participle": "pricked"}, "sentences": ["The needle pricks me."]}
+        {"lemma": "to prick", "pos": "verb", "details": {"past": "pricked", "participle": "pricked"}, "sentences": ["The needle pricks me."]}
         ],
         "nl": [
         {"lemma": "prikken", "pos": "verb", "details": {"pastSingular": "prikte", "pastPlural": "prikten", "participle": "geprikt", "auxiliary": "hebben"}, "sentences": ["De naald prikt mij."]}
@@ -929,7 +929,7 @@
       "gloss": "paralyze (verb)",
       "entries": {
         "en": [
-        {"lemma": "paralyze", "pos": "verb", "details": {"past": "paralyzed", "participle": "paralyzed"}, "sentences": ["The fear paralyzes him."]}
+        {"lemma": "to paralyze", "pos": "verb", "details": {"past": "paralyzed", "participle": "paralyzed"}, "sentences": ["The fear paralyzes him."]}
         ],
         "nl": [
         {"lemma": "verlammen", "pos": "verb", "details": {"pastSingular": "verlamde", "pastPlural": "verlamden", "participle": "verlamd", "auxiliary": "hebben"}, "sentences": ["De angst verlamt hem."]}
@@ -941,7 +941,7 @@
       "gloss": "hurt (injure oneself)",
       "entries": {
         "en": [
-        {"lemma": "hurt (injure oneself)", "pos": "verb", "details": {"past": "hurt", "participle": "hurt"}, "sentences": ["I hurt my knee."]}
+        {"lemma": "to hurt (injure oneself)", "pos": "verb", "details": {"past": "hurt", "participle": "hurt"}, "sentences": ["I hurt my knee."]}
         ],
         "nl": [
         {"lemma": "bezeren", "pos": "verb", "details": {"pastSingular": "bezeerde", "pastPlural": "bezeerden", "participle": "bezeerd", "auxiliary": "hebben"}, "sentences": ["Ik bezeer mijn knie."]}
@@ -989,7 +989,7 @@
       "gloss": "lose weight (verb)",
       "entries": {
         "en": [
-        {"lemma": "lose weight", "pos": "verb", "details": {"past": "lost weight", "participle": "lost weight"}, "sentences": ["I want to lose weight."]}
+        {"lemma": "to lose weight", "pos": "verb", "details": {"past": "lost weight", "participle": "lost weight"}, "sentences": ["I want to lose weight."]}
         ],
         "nl": [
         {"lemma": "afvallen", "pos": "verb", "details": {"pastSingular": "viel af", "pastPlural": "vielen af", "participle": "afgevallen", "auxiliary": "zijn"}, "sentences": ["Ik wil afvallen."]}
@@ -1001,7 +1001,7 @@
       "gloss": "freshen up (verb)",
       "entries": {
         "en": [
-        {"lemma": "freshen up", "pos": "verb", "details": {"past": "freshened up", "participle": "freshened up"}, "sentences": ["I freshen up."]}
+        {"lemma": "to freshen up", "pos": "verb", "details": {"past": "freshened up", "participle": "freshened up"}, "sentences": ["I freshen up."]}
         ],
         "nl": [
         {"lemma": "opfrissen", "pos": "verb", "details": {"pastSingular": "friste op", "pastPlural": "fristen op", "participle": "opgefrist", "auxiliary": "hebben"}, "sentences": ["Ik fris me op."]}
@@ -1037,7 +1037,7 @@
       "gloss": "sweat (verb)",
       "entries": {
         "en": [
-        {"lemma": "sweat", "pos": "verb", "details": {"past": "sweated", "participle": "sweated"}, "sentences": ["I sweat in the sun."]}
+        {"lemma": "to sweat", "pos": "verb", "details": {"past": "sweated", "participle": "sweated"}, "sentences": ["I sweat in the sun."]}
         ],
         "nl": [
         {"lemma": "zweten", "pos": "verb", "details": {"pastSingular": "zweette", "pastPlural": "zweetten", "participle": "gezweet", "auxiliary": "hebben"}, "sentences": ["Ik zweet in de zon."]}
@@ -1121,7 +1121,7 @@
       "gloss": "starve (verb)",
       "entries": {
         "en": [
-        {"lemma": "starve", "pos": "verb", "details": {"past": "starved", "participle": "starved"}, "sentences": ["The animals starve."]}
+        {"lemma": "to starve", "pos": "verb", "details": {"past": "starved", "participle": "starved"}, "sentences": ["The animals starve."]}
         ],
         "nl": [
         {"lemma": "verhongeren", "pos": "verb", "details": {"pastSingular": "verhongerde", "pastPlural": "verhongerden", "participle": "verhongerd", "auxiliary": "zijn"}, "sentences": ["De dieren verhongeren."]}
@@ -1229,7 +1229,7 @@
       "gloss": "faint (verb)",
       "entries": {
         "en": [
-        {"lemma": "faint", "pos": "verb", "details": {"past": "fainted", "participle": "fainted"}, "sentences": ["He faints."]}
+        {"lemma": "to faint", "pos": "verb", "details": {"past": "fainted", "participle": "fainted"}, "sentences": ["He faints."]}
         ],
         "nl": [
         {"lemma": "flauwvallen", "pos": "verb", "details": {"pastSingular": "viel flauw", "pastPlural": "vielen flauw", "participle": "flauwgevallen", "auxiliary": "zijn"}, "sentences": ["Hij valt flauw."]}
@@ -1241,7 +1241,7 @@
       "gloss": "inhale (verb)",
       "entries": {
         "en": [
-        {"lemma": "inhale", "pos": "verb", "details": {"past": "inhaled", "participle": "inhaled"}, "sentences": ["I inhale deeply."]}
+        {"lemma": "to inhale", "pos": "verb", "details": {"past": "inhaled", "participle": "inhaled"}, "sentences": ["I inhale deeply."]}
         ],
         "nl": [
         {"lemma": "inademen", "pos": "verb", "details": {"pastSingular": "ademde in", "pastPlural": "ademden in", "participle": "ingeademd", "auxiliary": "hebben"}, "sentences": ["Ik adem diep in."]}
@@ -1277,7 +1277,7 @@
       "gloss": "weaken (verb)",
       "entries": {
         "en": [
-        {"lemma": "weaken", "pos": "verb", "details": {"past": "weakened", "participle": "weakened"}, "sentences": ["The illness weakens him."]}
+        {"lemma": "to weaken", "pos": "verb", "details": {"past": "weakened", "participle": "weakened"}, "sentences": ["The illness weakens him."]}
         ],
         "nl": [
         {"lemma": "verzwakken", "pos": "verb", "details": {"pastSingular": "verzwakte", "pastPlural": "verzwakten", "participle": "verzwakt", "auxiliary": "hebben/zijn"}, "sentences": ["De ziekte verzwakt hem."]}
@@ -1289,7 +1289,7 @@
       "gloss": "shiver (verb)",
       "entries": {
         "en": [
-        {"lemma": "shiver", "pos": "verb", "details": {"past": "shivered", "participle": "shivered"}, "sentences": ["I shiver in the cold."]}
+        {"lemma": "to shiver", "pos": "verb", "details": {"past": "shivered", "participle": "shivered"}, "sentences": ["I shiver in the cold."]}
         ],
         "nl": [
         {"lemma": "beven", "pos": "verb", "details": {"pastSingular": "beefde", "pastPlural": "beefden", "participle": "gebeefd", "auxiliary": "hebben"}, "sentences": ["Ik beef van de kou."]}
@@ -1301,7 +1301,7 @@
       "gloss": "cough (verb)",
       "entries": {
         "en": [
-        {"lemma": "cough", "pos": "verb", "details": {"past": "coughed", "participle": "coughed"}, "sentences": ["I cough a lot."]}
+        {"lemma": "to cough", "pos": "verb", "details": {"past": "coughed", "participle": "coughed"}, "sentences": ["I cough a lot."]}
         ],
         "nl": [
         {"lemma": "hoesten", "pos": "verb", "details": {"pastSingular": "hoestte", "pastPlural": "hoestten", "participle": "gehoest", "auxiliary": "hebben"}, "sentences": ["Ik hoest veel."]}
@@ -1541,7 +1541,7 @@
       "gloss": "prescribe (verb)",
       "entries": {
         "en": [
-        {"lemma": "prescribe", "pos": "verb", "details": {"past": "prescribed", "participle": "prescribed"}, "sentences": ["The doctor prescribes a pill."]}
+        {"lemma": "to prescribe", "pos": "verb", "details": {"past": "prescribed", "participle": "prescribed"}, "sentences": ["The doctor prescribes a pill."]}
         ],
         "nl": [
         {"lemma": "voorschrijven", "pos": "verb", "details": {"pastSingular": "schreef voor", "pastPlural": "schreven voor", "participle": "voorgeschreven", "auxiliary": "hebben"}, "sentences": ["De dokter schrijft een pil voor."]}
@@ -1589,7 +1589,7 @@
       "gloss": "massage (verb)",
       "entries": {
         "en": [
-        {"lemma": "massage", "pos": "verb", "details": {"past": "massaged", "participle": "massaged"}, "sentences": ["I massage my neck."]}
+        {"lemma": "to massage", "pos": "verb", "details": {"past": "massaged", "participle": "massaged"}, "sentences": ["I massage my neck."]}
         ],
         "nl": [
         {"lemma": "masseren", "pos": "verb", "details": {"pastSingular": "masseerde", "pastPlural": "masseerden", "participle": "gemasseerd", "auxiliary": "hebben"}, "sentences": ["Ik masseer mijn nek."]}
@@ -1637,7 +1637,7 @@
       "gloss": "shrink (verb)",
       "entries": {
         "en": [
-        {"lemma": "shrink", "pos": "verb", "details": {"past": "shrank", "participle": "shrunk"}, "sentences": ["The shirt shrinks."]}
+        {"lemma": "to shrink", "pos": "verb", "details": {"past": "shrank", "participle": "shrunk"}, "sentences": ["The shirt shrinks."]}
         ],
         "nl": [
         {"lemma": "krimpen", "pos": "verb", "details": {"pastSingular": "kromp", "pastPlural": "krompen", "participle": "gekrompen", "auxiliary": "zijn"}, "sentences": ["Het shirt krimpt."]}
@@ -1685,7 +1685,7 @@
       "gloss": "drool (verb)",
       "entries": {
         "en": [
-        {"lemma": "drool", "pos": "verb", "details": {"past": "drooled", "participle": "drooled"}, "sentences": ["The dog drools."]}
+        {"lemma": "to drool", "pos": "verb", "details": {"past": "drooled", "participle": "drooled"}, "sentences": ["The dog drools."]}
         ],
         "nl": [
         {"lemma": "kwijlen", "pos": "verb", "details": {"pastSingular": "kwijlde", "pastPlural": "kwijlden", "participle": "gekwijld", "auxiliary": "hebben"}, "sentences": ["De hond kwijlt."]}
@@ -1745,7 +1745,7 @@
       "gloss": "inject (verb)",
       "entries": {
         "en": [
-        {"lemma": "inject", "pos": "verb", "details": {"past": "injected", "participle": "injected"}, "sentences": ["The doctor injects the medicine."]}
+        {"lemma": "to inject", "pos": "verb", "details": {"past": "injected", "participle": "injected"}, "sentences": ["The doctor injects the medicine."]}
         ],
         "nl": [
         {"lemma": "injecteren", "pos": "verb", "details": {"pastSingular": "injecteerde", "pastPlural": "injecteerden", "participle": "geïnjecteerd", "auxiliary": "hebben"}, "sentences": ["De dokter injecteert het medicijn."]}
@@ -1853,7 +1853,7 @@
       "gloss": "administer (verb)",
       "entries": {
         "en": [
-        {"lemma": "administer", "pos": "verb", "details": {"past": "administered", "participle": "administered"}, "sentences": ["The nurse administers the medicine."]}
+        {"lemma": "to administer", "pos": "verb", "details": {"past": "administered", "participle": "administered"}, "sentences": ["The nurse administers the medicine."]}
         ],
         "nl": [
         {"lemma": "toedienen", "pos": "verb", "details": {"pastSingular": "diende toe", "pastPlural": "dienden toe", "participle": "toegediend", "auxiliary": "hebben"}, "sentences": ["De zuster dient het medicijn toe."]}
@@ -1901,7 +1901,7 @@
       "gloss": "snore (verb)",
       "entries": {
         "en": [
-        {"lemma": "snore", "pos": "verb", "details": {"past": "snored", "participle": "snored"}, "sentences": ["He snores at night."]}
+        {"lemma": "to snore", "pos": "verb", "details": {"past": "snored", "participle": "snored"}, "sentences": ["He snores at night."]}
         ],
         "nl": [
         {"lemma": "snurken", "pos": "verb", "details": {"pastSingular": "snurkte", "pastPlural": "snurkten", "participle": "gesnurkt", "auxiliary": "hebben"}, "sentences": ["Hij snurkt 's nachts."]}
@@ -1925,7 +1925,7 @@
       "gloss": "suffocate (verb)",
       "entries": {
         "en": [
-        {"lemma": "suffocate", "pos": "verb", "details": {"past": "suffocated", "participle": "suffocated"}, "sentences": ["The smoke suffocates him."]}
+        {"lemma": "to suffocate", "pos": "verb", "details": {"past": "suffocated", "participle": "suffocated"}, "sentences": ["The smoke suffocates him."]}
         ],
         "nl": [
         {"lemma": "verstikken", "pos": "verb", "details": {"pastSingular": "verstikte", "pastPlural": "verstikten", "participle": "verstikt", "auxiliary": "hebben/zijn"}, "sentences": ["De rook verstikt hem."]}
@@ -1949,7 +1949,7 @@
       "gloss": "itch (verb)",
       "entries": {
         "en": [
-        {"lemma": "itch", "pos": "verb", "details": {"past": "itched", "participle": "itched"}, "sentences": ["My arm itches."]}
+        {"lemma": "to itch", "pos": "verb", "details": {"past": "itched", "participle": "itched"}, "sentences": ["My arm itches."]}
         ],
         "nl": [
         {"lemma": "jeuken", "pos": "verb", "details": {"pastSingular": "jeukte", "pastPlural": "jeukten", "participle": "gejeukt", "auxiliary": "hebben"}, "sentences": ["Mijn arm jeukt."]}
@@ -2021,7 +2021,7 @@
       "gloss": "swell (verb)",
       "entries": {
         "en": [
-        {"lemma": "swell", "pos": "verb", "details": {"past": "swelled", "participle": "swollen"}, "sentences": ["My foot swells."]}
+        {"lemma": "to swell", "pos": "verb", "details": {"past": "swelled", "participle": "swollen"}, "sentences": ["My foot swells."]}
         ],
         "nl": [
         {"lemma": "zwellen", "pos": "verb", "details": {"pastSingular": "zwol", "pastPlural": "zwollen", "participle": "gezwollen", "auxiliary": "zijn"}, "sentences": ["Mijn voet zwelt."]}
@@ -2057,7 +2057,7 @@
       "gloss": "sneeze (verb)",
       "entries": {
         "en": [
-        {"lemma": "sneeze", "pos": "verb", "details": {"past": "sneezed", "participle": "sneezed"}, "sentences": ["I sneeze."]}
+        {"lemma": "to sneeze", "pos": "verb", "details": {"past": "sneezed", "participle": "sneezed"}, "sentences": ["I sneeze."]}
         ],
         "nl": [
         {"lemma": "niezen", "pos": "verb", "details": {"pastSingular": "niesde", "pastPlural": "niesden", "participle": "geniesd", "auxiliary": "hebben"}, "sentences": ["Ik nies."]}
@@ -2249,7 +2249,7 @@
       "gloss": "tire (verb)",
       "entries": {
         "en": [
-        {"lemma": "tire", "pos": "verb", "details": {"past": "tired", "participle": "tired"}, "sentences": ["The walk tires me."]}
+        {"lemma": "to tire", "pos": "verb", "details": {"past": "tired", "participle": "tired"}, "sentences": ["The walk tires me."]}
         ],
         "nl": [
         {"lemma": "vermoeien", "pos": "verb", "details": {"pastSingular": "vermoeide", "pastPlural": "vermoeiden", "participle": "vermoeid", "auxiliary": "hebben"}, "sentences": ["De wandeling vermoeit mij."]}

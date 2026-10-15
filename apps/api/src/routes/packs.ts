@@ -17,6 +17,7 @@ import {
   loadSentences,
   sentenceKey,
 } from "../content/queries.js";
+import { bareLemmaSql } from "../content/lemma-sql.js";
 import {
   concepts,
   entries,
@@ -280,9 +281,11 @@ export async function packRoutes(
     const term = q.data.q.toLowerCase();
     const like = term.replace(/[\\%_]/g, "\\$&");
 
+    // A verb is found by the bare word too: "run" is an exact match for "to run".
+    const bare = bareLemmaSql(entries.lemma, entries.language, entries.partOfSpeech);
     const rank = sql<number>`min(case
-      when lower(${entries.lemma}) = ${term} then 0
-      when lower(${entries.lemma}) like ${like + "%"} then 1
+      when lower(${entries.lemma}) = ${term} or lower(${bare}) = ${term} then 0
+      when lower(${entries.lemma}) like ${like + "%"} or lower(${bare}) like ${like + "%"} then 1
       else 2 end)`;
     const matches = await db
       .select({ conceptId: entries.conceptId })
@@ -317,8 +320,8 @@ export async function packRoutes(
       .groupBy(entries.conceptId)
       .orderBy(
         rank,
-        sql`min(length(${entries.lemma}))`,
-        sql`min(${entries.lemma})`,
+        sql`min(length(${bare}))`,
+        sql`min(${bare})`,
         entries.conceptId,
       )
       .limit(limit + 1)

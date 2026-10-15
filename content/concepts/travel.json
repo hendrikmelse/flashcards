@@ -20,7 +20,7 @@
         {"lemma": "map", "pos": "noun", "details": {"plural": "maps"}, "sentences": ["We look at the map."]}
         ],
         "nl": [
-        {"lemma": "kaart", "pos": "noun", "details": {"article": "de", "plural": "kaarten"}, "sentences": ["Wij kijken op de kaart."]}
+        {"lemma": "kaart", "pos": "noun", "details": {"note": "van een stad of land", "article": "de", "plural": "kaarten"}, "sentences": ["Wij kijken op de kaart."]}
         ]
       }
     },
@@ -92,7 +92,7 @@
         {"lemma": "engine", "pos": "noun", "details": {"plural": "engines"}, "sentences": ["The engine is loud."]}
         ],
         "nl": [
-        {"lemma": "motor", "pos": "noun", "details": {"article": "de", "plural": "motoren"}, "sentences": ["De motor is luid."]}
+        {"lemma": "motor", "pos": "noun", "details": {"note": "van een auto of boot", "article": "de", "plural": "motoren"}, "sentences": ["De motor is luid."]}
         ]
       }
     },
@@ -104,7 +104,7 @@
         {"lemma": "motorcycle", "pos": "noun", "details": {"plural": "motorcycles"}, "sentences": ["He rides a motorcycle."]}
         ],
         "nl": [
-        {"lemma": "motor", "pos": "noun", "details": {"article": "de", "plural": "motoren"}, "sentences": ["Hij rijdt op een motor."]}
+        {"lemma": "motor", "pos": "noun", "details": {"note": "om op te rijden", "article": "de", "plural": "motoren"}, "sentences": ["Hij rijdt op een motor."]}
         ]
       }
     },
@@ -149,7 +149,7 @@
       "gloss": "travel (verb)",
       "entries": {
         "en": [
-        {"lemma": "travel", "pos": "verb", "details": {"past": "traveled", "participle": "traveled"}, "sentences": ["I travel a lot."]}
+        {"lemma": "to travel", "pos": "verb", "details": {"past": "traveled", "participle": "traveled"}, "sentences": ["I travel a lot."]}
         ],
         "nl": [
         {"lemma": "reizen", "pos": "verb", "details": {"pastSingular": "reisde", "pastPlural": "reisden", "participle": "gereisd", "auxiliary": "hebben/zijn"}, "sentences": ["Ik reis veel."]}
@@ -317,7 +317,7 @@
       "gloss": "park (verb)",
       "entries": {
         "en": [
-        {"lemma": "park", "pos": "verb", "details": {"past": "parked", "participle": "parked"}, "sentences": ["I park the car."]}
+        {"lemma": "to park", "pos": "verb", "details": {"past": "parked", "participle": "parked"}, "sentences": ["I park the car."]}
         ],
         "nl": [
         {"lemma": "parkeren", "pos": "verb", "details": {"pastSingular": "parkeerde", "pastPlural": "parkeerden", "participle": "geparkeerd", "auxiliary": "hebben"}, "sentences": ["Ik parkeer de auto."]}
@@ -353,10 +353,10 @@
       "gloss": "pack (verb)",
       "entries": {
         "en": [
-        {"lemma": "pack", "pos": "verb", "details": {"past": "packed", "participle": "packed"}, "sentences": ["I pack my suitcase."]}
+        {"lemma": "to pack", "pos": "verb", "details": {"past": "packed", "participle": "packed"}, "sentences": ["I pack my suitcase."]}
         ],
         "nl": [
-        {"lemma": "inpakken", "pos": "verb", "details": {"pastSingular": "pakte in", "pastPlural": "pakten in", "participle": "ingepakt", "auxiliary": "hebben"}, "sentences": ["Ik pak mijn koffer in."]}
+        {"lemma": "inpakken", "pos": "verb", "details": {"note": "dingen in een tas doen", "pastSingular": "pakte in", "pastPlural": "pakten in", "participle": "ingepakt", "auxiliary": "hebben"}, "sentences": ["Ik pak mijn koffer in."]}
         ]
       }
     },
@@ -413,7 +413,7 @@
       "gloss": "sail (verb)",
       "entries": {
         "en": [
-        {"lemma": "sail", "pos": "verb", "details": {"past": "sailed", "participle": "sailed"}, "sentences": ["The ship sails."]}
+        {"lemma": "to sail", "pos": "verb", "details": {"past": "sailed", "participle": "sailed"}, "sentences": ["The ship sails."]}
         ],
         "nl": [
         {"lemma": "varen", "pos": "verb", "details": {"pastSingular": "voer", "pastPlural": "voeren", "participle": "gevaren", "auxiliary": "hebben/zijn"}, "sentences": ["Het schip vaart."]}
@@ -437,7 +437,7 @@
       "gloss": "land (verb)",
       "entries": {
         "en": [
-        {"lemma": "land", "pos": "verb", "details": {"past": "landed", "participle": "landed"}, "sentences": ["The plane lands."]}
+        {"lemma": "to land", "pos": "verb", "details": {"past": "landed", "participle": "landed"}, "sentences": ["The plane lands."]}
         ],
         "nl": [
         {"lemma": "landen", "pos": "verb", "details": {"pastSingular": "landde", "pastPlural": "landden", "participle": "geland", "auxiliary": "zijn"}, "sentences": ["Het vliegtuig landt."]}
@@ -461,7 +461,7 @@
       "gloss": "get off (verb)",
       "entries": {
         "en": [
-        {"lemma": "get off", "pos": "verb", "details": {"past": "got off", "participle": "got off"}, "sentences": ["We get off at the station."]}
+        {"lemma": "to get off", "pos": "verb", "details": {"past": "got off", "participle": "got off"}, "sentences": ["We get off at the station."]}
         ],
         "nl": [
         {"lemma": "uitstappen", "pos": "verb", "details": {"pastSingular": "stapte uit", "pastPlural": "stapten uit", "participle": "uitgestapt", "auxiliary": "zijn"}, "sentences": ["Wij stappen uit bij het station."]}
@@ -497,7 +497,7 @@
       "gloss": "get in (verb)",
       "entries": {
         "en": [
-        {"lemma": "get in", "pos": "verb", "details": {"past": "got in", "participle": "got in"}, "sentences": ["We get in the car."]}
+        {"lemma": "to get in", "pos": "verb", "details": {"past": "got in", "participle": "got in"}, "sentences": ["We get in the car."]}
         ],
         "nl": [
         {"lemma": "instappen", "pos": "verb", "details": {"pastSingular": "stapte in", "pastPlural": "stapten in", "participle": "ingestapt", "auxiliary": "zijn"}, "sentences": ["Wij stappen in de auto."]}
@@ -581,7 +581,7 @@
       "gloss": "reserve (verb)",
       "entries": {
         "en": [
-        {"lemma": "reserve", "pos": "verb", "details": {"past": "reserved", "participle": "reserved"}, "sentences": ["I reserve a table."]}
+        {"lemma": "to reserve", "pos": "verb", "details": {"past": "reserved", "participle": "reserved"}, "sentences": ["I reserve a table."]}
         ],
         "nl": [
         {"lemma": "reserveren", "pos": "verb", "details": {"pastSingular": "reserveerde", "pastPlural": "reserveerden", "participle": "gereserveerd", "auxiliary": "hebben"}, "sentences": ["Ik reserveer een tafel."]}
@@ -605,7 +605,7 @@
       "gloss": "transport (verb)",
       "entries": {
         "en": [
-        {"lemma": "transport", "pos": "verb", "details": {"past": "transported", "participle": "transported"}, "sentences": ["The truck transports goods."]}
+        {"lemma": "to transport", "pos": "verb", "details": {"past": "transported", "participle": "transported"}, "sentences": ["The truck transports goods."]}
         ],
         "nl": [
         {"lemma": "vervoeren", "pos": "verb", "details": {"pastSingular": "vervoerde", "pastPlural": "vervoerden", "participle": "vervoerd", "auxiliary": "hebben"}, "sentences": ["De vrachtwagen vervoert goederen."]}
@@ -641,7 +641,7 @@
       "gloss": "steer (verb)",
       "entries": {
         "en": [
-        {"lemma": "steer", "pos": "verb", "details": {"past": "steered", "participle": "steered"}, "sentences": ["He steers the ship."]}
+        {"lemma": "to steer", "pos": "verb", "details": {"past": "steered", "participle": "steered"}, "sentences": ["He steers the ship."]}
         ],
         "nl": [
         {"lemma": "besturen", "pos": "verb", "details": {"pastSingular": "bestuurde", "pastPlural": "bestuurden", "participle": "bestuurd", "auxiliary": "hebben"}, "sentences": ["Hij bestuurt het schip."]}
@@ -665,7 +665,7 @@
       "gloss": "book (reserve)",
       "entries": {
         "en": [
-        {"lemma": "book (reserve)", "pos": "verb", "details": {"past": "booked", "participle": "booked"}, "sentences": ["I book a hotel."]}
+        {"lemma": "to book (reserve)", "pos": "verb", "details": {"past": "booked", "participle": "booked"}, "sentences": ["I book a hotel."]}
         ],
         "nl": [
         {"lemma": "boeken", "pos": "verb", "details": {"pastSingular": "boekte", "pastPlural": "boekten", "participle": "geboekt", "auxiliary": "hebben"}, "sentences": ["Ik boek een hotel."]}
@@ -689,7 +689,7 @@
       "gloss": "run over (verb)",
       "entries": {
         "en": [
-        {"lemma": "run over", "pos": "verb", "details": {"past": "ran over", "participle": "run over"}, "sentences": ["The car ran over a cat."]}
+        {"lemma": "to run over", "pos": "verb", "details": {"past": "ran over", "participle": "run over"}, "sentences": ["The car ran over a cat."]}
         ],
         "nl": [
         {"lemma": "aanrijden", "pos": "verb", "details": {"pastSingular": "reed aan", "pastPlural": "reden aan", "participle": "aangereden", "auxiliary": "hebben"}, "sentences": ["De auto reed een kat aan."]}
@@ -701,7 +701,7 @@
       "gloss": "crash (fall down)",
       "entries": {
         "en": [
-        {"lemma": "crash (fall down)", "pos": "verb", "details": {"past": "crashed", "participle": "crashed"}, "sentences": ["The plane crashes."]}
+        {"lemma": "to crash (fall down)", "pos": "verb", "details": {"past": "crashed", "participle": "crashed"}, "sentences": ["The plane crashes."]}
         ],
         "nl": [
         {"lemma": "neerstorten", "pos": "verb", "details": {"pastSingular": "stortte neer", "pastPlural": "stortten neer", "participle": "neergestort", "auxiliary": "zijn"}, "sentences": ["Het vliegtuig stort neer."]}
@@ -773,7 +773,7 @@
       "gloss": "take off (aircraft)",
       "entries": {
         "en": [
-        {"lemma": "take off (aircraft)", "pos": "verb", "details": {"past": "took off", "participle": "taken off"}, "sentences": ["The plane took off."]}
+        {"lemma": "to take off (aircraft)", "pos": "verb", "details": {"past": "took off", "participle": "taken off"}, "sentences": ["The plane took off."]}
         ],
         "nl": [
         {"lemma": "opstijgen", "pos": "verb", "details": {"pastSingular": "steeg op", "pastPlural": "stegen op", "participle": "opgestegen", "auxiliary": "zijn"}, "sentences": ["Het vliegtuig steeg op."]}
@@ -821,7 +821,7 @@
       "gloss": "camp (verb)",
       "entries": {
         "en": [
-        {"lemma": "camp", "pos": "verb", "details": {"past": "camped", "participle": "camped"}, "sentences": ["We camp in the forest."]}
+        {"lemma": "to camp", "pos": "verb", "details": {"past": "camped", "participle": "camped"}, "sentences": ["We camp in the forest."]}
         ],
         "nl": [
         {"lemma": "kamperen", "pos": "verb", "details": {"pastSingular": "kampeerde", "pastPlural": "kampeerden", "participle": "gekampeerd", "auxiliary": "hebben"}, "sentences": ["Wij kamperen in het bos."]}
@@ -833,7 +833,7 @@
       "gloss": "explore (verb)",
       "entries": {
         "en": [
-        {"lemma": "explore", "pos": "verb", "details": {"past": "explored", "participle": "explored"}, "sentences": ["We explore the city."]}
+        {"lemma": "to explore", "pos": "verb", "details": {"past": "explored", "participle": "explored"}, "sentences": ["We explore the city."]}
         ],
         "nl": [
         {"lemma": "verkennen", "pos": "verb", "details": {"pastSingular": "verkende", "pastPlural": "verkenden", "participle": "verkend", "auxiliary": "hebben"}, "sentences": ["Wij verkennen de stad."]}
@@ -869,7 +869,7 @@
       "gloss": "brake (verb)",
       "entries": {
         "en": [
-        {"lemma": "brake", "pos": "verb", "details": {"past": "braked", "participle": "braked"}, "sentences": ["The driver brakes."]}
+        {"lemma": "to brake", "pos": "verb", "details": {"past": "braked", "participle": "braked"}, "sentences": ["The driver brakes."]}
         ],
         "nl": [
         {"lemma": "remmen", "pos": "verb", "details": {"pastSingular": "remde", "pastPlural": "remden", "participle": "geremd", "auxiliary": "hebben"}, "sentences": ["De chauffeur remt."]}
@@ -1001,7 +1001,7 @@
       "gloss": "ride along (verb)",
       "entries": {
         "en": [
-        {"lemma": "ride along", "pos": "verb", "details": {"past": "rode along", "participle": "ridden along"}, "sentences": ["I ride along with you."]}
+        {"lemma": "to ride along", "pos": "verb", "details": {"past": "rode along", "participle": "ridden along"}, "sentences": ["I ride along with you."]}
         ],
         "nl": [
         {"lemma": "meerijden", "pos": "verb", "details": {"pastSingular": "reed mee", "pastPlural": "reden mee", "participle": "meegereden", "auxiliary": "hebben/zijn"}, "sentences": ["Ik rijd met je mee."]}
@@ -1061,7 +1061,7 @@
       "gloss": "stay overnight (verb)",
       "entries": {
         "en": [
-        {"lemma": "stay overnight", "pos": "verb", "details": {"past": "stayed overnight", "participle": "stayed overnight"}, "sentences": ["We stay overnight in a hotel."]}
+        {"lemma": "to stay overnight", "pos": "verb", "details": {"past": "stayed overnight", "participle": "stayed overnight"}, "sentences": ["We stay overnight in a hotel."]}
         ],
         "nl": [
         {"lemma": "overnachten", "pos": "verb", "details": {"pastSingular": "overnachtte", "pastPlural": "overnachtten", "participle": "overnacht", "auxiliary": "hebben"}, "sentences": ["Wij overnachten in een hotel."]}
@@ -1073,7 +1073,7 @@
       "gloss": "bike (verb)",
       "entries": {
         "en": [
-        {"lemma": "bike", "pos": "verb", "details": {"past": "biked", "participle": "biked"}, "sentences": ["I bike to work."]}
+        {"lemma": "to bike", "pos": "verb", "details": {"past": "biked", "participle": "biked"}, "sentences": ["I bike to work."]}
         ],
         "nl": [
         {"lemma": "fietsen", "pos": "verb", "details": {"pastSingular": "fietste", "pastPlural": "fietsten", "participle": "gefietst", "auxiliary": "hebben/zijn"}, "sentences": ["Ik fiets naar mijn werk."]}
@@ -1109,7 +1109,7 @@
       "gloss": "fill up (fuel)",
       "entries": {
         "en": [
-        {"lemma": "fill up (fuel)", "pos": "verb", "details": {"past": "filled up", "participle": "filled up"}, "sentences": ["I fill up the car."]}
+        {"lemma": "to fill up (fuel)", "pos": "verb", "details": {"past": "filled up", "participle": "filled up"}, "sentences": ["I fill up the car."]}
         ],
         "nl": [
         {"lemma": "tanken", "pos": "verb", "details": {"pastSingular": "tankte", "pastPlural": "tankten", "participle": "getankt", "auxiliary": "hebben"}, "sentences": ["Ik tank de auto."]}
@@ -1121,7 +1121,7 @@
       "gloss": "intersect (verb)",
       "entries": {
         "en": [
-        {"lemma": "intersect", "pos": "verb", "details": {"past": "intersected", "participle": "intersected"}, "sentences": ["The roads intersect."]}
+        {"lemma": "to intersect", "pos": "verb", "details": {"past": "intersected", "participle": "intersected"}, "sentences": ["The roads intersect."]}
         ],
         "nl": [
         {"lemma": "kruisen", "pos": "verb", "details": {"pastSingular": "kruiste", "pastPlural": "kruisten", "participle": "gekruist", "auxiliary": "hebben/zijn"}, "sentences": ["De wegen kruisen elkaar."]}
@@ -1133,7 +1133,7 @@
       "gloss": "turn off (a road)",
       "entries": {
         "en": [
-        {"lemma": "turn off (a road)", "pos": "verb", "details": {"past": "turned off", "participle": "turned off"}, "sentences": ["We turn off at the exit."]}
+        {"lemma": "to turn off (a road)", "pos": "verb", "details": {"past": "turned off", "participle": "turned off"}, "sentences": ["We turn off at the exit."]}
         ],
         "nl": [
         {"lemma": "afslaan", "pos": "verb", "details": {"pastSingular": "sloeg af", "pastPlural": "sloegen af", "participle": "afgeslagen", "auxiliary": "hebben/zijn"}, "sentences": ["Wij slaan af bij de afrit."]}
@@ -1169,7 +1169,7 @@
       "gloss": "accelerate (verb)",
       "entries": {
         "en": [
-        {"lemma": "accelerate", "pos": "verb", "details": {"past": "accelerated", "participle": "accelerated"}, "sentences": ["The car accelerates."]}
+        {"lemma": "to accelerate", "pos": "verb", "details": {"past": "accelerated", "participle": "accelerated"}, "sentences": ["The car accelerates."]}
         ],
         "nl": [
         {"lemma": "versnellen", "pos": "verb", "details": {"pastSingular": "versnelde", "pastPlural": "versnelden", "participle": "versneld", "auxiliary": "hebben/zijn"}, "sentences": ["De auto versnelt."]}
@@ -1181,7 +1181,7 @@
       "gloss": "collide (verb)",
       "entries": {
         "en": [
-        {"lemma": "collide", "pos": "verb", "details": {"past": "collided", "participle": "collided"}, "sentences": ["The cars collide."]}
+        {"lemma": "to collide", "pos": "verb", "details": {"past": "collided", "participle": "collided"}, "sentences": ["The cars collide."]}
         ],
         "nl": [
         {"lemma": "botsen", "pos": "verb", "details": {"pastSingular": "botste", "pastPlural": "botsten", "participle": "gebotst", "auxiliary": "hebben/zijn"}, "sentences": ["De auto's botsen."]}
@@ -1349,7 +1349,7 @@
       "gloss": "drive away (leave by vehicle)",
       "entries": {
         "en": [
-        {"lemma": "drive away", "pos": "verb", "details": {"past": "drove away", "participle": "driven away"}, "sentences": ["The car drove away."]}
+        {"lemma": "to drive away", "pos": "verb", "details": {"past": "drove away", "participle": "driven away"}, "sentences": ["The car drove away."]}
         ],
         "nl": [
         {"lemma": "wegrijden", "pos": "verb", "details": {"pastSingular": "reed weg", "pastPlural": "reden weg", "participle": "weggereden", "auxiliary": "zijn"}, "sentences": ["De auto reed weg."]}
@@ -1397,7 +1397,7 @@
       "gloss": "drive around (verb)",
       "entries": {
         "en": [
-        {"lemma": "drive around", "pos": "verb", "details": {"past": "drove around", "participle": "driven around"}, "sentences": ["We drive around the city."]}
+        {"lemma": "to drive around", "pos": "verb", "details": {"past": "drove around", "participle": "driven around"}, "sentences": ["We drive around the city."]}
         ],
         "nl": [
         {"lemma": "rondrijden", "pos": "verb", "details": {"pastSingular": "reed rond", "pastPlural": "reden rond", "participle": "rondgereden", "auxiliary": "hebben"}, "sentences": ["Wij rijden rond in de stad."]}
@@ -1649,7 +1649,7 @@
       "gloss": "check in (verb)",
       "entries": {
         "en": [
-        {"lemma": "check in", "pos": "verb", "details": {"past": "checked in", "participle": "checked in"}, "sentences": ["We check in at the hotel."]}
+        {"lemma": "to check in", "pos": "verb", "details": {"past": "checked in", "participle": "checked in"}, "sentences": ["We check in at the hotel."]}
         ],
         "nl": [
         {"lemma": "inchecken", "pos": "verb", "details": {"pastSingular": "checkte in", "pastPlural": "checkten in", "participle": "ingecheckt", "auxiliary": "hebben"}, "sentences": ["Wij checken in bij het hotel."]}
@@ -1817,7 +1817,7 @@
       "gloss": "run aground (verb)",
       "entries": {
         "en": [
-        {"lemma": "run aground", "pos": "verb", "details": {"past": "ran aground", "participle": "run aground"}, "sentences": ["The ship ran aground."]}
+        {"lemma": "to run aground", "pos": "verb", "details": {"past": "ran aground", "participle": "run aground"}, "sentences": ["The ship ran aground."]}
         ],
         "nl": [
         {"lemma": "stranden", "pos": "verb", "details": {"pastSingular": "strandde", "pastPlural": "strandden", "participle": "gestrand", "auxiliary": "zijn"}, "sentences": ["Het schip strandde."]}

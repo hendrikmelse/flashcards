@@ -32,8 +32,8 @@
         {"lemma": "they", "pos": "pronoun", "sentences": ["They live in Utrecht."]}
         ],
         "nl": [
-        {"lemma": "zij", "pos": "pronoun", "sentences": ["Zij wonen in Utrecht."]},
-        {"lemma": "ze", "pos": "pronoun", "sentences": ["Ze wonen in Utrecht."]}
+        {"lemma": "zij", "pos": "pronoun", "details": {"note": "nadruk, meervoud onderwerp"}, "sentences": ["Zij wonen in Utrecht."]},
+        {"lemma": "ze", "pos": "pronoun", "details": {"note": "gewoon, meervoud onderwerp"}, "sentences": ["Ze wonen in Utrecht."]}
         ]
       }
     },
@@ -69,7 +69,7 @@
         {"lemma": "you (formal)", "pos": "pronoun", "sentences": ["Can I help you?"]}
         ],
         "nl": [
-        {"lemma": "u", "pos": "pronoun", "sentences": ["Kan ik u helpen?"]}
+        {"lemma": "u", "pos": "pronoun", "details": {"note": "formeel, tegen één of meer mensen"}, "sentences": ["Kan ik u helpen?"]}
         ]
       }
     },
@@ -165,8 +165,8 @@
         {"lemma": "me", "pos": "pronoun", "sentences": ["He sees me.", "He gave it to me."]}
         ],
         "nl": [
-        {"lemma": "mij", "pos": "pronoun", "sentences": ["Hij gaf het aan mij."]},
-        {"lemma": "me", "pos": "pronoun", "sentences": ["Hij ziet me."]}
+        {"lemma": "mij", "pos": "pronoun", "details": {"note": "nadruk"}, "sentences": ["Hij gaf het aan mij."]},
+        {"lemma": "me", "pos": "pronoun", "details": {"note": "gewoon"}, "sentences": ["Hij ziet me."]}
         ]
       }
     },
@@ -178,7 +178,7 @@
         {"lemma": "you (plural)", "pos": "pronoun", "sentences": ["You are my friends."]}
         ],
         "nl": [
-        {"lemma": "jullie", "pos": "pronoun", "sentences": ["Jullie zijn mijn vrienden."]}
+        {"lemma": "jullie", "pos": "pronoun", "details": {"note": "tegen meerdere bekenden"}, "sentences": ["Jullie zijn mijn vrienden."]}
         ]
       }
     },
@@ -226,8 +226,8 @@
         {"lemma": "you (object)", "pos": "pronoun", "sentences": ["I see you."]}
         ],
         "nl": [
-        {"lemma": "jou", "pos": "pronoun", "sentences": ["Ik zie jou."]},
-        {"lemma": "je", "pos": "pronoun", "sentences": ["Ik zie je."]}
+        {"lemma": "jou", "pos": "pronoun", "details": {"note": "nadruk"}, "sentences": ["Ik zie jou."]},
+        {"lemma": "je", "pos": "pronoun", "details": {"note": "gewoon, als lijdend voorwerp"}, "sentences": ["Ik zie je."]}
         ]
       }
     },
@@ -239,7 +239,7 @@
         {"lemma": "nothing", "pos": "pronoun", "sentences": ["There is nothing here."]}
         ],
         "nl": [
-        {"lemma": "niets", "pos": "pronoun", "sentences": ["Er is hier niets."]}
+        {"lemma": "niets", "pos": "pronoun", "details": {"note": "standaard"}, "sentences": ["Er is hier niets."]}
         ]
       }
     },
@@ -275,7 +275,7 @@
         {"lemma": "nothing (informal)", "pos": "pronoun", "sentences": ["I see nothing."]}
         ],
         "nl": [
-        {"lemma": "niks", "pos": "pronoun", "sentences": ["Ik zie niks."]}
+        {"lemma": "niks", "pos": "pronoun", "details": {"note": "informeel"}, "sentences": ["Ik zie niks."]}
         ]
       }
     },
@@ -383,8 +383,8 @@
         {"lemma": "them", "pos": "pronoun", "sentences": ["I see them."]}
         ],
         "nl": [
-        {"lemma": "hen", "pos": "pronoun", "sentences": ["Ik zie hen."]},
-        {"lemma": "ze", "pos": "pronoun", "sentences": ["Ik zie ze."]}
+        {"lemma": "hen", "pos": "pronoun", "details": {"note": "mensen, als lijdend voorwerp"}, "sentences": ["Ik zie hen."]},
+        {"lemma": "ze", "pos": "pronoun", "details": {"note": "gewoon, als lijdend voorwerp"}, "sentences": ["Ik zie ze."]}
         ]
       }
     },
@@ -636,7 +636,7 @@
         {"lemma": "many (formal)", "pos": "determiner", "sentences": ["Many people came."]}
         ],
         "nl": [
-        {"lemma": "vele", "pos": "determiner", "sentences": ["Vele mensen kwamen."]}
+        {"lemma": "vele", "pos": "determiner", "details": {"note": "formeel of geschreven"}, "sentences": ["Vele mensen kwamen."]}
         ]
       }
     },
@@ -876,7 +876,7 @@
         {"lemma": "after", "pos": "preposition", "sentences": ["After dinner I walk."]}
         ],
         "nl": [
-        {"lemma": "na", "pos": "preposition", "sentences": ["Na het eten loop ik."]}
+        {"lemma": "na", "pos": "preposition", "details": {"note": "voor een zelfstandig naamwoord"}, "sentences": ["Na het eten loop ik."]}
         ]
       }
     },
@@ -1176,7 +1176,7 @@
         {"lemma": "because (main clause)", "pos": "conjunction", "sentences": ["I stay home, because I am tired."]}
         ],
         "nl": [
-        {"lemma": "want", "pos": "conjunction", "sentences": ["Ik blijf thuis, want ik ben moe."]}
+        {"lemma": "want", "pos": "conjunction", "details": {"note": "de woordvolgorde blijft gewoon"}, "sentences": ["Ik blijf thuis, want ik ben moe."]}
         ]
       }
     },
@@ -1296,7 +1296,7 @@
         {"lemma": "after (conjunction)", "pos": "conjunction", "sentences": ["After I eat, I walk."]}
         ],
         "nl": [
-        {"lemma": "nadat", "pos": "conjunction", "sentences": ["Nadat ik gegeten heb, loop ik."]}
+        {"lemma": "nadat", "pos": "conjunction", "details": {"note": "voor een bijzin"}, "sentences": ["Nadat ik gegeten heb, loop ik."]}
         ]
       }
     },
@@ -1356,7 +1356,7 @@
         {"lemma": "or (formal)", "pos": "conjunction", "sentences": ["You pay now or later."]}
         ],
         "nl": [
-        {"lemma": "ofwel", "pos": "conjunction", "sentences": ["U betaalt nu ofwel later."]}
+        {"lemma": "ofwel", "pos": "conjunction", "details": {"note": "formeel, voor een keuze"}, "sentences": ["U betaalt nu ofwel later."]}
         ]
       }
     },
@@ -1380,7 +1380,7 @@
         {"lemma": "because (of the fact that)", "pos": "conjunction", "sentences": ["He is late because the train was late."]}
         ],
         "nl": [
-        {"lemma": "doordat", "pos": "conjunction", "sentences": ["Hij is te laat doordat de trein te laat was."]}
+        {"lemma": "doordat", "pos": "conjunction", "details": {"note": "geeft een oorzaak"}, "sentences": ["Hij is te laat doordat de trein te laat was."]}
         ]
       }
     },

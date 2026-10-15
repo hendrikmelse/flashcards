@@ -344,7 +344,7 @@
         {"lemma": "couch", "pos": "noun", "details": {"plural": "couches"}, "sentences": ["The cat sleeps on the couch."]}
         ],
         "nl": [
-        {"lemma": "bank", "pos": "noun", "details": {"article": "de", "plural": "banken"}, "sentences": ["De kat slaapt op de bank."]}
+        {"lemma": "bank", "pos": "noun", "details": {"note": "om op te zitten", "article": "de", "plural": "banken"}, "sentences": ["De kat slaapt op de bank."]}
         ]
       }
     },
@@ -356,7 +356,7 @@
         {"lemma": "light", "pos": "noun", "details": {"plural": "lights"}, "sentences": ["Turn on the light."]}
         ],
         "nl": [
-        {"lemma": "licht", "pos": "noun", "details": {"article": "het", "plural": "lichten"}, "sentences": ["Doe het licht aan."]}
+        {"lemma": "licht", "pos": "noun", "details": {"note": "van een lamp of de zon", "article": "het", "plural": "lichten"}, "sentences": ["Doe het licht aan."]}
         ]
       }
     },
@@ -368,7 +368,7 @@
         {"lemma": "wall", "pos": "noun", "details": {"plural": "walls"}, "sentences": ["The wall is white."]}
         ],
         "nl": [
-        {"lemma": "muur", "pos": "noun", "details": {"article": "de", "plural": "muren"}, "sentences": ["De muur is wit."]}
+        {"lemma": "muur", "pos": "noun", "details": {"note": "buiten, of rond een stad", "article": "de", "plural": "muren"}, "sentences": ["De muur is wit."]}
         ]
       }
     },
@@ -584,7 +584,7 @@
         {"lemma": "dust", "pos": "noun", "details": {"uncountable": true}, "sentences": ["There is dust on the table."]}
         ],
         "nl": [
-        {"lemma": "stof", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["Er ligt stof op de tafel."]}
+        {"lemma": "stof", "pos": "noun", "details": {"note": "op de tafel", "article": "het", "uncountable": true}, "sentences": ["Er ligt stof op de tafel."]}
         ]
       }
     },
@@ -725,7 +725,7 @@
       "gloss": "move in (verb)",
       "entries": {
         "en": [
-        {"lemma": "move in", "pos": "verb", "details": {"past": "moved in", "participle": "moved in"}, "sentences": ["We moved in last week."]}
+        {"lemma": "to move in", "pos": "verb", "details": {"past": "moved in", "participle": "moved in"}, "sentences": ["We moved in last week."]}
         ],
         "nl": [
         {"lemma": "intrekken", "pos": "verb", "details": {"pastSingular": "trok in", "pastPlural": "trokken in", "participle": "ingetrokken", "auxiliary": "zijn"}, "sentences": ["Wij trokken vorige week in."]}
@@ -920,7 +920,7 @@
         {"lemma": "cloth", "pos": "noun", "details": {"plural": "cloths"}, "sentences": ["I wipe the table with a cloth."]}
         ],
         "nl": [
-        {"lemma": "doek", "pos": "noun", "details": {"article": "het", "plural": "doeken"}, "sentences": ["Ik veeg de tafel af met een doek."]}
+        {"lemma": "doek", "pos": "noun", "details": {"note": "om mee af te vegen of te bedekken", "article": "het", "plural": "doeken"}, "sentences": ["Ik veeg de tafel af met een doek."]}
         ]
       }
     },
@@ -980,7 +980,7 @@
         {"lemma": "bowl", "pos": "noun", "details": {"plural": "bowls"}, "sentences": ["The bowl is full of fruit."]}
         ],
         "nl": [
-        {"lemma": "schaal", "pos": "noun", "details": {"article": "de", "plural": "schalen"}, "sentences": ["De schaal is vol fruit."]}
+        {"lemma": "schaal", "pos": "noun", "details": {"note": "voor fruit of eten", "article": "de", "plural": "schalen"}, "sentences": ["De schaal is vol fruit."]}
         ]
       }
     },
@@ -1169,10 +1169,10 @@
       "gloss": "paint (coat)",
       "entries": {
         "en": [
-        {"lemma": "paint (coat)", "pos": "verb", "details": {"past": "painted", "participle": "painted"}, "sentences": ["I paint the door."]}
+        {"lemma": "to paint (coat)", "pos": "verb", "details": {"past": "painted", "participle": "painted"}, "sentences": ["I paint the door."]}
         ],
         "nl": [
-        {"lemma": "verven", "pos": "verb", "details": {"pastSingular": "verfde", "pastPlural": "verfden", "participle": "geverfd", "auxiliary": "hebben"}, "sentences": ["Ik verf de deur."]}
+        {"lemma": "verven", "pos": "verb", "details": {"note": "muren, haar", "pastSingular": "verfde", "pastPlural": "verfden", "participle": "geverfd", "auxiliary": "hebben"}, "sentences": ["Ik verf de deur."]}
         ]
       }
     },
@@ -1397,7 +1397,7 @@
       "gloss": "furnish (verb)",
       "entries": {
         "en": [
-        {"lemma": "furnish", "pos": "verb", "details": {"past": "furnished", "participle": "furnished"}, "sentences": ["We furnish the room."]}
+        {"lemma": "to furnish", "pos": "verb", "details": {"past": "furnished", "participle": "furnished"}, "sentences": ["We furnish the room."]}
         ],
         "nl": [
         {"lemma": "inrichten", "pos": "verb", "details": {"pastSingular": "richtte in", "pastPlural": "richtten in", "participle": "ingericht", "auxiliary": "hebben"}, "sentences": ["Wij richten de kamer in."]}
@@ -1481,7 +1481,7 @@
       "gloss": "burn down (verb)",
       "entries": {
         "en": [
-        {"lemma": "burn down", "pos": "verb", "details": {"past": "burned down", "participle": "burned down"}, "sentences": ["The house burned down."]}
+        {"lemma": "to burn down", "pos": "verb", "details": {"past": "burned down", "participle": "burned down"}, "sentences": ["The house burned down."]}
         ],
         "nl": [
         {"lemma": "afbranden", "pos": "verb", "details": {"pastSingular": "brandde af", "pastPlural": "brandden af", "participle": "afgebrand", "auxiliary": "zijn"}, "sentences": ["Het huis brandde af."]}
@@ -1580,7 +1580,7 @@
         {"lemma": "wall (inner)", "pos": "noun", "details": {"plural": "walls"}, "sentences": ["The wall of the cave is wet."]}
         ],
         "nl": [
-        {"lemma": "wand", "pos": "noun", "details": {"article": "de", "plural": "wanden"}, "sentences": ["De wand van de grot is nat."]}
+        {"lemma": "wand", "pos": "noun", "details": {"note": "binnen in een kamer", "article": "de", "plural": "wanden"}, "sentences": ["De wand van de grot is nat."]}
         ]
       }
     },
@@ -1637,7 +1637,7 @@
       "gloss": "heat (verb)",
       "entries": {
         "en": [
-        {"lemma": "heat", "pos": "verb", "details": {"past": "heated", "participle": "heated"}, "sentences": ["I heat the room."]}
+        {"lemma": "to heat", "pos": "verb", "details": {"past": "heated", "participle": "heated"}, "sentences": ["I heat the room."]}
         ],
         "nl": [
         {"lemma": "verwarmen", "pos": "verb", "details": {"pastSingular": "verwarmde", "pastPlural": "verwarmden", "participle": "verwarmd", "auxiliary": "hebben"}, "sentences": ["Ik verwarm de kamer."]}
@@ -1805,10 +1805,10 @@
       "gloss": "change (bedding)",
       "entries": {
         "en": [
-        {"lemma": "change (bedding)", "pos": "verb", "details": {"past": "changed", "participle": "changed"}, "sentences": ["I change the bed."]}
+        {"lemma": "to change (bedding)", "pos": "verb", "details": {"past": "changed", "participle": "changed"}, "sentences": ["I change the bed."]}
         ],
         "nl": [
-        {"lemma": "verschonen", "pos": "verb", "details": {"pastSingular": "verschoonde", "pastPlural": "verschoonden", "participle": "verschoond", "auxiliary": "hebben"}, "sentences": ["Ik verschoon het bed."]}
+        {"lemma": "verschonen", "pos": "verb", "details": {"note": "beddengoed, een baby", "pastSingular": "verschoonde", "pastPlural": "verschoonden", "participle": "verschoond", "auxiliary": "hebben"}, "sentences": ["Ik verschoon het bed."]}
         ]
       }
     },
@@ -2141,7 +2141,7 @@
       "gloss": "wash the dishes (verb)",
       "entries": {
         "en": [
-        {"lemma": "wash the dishes", "pos": "verb", "details": {"past": "washed the dishes", "participle": "washed the dishes"}, "sentences": ["I wash the dishes."]}
+        {"lemma": "to wash the dishes", "pos": "verb", "details": {"past": "washed the dishes", "participle": "washed the dishes"}, "sentences": ["I wash the dishes."]}
         ],
         "nl": [
         {"lemma": "afwassen", "pos": "verb", "details": {"pastSingular": "waste af", "pastPlural": "wasten af", "participle": "afgewassen", "auxiliary": "hebben"}, "sentences": ["Ik was de borden af."]}

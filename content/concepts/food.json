@@ -317,7 +317,7 @@
       "gloss": "eat up (verb)",
       "entries": {
         "en": [
-        {"lemma": "eat up", "pos": "verb", "details": {"past": "ate up", "participle": "eaten up"}, "sentences": ["I eat up the soup."]}
+        {"lemma": "to eat up", "pos": "verb", "details": {"past": "ate up", "participle": "eaten up"}, "sentences": ["I eat up the soup."]}
         ],
         "nl": [
         {"lemma": "opeten", "pos": "verb", "details": {"pastSingular": "at op", "pastPlural": "aten op", "participle": "opgegeten", "auxiliary": "hebben"}, "sentences": ["Ik eet de soep op."]}
@@ -341,7 +341,7 @@
       "gloss": "spread (verb)",
       "entries": {
         "en": [
-        {"lemma": "spread", "pos": "verb", "details": {"past": "spread", "participle": "spread"}, "sentences": ["I spread butter on the bread."]}
+        {"lemma": "to spread", "pos": "verb", "details": {"past": "spread", "participle": "spread"}, "sentences": ["I spread butter on the bread."]}
         ],
         "nl": [
         {"lemma": "smeren", "pos": "verb", "details": {"pastSingular": "smeerde", "pastPlural": "smeerden", "participle": "gesmeerd", "auxiliary": "hebben"}, "sentences": ["Ik smeer boter op het brood."]}
@@ -401,7 +401,7 @@
       "gloss": "pour (serve a drink)",
       "entries": {
         "en": [
-        {"lemma": "pour (serve a drink)", "pos": "verb", "details": {"past": "poured", "participle": "poured"}, "sentences": ["I pour the tea."]}
+        {"lemma": "to pour (serve a drink)", "pos": "verb", "details": {"past": "poured", "participle": "poured"}, "sentences": ["I pour the tea."]}
         ],
         "nl": [
         {"lemma": "schenken", "pos": "verb", "details": {"pastSingular": "schonk", "pastPlural": "schonken", "participle": "geschonken", "auxiliary": "hebben"}, "sentences": ["Ik schenk de thee."]}
@@ -413,7 +413,7 @@
       "gloss": "have lunch (verb)",
       "entries": {
         "en": [
-        {"lemma": "have lunch", "pos": "verb", "details": {"past": "had lunch", "participle": "had lunch"}, "sentences": ["We have lunch at noon."]}
+        {"lemma": "to have lunch", "pos": "verb", "details": {"past": "had lunch", "participle": "had lunch"}, "sentences": ["We have lunch at noon."]}
         ],
         "nl": [
         {"lemma": "lunchen", "pos": "verb", "details": {"pastSingular": "lunchte", "pastPlural": "lunchten", "participle": "geluncht", "auxiliary": "hebben"}, "sentences": ["Wij lunchen om twaalf uur."]}
@@ -452,7 +452,7 @@
         {"lemma": "dinner", "pos": "noun", "details": {"plural": "dinners"}, "sentences": ["Dinner is ready."]}
         ],
         "nl": [
-        {"lemma": "diner", "pos": "noun", "details": {"article": "het", "plural": "diners"}, "sentences": ["Het diner is klaar."]}
+        {"lemma": "diner", "pos": "noun", "details": {"note": "officieel, in een restaurant", "article": "het", "plural": "diners"}, "sentences": ["Het diner is klaar."]}
         ]
       }
     },
@@ -461,7 +461,7 @@
       "gloss": "bake (verb)",
       "entries": {
         "en": [
-        {"lemma": "bake", "pos": "verb", "details": {"past": "baked", "participle": "baked"}, "sentences": ["I bake bread."]}
+        {"lemma": "to bake", "pos": "verb", "details": {"past": "baked", "participle": "baked"}, "sentences": ["I bake bread."]}
         ],
         "nl": [
         {"lemma": "bakken", "pos": "verb", "details": {"pastSingular": "bakte", "pastPlural": "bakten", "participle": "gebakken", "auxiliary": "hebben"}, "sentences": ["Ik bak brood."]}
@@ -473,10 +473,10 @@
       "gloss": "taste (verb)",
       "entries": {
         "en": [
-        {"lemma": "taste", "pos": "verb", "details": {"past": "tasted", "participle": "tasted"}, "sentences": ["I taste the soup."]}
+        {"lemma": "to taste", "pos": "verb", "details": {"past": "tasted", "participle": "tasted"}, "sentences": ["I taste the soup."]}
         ],
         "nl": [
-        {"lemma": "proeven", "pos": "verb", "details": {"pastSingular": "proefde", "pastPlural": "proefden", "participle": "geproefd", "auxiliary": "hebben"}, "sentences": ["Ik proef de soep."]}
+        {"lemma": "proeven", "pos": "verb", "details": {"note": "zelf even testen of het lekker is", "pastSingular": "proefde", "pastPlural": "proefden", "participle": "geproefd", "auxiliary": "hebben"}, "sentences": ["Ik proef de soep."]}
         ]
       }
     },
@@ -485,10 +485,10 @@
       "gloss": "taste (have a flavor)",
       "entries": {
         "en": [
-        {"lemma": "taste (have a flavor)", "pos": "verb", "details": {"past": "tasted", "participle": "tasted"}, "sentences": ["The soup tastes good."]}
+        {"lemma": "to taste (have a flavor)", "pos": "verb", "details": {"past": "tasted", "participle": "tasted"}, "sentences": ["The soup tastes good."]}
         ],
         "nl": [
-        {"lemma": "smaken", "pos": "verb", "details": {"pastSingular": "smaakte", "pastPlural": "smaakten", "participle": "gesmaakt", "auxiliary": "hebben"}, "sentences": ["De soep smaakt goed."]}
+        {"lemma": "smaken", "pos": "verb", "details": {"note": "van het eten zelf, bijvoorbeeld zoet", "pastSingular": "smaakte", "pastPlural": "smaakten", "participle": "gesmaakt", "auxiliary": "hebben"}, "sentences": ["De soep smaakt goed."]}
         ]
       }
     },
@@ -509,7 +509,7 @@
       "gloss": "swallow (verb)",
       "entries": {
         "en": [
-        {"lemma": "swallow", "pos": "verb", "details": {"past": "swallowed", "participle": "swallowed"}, "sentences": ["I swallow the pill."]}
+        {"lemma": "to swallow", "pos": "verb", "details": {"past": "swallowed", "participle": "swallowed"}, "sentences": ["I swallow the pill."]}
         ],
         "nl": [
         {"lemma": "slikken", "pos": "verb", "details": {"pastSingular": "slikte", "pastPlural": "slikten", "participle": "geslikt", "auxiliary": "hebben"}, "sentences": ["Ik slik de pil."]}
@@ -641,7 +641,7 @@
       "gloss": "have breakfast (verb)",
       "entries": {
         "en": [
-        {"lemma": "have breakfast", "pos": "verb", "details": {"past": "had breakfast", "participle": "had breakfast"}, "sentences": ["We have breakfast at eight."]}
+        {"lemma": "to have breakfast", "pos": "verb", "details": {"past": "had breakfast", "participle": "had breakfast"}, "sentences": ["We have breakfast at eight."]}
         ],
         "nl": [
         {"lemma": "ontbijten", "pos": "verb", "details": {"pastSingular": "ontbeet", "pastPlural": "ontbeten", "participle": "ontbeten", "auxiliary": "hebben"}, "sentences": ["Wij ontbijten om acht uur."]}
@@ -668,7 +668,7 @@
         {"lemma": "sandwich", "pos": "noun", "details": {"plural": "sandwiches"}, "sentences": ["I eat a sandwich."]}
         ],
         "nl": [
-        {"lemma": "broodje", "pos": "noun", "details": {"article": "het", "plural": "broodjes"}, "sentences": ["Ik eet een broodje."]}
+        {"lemma": "broodje", "pos": "noun", "details": {"note": "een klein brood met beleg", "article": "het", "plural": "broodjes"}, "sentences": ["Ik eet een broodje."]}
         ]
       }
     },
@@ -680,7 +680,7 @@
         {"lemma": "carrot", "pos": "noun", "details": {"plural": "carrots"}, "sentences": ["I eat a carrot."]}
         ],
         "nl": [
-        {"lemma": "wortel", "pos": "noun", "details": {"article": "de", "plural": "wortels"}, "sentences": ["Ik eet een wortel."]}
+        {"lemma": "wortel", "pos": "noun", "details": {"note": "een groente", "article": "de", "plural": "wortels"}, "sentences": ["Ik eet een wortel."]}
         ]
       }
     },
@@ -749,10 +749,10 @@
       "gloss": "serve (food)",
       "entries": {
         "en": [
-        {"lemma": "serve (food)", "pos": "verb", "details": {"past": "served", "participle": "served"}, "sentences": ["They serve dinner."]}
+        {"lemma": "to serve (food)", "pos": "verb", "details": {"past": "served", "participle": "served"}, "sentences": ["They serve dinner."]}
         ],
         "nl": [
-        {"lemma": "serveren", "pos": "verb", "details": {"pastSingular": "serveerde", "pastPlural": "serveerden", "participle": "geserveerd", "auxiliary": "hebben"}, "sentences": ["Zij serveren het diner."]}
+        {"lemma": "serveren", "pos": "verb", "details": {"note": "eten en drinken", "pastSingular": "serveerde", "pastPlural": "serveerden", "participle": "geserveerd", "auxiliary": "hebben"}, "sentences": ["Zij serveren het diner."]}
         ]
       }
     },
@@ -860,7 +860,7 @@
         {"lemma": "dinner (evening meal)", "pos": "noun", "details": {"uncountable": true}, "sentences": ["Dinner is at six."]}
         ],
         "nl": [
-        {"lemma": "avondeten", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["Het avondeten is om zes uur."]}
+        {"lemma": "avondeten", "pos": "noun", "details": {"note": "de maaltijd thuis in de avond", "article": "het", "uncountable": true}, "sentences": ["Het avondeten is om zes uur."]}
         ]
       }
     },
@@ -869,7 +869,7 @@
       "gloss": "dine (verb)",
       "entries": {
         "en": [
-        {"lemma": "dine", "pos": "verb", "details": {"past": "dined", "participle": "dined"}, "sentences": ["We dine at eight."]}
+        {"lemma": "to dine", "pos": "verb", "details": {"past": "dined", "participle": "dined"}, "sentences": ["We dine at eight."]}
         ],
         "nl": [
         {"lemma": "dineren", "pos": "verb", "details": {"pastSingular": "dineerde", "pastPlural": "dineerden", "participle": "gedineerd", "auxiliary": "hebben"}, "sentences": ["Wij dineren om acht uur."]}
@@ -992,7 +992,7 @@
         {"lemma": "sandwich (slice of bread)", "pos": "noun", "details": {"plural": "sandwiches"}, "sentences": ["I eat a sandwich."]}
         ],
         "nl": [
-        {"lemma": "boterham", "pos": "noun", "details": {"article": "de", "plural": "boterhammen"}, "sentences": ["Ik eet een boterham."]}
+        {"lemma": "boterham", "pos": "noun", "details": {"note": "een sneetje brood met beleg", "article": "de", "plural": "boterhammen"}, "sentences": ["Ik eet een boterham."]}
         ]
       }
     },
@@ -1001,7 +1001,7 @@
       "gloss": "spit (verb)",
       "entries": {
         "en": [
-        {"lemma": "spit", "pos": "verb", "details": {"past": "spat", "participle": "spat"}, "sentences": ["He spits on the ground."]}
+        {"lemma": "to spit", "pos": "verb", "details": {"past": "spat", "participle": "spat"}, "sentences": ["He spits on the ground."]}
         ],
         "nl": [
         {"lemma": "spugen", "pos": "verb", "details": {"pastSingular": "spuugde", "pastPlural": "spuugden", "participle": "gespuugd", "auxiliary": "hebben"}, "sentences": ["Hij spuugt op de grond."]}
@@ -1061,7 +1061,7 @@
       "gloss": "roast (verb)",
       "entries": {
         "en": [
-        {"lemma": "roast", "pos": "verb", "details": {"past": "roasted", "participle": "roasted"}, "sentences": ["I roast the nuts."]}
+        {"lemma": "to roast", "pos": "verb", "details": {"past": "roasted", "participle": "roasted"}, "sentences": ["I roast the nuts."]}
         ],
         "nl": [
         {"lemma": "roosteren", "pos": "verb", "details": {"pastSingular": "roosterde", "pastPlural": "roosterden", "participle": "geroosterd", "auxiliary": "hebben"}, "sentences": ["Ik rooster de noten."]}
@@ -1145,7 +1145,7 @@
       "gloss": "chew (verb)",
       "entries": {
         "en": [
-        {"lemma": "chew", "pos": "verb", "details": {"past": "chewed", "participle": "chewed"}, "sentences": ["I chew the bread."]}
+        {"lemma": "to chew", "pos": "verb", "details": {"past": "chewed", "participle": "chewed"}, "sentences": ["I chew the bread."]}
         ],
         "nl": [
         {"lemma": "kauwen", "pos": "verb", "details": {"pastSingular": "kauwde", "pastPlural": "kauwden", "participle": "gekauwd", "auxiliary": "hebben"}, "sentences": ["Ik kauw op het brood."]}
@@ -1217,7 +1217,7 @@
       "gloss": "pour (liquid)",
       "entries": {
         "en": [
-        {"lemma": "pour (liquid)", "pos": "verb", "details": {"past": "poured", "participle": "poured"}, "sentences": ["I pour the water."]}
+        {"lemma": "to pour (liquid)", "pos": "verb", "details": {"past": "poured", "participle": "poured"}, "sentences": ["I pour the water."]}
         ],
         "nl": [
         {"lemma": "gieten", "pos": "verb", "details": {"pastSingular": "goot", "pastPlural": "goten", "participle": "gegoten", "auxiliary": "hebben"}, "sentences": ["Ik giet het water."]}
@@ -1361,7 +1361,7 @@
       "gloss": "stir (verb)",
       "entries": {
         "en": [
-        {"lemma": "stir", "pos": "verb", "details": {"past": "stirred", "participle": "stirred"}, "sentences": ["I stir the soup."]}
+        {"lemma": "to stir", "pos": "verb", "details": {"past": "stirred", "participle": "stirred"}, "sentences": ["I stir the soup."]}
         ],
         "nl": [
         {"lemma": "roeren", "pos": "verb", "details": {"pastSingular": "roerde", "pastPlural": "roerden", "participle": "geroerd", "auxiliary": "hebben"}, "sentences": ["Ik roer de soep."]}
@@ -1421,7 +1421,7 @@
       "gloss": "devour (verb)",
       "entries": {
         "en": [
-        {"lemma": "devour", "pos": "verb", "details": {"past": "devoured", "participle": "devoured"}, "sentences": ["The wolf devours the meat."]}
+        {"lemma": "to devour", "pos": "verb", "details": {"past": "devoured", "participle": "devoured"}, "sentences": ["The wolf devours the meat."]}
         ],
         "nl": [
         {"lemma": "verslinden", "pos": "verb", "details": {"pastSingular": "verslond", "pastPlural": "verslonden", "participle": "verslonden", "auxiliary": "hebben"}, "sentences": ["De wolf verslindt het vlees."]}
@@ -1577,7 +1577,7 @@
       "gloss": "digest (verb)",
       "entries": {
         "en": [
-        {"lemma": "digest", "pos": "verb", "details": {"past": "digested", "participle": "digested"}, "sentences": ["The stomach digests the food."]}
+        {"lemma": "to digest", "pos": "verb", "details": {"past": "digested", "participle": "digested"}, "sentences": ["The stomach digests the food."]}
         ],
         "nl": [
         {"lemma": "verteren", "pos": "verb", "details": {"pastSingular": "verteerde", "pastPlural": "verteerden", "participle": "verteerd", "auxiliary": "hebben"}, "sentences": ["De maag verteert het eten."]}
@@ -1661,7 +1661,7 @@
       "gloss": "slaughter (verb)",
       "entries": {
         "en": [
-        {"lemma": "slaughter", "pos": "verb", "details": {"past": "slaughtered", "participle": "slaughtered"}, "sentences": ["They slaughter the pig."]}
+        {"lemma": "to slaughter", "pos": "verb", "details": {"past": "slaughtered", "participle": "slaughtered"}, "sentences": ["They slaughter the pig."]}
         ],
         "nl": [
         {"lemma": "slachten", "pos": "verb", "details": {"pastSingular": "slachtte", "pastPlural": "slachtten", "participle": "geslacht", "auxiliary": "hebben"}, "sentences": ["Zij slachten het varken."]}
@@ -1712,7 +1712,7 @@
         {"lemma": "cream", "pos": "noun", "details": {"uncountable": true}, "sentences": ["I put cream in my coffee."]}
         ],
         "nl": [
-        {"lemma": "room", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Ik doe room in mijn koffie."]}
+        {"lemma": "room", "pos": "noun", "details": {"note": "van melk", "article": "de", "uncountable": true}, "sentences": ["Ik doe room in mijn koffie."]}
         ]
       }
     },
@@ -1733,7 +1733,7 @@
       "gloss": "fry (verb)",
       "entries": {
         "en": [
-        {"lemma": "fry", "pos": "verb", "details": {"past": "fried", "participle": "fried"}, "sentences": ["I fry the meat."]}
+        {"lemma": "to fry", "pos": "verb", "details": {"past": "fried", "participle": "fried"}, "sentences": ["I fry the meat."]}
         ],
         "nl": [
         {"lemma": "braden", "pos": "verb", "details": {"pastSingular": "braadde", "pastPlural": "braadden", "participle": "gebraden", "auxiliary": "hebben"}, "sentences": ["Ik braad het vlees."]}
@@ -1844,7 +1844,7 @@
         {"lemma": "cream (lotion)", "pos": "noun", "details": {"plural": "creams"}, "sentences": ["I use a cream."]}
         ],
         "nl": [
-        {"lemma": "crème", "pos": "noun", "details": {"article": "de", "plural": "crèmes"}, "sentences": ["Ik gebruik een crème."]}
+        {"lemma": "crème", "pos": "noun", "details": {"note": "voor de huid", "article": "de", "plural": "crèmes"}, "sentences": ["Ik gebruik een crème."]}
         ]
       }
     },
@@ -2045,7 +2045,7 @@
       "gloss": "grind (verb)",
       "entries": {
         "en": [
-        {"lemma": "grind", "pos": "verb", "details": {"past": "ground", "participle": "ground"}, "sentences": ["I grind the coffee."]}
+        {"lemma": "to grind", "pos": "verb", "details": {"past": "ground", "participle": "ground"}, "sentences": ["I grind the coffee."]}
         ],
         "nl": [
         {"lemma": "malen", "pos": "verb", "details": {"pastSingular": "maalde", "pastPlural": "maalden", "participle": "gemalen", "auxiliary": "hebben"}, "sentences": ["Ik maal de koffie."]}
@@ -2105,7 +2105,7 @@
       "gloss": "milk (verb)",
       "entries": {
         "en": [
-        {"lemma": "milk", "pos": "verb", "details": {"past": "milked", "participle": "milked"}, "sentences": ["The farmer milks the cow."]}
+        {"lemma": "to milk", "pos": "verb", "details": {"past": "milked", "participle": "milked"}, "sentences": ["The farmer milks the cow."]}
         ],
         "nl": [
         {"lemma": "melken", "pos": "verb", "details": {"pastSingular": "melkte", "pastPlural": "melkten", "participle": "gemolken", "auxiliary": "hebben"}, "sentences": ["De boer melkte de koe."]}
@@ -2177,10 +2177,10 @@
       "gloss": "boil (verb)",
       "entries": {
         "en": [
-        {"lemma": "boil", "pos": "verb", "details": {"past": "boiled", "participle": "boiled"}, "sentences": ["The water boils."]}
+        {"lemma": "to boil", "pos": "verb", "details": {"past": "boiled", "participle": "boiled"}, "sentences": ["The water boils."]}
         ],
         "nl": [
-        {"lemma": "koken", "pos": "verb", "details": {"pastSingular": "kookte", "pastPlural": "kookten", "participle": "gekookt", "auxiliary": "hebben"}, "sentences": ["Het water kookt."]}
+        {"lemma": "koken", "pos": "verb", "details": {"note": "water, soep", "pastSingular": "kookte", "pastPlural": "kookten", "participle": "gekookt", "auxiliary": "hebben"}, "sentences": ["Het water kookt."]}
         ]
       }
     },
@@ -2189,7 +2189,7 @@
       "gloss": "peel (verb)",
       "entries": {
         "en": [
-        {"lemma": "peel", "pos": "verb", "details": {"past": "peeled", "participle": "peeled"}, "sentences": ["I peel the potatoes."]}
+        {"lemma": "to peel", "pos": "verb", "details": {"past": "peeled", "participle": "peeled"}, "sentences": ["I peel the potatoes."]}
         ],
         "nl": [
         {"lemma": "schillen", "pos": "verb", "details": {"pastSingular": "schilde", "pastPlural": "schilden", "participle": "geschild", "auxiliary": "hebben"}, "sentences": ["Ik schil de aardappels."]}
@@ -2201,7 +2201,7 @@
       "gloss": "grate (verb)",
       "entries": {
         "en": [
-        {"lemma": "grate", "pos": "verb", "details": {"past": "grated", "participle": "grated"}, "sentences": ["I grate the cheese."]}
+        {"lemma": "to grate", "pos": "verb", "details": {"past": "grated", "participle": "grated"}, "sentences": ["I grate the cheese."]}
         ],
         "nl": [
         {"lemma": "raspen", "pos": "verb", "details": {"pastSingular": "raspte", "pastPlural": "raspten", "participle": "geraspt", "auxiliary": "hebben"}, "sentences": ["Ik rasp de kaas."]}
@@ -2213,10 +2213,10 @@
       "gloss": "whisk (verb)",
       "entries": {
         "en": [
-        {"lemma": "whisk", "pos": "verb", "details": {"past": "whisked", "participle": "whisked"}, "sentences": ["I whisk the eggs."]}
+        {"lemma": "to whisk", "pos": "verb", "details": {"past": "whisked", "participle": "whisked"}, "sentences": ["I whisk the eggs."]}
         ],
         "nl": [
-        {"lemma": "kloppen", "pos": "verb", "details": {"pastSingular": "klopte", "pastPlural": "klopten", "participle": "geklopt", "auxiliary": "hebben"}, "sentences": ["Ik klop de eieren."]}
+        {"lemma": "kloppen", "pos": "verb", "details": {"note": "eieren, room", "pastSingular": "klopte", "pastPlural": "klopten", "participle": "geklopt", "auxiliary": "hebben"}, "sentences": ["Ik klop de eieren."]}
         ]
       }
     },
@@ -2225,7 +2225,7 @@
       "gloss": "knead (verb)",
       "entries": {
         "en": [
-        {"lemma": "knead", "pos": "verb", "details": {"past": "kneaded", "participle": "kneaded"}, "sentences": ["I knead the dough."]}
+        {"lemma": "to knead", "pos": "verb", "details": {"past": "kneaded", "participle": "kneaded"}, "sentences": ["I knead the dough."]}
         ],
         "nl": [
         {"lemma": "kneden", "pos": "verb", "details": {"pastSingular": "kneedde", "pastPlural": "kneedden", "participle": "gekneed", "auxiliary": "hebben"}, "sentences": ["Ik kneed het deeg."]}
@@ -2237,7 +2237,7 @@
       "gloss": "roll out (verb)",
       "entries": {
         "en": [
-        {"lemma": "roll out", "pos": "verb", "details": {"past": "rolled out", "participle": "rolled out"}, "sentences": ["I roll out the dough."]}
+        {"lemma": "to roll out", "pos": "verb", "details": {"past": "rolled out", "participle": "rolled out"}, "sentences": ["I roll out the dough."]}
         ],
         "nl": [
         {"lemma": "uitrollen", "pos": "verb", "details": {"pastSingular": "rolde uit", "pastPlural": "rolden uit", "participle": "uitgerold", "auxiliary": "hebben"}, "sentences": ["Ik rol het deeg uit."]}
@@ -2249,7 +2249,7 @@
       "gloss": "season (verb)",
       "entries": {
         "en": [
-        {"lemma": "season", "pos": "verb", "details": {"past": "seasoned", "participle": "seasoned"}, "sentences": ["I season the soup."]}
+        {"lemma": "to season", "pos": "verb", "details": {"past": "seasoned", "participle": "seasoned"}, "sentences": ["I season the soup."]}
         ],
         "nl": [
         {"lemma": "kruiden", "pos": "verb", "details": {"pastSingular": "kruidde", "pastPlural": "kruidden", "participle": "gekruid", "auxiliary": "hebben"}, "sentences": ["Ik kruid de soep."]}
@@ -2261,7 +2261,7 @@
       "gloss": "simmer (verb)",
       "entries": {
         "en": [
-        {"lemma": "simmer", "pos": "verb", "details": {"past": "simmered", "participle": "simmered"}, "sentences": ["The sauce simmers."]}
+        {"lemma": "to simmer", "pos": "verb", "details": {"past": "simmered", "participle": "simmered"}, "sentences": ["The sauce simmers."]}
         ],
         "nl": [
         {"lemma": "sudderen", "pos": "verb", "details": {"pastSingular": "sudderde", "pastPlural": "sudderden", "participle": "gesudderd", "auxiliary": "hebben"}, "sentences": ["De saus suddert."]}
@@ -2273,7 +2273,7 @@
       "gloss": "marinate (verb)",
       "entries": {
         "en": [
-        {"lemma": "marinate", "pos": "verb", "details": {"past": "marinated", "participle": "marinated"}, "sentences": ["I marinate the meat."]}
+        {"lemma": "to marinate", "pos": "verb", "details": {"past": "marinated", "participle": "marinated"}, "sentences": ["I marinate the meat."]}
         ],
         "nl": [
         {"lemma": "marineren", "pos": "verb", "details": {"pastSingular": "marineerde", "pastPlural": "marineerden", "participle": "gemarineerd", "auxiliary": "hebben"}, "sentences": ["Ik marineer het vlees."]}
@@ -2729,7 +2729,7 @@
       "gloss": "toast (raise a glass)",
       "entries": {
         "en": [
-        {"lemma": "toast (raise a glass)", "pos": "verb", "details": {"past": "toasted", "participle": "toasted"}, "sentences": ["We toast to your health."]}
+        {"lemma": "to toast (raise a glass)", "pos": "verb", "details": {"past": "toasted", "participle": "toasted"}, "sentences": ["We toast to your health."]}
         ],
         "nl": [
         {"lemma": "toosten", "pos": "verb", "details": {"pastSingular": "toastte", "pastPlural": "toastten", "participle": "getoast", "auxiliary": "hebben"}, "sentences": ["Wij toosten op je gezondheid."]}
@@ -3128,7 +3128,7 @@
         {"lemma": "mint", "pos": "noun", "details": {"uncountable": true}, "sentences": ["I put mint in the tea."]}
         ],
         "nl": [
-        {"lemma": "munt", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Ik doe munt in de thee."]}
+        {"lemma": "munt", "pos": "noun", "details": {"note": "een kruid", "article": "de", "uncountable": true}, "sentences": ["Ik doe munt in de thee."]}
         ]
       }
     },

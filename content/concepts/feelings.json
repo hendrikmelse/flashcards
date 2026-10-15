@@ -32,7 +32,7 @@
         {"lemma": "calm", "pos": "adjective", "sentences": ["The sea is calm."]}
         ],
         "nl": [
-        {"lemma": "rustig", "pos": "adjective", "sentences": ["De zee is rustig."]}
+        {"lemma": "rustig", "pos": "adjective", "details": {"note": "stil, niet druk"}, "sentences": ["De zee is rustig."]}
         ]
       }
     },
@@ -56,7 +56,7 @@
         {"lemma": "happy (content)", "pos": "adjective", "sentences": ["She is happy."]}
         ],
         "nl": [
-        {"lemma": "gelukkig", "pos": "adjective", "sentences": ["Zij is gelukkig."]}
+        {"lemma": "gelukkig", "pos": "adjective", "details": {"note": "tevreden met je leven, of met geluk"}, "sentences": ["Zij is gelukkig."]}
         ]
       }
     },
@@ -113,7 +113,7 @@
       "gloss": "laugh (verb)",
       "entries": {
         "en": [
-        {"lemma": "laugh", "pos": "verb", "details": {"past": "laughed", "participle": "laughed"}, "sentences": ["The children laugh."]}
+        {"lemma": "to laugh", "pos": "verb", "details": {"past": "laughed", "participle": "laughed"}, "sentences": ["The children laugh."]}
         ],
         "nl": [
         {"lemma": "lachen", "pos": "verb", "details": {"pastSingular": "lachte", "pastPlural": "lachten", "participle": "gelachen", "auxiliary": "hebben"}, "sentences": ["De kinderen lachen."]}
@@ -137,7 +137,7 @@
       "gloss": "hate (verb)",
       "entries": {
         "en": [
-        {"lemma": "hate", "pos": "verb", "details": {"past": "hated", "participle": "hated"}, "sentences": ["I hate the rain."]}
+        {"lemma": "to hate", "pos": "verb", "details": {"past": "hated", "participle": "hated"}, "sentences": ["I hate the rain."]}
         ],
         "nl": [
         {"lemma": "haten", "pos": "verb", "details": {"pastSingular": "haatte", "pastPlural": "haatten", "participle": "gehaat", "auxiliary": "hebben"}, "sentences": ["Ik haat de regen."]}
@@ -173,7 +173,7 @@
       "gloss": "cry (verb)",
       "entries": {
         "en": [
-        {"lemma": "cry", "pos": "verb", "details": {"past": "cried", "participle": "cried"}, "sentences": ["The baby cries."]}
+        {"lemma": "to cry", "pos": "verb", "details": {"past": "cried", "participle": "cried"}, "sentences": ["The baby cries."]}
         ],
         "nl": [
         {"lemma": "huilen", "pos": "verb", "details": {"pastSingular": "huilde", "pastPlural": "huilden", "participle": "gehuild", "auxiliary": "hebben"}, "sentences": ["De baby huilt."]}
@@ -197,7 +197,7 @@
       "gloss": "enjoy (verb)",
       "entries": {
         "en": [
-        {"lemma": "enjoy", "pos": "verb", "details": {"past": "enjoyed", "participle": "enjoyed"}, "sentences": ["I enjoy the sun."]}
+        {"lemma": "to enjoy", "pos": "verb", "details": {"past": "enjoyed", "participle": "enjoyed"}, "sentences": ["I enjoy the sun."]}
         ],
         "nl": [
         {"lemma": "genieten", "pos": "verb", "details": {"pastSingular": "genoot", "pastPlural": "genoten", "participle": "genoten", "auxiliary": "hebben"}, "sentences": ["Ik geniet van de zon."]}
@@ -236,7 +236,7 @@
         {"lemma": "calm (composed)", "pos": "adjective", "sentences": ["Stay calm."]}
         ],
         "nl": [
-        {"lemma": "kalm", "pos": "adjective", "sentences": ["Blijf kalm."]}
+        {"lemma": "kalm", "pos": "adjective", "details": {"note": "vredig, niet opgewonden"}, "sentences": ["Blijf kalm."]}
         ]
       }
     },
@@ -257,7 +257,7 @@
       "gloss": "be startled (verb)",
       "entries": {
         "en": [
-        {"lemma": "be startled", "pos": "verb", "details": {"past": "was startled", "participle": "been startled"}, "sentences": ["Do not be startled."]}
+        {"lemma": "to be startled", "pos": "verb", "details": {"past": "was startled", "participle": "been startled"}, "sentences": ["Do not be startled."]}
         ],
         "nl": [
         {"lemma": "schrikken", "pos": "verb", "details": {"pastSingular": "schrok", "pastPlural": "schrokken", "participle": "geschrokken", "auxiliary": "zijn"}, "sentences": ["Schrik niet."]}
@@ -293,7 +293,7 @@
       "gloss": "fear (verb)",
       "entries": {
         "en": [
-        {"lemma": "fear", "pos": "verb", "details": {"past": "feared", "participle": "feared"}, "sentences": ["I fear the worst."]}
+        {"lemma": "to fear", "pos": "verb", "details": {"past": "feared", "participle": "feared"}, "sentences": ["I fear the worst."]}
         ],
         "nl": [
         {"lemma": "vrezen", "pos": "verb", "details": {"pastSingular": "vreesde", "pastPlural": "vreesden", "participle": "gevreesd", "auxiliary": "hebben"}, "sentences": ["Ik vrees het ergste."]}
@@ -305,7 +305,7 @@
       "gloss": "be ashamed (verb)",
       "entries": {
         "en": [
-        {"lemma": "be ashamed", "pos": "verb", "details": {"past": "was ashamed", "participle": "been ashamed"}, "sentences": ["Do not be ashamed."]}
+        {"lemma": "to be ashamed", "pos": "verb", "details": {"past": "was ashamed", "participle": "been ashamed"}, "sentences": ["Do not be ashamed."]}
         ],
         "nl": [
         {"lemma": "schamen", "pos": "verb", "details": {"pastSingular": "schaamde", "pastPlural": "schaamden", "participle": "geschaamd", "auxiliary": "hebben"}, "sentences": ["Schaam je niet."]}
@@ -377,7 +377,7 @@
       "gloss": "surprise (verb)",
       "entries": {
         "en": [
-        {"lemma": "surprise", "pos": "verb", "details": {"past": "surprised", "participle": "surprised"}, "sentences": ["You surprise me."]}
+        {"lemma": "to surprise", "pos": "verb", "details": {"past": "surprised", "participle": "surprised"}, "sentences": ["You surprise me."]}
         ],
         "nl": [
         {"lemma": "verrassen", "pos": "verb", "details": {"pastSingular": "verraste", "pastPlural": "verrasten", "participle": "verrast", "auxiliary": "hebben"}, "sentences": ["Je verrast me."]}
@@ -509,7 +509,7 @@
       "gloss": "hurt (offend)",
       "entries": {
         "en": [
-        {"lemma": "hurt (offend)", "pos": "verb", "details": {"past": "hurt", "participle": "hurt"}, "sentences": ["Do not hurt him."]}
+        {"lemma": "to hurt (offend)", "pos": "verb", "details": {"past": "hurt", "participle": "hurt"}, "sentences": ["Do not hurt him."]}
         ],
         "nl": [
         {"lemma": "kwetsen", "pos": "verb", "details": {"pastSingular": "kwetste", "pastPlural": "kwetsten", "participle": "gekwetst", "auxiliary": "hebben"}, "sentences": ["Kwets hem niet."]}
@@ -521,7 +521,7 @@
       "gloss": "disappoint (verb)",
       "entries": {
         "en": [
-        {"lemma": "disappoint", "pos": "verb", "details": {"past": "disappointed", "participle": "disappointed"}, "sentences": ["I do not want to disappoint you."]}
+        {"lemma": "to disappoint", "pos": "verb", "details": {"past": "disappointed", "participle": "disappointed"}, "sentences": ["I do not want to disappoint you."]}
         ],
         "nl": [
         {"lemma": "teleurstellen", "pos": "verb", "details": {"pastSingular": "stelde teleur", "pastPlural": "stelden teleur", "participle": "teleurgesteld", "auxiliary": "hebben"}, "sentences": ["Ik wil je niet teleurstellen."]}
@@ -581,7 +581,7 @@
       "gloss": "amaze (verb)",
       "entries": {
         "en": [
-        {"lemma": "amaze", "pos": "verb", "details": {"past": "amazed", "participle": "amazed"}, "sentences": ["That amazes me."]}
+        {"lemma": "to amaze", "pos": "verb", "details": {"past": "amazed", "participle": "amazed"}, "sentences": ["That amazes me."]}
         ],
         "nl": [
         {"lemma": "verbazen", "pos": "verb", "details": {"pastSingular": "verbaasde", "pastPlural": "verbaasden", "participle": "verbaasd", "auxiliary": "hebben"}, "sentences": ["Dat verbaast me."]}
@@ -689,7 +689,7 @@
       "gloss": "bore (verb)",
       "entries": {
         "en": [
-        {"lemma": "bore", "pos": "verb", "details": {"past": "bored", "participle": "bored"}, "sentences": ["The film bores me."]}
+        {"lemma": "to bore", "pos": "verb", "details": {"past": "bored", "participle": "bored"}, "sentences": ["The film bores me."]}
         ],
         "nl": [
         {"lemma": "vervelen", "pos": "verb", "details": {"pastSingular": "verveelde", "pastPlural": "verveelden", "participle": "verveeld", "auxiliary": "hebben"}, "sentences": ["De film verveelt me."]}
@@ -773,7 +773,7 @@
       "gloss": "confuse (verb)",
       "entries": {
         "en": [
-        {"lemma": "confuse", "pos": "verb", "details": {"past": "confused", "participle": "confused"}, "sentences": ["The map confuses me."]}
+        {"lemma": "to confuse", "pos": "verb", "details": {"past": "confused", "participle": "confused"}, "sentences": ["The map confuses me."]}
         ],
         "nl": [
         {"lemma": "verwarren", "pos": "verb", "details": {"pastSingular": "verwarde", "pastPlural": "verwarden", "participle": "verward", "auxiliary": "hebben"}, "sentences": ["De kaart verwart me."]}
@@ -869,7 +869,7 @@
       "gloss": "admire (verb)",
       "entries": {
         "en": [
-        {"lemma": "admire", "pos": "verb", "details": {"past": "admired", "participle": "admired"}, "sentences": ["I admire her."]}
+        {"lemma": "to admire", "pos": "verb", "details": {"past": "admired", "participle": "admired"}, "sentences": ["I admire her."]}
         ],
         "nl": [
         {"lemma": "bewonderen", "pos": "verb", "details": {"pastSingular": "bewonderde", "pastPlural": "bewonderden", "participle": "bewonderd", "auxiliary": "hebben"}, "sentences": ["Ik bewonder haar."]}
@@ -1025,7 +1025,7 @@
       "gloss": "persevere (verb)",
       "entries": {
         "en": [
-        {"lemma": "persevere", "pos": "verb", "details": {"past": "persevered", "participle": "persevered"}, "sentences": ["I persevere."]}
+        {"lemma": "to persevere", "pos": "verb", "details": {"past": "persevered", "participle": "persevered"}, "sentences": ["I persevere."]}
         ],
         "nl": [
         {"lemma": "volhouden", "pos": "verb", "details": {"pastSingular": "hield vol", "pastPlural": "hielden vol", "participle": "volgehouden", "auxiliary": "hebben"}, "sentences": ["Ik houd vol."]}
@@ -1037,7 +1037,7 @@
       "gloss": "long for (verb)",
       "entries": {
         "en": [
-        {"lemma": "long for", "pos": "verb", "details": {"past": "longed for", "participle": "longed for"}, "sentences": ["I long for the summer."]}
+        {"lemma": "to long for", "pos": "verb", "details": {"past": "longed for", "participle": "longed for"}, "sentences": ["I long for the summer."]}
         ],
         "nl": [
         {"lemma": "verlangen", "pos": "verb", "details": {"pastSingular": "verlangde", "pastPlural": "verlangden", "participle": "verlangd", "auxiliary": "hebben"}, "sentences": ["Ik verlang naar de zomer."]}
@@ -1073,7 +1073,7 @@
       "gloss": "calm down (verb)",
       "entries": {
         "en": [
-        {"lemma": "calm down", "pos": "verb", "details": {"past": "calmed down", "participle": "calmed down"}, "sentences": ["Calm down!"]}
+        {"lemma": "to calm down", "pos": "verb", "details": {"past": "calmed down", "participle": "calmed down"}, "sentences": ["Calm down!"]}
         ],
         "nl": [
         {"lemma": "kalmeren", "pos": "verb", "details": {"pastSingular": "kalmeerde", "pastPlural": "kalmeerden", "participle": "gekalmeerd", "auxiliary": "hebben/zijn"}, "sentences": ["Kalmeer!"]}
@@ -1217,7 +1217,7 @@
       "gloss": "shock (verb)",
       "entries": {
         "en": [
-        {"lemma": "shock", "pos": "verb", "details": {"past": "shocked", "participle": "shocked"}, "sentences": ["The news shocks me."]}
+        {"lemma": "to shock", "pos": "verb", "details": {"past": "shocked", "participle": "shocked"}, "sentences": ["The news shocks me."]}
         ],
         "nl": [
         {"lemma": "schokken", "pos": "verb", "details": {"pastSingular": "schokte", "pastPlural": "schokten", "participle": "geschokt", "auxiliary": "hebben"}, "sentences": ["Het nieuws schokt mij."]}
@@ -1229,7 +1229,7 @@
       "gloss": "look forward to (verb)",
       "entries": {
         "en": [
-        {"lemma": "look forward to", "pos": "verb", "details": {"past": "looked forward to", "participle": "looked forward to"}, "sentences": ["I look forward to the summer."]}
+        {"lemma": "to look forward to", "pos": "verb", "details": {"past": "looked forward to", "participle": "looked forward to"}, "sentences": ["I look forward to the summer."]}
         ],
         "nl": [
         {"lemma": "verheugen", "pos": "verb", "details": {"pastSingular": "verheugde", "pastPlural": "verheugden", "participle": "verheugd", "auxiliary": "hebben"}, "sentences": ["Ik verheug me op de zomer."]}
@@ -1337,7 +1337,7 @@
       "gloss": "inspire (verb)",
       "entries": {
         "en": [
-        {"lemma": "inspire", "pos": "verb", "details": {"past": "inspired", "participle": "inspired"}, "sentences": ["The music inspires me."]}
+        {"lemma": "to inspire", "pos": "verb", "details": {"past": "inspired", "participle": "inspired"}, "sentences": ["The music inspires me."]}
         ],
         "nl": [
         {"lemma": "inspireren", "pos": "verb", "details": {"pastSingular": "inspireerde", "pastPlural": "inspireerden", "participle": "geïnspireerd", "auxiliary": "hebben"}, "sentences": ["De muziek inspireert mij."]}
@@ -1397,7 +1397,7 @@
       "gloss": "fascinate (verb)",
       "entries": {
         "en": [
-        {"lemma": "fascinate", "pos": "verb", "details": {"past": "fascinated", "participle": "fascinated"}, "sentences": ["The story fascinates me."]}
+        {"lemma": "to fascinate", "pos": "verb", "details": {"past": "fascinated", "participle": "fascinated"}, "sentences": ["The story fascinates me."]}
         ],
         "nl": [
         {"lemma": "fascineren", "pos": "verb", "details": {"pastSingular": "fascineerde", "pastPlural": "fascineerden", "participle": "gefascineerd", "auxiliary": "hebben"}, "sentences": ["Het verhaal fascineert mij."]}
@@ -1457,7 +1457,7 @@
       "gloss": "smile (verb)",
       "entries": {
         "en": [
-        {"lemma": "smile", "pos": "verb", "details": {"past": "smiled", "participle": "smiled"}, "sentences": ["She smiles."]}
+        {"lemma": "to smile", "pos": "verb", "details": {"past": "smiled", "participle": "smiled"}, "sentences": ["She smiles."]}
         ],
         "nl": [
         {"lemma": "glimlachen", "pos": "verb", "details": {"pastSingular": "glimlachte", "pastPlural": "glimlachten", "participle": "geglimlacht", "auxiliary": "hebben"}, "sentences": ["Zij glimlacht."]}
@@ -1601,7 +1601,7 @@
       "gloss": "irritate (verb)",
       "entries": {
         "en": [
-        {"lemma": "irritate", "pos": "verb", "details": {"past": "irritated", "participle": "irritated"}, "sentences": ["The noise irritates me."]}
+        {"lemma": "to irritate", "pos": "verb", "details": {"past": "irritated", "participle": "irritated"}, "sentences": ["The noise irritates me."]}
         ],
         "nl": [
         {"lemma": "irriteren", "pos": "verb", "details": {"pastSingular": "irriteerde", "pastPlural": "irriteerden", "participle": "geïrriteerd", "auxiliary": "hebben"}, "sentences": ["Het lawaai irriteert mij."]}
@@ -1637,7 +1637,7 @@
       "gloss": "cherish (verb)",
       "entries": {
         "en": [
-        {"lemma": "cherish", "pos": "verb", "details": {"past": "cherished", "participle": "cherished"}, "sentences": ["I cherish this memory."]}
+        {"lemma": "to cherish", "pos": "verb", "details": {"past": "cherished", "participle": "cherished"}, "sentences": ["I cherish this memory."]}
         ],
         "nl": [
         {"lemma": "koesteren", "pos": "verb", "details": {"pastSingular": "koesterde", "pastPlural": "koesterden", "participle": "gekoesterd", "auxiliary": "hebben"}, "sentences": ["Ik koester deze herinnering."]}
@@ -1733,7 +1733,7 @@
       "gloss": "hesitate (verb)",
       "entries": {
         "en": [
-        {"lemma": "hesitate", "pos": "verb", "details": {"past": "hesitated", "participle": "hesitated"}, "sentences": ["I hesitate."]}
+        {"lemma": "to hesitate", "pos": "verb", "details": {"past": "hesitated", "participle": "hesitated"}, "sentences": ["I hesitate."]}
         ],
         "nl": [
         {"lemma": "aarzelen", "pos": "verb", "details": {"pastSingular": "aarzelde", "pastPlural": "aarzelden", "participle": "geaarzeld", "auxiliary": "hebben"}, "sentences": ["Ik aarzel."]}
@@ -1889,7 +1889,7 @@
       "gloss": "frighten (verb)",
       "entries": {
         "en": [
-        {"lemma": "frighten", "pos": "verb", "details": {"past": "frightened", "participle": "frightened"}, "sentences": ["The storm frightens me."]}
+        {"lemma": "to frighten", "pos": "verb", "details": {"past": "frightened", "participle": "frightened"}, "sentences": ["The storm frightens me."]}
         ],
         "nl": [
         {"lemma": "beangstigen", "pos": "verb", "details": {"pastSingular": "beangstigde", "pastPlural": "beangstigden", "participle": "beangstigd", "auxiliary": "hebben"}, "sentences": ["De storm beangstigt mij."]}
@@ -1973,7 +1973,7 @@
       "gloss": "mourn (verb)",
       "entries": {
         "en": [
-        {"lemma": "mourn", "pos": "verb", "details": {"past": "mourned", "participle": "mourned"}, "sentences": ["They mourn their father."]}
+        {"lemma": "to mourn", "pos": "verb", "details": {"past": "mourned", "participle": "mourned"}, "sentences": ["They mourn their father."]}
         ],
         "nl": [
         {"lemma": "rouwen", "pos": "verb", "details": {"pastSingular": "rouwde", "pastPlural": "rouwden", "participle": "gerouwd", "auxiliary": "hebben"}, "sentences": ["Zij rouwen om hun vader."]}
@@ -2081,7 +2081,7 @@
       "gloss": "torment (verb)",
       "entries": {
         "en": [
-        {"lemma": "torment", "pos": "verb", "details": {"past": "tormented", "participle": "tormented"}, "sentences": ["The thought torments me."]}
+        {"lemma": "to torment", "pos": "verb", "details": {"past": "tormented", "participle": "tormented"}, "sentences": ["The thought torments me."]}
         ],
         "nl": [
         {"lemma": "kwellen", "pos": "verb", "details": {"pastSingular": "kwelde", "pastPlural": "kwelden", "participle": "gekweld", "auxiliary": "hebben"}, "sentences": ["De gedachte kwelt mij."]}
@@ -2237,7 +2237,7 @@
       "gloss": "frustrate (verb)",
       "entries": {
         "en": [
-        {"lemma": "frustrate", "pos": "verb", "details": {"past": "frustrated", "participle": "frustrated"}, "sentences": ["The delay frustrates me."]}
+        {"lemma": "to frustrate", "pos": "verb", "details": {"past": "frustrated", "participle": "frustrated"}, "sentences": ["The delay frustrates me."]}
         ],
         "nl": [
         {"lemma": "frustreren", "pos": "verb", "details": {"pastSingular": "frustreerde", "pastPlural": "frustreerden", "participle": "gefrustreerd", "auxiliary": "hebben"}, "sentences": ["De vertraging frustreert mij."]}
@@ -2333,7 +2333,7 @@
       "gloss": "depress (verb)",
       "entries": {
         "en": [
-        {"lemma": "depress", "pos": "verb", "details": {"past": "depressed", "participle": "depressed"}, "sentences": ["The weather depresses me."]}
+        {"lemma": "to depress", "pos": "verb", "details": {"past": "depressed", "participle": "depressed"}, "sentences": ["The weather depresses me."]}
         ],
         "nl": [
         {"lemma": "deprimeren", "pos": "verb", "details": {"pastSingular": "deprimeerde", "pastPlural": "deprimeerden", "participle": "gedeprimeerd", "auxiliary": "hebben"}, "sentences": ["Het weer deprimeert mij."]}
@@ -2441,7 +2441,7 @@
       "gloss": "brood (verb)",
       "entries": {
         "en": [
-        {"lemma": "brood", "pos": "verb", "details": {"past": "brooded", "participle": "brooded"}, "sentences": ["I brood too much."]}
+        {"lemma": "to brood", "pos": "verb", "details": {"past": "brooded", "participle": "brooded"}, "sentences": ["I brood too much."]}
         ],
         "nl": [
         {"lemma": "piekeren", "pos": "verb", "details": {"pastSingular": "piekerde", "pastPlural": "piekerden", "participle": "gepiekerd", "auxiliary": "hebben"}, "sentences": ["Ik pieker te veel."]}
@@ -2489,7 +2489,7 @@
       "gloss": "despise (verb)",
       "entries": {
         "en": [
-        {"lemma": "despise", "pos": "verb", "details": {"past": "despised", "participle": "despised"}, "sentences": ["I despise lies."]}
+        {"lemma": "to despise", "pos": "verb", "details": {"past": "despised", "participle": "despised"}, "sentences": ["I despise lies."]}
         ],
         "nl": [
         {"lemma": "verachten", "pos": "verb", "details": {"pastSingular": "verachtte", "pastPlural": "verachtten", "participle": "veracht", "auxiliary": "hebben"}, "sentences": ["Ik veracht leugens."]}
@@ -2537,7 +2537,7 @@
       "gloss": "comfort (verb)",
       "entries": {
         "en": [
-        {"lemma": "comfort", "pos": "verb", "details": {"past": "comforted", "participle": "comforted"}, "sentences": ["I comfort the child."]}
+        {"lemma": "to comfort", "pos": "verb", "details": {"past": "comforted", "participle": "comforted"}, "sentences": ["I comfort the child."]}
         ],
         "nl": [
         {"lemma": "troosten", "pos": "verb", "details": {"pastSingular": "troostte", "pastPlural": "troostten", "participle": "getroost", "auxiliary": "hebben"}, "sentences": ["Ik troost het kind."]}
@@ -2597,7 +2597,7 @@
       "gloss": "strive (verb)",
       "entries": {
         "en": [
-        {"lemma": "strive", "pos": "verb", "details": {"past": "strived", "participle": "strived"}, "sentences": ["I strive for the best."]}
+        {"lemma": "to strive", "pos": "verb", "details": {"past": "strove", "participle": "striven"}, "sentences": ["I strive for the best."]}
         ],
         "nl": [
         {"lemma": "streven", "pos": "verb", "details": {"pastSingular": "streefde", "pastPlural": "streefden", "participle": "gestreefd", "auxiliary": "hebben"}, "sentences": ["Ik streef naar het beste."]}
@@ -2645,7 +2645,7 @@
       "gloss": "cheer (verb)",
       "entries": {
         "en": [
-        {"lemma": "cheer", "pos": "verb", "details": {"past": "cheered", "participle": "cheered"}, "sentences": ["The fans cheer."]}
+        {"lemma": "to cheer", "pos": "verb", "details": {"past": "cheered", "participle": "cheered"}, "sentences": ["The fans cheer."]}
         ],
         "nl": [
         {"lemma": "juichen", "pos": "verb", "details": {"pastSingular": "juichte", "pastPlural": "juichten", "participle": "gejuicht", "auxiliary": "hebben"}, "sentences": ["De fans juichen."]}
@@ -2657,7 +2657,7 @@
       "gloss": "envy (verb)",
       "entries": {
         "en": [
-        {"lemma": "envy", "pos": "verb", "details": {"past": "envied", "participle": "envied"}, "sentences": ["I envy him."]}
+        {"lemma": "to envy", "pos": "verb", "details": {"past": "envied", "participle": "envied"}, "sentences": ["I envy him."]}
         ],
         "nl": [
         {"lemma": "benijden", "pos": "verb", "details": {"pastSingular": "benijdde", "pastPlural": "benijdden", "participle": "benijd", "auxiliary": "hebben"}, "sentences": ["Ik benijd hem."]}
@@ -2717,7 +2717,7 @@
       "gloss": "grieve (verb)",
       "entries": {
         "en": [
-        {"lemma": "grieve", "pos": "verb", "details": {"past": "grieved", "participle": "grieved"}, "sentences": ["They grieve for him."]}
+        {"lemma": "to grieve", "pos": "verb", "details": {"past": "grieved", "participle": "grieved"}, "sentences": ["They grieve for him."]}
         ],
         "nl": [
         {"lemma": "treuren", "pos": "verb", "details": {"pastSingular": "treurde", "pastPlural": "treurden", "participle": "getreurd", "auxiliary": "hebben"}, "sentences": ["Zij treuren om hem."]}
@@ -2729,7 +2729,7 @@
       "gloss": "regret (verb)",
       "entries": {
         "en": [
-        {"lemma": "regret", "pos": "verb", "details": {"past": "regreted", "participle": "regreted"}, "sentences": ["I regret my words."]}
+        {"lemma": "to regret", "pos": "verb", "details": {"past": "regretted", "participle": "regretted"}, "sentences": ["I regret my words."]}
         ],
         "nl": [
         {"lemma": "betreuren", "pos": "verb", "details": {"pastSingular": "betreurde", "pastPlural": "betreurden", "participle": "betreurd", "auxiliary": "hebben"}, "sentences": ["Ik betreur mijn woorden."]}
@@ -2765,7 +2765,7 @@
       "gloss": "desire (verb)",
       "entries": {
         "en": [
-        {"lemma": "desire", "pos": "verb", "details": {"past": "desired", "participle": "desired"}, "sentences": ["I desire peace."]}
+        {"lemma": "to desire", "pos": "verb", "details": {"past": "desired", "participle": "desired"}, "sentences": ["I desire peace."]}
         ],
         "nl": [
         {"lemma": "begeren", "pos": "verb", "details": {"pastSingular": "begeerde", "pastPlural": "begeerden", "participle": "begeerd", "auxiliary": "hebben"}, "sentences": ["Ik begeer vrede."]}
@@ -2789,7 +2789,7 @@
       "gloss": "annoy (verb)",
       "entries": {
         "en": [
-        {"lemma": "annoy", "pos": "verb", "details": {"past": "annoyed", "participle": "annoyed"}, "sentences": ["The noise annoys me."]}
+        {"lemma": "to annoy", "pos": "verb", "details": {"past": "annoyed", "participle": "annoyed"}, "sentences": ["The noise annoys me."]}
         ],
         "nl": [
         {"lemma": "ergeren", "pos": "verb", "details": {"pastSingular": "ergerde", "pastPlural": "ergerden", "participle": "geërgerd", "auxiliary": "hebben"}, "sentences": ["Het lawaai ergert mij."]}
@@ -2801,7 +2801,7 @@
       "gloss": "blush (verb)",
       "entries": {
         "en": [
-        {"lemma": "blush", "pos": "verb", "details": {"past": "blushed", "participle": "blushed"}, "sentences": ["She blushes."]}
+        {"lemma": "to blush", "pos": "verb", "details": {"past": "blushed", "participle": "blushed"}, "sentences": ["She blushes."]}
         ],
         "nl": [
         {"lemma": "blozen", "pos": "verb", "details": {"pastSingular": "bloosde", "pastPlural": "bloosden", "participle": "gebloosd", "auxiliary": "hebben"}, "sentences": ["Zij bloost."]}
@@ -2813,7 +2813,7 @@
       "gloss": "cheer up (verb)",
       "entries": {
         "en": [
-        {"lemma": "cheer up", "pos": "verb", "details": {"past": "cheered up", "participle": "cheered up"}, "sentences": ["I cheer up my friend."]}
+        {"lemma": "to cheer up", "pos": "verb", "details": {"past": "cheered up", "participle": "cheered up"}, "sentences": ["I cheer up my friend."]}
         ],
         "nl": [
         {"lemma": "opvrolijken", "pos": "verb", "details": {"pastSingular": "vrolijkte op", "pastPlural": "vrolijkten op", "participle": "opgevrolijkt", "auxiliary": "hebben"}, "sentences": ["Ik vrolijk mijn vriend op."]}
@@ -2909,7 +2909,7 @@
       "gloss": "bewilder (verb)",
       "entries": {
         "en": [
-        {"lemma": "bewilder", "pos": "verb", "details": {"past": "bewildered", "participle": "bewildered"}, "sentences": ["The news bewilders me."]}
+        {"lemma": "to bewilder", "pos": "verb", "details": {"past": "bewildered", "participle": "bewildered"}, "sentences": ["The news bewilders me."]}
         ],
         "nl": [
         {"lemma": "verbijsteren", "pos": "verb", "details": {"pastSingular": "verbijsterde", "pastPlural": "verbijsterden", "participle": "verbijsterd", "auxiliary": "hebben"}, "sentences": ["Het nieuws verbijstert mij."]}
@@ -3053,7 +3053,7 @@
       "gloss": "weep (verb)",
       "entries": {
         "en": [
-        {"lemma": "weep", "pos": "verb", "details": {"past": "wept", "participle": "wept"}, "sentences": ["She weeps."]}
+        {"lemma": "to weep", "pos": "verb", "details": {"past": "wept", "participle": "wept"}, "sentences": ["She weeps."]}
         ],
         "nl": [
         {"lemma": "wenen", "pos": "verb", "details": {"pastSingular": "weende", "pastPlural": "weenden", "participle": "geweend", "auxiliary": "hebben"}, "sentences": ["Zij weent."]}
@@ -3173,7 +3173,7 @@
       "gloss": "doom (verb)",
       "entries": {
         "en": [
-        {"lemma": "doom", "pos": "verb", "details": {"past": "doomed", "participle": "doomed"}, "sentences": ["They doom the plan."]}
+        {"lemma": "to doom", "pos": "verb", "details": {"past": "doomed", "participle": "doomed"}, "sentences": ["They doom the plan."]}
         ],
         "nl": [
         {"lemma": "doemen", "pos": "verb", "details": {"pastSingular": "doemde", "pastPlural": "doemden", "participle": "gedoemd", "auxiliary": "hebben"}, "sentences": ["Zij doemen het plan."]}
@@ -3341,7 +3341,7 @@
       "gloss": "impress (verb)",
       "entries": {
         "en": [
-        {"lemma": "impress", "pos": "verb", "details": {"past": "impressed", "participle": "impressed"}, "sentences": ["His skill impresses me."]}
+        {"lemma": "to impress", "pos": "verb", "details": {"past": "impressed", "participle": "impressed"}, "sentences": ["His skill impresses me."]}
         ],
         "nl": [
         {"lemma": "imponeren", "pos": "verb", "details": {"pastSingular": "imponeerde", "pastPlural": "imponeerden", "participle": "geïmponeerd", "auxiliary": "hebben"}, "sentences": ["Zijn vaardigheid imponeert mij."]}
@@ -3353,7 +3353,7 @@
       "gloss": "abhor (verb)",
       "entries": {
         "en": [
-        {"lemma": "abhor", "pos": "verb", "details": {"past": "abhored", "participle": "abhored"}, "sentences": ["I abhor violence."]}
+        {"lemma": "to abhor", "pos": "verb", "details": {"past": "abhorred", "participle": "abhorred"}, "sentences": ["I abhor violence."]}
         ],
         "nl": [
         {"lemma": "verafschuwen", "pos": "verb", "details": {"pastSingular": "verafschuwde", "pastPlural": "verafschuwden", "participle": "verafschuwd", "auxiliary": "hebben"}, "sentences": ["Ik verafschuw geweld."]}
@@ -3437,7 +3437,7 @@
       "gloss": "rage (verb)",
       "entries": {
         "en": [
-        {"lemma": "rage", "pos": "verb", "details": {"past": "raged", "participle": "raged"}, "sentences": ["The storm rages."]}
+        {"lemma": "to rage", "pos": "verb", "details": {"past": "raged", "participle": "raged"}, "sentences": ["The storm rages."]}
         ],
         "nl": [
         {"lemma": "razen", "pos": "verb", "details": {"pastSingular": "raasde", "pastPlural": "raasden", "participle": "geraasd", "auxiliary": "hebben"}, "sentences": ["De storm raast."]}
@@ -3545,7 +3545,7 @@
       "gloss": "intrigue (verb)",
       "entries": {
         "en": [
-        {"lemma": "intrigue", "pos": "verb", "details": {"past": "intrigued", "participle": "intrigued"}, "sentences": ["The story intrigues me."]}
+        {"lemma": "to intrigue", "pos": "verb", "details": {"past": "intrigued", "participle": "intrigued"}, "sentences": ["The story intrigues me."]}
         ],
         "nl": [
         {"lemma": "intrigeren", "pos": "verb", "details": {"pastSingular": "intrigeerde", "pastPlural": "intrigeerden", "participle": "geïntrigeerd", "auxiliary": "hebben"}, "sentences": ["Het verhaal intrigeert mij."]}
@@ -3605,7 +3605,7 @@
       "gloss": "gasp (verb)",
       "entries": {
         "en": [
-        {"lemma": "gasp", "pos": "verb", "details": {"past": "gasped", "participle": "gasped"}, "sentences": ["I gasp for air."]}
+        {"lemma": "to gasp", "pos": "verb", "details": {"past": "gasped", "participle": "gasped"}, "sentences": ["I gasp for air."]}
         ],
         "nl": [
         {"lemma": "snakken", "pos": "verb", "details": {"pastSingular": "snakte", "pastPlural": "snakten", "participle": "gesnakt", "auxiliary": "hebben"}, "sentences": ["Ik snak naar adem."]}
@@ -3629,7 +3629,7 @@
       "gloss": "reassure (verb)",
       "entries": {
         "en": [
-        {"lemma": "reassure", "pos": "verb", "details": {"past": "reassured", "participle": "reassured"}, "sentences": ["I reassure the child."]}
+        {"lemma": "to reassure", "pos": "verb", "details": {"past": "reassured", "participle": "reassured"}, "sentences": ["I reassure the child."]}
         ],
         "nl": [
         {"lemma": "geruststellen", "pos": "verb", "details": {"pastSingular": "stelde gerust", "pastPlural": "stelden gerust", "participle": "gerustgesteld", "auxiliary": "hebben"}, "sentences": ["Ik stel het kind gerust."]}
@@ -3689,7 +3689,7 @@
       "gloss": "overwhelm (verb)",
       "entries": {
         "en": [
-        {"lemma": "overwhelm", "pos": "verb", "details": {"past": "overwhelmed", "participle": "overwhelmed"}, "sentences": ["The news overwhelms me."]}
+        {"lemma": "to overwhelm", "pos": "verb", "details": {"past": "overwhelmed", "participle": "overwhelmed"}, "sentences": ["The news overwhelms me."]}
         ],
         "nl": [
         {"lemma": "overweldigen", "pos": "verb", "details": {"pastSingular": "overweldigde", "pastPlural": "overweldigden", "participle": "overweldigd", "auxiliary": "hebben"}, "sentences": ["Het nieuws overweldigt mij."]}

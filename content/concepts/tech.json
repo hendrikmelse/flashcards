@@ -44,7 +44,7 @@
         {"lemma": "letter", "pos": "noun", "details": {"plural": "letters"}, "sentences": ["I write a letter."]}
         ],
         "nl": [
-        {"lemma": "brief", "pos": "noun", "details": {"article": "de", "plural": "brieven"}, "sentences": ["Ik schrijf een brief."]}
+        {"lemma": "brief", "pos": "noun", "details": {"note": "die je op de post doet", "article": "de", "plural": "brieven"}, "sentences": ["Ik schrijf een brief."]}
         ]
       }
     },
@@ -137,7 +137,7 @@
       "gloss": "record (verb)",
       "entries": {
         "en": [
-        {"lemma": "record", "pos": "verb", "details": {"past": "recorded", "participle": "recorded"}, "sentences": ["We record the song."]}
+        {"lemma": "to record", "pos": "verb", "details": {"past": "recorded", "participle": "recorded"}, "sentences": ["We record the song."]}
         ],
         "nl": [
         {"lemma": "opnemen", "pos": "verb", "details": {"pastSingular": "nam op", "pastPlural": "namen op", "participle": "opgenomen", "auxiliary": "hebben"}, "sentences": ["Wij nemen het lied op."]}
@@ -197,7 +197,7 @@
       "gloss": "hang up (verb)",
       "entries": {
         "en": [
-        {"lemma": "hang up", "pos": "verb", "details": {"past": "hung up", "participle": "hung up"}, "sentences": ["I hang up the phone."]}
+        {"lemma": "to hang up", "pos": "verb", "details": {"past": "hung up", "participle": "hung up"}, "sentences": ["I hang up the phone."]}
         ],
         "nl": [
         {"lemma": "ophangen", "pos": "verb", "details": {"pastSingular": "hing op", "pastPlural": "hingen op", "participle": "opgehangen", "auxiliary": "hebben"}, "sentences": ["Ik hang de telefoon op."]}
@@ -257,7 +257,7 @@
       "gloss": "remove (verb)",
       "entries": {
         "en": [
-        {"lemma": "remove", "pos": "verb", "details": {"past": "removed", "participle": "removed"}, "sentences": ["I remove the file."]}
+        {"lemma": "to remove", "pos": "verb", "details": {"past": "removed", "participle": "removed"}, "sentences": ["I remove the file."]}
         ],
         "nl": [
         {"lemma": "verwijderen", "pos": "verb", "details": {"pastSingular": "verwijderde", "pastPlural": "verwijderden", "participle": "verwijderd", "auxiliary": "hebben"}, "sentences": ["Ik verwijder het bestand."]}
@@ -305,7 +305,7 @@
       "gloss": "test (verb)",
       "entries": {
         "en": [
-        {"lemma": "test", "pos": "verb", "details": {"past": "tested", "participle": "tested"}, "sentences": ["We test the machine."]}
+        {"lemma": "to test", "pos": "verb", "details": {"past": "tested", "participle": "tested"}, "sentences": ["We test the machine."]}
         ],
         "nl": [
         {"lemma": "testen", "pos": "verb", "details": {"pastSingular": "testte", "pastPlural": "testten", "participle": "getest", "auxiliary": "hebben"}, "sentences": ["Wij testen de machine."]}
@@ -341,7 +341,7 @@
       "gloss": "film (verb)",
       "entries": {
         "en": [
-        {"lemma": "film", "pos": "verb", "details": {"past": "filmed", "participle": "filmed"}, "sentences": ["We film the party."]}
+        {"lemma": "to film", "pos": "verb", "details": {"past": "filmed", "participle": "filmed"}, "sentences": ["We film the party."]}
         ],
         "nl": [
         {"lemma": "filmen", "pos": "verb", "details": {"pastSingular": "filmde", "pastPlural": "filmden", "participle": "gefilmd", "auxiliary": "hebben"}, "sentences": ["Wij filmen het feest."]}
@@ -353,7 +353,7 @@
       "gloss": "switch off (verb)",
       "entries": {
         "en": [
-        {"lemma": "switch off", "pos": "verb", "details": {"past": "switched off", "participle": "switched off"}, "sentences": ["I switch off the computer."]}
+        {"lemma": "to switch off", "pos": "verb", "details": {"past": "switched off", "participle": "switched off"}, "sentences": ["I switch off the computer."]}
         ],
         "nl": [
         {"lemma": "uitschakelen", "pos": "verb", "details": {"pastSingular": "schakelde uit", "pastPlural": "schakelden uit", "participle": "uitgeschakeld", "auxiliary": "hebben"}, "sentences": ["Ik schakel de computer uit."]}
@@ -392,7 +392,7 @@
         {"lemma": "button", "pos": "noun", "details": {"plural": "buttons"}, "sentences": ["I press the button."]}
         ],
         "nl": [
-        {"lemma": "knop", "pos": "noun", "details": {"article": "de", "plural": "knoppen"}, "sentences": ["Ik druk op de knop."]}
+        {"lemma": "knop", "pos": "noun", "details": {"note": "om op te drukken", "article": "de", "plural": "knoppen"}, "sentences": ["Ik druk op de knop."]}
         ]
       }
     },
@@ -476,7 +476,7 @@
         {"lemma": "connection (link)", "pos": "noun", "details": {"plural": "connections"}, "sentences": ["The connection is bad."]}
         ],
         "nl": [
-        {"lemma": "verbinding", "pos": "noun", "details": {"article": "de", "plural": "verbindingen"}, "sentences": ["De verbinding is slecht."]}
+        {"lemma": "verbinding", "pos": "noun", "details": {"note": "zoals een telefoonlijn", "article": "de", "plural": "verbindingen"}, "sentences": ["De verbinding is slecht."]}
         ]
       }
     },
@@ -509,7 +509,7 @@
       "gloss": "activate (verb)",
       "entries": {
         "en": [
-        {"lemma": "activate", "pos": "verb", "details": {"past": "activated", "participle": "activated"}, "sentences": ["I activate the alarm."]}
+        {"lemma": "to activate", "pos": "verb", "details": {"past": "activated", "participle": "activated"}, "sentences": ["I activate the alarm."]}
         ],
         "nl": [
         {"lemma": "activeren", "pos": "verb", "details": {"pastSingular": "activeerde", "pastPlural": "activeerden", "participle": "geactiveerd", "auxiliary": "hebben"}, "sentences": ["Ik activeer het alarm."]}
@@ -521,7 +521,7 @@
       "gloss": "connect (verb)",
       "entries": {
         "en": [
-        {"lemma": "connect", "pos": "verb", "details": {"past": "connected", "participle": "connected"}, "sentences": ["I connect the cable."]}
+        {"lemma": "to connect", "pos": "verb", "details": {"past": "connected", "participle": "connected"}, "sentences": ["I connect the cable."]}
         ],
         "nl": [
         {"lemma": "verbinden", "pos": "verb", "details": {"pastSingular": "verbond", "pastPlural": "verbonden", "participle": "verbonden", "auxiliary": "hebben"}, "sentences": ["Ik verbind de kabel."]}
@@ -605,7 +605,7 @@
       "gloss": "call back (verb)",
       "entries": {
         "en": [
-        {"lemma": "call back", "pos": "verb", "details": {"past": "called back", "participle": "called back"}, "sentences": ["I call you back."]}
+        {"lemma": "to call back", "pos": "verb", "details": {"past": "called back", "participle": "called back"}, "sentences": ["I call you back."]}
         ],
         "nl": [
         {"lemma": "terugbellen", "pos": "verb", "details": {"pastSingular": "belde terug", "pastPlural": "belden terug", "participle": "teruggebeld", "auxiliary": "hebben"}, "sentences": ["Ik bel je terug."]}
@@ -677,7 +677,7 @@
       "gloss": "erase (verb)",
       "entries": {
         "en": [
-        {"lemma": "erase", "pos": "verb", "details": {"past": "erased", "participle": "erased"}, "sentences": ["I erase the file."]}
+        {"lemma": "to erase", "pos": "verb", "details": {"past": "erased", "participle": "erased"}, "sentences": ["I erase the file."]}
         ],
         "nl": [
         {"lemma": "wissen", "pos": "verb", "details": {"pastSingular": "wiste", "pastPlural": "wisten", "participle": "gewist", "auxiliary": "hebben"}, "sentences": ["Ik wis het bestand."]}
@@ -749,7 +749,7 @@
       "gloss": "turn on (verb)",
       "entries": {
         "en": [
-        {"lemma": "turn on", "pos": "verb", "details": {"past": "turned on", "participle": "turned on"}, "sentences": ["I turn on the light."]}
+        {"lemma": "to turn on", "pos": "verb", "details": {"past": "turned on", "participle": "turned on"}, "sentences": ["I turn on the light."]}
         ],
         "nl": [
         {"lemma": "aanzetten", "pos": "verb", "details": {"pastSingular": "zette aan", "pastPlural": "zetten aan", "participle": "aangezet", "auxiliary": "hebben"}, "sentences": ["Ik zet het licht aan."]}
@@ -797,7 +797,7 @@
       "gloss": "publish (verb)",
       "entries": {
         "en": [
-        {"lemma": "publish", "pos": "verb", "details": {"past": "published", "participle": "published"}, "sentences": ["They publish a book."]}
+        {"lemma": "to publish", "pos": "verb", "details": {"past": "published", "participle": "published"}, "sentences": ["They publish a book."]}
         ],
         "nl": [
         {"lemma": "publiceren", "pos": "verb", "details": {"pastSingular": "publiceerde", "pastPlural": "publiceerden", "participle": "gepubliceerd", "auxiliary": "hebben"}, "sentences": ["Zij publiceren een boek."]}
@@ -857,7 +857,7 @@
       "gloss": "edit (verb)",
       "entries": {
         "en": [
-        {"lemma": "edit", "pos": "verb", "details": {"past": "edited", "participle": "edited"}, "sentences": ["I edit the text."]}
+        {"lemma": "to edit", "pos": "verb", "details": {"past": "edited", "participle": "edited"}, "sentences": ["I edit the text."]}
         ],
         "nl": [
         {"lemma": "bewerken", "pos": "verb", "details": {"pastSingular": "bewerkte", "pastPlural": "bewerkten", "participle": "bewerkt", "auxiliary": "hebben"}, "sentences": ["Ik bewerk de tekst."]}
@@ -905,7 +905,7 @@
       "gloss": "mail (verb)",
       "entries": {
         "en": [
-        {"lemma": "mail", "pos": "verb", "details": {"past": "mailed", "participle": "mailed"}, "sentences": ["I mail the letter."]}
+        {"lemma": "to mail", "pos": "verb", "details": {"past": "mailed", "participle": "mailed"}, "sentences": ["I mail the letter."]}
         ],
         "nl": [
         {"lemma": "versturen", "pos": "verb", "details": {"pastSingular": "verstuurde", "pastPlural": "verstuurden", "participle": "verstuurd", "auxiliary": "hebben"}, "sentences": ["Ik verstuur de brief."]}
@@ -929,7 +929,7 @@
       "gloss": "link (verb)",
       "entries": {
         "en": [
-        {"lemma": "link", "pos": "verb", "details": {"past": "linked", "participle": "linked"}, "sentences": ["I link the two files."]}
+        {"lemma": "to link", "pos": "verb", "details": {"past": "linked", "participle": "linked"}, "sentences": ["I link the two files."]}
         ],
         "nl": [
         {"lemma": "koppelen", "pos": "verb", "details": {"pastSingular": "koppelde", "pastPlural": "koppelden", "participle": "gekoppeld", "auxiliary": "hebben"}, "sentences": ["Ik koppel de twee bestanden."]}
@@ -941,7 +941,7 @@
       "gloss": "photograph (verb)",
       "entries": {
         "en": [
-        {"lemma": "photograph", "pos": "verb", "details": {"past": "photographed", "participle": "photographed"}, "sentences": ["I photograph the house."]}
+        {"lemma": "to photograph", "pos": "verb", "details": {"past": "photographed", "participle": "photographed"}, "sentences": ["I photograph the house."]}
         ],
         "nl": [
         {"lemma": "fotograferen", "pos": "verb", "details": {"pastSingular": "fotografeerde", "pastPlural": "fotografeerden", "participle": "gefotografeerd", "auxiliary": "hebben"}, "sentences": ["Ik fotografeer het huis."]}
@@ -1061,7 +1061,7 @@
       "gloss": "phone (call up)",
       "entries": {
         "en": [
-        {"lemma": "phone (call up)", "pos": "verb", "details": {"past": "phoned", "participle": "phoned"}, "sentences": ["He phoned me yesterday."]}
+        {"lemma": "to phone (call up)", "pos": "verb", "details": {"past": "phoned", "participle": "phoned"}, "sentences": ["He phoned me yesterday."]}
         ],
         "nl": [
         {"lemma": "opbellen", "pos": "verb", "details": {"pastSingular": "belde op", "pastPlural": "belden op", "participle": "opgebeld", "auxiliary": "hebben"}, "sentences": ["Hij belde mij gisteren op."]}
@@ -1085,7 +1085,7 @@
       "gloss": "set (adjust)",
       "entries": {
         "en": [
-        {"lemma": "set (adjust)", "pos": "verb", "details": {"past": "seted", "participle": "seted"}, "sentences": ["I set the clock."]}
+        {"lemma": "to set (adjust)", "pos": "verb", "details": {"past": "set", "participle": "set"}, "sentences": ["I set the clock."]}
         ],
         "nl": [
         {"lemma": "instellen", "pos": "verb", "details": {"pastSingular": "stelde in", "pastPlural": "stelden in", "participle": "ingesteld", "auxiliary": "hebben"}, "sentences": ["Ik stel de klok in."]}
@@ -1097,7 +1097,7 @@
       "gloss": "broadcast (verb)",
       "entries": {
         "en": [
-        {"lemma": "broadcast", "pos": "verb", "details": {"past": "broadcast", "participle": "broadcast"}, "sentences": ["They broadcast the match."]}
+        {"lemma": "to broadcast", "pos": "verb", "details": {"past": "broadcast", "participle": "broadcast"}, "sentences": ["They broadcast the match."]}
         ],
         "nl": [
         {"lemma": "uitzenden", "pos": "verb", "details": {"pastSingular": "zond uit", "pastPlural": "zonden uit", "participle": "uitgezonden", "auxiliary": "hebben"}, "sentences": ["Zij zenden de wedstrijd uit."]}
@@ -1121,7 +1121,7 @@
       "gloss": "ring (phone)",
       "entries": {
         "en": [
-        {"lemma": "ring (phone)", "pos": "verb", "details": {"past": "rang", "participle": "rung"}, "sentences": ["The phone rang."]}
+        {"lemma": "to ring (phone)", "pos": "verb", "details": {"past": "rang", "participle": "rung"}, "sentences": ["The phone rang."]}
         ],
         "nl": [
         {"lemma": "overgaan", "pos": "verb", "details": {"pastSingular": "ging over", "pastPlural": "gingen over", "participle": "overgegaan", "auxiliary": "zijn"}, "sentences": ["De telefoon ging over."]}
@@ -1145,7 +1145,7 @@
       "gloss": "request (verb)",
       "entries": {
         "en": [
-        {"lemma": "request", "pos": "verb", "details": {"past": "requested", "participle": "requested"}, "sentences": ["I request a meeting."]}
+        {"lemma": "to request", "pos": "verb", "details": {"past": "requested", "participle": "requested"}, "sentences": ["I request a meeting."]}
         ],
         "nl": [
         {"lemma": "verzoeken", "pos": "verb", "details": {"pastSingular": "verzocht", "pastPlural": "verzochten", "participle": "verzocht", "auxiliary": "hebben"}, "sentences": ["Ik verzoek om een vergadering."]}
@@ -1157,7 +1157,7 @@
       "gloss": "click (verb)",
       "entries": {
         "en": [
-        {"lemma": "click", "pos": "verb", "details": {"past": "clicked", "participle": "clicked"}, "sentences": ["I click on the button."]}
+        {"lemma": "to click", "pos": "verb", "details": {"past": "clicked", "participle": "clicked"}, "sentences": ["I click on the button."]}
         ],
         "nl": [
         {"lemma": "klikken", "pos": "verb", "details": {"pastSingular": "klikte", "pastPlural": "klikten", "participle": "geklikt", "auxiliary": "hebben"}, "sentences": ["Ik klik op de knop."]}
@@ -1193,7 +1193,7 @@
       "gloss": "install (verb)",
       "entries": {
         "en": [
-        {"lemma": "install", "pos": "verb", "details": {"past": "installed", "participle": "installed"}, "sentences": ["I install the program."]}
+        {"lemma": "to install", "pos": "verb", "details": {"past": "installed", "participle": "installed"}, "sentences": ["I install the program."]}
         ],
         "nl": [
         {"lemma": "installeren", "pos": "verb", "details": {"pastSingular": "installeerde", "pastPlural": "installeerden", "participle": "geïnstalleerd", "auxiliary": "hebben"}, "sentences": ["Ik installeer het programma."]}
@@ -1265,7 +1265,7 @@
       "gloss": "interview (verb)",
       "entries": {
         "en": [
-        {"lemma": "interview", "pos": "verb", "details": {"past": "interviewed", "participle": "interviewed"}, "sentences": ["I interview the mayor."]}
+        {"lemma": "to interview", "pos": "verb", "details": {"past": "interviewed", "participle": "interviewed"}, "sentences": ["I interview the mayor."]}
         ],
         "nl": [
         {"lemma": "interviewen", "pos": "verb", "details": {"pastSingular": "interviewde", "pastPlural": "interviewden", "participle": "geïnterviewd", "auxiliary": "hebben"}, "sentences": ["Ik interview de burgemeester."]}
@@ -1277,7 +1277,7 @@
       "gloss": "capture (verb)",
       "entries": {
         "en": [
-        {"lemma": "capture", "pos": "verb", "details": {"past": "captured", "participle": "captured"}, "sentences": ["I capture the moment."]}
+        {"lemma": "to capture", "pos": "verb", "details": {"past": "captured", "participle": "captured"}, "sentences": ["I capture the moment."]}
         ],
         "nl": [
         {"lemma": "vastleggen", "pos": "verb", "details": {"pastSingular": "legde vast", "pastPlural": "legden vast", "participle": "vastgelegd", "auxiliary": "hebben"}, "sentences": ["Ik leg het moment vast."]}
@@ -1301,7 +1301,7 @@
       "gloss": "copy (verb)",
       "entries": {
         "en": [
-        {"lemma": "copy", "pos": "verb", "details": {"past": "copied", "participle": "copied"}, "sentences": ["I copy the file."]}
+        {"lemma": "to copy", "pos": "verb", "details": {"past": "copied", "participle": "copied"}, "sentences": ["I copy the file."]}
         ],
         "nl": [
         {"lemma": "kopiëren", "pos": "verb", "details": {"pastSingular": "kopieerde", "pastPlural": "kopieerden", "participle": "gekopieerd", "auxiliary": "hebben"}, "sentences": ["Ik kopieer het bestand."]}
@@ -1313,7 +1313,7 @@
       "gloss": "print (verb)",
       "entries": {
         "en": [
-        {"lemma": "print", "pos": "verb", "details": {"past": "printed", "participle": "printed"}, "sentences": ["I print the page."]}
+        {"lemma": "to print", "pos": "verb", "details": {"past": "printed", "participle": "printed"}, "sentences": ["I print the page."]}
         ],
         "nl": [
         {"lemma": "afdrukken", "pos": "verb", "details": {"pastSingular": "drukte af", "pastPlural": "drukten af", "participle": "afgedrukt", "auxiliary": "hebben"}, "sentences": ["Ik druk de pagina af."]}
@@ -1337,7 +1337,7 @@
       "gloss": "store (verb)",
       "entries": {
         "en": [
-        {"lemma": "store", "pos": "verb", "details": {"past": "stored", "participle": "stored"}, "sentences": ["I store the file."]}
+        {"lemma": "to store", "pos": "verb", "details": {"past": "stored", "participle": "stored"}, "sentences": ["I store the file."]}
         ],
         "nl": [
         {"lemma": "opslaan", "pos": "verb", "details": {"pastSingular": "sloeg op", "pastPlural": "sloegen op", "participle": "opgeslagen", "auxiliary": "hebben"}, "sentences": ["Ik sla het bestand op."]}
@@ -1409,7 +1409,7 @@
       "gloss": "program (verb)",
       "entries": {
         "en": [
-        {"lemma": "program", "pos": "verb", "details": {"past": "programed", "participle": "programed"}, "sentences": ["I program the computer."]}
+        {"lemma": "to program", "pos": "verb", "details": {"past": "programmed", "participle": "programmed"}, "sentences": ["I program the computer."]}
         ],
         "nl": [
         {"lemma": "programmeren", "pos": "verb", "details": {"pastSingular": "programmeerde", "pastPlural": "programmeerden", "participle": "geprogrammeerd", "auxiliary": "hebben"}, "sentences": ["Ik programmeer de computer."]}
@@ -1577,7 +1577,7 @@
       "gloss": "type (verb)",
       "entries": {
         "en": [
-        {"lemma": "type", "pos": "verb", "details": {"past": "typed", "participle": "typed"}, "sentences": ["I type a letter."]}
+        {"lemma": "to type", "pos": "verb", "details": {"past": "typed", "participle": "typed"}, "sentences": ["I type a letter."]}
         ],
         "nl": [
         {"lemma": "typen", "pos": "verb", "details": {"pastSingular": "typte", "pastPlural": "typten", "participle": "getypt", "auxiliary": "hebben"}, "sentences": ["Ik typ een brief."]}
@@ -1601,7 +1601,7 @@
       "gloss": "play back (verb)",
       "entries": {
         "en": [
-        {"lemma": "play back", "pos": "verb", "details": {"past": "played back", "participle": "played back"}, "sentences": ["I play back the song."]}
+        {"lemma": "to play back", "pos": "verb", "details": {"past": "played back", "participle": "played back"}, "sentences": ["I play back the song."]}
         ],
         "nl": [
         {"lemma": "afspelen", "pos": "verb", "details": {"pastSingular": "speelde af", "pastPlural": "speelden af", "participle": "afgespeeld", "auxiliary": "hebben"}, "sentences": ["Ik speel het liedje af."]}
@@ -1697,7 +1697,7 @@
       "gloss": "scan (verb)",
       "entries": {
         "en": [
-        {"lemma": "scan", "pos": "verb", "details": {"past": "scanned", "participle": "scanned"}, "sentences": ["I scan the document."]}
+        {"lemma": "to scan", "pos": "verb", "details": {"past": "scanned", "participle": "scanned"}, "sentences": ["I scan the document."]}
         ],
         "nl": [
         {"lemma": "scannen", "pos": "verb", "details": {"pastSingular": "scande", "pastPlural": "scanden", "participle": "gescand", "auxiliary": "hebben"}, "sentences": ["Ik scan het document."]}
@@ -1769,7 +1769,7 @@
       "gloss": "select (verb)",
       "entries": {
         "en": [
-        {"lemma": "select", "pos": "verb", "details": {"past": "selected", "participle": "selected"}, "sentences": ["I select a file."]}
+        {"lemma": "to select", "pos": "verb", "details": {"past": "selected", "participle": "selected"}, "sentences": ["I select a file."]}
         ],
         "nl": [
         {"lemma": "selecteren", "pos": "verb", "details": {"pastSingular": "selecteerde", "pastPlural": "selecteerden", "participle": "geselecteerd", "auxiliary": "hebben"}, "sentences": ["Ik selecteer een bestand."]}
@@ -1781,7 +1781,7 @@
       "gloss": "download (verb)",
       "entries": {
         "en": [
-        {"lemma": "download", "pos": "verb", "details": {"past": "downloaded", "participle": "downloaded"}, "sentences": ["I download the file."]}
+        {"lemma": "to download", "pos": "verb", "details": {"past": "downloaded", "participle": "downloaded"}, "sentences": ["I download the file."]}
         ],
         "nl": [
         {"lemma": "downloaden", "pos": "verb", "details": {"pastSingular": "downloadde", "pastPlural": "downloadden", "participle": "gedownload", "auxiliary": "hebben"}, "sentences": ["Ik download het bestand."]}
@@ -1829,7 +1829,7 @@
       "gloss": "direct (verb)",
       "entries": {
         "en": [
-        {"lemma": "direct", "pos": "verb", "details": {"past": "directed", "participle": "directed"}, "sentences": ["He directs a film."]}
+        {"lemma": "to direct", "pos": "verb", "details": {"past": "directed", "participle": "directed"}, "sentences": ["He directs a film."]}
         ],
         "nl": [
         {"lemma": "regisseren", "pos": "verb", "details": {"pastSingular": "regisseerde", "pastPlural": "regisseerden", "participle": "geregisseerd", "auxiliary": "hebben"}, "sentences": ["Hij regisseert een film."]}
@@ -1853,7 +1853,7 @@
       "gloss": "encode (verb)",
       "entries": {
         "en": [
-        {"lemma": "encode", "pos": "verb", "details": {"past": "encoded", "participle": "encoded"}, "sentences": ["I encode the message."]}
+        {"lemma": "to encode", "pos": "verb", "details": {"past": "encoded", "participle": "encoded"}, "sentences": ["I encode the message."]}
         ],
         "nl": [
         {"lemma": "coderen", "pos": "verb", "details": {"pastSingular": "codeerde", "pastPlural": "codeerden", "participle": "gecodeerd", "auxiliary": "hebben"}, "sentences": ["Ik codeer het bericht."]}
@@ -1901,7 +1901,7 @@
       "gloss": "enter (data)",
       "entries": {
         "en": [
-        {"lemma": "enter (data)", "pos": "verb", "details": {"past": "entered", "participle": "entered"}, "sentences": ["I enter the data."]}
+        {"lemma": "to enter (data)", "pos": "verb", "details": {"past": "entered", "participle": "entered"}, "sentences": ["I enter the data."]}
         ],
         "nl": [
         {"lemma": "invoeren", "pos": "verb", "details": {"pastSingular": "voerde in", "pastPlural": "voerden in", "participle": "ingevoerd", "auxiliary": "hebben"}, "sentences": ["Ik voer de gegevens in."]}
@@ -2009,7 +2009,7 @@
       "gloss": "locate (verb)",
       "entries": {
         "en": [
-        {"lemma": "locate", "pos": "verb", "details": {"past": "located", "participle": "located"}, "sentences": ["We locate the problem."]}
+        {"lemma": "to locate", "pos": "verb", "details": {"past": "located", "participle": "located"}, "sentences": ["We locate the problem."]}
         ],
         "nl": [
         {"lemma": "lokaliseren", "pos": "verb", "details": {"pastSingular": "lokaliseerde", "pastPlural": "lokaliseerden", "participle": "gelokaliseerd", "auxiliary": "hebben"}, "sentences": ["Wij lokaliseren het probleem."]}
@@ -2033,7 +2033,7 @@
       "gloss": "charge (a battery)",
       "entries": {
         "en": [
-        {"lemma": "charge (a battery)", "pos": "verb", "details": {"past": "charged", "participle": "charged"}, "sentences": ["I charge my phone."]}
+        {"lemma": "to charge (a battery)", "pos": "verb", "details": {"past": "charged", "participle": "charged"}, "sentences": ["I charge my phone."]}
         ],
         "nl": [
         {"lemma": "opladen", "pos": "verb", "details": {"pastSingular": "laadde op", "pastPlural": "laadden op", "participle": "opgeladen", "auxiliary": "hebben"}, "sentences": ["Ik laad mijn telefoon op."]}
@@ -2153,7 +2153,7 @@
       "gloss": "fax (verb)",
       "entries": {
         "en": [
-        {"lemma": "fax", "pos": "verb", "details": {"past": "faxed", "participle": "faxed"}, "sentences": ["I fax the letter."]}
+        {"lemma": "to fax", "pos": "verb", "details": {"past": "faxed", "participle": "faxed"}, "sentences": ["I fax the letter."]}
         ],
         "nl": [
         {"lemma": "faxen", "pos": "verb", "details": {"pastSingular": "faxte", "pastPlural": "faxten", "participle": "gefaxt", "auxiliary": "hebben"}, "sentences": ["Ik fax de brief."]}
@@ -2237,7 +2237,7 @@
       "gloss": "put through (verb)",
       "entries": {
         "en": [
-        {"lemma": "put through", "pos": "verb", "details": {"past": "put through", "participle": "put through"}, "sentences": ["I put you through."]}
+        {"lemma": "to put through", "pos": "verb", "details": {"past": "put through", "participle": "put through"}, "sentences": ["I put you through."]}
         ],
         "nl": [
         {"lemma": "doorverbinden", "pos": "verb", "details": {"pastSingular": "verbond door", "pastPlural": "verbonden door", "participle": "doorverbonden", "auxiliary": "hebben"}, "sentences": ["Ik verbind u door."]}

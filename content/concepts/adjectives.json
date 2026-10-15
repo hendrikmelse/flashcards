@@ -153,7 +153,7 @@
         {"lemma": "happy", "pos": "adjective", "sentences": ["The children are happy."]}
         ],
         "nl": [
-        {"lemma": "blij", "pos": "adjective", "sentences": ["De kinderen zijn blij."]}
+        {"lemma": "blij", "pos": "adjective", "details": {"note": "over iets goeds dat gebeurt"}, "sentences": ["De kinderen zijn blij."]}
         ]
       }
     },
@@ -548,13 +548,25 @@
     },
     {
       "key": "sure",
-      "gloss": "sure (adjective)",
+      "gloss": "to be sure",
       "entries": {
         "en": [
-        {"lemma": "sure", "pos": "adjective", "sentences": ["I am sure."]}
+        {"lemma": "to be sure", "pos": "phrase", "sentences": ["I am sure."]}
         ],
         "nl": [
-        {"lemma": "zeker", "pos": "adjective", "sentences": ["Ik weet het zeker."]}
+        {"lemma": "zeker weten", "pos": "phrase", "sentences": ["Ik weet het zeker."]}
+        ]
+      }
+    },
+    {
+      "key": "certainly",
+      "gloss": "certainly (adverb)",
+      "entries": {
+        "en": [
+        {"lemma": "certainly", "pos": "adverb", "sentences": ["Are you coming tomorrow? Certainly!", "That is certainly true."]}
+        ],
+        "nl": [
+        {"lemma": "zeker", "pos": "adverb", "sentences": ["Kom je morgen? Zeker!", "Dat is zeker waar."]}
         ]
       }
     },
@@ -902,7 +914,7 @@
         {"lemma": "the same", "pos": "adjective", "sentences": ["It is the same."]}
         ],
         "nl": [
-        {"lemma": "hetzelfde", "pos": "adjective", "sentences": ["Het is hetzelfde."]}
+        {"lemma": "hetzelfde", "pos": "adjective", "details": {"note": "bij het-woorden"}, "sentences": ["Het is hetzelfde."]}
         ]
       }
     },
@@ -998,7 +1010,7 @@
         {"lemma": "the same (de-words)", "pos": "adjective", "sentences": ["She has the same bag."]}
         ],
         "nl": [
-        {"lemma": "dezelfde", "pos": "adjective", "sentences": ["Zij heeft dezelfde tas."]}
+        {"lemma": "dezelfde", "pos": "adjective", "details": {"note": "bij de-woorden en meervoud"}, "sentences": ["Zij heeft dezelfde tas."]}
         ]
       }
     },
@@ -1946,7 +1958,7 @@
         {"lemma": "fresh", "pos": "adjective", "sentences": ["The air is fresh."]}
         ],
         "nl": [
-        {"lemma": "fris", "pos": "adjective", "sentences": ["De lucht is fris."]}
+        {"lemma": "fris", "pos": "adjective", "details": {"note": "koel, van lucht of een drankje"}, "sentences": ["De lucht is fris."]}
         ]
       }
     },
@@ -2018,7 +2030,7 @@
         {"lemma": "fresh (newly made)", "pos": "adjective", "sentences": ["The bread is fresh."]}
         ],
         "nl": [
-        {"lemma": "vers", "pos": "adjective", "sentences": ["Het brood is vers."]}
+        {"lemma": "vers", "pos": "adjective", "details": {"note": "pas gemaakt of geplukt"}, "sentences": ["Het brood is vers."]}
         ]
       }
     },
@@ -2378,7 +2390,7 @@
         {"lemma": "light (not heavy)", "pos": "adjective", "sentences": ["The bag is light."]}
         ],
         "nl": [
-        {"lemma": "licht", "pos": "adjective", "sentences": ["De tas is licht."]}
+        {"lemma": "licht", "pos": "adjective", "details": {"note": "qua gewicht"}, "sentences": ["De tas is licht."]}
         ]
       }
     },
@@ -3266,7 +3278,7 @@
         {"lemma": "classic", "pos": "adjective", "sentences": ["This is a classic film."]}
         ],
         "nl": [
-        {"lemma": "klassiek", "pos": "adjective", "sentences": ["Dit is een klassieke film."]}
+        {"lemma": "klassiek", "pos": "adjective", "details": {"note": "een tijdloos voorbeeld"}, "sentences": ["Dit is een klassieke film."]}
         ]
       }
     },
@@ -5978,7 +5990,7 @@
         {"lemma": "light (pale in color)", "pos": "adjective", "sentences": ["The color is light."]}
         ],
         "nl": [
-        {"lemma": "licht", "pos": "adjective", "sentences": ["De kleur is licht."]}
+        {"lemma": "licht", "pos": "adjective", "details": {"note": "qua kleur"}, "sentences": ["De kleur is licht."]}
         ]
       }
     },
@@ -6059,7 +6071,7 @@
       "gloss": "color in (verb)",
       "entries": {
         "en": [
-        {"lemma": "color in", "pos": "verb", "details": {"past": "colored in", "participle": "colored in"}, "sentences": ["I color in the picture."]}
+        {"lemma": "to color in", "pos": "verb", "details": {"past": "colored in", "participle": "colored in"}, "sentences": ["I color in the picture."]}
         ],
         "nl": [
         {"lemma": "inkleuren", "pos": "verb", "details": {"pastSingular": "kleurde in", "pastPlural": "kleurden in", "participle": "ingekleurd", "auxiliary": "hebben"}, "sentences": ["Ik kleur de tekening in."]}
@@ -6071,10 +6083,10 @@
       "gloss": "fade (lose color)",
       "entries": {
         "en": [
-        {"lemma": "fade (lose color)", "pos": "verb", "details": {"past": "faded", "participle": "faded"}, "sentences": ["The color fades."]}
+        {"lemma": "to fade (lose color)", "pos": "verb", "details": {"past": "faded", "participle": "faded"}, "sentences": ["The color fades."]}
         ],
         "nl": [
-        {"lemma": "verbleken", "pos": "verb", "details": {"pastSingular": "verbleekte", "pastPlural": "verbleekten", "participle": "verbleekt", "auxiliary": "zijn"}, "sentences": ["De kleur verbleekt."]}
+        {"lemma": "verbleken", "pos": "verb", "details": {"note": "van stof of een foto in de zon", "pastSingular": "verbleekte", "pastPlural": "verbleekten", "participle": "verbleekt", "auxiliary": "zijn"}, "sentences": ["De kleur verbleekt."]}
         ]
       }
     }

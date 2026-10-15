@@ -80,7 +80,7 @@
         {"lemma": "romanticism", "pos": "noun", "details": {"uncountable": true}, "sentences": ["Romanticism put feeling above reason."]}
         ],
         "nl": [
-        {"lemma": "romantiek", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["De romantiek stelde het gevoel boven de rede."]}
+        {"lemma": "romantiek", "pos": "noun", "details": {"note": "de kunststroming", "article": "de", "uncountable": true}, "sentences": ["De romantiek stelde het gevoel boven de rede."]}
         ]
       }
     },
@@ -224,7 +224,7 @@
         {"lemma": "classical", "pos": "adjective", "sentences": ["Classical sculpture shows perfect bodies."]}
         ],
         "nl": [
-        {"lemma": "klassiek", "pos": "adjective", "sentences": ["Klassieke beeldhouwkunst toont perfecte lichamen."]}
+        {"lemma": "klassiek", "pos": "adjective", "details": {"note": "van de oude Grieken en Romeinen, of de muziekstijl"}, "sentences": ["Klassieke beeldhouwkunst toont perfecte lichamen."]}
         ]
       }
     },
@@ -368,7 +368,7 @@
         {"lemma": "canvas", "pos": "noun", "details": {"plural": "canvases"}, "sentences": ["The painting is on a large canvas."]}
         ],
         "nl": [
-        {"lemma": "doek", "pos": "noun", "details": {"article": "het", "plural": "doeken"}, "sentences": ["Het schilderij is op een groot doek geschilderd."]}
+        {"lemma": "doek", "pos": "noun", "details": {"note": "om op te schilderen", "article": "het", "plural": "doeken"}, "sentences": ["Het schilderij is op een groot doek geschilderd."]}
         ]
       }
     },
@@ -380,7 +380,7 @@
         {"lemma": "easel", "pos": "noun", "details": {"plural": "easels"}, "sentences": ["The artist stands at her easel."]}
         ],
         "nl": [
-        {"lemma": "ezel", "pos": "noun", "details": {"article": "de", "plural": "ezels"}, "sentences": ["De kunstenaar staat bij haar ezel."]}
+        {"lemma": "ezel", "pos": "noun", "details": {"note": "om een schilderij op te zetten", "article": "de", "plural": "ezels"}, "sentences": ["De kunstenaar staat bij haar ezel."]}
         ]
       }
     },
@@ -845,7 +845,7 @@
       "gloss": "restore (an artwork)",
       "entries": {
         "en": [
-        {"lemma": "restore", "pos": "verb", "details": {"past": "restored", "participle": "restored"}, "sentences": ["They restore the old painting."]}
+        {"lemma": "to restore", "pos": "verb", "details": {"past": "restored", "participle": "restored"}, "sentences": ["They restore the old painting."]}
         ],
         "nl": [
         {"lemma": "restaureren", "pos": "verb", "details": {"pastSingular": "restaureerde", "pastPlural": "restaureerden", "participle": "gerestaureerd", "auxiliary": "hebben"}, "sentences": ["Zij restaureren het oude schilderij."]}
@@ -857,7 +857,7 @@
       "gloss": "depict",
       "entries": {
         "en": [
-        {"lemma": "depict", "pos": "verb", "details": {"past": "depicted", "participle": "depicted"}, "sentences": ["The painting depicts a battle."]}
+        {"lemma": "to depict", "pos": "verb", "details": {"past": "depicted", "participle": "depicted"}, "sentences": ["The painting depicts a battle."]}
         ],
         "nl": [
         {"lemma": "afbeelden", "pos": "verb", "details": {"pastSingular": "beeldde af", "pastPlural": "beeldden af", "participle": "afgebeeld", "auxiliary": "hebben"}, "sentences": ["Het schilderij beeldt een veldslag af."]}
@@ -869,7 +869,7 @@
       "gloss": "exhibit (verb)",
       "entries": {
         "en": [
-        {"lemma": "exhibit", "pos": "verb", "details": {"past": "exhibited", "participle": "exhibited"}, "sentences": ["The museum exhibits works by Van Gogh."]}
+        {"lemma": "to exhibit", "pos": "verb", "details": {"past": "exhibited", "participle": "exhibited"}, "sentences": ["The museum exhibits works by Van Gogh."]}
         ],
         "nl": [
         {"lemma": "tentoonstellen", "pos": "verb", "details": {"pastSingular": "stelde tentoon", "pastPlural": "stelden tentoon", "participle": "tentoongesteld", "auxiliary": "hebben"}, "sentences": ["Het museum stelt werken van Van Gogh tentoon."]}
@@ -881,7 +881,7 @@
       "gloss": "sculpt",
       "entries": {
         "en": [
-        {"lemma": "sculpt", "pos": "verb", "details": {"past": "sculpted", "participle": "sculpted"}, "sentences": ["He sculpts a head out of stone."]}
+        {"lemma": "to sculpt", "pos": "verb", "details": {"past": "sculpted", "participle": "sculpted"}, "sentences": ["He sculpts a head out of stone."]}
         ],
         "nl": [
         {"lemma": "beeldhouwen", "pos": "verb", "details": {"pastSingular": "beeldhouwde", "pastPlural": "beeldhouwden", "participle": "gebeeldhouwd", "auxiliary": "hebben"}, "sentences": ["Hij beeldhouwt een hoofd uit steen."]}
@@ -893,7 +893,7 @@
       "gloss": "symbolize",
       "entries": {
         "en": [
-        {"lemma": "symbolize", "pos": "verb", "details": {"past": "symbolized", "participle": "symbolized"}, "sentences": ["The dove symbolizes peace."]}
+        {"lemma": "to symbolize", "pos": "verb", "details": {"past": "symbolized", "participle": "symbolized"}, "sentences": ["The dove symbolizes peace."]}
         ],
         "nl": [
         {"lemma": "symboliseren", "pos": "verb", "details": {"pastSingular": "symboliseerde", "pastPlural": "symboliseerden", "participle": "gesymboliseerd", "auxiliary": "hebben"}, "sentences": ["De duif symboliseert vrede."]}
@@ -1361,7 +1361,7 @@
       "gloss": "engrave",
       "entries": {
         "en": [
-        {"lemma": "engrave", "pos": "verb", "details": {"past": "engraved", "participle": "engraved"}, "sentences": ["He engraves a picture in the copper plate."]}
+        {"lemma": "to engrave", "pos": "verb", "details": {"past": "engraved", "participle": "engraved"}, "sentences": ["He engraves a picture in the copper plate."]}
         ],
         "nl": [
         {"lemma": "graveren", "pos": "verb", "details": {"pastSingular": "graveerde", "pastPlural": "graveerden", "participle": "gegraveerd", "auxiliary": "hebben"}, "sentences": ["Hij graveert een afbeelding in de koperen plaat."]}
@@ -1373,7 +1373,7 @@
       "gloss": "compose (music)",
       "entries": {
         "en": [
-        {"lemma": "compose", "pos": "verb", "details": {"past": "composed", "participle": "composed"}, "sentences": ["Mozart composed his first piece at the age of five."]}
+        {"lemma": "to compose", "pos": "verb", "details": {"past": "composed", "participle": "composed"}, "sentences": ["Mozart composed his first piece at the age of five."]}
         ],
         "nl": [
         {"lemma": "componeren", "pos": "verb", "details": {"pastSingular": "componeerde", "pastPlural": "componeerden", "participle": "gecomponeerd", "auxiliary": "hebben"}, "sentences": ["Mozart componeerde zijn eerste stuk op vijfjarige leeftijd."]}
@@ -1385,7 +1385,7 @@
       "gloss": "sketch (verb)",
       "entries": {
         "en": [
-        {"lemma": "sketch", "pos": "verb", "details": {"past": "sketched", "participle": "sketched"}, "sentences": ["She sketches the church before she paints it."]}
+        {"lemma": "to sketch", "pos": "verb", "details": {"past": "sketched", "participle": "sketched"}, "sentences": ["She sketches the church before she paints it."]}
         ],
         "nl": [
         {"lemma": "schetsen", "pos": "verb", "details": {"pastSingular": "schetste", "pastPlural": "schetsten", "participle": "geschetst", "auxiliary": "hebben"}, "sentences": ["Zij schetst de kerk voordat zij hem schildert."]}
@@ -1397,7 +1397,7 @@
       "gloss": "date from",
       "entries": {
         "en": [
-        {"lemma": "date from", "pos": "verb", "details": {"past": "dated from", "participle": "dated from"}, "sentences": ["The painting dates from 1650."]}
+        {"lemma": "to date from", "pos": "verb", "details": {"past": "dated from", "participle": "dated from"}, "sentences": ["The painting dates from 1650."]}
         ],
         "nl": [
         {"lemma": "dateren", "pos": "verb", "details": {"pastSingular": "dateerde", "pastPlural": "dateerden", "participle": "gedateerd", "auxiliary": "hebben"}, "sentences": ["Het schilderij dateert uit 1650."]}
@@ -1409,7 +1409,7 @@
       "gloss": "flourish",
       "entries": {
         "en": [
-        {"lemma": "flourish", "pos": "verb", "details": {"past": "flourished", "participle": "flourished"}, "sentences": ["Art flourished in the rich trading cities."]}
+        {"lemma": "to flourish", "pos": "verb", "details": {"past": "flourished", "participle": "flourished"}, "sentences": ["Art flourished in the rich trading cities."]}
         ],
         "nl": [
         {"lemma": "floreren", "pos": "verb", "details": {"pastSingular": "floreerde", "pastPlural": "floreerden", "participle": "gefloreerd", "auxiliary": "hebben"}, "sentences": ["De kunst floreerde in de rijke handelssteden."]}

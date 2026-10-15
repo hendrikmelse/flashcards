@@ -3,8 +3,12 @@ import {
   LANGUAGE_CODES,
   PACK_CATEGORIES,
   REQUIRED_LANGUAGES,
+  MAX_NOTE_LENGTH,
   allVerbForms,
+  infinitiveMarker,
   languageCodeSchema,
+  lemmaWithoutMarker,
+  missingInfinitiveMarker,
   presentPronouns,
   verbFormKeys,
 } from "@flashcards/shared";
@@ -149,6 +153,12 @@ export function checkEntries(
     if (lemmas.has(entry.lemma)) errors.push(`${at}: duplicate lemma`);
     lemmas.add(entry.lemma);
 
+    const note = entry.details["note"];
+    if (note !== undefined) {
+      if (typeof note !== "string" || !note.trim()) errors.push(`${at}: details.note must be a non-empty string`);
+      else if (note.length > MAX_NOTE_LENGTH) errors.push(`${at}: details.note is over ${MAX_NOTE_LENGTH} characters`);
+    }
+
     if (entry.pos === "noun") {
       errors.push(...(rules?.nounErrors?.(entry.details) ?? []).map((e) => `${at}: ${e}`));
       if (
@@ -160,7 +170,12 @@ export function checkEntries(
       }
     }
 
-    if (entry.pos === "verb") checkVerbForms(at, lang, entry, errors, warnings, rules);
+    if (entry.pos === "verb") {
+      if (missingInfinitiveMarker(lang, entry)) {
+        errors.push(`${at}: a verb's lemma starts with "${infinitiveMarker(lang)} " (set details.bare if it should not)`);
+      }
+      checkVerbForms(at, lang, entry, errors, warnings, rules);
+    }
 
     if (entry.sentences.length === 0) {
       warnings.push(`${at}: no example sentence`);
@@ -174,7 +189,7 @@ export function checkEntries(
       const forms = entry.pos === "verb" ? allVerbForms(lang, entry.details) : [];
       // A lemma may carry a trailing qualifier, "bank (financial)", to tell
       // homographs apart on the card; the sentence only has the word.
-      const bare = entry.lemma.replace(/\s*\([^)]*\)\s*$/, "");
+      const bare = lemmaWithoutMarker(lang, entry.pos, entry.lemma).replace(/\s*\([^)]*\)\s*$/, "");
       // "of, from" lists alternatives; any one of them in the sentence will do.
       const alternatives = bare.split(/,\s*/).filter(Boolean);
       const candidates =

@@ -1,18 +1,6 @@
 {
   "concepts": [
     {
-      "key": "spot",
-      "gloss": "spot (noun)",
-      "entries": {
-        "en": [
-        {"lemma": "spot", "pos": "noun", "details": {"plural": "spots"}, "sentences": ["This is a nice spot."]}
-        ],
-        "nl": [
-        {"lemma": "plek", "pos": "noun", "details": {"article": "de", "plural": "plekken"}, "sentences": ["Dit is een mooie plek."]}
-        ]
-      }
-    },
-    {
       "key": "neighborhood",
       "gloss": "neighborhood (noun)",
       "entries": {
@@ -32,7 +20,7 @@
         {"lemma": "price", "pos": "noun", "details": {"plural": "prices"}, "sentences": ["The price is high."]}
         ],
         "nl": [
-        {"lemma": "prijs", "pos": "noun", "details": {"article": "de", "plural": "prijzen"}, "sentences": ["De prijs is hoog."]}
+        {"lemma": "prijs", "pos": "noun", "details": {"note": "wat het kost", "article": "de", "plural": "prijzen"}, "sentences": ["De prijs is hoog."]}
         ]
       }
     },
@@ -89,10 +77,10 @@
       "gloss": "deliver (verb)",
       "entries": {
         "en": [
-        {"lemma": "deliver", "pos": "verb", "details": {"past": "delivered", "participle": "delivered"}, "sentences": ["They deliver the bread."]}
+        {"lemma": "to deliver", "pos": "verb", "details": {"past": "delivered", "participle": "delivered"}, "sentences": ["They deliver the bread."]}
         ],
         "nl": [
-        {"lemma": "leveren", "pos": "verb", "details": {"pastSingular": "leverde", "pastPlural": "leverden", "participle": "geleverd", "auxiliary": "hebben"}, "sentences": ["Zij leveren het brood."]}
+        {"lemma": "leveren", "pos": "verb", "details": {"note": "goederen verschaffen", "pastSingular": "leverde", "pastPlural": "leverden", "participle": "geleverd", "auxiliary": "hebben"}, "sentences": ["Zij leveren het brood."]}
         ]
       }
     },
@@ -161,7 +149,7 @@
       "gloss": "order (verb)",
       "entries": {
         "en": [
-        {"lemma": "order", "pos": "verb", "details": {"past": "ordered", "participle": "ordered"}, "sentences": ["I order a coffee."]}
+        {"lemma": "to order", "pos": "verb", "details": {"past": "ordered", "participle": "ordered"}, "sentences": ["I order a coffee."]}
         ],
         "nl": [
         {"lemma": "bestellen", "pos": "verb", "details": {"pastSingular": "bestelde", "pastPlural": "bestelden", "participle": "besteld", "auxiliary": "hebben"}, "sentences": ["Ik bestel een koffie."]}
@@ -185,10 +173,10 @@
       "gloss": "deliver (to the door)",
       "entries": {
         "en": [
-        {"lemma": "deliver (to the door)", "pos": "verb", "details": {"past": "delivered", "participle": "delivered"}, "sentences": ["He delivers the pizza."]}
+        {"lemma": "to deliver (to the door)", "pos": "verb", "details": {"past": "delivered", "participle": "delivered"}, "sentences": ["He delivers the pizza."]}
         ],
         "nl": [
-        {"lemma": "bezorgen", "pos": "verb", "details": {"pastSingular": "bezorgde", "pastPlural": "bezorgden", "participle": "bezorgd", "auxiliary": "hebben"}, "sentences": ["Hij bezorgt de pizza."]}
+        {"lemma": "bezorgen", "pos": "verb", "details": {"note": "aan de deur brengen", "pastSingular": "bezorgde", "pastPlural": "bezorgden", "participle": "bezorgd", "auxiliary": "hebben"}, "sentences": ["Hij bezorgt de pizza."]}
         ]
       }
     },
@@ -293,7 +281,7 @@
       "gloss": "swap (verb)",
       "entries": {
         "en": [
-        {"lemma": "swap", "pos": "verb", "details": {"past": "swapped", "participle": "swapped"}, "sentences": ["We swap books."]}
+        {"lemma": "to swap", "pos": "verb", "details": {"past": "swapped", "participle": "swapped"}, "sentences": ["We swap books."]}
         ],
         "nl": [
         {"lemma": "ruilen", "pos": "verb", "details": {"pastSingular": "ruilde", "pastPlural": "ruilden", "participle": "geruild", "auxiliary": "hebben"}, "sentences": ["Wij ruilen boeken."]}
@@ -401,7 +389,7 @@
       "gloss": "go shopping (verb)",
       "entries": {
         "en": [
-        {"lemma": "go shopping", "pos": "verb", "details": {"past": "went shopping", "participle": "gone shopping"}, "sentences": ["We went shopping."]}
+        {"lemma": "to go shopping", "pos": "verb", "details": {"past": "went shopping", "participle": "gone shopping"}, "sentences": ["We went shopping."]}
         ],
         "nl": [
         {"lemma": "winkelen", "pos": "verb", "details": {"pastSingular": "winkelde", "pastPlural": "winkelden", "participle": "gewinkeld", "auxiliary": "hebben"}, "sentences": ["Wij gingen winkelen."]}
@@ -965,7 +953,7 @@
       "gloss": "sell out (verb)",
       "entries": {
         "en": [
-        {"lemma": "sell out", "pos": "verb", "details": {"past": "sold out", "participle": "sold out"}, "sentences": ["The shop sells out the tickets."]}
+        {"lemma": "to sell out", "pos": "verb", "details": {"past": "sold out", "participle": "sold out"}, "sentences": ["The shop sells out the tickets."]}
         ],
         "nl": [
         {"lemma": "uitverkopen", "pos": "verb", "details": {"pastSingular": "verkocht uit", "pastPlural": "verkochten uit", "participle": "uitverkocht", "auxiliary": "hebben"}, "sentences": ["De winkel verkoopt de kaartjes uit."]}
@@ -1085,7 +1073,7 @@
       "gloss": "haggle (verb)",
       "entries": {
         "en": [
-        {"lemma": "haggle", "pos": "verb", "details": {"past": "haggled", "participle": "haggled"}, "sentences": ["He haggles over the price."]}
+        {"lemma": "to haggle", "pos": "verb", "details": {"past": "haggled", "participle": "haggled"}, "sentences": ["He haggles over the price."]}
         ],
         "nl": [
         {"lemma": "afdingen", "pos": "verb", "details": {"pastSingular": "dong af", "pastPlural": "dongen af", "participle": "afgedongen", "auxiliary": "hebben"}, "sentences": ["Hij dingt af op de prijs."]}
