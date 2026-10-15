@@ -5,7 +5,9 @@ import { deleteExpiredEmailTokens } from "./auth/email-tokens.js";
 import { config } from "./config.js";
 import { db, sql } from "./db/client.js";
 import { mailSettingsFromEnv } from "./mail/config.js";
+import { scheduleFeedbackDigest } from "./reports/digest.js";
 
+const mail = mailSettingsFromEnv(process.env);
 const app = await buildApp({
   db,
   prefix: "/api",
@@ -13,8 +15,14 @@ const app = await buildApp({
   production: config.NODE_ENV === "production",
   staticDir: config.WEB_DIST,
   registration: registrationPolicyFromEnv(process.env),
-  ...mailSettingsFromEnv(process.env),
+  mailer: mail.mailer,
+  publicUrl: mail.publicUrl,
 });
+
+// Open reports are emailed once a day, not as they come in.
+if (mail.reportNotifyEmail) {
+  scheduleFeedbackDigest({ db, mailer: mail.mailer, to: mail.reportNotifyEmail, publicUrl: mail.publicUrl }, app.log);
+}
 
 async function cleanUp() {
   try {
