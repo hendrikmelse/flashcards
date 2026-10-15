@@ -116,7 +116,7 @@
         {"lemma": "tonight", "pos": "adverb", "sentences": ["I am home tonight."]}
         ],
         "nl": [
-        {"lemma": "vanavond", "pos": "adverb", "sentences": ["Ik ben vanavond thuis."]}
+        {"lemma": "vanavond", "pos": "adverb", "details": {"note": "deze avond"}, "sentences": ["Ik ben vanavond thuis."]}
         ]
       }
     },
@@ -152,7 +152,7 @@
         {"lemma": "tonight (in the night)", "pos": "adverb", "sentences": ["It will freeze tonight."]}
         ],
         "nl": [
-        {"lemma": "vannacht", "pos": "adverb", "sentences": ["Vannacht vriest het."]}
+        {"lemma": "vannacht", "pos": "adverb", "details": {"note": "tijdens de nacht"}, "sentences": ["Vannacht vriest het."]}
         ]
       }
     },

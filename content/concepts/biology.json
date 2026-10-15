@@ -44,7 +44,7 @@
         {"lemma": "compound", "pos": "noun", "details": {"plural": "compounds"}, "sentences": ["Salt is a compound of sodium and chlorine."]}
         ],
         "nl": [
-        {"lemma": "verbinding", "pos": "noun", "details": {"article": "de", "plural": "verbindingen"}, "sentences": ["Zout is een verbinding van natrium en chloor."]}
+        {"lemma": "verbinding", "pos": "noun", "details": {"note": "in de scheikunde", "article": "de", "plural": "verbindingen"}, "sentences": ["Zout is een verbinding van natrium en chloor."]}
         ]
       }
     },
@@ -236,7 +236,7 @@
         {"lemma": "mass (matter)", "pos": "noun", "details": {"plural": "masses"}, "sentences": ["The mass of the sample is ten grams."]}
         ],
         "nl": [
-        {"lemma": "massa", "pos": "noun", "details": {"article": "de", "plural": "massa's"}, "sentences": ["De massa van het monster is tien gram."]}
+        {"lemma": "massa", "pos": "noun", "details": {"note": "in de natuurkunde, in gram", "article": "de", "plural": "massa's"}, "sentences": ["De massa van het monster is tien gram."]}
         ]
       }
     },
@@ -248,7 +248,7 @@
         {"lemma": "substance", "pos": "noun", "details": {"plural": "substances"}, "sentences": ["This substance is toxic."]}
         ],
         "nl": [
-        {"lemma": "stof", "pos": "noun", "details": {"article": "de", "plural": "stoffen"}, "sentences": ["Deze stof is giftig."]}
+        {"lemma": "stof", "pos": "noun", "details": {"note": "in de scheikunde", "article": "de", "plural": "stoffen"}, "sentences": ["Deze stof is giftig."]}
         ]
       }
     },
@@ -257,10 +257,10 @@
       "gloss": "dissolve (in a liquid)",
       "entries": {
         "en": [
-        {"lemma": "dissolve (in a liquid)", "pos": "verb", "details": {"past": "dissolved", "participle": "dissolved"}, "sentences": ["Salt dissolves in water."]}
+        {"lemma": "to dissolve (in a liquid)", "pos": "verb", "details": {"past": "dissolved", "participle": "dissolved"}, "sentences": ["Salt dissolves in water."]}
         ],
         "nl": [
-        {"lemma": "oplossen", "pos": "verb", "details": {"pastSingular": "loste op", "pastPlural": "losten op", "participle": "opgelost", "auxiliary": "hebben/zijn"}, "sentences": ["Zout lost op in water."]}
+        {"lemma": "oplossen", "pos": "verb", "details": {"note": "zout in water", "pastSingular": "loste op", "pastPlural": "losten op", "participle": "opgelost", "auxiliary": "hebben/zijn"}, "sentences": ["Zout lost op in water."]}
         ]
       }
     },
@@ -572,7 +572,7 @@
         {"lemma": "fungus", "pos": "noun", "details": {"plural": "fungi"}, "sentences": ["A fungus grows on old bread."]}
         ],
         "nl": [
-        {"lemma": "schimmel", "pos": "noun", "details": {"article": "de", "plural": "schimmels"}, "sentences": ["Een schimmel groeit op oud brood."]}
+        {"lemma": "schimmel", "pos": "noun", "details": {"note": "het organisme", "article": "de", "plural": "schimmels"}, "sentences": ["Een schimmel groeit op oud brood."]}
         ]
       }
     },
@@ -584,7 +584,7 @@
         {"lemma": "species", "pos": "noun", "details": {"plural": "species"}, "sentences": ["This species lives in the sea."]}
         ],
         "nl": [
-        {"lemma": "soort", "pos": "noun", "details": {"article": "de", "plural": "soorten"}, "sentences": ["Deze soort leeft in de zee."]}
+        {"lemma": "soort", "pos": "noun", "details": {"note": "in de biologie", "article": "de", "plural": "soorten"}, "sentences": ["Deze soort leeft in de zee."]}
         ]
       }
     },
@@ -725,7 +725,7 @@
       "gloss": "evolve (verb)",
       "entries": {
         "en": [
-        {"lemma": "evolve", "pos": "verb", "details": {"past": "evolved", "participle": "evolved"}, "sentences": ["Species evolve over millions of years."]}
+        {"lemma": "to evolve", "pos": "verb", "details": {"past": "evolved", "participle": "evolved"}, "sentences": ["Species evolve over millions of years."]}
         ],
         "nl": [
         {"lemma": "evolueren", "pos": "verb", "details": {"pastSingular": "evolueerde", "pastPlural": "evolueerden", "participle": "geëvolueerd", "auxiliary": "zijn"}, "sentences": ["Soorten evolueren over miljoenen jaren."]}
@@ -737,7 +737,7 @@
       "gloss": "mutate (verb)",
       "entries": {
         "en": [
-        {"lemma": "mutate", "pos": "verb", "details": {"past": "mutated", "participle": "mutated"}, "sentences": ["Viruses mutate quickly."]}
+        {"lemma": "to mutate", "pos": "verb", "details": {"past": "mutated", "participle": "mutated"}, "sentences": ["Viruses mutate quickly."]}
         ],
         "nl": [
         {"lemma": "muteren", "pos": "verb", "details": {"pastSingular": "muteerde", "pastPlural": "muteerden", "participle": "gemuteerd", "auxiliary": "zijn"}, "sentences": ["Virussen muteren snel."]}
@@ -749,7 +749,7 @@
       "gloss": "ferment (verb)",
       "entries": {
         "en": [
-        {"lemma": "ferment", "pos": "verb", "details": {"past": "fermented", "participle": "fermented"}, "sentences": ["Yeast ferments sugar."]}
+        {"lemma": "to ferment", "pos": "verb", "details": {"past": "fermented", "participle": "fermented"}, "sentences": ["Yeast ferments sugar."]}
         ],
         "nl": [
         {"lemma": "fermenteren", "pos": "verb", "details": {"pastSingular": "fermenteerde", "pastPlural": "fermenteerden", "participle": "gefermenteerd", "auxiliary": "hebben"}, "sentences": ["Gist fermenteert suiker."]}
@@ -992,7 +992,7 @@
         {"lemma": "sample", "pos": "noun", "details": {"plural": "samples"}, "sentences": ["The doctor takes a blood sample."]}
         ],
         "nl": [
-        {"lemma": "monster", "pos": "noun", "details": {"article": "het", "plural": "monsters"}, "sentences": ["De dokter neemt een bloedmonster."]}
+        {"lemma": "monster", "pos": "noun", "details": {"note": "om te onderzoeken", "article": "het", "plural": "monsters"}, "sentences": ["De dokter neemt een bloedmonster."]}
         ]
       }
     },
@@ -1097,7 +1097,7 @@
       "gloss": "absorb (verb)",
       "entries": {
         "en": [
-        {"lemma": "absorb", "pos": "verb", "details": {"past": "absorbed", "participle": "absorbed"}, "sentences": ["Plants absorb water through their roots."]}
+        {"lemma": "to absorb", "pos": "verb", "details": {"past": "absorbed", "participle": "absorbed"}, "sentences": ["Plants absorb water through their roots."]}
         ],
         "nl": [
         {"lemma": "absorberen", "pos": "verb", "details": {"pastSingular": "absorbeerde", "pastPlural": "absorbeerden", "participle": "geabsorbeerd", "auxiliary": "hebben"}, "sentences": ["Planten absorberen water via hun wortels."]}

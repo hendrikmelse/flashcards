@@ -9,6 +9,16 @@
 // map from pronoun to form. `defective: true` marks verbs that lack some forms
 // (English "can", "must") and so are exempt from the completeness check.
 //
+// Any entry may carry `note`: a few words, in the language of the word itself, saying which sense or
+// use it has ("op een deur", "informeel"), shown beside the word in brackets. It tells words apart that
+// a card could otherwise not, such as two Dutch words that are both "knock" and "whisk". It describes
+// the use and never gives the translation away, since it is shown on the prompt side too.
+//
+// A language may name its verbs with a marker in front of the infinitive (English "to run"). The
+// lemma is stored with it, as it is shown; `lemmaWithoutMarker` gives the bare word back for matching
+// and sorting. A verb that is not named that way ("have to", "need to") has `bare: true`, and the
+// modals, which have no infinitive, are `defective`.
+//
 // What each language's verbs have is described by its entry in LANGUAGE_FORMS below. A language
 // with no entry has noun plurals only.
 
@@ -33,6 +43,8 @@ type LanguageForms = {
   verbKeys: readonly string[];
   /** The verb lines shown on the back of a card, after the present tense. */
   verbLines: (details: Record<string, unknown>) => FormLine[];
+  /** The word that goes in front of a verb's lemma, as English "to" does ("to run"). */
+  infinitiveMarker?: string;
 };
 
 export const DUTCH_AUXILIARIES = ["hebben", "zijn", "hebben/zijn"] as const;
@@ -65,6 +77,7 @@ const LANGUAGE_FORMS: Record<string, LanguageForms> = {
     },
   },
   en: {
+    infinitiveMarker: "to",
     presentPronouns: ["I", "you", "he", "we"],
     verbKeys: ["past", "participle"],
     verbLines(details) {
@@ -81,6 +94,37 @@ const LANGUAGE_FORMS: Record<string, LanguageForms> = {
 /** Pronoun order for the present-tense table of a language's verbs, if it has one. */
 export const presentPronouns = (language: string): readonly string[] | undefined =>
   LANGUAGE_FORMS[language]?.presentPronouns;
+
+/** The longest an entry's note may be: it sits beside the word on a card. */
+export const MAX_NOTE_LENGTH = 60;
+
+/** An entry's note, if it has one. */
+export const entryNote = (details: Record<string, unknown>): string | undefined => str(details["note"]);
+
+/** The word that goes in front of a verb's lemma in this language ("to" in English), if there is one. */
+export const infinitiveMarker = (language: string): string | undefined => LANGUAGE_FORMS[language]?.infinitiveMarker;
+
+/**
+ * A lemma without the marker of the infinitive: "to run" is "run" for an English verb, and anything
+ * else is returned as it is. Used wherever the word itself matters, such as search and finding it in
+ * a sentence.
+ */
+export function lemmaWithoutMarker(language: string, partOfSpeech: string | null, lemma: string): string {
+  const marker = partOfSpeech === "verb" ? infinitiveMarker(language) : undefined;
+  if (!marker) return lemma;
+  const prefix = `${marker} `;
+  return lemma.startsWith(prefix) ? lemma.slice(prefix.length).trimStart() : lemma;
+}
+
+/** Whether a verb should have the marker in its lemma but does not: it is neither defective nor `bare`. */
+export function missingInfinitiveMarker(
+  language: string,
+  entry: { lemma: string; details: Record<string, unknown> },
+): boolean {
+  const marker = infinitiveMarker(language);
+  if (!marker || entry.details["defective"] === true || entry.details["bare"] === true) return false;
+  return !entry.lemma.startsWith(`${marker} `);
+}
 
 /** The details keys a language's verbs should have. */
 export const verbFormKeys = (language: string): readonly string[] => LANGUAGE_FORMS[language]?.verbKeys ?? [];

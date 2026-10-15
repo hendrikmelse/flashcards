@@ -104,7 +104,7 @@
         {"lemma": "monster", "pos": "noun", "details": {"plural": "monsters"}, "sentences": ["The monster is big."]}
         ],
         "nl": [
-        {"lemma": "monster", "pos": "noun", "details": {"article": "het", "plural": "monsters"}, "sentences": ["Het monster is groot."]}
+        {"lemma": "monster", "pos": "noun", "details": {"note": "een eng wezen", "article": "het", "plural": "monsters"}, "sentences": ["Het monster is groot."]}
         ]
       }
     },
@@ -344,7 +344,7 @@
         {"lemma": "donkey", "pos": "noun", "details": {"plural": "donkeys"}, "sentences": ["The donkey carries a bag."]}
         ],
         "nl": [
-        {"lemma": "ezel", "pos": "noun", "details": {"article": "de", "plural": "ezels"}, "sentences": ["De ezel draagt een tas."]}
+        {"lemma": "ezel", "pos": "noun", "details": {"note": "het dier", "article": "de", "plural": "ezels"}, "sentences": ["De ezel draagt een tas."]}
         ]
       }
     },
@@ -392,8 +392,8 @@
         {"lemma": "cattle", "pos": "noun", "details": {"pluralOnly": true}, "sentences": ["The cattle graze."]}
         ],
         "nl": [
-        {"lemma": "vee", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["Het vee graast."]},
-        {"lemma": "rund", "pos": "noun", "details": {"article": "het", "plural": "runderen"}, "sentences": ["De boer heeft veel runderen."]}
+        {"lemma": "vee", "pos": "noun", "details": {"note": "alle boerderijdieren samen", "article": "het", "uncountable": true}, "sentences": ["Het vee graast."]},
+        {"lemma": "rund", "pos": "noun", "details": {"note": "één koe of stier", "article": "het", "plural": "runderen"}, "sentences": ["De boer heeft veel runderen."]}
         ]
       }
     },
@@ -642,7 +642,7 @@
       "gloss": "bark (verb)",
       "entries": {
         "en": [
-        {"lemma": "bark", "pos": "verb", "details": {"past": "barked", "participle": "barked"}, "sentences": ["The dog barks."]}
+        {"lemma": "to bark", "pos": "verb", "details": {"past": "barked", "participle": "barked"}, "sentences": ["The dog barks."]}
         ],
         "nl": [
         {"lemma": "blaffen", "pos": "verb", "details": {"pastSingular": "blafte", "pastPlural": "blaften", "participle": "geblaft", "auxiliary": "hebben"}, "sentences": ["De hond blaft."]}
@@ -846,10 +846,10 @@
       "gloss": "breed (animals)",
       "entries": {
         "en": [
-        {"lemma": "breed (animals)", "pos": "verb", "details": {"past": "breeded", "participle": "breeded"}, "sentences": ["He breeds horses."]}
+        {"lemma": "to breed (animals)", "pos": "verb", "details": {"past": "bred", "participle": "bred"}, "sentences": ["He breeds horses."]}
         ],
         "nl": [
-        {"lemma": "fokken", "pos": "verb", "details": {"pastSingular": "fokte", "pastPlural": "fokten", "participle": "gefokt", "auxiliary": "hebben"}, "sentences": ["Hij fokt paarden."]}
+        {"lemma": "fokken", "pos": "verb", "details": {"note": "dieren", "pastSingular": "fokte", "pastPlural": "fokten", "participle": "gefokt", "auxiliary": "hebben"}, "sentences": ["Hij fokt paarden."]}
         ]
       }
     },
@@ -990,7 +990,7 @@
       "gloss": "tame (verb)",
       "entries": {
         "en": [
-        {"lemma": "tame", "pos": "verb", "details": {"past": "tamed", "participle": "tamed"}, "sentences": ["He tames the horse."]}
+        {"lemma": "to tame", "pos": "verb", "details": {"past": "tamed", "participle": "tamed"}, "sentences": ["He tames the horse."]}
         ],
         "nl": [
         {"lemma": "temmen", "pos": "verb", "details": {"pastSingular": "temde", "pastPlural": "temden", "participle": "getemd", "auxiliary": "hebben"}, "sentences": ["Hij temt het paard."]}
@@ -1146,7 +1146,7 @@
       "gloss": "roar (verb)",
       "entries": {
         "en": [
-        {"lemma": "roar", "pos": "verb", "details": {"past": "roared", "participle": "roared"}, "sentences": ["The lion roars."]}
+        {"lemma": "to roar", "pos": "verb", "details": {"past": "roared", "participle": "roared"}, "sentences": ["The lion roars."]}
         ],
         "nl": [
         {"lemma": "brullen", "pos": "verb", "details": {"pastSingular": "brulde", "pastPlural": "brulden", "participle": "gebruld", "auxiliary": "hebben"}, "sentences": ["De leeuw brult."]}
@@ -1278,7 +1278,7 @@
       "gloss": "gnaw (verb)",
       "entries": {
         "en": [
-        {"lemma": "gnaw", "pos": "verb", "details": {"past": "gnawed", "participle": "gnawed"}, "sentences": ["The mouse gnaws the cheese."]}
+        {"lemma": "to gnaw", "pos": "verb", "details": {"past": "gnawed", "participle": "gnawed"}, "sentences": ["The mouse gnaws the cheese."]}
         ],
         "nl": [
         {"lemma": "knagen", "pos": "verb", "details": {"pastSingular": "knaagde", "pastPlural": "knaagden", "participle": "geknaagd", "auxiliary": "hebben"}, "sentences": ["De muis knaagt aan de kaas."]}

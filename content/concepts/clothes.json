@@ -41,7 +41,7 @@
       "gloss": "put on (verb)",
       "entries": {
         "en": [
-        {"lemma": "put on", "pos": "verb", "details": {"past": "put on", "participle": "put on"}, "sentences": ["I put on my coat."]}
+        {"lemma": "to put on", "pos": "verb", "details": {"past": "put on", "participle": "put on"}, "sentences": ["I put on my coat."]}
         ],
         "nl": [
         {"lemma": "aandoen", "pos": "verb", "details": {"pastSingular": "deed aan", "pastPlural": "deden aan", "participle": "aangedaan", "auxiliary": "hebben"}, "sentences": ["Ik doe mijn jas aan."]}
@@ -56,7 +56,7 @@
         {"lemma": "size", "pos": "noun", "details": {"plural": "sizes"}, "sentences": ["What size are you?"]}
         ],
         "nl": [
-        {"lemma": "maat", "pos": "noun", "details": {"article": "de", "plural": "maten"}, "sentences": ["Welke maat heb je?"]}
+        {"lemma": "maat", "pos": "noun", "details": {"note": "van kleren of schoenen", "article": "de", "plural": "maten"}, "sentences": ["Welke maat heb je?"]}
         ]
       }
     },
@@ -125,7 +125,7 @@
       "gloss": "dress (clothe)",
       "entries": {
         "en": [
-        {"lemma": "dress (clothe)", "pos": "verb", "details": {"past": "dressed", "participle": "dressed"}, "sentences": ["I dress the child."]}
+        {"lemma": "to dress (clothe)", "pos": "verb", "details": {"past": "dressed", "participle": "dressed"}, "sentences": ["I dress the child."]}
         ],
         "nl": [
         {"lemma": "kleden", "pos": "verb", "details": {"pastSingular": "kleedde", "pastPlural": "kleedden", "participle": "gekleed", "auxiliary": "hebben"}, "sentences": ["Ik kleed het kind."]}
@@ -152,7 +152,7 @@
         {"lemma": "fabric", "pos": "noun", "details": {"plural": "fabrics"}, "sentences": ["The fabric is soft."]}
         ],
         "nl": [
-        {"lemma": "stof", "pos": "noun", "details": {"article": "de", "plural": "stoffen"}, "sentences": ["De stof is zacht."]}
+        {"lemma": "stof", "pos": "noun", "details": {"note": "voor kleding", "article": "de", "plural": "stoffen"}, "sentences": ["De stof is zacht."]}
         ]
       }
     },
@@ -185,7 +185,7 @@
       "gloss": "put on (pull on clothing)",
       "entries": {
         "en": [
-        {"lemma": "put on (pull on clothing)", "pos": "verb", "details": {"past": "put on", "participle": "put on"}, "sentences": ["I put on my shoes."]}
+        {"lemma": "to put on (pull on clothing)", "pos": "verb", "details": {"past": "put on", "participle": "put on"}, "sentences": ["I put on my shoes."]}
         ],
         "nl": [
         {"lemma": "aantrekken", "pos": "verb", "details": {"pastSingular": "trok aan", "pastPlural": "trokken aan", "participle": "aangetrokken", "auxiliary": "hebben"}, "sentences": ["Ik trek mijn schoenen aan."]}
@@ -341,7 +341,7 @@
       "gloss": "get dressed (verb)",
       "entries": {
         "en": [
-        {"lemma": "get dressed", "pos": "verb", "details": {"past": "got dressed", "participle": "got dressed"}, "sentences": ["I get dressed."]}
+        {"lemma": "to get dressed", "pos": "verb", "details": {"past": "got dressed", "participle": "got dressed"}, "sentences": ["I get dressed."]}
         ],
         "nl": [
         {"lemma": "aankleden", "pos": "verb", "details": {"pastSingular": "kleedde aan", "pastPlural": "kleedden aan", "participle": "aangekleed", "auxiliary": "hebben"}, "sentences": ["Ik kleed me aan."]}
@@ -413,7 +413,7 @@
       "gloss": "dress up (verb)",
       "entries": {
         "en": [
-        {"lemma": "dress up", "pos": "verb", "details": {"past": "dressed up", "participle": "dressed up"}, "sentences": ["The children dress up."]}
+        {"lemma": "to dress up", "pos": "verb", "details": {"past": "dressed up", "participle": "dressed up"}, "sentences": ["The children dress up."]}
         ],
         "nl": [
         {"lemma": "verkleden", "pos": "verb", "details": {"pastSingular": "verkleedde", "pastPlural": "verkleedden", "participle": "verkleed", "auxiliary": "hebben"}, "sentences": ["De kinderen verkleden zich."]}
@@ -449,7 +449,7 @@
       "gloss": "change clothes (verb)",
       "entries": {
         "en": [
-        {"lemma": "change clothes", "pos": "verb", "details": {"past": "changed clothes", "participle": "changed clothes"}, "sentences": ["I change clothes."]}
+        {"lemma": "to change clothes", "pos": "verb", "details": {"past": "changed clothes", "participle": "changed clothes"}, "sentences": ["I change clothes."]}
         ],
         "nl": [
         {"lemma": "omkleden", "pos": "verb", "details": {"pastSingular": "kleedde om", "pastPlural": "kleedden om", "participle": "omgekleed", "auxiliary": "hebben"}, "sentences": ["Ik kleed me om."]}
@@ -557,7 +557,7 @@
       "gloss": "take off (clothes)",
       "entries": {
         "en": [
-        {"lemma": "take off (clothes)", "pos": "verb", "details": {"past": "took off", "participle": "taken off"}, "sentences": ["I take off my coat."]}
+        {"lemma": "to take off (clothes)", "pos": "verb", "details": {"past": "took off", "participle": "taken off"}, "sentences": ["I take off my coat."]}
         ],
         "nl": [
         {"lemma": "uittrekken", "pos": "verb", "details": {"pastSingular": "trok uit", "pastPlural": "trokken uit", "participle": "uitgetrokken", "auxiliary": "hebben"}, "sentences": ["Ik trek mijn jas uit."]}
@@ -629,7 +629,7 @@
       "gloss": "undress (verb)",
       "entries": {
         "en": [
-        {"lemma": "undress", "pos": "verb", "details": {"past": "undressed", "participle": "undressed"}, "sentences": ["I undress the child."]}
+        {"lemma": "to undress", "pos": "verb", "details": {"past": "undressed", "participle": "undressed"}, "sentences": ["I undress the child."]}
         ],
         "nl": [
         {"lemma": "uitkleden", "pos": "verb", "details": {"pastSingular": "kleedde uit", "pastPlural": "kleedden uit", "participle": "uitgekleed", "auxiliary": "hebben"}, "sentences": ["Ik kleed het kind uit."]}

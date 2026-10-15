@@ -20,7 +20,7 @@
         {"lemma": "treasure", "pos": "noun", "details": {"plural": "treasures"}, "sentences": ["The pirate finds a treasure."]}
         ],
         "nl": [
-        {"lemma": "schat", "pos": "noun", "details": {"article": "de", "plural": "schatten"}, "sentences": ["De piraat vindt een schat."]}
+        {"lemma": "schat", "pos": "noun", "details": {"note": "goud en juwelen", "article": "de", "plural": "schatten"}, "sentences": ["De piraat vindt een schat."]}
         ]
       }
     },
@@ -56,7 +56,7 @@
         {"lemma": "card", "pos": "noun", "details": {"plural": "cards"}, "sentences": ["I send a card."]}
         ],
         "nl": [
-        {"lemma": "kaart", "pos": "noun", "details": {"article": "de", "plural": "kaarten"}, "sentences": ["Ik stuur een kaart."]}
+        {"lemma": "kaart", "pos": "noun", "details": {"note": "om te sturen of mee te spelen", "article": "de", "plural": "kaarten"}, "sentences": ["Ik stuur een kaart."]}
         ]
       }
     }

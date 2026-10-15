@@ -152,7 +152,7 @@
         {"lemma": "family", "pos": "noun", "details": {"plural": "families"}, "sentences": ["I have a big family."]}
         ],
         "nl": [
-        {"lemma": "gezin", "pos": "noun", "details": {"article": "het", "plural": "gezinnen"}, "sentences": ["Ik heb een groot gezin."]}
+        {"lemma": "gezin", "pos": "noun", "details": {"note": "ouders en kinderen thuis", "article": "het", "plural": "gezinnen"}, "sentences": ["Ik heb een groot gezin."]}
         ]
       }
     },
@@ -212,7 +212,7 @@
         {"lemma": "darling (term of endearment)", "pos": "noun", "details": {"plural": "darlings"}, "sentences": ["Come here, darling."]}
         ],
         "nl": [
-        {"lemma": "schat", "pos": "noun", "details": {"article": "de", "plural": "schatten"}, "sentences": ["Kom hier, schat."]}
+        {"lemma": "schat", "pos": "noun", "details": {"note": "tegen iemand van wie je houdt", "article": "de", "plural": "schatten"}, "sentences": ["Kom hier, schat."]}
         ]
       }
     },
@@ -233,7 +233,7 @@
       "gloss": "marry (verb)",
       "entries": {
         "en": [
-        {"lemma": "marry", "pos": "verb", "details": {"past": "married", "participle": "married"}, "sentences": ["They marry in June."]}
+        {"lemma": "to marry", "pos": "verb", "details": {"past": "married", "participle": "married"}, "sentences": ["They marry in June."]}
         ],
         "nl": [
         {"lemma": "trouwen", "pos": "verb", "details": {"pastSingular": "trouwde", "pastPlural": "trouwden", "participle": "getrouwd", "auxiliary": "zijn"}, "sentences": ["Zij trouwen in juni."]}
@@ -248,7 +248,7 @@
         {"lemma": "family (relatives)", "pos": "noun", "details": {"plural": "families"}, "sentences": ["Our family is big."]}
         ],
         "nl": [
-        {"lemma": "familie", "pos": "noun", "details": {"article": "de", "plural": "families"}, "sentences": ["Onze familie is groot."]}
+        {"lemma": "familie", "pos": "noun", "details": {"note": "alle verwanten, ook de verre", "article": "de", "plural": "families"}, "sentences": ["Onze familie is groot."]}
         ]
       }
     },
@@ -380,7 +380,7 @@
         {"lemma": "girl (informal)", "pos": "noun", "details": {"plural": "girls"}, "sentences": ["The girl laughs."]}
         ],
         "nl": [
-        {"lemma": "meid", "pos": "noun", "details": {"article": "de", "plural": "meiden"}, "sentences": ["De meid lacht."]}
+        {"lemma": "meid", "pos": "noun", "details": {"note": "informeel", "article": "de", "plural": "meiden"}, "sentences": ["De meid lacht."]}
         ]
       }
     },
@@ -497,7 +497,7 @@
       "gloss": "separate (divorce)",
       "entries": {
         "en": [
-        {"lemma": "separate (divorce)", "pos": "verb", "details": {"past": "separated", "participle": "separated"}, "sentences": ["They separate."]}
+        {"lemma": "to separate (divorce)", "pos": "verb", "details": {"past": "separated", "participle": "separated"}, "sentences": ["They separate."]}
         ],
         "nl": [
         {"lemma": "scheiden", "pos": "verb", "details": {"pastSingular": "scheidde", "pastPlural": "scheidden", "participle": "gescheiden", "auxiliary": "hebben/zijn"}, "sentences": ["Zij scheiden."]}
@@ -605,7 +605,7 @@
       "gloss": "kiss (verb)",
       "entries": {
         "en": [
-        {"lemma": "kiss", "pos": "verb", "details": {"past": "kissed", "participle": "kissed"}, "sentences": ["He kisses her."]}
+        {"lemma": "to kiss", "pos": "verb", "details": {"past": "kissed", "participle": "kissed"}, "sentences": ["He kisses her."]}
         ],
         "nl": [
         {"lemma": "kussen", "pos": "verb", "details": {"pastSingular": "kuste", "pastPlural": "kusten", "participle": "gekust", "auxiliary": "hebben"}, "sentences": ["Hij kust haar."]}
@@ -680,7 +680,7 @@
         {"lemma": "niece", "pos": "noun", "details": {"plural": "nieces"}, "sentences": ["My niece is young."]}
         ],
         "nl": [
-        {"lemma": "nicht", "pos": "noun", "details": {"article": "de", "plural": "nichten"}, "sentences": ["Mijn nicht is jong."]}
+        {"lemma": "nicht", "pos": "noun", "details": {"note": "de dochter van een broer of zus", "article": "de", "plural": "nichten"}, "sentences": ["Mijn nicht is jong."]}
         ]
       }
     },
@@ -713,7 +713,7 @@
       "gloss": "cheat (verb)",
       "entries": {
         "en": [
-        {"lemma": "cheat", "pos": "verb", "details": {"past": "cheated", "participle": "cheated"}, "sentences": ["He cheats his friend."]}
+        {"lemma": "to cheat", "pos": "verb", "details": {"past": "cheated", "participle": "cheated"}, "sentences": ["He cheats his friend."]}
         ],
         "nl": [
         {"lemma": "bedriegen", "pos": "verb", "details": {"pastSingular": "bedroog", "pastPlural": "bedrogen", "participle": "bedrogen", "auxiliary": "hebben"}, "sentences": ["Hij bedriegt zijn vriend."]}
@@ -1025,7 +1025,7 @@
       "gloss": "tempt (verb)",
       "entries": {
         "en": [
-        {"lemma": "tempt", "pos": "verb", "details": {"past": "tempted", "participle": "tempted"}, "sentences": ["The cake tempts me."]}
+        {"lemma": "to tempt", "pos": "verb", "details": {"past": "tempted", "participle": "tempted"}, "sentences": ["The cake tempts me."]}
         ],
         "nl": [
         {"lemma": "verleiden", "pos": "verb", "details": {"pastSingular": "verleidde", "pastPlural": "verleidden", "participle": "verleid", "auxiliary": "hebben"}, "sentences": ["De taart verleidt mij."]}
@@ -1157,7 +1157,7 @@
       "gloss": "flirt (verb)",
       "entries": {
         "en": [
-        {"lemma": "flirt", "pos": "verb", "details": {"past": "flirted", "participle": "flirted"}, "sentences": ["They flirt."]}
+        {"lemma": "to flirt", "pos": "verb", "details": {"past": "flirted", "participle": "flirted"}, "sentences": ["They flirt."]}
         ],
         "nl": [
         {"lemma": "flirten", "pos": "verb", "details": {"pastSingular": "flirtte", "pastPlural": "flirtten", "participle": "geflirt", "auxiliary": "hebben"}, "sentences": ["Zij flirten."]}
@@ -1517,7 +1517,7 @@
       "gloss": "live together (verb)",
       "entries": {
         "en": [
-        {"lemma": "live together", "pos": "verb", "details": {"past": "lived together", "participle": "lived together"}, "sentences": ["They live together."]}
+        {"lemma": "to live together", "pos": "verb", "details": {"past": "lived together", "participle": "lived together"}, "sentences": ["They live together."]}
         ],
         "nl": [
         {"lemma": "samenwonen", "pos": "verb", "details": {"pastSingular": "woonde samen", "pastPlural": "woonden samen", "participle": "samengewoond", "auxiliary": "hebben"}, "sentences": ["Zij wonen samen."]}
@@ -1529,7 +1529,7 @@
       "gloss": "cuddle (verb)",
       "entries": {
         "en": [
-        {"lemma": "cuddle", "pos": "verb", "details": {"past": "cuddled", "participle": "cuddled"}, "sentences": ["We cuddle on the couch."]}
+        {"lemma": "to cuddle", "pos": "verb", "details": {"past": "cuddled", "participle": "cuddled"}, "sentences": ["We cuddle on the couch."]}
         ],
         "nl": [
         {"lemma": "knuffelen", "pos": "verb", "details": {"pastSingular": "knuffelde", "pastPlural": "knuffelden", "participle": "geknuffeld", "auxiliary": "hebben"}, "sentences": ["Wij knuffelen op de bank."]}
@@ -1541,7 +1541,7 @@
       "gloss": "stroke (verb)",
       "entries": {
         "en": [
-        {"lemma": "stroke", "pos": "verb", "details": {"past": "stroked", "participle": "stroked"}, "sentences": ["I stroke the cat."]}
+        {"lemma": "to stroke", "pos": "verb", "details": {"past": "stroked", "participle": "stroked"}, "sentences": ["I stroke the cat."]}
         ],
         "nl": [
         {"lemma": "strelen", "pos": "verb", "details": {"pastSingular": "streelde", "pastPlural": "streelden", "participle": "gestreeld", "auxiliary": "hebben"}, "sentences": ["Ik streel de kat."]}
@@ -1565,7 +1565,7 @@
       "gloss": "embrace (verb)",
       "entries": {
         "en": [
-        {"lemma": "embrace", "pos": "verb", "details": {"past": "embraced", "participle": "embraced"}, "sentences": ["They embrace."]}
+        {"lemma": "to embrace", "pos": "verb", "details": {"past": "embraced", "participle": "embraced"}, "sentences": ["They embrace."]}
         ],
         "nl": [
         {"lemma": "omhelzen", "pos": "verb", "details": {"pastSingular": "omhelsde", "pastPlural": "omhelsden", "participle": "omhelsd", "auxiliary": "hebben"}, "sentences": ["Zij omhelzen elkaar."]}
@@ -1580,7 +1580,7 @@
         {"lemma": "romance", "pos": "noun", "details": {"uncountable": true}, "sentences": ["I like romance."]}
         ],
         "nl": [
-        {"lemma": "romantiek", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Ik hou van romantiek."]}
+        {"lemma": "romantiek", "pos": "noun", "details": {"note": "liefde en genegenheid", "article": "de", "uncountable": true}, "sentences": ["Ik hou van romantiek."]}
         ]
       }
     },
@@ -1817,7 +1817,7 @@
       "gloss": "wed (verb)",
       "entries": {
         "en": [
-        {"lemma": "wed", "pos": "verb", "details": {"past": "wedded", "participle": "wedded"}, "sentences": ["They wed in June."]}
+        {"lemma": "to wed", "pos": "verb", "details": {"past": "wedded", "participle": "wedded"}, "sentences": ["They wed in June."]}
         ],
         "nl": [
         {"lemma": "huwen", "pos": "verb", "details": {"pastSingular": "huwde", "pastPlural": "huwden", "participle": "gehuwd", "auxiliary": "hebben"}, "sentences": ["Zij huwen in juni."]}
@@ -2297,7 +2297,7 @@
       "gloss": "remarry (verb)",
       "entries": {
         "en": [
-        {"lemma": "remarry", "pos": "verb", "details": {"past": "remarried", "participle": "remarried"}, "sentences": ["She remarries."]}
+        {"lemma": "to remarry", "pos": "verb", "details": {"past": "remarried", "participle": "remarried"}, "sentences": ["She remarries."]}
         ],
         "nl": [
         {"lemma": "hertrouwen", "pos": "verb", "details": {"pastSingular": "hertrouwde", "pastPlural": "hertrouwden", "participle": "hertrouwd", "auxiliary": "hebben/zijn"}, "sentences": ["Zij hertrouwt."]}
@@ -2588,7 +2588,7 @@
         {"lemma": "nephew", "pos": "noun", "details": {"plural": "nephews"}, "sentences": ["My nephew is eight."]}
         ],
         "nl": [
-        {"lemma": "neef", "pos": "noun", "details": {"article": "de", "plural": "neven"}, "sentences": ["Mijn neef is acht."]}
+        {"lemma": "neef", "pos": "noun", "details": {"note": "de zoon van een broer of zus", "article": "de", "plural": "neven"}, "sentences": ["Mijn neef is acht."]}
         ]
       }
     },
@@ -2600,7 +2600,7 @@
         {"lemma": "cousin (male)", "pos": "noun", "details": {"plural": "cousins"}, "sentences": ["I visit my cousin."]}
         ],
         "nl": [
-        {"lemma": "neef", "pos": "noun", "details": {"article": "de", "plural": "neven"}, "sentences": ["Ik bezoek mijn neef."]}
+        {"lemma": "neef", "pos": "noun", "details": {"note": "de zoon van een oom of tante", "article": "de", "plural": "neven"}, "sentences": ["Ik bezoek mijn neef."]}
         ]
       }
     },
@@ -2612,7 +2612,7 @@
         {"lemma": "cousin (female)", "pos": "noun", "details": {"plural": "cousins"}, "sentences": ["My cousin lives in Utrecht."]}
         ],
         "nl": [
-        {"lemma": "nicht", "pos": "noun", "details": {"article": "de", "plural": "nichten"}, "sentences": ["Mijn nicht woont in Utrecht."]}
+        {"lemma": "nicht", "pos": "noun", "details": {"note": "de dochter van een oom of tante", "article": "de", "plural": "nichten"}, "sentences": ["Mijn nicht woont in Utrecht."]}
         ]
       }
     },

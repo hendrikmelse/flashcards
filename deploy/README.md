@@ -35,7 +35,7 @@ internet ─▶ Caddy (80/443, automatic HTTPS) ─▶ flashcards-api (Node, por
 | A VPS (Ubuntu 24.04, x86) | Hosting |
 | GitHub Actions and the GitHub Container Registry | Testing, building, and deploying the image |
 | Let's Encrypt (through Caddy) | HTTPS certificates |
-| Resend | Email: verification, password reset, report notifications |
+| Resend | Email: verification, password reset, the daily summary of open reports |
 | Backblaze B2, with `restic` | Encrypted offsite copies of the database backups |
 | Healthchecks.io | Alert when the nightly backup does not run or fails |
 | UptimeRobot | Alert when the site or the database is unreachable |
@@ -246,7 +246,7 @@ cd /srv/flashcards
 cp .env.example .env && chmod 600 .env
 nano .env    # 1) replace change-me in DATABASE_URL with the password printed above
              # 2) set RESEND_API_KEY (see "Email (Resend)" below)
-             # 3) set REPORT_NOTIFY_EMAIL to where reports should be emailed (optional)
+             # 3) set REPORT_NOTIFY_EMAIL to where the daily summary of open reports should be emailed (optional)
 ```
 
 Sign-up is **open**: `compose.yaml` sets `REGISTRATION_MODE=open`, so anyone can
@@ -392,7 +392,7 @@ ran, not that the site is reachable.
 
 The app sends three kinds of email to users: a confirmation link for a new
 account, a password reset link, and a confirmation link for a new address. It
-also emails the owner about each report and comment, when `REPORT_NOTIFY_EMAIL`
+also emails the owner a daily summary of open reports, when `REPORT_NOTIFY_EMAIL`
 is set. All of it goes out through [Resend](https://resend.com), from
 `noreply@mail.hendrikmelse.com`, a subdomain used only for this, so the app's
 mail reputation stays apart from the rest of `hendrikmelse.com`.
@@ -587,10 +587,13 @@ you can clean up by hand.
 
 Users can send in four kinds of reports: a problem with a word, a bug, a feature
 suggestion, and a request for a pack. If `REPORT_NOTIFY_EMAIL` is set in
-`/srv/flashcards/.env` (restart the container after changing it), each report is
-emailed to that address as it comes in. A report is a conversation: its sender can
-add comments while it is open (each is emailed to you too), and you reply. Senders
-see their own reports, with the status and the conversation, on the Reports page.
+`/srv/flashcards/.env` (restart the container after changing it), the app emails that
+address one summary of everything still open every day at 7am Los Angeles time (it
+follows daylight saving), and nothing on a day with none open. The schedule runs inside
+the app container, so a digest is skipped, not made up later, if the app is down or
+restarting at 7am; look in the logs (`sudo journalctl -t flashcards-api -o cat | grep -i digest`)
+to see whether it went out. A report is a conversation: its sender can add comments
+while it is open, and you reply. Senders see their own reports, with the status and the conversation, on the Reports page.
 
 In the app, the Admin dashboard's Manage reports page is the place to answer them:
 click a report to open it, reply, then resolve it (which needs at least one
@@ -654,7 +657,7 @@ who guesses an address whether it is on it.
   abused.
 - Sign-up and sign-in are rate limited per client (10 a minute), which slows one source down but
   not many. A confirmed email address is not required to use the app yet.
-- Reports arrive from anyone, so `REPORT_NOTIFY_EMAIL` can get busy.
+- Reports arrive from anyone, so the daily summary at `REPORT_NOTIFY_EMAIL` can get long.
 
 ## Adding another app to this server
 

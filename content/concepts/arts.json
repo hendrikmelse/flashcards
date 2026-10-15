@@ -5,7 +5,7 @@
       "gloss": "win (verb)",
       "entries": {
         "en": [
-        {"lemma": "win", "pos": "verb", "details": {"past": "won", "participle": "won"}, "sentences": ["We win the game."]}
+        {"lemma": "to win", "pos": "verb", "details": {"past": "won", "participle": "won"}, "sentences": ["We win the game."]}
         ],
         "nl": [
         {"lemma": "winnen", "pos": "verb", "details": {"pastSingular": "won", "pastPlural": "wonnen", "participle": "gewonnen", "auxiliary": "hebben"}, "sentences": ["Wij winnen het spel."]}
@@ -29,7 +29,7 @@
       "gloss": "dance (verb)",
       "entries": {
         "en": [
-        {"lemma": "dance", "pos": "verb", "details": {"past": "danced", "participle": "danced"}, "sentences": ["We dance."]}
+        {"lemma": "to dance", "pos": "verb", "details": {"past": "danced", "participle": "danced"}, "sentences": ["We dance."]}
         ],
         "nl": [
         {"lemma": "dansen", "pos": "verb", "details": {"pastSingular": "danste", "pastPlural": "dansten", "participle": "gedanst", "auxiliary": "hebben"}, "sentences": ["Wij dansen."]}
@@ -41,7 +41,7 @@
       "gloss": "sing (verb)",
       "entries": {
         "en": [
-        {"lemma": "sing", "pos": "verb", "details": {"past": "sang", "participle": "sung"}, "sentences": ["She sings a song."]}
+        {"lemma": "to sing", "pos": "verb", "details": {"past": "sang", "participle": "sung"}, "sentences": ["She sings a song."]}
         ],
         "nl": [
         {"lemma": "zingen", "pos": "verb", "details": {"pastSingular": "zong", "pastPlural": "zongen", "participle": "gezongen", "auxiliary": "hebben"}, "sentences": ["Zij zingt een lied."]}
@@ -92,7 +92,7 @@
         {"lemma": "prize", "pos": "noun", "details": {"plural": "prizes"}, "sentences": ["He wins a prize."]}
         ],
         "nl": [
-        {"lemma": "prijs", "pos": "noun", "details": {"article": "de", "plural": "prijzen"}, "sentences": ["Hij wint een prijs."]}
+        {"lemma": "prijs", "pos": "noun", "details": {"note": "om te winnen", "article": "de", "plural": "prijzen"}, "sentences": ["Hij wint een prijs."]}
         ]
       }
     },
@@ -113,7 +113,7 @@
       "gloss": "draw (verb)",
       "entries": {
         "en": [
-        {"lemma": "draw", "pos": "verb", "details": {"past": "drew", "participle": "drawn"}, "sentences": ["The child draws a house."]}
+        {"lemma": "to draw", "pos": "verb", "details": {"past": "drew", "participle": "drawn"}, "sentences": ["The child draws a house."]}
         ],
         "nl": [
         {"lemma": "tekenen", "pos": "verb", "details": {"pastSingular": "tekende", "pastPlural": "tekenden", "participle": "getekend", "auxiliary": "hebben"}, "sentences": ["Het kind tekent een huis."]}
@@ -137,7 +137,7 @@
       "gloss": "defeat (verb)",
       "entries": {
         "en": [
-        {"lemma": "defeat", "pos": "verb", "details": {"past": "defeated", "participle": "defeated"}, "sentences": ["We defeat the team."]}
+        {"lemma": "to defeat", "pos": "verb", "details": {"past": "defeated", "participle": "defeated"}, "sentences": ["We defeat the team."]}
         ],
         "nl": [
         {"lemma": "verslaan", "pos": "verb", "details": {"pastSingular": "versloeg", "pastPlural": "versloegen", "participle": "verslagen", "auxiliary": "hebben"}, "sentences": ["Wij verslaan het team."]}
@@ -161,7 +161,7 @@
       "gloss": "bet (verb)",
       "entries": {
         "en": [
-        {"lemma": "bet", "pos": "verb", "details": {"past": "bet", "participle": "bet"}, "sentences": ["I bet on the horse."]}
+        {"lemma": "to bet", "pos": "verb", "details": {"past": "bet", "participle": "bet"}, "sentences": ["I bet on the horse."]}
         ],
         "nl": [
         {"lemma": "wedden", "pos": "verb", "details": {"pastSingular": "wedde", "pastPlural": "wedden", "participle": "gewed", "auxiliary": "hebben"}, "sentences": ["Ik wed op het paard."]}
@@ -197,7 +197,7 @@
       "gloss": "swim (verb)",
       "entries": {
         "en": [
-        {"lemma": "swim", "pos": "verb", "details": {"past": "swam", "participle": "swum"}, "sentences": ["I swim in the sea."]}
+        {"lemma": "to swim", "pos": "verb", "details": {"past": "swam", "participle": "swum"}, "sentences": ["I swim in the sea."]}
         ],
         "nl": [
         {"lemma": "zwemmen", "pos": "verb", "details": {"pastSingular": "zwom", "pastPlural": "zwommen", "participle": "gezwommen", "auxiliary": "hebben/zijn"}, "sentences": ["Ik zwem in de zee."]}
@@ -221,7 +221,7 @@
       "gloss": "celebrate (verb)",
       "entries": {
         "en": [
-        {"lemma": "celebrate", "pos": "verb", "details": {"past": "celebrated", "participle": "celebrated"}, "sentences": ["We celebrate his birthday."]}
+        {"lemma": "to celebrate", "pos": "verb", "details": {"past": "celebrated", "participle": "celebrated"}, "sentences": ["We celebrate his birthday."]}
         ],
         "nl": [
         {"lemma": "vieren", "pos": "verb", "details": {"pastSingular": "vierde", "pastPlural": "vierden", "participle": "gevierd", "auxiliary": "hebben"}, "sentences": ["Wij vieren zijn verjaardag."]}
@@ -233,7 +233,7 @@
       "gloss": "relax (verb)",
       "entries": {
         "en": [
-        {"lemma": "relax", "pos": "verb", "details": {"past": "relaxed", "participle": "relaxed"}, "sentences": ["I relax at home."]}
+        {"lemma": "to relax", "pos": "verb", "details": {"past": "relaxed", "participle": "relaxed"}, "sentences": ["I relax at home."]}
         ],
         "nl": [
         {"lemma": "ontspannen", "pos": "verb", "details": {"pastSingular": "ontspande", "pastPlural": "ontspanden", "participle": "ontspannen", "auxiliary": "hebben"}, "sentences": ["Ik ontspan thuis."]}
@@ -245,7 +245,7 @@
       "gloss": "train (verb)",
       "entries": {
         "en": [
-        {"lemma": "train", "pos": "verb", "details": {"past": "trained", "participle": "trained"}, "sentences": ["We train every day."]}
+        {"lemma": "to train", "pos": "verb", "details": {"past": "trained", "participle": "trained"}, "sentences": ["We train every day."]}
         ],
         "nl": [
         {"lemma": "trainen", "pos": "verb", "details": {"pastSingular": "trainde", "pastPlural": "trainden", "participle": "getraind", "auxiliary": "hebben"}, "sentences": ["Wij trainen elke dag."]}
@@ -257,7 +257,7 @@
       "gloss": "stroll (verb)",
       "entries": {
         "en": [
-        {"lemma": "stroll", "pos": "verb", "details": {"past": "strolled", "participle": "strolled"}, "sentences": ["We stroll in the park."]}
+        {"lemma": "to stroll", "pos": "verb", "details": {"past": "strolled", "participle": "strolled"}, "sentences": ["We stroll in the park."]}
         ],
         "nl": [
         {"lemma": "wandelen", "pos": "verb", "details": {"pastSingular": "wandelde", "pastPlural": "wandelden", "participle": "gewandeld", "auxiliary": "hebben/zijn"}, "sentences": ["Wij wandelen in het park."]}
@@ -281,10 +281,10 @@
       "gloss": "collect (verb)",
       "entries": {
         "en": [
-        {"lemma": "collect", "pos": "verb", "details": {"past": "collected", "participle": "collected"}, "sentences": ["I collect stamps."]}
+        {"lemma": "to collect", "pos": "verb", "details": {"past": "collected", "participle": "collected"}, "sentences": ["I collect stamps."]}
         ],
         "nl": [
-        {"lemma": "verzamelen", "pos": "verb", "details": {"pastSingular": "verzamelde", "pastPlural": "verzamelden", "participle": "verzameld", "auxiliary": "hebben"}, "sentences": ["Ik verzamel postzegels."]}
+        {"lemma": "verzamelen", "pos": "verb", "details": {"note": "veel dingen bij elkaar brengen", "pastSingular": "verzamelde", "pastPlural": "verzamelden", "participle": "verzameld", "auxiliary": "hebben"}, "sentences": ["Ik verzamel postzegels."]}
         ]
       }
     },
@@ -317,7 +317,7 @@
       "gloss": "go out (verb)",
       "entries": {
         "en": [
-        {"lemma": "go out", "pos": "verb", "details": {"past": "went out", "participle": "gone out"}, "sentences": ["We went out last night."]}
+        {"lemma": "to go out", "pos": "verb", "details": {"past": "went out", "participle": "gone out"}, "sentences": ["We went out last night."]}
         ],
         "nl": [
         {"lemma": "uitgaan", "pos": "verb", "details": {"pastSingular": "ging uit", "pastPlural": "gingen uit", "participle": "uitgegaan", "auxiliary": "zijn"}, "sentences": ["Wij gingen gisteravond uit."]}
@@ -401,7 +401,7 @@
       "gloss": "dive (verb)",
       "entries": {
         "en": [
-        {"lemma": "dive", "pos": "verb", "details": {"past": "dived", "participle": "dived"}, "sentences": ["He dives into the water."]}
+        {"lemma": "to dive", "pos": "verb", "details": {"past": "dived", "participle": "dived"}, "sentences": ["He dives into the water."]}
         ],
         "nl": [
         {"lemma": "duiken", "pos": "verb", "details": {"pastSingular": "dook", "pastPlural": "doken", "participle": "gedoken", "auxiliary": "hebben/zijn"}, "sentences": ["Hij duikt in het water."]}
@@ -425,7 +425,7 @@
       "gloss": "kick (verb)",
       "entries": {
         "en": [
-        {"lemma": "kick", "pos": "verb", "details": {"past": "kicked", "participle": "kicked"}, "sentences": ["He kicks the ball."]}
+        {"lemma": "to kick", "pos": "verb", "details": {"past": "kicked", "participle": "kicked"}, "sentences": ["He kicks the ball."]}
         ],
         "nl": [
         {"lemma": "trappen", "pos": "verb", "details": {"pastSingular": "trapte", "pastPlural": "trapten", "participle": "getrapt", "auxiliary": "hebben"}, "sentences": ["Hij trapt de bal."]}
@@ -437,7 +437,7 @@
       "gloss": "climb (verb)",
       "entries": {
         "en": [
-        {"lemma": "climb", "pos": "verb", "details": {"past": "climbed", "participle": "climbed"}, "sentences": ["We climb the mountain."]}
+        {"lemma": "to climb", "pos": "verb", "details": {"past": "climbed", "participle": "climbed"}, "sentences": ["We climb the mountain."]}
         ],
         "nl": [
         {"lemma": "klimmen", "pos": "verb", "details": {"pastSingular": "klom", "pastPlural": "klommen", "participle": "geklommen", "auxiliary": "hebben/zijn"}, "sentences": ["Wij klimmen de berg op."]}
@@ -497,10 +497,10 @@
       "gloss": "paint (verb)",
       "entries": {
         "en": [
-        {"lemma": "paint", "pos": "verb", "details": {"past": "painted", "participle": "painted"}, "sentences": ["I paint the wall."]}
+        {"lemma": "to paint", "pos": "verb", "details": {"past": "painted", "participle": "painted"}, "sentences": ["I paint the wall."]}
         ],
         "nl": [
-        {"lemma": "schilderen", "pos": "verb", "details": {"pastSingular": "schilderde", "pastPlural": "schilderden", "participle": "geschilderd", "auxiliary": "hebben"}, "sentences": ["Ik schilder de muur."]}
+        {"lemma": "schilderen", "pos": "verb", "details": {"note": "een schilderij", "pastSingular": "schilderde", "pastPlural": "schilderden", "participle": "geschilderd", "auxiliary": "hebben"}, "sentences": ["Ik schilder de muur."]}
         ]
       }
     },
@@ -545,7 +545,7 @@
       "gloss": "score (verb)",
       "entries": {
         "en": [
-        {"lemma": "score", "pos": "verb", "details": {"past": "scored", "participle": "scored"}, "sentences": ["He scores a goal."]}
+        {"lemma": "to score", "pos": "verb", "details": {"past": "scored", "participle": "scored"}, "sentences": ["He scores a goal."]}
         ],
         "nl": [
         {"lemma": "scoren", "pos": "verb", "details": {"pastSingular": "scoorde", "pastPlural": "scoorden", "participle": "gescoord", "auxiliary": "hebben"}, "sentences": ["Hij scoort een doelpunt."]}
@@ -641,7 +641,7 @@
       "gloss": "decorate (verb)",
       "entries": {
         "en": [
-        {"lemma": "decorate", "pos": "verb", "details": {"past": "decorated", "participle": "decorated"}, "sentences": ["We decorate the tree."]}
+        {"lemma": "to decorate", "pos": "verb", "details": {"past": "decorated", "participle": "decorated"}, "sentences": ["We decorate the tree."]}
         ],
         "nl": [
         {"lemma": "versieren", "pos": "verb", "details": {"pastSingular": "versierde", "pastPlural": "versierden", "participle": "versierd", "auxiliary": "hebben"}, "sentences": ["Wij versieren de boom."]}
@@ -653,7 +653,7 @@
       "gloss": "perform (verb)",
       "entries": {
         "en": [
-        {"lemma": "perform", "pos": "verb", "details": {"past": "performed", "participle": "performed"}, "sentences": ["The band performs tonight."]}
+        {"lemma": "to perform", "pos": "verb", "details": {"past": "performed", "participle": "performed"}, "sentences": ["The band performs tonight."]}
         ],
         "nl": [
         {"lemma": "optreden", "pos": "verb", "details": {"pastSingular": "trad op", "pastPlural": "traden op", "participle": "opgetreden", "auxiliary": "hebben"}, "sentences": ["De band treedt vanavond op."]}
@@ -677,7 +677,7 @@
       "gloss": "gamble (verb)",
       "entries": {
         "en": [
-        {"lemma": "gamble", "pos": "verb", "details": {"past": "gambled", "participle": "gambled"}, "sentences": ["He gambles every week."]}
+        {"lemma": "to gamble", "pos": "verb", "details": {"past": "gambled", "participle": "gambled"}, "sentences": ["He gambles every week."]}
         ],
         "nl": [
         {"lemma": "gokken", "pos": "verb", "details": {"pastSingular": "gokte", "pastPlural": "gokten", "participle": "gegokt", "auxiliary": "hebben"}, "sentences": ["Hij gokt elke week."]}
@@ -785,7 +785,7 @@
       "gloss": "entertain (verb)",
       "entries": {
         "en": [
-        {"lemma": "entertain", "pos": "verb", "details": {"past": "entertained", "participle": "entertained"}, "sentences": ["The clown entertains the children."]}
+        {"lemma": "to entertain", "pos": "verb", "details": {"past": "entertained", "participle": "entertained"}, "sentences": ["The clown entertains the children."]}
         ],
         "nl": [
         {"lemma": "vermaken", "pos": "verb", "details": {"pastSingular": "vermaakte", "pastPlural": "vermaakten", "participle": "vermaakt", "auxiliary": "hebben"}, "sentences": ["De clown vermaakt de kinderen."]}
@@ -821,7 +821,7 @@
       "gloss": "act (perform)",
       "entries": {
         "en": [
-        {"lemma": "act (perform)", "pos": "verb", "details": {"past": "acted", "participle": "acted"}, "sentences": ["She acts in a film."]}
+        {"lemma": "to act (perform)", "pos": "verb", "details": {"past": "acted", "participle": "acted"}, "sentences": ["She acts in a film."]}
         ],
         "nl": [
         {"lemma": "acteren", "pos": "verb", "details": {"pastSingular": "acteerde", "pastPlural": "acteerden", "participle": "geacteerd", "auxiliary": "hebben"}, "sentences": ["Zij acteert in een film."]}
@@ -857,7 +857,7 @@
       "gloss": "amuse (verb)",
       "entries": {
         "en": [
-        {"lemma": "amuse", "pos": "verb", "details": {"past": "amused", "participle": "amused"}, "sentences": ["The film amuses me."]}
+        {"lemma": "to amuse", "pos": "verb", "details": {"past": "amused", "participle": "amused"}, "sentences": ["The film amuses me."]}
         ],
         "nl": [
         {"lemma": "amuseren", "pos": "verb", "details": {"pastSingular": "amuseerde", "pastPlural": "amuseerden", "participle": "geamuseerd", "auxiliary": "hebben"}, "sentences": ["De film amuseert mij."]}
@@ -869,7 +869,7 @@
       "gloss": "box (verb)",
       "entries": {
         "en": [
-        {"lemma": "box", "pos": "verb", "details": {"past": "boxed", "participle": "boxed"}, "sentences": ["He boxes."]}
+        {"lemma": "to box", "pos": "verb", "details": {"past": "boxed", "participle": "boxed"}, "sentences": ["He boxes."]}
         ],
         "nl": [
         {"lemma": "boksen", "pos": "verb", "details": {"pastSingular": "bokste", "pastPlural": "boksten", "participle": "geboksd", "auxiliary": "hebben"}, "sentences": ["Hij bokst."]}
@@ -1049,7 +1049,7 @@
       "gloss": "enchant (verb)",
       "entries": {
         "en": [
-        {"lemma": "enchant", "pos": "verb", "details": {"past": "enchanted", "participle": "enchanted"}, "sentences": ["The music enchants me."]}
+        {"lemma": "to enchant", "pos": "verb", "details": {"past": "enchanted", "participle": "enchanted"}, "sentences": ["The music enchants me."]}
         ],
         "nl": [
         {"lemma": "betoveren", "pos": "verb", "details": {"pastSingular": "betoverde", "pastPlural": "betoverden", "participle": "betoverd", "auxiliary": "hebben"}, "sentences": ["De muziek betovert mij."]}
@@ -1217,7 +1217,7 @@
       "gloss": "row (verb)",
       "entries": {
         "en": [
-        {"lemma": "row", "pos": "verb", "details": {"past": "rowed", "participle": "rowed"}, "sentences": ["We row on the lake."]}
+        {"lemma": "to row", "pos": "verb", "details": {"past": "rowed", "participle": "rowed"}, "sentences": ["We row on the lake."]}
         ],
         "nl": [
         {"lemma": "roeien", "pos": "verb", "details": {"pastSingular": "roeide", "pastPlural": "roeiden", "participle": "geroeid", "auxiliary": "hebben"}, "sentences": ["Wij roeien op het meer."]}
@@ -1241,7 +1241,7 @@
       "gloss": "wrestle (verb)",
       "entries": {
         "en": [
-        {"lemma": "wrestle", "pos": "verb", "details": {"past": "wrestled", "participle": "wrestled"}, "sentences": ["They wrestle."]}
+        {"lemma": "to wrestle", "pos": "verb", "details": {"past": "wrestled", "participle": "wrestled"}, "sentences": ["They wrestle."]}
         ],
         "nl": [
         {"lemma": "worstelen", "pos": "verb", "details": {"pastSingular": "worstelde", "pastPlural": "worstelden", "participle": "geworsteld", "auxiliary": "hebben"}, "sentences": ["Zij worstelen."]}
@@ -1265,7 +1265,7 @@
       "gloss": "race (verb)",
       "entries": {
         "en": [
-        {"lemma": "race", "pos": "verb", "details": {"past": "raced", "participle": "raced"}, "sentences": ["The cars race."]}
+        {"lemma": "to race", "pos": "verb", "details": {"past": "raced", "participle": "raced"}, "sentences": ["The cars race."]}
         ],
         "nl": [
         {"lemma": "racen", "pos": "verb", "details": {"pastSingular": "racete", "pastPlural": "raceten", "participle": "geracet", "auxiliary": "hebben/zijn"}, "sentences": ["De auto's racen."]}
@@ -1277,7 +1277,7 @@
       "gloss": "rehearse (verb)",
       "entries": {
         "en": [
-        {"lemma": "rehearse", "pos": "verb", "details": {"past": "rehearsed", "participle": "rehearsed"}, "sentences": ["We rehearse every day."]}
+        {"lemma": "to rehearse", "pos": "verb", "details": {"past": "rehearsed", "participle": "rehearsed"}, "sentences": ["We rehearse every day."]}
         ],
         "nl": [
         {"lemma": "repeteren", "pos": "verb", "details": {"pastSingular": "repeteerde", "pastPlural": "repeteerden", "participle": "gerepeteerd", "auxiliary": "hebben"}, "sentences": ["Wij repeteren elke dag."]}
@@ -1409,7 +1409,7 @@
       "gloss": "challenge (verb)",
       "entries": {
         "en": [
-        {"lemma": "challenge", "pos": "verb", "details": {"past": "challenged", "participle": "challenged"}, "sentences": ["I challenge you."]}
+        {"lemma": "to challenge", "pos": "verb", "details": {"past": "challenged", "participle": "challenged"}, "sentences": ["I challenge you."]}
         ],
         "nl": [
         {"lemma": "uitdagen", "pos": "verb", "details": {"pastSingular": "daagde uit", "pastPlural": "daagden uit", "participle": "uitgedaagd", "auxiliary": "hebben"}, "sentences": ["Ik daag je uit."]}
@@ -1493,7 +1493,7 @@
       "gloss": "surf (verb)",
       "entries": {
         "en": [
-        {"lemma": "surf", "pos": "verb", "details": {"past": "surfed", "participle": "surfed"}, "sentences": ["We surf in the sea."]}
+        {"lemma": "to surf", "pos": "verb", "details": {"past": "surfed", "participle": "surfed"}, "sentences": ["We surf in the sea."]}
         ],
         "nl": [
         {"lemma": "surfen", "pos": "verb", "details": {"pastSingular": "surfte", "pastPlural": "surften", "participle": "gesurft", "auxiliary": "hebben"}, "sentences": ["Wij surfen in de zee."]}
@@ -1553,7 +1553,7 @@
       "gloss": "ski (verb)",
       "entries": {
         "en": [
-        {"lemma": "ski", "pos": "verb", "details": {"past": "skied", "participle": "skied"}, "sentences": ["We ski in the winter."]}
+        {"lemma": "to ski", "pos": "verb", "details": {"past": "skied", "participle": "skied"}, "sentences": ["We ski in the winter."]}
         ],
         "nl": [
         {"lemma": "skiën", "pos": "verb", "details": {"pastSingular": "skiede", "pastPlural": "skieden", "participle": "geskied", "auxiliary": "hebben"}, "sentences": ["Wij skiën in de winter."]}
@@ -1673,7 +1673,7 @@
       "gloss": "skate (verb)",
       "entries": {
         "en": [
-        {"lemma": "skate", "pos": "verb", "details": {"past": "skated", "participle": "skated"}, "sentences": ["We skate on the ice."]}
+        {"lemma": "to skate", "pos": "verb", "details": {"past": "skated", "participle": "skated"}, "sentences": ["We skate on the ice."]}
         ],
         "nl": [
         {"lemma": "schaatsen", "pos": "verb", "details": {"pastSingular": "schaatste", "pastPlural": "schaatsten", "participle": "geschaatst", "auxiliary": "hebben/zijn"}, "sentences": ["Wij schaatsen op het ijs."]}
@@ -1685,7 +1685,7 @@
       "gloss": "improvise (verb)",
       "entries": {
         "en": [
-        {"lemma": "improvise", "pos": "verb", "details": {"past": "improvised", "participle": "improvised"}, "sentences": ["The musician improvises."]}
+        {"lemma": "to improvise", "pos": "verb", "details": {"past": "improvised", "participle": "improvised"}, "sentences": ["The musician improvises."]}
         ],
         "nl": [
         {"lemma": "improviseren", "pos": "verb", "details": {"pastSingular": "improviseerde", "pastPlural": "improviseerden", "participle": "geïmproviseerd", "auxiliary": "hebben"}, "sentences": ["De muzikant improviseert."]}
@@ -1733,7 +1733,7 @@
       "gloss": "color (verb)",
       "entries": {
         "en": [
-        {"lemma": "color (verb)", "pos": "verb", "details": {"past": "colored", "participle": "colored"}, "sentences": ["The child colors a picture."]}
+        {"lemma": "to color (verb)", "pos": "verb", "details": {"past": "colored", "participle": "colored"}, "sentences": ["The child colors a picture."]}
         ],
         "nl": [
         {"lemma": "kleuren", "pos": "verb", "details": {"pastSingular": "kleurde", "pastPlural": "kleurden", "participle": "gekleurd", "auxiliary": "hebben"}, "sentences": ["Het kind kleurt een plaatje."]}
@@ -1745,7 +1745,7 @@
       "gloss": "aim (verb)",
       "entries": {
         "en": [
-        {"lemma": "aim", "pos": "verb", "details": {"past": "aimed", "participle": "aimed"}, "sentences": ["I aim at the target."]}
+        {"lemma": "to aim", "pos": "verb", "details": {"past": "aimed", "participle": "aimed"}, "sentences": ["I aim at the target."]}
         ],
         "nl": [
         {"lemma": "mikken", "pos": "verb", "details": {"pastSingular": "mikte", "pastPlural": "mikten", "participle": "gemikt", "auxiliary": "hebben"}, "sentences": ["Ik mik op het doelwit."]}
@@ -1769,7 +1769,7 @@
       "gloss": "golf (verb)",
       "entries": {
         "en": [
-        {"lemma": "golf", "pos": "verb", "details": {"past": "golfed", "participle": "golfed"}, "sentences": ["We golf on Sunday."]}
+        {"lemma": "to golf", "pos": "verb", "details": {"past": "golfed", "participle": "golfed"}, "sentences": ["We golf on Sunday."]}
         ],
         "nl": [
         {"lemma": "golfen", "pos": "verb", "details": {"pastSingular": "golfde", "pastPlural": "golfden", "participle": "gegolfd", "auxiliary": "hebben"}, "sentences": ["Wij golfen op zondag."]}
@@ -1781,7 +1781,7 @@
       "gloss": "conjure (verb)",
       "entries": {
         "en": [
-        {"lemma": "conjure", "pos": "verb", "details": {"past": "conjured", "participle": "conjured"}, "sentences": ["The magician conjures a rabbit."]}
+        {"lemma": "to conjure", "pos": "verb", "details": {"past": "conjured", "participle": "conjured"}, "sentences": ["The magician conjures a rabbit."]}
         ],
         "nl": [
         {"lemma": "toveren", "pos": "verb", "details": {"pastSingular": "toverde", "pastPlural": "toverden", "participle": "getoverd", "auxiliary": "hebben"}, "sentences": ["De goochelaar tovert een konijn."]}
@@ -1841,7 +1841,7 @@
       "gloss": "play (an instrument)",
       "entries": {
         "en": [
-        {"lemma": "play (an instrument)", "pos": "verb", "details": {"past": "played", "participle": "played"}, "sentences": ["He plays the violin."]}
+        {"lemma": "to play (an instrument)", "pos": "verb", "details": {"past": "played", "participle": "played"}, "sentences": ["He plays the violin."]}
         ],
         "nl": [
         {"lemma": "bespelen", "pos": "verb", "details": {"pastSingular": "bespeelde", "pastPlural": "bespeelden", "participle": "bespeeld", "auxiliary": "hebben"}, "sentences": ["Hij bespeelt de viool."]}
@@ -1877,7 +1877,7 @@
       "gloss": "triumph (verb)",
       "entries": {
         "en": [
-        {"lemma": "triumph", "pos": "verb", "details": {"past": "triumphed", "participle": "triumphed"}, "sentences": ["Good triumphs over evil."]}
+        {"lemma": "to triumph", "pos": "verb", "details": {"past": "triumphed", "participle": "triumphed"}, "sentences": ["Good triumphs over evil."]}
         ],
         "nl": [
         {"lemma": "zegevieren", "pos": "verb", "details": {"pastSingular": "zegevierde", "pastPlural": "zegevierden", "participle": "gezegevierd", "auxiliary": "hebben"}, "sentences": ["Het goede zegeviert over het kwade."]}
@@ -1985,7 +1985,7 @@
       "gloss": "bowl (verb)",
       "entries": {
         "en": [
-        {"lemma": "bowl", "pos": "verb", "details": {"past": "bowled", "participle": "bowled"}, "sentences": ["We bowl on Friday."]}
+        {"lemma": "to bowl", "pos": "verb", "details": {"past": "bowled", "participle": "bowled"}, "sentences": ["We bowl on Friday."]}
         ],
         "nl": [
         {"lemma": "bowlen", "pos": "verb", "details": {"pastSingular": "bowlde", "pastPlural": "bowlden", "participle": "gebowld", "auxiliary": "hebben"}, "sentences": ["Wij bowlen op vrijdag."]}
@@ -2033,7 +2033,7 @@
       "gloss": "play soccer (verb)",
       "entries": {
         "en": [
-        {"lemma": "play soccer", "pos": "verb", "details": {"past": "played soccer", "participle": "played soccer"}, "sentences": ["The boys play soccer."]}
+        {"lemma": "to play soccer", "pos": "verb", "details": {"past": "played soccer", "participle": "played soccer"}, "sentences": ["The boys play soccer."]}
         ],
         "nl": [
         {"lemma": "voetballen", "pos": "verb", "details": {"pastSingular": "voetbalde", "pastPlural": "voetbalden", "participle": "gevoetbald", "auxiliary": "hebben"}, "sentences": ["De jongens voetballen."]}
@@ -2069,7 +2069,7 @@
       "gloss": "play chess (verb)",
       "entries": {
         "en": [
-        {"lemma": "play chess", "pos": "verb", "details": {"past": "played chess", "participle": "played chess"}, "sentences": ["We play chess."]}
+        {"lemma": "to play chess", "pos": "verb", "details": {"past": "played chess", "participle": "played chess"}, "sentences": ["We play chess."]}
         ],
         "nl": [
         {"lemma": "schaken", "pos": "verb", "details": {"pastSingular": "schaakte", "pastPlural": "schaakten", "participle": "geschaakt", "auxiliary": "hebben"}, "sentences": ["Wij schaken."]}
@@ -2309,7 +2309,7 @@
       "gloss": "jog (verb)",
       "entries": {
         "en": [
-        {"lemma": "jog", "pos": "verb", "details": {"past": "jogged", "participle": "jogged"}, "sentences": ["I jog in the park."]}
+        {"lemma": "to jog", "pos": "verb", "details": {"past": "jogged", "participle": "jogged"}, "sentences": ["I jog in the park."]}
         ],
         "nl": [
         {"lemma": "joggen", "pos": "verb", "details": {"pastSingular": "jogde", "pastPlural": "jogden", "participle": "gejogd", "auxiliary": "hebben"}, "sentences": ["Ik jog in het park."]}
@@ -2405,7 +2405,7 @@
       "gloss": "ride (a horse)",
       "entries": {
         "en": [
-        {"lemma": "ride (a horse)", "pos": "verb", "details": {"past": "rode", "participle": "ridden"}, "sentences": ["She rides a horse."]}
+        {"lemma": "to ride (a horse)", "pos": "verb", "details": {"past": "rode", "participle": "ridden"}, "sentences": ["She rides a horse."]}
         ],
         "nl": [
         {"lemma": "berijden", "pos": "verb", "details": {"pastSingular": "bereed", "pastPlural": "bereden", "participle": "bereden", "auxiliary": "hebben"}, "sentences": ["Zij berijdt een paard."]}
@@ -2561,7 +2561,7 @@
       "gloss": "rhyme (verb)",
       "entries": {
         "en": [
-        {"lemma": "rhyme", "pos": "verb", "details": {"past": "rhymed", "participle": "rhymed"}, "sentences": ["The words rhyme."]}
+        {"lemma": "to rhyme", "pos": "verb", "details": {"past": "rhymed", "participle": "rhymed"}, "sentences": ["The words rhyme."]}
         ],
         "nl": [
         {"lemma": "rijmen", "pos": "verb", "details": {"pastSingular": "rijmde", "pastPlural": "rijmden", "participle": "gerijmd", "auxiliary": "hebben"}, "sentences": ["De woorden rijmen."]}
@@ -2657,7 +2657,7 @@
       "gloss": "imitate (verb)",
       "entries": {
         "en": [
-        {"lemma": "imitate", "pos": "verb", "details": {"past": "imitated", "participle": "imitated"}, "sentences": ["He imitates the teacher."]}
+        {"lemma": "to imitate", "pos": "verb", "details": {"past": "imitated", "participle": "imitated"}, "sentences": ["He imitates the teacher."]}
         ],
         "nl": [
         {"lemma": "imiteren", "pos": "verb", "details": {"pastSingular": "imiteerde", "pastPlural": "imiteerden", "participle": "geïmiteerd", "auxiliary": "hebben"}, "sentences": ["Hij imiteert de leraar."]}
@@ -2777,7 +2777,7 @@
       "gloss": "exercise (do sports)",
       "entries": {
         "en": [
-        {"lemma": "exercise (do sports)", "pos": "verb", "details": {"past": "exercised", "participle": "exercised"}, "sentences": ["I exercise three times a week."]}
+        {"lemma": "to exercise (do sports)", "pos": "verb", "details": {"past": "exercised", "participle": "exercised"}, "sentences": ["I exercise three times a week."]}
         ],
         "nl": [
         {"lemma": "sporten", "pos": "verb", "details": {"pastSingular": "sportte", "pastPlural": "sportten", "participle": "gesport", "auxiliary": "hebben"}, "sentences": ["Ik sport drie keer per week."]}

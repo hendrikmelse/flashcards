@@ -54,6 +54,17 @@ describe("finding the card's word in a sentence", () => {
     expect(words("We saw a bat.", [entry("en", "bat, club", "noun")])).toEqual(["bat"]);
   });
 
+  it("finds an English verb by the word after \"to\", in any of its forms", () => {
+    const run = entry("en", "to run", "verb", { past: "ran", participle: "run" });
+    expect(words("I run every day.", [run])).toEqual(["run"]);
+    expect(words("She runs home.", [run])).toEqual(["runs"]);
+    expect(words("He is running.", [run])).toEqual(["running"]);
+    expect(words("He ran home.", [run])).toEqual(["ran"]);
+    // The marker is not the word: "to" in the sentence is left alone.
+    expect(words("I want to go home.", [entry("en", "to go", "verb", { past: "went", participle: "gone" })])).toEqual(["go"]);
+    expect(words("Give it to me.", [entry("en", "to give", "verb", { past: "gave", participle: "given" })])).toEqual(["Give"]);
+  });
+
   it("finds a conjugated English verb", () => {
     const forms = { past: "dissolved", participle: "dissolved" };
     expect(words("The salt dissolved.", [entry("en", "dissolve", "verb", forms)])).toEqual(["dissolved"]);

@@ -8,7 +8,6 @@ import { buildApp } from "../src/app.js";
 import { seed } from "../src/db/seed.js";
 import * as schema from "../src/db/schema.js";
 import { cardReports, concepts, reportComments } from "../src/db/schema.js";
-import { createMemoryMailer, type Mailer } from "../src/mail/mailer.js";
 
 let app: FastifyInstance;
 let pg: PGlite;
@@ -83,60 +82,6 @@ describe("POST /concepts/:id/report", () => {
   it("says so for a word that does not exist, or an id that is not one", async () => {
     expect((await report("00000000-0000-4000-8000-000000000000", good)).statusCode).toBe(404);
     expect((await report("nope", good)).statusCode).toBe(400);
-  });
-});
-
-describe("emailing the owner", () => {
-  const owner = "owner@example.com";
-  async function withNotifier(mailer: Mailer, run: (a: FastifyInstance) => Promise<void>, notify: string | null = owner) {
-    const a = await buildApp({ db, logger: false, authRateLimit: 1000, mailer, reportNotifyEmail: notify ?? undefined });
-    try {
-      await run(a);
-    } finally {
-      await a.close();
-    }
-  }
-  const send = (a: FastifyInstance, payload: object) =>
-    a.inject({ method: "POST", url: `/concepts/${conceptId}/report`, payload, cookies });
-
-  it("sends the owner one email per report, saying who, what, and how to answer", async () => {
-    const mailer = createMemoryMailer();
-    await withNotifier(mailer, async (a) => {
-      expect((await send(a, { ...good, note: "Mail me this" })).statusCode).toBe(201);
-    });
-    expect(mailer.sent).toHaveLength(1);
-    const [row] = await db.select().from(cardReports).where(eq(cardReports.note, "Mail me this"));
-    const mail = mailer.sent[0]!;
-    expect(mail.to).toBe(owner);
-    expect(mail.subject).toMatch(/^Problem report: /);
-    expect(mail.text).toContain("reporter@example.com");
-    expect(mail.text).toContain("The translation is wrong");
-    expect(mail.text).toContain("Mail me this");
-    expect(mail.text).toContain(row!.id.slice(0, 8));
-  });
-
-  it("sends nothing when no address is set", async () => {
-    const mailer = createMemoryMailer();
-    await withNotifier(mailer, async (a) => {
-      expect((await send(a, good)).statusCode).toBe(201);
-    }, null);
-    expect(mailer.sent).toHaveLength(0);
-  });
-
-  it("does not email for a report that was rejected", async () => {
-    const mailer = createMemoryMailer();
-    await withNotifier(mailer, async (a) => {
-      expect((await send(a, { ...good, reason: "bogus" })).statusCode).toBe(400);
-    });
-    expect(mailer.sent).toHaveLength(0);
-  });
-
-  it("still saves the report and answers normally when the email cannot be sent", async () => {
-    const broken: Mailer = { send: () => Promise.reject(new Error("provider down")) };
-    await withNotifier(broken, async (a) => {
-      expect((await send(a, { ...good, note: "Saved anyway" })).statusCode).toBe(201);
-    });
-    expect(await db.select().from(cardReports).where(eq(cardReports.note, "Saved anyway"))).toHaveLength(1);
   });
 });
 
@@ -218,21 +163,6 @@ describe("POST /reports (bugs and feature suggestions)", () => {
     expect((await send({ kind: "bug", title: "x", note: "x" }, null)).statusCode).toBe(401);
   });
 
-  it("emails the owner, saying which kind it is", async () => {
-    const mailer = createMemoryMailer();
-    const a = await buildApp({ db, logger: false, authRateLimit: 1000, mailer, reportNotifyEmail: "owner@example.com" });
-    try {
-      const res = await a.inject({ method: "POST", url: "/reports", payload: { kind: "suggestion", title: "Offline mode", note: "For the train." }, cookies });
-      expect(res.statusCode).toBe(201);
-    } finally {
-      await a.close();
-    }
-    expect(mailer.sent).toHaveLength(1);
-    expect(mailer.sent[0]!.subject).toBe("Feature suggestion: Offline mode");
-    expect(mailer.sent[0]!.text).toContain("For the train.");
-    expect(mailer.sent[0]!.text).toContain("reporter@example.com");
-  });
-
   it("needs details for a bug or a suggestion, but not for a pack request", async () => {
     const send = (payload: object) => app.inject({ method: "POST", url: "/reports", payload, cookies });
     expect((await send({ kind: "bug", title: "No details" })).statusCode).toBe(400);
@@ -245,25 +175,16 @@ describe("POST /reports (bugs and feature suggestions)", () => {
     expect((await send({ kind: "pack_request", title: "  " })).statusCode).toBe(400);
   });
 
-  it("takes a pack request like the others, and emails the owner about it", async () => {
-    const mailer = createMemoryMailer();
-    const a = await buildApp({ db, logger: false, authRateLimit: 1000, mailer, reportNotifyEmail: "owner@example.com" });
-    try {
-      const res = await a.inject({
-        method: "POST",
-        url: "/reports",
-        payload: { kind: "pack_request", title: "Cooking verbs", note: "Chop, stir, fry." },
-        cookies,
-      });
-      expect(res.statusCode).toBe(201);
-    } finally {
-      await a.close();
-    }
+  it("takes a pack request like the others", async () => {
+    const res = await app.inject({
+      method: "POST",
+      url: "/reports",
+      payload: { kind: "pack_request", title: "Cooking verbs", note: "Chop, stir, fry." },
+      cookies,
+    });
+    expect(res.statusCode).toBe(201);
     const [row] = await db.select().from(cardReports).where(eq(cardReports.title, "Cooking verbs"));
     expect(row).toMatchObject({ kind: "pack_request", conceptId: null, reason: null });
-    expect(mailer.sent).toHaveLength(1);
-    expect(mailer.sent[0]!.subject).toBe("Pack request: Cooking verbs");
-    expect(mailer.sent[0]!.text).toContain("Chop, stir, fry.");
     const list = (await app.inject({ method: "GET", url: "/reports", cookies })).json().reports as { title: string; kind: string }[];
     expect(list.find((r) => r.title === "Cooking verbs")!.kind).toBe("pack_request");
   });
@@ -317,22 +238,6 @@ describe("POST /reports/:id/comments", () => {
     expect((await comment(r.id, { body: "Not mine" }, other)).statusCode).toBe(404);
     expect((await comment(r.id, { body: "Anon" }, null)).statusCode).toBe(401);
     expect(await db.select().from(reportComments).where(eq(reportComments.reportId, r.id))).toHaveLength(0);
-  });
-
-  it("emails the owner about the comment", async () => {
-    const r = await mine("Commentable 5");
-    const mailer = createMemoryMailer();
-    const a = await buildApp({ db, logger: false, authRateLimit: 1000, mailer, reportNotifyEmail: "owner@example.com" });
-    try {
-      const res = await a.inject({ method: "POST", url: `/reports/${r.id}/comments`, payload: { body: "Extra detail" }, cookies });
-      expect(res.statusCode).toBe(201);
-    } finally {
-      await a.close();
-    }
-    expect(mailer.sent).toHaveLength(1);
-    expect(mailer.sent[0]!.subject).toMatch(/^New comment on report: /);
-    expect(mailer.sent[0]!.text).toContain("Extra detail");
-    expect(mailer.sent[0]!.text).toContain(r.id.slice(0, 8));
   });
 });
 

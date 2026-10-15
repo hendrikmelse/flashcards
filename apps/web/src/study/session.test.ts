@@ -411,3 +411,205 @@ describe("the number of cards left", () => {
   });
 });
 
+describe("the number of cards left, with the server's total", () => {
+  const batch = (n: number, total: number, extra: Partial<Extract<Action, { type: "fetched" }>> = {}): Action => ({
+    type: "fetched",
+    cards: ids(n),
+    total,
+    now: "2026-01-15T10:00:00.000Z",
+    ...extra,
+  });
+  const left = (actions: Action[]) => remaining(run(actions));
+
+  it("starts at everything the server has, not only the cards loaded", () => {
+    expect(left([batch(100, 250), { type: "pick" }])).toBe(250);
+  });
+
+  it("counts down one at a time through the batch, and does not jump when the next arrives", () => {
+    let s = run([batch(3, 5), { type: "pick" }]);
+    const seen = [remaining(s)];
+    for (let i = 0; i < 3; i++) {
+      s = run([answer("good", "review"), { type: "pick" }], s);
+      seen.push(remaining(s));
+    }
+    // The last card is on screen: the next batch (the other two) arrives with what is left, 2 cards.
+    s = reducer(s, { type: "fetched", cards: ids(2, 10), total: 2, now: "2026-01-15T10:05:00.000Z" });
+    s = run([{ type: "pick" }], s);
+    expect(seen).toEqual([5, 4, 3, 2]);
+    expect(remaining(s)).toBe(2);
+  });
+
+  it("does not take a card answered while the request was away off the server's count twice", () => {
+    // Two cards left and loaded; the request goes out with 0 answered and 3 on the server's side...
+    let s = run([batch(1, 1), { type: "pick" }]);
+    // ...the user answers it while the next request is on its way. The server still counted it.
+    s = run([answer("good", "review")], s);
+    s = reducer(s, { type: "fetched", cards: ids(2, 10), total: 3, answeredAtRequest: 0, now: "x" });
+    expect(remaining(s)).toBe(2);
+  });
+
+  it("counts a card returned after Again once, as the server no longer has it", () => {
+    let s = run([batch(2, 2), { type: "pick" }, answer("again", "learning")]);
+    expect(remaining(s)).toBe(2);
+    // Next batch: the server has the one unanswered card; the missed one is held here.
+    s = reducer(s, { type: "fetched", cards: [card("c2")], total: 1, answeredAtRequest: 1 });
+    expect(remaining(s)).toBe(2);
+  });
+
+  it("stays flat on a known new card, and then follows the server when the next batch arrives", () => {
+    // 3 new cards, 2 more waiting behind the daily limit; the server's total is 3.
+    let s = run([batch(3, 3, { moreNew: 2 }), { type: "pick" }, answer("good", "review"), { type: "pick" }]);
+    expect(remaining(s)).toBe(3);
+    s = run([answer("good", "review"), { type: "pick" }], s);
+    expect(remaining(s)).toBe(3);
+    // Room was made for two only, so the third known card counts down.
+    s = run([answer("good", "review")], s);
+    expect(remaining(s)).toBe(2);
+    // The queue is empty: the next batch brings the two that were made room for (and no more).
+    s = reducer(s, { type: "fetched", cards: ids(2, 10), total: 2, moreNew: 0, answeredAtRequest: 3 });
+    expect(remaining(s)).toBe(2);
+  });
+
+  it("remembers when the session began, from the first batch only", () => {
+    let s = run([batch(1, 1)]);
+    expect(s.asOf).toBe("2026-01-15T10:00:00.000Z");
+    s = reducer(s, { type: "fetched", cards: [], total: 0, now: "2026-01-15T10:30:00.000Z" });
+    expect(s.asOf).toBe("2026-01-15T10:00:00.000Z");
+  });
+
+  it("ignores a time that is not one", () => {
+    expect(run([batch(1, 1, { now: "x" })]).asOf).toBeNull();
+  });
+
+  it("starts afresh when told to keep going", () => {
+    const s = run([batch(1, 1), { type: "pick" }, answer("good", "review"), { type: "restart" }]);
+    expect(s).toEqual(initialState);
+  });
+});
+
+describe("undoing the last answer", () => {
+  const withId = (rating: "again" | "hard" | "good" | "easy", state: ReviewResponse["state"], id = "r1"): Action => ({
+    type: "answered",
+    rating,
+    result: result(state),
+    random: 0.5,
+    clientReviewId: id,
+  });
+  const start = (n = 3, extra: Partial<Extract<Action, { type: "fetched" }>> = {}): Action[] => [
+    { type: "fetched", cards: ids(n), ...extra },
+    { type: "pick" },
+  ];
+  const left = (s: SessionState) => remaining(s);
+
+  it("remembers the latest answer, and only when it was sent with an id", () => {
+    const s = run([...start(), withId("good", "learning")]);
+    expect(s.lastAnswer).toMatchObject({ clientReviewId: "r1", rating: "good", wasHandled: false, madeRoom: false });
+    expect(s.lastAnswer!.card.id).toBe("c1");
+    expect(run([...start(), answer("good", "learning")]).lastAnswer).toBeNull();
+    // A later answer replaces it: only the latest can be undone.
+    const two = run([...start(), withId("good", "learning", "r1"), { type: "pick" }, withId("easy", "review", "r2")]);
+    expect(two.lastAnswer!.clientReviewId).toBe("r2");
+  });
+
+  it("puts the card back on screen with its answer showing, and the session as it was", () => {
+    const before = run(start());
+    const s = run([withId("good", "learning"), { type: "undone" }], before);
+    expect(s.current!.id).toBe("c1");
+    expect(s.current!.state).toBe("new"); // as it was shown, not as it became
+    expect(s.revealed).toBe(true);
+    expect(s.handled).toEqual([]);
+    expect(s.stats).toEqual(before.stats);
+    expect(s.lastAnswer).toBeNull();
+    expect(s.queue.map((c) => c.id)).toEqual(["c2", "c3"]);
+    expect(left(s)).toBe(left(before));
+  });
+
+  it("takes a missed card back out of the queue, and keeps it counted once", () => {
+    const before = run(start(10));
+    const missed = run([withId("again", "learning")], before);
+    expect(missed.queue.some((c) => c.id === "c1")).toBe(true);
+    const s = reducer(missed, { type: "undone" });
+    expect(s.queue.filter((c) => c.id === "c1")).toHaveLength(0);
+    expect(s.current!.id).toBe("c1");
+    expect(s.lastAgainId).toBe(before.lastAgainId);
+    expect(left(s)).toBe(left(before));
+  });
+
+  it("keeps a card that was missed earlier among the answered ones", () => {
+    // c1 is missed and goes behind c2; c2 is answered; c1 comes round again and is answered Good.
+    // Undoing that second answer must not make it look as if c1 had never been answered.
+    const s = run([
+      { type: "fetched", cards: ids(2) },
+      { type: "pick" },
+      answer("again", "learning"),
+      { type: "pick" },
+      answer("good", "review"),
+      { type: "pick" },
+      withId("good", "review", "second"),
+      { type: "undone" },
+    ]);
+    expect(s.current!.id).toBe("c1");
+    expect(s.handled).toContain("c1");
+    expect(s.lastAnswer).toBeNull();
+  });
+
+  it("sends the next card, already on screen, back to the front of the queue", () => {
+    const s = run([...start(), withId("good", "learning"), { type: "pick" }, { type: "undone" }]);
+    expect(s.current!.id).toBe("c1");
+    expect(s.queue.map((c) => c.id)).toEqual(["c2", "c3"]);
+  });
+
+  it("brings the session back from finished when the last card is taken back", () => {
+    const s = run([...start(1), { type: "fetched", cards: [] }, withId("easy", "review")]);
+    expect(phaseOf(s)).toBe("done");
+    const back = reducer(s, { type: "undone" });
+    expect(phaseOf(back)).toBe("card");
+    expect(back.stats.reviewed).toBe(0);
+  });
+
+  it("takes back the room a known new card made for another one", () => {
+    const before = run(start(3, { moreNew: 5 }));
+    const answered = run([withId("good", "review")], before);
+    expect(answered.unlocked).toBe(1);
+    const s = reducer(answered, { type: "undone" });
+    expect(s.unlocked).toBe(0);
+    expect(left(s)).toBe(left(before));
+  });
+
+  it("does not take back room that arrived with a batch in the meantime", () => {
+    // The last card is a known new card: the answer makes room and the next fetch delivers the new card.
+    let s = run([...start(1, { moreNew: 1 }), { type: "fetched", cards: [], moreNew: 1 }, withId("good", "review")]);
+    expect(s.exhausted).toBe(false);
+    s = reducer(s, { type: "fetched", cards: ids(1, 10), moreNew: 0 });
+    expect(s.unlocked).toBe(0);
+    s = reducer(s, { type: "undone" });
+    expect(s.unlocked).toBe(0);
+    expect(s.queue.map((c) => c.id)).toEqual(["c10"]);
+    expect(s.exhausted).toBe(false);
+  });
+
+  it("restores that the session had run dry, when nothing arrived after the answer", () => {
+    const s = run([...start(1, { moreNew: 1 }), { type: "fetched", cards: [], moreNew: 1 }, withId("good", "review"), { type: "undone" }]);
+    expect(s.exhausted).toBe(true);
+  });
+
+  it("does nothing when there is no answer to take back, or the session was ended", () => {
+    const fresh = run(start());
+    expect(reducer(fresh, { type: "undone" })).toBe(fresh);
+    const ended = run([withId("good", "learning"), { type: "end" }], fresh);
+    expect(ended.lastAnswer).toBeNull();
+    expect(reducer(ended, { type: "undone" })).toBe(ended);
+  });
+
+  it("stops being offered when it expires, but only for the answer it was set for", () => {
+    const s = run([...start(), withId("good", "learning", "r1")]);
+    expect(reducer(s, { type: "undoExpired", clientReviewId: "someone-else" })).toBe(s);
+    expect(reducer(s, { type: "undoExpired", clientReviewId: "r1" }).lastAnswer).toBeNull();
+    expect(reducer(s, { type: "undoExpired" }).lastAnswer).toBeNull();
+  });
+
+  it("starts afresh with a new session", () => {
+    expect(run([...start(), withId("good", "learning"), { type: "restart" }]).lastAnswer).toBeNull();
+  });
+});
+

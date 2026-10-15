@@ -980,7 +980,7 @@
         {"lemma": "Chinese person", "pos": "noun", "details": {"plural": "Chinese people"}, "sentences": ["The Chinese person cooks rice."]}
         ],
         "nl": [
-        {"lemma": "Chinees", "pos": "noun", "details": {"article": "de", "plural": "Chinezen"}, "sentences": ["De Chinees kookt rijst."]}
+        {"lemma": "Chinees", "pos": "noun", "details": {"note": "een persoon", "article": "de", "plural": "Chinezen"}, "sentences": ["De Chinees kookt rijst."]}
         ]
       }
     },
@@ -1076,7 +1076,7 @@
         {"lemma": "Scot", "pos": "noun", "details": {"plural": "Scots"}, "sentences": ["The Scot wears a kilt."]}
         ],
         "nl": [
-        {"lemma": "Schot", "pos": "noun", "details": {"article": "de", "plural": "Schotten"}, "sentences": ["De Schot draagt een kilt."]}
+        {"lemma": "Schot", "pos": "noun", "details": {"note": "iemand uit Schotland", "article": "de", "plural": "Schotten"}, "sentences": ["De Schot draagt een kilt."]}
         ]
       }
     },
@@ -1184,7 +1184,7 @@
         {"lemma": "Chinese (language)", "pos": "noun", "details": {"uncountable": true}, "sentences": ["Chinese is difficult."]}
         ],
         "nl": [
-        {"lemma": "Chinees", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["Chinees is moeilijk."]}
+        {"lemma": "Chinees", "pos": "noun", "details": {"note": "de taal", "article": "het", "uncountable": true}, "sentences": ["Chinees is moeilijk."]}
         ]
       }
     },

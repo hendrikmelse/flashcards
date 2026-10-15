@@ -162,6 +162,8 @@ export async function accountRoutes(
         intervalBeforeDays: reviewLogs.intervalBeforeDays,
         intervalAfterDays: reviewLogs.intervalAfterDays,
         dueAfter: reviewLogs.dueAfter,
+        // Set when the answer was taken back; it is still listed, being part of what is held.
+        undoneAt: reviewLogs.undoneAt,
       })
       .from(reviewLogs)
       .innerJoin(userCards, eq(userCards.id, reviewLogs.userCardId))

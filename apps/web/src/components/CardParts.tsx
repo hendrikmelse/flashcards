@@ -1,4 +1,4 @@
-import { formLines, highlightSentence, isFormNote, type EntryView, type LanguageInfo } from "@flashcards/shared";
+import { entryNote, formLines, highlightSentence, isFormNote, type EntryView, type LanguageInfo } from "@flashcards/shared";
 import { displayLemma, langAttrs, languageName } from "./entries";
 import { LanguageFlag } from "./LanguageFlag";
 
@@ -27,6 +27,13 @@ export function Entries({
             {/* The word is in its own language, so a screen reader pronounces it that way. */}
             <span {...langAttrs(language)}>{displayLemma(e)}</span>
             {e.partOfSpeech && <span className="pos"> {e.partOfSpeech}</span>}
+            {/* Which sense or use this is, in the word's own language, like the word. */}
+            {entryNote(e.details) && (
+              <span className="note" {...langAttrs(language)}>
+                {" "}
+                [{entryNote(e.details)}]
+              </span>
+            )}
           </span>
         ))}
       </p>

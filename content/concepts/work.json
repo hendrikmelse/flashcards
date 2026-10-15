@@ -17,7 +17,7 @@
       "gloss": "earn (verb)",
       "entries": {
         "en": [
-        {"lemma": "earn", "pos": "verb", "details": {"past": "earned", "participle": "earned"}, "sentences": ["I earn money."]}
+        {"lemma": "to earn", "pos": "verb", "details": {"past": "earned", "participle": "earned"}, "sentences": ["I earn money."]}
         ],
         "nl": [
         {"lemma": "verdienen", "pos": "verb", "details": {"pastSingular": "verdiende", "pastPlural": "verdienden", "participle": "verdiend", "auxiliary": "hebben"}, "sentences": ["Ik verdien geld."]}
@@ -77,7 +77,7 @@
       "gloss": "cost (verb)",
       "entries": {
         "en": [
-        {"lemma": "cost", "pos": "verb", "details": {"past": "cost", "participle": "cost"}, "sentences": ["The book costs ten euros."]}
+        {"lemma": "to cost", "pos": "verb", "details": {"past": "cost", "participle": "cost"}, "sentences": ["The book costs ten euros."]}
         ],
         "nl": [
         {"lemma": "kosten", "pos": "verb", "details": {"pastSingular": "kostte", "pastPlural": "kostten", "participle": "gekost", "auxiliary": "hebben"}, "sentences": ["Het boek kost tien euro."]}
@@ -116,7 +116,7 @@
         {"lemma": "bank (financial)", "pos": "noun", "details": {"plural": "banks"}, "sentences": ["I go to the bank."]}
         ],
         "nl": [
-        {"lemma": "bank", "pos": "noun", "details": {"article": "de", "plural": "banken"}, "sentences": ["Ik ga naar de bank."]}
+        {"lemma": "bank", "pos": "noun", "details": {"note": "voor je geld", "article": "de", "plural": "banken"}, "sentences": ["Ik ga naar de bank."]}
         ]
       }
     },
@@ -137,7 +137,7 @@
       "gloss": "fire (dismiss)",
       "entries": {
         "en": [
-        {"lemma": "fire (dismiss)", "pos": "verb", "details": {"past": "fired", "participle": "fired"}, "sentences": ["The boss fires him."]}
+        {"lemma": "to fire (dismiss)", "pos": "verb", "details": {"past": "fired", "participle": "fired"}, "sentences": ["The boss fires him."]}
         ],
         "nl": [
         {"lemma": "ontslaan", "pos": "verb", "details": {"pastSingular": "ontsloeg", "pastPlural": "ontsloegen", "participle": "ontslagen", "auxiliary": "hebben"}, "sentences": ["De baas ontslaat hem."]}
@@ -365,7 +365,7 @@
       "gloss": "rent (verb)",
       "entries": {
         "en": [
-        {"lemma": "rent", "pos": "verb", "details": {"past": "rented", "participle": "rented"}, "sentences": ["We rent a house."]}
+        {"lemma": "to rent", "pos": "verb", "details": {"past": "rented", "participle": "rented"}, "sentences": ["We rent a house."]}
         ],
         "nl": [
         {"lemma": "huren", "pos": "verb", "details": {"pastSingular": "huurde", "pastPlural": "huurden", "participle": "gehuurd", "auxiliary": "hebben"}, "sentences": ["Wij huren een huis."]}
@@ -413,7 +413,7 @@
       "gloss": "save (money)",
       "entries": {
         "en": [
-        {"lemma": "save (money)", "pos": "verb", "details": {"past": "saved", "participle": "saved"}, "sentences": ["I save money."]}
+        {"lemma": "to save (money)", "pos": "verb", "details": {"past": "saved", "participle": "saved"}, "sentences": ["I save money."]}
         ],
         "nl": [
         {"lemma": "sparen", "pos": "verb", "details": {"pastSingular": "spaarde", "pastPlural": "spaarden", "participle": "gespaard", "auxiliary": "hebben"}, "sentences": ["Ik spaar geld."]}
@@ -509,7 +509,7 @@
       "gloss": "deposit (verb)",
       "entries": {
         "en": [
-        {"lemma": "deposit", "pos": "verb", "details": {"past": "deposited", "participle": "deposited"}, "sentences": ["I deposit money."]}
+        {"lemma": "to deposit", "pos": "verb", "details": {"past": "deposited", "participle": "deposited"}, "sentences": ["I deposit money."]}
         ],
         "nl": [
         {"lemma": "storten", "pos": "verb", "details": {"pastSingular": "stortte", "pastPlural": "stortten", "participle": "gestort", "auxiliary": "hebben"}, "sentences": ["Ik stort geld."]}
@@ -533,7 +533,7 @@
       "gloss": "carry out (verb)",
       "entries": {
         "en": [
-        {"lemma": "carry out", "pos": "verb", "details": {"past": "carried out", "participle": "carried out"}, "sentences": ["We carry out the plan."]}
+        {"lemma": "to carry out", "pos": "verb", "details": {"past": "carried out", "participle": "carried out"}, "sentences": ["We carry out the plan."]}
         ],
         "nl": [
         {"lemma": "uitvoeren", "pos": "verb", "details": {"pastSingular": "voerde uit", "pastPlural": "voerden uit", "participle": "uitgevoerd", "auxiliary": "hebben"}, "sentences": ["Wij voeren het plan uit."]}
@@ -545,7 +545,7 @@
       "gloss": "take over (verb)",
       "entries": {
         "en": [
-        {"lemma": "take over", "pos": "verb", "details": {"past": "took over", "participle": "taken over"}, "sentences": ["I take over the work."]}
+        {"lemma": "to take over", "pos": "verb", "details": {"past": "took over", "participle": "taken over"}, "sentences": ["I take over the work."]}
         ],
         "nl": [
         {"lemma": "overnemen", "pos": "verb", "details": {"pastSingular": "nam over", "pastPlural": "namen over", "participle": "overgenomen", "auxiliary": "hebben"}, "sentences": ["Ik neem het werk over."]}
@@ -569,7 +569,7 @@
       "gloss": "cooperate (verb)",
       "entries": {
         "en": [
-        {"lemma": "cooperate", "pos": "verb", "details": {"past": "cooperated", "participle": "cooperated"}, "sentences": ["We cooperate."]}
+        {"lemma": "to cooperate", "pos": "verb", "details": {"past": "cooperated", "participle": "cooperated"}, "sentences": ["We cooperate."]}
         ],
         "nl": [
         {"lemma": "samenwerken", "pos": "verb", "details": {"pastSingular": "werkte samen", "pastPlural": "werkten samen", "participle": "samengewerkt", "auxiliary": "hebben"}, "sentences": ["Wij werken samen."]}
@@ -653,7 +653,7 @@
       "gloss": "set up (verb)",
       "entries": {
         "en": [
-        {"lemma": "set up", "pos": "verb", "details": {"past": "set up", "participle": "set up"}, "sentences": ["We set up a company."]}
+        {"lemma": "to set up", "pos": "verb", "details": {"past": "set up", "participle": "set up"}, "sentences": ["We set up a company."]}
         ],
         "nl": [
         {"lemma": "opzetten", "pos": "verb", "details": {"pastSingular": "zette op", "pastPlural": "zetten op", "participle": "opgezet", "auxiliary": "hebben"}, "sentences": ["Wij zetten een bedrijf op."]}
@@ -701,7 +701,7 @@
       "gloss": "organize (verb)",
       "entries": {
         "en": [
-        {"lemma": "organize", "pos": "verb", "details": {"past": "organized", "participle": "organized"}, "sentences": ["We organize a party."]}
+        {"lemma": "to organize", "pos": "verb", "details": {"past": "organized", "participle": "organized"}, "sentences": ["We organize a party."]}
         ],
         "nl": [
         {"lemma": "organiseren", "pos": "verb", "details": {"pastSingular": "organiseerde", "pastPlural": "organiseerden", "participle": "georganiseerd", "auxiliary": "hebben"}, "sentences": ["Wij organiseren een feest."]}
@@ -785,7 +785,7 @@
       "gloss": "spend (money)",
       "entries": {
         "en": [
-        {"lemma": "spend (money)", "pos": "verb", "details": {"past": "spent", "participle": "spent"}, "sentences": ["I spend too much money."]}
+        {"lemma": "to spend (money)", "pos": "verb", "details": {"past": "spent", "participle": "spent"}, "sentences": ["I spend too much money."]}
         ],
         "nl": [
         {"lemma": "uitgeven", "pos": "verb", "details": {"pastSingular": "gaf uit", "pastPlural": "gaven uit", "participle": "uitgegeven", "auxiliary": "hebben"}, "sentences": ["Ik geef te veel geld uit."]}
@@ -809,7 +809,7 @@
       "gloss": "hire (verb)",
       "entries": {
         "en": [
-        {"lemma": "hire", "pos": "verb", "details": {"past": "hired", "participle": "hired"}, "sentences": ["We hire a worker."]}
+        {"lemma": "to hire", "pos": "verb", "details": {"past": "hired", "participle": "hired"}, "sentences": ["We hire a worker."]}
         ],
         "nl": [
         {"lemma": "inhuren", "pos": "verb", "details": {"pastSingular": "huurde in", "pastPlural": "huurden in", "participle": "ingehuurd", "auxiliary": "hebben"}, "sentences": ["Wij huren een werker in."]}
@@ -821,7 +821,7 @@
       "gloss": "handle (verb)",
       "entries": {
         "en": [
-        {"lemma": "handle", "pos": "verb", "details": {"past": "handled", "participle": "handled"}, "sentences": ["I handle the case."]}
+        {"lemma": "to handle", "pos": "verb", "details": {"past": "handled", "participle": "handled"}, "sentences": ["I handle the case."]}
         ],
         "nl": [
         {"lemma": "afhandelen", "pos": "verb", "details": {"pastSingular": "handelde af", "pastPlural": "handelden af", "participle": "afgehandeld", "auxiliary": "hebben"}, "sentences": ["Ik handel de zaak af."]}
@@ -869,7 +869,7 @@
       "gloss": "negotiate (verb)",
       "entries": {
         "en": [
-        {"lemma": "negotiate", "pos": "verb", "details": {"past": "negotiated", "participle": "negotiated"}, "sentences": ["We negotiate the price."]}
+        {"lemma": "to negotiate", "pos": "verb", "details": {"past": "negotiated", "participle": "negotiated"}, "sentences": ["We negotiate the price."]}
         ],
         "nl": [
         {"lemma": "onderhandelen", "pos": "verb", "details": {"pastSingular": "onderhandelde", "pastPlural": "onderhandelden", "participle": "onderhandeld", "auxiliary": "hebben"}, "sentences": ["Wij onderhandelen over de prijs."]}
@@ -980,7 +980,7 @@
         {"lemma": "coin", "pos": "noun", "details": {"plural": "coins"}, "sentences": ["I have a coin."]}
         ],
         "nl": [
-        {"lemma": "munt", "pos": "noun", "details": {"article": "de", "plural": "munten"}, "sentences": ["Ik heb een munt."]}
+        {"lemma": "munt", "pos": "noun", "details": {"note": "geld", "article": "de", "plural": "munten"}, "sentences": ["Ik heb een munt."]}
         ]
       }
     },
@@ -1013,7 +1013,7 @@
       "gloss": "afford (verb)",
       "entries": {
         "en": [
-        {"lemma": "afford", "pos": "verb", "details": {"past": "afforded", "participle": "afforded"}, "sentences": ["I cannot afford it."]}
+        {"lemma": "to afford", "pos": "verb", "details": {"past": "afforded", "participle": "afforded"}, "sentences": ["I cannot afford it."]}
         ],
         "nl": [
         {"lemma": "veroorloven", "pos": "verb", "details": {"pastSingular": "veroorloofde", "pastPlural": "veroorloofden", "participle": "veroorloofd", "auxiliary": "hebben"}, "sentences": ["Ik kan het mij niet veroorloven."]}
@@ -1037,7 +1037,7 @@
       "gloss": "yield (verb)",
       "entries": {
         "en": [
-        {"lemma": "yield", "pos": "verb", "details": {"past": "yielded", "participle": "yielded"}, "sentences": ["The work yields money."]}
+        {"lemma": "to yield", "pos": "verb", "details": {"past": "yielded", "participle": "yielded"}, "sentences": ["The work yields money."]}
         ],
         "nl": [
         {"lemma": "opleveren", "pos": "verb", "details": {"pastSingular": "leverde op", "pastPlural": "leverden op", "participle": "opgeleverd", "auxiliary": "hebben"}, "sentences": ["Het werk levert geld op."]}
@@ -1061,7 +1061,7 @@
       "gloss": "represent (verb)",
       "entries": {
         "en": [
-        {"lemma": "represent", "pos": "verb", "details": {"past": "represented", "participle": "represented"}, "sentences": ["I represent the company."]}
+        {"lemma": "to represent", "pos": "verb", "details": {"past": "represented", "participle": "represented"}, "sentences": ["I represent the company."]}
         ],
         "nl": [
         {"lemma": "vertegenwoordigen", "pos": "verb", "details": {"pastSingular": "vertegenwoordigde", "pastPlural": "vertegenwoordigden", "participle": "vertegenwoordigd", "auxiliary": "hebben"}, "sentences": ["Ik vertegenwoordig het bedrijf."]}
@@ -1097,7 +1097,7 @@
       "gloss": "own (verb)",
       "entries": {
         "en": [
-        {"lemma": "own", "pos": "verb", "details": {"past": "owned", "participle": "owned"}, "sentences": ["He owns a house."]}
+        {"lemma": "to own", "pos": "verb", "details": {"past": "owned", "participle": "owned"}, "sentences": ["He owns a house."]}
         ],
         "nl": [
         {"lemma": "bezitten", "pos": "verb", "details": {"pastSingular": "bezat", "pastPlural": "bezaten", "participle": "bezeten", "auxiliary": "hebben"}, "sentences": ["Hij bezit een huis."]}
@@ -1145,7 +1145,7 @@
       "gloss": "sign (a document)",
       "entries": {
         "en": [
-        {"lemma": "sign (a document)", "pos": "verb", "details": {"past": "signed", "participle": "signed"}, "sentences": ["I sign the contract."]}
+        {"lemma": "to sign (a document)", "pos": "verb", "details": {"past": "signed", "participle": "signed"}, "sentences": ["I sign the contract."]}
         ],
         "nl": [
         {"lemma": "ondertekenen", "pos": "verb", "details": {"pastSingular": "ondertekende", "pastPlural": "ondertekenden", "participle": "ondertekend", "auxiliary": "hebben"}, "sentences": ["Ik onderteken het contract."]}
@@ -1181,7 +1181,7 @@
       "gloss": "submit (verb)",
       "entries": {
         "en": [
-        {"lemma": "submit", "pos": "verb", "details": {"past": "submited", "participle": "submited"}, "sentences": ["I submit the report."]}
+        {"lemma": "to submit", "pos": "verb", "details": {"past": "submitted", "participle": "submitted"}, "sentences": ["I submit the report."]}
         ],
         "nl": [
         {"lemma": "indienen", "pos": "verb", "details": {"pastSingular": "diende in", "pastPlural": "dienden in", "participle": "ingediend", "auxiliary": "hebben"}, "sentences": ["Ik dien het rapport in."]}
@@ -1265,7 +1265,7 @@
       "gloss": "suspend (verb)",
       "entries": {
         "en": [
-        {"lemma": "suspend", "pos": "verb", "details": {"past": "suspended", "participle": "suspended"}, "sentences": ["They suspend the worker."]}
+        {"lemma": "to suspend", "pos": "verb", "details": {"past": "suspended", "participle": "suspended"}, "sentences": ["They suspend the worker."]}
         ],
         "nl": [
         {"lemma": "schorsen", "pos": "verb", "details": {"pastSingular": "schorste", "pastPlural": "schorsten", "participle": "geschorst", "auxiliary": "hebben"}, "sentences": ["Zij schorsen de werknemer."]}
@@ -1373,7 +1373,7 @@
       "gloss": "produce (verb)",
       "entries": {
         "en": [
-        {"lemma": "produce", "pos": "verb", "details": {"past": "produced", "participle": "produced"}, "sentences": ["The factory produces cars."]}
+        {"lemma": "to produce", "pos": "verb", "details": {"past": "produced", "participle": "produced"}, "sentences": ["The factory produces cars."]}
         ],
         "nl": [
         {"lemma": "produceren", "pos": "verb", "details": {"pastSingular": "produceerde", "pastPlural": "produceerden", "participle": "geproduceerd", "auxiliary": "hebben"}, "sentences": ["De fabriek produceert auto's."]}
@@ -1421,7 +1421,7 @@
       "gloss": "present (verb)",
       "entries": {
         "en": [
-        {"lemma": "present", "pos": "verb", "details": {"past": "presented", "participle": "presented"}, "sentences": ["I present the plan."]}
+        {"lemma": "to present", "pos": "verb", "details": {"past": "presented", "participle": "presented"}, "sentences": ["I present the plan."]}
         ],
         "nl": [
         {"lemma": "presenteren", "pos": "verb", "details": {"pastSingular": "presenteerde", "pastPlural": "presenteerden", "participle": "gepresenteerd", "auxiliary": "hebben"}, "sentences": ["Ik presenteer het plan."]}
@@ -1481,7 +1481,7 @@
       "gloss": "register (verb)",
       "entries": {
         "en": [
-        {"lemma": "register", "pos": "verb", "details": {"past": "registered", "participle": "registered"}, "sentences": ["I register the car."]}
+        {"lemma": "to register", "pos": "verb", "details": {"past": "registered", "participle": "registered"}, "sentences": ["I register the car."]}
         ],
         "nl": [
         {"lemma": "registreren", "pos": "verb", "details": {"pastSingular": "registreerde", "pastPlural": "registreerden", "participle": "geregistreerd", "auxiliary": "hebben"}, "sentences": ["Ik registreer de auto."]}
@@ -1517,7 +1517,7 @@
       "gloss": "invest (verb)",
       "entries": {
         "en": [
-        {"lemma": "invest", "pos": "verb", "details": {"past": "invested", "participle": "invested"}, "sentences": ["I invest money."]}
+        {"lemma": "to invest", "pos": "verb", "details": {"past": "invested", "participle": "invested"}, "sentences": ["I invest money."]}
         ],
         "nl": [
         {"lemma": "investeren", "pos": "verb", "details": {"pastSingular": "investeerde", "pastPlural": "investeerden", "participle": "geïnvesteerd", "auxiliary": "hebben"}, "sentences": ["Ik investeer geld."]}
@@ -1553,7 +1553,7 @@
       "gloss": "appoint (verb)",
       "entries": {
         "en": [
-        {"lemma": "appoint", "pos": "verb", "details": {"past": "appointed", "participle": "appointed"}, "sentences": ["They appoint a new manager."]}
+        {"lemma": "to appoint", "pos": "verb", "details": {"past": "appointed", "participle": "appointed"}, "sentences": ["They appoint a new manager."]}
         ],
         "nl": [
         {"lemma": "benoemen", "pos": "verb", "details": {"pastSingular": "benoemde", "pastPlural": "benoemden", "participle": "benoemd", "auxiliary": "hebben"}, "sentences": ["Zij benoemen een nieuwe manager."]}
@@ -1613,7 +1613,7 @@
       "gloss": "launch (verb)",
       "entries": {
         "en": [
-        {"lemma": "launch", "pos": "verb", "details": {"past": "launched", "participle": "launched"}, "sentences": ["They launch a new product."]}
+        {"lemma": "to launch", "pos": "verb", "details": {"past": "launched", "participle": "launched"}, "sentences": ["They launch a new product."]}
         ],
         "nl": [
         {"lemma": "lanceren", "pos": "verb", "details": {"pastSingular": "lanceerde", "pastPlural": "lanceerden", "participle": "gelanceerd", "auxiliary": "hebben"}, "sentences": ["Zij lanceren een nieuw product."]}
@@ -1625,7 +1625,7 @@
       "gloss": "inherit (verb)",
       "entries": {
         "en": [
-        {"lemma": "inherit", "pos": "verb", "details": {"past": "inherited", "participle": "inherited"}, "sentences": ["I inherit a house."]}
+        {"lemma": "to inherit", "pos": "verb", "details": {"past": "inherited", "participle": "inherited"}, "sentences": ["I inherit a house."]}
         ],
         "nl": [
         {"lemma": "erven", "pos": "verb", "details": {"pastSingular": "erfde", "pastPlural": "erfden", "participle": "geërfd", "auxiliary": "hebben"}, "sentences": ["Ik erf een huis."]}
@@ -1649,7 +1649,7 @@
       "gloss": "maintain (verb)",
       "entries": {
         "en": [
-        {"lemma": "maintain", "pos": "verb", "details": {"past": "maintained", "participle": "maintained"}, "sentences": ["We maintain the road."]}
+        {"lemma": "to maintain", "pos": "verb", "details": {"past": "maintained", "participle": "maintained"}, "sentences": ["We maintain the road."]}
         ],
         "nl": [
         {"lemma": "onderhouden", "pos": "verb", "details": {"pastSingular": "onderhield", "pastPlural": "onderhielden", "participle": "onderhouden", "auxiliary": "hebben"}, "sentences": ["Wij onderhouden de weg."]}
@@ -1661,7 +1661,7 @@
       "gloss": "complete (round off)",
       "entries": {
         "en": [
-        {"lemma": "complete (round off)", "pos": "verb", "details": {"past": "completed", "participle": "completed"}, "sentences": ["I complete the work."]}
+        {"lemma": "to complete (round off)", "pos": "verb", "details": {"past": "completed", "participle": "completed"}, "sentences": ["I complete the work."]}
         ],
         "nl": [
         {"lemma": "afronden", "pos": "verb", "details": {"pastSingular": "rondde af", "pastPlural": "rondden af", "participle": "afgerond", "auxiliary": "hebben"}, "sentences": ["Ik rond het werk af."]}
@@ -1673,10 +1673,10 @@
       "gloss": "transfer (verb)",
       "entries": {
         "en": [
-        {"lemma": "transfer", "pos": "verb", "details": {"past": "transfered", "participle": "transfered"}, "sentences": ["They transfer the worker."]}
+        {"lemma": "to transfer", "pos": "verb", "details": {"past": "transferred", "participle": "transferred"}, "sentences": ["They transfer the worker."]}
         ],
         "nl": [
-        {"lemma": "overplaatsen", "pos": "verb", "details": {"pastSingular": "plaatste over", "pastPlural": "plaatsten over", "participle": "overgeplaatst", "auxiliary": "hebben"}, "sentences": ["Zij plaatsen de werknemer over."]}
+        {"lemma": "overplaatsen", "pos": "verb", "details": {"note": "naar een andere plek of baan", "pastSingular": "plaatste over", "pastPlural": "plaatsten over", "participle": "overgeplaatst", "auxiliary": "hebben"}, "sentences": ["Zij plaatsen de werknemer over."]}
         ]
       }
     },
@@ -1685,7 +1685,7 @@
       "gloss": "confer (verb)",
       "entries": {
         "en": [
-        {"lemma": "confer", "pos": "verb", "details": {"past": "confered", "participle": "confered"}, "sentences": ["We confer with the team."]}
+        {"lemma": "to confer", "pos": "verb", "details": {"past": "conferred", "participle": "conferred"}, "sentences": ["We confer with the team."]}
         ],
         "nl": [
         {"lemma": "overleggen", "pos": "verb", "details": {"pastSingular": "overlegde", "pastPlural": "overlegden", "participle": "overlegd", "auxiliary": "hebben"}, "sentences": ["Wij overleggen met het team."]}
@@ -1757,7 +1757,7 @@
       "gloss": "accomplish (verb)",
       "entries": {
         "en": [
-        {"lemma": "accomplish", "pos": "verb", "details": {"past": "accomplished", "participle": "accomplished"}, "sentences": ["I accomplish the task."]}
+        {"lemma": "to accomplish", "pos": "verb", "details": {"past": "accomplished", "participle": "accomplished"}, "sentences": ["I accomplish the task."]}
         ],
         "nl": [
         {"lemma": "voltooien", "pos": "verb", "details": {"pastSingular": "voltooide", "pastPlural": "voltooiden", "participle": "voltooid", "auxiliary": "hebben"}, "sentences": ["Ik voltooi de taak."]}
@@ -1925,7 +1925,7 @@
       "gloss": "benefit (profit)",
       "entries": {
         "en": [
-        {"lemma": "benefit (profit)", "pos": "verb", "details": {"past": "benefited", "participle": "benefited"}, "sentences": ["I benefit from it."]}
+        {"lemma": "to benefit (profit)", "pos": "verb", "details": {"past": "benefited", "participle": "benefited"}, "sentences": ["I benefit from it."]}
         ],
         "nl": [
         {"lemma": "profiteren", "pos": "verb", "details": {"pastSingular": "profiteerde", "pastPlural": "profiteerden", "participle": "geprofiteerd", "auxiliary": "hebben"}, "sentences": ["Ik profiteer ervan."]}
@@ -1949,7 +1949,7 @@
       "gloss": "pay up (verb)",
       "entries": {
         "en": [
-        {"lemma": "pay up", "pos": "verb", "details": {"past": "paid up", "participle": "paid up"}, "sentences": ["We pay up and go."]}
+        {"lemma": "to pay up", "pos": "verb", "details": {"past": "paid up", "participle": "paid up"}, "sentences": ["We pay up and go."]}
         ],
         "nl": [
         {"lemma": "afrekenen", "pos": "verb", "details": {"pastSingular": "rekende af", "pastPlural": "rekenden af", "participle": "afgerekend", "auxiliary": "hebben"}, "sentences": ["Wij rekenen af en gaan."]}
@@ -1997,7 +1997,7 @@
       "gloss": "pay back (verb)",
       "entries": {
         "en": [
-        {"lemma": "pay back", "pos": "verb", "details": {"past": "paid back", "participle": "paid back"}, "sentences": ["I pay back the money."]}
+        {"lemma": "to pay back", "pos": "verb", "details": {"past": "paid back", "participle": "paid back"}, "sentences": ["I pay back the money."]}
         ],
         "nl": [
         {"lemma": "terugbetalen", "pos": "verb", "details": {"pastSingular": "betaalde terug", "pastPlural": "betaalden terug", "participle": "terugbetaald", "auxiliary": "hebben"}, "sentences": ["Ik betaal het geld terug."]}
@@ -2057,7 +2057,7 @@
       "gloss": "keep up (verb)",
       "entries": {
         "en": [
-        {"lemma": "keep up", "pos": "verb", "details": {"past": "kept up", "participle": "kept up"}, "sentences": ["I keep up the records."]}
+        {"lemma": "to keep up", "pos": "verb", "details": {"past": "kept up", "participle": "kept up"}, "sentences": ["I keep up the records."]}
         ],
         "nl": [
         {"lemma": "bijhouden", "pos": "verb", "details": {"pastSingular": "hield bij", "pastPlural": "hielden bij", "participle": "bijgehouden", "auxiliary": "hebben"}, "sentences": ["Ik houd de gegevens bij."]}
@@ -2117,7 +2117,7 @@
       "gloss": "function (verb)",
       "entries": {
         "en": [
-        {"lemma": "function", "pos": "verb", "details": {"past": "functioned", "participle": "functioned"}, "sentences": ["The machine functions well."]}
+        {"lemma": "to function", "pos": "verb", "details": {"past": "functioned", "participle": "functioned"}, "sentences": ["The machine functions well."]}
         ],
         "nl": [
         {"lemma": "functioneren", "pos": "verb", "details": {"pastSingular": "functioneerde", "pastPlural": "functioneerden", "participle": "gefunctioneerd", "auxiliary": "hebben"}, "sentences": ["De machine functioneert goed."]}
@@ -2189,7 +2189,7 @@
       "gloss": "get back (verb)",
       "entries": {
         "en": [
-        {"lemma": "get back", "pos": "verb", "details": {"past": "got back", "participle": "got back"}, "sentences": ["I get my money back."]}
+        {"lemma": "to get back", "pos": "verb", "details": {"past": "got back", "participle": "got back"}, "sentences": ["I get my money back."]}
         ],
         "nl": [
         {"lemma": "terugkrijgen", "pos": "verb", "details": {"pastSingular": "kreeg terug", "pastPlural": "kregen terug", "participle": "teruggekregen", "auxiliary": "hebben"}, "sentences": ["Ik krijg mijn geld terug."]}
@@ -2201,7 +2201,7 @@
       "gloss": "obtain (verb)",
       "entries": {
         "en": [
-        {"lemma": "obtain", "pos": "verb", "details": {"past": "obtained", "participle": "obtained"}, "sentences": ["I obtain a permit."]}
+        {"lemma": "to obtain", "pos": "verb", "details": {"past": "obtained", "participle": "obtained"}, "sentences": ["I obtain a permit."]}
         ],
         "nl": [
         {"lemma": "verkrijgen", "pos": "verb", "details": {"pastSingular": "verkreeg", "pastPlural": "verkregen", "participle": "verkregen", "auxiliary": "hebben"}, "sentences": ["Ik verkrijg een vergunning."]}
@@ -2297,7 +2297,7 @@
       "gloss": "strike (stop work)",
       "entries": {
         "en": [
-        {"lemma": "strike (stop work)", "pos": "verb", "details": {"past": "striked", "participle": "striked"}, "sentences": ["The workers strike."]}
+        {"lemma": "to strike (stop work)", "pos": "verb", "details": {"past": "struck", "participle": "struck"}, "sentences": ["The workers strike."]}
         ],
         "nl": [
         {"lemma": "staken", "pos": "verb", "details": {"pastSingular": "staakte", "pastPlural": "staakten", "participle": "gestaakt", "auxiliary": "hebben"}, "sentences": ["De werknemers staken."]}
@@ -2345,7 +2345,7 @@
       "gloss": "construct (verb)",
       "entries": {
         "en": [
-        {"lemma": "construct", "pos": "verb", "details": {"past": "constructed", "participle": "constructed"}, "sentences": ["They construct a road."]}
+        {"lemma": "to construct", "pos": "verb", "details": {"past": "constructed", "participle": "constructed"}, "sentences": ["They construct a road."]}
         ],
         "nl": [
         {"lemma": "aanleggen", "pos": "verb", "details": {"pastSingular": "legde aan", "pastPlural": "legden aan", "participle": "aangelegd", "auxiliary": "hebben"}, "sentences": ["Zij leggen een weg aan."]}
@@ -2525,7 +2525,7 @@
       "gloss": "work out (verb)",
       "entries": {
         "en": [
-        {"lemma": "work out", "pos": "verb", "details": {"past": "worked out", "participle": "worked out"}, "sentences": ["I work out the plan."]}
+        {"lemma": "to work out", "pos": "verb", "details": {"past": "worked out", "participle": "worked out"}, "sentences": ["I work out the plan."]}
         ],
         "nl": [
         {"lemma": "uitwerken", "pos": "verb", "details": {"pastSingular": "werkte uit", "pastPlural": "werkten uit", "participle": "uitgewerkt", "auxiliary": "hebben"}, "sentences": ["Ik werk het plan uit."]}
@@ -2609,7 +2609,7 @@
       "gloss": "manage (verb)",
       "entries": {
         "en": [
-        {"lemma": "manage", "pos": "verb", "details": {"past": "managed", "participle": "managed"}, "sentences": ["I manage the money."]}
+        {"lemma": "to manage", "pos": "verb", "details": {"past": "managed", "participle": "managed"}, "sentences": ["I manage the money."]}
         ],
         "nl": [
         {"lemma": "beheren", "pos": "verb", "details": {"pastSingular": "beheerde", "pastPlural": "beheerden", "participle": "beheerd", "auxiliary": "hebben"}, "sentences": ["Ik beheer het geld."]}
@@ -2717,7 +2717,7 @@
       "gloss": "apply for (verb)",
       "entries": {
         "en": [
-        {"lemma": "apply for", "pos": "verb", "details": {"past": "applied for", "participle": "applied for"}, "sentences": ["I apply for a permit."]}
+        {"lemma": "to apply for", "pos": "verb", "details": {"past": "applied for", "participle": "applied for"}, "sentences": ["I apply for a permit."]}
         ],
         "nl": [
         {"lemma": "aanvragen", "pos": "verb", "details": {"pastSingular": "vroeg aan", "pastPlural": "vroegen aan", "participle": "aangevraagd", "auxiliary": "hebben"}, "sentences": ["Ik vraag een vergunning aan."]}
@@ -2789,7 +2789,7 @@
       "gloss": "assign (verb)",
       "entries": {
         "en": [
-        {"lemma": "assign", "pos": "verb", "details": {"past": "assigned", "participle": "assigned"}, "sentences": ["I assign the task."]}
+        {"lemma": "to assign", "pos": "verb", "details": {"past": "assigned", "participle": "assigned"}, "sentences": ["I assign the task."]}
         ],
         "nl": [
         {"lemma": "toewijzen", "pos": "verb", "details": {"pastSingular": "wees toe", "pastPlural": "wezen toe", "participle": "toegewezen", "auxiliary": "hebben"}, "sentences": ["Ik wijs de taak toe."]}
@@ -2837,7 +2837,7 @@
       "gloss": "rent out (verb)",
       "entries": {
         "en": [
-        {"lemma": "rent out", "pos": "verb", "details": {"past": "rented out", "participle": "rented out"}, "sentences": ["We rent out a room."]}
+        {"lemma": "to rent out", "pos": "verb", "details": {"past": "rented out", "participle": "rented out"}, "sentences": ["We rent out a room."]}
         ],
         "nl": [
         {"lemma": "verhuren", "pos": "verb", "details": {"pastSingular": "verhuurde", "pastPlural": "verhuurden", "participle": "verhuurd", "auxiliary": "hebben"}, "sentences": ["Wij verhuren een kamer."]}
@@ -2861,10 +2861,10 @@
       "gloss": "collect (money)",
       "entries": {
         "en": [
-        {"lemma": "collect (money)", "pos": "verb", "details": {"past": "collected", "participle": "collected"}, "sentences": ["They collect the rent."]}
+        {"lemma": "to collect (money)", "pos": "verb", "details": {"past": "collected", "participle": "collected"}, "sentences": ["They collect the rent."]}
         ],
         "nl": [
-        {"lemma": "innen", "pos": "verb", "details": {"pastSingular": "inde", "pastPlural": "inden", "participle": "geïnd", "auxiliary": "hebben"}, "sentences": ["Zij innen de huur."]}
+        {"lemma": "innen", "pos": "verb", "details": {"note": "geld dat iemand verschuldigd is", "pastSingular": "inde", "pastPlural": "inden", "participle": "geïnd", "auxiliary": "hebben"}, "sentences": ["Zij innen de huur."]}
         ]
       }
     },
@@ -2993,7 +2993,7 @@
       "gloss": "instruct (verb)",
       "entries": {
         "en": [
-        {"lemma": "instruct", "pos": "verb", "details": {"past": "instructed", "participle": "instructed"}, "sentences": ["I instruct him to wait."]}
+        {"lemma": "to instruct", "pos": "verb", "details": {"past": "instructed", "participle": "instructed"}, "sentences": ["I instruct him to wait."]}
         ],
         "nl": [
         {"lemma": "opdragen", "pos": "verb", "details": {"pastSingular": "droeg op", "pastPlural": "droegen op", "participle": "opgedragen", "auxiliary": "hebben"}, "sentences": ["Ik draag hem op te wachten."]}
@@ -3113,7 +3113,7 @@
       "gloss": "finance (verb)",
       "entries": {
         "en": [
-        {"lemma": "finance", "pos": "verb", "details": {"past": "financed", "participle": "financed"}, "sentences": ["The bank finances the plan."]}
+        {"lemma": "to finance", "pos": "verb", "details": {"past": "financed", "participle": "financed"}, "sentences": ["The bank finances the plan."]}
         ],
         "nl": [
         {"lemma": "financieren", "pos": "verb", "details": {"pastSingular": "financierde", "pastPlural": "financierden", "participle": "gefinancierd", "auxiliary": "hebben"}, "sentences": ["De bank financiert het plan."]}
@@ -3125,10 +3125,10 @@
       "gloss": "beg (for money)",
       "entries": {
         "en": [
-        {"lemma": "beg (for money)", "pos": "verb", "details": {"past": "beged", "participle": "beged"}, "sentences": ["The man begs for money."]}
+        {"lemma": "to beg (for money)", "pos": "verb", "details": {"past": "begged", "participle": "begged"}, "sentences": ["The man begs for money."]}
         ],
         "nl": [
-        {"lemma": "bedelen", "pos": "verb", "details": {"pastSingular": "bedelde", "pastPlural": "bedelden", "participle": "gebedeld", "auxiliary": "hebben"}, "sentences": ["De man bedelt om geld."]}
+        {"lemma": "bedelen", "pos": "verb", "details": {"note": "om geld vragen", "pastSingular": "bedelde", "pastPlural": "bedelden", "participle": "gebedeld", "auxiliary": "hebben"}, "sentences": ["De man bedelt om geld."]}
         ]
       }
     },
@@ -3173,7 +3173,7 @@
       "gloss": "pay off (verb)",
       "entries": {
         "en": [
-        {"lemma": "pay off", "pos": "verb", "details": {"past": "paid off", "participle": "paid off"}, "sentences": ["I pay off the loan."]}
+        {"lemma": "to pay off", "pos": "verb", "details": {"past": "paid off", "participle": "paid off"}, "sentences": ["I pay off the loan."]}
         ],
         "nl": [
         {"lemma": "afbetalen", "pos": "verb", "details": {"pastSingular": "betaalde af", "pastPlural": "betaalden af", "participle": "afbetaald", "auxiliary": "hebben"}, "sentences": ["Ik betaal de lening af."]}
@@ -3185,7 +3185,7 @@
       "gloss": "terminate (verb)",
       "entries": {
         "en": [
-        {"lemma": "terminate", "pos": "verb", "details": {"past": "terminated", "participle": "terminated"}, "sentences": ["I terminate the contract."]}
+        {"lemma": "to terminate", "pos": "verb", "details": {"past": "terminated", "participle": "terminated"}, "sentences": ["I terminate the contract."]}
         ],
         "nl": [
         {"lemma": "opzeggen", "pos": "verb", "details": {"pastSingular": "zegde op", "pastPlural": "zegden op", "participle": "opgezegd", "auxiliary": "hebben"}, "sentences": ["Ik zeg het contract op."]}
@@ -3197,7 +3197,7 @@
       "gloss": "achieve (verb)",
       "entries": {
         "en": [
-        {"lemma": "achieve", "pos": "verb", "details": {"past": "achieved", "participle": "achieved"}, "sentences": ["He achieves good results."]}
+        {"lemma": "to achieve", "pos": "verb", "details": {"past": "achieved", "participle": "achieved"}, "sentences": ["He achieves good results."]}
         ],
         "nl": [
         {"lemma": "behalen", "pos": "verb", "details": {"pastSingular": "behaalde", "pastPlural": "behaalden", "participle": "behaald", "auxiliary": "hebben"}, "sentences": ["Hij behaalt goede resultaten."]}
@@ -3257,7 +3257,7 @@
       "gloss": "specialize (verb)",
       "entries": {
         "en": [
-        {"lemma": "specialize", "pos": "verb", "details": {"past": "specialized", "participle": "specialized"}, "sentences": ["He specializes in law."]}
+        {"lemma": "to specialize", "pos": "verb", "details": {"past": "specialized", "participle": "specialized"}, "sentences": ["He specializes in law."]}
         ],
         "nl": [
         {"lemma": "specialiseren", "pos": "verb", "details": {"pastSingular": "specialiseerde", "pastPlural": "specialiseerden", "participle": "gespecialiseerd", "auxiliary": "hebben"}, "sentences": ["Hij specialiseert zich in recht."]}
@@ -3293,7 +3293,7 @@
       "gloss": "gain (experience)",
       "entries": {
         "en": [
-        {"lemma": "gain (experience)", "pos": "verb", "details": {"past": "gained", "participle": "gained"}, "sentences": ["I gain experience."]}
+        {"lemma": "to gain (experience)", "pos": "verb", "details": {"past": "gained", "participle": "gained"}, "sentences": ["I gain experience."]}
         ],
         "nl": [
         {"lemma": "opdoen", "pos": "verb", "details": {"pastSingular": "deed op", "pastPlural": "deden op", "participle": "opgedaan", "auxiliary": "hebben"}, "sentences": ["Ik doe ervaring op."]}
@@ -3305,7 +3305,7 @@
       "gloss": "promote (verb)",
       "entries": {
         "en": [
-        {"lemma": "promote", "pos": "verb", "details": {"past": "promoted", "participle": "promoted"}, "sentences": ["They promote the product."]}
+        {"lemma": "to promote", "pos": "verb", "details": {"past": "promoted", "participle": "promoted"}, "sentences": ["They promote the product."]}
         ],
         "nl": [
         {"lemma": "bevorderen", "pos": "verb", "details": {"pastSingular": "bevorderde", "pastPlural": "bevorderden", "participle": "bevorderd", "auxiliary": "hebben"}, "sentences": ["Zij bevorderen het product."]}
@@ -3329,7 +3329,7 @@
       "gloss": "apply (for a job)",
       "entries": {
         "en": [
-        {"lemma": "apply (for a job)", "pos": "verb", "details": {"past": "applied", "participle": "applied"}, "sentences": ["I apply for a job."]}
+        {"lemma": "to apply (for a job)", "pos": "verb", "details": {"past": "applied", "participle": "applied"}, "sentences": ["I apply for a job."]}
         ],
         "nl": [
         {"lemma": "solliciteren", "pos": "verb", "details": {"pastSingular": "solliciteerde", "pastPlural": "solliciteerden", "participle": "gesolliciteerd", "auxiliary": "hebben"}, "sentences": ["Ik solliciteer naar een baan."]}
@@ -3389,7 +3389,7 @@
       "gloss": "perform (achieve)",
       "entries": {
         "en": [
-        {"lemma": "perform (achieve)", "pos": "verb", "details": {"past": "performed", "participle": "performed"}, "sentences": ["The team performs well."]}
+        {"lemma": "to perform (achieve)", "pos": "verb", "details": {"past": "performed", "participle": "performed"}, "sentences": ["The team performs well."]}
         ],
         "nl": [
         {"lemma": "presteren", "pos": "verb", "details": {"pastSingular": "presteerde", "pastPlural": "presteerden", "participle": "gepresteerd", "auxiliary": "hebben"}, "sentences": ["Het team presteert goed."]}
@@ -3401,7 +3401,7 @@
       "gloss": "delegate (verb)",
       "entries": {
         "en": [
-        {"lemma": "delegate", "pos": "verb", "details": {"past": "delegated", "participle": "delegated"}, "sentences": ["We delegate a member."]}
+        {"lemma": "to delegate", "pos": "verb", "details": {"past": "delegated", "participle": "delegated"}, "sentences": ["We delegate a member."]}
         ],
         "nl": [
         {"lemma": "afvaardigen", "pos": "verb", "details": {"pastSingular": "vaardigde af", "pastPlural": "vaardigden af", "participle": "afgevaardigd", "auxiliary": "hebben"}, "sentences": ["Wij vaardigen een lid af."]}
@@ -3413,10 +3413,10 @@
       "gloss": "practice (a profession)",
       "entries": {
         "en": [
-        {"lemma": "practice (a profession)", "pos": "verb", "details": {"past": "practiced", "participle": "practiced"}, "sentences": ["He practices law."]}
+        {"lemma": "to practice (a profession)", "pos": "verb", "details": {"past": "practiced", "participle": "practiced"}, "sentences": ["He practices law."]}
         ],
         "nl": [
-        {"lemma": "uitoefenen", "pos": "verb", "details": {"pastSingular": "oefende uit", "pastPlural": "oefenden uit", "participle": "uitgeoefend", "auxiliary": "hebben"}, "sentences": ["Hij oefent het recht uit."]}
+        {"lemma": "uitoefenen", "pos": "verb", "details": {"note": "een beroep", "pastSingular": "oefende uit", "pastPlural": "oefenden uit", "participle": "uitgeoefend", "auxiliary": "hebben"}, "sentences": ["Hij oefent het recht uit."]}
         ]
       }
     },
@@ -3437,7 +3437,7 @@
       "gloss": "compensate (verb)",
       "entries": {
         "en": [
-        {"lemma": "compensate", "pos": "verb", "details": {"past": "compensated", "participle": "compensated"}, "sentences": ["They compensate the damage."]}
+        {"lemma": "to compensate", "pos": "verb", "details": {"past": "compensated", "participle": "compensated"}, "sentences": ["They compensate the damage."]}
         ],
         "nl": [
         {"lemma": "vergoeden", "pos": "verb", "details": {"pastSingular": "vergoedde", "pastPlural": "vergoedden", "participle": "vergoed", "auxiliary": "hebben"}, "sentences": ["Zij vergoeden de schade."]}
@@ -3449,7 +3449,7 @@
       "gloss": "halt (verb)",
       "entries": {
         "en": [
-        {"lemma": "halt", "pos": "verb", "details": {"past": "halted", "participle": "halted"}, "sentences": ["They halt the work."]}
+        {"lemma": "to halt", "pos": "verb", "details": {"past": "halted", "participle": "halted"}, "sentences": ["They halt the work."]}
         ],
         "nl": [
         {"lemma": "stopzetten", "pos": "verb", "details": {"pastSingular": "zette stop", "pastPlural": "zetten stop", "participle": "stopgezet", "auxiliary": "hebben"}, "sentences": ["Zij zetten het werk stop."]}
@@ -3473,10 +3473,10 @@
       "gloss": "finish (off)",
       "entries": {
         "en": [
-        {"lemma": "finish (off)", "pos": "verb", "details": {"past": "finished", "participle": "finished"}, "sentences": ["I finish the job."]}
+        {"lemma": "to finish (off)", "pos": "verb", "details": {"past": "finished", "participle": "finished"}, "sentences": ["I finish the job."]}
         ],
         "nl": [
-        {"lemma": "afwerken", "pos": "verb", "details": {"pastSingular": "werkte af", "pastPlural": "werkten af", "participle": "afgewerkt", "auxiliary": "hebben"}, "sentences": ["Ik werk de klus af."]}
+        {"lemma": "afwerken", "pos": "verb", "details": {"note": "de laatste details toevoegen", "pastSingular": "werkte af", "pastPlural": "werkten af", "participle": "afgewerkt", "auxiliary": "hebben"}, "sentences": ["Ik werk de klus af."]}
         ]
       }
     },
@@ -3485,7 +3485,7 @@
       "gloss": "inspect (verb)",
       "entries": {
         "en": [
-        {"lemma": "inspect", "pos": "verb", "details": {"past": "inspected", "participle": "inspected"}, "sentences": ["I inspect the house."]}
+        {"lemma": "to inspect", "pos": "verb", "details": {"past": "inspected", "participle": "inspected"}, "sentences": ["I inspect the house."]}
         ],
         "nl": [
         {"lemma": "inspecteren", "pos": "verb", "details": {"pastSingular": "inspecteerde", "pastPlural": "inspecteerden", "participle": "geïnspecteerd", "auxiliary": "hebben"}, "sentences": ["Ik inspecteer het huis."]}
@@ -3497,7 +3497,7 @@
       "gloss": "work overtime (verb)",
       "entries": {
         "en": [
-        {"lemma": "work overtime", "pos": "verb", "details": {"past": "worked overtime", "participle": "worked overtime"}, "sentences": ["I worked overtime yesterday."]}
+        {"lemma": "to work overtime", "pos": "verb", "details": {"past": "worked overtime", "participle": "worked overtime"}, "sentences": ["I worked overtime yesterday."]}
         ],
         "nl": [
         {"lemma": "overwerken", "pos": "verb", "details": {"pastSingular": "werkte over", "pastPlural": "werkten over", "participle": "overgewerkt", "auxiliary": "hebben"}, "sentences": ["Ik heb gisteren overgewerkt."]}
@@ -3569,7 +3569,7 @@
       "gloss": "free up (verb)",
       "entries": {
         "en": [
-        {"lemma": "free up", "pos": "verb", "details": {"past": "freed up", "participle": "freed up"}, "sentences": ["I free up time."]}
+        {"lemma": "to free up", "pos": "verb", "details": {"past": "freed up", "participle": "freed up"}, "sentences": ["I free up time."]}
         ],
         "nl": [
         {"lemma": "vrijmaken", "pos": "verb", "details": {"pastSingular": "maakte vrij", "pastPlural": "maakten vrij", "participle": "vrijgemaakt", "auxiliary": "hebben"}, "sentences": ["Ik maak tijd vrij."]}
@@ -3581,7 +3581,7 @@
       "gloss": "compile (verb)",
       "entries": {
         "en": [
-        {"lemma": "compile", "pos": "verb", "details": {"past": "compiled", "participle": "compiled"}, "sentences": ["I compile a list."]}
+        {"lemma": "to compile", "pos": "verb", "details": {"past": "compiled", "participle": "compiled"}, "sentences": ["I compile a list."]}
         ],
         "nl": [
         {"lemma": "samenstellen", "pos": "verb", "details": {"pastSingular": "stelde samen", "pastPlural": "stelden samen", "participle": "samengesteld", "auxiliary": "hebben"}, "sentences": ["Ik stel een lijst samen."]}
@@ -3608,7 +3608,7 @@
         {"lemma": "job (task)", "pos": "noun", "details": {"plural": "jobs"}, "sentences": ["That is a big job."]}
         ],
         "nl": [
-        {"lemma": "karwei", "pos": "noun", "details": {"article": "het", "plural": "karweien"}, "sentences": ["Dat is een groot karwei."]}
+        {"lemma": "karwei", "pos": "noun", "details": {"note": "een klus in huis", "article": "het", "plural": "karweien"}, "sentences": ["Dat is een groot karwei."]}
         ]
       }
     },
@@ -3617,7 +3617,7 @@
       "gloss": "hold a meeting (verb)",
       "entries": {
         "en": [
-        {"lemma": "hold a meeting", "pos": "verb", "details": {"past": "held a meeting", "participle": "held a meeting"}, "sentences": ["We hold a meeting."]}
+        {"lemma": "to hold a meeting", "pos": "verb", "details": {"past": "held a meeting", "participle": "held a meeting"}, "sentences": ["We hold a meeting."]}
         ],
         "nl": [
         {"lemma": "vergaderen", "pos": "verb", "details": {"pastSingular": "vergaderde", "pastPlural": "vergaderden", "participle": "vergaderd", "auxiliary": "hebben"}, "sentences": ["Wij vergaderen."]}
@@ -3713,7 +3713,7 @@
       "gloss": "relieve (replace)",
       "entries": {
         "en": [
-        {"lemma": "relieve (replace)", "pos": "verb", "details": {"past": "relieved", "participle": "relieved"}, "sentences": ["I relieve the guard."]}
+        {"lemma": "to relieve (replace)", "pos": "verb", "details": {"past": "relieved", "participle": "relieved"}, "sentences": ["I relieve the guard."]}
         ],
         "nl": [
         {"lemma": "aflossen", "pos": "verb", "details": {"pastSingular": "loste af", "pastPlural": "losten af", "participle": "afgelost", "auxiliary": "hebben"}, "sentences": ["Ik los de wacht af."]}
@@ -3737,7 +3737,7 @@
       "gloss": "sign up (verb)",
       "entries": {
         "en": [
-        {"lemma": "sign up", "pos": "verb", "details": {"past": "signed up", "participle": "signed up"}, "sentences": ["I sign up for the course."]}
+        {"lemma": "to sign up", "pos": "verb", "details": {"past": "signed up", "participle": "signed up"}, "sentences": ["I sign up for the course."]}
         ],
         "nl": [
         {"lemma": "aanmelden", "pos": "verb", "details": {"pastSingular": "meldde aan", "pastPlural": "meldden aan", "participle": "aangemeld", "auxiliary": "hebben"}, "sentences": ["Ik meld me aan voor de cursus."]}
@@ -3797,7 +3797,7 @@
       "gloss": "consult (verb)",
       "entries": {
         "en": [
-        {"lemma": "consult", "pos": "verb", "details": {"past": "consulted", "participle": "consulted"}, "sentences": ["I consult a lawyer."]}
+        {"lemma": "to consult", "pos": "verb", "details": {"past": "consulted", "participle": "consulted"}, "sentences": ["I consult a lawyer."]}
         ],
         "nl": [
         {"lemma": "raadplegen", "pos": "verb", "details": {"pastSingular": "raadpleegde", "pastPlural": "raadpleegden", "participle": "geraadpleegd", "auxiliary": "hebben"}, "sentences": ["Ik raadpleeg een advocaat."]}
@@ -3812,8 +3812,8 @@
         {"lemma": "donation", "pos": "noun", "details": {"plural": "donations"}, "sentences": ["I make a donation."]}
         ],
         "nl": [
-        {"lemma": "donatie", "pos": "noun", "details": {"article": "de", "plural": "donaties"}, "sentences": ["Ik doe een donatie."]},
-        {"lemma": "gift", "pos": "noun", "details": {"article": "de", "plural": "giften"}, "sentences": ["Hij doet een gift aan het goede doel."]}
+        {"lemma": "donatie", "pos": "noun", "details": {"note": "geld voor een goed doel", "article": "de", "plural": "donaties"}, "sentences": ["Ik doe een donatie."]},
+        {"lemma": "gift", "pos": "noun", "details": {"note": "een cadeau, vaak geld", "article": "de", "plural": "giften"}, "sentences": ["Hij doet een gift aan het goede doel."]}
         ]
       }
     },
@@ -3858,7 +3858,7 @@
       "gloss": "apply (use)",
       "entries": {
         "en": [
-        {"lemma": "apply (use)", "pos": "verb", "details": {"past": "applied", "participle": "applied"}, "sentences": ["We apply the rule."]}
+        {"lemma": "to apply (use)", "pos": "verb", "details": {"past": "applied", "participle": "applied"}, "sentences": ["We apply the rule."]}
         ],
         "nl": [
         {"lemma": "toepassen", "pos": "verb", "details": {"pastSingular": "paste toe", "pastPlural": "pasten toe", "participle": "toegepast", "auxiliary": "hebben"}, "sentences": ["Wij passen de regel toe."]}
@@ -3894,7 +3894,7 @@
       "gloss": "recruit (verb)",
       "entries": {
         "en": [
-        {"lemma": "recruit", "pos": "verb", "details": {"past": "recruited", "participle": "recruited"}, "sentences": ["We recruit new staff."]}
+        {"lemma": "to recruit", "pos": "verb", "details": {"past": "recruited", "participle": "recruited"}, "sentences": ["We recruit new staff."]}
         ],
         "nl": [
         {"lemma": "rekruteren", "pos": "verb", "details": {"pastSingular": "rekruteerde", "pastPlural": "rekruteerden", "participle": "gerekruteerd", "auxiliary": "hebben"}, "sentences": ["Wij rekruteren nieuw personeel."]}
@@ -3906,7 +3906,7 @@
       "gloss": "expand (verb)",
       "entries": {
         "en": [
-        {"lemma": "expand", "pos": "verb", "details": {"past": "expanded", "participle": "expanded"}, "sentences": ["We expand the shop."]}
+        {"lemma": "to expand", "pos": "verb", "details": {"past": "expanded", "participle": "expanded"}, "sentences": ["We expand the shop."]}
         ],
         "nl": [
         {"lemma": "uitbreiden", "pos": "verb", "details": {"pastSingular": "breidde uit", "pastPlural": "breidden uit", "participle": "uitgebreid", "auxiliary": "hebben"}, "sentences": ["Wij breiden de winkel uit."]}
@@ -3918,7 +3918,7 @@
       "gloss": "nominate (verb)",
       "entries": {
         "en": [
-        {"lemma": "nominate", "pos": "verb", "details": {"past": "nominated", "participle": "nominated"}, "sentences": ["They nominate him."]}
+        {"lemma": "to nominate", "pos": "verb", "details": {"past": "nominated", "participle": "nominated"}, "sentences": ["They nominate him."]}
         ],
         "nl": [
         {"lemma": "nomineren", "pos": "verb", "details": {"pastSingular": "nomineerde", "pastPlural": "nomineerden", "participle": "genomineerd", "auxiliary": "hebben"}, "sentences": ["Zij nomineren hem."]}
@@ -3930,10 +3930,10 @@
       "gloss": "transfer (money)",
       "entries": {
         "en": [
-        {"lemma": "transfer (money)", "pos": "verb", "details": {"past": "transfered", "participle": "transfered"}, "sentences": ["I transfer the money."]}
+        {"lemma": "to transfer (money)", "pos": "verb", "details": {"past": "transferred", "participle": "transferred"}, "sentences": ["I transfer the money."]}
         ],
         "nl": [
-        {"lemma": "overmaken", "pos": "verb", "details": {"pastSingular": "maakte over", "pastPlural": "maakten over", "participle": "overgemaakt", "auxiliary": "hebben"}, "sentences": ["Ik maak het geld over."]}
+        {"lemma": "overmaken", "pos": "verb", "details": {"note": "geld sturen", "pastSingular": "maakte over", "pastPlural": "maakten over", "participle": "overgemaakt", "auxiliary": "hebben"}, "sentences": ["Ik maak het geld over."]}
         ]
       }
     },
@@ -4086,7 +4086,7 @@
       "gloss": "pay out (verb)",
       "entries": {
         "en": [
-        {"lemma": "pay out", "pos": "verb", "details": {"past": "paid out", "participle": "paid out"}, "sentences": ["They pay out the money."]}
+        {"lemma": "to pay out", "pos": "verb", "details": {"past": "paid out", "participle": "paid out"}, "sentences": ["They pay out the money."]}
         ],
         "nl": [
         {"lemma": "uitbetalen", "pos": "verb", "details": {"pastSingular": "betaalde uit", "pastPlural": "betaalden uit", "participle": "uitbetaald", "auxiliary": "hebben"}, "sentences": ["Zij betalen het geld uit."]}
@@ -4170,7 +4170,7 @@
       "gloss": "assemble (verb)",
       "entries": {
         "en": [
-        {"lemma": "assemble", "pos": "verb", "details": {"past": "assembled", "participle": "assembled"}, "sentences": ["I assemble the cabinet."]}
+        {"lemma": "to assemble", "pos": "verb", "details": {"past": "assembled", "participle": "assembled"}, "sentences": ["I assemble the cabinet."]}
         ],
         "nl": [
         {"lemma": "monteren", "pos": "verb", "details": {"pastSingular": "monteerde", "pastPlural": "monteerden", "participle": "gemonteerd", "auxiliary": "hebben"}, "sentences": ["Ik monteer de kast."]}
@@ -4182,7 +4182,7 @@
       "gloss": "retire (verb)",
       "entries": {
         "en": [
-        {"lemma": "retire", "pos": "verb", "details": {"past": "retired", "participle": "retired"}, "sentences": ["He retires at sixty-five."]}
+        {"lemma": "to retire", "pos": "verb", "details": {"past": "retired", "participle": "retired"}, "sentences": ["He retires at sixty-five."]}
         ],
         "nl": [
         {"lemma": "pensioneren", "pos": "verb", "details": {"pastSingular": "pensioneerde", "pastPlural": "pensioneerden", "participle": "gepensioneerd", "auxiliary": "hebben"}, "sentences": ["Hij pensioneert op zijn vijfenzestigste."]}
@@ -4218,7 +4218,7 @@
       "gloss": "resign (verb)",
       "entries": {
         "en": [
-        {"lemma": "resign", "pos": "verb", "details": {"past": "resigned", "participle": "resigned"}, "sentences": ["The minister resigns."]}
+        {"lemma": "to resign", "pos": "verb", "details": {"past": "resigned", "participle": "resigned"}, "sentences": ["The minister resigns."]}
         ],
         "nl": [
         {"lemma": "aftreden", "pos": "verb", "details": {"pastSingular": "trad af", "pastPlural": "traden af", "participle": "afgetreden", "auxiliary": "zijn"}, "sentences": ["De minister treedt af."]}
@@ -4254,7 +4254,7 @@
       "gloss": "obstruct (verb)",
       "entries": {
         "en": [
-        {"lemma": "obstruct", "pos": "verb", "details": {"past": "obstructed", "participle": "obstructed"}, "sentences": ["They obstruct my work."]}
+        {"lemma": "to obstruct", "pos": "verb", "details": {"past": "obstructed", "participle": "obstructed"}, "sentences": ["They obstruct my work."]}
         ],
         "nl": [
         {"lemma": "tegenwerken", "pos": "verb", "details": {"pastSingular": "werkte tegen", "pastPlural": "werkten tegen", "participle": "tegengewerkt", "auxiliary": "hebben"}, "sentences": ["Zij werken mijn werk tegen."]}

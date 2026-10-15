@@ -201,13 +201,33 @@ describe("checkConcept", () => {
     expect(errors.some((e) => e.includes("no en entry"))).toBe(true);
   });
 
+  describe("notes", () => {
+    const withNote = (note: unknown) => {
+      const c = noun("knock", "knock", "klop");
+      c.entries["nl"]![0]!.details["note"] = note;
+      return checkConcept(c);
+    };
+
+    it("accepts a short note", () => {
+      expect(withNote("op een deur").errors).toEqual([]);
+    });
+
+    it("refuses a note that is empty, not text, or too long to sit beside a word", () => {
+      expect(withNote("").errors[0]).toContain("details.note must be a non-empty string");
+      expect(withNote("   ").errors[0]).toContain("details.note must be a non-empty string");
+      expect(withNote(3).errors[0]).toContain("details.note must be a non-empty string");
+      expect(withNote("x".repeat(61)).errors[0]).toContain("over 60 characters");
+      expect(withNote("x".repeat(60)).errors).toEqual([]);
+    });
+  });
+
   describe("verb forms", () => {
     const verb = (en: Record<string, unknown>, nl: Record<string, unknown>) =>
       conceptSchema.parse({
         key: "run",
         gloss: "run (test)",
         entries: {
-          en: [{ lemma: "run", pos: "verb", details: en, sentences: ["I run."] }],
+          en: [{ lemma: "to run", pos: "verb", details: en, sentences: ["I run."] }],
           nl: [{ lemma: "rennen", pos: "verb", details: nl, sentences: ["Ik ren."] }],
         },
       });
@@ -221,6 +241,39 @@ describe("checkConcept", () => {
 
     it("accepts complete forms", () => {
       expect(checkConcept(verb(goodEn, goodNl))).toEqual({ errors: [], warnings: [] });
+    });
+
+    it("wants an English verb's lemma to start with \"to\", unless it is defective or bare", () => {
+      const en = (lemma: string, details: Record<string, unknown>) =>
+        conceptSchema.parse({
+          key: "run",
+          gloss: "run (test)",
+          entries: {
+            en: [{ lemma, pos: "verb", details, sentences: ["I run, and I have to run."] }],
+            nl: [{ lemma: "rennen", pos: "verb", details: goodNl, sentences: ["Ik ren."] }],
+          },
+        });
+      const missing = checkConcept(en("run", goodEn)).errors;
+      expect(missing).toHaveLength(1);
+      expect(missing[0]).toContain('starts with "to "');
+      expect(checkConcept(en("to run", goodEn)).errors).toEqual([]);
+      expect(checkConcept(en("must", { defective: true })).errors).toEqual([]);
+      expect(checkConcept(en("have to", { ...goodEn, bare: true })).errors).toEqual([]);
+    });
+
+    it("looks for the bare word, not the marker, in an English verb's sentences", () => {
+      expect(checkConcept(verb(goodEn, goodNl)).warnings).toEqual([]);
+      const walks = conceptSchema.parse({
+        key: "walk",
+        gloss: "walk (test)",
+        entries: {
+          en: [{ lemma: "to walk", pos: "verb", details: { past: "walked", participle: "walked" }, sentences: ["She walks home.", "To be fair, it rains."] }],
+          nl: [{ lemma: "lopen", pos: "verb", details: goodNl, sentences: ["Ik loop."] }],
+        },
+      });
+      const { warnings } = checkConcept(walks);
+      expect(warnings).toHaveLength(1);
+      expect(warnings[0]).toContain("To be fair");
     });
 
     it("warns about missing forms unless the verb is marked defective", () => {

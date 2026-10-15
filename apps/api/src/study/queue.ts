@@ -1,4 +1,4 @@
-import { and, asc, count, eq, exists, getTableColumns, gte, inArray, lte, or, sql } from "drizzle-orm";
+import { and, asc, count, eq, exists, getTableColumns, gte, inArray, isNull, lte, or, sql } from "drizzle-orm";
 import { alias } from "drizzle-orm/pg-core";
 import type { EntryView } from "@flashcards/shared";
 import { loadEntries, loadSentences, sentenceKey } from "../content/queries.js";
@@ -35,11 +35,18 @@ export interface StudyBatch {
   firstSession: boolean;
   /** New cards beyond the daily limit's share, which first looks rated Good or Easy make room for. */
   moreNew: number;
+  /** Every card on offer, including those beyond `limit` (the sum of `counts`). */
+  total: number;
 }
 
 // What to study: a scope (a language pair, or one direction of it; with neither, every deck) and
 // how many cards at most.
-type Options = { pair?: string | undefined; limit: number };
+type Options = {
+  pair?: string | undefined;
+  limit: number;
+  /** Cards due after this are left out, so a session's cards do not grow while it runs (never later than now). */
+  asOf?: Date | undefined;
+};
 
 // The conditions that define what is studyable now, and how many of each kind.
 //
@@ -48,22 +55,24 @@ type Options = { pair?: string | undefined; limit: number };
 // covers every deck as one.)
 //
 // Nothing is held back between sessions, and nothing is offered early: a card is studyable once it
-// is due, and not before.
-async function prepare(db: Db, userId: string, opts: Omit<Options, "limit">, now: Date) {
+// is due, and not before. `dueBy` is the moment "due" is judged at: now, or for a session that is
+// already under way, when it began.
+async function prepare(db: Db, userId: string, opts: Pick<Options, "pair">, now: Date, dueBy = now) {
   const [user] = await db.select().from(users).where(eq(users.id, userId));
   if (!user) throw new Error("User not found");
 
   // The reviews of this deck: those of cards in the pair (all of them when there is no pair).
   const pair = pairOf(opts);
-  const deckReviews = and(eq(reviewLogs.userId, userId), pair ? inPair(userCards, pair) : undefined);
+  // An answer that was undone is as if it had not been given: it uses none of the day's new-card limit.
+  const deckReviews = and(eq(reviewLogs.userId, userId), isNull(reviewLogs.undoneAt), pair ? inPair(userCards, pair) : undefined);
 
   const mine = and(eq(userCards.userId, userId), inScope(userCards, opts));
   const learningDue = and(
     mine,
     inArray(userCards.state, ["learning", "relearning"]),
-    lte(userCards.dueAt, now),
+    lte(userCards.dueAt, dueBy),
   );
-  const reviewDue = and(mine, eq(userCards.state, "review"), lte(userCards.dueAt, now));
+  const reviewDue = and(mine, eq(userCards.state, "review"), lte(userCards.dueAt, dueBy));
   const dayStart = studyDayStart(now, user.timezone);
   const isNew = and(mine, eq(userCards.state, "new"));
   // A new card whose reverse (same word, other direction) was first shown today comes after the
@@ -78,6 +87,7 @@ async function prepare(db: Db, userId: string, opts: Omit<Options, "limit">, now
       .where(
         and(
           eq(reviewLogs.userId, userId),
+          isNull(reviewLogs.undoneAt),
           eq(reviewLogs.stateBefore, "new"),
           gte(reviewLogs.reviewedAt, dayStart),
           eq(introduced.conceptId, userCards.conceptId),
@@ -134,7 +144,7 @@ async function prepare(db: Db, userId: string, opts: Omit<Options, "limit">, now
 export async function getStudyCounts(
   db: Db,
   userId: string,
-  opts: Omit<Options, "limit">,
+  opts: Pick<Options, "pair">,
   now: Date,
 ): Promise<{
   now: Date;
@@ -173,7 +183,16 @@ export async function getStudyBatch(
   now: Date,
   scheduler: Scheduler,
 ): Promise<StudyBatch> {
-  const { learningDue, reviewDue, isNew, reverseIntroducedToday, counts, newInDeck } = await prepare(db, userId, opts, now);
+  // A card answered in this session is due again after the session began, so asking as of its start
+  // leaves out exactly the cards already answered, and what is left is what remains to be studied.
+  const dueBy = opts.asOf && opts.asOf < now ? opts.asOf : now;
+  const { learningDue, reviewDue, isNew, reverseIntroducedToday, counts, newInDeck } = await prepare(
+    db,
+    userId,
+    opts,
+    now,
+    dueBy,
+  );
 
   const due = await db.select().from(userCards).where(or(learningDue, reviewDue));
   const ranked = due
@@ -250,8 +269,15 @@ export async function getStudyBatch(
   const [answered] = await db
     .select({ one: sql`1` })
     .from(reviewLogs)
-    .where(eq(reviewLogs.userId, userId))
+    .where(and(eq(reviewLogs.userId, userId), isNull(reviewLogs.undoneAt)))
     .limit(1);
 
-  return { now, counts, cards, firstSession: !answered, moreNew: Math.max(0, newInDeck - counts.new) };
+  return {
+    now,
+    counts,
+    cards,
+    firstSession: !answered,
+    moreNew: Math.max(0, newInDeck - counts.new),
+    total: counts.learning + counts.review + counts.new,
+  };
 }

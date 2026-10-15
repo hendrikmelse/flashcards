@@ -128,7 +128,7 @@
         {"lemma": "job", "pos": "noun", "details": {"plural": "jobs"}, "sentences": ["He has a new job."]}
         ],
         "nl": [
-        {"lemma": "baan", "pos": "noun", "details": {"article": "de", "plural": "banen"}, "sentences": ["Hij heeft een nieuwe baan."]}
+        {"lemma": "baan", "pos": "noun", "details": {"note": "werk waarvoor je in dienst bent", "article": "de", "plural": "banen"}, "sentences": ["Hij heeft een nieuwe baan."]}
         ]
       }
     },
@@ -161,10 +161,11 @@
       "gloss": "place (location)",
       "entries": {
         "en": [
-        {"lemma": "place", "pos": "noun", "details": {"plural": "places"}, "sentences": ["This is a nice place."]}
+        {"lemma": "place", "pos": "noun", "details": {"plural": "places"}, "sentences": ["This is a nice place.", "She finished in second place."]}
         ],
         "nl": [
-        {"lemma": "plaats", "pos": "noun", "details": {"article": "de", "plural": "plaatsen"}, "sentences": ["Dit is een mooie plaats."]}
+        {"lemma": "plek", "pos": "noun", "details": {"note": "alledaags: een plekje", "article": "de", "plural": "plekken"}, "sentences": ["Dit is een mooie plek."]},
+        {"lemma": "plaats", "pos": "noun", "details": {"note": "een stad, of een positie in een ranglijst", "article": "de", "plural": "plaatsen"}, "sentences": ["Zij eindigde op de tweede plaats."]}
         ]
       }
     },

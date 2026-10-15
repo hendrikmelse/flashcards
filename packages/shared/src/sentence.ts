@@ -1,4 +1,4 @@
-import { allVerbForms } from "./forms.js";
+import { allVerbForms, lemmaWithoutMarker } from "./forms.js";
 
 // Finding the card's word in an example sentence, so the card can show it in bold among the rest of
 // the sentence. The sentences are written to contain the word (the content check warns
@@ -79,7 +79,7 @@ function englishForms(lemma: string): string[] {
 function needlesFor(entry: WordEntry): Needle[] {
   const needles: Needle[] = [];
   // "bank (financial)" is shown to tell homographs apart; "of, from" lists alternatives.
-  const bare = entry.lemma.replace(/\s*\([^)]*\)\s*$/, "");
+  const bare = lemmaWithoutMarker(entry.language, entry.partOfSpeech, entry.lemma).replace(/\s*\([^)]*\)\s*$/, "");
   for (const alternative of bare.split(/,\s*/)) {
     const words = alternative.split(/\s+/).map(norm).filter(Boolean);
     if (words.length > 0) needles.push({ words, prefix: 4 });
@@ -93,7 +93,7 @@ function needlesFor(entry: WordEntry): Needle[] {
     if (entry.language === "nl") {
       for (const stem of dutchStems(entry.lemma)) needles.push({ words: [norm(stem)], prefix: 3 });
     } else if (entry.language === "en") {
-      forms.push(...englishForms(entry.lemma));
+      forms.push(...englishForms(lemmaWithoutMarker(entry.language, entry.partOfSpeech, entry.lemma)));
     }
   }
   // A stored form is exactly that; of a form in several words ("loste op"), each word counts alone.

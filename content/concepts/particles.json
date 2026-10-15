@@ -272,7 +272,7 @@
         {"lemma": "only (formal)", "pos": "particle", "sentences": ["There is only one left."]}
         ],
         "nl": [
-        {"lemma": "slechts", "pos": "particle", "sentences": ["Er is slechts één over."]}
+        {"lemma": "slechts", "pos": "particle", "details": {"note": "formeel"}, "sentences": ["Er is slechts één over."]}
         ]
       }
     },
@@ -308,7 +308,7 @@
         {"lemma": "only (just)", "pos": "particle", "sentences": ["I want only one."]}
         ],
         "nl": [
-        {"lemma": "enkel", "pos": "particle", "sentences": ["Ik wil enkel één."]}
+        {"lemma": "enkel", "pos": "particle", "details": {"note": "formeel of geschreven"}, "sentences": ["Ik wil enkel één."]}
         ]
       }
     },
@@ -716,7 +716,7 @@
         {"lemma": "please (formal)", "pos": "interjection", "sentences": ["Your coffee, please."]}
         ],
         "nl": [
-        {"lemma": "alstublieft", "pos": "interjection", "sentences": ["Uw koffie, alstublieft."]}
+        {"lemma": "alstublieft", "pos": "interjection", "details": {"note": "formeel"}, "sentences": ["Uw koffie, alstublieft."]}
         ]
       }
     },
@@ -824,7 +824,7 @@
         {"lemma": "thanks", "pos": "interjection", "sentences": ["Thanks for your help."]}
         ],
         "nl": [
-        {"lemma": "bedankt", "pos": "interjection", "sentences": ["Bedankt voor je hulp."]}
+        {"lemma": "bedankt", "pos": "interjection", "details": {"note": "gewoon"}, "sentences": ["Bedankt voor je hulp."]}
         ]
       }
     },
@@ -836,7 +836,7 @@
         {"lemma": "thanks (informal)", "pos": "interjection", "sentences": ["Thanks for the gift."]}
         ],
         "nl": [
-        {"lemma": "dankjewel", "pos": "interjection", "sentences": ["Dankjewel voor het cadeau."]}
+        {"lemma": "dankjewel", "pos": "interjection", "details": {"note": "informeel, tegen één persoon"}, "sentences": ["Dankjewel voor het cadeau."]}
         ]
       }
     },

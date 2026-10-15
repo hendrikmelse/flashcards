@@ -92,7 +92,7 @@
         {"lemma": "kind (type)", "pos": "noun", "details": {"plural": "kinds"}, "sentences": ["What kind of food is this?"]}
         ],
         "nl": [
-        {"lemma": "soort", "pos": "noun", "details": {"article": "de", "plural": "soorten"}, "sentences": ["Wat voor soort eten is dit?"]}
+        {"lemma": "soort", "pos": "noun", "details": {"note": "een type of categorie", "article": "de", "plural": "soorten"}, "sentences": ["Wat voor soort eten is dit?"]}
         ]
       }
     },
@@ -116,7 +116,7 @@
         {"lemma": "number", "pos": "noun", "details": {"plural": "numbers"}, "sentences": ["What is your number?"]}
         ],
         "nl": [
-        {"lemma": "nummer", "pos": "noun", "details": {"article": "het", "plural": "nummers"}, "sentences": ["Wat is je nummer?"]}
+        {"lemma": "nummer", "pos": "noun", "details": {"note": "in een lijst, of een telefoonnummer", "article": "het", "plural": "nummers"}, "sentences": ["Wat is je nummer?"]}
         ]
       }
     },
@@ -1280,7 +1280,7 @@
         {"lemma": "interest", "pos": "noun", "details": {"plural": "interests"}, "sentences": ["I have an interest in music."]}
         ],
         "nl": [
-        {"lemma": "interesse", "pos": "noun", "details": {"article": "de", "plural": "interesses"}, "sentences": ["Ik heb interesse in muziek."]}
+        {"lemma": "interesse", "pos": "noun", "details": {"note": "nieuwsgierigheid", "article": "de", "plural": "interesses"}, "sentences": ["Ik heb interesse in muziek."]}
         ]
       }
     },
@@ -1508,7 +1508,7 @@
         {"lemma": "connection", "pos": "noun", "details": {"plural": "connections"}, "sentences": ["There is a connection."]}
         ],
         "nl": [
-        {"lemma": "verband", "pos": "noun", "details": {"article": "het", "plural": "verbanden"}, "sentences": ["Er is een verband."]}
+        {"lemma": "verband", "pos": "noun", "details": {"note": "tussen twee dingen", "article": "het", "plural": "verbanden"}, "sentences": ["Er is een verband."]}
         ]
       }
     },
@@ -2624,7 +2624,7 @@
         {"lemma": "mass", "pos": "noun", "details": {"plural": "masses"}, "sentences": ["The mass is heavy."]}
         ],
         "nl": [
-        {"lemma": "massa", "pos": "noun", "details": {"article": "de", "plural": "massa's"}, "sentences": ["De massa is zwaar."]}
+        {"lemma": "massa", "pos": "noun", "details": {"note": "een grote groep of hoeveelheid", "article": "de", "plural": "massa's"}, "sentences": ["De massa is zwaar."]}
         ]
       }
     },
@@ -3752,7 +3752,7 @@
         {"lemma": "size", "pos": "noun", "details": {"plural": "sizes"}, "sentences": ["What size is it?"]}
         ],
         "nl": [
-        {"lemma": "grootte", "pos": "noun", "details": {"article": "de", "plural": "groottes"}, "sentences": ["Wat is de grootte?"]}
+        {"lemma": "grootte", "pos": "noun", "details": {"note": "hoe groot", "article": "de", "plural": "groottes"}, "sentences": ["Wat is de grootte?"]}
         ]
       }
     },

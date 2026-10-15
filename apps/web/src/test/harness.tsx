@@ -91,7 +91,11 @@ export function installMockApi() {
       const full = url.replace(/^\/api/, "");
       // Every request about the deck carries the language pair being learned. Handlers and
       // `mock.calls` leave it out, so they read the same whatever the pair; `mock.requests` keeps it.
-      const path = full.replace(/([?&])pair=[^&]*&?/, "$1").replace(/[?&]$/, "");
+      // A study session's `asOf` is left out in the same way.
+      const path = full
+        .replace(/([?&])pair=[^&]*&?/, "$1")
+        .replace(/([?&])asOf=[^&]*&?/, "$1")
+        .replace(/[?&]$/, "");
       const key = `${method} ${path}`;
       mock.calls.push(key);
       mock.requests.push(`${method} ${full}`);

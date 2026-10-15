@@ -9,6 +9,7 @@ import {
   type EntryView,
   type Scope,
 } from "@flashcards/shared";
+import { bareLemmaSql } from "../content/lemma-sql.js";
 import { loadEntries, loadSentences, sentenceKey } from "../content/queries.js";
 import { entries, userCards } from "../db/schema.js";
 import type { Db } from "../db/types.js";
@@ -100,7 +101,9 @@ export async function deckRoutes(app: FastifyInstance, { db }: { db: Db }) {
     // Ordering. Ties always fall back to id so pages never overlap or skip.
     const dir = (f.data.order ?? DECK_SORT_DEFAULT_ORDER[f.data.sort]) === "desc" ? desc : asc;
     const stageRank = sql`(case ${userCards.state} when 'new' then 0 when 'learning' then 1 when 'relearning' then 2 else 3 end)`;
-    const promptWord = sql`lower((select min(e.lemma) from entries e where e.concept_id = ${userCards.conceptId} and e.language = ${userCards.fromLanguage}))`;
+    // Sorted by the word itself: "to run" goes under R.
+    const bareLemma = bareLemmaSql(sql.raw("e.lemma"), sql.raw("e.language"), sql.raw("e.part_of_speech"));
+    const promptWord = sql`lower((select min(${bareLemma}) from entries e where e.concept_id = ${userCards.conceptId} and e.language = ${userCards.fromLanguage}))`;
     const orderBy = {
       added: [dir(userCards.addedAt)],
       // Cards not studied yet have no real due date, so they go last either way.

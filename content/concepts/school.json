@@ -17,7 +17,7 @@
       "gloss": "count (verb)",
       "entries": {
         "en": [
-        {"lemma": "count", "pos": "verb", "details": {"past": "counted", "participle": "counted"}, "sentences": ["I count to ten."]}
+        {"lemma": "to count", "pos": "verb", "details": {"past": "counted", "participle": "counted"}, "sentences": ["I count to ten."]}
         ],
         "nl": [
         {"lemma": "tellen", "pos": "verb", "details": {"pastSingular": "telde", "pastPlural": "telden", "participle": "geteld", "auxiliary": "hebben"}, "sentences": ["Ik tel tot tien."]}
@@ -29,7 +29,7 @@
       "gloss": "calculate (verb)",
       "entries": {
         "en": [
-        {"lemma": "calculate", "pos": "verb", "details": {"past": "calculated", "participle": "calculated"}, "sentences": ["We calculate with numbers."]}
+        {"lemma": "to calculate", "pos": "verb", "details": {"past": "calculated", "participle": "calculated"}, "sentences": ["We calculate with numbers."]}
         ],
         "nl": [
         {"lemma": "rekenen", "pos": "verb", "details": {"pastSingular": "rekende", "pastPlural": "rekenden", "participle": "gerekend", "auxiliary": "hebben"}, "sentences": ["Wij rekenen met getallen."]}
@@ -53,7 +53,7 @@
       "gloss": "study (verb)",
       "entries": {
         "en": [
-        {"lemma": "study", "pos": "verb", "details": {"past": "studied", "participle": "studied"}, "sentences": ["I study law."]}
+        {"lemma": "to study", "pos": "verb", "details": {"past": "studied", "participle": "studied"}, "sentences": ["I study law."]}
         ],
         "nl": [
         {"lemma": "studeren", "pos": "verb", "details": {"pastSingular": "studeerde", "pastPlural": "studeerden", "participle": "gestudeerd", "auxiliary": "hebben"}, "sentences": ["Ik studeer rechten."]}
@@ -65,7 +65,7 @@
       "gloss": "memorize (verb)",
       "entries": {
         "en": [
-        {"lemma": "memorize", "pos": "verb", "details": {"past": "memorized", "participle": "memorized"}, "sentences": ["I memorize the words."]}
+        {"lemma": "to memorize", "pos": "verb", "details": {"past": "memorized", "participle": "memorized"}, "sentences": ["I memorize the words."]}
         ],
         "nl": [
         {"lemma": "onthouden", "pos": "verb", "details": {"pastSingular": "onthield", "pastPlural": "onthielden", "participle": "onthouden", "auxiliary": "hebben"}, "sentences": ["Ik onthoud de woorden."]}
@@ -125,7 +125,7 @@
       "gloss": "fail (an exam)",
       "entries": {
         "en": [
-        {"lemma": "fail (an exam)", "pos": "verb", "details": {"past": "failed", "participle": "failed"}, "sentences": ["I failed the exam."]}
+        {"lemma": "to fail (an exam)", "pos": "verb", "details": {"past": "failed", "participle": "failed"}, "sentences": ["I failed the exam."]}
         ],
         "nl": [
         {"lemma": "zakken", "pos": "verb", "details": {"pastSingular": "zakte", "pastPlural": "zakten", "participle": "gezakt", "auxiliary": "zijn"}, "sentences": ["Ik ben voor het examen gezakt."]}
@@ -161,10 +161,10 @@
       "gloss": "practice (verb)",
       "entries": {
         "en": [
-        {"lemma": "practice", "pos": "verb", "details": {"past": "practiced", "participle": "practiced"}, "sentences": ["I practice every day."]}
+        {"lemma": "to practice", "pos": "verb", "details": {"past": "practiced", "participle": "practiced"}, "sentences": ["I practice every day."]}
         ],
         "nl": [
-        {"lemma": "oefenen", "pos": "verb", "details": {"pastSingular": "oefende", "pastPlural": "oefenden", "participle": "geoefend", "auxiliary": "hebben"}, "sentences": ["Ik oefen elke dag."]}
+        {"lemma": "oefenen", "pos": "verb", "details": {"note": "om beter te worden", "pastSingular": "oefende", "pastPlural": "oefenden", "participle": "geoefend", "auxiliary": "hebben"}, "sentences": ["Ik oefen elke dag."]}
         ]
       }
     },
@@ -185,10 +185,10 @@
       "gloss": "succeed (pass)",
       "entries": {
         "en": [
-        {"lemma": "succeed (pass)", "pos": "verb", "details": {"past": "succeeded", "participle": "succeeded"}, "sentences": ["I succeeded."]}
+        {"lemma": "to succeed (pass)", "pos": "verb", "details": {"past": "succeeded", "participle": "succeeded"}, "sentences": ["I succeeded."]}
         ],
         "nl": [
-        {"lemma": "slagen", "pos": "verb", "details": {"pastSingular": "slaagde", "pastPlural": "slaagden", "participle": "geslaagd", "auxiliary": "zijn"}, "sentences": ["Ik ben geslaagd."]}
+        {"lemma": "slagen", "pos": "verb", "details": {"note": "voor een toets, of iets bereiken", "pastSingular": "slaagde", "pastPlural": "slaagden", "participle": "geslaagd", "auxiliary": "zijn"}, "sentences": ["Ik ben geslaagd."]}
         ]
       }
     },
@@ -353,7 +353,7 @@
       "gloss": "study (examine)",
       "entries": {
         "en": [
-        {"lemma": "study (examine)", "pos": "verb", "details": {"past": "studied", "participle": "studied"}, "sentences": ["We study the map."]}
+        {"lemma": "to study (examine)", "pos": "verb", "details": {"past": "studied", "participle": "studied"}, "sentences": ["We study the map."]}
         ],
         "nl": [
         {"lemma": "bestuderen", "pos": "verb", "details": {"pastSingular": "bestudeerde", "pastPlural": "bestudeerden", "participle": "bestudeerd", "auxiliary": "hebben"}, "sentences": ["Wij bestuderen de kaart."]}
@@ -365,7 +365,7 @@
       "gloss": "translate (verb)",
       "entries": {
         "en": [
-        {"lemma": "translate", "pos": "verb", "details": {"past": "translated", "participle": "translated"}, "sentences": ["I translate the text."]}
+        {"lemma": "to translate", "pos": "verb", "details": {"past": "translated", "participle": "translated"}, "sentences": ["I translate the text."]}
         ],
         "nl": [
         {"lemma": "vertalen", "pos": "verb", "details": {"pastSingular": "vertaalde", "pastPlural": "vertaalden", "participle": "vertaald", "auxiliary": "hebben"}, "sentences": ["Ik vertaal de tekst."]}
@@ -461,7 +461,7 @@
       "gloss": "write down (verb)",
       "entries": {
         "en": [
-        {"lemma": "write down", "pos": "verb", "details": {"past": "wrote down", "participle": "written down"}, "sentences": ["I write down the address."]}
+        {"lemma": "to write down", "pos": "verb", "details": {"past": "wrote down", "participle": "written down"}, "sentences": ["I write down the address."]}
         ],
         "nl": [
         {"lemma": "opschrijven", "pos": "verb", "details": {"pastSingular": "schreef op", "pastPlural": "schreven op", "participle": "opgeschreven", "auxiliary": "hebben"}, "sentences": ["Ik schrijf het adres op."]}
@@ -473,7 +473,7 @@
       "gloss": "read aloud (verb)",
       "entries": {
         "en": [
-        {"lemma": "read aloud", "pos": "verb", "details": {"past": "read aloud", "participle": "read aloud"}, "sentences": ["I read a story aloud."]}
+        {"lemma": "to read aloud", "pos": "verb", "details": {"past": "read aloud", "participle": "read aloud"}, "sentences": ["I read a story aloud."]}
         ],
         "nl": [
         {"lemma": "voorlezen", "pos": "verb", "details": {"pastSingular": "las voor", "pastPlural": "lazen voor", "participle": "voorgelezen", "auxiliary": "hebben"}, "sentences": ["Ik lees een verhaal voor."]}
@@ -512,7 +512,7 @@
         {"lemma": "number (mathematical)", "pos": "noun", "details": {"plural": "numbers"}, "sentences": ["Seven is a number."]}
         ],
         "nl": [
-        {"lemma": "getal", "pos": "noun", "details": {"article": "het", "plural": "getallen"}, "sentences": ["Zeven is een getal."]}
+        {"lemma": "getal", "pos": "noun", "details": {"note": "in de wiskunde", "article": "het", "plural": "getallen"}, "sentences": ["Zeven is een getal."]}
         ]
       }
     },
@@ -521,7 +521,7 @@
       "gloss": "note (write down)",
       "entries": {
         "en": [
-        {"lemma": "note (write down)", "pos": "verb", "details": {"past": "noted", "participle": "noted"}, "sentences": ["I note the date."]}
+        {"lemma": "to note (write down)", "pos": "verb", "details": {"past": "noted", "participle": "noted"}, "sentences": ["I note the date."]}
         ],
         "nl": [
         {"lemma": "noteren", "pos": "verb", "details": {"pastSingular": "noteerde", "pastPlural": "noteerden", "participle": "genoteerd", "auxiliary": "hebben"}, "sentences": ["Ik noteer de datum."]}
@@ -536,7 +536,7 @@
         {"lemma": "letter (of the alphabet)", "pos": "noun", "details": {"plural": "letters"}, "sentences": ["This is a big letter."]}
         ],
         "nl": [
-        {"lemma": "letter", "pos": "noun", "details": {"article": "de", "plural": "letters"}, "sentences": ["Dit is een grote letter."]}
+        {"lemma": "letter", "pos": "noun", "details": {"note": "van het alfabet", "article": "de", "plural": "letters"}, "sentences": ["Dit is een grote letter."]}
         ]
       }
     },
@@ -593,7 +593,7 @@
       "gloss": "graduate (verb)",
       "entries": {
         "en": [
-        {"lemma": "graduate", "pos": "verb", "details": {"past": "graduated", "participle": "graduated"}, "sentences": ["She graduates in June."]}
+        {"lemma": "to graduate", "pos": "verb", "details": {"past": "graduated", "participle": "graduated"}, "sentences": ["She graduates in June."]}
         ],
         "nl": [
         {"lemma": "afstuderen", "pos": "verb", "details": {"pastSingular": "studeerde af", "pastPlural": "studeerden af", "participle": "afgestudeerd", "auxiliary": "zijn"}, "sentences": ["Zij studeert in juni af."]}
@@ -629,7 +629,7 @@
       "gloss": "cross out (verb)",
       "entries": {
         "en": [
-        {"lemma": "cross out", "pos": "verb", "details": {"past": "crossed out", "participle": "crossed out"}, "sentences": ["I cross out the word."]}
+        {"lemma": "to cross out", "pos": "verb", "details": {"past": "crossed out", "participle": "crossed out"}, "sentences": ["I cross out the word."]}
         ],
         "nl": [
         {"lemma": "schrappen", "pos": "verb", "details": {"pastSingular": "schrapte", "pastPlural": "schrapten", "participle": "geschrapt", "auxiliary": "hebben"}, "sentences": ["Ik schrap het woord."]}
@@ -656,7 +656,7 @@
         {"lemma": "scale", "pos": "noun", "details": {"plural": "scales"}, "sentences": ["The scale is one to ten."]}
         ],
         "nl": [
-        {"lemma": "schaal", "pos": "noun", "details": {"article": "de", "plural": "schalen"}, "sentences": ["De schaal is een tot tien."]}
+        {"lemma": "schaal", "pos": "noun", "details": {"note": "om te meten, of op een kaart", "article": "de", "plural": "schalen"}, "sentences": ["De schaal is een tot tien."]}
         ]
       }
     },
@@ -665,7 +665,7 @@
       "gloss": "measure (verb)",
       "entries": {
         "en": [
-        {"lemma": "measure", "pos": "verb", "details": {"past": "measured", "participle": "measured"}, "sentences": ["I measure the table."]}
+        {"lemma": "to measure", "pos": "verb", "details": {"past": "measured", "participle": "measured"}, "sentences": ["I measure the table."]}
         ],
         "nl": [
         {"lemma": "meten", "pos": "verb", "details": {"pastSingular": "mat", "pastPlural": "maten", "participle": "gemeten", "auxiliary": "hebben"}, "sentences": ["Ik meet de tafel."]}
@@ -809,7 +809,7 @@
       "gloss": "analyze (verb)",
       "entries": {
         "en": [
-        {"lemma": "analyze", "pos": "verb", "details": {"past": "analyzed", "participle": "analyzed"}, "sentences": ["We analyze the text."]}
+        {"lemma": "to analyze", "pos": "verb", "details": {"past": "analyzed", "participle": "analyzed"}, "sentences": ["We analyze the text."]}
         ],
         "nl": [
         {"lemma": "analyseren", "pos": "verb", "details": {"pastSingular": "analyseerde", "pastPlural": "analyseerden", "participle": "geanalyseerd", "auxiliary": "hebben"}, "sentences": ["Wij analyseren de tekst."]}
@@ -845,7 +845,7 @@
       "gloss": "fill in (verb)",
       "entries": {
         "en": [
-        {"lemma": "fill in", "pos": "verb", "details": {"past": "filled in", "participle": "filled in"}, "sentences": ["I fill in the form."]}
+        {"lemma": "to fill in", "pos": "verb", "details": {"past": "filled in", "participle": "filled in"}, "sentences": ["I fill in the form."]}
         ],
         "nl": [
         {"lemma": "invullen", "pos": "verb", "details": {"pastSingular": "vulde in", "pastPlural": "vulden in", "participle": "ingevuld", "auxiliary": "hebben"}, "sentences": ["Ik vul het formulier in."]}
@@ -881,7 +881,7 @@
       "gloss": "spell (verb)",
       "entries": {
         "en": [
-        {"lemma": "spell", "pos": "verb", "details": {"past": "spelled", "participle": "spelled"}, "sentences": ["I spell the word."]}
+        {"lemma": "to spell", "pos": "verb", "details": {"past": "spelled", "participle": "spelled"}, "sentences": ["I spell the word."]}
         ],
         "nl": [
         {"lemma": "spellen", "pos": "verb", "details": {"pastSingular": "spelde", "pastPlural": "spelden", "participle": "gespeld", "auxiliary": "hebben"}, "sentences": ["Ik spel het woord."]}
@@ -917,7 +917,7 @@
       "gloss": "go over (verb)",
       "entries": {
         "en": [
-        {"lemma": "go over", "pos": "verb", "details": {"past": "went over", "participle": "gone over"}, "sentences": ["We go over the text."]}
+        {"lemma": "to go over", "pos": "verb", "details": {"past": "went over", "participle": "gone over"}, "sentences": ["We go over the text."]}
         ],
         "nl": [
         {"lemma": "doornemen", "pos": "verb", "details": {"pastSingular": "nam door", "pastPlural": "namen door", "participle": "doorgenomen", "auxiliary": "hebben"}, "sentences": ["Wij nemen de tekst door."]}
@@ -929,7 +929,7 @@
       "gloss": "enroll (verb)",
       "entries": {
         "en": [
-        {"lemma": "enroll", "pos": "verb", "details": {"past": "enrolled", "participle": "enrolled"}, "sentences": ["I enroll in the course."]}
+        {"lemma": "to enroll", "pos": "verb", "details": {"past": "enrolled", "participle": "enrolled"}, "sentences": ["I enroll in the course."]}
         ],
         "nl": [
         {"lemma": "inschrijven", "pos": "verb", "details": {"pastSingular": "schreef in", "pastPlural": "schreven in", "participle": "ingeschreven", "auxiliary": "hebben"}, "sentences": ["Ik schrijf me in voor de cursus."]}
@@ -1025,7 +1025,7 @@
       "gloss": "compute (verb)",
       "entries": {
         "en": [
-        {"lemma": "compute", "pos": "verb", "details": {"past": "computed", "participle": "computed"}, "sentences": ["I compute the price."]}
+        {"lemma": "to compute", "pos": "verb", "details": {"past": "computed", "participle": "computed"}, "sentences": ["I compute the price."]}
         ],
         "nl": [
         {"lemma": "berekenen", "pos": "verb", "details": {"pastSingular": "berekende", "pastPlural": "berekenden", "participle": "berekend", "auxiliary": "hebben"}, "sentences": ["Ik bereken de prijs."]}
@@ -1037,7 +1037,7 @@
       "gloss": "teach (verb)",
       "entries": {
         "en": [
-        {"lemma": "teach", "pos": "verb", "details": {"past": "taught", "participle": "taught"}, "sentences": ["I teach Dutch."]}
+        {"lemma": "to teach", "pos": "verb", "details": {"past": "taught", "participle": "taught"}, "sentences": ["I teach Dutch."]}
         ],
         "nl": [
         {"lemma": "lesgeven", "pos": "verb", "details": {"pastSingular": "gaf les", "pastPlural": "gaven les", "participle": "lesgegeven", "auxiliary": "hebben"}, "sentences": ["Ik geef les in Nederlands."]}
@@ -1217,7 +1217,7 @@
       "gloss": "experiment (verb)",
       "entries": {
         "en": [
-        {"lemma": "experiment", "pos": "verb", "details": {"past": "experimented", "participle": "experimented"}, "sentences": ["We experiment with colors."]}
+        {"lemma": "to experiment", "pos": "verb", "details": {"past": "experimented", "participle": "experimented"}, "sentences": ["We experiment with colors."]}
         ],
         "nl": [
         {"lemma": "experimenteren", "pos": "verb", "details": {"pastSingular": "experimenteerde", "pastPlural": "experimenteerden", "participle": "geëxperimenteerd", "auxiliary": "hebben"}, "sentences": ["Wij experimenteren met kleuren."]}
@@ -1229,7 +1229,7 @@
       "gloss": "subtract (verb)",
       "entries": {
         "en": [
-        {"lemma": "subtract", "pos": "verb", "details": {"past": "subtracted", "participle": "subtracted"}, "sentences": ["I subtract two from five."]}
+        {"lemma": "to subtract", "pos": "verb", "details": {"past": "subtracted", "participle": "subtracted"}, "sentences": ["I subtract two from five."]}
         ],
         "nl": [
         {"lemma": "aftrekken", "pos": "verb", "details": {"pastSingular": "trok af", "pastPlural": "trokken af", "participle": "afgetrokken", "auxiliary": "hebben"}, "sentences": ["Ik trek twee van vijf af."]}
@@ -1253,7 +1253,7 @@
       "gloss": "hand in (verb)",
       "entries": {
         "en": [
-        {"lemma": "hand in", "pos": "verb", "details": {"past": "handed in", "participle": "handed in"}, "sentences": ["I hand in my homework."]}
+        {"lemma": "to hand in", "pos": "verb", "details": {"past": "handed in", "participle": "handed in"}, "sentences": ["I hand in my homework."]}
         ],
         "nl": [
         {"lemma": "inleveren", "pos": "verb", "details": {"pastSingular": "leverde in", "pastPlural": "leverden in", "participle": "ingeleverd", "auxiliary": "hebben"}, "sentences": ["Ik lever mijn huiswerk in."]}
@@ -1361,7 +1361,7 @@
       "gloss": "neglect (verb)",
       "entries": {
         "en": [
-        {"lemma": "neglect", "pos": "verb", "details": {"past": "neglected", "participle": "neglected"}, "sentences": ["Do not neglect your homework."]}
+        {"lemma": "to neglect", "pos": "verb", "details": {"past": "neglected", "participle": "neglected"}, "sentences": ["Do not neglect your homework."]}
         ],
         "nl": [
         {"lemma": "verwaarlozen", "pos": "verb", "details": {"pastSingular": "verwaarloosde", "pastPlural": "verwaarloosden", "participle": "verwaarloosd", "auxiliary": "hebben"}, "sentences": ["Verwaarloos je huiswerk niet."]}
@@ -1373,7 +1373,7 @@
       "gloss": "clone (verb)",
       "entries": {
         "en": [
-        {"lemma": "clone", "pos": "verb", "details": {"past": "cloned", "participle": "cloned"}, "sentences": ["They clone the sheep."]}
+        {"lemma": "to clone", "pos": "verb", "details": {"past": "cloned", "participle": "cloned"}, "sentences": ["They clone the sheep."]}
         ],
         "nl": [
         {"lemma": "klonen", "pos": "verb", "details": {"pastSingular": "kloonde", "pastPlural": "kloonden", "participle": "gekloond", "auxiliary": "hebben"}, "sentences": ["Zij klonen het schaap."]}
@@ -1517,7 +1517,7 @@
       "gloss": "rewrite (verb)",
       "entries": {
         "en": [
-        {"lemma": "rewrite", "pos": "verb", "details": {"past": "rewrote", "participle": "rewritten"}, "sentences": ["I rewrite the text."]}
+        {"lemma": "to rewrite", "pos": "verb", "details": {"past": "rewrote", "participle": "rewritten"}, "sentences": ["I rewrite the text."]}
         ],
         "nl": [
         {"lemma": "herschrijven", "pos": "verb", "details": {"pastSingular": "herschreef", "pastPlural": "herschreven", "participle": "herschreven", "auxiliary": "hebben"}, "sentences": ["Ik herschrijf de tekst."]}
@@ -1685,7 +1685,7 @@
       "gloss": "revise (verb)",
       "entries": {
         "en": [
-        {"lemma": "revise", "pos": "verb", "details": {"past": "revised", "participle": "revised"}, "sentences": ["I revise the text."]}
+        {"lemma": "to revise", "pos": "verb", "details": {"past": "revised", "participle": "revised"}, "sentences": ["I revise the text."]}
         ],
         "nl": [
         {"lemma": "herzien", "pos": "verb", "details": {"pastSingular": "herzag", "pastPlural": "herzagen", "participle": "herzien", "auxiliary": "hebben"}, "sentences": ["Ik herzie de tekst."]}
@@ -1781,7 +1781,7 @@
       "gloss": "multiply (verb)",
       "entries": {
         "en": [
-        {"lemma": "multiply", "pos": "verb", "details": {"past": "multiplied", "participle": "multiplied"}, "sentences": ["I multiply two by three."]}
+        {"lemma": "to multiply", "pos": "verb", "details": {"past": "multiplied", "participle": "multiplied"}, "sentences": ["I multiply two by three."]}
         ],
         "nl": [
         {"lemma": "vermenigvuldigen", "pos": "verb", "details": {"pastSingular": "vermenigvuldigde", "pastPlural": "vermenigvuldigden", "participle": "vermenigvuldigd", "auxiliary": "hebben"}, "sentences": ["Ik vermenigvuldig twee met drie."]}

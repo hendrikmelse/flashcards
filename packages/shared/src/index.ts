@@ -129,6 +129,13 @@ export const submitReviewSchema = z.object({
 });
 export type SubmitReviewInput = z.infer<typeof submitReviewSchema>;
 
+/** Undoes an answer: the `clientReviewId` it was sent with. */
+export const undoReviewSchema = z.object({ clientReviewId: z.string().uuid() });
+export type UndoReviewInput = z.infer<typeof undoReviewSchema>;
+
+/** How long after an answer it can still be undone, by the server's clock. The study screen offers it for much less. */
+export const UNDO_WINDOW_MS = 60_000;
+
 /** Whether `tz` is an IANA time zone name this runtime knows ("Europe/Amsterdam"). */
 export function isValidTimeZone(tz: string): boolean {
   try {
@@ -374,6 +381,12 @@ export type EntryView = {
 
 export const studyQuerySchema = z.object({
   limit: z.coerce.number().int().min(1).max(100).default(20),
+  /**
+   * Study as of this moment: only cards due by then are offered. A session sends the `now` of its
+   * first batch with every later request, so cards that come due while it runs wait for the next
+   * session, and the number of cards left can only go down. Later than the server's clock counts as now.
+   */
+  asOf: z.coerce.date().optional(),
 });
 
 // Response shapes of the API (dates arrive as ISO strings over JSON).
@@ -446,6 +459,12 @@ export type StudyResponse = {
    * these into today's session.
    */
   moreNew: number;
+  /**
+   * Every card this session offers (due as of the request, plus the new cards today's limit allows),
+   * not only the ones in `cards`, which are capped by `limit`. A session that sends `asOf` is told,
+   * each time, how many of its cards it has not answered yet.
+   */
+  total: number;
 };
 
 export type DirectionSummary = {

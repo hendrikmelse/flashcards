@@ -20,8 +20,8 @@
         {"lemma": "you", "pos": "pronoun", "sentences": ["Are you hungry?", "Do you have time?"]}
         ],
         "nl": [
-        {"lemma": "jij", "pos": "pronoun", "sentences": ["Heb jij honger?"]},
-        {"lemma": "je", "pos": "pronoun", "sentences": ["Heb je tijd?"]}
+        {"lemma": "jij", "pos": "pronoun", "details": {"note": "nadruk"}, "sentences": ["Heb jij honger?"]},
+        {"lemma": "je", "pos": "pronoun", "details": {"note": "gewoon, als onderwerp"}, "sentences": ["Heb je tijd?"]}
         ]
       }
     },
@@ -45,8 +45,8 @@
         {"lemma": "she", "pos": "pronoun", "sentences": ["She is my sister."]}
         ],
         "nl": [
-        {"lemma": "zij", "pos": "pronoun", "sentences": ["Zij is mijn zus."]},
-        {"lemma": "ze", "pos": "pronoun", "sentences": ["Ze is mijn zus."]}
+        {"lemma": "zij", "pos": "pronoun", "details": {"note": "nadruk, enkelvoud onderwerp"}, "sentences": ["Zij is mijn zus."]},
+        {"lemma": "ze", "pos": "pronoun", "details": {"note": "gewoon, enkelvoud onderwerp"}, "sentences": ["Ze is mijn zus."]}
         ]
       }
     },
@@ -58,8 +58,8 @@
         {"lemma": "we", "pos": "pronoun", "sentences": ["We are friends."]}
         ],
         "nl": [
-        {"lemma": "wij", "pos": "pronoun", "sentences": ["Wij zijn vrienden."]},
-        {"lemma": "we", "pos": "pronoun", "sentences": ["We zijn vrienden."]}
+        {"lemma": "wij", "pos": "pronoun", "details": {"note": "nadruk"}, "sentences": ["Wij zijn vrienden."]},
+        {"lemma": "we", "pos": "pronoun", "details": {"note": "gewoon"}, "sentences": ["We zijn vrienden."]}
         ]
       }
     },

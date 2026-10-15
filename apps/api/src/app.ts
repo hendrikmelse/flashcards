@@ -39,8 +39,6 @@ export interface AppOptions {
   mailer?: Mailer;
   /** The address the app is reached at, which the links in emails start with. */
   publicUrl?: string;
-  /** Where to send an email for every problem report that comes in. Without it, none is sent. */
-  reportNotifyEmail?: string | undefined;
   /**
    * How many sign-up, login, password-checking, and problem-report requests one client may make a
    * minute. Tests that create many accounts raise it.
@@ -64,7 +62,6 @@ export async function buildApp({
   registration = OPEN_REGISTRATION,
   mailer = createMemoryMailer(),
   publicUrl = "http://localhost:5173",
-  reportNotifyEmail,
   authRateLimit = 10,
   publicRateLimit = 120,
 }: AppOptions) {
@@ -82,11 +79,7 @@ export async function buildApp({
       await api.register(healthRoutes, { db });
       await api.register(authRoutes, { db, registration, rateLimitMax: authRateLimit, mail });
       await api.register(packRoutes, { db, searchRateLimit: publicRateLimit, readRateLimit: publicRateLimit * 2 });
-      await api.register(reportRoutes, {
-        db,
-        rateLimitMax: authRateLimit,
-        notify: reportNotifyEmail ? { mailer, to: reportNotifyEmail, publicUrl } : undefined,
-      });
+      await api.register(reportRoutes, { db, rateLimitMax: authRateLimit });
       await api.register(adminReportRoutes, { db });
       await api.register(adminStatsRoutes, { db });
       await api.register(deckRoutes, { db });

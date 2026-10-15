@@ -116,7 +116,7 @@
         {"lemma": "fire", "pos": "noun", "details": {"plural": "fires"}, "sentences": ["The fire is hot."]}
         ],
         "nl": [
-        {"lemma": "vuur", "pos": "noun", "details": {"article": "het", "plural": "vuren"}, "sentences": ["Het vuur is heet."]}
+        {"lemma": "vuur", "pos": "noun", "details": {"note": "vlammen", "article": "het", "plural": "vuren"}, "sentences": ["Het vuur is heet."]}
         ]
       }
     },
@@ -128,7 +128,7 @@
         {"lemma": "sky", "pos": "noun", "details": {"plural": "skies"}, "sentences": ["The sky is blue."]}
         ],
         "nl": [
-        {"lemma": "lucht", "pos": "noun", "details": {"article": "de", "plural": "luchten"}, "sentences": ["De lucht is blauw."]}
+        {"lemma": "lucht", "pos": "noun", "details": {"note": "boven je, met wolken", "article": "de", "plural": "luchten"}, "sentences": ["De lucht is blauw."]}
         ]
       }
     },
@@ -140,7 +140,7 @@
         {"lemma": "air (what we breathe)", "pos": "noun", "details": {"uncountable": true}, "sentences": ["I need fresh air."]}
         ],
         "nl": [
-        {"lemma": "lucht", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Ik heb frisse lucht nodig."]}
+        {"lemma": "lucht", "pos": "noun", "details": {"note": "om te ademen", "article": "de", "uncountable": true}, "sentences": ["Ik heb frisse lucht nodig."]}
         ]
       }
     },
@@ -221,7 +221,7 @@
       "gloss": "shine (verb)",
       "entries": {
         "en": [
-        {"lemma": "shine", "pos": "verb", "details": {"past": "shone", "participle": "shone"}, "sentences": ["The sun shines."]}
+        {"lemma": "to shine", "pos": "verb", "details": {"past": "shone", "participle": "shone"}, "sentences": ["The sun shines."]}
         ],
         "nl": [
         {"lemma": "schijnen", "pos": "verb", "details": {"pastSingular": "scheen", "pastPlural": "schenen", "participle": "geschenen", "auxiliary": "hebben"}, "sentences": ["De zon schijnt."]}
@@ -245,10 +245,10 @@
       "gloss": "burn (be on fire)",
       "entries": {
         "en": [
-        {"lemma": "burn (be on fire)", "pos": "verb", "details": {"past": "burned", "participle": "burned"}, "sentences": ["The house is burning."]}
+        {"lemma": "to burn (be on fire)", "pos": "verb", "details": {"past": "burned", "participle": "burned"}, "sentences": ["The house is burning."]}
         ],
         "nl": [
-        {"lemma": "branden", "pos": "verb", "details": {"pastSingular": "brandde", "pastPlural": "brandden", "participle": "gebrand", "auxiliary": "hebben"}, "sentences": ["Het huis brandt."]}
+        {"lemma": "branden", "pos": "verb", "details": {"note": "van een vuur of een lamp", "pastSingular": "brandde", "pastPlural": "brandden", "participle": "gebrand", "auxiliary": "hebben"}, "sentences": ["Het huis brandt."]}
         ]
       }
     },
@@ -305,7 +305,7 @@
       "gloss": "float (verb)",
       "entries": {
         "en": [
-        {"lemma": "float", "pos": "verb", "details": {"past": "floated", "participle": "floated"}, "sentences": ["The wood floats."]}
+        {"lemma": "to float", "pos": "verb", "details": {"past": "floated", "participle": "floated"}, "sentences": ["The wood floats."]}
         ],
         "nl": [
         {"lemma": "drijven", "pos": "verb", "details": {"pastSingular": "dreef", "pastPlural": "dreven", "participle": "gedreven", "auxiliary": "hebben"}, "sentences": ["Het hout drijft."]}
@@ -473,7 +473,7 @@
       "gloss": "rain (verb)",
       "entries": {
         "en": [
-        {"lemma": "rain", "pos": "verb", "details": {"past": "rained", "participle": "rained"}, "sentences": ["It rains."]}
+        {"lemma": "to rain", "pos": "verb", "details": {"past": "rained", "participle": "rained"}, "sentences": ["It rains."]}
         ],
         "nl": [
         {"lemma": "regenen", "pos": "verb", "details": {"pastSingular": "regende", "pastPlural": "regenden", "participle": "geregend", "auxiliary": "hebben"}, "sentences": ["Het regent."]}
@@ -677,7 +677,7 @@
       "gloss": "graze (verb)",
       "entries": {
         "en": [
-        {"lemma": "graze", "pos": "verb", "details": {"past": "grazed", "participle": "grazed"}, "sentences": ["The cows graze."]}
+        {"lemma": "to graze", "pos": "verb", "details": {"past": "grazed", "participle": "grazed"}, "sentences": ["The cows graze."]}
         ],
         "nl": [
         {"lemma": "grazen", "pos": "verb", "details": {"pastSingular": "graasde", "pastPlural": "graasden", "participle": "gegraasd", "auxiliary": "hebben"}, "sentences": ["De koeien grazen."]}
@@ -701,7 +701,7 @@
       "gloss": "freeze (verb)",
       "entries": {
         "en": [
-        {"lemma": "freeze", "pos": "verb", "details": {"past": "froze", "participle": "frozen"}, "sentences": ["The water freezes."]}
+        {"lemma": "to freeze", "pos": "verb", "details": {"past": "froze", "participle": "frozen"}, "sentences": ["The water freezes."]}
         ],
         "nl": [
         {"lemma": "bevriezen", "pos": "verb", "details": {"pastSingular": "bevroor", "pastPlural": "bevroren", "participle": "bevroren", "auxiliary": "zijn"}, "sentences": ["Het water bevriest."]}
@@ -761,7 +761,7 @@
       "gloss": "flow (verb)",
       "entries": {
         "en": [
-        {"lemma": "flow", "pos": "verb", "details": {"past": "flowed", "participle": "flowed"}, "sentences": ["The river flows."]}
+        {"lemma": "to flow", "pos": "verb", "details": {"past": "flowed", "participle": "flowed"}, "sentences": ["The river flows."]}
         ],
         "nl": [
         {"lemma": "stromen", "pos": "verb", "details": {"pastSingular": "stroomde", "pastPlural": "stroomden", "participle": "gestroomd", "auxiliary": "hebben/zijn"}, "sentences": ["De rivier stroomt."]}
@@ -785,7 +785,7 @@
       "gloss": "melt (verb)",
       "entries": {
         "en": [
-        {"lemma": "melt", "pos": "verb", "details": {"past": "melted", "participle": "melted"}, "sentences": ["The ice melts."]}
+        {"lemma": "to melt", "pos": "verb", "details": {"past": "melted", "participle": "melted"}, "sentences": ["The ice melts."]}
         ],
         "nl": [
         {"lemma": "smelten", "pos": "verb", "details": {"pastSingular": "smolt", "pastPlural": "smolten", "participle": "gesmolten", "auxiliary": "hebben/zijn"}, "sentences": ["Het ijs smelt."]}
@@ -857,7 +857,7 @@
       "gloss": "pick (flowers)",
       "entries": {
         "en": [
-        {"lemma": "pick (flowers)", "pos": "verb", "details": {"past": "picked", "participle": "picked"}, "sentences": ["I pick flowers."]}
+        {"lemma": "to pick (flowers)", "pos": "verb", "details": {"past": "picked", "participle": "picked"}, "sentences": ["I pick flowers."]}
         ],
         "nl": [
         {"lemma": "plukken", "pos": "verb", "details": {"pastSingular": "plukte", "pastPlural": "plukten", "participle": "geplukt", "auxiliary": "hebben"}, "sentences": ["Ik pluk bloemen."]}
@@ -908,7 +908,7 @@
         {"lemma": "root", "pos": "noun", "details": {"plural": "roots"}, "sentences": ["The tree has deep roots."]}
         ],
         "nl": [
-        {"lemma": "wortel", "pos": "noun", "details": {"article": "de", "plural": "wortels"}, "sentences": ["De boom heeft diepe wortels."]}
+        {"lemma": "wortel", "pos": "noun", "details": {"note": "van een plant of een tand", "article": "de", "plural": "wortels"}, "sentences": ["De boom heeft diepe wortels."]}
         ]
       }
     },
@@ -1073,7 +1073,7 @@
       "gloss": "radiate (verb)",
       "entries": {
         "en": [
-        {"lemma": "radiate", "pos": "verb", "details": {"past": "radiated", "participle": "radiated"}, "sentences": ["The sun radiates warmth."]}
+        {"lemma": "to radiate", "pos": "verb", "details": {"past": "radiated", "participle": "radiated"}, "sentences": ["The sun radiates warmth."]}
         ],
         "nl": [
         {"lemma": "stralen", "pos": "verb", "details": {"pastSingular": "straalde", "pastPlural": "straalden", "participle": "gestraald", "auxiliary": "hebben"}, "sentences": ["De zon straalt warmte uit."]}
@@ -1109,10 +1109,10 @@
       "gloss": "blow (of wind)",
       "entries": {
         "en": [
-        {"lemma": "blow (of wind)", "pos": "verb", "details": {"past": "blew", "participle": "blown"}, "sentences": ["The wind blows."]}
+        {"lemma": "to blow (of wind)", "pos": "verb", "details": {"past": "blew", "participle": "blown"}, "sentences": ["The wind blows."]}
         ],
         "nl": [
-        {"lemma": "waaien", "pos": "verb", "details": {"pastSingular": "waaide", "pastPlural": "waaiden", "participle": "gewaaid", "auxiliary": "hebben"}, "sentences": ["De wind waait."]}
+        {"lemma": "waaien", "pos": "verb", "details": {"note": "van wind", "pastSingular": "waaide", "pastPlural": "waaiden", "participle": "gewaaid", "auxiliary": "hebben"}, "sentences": ["De wind waait."]}
         ]
       }
     },
@@ -1169,7 +1169,7 @@
       "gloss": "take shelter (verb)",
       "entries": {
         "en": [
-        {"lemma": "take shelter", "pos": "verb", "details": {"past": "took shelter", "participle": "taken shelter"}, "sentences": ["We take shelter from the rain."]}
+        {"lemma": "to take shelter", "pos": "verb", "details": {"past": "took shelter", "participle": "taken shelter"}, "sentences": ["We take shelter from the rain."]}
         ],
         "nl": [
         {"lemma": "schuilen", "pos": "verb", "details": {"pastSingular": "school", "pastPlural": "scholen", "participle": "gescholen", "auxiliary": "hebben"}, "sentences": ["Wij schuilen voor de regen."]}
@@ -1217,7 +1217,7 @@
       "gloss": "sow (verb)",
       "entries": {
         "en": [
-        {"lemma": "sow", "pos": "verb", "details": {"past": "sowed", "participle": "sown"}, "sentences": ["The farmer sows seeds."]}
+        {"lemma": "to sow", "pos": "verb", "details": {"past": "sowed", "participle": "sown"}, "sentences": ["The farmer sows seeds."]}
         ],
         "nl": [
         {"lemma": "zaaien", "pos": "verb", "details": {"pastSingular": "zaaide", "pastPlural": "zaaiden", "participle": "gezaaid", "auxiliary": "hebben"}, "sentences": ["De boer zaait zaad."]}
@@ -1265,7 +1265,7 @@
       "gloss": "bloom (verb)",
       "entries": {
         "en": [
-        {"lemma": "bloom", "pos": "verb", "details": {"past": "bloomed", "participle": "bloomed"}, "sentences": ["The flowers bloom."]}
+        {"lemma": "to bloom", "pos": "verb", "details": {"past": "bloomed", "participle": "bloomed"}, "sentences": ["The flowers bloom."]}
         ],
         "nl": [
         {"lemma": "bloeien", "pos": "verb", "details": {"pastSingular": "bloeide", "pastPlural": "bloeiden", "participle": "gebloeid", "auxiliary": "hebben"}, "sentences": ["De bloemen bloeien."]}
@@ -1274,13 +1274,13 @@
     },
     {
       "key": "breed",
-      "gloss": "breed (verb)",
+      "gloss": "breed (plants)",
       "entries": {
         "en": [
-        {"lemma": "breed", "pos": "verb", "details": {"past": "breeded", "participle": "breeded"}, "sentences": ["He breeds roses."]}
+        {"lemma": "to breed (plants)", "pos": "verb", "details": {"past": "bred", "participle": "bred"}, "sentences": ["He breeds roses."]}
         ],
         "nl": [
-        {"lemma": "kweken", "pos": "verb", "details": {"pastSingular": "kweekte", "pastPlural": "kweekten", "participle": "gekweekt", "auxiliary": "hebben"}, "sentences": ["Hij kweekt rozen."]}
+        {"lemma": "kweken", "pos": "verb", "details": {"note": "planten", "pastSingular": "kweekte", "pastPlural": "kweekten", "participle": "gekweekt", "auxiliary": "hebben"}, "sentences": ["Hij kweekt rozen."]}
         ]
       }
     },
@@ -1313,7 +1313,7 @@
       "gloss": "snow (verb)",
       "entries": {
         "en": [
-        {"lemma": "snow", "pos": "verb", "details": {"past": "snowed", "participle": "snowed"}, "sentences": ["It snows."]}
+        {"lemma": "to snow", "pos": "verb", "details": {"past": "snowed", "participle": "snowed"}, "sentences": ["It snows."]}
         ],
         "nl": [
         {"lemma": "sneeuwen", "pos": "verb", "details": {"pastSingular": "sneeuwde", "pastPlural": "sneeuwden", "participle": "gesneeuwd", "auxiliary": "hebben"}, "sentences": ["Het sneeuwt."]}
@@ -1361,7 +1361,7 @@
       "gloss": "glow (verb)",
       "entries": {
         "en": [
-        {"lemma": "glow", "pos": "verb", "details": {"past": "glowed", "participle": "glowed"}, "sentences": ["The fire glows."]}
+        {"lemma": "to glow", "pos": "verb", "details": {"past": "glowed", "participle": "glowed"}, "sentences": ["The fire glows."]}
         ],
         "nl": [
         {"lemma": "gloeien", "pos": "verb", "details": {"pastSingular": "gloeide", "pastPlural": "gloeiden", "participle": "gegloeid", "auxiliary": "hebben"}, "sentences": ["Het vuur gloeit."]}
@@ -1553,7 +1553,7 @@
       "gloss": "harvest (verb)",
       "entries": {
         "en": [
-        {"lemma": "harvest", "pos": "verb", "details": {"past": "harvested", "participle": "harvested"}, "sentences": ["The farmer harvests the corn."]}
+        {"lemma": "to harvest", "pos": "verb", "details": {"past": "harvested", "participle": "harvested"}, "sentences": ["The farmer harvests the corn."]}
         ],
         "nl": [
         {"lemma": "oogsten", "pos": "verb", "details": {"pastSingular": "oogstte", "pastPlural": "oogstten", "participle": "geoogst", "auxiliary": "hebben"}, "sentences": ["De boer oogst het koren."]}
@@ -1613,7 +1613,7 @@
       "gloss": "mow (verb)",
       "entries": {
         "en": [
-        {"lemma": "mow", "pos": "verb", "details": {"past": "mowed", "participle": "mowed"}, "sentences": ["I mow the grass."]}
+        {"lemma": "to mow", "pos": "verb", "details": {"past": "mowed", "participle": "mowed"}, "sentences": ["I mow the grass."]}
         ],
         "nl": [
         {"lemma": "maaien", "pos": "verb", "details": {"pastSingular": "maaide", "pastPlural": "maaiden", "participle": "gemaaid", "auxiliary": "hebben"}, "sentences": ["Ik maai het gras."]}
@@ -1808,7 +1808,7 @@
         {"lemma": "mold", "pos": "noun", "details": {"plural": "molds"}, "sentences": ["There is mold on the bread."]}
         ],
         "nl": [
-        {"lemma": "schimmel", "pos": "noun", "details": {"article": "de", "plural": "schimmels"}, "sentences": ["Er zit schimmel op het brood."]}
+        {"lemma": "schimmel", "pos": "noun", "details": {"note": "op oud eten", "article": "de", "plural": "schimmels"}, "sentences": ["Er zit schimmel op het brood."]}
         ]
       }
     },
@@ -1865,7 +1865,7 @@
       "gloss": "swarm (verb)",
       "entries": {
         "en": [
-        {"lemma": "swarm", "pos": "verb", "details": {"past": "swarmed", "participle": "swarmed"}, "sentences": ["The street swarms with people."]}
+        {"lemma": "to swarm", "pos": "verb", "details": {"past": "swarmed", "participle": "swarmed"}, "sentences": ["The street swarms with people."]}
         ],
         "nl": [
         {"lemma": "wemelen", "pos": "verb", "details": {"pastSingular": "wemelde", "pastPlural": "wemelden", "participle": "gewemeld", "auxiliary": "hebben"}, "sentences": ["De straat wemelt van de mensen."]}
@@ -1877,7 +1877,7 @@
       "gloss": "sparkle (verb)",
       "entries": {
         "en": [
-        {"lemma": "sparkle", "pos": "verb", "details": {"past": "sparkled", "participle": "sparkled"}, "sentences": ["The stars sparkle."]}
+        {"lemma": "to sparkle", "pos": "verb", "details": {"past": "sparkled", "participle": "sparkled"}, "sentences": ["The stars sparkle."]}
         ],
         "nl": [
         {"lemma": "schitteren", "pos": "verb", "details": {"pastSingular": "schitterde", "pastPlural": "schitterden", "participle": "geschitterd", "auxiliary": "hebben"}, "sentences": ["De sterren schitteren."]}
@@ -1913,7 +1913,7 @@
       "gloss": "plant (verb)",
       "entries": {
         "en": [
-        {"lemma": "plant", "pos": "verb", "details": {"past": "planted", "participle": "planted"}, "sentences": ["I plant a tree."]}
+        {"lemma": "to plant", "pos": "verb", "details": {"past": "planted", "participle": "planted"}, "sentences": ["I plant a tree."]}
         ],
         "nl": [
         {"lemma": "planten", "pos": "verb", "details": {"pastSingular": "plantte", "pastPlural": "plantten", "participle": "geplant", "auxiliary": "hebben"}, "sentences": ["Ik plant een boom."]}
@@ -1925,7 +1925,7 @@
       "gloss": "pollute (verb)",
       "entries": {
         "en": [
-        {"lemma": "pollute", "pos": "verb", "details": {"past": "polluted", "participle": "polluted"}, "sentences": ["The factory pollutes the river."]}
+        {"lemma": "to pollute", "pos": "verb", "details": {"past": "polluted", "participle": "polluted"}, "sentences": ["The factory pollutes the river."]}
         ],
         "nl": [
         {"lemma": "vervuilen", "pos": "verb", "details": {"pastSingular": "vervuilde", "pastPlural": "vervuilden", "participle": "vervuild", "auxiliary": "hebben"}, "sentences": ["De fabriek vervuilt de rivier."]}
@@ -1949,7 +1949,7 @@
       "gloss": "flood (verb)",
       "entries": {
         "en": [
-        {"lemma": "flood", "pos": "verb", "details": {"past": "flooded", "participle": "flooded"}, "sentences": ["The water floods the street."]}
+        {"lemma": "to flood", "pos": "verb", "details": {"past": "flooded", "participle": "flooded"}, "sentences": ["The water floods the street."]}
         ],
         "nl": [
         {"lemma": "overspoelen", "pos": "verb", "details": {"pastSingular": "overspoelde", "pastPlural": "overspoelden", "participle": "overspoeld", "auxiliary": "hebben"}, "sentences": ["Het water overspoelt de straat."]}
@@ -2180,7 +2180,7 @@
         {"lemma": "bud", "pos": "noun", "details": {"plural": "buds"}, "sentences": ["The bud opens."]}
         ],
         "nl": [
-        {"lemma": "knop", "pos": "noun", "details": {"article": "de", "plural": "knoppen"}, "sentences": ["De knop gaat open."]}
+        {"lemma": "knop", "pos": "noun", "details": {"note": "aan een plant", "article": "de", "plural": "knoppen"}, "sentences": ["De knop gaat open."]}
         ]
       }
     },
@@ -2309,7 +2309,7 @@
       "gloss": "water (plants)",
       "entries": {
         "en": [
-        {"lemma": "water (plants)", "pos": "verb", "details": {"past": "watered", "participle": "watered"}, "sentences": ["I water the plants."]}
+        {"lemma": "to water (plants)", "pos": "verb", "details": {"past": "watered", "participle": "watered"}, "sentences": ["I water the plants."]}
         ],
         "nl": [
         {"lemma": "begieten", "pos": "verb", "details": {"pastSingular": "begoot", "pastPlural": "begoten", "participle": "begoten", "auxiliary": "hebben"}, "sentences": ["Ik heb de planten begoten."]}
@@ -2321,7 +2321,7 @@
       "gloss": "prune (verb)",
       "entries": {
         "en": [
-        {"lemma": "prune", "pos": "verb", "details": {"past": "pruned", "participle": "pruned"}, "sentences": ["I prune the roses."]}
+        {"lemma": "to prune", "pos": "verb", "details": {"past": "pruned", "participle": "pruned"}, "sentences": ["I prune the roses."]}
         ],
         "nl": [
         {"lemma": "snoeien", "pos": "verb", "details": {"pastSingular": "snoeide", "pastPlural": "snoeiden", "participle": "gesnoeid", "auxiliary": "hebben"}, "sentences": ["Ik snoei de rozen."]}
@@ -2333,7 +2333,7 @@
       "gloss": "weed (verb)",
       "entries": {
         "en": [
-        {"lemma": "weed", "pos": "verb", "details": {"past": "weeded", "participle": "weeded"}, "sentences": ["I weed the garden."]}
+        {"lemma": "to weed", "pos": "verb", "details": {"past": "weeded", "participle": "weeded"}, "sentences": ["I weed the garden."]}
         ],
         "nl": [
         {"lemma": "wieden", "pos": "verb", "details": {"pastSingular": "wiedde", "pastPlural": "wiedden", "participle": "gewied", "auxiliary": "hebben"}, "sentences": ["Ik wied de tuin."]}
@@ -2621,7 +2621,7 @@
       "gloss": "thunder (verb)",
       "entries": {
         "en": [
-        {"lemma": "thunder", "pos": "verb", "details": {"past": "thundered", "participle": "thundered"}, "sentences": ["It thunders."]}
+        {"lemma": "to thunder", "pos": "verb", "details": {"past": "thundered", "participle": "thundered"}, "sentences": ["It thunders."]}
         ],
         "nl": [
         {"lemma": "donderen", "pos": "verb", "details": {"pastSingular": "donderde", "pastPlural": "donderden", "participle": "gedonderd", "auxiliary": "hebben"}, "sentences": ["Het dondert."]}
@@ -2633,7 +2633,7 @@
       "gloss": "hail (verb)",
       "entries": {
         "en": [
-        {"lemma": "hail", "pos": "verb", "details": {"past": "hailed", "participle": "hailed"}, "sentences": ["It hails."]}
+        {"lemma": "to hail", "pos": "verb", "details": {"past": "hailed", "participle": "hailed"}, "sentences": ["It hails."]}
         ],
         "nl": [
         {"lemma": "hagelen", "pos": "verb", "details": {"pastSingular": "hagelde", "pastPlural": "hagelden", "participle": "gehageld", "auxiliary": "hebben"}, "sentences": ["Het hagelt."]}

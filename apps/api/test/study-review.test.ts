@@ -802,3 +802,93 @@ describe("the daily new-card limit", () => {
     expect(await newCount(c)).toBe(1);
   });
 });
+
+describe("a session's cards", () => {
+  const MIN = 60_000;
+  type Batch = { now: string; cards: Card[]; total: number; moreNew: number; counts: { learning: number; review: number; new: number } };
+  // Cards (three words, both ways) in the given states, each due that many minutes from now.
+  async function user(cards: { state: "review" | "learning" | "new"; dueInMin?: number }[], limit = 0) {
+    const me = await scratchUser();
+    await db.update(users).set({ dailyNewCardLimit: limit }).where(eq(users.id, me.id));
+    const cs = await db.select().from(concepts);
+    await db.insert(userCards).values(
+      cards.map((c, i) => ({
+        userId: me.id,
+        conceptId: cs[i % cs.length]!.id,
+        fromLanguage: i < cs.length ? "en" : "nl",
+        toLanguage: i < cs.length ? "nl" : "en",
+        state: c.state,
+        difficulty: c.state === "new" ? null : 5,
+        stability: c.state === "new" ? null : 5,
+        lastReviewedAt: c.state === "new" ? null : new Date(Date.now() - 3 * 86_400_000),
+        dueAt: new Date(Date.now() + (c.dueInMin ?? -30) * MIN),
+      })),
+    );
+    return me.cookies;
+  }
+  const batch = async (c: { session: string }, query = "limit=50") => (await get(`/study?${query}`, c)).json() as Batch;
+  const asOf = (d: Date | string) => `limit=50&asOf=${encodeURIComponent(new Date(d).toISOString())}`;
+
+  it("says how many cards it has in all, even when the batch holds fewer", async () => {
+    const c = await user(
+      [
+        { state: "review" }, { state: "review" }, { state: "review" },
+        { state: "learning" }, { state: "learning" }, { state: "new" },
+      ],
+      5,
+    );
+    const b = await batch(c, "limit=2");
+    expect(b.cards).toHaveLength(2);
+    expect(b.counts).toEqual({ learning: 2, review: 3, new: 1 });
+    expect(b.total).toBe(6);
+  });
+
+  it("leaves out cards that came due after the time it is asked as of", async () => {
+    // Due 30 and 5 minutes ago: a session that began 10 minutes ago has only the first.
+    const c = await user([{ state: "review", dueInMin: -30 }, { state: "learning", dueInMin: -5 }]);
+    expect((await batch(c)).total).toBe(2);
+    const early = await batch(c, asOf(new Date(Date.now() - 10 * MIN)));
+    expect(early.total).toBe(1);
+    expect(early.counts).toEqual({ learning: 0, review: 1, new: 0 });
+    expect(early.cards.map((x) => x.state)).toEqual(["review"]);
+  });
+
+  it("treats a time in the future as now, and refuses one that is not a time", async () => {
+    const c = await user([{ state: "review", dueInMin: -30 }, { state: "review", dueInMin: 5 }]);
+    expect((await batch(c, asOf(new Date(Date.now() + 60 * MIN)))).total).toBe(1);
+    expect((await get("/study?asOf=yesterday", c)).statusCode).toBe(400);
+  });
+
+  it("shrinks as cards are answered, whatever the answer, so a session's count only goes down", async () => {
+    const c = await user([
+      { state: "review" }, { state: "review" }, { state: "learning" }, { state: "learning" },
+    ]);
+    const start = await batch(c);
+    expect(start.total).toBe(4);
+    const pinned = () => batch(c, asOf(start.now));
+
+    const [a, b, d, e] = start.cards;
+    // Again on a learning card brings it back in a minute, which is after the session began.
+    expect((await review(a!.id, "again", {}, c)).statusCode).toBe(200);
+    expect((await pinned()).total).toBe(3);
+    expect((await review(b!.id, "good", {}, c)).statusCode).toBe(200);
+    expect((await pinned()).total).toBe(2);
+    expect((await review(d!.id, "hard", {}, c)).statusCode).toBe(200);
+    expect((await review(e!.id, "easy", {}, c)).statusCode).toBe(200);
+    const done = await pinned();
+    expect(done.total).toBe(0);
+    expect(done.cards).toEqual([]);
+    // Asked about now instead, the cards due again in the meantime are back.
+    expect((await get("/study/counts", c)).json().counts).toEqual({ learning: 0, review: 0, new: 0 });
+  });
+
+  it("does not shrink for a new card marked Good, as another new card takes its place", async () => {
+    const c = await user([{ state: "new" }, { state: "new" }, { state: "new" }], 1);
+    const start = await batch(c);
+    expect(start.total).toBe(1);
+    expect(start.moreNew).toBe(2);
+    expect((await review(start.cards[0]!.id, "good", {}, c)).statusCode).toBe(200);
+    // The known word did not use the limit, so one of the two waiting is offered in its place.
+    expect((await batch(c, asOf(start.now))).total).toBe(1);
+  });
+});

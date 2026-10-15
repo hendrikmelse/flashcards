@@ -31,60 +31,74 @@ export const resetPasswordMessage = (to: string, link: string): Email => ({
     footer("If you did not ask for this, ignore this email. Your password has not changed."),
 });
 
-/** Tells the owner a report came in: a word problem, a bug, or a feature suggestion. */
-export const newReportMessage = (
-  to: string,
-  r: {
-    id: string;
-    kind: "card" | "bug" | "suggestion" | "pack_request";
-    /** What it is about: "huis → house, home" for a word, the title for a bug or suggestion. */
-    subject: string;
-    /** For a word: what was wrong, and the direction. */
-    problem?: string;
-    direction?: string;
-    note: string;
-    reporter: string;
-    publicUrl: string;
-  },
-): Email => {
-  const what = {
-    card: "a problem with a word",
-    bug: "a bug",
-    suggestion: "a feature suggestion",
-    pack_request: "a pack they would like",
-  }[r.kind];
-  const label = {
-    card: "Problem report",
-    bug: "Bug report",
-    suggestion: "Feature suggestion",
-    pack_request: "Pack request",
-  }[r.kind];
-  const id = r.id.slice(0, 8);
-  return {
-    to,
-    subject: `${label}: ${r.subject}`,
-    text:
-      `${r.reporter} reported ${what}.\n\n` +
-      (r.kind === "card" ? `Word: ${r.subject} (${r.direction})\nProblem: ${r.problem}\n` : `Title: ${r.subject}\n`) +
-      (r.note ? `Details: ${r.note}\n` : "") +
-      `Report: ${id}\n\n` +
-      `Read open reports with the reports script (deploy/README.md, "Reading problem reports"), then ` +
-      `answer with: reports.js resolve ${id} -m "your reply". The reporter sees the reply at ` +
-      `${r.publicUrl}/reports.` +
-      footer("You get this email for every report because REPORT_NOTIFY_EMAIL is set."),
-  };
+export interface DigestReport {
+  id: string;
+  kind: "card" | "bug" | "suggestion" | "pack_request";
+  /** What it is about: "huis → house, home" for a word, the title for the others. */
+  subject: string;
+  /** For a word: what was wrong. */
+  problem?: string | undefined;
+  note: string;
+  /** The sender's email, or null once they have deleted their account. */
+  reporter: string | null;
+  createdAt: Date;
+  comments: { fromAdmin: boolean; body: string }[];
+}
+
+const DIGEST_SECTIONS = [
+  ["card", "Problems with words"],
+  ["bug", "Bugs"],
+  ["suggestion", "Feature suggestions"],
+  ["pack_request", "Pack requests"],
+] as const;
+
+const oneLine = (text: string, max: number) => {
+  const flat = text.replace(/\s+/g, " ").trim();
+  return flat.length > max ? `${flat.slice(0, max - 1)}…` : flat;
 };
 
-/** Tells the owner that someone added a comment to a report that is still open. */
-export const reportCommentMessage = (
+const daysOld = (since: Date, now: Date) => Math.max(0, Math.floor((now.getTime() - since.getTime()) / 86_400_000));
+
+/** Tells the owner, once a day, everything that is still open: what came in and what waits for a reply. */
+export const openFeedbackDigestMessage = (
   to: string,
-  r: { id: string; subject: string; body: string; reporter: string; publicUrl: string },
-): Email => ({
-  to,
-  subject: `New comment on report: ${r.subject}`,
-  text:
-    `${r.reporter} added a comment to an open report (${r.id.slice(0, 8)}, ${r.subject}):\n\n${r.body}\n\n` +
-    `Read it with the reports script (deploy/README.md, "Reading problem reports"), then answer with: ` +
-    `reports.js reply ${r.id.slice(0, 8)} "your reply". The reporter sees the reply at ${r.publicUrl}/reports.` +
-    footer("You get this email for every comment because REPORT_NOTIFY_EMAIL is set."),
-});
+  { reports, publicUrl, now }: { reports: DigestReport[]; publicUrl: string; now: Date },
+): Email => {
+  // Waiting for the owner: nothing said back yet, or the sender had the last word.
+  const waiting = (r: DigestReport) => !r.comments.at(-1)?.fromAdmin;
+  const unanswered = reports.filter(waiting).length;
+
+  const sections = DIGEST_SECTIONS.flatMap(([kind, heading]) => {
+    const items = reports.filter((r) => r.kind === kind).sort((a, b) => a.createdAt.getTime() - b.createdAt.getTime());
+    if (items.length === 0) return [];
+    const lines = items.map((r) => {
+      const age = daysOld(r.createdAt, now);
+      const meta = [
+        r.id.slice(0, 8),
+        age === 0 ? "today" : `${age} day${age === 1 ? "" : "s"} old`,
+        `from ${r.reporter ?? "a deleted account"}`,
+        waiting(r) ? "needs a reply" : "replied",
+      ].join(", ");
+      const latest = r.comments.filter((c) => !c.fromAdmin).at(-1);
+      return [
+        `- ${r.subject}${r.problem ? ` (${r.problem})` : ""}`,
+        `  ${meta}`,
+        ...(r.note ? [`  “${oneLine(r.note, 300)}”`] : []),
+        ...(latest ? [`  Latest comment: “${oneLine(latest.body, 200)}”`] : []),
+      ].join("\n");
+    });
+    return [`${heading} (${items.length})\n\n${lines.join("\n\n")}`];
+  });
+
+  const count = (n: number) => `${n} open report${n === 1 ? "" : "s"}`;
+  return {
+    to,
+    subject: `Open feedback: ${count(reports.length)}${unanswered > 0 ? `, ${unanswered} to answer` : ""}`,
+    text:
+      `${count(reports.length)}, ${unanswered} waiting for your reply.\n\n` +
+      sections.join("\n\n") +
+      `\n\nAnswer them in the Admin dashboard at ${publicUrl}/admin, or with the reports script ` +
+      `(deploy/README.md, "Reading problem reports").` +
+      footer("You get this email every morning at 7am Los Angeles time while any feedback is open, because REPORT_NOTIFY_EMAIL is set."),
+  };
+};
