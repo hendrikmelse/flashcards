@@ -266,20 +266,66 @@ input {
   padding: 1.5rem 1rem 3rem;
 }
 
-.page-footer {
-  position: absolute;
-  bottom: 1rem;
-  left: 0;
-  right: 0;
-  margin: 0;
+/* The line under the "ready to study" card saying what schedules the reviews. */
+.scheduling-note {
+  margin: -0.35rem 0 1rem;
   text-align: center;
-  font-size: 0.8rem;
-  color: color-mix(in srgb, var(--muted) 80%, var(--bg));
+  font-size: 0.85rem;
+  color: var(--muted);
 }
 
-.page-footer a {
+/* A page for anyone, signed in or not: no top bar around it. */
+.public-page {
+  max-width: 42rem;
+  margin: 0 auto;
+  padding: 2rem 1rem 4rem;
+}
+
+/* The foot of every page: a strip like the top bar, with its border on the other side. It sits at the
+   bottom of the window when the page is short (#root is a column that fills the window). */
+.sitefooter {
+  margin-top: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0 0.6rem;
+  padding: calc(0.3rem + 2px) 1rem calc(0.3rem + 3px);
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  font-size: 0.75rem;
+  line-height: 1.3;
+  /* As light as the text can go and still be readable: about 4.6 to 1 against the strip in the light
+     theme, a little more in the dark one. Lighter would fall below the 4.5 to 1 guideline. */
+  color: color-mix(in srgb, var(--muted) 88%, var(--surface));
+}
+
+/* On a phone the three wrap onto separate lines, where a dot between them would dangle. */
+@media (max-width: 32rem) {
+  .sitefooter {
+    column-gap: 1.25rem;
+  }
+
+  .sitefooter .sep {
+    display: none;
+  }
+}
+
+.sitefooter a {
   color: inherit;
+  /* The links stay underlined, so they are not told apart by color alone, but the line is faint. */
+  text-decoration-color: color-mix(in srgb, currentColor 40%, transparent);
   text-underline-offset: 0.15em;
+}
+
+.sitefooter a:hover,
+.sitefooter a:focus-visible {
+  text-decoration-color: currentColor;
+}
+
+/* The dots are decoration, so they can be much fainter than the words. */
+.sitefooter .sep {
+  opacity: 0.45;
 }
 
 /* Status messages */
