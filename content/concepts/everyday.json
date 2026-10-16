@@ -125,10 +125,10 @@
       "gloss": "job (paid position)",
       "entries": {
         "en": [
-        {"lemma": "job", "pos": "noun", "details": {"plural": "jobs"}, "sentences": ["He has a new job."]}
+        {"lemma": "job", "pos": "noun", "details": {"note": "work you are employed for", "plural": "jobs"}, "sentences": ["He has a new job."]}
         ],
         "nl": [
-        {"lemma": "baan", "pos": "noun", "details": {"note": "werk waarvoor je in dienst bent", "article": "de", "plural": "banen"}, "sentences": ["Hij heeft een nieuwe baan."]}
+        {"lemma": "baan", "pos": "noun", "details": {"article": "de", "plural": "banen"}, "sentences": ["Hij heeft een nieuwe baan."]}
         ]
       }
     },

@@ -797,7 +797,7 @@
       "gloss": "Italian (person)",
       "entries": {
         "en": [
-        {"lemma": "Italian (person)", "pos": "noun", "details": {"plural": "Italians"}, "sentences": ["The Italian cooks pasta."]}
+        {"lemma": "Italian", "pos": "noun", "details": {"note": "person", "plural": "Italians"}, "sentences": ["The Italian cooks pasta."]}
         ],
         "nl": [
         {"lemma": "Italiaan", "pos": "noun", "details": {"article": "de", "plural": "Italianen"}, "sentences": ["De Italiaan kookt pasta."]}
@@ -893,7 +893,7 @@
       "gloss": "Russian (person)",
       "entries": {
         "en": [
-        {"lemma": "Russian (person)", "pos": "noun", "details": {"plural": "Russians"}, "sentences": ["The Russian plays chess."]}
+        {"lemma": "Russian", "pos": "noun", "details": {"note": "person", "plural": "Russians"}, "sentences": ["The Russian plays chess."]}
         ],
         "nl": [
         {"lemma": "Rus", "pos": "noun", "details": {"article": "de", "plural": "Russen"}, "sentences": ["De Rus schaakt."]}
@@ -917,7 +917,7 @@
       "gloss": "Greek (person)",
       "entries": {
         "en": [
-        {"lemma": "Greek (person)", "pos": "noun", "details": {"plural": "Greeks"}, "sentences": ["The Greek lives on an island."]}
+        {"lemma": "Greek", "pos": "noun", "details": {"note": "person", "plural": "Greeks"}, "sentences": ["The Greek lives on an island."]}
         ],
         "nl": [
         {"lemma": "Griek", "pos": "noun", "details": {"article": "de", "plural": "Grieken"}, "sentences": ["De Griek woont op een eiland."]}
@@ -1001,7 +1001,7 @@
       "gloss": "Indian (person)",
       "entries": {
         "en": [
-        {"lemma": "Indian (person)", "pos": "noun", "details": {"plural": "Indians"}, "sentences": ["The Indian cooks curry."]}
+        {"lemma": "Indian", "pos": "noun", "details": {"note": "person", "plural": "Indians"}, "sentences": ["The Indian cooks curry."]}
         ],
         "nl": [
         {"lemma": "Indiër", "pos": "noun", "details": {"article": "de", "plural": "Indiërs"}, "sentences": ["De Indiër kookt curry."]}
@@ -1085,7 +1085,7 @@
       "gloss": "Dutch (language)",
       "entries": {
         "en": [
-        {"lemma": "Dutch (language)", "pos": "noun", "details": {"uncountable": true}, "sentences": ["I learn Dutch."]}
+        {"lemma": "Dutch", "pos": "noun", "details": {"note": "language", "uncountable": true}, "sentences": ["I learn Dutch."]}
         ],
         "nl": [
         {"lemma": "Nederlands", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["Ik leer Nederlands."]}
@@ -1097,7 +1097,7 @@
       "gloss": "English (language)",
       "entries": {
         "en": [
-        {"lemma": "English (language)", "pos": "noun", "details": {"uncountable": true}, "sentences": ["I speak English."]}
+        {"lemma": "English", "pos": "noun", "details": {"note": "language", "uncountable": true}, "sentences": ["I speak English."]}
         ],
         "nl": [
         {"lemma": "Engels", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["Ik spreek Engels."]}
@@ -1109,7 +1109,7 @@
       "gloss": "German (language)",
       "entries": {
         "en": [
-        {"lemma": "German (language)", "pos": "noun", "details": {"uncountable": true}, "sentences": ["She speaks German."]}
+        {"lemma": "German", "pos": "noun", "details": {"note": "language", "uncountable": true}, "sentences": ["She speaks German."]}
         ],
         "nl": [
         {"lemma": "Duits", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["Zij spreekt Duits."]}
@@ -1121,7 +1121,7 @@
       "gloss": "French (language)",
       "entries": {
         "en": [
-        {"lemma": "French (language)", "pos": "noun", "details": {"uncountable": true}, "sentences": ["He speaks French."]}
+        {"lemma": "French", "pos": "noun", "details": {"note": "language", "uncountable": true}, "sentences": ["He speaks French."]}
         ],
         "nl": [
         {"lemma": "Frans", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["Hij spreekt Frans."]}
@@ -1133,7 +1133,7 @@
       "gloss": "Spanish (language)",
       "entries": {
         "en": [
-        {"lemma": "Spanish (language)", "pos": "noun", "details": {"uncountable": true}, "sentences": ["We learn Spanish."]}
+        {"lemma": "Spanish", "pos": "noun", "details": {"note": "language", "uncountable": true}, "sentences": ["We learn Spanish."]}
         ],
         "nl": [
         {"lemma": "Spaans", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["Wij leren Spaans."]}
@@ -1145,7 +1145,7 @@
       "gloss": "Italian (language)",
       "entries": {
         "en": [
-        {"lemma": "Italian (language)", "pos": "noun", "details": {"uncountable": true}, "sentences": ["I like Italian."]}
+        {"lemma": "Italian", "pos": "noun", "details": {"note": "language", "uncountable": true}, "sentences": ["I like Italian."]}
         ],
         "nl": [
         {"lemma": "Italiaans", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["Ik hou van Italiaans."]}
@@ -1157,7 +1157,7 @@
       "gloss": "Portuguese (language)",
       "entries": {
         "en": [
-        {"lemma": "Portuguese (language)", "pos": "noun", "details": {"uncountable": true}, "sentences": ["He speaks Portuguese."]}
+        {"lemma": "Portuguese", "pos": "noun", "details": {"note": "language", "uncountable": true}, "sentences": ["He speaks Portuguese."]}
         ],
         "nl": [
         {"lemma": "Portugees", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["Hij spreekt Portugees."]}
@@ -1169,7 +1169,7 @@
       "gloss": "Russian (language)",
       "entries": {
         "en": [
-        {"lemma": "Russian (language)", "pos": "noun", "details": {"uncountable": true}, "sentences": ["She learns Russian."]}
+        {"lemma": "Russian", "pos": "noun", "details": {"note": "language", "uncountable": true}, "sentences": ["She learns Russian."]}
         ],
         "nl": [
         {"lemma": "Russisch", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["Zij leert Russisch."]}
@@ -1181,7 +1181,7 @@
       "gloss": "Chinese (language)",
       "entries": {
         "en": [
-        {"lemma": "Chinese (language)", "pos": "noun", "details": {"uncountable": true}, "sentences": ["Chinese is difficult."]}
+        {"lemma": "Chinese", "pos": "noun", "details": {"note": "language", "uncountable": true}, "sentences": ["Chinese is difficult."]}
         ],
         "nl": [
         {"lemma": "Chinees", "pos": "noun", "details": {"note": "de taal", "article": "het", "uncountable": true}, "sentences": ["Chinees is moeilijk."]}
@@ -1193,7 +1193,7 @@
       "gloss": "Japanese (language)",
       "entries": {
         "en": [
-        {"lemma": "Japanese (language)", "pos": "noun", "details": {"uncountable": true}, "sentences": ["I want to learn Japanese."]}
+        {"lemma": "Japanese", "pos": "noun", "details": {"note": "language", "uncountable": true}, "sentences": ["I want to learn Japanese."]}
         ],
         "nl": [
         {"lemma": "Japans", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["Ik wil Japans leren."]}
@@ -1205,7 +1205,7 @@
       "gloss": "Arabic (language)",
       "entries": {
         "en": [
-        {"lemma": "Arabic (language)", "pos": "noun", "details": {"uncountable": true}, "sentences": ["He speaks Arabic."]}
+        {"lemma": "Arabic", "pos": "noun", "details": {"note": "language", "uncountable": true}, "sentences": ["He speaks Arabic."]}
         ],
         "nl": [
         {"lemma": "Arabisch", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["Hij spreekt Arabisch."]}
@@ -1217,7 +1217,7 @@
       "gloss": "Turkish (language)",
       "entries": {
         "en": [
-        {"lemma": "Turkish (language)", "pos": "noun", "details": {"uncountable": true}, "sentences": ["They speak Turkish."]}
+        {"lemma": "Turkish", "pos": "noun", "details": {"note": "language", "uncountable": true}, "sentences": ["They speak Turkish."]}
         ],
         "nl": [
         {"lemma": "Turks", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["Zij spreken Turks."]}
@@ -1229,7 +1229,7 @@
       "gloss": "Polish (language)",
       "entries": {
         "en": [
-        {"lemma": "Polish (language)", "pos": "noun", "details": {"uncountable": true}, "sentences": ["She speaks Polish."]}
+        {"lemma": "Polish", "pos": "noun", "details": {"note": "language", "uncountable": true}, "sentences": ["She speaks Polish."]}
         ],
         "nl": [
         {"lemma": "Pools", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["Zij spreekt Pools."]}
@@ -1241,7 +1241,7 @@
       "gloss": "Swedish (language)",
       "entries": {
         "en": [
-        {"lemma": "Swedish (language)", "pos": "noun", "details": {"uncountable": true}, "sentences": ["He speaks Swedish."]}
+        {"lemma": "Swedish", "pos": "noun", "details": {"note": "language", "uncountable": true}, "sentences": ["He speaks Swedish."]}
         ],
         "nl": [
         {"lemma": "Zweeds", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["Hij spreekt Zweeds."]}
@@ -1253,7 +1253,7 @@
       "gloss": "Greek (language)",
       "entries": {
         "en": [
-        {"lemma": "Greek (language)", "pos": "noun", "details": {"uncountable": true}, "sentences": ["I study Greek."]}
+        {"lemma": "Greek", "pos": "noun", "details": {"note": "language", "uncountable": true}, "sentences": ["I study Greek."]}
         ],
         "nl": [
         {"lemma": "Grieks", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["Ik studeer Grieks."]}

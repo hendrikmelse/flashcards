@@ -53,10 +53,10 @@
       "gloss": "please (polite request)",
       "entries": {
         "en": [
-        {"lemma": "please", "pos": "interjection", "sentences": ["Water, please."]}
+        {"lemma": "please", "pos": "interjection", "details": {"note": "informal, to one person"}, "sentences": ["Water, please."]}
         ],
         "nl": [
-        {"lemma": "alsjeblieft", "pos": "interjection", "details": {"note": "informeel, tegen één persoon"}, "sentences": ["Water, alsjeblieft."]}
+        {"lemma": "alsjeblieft", "pos": "interjection", "sentences": ["Water, alsjeblieft."]}
         ]
       }
     },

@@ -125,7 +125,7 @@
       "gloss": "fail (an exam)",
       "entries": {
         "en": [
-        {"lemma": "to fail (an exam)", "pos": "verb", "details": {"past": "failed", "participle": "failed"}, "sentences": ["I failed the exam."]}
+        {"lemma": "to fail", "pos": "verb", "details": {"note": "an exam", "past": "failed", "participle": "failed"}, "sentences": ["I failed the exam."]}
         ],
         "nl": [
         {"lemma": "zakken", "pos": "verb", "details": {"pastSingular": "zakte", "pastPlural": "zakten", "participle": "gezakt", "auxiliary": "zijn"}, "sentences": ["Ik ben voor het examen gezakt."]}
@@ -161,10 +161,10 @@
       "gloss": "practice (verb)",
       "entries": {
         "en": [
-        {"lemma": "to practice", "pos": "verb", "details": {"past": "practiced", "participle": "practiced"}, "sentences": ["I practice every day."]}
+        {"lemma": "to practice", "pos": "verb", "details": {"note": "to get better", "past": "practiced", "participle": "practiced"}, "sentences": ["I practice every day."]}
         ],
         "nl": [
-        {"lemma": "oefenen", "pos": "verb", "details": {"note": "om beter te worden", "pastSingular": "oefende", "pastPlural": "oefenden", "participle": "geoefend", "auxiliary": "hebben"}, "sentences": ["Ik oefen elke dag."]}
+        {"lemma": "oefenen", "pos": "verb", "details": {"pastSingular": "oefende", "pastPlural": "oefenden", "participle": "geoefend", "auxiliary": "hebben"}, "sentences": ["Ik oefen elke dag."]}
         ]
       }
     },
@@ -185,10 +185,10 @@
       "gloss": "succeed (pass)",
       "entries": {
         "en": [
-        {"lemma": "to succeed (pass)", "pos": "verb", "details": {"past": "succeeded", "participle": "succeeded"}, "sentences": ["I succeeded."]}
+        {"lemma": "to succeed", "pos": "verb", "details": {"note": "pass", "past": "succeeded", "participle": "succeeded"}, "sentences": ["I succeeded."]}
         ],
         "nl": [
-        {"lemma": "slagen", "pos": "verb", "details": {"note": "voor een toets, of iets bereiken", "pastSingular": "slaagde", "pastPlural": "slaagden", "participle": "geslaagd", "auxiliary": "zijn"}, "sentences": ["Ik ben geslaagd."]}
+        {"lemma": "slagen", "pos": "verb", "details": {"pastSingular": "slaagde", "pastPlural": "slaagden", "participle": "geslaagd", "auxiliary": "zijn"}, "sentences": ["Ik ben geslaagd."]}
         ]
       }
     },
@@ -305,7 +305,7 @@
       "gloss": "subject (school)",
       "entries": {
         "en": [
-        {"lemma": "subject (school)", "pos": "noun", "details": {"plural": "subjects"}, "sentences": ["Math is my favorite subject."]}
+        {"lemma": "subject", "pos": "noun", "details": {"note": "school", "plural": "subjects"}, "sentences": ["Math is my favorite subject."]}
         ],
         "nl": [
         {"lemma": "vak", "pos": "noun", "details": {"article": "het", "plural": "vakken"}, "sentences": ["Wiskunde is mijn lievelingsvak."]}
@@ -353,7 +353,7 @@
       "gloss": "study (examine)",
       "entries": {
         "en": [
-        {"lemma": "to study (examine)", "pos": "verb", "details": {"past": "studied", "participle": "studied"}, "sentences": ["We study the map."]}
+        {"lemma": "to study", "pos": "verb", "details": {"note": "examine", "past": "studied", "participle": "studied"}, "sentences": ["We study the map."]}
         ],
         "nl": [
         {"lemma": "bestuderen", "pos": "verb", "details": {"pastSingular": "bestudeerde", "pastPlural": "bestudeerden", "participle": "bestudeerd", "auxiliary": "hebben"}, "sentences": ["Wij bestuderen de kaart."]}
@@ -413,7 +413,7 @@
       "gloss": "education (training)",
       "entries": {
         "en": [
-        {"lemma": "education (training)", "pos": "noun", "details": {"plural": "educations"}, "sentences": ["He has a good education."]}
+        {"lemma": "education", "pos": "noun", "details": {"note": "training", "plural": "educations"}, "sentences": ["He has a good education."]}
         ],
         "nl": [
         {"lemma": "opleiding", "pos": "noun", "details": {"article": "de", "plural": "opleidingen"}, "sentences": ["Hij heeft een goede opleiding."]}
@@ -509,10 +509,10 @@
       "gloss": "number (mathematical)",
       "entries": {
         "en": [
-        {"lemma": "number (mathematical)", "pos": "noun", "details": {"plural": "numbers"}, "sentences": ["Seven is a number."]}
+        {"lemma": "number", "pos": "noun", "details": {"note": "mathematical", "plural": "numbers"}, "sentences": ["Seven is a number."]}
         ],
         "nl": [
-        {"lemma": "getal", "pos": "noun", "details": {"note": "in de wiskunde", "article": "het", "plural": "getallen"}, "sentences": ["Zeven is een getal."]}
+        {"lemma": "getal", "pos": "noun", "details": {"article": "het", "plural": "getallen"}, "sentences": ["Zeven is een getal."]}
         ]
       }
     },
@@ -521,7 +521,7 @@
       "gloss": "note (write down)",
       "entries": {
         "en": [
-        {"lemma": "to note (write down)", "pos": "verb", "details": {"past": "noted", "participle": "noted"}, "sentences": ["I note the date."]}
+        {"lemma": "to note", "pos": "verb", "details": {"note": "write down", "past": "noted", "participle": "noted"}, "sentences": ["I note the date."]}
         ],
         "nl": [
         {"lemma": "noteren", "pos": "verb", "details": {"pastSingular": "noteerde", "pastPlural": "noteerden", "participle": "genoteerd", "auxiliary": "hebben"}, "sentences": ["Ik noteer de datum."]}
@@ -533,10 +533,10 @@
       "gloss": "letter (of the alphabet)",
       "entries": {
         "en": [
-        {"lemma": "letter (of the alphabet)", "pos": "noun", "details": {"plural": "letters"}, "sentences": ["This is a big letter."]}
+        {"lemma": "letter", "pos": "noun", "details": {"note": "of the alphabet", "plural": "letters"}, "sentences": ["This is a big letter."]}
         ],
         "nl": [
-        {"lemma": "letter", "pos": "noun", "details": {"note": "van het alfabet", "article": "de", "plural": "letters"}, "sentences": ["Dit is een grote letter."]}
+        {"lemma": "letter", "pos": "noun", "details": {"article": "de", "plural": "letters"}, "sentences": ["Dit is een grote letter."]}
         ]
       }
     },
@@ -965,7 +965,7 @@
       "gloss": "talk (lecture)",
       "entries": {
         "en": [
-        {"lemma": "talk (lecture)", "pos": "noun", "details": {"plural": "talks"}, "sentences": ["I attend a talk."]}
+        {"lemma": "talk", "pos": "noun", "details": {"note": "lecture", "plural": "talks"}, "sentences": ["I attend a talk."]}
         ],
         "nl": [
         {"lemma": "lezing", "pos": "noun", "details": {"article": "de", "plural": "lezingen"}, "sentences": ["Ik bezoek een lezing."]}
@@ -1085,7 +1085,7 @@
       "gloss": "education (system)",
       "entries": {
         "en": [
-        {"lemma": "education (system)", "pos": "noun", "details": {"uncountable": true}, "sentences": ["Education is important."]}
+        {"lemma": "education", "pos": "noun", "details": {"note": "system", "uncountable": true}, "sentences": ["Education is important."]}
         ],
         "nl": [
         {"lemma": "onderwijs", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["Onderwijs is belangrijk."]}
@@ -1397,7 +1397,7 @@
       "gloss": "lead (metal)",
       "entries": {
         "en": [
-        {"lemma": "lead (metal)", "pos": "noun", "details": {"uncountable": true}, "sentences": ["The pipe is made of lead."]}
+        {"lemma": "lead", "pos": "noun", "details": {"note": "metal", "uncountable": true}, "sentences": ["The pipe is made of lead."]}
         ],
         "nl": [
         {"lemma": "lood", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["De pijp is van lood."]}
@@ -1649,7 +1649,7 @@
       "gloss": "medicine (science)",
       "entries": {
         "en": [
-        {"lemma": "medicine (science)", "pos": "noun", "details": {"uncountable": true}, "sentences": ["I study medicine."]}
+        {"lemma": "medicine", "pos": "noun", "details": {"note": "science", "uncountable": true}, "sentences": ["I study medicine."]}
         ],
         "nl": [
         {"lemma": "geneeskunde", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Ik studeer geneeskunde."]}

@@ -113,10 +113,10 @@
       "gloss": "fire (noun)",
       "entries": {
         "en": [
-        {"lemma": "fire", "pos": "noun", "details": {"plural": "fires"}, "sentences": ["The fire is hot."]}
+        {"lemma": "fire", "pos": "noun", "details": {"note": "flames", "plural": "fires"}, "sentences": ["The fire is hot."]}
         ],
         "nl": [
-        {"lemma": "vuur", "pos": "noun", "details": {"note": "vlammen", "article": "het", "plural": "vuren"}, "sentences": ["Het vuur is heet."]}
+        {"lemma": "vuur", "pos": "noun", "details": {"article": "het", "plural": "vuren"}, "sentences": ["Het vuur is heet."]}
         ]
       }
     },
@@ -137,7 +137,7 @@
       "gloss": "air (what we breathe)",
       "entries": {
         "en": [
-        {"lemma": "air (what we breathe)", "pos": "noun", "details": {"uncountable": true}, "sentences": ["I need fresh air."]}
+        {"lemma": "air", "pos": "noun", "details": {"note": "what we breathe", "uncountable": true}, "sentences": ["I need fresh air."]}
         ],
         "nl": [
         {"lemma": "lucht", "pos": "noun", "details": {"note": "om te ademen", "article": "de", "uncountable": true}, "sentences": ["Ik heb frisse lucht nodig."]}
@@ -245,10 +245,10 @@
       "gloss": "burn (be on fire)",
       "entries": {
         "en": [
-        {"lemma": "to burn (be on fire)", "pos": "verb", "details": {"past": "burned", "participle": "burned"}, "sentences": ["The house is burning."]}
+        {"lemma": "to burn", "pos": "verb", "details": {"note": "be on fire", "past": "burned", "participle": "burned"}, "sentences": ["The house is burning."]}
         ],
         "nl": [
-        {"lemma": "branden", "pos": "verb", "details": {"note": "van een vuur of een lamp", "pastSingular": "brandde", "pastPlural": "brandden", "participle": "gebrand", "auxiliary": "hebben"}, "sentences": ["Het huis brandt."]}
+        {"lemma": "branden", "pos": "verb", "details": {"pastSingular": "brandde", "pastPlural": "brandden", "participle": "gebrand", "auxiliary": "hebben"}, "sentences": ["Het huis brandt."]}
         ]
       }
     },
@@ -857,7 +857,7 @@
       "gloss": "pick (flowers)",
       "entries": {
         "en": [
-        {"lemma": "to pick (flowers)", "pos": "verb", "details": {"past": "picked", "participle": "picked"}, "sentences": ["I pick flowers."]}
+        {"lemma": "to pick", "pos": "verb", "details": {"note": "flowers", "past": "picked", "participle": "picked"}, "sentences": ["I pick flowers."]}
         ],
         "nl": [
         {"lemma": "plukken", "pos": "verb", "details": {"pastSingular": "plukte", "pastPlural": "plukten", "participle": "geplukt", "auxiliary": "hebben"}, "sentences": ["Ik pluk bloemen."]}
@@ -1109,10 +1109,10 @@
       "gloss": "blow (of wind)",
       "entries": {
         "en": [
-        {"lemma": "to blow (of wind)", "pos": "verb", "details": {"past": "blew", "participle": "blown"}, "sentences": ["The wind blows."]}
+        {"lemma": "to blow", "pos": "verb", "details": {"note": "of wind", "past": "blew", "participle": "blown"}, "sentences": ["The wind blows."]}
         ],
         "nl": [
-        {"lemma": "waaien", "pos": "verb", "details": {"note": "van wind", "pastSingular": "waaide", "pastPlural": "waaiden", "participle": "gewaaid", "auxiliary": "hebben"}, "sentences": ["De wind waait."]}
+        {"lemma": "waaien", "pos": "verb", "details": {"pastSingular": "waaide", "pastPlural": "waaiden", "participle": "gewaaid", "auxiliary": "hebben"}, "sentences": ["De wind waait."]}
         ]
       }
     },
@@ -1133,7 +1133,7 @@
       "gloss": "bank (of a river)",
       "entries": {
         "en": [
-        {"lemma": "bank (of a river)", "pos": "noun", "details": {"plural": "banks"}, "sentences": ["The boat is at the bank."]}
+        {"lemma": "bank", "pos": "noun", "details": {"note": "of a river", "plural": "banks"}, "sentences": ["The boat is at the bank."]}
         ],
         "nl": [
         {"lemma": "wal", "pos": "noun", "details": {"article": "de", "plural": "wallen"}, "sentences": ["De boot ligt aan de wal."]}
@@ -1157,7 +1157,7 @@
       "gloss": "shower (rain)",
       "entries": {
         "en": [
-        {"lemma": "shower (rain)", "pos": "noun", "details": {"plural": "showers"}, "sentences": ["There is a shower of rain."]}
+        {"lemma": "shower", "pos": "noun", "details": {"note": "rain", "plural": "showers"}, "sentences": ["There is a shower of rain."]}
         ],
         "nl": [
         {"lemma": "bui", "pos": "noun", "details": {"article": "de", "plural": "buien"}, "sentences": ["Er komt een bui."]}
@@ -1277,10 +1277,10 @@
       "gloss": "breed (plants)",
       "entries": {
         "en": [
-        {"lemma": "to breed (plants)", "pos": "verb", "details": {"past": "bred", "participle": "bred"}, "sentences": ["He breeds roses."]}
+        {"lemma": "to breed", "pos": "verb", "details": {"note": "plants", "past": "bred", "participle": "bred"}, "sentences": ["He breeds roses."]}
         ],
         "nl": [
-        {"lemma": "kweken", "pos": "verb", "details": {"note": "planten", "pastSingular": "kweekte", "pastPlural": "kweekten", "participle": "gekweekt", "auxiliary": "hebben"}, "sentences": ["Hij kweekt rozen."]}
+        {"lemma": "kweken", "pos": "verb", "details": {"pastSingular": "kweekte", "pastPlural": "kweekten", "participle": "gekweekt", "auxiliary": "hebben"}, "sentences": ["Hij kweekt rozen."]}
         ]
       }
     },
@@ -1565,7 +1565,7 @@
       "gloss": "pit (hole)",
       "entries": {
         "en": [
-        {"lemma": "pit (hole)", "pos": "noun", "details": {"plural": "pits"}, "sentences": ["He digs a pit."]}
+        {"lemma": "pit", "pos": "noun", "details": {"note": "hole", "plural": "pits"}, "sentences": ["He digs a pit."]}
         ],
         "nl": [
         {"lemma": "kuil", "pos": "noun", "details": {"article": "de", "plural": "kuilen"}, "sentences": ["Hij graaft een kuil."]}
@@ -2309,7 +2309,7 @@
       "gloss": "water (plants)",
       "entries": {
         "en": [
-        {"lemma": "to water (plants)", "pos": "verb", "details": {"past": "watered", "participle": "watered"}, "sentences": ["I water the plants."]}
+        {"lemma": "to water", "pos": "verb", "details": {"note": "plants", "past": "watered", "participle": "watered"}, "sentences": ["I water the plants."]}
         ],
         "nl": [
         {"lemma": "begieten", "pos": "verb", "details": {"pastSingular": "begoot", "pastPlural": "begoten", "participle": "begoten", "auxiliary": "hebben"}, "sentences": ["Ik heb de planten begoten."]}

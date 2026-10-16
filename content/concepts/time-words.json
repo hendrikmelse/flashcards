@@ -113,10 +113,10 @@
       "gloss": "tonight (adverb)",
       "entries": {
         "en": [
-        {"lemma": "tonight", "pos": "adverb", "sentences": ["I am home tonight."]}
+        {"lemma": "tonight", "pos": "adverb", "details": {"note": "this evening"}, "sentences": ["I am home tonight."]}
         ],
         "nl": [
-        {"lemma": "vanavond", "pos": "adverb", "details": {"note": "deze avond"}, "sentences": ["Ik ben vanavond thuis."]}
+        {"lemma": "vanavond", "pos": "adverb", "sentences": ["Ik ben vanavond thuis."]}
         ]
       }
     },
@@ -125,7 +125,7 @@
       "gloss": "later (soon)",
       "entries": {
         "en": [
-        {"lemma": "later (soon)", "pos": "adverb", "sentences": ["I will call you later."]}
+        {"lemma": "later", "pos": "adverb", "details": {"note": "soon"}, "sentences": ["I will call you later."]}
         ],
         "nl": [
         {"lemma": "straks", "pos": "adverb", "sentences": ["Ik bel je straks."]}
@@ -149,10 +149,10 @@
       "gloss": "tonight (in the night)",
       "entries": {
         "en": [
-        {"lemma": "tonight (in the night)", "pos": "adverb", "sentences": ["It will freeze tonight."]}
+        {"lemma": "tonight", "pos": "adverb", "details": {"note": "in the night"}, "sentences": ["It will freeze tonight."]}
         ],
         "nl": [
-        {"lemma": "vannacht", "pos": "adverb", "details": {"note": "tijdens de nacht"}, "sentences": ["Vannacht vriest het."]}
+        {"lemma": "vannacht", "pos": "adverb", "sentences": ["Vannacht vriest het."]}
         ]
       }
     },
@@ -197,7 +197,7 @@
       "gloss": "soon (shortly)",
       "entries": {
         "en": [
-        {"lemma": "soon (shortly)", "pos": "adverb", "sentences": ["I am coming soon."]}
+        {"lemma": "soon", "pos": "adverb", "details": {"note": "shortly"}, "sentences": ["I am coming soon."]}
         ],
         "nl": [
         {"lemma": "binnenkort", "pos": "adverb", "sentences": ["Ik kom binnenkort."]}
@@ -389,7 +389,7 @@
       "gloss": "in hindsight (afterwards)",
       "entries": {
         "en": [
-        {"lemma": "in hindsight (afterwards)", "pos": "adverb", "sentences": ["In hindsight I was wrong."]}
+        {"lemma": "in hindsight", "pos": "adverb", "details": {"note": "afterwards"}, "sentences": ["In hindsight I was wrong."]}
         ],
         "nl": [
         {"lemma": "achteraf", "pos": "adverb", "sentences": ["Achteraf had ik ongelijk."]}

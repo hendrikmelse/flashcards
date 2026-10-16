@@ -497,7 +497,7 @@
       "gloss": "relief (sculpture)",
       "entries": {
         "en": [
-        {"lemma": "relief (sculpture)", "pos": "noun", "details": {"plural": "reliefs"}, "sentences": ["The wall has a stone relief."]}
+        {"lemma": "relief", "pos": "noun", "details": {"note": "sculpture", "plural": "reliefs"}, "sentences": ["The wall has a stone relief."]}
         ],
         "nl": [
         {"lemma": "reliëf", "pos": "noun", "details": {"article": "het", "plural": "reliëfs"}, "sentences": ["De muur heeft een stenen reliëf."]}
@@ -629,7 +629,7 @@
       "gloss": "column (architecture)",
       "entries": {
         "en": [
-        {"lemma": "column (architecture)", "pos": "noun", "details": {"plural": "columns"}, "sentences": ["Tall columns hold up the roof."]}
+        {"lemma": "column", "pos": "noun", "details": {"note": "architecture", "plural": "columns"}, "sentences": ["Tall columns hold up the roof."]}
         ],
         "nl": [
         {"lemma": "zuil", "pos": "noun", "details": {"article": "de", "plural": "zuilen"}, "sentences": ["Hoge zuilen dragen het dak."]}

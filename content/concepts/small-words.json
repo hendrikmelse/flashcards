@@ -41,10 +41,10 @@
       "gloss": "because (conjunction)",
       "entries": {
         "en": [
-        {"lemma": "because", "pos": "conjunction", "sentences": ["I sleep because I am tired."]}
+        {"lemma": "because", "pos": "conjunction", "details": {"note": "the verb goes to the end"}, "sentences": ["I sleep because I am tired."]}
         ],
         "nl": [
-        {"lemma": "omdat", "pos": "conjunction", "details": {"note": "het werkwoord gaat naar het eind"}, "sentences": ["Ik slaap omdat ik moe ben."]}
+        {"lemma": "omdat", "pos": "conjunction", "sentences": ["Ik slaap omdat ik moe ben."]}
         ]
       }
     },

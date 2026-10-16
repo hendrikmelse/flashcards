@@ -17,10 +17,10 @@
       "gloss": "you (informal, singular)",
       "entries": {
         "en": [
-        {"lemma": "you", "pos": "pronoun", "sentences": ["Are you hungry?", "Do you have time?"]}
+        {"lemma": "you", "pos": "pronoun", "details": {"note": "subject, singular"}, "sentences": ["Are you hungry?", "Do you have time?"]}
         ],
         "nl": [
-        {"lemma": "jij", "pos": "pronoun", "details": {"note": "nadruk"}, "sentences": ["Heb jij honger?"]},
+        {"lemma": "jij", "pos": "pronoun", "sentences": ["Heb jij honger?"]},
         {"lemma": "je", "pos": "pronoun", "details": {"note": "gewoon, als onderwerp"}, "sentences": ["Heb je tijd?"]}
         ]
       }

@@ -233,7 +233,7 @@
       "gloss": "moment (instant)",
       "entries": {
         "en": [
-        {"lemma": "moment (instant)", "pos": "noun", "details": {"plural": "moments"}, "sentences": ["Just a moment."]}
+        {"lemma": "moment", "pos": "noun", "details": {"note": "instant", "plural": "moments"}, "sentences": ["Just a moment."]}
         ],
         "nl": [
         {"lemma": "ogenblik", "pos": "noun", "details": {"article": "het", "plural": "ogenblikken"}, "sentences": ["Een ogenblik, alstublieft."]}
@@ -257,7 +257,7 @@
       "gloss": "break (pause)",
       "entries": {
         "en": [
-        {"lemma": "break (pause)", "pos": "noun", "details": {"plural": "breaks"}, "sentences": ["We take a break."]}
+        {"lemma": "break", "pos": "noun", "details": {"note": "pause", "plural": "breaks"}, "sentences": ["We take a break."]}
         ],
         "nl": [
         {"lemma": "pauze", "pos": "noun", "details": {"article": "de", "plural": "pauzes"}, "sentences": ["Wij nemen een pauze."]}
@@ -353,7 +353,7 @@
       "gloss": "date (calendar)",
       "entries": {
         "en": [
-        {"lemma": "date (calendar)", "pos": "noun", "details": {"plural": "dates"}, "sentences": ["What is the date?"]}
+        {"lemma": "date", "pos": "noun", "details": {"note": "calendar", "plural": "dates"}, "sentences": ["What is the date?"]}
         ],
         "nl": [
         {"lemma": "datum", "pos": "noun", "details": {"article": "de", "plural": "data"}, "sentences": ["Wat is de datum?"]}
@@ -509,7 +509,7 @@
       "gloss": "pass (of time)",
       "entries": {
         "en": [
-        {"lemma": "to pass (of time)", "pos": "verb", "details": {"past": "passed", "participle": "passed"}, "sentences": ["The time passes."]}
+        {"lemma": "to pass", "pos": "verb", "details": {"note": "of time", "past": "passed", "participle": "passed"}, "sentences": ["The time passes."]}
         ],
         "nl": [
         {"lemma": "verstrijken", "pos": "verb", "details": {"pastSingular": "verstreek", "pastPlural": "verstreken", "participle": "verstreken", "auxiliary": "zijn"}, "sentences": ["De tijd verstrijkt."]}

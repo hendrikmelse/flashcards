@@ -149,10 +149,10 @@
       "gloss": "family (parents and children living together)",
       "entries": {
         "en": [
-        {"lemma": "family", "pos": "noun", "details": {"plural": "families"}, "sentences": ["I have a big family."]}
+        {"lemma": "family", "pos": "noun", "details": {"note": "parents and children", "plural": "families"}, "sentences": ["I have a big family."]}
         ],
         "nl": [
-        {"lemma": "gezin", "pos": "noun", "details": {"note": "ouders en kinderen thuis", "article": "het", "plural": "gezinnen"}, "sentences": ["Ik heb een groot gezin."]}
+        {"lemma": "gezin", "pos": "noun", "details": {"article": "het", "plural": "gezinnen"}, "sentences": ["Ik heb een groot gezin."]}
         ]
       }
     },
@@ -209,7 +209,7 @@
       "gloss": "darling (term of endearment)",
       "entries": {
         "en": [
-        {"lemma": "darling (term of endearment)", "pos": "noun", "details": {"plural": "darlings"}, "sentences": ["Come here, darling."]}
+        {"lemma": "darling", "pos": "noun", "details": {"note": "term of endearment", "plural": "darlings"}, "sentences": ["Come here, darling."]}
         ],
         "nl": [
         {"lemma": "schat", "pos": "noun", "details": {"note": "tegen iemand van wie je houdt", "article": "de", "plural": "schatten"}, "sentences": ["Kom hier, schat."]}
@@ -245,10 +245,10 @@
       "gloss": "family (relatives)",
       "entries": {
         "en": [
-        {"lemma": "family (relatives)", "pos": "noun", "details": {"plural": "families"}, "sentences": ["Our family is big."]}
+        {"lemma": "family", "pos": "noun", "details": {"note": "relatives", "plural": "families"}, "sentences": ["Our family is big."]}
         ],
         "nl": [
-        {"lemma": "familie", "pos": "noun", "details": {"note": "alle verwanten, ook de verre", "article": "de", "plural": "families"}, "sentences": ["Onze familie is groot."]}
+        {"lemma": "familie", "pos": "noun", "details": {"article": "de", "plural": "families"}, "sentences": ["Onze familie is groot."]}
         ]
       }
     },
@@ -377,10 +377,10 @@
       "gloss": "girl (informal)",
       "entries": {
         "en": [
-        {"lemma": "girl (informal)", "pos": "noun", "details": {"plural": "girls"}, "sentences": ["The girl laughs."]}
+        {"lemma": "girl", "pos": "noun", "details": {"note": "informal", "plural": "girls"}, "sentences": ["The girl laughs."]}
         ],
         "nl": [
-        {"lemma": "meid", "pos": "noun", "details": {"note": "informeel", "article": "de", "plural": "meiden"}, "sentences": ["De meid lacht."]}
+        {"lemma": "meid", "pos": "noun", "details": {"article": "de", "plural": "meiden"}, "sentences": ["De meid lacht."]}
         ]
       }
     },
@@ -497,7 +497,7 @@
       "gloss": "separate (divorce)",
       "entries": {
         "en": [
-        {"lemma": "to separate (divorce)", "pos": "verb", "details": {"past": "separated", "participle": "separated"}, "sentences": ["They separate."]}
+        {"lemma": "to separate", "pos": "verb", "details": {"note": "divorce", "past": "separated", "participle": "separated"}, "sentences": ["They separate."]}
         ],
         "nl": [
         {"lemma": "scheiden", "pos": "verb", "details": {"pastSingular": "scheidde", "pastPlural": "scheidden", "participle": "gescheiden", "auxiliary": "hebben/zijn"}, "sentences": ["Zij scheiden."]}
@@ -653,7 +653,7 @@
       "gloss": "miss (form of address)",
       "entries": {
         "en": [
-        {"lemma": "miss (form of address)", "pos": "noun", "details": {"plural": "misses"}, "sentences": ["Miss, may I ask something?"]}
+        {"lemma": "miss", "pos": "noun", "details": {"note": "form of address", "plural": "misses"}, "sentences": ["Miss, may I ask something?"]}
         ],
         "nl": [
         {"lemma": "juffrouw", "pos": "noun", "details": {"article": "de", "plural": "juffrouwen"}, "sentences": ["Juffrouw, mag ik iets vragen?"]}
@@ -749,7 +749,7 @@
       "gloss": "couple (two people)",
       "entries": {
         "en": [
-        {"lemma": "couple (two people)", "pos": "noun", "details": {"plural": "couples"}, "sentences": ["They are a nice couple."]}
+        {"lemma": "couple", "pos": "noun", "details": {"note": "two people", "plural": "couples"}, "sentences": ["They are a nice couple."]}
         ],
         "nl": [
         {"lemma": "stel", "pos": "noun", "details": {"article": "het", "plural": "stellen"}, "sentences": ["Zij zijn een leuk stel."]}
@@ -941,7 +941,7 @@
       "gloss": "darling (favorite)",
       "entries": {
         "en": [
-        {"lemma": "darling (favorite)", "pos": "noun", "details": {"plural": "darlings"}, "sentences": ["She is my darling."]}
+        {"lemma": "darling", "pos": "noun", "details": {"note": "favorite", "plural": "darlings"}, "sentences": ["She is my darling."]}
         ],
         "nl": [
         {"lemma": "lieveling", "pos": "noun", "details": {"article": "de", "plural": "lievelingen"}, "sentences": ["Zij is mijn lieveling."]}
@@ -1037,7 +1037,7 @@
       "gloss": "date (romantic)",
       "entries": {
         "en": [
-        {"lemma": "date (romantic)", "pos": "noun", "details": {"plural": "dates"}, "sentences": ["I have a date tonight."]}
+        {"lemma": "date", "pos": "noun", "details": {"note": "romantic", "plural": "dates"}, "sentences": ["I have a date tonight."]}
         ],
         "nl": [
         {"lemma": "date", "pos": "noun", "details": {"article": "de", "plural": "dates"}, "sentences": ["Ik heb vanavond een date."]}
@@ -1121,7 +1121,7 @@
       "gloss": "neighbor (male)",
       "entries": {
         "en": [
-        {"lemma": "neighbor (male)", "pos": "noun", "details": {"plural": "neighbors"}, "sentences": ["My neighbor is nice."]}
+        {"lemma": "neighbor", "pos": "noun", "details": {"note": "male", "plural": "neighbors"}, "sentences": ["My neighbor is nice."]}
         ],
         "nl": [
         {"lemma": "buurman", "pos": "noun", "details": {"article": "de", "plural": "buurmannen"}, "sentences": ["Mijn buurman is aardig."]}
@@ -1169,7 +1169,7 @@
       "gloss": "single (unmarried)",
       "entries": {
         "en": [
-        {"lemma": "single (unmarried)", "pos": "adjective", "sentences": ["He is single."]}
+        {"lemma": "single", "pos": "adjective", "details": {"note": "unmarried"}, "sentences": ["He is single."]}
         ],
         "nl": [
         {"lemma": "vrijgezel", "pos": "adjective", "sentences": ["Hij is vrijgezel."]}
@@ -1337,7 +1337,7 @@
       "gloss": "kiss (smooch)",
       "entries": {
         "en": [
-        {"lemma": "kiss (smooch)", "pos": "noun", "details": {"plural": "kisses"}, "sentences": ["He gives her a kiss."]}
+        {"lemma": "kiss", "pos": "noun", "details": {"note": "smooch", "plural": "kisses"}, "sentences": ["He gives her a kiss."]}
         ],
         "nl": [
         {"lemma": "zoen", "pos": "noun", "details": {"article": "de", "plural": "zoenen"}, "sentences": ["Hij geeft haar een zoen."]}
@@ -1397,7 +1397,7 @@
       "gloss": "resident (inhabitant)",
       "entries": {
         "en": [
-        {"lemma": "resident (inhabitant)", "pos": "noun", "details": {"plural": "residents"}, "sentences": ["The residents are happy."]}
+        {"lemma": "resident", "pos": "noun", "details": {"note": "inhabitant", "plural": "residents"}, "sentences": ["The residents are happy."]}
         ],
         "nl": [
         {"lemma": "bewoner", "pos": "noun", "details": {"article": "de", "plural": "bewoners"}, "sentences": ["De bewoners zijn blij."]}
@@ -1409,7 +1409,7 @@
       "gloss": "society (community)",
       "entries": {
         "en": [
-        {"lemma": "society (community)", "pos": "noun", "details": {"plural": "societies"}, "sentences": ["Society is changing."]}
+        {"lemma": "society", "pos": "noun", "details": {"note": "community", "plural": "societies"}, "sentences": ["Society is changing."]}
         ],
         "nl": [
         {"lemma": "samenleving", "pos": "noun", "details": {"article": "de", "plural": "samenlevingen"}, "sentences": ["De samenleving verandert."]}
@@ -1589,7 +1589,7 @@
       "gloss": "couple (pair)",
       "entries": {
         "en": [
-        {"lemma": "couple (pair)", "pos": "noun", "details": {"plural": "couples"}, "sentences": ["They are a nice couple."]}
+        {"lemma": "couple", "pos": "noun", "details": {"note": "pair", "plural": "couples"}, "sentences": ["They are a nice couple."]}
         ],
         "nl": [
         {"lemma": "koppel", "pos": "noun", "details": {"article": "het", "plural": "koppels"}, "sentences": ["Zij zijn een leuk koppel."]}
@@ -1793,7 +1793,7 @@
       "gloss": "single (alone)",
       "entries": {
         "en": [
-        {"lemma": "single (alone)", "pos": "adjective", "sentences": ["She is single."]}
+        {"lemma": "single", "pos": "adjective", "details": {"note": "alone"}, "sentences": ["She is single."]}
         ],
         "nl": [
         {"lemma": "alleenstaand", "pos": "adjective", "sentences": ["Zij is alleenstaand."]}
@@ -1913,7 +1913,7 @@
       "gloss": "neighbor (female)",
       "entries": {
         "en": [
-        {"lemma": "neighbor (female)", "pos": "noun", "details": {"plural": "neighbors"}, "sentences": ["My neighbor is friendly."]}
+        {"lemma": "neighbor", "pos": "noun", "details": {"note": "female", "plural": "neighbors"}, "sentences": ["My neighbor is friendly."]}
         ],
         "nl": [
         {"lemma": "buurvrouw", "pos": "noun", "details": {"article": "de", "plural": "buurvrouwen"}, "sentences": ["Mijn buurvrouw is vriendelijk."]}
@@ -2105,7 +2105,7 @@
       "gloss": "subject (of a ruler)",
       "entries": {
         "en": [
-        {"lemma": "subject (of a ruler)", "pos": "noun", "details": {"plural": "subjects"}, "sentences": ["The king has many subjects."]}
+        {"lemma": "subject", "pos": "noun", "details": {"note": "of a ruler", "plural": "subjects"}, "sentences": ["The king has many subjects."]}
         ],
         "nl": [
         {"lemma": "onderdaan", "pos": "noun", "details": {"article": "de", "plural": "onderdanen"}, "sentences": ["De koning heeft veel onderdanen."]}
@@ -2597,7 +2597,7 @@
       "gloss": "cousin (male)",
       "entries": {
         "en": [
-        {"lemma": "cousin (male)", "pos": "noun", "details": {"plural": "cousins"}, "sentences": ["I visit my cousin."]}
+        {"lemma": "cousin", "pos": "noun", "details": {"note": "male", "plural": "cousins"}, "sentences": ["I visit my cousin."]}
         ],
         "nl": [
         {"lemma": "neef", "pos": "noun", "details": {"note": "de zoon van een oom of tante", "article": "de", "plural": "neven"}, "sentences": ["Ik bezoek mijn neef."]}
@@ -2609,7 +2609,7 @@
       "gloss": "cousin (female)",
       "entries": {
         "en": [
-        {"lemma": "cousin (female)", "pos": "noun", "details": {"plural": "cousins"}, "sentences": ["My cousin lives in Utrecht."]}
+        {"lemma": "cousin", "pos": "noun", "details": {"note": "female", "plural": "cousins"}, "sentences": ["My cousin lives in Utrecht."]}
         ],
         "nl": [
         {"lemma": "nicht", "pos": "noun", "details": {"note": "de dochter van een oom of tante", "article": "de", "plural": "nichten"}, "sentences": ["Mijn nicht woont in Utrecht."]}

@@ -474,7 +474,7 @@
       "gloss": "cat (female)",
       "entries": {
         "en": [
-        {"lemma": "cat (female)", "pos": "noun", "details": {"plural": "cats"}, "sentences": ["The cat sleeps."]}
+        {"lemma": "cat", "pos": "noun", "details": {"note": "female", "plural": "cats"}, "sentences": ["The cat sleeps."]}
         ],
         "nl": [
         {"lemma": "poes", "pos": "noun", "details": {"article": "de", "plural": "poezen"}, "sentences": ["De poes slaapt."]}
@@ -846,10 +846,10 @@
       "gloss": "breed (animals)",
       "entries": {
         "en": [
-        {"lemma": "to breed (animals)", "pos": "verb", "details": {"past": "bred", "participle": "bred"}, "sentences": ["He breeds horses."]}
+        {"lemma": "to breed", "pos": "verb", "details": {"note": "animals", "past": "bred", "participle": "bred"}, "sentences": ["He breeds horses."]}
         ],
         "nl": [
-        {"lemma": "fokken", "pos": "verb", "details": {"note": "dieren", "pastSingular": "fokte", "pastPlural": "fokten", "participle": "gefokt", "auxiliary": "hebben"}, "sentences": ["Hij fokt paarden."]}
+        {"lemma": "fokken", "pos": "verb", "details": {"pastSingular": "fokte", "pastPlural": "fokten", "participle": "gefokt", "auxiliary": "hebben"}, "sentences": ["Hij fokt paarden."]}
         ]
       }
     },

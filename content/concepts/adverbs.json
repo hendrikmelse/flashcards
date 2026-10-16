@@ -137,7 +137,7 @@
       "gloss": "first (at first)",
       "entries": {
         "en": [
-        {"lemma": "first (at first)", "pos": "adverb", "sentences": ["First I eat."]}
+        {"lemma": "first", "pos": "adverb", "details": {"note": "at first"}, "sentences": ["First I eat."]}
         ],
         "nl": [
         {"lemma": "eerst", "pos": "adverb", "sentences": ["Eerst eet ik."]}
@@ -185,7 +185,7 @@
       "gloss": "again (anew)",
       "entries": {
         "en": [
-        {"lemma": "again (anew)", "pos": "adverb", "sentences": ["Try again."]}
+        {"lemma": "again", "pos": "adverb", "details": {"note": "anew"}, "sentences": ["Try again."]}
         ],
         "nl": [
         {"lemma": "opnieuw", "pos": "adverb", "sentences": ["Probeer het opnieuw."]}
@@ -233,7 +233,7 @@
       "gloss": "again (already)",
       "entries": {
         "en": [
-        {"lemma": "again (already)", "pos": "adverb", "sentences": ["It is raining again."]}
+        {"lemma": "again", "pos": "adverb", "details": {"note": "already"}, "sentences": ["It is raining again."]}
         ],
         "nl": [
         {"lemma": "alweer", "pos": "adverb", "sentences": ["Het regent alweer."]}
@@ -241,14 +241,14 @@
       }
     },
     {
-      "key": "almost-adverb-haast",
+      "key": "almost-nearly",
       "gloss": "almost (nearly)",
       "entries": {
         "en": [
-        {"lemma": "almost (nearly)", "pos": "adverb", "sentences": ["I am almost there."]}
+        {"lemma": "almost", "pos": "adverb", "details": {"note": "nearly"}, "sentences": ["I am almost there."]}
         ],
         "nl": [
-        {"lemma": "haast (almost)", "pos": "adverb", "sentences": ["Ik ben haast klaar."]}
+        {"lemma": "haast", "pos": "adverb", "details": {"note": "bijna"}, "sentences": ["Ik ben haast klaar."]}
         ]
       }
     },
@@ -293,7 +293,7 @@
       "gloss": "at least (minimum)",
       "entries": {
         "en": [
-        {"lemma": "at least (minimum)", "pos": "adverb", "sentences": ["It costs at least ten euros."]}
+        {"lemma": "at least", "pos": "adverb", "details": {"note": "minimum"}, "sentences": ["It costs at least ten euros."]}
         ],
         "nl": [
         {"lemma": "minstens", "pos": "adverb", "sentences": ["Het kost minstens tien euro."]}
@@ -317,10 +317,10 @@
       "gloss": "already (in advance)",
       "entries": {
         "en": [
-        {"lemma": "already (in advance)", "pos": "adverb", "sentences": ["You can already start."]}
+        {"lemma": "already", "pos": "adverb", "details": {"note": "in advance"}, "sentences": ["You can already start."]}
         ],
         "nl": [
-        {"lemma": "alvast", "pos": "adverb", "details": {"note": "van tevoren"}, "sentences": ["Je kunt alvast beginnen."]}
+        {"lemma": "alvast", "pos": "adverb", "sentences": ["Je kunt alvast beginnen."]}
         ]
       }
     },
@@ -365,7 +365,7 @@
       "gloss": "gladly (love to)",
       "entries": {
         "en": [
-        {"lemma": "gladly (love to)", "pos": "adverb", "sentences": ["I would gladly come."]}
+        {"lemma": "gladly", "pos": "adverb", "details": {"note": "love to"}, "sentences": ["I would gladly come."]}
         ],
         "nl": [
         {"lemma": "dolgraag", "pos": "adverb", "sentences": ["Ik kom dolgraag."]}
@@ -569,7 +569,7 @@
       "gloss": "quite (fairly)",
       "entries": {
         "en": [
-        {"lemma": "quite (fairly)", "pos": "adverb", "sentences": ["It is quite cold."]}
+        {"lemma": "quite", "pos": "adverb", "details": {"note": "fairly"}, "sentences": ["It is quite cold."]}
         ],
         "nl": [
         {"lemma": "behoorlijk", "pos": "adverb", "sentences": ["Het is behoorlijk koud."]}

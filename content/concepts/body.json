@@ -629,7 +629,7 @@
       "gloss": "neck (throat)",
       "entries": {
         "en": [
-        {"lemma": "neck (throat)", "pos": "noun", "details": {"plural": "necks"}, "sentences": ["He has a long neck."]}
+        {"lemma": "neck", "pos": "noun", "details": {"note": "throat", "plural": "necks"}, "sentences": ["He has a long neck."]}
         ],
         "nl": [
         {"lemma": "hals", "pos": "noun", "details": {"article": "de", "plural": "halzen"}, "sentences": ["Hij heeft een lange hals."]}
@@ -881,7 +881,7 @@
       "gloss": "mole (skin)",
       "entries": {
         "en": [
-        {"lemma": "mole (skin)", "pos": "noun", "details": {"plural": "moles"}, "sentences": ["I have a mole on my arm."]}
+        {"lemma": "mole", "pos": "noun", "details": {"note": "skin", "plural": "moles"}, "sentences": ["I have a mole on my arm."]}
         ],
         "nl": [
         {"lemma": "moedervlek", "pos": "noun", "details": {"article": "de", "plural": "moedervlekken"}, "sentences": ["Ik heb een moedervlek op mijn arm."]}

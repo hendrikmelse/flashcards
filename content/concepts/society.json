@@ -149,7 +149,7 @@
       "gloss": "right (entitlement)",
       "entries": {
         "en": [
-        {"lemma": "right (entitlement)", "pos": "noun", "details": {"plural": "rights"}, "sentences": ["You have the right to speak."]}
+        {"lemma": "right", "pos": "noun", "details": {"note": "entitlement", "plural": "rights"}, "sentences": ["You have the right to speak."]}
         ],
         "nl": [
         {"lemma": "recht", "pos": "noun", "details": {"article": "het", "plural": "rechten"}, "sentences": ["Je hebt het recht om te spreken."]}
@@ -437,7 +437,7 @@
       "gloss": "order (command)",
       "entries": {
         "en": [
-        {"lemma": "order (command)", "pos": "noun", "details": {"plural": "orders"}, "sentences": ["He gives an order."]}
+        {"lemma": "order", "pos": "noun", "details": {"note": "command", "plural": "orders"}, "sentences": ["He gives an order."]}
         ],
         "nl": [
         {"lemma": "bevel", "pos": "noun", "details": {"article": "het", "plural": "bevelen"}, "sentences": ["Hij geeft een bevel."]}
@@ -857,7 +857,7 @@
       "gloss": "pick up (arrest)",
       "entries": {
         "en": [
-        {"lemma": "to pick up (arrest)", "pos": "verb", "details": {"past": "picked up", "participle": "picked up"}, "sentences": ["The police pick him up."]}
+        {"lemma": "to pick up", "pos": "verb", "details": {"note": "arrest", "past": "picked up", "participle": "picked up"}, "sentences": ["The police pick him up."]}
         ],
         "nl": [
         {"lemma": "oppakken", "pos": "verb", "details": {"pastSingular": "pakte op", "pastPlural": "pakten op", "participle": "opgepakt", "auxiliary": "hebben"}, "sentences": ["De politie pakt hem op."]}
@@ -941,10 +941,10 @@
       "gloss": "fire (blaze)",
       "entries": {
         "en": [
-        {"lemma": "fire (blaze)", "pos": "noun", "details": {"plural": "fires"}, "sentences": ["There is a fire in the house."]}
+        {"lemma": "fire", "pos": "noun", "details": {"note": "blaze", "plural": "fires"}, "sentences": ["There is a fire in the house."]}
         ],
         "nl": [
-        {"lemma": "brand", "pos": "noun", "details": {"note": "die schade aanricht", "article": "de", "plural": "branden"}, "sentences": ["Er is brand in het huis."]}
+        {"lemma": "brand", "pos": "noun", "details": {"article": "de", "plural": "branden"}, "sentences": ["Er is brand in het huis."]}
         ]
       }
     },
@@ -989,7 +989,7 @@
       "gloss": "free (liberate)",
       "entries": {
         "en": [
-        {"lemma": "to free (liberate)", "pos": "verb", "details": {"past": "freed", "participle": "freed"}, "sentences": ["They free the prisoners."]}
+        {"lemma": "to free", "pos": "verb", "details": {"note": "liberate", "past": "freed", "participle": "freed"}, "sentences": ["They free the prisoners."]}
         ],
         "nl": [
         {"lemma": "bevrijden", "pos": "verb", "details": {"pastSingular": "bevrijdde", "pastPlural": "bevrijdden", "participle": "bevrijd", "auxiliary": "hebben"}, "sentences": ["Zij bevrijden de gevangenen."]}
@@ -1277,7 +1277,7 @@
       "gloss": "party (political)",
       "entries": {
         "en": [
-        {"lemma": "party (political)", "pos": "noun", "details": {"plural": "parties"}, "sentences": ["I vote for this party."]}
+        {"lemma": "party", "pos": "noun", "details": {"note": "political", "plural": "parties"}, "sentences": ["I vote for this party."]}
         ],
         "nl": [
         {"lemma": "partij", "pos": "noun", "details": {"article": "de", "plural": "partijen"}, "sentences": ["Ik stem op deze partij."]}
@@ -1337,10 +1337,10 @@
       "gloss": "catch (in the act)",
       "entries": {
         "en": [
-        {"lemma": "to catch (in the act)", "pos": "verb", "details": {"past": "caught", "participle": "caught"}, "sentences": ["They catch the thief."]}
+        {"lemma": "to catch", "pos": "verb", "details": {"note": "in the act", "past": "caught", "participle": "caught"}, "sentences": ["They catch the thief."]}
         ],
         "nl": [
-        {"lemma": "betrappen", "pos": "verb", "details": {"note": "bij iets verkeerds", "pastSingular": "betrapte", "pastPlural": "betrapten", "participle": "betrapt", "auxiliary": "hebben"}, "sentences": ["Zij betrappen de dief."]}
+        {"lemma": "betrappen", "pos": "verb", "details": {"pastSingular": "betrapte", "pastPlural": "betrapten", "participle": "betrapt", "auxiliary": "hebben"}, "sentences": ["Zij betrappen de dief."]}
         ]
       }
     },
@@ -1481,7 +1481,7 @@
       "gloss": "charge (accusation)",
       "entries": {
         "en": [
-        {"lemma": "charge (accusation)", "pos": "noun", "details": {"plural": "charges"}, "sentences": ["The charge is serious."]}
+        {"lemma": "charge", "pos": "noun", "details": {"note": "accusation", "plural": "charges"}, "sentences": ["The charge is serious."]}
         ],
         "nl": [
         {"lemma": "aanklacht", "pos": "noun", "details": {"article": "de", "plural": "aanklachten"}, "sentences": ["De aanklacht is ernstig."]}
@@ -2249,7 +2249,7 @@
       "gloss": "fire (a weapon)",
       "entries": {
         "en": [
-        {"lemma": "to fire (a weapon)", "pos": "verb", "details": {"past": "fired", "participle": "fired"}, "sentences": ["They fire a shot."]}
+        {"lemma": "to fire", "pos": "verb", "details": {"note": "a weapon", "past": "fired", "participle": "fired"}, "sentences": ["They fire a shot."]}
         ],
         "nl": [
         {"lemma": "vuren", "pos": "verb", "details": {"pastSingular": "vuurde", "pastPlural": "vuurden", "participle": "gevuurd", "auxiliary": "hebben"}, "sentences": ["Zij vuren een schot."]}
@@ -2489,7 +2489,7 @@
       "gloss": "will (testament)",
       "entries": {
         "en": [
-        {"lemma": "will (testament)", "pos": "noun", "details": {"plural": "wills"}, "sentences": ["He writes his will."]}
+        {"lemma": "will", "pos": "noun", "details": {"note": "testament", "plural": "wills"}, "sentences": ["He writes his will."]}
         ],
         "nl": [
         {"lemma": "testament", "pos": "noun", "details": {"article": "het", "plural": "testamenten"}, "sentences": ["Hij schrijft zijn testament."]}
@@ -2897,7 +2897,7 @@
       "gloss": "authorities (officials)",
       "entries": {
         "en": [
-        {"lemma": "authorities (officials)", "pos": "noun", "details": {"pluralOnly": true}, "sentences": ["The authorities are informed."]}
+        {"lemma": "authorities", "pos": "noun", "details": {"note": "officials", "pluralOnly": true}, "sentences": ["The authorities are informed."]}
         ],
         "nl": [
         {"lemma": "autoriteiten", "pos": "noun", "details": {"article": "de", "pluralOnly": true}, "sentences": ["De autoriteiten zijn geïnformeerd."]}
@@ -3221,7 +3221,7 @@
       "gloss": "trap (snare)",
       "entries": {
         "en": [
-        {"lemma": "trap (snare)", "pos": "noun", "details": {"plural": "traps"}, "sentences": ["It is a trap."]}
+        {"lemma": "trap", "pos": "noun", "details": {"note": "snare", "plural": "traps"}, "sentences": ["It is a trap."]}
         ],
         "nl": [
         {"lemma": "valstrik", "pos": "noun", "details": {"article": "de", "plural": "valstrikken"}, "sentences": ["Het is een valstrik."]}
@@ -3305,7 +3305,7 @@
       "gloss": "cover (front)",
       "entries": {
         "en": [
-        {"lemma": "cover (front)", "pos": "noun", "details": {"plural": "covers"}, "sentences": ["It is a cover."]}
+        {"lemma": "cover", "pos": "noun", "details": {"note": "front", "plural": "covers"}, "sentences": ["It is a cover."]}
         ],
         "nl": [
         {"lemma": "dekmantel", "pos": "noun", "details": {"article": "de", "plural": "dekmantels"}, "sentences": ["Het is een dekmantel."]}
@@ -3329,7 +3329,7 @@
       "gloss": "escape (breakout)",
       "entries": {
         "en": [
-        {"lemma": "escape (breakout)", "pos": "noun", "details": {"plural": "escapes"}, "sentences": ["The escape fails."]}
+        {"lemma": "escape", "pos": "noun", "details": {"note": "breakout", "plural": "escapes"}, "sentences": ["The escape fails."]}
         ],
         "nl": [
         {"lemma": "ontsnapping", "pos": "noun", "details": {"article": "de", "plural": "ontsnappingen"}, "sentences": ["De ontsnapping mislukt."]}
@@ -3509,7 +3509,7 @@
       "gloss": "offense (minor)",
       "entries": {
         "en": [
-        {"lemma": "offense (minor)", "pos": "noun", "details": {"plural": "offenses"}, "sentences": ["That is a minor offense."]}
+        {"lemma": "offense", "pos": "noun", "details": {"note": "minor", "plural": "offenses"}, "sentences": ["That is a minor offense."]}
         ],
         "nl": [
         {"lemma": "delict", "pos": "noun", "details": {"article": "het", "plural": "delicten"}, "sentences": ["Dat is een licht delict."]}
@@ -3581,7 +3581,7 @@
       "gloss": "legal (juridical)",
       "entries": {
         "en": [
-        {"lemma": "legal (juridical)", "pos": "adjective", "sentences": ["It is a legal question."]}
+        {"lemma": "legal", "pos": "adjective", "details": {"note": "juridical"}, "sentences": ["It is a legal question."]}
         ],
         "nl": [
         {"lemma": "juridisch", "pos": "adjective", "sentences": ["Het is een juridische vraag."]}
@@ -3737,10 +3737,10 @@
       "gloss": "forge (verb)",
       "entries": {
         "en": [
-        {"lemma": "to forge", "pos": "verb", "details": {"past": "forged", "participle": "forged"}, "sentences": ["He forges a signature."]}
+        {"lemma": "to forge", "pos": "verb", "details": {"note": "a document or money", "past": "forged", "participle": "forged"}, "sentences": ["He forges a signature."]}
         ],
         "nl": [
-        {"lemma": "vervalsen", "pos": "verb", "details": {"note": "een document of geld", "pastSingular": "vervalste", "pastPlural": "vervalsten", "participle": "vervalst", "auxiliary": "hebben"}, "sentences": ["Hij vervalst een handtekening."]}
+        {"lemma": "vervalsen", "pos": "verb", "details": {"pastSingular": "vervalste", "pastPlural": "vervalsten", "participle": "vervalst", "auxiliary": "hebben"}, "sentences": ["Hij vervalst een handtekening."]}
         ]
       }
     },
@@ -3809,7 +3809,7 @@
       "gloss": "company (military unit)",
       "entries": {
         "en": [
-        {"lemma": "company (military unit)", "pos": "noun", "details": {"plural": "companies"}, "sentences": ["The company marches."]}
+        {"lemma": "company", "pos": "noun", "details": {"note": "military unit", "plural": "companies"}, "sentences": ["The company marches."]}
         ],
         "nl": [
         {"lemma": "compagnie", "pos": "noun", "details": {"article": "de", "plural": "compagnieën"}, "sentences": ["De compagnie marcheert."]}
@@ -3869,7 +3869,7 @@
       "gloss": "clear (a building)",
       "entries": {
         "en": [
-        {"lemma": "to clear (a building)", "pos": "verb", "details": {"past": "cleared", "participle": "cleared"}, "sentences": ["They clear the building."]}
+        {"lemma": "to clear", "pos": "verb", "details": {"note": "a building", "past": "cleared", "participle": "cleared"}, "sentences": ["They clear the building."]}
         ],
         "nl": [
         {"lemma": "ontruimen", "pos": "verb", "details": {"pastSingular": "ontruimde", "pastPlural": "ontruimden", "participle": "ontruimd", "auxiliary": "hebben"}, "sentences": ["Zij ontruimen het gebouw."]}
@@ -3929,7 +3929,7 @@
       "gloss": "cemetery (burial ground)",
       "entries": {
         "en": [
-        {"lemma": "cemetery (burial ground)", "pos": "noun", "details": {"plural": "cemeteries"}, "sentences": ["The cemetery is quiet."]}
+        {"lemma": "cemetery", "pos": "noun", "details": {"note": "burial ground", "plural": "cemeteries"}, "sentences": ["The cemetery is quiet."]}
         ],
         "nl": [
         {"lemma": "begraafplaats", "pos": "noun", "details": {"article": "de", "plural": "begraafplaatsen"}, "sentences": ["De begraafplaats is stil."]}
@@ -4001,7 +4001,7 @@
       "gloss": "conviction (verdict)",
       "entries": {
         "en": [
-        {"lemma": "conviction (verdict)", "pos": "noun", "details": {"plural": "convictions"}, "sentences": ["The conviction is a surprise."]}
+        {"lemma": "conviction", "pos": "noun", "details": {"note": "verdict", "plural": "convictions"}, "sentences": ["The conviction is a surprise."]}
         ],
         "nl": [
         {"lemma": "veroordeling", "pos": "noun", "details": {"article": "de", "plural": "veroordelingen"}, "sentences": ["De veroordeling is een verrassing."]}
@@ -4097,7 +4097,7 @@
       "gloss": "release (from custody)",
       "entries": {
         "en": [
-        {"lemma": "release (from custody)", "pos": "noun", "details": {"plural": "releases"}, "sentences": ["The release is tomorrow."]}
+        {"lemma": "release", "pos": "noun", "details": {"note": "from custody", "plural": "releases"}, "sentences": ["The release is tomorrow."]}
         ],
         "nl": [
         {"lemma": "vrijlating", "pos": "noun", "details": {"article": "de", "plural": "vrijlatingen"}, "sentences": ["De vrijlating is morgen."]}
@@ -4121,7 +4121,7 @@
       "gloss": "try (in court)",
       "entries": {
         "en": [
-        {"lemma": "to try (in court)", "pos": "verb", "details": {"past": "tried", "participle": "tried"}, "sentences": ["They try the man in court."]}
+        {"lemma": "to try", "pos": "verb", "details": {"note": "in court", "past": "tried", "participle": "tried"}, "sentences": ["They try the man in court."]}
         ],
         "nl": [
         {"lemma": "berechten", "pos": "verb", "details": {"pastSingular": "berechtte", "pastPlural": "berechtten", "participle": "berecht", "auxiliary": "hebben"}, "sentences": ["Zij berechten de man."]}
@@ -4157,7 +4157,7 @@
       "gloss": "threat (spoken)",
       "entries": {
         "en": [
-        {"lemma": "threat (spoken)", "pos": "noun", "details": {"plural": "threats"}, "sentences": ["He makes a threat."]}
+        {"lemma": "threat", "pos": "noun", "details": {"note": "spoken", "plural": "threats"}, "sentences": ["He makes a threat."]}
         ],
         "nl": [
         {"lemma": "dreigement", "pos": "noun", "details": {"article": "het", "plural": "dreigementen"}, "sentences": ["Hij doet een dreigement."]}
@@ -4205,7 +4205,7 @@
       "gloss": "guard (watchman)",
       "entries": {
         "en": [
-        {"lemma": "guard (watchman)", "pos": "noun", "details": {"plural": "guards"}, "sentences": ["The guard stands at the gate."]}
+        {"lemma": "guard", "pos": "noun", "details": {"note": "watchman", "plural": "guards"}, "sentences": ["The guard stands at the gate."]}
         ],
         "nl": [
         {"lemma": "wachter", "pos": "noun", "details": {"article": "de", "plural": "wachters"}, "sentences": ["De wachter staat bij de poort."]}
@@ -4685,7 +4685,7 @@
       "gloss": "ally (female)",
       "entries": {
         "en": [
-        {"lemma": "ally (female)", "pos": "noun", "details": {"plural": "allies"}, "sentences": ["She is my ally."]}
+        {"lemma": "ally", "pos": "noun", "details": {"note": "female", "plural": "allies"}, "sentences": ["She is my ally."]}
         ],
         "nl": [
         {"lemma": "bondgenote", "pos": "noun", "details": {"article": "de", "plural": "bondgenotes"}, "sentences": ["Zij is mijn bondgenote."]}
@@ -4961,7 +4961,7 @@
       "gloss": "authority (institution)",
       "entries": {
         "en": [
-        {"lemma": "authority (institution)", "pos": "noun", "details": {"plural": "authorities"}, "sentences": ["The authority decides."]}
+        {"lemma": "authority", "pos": "noun", "details": {"note": "institution", "plural": "authorities"}, "sentences": ["The authority decides."]}
         ],
         "nl": [
         {"lemma": "autoriteit", "pos": "noun", "details": {"article": "de", "plural": "autoriteiten"}, "sentences": ["De autoriteit beslist."]}
@@ -4985,7 +4985,7 @@
       "gloss": "deed (certificate)",
       "entries": {
         "en": [
-        {"lemma": "deed (certificate)", "pos": "noun", "details": {"plural": "deeds"}, "sentences": ["I sign the deed."]}
+        {"lemma": "deed", "pos": "noun", "details": {"note": "certificate", "plural": "deeds"}, "sentences": ["I sign the deed."]}
         ],
         "nl": [
         {"lemma": "akte", "pos": "noun", "details": {"article": "de", "plural": "aktes"}, "sentences": ["Ik teken de akte."]}
@@ -4997,10 +4997,10 @@
       "gloss": "claim (demand as one's own)",
       "entries": {
         "en": [
-        {"lemma": "to claim", "pos": "verb", "details": {"past": "claimed", "participle": "claimed"}, "sentences": ["They claim the land."]}
+        {"lemma": "to claim", "pos": "verb", "details": {"note": "what rightfully is yours", "past": "claimed", "participle": "claimed"}, "sentences": ["They claim the land."]}
         ],
         "nl": [
-        {"lemma": "opeisen", "pos": "verb", "details": {"note": "wat rechtmatig van jou is", "pastSingular": "eiste op", "pastPlural": "eisten op", "participle": "opgeëist", "auxiliary": "hebben"}, "sentences": ["Zij eisen het land op."]}
+        {"lemma": "opeisen", "pos": "verb", "details": {"pastSingular": "eiste op", "pastPlural": "eisten op", "participle": "opgeëist", "auxiliary": "hebben"}, "sentences": ["Zij eisen het land op."]}
         ]
       }
     },
@@ -5933,10 +5933,10 @@
       "gloss": "claim (apply for)",
       "entries": {
         "en": [
-        {"lemma": "to claim (verb)", "pos": "verb", "details": {"past": "claimed", "participle": "claimed"}, "sentences": ["They claim the prize."]}
+        {"lemma": "to claim", "pos": "verb", "details": {"note": "a prize or insurance", "past": "claimed", "participle": "claimed"}, "sentences": ["They claim the prize."]}
         ],
         "nl": [
-        {"lemma": "claimen", "pos": "verb", "details": {"note": "een verzekering of een prijs", "pastSingular": "claimde", "pastPlural": "claimden", "participle": "geclaimd", "auxiliary": "hebben"}, "sentences": ["Zij claimen de prijs."]}
+        {"lemma": "claimen", "pos": "verb", "details": {"pastSingular": "claimde", "pastPlural": "claimden", "participle": "geclaimd", "auxiliary": "hebben"}, "sentences": ["Zij claimen de prijs."]}
         ]
       }
     },
