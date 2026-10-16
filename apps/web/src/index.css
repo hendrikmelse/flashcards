@@ -282,9 +282,14 @@ input {
 }
 
 /* The foot of every page: a strip like the top bar, with its border on the other side. It sits at the
-   bottom of the window when the page is short (#root is a column that fills the window). */
+   bottom of the window when the page is short (#root is a column that fills the window), and stays in
+   view at the bottom of the screen when the page is long, under a card shown over the page like the top
+   bar is. */
 .sitefooter {
   margin-top: auto;
+  position: sticky;
+  bottom: 0;
+  z-index: 20;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -298,6 +303,11 @@ input {
   /* As light as the text can go and still be readable: about 4.6 to 1 against the strip in the light
      theme, a little more in the dark one. Lighter would fall below the 4.5 to 1 guideline. */
   color: color-mix(in srgb, var(--muted) 88%, var(--surface));
+}
+
+/* Something tabbed to near the end of a page is scrolled clear of the footer, not left behind it. */
+html {
+  scroll-padding-bottom: 2.5rem;
 }
 
 /* On a phone the three wrap onto separate lines, where a dot between them would dangle. */
