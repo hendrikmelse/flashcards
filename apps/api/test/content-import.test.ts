@@ -103,6 +103,23 @@ describe("shipped content", () => {
     expect(offenders.filter((k) => k !== "comic-strip")).toEqual([]);
   });
 
+  it("gives a note to every entry whose word is also the lemma of another concept", () => {
+    const { concepts: cs } = loadContent("../../content");
+    const lemmas = new Map<string, { key: string; noted: boolean }[]>();
+    for (const c of cs) {
+      for (const [lang, entries] of Object.entries(c.entries)) {
+        for (const e of entries ?? []) {
+          const id = `${lang} ${e.lemma}`;
+          lemmas.set(id, [...(lemmas.get(id) ?? []), { key: c.key, noted: typeof e.details?.["note"] === "string" }]);
+        }
+      }
+    }
+    const missing = [...lemmas]
+      .filter(([, uses]) => new Set(uses.map((u) => u.key)).size > 1)
+      .flatMap(([id, uses]) => uses.filter((u) => !u.noted).map((u) => `${id} (${u.key})`));
+    expect(missing).toEqual([]);
+  });
+
   it("gives every pack a category, and every category a handful of packs", () => {
     const { packs: ps } = loadContent("../../content");
     const perCategory = new Map<string, number>();

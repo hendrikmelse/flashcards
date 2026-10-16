@@ -125,7 +125,7 @@
       "gloss": "company (noun)",
       "entries": {
         "en": [
-        {"lemma": "company", "pos": "noun", "details": {"plural": "companies"}, "sentences": ["He works at a company."]}
+        {"lemma": "company", "pos": "noun", "details": {"note": "a business", "plural": "companies"}, "sentences": ["He works at a company."]}
         ],
         "nl": [
         {"lemma": "bedrijf", "pos": "noun", "details": {"article": "het", "plural": "bedrijven"}, "sentences": ["Hij werkt bij een bedrijf."]}
@@ -185,7 +185,7 @@
       "gloss": "file (noun)",
       "entries": {
         "en": [
-        {"lemma": "file", "pos": "noun", "details": {"plural": "files"}, "sentences": ["The file is on the desk."]}
+        {"lemma": "file", "pos": "noun", "details": {"note": "papers", "plural": "files"}, "sentences": ["The file is on the desk."]}
         ],
         "nl": [
         {"lemma": "dossier", "pos": "noun", "details": {"article": "het", "plural": "dossiers"}, "sentences": ["Het dossier ligt op het bureau."]}
@@ -257,7 +257,7 @@
       "gloss": "report (noun)",
       "entries": {
         "en": [
-        {"lemma": "report", "pos": "noun", "details": {"plural": "reports"}, "sentences": ["I read the report."]}
+        {"lemma": "report", "pos": "noun", "details": {"note": "a document", "plural": "reports"}, "sentences": ["I read the report."]}
         ],
         "nl": [
         {"lemma": "rapport", "pos": "noun", "details": {"article": "het", "plural": "rapporten"}, "sentences": ["Ik lees het rapport."]}
@@ -389,7 +389,7 @@
       "gloss": "writer (noun)",
       "entries": {
         "en": [
-        {"lemma": "writer", "pos": "noun", "details": {"plural": "writers"}, "sentences": ["The writer writes a book."]}
+        {"lemma": "writer", "pos": "noun", "details": {"note": "any gender", "plural": "writers"}, "sentences": ["The writer writes a book."]}
         ],
         "nl": [
         {"lemma": "schrijver", "pos": "noun", "details": {"article": "de", "plural": "schrijvers"}, "sentences": ["De schrijver schrijft een boek."]}
@@ -401,7 +401,7 @@
       "gloss": "department (noun)",
       "entries": {
         "en": [
-        {"lemma": "department", "pos": "noun", "details": {"plural": "departments"}, "sentences": ["I work in this department."]}
+        {"lemma": "department", "pos": "noun", "details": {"note": "of a company", "plural": "departments"}, "sentences": ["I work in this department."]}
         ],
         "nl": [
         {"lemma": "afdeling", "pos": "noun", "details": {"article": "de", "plural": "afdelingen"}, "sentences": ["Ik werk op deze afdeling."]}
@@ -449,7 +449,7 @@
       "gloss": "driver (noun)",
       "entries": {
         "en": [
-        {"lemma": "driver", "pos": "noun", "details": {"plural": "drivers"}, "sentences": ["The driver waits."]}
+        {"lemma": "driver", "pos": "noun", "details": {"note": "a professional", "plural": "drivers"}, "sentences": ["The driver waits."]}
         ],
         "nl": [
         {"lemma": "chauffeur", "pos": "noun", "details": {"article": "de", "plural": "chauffeurs"}, "sentences": ["De chauffeur wacht."]}
@@ -605,7 +605,7 @@
       "gloss": "journalist (noun)",
       "entries": {
         "en": [
-        {"lemma": "journalist", "pos": "noun", "details": {"plural": "journalists"}, "sentences": ["The journalist writes an article."]}
+        {"lemma": "journalist", "pos": "noun", "details": {"note": "any gender", "plural": "journalists"}, "sentences": ["The journalist writes an article."]}
         ],
         "nl": [
         {"lemma": "journalist", "pos": "noun", "details": {"article": "de", "plural": "journalisten"}, "sentences": ["De journalist schrijft een artikel."]}
@@ -641,7 +641,7 @@
       "gloss": "copy (noun)",
       "entries": {
         "en": [
-        {"lemma": "copy", "pos": "noun", "details": {"plural": "copies"}, "sentences": ["I make a copy."]}
+        {"lemma": "copy", "pos": "noun", "details": {"note": "duplicate", "plural": "copies"}, "sentences": ["I make a copy."]}
         ],
         "nl": [
         {"lemma": "kopie", "pos": "noun", "details": {"article": "de", "plural": "kopieën"}, "sentences": ["Ik maak een kopie."]}
@@ -749,7 +749,7 @@
       "gloss": "assistant (noun)",
       "entries": {
         "en": [
-        {"lemma": "assistant", "pos": "noun", "details": {"plural": "assistants"}, "sentences": ["The assistant helps me."]}
+        {"lemma": "assistant", "pos": "noun", "details": {"note": "any gender", "plural": "assistants"}, "sentences": ["The assistant helps me."]}
         ],
         "nl": [
         {"lemma": "assistent", "pos": "noun", "details": {"article": "de", "plural": "assistenten"}, "sentences": ["De assistent helpt mij."]}
@@ -1121,7 +1121,7 @@
       "gloss": "secretary (noun)",
       "entries": {
         "en": [
-        {"lemma": "secretary", "pos": "noun", "details": {"plural": "secretaries"}, "sentences": ["The secretary types."]}
+        {"lemma": "secretary", "pos": "noun", "details": {"note": "typist", "plural": "secretaries"}, "sentences": ["The secretary types."]}
         ],
         "nl": [
         {"lemma": "secretaresse", "pos": "noun", "details": {"article": "de", "plural": "secretaressen"}, "sentences": ["De secretaresse typt."]}
@@ -1316,7 +1316,7 @@
         {"lemma": "copper", "pos": "noun", "details": {"uncountable": true}, "sentences": ["The pipe is made of copper."]}
         ],
         "nl": [
-        {"lemma": "koper", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["De pijp is van koper."]}
+        {"lemma": "koper", "pos": "noun", "details": {"note": "het metaal", "article": "het", "uncountable": true}, "sentences": ["De pijp is van koper."]}
         ]
       }
     },
@@ -1601,7 +1601,7 @@
       "gloss": "silver (noun)",
       "entries": {
         "en": [
-        {"lemma": "silver", "pos": "noun", "details": {"uncountable": true}, "sentences": ["The ring is made of silver."]}
+        {"lemma": "silver", "pos": "noun", "details": {"note": "the metal", "uncountable": true}, "sentences": ["The ring is made of silver."]}
         ],
         "nl": [
         {"lemma": "zilver", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["De ring is van zilver."]}
@@ -1697,7 +1697,7 @@
       "gloss": "reception (noun)",
       "entries": {
         "en": [
-        {"lemma": "reception", "pos": "noun", "details": {"plural": "receptions"}, "sentences": ["I wait at the reception."]}
+        {"lemma": "reception", "pos": "noun", "details": {"note": "front desk", "plural": "receptions"}, "sentences": ["I wait at the reception."]}
         ],
         "nl": [
         {"lemma": "receptie", "pos": "noun", "details": {"article": "de", "plural": "recepties"}, "sentences": ["Ik wacht bij de receptie."]}
@@ -1745,7 +1745,7 @@
       "gloss": "union (noun)",
       "entries": {
         "en": [
-        {"lemma": "union", "pos": "noun", "details": {"plural": "unions"}, "sentences": ["The union strikes."]}
+        {"lemma": "union", "pos": "noun", "details": {"note": "of workers", "plural": "unions"}, "sentences": ["The union strikes."]}
         ],
         "nl": [
         {"lemma": "vakbond", "pos": "noun", "details": {"article": "de", "plural": "vakbonden"}, "sentences": ["De vakbond staakt."]}
@@ -1817,7 +1817,7 @@
       "gloss": "session (period of activity)",
       "entries": {
         "en": [
-        {"lemma": "session", "pos": "noun", "details": {"plural": "sessions"}, "sentences": ["The session is long."]}
+        {"lemma": "session", "pos": "noun", "details": {"note": "period of activity", "plural": "sessions"}, "sentences": ["The session is long."]}
         ],
         "nl": [
         {"lemma": "sessie", "pos": "noun", "details": {"article": "de", "plural": "sessies"}, "sentences": ["De sessie is lang."]}
@@ -1853,7 +1853,7 @@
       "gloss": "token (coin-like piece)",
       "entries": {
         "en": [
-        {"lemma": "token", "pos": "noun", "details": {"plural": "tokens"}, "sentences": ["He gets a token."]}
+        {"lemma": "token", "pos": "noun", "details": {"note": "coin-like piece", "plural": "tokens"}, "sentences": ["He gets a token."]}
         ],
         "nl": [
         {"lemma": "penning", "pos": "noun", "details": {"article": "de", "plural": "penningen"}, "sentences": ["Hij krijgt een penning."]}
@@ -1961,7 +1961,7 @@
       "gloss": "singer (noun)",
       "entries": {
         "en": [
-        {"lemma": "singer", "pos": "noun", "details": {"plural": "singers"}, "sentences": ["The singer is famous."]}
+        {"lemma": "singer", "pos": "noun", "details": {"note": "any gender", "plural": "singers"}, "sentences": ["The singer is famous."]}
         ],
         "nl": [
         {"lemma": "zanger", "pos": "noun", "details": {"article": "de", "plural": "zangers"}, "sentences": ["De zanger is beroemd."]}
@@ -2021,7 +2021,7 @@
       "gloss": "dancer (noun)",
       "entries": {
         "en": [
-        {"lemma": "dancer", "pos": "noun", "details": {"plural": "dancers"}, "sentences": ["The dancer is good."]}
+        {"lemma": "dancer", "pos": "noun", "details": {"note": "any gender", "plural": "dancers"}, "sentences": ["The dancer is good."]}
         ],
         "nl": [
         {"lemma": "danser", "pos": "noun", "details": {"article": "de", "plural": "dansers"}, "sentences": ["De danser is goed."]}
@@ -3041,7 +3041,7 @@
       "gloss": "stamp (noun)",
       "entries": {
         "en": [
-        {"lemma": "stamp", "pos": "noun", "details": {"plural": "stamps"}, "sentences": ["The paper has a stamp."]}
+        {"lemma": "stamp", "pos": "noun", "details": {"note": "an ink mark", "plural": "stamps"}, "sentences": ["The paper has a stamp."]}
         ],
         "nl": [
         {"lemma": "stempel", "pos": "noun", "details": {"article": "de", "plural": "stempels"}, "sentences": ["Het papier heeft een stempel."]}
@@ -4050,7 +4050,7 @@
       "gloss": "capital (money)",
       "entries": {
         "en": [
-        {"lemma": "capital", "pos": "noun", "details": {"plural": "capitals"}, "sentences": ["The company needs capital."]}
+        {"lemma": "capital", "pos": "noun", "details": {"note": "money", "plural": "capitals"}, "sentences": ["The company needs capital."]}
         ],
         "nl": [
         {"lemma": "kapitaal", "pos": "noun", "details": {"article": "het", "plural": "kapitalen"}, "sentences": ["Het bedrijf heeft kapitaal nodig."]}
@@ -4158,7 +4158,7 @@
       "gloss": "professional (noun)",
       "entries": {
         "en": [
-        {"lemma": "professional", "pos": "noun", "details": {"plural": "professionals"}, "sentences": ["He is a professional."]}
+        {"lemma": "professional", "pos": "noun", "details": {"note": "an expert", "plural": "professionals"}, "sentences": ["He is a professional."]}
         ],
         "nl": [
         {"lemma": "professional", "pos": "noun", "details": {"article": "de", "plural": "professionals"}, "sentences": ["Hij is een professional."]}

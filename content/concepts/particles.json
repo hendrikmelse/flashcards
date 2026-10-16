@@ -29,7 +29,7 @@
       "gloss": "so (particle)",
       "entries": {
         "en": [
-        {"lemma": "so", "pos": "particle", "sentences": ["It is so beautiful."]}
+        {"lemma": "so", "pos": "particle", "details": {"note": "very"}, "sentences": ["It is so beautiful."]}
         ],
         "nl": [
         {"lemma": "zo", "pos": "particle", "sentences": ["Het is zo mooi."]}
@@ -77,7 +77,7 @@
       "gloss": "only (particle)",
       "entries": {
         "en": [
-        {"lemma": "only", "pos": "particle", "sentences": ["I only want water."]}
+        {"lemma": "only", "pos": "particle", "details": {"note": "nothing more than"}, "sentences": ["I only want water."]}
         ],
         "nl": [
         {"lemma": "alleen", "pos": "particle", "sentences": ["Ik wil alleen water."]}
@@ -164,7 +164,7 @@
         {"lemma": "only just", "pos": "particle", "sentences": ["I only just arrived."]}
         ],
         "nl": [
-        {"lemma": "pas", "pos": "particle", "sentences": ["Ik ben pas aangekomen."]}
+        {"lemma": "pas", "pos": "particle", "details": {"note": "zojuist"}, "sentences": ["Ik ben pas aangekomen."]}
         ]
       }
     },
@@ -224,7 +224,7 @@
         {"lemma": "exactly", "pos": "particle", "sentences": ["That is exactly right."]}
         ],
         "nl": [
-        {"lemma": "juist", "pos": "particle", "sentences": ["Dat is juist."]}
+        {"lemma": "juist", "pos": "particle", "details": {"note": "precies"}, "sentences": ["Dat is juist."]}
         ]
       }
     },
@@ -245,7 +245,7 @@
       "gloss": "at least (particle)",
       "entries": {
         "en": [
-        {"lemma": "at least", "pos": "particle", "sentences": ["At least he called."]}
+        {"lemma": "at least", "pos": "particle", "details": {"note": "on the bright side"}, "sentences": ["At least he called."]}
         ],
         "nl": [
         {"lemma": "tenminste", "pos": "particle", "sentences": ["Hij belde tenminste."]}
@@ -473,7 +473,7 @@
       "gloss": "already (particle)",
       "entries": {
         "en": [
-        {"lemma": "already", "pos": "particle", "sentences": ["I am already here."]}
+        {"lemma": "already", "pos": "particle", "details": {"note": "sooner than expected"}, "sentences": ["I am already here."]}
         ],
         "nl": [
         {"lemma": "al", "pos": "particle", "sentences": ["Ik ben al hier."]}
@@ -488,7 +488,7 @@
         {"lemma": "just", "pos": "particle", "details": {"note": "encouraging"}, "sentences": ["Just come in."]}
         ],
         "nl": [
-        {"lemma": "maar", "pos": "particle", "sentences": ["Kom maar binnen."]}
+        {"lemma": "maar", "pos": "particle", "details": {"note": "aanmoedigend"}, "sentences": ["Kom maar binnen."]}
         ]
       }
     },
@@ -800,7 +800,7 @@
         {"lemma": "hello", "pos": "interjection", "details": {"note": "informal, hi or bye"}, "sentences": ["Hello, how are you?"]}
         ],
         "nl": [
-        {"lemma": "dag", "pos": "interjection", "sentences": ["Dag, hoe gaat het?"]}
+        {"lemma": "dag", "pos": "interjection", "details": {"note": "een groet"}, "sentences": ["Dag, hoe gaat het?"]}
         ]
       }
     },

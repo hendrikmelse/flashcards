@@ -32,7 +32,7 @@
         {"lemma": "weather", "pos": "noun", "details": {"uncountable": true}, "sentences": ["How is the weather today?"]}
         ],
         "nl": [
-        {"lemma": "weer", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["Hoe is het weer vandaag?"]}
+        {"lemma": "weer", "pos": "noun", "details": {"note": "zon en regen", "article": "het", "uncountable": true}, "sentences": ["Hoe is het weer vandaag?"]}
         ]
       }
     },
@@ -317,7 +317,7 @@
       "gloss": "region (district)",
       "entries": {
         "en": [
-        {"lemma": "region", "pos": "noun", "details": {"plural": "regions"}, "sentences": ["This is a beautiful region."]}
+        {"lemma": "region", "pos": "noun", "details": {"note": "countryside", "plural": "regions"}, "sentences": ["This is a beautiful region."]}
         ],
         "nl": [
         {"lemma": "streek", "pos": "noun", "details": {"article": "de", "plural": "streken"}, "sentences": ["Dit is een mooie streek."]}
@@ -749,7 +749,7 @@
       "gloss": "stable (noun)",
       "entries": {
         "en": [
-        {"lemma": "stable", "pos": "noun", "details": {"plural": "stables"}, "sentences": ["The horse is in the stable."]}
+        {"lemma": "stable", "pos": "noun", "details": {"note": "for horses", "plural": "stables"}, "sentences": ["The horse is in the stable."]}
         ],
         "nl": [
         {"lemma": "stal", "pos": "noun", "details": {"article": "de", "plural": "stallen"}, "sentences": ["Het paard staat in de stal."]}
@@ -773,7 +773,7 @@
       "gloss": "cold (noun)",
       "entries": {
         "en": [
-        {"lemma": "cold", "pos": "noun", "details": {"uncountable": true}, "sentences": ["I feel the cold."]}
+        {"lemma": "cold", "pos": "noun", "details": {"note": "the cold weather", "uncountable": true}, "sentences": ["I feel the cold."]}
         ],
         "nl": [
         {"lemma": "kou", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Ik voel de kou."]}
@@ -797,7 +797,7 @@
       "gloss": "canal (noun)",
       "entries": {
         "en": [
-        {"lemma": "canal", "pos": "noun", "details": {"plural": "canals"}, "sentences": ["The boat is on the canal."]}
+        {"lemma": "canal", "pos": "noun", "details": {"note": "for boats, not in a city", "plural": "canals"}, "sentences": ["The boat is on the canal."]}
         ],
         "nl": [
         {"lemma": "kanaal", "pos": "noun", "details": {"article": "het", "plural": "kanalen"}, "sentences": ["De boot ligt op het kanaal."]}
@@ -917,7 +917,7 @@
       "gloss": "waste (noun)",
       "entries": {
         "en": [
-        {"lemma": "waste", "pos": "noun", "details": {"uncountable": true}, "sentences": ["The waste is in the bin."]}
+        {"lemma": "waste", "pos": "noun", "details": {"note": "rubbish", "uncountable": true}, "sentences": ["The waste is in the bin."]}
         ],
         "nl": [
         {"lemma": "afval", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["Het afval zit in de bak."]}
@@ -1037,7 +1037,7 @@
       "gloss": "well (noun)",
       "entries": {
         "en": [
-        {"lemma": "well", "pos": "noun", "details": {"plural": "wells"}, "sentences": ["The water comes from a well."]}
+        {"lemma": "well", "pos": "noun", "details": {"note": "water source", "plural": "wells"}, "sentences": ["The water comes from a well."]}
         ],
         "nl": [
         {"lemma": "put", "pos": "noun", "details": {"article": "de", "plural": "putten"}, "sentences": ["Het water komt uit een put."]}
@@ -1397,7 +1397,7 @@
       "gloss": "plain (noun)",
       "entries": {
         "en": [
-        {"lemma": "plain", "pos": "noun", "details": {"plural": "plains"}, "sentences": ["The plain is wide."]}
+        {"lemma": "plain", "pos": "noun", "details": {"note": "flat land", "plural": "plains"}, "sentences": ["The plain is wide."]}
         ],
         "nl": [
         {"lemma": "vlakte", "pos": "noun", "details": {"article": "de", "plural": "vlaktes"}, "sentences": ["De vlakte is wijd."]}
@@ -1433,7 +1433,7 @@
       "gloss": "region (area)",
       "entries": {
         "en": [
-        {"lemma": "region", "pos": "noun", "details": {"plural": "regions"}, "sentences": ["This is a nice region."]}
+        {"lemma": "region", "pos": "noun", "details": {"note": "administrative area", "plural": "regions"}, "sentences": ["This is a nice region."]}
         ],
         "nl": [
         {"lemma": "regio", "pos": "noun", "details": {"article": "de", "plural": "regio's"}, "sentences": ["Dit is een mooie regio."]}
@@ -1697,7 +1697,7 @@
       "gloss": "current (noun)",
       "entries": {
         "en": [
-        {"lemma": "current", "pos": "noun", "details": {"plural": "currents"}, "sentences": ["The current is strong."]}
+        {"lemma": "current", "pos": "noun", "details": {"note": "flow of water or electricity", "plural": "currents"}, "sentences": ["The current is strong."]}
         ],
         "nl": [
         {"lemma": "stroming", "pos": "noun", "details": {"article": "de", "plural": "stromingen"}, "sentences": ["De stroming is sterk."]}
@@ -2084,7 +2084,7 @@
         {"lemma": "fern", "pos": "noun", "details": {"plural": "ferns"}, "sentences": ["The fern grows in the shade."]}
         ],
         "nl": [
-        {"lemma": "varen", "pos": "noun", "details": {"article": "de", "plural": "varens"}, "sentences": ["De varen groeit in de schaduw."]}
+        {"lemma": "varen", "pos": "noun", "details": {"note": "de plant", "article": "de", "plural": "varens"}, "sentences": ["De varen groeit in de schaduw."]}
         ]
       }
     },
@@ -2297,7 +2297,7 @@
       "gloss": "mushroom (noun)",
       "entries": {
         "en": [
-        {"lemma": "mushroom", "pos": "noun", "details": {"plural": "mushrooms"}, "sentences": ["The mushroom grows in the forest."]}
+        {"lemma": "mushroom", "pos": "noun", "details": {"note": "in the wild", "plural": "mushrooms"}, "sentences": ["The mushroom grows in the forest."]}
         ],
         "nl": [
         {"lemma": "paddenstoel", "pos": "noun", "details": {"article": "de", "plural": "paddenstoelen"}, "sentences": ["De paddenstoel groeit in het bos."]}

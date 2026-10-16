@@ -29,7 +29,7 @@
       "gloss": "building (noun)",
       "entries": {
         "en": [
-        {"lemma": "building", "pos": "noun", "details": {"plural": "buildings"}, "sentences": ["The building is tall."]}
+        {"lemma": "building", "pos": "noun", "details": {"note": "a structure", "plural": "buildings"}, "sentences": ["The building is tall."]}
         ],
         "nl": [
         {"lemma": "gebouw", "pos": "noun", "details": {"article": "het", "plural": "gebouwen"}, "sentences": ["Het gebouw is hoog."]}
@@ -125,7 +125,7 @@
       "gloss": "bar (noun)",
       "entries": {
         "en": [
-        {"lemma": "bar", "pos": "noun", "details": {"plural": "bars"}, "sentences": ["We go to a bar."]}
+        {"lemma": "bar", "pos": "noun", "details": {"note": "a place for drinks", "plural": "bars"}, "sentences": ["We go to a bar."]}
         ],
         "nl": [
         {"lemma": "bar", "pos": "noun", "details": {"article": "de", "plural": "bars"}, "sentences": ["Wij gaan naar een bar."]}
@@ -329,7 +329,7 @@
       "gloss": "exit (noun)",
       "entries": {
         "en": [
-        {"lemma": "exit", "pos": "noun", "details": {"plural": "exits"}, "sentences": ["The exit is on the left."]}
+        {"lemma": "exit", "pos": "noun", "details": {"note": "way out", "plural": "exits"}, "sentences": ["The exit is on the left."]}
         ],
         "nl": [
         {"lemma": "uitgang", "pos": "noun", "details": {"article": "de", "plural": "uitgangen"}, "sentences": ["De uitgang is links."]}
@@ -440,7 +440,7 @@
         {"lemma": "buyer", "pos": "noun", "details": {"plural": "buyers"}, "sentences": ["The buyer pays."]}
         ],
         "nl": [
-        {"lemma": "koper", "pos": "noun", "details": {"article": "de", "plural": "kopers"}, "sentences": ["De koper betaalt."]}
+        {"lemma": "koper", "pos": "noun", "details": {"note": "iemand die koopt", "article": "de", "plural": "kopers"}, "sentences": ["De koper betaalt."]}
         ]
       }
     },
@@ -569,7 +569,7 @@
       "gloss": "warehouse (noun)",
       "entries": {
         "en": [
-        {"lemma": "warehouse", "pos": "noun", "details": {"plural": "warehouses"}, "sentences": ["The goods are in the warehouse."]}
+        {"lemma": "warehouse", "pos": "noun", "details": {"note": "for goods", "plural": "warehouses"}, "sentences": ["The goods are in the warehouse."]}
         ],
         "nl": [
         {"lemma": "magazijn", "pos": "noun", "details": {"article": "het", "plural": "magazijnen"}, "sentences": ["De goederen liggen in het magazijn."]}

@@ -17,7 +17,7 @@
       "gloss": "cat (domestic animal)",
       "entries": {
         "en": [
-        {"lemma": "cat", "pos": "noun", "details": {"plural": "cats"}, "sentences": ["The cat sleeps on the bed."]}
+        {"lemma": "cat", "pos": "noun", "details": {"note": "any cat", "plural": "cats"}, "sentences": ["The cat sleeps on the bed."]}
         ],
         "nl": [
         {"lemma": "kat", "pos": "noun", "details": {"article": "de", "plural": "katten"}, "sentences": ["De kat slaapt op het bed."]}
@@ -693,7 +693,7 @@
         {"lemma": "bee", "pos": "noun", "details": {"plural": "bees"}, "sentences": ["The bee makes honey."]}
         ],
         "nl": [
-        {"lemma": "bij", "pos": "noun", "details": {"article": "de", "plural": "bijen"}, "sentences": ["De bij maakt honing."]}
+        {"lemma": "bij", "pos": "noun", "details": {"note": "het insect", "article": "de", "plural": "bijen"}, "sentences": ["De bij maakt honing."]}
         ]
       }
     },
@@ -738,7 +738,7 @@
       "gloss": "mole (noun)",
       "entries": {
         "en": [
-        {"lemma": "mole", "pos": "noun", "details": {"plural": "moles"}, "sentences": ["The mole lives under the ground."]}
+        {"lemma": "mole", "pos": "noun", "details": {"note": "animal", "plural": "moles"}, "sentences": ["The mole lives under the ground."]}
         ],
         "nl": [
         {"lemma": "mol", "pos": "noun", "details": {"article": "de", "plural": "mollen"}, "sentences": ["De mol leeft onder de grond."]}
@@ -906,7 +906,7 @@
       "gloss": "collar (noun)",
       "entries": {
         "en": [
-        {"lemma": "collar", "pos": "noun", "details": {"plural": "collars"}, "sentences": ["The dog has a collar."]}
+        {"lemma": "collar", "pos": "noun", "details": {"note": "of a dog", "plural": "collars"}, "sentences": ["The dog has a collar."]}
         ],
         "nl": [
         {"lemma": "halsband", "pos": "noun", "details": {"article": "de", "plural": "halsbanden"}, "sentences": ["De hond heeft een halsband."]}
@@ -1590,7 +1590,7 @@
       "gloss": "seal (animal)",
       "entries": {
         "en": [
-        {"lemma": "seal", "pos": "noun", "details": {"plural": "seals"}, "sentences": ["The seal swims."]}
+        {"lemma": "seal", "pos": "noun", "details": {"note": "animal", "plural": "seals"}, "sentences": ["The seal swims."]}
         ],
         "nl": [
         {"lemma": "zeehond", "pos": "noun", "details": {"article": "de", "plural": "zeehonden"}, "sentences": ["De zeehond zwemt."]}

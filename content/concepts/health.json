@@ -65,7 +65,7 @@
       "gloss": "nurse (noun)",
       "entries": {
         "en": [
-        {"lemma": "nurse", "pos": "noun", "details": {"plural": "nurses"}, "sentences": ["The nurse helps the patient."]}
+        {"lemma": "nurse", "pos": "noun", "details": {"note": "any gender", "plural": "nurses"}, "sentences": ["The nurse helps the patient."]}
         ],
         "nl": [
         {"lemma": "zuster", "pos": "noun", "details": {"article": "de", "plural": "zusters"}, "sentences": ["De zuster helpt de patiënt."]}
@@ -101,7 +101,7 @@
       "gloss": "rest (relaxation)",
       "entries": {
         "en": [
-        {"lemma": "rest", "pos": "noun", "details": {"uncountable": true}, "sentences": ["I need rest."]}
+        {"lemma": "rest", "pos": "noun", "details": {"note": "relaxation", "uncountable": true}, "sentences": ["I need rest."]}
         ],
         "nl": [
         {"lemma": "rust", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Ik heb rust nodig."]}
@@ -173,7 +173,7 @@
       "gloss": "medicine (noun)",
       "entries": {
         "en": [
-        {"lemma": "medicine", "pos": "noun", "details": {"plural": "medicines"}, "sentences": ["I take medicine."]}
+        {"lemma": "medicine", "pos": "noun", "details": {"note": "something you take", "plural": "medicines"}, "sentences": ["I take medicine."]}
         ],
         "nl": [
         {"lemma": "medicijn", "pos": "noun", "details": {"article": "het", "plural": "medicijnen"}, "sentences": ["Ik neem medicijnen."]}
@@ -197,7 +197,7 @@
       "gloss": "patient (noun)",
       "entries": {
         "en": [
-        {"lemma": "patient", "pos": "noun", "details": {"plural": "patients"}, "sentences": ["The patient is ill."]}
+        {"lemma": "patient", "pos": "noun", "details": {"note": "someone being treated", "plural": "patients"}, "sentences": ["The patient is ill."]}
         ],
         "nl": [
         {"lemma": "patiënt", "pos": "noun", "details": {"article": "de", "plural": "patiënten"}, "sentences": ["De patiënt is ziek."]}
@@ -209,7 +209,7 @@
       "gloss": "operation (noun)",
       "entries": {
         "en": [
-        {"lemma": "operation", "pos": "noun", "details": {"plural": "operations"}, "sentences": ["The operation is tomorrow."]}
+        {"lemma": "operation", "pos": "noun", "details": {"note": "surgery", "plural": "operations"}, "sentences": ["The operation is tomorrow."]}
         ],
         "nl": [
         {"lemma": "operatie", "pos": "noun", "details": {"article": "de", "plural": "operaties"}, "sentences": ["De operatie is morgen."]}
@@ -1373,7 +1373,7 @@
       "gloss": "hearing (sense)",
       "entries": {
         "en": [
-        {"lemma": "hearing", "pos": "noun", "details": {"uncountable": true}, "sentences": ["His hearing is poor."]}
+        {"lemma": "hearing", "pos": "noun", "details": {"note": "ability to hear", "uncountable": true}, "sentences": ["His hearing is poor."]}
         ],
         "nl": [
         {"lemma": "gehoor", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["Zijn gehoor is slecht."]}

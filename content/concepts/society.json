@@ -152,7 +152,7 @@
         {"lemma": "right", "pos": "noun", "details": {"note": "entitlement", "plural": "rights"}, "sentences": ["You have the right to speak."]}
         ],
         "nl": [
-        {"lemma": "recht", "pos": "noun", "details": {"article": "het", "plural": "rechten"}, "sentences": ["Je hebt het recht om te spreken."]}
+        {"lemma": "recht", "pos": "noun", "details": {"note": "wat je mag", "article": "het", "plural": "rechten"}, "sentences": ["Je hebt het recht om te spreken."]}
         ]
       }
     },
@@ -353,7 +353,7 @@
       "gloss": "general (noun)",
       "entries": {
         "en": [
-        {"lemma": "general", "pos": "noun", "details": {"plural": "generals"}, "sentences": ["The general speaks."]}
+        {"lemma": "general", "pos": "noun", "details": {"note": "an army officer", "plural": "generals"}, "sentences": ["The general speaks."]}
         ],
         "nl": [
         {"lemma": "generaal", "pos": "noun", "details": {"article": "de", "plural": "generaals"}, "sentences": ["De generaal spreekt."]}
@@ -749,7 +749,7 @@
       "gloss": "trap (noun)",
       "entries": {
         "en": [
-        {"lemma": "trap", "pos": "noun", "details": {"plural": "traps"}, "sentences": ["It is a trap."]}
+        {"lemma": "trap", "pos": "noun", "details": {"note": "a device or situation", "plural": "traps"}, "sentences": ["It is a trap."]}
         ],
         "nl": [
         {"lemma": "val", "pos": "noun", "details": {"article": "de", "plural": "vallen"}, "sentences": ["Het is een val."]}
@@ -917,7 +917,7 @@
       "gloss": "guard (noun)",
       "entries": {
         "en": [
-        {"lemma": "guard", "pos": "noun", "details": {"plural": "guards"}, "sentences": ["The guard stands at the door."]}
+        {"lemma": "guard", "pos": "noun", "details": {"note": "security guard", "plural": "guards"}, "sentences": ["The guard stands at the door."]}
         ],
         "nl": [
         {"lemma": "bewaker", "pos": "noun", "details": {"article": "de", "plural": "bewakers"}, "sentences": ["De bewaker staat bij de deur."]}
@@ -1133,7 +1133,7 @@
       "gloss": "grave (noun)",
       "entries": {
         "en": [
-        {"lemma": "grave", "pos": "noun", "details": {"plural": "graves"}, "sentences": ["The grave is old."]}
+        {"lemma": "grave", "pos": "noun", "details": {"note": "where someone is buried", "plural": "graves"}, "sentences": ["The grave is old."]}
         ],
         "nl": [
         {"lemma": "graf", "pos": "noun", "details": {"article": "het", "plural": "graven"}, "sentences": ["Het graf is oud."]}
@@ -1325,7 +1325,7 @@
       "gloss": "criminal (noun)",
       "entries": {
         "en": [
-        {"lemma": "criminal", "pos": "noun", "details": {"plural": "criminals"}, "sentences": ["The criminal escapes."]}
+        {"lemma": "criminal", "pos": "noun", "details": {"note": "lawbreaker", "plural": "criminals"}, "sentences": ["The criminal escapes."]}
         ],
         "nl": [
         {"lemma": "crimineel", "pos": "noun", "details": {"article": "de", "plural": "criminelen"}, "sentences": ["De crimineel ontsnapt."]}
@@ -1589,7 +1589,7 @@
       "gloss": "cover (noun)",
       "entries": {
         "en": [
-        {"lemma": "cover", "pos": "noun", "details": {"uncountable": true}, "sentences": ["Take cover!"]}
+        {"lemma": "cover", "pos": "noun", "details": {"note": "shelter", "uncountable": true}, "sentences": ["Take cover!"]}
         ],
         "nl": [
         {"lemma": "dekking", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Zoek dekking!"]}
@@ -1604,7 +1604,7 @@
         {"lemma": "politics", "pos": "noun", "details": {"uncountable": true}, "sentences": ["I do not like politics."]}
         ],
         "nl": [
-        {"lemma": "politiek", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Ik hou niet van politiek."]}
+        {"lemma": "politiek", "pos": "noun", "details": {"note": "de zaak van de staat", "article": "de", "uncountable": true}, "sentences": ["Ik hou niet van politiek."]}
         ]
       }
     },
@@ -1625,7 +1625,7 @@
       "gloss": "threat (noun)",
       "entries": {
         "en": [
-        {"lemma": "threat", "pos": "noun", "details": {"plural": "threats"}, "sentences": ["This is a threat."]}
+        {"lemma": "threat", "pos": "noun", "details": {"note": "a danger", "plural": "threats"}, "sentences": ["This is a threat."]}
         ],
         "nl": [
         {"lemma": "bedreiging", "pos": "noun", "details": {"article": "de", "plural": "bedreigingen"}, "sentences": ["Dit is een bedreiging."]}
@@ -1661,7 +1661,7 @@
       "gloss": "authorities (noun)",
       "entries": {
         "en": [
-        {"lemma": "authorities", "pos": "noun", "details": {"pluralOnly": true}, "sentences": ["The authorities decide."]}
+        {"lemma": "authorities", "pos": "noun", "details": {"note": "the government", "pluralOnly": true}, "sentences": ["The authorities decide."]}
         ],
         "nl": [
         {"lemma": "overheid", "pos": "noun", "details": {"article": "de", "plural": "overheden"}, "sentences": ["De overheid beslist."]}
@@ -1724,7 +1724,7 @@
         {"lemma": "political", "pos": "adjective", "sentences": ["It is a political question."]}
         ],
         "nl": [
-        {"lemma": "politiek", "pos": "adjective", "sentences": ["Het is een politieke vraag."]}
+        {"lemma": "politiek", "pos": "adjective", "details": {"note": "over de overheid"}, "sentences": ["Het is een politieke vraag."]}
         ]
       }
     },
@@ -1817,7 +1817,7 @@
       "gloss": "spy (noun)",
       "entries": {
         "en": [
-        {"lemma": "spy", "pos": "noun", "details": {"plural": "spies"}, "sentences": ["The spy is caught."]}
+        {"lemma": "spy", "pos": "noun", "details": {"note": "any gender", "plural": "spies"}, "sentences": ["The spy is caught."]}
         ],
         "nl": [
         {"lemma": "spion", "pos": "noun", "details": {"article": "de", "plural": "spionnen"}, "sentences": ["De spion is gepakt."]}
@@ -2057,7 +2057,7 @@
       "gloss": "legal (adjective)",
       "entries": {
         "en": [
-        {"lemma": "legal", "pos": "adjective", "sentences": ["It is legal."]}
+        {"lemma": "legal", "pos": "adjective", "details": {"note": "allowed by law"}, "sentences": ["It is legal."]}
         ],
         "nl": [
         {"lemma": "legaal", "pos": "adjective", "sentences": ["Het is legaal."]}
@@ -2297,7 +2297,7 @@
       "gloss": "offense (noun)",
       "entries": {
         "en": [
-        {"lemma": "offense", "pos": "noun", "details": {"plural": "offenses"}, "sentences": ["That is an offense."]}
+        {"lemma": "offense", "pos": "noun", "details": {"note": "a crime", "plural": "offenses"}, "sentences": ["That is an offense."]}
         ],
         "nl": [
         {"lemma": "misdrijf", "pos": "noun", "details": {"article": "het", "plural": "misdrijven"}, "sentences": ["Dat is een misdrijf."]}
@@ -2513,7 +2513,7 @@
       "gloss": "cemetery (noun)",
       "entries": {
         "en": [
-        {"lemma": "cemetery", "pos": "noun", "details": {"plural": "cemeteries"}, "sentences": ["The cemetery is quiet."]}
+        {"lemma": "cemetery", "pos": "noun", "details": {"note": "churchyard", "plural": "cemeteries"}, "sentences": ["The cemetery is quiet."]}
         ],
         "nl": [
         {"lemma": "kerkhof", "pos": "noun", "details": {"article": "het", "plural": "kerkhoven"}, "sentences": ["Het kerkhof is stil."]}
@@ -2645,7 +2645,7 @@
       "gloss": "authority (noun)",
       "entries": {
         "en": [
-        {"lemma": "authority", "pos": "noun", "details": {"uncountable": true}, "sentences": ["The teacher has authority."]}
+        {"lemma": "authority", "pos": "noun", "details": {"note": "power", "uncountable": true}, "sentences": ["The teacher has authority."]}
         ],
         "nl": [
         {"lemma": "gezag", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["De leraar heeft gezag."]}
@@ -2957,7 +2957,7 @@
       "gloss": "fine (noun)",
       "entries": {
         "en": [
-        {"lemma": "fine", "pos": "noun", "details": {"plural": "fines"}, "sentences": ["I pay a fine."]}
+        {"lemma": "fine", "pos": "noun", "details": {"note": "a penalty", "plural": "fines"}, "sentences": ["I pay a fine."]}
         ],
         "nl": [
         {"lemma": "boete", "pos": "noun", "details": {"article": "de", "plural": "boetes"}, "sentences": ["Ik betaal een boete."]}
@@ -3209,7 +3209,7 @@
       "gloss": "fighter (warrior)",
       "entries": {
         "en": [
-        {"lemma": "fighter", "pos": "noun", "details": {"plural": "fighters"}, "sentences": ["The fighter is brave."]}
+        {"lemma": "fighter", "pos": "noun", "details": {"note": "warrior", "plural": "fighters"}, "sentences": ["The fighter is brave."]}
         ],
         "nl": [
         {"lemma": "strijder", "pos": "noun", "details": {"article": "de", "plural": "strijders"}, "sentences": ["De strijder is dapper."]}
@@ -3593,7 +3593,7 @@
       "gloss": "forgiveness (noun)",
       "entries": {
         "en": [
-        {"lemma": "forgiveness", "pos": "noun", "details": {"uncountable": true}, "sentences": ["I ask for forgiveness."]}
+        {"lemma": "forgiveness", "pos": "noun", "details": {"note": "mercy", "uncountable": true}, "sentences": ["I ask for forgiveness."]}
         ],
         "nl": [
         {"lemma": "vergiffenis", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Ik vraag om vergiffenis."]}
@@ -3773,7 +3773,7 @@
       "gloss": "hearing (formal session)",
       "entries": {
         "en": [
-        {"lemma": "hearing", "pos": "noun", "details": {"plural": "hearings"}, "sentences": ["The hearing starts at ten."]}
+        {"lemma": "hearing", "pos": "noun", "details": {"note": "formal session", "plural": "hearings"}, "sentences": ["The hearing starts at ten."]}
         ],
         "nl": [
         {"lemma": "hoorzitting", "pos": "noun", "details": {"article": "de", "plural": "hoorzittingen"}, "sentences": ["De hoorzitting begint om tien uur."]}
@@ -4037,7 +4037,7 @@
       "gloss": "capital (city)",
       "entries": {
         "en": [
-        {"lemma": "capital", "pos": "noun", "details": {"plural": "capitals"}, "sentences": ["Amsterdam is the capital."]}
+        {"lemma": "capital", "pos": "noun", "details": {"note": "city", "plural": "capitals"}, "sentences": ["Amsterdam is the capital."]}
         ],
         "nl": [
         {"lemma": "hoofdstad", "pos": "noun", "details": {"article": "de", "plural": "hoofdsteden"}, "sentences": ["Amsterdam is de hoofdstad."]}
@@ -4664,7 +4664,7 @@
         {"lemma": "elf", "pos": "noun", "details": {"plural": "elfs"}, "sentences": ["The elf lives in the forest."]}
         ],
         "nl": [
-        {"lemma": "elf", "pos": "noun", "details": {"article": "de", "plural": "elfen"}, "sentences": ["De elf woont in het bos."]}
+        {"lemma": "elf", "pos": "noun", "details": {"note": "een sprookjesfiguur", "article": "de", "plural": "elfen"}, "sentences": ["De elf woont in het bos."]}
         ]
       }
     },
@@ -4865,7 +4865,7 @@
       "gloss": "lobby (pressure group)",
       "entries": {
         "en": [
-        {"lemma": "lobby", "pos": "noun", "details": {"plural": "lobbies"}, "sentences": ["The lobby is strong."]}
+        {"lemma": "lobby", "pos": "noun", "details": {"note": "pressure group", "plural": "lobbies"}, "sentences": ["The lobby is strong."]}
         ],
         "nl": [
         {"lemma": "lobby", "pos": "noun", "details": {"article": "de", "plural": "lobby's"}, "sentences": ["De lobby is sterk."]}
@@ -5393,7 +5393,7 @@
       "gloss": "mortal (adjective)",
       "entries": {
         "en": [
-        {"lemma": "mortal", "pos": "adjective", "sentences": ["Humans are mortal."]}
+        {"lemma": "mortal", "pos": "adjective", "details": {"note": "bound to die"}, "sentences": ["Humans are mortal."]}
         ],
         "nl": [
         {"lemma": "sterfelijk", "pos": "adjective", "sentences": ["Mensen zijn sterfelijk."]}
@@ -5405,7 +5405,7 @@
       "gloss": "ally (noun)",
       "entries": {
         "en": [
-        {"lemma": "ally", "pos": "noun", "details": {"plural": "allies"}, "sentences": ["He is my ally."]}
+        {"lemma": "ally", "pos": "noun", "details": {"note": "any gender", "plural": "allies"}, "sentences": ["He is my ally."]}
         ],
         "nl": [
         {"lemma": "bondgenoot", "pos": "noun", "details": {"article": "de", "plural": "bondgenoten"}, "sentences": ["Hij is mijn bondgenoot."]}
@@ -5981,7 +5981,7 @@
       "gloss": "criminal (adjective)",
       "entries": {
         "en": [
-        {"lemma": "criminal", "pos": "adjective", "sentences": ["That is a criminal act."]}
+        {"lemma": "criminal", "pos": "adjective", "details": {"note": "against the law"}, "sentences": ["That is a criminal act."]}
         ],
         "nl": [
         {"lemma": "misdadig", "pos": "adjective", "sentences": ["Dat is een misdadige daad."]}

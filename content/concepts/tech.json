@@ -125,7 +125,7 @@
       "gloss": "joke (noun)",
       "entries": {
         "en": [
-        {"lemma": "joke", "pos": "noun", "details": {"plural": "jokes"}, "sentences": ["He tells a joke."]}
+        {"lemma": "joke", "pos": "noun", "details": {"note": "a standard joke", "plural": "jokes"}, "sentences": ["He tells a joke."]}
         ],
         "nl": [
         {"lemma": "grap", "pos": "noun", "details": {"article": "de", "plural": "grappen"}, "sentences": ["Hij vertelt een grap."]}
@@ -413,7 +413,7 @@
       "gloss": "device (noun)",
       "entries": {
         "en": [
-        {"lemma": "device", "pos": "noun", "details": {"plural": "devices"}, "sentences": ["The device is new."]}
+        {"lemma": "device", "pos": "noun", "details": {"note": "a machine", "plural": "devices"}, "sentences": ["The device is new."]}
         ],
         "nl": [
         {"lemma": "apparaat", "pos": "noun", "details": {"article": "het", "plural": "apparaten"}, "sentences": ["Het apparaat is nieuw."]}
@@ -461,7 +461,7 @@
       "gloss": "page (noun)",
       "entries": {
         "en": [
-        {"lemma": "page", "pos": "noun", "details": {"plural": "pages"}, "sentences": ["Turn the page."]}
+        {"lemma": "page", "pos": "noun", "details": {"note": "on a screen or paper", "plural": "pages"}, "sentences": ["Turn the page."]}
         ],
         "nl": [
         {"lemma": "pagina", "pos": "noun", "details": {"article": "de", "plural": "pagina's"}, "sentences": ["Sla de pagina om."]}
@@ -581,7 +581,7 @@
       "gloss": "series (noun)",
       "entries": {
         "en": [
-        {"lemma": "series", "pos": "noun", "details": {"plural": "series"}, "sentences": ["I watch a series."]}
+        {"lemma": "series", "pos": "noun", "details": {"note": "of TV shows", "plural": "series"}, "sentences": ["I watch a series."]}
         ],
         "nl": [
         {"lemma": "serie", "pos": "noun", "details": {"article": "de", "plural": "series"}, "sentences": ["Ik kijk een serie."]}
@@ -668,7 +668,7 @@
         {"lemma": "cell phone", "pos": "noun", "details": {"plural": "cell phones"}, "sentences": ["My cell phone is new."]}
         ],
         "nl": [
-        {"lemma": "mobiel", "pos": "noun", "details": {"article": "de", "plural": "mobiels"}, "sentences": ["Mijn mobiel is nieuw."]}
+        {"lemma": "mobiel", "pos": "noun", "details": {"note": "de telefoon", "article": "de", "plural": "mobiels"}, "sentences": ["Mijn mobiel is nieuw."]}
         ]
       }
     },
@@ -881,7 +881,7 @@
       "gloss": "equipment (noun)",
       "entries": {
         "en": [
-        {"lemma": "equipment", "pos": "noun", "details": {"uncountable": true}, "sentences": ["The equipment is new."]}
+        {"lemma": "equipment", "pos": "noun", "details": {"note": "devices", "uncountable": true}, "sentences": ["The equipment is new."]}
         ],
         "nl": [
         {"lemma": "apparatuur", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["De apparatuur is nieuw."]}
@@ -1004,7 +1004,7 @@
         {"lemma": "mobile", "pos": "adjective", "sentences": ["The phone is mobile."]}
         ],
         "nl": [
-        {"lemma": "mobiel", "pos": "adjective", "sentences": ["De telefoon is mobiel."]}
+        {"lemma": "mobiel", "pos": "adjective", "details": {"note": "beweeglijk"}, "sentences": ["De telefoon is mobiel."]}
         ]
       }
     },
@@ -1013,7 +1013,7 @@
       "gloss": "link (web)",
       "entries": {
         "en": [
-        {"lemma": "link", "pos": "noun", "details": {"plural": "links"}, "sentences": ["I send you the link."]}
+        {"lemma": "link", "pos": "noun", "details": {"note": "on the internet", "plural": "links"}, "sentences": ["I send you the link."]}
         ],
         "nl": [
         {"lemma": "link", "pos": "noun", "details": {"article": "de", "plural": "links"}, "sentences": ["Ik stuur je de link."]}
@@ -1253,7 +1253,7 @@
       "gloss": "crew (film or work team)",
       "entries": {
         "en": [
-        {"lemma": "crew", "pos": "noun", "details": {"plural": "crews"}, "sentences": ["The crew films the scene."]}
+        {"lemma": "crew", "pos": "noun", "details": {"note": "film or work team", "plural": "crews"}, "sentences": ["The crew films the scene."]}
         ],
         "nl": [
         {"lemma": "crew", "pos": "noun", "details": {"article": "de", "plural": "crews"}, "sentences": ["De crew filmt de scène."]}
@@ -2129,7 +2129,7 @@
       "gloss": "column (noun)",
       "entries": {
         "en": [
-        {"lemma": "column", "pos": "noun", "details": {"plural": "columns"}, "sentences": ["I read the column."]}
+        {"lemma": "column", "pos": "noun", "details": {"note": "in a newspaper", "plural": "columns"}, "sentences": ["I read the column."]}
         ],
         "nl": [
         {"lemma": "column", "pos": "noun", "details": {"article": "de", "plural": "columns"}, "sentences": ["Ik lees de column."]}

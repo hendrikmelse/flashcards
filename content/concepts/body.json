@@ -80,7 +80,7 @@
         {"lemma": "hair", "pos": "noun", "details": {"uncountable": true}, "sentences": ["She has long hair."]}
         ],
         "nl": [
-        {"lemma": "haar", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["Zij heeft lang haar."]}
+        {"lemma": "haar", "pos": "noun", "details": {"note": "op je hoofd", "article": "het", "uncountable": true}, "sentences": ["Zij heeft lang haar."]}
         ]
       }
     },
@@ -128,7 +128,7 @@
         {"lemma": "arm", "pos": "noun", "details": {"plural": "arms"}, "sentences": ["My arm hurts."]}
         ],
         "nl": [
-        {"lemma": "arm", "pos": "noun", "details": {"article": "de", "plural": "armen"}, "sentences": ["Mijn arm doet pijn."]}
+        {"lemma": "arm", "pos": "noun", "details": {"note": "een lichaamsdeel", "article": "de", "plural": "armen"}, "sentences": ["Mijn arm doet pijn."]}
         ]
       }
     },
@@ -137,7 +137,7 @@
       "gloss": "back (noun)",
       "entries": {
         "en": [
-        {"lemma": "back", "pos": "noun", "details": {"plural": "backs"}, "sentences": ["My back hurts."]}
+        {"lemma": "back", "pos": "noun", "details": {"note": "body part", "plural": "backs"}, "sentences": ["My back hurts."]}
         ],
         "nl": [
         {"lemma": "rug", "pos": "noun", "details": {"article": "de", "plural": "ruggen"}, "sentences": ["Mijn rug doet pijn."]}
@@ -197,7 +197,7 @@
       "gloss": "neck (noun)",
       "entries": {
         "en": [
-        {"lemma": "neck", "pos": "noun", "details": {"plural": "necks"}, "sentences": ["My neck hurts."]}
+        {"lemma": "neck", "pos": "noun", "details": {"note": "body part", "plural": "necks"}, "sentences": ["My neck hurts."]}
         ],
         "nl": [
         {"lemma": "nek", "pos": "noun", "details": {"article": "de", "plural": "nekken"}, "sentences": ["Mijn nek doet pijn."]}
@@ -221,7 +221,7 @@
       "gloss": "chest (noun)",
       "entries": {
         "en": [
-        {"lemma": "chest", "pos": "noun", "details": {"plural": "chests"}, "sentences": ["My chest hurts."]}
+        {"lemma": "chest", "pos": "noun", "details": {"note": "upper body", "plural": "chests"}, "sentences": ["My chest hurts."]}
         ],
         "nl": [
         {"lemma": "borst", "pos": "noun", "details": {"article": "de", "plural": "borsten"}, "sentences": ["Mijn borst doet pijn."]}
@@ -401,7 +401,7 @@
       "gloss": "nail (noun)",
       "entries": {
         "en": [
-        {"lemma": "nail", "pos": "noun", "details": {"plural": "nails"}, "sentences": ["I cut my nails."]}
+        {"lemma": "nail", "pos": "noun", "details": {"note": "of a finger", "plural": "nails"}, "sentences": ["I cut my nails."]}
         ],
         "nl": [
         {"lemma": "nagel", "pos": "noun", "details": {"article": "de", "plural": "nagels"}, "sentences": ["Ik knip mijn nagels."]}
@@ -749,7 +749,7 @@
       "gloss": "sense (noun)",
       "entries": {
         "en": [
-        {"lemma": "sense", "pos": "noun", "details": {"plural": "senses"}, "sentences": ["Sight is a sense."]}
+        {"lemma": "sense", "pos": "noun", "details": {"note": "of sight, hearing and so on", "plural": "senses"}, "sentences": ["Sight is a sense."]}
         ],
         "nl": [
         {"lemma": "zintuig", "pos": "noun", "details": {"article": "het", "plural": "zintuigen"}, "sentences": ["Zicht is een zintuig."]}
@@ -836,7 +836,7 @@
         {"lemma": "ankle", "pos": "noun", "details": {"plural": "ankles"}, "sentences": ["My ankle hurts."]}
         ],
         "nl": [
-        {"lemma": "enkel", "pos": "noun", "details": {"article": "de", "plural": "enkels"}, "sentences": ["Mijn enkel doet pijn."]}
+        {"lemma": "enkel", "pos": "noun", "details": {"note": "een lichaamsdeel", "article": "de", "plural": "enkels"}, "sentences": ["Mijn enkel doet pijn."]}
         ]
       }
     },

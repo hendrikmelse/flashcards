@@ -41,7 +41,7 @@
       "gloss": "sweet (kind, nice)",
       "entries": {
         "en": [
-        {"lemma": "sweet", "pos": "adjective", "sentences": ["The dog is sweet."]}
+        {"lemma": "sweet", "pos": "adjective", "details": {"note": "kind, nice"}, "sentences": ["The dog is sweet."]}
         ],
         "nl": [
         {"lemma": "lief", "pos": "adjective", "sentences": ["De hond is lief."]}
@@ -101,7 +101,7 @@
       "gloss": "angry (adjective)",
       "entries": {
         "en": [
-        {"lemma": "angry", "pos": "adjective", "sentences": ["He is angry."]}
+        {"lemma": "angry", "pos": "adjective", "details": {"note": "annoyed"}, "sentences": ["He is angry."]}
         ],
         "nl": [
         {"lemma": "kwaad", "pos": "adjective", "sentences": ["Hij is kwaad."]}
@@ -701,7 +701,7 @@
       "gloss": "beloved (adjective)",
       "entries": {
         "en": [
-        {"lemma": "beloved", "pos": "adjective", "sentences": ["He is a beloved teacher."]}
+        {"lemma": "beloved", "pos": "adjective", "details": {"note": "much loved"}, "sentences": ["He is a beloved teacher."]}
         ],
         "nl": [
         {"lemma": "geliefd", "pos": "adjective", "sentences": ["Hij is een geliefde leraar."]}
@@ -725,10 +725,10 @@
       "gloss": "loyalty (noun)",
       "entries": {
         "en": [
-        {"lemma": "loyalty", "pos": "noun", "details": {"uncountable": true}, "sentences": ["Loyalty is important."]}
+        {"lemma": "loyalty", "pos": "noun", "details": {"note": "faithfulness", "uncountable": true}, "sentences": ["Loyalty is important."]}
         ],
         "nl": [
-        {"lemma": "trouw", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Trouw is belangrijk."]}
+        {"lemma": "trouw", "pos": "noun", "details": {"note": "een eigenschap", "article": "de", "uncountable": true}, "sentences": ["Trouw is belangrijk."]}
         ]
       }
     },
@@ -761,7 +761,7 @@
       "gloss": "tough (adjective)",
       "entries": {
         "en": [
-        {"lemma": "tough", "pos": "adjective", "sentences": ["He is a tough guy."]}
+        {"lemma": "tough", "pos": "adjective", "details": {"note": "strong and hard"}, "sentences": ["He is a tough guy."]}
         ],
         "nl": [
         {"lemma": "stoer", "pos": "adjective", "sentences": ["Hij is een stoere kerel."]}
@@ -1040,7 +1040,7 @@
         {"lemma": "to long for", "pos": "verb", "details": {"past": "longed for", "participle": "longed for"}, "sentences": ["I long for the summer."]}
         ],
         "nl": [
-        {"lemma": "verlangen", "pos": "verb", "details": {"pastSingular": "verlangde", "pastPlural": "verlangden", "participle": "verlangd", "auxiliary": "hebben"}, "sentences": ["Ik verlang naar de zomer."]}
+        {"lemma": "verlangen", "pos": "verb", "details": {"note": "naar iets uitzien", "pastSingular": "verlangde", "pastPlural": "verlangden", "participle": "verlangd", "auxiliary": "hebben"}, "sentences": ["Ik verlang naar de zomer."]}
         ]
       }
     },
@@ -1112,7 +1112,7 @@
         {"lemma": "longing", "pos": "noun", "details": {"uncountable": true}, "sentences": ["I feel longing."]}
         ],
         "nl": [
-        {"lemma": "verlangen", "pos": "noun", "details": {"article": "het", "plural": "verlangens"}, "sentences": ["Ik voel verlangen."]}
+        {"lemma": "verlangen", "pos": "noun", "details": {"note": "het gevoel", "article": "het", "plural": "verlangens"}, "sentences": ["Ik voel verlangen."]}
         ]
       }
     },
@@ -1556,7 +1556,7 @@
         {"lemma": "faithful", "pos": "adjective", "sentences": ["The dog is faithful."]}
         ],
         "nl": [
-        {"lemma": "trouw", "pos": "adjective", "sentences": ["De hond is trouw."]}
+        {"lemma": "trouw", "pos": "adjective", "details": {"note": "van een hond of partner"}, "sentences": ["De hond is trouw."]}
         ]
       }
     },
@@ -2033,7 +2033,7 @@
       "gloss": "relief (noun)",
       "entries": {
         "en": [
-        {"lemma": "relief", "pos": "noun", "details": {"uncountable": true}, "sentences": ["I feel relief."]}
+        {"lemma": "relief", "pos": "noun", "details": {"note": "feeling better", "uncountable": true}, "sentences": ["I feel relief."]}
         ],
         "nl": [
         {"lemma": "opluchting", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Ik voel opluchting."]}
@@ -2057,7 +2057,7 @@
       "gloss": "patient (adjective)",
       "entries": {
         "en": [
-        {"lemma": "patient", "pos": "adjective", "sentences": ["She is patient."]}
+        {"lemma": "patient", "pos": "adjective", "details": {"note": "able to wait"}, "sentences": ["She is patient."]}
         ],
         "nl": [
         {"lemma": "geduldig", "pos": "adjective", "sentences": ["Zij is geduldig."]}
@@ -2105,7 +2105,7 @@
       "gloss": "sympathy (condolence)",
       "entries": {
         "en": [
-        {"lemma": "sympathy", "pos": "noun", "details": {"uncountable": true}, "sentences": ["I send my sympathy."]}
+        {"lemma": "sympathy", "pos": "noun", "details": {"note": "condolence", "uncountable": true}, "sentences": ["I send my sympathy."]}
         ],
         "nl": [
         {"lemma": "medeleven", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["Ik betuig mijn medeleven."]}
@@ -2933,7 +2933,7 @@
       "gloss": "sympathy (liking)",
       "entries": {
         "en": [
-        {"lemma": "sympathy", "pos": "noun", "details": {"uncountable": true}, "sentences": ["I feel sympathy."]}
+        {"lemma": "sympathy", "pos": "noun", "details": {"note": "liking", "uncountable": true}, "sentences": ["I feel sympathy."]}
         ],
         "nl": [
         {"lemma": "sympathie", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Ik voel sympathie."]}
@@ -3029,7 +3029,7 @@
       "gloss": "skilled (adjective)",
       "entries": {
         "en": [
-        {"lemma": "skilled", "pos": "adjective", "sentences": ["He is skilled."]}
+        {"lemma": "skilled", "pos": "adjective", "details": {"note": "trained"}, "sentences": ["He is skilled."]}
         ],
         "nl": [
         {"lemma": "bekwaam", "pos": "adjective", "sentences": ["Hij is bekwaam."]}

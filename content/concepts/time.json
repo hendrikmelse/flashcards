@@ -8,7 +8,7 @@
         {"lemma": "day", "pos": "noun", "details": {"plural": "days"}, "sentences": ["I work every day."]}
         ],
         "nl": [
-        {"lemma": "dag", "pos": "noun", "details": {"article": "de", "plural": "dagen"}, "sentences": ["Ik werk elke dag."]}
+        {"lemma": "dag", "pos": "noun", "details": {"note": "24 uur", "article": "de", "plural": "dagen"}, "sentences": ["Ik werk elke dag."]}
         ]
       }
     },
@@ -113,7 +113,7 @@
       "gloss": "time (in general)",
       "entries": {
         "en": [
-        {"lemma": "time", "pos": "noun", "details": {"plural": "times"}, "sentences": ["I have no time."]}
+        {"lemma": "time", "pos": "noun", "details": {"note": "as a concept", "plural": "times"}, "sentences": ["I have no time."]}
         ],
         "nl": [
         {"lemma": "tijd", "pos": "noun", "details": {"article": "de", "plural": "tijden"}, "sentences": ["Ik heb geen tijd."]}
@@ -125,7 +125,7 @@
       "gloss": "moment (noun)",
       "entries": {
         "en": [
-        {"lemma": "moment", "pos": "noun", "details": {"plural": "moments"}, "sentences": ["Wait a moment."]}
+        {"lemma": "moment", "pos": "noun", "details": {"note": "a short while", "plural": "moments"}, "sentences": ["Wait a moment."]}
         ],
         "nl": [
         {"lemma": "moment", "pos": "noun", "details": {"article": "het", "plural": "momenten"}, "sentences": ["Wacht een moment."]}
@@ -149,7 +149,7 @@
       "gloss": "half (adjective)",
       "entries": {
         "en": [
-        {"lemma": "half", "pos": "adjective", "sentences": ["It is half past two."]}
+        {"lemma": "half", "pos": "adjective", "details": {"note": "not whole"}, "sentences": ["It is half past two."]}
         ],
         "nl": [
         {"lemma": "half", "pos": "adjective", "sentences": ["Het is half drie."]}
@@ -161,7 +161,7 @@
       "gloss": "future (noun)",
       "entries": {
         "en": [
-        {"lemma": "future", "pos": "noun", "details": {"plural": "futures"}, "sentences": ["I think about the future."]}
+        {"lemma": "future", "pos": "noun", "details": {"note": "time to come", "plural": "futures"}, "sentences": ["I think about the future."]}
         ],
         "nl": [
         {"lemma": "toekomst", "pos": "noun", "details": {"article": "de", "plural": "toekomsten"}, "sentences": ["Ik denk aan de toekomst."]}
@@ -173,7 +173,7 @@
       "gloss": "second (noun)",
       "entries": {
         "en": [
-        {"lemma": "second", "pos": "noun", "details": {"plural": "seconds"}, "sentences": ["Wait one second."]}
+        {"lemma": "second", "pos": "noun", "details": {"note": "unit of time", "plural": "seconds"}, "sentences": ["Wait one second."]}
         ],
         "nl": [
         {"lemma": "seconde", "pos": "noun", "details": {"article": "de", "plural": "seconden"}, "sentences": ["Wacht één seconde."]}

@@ -68,10 +68,10 @@
       "gloss": "what (question word)",
       "entries": {
         "en": [
-        {"lemma": "what", "pos": "pronoun", "sentences": ["What is this?"]}
+        {"lemma": "what", "pos": "pronoun", "details": {"note": "question word"}, "sentences": ["What is this?"]}
         ],
         "nl": [
-        {"lemma": "wat", "pos": "pronoun", "sentences": ["Wat is dit?"]}
+        {"lemma": "wat", "pos": "pronoun", "details": {"note": "vraagwoord"}, "sentences": ["Wat is dit?"]}
         ]
       }
     },
@@ -95,7 +95,7 @@
         {"lemma": "where", "pos": "adverb", "sentences": ["Where is the bus?"]}
         ],
         "nl": [
-        {"lemma": "waar", "pos": "adverb", "sentences": ["Waar is de bus?"]}
+        {"lemma": "waar", "pos": "adverb", "details": {"note": "vraagwoord"}, "sentences": ["Waar is de bus?"]}
         ]
       }
     },
@@ -104,7 +104,7 @@
       "gloss": "why (question word)",
       "entries": {
         "en": [
-        {"lemma": "why", "pos": "adverb", "sentences": ["Why are you tired?"]}
+        {"lemma": "why", "pos": "adverb", "details": {"note": "question word"}, "sentences": ["Why are you tired?"]}
         ],
         "nl": [
         {"lemma": "waarom", "pos": "adverb", "sentences": ["Waarom ben je moe?"]}
@@ -128,7 +128,7 @@
       "gloss": "when (question word)",
       "entries": {
         "en": [
-        {"lemma": "when", "pos": "adverb", "sentences": ["When do you eat?"]}
+        {"lemma": "when", "pos": "adverb", "details": {"note": "question word"}, "sentences": ["When do you eat?"]}
         ],
         "nl": [
         {"lemma": "wanneer", "pos": "adverb", "sentences": ["Wanneer eet je?"]}

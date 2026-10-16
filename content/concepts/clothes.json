@@ -41,7 +41,7 @@
       "gloss": "put on (verb)",
       "entries": {
         "en": [
-        {"lemma": "to put on", "pos": "verb", "details": {"past": "put on", "participle": "put on"}, "sentences": ["I put on my coat."]}
+        {"lemma": "to put on", "pos": "verb", "details": {"note": "a coat, scarf or jewelry", "past": "put on", "participle": "put on"}, "sentences": ["I put on my coat."]}
         ],
         "nl": [
         {"lemma": "aandoen", "pos": "verb", "details": {"pastSingular": "deed aan", "pastPlural": "deden aan", "participle": "aangedaan", "auxiliary": "hebben"}, "sentences": ["Ik doe mijn jas aan."]}
@@ -293,7 +293,7 @@
       "gloss": "silk (noun)",
       "entries": {
         "en": [
-        {"lemma": "silk", "pos": "noun", "details": {"uncountable": true}, "sentences": ["The dress is made of silk."]}
+        {"lemma": "silk", "pos": "noun", "details": {"note": "the fabric", "uncountable": true}, "sentences": ["The dress is made of silk."]}
         ],
         "nl": [
         {"lemma": "zijde", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["De jurk is van zijde."]}
@@ -365,7 +365,7 @@
       "gloss": "dress shirt (noun)",
       "entries": {
         "en": [
-        {"lemma": "dress shirt", "pos": "noun", "details": {"plural": "dress shirts"}, "sentences": ["He wears a white dress shirt."]}
+        {"lemma": "dress shirt", "pos": "noun", "details": {"note": "casual", "plural": "dress shirts"}, "sentences": ["He wears a white dress shirt."]}
         ],
         "nl": [
         {"lemma": "hemd", "pos": "noun", "details": {"article": "het", "plural": "hemden"}, "sentences": ["Hij draagt een wit hemd."]}

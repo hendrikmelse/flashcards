@@ -284,7 +284,7 @@
         {"lemma": "the other day", "pos": "adverb", "sentences": ["The other day I saw him."]}
         ],
         "nl": [
-        {"lemma": "laatst", "pos": "adverb", "sentences": ["Laatst zag ik hem."]}
+        {"lemma": "laatst", "pos": "adverb", "details": {"note": "kortgeleden"}, "sentences": ["Laatst zag ik hem."]}
         ]
       }
     },
@@ -473,7 +473,7 @@
       "gloss": "soon (adverb)",
       "entries": {
         "en": [
-        {"lemma": "soon", "pos": "adverb", "sentences": ["I am coming soon."]}
+        {"lemma": "soon", "pos": "adverb", "details": {"note": "before long"}, "sentences": ["I am coming soon."]}
         ],
         "nl": [
         {"lemma": "gauw", "pos": "adverb", "sentences": ["Ik kom gauw."]}

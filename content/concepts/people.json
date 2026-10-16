@@ -53,7 +53,7 @@
       "gloss": "girl (young female)",
       "entries": {
         "en": [
-        {"lemma": "girl", "pos": "noun", "details": {"plural": "girls"}, "sentences": ["The girl has a cat."]}
+        {"lemma": "girl", "pos": "noun", "details": {"note": "standard", "plural": "girls"}, "sentences": ["The girl has a cat."]}
         ],
         "nl": [
         {"lemma": "meisje", "pos": "noun", "details": {"article": "het", "plural": "meisjes"}, "sentences": ["Het meisje heeft een kat."]}
@@ -161,7 +161,7 @@
       "gloss": "teacher (person who teaches)",
       "entries": {
         "en": [
-        {"lemma": "teacher", "pos": "noun", "details": {"plural": "teachers"}, "sentences": ["The teacher is at school."]}
+        {"lemma": "teacher", "pos": "noun", "details": {"note": "any gender", "plural": "teachers"}, "sentences": ["The teacher is at school."]}
         ],
         "nl": [
         {"lemma": "leraar", "pos": "noun", "details": {"article": "de", "plural": "leraren"}, "sentences": ["De leraar is op school."]}
@@ -401,7 +401,7 @@
       "gloss": "human (noun)",
       "entries": {
         "en": [
-        {"lemma": "human", "pos": "noun", "details": {"plural": "humans"}, "sentences": ["Every human needs water."]}
+        {"lemma": "human", "pos": "noun", "details": {"note": "a person", "plural": "humans"}, "sentences": ["Every human needs water."]}
         ],
         "nl": [
         {"lemma": "mens", "pos": "noun", "details": {"article": "de", "plural": "mensen"}, "sentences": ["Elk mens heeft water nodig."]}
@@ -608,7 +608,7 @@
         {"lemma": "to kiss", "pos": "verb", "details": {"past": "kissed", "participle": "kissed"}, "sentences": ["He kisses her."]}
         ],
         "nl": [
-        {"lemma": "kussen", "pos": "verb", "details": {"pastSingular": "kuste", "pastPlural": "kusten", "participle": "gekust", "auxiliary": "hebben"}, "sentences": ["Hij kust haar."]}
+        {"lemma": "kussen", "pos": "verb", "details": {"note": "met je lippen", "pastSingular": "kuste", "pastPlural": "kusten", "participle": "gekust", "auxiliary": "hebben"}, "sentences": ["Hij kust haar."]}
         ]
       }
     },
@@ -629,7 +629,7 @@
       "gloss": "kiss (noun)",
       "entries": {
         "en": [
-        {"lemma": "kiss", "pos": "noun", "details": {"plural": "kisses"}, "sentences": ["He gives her a kiss."]}
+        {"lemma": "kiss", "pos": "noun", "details": {"note": "a light kiss", "plural": "kisses"}, "sentences": ["He gives her a kiss."]}
         ],
         "nl": [
         {"lemma": "kus", "pos": "noun", "details": {"article": "de", "plural": "kussen"}, "sentences": ["Hij geeft haar een kus."]}
@@ -725,7 +725,7 @@
       "gloss": "neighbor (noun)",
       "entries": {
         "en": [
-        {"lemma": "neighbor", "pos": "noun", "details": {"plural": "neighbors"}, "sentences": ["My neighbor is nice."]}
+        {"lemma": "neighbor", "pos": "noun", "details": {"note": "any gender", "plural": "neighbors"}, "sentences": ["My neighbor is nice."]}
         ],
         "nl": [
         {"lemma": "buur", "pos": "noun", "details": {"article": "de", "plural": "buren"}, "sentences": ["Mijn buurman is aardig."]}
@@ -773,7 +773,7 @@
       "gloss": "fan (supporter)",
       "entries": {
         "en": [
-        {"lemma": "fan", "pos": "noun", "details": {"plural": "fans"}, "sentences": ["He is a big fan."]}
+        {"lemma": "fan", "pos": "noun", "details": {"note": "supporter", "plural": "fans"}, "sentences": ["He is a big fan."]}
         ],
         "nl": [
         {"lemma": "fan", "pos": "noun", "details": {"article": "de", "plural": "fans"}, "sentences": ["Hij is een grote fan."]}
@@ -1097,7 +1097,7 @@
       "gloss": "society (noun)",
       "entries": {
         "en": [
-        {"lemma": "society", "pos": "noun", "details": {"plural": "societies"}, "sentences": ["Society changes."]}
+        {"lemma": "society", "pos": "noun", "details": {"note": "as a system", "plural": "societies"}, "sentences": ["Society changes."]}
         ],
         "nl": [
         {"lemma": "maatschappij", "pos": "noun", "details": {"article": "de", "plural": "maatschappijen"}, "sentences": ["De maatschappij verandert."]}
@@ -1217,7 +1217,7 @@
       "gloss": "relative (noun)",
       "entries": {
         "en": [
-        {"lemma": "relative", "pos": "noun", "details": {"plural": "relatives"}, "sentences": ["He is a relative."]}
+        {"lemma": "relative", "pos": "noun", "details": {"note": "a family member", "plural": "relatives"}, "sentences": ["He is a relative."]}
         ],
         "nl": [
         {"lemma": "familielid", "pos": "noun", "details": {"article": "het", "plural": "familieleden"}, "sentences": ["Hij is een familielid."]}
@@ -1241,7 +1241,7 @@
       "gloss": "resident (noun)",
       "entries": {
         "en": [
-        {"lemma": "resident", "pos": "noun", "details": {"plural": "residents"}, "sentences": ["The residents are friendly."]}
+        {"lemma": "resident", "pos": "noun", "details": {"note": "of a town or country", "plural": "residents"}, "sentences": ["The residents are friendly."]}
         ],
         "nl": [
         {"lemma": "inwoner", "pos": "noun", "details": {"article": "de", "plural": "inwoners"}, "sentences": ["De inwoners zijn vriendelijk."]}
@@ -1481,7 +1481,7 @@
       "gloss": "beloved (noun)",
       "entries": {
         "en": [
-        {"lemma": "beloved", "pos": "noun", "details": {"plural": "beloveds"}, "sentences": ["She is my beloved."]}
+        {"lemma": "beloved", "pos": "noun", "details": {"note": "loved one", "plural": "beloveds"}, "sentences": ["She is my beloved."]}
         ],
         "nl": [
         {"lemma": "geliefde", "pos": "noun", "details": {"article": "de", "plural": "geliefden"}, "sentences": ["Zij is mijn geliefde."]}
@@ -1853,7 +1853,7 @@
       "gloss": "individual (noun)",
       "entries": {
         "en": [
-        {"lemma": "individual", "pos": "noun", "details": {"plural": "individuals"}, "sentences": ["Each individual is unique."]}
+        {"lemma": "individual", "pos": "noun", "details": {"note": "a single person", "plural": "individuals"}, "sentences": ["Each individual is unique."]}
         ],
         "nl": [
         {"lemma": "individu", "pos": "noun", "details": {"article": "het", "plural": "individuen"}, "sentences": ["Elk individu is uniek."]}
@@ -2057,7 +2057,7 @@
       "gloss": "mortal (noun)",
       "entries": {
         "en": [
-        {"lemma": "mortal", "pos": "noun", "details": {"plural": "mortals"}, "sentences": ["We are all mortals."]}
+        {"lemma": "mortal", "pos": "noun", "details": {"note": "a human", "plural": "mortals"}, "sentences": ["We are all mortals."]}
         ],
         "nl": [
         {"lemma": "sterveling", "pos": "noun", "details": {"article": "de", "plural": "stervelingen"}, "sentences": ["Wij zijn allemaal stervelingen."]}
@@ -2081,7 +2081,7 @@
       "gloss": "superior (noun)",
       "entries": {
         "en": [
-        {"lemma": "superior", "pos": "noun", "details": {"plural": "superiors"}, "sentences": ["The superior gives an order."]}
+        {"lemma": "superior", "pos": "noun", "details": {"note": "a boss", "plural": "superiors"}, "sentences": ["The superior gives an order."]}
         ],
         "nl": [
         {"lemma": "overste", "pos": "noun", "details": {"article": "de", "plural": "oversten"}, "sentences": ["De overste geeft een bevel."]}

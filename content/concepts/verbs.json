@@ -8,7 +8,7 @@
         {"lemma": "to be", "pos": "verb", "details": {"past": "was/were", "participle": "been", "present": {"I": "am", "you": "are", "he": "is", "we": "are"}}, "sentences": ["I am at home."]}
         ],
         "nl": [
-        {"lemma": "zijn", "pos": "verb", "details": {"pastSingular": "was", "pastPlural": "waren", "participle": "geweest", "auxiliary": "zijn", "present": {"ik": "ben", "jij": "bent", "hij": "is", "wij": "zijn"}}, "sentences": ["Ik ben thuis."]}
+        {"lemma": "zijn", "pos": "verb", "details": {"note": "het werkwoord", "pastSingular": "was", "pastPlural": "waren", "participle": "geweest", "auxiliary": "zijn", "present": {"ik": "ben", "jij": "bent", "hij": "is", "wij": "zijn"}}, "sentences": ["Ik ben thuis."]}
         ]
       }
     },
@@ -125,7 +125,7 @@
       "gloss": "live (reside somewhere)",
       "entries": {
         "en": [
-        {"lemma": "to live", "pos": "verb", "details": {"past": "lived", "participle": "lived"}, "sentences": ["I live in a small house."]}
+        {"lemma": "to live", "pos": "verb", "details": {"note": "reside somewhere", "past": "lived", "participle": "lived"}, "sentences": ["I live in a small house."]}
         ],
         "nl": [
         {"lemma": "wonen", "pos": "verb", "details": {"pastSingular": "woonde", "pastPlural": "woonden", "participle": "gewoond", "auxiliary": "hebben"}, "sentences": ["Ik woon in een klein huis."]}
@@ -221,7 +221,7 @@
       "gloss": "can (be able to)",
       "entries": {
         "en": [
-        {"lemma": "can", "pos": "verb", "details": {"past": "could", "defective": true, "present": {"I": "can", "you": "can", "he": "can", "we": "can"}}, "sentences": ["I can help you."]}
+        {"lemma": "can", "pos": "verb", "details": {"note": "be able to", "past": "could", "defective": true, "present": {"I": "can", "you": "can", "he": "can", "we": "can"}}, "sentences": ["I can help you."]}
         ],
         "nl": [
         {"lemma": "kunnen", "pos": "verb", "details": {"pastSingular": "kon", "pastPlural": "konden", "participle": "gekund", "auxiliary": "hebben", "present": {"ik": "kan", "jij": "kunt", "hij": "kan", "wij": "kunnen"}}, "sentences": ["Ik kan je helpen."]}
@@ -270,7 +270,7 @@
       "gloss": "take (pick up or board)",
       "entries": {
         "en": [
-        {"lemma": "to take", "pos": "verb", "details": {"past": "took", "participle": "taken"}, "sentences": ["I take the bus."]}
+        {"lemma": "to take", "pos": "verb", "details": {"note": "pick up or board", "past": "took", "participle": "taken"}, "sentences": ["I take the bus."]}
         ],
         "nl": [
         {"lemma": "nemen", "pos": "verb", "details": {"pastSingular": "nam", "pastPlural": "namen", "participle": "genomen", "auxiliary": "hebben"}, "sentences": ["Ik neem de bus."]}
@@ -390,7 +390,7 @@
       "gloss": "play (take part in a game)",
       "entries": {
         "en": [
-        {"lemma": "to play", "pos": "verb", "details": {"past": "played", "participle": "played"}, "sentences": ["The children play."]}
+        {"lemma": "to play", "pos": "verb", "details": {"note": "take part in a game", "past": "played", "participle": "played"}, "sentences": ["The children play."]}
         ],
         "nl": [
         {"lemma": "spelen", "pos": "verb", "details": {"pastSingular": "speelde", "pastPlural": "speelden", "participle": "gespeeld", "auxiliary": "hebben"}, "sentences": ["De kinderen spelen."]}
@@ -487,7 +487,7 @@
       "entries": {
         "en": [
         {"lemma": "to begin", "pos": "verb", "details": {"past": "began", "participle": "begun"}, "sentences": ["The film begins now."]},
-        {"lemma": "to start", "pos": "verb", "details": {"past": "started", "participle": "started"}, "sentences": ["We start at nine."]}
+        {"lemma": "to start", "pos": "verb", "details": {"note": "begin doing something", "past": "started", "participle": "started"}, "sentences": ["We start at nine."]}
         ],
         "nl": [
         {"lemma": "beginnen", "pos": "verb", "details": {"pastSingular": "begon", "pastPlural": "begonnen", "participle": "begonnen", "auxiliary": "zijn"}, "sentences": ["De film begint nu.", "Wij beginnen om negen uur."]}
@@ -523,7 +523,7 @@
       "gloss": "stand (be upright)",
       "entries": {
         "en": [
-        {"lemma": "to stand", "pos": "verb", "details": {"past": "stood", "participle": "stood"}, "sentences": ["The man stands at the door."]}
+        {"lemma": "to stand", "pos": "verb", "details": {"note": "be upright", "past": "stood", "participle": "stood"}, "sentences": ["The man stands at the door."]}
         ],
         "nl": [
         {"lemma": "staan", "pos": "verb", "details": {"pastSingular": "stond", "pastPlural": "stonden", "participle": "gestaan", "auxiliary": "hebben", "present": {"ik": "sta", "jij": "staat", "hij": "staat", "wij": "staan"}}, "sentences": ["De man staat bij de deur."]}
@@ -571,7 +571,7 @@
       "gloss": "will, shall (verb)",
       "entries": {
         "en": [
-        {"lemma": "will", "pos": "verb", "details": {"past": "would", "defective": true}, "sentences": ["I will come tomorrow."]},
+        {"lemma": "will", "pos": "verb", "details": {"note": "future", "past": "would", "defective": true}, "sentences": ["I will come tomorrow."]},
         {"lemma": "shall", "pos": "verb", "details": {"past": "should", "defective": true}, "sentences": ["Shall we go?"]}
         ],
         "nl": [
@@ -620,7 +620,7 @@
       "gloss": "look (verb)",
       "entries": {
         "en": [
-        {"lemma": "to look", "pos": "verb", "details": {"past": "looked", "participle": "looked"}, "sentences": ["I look at the sky."]}
+        {"lemma": "to look", "pos": "verb", "details": {"note": "use your eyes", "past": "looked", "participle": "looked"}, "sentences": ["I look at the sky."]}
         ],
         "nl": [
         {"lemma": "kijken", "pos": "verb", "details": {"pastSingular": "keek", "pastPlural": "keken", "participle": "gekeken", "auxiliary": "hebben"}, "sentences": ["Ik kijk naar de lucht."]}
@@ -704,7 +704,7 @@
       "gloss": "try (verb)",
       "entries": {
         "en": [
-        {"lemma": "to try", "pos": "verb", "details": {"past": "tried", "participle": "tried"}, "sentences": ["I try the soup."]}
+        {"lemma": "to try", "pos": "verb", "details": {"note": "test", "past": "tried", "participle": "tried"}, "sentences": ["I try the soup."]}
         ],
         "nl": [
         {"lemma": "proberen", "pos": "verb", "details": {"pastSingular": "probeerde", "pastPlural": "probeerden", "participle": "geprobeerd", "auxiliary": "hebben"}, "sentences": ["Ik probeer de soep."]}
@@ -872,7 +872,7 @@
       "gloss": "stop (verb)",
       "entries": {
         "en": [
-        {"lemma": "to stop", "pos": "verb", "details": {"past": "stopped", "participle": "stopped"}, "sentences": ["The bus stops here."]}
+        {"lemma": "to stop", "pos": "verb", "details": {"note": "come to a halt", "past": "stopped", "participle": "stopped"}, "sentences": ["The bus stops here."]}
         ],
         "nl": [
         {"lemma": "stoppen", "pos": "verb", "details": {"pastSingular": "stopte", "pastPlural": "stopten", "participle": "gestopt", "auxiliary": "hebben"}, "sentences": ["De bus stopt hier."]}
@@ -1043,7 +1043,7 @@
         {"lemma": "to live", "pos": "verb", "details": {"note": "be alive", "past": "lived", "participle": "lived"}, "sentences": ["My grandfather still lives."]}
         ],
         "nl": [
-        {"lemma": "leven", "pos": "verb", "details": {"pastSingular": "leefde", "pastPlural": "leefden", "participle": "geleefd", "auxiliary": "hebben"}, "sentences": ["Mijn opa leeft nog."]}
+        {"lemma": "leven", "pos": "verb", "details": {"note": "niet dood zijn", "pastSingular": "leefde", "pastPlural": "leefden", "participle": "geleefd", "auxiliary": "hebben"}, "sentences": ["Mijn opa leeft nog."]}
         ]
       }
     },
@@ -1559,7 +1559,7 @@
         {"lemma": "to trust", "pos": "verb", "details": {"past": "trusted", "participle": "trusted"}, "sentences": ["I trust you."]}
         ],
         "nl": [
-        {"lemma": "vertrouwen", "pos": "verb", "details": {"pastSingular": "vertrouwde", "pastPlural": "vertrouwden", "participle": "vertrouwd", "auxiliary": "hebben"}, "sentences": ["Ik vertrouw je."]}
+        {"lemma": "vertrouwen", "pos": "verb", "details": {"note": "op iemand rekenen", "pastSingular": "vertrouwde", "pastPlural": "vertrouwden", "participle": "vertrouwd", "auxiliary": "hebben"}, "sentences": ["Ik vertrouw je."]}
         ]
       }
     },
@@ -1976,7 +1976,7 @@
       "gloss": "argument (quarrel)",
       "entries": {
         "en": [
-        {"lemma": "argument", "pos": "noun", "details": {"plural": "arguments"}, "sentences": ["They have an argument."]}
+        {"lemma": "argument", "pos": "noun", "details": {"note": "quarrel", "plural": "arguments"}, "sentences": ["They have an argument."]}
         ],
         "nl": [
         {"lemma": "ruzie", "pos": "noun", "details": {"article": "de", "plural": "ruzies"}, "sentences": ["Zij hebben ruzie."]}
@@ -2252,7 +2252,7 @@
       "gloss": "pick up (verb)",
       "entries": {
         "en": [
-        {"lemma": "to pick up", "pos": "verb", "details": {"past": "picked up", "participle": "picked up"}, "sentences": ["I pick up the child."]}
+        {"lemma": "to pick up", "pos": "verb", "details": {"note": "collect someone", "past": "picked up", "participle": "picked up"}, "sentences": ["I pick up the child."]}
         ],
         "nl": [
         {"lemma": "ophalen", "pos": "verb", "details": {"pastSingular": "haalde op", "pastPlural": "haalden op", "participle": "opgehaald", "auxiliary": "hebben"}, "sentences": ["Ik haal het kind op."]}
@@ -2732,7 +2732,7 @@
       "gloss": "strike (verb)",
       "entries": {
         "en": [
-        {"lemma": "to strike", "pos": "verb", "details": {"past": "struck", "participle": "struck"}, "sentences": ["The lightning strikes the tree."]}
+        {"lemma": "to strike", "pos": "verb", "details": {"note": "land on a target", "past": "struck", "participle": "struck"}, "sentences": ["The lightning strikes the tree."]}
         ],
         "nl": [
         {"lemma": "treffen", "pos": "verb", "details": {"pastSingular": "trof", "pastPlural": "troffen", "participle": "getroffen", "auxiliary": "hebben"}, "sentences": ["De bliksem treft de boom."]}
@@ -3488,7 +3488,7 @@
       "gloss": "rise (verb)",
       "entries": {
         "en": [
-        {"lemma": "to rise", "pos": "verb", "details": {"past": "rose", "participle": "risen"}, "sentences": ["The price rises."]}
+        {"lemma": "to rise", "pos": "verb", "details": {"note": "go up in amount", "past": "rose", "participle": "risen"}, "sentences": ["The price rises."]}
         ],
         "nl": [
         {"lemma": "stijgen", "pos": "verb", "details": {"pastSingular": "steeg", "pastPlural": "stegen", "participle": "gestegen", "auxiliary": "zijn"}, "sentences": ["De prijs stijgt."]}
@@ -4664,7 +4664,7 @@
       "gloss": "pass (verb)",
       "entries": {
         "en": [
-        {"lemma": "to pass", "pos": "verb", "details": {"past": "passed", "participle": "passed"}, "sentences": ["The car passes the bus."]}
+        {"lemma": "to pass", "pos": "verb", "details": {"note": "go past something", "past": "passed", "participle": "passed"}, "sentences": ["The car passes the bus."]}
         ],
         "nl": [
         {"lemma": "passeren", "pos": "verb", "details": {"pastSingular": "passeerde", "pastPlural": "passeerden", "participle": "gepasseerd", "auxiliary": "hebben/zijn"}, "sentences": ["De auto passeert de bus."]}
@@ -4784,7 +4784,7 @@
       "gloss": "turn off (verb)",
       "entries": {
         "en": [
-        {"lemma": "to turn off", "pos": "verb", "details": {"past": "turned off", "participle": "turned off"}, "sentences": ["I turn off the light."]}
+        {"lemma": "to turn off", "pos": "verb", "details": {"note": "switch off a device", "past": "turned off", "participle": "turned off"}, "sentences": ["I turn off the light."]}
         ],
         "nl": [
         {"lemma": "uitzetten", "pos": "verb", "details": {"pastSingular": "zette uit", "pastPlural": "zetten uit", "participle": "uitgezet", "auxiliary": "hebben"}, "sentences": ["Ik zet het licht uit."]}
@@ -6177,7 +6177,7 @@
       "gloss": "drive away (chase off)",
       "entries": {
         "en": [
-        {"lemma": "to drive away", "pos": "verb", "details": {"past": "drove away", "participle": "driven away"}, "sentences": ["The sun drives away the clouds."]}
+        {"lemma": "to drive away", "pos": "verb", "details": {"note": "chase off", "past": "drove away", "participle": "driven away"}, "sentences": ["The sun drives away the clouds."]}
         ],
         "nl": [
         {"lemma": "verdrijven", "pos": "verb", "details": {"pastSingular": "verdreef", "pastPlural": "verdreven", "participle": "verdreven", "auxiliary": "hebben"}, "sentences": ["De zon verdrijft de wolken."]}
@@ -6369,7 +6369,7 @@
       "gloss": "enter (verb)",
       "entries": {
         "en": [
-        {"lemma": "to enter", "pos": "verb", "details": {"past": "entered", "participle": "entered"}, "sentences": ["We enter the house."]}
+        {"lemma": "to enter", "pos": "verb", "details": {"note": "go in", "past": "entered", "participle": "entered"}, "sentences": ["We enter the house."]}
         ],
         "nl": [
         {"lemma": "binnengaan", "pos": "verb", "details": {"pastSingular": "ging binnen", "pastPlural": "gingen binnen", "participle": "binnengegaan", "auxiliary": "zijn"}, "sentences": ["Wij gaan het huis binnen."]}

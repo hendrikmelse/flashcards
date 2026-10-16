@@ -20,7 +20,7 @@
         {"lemma": "that", "pos": "pronoun", "details": {"note": "het-words"}, "sentences": ["I do not know that."]}
         ],
         "nl": [
-        {"lemma": "dat", "pos": "pronoun", "sentences": ["Dat weet ik niet."]}
+        {"lemma": "dat", "pos": "pronoun", "details": {"note": "aanwijzend"}, "sentences": ["Dat weet ik niet."]}
         ]
       }
     },
@@ -117,7 +117,7 @@
         {"lemma": "us", "pos": "pronoun", "sentences": ["He sees us."]}
         ],
         "nl": [
-        {"lemma": "ons", "pos": "pronoun", "sentences": ["Hij ziet ons."]}
+        {"lemma": "ons", "pos": "pronoun", "details": {"note": "als lijdend voorwerp"}, "sentences": ["Hij ziet ons."]}
         ]
       }
     },
@@ -138,10 +138,10 @@
       "gloss": "her (pronoun)",
       "entries": {
         "en": [
-        {"lemma": "her", "pos": "pronoun", "sentences": ["I see her."]}
+        {"lemma": "her", "pos": "pronoun", "details": {"note": "as an object"}, "sentences": ["I see her."]}
         ],
         "nl": [
-        {"lemma": "haar", "pos": "pronoun", "sentences": ["Ik zie haar."]}
+        {"lemma": "haar", "pos": "pronoun", "details": {"note": "als lijdend voorwerp"}, "sentences": ["Ik zie haar."]}
         ]
       }
     },
@@ -513,7 +513,7 @@
       "gloss": "both (pronoun)",
       "entries": {
         "en": [
-        {"lemma": "both", "pos": "pronoun", "sentences": ["We both like it."]}
+        {"lemma": "both", "pos": "pronoun", "details": {"note": "the two of them"}, "sentences": ["We both like it."]}
         ],
         "nl": [
         {"lemma": "allebei", "pos": "pronoun", "sentences": ["Wij vinden het allebei leuk."]}
@@ -816,7 +816,7 @@
         {"lemma": "at, near, with", "pos": "preposition", "sentences": ["I am at my sister's."]}
         ],
         "nl": [
-        {"lemma": "bij", "pos": "preposition", "sentences": ["Ik ben bij mijn zus."]}
+        {"lemma": "bij", "pos": "preposition", "details": {"note": "bij iemand of iets"}, "sentences": ["Ik ben bij mijn zus."]}
         ]
       }
     },
@@ -864,7 +864,7 @@
         {"lemma": "inside, within", "pos": "preposition", "sentences": ["I am back within an hour."]}
         ],
         "nl": [
-        {"lemma": "binnen", "pos": "preposition", "sentences": ["Ik ben binnen een uur terug."]}
+        {"lemma": "binnen", "pos": "preposition", "details": {"note": "binnen een tijd"}, "sentences": ["Ik ben binnen een uur terug."]}
         ]
       }
     },
@@ -897,10 +897,10 @@
       "gloss": "outside (preposition)",
       "entries": {
         "en": [
-        {"lemma": "outside", "pos": "preposition", "sentences": ["The children play outside."]}
+        {"lemma": "outside", "pos": "preposition", "details": {"note": "not inside"}, "sentences": ["The children play outside."]}
         ],
         "nl": [
-        {"lemma": "buiten", "pos": "preposition", "sentences": ["De kinderen spelen buiten."]}
+        {"lemma": "buiten", "pos": "preposition", "details": {"note": "aan de buitenkant"}, "sentences": ["De kinderen spelen buiten."]}
         ]
       }
     },
@@ -936,7 +936,7 @@
         {"lemma": "above", "pos": "preposition", "sentences": ["The lamp hangs above the table."]}
         ],
         "nl": [
-        {"lemma": "boven", "pos": "preposition", "sentences": ["De lamp hangt boven de tafel."]}
+        {"lemma": "boven", "pos": "preposition", "details": {"note": "hoger dan iets"}, "sentences": ["De lamp hangt boven de tafel."]}
         ]
       }
     },
@@ -960,7 +960,7 @@
         {"lemma": "below", "pos": "preposition", "sentences": ["The temperature is below zero."]}
         ],
         "nl": [
-        {"lemma": "beneden", "pos": "preposition", "sentences": ["De temperatuur is beneden nul."]}
+        {"lemma": "beneden", "pos": "preposition", "details": {"note": "lager dan iets"}, "sentences": ["De temperatuur is beneden nul."]}
         ]
       }
     },
@@ -1089,7 +1089,7 @@
       "gloss": "opposite (preposition)",
       "entries": {
         "en": [
-        {"lemma": "opposite", "pos": "preposition", "sentences": ["The shop is opposite the school."]}
+        {"lemma": "opposite", "pos": "preposition", "details": {"note": "across from"}, "sentences": ["The shop is opposite the school."]}
         ],
         "nl": [
         {"lemma": "tegenover", "pos": "preposition", "sentences": ["De winkel ligt tegenover de school."]}
@@ -1209,7 +1209,7 @@
       "gloss": "so that (conjunction)",
       "entries": {
         "en": [
-        {"lemma": "so that", "pos": "conjunction", "sentences": ["I speak slowly so that you understand."]}
+        {"lemma": "so that", "pos": "conjunction", "details": {"note": "standard"}, "sentences": ["I speak slowly so that you understand."]}
         ],
         "nl": [
         {"lemma": "zodat", "pos": "conjunction", "sentences": ["Ik praat langzaam zodat je het begrijpt."]}
@@ -1557,7 +1557,7 @@
       "gloss": "for it (adverb)",
       "entries": {
         "en": [
-        {"lemma": "for it", "pos": "adverb", "sentences": ["I pay for it."]}
+        {"lemma": "for it", "pos": "adverb", "details": {"note": "in exchange for it"}, "sentences": ["I pay for it."]}
         ],
         "nl": [
         {"lemma": "ervoor", "pos": "adverb", "sentences": ["Ik betaal ervoor."]}
@@ -1761,7 +1761,7 @@
       "gloss": "of that (adverb)",
       "entries": {
         "en": [
-        {"lemma": "of that", "pos": "adverb", "sentences": ["I know nothing of that."]}
+        {"lemma": "of that", "pos": "adverb", "details": {"note": "from that"}, "sentences": ["I know nothing of that."]}
         ],
         "nl": [
         {"lemma": "daarvan", "pos": "adverb", "sentences": ["Daarvan weet ik niets."]}
@@ -1881,7 +1881,7 @@
       "gloss": "there (to that place, emphatic)",
       "entries": {
         "en": [
-        {"lemma": "there", "pos": "adverb", "details": {"note": "to that place"}, "sentences": ["I am going there."]}
+        {"lemma": "there", "pos": "adverb", "details": {"note": "to that place, emphatic"}, "sentences": ["I am going there."]}
         ],
         "nl": [
         {"lemma": "daarheen", "pos": "adverb", "sentences": ["Ik ga daarheen."]}
