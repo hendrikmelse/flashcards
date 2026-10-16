@@ -5,7 +5,7 @@
       "gloss": "one (number)",
       "entries": {
         "en": [
-        {"lemma": "one", "pos": "numeral", "sentences": ["I have one cat."]}
+        {"lemma": "one", "pos": "numeral", "details": {"note": "number"}, "sentences": ["I have one cat."]}
         ],
         "nl": [
         {"lemma": "één", "pos": "numeral", "sentences": ["Ik heb één kat."]}
@@ -152,7 +152,7 @@
         {"lemma": "eleven", "pos": "numeral", "sentences": ["There are eleven players."]}
         ],
         "nl": [
-        {"lemma": "elf", "pos": "numeral", "sentences": ["Er zijn elf spelers."]}
+        {"lemma": "elf", "pos": "numeral", "details": {"note": "het getal"}, "sentences": ["Er zijn elf spelers."]}
         ]
       }
     },
@@ -377,7 +377,7 @@
       "gloss": "first (numeral)",
       "entries": {
         "en": [
-        {"lemma": "first", "pos": "numeral", "sentences": ["He is the first."]}
+        {"lemma": "first", "pos": "numeral", "details": {"note": "number one"}, "sentences": ["He is the first."]}
         ],
         "nl": [
         {"lemma": "eerste", "pos": "numeral", "sentences": ["Hij is de eerste."]}
@@ -389,7 +389,7 @@
       "gloss": "second (numeral)",
       "entries": {
         "en": [
-        {"lemma": "second", "pos": "numeral", "sentences": ["She is second."]}
+        {"lemma": "second", "pos": "numeral", "details": {"note": "number two"}, "sentences": ["She is second."]}
         ],
         "nl": [
         {"lemma": "tweede", "pos": "numeral", "sentences": ["Zij is de tweede."]}

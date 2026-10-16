@@ -65,7 +65,7 @@
       "gloss": "trip (journey)",
       "entries": {
         "en": [
-        {"lemma": "trip", "pos": "noun", "details": {"plural": "trips"}, "sentences": ["The trip is long."]}
+        {"lemma": "trip", "pos": "noun", "details": {"note": "journey", "plural": "trips"}, "sentences": ["The trip is long."]}
         ],
         "nl": [
         {"lemma": "reis", "pos": "noun", "details": {"article": "de", "plural": "reizen"}, "sentences": ["De reis is lang."]}
@@ -197,7 +197,7 @@
       "gloss": "truck (noun)",
       "entries": {
         "en": [
-        {"lemma": "truck", "pos": "noun", "details": {"plural": "trucks"}, "sentences": ["The truck is big."]}
+        {"lemma": "truck", "pos": "noun", "details": {"note": "a large vehicle", "plural": "trucks"}, "sentences": ["The truck is big."]}
         ],
         "nl": [
         {"lemma": "truck", "pos": "noun", "details": {"article": "de", "plural": "trucks"}, "sentences": ["De truck is groot."]}
@@ -209,7 +209,7 @@
       "gloss": "airport (noun)",
       "entries": {
         "en": [
-        {"lemma": "airport", "pos": "noun", "details": {"plural": "airports"}, "sentences": ["We are at the airport."]}
+        {"lemma": "airport", "pos": "noun", "details": {"note": "any size", "plural": "airports"}, "sentences": ["We are at the airport."]}
         ],
         "nl": [
         {"lemma": "vliegveld", "pos": "noun", "details": {"article": "het", "plural": "vliegvelden"}, "sentences": ["Wij zijn op het vliegveld."]}
@@ -281,7 +281,7 @@
       "gloss": "course (direction)",
       "entries": {
         "en": [
-        {"lemma": "course (direction)", "pos": "noun", "details": {"plural": "courses"}, "sentences": ["The ship changes course."]}
+        {"lemma": "course", "pos": "noun", "details": {"note": "direction", "plural": "courses"}, "sentences": ["The ship changes course."]}
         ],
         "nl": [
         {"lemma": "koers", "pos": "noun", "details": {"article": "de", "plural": "koersen"}, "sentences": ["Het schip verandert van koers."]}
@@ -353,10 +353,10 @@
       "gloss": "pack (verb)",
       "entries": {
         "en": [
-        {"lemma": "to pack", "pos": "verb", "details": {"past": "packed", "participle": "packed"}, "sentences": ["I pack my suitcase."]}
+        {"lemma": "to pack", "pos": "verb", "details": {"note": "put things in a bag", "past": "packed", "participle": "packed"}, "sentences": ["I pack my suitcase."]}
         ],
         "nl": [
-        {"lemma": "inpakken", "pos": "verb", "details": {"note": "dingen in een tas doen", "pastSingular": "pakte in", "pastPlural": "pakten in", "participle": "ingepakt", "auxiliary": "hebben"}, "sentences": ["Ik pak mijn koffer in."]}
+        {"lemma": "inpakken", "pos": "verb", "details": {"pastSingular": "pakte in", "pastPlural": "pakten in", "participle": "ingepakt", "auxiliary": "hebben"}, "sentences": ["Ik pak mijn koffer in."]}
         ]
       }
     },
@@ -365,7 +365,7 @@
       "gloss": "truck (freight)",
       "entries": {
         "en": [
-        {"lemma": "truck (freight)", "pos": "noun", "details": {"plural": "trucks"}, "sentences": ["The truck is loaded."]}
+        {"lemma": "truck", "pos": "noun", "details": {"note": "freight", "plural": "trucks"}, "sentences": ["The truck is loaded."]}
         ],
         "nl": [
         {"lemma": "vrachtwagen", "pos": "noun", "details": {"article": "de", "plural": "vrachtwagens"}, "sentences": ["De vrachtwagen is geladen."]}
@@ -377,7 +377,7 @@
       "gloss": "crew (on a ship or plane)",
       "entries": {
         "en": [
-        {"lemma": "crew", "pos": "noun", "details": {"plural": "crews"}, "sentences": ["The crew is on board."]}
+        {"lemma": "crew", "pos": "noun", "details": {"note": "on a ship or plane", "plural": "crews"}, "sentences": ["The crew is on board."]}
         ],
         "nl": [
         {"lemma": "bemanning", "pos": "noun", "details": {"article": "de", "plural": "bemanningen"}, "sentences": ["De bemanning is aan boord."]}
@@ -389,7 +389,7 @@
       "gloss": "arrival (coming)",
       "entries": {
         "en": [
-        {"lemma": "arrival", "pos": "noun", "details": {"plural": "arrivals"}, "sentences": ["We await his arrival."]}
+        {"lemma": "arrival", "pos": "noun", "details": {"note": "coming", "plural": "arrivals"}, "sentences": ["We await his arrival."]}
         ],
         "nl": [
         {"lemma": "komst", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Wij wachten op zijn komst."]}
@@ -416,7 +416,7 @@
         {"lemma": "to sail", "pos": "verb", "details": {"past": "sailed", "participle": "sailed"}, "sentences": ["The ship sails."]}
         ],
         "nl": [
-        {"lemma": "varen", "pos": "verb", "details": {"pastSingular": "voer", "pastPlural": "voeren", "participle": "gevaren", "auxiliary": "hebben/zijn"}, "sentences": ["Het schip vaart."]}
+        {"lemma": "varen", "pos": "verb", "details": {"note": "met een schip", "pastSingular": "voer", "pastPlural": "voeren", "participle": "gevaren", "auxiliary": "hebben/zijn"}, "sentences": ["Het schip vaart."]}
         ]
       }
     },
@@ -437,7 +437,7 @@
       "gloss": "land (verb)",
       "entries": {
         "en": [
-        {"lemma": "to land", "pos": "verb", "details": {"past": "landed", "participle": "landed"}, "sentences": ["The plane lands."]}
+        {"lemma": "to land", "pos": "verb", "details": {"note": "touch down", "past": "landed", "participle": "landed"}, "sentences": ["The plane lands."]}
         ],
         "nl": [
         {"lemma": "landen", "pos": "verb", "details": {"pastSingular": "landde", "pastPlural": "landden", "participle": "geland", "auxiliary": "zijn"}, "sentences": ["Het vliegtuig landt."]}
@@ -653,7 +653,7 @@
       "gloss": "trunk (of a car)",
       "entries": {
         "en": [
-        {"lemma": "trunk (of a car)", "pos": "noun", "details": {"plural": "trunks"}, "sentences": ["The bag is in the trunk."]}
+        {"lemma": "trunk", "pos": "noun", "details": {"note": "of a car", "plural": "trunks"}, "sentences": ["The bag is in the trunk."]}
         ],
         "nl": [
         {"lemma": "kofferbak", "pos": "noun", "details": {"article": "de", "plural": "kofferbakken"}, "sentences": ["De tas ligt in de kofferbak."]}
@@ -665,7 +665,7 @@
       "gloss": "book (reserve)",
       "entries": {
         "en": [
-        {"lemma": "to book (reserve)", "pos": "verb", "details": {"past": "booked", "participle": "booked"}, "sentences": ["I book a hotel."]}
+        {"lemma": "to book", "pos": "verb", "details": {"note": "reserve", "past": "booked", "participle": "booked"}, "sentences": ["I book a hotel."]}
         ],
         "nl": [
         {"lemma": "boeken", "pos": "verb", "details": {"pastSingular": "boekte", "pastPlural": "boekten", "participle": "geboekt", "auxiliary": "hebben"}, "sentences": ["Ik boek een hotel."]}
@@ -701,7 +701,7 @@
       "gloss": "crash (fall down)",
       "entries": {
         "en": [
-        {"lemma": "to crash (fall down)", "pos": "verb", "details": {"past": "crashed", "participle": "crashed"}, "sentences": ["The plane crashes."]}
+        {"lemma": "to crash", "pos": "verb", "details": {"note": "fall down", "past": "crashed", "participle": "crashed"}, "sentences": ["The plane crashes."]}
         ],
         "nl": [
         {"lemma": "neerstorten", "pos": "verb", "details": {"pastSingular": "stortte neer", "pastPlural": "stortten neer", "participle": "neergestort", "auxiliary": "zijn"}, "sentences": ["Het vliegtuig stort neer."]}
@@ -737,7 +737,7 @@
       "gloss": "transport (noun)",
       "entries": {
         "en": [
-        {"lemma": "transport", "pos": "noun", "details": {"uncountable": true}, "sentences": ["Transport is expensive."]}
+        {"lemma": "transport", "pos": "noun", "details": {"note": "moving goods", "uncountable": true}, "sentences": ["Transport is expensive."]}
         ],
         "nl": [
         {"lemma": "transport", "pos": "noun", "details": {"article": "het", "plural": "transporten"}, "sentences": ["Transport is duur."]}
@@ -773,7 +773,7 @@
       "gloss": "take off (aircraft)",
       "entries": {
         "en": [
-        {"lemma": "to take off (aircraft)", "pos": "verb", "details": {"past": "took off", "participle": "taken off"}, "sentences": ["The plane took off."]}
+        {"lemma": "to take off", "pos": "verb", "details": {"note": "aircraft", "past": "took off", "participle": "taken off"}, "sentences": ["The plane took off."]}
         ],
         "nl": [
         {"lemma": "opstijgen", "pos": "verb", "details": {"pastSingular": "steeg op", "pastPlural": "stegen op", "participle": "opgestegen", "auxiliary": "zijn"}, "sentences": ["Het vliegtuig steeg op."]}
@@ -785,7 +785,7 @@
       "gloss": "transport (conveyance)",
       "entries": {
         "en": [
-        {"lemma": "transport (conveyance)", "pos": "noun", "details": {"uncountable": true}, "sentences": ["Public transport is cheap."]}
+        {"lemma": "transport", "pos": "noun", "details": {"note": "conveyance", "uncountable": true}, "sentences": ["Public transport is cheap."]}
         ],
         "nl": [
         {"lemma": "vervoer", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["Openbaar vervoer is goedkoop."]}
@@ -809,7 +809,7 @@
       "gloss": "speed (movement)",
       "entries": {
         "en": [
-        {"lemma": "speed (movement)", "pos": "noun", "details": {"uncountable": true}, "sentences": ["The ship has a high speed."]}
+        {"lemma": "speed", "pos": "noun", "details": {"note": "movement", "uncountable": true}, "sentences": ["The ship has a high speed."]}
         ],
         "nl": [
         {"lemma": "vaart", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Het schip vaart met hoge vaart."]}
@@ -893,7 +893,7 @@
       "gloss": "airport (large)",
       "entries": {
         "en": [
-        {"lemma": "airport (large)", "pos": "noun", "details": {"plural": "airports"}, "sentences": ["The airport is big."]}
+        {"lemma": "airport", "pos": "noun", "details": {"note": "large", "plural": "airports"}, "sentences": ["The airport is big."]}
         ],
         "nl": [
         {"lemma": "luchthaven", "pos": "noun", "details": {"article": "de", "plural": "luchthavens"}, "sentences": ["De luchthaven is groot."]}
@@ -917,7 +917,7 @@
       "gloss": "arrival (reaching a place)",
       "entries": {
         "en": [
-        {"lemma": "arrival", "pos": "noun", "details": {"uncountable": true}, "sentences": ["The arrival is at six."]}
+        {"lemma": "arrival", "pos": "noun", "details": {"note": "reaching a place", "uncountable": true}, "sentences": ["The arrival is at six."]}
         ],
         "nl": [
         {"lemma": "aankomst", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["De aankomst is om zes uur."]}
@@ -929,7 +929,7 @@
       "gloss": "driver (of a vehicle)",
       "entries": {
         "en": [
-        {"lemma": "driver (of a vehicle)", "pos": "noun", "details": {"plural": "drivers"}, "sentences": ["The driver stops."]}
+        {"lemma": "driver", "pos": "noun", "details": {"note": "of a vehicle", "plural": "drivers"}, "sentences": ["The driver stops."]}
         ],
         "nl": [
         {"lemma": "bestuurder", "pos": "noun", "details": {"article": "de", "plural": "bestuurders"}, "sentences": ["De bestuurder stopt."]}
@@ -965,7 +965,7 @@
       "gloss": "tour (guided visit)",
       "entries": {
         "en": [
-        {"lemma": "tour", "pos": "noun", "details": {"plural": "tours"}, "sentences": ["We take a tour."]}
+        {"lemma": "tour", "pos": "noun", "details": {"note": "guided visit", "plural": "tours"}, "sentences": ["We take a tour."]}
         ],
         "nl": [
         {"lemma": "rondleiding", "pos": "noun", "details": {"article": "de", "plural": "rondleidingen"}, "sentences": ["Wij maken een rondleiding."]}
@@ -1013,7 +1013,7 @@
       "gloss": "delay (noun)",
       "entries": {
         "en": [
-        {"lemma": "delay", "pos": "noun", "details": {"plural": "delays"}, "sentences": ["The train has a delay."]}
+        {"lemma": "delay", "pos": "noun", "details": {"note": "running late", "plural": "delays"}, "sentences": ["The train has a delay."]}
         ],
         "nl": [
         {"lemma": "vertraging", "pos": "noun", "details": {"article": "de", "plural": "vertragingen"}, "sentences": ["De trein heeft vertraging."]}
@@ -1109,7 +1109,7 @@
       "gloss": "fill up (fuel)",
       "entries": {
         "en": [
-        {"lemma": "to fill up (fuel)", "pos": "verb", "details": {"past": "filled up", "participle": "filled up"}, "sentences": ["I fill up the car."]}
+        {"lemma": "to fill up", "pos": "verb", "details": {"note": "fuel", "past": "filled up", "participle": "filled up"}, "sentences": ["I fill up the car."]}
         ],
         "nl": [
         {"lemma": "tanken", "pos": "verb", "details": {"pastSingular": "tankte", "pastPlural": "tankten", "participle": "getankt", "auxiliary": "hebben"}, "sentences": ["Ik tank de auto."]}
@@ -1133,7 +1133,7 @@
       "gloss": "turn off (a road)",
       "entries": {
         "en": [
-        {"lemma": "to turn off (a road)", "pos": "verb", "details": {"past": "turned off", "participle": "turned off"}, "sentences": ["We turn off at the exit."]}
+        {"lemma": "to turn off", "pos": "verb", "details": {"note": "a road", "past": "turned off", "participle": "turned off"}, "sentences": ["We turn off at the exit."]}
         ],
         "nl": [
         {"lemma": "afslaan", "pos": "verb", "details": {"pastSingular": "sloeg af", "pastPlural": "sloegen af", "participle": "afgeslagen", "auxiliary": "hebben/zijn"}, "sentences": ["Wij slaan af bij de afrit."]}
@@ -1229,7 +1229,7 @@
       "gloss": "bow (of a ship)",
       "entries": {
         "en": [
-        {"lemma": "bow (of a ship)", "pos": "noun", "details": {"plural": "bows"}, "sentences": ["The bow cuts the waves."]}
+        {"lemma": "bow", "pos": "noun", "details": {"note": "of a ship", "plural": "bows"}, "sentences": ["The bow cuts the waves."]}
         ],
         "nl": [
         {"lemma": "boeg", "pos": "noun", "details": {"article": "de", "plural": "boegen"}, "sentences": ["De boeg snijdt door de golven."]}
@@ -1241,7 +1241,7 @@
       "gloss": "exit (highway)",
       "entries": {
         "en": [
-        {"lemma": "exit (highway)", "pos": "noun", "details": {"plural": "exits"}, "sentences": ["We take the next exit."]}
+        {"lemma": "exit", "pos": "noun", "details": {"note": "highway", "plural": "exits"}, "sentences": ["We take the next exit."]}
         ],
         "nl": [
         {"lemma": "afslag", "pos": "noun", "details": {"article": "de", "plural": "afslagen"}, "sentences": ["Wij nemen de volgende afslag."]}
@@ -1349,7 +1349,7 @@
       "gloss": "drive away (leave by vehicle)",
       "entries": {
         "en": [
-        {"lemma": "to drive away", "pos": "verb", "details": {"past": "drove away", "participle": "driven away"}, "sentences": ["The car drove away."]}
+        {"lemma": "to drive away", "pos": "verb", "details": {"note": "leave by vehicle", "past": "drove away", "participle": "driven away"}, "sentences": ["The car drove away."]}
         ],
         "nl": [
         {"lemma": "wegrijden", "pos": "verb", "details": {"pastSingular": "reed weg", "pastPlural": "reden weg", "participle": "weggereden", "auxiliary": "zijn"}, "sentences": ["De auto reed weg."]}
@@ -1433,7 +1433,7 @@
       "gloss": "cabin (on a ship)",
       "entries": {
         "en": [
-        {"lemma": "cabin (on a ship)", "pos": "noun", "details": {"plural": "cabins"}, "sentences": ["The cabin is small."]}
+        {"lemma": "cabin", "pos": "noun", "details": {"note": "on a ship", "plural": "cabins"}, "sentences": ["The cabin is small."]}
         ],
         "nl": [
         {"lemma": "cabine", "pos": "noun", "details": {"article": "de", "plural": "cabines"}, "sentences": ["De cabine is klein."]}
@@ -1541,10 +1541,10 @@
       "gloss": "pass (mountain)",
       "entries": {
         "en": [
-        {"lemma": "pass (mountain)", "pos": "noun", "details": {"plural": "passes"}, "sentences": ["We cross the pass."]}
+        {"lemma": "pass", "pos": "noun", "details": {"note": "mountain", "plural": "passes"}, "sentences": ["We cross the pass."]}
         ],
         "nl": [
-        {"lemma": "pas", "pos": "noun", "details": {"article": "de", "plural": "passen"}, "sentences": ["Wij steken de pas over."]}
+        {"lemma": "pas", "pos": "noun", "details": {"note": "tussen bergen", "article": "de", "plural": "passen"}, "sentences": ["Wij steken de pas over."]}
         ]
       }
     },
@@ -1661,7 +1661,7 @@
       "gloss": "port (left side)",
       "entries": {
         "en": [
-        {"lemma": "port (left side)", "pos": "noun", "details": {"uncountable": true}, "sentences": ["The ship turns to port."]}
+        {"lemma": "port", "pos": "noun", "details": {"note": "left side", "uncountable": true}, "sentences": ["The ship turns to port."]}
         ],
         "nl": [
         {"lemma": "bakboord", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["Het schip draait naar bakboord."]}
@@ -1673,7 +1673,7 @@
       "gloss": "hood (car)",
       "entries": {
         "en": [
-        {"lemma": "hood (car)", "pos": "noun", "details": {"plural": "hoods"}, "sentences": ["The hood is open."]}
+        {"lemma": "hood", "pos": "noun", "details": {"note": "car", "plural": "hoods"}, "sentences": ["The hood is open."]}
         ],
         "nl": [
         {"lemma": "motorkap", "pos": "noun", "details": {"article": "de", "plural": "motorkappen"}, "sentences": ["De motorkap is open."]}

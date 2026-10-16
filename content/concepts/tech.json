@@ -41,10 +41,10 @@
       "gloss": "letter (noun)",
       "entries": {
         "en": [
-        {"lemma": "letter", "pos": "noun", "details": {"plural": "letters"}, "sentences": ["I write a letter."]}
+        {"lemma": "letter", "pos": "noun", "details": {"note": "that you post", "plural": "letters"}, "sentences": ["I write a letter."]}
         ],
         "nl": [
-        {"lemma": "brief", "pos": "noun", "details": {"note": "die je op de post doet", "article": "de", "plural": "brieven"}, "sentences": ["Ik schrijf een brief."]}
+        {"lemma": "brief", "pos": "noun", "details": {"article": "de", "plural": "brieven"}, "sentences": ["Ik schrijf een brief."]}
         ]
       }
     },
@@ -113,7 +113,7 @@
       "gloss": "joke (little)",
       "entries": {
         "en": [
-        {"lemma": "joke (little)", "pos": "noun", "details": {"plural": "jokes"}, "sentences": ["That is a little joke."]}
+        {"lemma": "joke", "pos": "noun", "details": {"note": "little", "plural": "jokes"}, "sentences": ["That is a little joke."]}
         ],
         "nl": [
         {"lemma": "grapje", "pos": "noun", "details": {"article": "het", "plural": "grapjes"}, "sentences": ["Dat is een grapje."]}
@@ -125,7 +125,7 @@
       "gloss": "joke (noun)",
       "entries": {
         "en": [
-        {"lemma": "joke", "pos": "noun", "details": {"plural": "jokes"}, "sentences": ["He tells a joke."]}
+        {"lemma": "joke", "pos": "noun", "details": {"note": "a standard joke", "plural": "jokes"}, "sentences": ["He tells a joke."]}
         ],
         "nl": [
         {"lemma": "grap", "pos": "noun", "details": {"article": "de", "plural": "grappen"}, "sentences": ["Hij vertelt een grap."]}
@@ -413,7 +413,7 @@
       "gloss": "device (noun)",
       "entries": {
         "en": [
-        {"lemma": "device", "pos": "noun", "details": {"plural": "devices"}, "sentences": ["The device is new."]}
+        {"lemma": "device", "pos": "noun", "details": {"note": "a machine", "plural": "devices"}, "sentences": ["The device is new."]}
         ],
         "nl": [
         {"lemma": "apparaat", "pos": "noun", "details": {"article": "het", "plural": "apparaten"}, "sentences": ["Het apparaat is nieuw."]}
@@ -449,7 +449,7 @@
       "gloss": "device (appliance)",
       "entries": {
         "en": [
-        {"lemma": "device (appliance)", "pos": "noun", "details": {"plural": "devices"}, "sentences": ["The device is on."]}
+        {"lemma": "device", "pos": "noun", "details": {"note": "appliance", "plural": "devices"}, "sentences": ["The device is on."]}
         ],
         "nl": [
         {"lemma": "toestel", "pos": "noun", "details": {"article": "het", "plural": "toestellen"}, "sentences": ["Het toestel staat aan."]}
@@ -461,7 +461,7 @@
       "gloss": "page (noun)",
       "entries": {
         "en": [
-        {"lemma": "page", "pos": "noun", "details": {"plural": "pages"}, "sentences": ["Turn the page."]}
+        {"lemma": "page", "pos": "noun", "details": {"note": "on a screen or paper", "plural": "pages"}, "sentences": ["Turn the page."]}
         ],
         "nl": [
         {"lemma": "pagina", "pos": "noun", "details": {"article": "de", "plural": "pagina's"}, "sentences": ["Sla de pagina om."]}
@@ -473,7 +473,7 @@
       "gloss": "connection (link)",
       "entries": {
         "en": [
-        {"lemma": "connection (link)", "pos": "noun", "details": {"plural": "connections"}, "sentences": ["The connection is bad."]}
+        {"lemma": "connection", "pos": "noun", "details": {"note": "link", "plural": "connections"}, "sentences": ["The connection is bad."]}
         ],
         "nl": [
         {"lemma": "verbinding", "pos": "noun", "details": {"note": "zoals een telefoonlijn", "article": "de", "plural": "verbindingen"}, "sentences": ["De verbinding is slecht."]}
@@ -581,7 +581,7 @@
       "gloss": "series (noun)",
       "entries": {
         "en": [
-        {"lemma": "series", "pos": "noun", "details": {"plural": "series"}, "sentences": ["I watch a series."]}
+        {"lemma": "series", "pos": "noun", "details": {"note": "of TV shows", "plural": "series"}, "sentences": ["I watch a series."]}
         ],
         "nl": [
         {"lemma": "serie", "pos": "noun", "details": {"article": "de", "plural": "series"}, "sentences": ["Ik kijk een serie."]}
@@ -668,7 +668,7 @@
         {"lemma": "cell phone", "pos": "noun", "details": {"plural": "cell phones"}, "sentences": ["My cell phone is new."]}
         ],
         "nl": [
-        {"lemma": "mobiel", "pos": "noun", "details": {"article": "de", "plural": "mobiels"}, "sentences": ["Mijn mobiel is nieuw."]}
+        {"lemma": "mobiel", "pos": "noun", "details": {"note": "de telefoon", "article": "de", "plural": "mobiels"}, "sentences": ["Mijn mobiel is nieuw."]}
         ]
       }
     },
@@ -773,7 +773,7 @@
       "gloss": "file (computer)",
       "entries": {
         "en": [
-        {"lemma": "file (computer)", "pos": "noun", "details": {"plural": "files"}, "sentences": ["I open the file."]}
+        {"lemma": "file", "pos": "noun", "details": {"note": "computer", "plural": "files"}, "sentences": ["I open the file."]}
         ],
         "nl": [
         {"lemma": "bestand", "pos": "noun", "details": {"article": "het", "plural": "bestanden"}, "sentences": ["Ik open het bestand."]}
@@ -833,7 +833,7 @@
       "gloss": "character (in a story)",
       "entries": {
         "en": [
-        {"lemma": "character (in a story)", "pos": "noun", "details": {"plural": "characters"}, "sentences": ["The character is funny."]}
+        {"lemma": "character", "pos": "noun", "details": {"note": "in a story", "plural": "characters"}, "sentences": ["The character is funny."]}
         ],
         "nl": [
         {"lemma": "personage", "pos": "noun", "details": {"article": "het", "plural": "personages"}, "sentences": ["Het personage is grappig."]}
@@ -881,7 +881,7 @@
       "gloss": "equipment (noun)",
       "entries": {
         "en": [
-        {"lemma": "equipment", "pos": "noun", "details": {"uncountable": true}, "sentences": ["The equipment is new."]}
+        {"lemma": "equipment", "pos": "noun", "details": {"note": "devices", "uncountable": true}, "sentences": ["The equipment is new."]}
         ],
         "nl": [
         {"lemma": "apparatuur", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["De apparatuur is nieuw."]}
@@ -893,7 +893,7 @@
       "gloss": "joke (short)",
       "entries": {
         "en": [
-        {"lemma": "joke (short)", "pos": "noun", "details": {"plural": "jokes"}, "sentences": ["He tells a joke."]}
+        {"lemma": "joke", "pos": "noun", "details": {"note": "short", "plural": "jokes"}, "sentences": ["He tells a joke."]}
         ],
         "nl": [
         {"lemma": "mop", "pos": "noun", "details": {"article": "de", "plural": "moppen"}, "sentences": ["Hij vertelt een mop."]}
@@ -1004,7 +1004,7 @@
         {"lemma": "mobile", "pos": "adjective", "sentences": ["The phone is mobile."]}
         ],
         "nl": [
-        {"lemma": "mobiel", "pos": "adjective", "sentences": ["De telefoon is mobiel."]}
+        {"lemma": "mobiel", "pos": "adjective", "details": {"note": "beweeglijk"}, "sentences": ["De telefoon is mobiel."]}
         ]
       }
     },
@@ -1013,7 +1013,7 @@
       "gloss": "link (web)",
       "entries": {
         "en": [
-        {"lemma": "link", "pos": "noun", "details": {"plural": "links"}, "sentences": ["I send you the link."]}
+        {"lemma": "link", "pos": "noun", "details": {"note": "on the internet", "plural": "links"}, "sentences": ["I send you the link."]}
         ],
         "nl": [
         {"lemma": "link", "pos": "noun", "details": {"article": "de", "plural": "links"}, "sentences": ["Ik stuur je de link."]}
@@ -1061,7 +1061,7 @@
       "gloss": "phone (call up)",
       "entries": {
         "en": [
-        {"lemma": "to phone (call up)", "pos": "verb", "details": {"past": "phoned", "participle": "phoned"}, "sentences": ["He phoned me yesterday."]}
+        {"lemma": "to phone", "pos": "verb", "details": {"note": "call up", "past": "phoned", "participle": "phoned"}, "sentences": ["He phoned me yesterday."]}
         ],
         "nl": [
         {"lemma": "opbellen", "pos": "verb", "details": {"pastSingular": "belde op", "pastPlural": "belden op", "participle": "opgebeld", "auxiliary": "hebben"}, "sentences": ["Hij belde mij gisteren op."]}
@@ -1085,7 +1085,7 @@
       "gloss": "set (adjust)",
       "entries": {
         "en": [
-        {"lemma": "to set (adjust)", "pos": "verb", "details": {"past": "set", "participle": "set"}, "sentences": ["I set the clock."]}
+        {"lemma": "to set", "pos": "verb", "details": {"note": "adjust", "past": "set", "participle": "set"}, "sentences": ["I set the clock."]}
         ],
         "nl": [
         {"lemma": "instellen", "pos": "verb", "details": {"pastSingular": "stelde in", "pastPlural": "stelden in", "participle": "ingesteld", "auxiliary": "hebben"}, "sentences": ["Ik stel de klok in."]}
@@ -1121,7 +1121,7 @@
       "gloss": "ring (phone)",
       "entries": {
         "en": [
-        {"lemma": "to ring (phone)", "pos": "verb", "details": {"past": "rang", "participle": "rung"}, "sentences": ["The phone rang."]}
+        {"lemma": "to ring", "pos": "verb", "details": {"note": "phone", "past": "rang", "participle": "rung"}, "sentences": ["The phone rang."]}
         ],
         "nl": [
         {"lemma": "overgaan", "pos": "verb", "details": {"pastSingular": "ging over", "pastPlural": "gingen over", "participle": "overgegaan", "auxiliary": "zijn"}, "sentences": ["De telefoon ging over."]}
@@ -1181,7 +1181,7 @@
       "gloss": "operation (working)",
       "entries": {
         "en": [
-        {"lemma": "operation (working)", "pos": "noun", "details": {"uncountable": true}, "sentences": ["The operation of the machine is simple."]}
+        {"lemma": "operation", "pos": "noun", "details": {"note": "working", "uncountable": true}, "sentences": ["The operation of the machine is simple."]}
         ],
         "nl": [
         {"lemma": "werking", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["De werking van de machine is eenvoudig."]}
@@ -1253,7 +1253,7 @@
       "gloss": "crew (film or work team)",
       "entries": {
         "en": [
-        {"lemma": "crew", "pos": "noun", "details": {"plural": "crews"}, "sentences": ["The crew films the scene."]}
+        {"lemma": "crew", "pos": "noun", "details": {"note": "film or work team", "plural": "crews"}, "sentences": ["The crew films the scene."]}
         ],
         "nl": [
         {"lemma": "crew", "pos": "noun", "details": {"article": "de", "plural": "crews"}, "sentences": ["De crew filmt de scène."]}
@@ -1325,7 +1325,7 @@
       "gloss": "page (of a book)",
       "entries": {
         "en": [
-        {"lemma": "page (of a book)", "pos": "noun", "details": {"plural": "pages"}, "sentences": ["Open page ten."]}
+        {"lemma": "page", "pos": "noun", "details": {"note": "of a book", "plural": "pages"}, "sentences": ["Open page ten."]}
         ],
         "nl": [
         {"lemma": "bladzijde", "pos": "noun", "details": {"article": "de", "plural": "bladzijden"}, "sentences": ["Sla bladzijde tien op."]}
@@ -1565,7 +1565,7 @@
       "gloss": "note (short)",
       "entries": {
         "en": [
-        {"lemma": "note (short)", "pos": "noun", "details": {"plural": "notes"}, "sentences": ["I make a note."]}
+        {"lemma": "note", "pos": "noun", "details": {"note": "short", "plural": "notes"}, "sentences": ["I make a note."]}
         ],
         "nl": [
         {"lemma": "notitie", "pos": "noun", "details": {"article": "de", "plural": "notities"}, "sentences": ["Ik maak een notitie."]}
@@ -1901,7 +1901,7 @@
       "gloss": "enter (data)",
       "entries": {
         "en": [
-        {"lemma": "to enter (data)", "pos": "verb", "details": {"past": "entered", "participle": "entered"}, "sentences": ["I enter the data."]}
+        {"lemma": "to enter", "pos": "verb", "details": {"note": "data", "past": "entered", "participle": "entered"}, "sentences": ["I enter the data."]}
         ],
         "nl": [
         {"lemma": "invoeren", "pos": "verb", "details": {"pastSingular": "voerde in", "pastPlural": "voerden in", "participle": "ingevoerd", "auxiliary": "hebben"}, "sentences": ["Ik voer de gegevens in."]}
@@ -2033,7 +2033,7 @@
       "gloss": "charge (a battery)",
       "entries": {
         "en": [
-        {"lemma": "to charge (a battery)", "pos": "verb", "details": {"past": "charged", "participle": "charged"}, "sentences": ["I charge my phone."]}
+        {"lemma": "to charge", "pos": "verb", "details": {"note": "a battery", "past": "charged", "participle": "charged"}, "sentences": ["I charge my phone."]}
         ],
         "nl": [
         {"lemma": "opladen", "pos": "verb", "details": {"pastSingular": "laadde op", "pastPlural": "laadden op", "participle": "opgeladen", "auxiliary": "hebben"}, "sentences": ["Ik laad mijn telefoon op."]}
@@ -2117,7 +2117,7 @@
       "gloss": "cover (of a book)",
       "entries": {
         "en": [
-        {"lemma": "cover (of a book)", "pos": "noun", "details": {"plural": "covers"}, "sentences": ["The cover of the book is red."]}
+        {"lemma": "cover", "pos": "noun", "details": {"note": "of a book", "plural": "covers"}, "sentences": ["The cover of the book is red."]}
         ],
         "nl": [
         {"lemma": "omslag", "pos": "noun", "details": {"article": "de", "plural": "omslagen"}, "sentences": ["De omslag van het boek is rood."]}
@@ -2129,7 +2129,7 @@
       "gloss": "column (noun)",
       "entries": {
         "en": [
-        {"lemma": "column", "pos": "noun", "details": {"plural": "columns"}, "sentences": ["I read the column."]}
+        {"lemma": "column", "pos": "noun", "details": {"note": "in a newspaper", "plural": "columns"}, "sentences": ["I read the column."]}
         ],
         "nl": [
         {"lemma": "column", "pos": "noun", "details": {"article": "de", "plural": "columns"}, "sentences": ["Ik lees de column."]}
@@ -2189,7 +2189,7 @@
       "gloss": "report (coverage)",
       "entries": {
         "en": [
-        {"lemma": "report (coverage)", "pos": "noun", "details": {"plural": "reports"}, "sentences": ["The report is on TV."]}
+        {"lemma": "report", "pos": "noun", "details": {"note": "coverage", "plural": "reports"}, "sentences": ["The report is on TV."]}
         ],
         "nl": [
         {"lemma": "reportage", "pos": "noun", "details": {"article": "de", "plural": "reportages"}, "sentences": ["De reportage staat op tv."]}

@@ -42,7 +42,7 @@
       "gloss": "bad (of low quality)",
       "entries": {
         "en": [
-        {"lemma": "bad", "pos": "adjective", "sentences": ["That is a bad idea."]}
+        {"lemma": "bad", "pos": "adjective", "details": {"note": "of low quality"}, "sentences": ["That is a bad idea."]}
         ],
         "nl": [
         {"lemma": "slecht", "pos": "adjective", "sentences": ["Dat is een slecht idee."]}
@@ -126,7 +126,7 @@
       "gloss": "warm (pleasantly warm, of weather)",
       "entries": {
         "en": [
-        {"lemma": "warm", "pos": "adjective", "sentences": ["It is warm today."]}
+        {"lemma": "warm", "pos": "adjective", "details": {"note": "pleasantly warm, of weather"}, "sentences": ["It is warm today."]}
         ],
         "nl": [
         {"lemma": "warm", "pos": "adjective", "sentences": ["Het is vandaag warm."]}
@@ -138,7 +138,7 @@
       "gloss": "cold (low temperature)",
       "entries": {
         "en": [
-        {"lemma": "cold", "pos": "adjective", "sentences": ["The water is cold."]}
+        {"lemma": "cold", "pos": "adjective", "details": {"note": "low temperature"}, "sentences": ["The water is cold."]}
         ],
         "nl": [
         {"lemma": "koud", "pos": "adjective", "sentences": ["Het water is koud."]}
@@ -150,10 +150,10 @@
       "gloss": "happy (glad)",
       "entries": {
         "en": [
-        {"lemma": "happy", "pos": "adjective", "sentences": ["The children are happy."]}
+        {"lemma": "happy", "pos": "adjective", "details": {"note": "about something good happening"}, "sentences": ["The children are happy."]}
         ],
         "nl": [
-        {"lemma": "blij", "pos": "adjective", "details": {"note": "over iets goeds dat gebeurt"}, "sentences": ["De kinderen zijn blij."]}
+        {"lemma": "blij", "pos": "adjective", "sentences": ["De kinderen zijn blij."]}
         ]
       }
     },
@@ -452,7 +452,7 @@
       "gloss": "many (a large number)",
       "entries": {
         "en": [
-        {"lemma": "many", "pos": "adjective", "sentences": ["I have many books."]},
+        {"lemma": "many", "pos": "adjective", "details": {"note": "a large number"}, "sentences": ["I have many books."]},
         {"lemma": "much", "pos": "adjective", "sentences": ["I do not have much time."]}
         ],
         "nl": [
@@ -478,7 +478,7 @@
       "entries": {
         "en": [
         {"lemma": "nice", "pos": "adjective", "sentences": ["The teacher is nice."]},
-        {"lemma": "kind", "pos": "adjective", "sentences": ["The doctor is very kind."]}
+        {"lemma": "kind", "pos": "adjective", "details": {"note": "kind-hearted"}, "sentences": ["The doctor is very kind."]}
         ],
         "nl": [
         {"lemma": "aardig", "pos": "adjective", "sentences": ["De leraar is aardig.", "De dokter is heel aardig."]}
@@ -515,10 +515,10 @@
       "gloss": "whole (adjective)",
       "entries": {
         "en": [
-        {"lemma": "whole", "pos": "adjective", "sentences": ["The whole cake is gone."]}
+        {"lemma": "whole", "pos": "adjective", "details": {"note": "complete"}, "sentences": ["The whole cake is gone."]}
         ],
         "nl": [
-        {"lemma": "heel", "pos": "adjective", "sentences": ["De hele taart is op."]}
+        {"lemma": "heel", "pos": "adjective", "details": {"note": "compleet"}, "sentences": ["De hele taart is op."]}
         ]
       }
     },
@@ -575,7 +575,7 @@
       "gloss": "bad (serious)",
       "entries": {
         "en": [
-        {"lemma": "bad (serious)", "pos": "adjective", "sentences": ["That is really bad."]}
+        {"lemma": "bad", "pos": "adjective", "details": {"note": "serious"}, "sentences": ["That is really bad."]}
         ],
         "nl": [
         {"lemma": "erg", "pos": "adjective", "sentences": ["Dat is heel erg."]}
@@ -611,7 +611,7 @@
       "gloss": "fun (adjective)",
       "entries": {
         "en": [
-        {"lemma": "fun", "pos": "adjective", "sentences": ["That is fun."]}
+        {"lemma": "fun", "pos": "adjective", "details": {"note": "enjoyable"}, "sentences": ["That is fun."]}
         ],
         "nl": [
         {"lemma": "leuk", "pos": "adjective", "sentences": ["Dat is leuk."]}
@@ -671,10 +671,10 @@
       "gloss": "last (adjective)",
       "entries": {
         "en": [
-        {"lemma": "last", "pos": "adjective", "sentences": ["This is the last day."]}
+        {"lemma": "last", "pos": "adjective", "details": {"note": "final"}, "sentences": ["This is the last day."]}
         ],
         "nl": [
-        {"lemma": "laatst", "pos": "adjective", "sentences": ["Dit is de laatste dag."]}
+        {"lemma": "laatst", "pos": "adjective", "details": {"note": "als laatste in een rij"}, "sentences": ["Dit is de laatste dag."]}
         ]
       }
     },
@@ -731,7 +731,7 @@
       "gloss": "excellent (adjective)",
       "entries": {
         "en": [
-        {"lemma": "excellent", "pos": "adjective", "sentences": ["That is excellent."]}
+        {"lemma": "excellent", "pos": "adjective", "details": {"note": "very good"}, "sentences": ["That is excellent."]}
         ],
         "nl": [
         {"lemma": "prima", "pos": "adjective", "sentences": ["Dat is prima."]}
@@ -803,7 +803,7 @@
       "gloss": "wrong (adjective)",
       "entries": {
         "en": [
-        {"lemma": "wrong", "pos": "adjective", "sentences": ["That is the wrong road."]}
+        {"lemma": "wrong", "pos": "adjective", "details": {"note": "not the right one"}, "sentences": ["That is the wrong road."]}
         ],
         "nl": [
         {"lemma": "verkeerd", "pos": "adjective", "sentences": ["Dat is de verkeerde weg."]}
@@ -815,7 +815,7 @@
       "gloss": "safe (adjective)",
       "entries": {
         "en": [
-        {"lemma": "safe", "pos": "adjective", "sentences": ["The house is safe."]}
+        {"lemma": "safe", "pos": "adjective", "details": {"note": "free from danger"}, "sentences": ["The house is safe."]}
         ],
         "nl": [
         {"lemma": "veilig", "pos": "adjective", "sentences": ["Het huis is veilig."]}
@@ -839,7 +839,7 @@
       "gloss": "over (finished)",
       "entries": {
         "en": [
-        {"lemma": "over (finished)", "pos": "adjective", "sentences": ["The summer is over."]}
+        {"lemma": "over", "pos": "adjective", "details": {"note": "finished"}, "sentences": ["The summer is over."]}
         ],
         "nl": [
         {"lemma": "voorbij", "pos": "adjective", "sentences": ["De zomer is voorbij."]}
@@ -875,7 +875,7 @@
       "gloss": "busy (occupied)",
       "entries": {
         "en": [
-        {"lemma": "busy (occupied)", "pos": "adjective", "sentences": ["I am busy."]}
+        {"lemma": "busy", "pos": "adjective", "details": {"note": "occupied"}, "sentences": ["I am busy."]}
         ],
         "nl": [
         {"lemma": "bezig", "pos": "adjective", "sentences": ["Ik ben bezig."]}
@@ -887,7 +887,7 @@
       "gloss": "free (adjective)",
       "entries": {
         "en": [
-        {"lemma": "free", "pos": "adjective", "sentences": ["You are free."]}
+        {"lemma": "free", "pos": "adjective", "details": {"note": "at liberty"}, "sentences": ["You are free."]}
         ],
         "nl": [
         {"lemma": "vrij", "pos": "adjective", "sentences": ["Je bent vrij."]}
@@ -911,10 +911,10 @@
       "gloss": "the same (adjective)",
       "entries": {
         "en": [
-        {"lemma": "the same", "pos": "adjective", "sentences": ["It is the same."]}
+        {"lemma": "the same", "pos": "adjective", "details": {"note": "with het-words"}, "sentences": ["It is the same."]}
         ],
         "nl": [
-        {"lemma": "hetzelfde", "pos": "adjective", "details": {"note": "bij het-woorden"}, "sentences": ["Het is hetzelfde."]}
+        {"lemma": "hetzelfde", "pos": "adjective", "sentences": ["Het is hetzelfde."]}
         ]
       }
     },
@@ -971,7 +971,7 @@
       "gloss": "busy (crowded)",
       "entries": {
         "en": [
-        {"lemma": "busy (crowded)", "pos": "adjective", "sentences": ["The street is busy."]}
+        {"lemma": "busy", "pos": "adjective", "details": {"note": "crowded"}, "sentences": ["The street is busy."]}
         ],
         "nl": [
         {"lemma": "druk", "pos": "adjective", "sentences": ["De straat is druk."]}
@@ -1007,10 +1007,10 @@
       "gloss": "the same (de-words)",
       "entries": {
         "en": [
-        {"lemma": "the same (de-words)", "pos": "adjective", "sentences": ["She has the same bag."]}
+        {"lemma": "the same", "pos": "adjective", "details": {"note": "de-words"}, "sentences": ["She has the same bag."]}
         ],
         "nl": [
-        {"lemma": "dezelfde", "pos": "adjective", "details": {"note": "bij de-woorden en meervoud"}, "sentences": ["Zij heeft dezelfde tas."]}
+        {"lemma": "dezelfde", "pos": "adjective", "sentences": ["Zij heeft dezelfde tas."]}
         ]
       }
     },
@@ -1055,7 +1055,7 @@
       "gloss": "lost (gone)",
       "entries": {
         "en": [
-        {"lemma": "lost (gone)", "pos": "adjective", "sentences": ["I have lost my key."]}
+        {"lemma": "lost", "pos": "adjective", "details": {"note": "gone"}, "sentences": ["I have lost my key."]}
         ],
         "nl": [
         {"lemma": "kwijt", "pos": "adjective", "sentences": ["Ik ben mijn sleutel kwijt."]}
@@ -1115,7 +1115,7 @@
       "gloss": "last (previous)",
       "entries": {
         "en": [
-        {"lemma": "last (previous)", "pos": "adjective", "sentences": ["Last year was cold."]}
+        {"lemma": "last", "pos": "adjective", "details": {"note": "previous"}, "sentences": ["Last year was cold."]}
         ],
         "nl": [
         {"lemma": "vorig", "pos": "adjective", "sentences": ["Vorig jaar was koud."]}
@@ -1163,10 +1163,10 @@
       "gloss": "wrong (incorrect)",
       "entries": {
         "en": [
-        {"lemma": "wrong (incorrect)", "pos": "adjective", "sentences": ["The answer is wrong."]}
+        {"lemma": "wrong", "pos": "adjective", "details": {"note": "incorrect"}, "sentences": ["The answer is wrong."]}
         ],
         "nl": [
-        {"lemma": "fout", "pos": "adjective", "sentences": ["Het antwoord is fout."]}
+        {"lemma": "fout", "pos": "adjective", "details": {"note": "niet juist"}, "sentences": ["Het antwoord is fout."]}
         ]
       }
     },
@@ -1238,7 +1238,7 @@
         {"lemma": "correct", "pos": "adjective", "sentences": ["The answer is correct."]}
         ],
         "nl": [
-        {"lemma": "juist", "pos": "adjective", "sentences": ["Het antwoord is juist."]}
+        {"lemma": "juist", "pos": "adjective", "details": {"note": "zonder fouten"}, "sentences": ["Het antwoord is juist."]}
         ]
       }
     },
@@ -1271,7 +1271,7 @@
       "gloss": "pity (too bad)",
       "entries": {
         "en": [
-        {"lemma": "pity (too bad)", "pos": "adjective", "sentences": ["That is a pity."]}
+        {"lemma": "pity", "pos": "adjective", "details": {"note": "too bad"}, "sentences": ["That is a pity."]}
         ],
         "nl": [
         {"lemma": "jammer", "pos": "adjective", "sentences": ["Dat is jammer."]}
@@ -1310,7 +1310,7 @@
         {"lemma": "poor", "pos": "adjective", "sentences": ["The man is poor."]}
         ],
         "nl": [
-        {"lemma": "arm", "pos": "adjective", "sentences": ["De man is arm."]}
+        {"lemma": "arm", "pos": "adjective", "details": {"note": "zonder geld"}, "sentences": ["De man is arm."]}
         ]
       }
     },
@@ -1487,7 +1487,7 @@
       "gloss": "human (adjective)",
       "entries": {
         "en": [
-        {"lemma": "human", "pos": "adjective", "sentences": ["That is human."]}
+        {"lemma": "human", "pos": "adjective", "details": {"note": "of people"}, "sentences": ["That is human."]}
         ],
         "nl": [
         {"lemma": "menselijk", "pos": "adjective", "sentences": ["Dat is menselijk."]}
@@ -1571,7 +1571,7 @@
       "gloss": "grave (serious)",
       "entries": {
         "en": [
-        {"lemma": "grave (serious)", "pos": "adjective", "sentences": ["The situation is grave."]}
+        {"lemma": "grave", "pos": "adjective", "details": {"note": "serious"}, "sentences": ["The situation is grave."]}
         ],
         "nl": [
         {"lemma": "ernstig", "pos": "adjective", "sentences": ["De situatie is ernstig."]}
@@ -1607,7 +1607,7 @@
       "gloss": "excellent (outstanding)",
       "entries": {
         "en": [
-        {"lemma": "excellent (outstanding)", "pos": "adjective", "sentences": ["The food is excellent."]}
+        {"lemma": "excellent", "pos": "adjective", "details": {"note": "outstanding"}, "sentences": ["The food is excellent."]}
         ],
         "nl": [
         {"lemma": "uitstekend", "pos": "adjective", "sentences": ["Het eten is uitstekend."]}
@@ -1619,7 +1619,7 @@
       "gloss": "cool (adjective)",
       "entries": {
         "en": [
-        {"lemma": "cool", "pos": "adjective", "sentences": ["That is cool."]}
+        {"lemma": "cool", "pos": "adjective", "details": {"note": "great"}, "sentences": ["That is cool."]}
         ],
         "nl": [
         {"lemma": "cool", "pos": "adjective", "sentences": ["Dat is cool."]}
@@ -1766,7 +1766,7 @@
         {"lemma": "true", "pos": "adjective", "sentences": ["That is true."]}
         ],
         "nl": [
-        {"lemma": "waar", "pos": "adjective", "sentences": ["Dat is waar."]}
+        {"lemma": "waar", "pos": "adjective", "details": {"note": "echt zo"}, "sentences": ["Dat is waar."]}
         ]
       }
     },
@@ -1919,7 +1919,7 @@
       "gloss": "present (adjective)",
       "entries": {
         "en": [
-        {"lemma": "present", "pos": "adjective", "sentences": ["He is present."]}
+        {"lemma": "present", "pos": "adjective", "details": {"note": "being there"}, "sentences": ["He is present."]}
         ],
         "nl": [
         {"lemma": "aanwezig", "pos": "adjective", "sentences": ["Hij is aanwezig."]}
@@ -1955,10 +1955,10 @@
       "gloss": "fresh (adjective)",
       "entries": {
         "en": [
-        {"lemma": "fresh", "pos": "adjective", "sentences": ["The air is fresh."]}
+        {"lemma": "fresh", "pos": "adjective", "details": {"note": "cool, of air or a drink"}, "sentences": ["The air is fresh."]}
         ],
         "nl": [
-        {"lemma": "fris", "pos": "adjective", "details": {"note": "koel, van lucht of een drankje"}, "sentences": ["De lucht is fris."]}
+        {"lemma": "fris", "pos": "adjective", "sentences": ["De lucht is fris."]}
         ]
       }
     },
@@ -2015,7 +2015,7 @@
       "gloss": "bright (clear)",
       "entries": {
         "en": [
-        {"lemma": "bright (clear)", "pos": "adjective", "sentences": ["The sky is bright."]}
+        {"lemma": "bright", "pos": "adjective", "details": {"note": "clear"}, "sentences": ["The sky is bright."]}
         ],
         "nl": [
         {"lemma": "helder", "pos": "adjective", "sentences": ["De lucht is helder."]}
@@ -2027,10 +2027,10 @@
       "gloss": "fresh (newly made)",
       "entries": {
         "en": [
-        {"lemma": "fresh (newly made)", "pos": "adjective", "sentences": ["The bread is fresh."]}
+        {"lemma": "fresh", "pos": "adjective", "details": {"note": "newly made"}, "sentences": ["The bread is fresh."]}
         ],
         "nl": [
-        {"lemma": "vers", "pos": "adjective", "details": {"note": "pas gemaakt of geplukt"}, "sentences": ["Het brood is vers."]}
+        {"lemma": "vers", "pos": "adjective", "sentences": ["Het brood is vers."]}
         ]
       }
     },
@@ -2183,7 +2183,7 @@
       "gloss": "certain (specific)",
       "entries": {
         "en": [
-        {"lemma": "certain (specific)", "pos": "adjective", "sentences": ["I have a certain plan."]}
+        {"lemma": "certain", "pos": "adjective", "details": {"note": "specific"}, "sentences": ["I have a certain plan."]}
         ],
         "nl": [
         {"lemma": "bepaald", "pos": "adjective", "sentences": ["Ik heb een bepaald plan."]}
@@ -2231,7 +2231,7 @@
       "gloss": "sweet (tasting of sugar)",
       "entries": {
         "en": [
-        {"lemma": "sweet", "pos": "adjective", "sentences": ["The tea is sweet."]}
+        {"lemma": "sweet", "pos": "adjective", "details": {"note": "tasting of sugar"}, "sentences": ["The tea is sweet."]}
         ],
         "nl": [
         {"lemma": "zoet", "pos": "adjective", "sentences": ["De thee is zoet."]}
@@ -2291,7 +2291,7 @@
       "gloss": "professional (adjective)",
       "entries": {
         "en": [
-        {"lemma": "professional", "pos": "adjective", "sentences": ["He is professional."]}
+        {"lemma": "professional", "pos": "adjective", "details": {"note": "skilled and businesslike"}, "sentences": ["He is professional."]}
         ],
         "nl": [
         {"lemma": "professioneel", "pos": "adjective", "sentences": ["Hij is professioneel."]}
@@ -2387,7 +2387,7 @@
       "gloss": "light (not heavy)",
       "entries": {
         "en": [
-        {"lemma": "light (not heavy)", "pos": "adjective", "sentences": ["The bag is light."]}
+        {"lemma": "light", "pos": "adjective", "details": {"note": "not heavy"}, "sentences": ["The bag is light."]}
         ],
         "nl": [
         {"lemma": "licht", "pos": "adjective", "details": {"note": "qua gewicht"}, "sentences": ["De tas is licht."]}
@@ -2570,7 +2570,7 @@
         {"lemma": "local", "pos": "adjective", "sentences": ["This is a local shop."]}
         ],
         "nl": [
-        {"lemma": "lokaal", "pos": "adjective", "sentences": ["Dit is een lokale winkel."]}
+        {"lemma": "lokaal", "pos": "adjective", "details": {"note": "uit de buurt"}, "sentences": ["Dit is een lokale winkel."]}
         ]
       }
     },
@@ -2603,7 +2603,7 @@
       "gloss": "general (adjective)",
       "entries": {
         "en": [
-        {"lemma": "general", "pos": "adjective", "sentences": ["This is a general rule."]}
+        {"lemma": "general", "pos": "adjective", "details": {"note": "not specific"}, "sentences": ["This is a general rule."]}
         ],
         "nl": [
         {"lemma": "algemeen", "pos": "adjective", "sentences": ["Dit is een algemene regel."]}
@@ -2819,7 +2819,7 @@
       "gloss": "current (adjective)",
       "entries": {
         "en": [
-        {"lemma": "current", "pos": "adjective", "sentences": ["The current price is high."]}
+        {"lemma": "current", "pos": "adjective", "details": {"note": "of now"}, "sentences": ["The current price is high."]}
         ],
         "nl": [
         {"lemma": "huidig", "pos": "adjective", "sentences": ["De huidige prijs is hoog."]}
@@ -2915,7 +2915,7 @@
       "gloss": "cool (cold)",
       "entries": {
         "en": [
-        {"lemma": "cool (cold)", "pos": "adjective", "sentences": ["The evening is cool."]}
+        {"lemma": "cool", "pos": "adjective", "details": {"note": "cold"}, "sentences": ["The evening is cool."]}
         ],
         "nl": [
         {"lemma": "koel", "pos": "adjective", "sentences": ["De avond is koel."]}
@@ -3011,7 +3011,7 @@
       "gloss": "future (adjective)",
       "entries": {
         "en": [
-        {"lemma": "future", "pos": "adjective", "sentences": ["This is a future plan."]}
+        {"lemma": "future", "pos": "adjective", "details": {"note": "still to come"}, "sentences": ["This is a future plan."]}
         ],
         "nl": [
         {"lemma": "toekomstig", "pos": "adjective", "sentences": ["Dit is een toekomstig plan."]}
@@ -3047,7 +3047,7 @@
       "gloss": "tough (chewy)",
       "entries": {
         "en": [
-        {"lemma": "tough (chewy)", "pos": "adjective", "sentences": ["The meat is tough."]}
+        {"lemma": "tough", "pos": "adjective", "details": {"note": "chewy"}, "sentences": ["The meat is tough."]}
         ],
         "nl": [
         {"lemma": "taai", "pos": "adjective", "sentences": ["Het vlees is taai."]}
@@ -3143,7 +3143,7 @@
       "gloss": "broke (penniless)",
       "entries": {
         "en": [
-        {"lemma": "broke (penniless)", "pos": "adjective", "sentences": ["I am broke."]}
+        {"lemma": "broke", "pos": "adjective", "details": {"note": "penniless"}, "sentences": ["I am broke."]}
         ],
         "nl": [
         {"lemma": "blut", "pos": "adjective", "sentences": ["Ik ben blut."]}
@@ -3167,7 +3167,7 @@
       "gloss": "stable (adjective)",
       "entries": {
         "en": [
-        {"lemma": "stable", "pos": "adjective", "sentences": ["The table is stable."]}
+        {"lemma": "stable", "pos": "adjective", "details": {"note": "steady"}, "sentences": ["The table is stable."]}
         ],
         "nl": [
         {"lemma": "stabiel", "pos": "adjective", "sentences": ["De tafel is stabiel."]}
@@ -3323,7 +3323,7 @@
       "gloss": "fine (handsome)",
       "entries": {
         "en": [
-        {"lemma": "fine (handsome)", "pos": "adjective", "sentences": ["The house is fine."]}
+        {"lemma": "fine", "pos": "adjective", "details": {"note": "handsome"}, "sentences": ["The house is fine."]}
         ],
         "nl": [
         {"lemma": "fraai", "pos": "adjective", "sentences": ["Het huis is fraai."]}
@@ -3371,7 +3371,7 @@
       "gloss": "bright (intense)",
       "entries": {
         "en": [
-        {"lemma": "bright (intense)", "pos": "adjective", "sentences": ["The light is bright."]}
+        {"lemma": "bright", "pos": "adjective", "details": {"note": "intense"}, "sentences": ["The light is bright."]}
         ],
         "nl": [
         {"lemma": "fel", "pos": "adjective", "sentences": ["Het licht is fel."]}
@@ -3407,7 +3407,7 @@
       "gloss": "silver (adjective)",
       "entries": {
         "en": [
-        {"lemma": "silver", "pos": "adjective", "sentences": ["She wears a silver ring."]}
+        {"lemma": "silver", "pos": "adjective", "details": {"note": "made of silver"}, "sentences": ["She wears a silver ring."]}
         ],
         "nl": [
         {"lemma": "zilveren", "pos": "adjective", "sentences": ["Zij draagt een zilveren ring."]}
@@ -3446,7 +3446,7 @@
         {"lemma": "sour", "pos": "adjective", "sentences": ["The lemon is sour."]}
         ],
         "nl": [
-        {"lemma": "zuur", "pos": "adjective", "sentences": ["De citroen is zuur."]}
+        {"lemma": "zuur", "pos": "adjective", "details": {"note": "een smaak"}, "sentences": ["De citroen is zuur."]}
         ]
       }
     },
@@ -3518,7 +3518,7 @@
         {"lemma": "straight", "pos": "adjective", "sentences": ["The road is straight."]}
         ],
         "nl": [
-        {"lemma": "recht", "pos": "adjective", "sentences": ["De weg is recht."]}
+        {"lemma": "recht", "pos": "adjective", "details": {"note": "niet krom"}, "sentences": ["De weg is recht."]}
         ]
       }
     },
@@ -3671,7 +3671,7 @@
       "gloss": "orange (adjective)",
       "entries": {
         "en": [
-        {"lemma": "orange", "pos": "adjective", "sentences": ["The orange is orange."]}
+        {"lemma": "orange", "pos": "adjective", "details": {"note": "the color"}, "sentences": ["The orange is orange."]}
         ],
         "nl": [
         {"lemma": "oranje", "pos": "adjective", "sentences": ["De sinaasappel is oranje."]}
@@ -3707,7 +3707,7 @@
       "gloss": "final (definitive)",
       "entries": {
         "en": [
-        {"lemma": "final (definitive)", "pos": "adjective", "sentences": ["The decision is final."]}
+        {"lemma": "final", "pos": "adjective", "details": {"note": "definitive"}, "sentences": ["The decision is final."]}
         ],
         "nl": [
         {"lemma": "definitief", "pos": "adjective", "sentences": ["De beslissing is definitief."]}
@@ -3743,7 +3743,7 @@
       "gloss": "maximum (adjective)",
       "entries": {
         "en": [
-        {"lemma": "maximum", "pos": "adjective", "sentences": ["The maximum speed is high."]}
+        {"lemma": "maximum", "pos": "adjective", "details": {"note": "highest allowed"}, "sentences": ["The maximum speed is high."]}
         ],
         "nl": [
         {"lemma": "maximaal", "pos": "adjective", "sentences": ["De maximale snelheid is hoog."]}
@@ -3815,7 +3815,7 @@
       "gloss": "superior (adjective)",
       "entries": {
         "en": [
-        {"lemma": "superior", "pos": "adjective", "sentences": ["His skill is superior."]}
+        {"lemma": "superior", "pos": "adjective", "details": {"note": "better than others"}, "sentences": ["His skill is superior."]}
         ],
         "nl": [
         {"lemma": "superieur", "pos": "adjective", "sentences": ["Zijn vaardigheid is superieur."]}
@@ -3923,7 +3923,7 @@
       "gloss": "tight (scarce)",
       "entries": {
         "en": [
-        {"lemma": "tight (scarce)", "pos": "adjective", "sentences": ["Money is tight."]}
+        {"lemma": "tight", "pos": "adjective", "details": {"note": "scarce"}, "sentences": ["Money is tight."]}
         ],
         "nl": [
         {"lemma": "krap", "pos": "adjective", "sentences": ["Geld is krap."]}
@@ -3983,7 +3983,7 @@
       "gloss": "solid (sound)",
       "entries": {
         "en": [
-        {"lemma": "solid (sound)", "pos": "adjective", "sentences": ["The house is solid."]}
+        {"lemma": "solid", "pos": "adjective", "details": {"note": "sound"}, "sentences": ["The house is solid."]}
         ],
         "nl": [
         {"lemma": "degelijk", "pos": "adjective", "sentences": ["Het huis is degelijk."]}
@@ -4139,7 +4139,7 @@
       "gloss": "opposite (adjective)",
       "entries": {
         "en": [
-        {"lemma": "opposite", "pos": "adjective", "sentences": ["He goes in the opposite direction."]}
+        {"lemma": "opposite", "pos": "adjective", "details": {"note": "facing the other way"}, "sentences": ["He goes in the opposite direction."]}
         ],
         "nl": [
         {"lemma": "tegenovergesteld", "pos": "adjective", "sentences": ["Hij gaat in de tegenovergestelde richting."]}
@@ -4319,7 +4319,7 @@
       "gloss": "square (adjective)",
       "entries": {
         "en": [
-        {"lemma": "square", "pos": "adjective", "sentences": ["The table is square."]}
+        {"lemma": "square", "pos": "adjective", "details": {"note": "with four equal sides"}, "sentences": ["The table is square."]}
         ],
         "nl": [
         {"lemma": "vierkant", "pos": "adjective", "sentences": ["De tafel is vierkant."]}
@@ -4571,7 +4571,7 @@
       "gloss": "metal (adjective)",
       "entries": {
         "en": [
-        {"lemma": "metal", "pos": "adjective", "sentences": ["The key is metal."]}
+        {"lemma": "metal", "pos": "adjective", "details": {"note": "made of metal"}, "sentences": ["The key is metal."]}
         ],
         "nl": [
         {"lemma": "metalen", "pos": "adjective", "sentences": ["De sleutel is metalen."]}
@@ -4751,7 +4751,7 @@
       "gloss": "common (shared)",
       "entries": {
         "en": [
-        {"lemma": "common (shared)", "pos": "adjective", "sentences": ["We have a common goal."]}
+        {"lemma": "common", "pos": "adjective", "details": {"note": "shared"}, "sentences": ["We have a common goal."]}
         ],
         "nl": [
         {"lemma": "gemeenschappelijk", "pos": "adjective", "sentences": ["Wij hebben een gemeenschappelijk doel."]}
@@ -4823,7 +4823,7 @@
       "gloss": "western (adjective)",
       "entries": {
         "en": [
-        {"lemma": "western", "pos": "adjective", "sentences": ["This is a western country."]}
+        {"lemma": "western", "pos": "adjective", "details": {"note": "of the West"}, "sentences": ["This is a western country."]}
         ],
         "nl": [
         {"lemma": "westers", "pos": "adjective", "sentences": ["Dit is een westers land."]}
@@ -4943,7 +4943,7 @@
       "gloss": "iron (adjective)",
       "entries": {
         "en": [
-        {"lemma": "iron", "pos": "adjective", "sentences": ["The gate is iron."]}
+        {"lemma": "iron", "pos": "adjective", "details": {"note": "made of iron"}, "sentences": ["The gate is iron."]}
         ],
         "nl": [
         {"lemma": "ijzeren", "pos": "adjective", "sentences": ["De poort is ijzeren."]}
@@ -5015,7 +5015,7 @@
       "gloss": "western (direction)",
       "entries": {
         "en": [
-        {"lemma": "western (direction)", "pos": "adjective", "sentences": ["The western part is dry."]}
+        {"lemma": "western", "pos": "adjective", "details": {"note": "direction"}, "sentences": ["The western part is dry."]}
         ],
         "nl": [
         {"lemma": "westelijk", "pos": "adjective", "sentences": ["Het westelijke deel is droog."]}
@@ -5111,7 +5111,7 @@
       "gloss": "silk (adjective)",
       "entries": {
         "en": [
-        {"lemma": "silk", "pos": "adjective", "sentences": ["She wears a silk scarf."]}
+        {"lemma": "silk", "pos": "adjective", "details": {"note": "made of silk"}, "sentences": ["She wears a silk scarf."]}
         ],
         "nl": [
         {"lemma": "zijden", "pos": "adjective", "sentences": ["Zij draagt een zijden sjaal."]}
@@ -5399,7 +5399,7 @@
       "gloss": "colorful (multicolored)",
       "entries": {
         "en": [
-        {"lemma": "colorful", "pos": "adjective", "sentences": ["The bird is colorful."]}
+        {"lemma": "colorful", "pos": "adjective", "details": {"note": "multicolored"}, "sentences": ["The bird is colorful."]}
         ],
         "nl": [
         {"lemma": "bont", "pos": "adjective", "sentences": ["De vogel is bont."]}
@@ -5543,7 +5543,7 @@
       "gloss": "relative (adjective)",
       "entries": {
         "en": [
-        {"lemma": "relative", "pos": "adjective", "sentences": ["The price is relative."]}
+        {"lemma": "relative", "pos": "adjective", "details": {"note": "compared to something"}, "sentences": ["The price is relative."]}
         ],
         "nl": [
         {"lemma": "relatief", "pos": "adjective", "sentences": ["De prijs is relatief."]}
@@ -5555,7 +5555,7 @@
       "gloss": "individual (adjective)",
       "entries": {
         "en": [
-        {"lemma": "individual", "pos": "adjective", "sentences": ["This is an individual choice."]}
+        {"lemma": "individual", "pos": "adjective", "details": {"note": "for one person"}, "sentences": ["This is an individual choice."]}
         ],
         "nl": [
         {"lemma": "individueel", "pos": "adjective", "sentences": ["Dit is een individuele keuze."]}
@@ -5651,7 +5651,7 @@
       "gloss": "concrete (adjective)",
       "entries": {
         "en": [
-        {"lemma": "concrete", "pos": "adjective", "sentences": ["I need a concrete example."]}
+        {"lemma": "concrete", "pos": "adjective", "details": {"note": "not abstract"}, "sentences": ["I need a concrete example."]}
         ],
         "nl": [
         {"lemma": "concreet", "pos": "adjective", "sentences": ["Ik heb een concreet voorbeeld nodig."]}
@@ -5879,7 +5879,7 @@
       "gloss": "colorful (vivid)",
       "entries": {
         "en": [
-        {"lemma": "colorful", "pos": "adjective", "sentences": ["The market is colorful."]}
+        {"lemma": "colorful", "pos": "adjective", "details": {"note": "vivid"}, "sentences": ["The market is colorful."]}
         ],
         "nl": [
         {"lemma": "kleurrijk", "pos": "adjective", "sentences": ["De markt is kleurrijk."]}
@@ -5918,7 +5918,7 @@
         {"lemma": "matte", "pos": "adjective", "sentences": ["The paint is matte."]}
         ],
         "nl": [
-        {"lemma": "mat", "pos": "adjective", "sentences": ["De verf is mat."]}
+        {"lemma": "mat", "pos": "adjective", "details": {"note": "niet glanzend"}, "sentences": ["De verf is mat."]}
         ]
       }
     },
@@ -5963,7 +5963,7 @@
       "gloss": "plain (one color)",
       "entries": {
         "en": [
-        {"lemma": "plain (one color)", "pos": "adjective", "sentences": ["The tablecloth is plain."]}
+        {"lemma": "plain", "pos": "adjective", "details": {"note": "one color"}, "sentences": ["The tablecloth is plain."]}
         ],
         "nl": [
         {"lemma": "effen", "pos": "adjective", "sentences": ["Het tafelkleed is effen."]}
@@ -5987,7 +5987,7 @@
       "gloss": "light (pale in color)",
       "entries": {
         "en": [
-        {"lemma": "light (pale in color)", "pos": "adjective", "sentences": ["The color is light."]}
+        {"lemma": "light", "pos": "adjective", "details": {"note": "pale in color"}, "sentences": ["The color is light."]}
         ],
         "nl": [
         {"lemma": "licht", "pos": "adjective", "details": {"note": "qua kleur"}, "sentences": ["De kleur is licht."]}
@@ -6047,7 +6047,7 @@
       "gloss": "shade (of a color)",
       "entries": {
         "en": [
-        {"lemma": "shade (of a color)", "pos": "noun", "details": {"plural": "shades"}, "sentences": ["There are many shades of green."]}
+        {"lemma": "shade", "pos": "noun", "details": {"note": "of a color", "plural": "shades"}, "sentences": ["There are many shades of green."]}
         ],
         "nl": [
         {"lemma": "schakering", "pos": "noun", "details": {"article": "de", "plural": "schakeringen"}, "sentences": ["Er zijn veel schakeringen van groen."]}
@@ -6083,10 +6083,10 @@
       "gloss": "fade (lose color)",
       "entries": {
         "en": [
-        {"lemma": "to fade (lose color)", "pos": "verb", "details": {"past": "faded", "participle": "faded"}, "sentences": ["The color fades."]}
+        {"lemma": "to fade", "pos": "verb", "details": {"note": "lose color", "past": "faded", "participle": "faded"}, "sentences": ["The color fades."]}
         ],
         "nl": [
-        {"lemma": "verbleken", "pos": "verb", "details": {"note": "van stof of een foto in de zon", "pastSingular": "verbleekte", "pastPlural": "verbleekten", "participle": "verbleekt", "auxiliary": "zijn"}, "sentences": ["De kleur verbleekt."]}
+        {"lemma": "verbleken", "pos": "verb", "details": {"pastSingular": "verbleekte", "pastPlural": "verbleekten", "participle": "verbleekt", "auxiliary": "zijn"}, "sentences": ["De kleur verbleekt."]}
         ]
       }
     }

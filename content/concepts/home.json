@@ -353,7 +353,7 @@
       "gloss": "light (noun)",
       "entries": {
         "en": [
-        {"lemma": "light", "pos": "noun", "details": {"plural": "lights"}, "sentences": ["Turn on the light."]}
+        {"lemma": "light", "pos": "noun", "details": {"note": "from a lamp or the sun", "plural": "lights"}, "sentences": ["Turn on the light."]}
         ],
         "nl": [
         {"lemma": "licht", "pos": "noun", "details": {"note": "van een lamp of de zon", "article": "het", "plural": "lichten"}, "sentences": ["Doe het licht aan."]}
@@ -365,10 +365,10 @@
       "gloss": "wall (noun)",
       "entries": {
         "en": [
-        {"lemma": "wall", "pos": "noun", "details": {"plural": "walls"}, "sentences": ["The wall is white."]}
+        {"lemma": "wall", "pos": "noun", "details": {"note": "outdoors, or around a city", "plural": "walls"}, "sentences": ["The wall is white."]}
         ],
         "nl": [
-        {"lemma": "muur", "pos": "noun", "details": {"note": "buiten, of rond een stad", "article": "de", "plural": "muren"}, "sentences": ["De muur is wit."]}
+        {"lemma": "muur", "pos": "noun", "details": {"article": "de", "plural": "muren"}, "sentences": ["De muur is wit."]}
         ]
       }
     },
@@ -413,7 +413,7 @@
       "gloss": "lock (noun)",
       "entries": {
         "en": [
-        {"lemma": "lock", "pos": "noun", "details": {"plural": "locks"}, "sentences": ["The lock is broken."]}
+        {"lemma": "lock", "pos": "noun", "details": {"note": "on a door", "plural": "locks"}, "sentences": ["The lock is broken."]}
         ],
         "nl": [
         {"lemma": "slot", "pos": "noun", "details": {"article": "het", "plural": "sloten"}, "sentences": ["Het slot is kapot."]}
@@ -557,7 +557,7 @@
       "gloss": "floor (noun)",
       "entries": {
         "en": [
-        {"lemma": "floor", "pos": "noun", "details": {"plural": "floors"}, "sentences": ["The floor is clean."]}
+        {"lemma": "floor", "pos": "noun", "details": {"note": "ground inside", "plural": "floors"}, "sentences": ["The floor is clean."]}
         ],
         "nl": [
         {"lemma": "vloer", "pos": "noun", "details": {"article": "de", "plural": "vloeren"}, "sentences": ["De vloer is schoon."]}
@@ -593,7 +593,7 @@
       "gloss": "chest (box)",
       "entries": {
         "en": [
-        {"lemma": "chest (box)", "pos": "noun", "details": {"plural": "chests"}, "sentences": ["The chest is full of gold."]}
+        {"lemma": "chest", "pos": "noun", "details": {"note": "box", "plural": "chests"}, "sentences": ["The chest is full of gold."]}
         ],
         "nl": [
         {"lemma": "kist", "pos": "noun", "details": {"article": "de", "plural": "kisten"}, "sentences": ["De kist is vol goud."]}
@@ -605,7 +605,7 @@
       "gloss": "floor (level)",
       "entries": {
         "en": [
-        {"lemma": "floor (level)", "pos": "noun", "details": {"plural": "floors"}, "sentences": ["He lives on the third floor."]}
+        {"lemma": "floor", "pos": "noun", "details": {"note": "level", "plural": "floors"}, "sentences": ["He lives on the third floor."]}
         ],
         "nl": [
         {"lemma": "verdieping", "pos": "noun", "details": {"article": "de", "plural": "verdiepingen"}, "sentences": ["Hij woont op de derde verdieping."]}
@@ -677,7 +677,7 @@
       "gloss": "shower (noun)",
       "entries": {
         "en": [
-        {"lemma": "shower", "pos": "noun", "details": {"plural": "showers"}, "sentences": ["I take a shower."]}
+        {"lemma": "shower", "pos": "noun", "details": {"note": "for washing", "plural": "showers"}, "sentences": ["I take a shower."]}
         ],
         "nl": [
         {"lemma": "douche", "pos": "noun", "details": {"article": "de", "plural": "douches"}, "sentences": ["Ik neem een douche."]}
@@ -701,7 +701,7 @@
       "gloss": "cabin (noun)",
       "entries": {
         "en": [
-        {"lemma": "cabin", "pos": "noun", "details": {"plural": "cabins"}, "sentences": ["We sleep in a cabin."]}
+        {"lemma": "cabin", "pos": "noun", "details": {"note": "a hut", "plural": "cabins"}, "sentences": ["We sleep in a cabin."]}
         ],
         "nl": [
         {"lemma": "hut", "pos": "noun", "details": {"article": "de", "plural": "hutten"}, "sentences": ["Wij slapen in een hut."]}
@@ -737,7 +737,7 @@
       "gloss": "lobby (entrance hall)",
       "entries": {
         "en": [
-        {"lemma": "lobby", "pos": "noun", "details": {"plural": "lobbies"}, "sentences": ["We wait in the lobby."]}
+        {"lemma": "lobby", "pos": "noun", "details": {"note": "entrance hall", "plural": "lobbies"}, "sentences": ["We wait in the lobby."]}
         ],
         "nl": [
         {"lemma": "hal", "pos": "noun", "details": {"article": "de", "plural": "hallen"}, "sentences": ["Wij wachten in de hal."]}
@@ -1085,7 +1085,7 @@
       "gloss": "pot (container)",
       "entries": {
         "en": [
-        {"lemma": "pot", "pos": "noun", "details": {"plural": "pots"}, "sentences": ["The pot is on the stove."]}
+        {"lemma": "pot", "pos": "noun", "details": {"note": "small", "plural": "pots"}, "sentences": ["The pot is on the stove."]}
         ],
         "nl": [
         {"lemma": "potje", "pos": "noun", "details": {"article": "het", "plural": "potjes"}, "sentences": ["Het potje staat op het fornuis."]}
@@ -1145,7 +1145,7 @@
       "gloss": "match (for fire)",
       "entries": {
         "en": [
-        {"lemma": "match", "pos": "noun", "details": {"plural": "matches"}, "sentences": ["I light a match."]}
+        {"lemma": "match", "pos": "noun", "details": {"note": "for fire", "plural": "matches"}, "sentences": ["I light a match."]}
         ],
         "nl": [
         {"lemma": "lucifer", "pos": "noun", "details": {"article": "de", "plural": "lucifers"}, "sentences": ["Ik steek een lucifer aan."]}
@@ -1169,10 +1169,10 @@
       "gloss": "paint (coat)",
       "entries": {
         "en": [
-        {"lemma": "to paint (coat)", "pos": "verb", "details": {"past": "painted", "participle": "painted"}, "sentences": ["I paint the door."]}
+        {"lemma": "to paint", "pos": "verb", "details": {"note": "coat", "past": "painted", "participle": "painted"}, "sentences": ["I paint the door."]}
         ],
         "nl": [
-        {"lemma": "verven", "pos": "verb", "details": {"note": "muren, haar", "pastSingular": "verfde", "pastPlural": "verfden", "participle": "geverfd", "auxiliary": "hebben"}, "sentences": ["Ik verf de deur."]}
+        {"lemma": "verven", "pos": "verb", "details": {"pastSingular": "verfde", "pastPlural": "verfden", "participle": "geverfd", "auxiliary": "hebben"}, "sentences": ["Ik verf de deur."]}
         ]
       }
     },
@@ -1229,7 +1229,7 @@
       "gloss": "floor (story)",
       "entries": {
         "en": [
-        {"lemma": "floor (story)", "pos": "noun", "details": {"plural": "floors"}, "sentences": ["He lives on the second floor."]}
+        {"lemma": "floor", "pos": "noun", "details": {"note": "story", "plural": "floors"}, "sentences": ["He lives on the second floor."]}
         ],
         "nl": [
         {"lemma": "etage", "pos": "noun", "details": {"article": "de", "plural": "etages"}, "sentences": ["Hij woont op de tweede etage."]}
@@ -1277,7 +1277,7 @@
       "gloss": "dish (serving dish)",
       "entries": {
         "en": [
-        {"lemma": "dish (serving dish)", "pos": "noun", "details": {"plural": "dishes"}, "sentences": ["The dish is on the table."]}
+        {"lemma": "dish", "pos": "noun", "details": {"note": "serving dish", "plural": "dishes"}, "sentences": ["The dish is on the table."]}
         ],
         "nl": [
         {"lemma": "schotel", "pos": "noun", "details": {"article": "de", "plural": "schotels"}, "sentences": ["De schotel staat op de tafel."]}
@@ -1373,7 +1373,7 @@
       "gloss": "nail (metal)",
       "entries": {
         "en": [
-        {"lemma": "nail (metal)", "pos": "noun", "details": {"plural": "nails"}, "sentences": ["I hammer a nail."]}
+        {"lemma": "nail", "pos": "noun", "details": {"note": "metal", "plural": "nails"}, "sentences": ["I hammer a nail."]}
         ],
         "nl": [
         {"lemma": "spijker", "pos": "noun", "details": {"article": "de", "plural": "spijkers"}, "sentences": ["Ik sla een spijker in de muur."]}
@@ -1577,10 +1577,10 @@
       "gloss": "wall (inner)",
       "entries": {
         "en": [
-        {"lemma": "wall (inner)", "pos": "noun", "details": {"plural": "walls"}, "sentences": ["The wall of the cave is wet."]}
+        {"lemma": "wall", "pos": "noun", "details": {"note": "inner", "plural": "walls"}, "sentences": ["The wall of the cave is wet."]}
         ],
         "nl": [
-        {"lemma": "wand", "pos": "noun", "details": {"note": "binnen in een kamer", "article": "de", "plural": "wanden"}, "sentences": ["De wand van de grot is nat."]}
+        {"lemma": "wand", "pos": "noun", "details": {"article": "de", "plural": "wanden"}, "sentences": ["De wand van de grot is nat."]}
         ]
       }
     },
@@ -1724,7 +1724,7 @@
         {"lemma": "mat", "pos": "noun", "details": {"plural": "mats"}, "sentences": ["The mat lies at the door."]}
         ],
         "nl": [
-        {"lemma": "mat", "pos": "noun", "details": {"article": "de", "plural": "matten"}, "sentences": ["De mat ligt voor de deur."]}
+        {"lemma": "mat", "pos": "noun", "details": {"note": "op de vloer", "article": "de", "plural": "matten"}, "sentences": ["De mat ligt voor de deur."]}
         ]
       }
     },
@@ -1745,7 +1745,7 @@
       "gloss": "study (room)",
       "entries": {
         "en": [
-        {"lemma": "study (room)", "pos": "noun", "details": {"plural": "studies"}, "sentences": ["He reads in the study."]}
+        {"lemma": "study", "pos": "noun", "details": {"note": "room", "plural": "studies"}, "sentences": ["He reads in the study."]}
         ],
         "nl": [
         {"lemma": "studeerkamer", "pos": "noun", "details": {"article": "de", "plural": "studeerkamers"}, "sentences": ["Hij leest in de studeerkamer."]}
@@ -1757,7 +1757,7 @@
       "gloss": "seat (chair)",
       "entries": {
         "en": [
-        {"lemma": "seat (chair)", "pos": "noun", "details": {"plural": "seats"}, "sentences": ["The seat is soft."]}
+        {"lemma": "seat", "pos": "noun", "details": {"note": "chair", "plural": "seats"}, "sentences": ["The seat is soft."]}
         ],
         "nl": [
         {"lemma": "zetel", "pos": "noun", "details": {"article": "de", "plural": "zetels"}, "sentences": ["De zetel is zacht."]}
@@ -1805,10 +1805,10 @@
       "gloss": "change (bedding)",
       "entries": {
         "en": [
-        {"lemma": "to change (bedding)", "pos": "verb", "details": {"past": "changed", "participle": "changed"}, "sentences": ["I change the bed."]}
+        {"lemma": "to change", "pos": "verb", "details": {"note": "bedding", "past": "changed", "participle": "changed"}, "sentences": ["I change the bed."]}
         ],
         "nl": [
-        {"lemma": "verschonen", "pos": "verb", "details": {"note": "beddengoed, een baby", "pastSingular": "verschoonde", "pastPlural": "verschoonden", "participle": "verschoond", "auxiliary": "hebben"}, "sentences": ["Ik verschoon het bed."]}
+        {"lemma": "verschonen", "pos": "verb", "details": {"pastSingular": "verschoonde", "pastPlural": "verschoonden", "participle": "verschoond", "auxiliary": "hebben"}, "sentences": ["Ik verschoon het bed."]}
         ]
       }
     },
@@ -2000,7 +2000,7 @@
         {"lemma": "pillow", "pos": "noun", "details": {"plural": "pillows"}, "sentences": ["I sleep on a soft pillow."]}
         ],
         "nl": [
-        {"lemma": "kussen", "pos": "noun", "details": {"article": "het", "plural": "kussens"}, "sentences": ["Ik slaap op een zacht kussen."]}
+        {"lemma": "kussen", "pos": "noun", "details": {"note": "om op te slapen", "article": "het", "plural": "kussens"}, "sentences": ["Ik slaap op een zacht kussen."]}
         ]
       }
     },
@@ -2069,7 +2069,7 @@
       "gloss": "fan (cooling device)",
       "entries": {
         "en": [
-        {"lemma": "fan", "pos": "noun", "details": {"plural": "fans"}, "sentences": ["The fan is on."]}
+        {"lemma": "fan", "pos": "noun", "details": {"note": "cooling device", "plural": "fans"}, "sentences": ["The fan is on."]}
         ],
         "nl": [
         {"lemma": "ventilator", "pos": "noun", "details": {"article": "de", "plural": "ventilators"}, "sentences": ["De ventilator staat aan."]}
@@ -2093,7 +2093,7 @@
       "gloss": "stove (heater)",
       "entries": {
         "en": [
-        {"lemma": "stove (heater)", "pos": "noun", "details": {"plural": "stoves"}, "sentences": ["The stove is warm."]}
+        {"lemma": "stove", "pos": "noun", "details": {"note": "heater", "plural": "stoves"}, "sentences": ["The stove is warm."]}
         ],
         "nl": [
         {"lemma": "kachel", "pos": "noun", "details": {"article": "de", "plural": "kachels"}, "sentences": ["De kachel is warm."]}
@@ -2105,7 +2105,7 @@
       "gloss": "beam (timber)",
       "entries": {
         "en": [
-        {"lemma": "beam", "pos": "noun", "details": {"plural": "beams"}, "sentences": ["The beam supports the roof."]}
+        {"lemma": "beam", "pos": "noun", "details": {"note": "timber", "plural": "beams"}, "sentences": ["The beam supports the roof."]}
         ],
         "nl": [
         {"lemma": "balk", "pos": "noun", "details": {"article": "de", "plural": "balken"}, "sentences": ["De balk draagt het dak."]}

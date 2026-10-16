@@ -29,7 +29,7 @@
       "gloss": "canal (city canal)",
       "entries": {
         "en": [
-        {"lemma": "canal (city canal)", "pos": "noun", "details": {"plural": "canals"}, "sentences": ["The canal runs through the city."]}
+        {"lemma": "canal", "pos": "noun", "details": {"note": "city canal", "plural": "canals"}, "sentences": ["The canal runs through the city."]}
         ],
         "nl": [
         {"lemma": "gracht", "pos": "noun", "details": {"article": "de", "plural": "grachten"}, "sentences": ["De gracht loopt door de stad."]}
@@ -41,7 +41,7 @@
       "gloss": "lock (canal)",
       "entries": {
         "en": [
-        {"lemma": "lock (canal)", "pos": "noun", "details": {"plural": "locks"}, "sentences": ["The boat goes through the lock."]}
+        {"lemma": "lock", "pos": "noun", "details": {"note": "canal", "plural": "locks"}, "sentences": ["The boat goes through the lock."]}
         ],
         "nl": [
         {"lemma": "sluis", "pos": "noun", "details": {"article": "de", "plural": "sluizen"}, "sentences": ["De boot vaart door de sluis."]}

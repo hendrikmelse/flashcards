@@ -20,7 +20,7 @@
         {"lemma": "but", "pos": "conjunction", "sentences": ["I am tired, but happy."]}
         ],
         "nl": [
-        {"lemma": "maar", "pos": "conjunction", "sentences": ["Ik ben moe, maar blij."]}
+        {"lemma": "maar", "pos": "conjunction", "details": {"note": "tegenstelling"}, "sentences": ["Ik ben moe, maar blij."]}
         ]
       }
     },
@@ -29,10 +29,10 @@
       "gloss": "or (conjunction)",
       "entries": {
         "en": [
-        {"lemma": "or", "pos": "conjunction", "sentences": ["Tea or coffee?"]}
+        {"lemma": "or", "pos": "conjunction", "details": {"note": "standard"}, "sentences": ["Tea or coffee?"]}
         ],
         "nl": [
-        {"lemma": "of", "pos": "conjunction", "sentences": ["Thee of koffie?"]}
+        {"lemma": "of", "pos": "conjunction", "details": {"note": "een keuze"}, "sentences": ["Thee of koffie?"]}
         ]
       }
     },
@@ -41,10 +41,10 @@
       "gloss": "because (conjunction)",
       "entries": {
         "en": [
-        {"lemma": "because", "pos": "conjunction", "sentences": ["I sleep because I am tired."]}
+        {"lemma": "because", "pos": "conjunction", "details": {"note": "the verb goes to the end"}, "sentences": ["I sleep because I am tired."]}
         ],
         "nl": [
-        {"lemma": "omdat", "pos": "conjunction", "details": {"note": "het werkwoord gaat naar het eind"}, "sentences": ["Ik slaap omdat ik moe ben."]}
+        {"lemma": "omdat", "pos": "conjunction", "sentences": ["Ik slaap omdat ik moe ben."]}
         ]
       }
     },
@@ -113,10 +113,10 @@
       "gloss": "very (to a high degree)",
       "entries": {
         "en": [
-        {"lemma": "very", "pos": "adverb", "sentences": ["The coffee is very hot."]}
+        {"lemma": "very", "pos": "adverb", "details": {"note": "to a high degree"}, "sentences": ["The coffee is very hot."]}
         ],
         "nl": [
-        {"lemma": "heel", "pos": "adverb", "sentences": ["De koffie is heel heet."]}
+        {"lemma": "heel", "pos": "adverb", "details": {"note": "in hoge mate"}, "sentences": ["De koffie is heel heet."]}
         ]
       }
     },
@@ -173,7 +173,7 @@
       "gloss": "there (at that place)",
       "entries": {
         "en": [
-        {"lemma": "there", "pos": "adverb", "sentences": ["The bus is over there."]}
+        {"lemma": "there", "pos": "adverb", "details": {"note": "at that place"}, "sentences": ["The bus is over there."]}
         ],
         "nl": [
         {"lemma": "daar", "pos": "adverb", "sentences": ["De bus is daar."]}

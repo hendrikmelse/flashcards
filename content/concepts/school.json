@@ -53,7 +53,7 @@
       "gloss": "study (verb)",
       "entries": {
         "en": [
-        {"lemma": "to study", "pos": "verb", "details": {"past": "studied", "participle": "studied"}, "sentences": ["I study law."]}
+        {"lemma": "to study", "pos": "verb", "details": {"note": "at university", "past": "studied", "participle": "studied"}, "sentences": ["I study law."]}
         ],
         "nl": [
         {"lemma": "studeren", "pos": "verb", "details": {"pastSingular": "studeerde", "pastPlural": "studeerden", "participle": "gestudeerd", "auxiliary": "hebben"}, "sentences": ["Ik studeer rechten."]}
@@ -125,7 +125,7 @@
       "gloss": "fail (an exam)",
       "entries": {
         "en": [
-        {"lemma": "to fail (an exam)", "pos": "verb", "details": {"past": "failed", "participle": "failed"}, "sentences": ["I failed the exam."]}
+        {"lemma": "to fail", "pos": "verb", "details": {"note": "an exam", "past": "failed", "participle": "failed"}, "sentences": ["I failed the exam."]}
         ],
         "nl": [
         {"lemma": "zakken", "pos": "verb", "details": {"pastSingular": "zakte", "pastPlural": "zakten", "participle": "gezakt", "auxiliary": "zijn"}, "sentences": ["Ik ben voor het examen gezakt."]}
@@ -149,7 +149,7 @@
       "gloss": "student (noun)",
       "entries": {
         "en": [
-        {"lemma": "student", "pos": "noun", "details": {"plural": "students"}, "sentences": ["The student studies law."]}
+        {"lemma": "student", "pos": "noun", "details": {"note": "any gender", "plural": "students"}, "sentences": ["The student studies law."]}
         ],
         "nl": [
         {"lemma": "student", "pos": "noun", "details": {"article": "de", "plural": "studenten"}, "sentences": ["De student studeert rechten."]}
@@ -161,10 +161,10 @@
       "gloss": "practice (verb)",
       "entries": {
         "en": [
-        {"lemma": "to practice", "pos": "verb", "details": {"past": "practiced", "participle": "practiced"}, "sentences": ["I practice every day."]}
+        {"lemma": "to practice", "pos": "verb", "details": {"note": "to get better", "past": "practiced", "participle": "practiced"}, "sentences": ["I practice every day."]}
         ],
         "nl": [
-        {"lemma": "oefenen", "pos": "verb", "details": {"note": "om beter te worden", "pastSingular": "oefende", "pastPlural": "oefenden", "participle": "geoefend", "auxiliary": "hebben"}, "sentences": ["Ik oefen elke dag."]}
+        {"lemma": "oefenen", "pos": "verb", "details": {"pastSingular": "oefende", "pastPlural": "oefenden", "participle": "geoefend", "auxiliary": "hebben"}, "sentences": ["Ik oefen elke dag."]}
         ]
       }
     },
@@ -185,10 +185,10 @@
       "gloss": "succeed (pass)",
       "entries": {
         "en": [
-        {"lemma": "to succeed (pass)", "pos": "verb", "details": {"past": "succeeded", "participle": "succeeded"}, "sentences": ["I succeeded."]}
+        {"lemma": "to succeed", "pos": "verb", "details": {"note": "pass", "past": "succeeded", "participle": "succeeded"}, "sentences": ["I succeeded."]}
         ],
         "nl": [
-        {"lemma": "slagen", "pos": "verb", "details": {"note": "voor een toets, of iets bereiken", "pastSingular": "slaagde", "pastPlural": "slaagden", "participle": "geslaagd", "auxiliary": "zijn"}, "sentences": ["Ik ben geslaagd."]}
+        {"lemma": "slagen", "pos": "verb", "details": {"pastSingular": "slaagde", "pastPlural": "slaagden", "participle": "geslaagd", "auxiliary": "zijn"}, "sentences": ["Ik ben geslaagd."]}
         ]
       }
     },
@@ -305,7 +305,7 @@
       "gloss": "subject (school)",
       "entries": {
         "en": [
-        {"lemma": "subject (school)", "pos": "noun", "details": {"plural": "subjects"}, "sentences": ["Math is my favorite subject."]}
+        {"lemma": "subject", "pos": "noun", "details": {"note": "school", "plural": "subjects"}, "sentences": ["Math is my favorite subject."]}
         ],
         "nl": [
         {"lemma": "vak", "pos": "noun", "details": {"article": "het", "plural": "vakken"}, "sentences": ["Wiskunde is mijn lievelingsvak."]}
@@ -353,7 +353,7 @@
       "gloss": "study (examine)",
       "entries": {
         "en": [
-        {"lemma": "to study (examine)", "pos": "verb", "details": {"past": "studied", "participle": "studied"}, "sentences": ["We study the map."]}
+        {"lemma": "to study", "pos": "verb", "details": {"note": "examine", "past": "studied", "participle": "studied"}, "sentences": ["We study the map."]}
         ],
         "nl": [
         {"lemma": "bestuderen", "pos": "verb", "details": {"pastSingular": "bestudeerde", "pastPlural": "bestudeerden", "participle": "bestudeerd", "auxiliary": "hebben"}, "sentences": ["Wij bestuderen de kaart."]}
@@ -389,7 +389,7 @@
       "gloss": "study (research)",
       "entries": {
         "en": [
-        {"lemma": "study", "pos": "noun", "details": {"plural": "studies"}, "sentences": ["He starts a study."]}
+        {"lemma": "study", "pos": "noun", "details": {"note": "research", "plural": "studies"}, "sentences": ["He starts a study."]}
         ],
         "nl": [
         {"lemma": "studie", "pos": "noun", "details": {"article": "de", "plural": "studies"}, "sentences": ["Hij begint een studie."]}
@@ -413,7 +413,7 @@
       "gloss": "education (training)",
       "entries": {
         "en": [
-        {"lemma": "education (training)", "pos": "noun", "details": {"plural": "educations"}, "sentences": ["He has a good education."]}
+        {"lemma": "education", "pos": "noun", "details": {"note": "training", "plural": "educations"}, "sentences": ["He has a good education."]}
         ],
         "nl": [
         {"lemma": "opleiding", "pos": "noun", "details": {"article": "de", "plural": "opleidingen"}, "sentences": ["Hij heeft een goede opleiding."]}
@@ -509,10 +509,10 @@
       "gloss": "number (mathematical)",
       "entries": {
         "en": [
-        {"lemma": "number (mathematical)", "pos": "noun", "details": {"plural": "numbers"}, "sentences": ["Seven is a number."]}
+        {"lemma": "number", "pos": "noun", "details": {"note": "mathematical", "plural": "numbers"}, "sentences": ["Seven is a number."]}
         ],
         "nl": [
-        {"lemma": "getal", "pos": "noun", "details": {"note": "in de wiskunde", "article": "het", "plural": "getallen"}, "sentences": ["Zeven is een getal."]}
+        {"lemma": "getal", "pos": "noun", "details": {"article": "het", "plural": "getallen"}, "sentences": ["Zeven is een getal."]}
         ]
       }
     },
@@ -521,7 +521,7 @@
       "gloss": "note (write down)",
       "entries": {
         "en": [
-        {"lemma": "to note (write down)", "pos": "verb", "details": {"past": "noted", "participle": "noted"}, "sentences": ["I note the date."]}
+        {"lemma": "to note", "pos": "verb", "details": {"note": "write down", "past": "noted", "participle": "noted"}, "sentences": ["I note the date."]}
         ],
         "nl": [
         {"lemma": "noteren", "pos": "verb", "details": {"pastSingular": "noteerde", "pastPlural": "noteerden", "participle": "genoteerd", "auxiliary": "hebben"}, "sentences": ["Ik noteer de datum."]}
@@ -533,10 +533,10 @@
       "gloss": "letter (of the alphabet)",
       "entries": {
         "en": [
-        {"lemma": "letter (of the alphabet)", "pos": "noun", "details": {"plural": "letters"}, "sentences": ["This is a big letter."]}
+        {"lemma": "letter", "pos": "noun", "details": {"note": "of the alphabet", "plural": "letters"}, "sentences": ["This is a big letter."]}
         ],
         "nl": [
-        {"lemma": "letter", "pos": "noun", "details": {"note": "van het alfabet", "article": "de", "plural": "letters"}, "sentences": ["Dit is een grote letter."]}
+        {"lemma": "letter", "pos": "noun", "details": {"article": "de", "plural": "letters"}, "sentences": ["Dit is een grote letter."]}
         ]
       }
     },
@@ -737,7 +737,7 @@
       "gloss": "steel (noun)",
       "entries": {
         "en": [
-        {"lemma": "steel", "pos": "noun", "details": {"uncountable": true}, "sentences": ["The bridge is made of steel."]}
+        {"lemma": "steel", "pos": "noun", "details": {"note": "the metal", "uncountable": true}, "sentences": ["The bridge is made of steel."]}
         ],
         "nl": [
         {"lemma": "staal", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["De brug is van staal."]}
@@ -773,7 +773,7 @@
       "gloss": "course (noun)",
       "entries": {
         "en": [
-        {"lemma": "course", "pos": "noun", "details": {"plural": "courses"}, "sentences": ["I take a course."]}
+        {"lemma": "course", "pos": "noun", "details": {"note": "a class", "plural": "courses"}, "sentences": ["I take a course."]}
         ],
         "nl": [
         {"lemma": "cursus", "pos": "noun", "details": {"article": "de", "plural": "cursussen"}, "sentences": ["Ik volg een cursus."]}
@@ -785,7 +785,7 @@
       "gloss": "note (noun)",
       "entries": {
         "en": [
-        {"lemma": "note", "pos": "noun", "details": {"plural": "notes"}, "sentences": ["I make notes."]}
+        {"lemma": "note", "pos": "noun", "details": {"note": "a written remark", "plural": "notes"}, "sentences": ["I make notes."]}
         ],
         "nl": [
         {"lemma": "aantekening", "pos": "noun", "details": {"article": "de", "plural": "aantekeningen"}, "sentences": ["Ik maak aantekeningen."]}
@@ -833,7 +833,7 @@
       "gloss": "metal (noun)",
       "entries": {
         "en": [
-        {"lemma": "metal", "pos": "noun", "details": {"plural": "metals"}, "sentences": ["The spoon is made of metal."]}
+        {"lemma": "metal", "pos": "noun", "details": {"note": "the material", "plural": "metals"}, "sentences": ["The spoon is made of metal."]}
         ],
         "nl": [
         {"lemma": "metaal", "pos": "noun", "details": {"article": "het", "plural": "metalen"}, "sentences": ["De lepel is van metaal."]}
@@ -965,7 +965,7 @@
       "gloss": "talk (lecture)",
       "entries": {
         "en": [
-        {"lemma": "talk (lecture)", "pos": "noun", "details": {"plural": "talks"}, "sentences": ["I attend a talk."]}
+        {"lemma": "talk", "pos": "noun", "details": {"note": "lecture", "plural": "talks"}, "sentences": ["I attend a talk."]}
         ],
         "nl": [
         {"lemma": "lezing", "pos": "noun", "details": {"article": "de", "plural": "lezingen"}, "sentences": ["Ik bezoek een lezing."]}
@@ -1061,7 +1061,7 @@
       "gloss": "iron (noun)",
       "entries": {
         "en": [
-        {"lemma": "iron", "pos": "noun", "details": {"uncountable": true}, "sentences": ["The gate is made of iron."]}
+        {"lemma": "iron", "pos": "noun", "details": {"note": "the metal", "uncountable": true}, "sentences": ["The gate is made of iron."]}
         ],
         "nl": [
         {"lemma": "ijzer", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["De poort is van ijzer."]}
@@ -1085,7 +1085,7 @@
       "gloss": "education (system)",
       "entries": {
         "en": [
-        {"lemma": "education (system)", "pos": "noun", "details": {"uncountable": true}, "sentences": ["Education is important."]}
+        {"lemma": "education", "pos": "noun", "details": {"note": "system", "uncountable": true}, "sentences": ["Education is important."]}
         ],
         "nl": [
         {"lemma": "onderwijs", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["Onderwijs is belangrijk."]}
@@ -1241,7 +1241,7 @@
       "gloss": "liquid (noun)",
       "entries": {
         "en": [
-        {"lemma": "liquid", "pos": "noun", "details": {"plural": "liquids"}, "sentences": ["The liquid is hot."]}
+        {"lemma": "liquid", "pos": "noun", "details": {"note": "a fluid", "plural": "liquids"}, "sentences": ["The liquid is hot."]}
         ],
         "nl": [
         {"lemma": "vloeistof", "pos": "noun", "details": {"article": "de", "plural": "vloeistoffen"}, "sentences": ["De vloeistof is heet."]}
@@ -1265,7 +1265,7 @@
       "gloss": "steel (adjective)",
       "entries": {
         "en": [
-        {"lemma": "steel", "pos": "adjective", "sentences": ["This is a steel bridge."]}
+        {"lemma": "steel", "pos": "adjective", "details": {"note": "made of steel"}, "sentences": ["This is a steel bridge."]}
         ],
         "nl": [
         {"lemma": "stalen", "pos": "adjective", "sentences": ["Dit is een stalen brug."]}
@@ -1289,7 +1289,7 @@
       "gloss": "liquid (adjective)",
       "entries": {
         "en": [
-        {"lemma": "liquid", "pos": "adjective", "sentences": ["The soap is liquid."]}
+        {"lemma": "liquid", "pos": "adjective", "details": {"note": "not solid"}, "sentences": ["The soap is liquid."]}
         ],
         "nl": [
         {"lemma": "vloeibaar", "pos": "adjective", "sentences": ["De zeep is vloeibaar."]}
@@ -1397,7 +1397,7 @@
       "gloss": "lead (metal)",
       "entries": {
         "en": [
-        {"lemma": "lead (metal)", "pos": "noun", "details": {"uncountable": true}, "sentences": ["The pipe is made of lead."]}
+        {"lemma": "lead", "pos": "noun", "details": {"note": "metal", "uncountable": true}, "sentences": ["The pipe is made of lead."]}
         ],
         "nl": [
         {"lemma": "lood", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["De pijp is van lood."]}
@@ -1421,7 +1421,7 @@
       "gloss": "concrete (noun)",
       "entries": {
         "en": [
-        {"lemma": "concrete", "pos": "noun", "details": {"uncountable": true}, "sentences": ["The wall is made of concrete."]}
+        {"lemma": "concrete", "pos": "noun", "details": {"note": "building material", "uncountable": true}, "sentences": ["The wall is made of concrete."]}
         ],
         "nl": [
         {"lemma": "beton", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["De muur is van beton."]}
@@ -1448,7 +1448,7 @@
         {"lemma": "classroom", "pos": "noun", "details": {"plural": "classrooms"}, "sentences": ["The classroom is empty."]}
         ],
         "nl": [
-        {"lemma": "lokaal", "pos": "noun", "details": {"article": "het", "plural": "lokalen"}, "sentences": ["Het lokaal is leeg."]}
+        {"lemma": "lokaal", "pos": "noun", "details": {"note": "op school", "article": "het", "plural": "lokalen"}, "sentences": ["Het lokaal is leeg."]}
         ]
       }
     },
@@ -1649,7 +1649,7 @@
       "gloss": "medicine (science)",
       "entries": {
         "en": [
-        {"lemma": "medicine (science)", "pos": "noun", "details": {"uncountable": true}, "sentences": ["I study medicine."]}
+        {"lemma": "medicine", "pos": "noun", "details": {"note": "science", "uncountable": true}, "sentences": ["I study medicine."]}
         ],
         "nl": [
         {"lemma": "geneeskunde", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Ik studeer geneeskunde."]}

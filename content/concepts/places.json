@@ -29,7 +29,7 @@
       "gloss": "building (noun)",
       "entries": {
         "en": [
-        {"lemma": "building", "pos": "noun", "details": {"plural": "buildings"}, "sentences": ["The building is tall."]}
+        {"lemma": "building", "pos": "noun", "details": {"note": "a structure", "plural": "buildings"}, "sentences": ["The building is tall."]}
         ],
         "nl": [
         {"lemma": "gebouw", "pos": "noun", "details": {"article": "het", "plural": "gebouwen"}, "sentences": ["Het gebouw is hoog."]}
@@ -77,10 +77,10 @@
       "gloss": "deliver (verb)",
       "entries": {
         "en": [
-        {"lemma": "to deliver", "pos": "verb", "details": {"past": "delivered", "participle": "delivered"}, "sentences": ["They deliver the bread."]}
+        {"lemma": "to deliver", "pos": "verb", "details": {"note": "supply goods", "past": "delivered", "participle": "delivered"}, "sentences": ["They deliver the bread."]}
         ],
         "nl": [
-        {"lemma": "leveren", "pos": "verb", "details": {"note": "goederen verschaffen", "pastSingular": "leverde", "pastPlural": "leverden", "participle": "geleverd", "auxiliary": "hebben"}, "sentences": ["Zij leveren het brood."]}
+        {"lemma": "leveren", "pos": "verb", "details": {"pastSingular": "leverde", "pastPlural": "leverden", "participle": "geleverd", "auxiliary": "hebben"}, "sentences": ["Zij leveren het brood."]}
         ]
       }
     },
@@ -125,7 +125,7 @@
       "gloss": "bar (noun)",
       "entries": {
         "en": [
-        {"lemma": "bar", "pos": "noun", "details": {"plural": "bars"}, "sentences": ["We go to a bar."]}
+        {"lemma": "bar", "pos": "noun", "details": {"note": "a place for drinks", "plural": "bars"}, "sentences": ["We go to a bar."]}
         ],
         "nl": [
         {"lemma": "bar", "pos": "noun", "details": {"article": "de", "plural": "bars"}, "sentences": ["Wij gaan naar een bar."]}
@@ -161,7 +161,7 @@
       "gloss": "free (no cost)",
       "entries": {
         "en": [
-        {"lemma": "free (no cost)", "pos": "adjective", "sentences": ["The coffee is free."]}
+        {"lemma": "free", "pos": "adjective", "details": {"note": "no cost"}, "sentences": ["The coffee is free."]}
         ],
         "nl": [
         {"lemma": "gratis", "pos": "adjective", "sentences": ["De koffie is gratis."]}
@@ -173,10 +173,10 @@
       "gloss": "deliver (to the door)",
       "entries": {
         "en": [
-        {"lemma": "to deliver (to the door)", "pos": "verb", "details": {"past": "delivered", "participle": "delivered"}, "sentences": ["He delivers the pizza."]}
+        {"lemma": "to deliver", "pos": "verb", "details": {"note": "to the door", "past": "delivered", "participle": "delivered"}, "sentences": ["He delivers the pizza."]}
         ],
         "nl": [
-        {"lemma": "bezorgen", "pos": "verb", "details": {"note": "aan de deur brengen", "pastSingular": "bezorgde", "pastPlural": "bezorgden", "participle": "bezorgd", "auxiliary": "hebben"}, "sentences": ["Hij bezorgt de pizza."]}
+        {"lemma": "bezorgen", "pos": "verb", "details": {"pastSingular": "bezorgde", "pastPlural": "bezorgden", "participle": "bezorgd", "auxiliary": "hebben"}, "sentences": ["Hij bezorgt de pizza."]}
         ]
       }
     },
@@ -185,7 +185,7 @@
       "gloss": "order (purchase)",
       "entries": {
         "en": [
-        {"lemma": "order (purchase)", "pos": "noun", "details": {"plural": "orders"}, "sentences": ["I place an order."]}
+        {"lemma": "order", "pos": "noun", "details": {"note": "purchase", "plural": "orders"}, "sentences": ["I place an order."]}
         ],
         "nl": [
         {"lemma": "order", "pos": "noun", "details": {"article": "de", "plural": "orders"}, "sentences": ["Ik plaats een order."]}
@@ -245,7 +245,7 @@
       "gloss": "offer (proposal)",
       "entries": {
         "en": [
-        {"lemma": "offer (proposal)", "pos": "noun", "details": {"plural": "offers"}, "sentences": ["I accept the offer."]}
+        {"lemma": "offer", "pos": "noun", "details": {"note": "proposal", "plural": "offers"}, "sentences": ["I accept the offer."]}
         ],
         "nl": [
         {"lemma": "aanbod", "pos": "noun", "details": {"article": "het", "plural": "aanbiedingen"}, "sentences": ["Ik accepteer het aanbod."]}
@@ -329,7 +329,7 @@
       "gloss": "exit (noun)",
       "entries": {
         "en": [
-        {"lemma": "exit", "pos": "noun", "details": {"plural": "exits"}, "sentences": ["The exit is on the left."]}
+        {"lemma": "exit", "pos": "noun", "details": {"note": "way out", "plural": "exits"}, "sentences": ["The exit is on the left."]}
         ],
         "nl": [
         {"lemma": "uitgang", "pos": "noun", "details": {"article": "de", "plural": "uitgangen"}, "sentences": ["De uitgang is links."]}
@@ -440,7 +440,7 @@
         {"lemma": "buyer", "pos": "noun", "details": {"plural": "buyers"}, "sentences": ["The buyer pays."]}
         ],
         "nl": [
-        {"lemma": "koper", "pos": "noun", "details": {"article": "de", "plural": "kopers"}, "sentences": ["De koper betaalt."]}
+        {"lemma": "koper", "pos": "noun", "details": {"note": "iemand die koopt", "article": "de", "plural": "kopers"}, "sentences": ["De koper betaalt."]}
         ]
       }
     },
@@ -569,7 +569,7 @@
       "gloss": "warehouse (noun)",
       "entries": {
         "en": [
-        {"lemma": "warehouse", "pos": "noun", "details": {"plural": "warehouses"}, "sentences": ["The goods are in the warehouse."]}
+        {"lemma": "warehouse", "pos": "noun", "details": {"note": "for goods", "plural": "warehouses"}, "sentences": ["The goods are in the warehouse."]}
         ],
         "nl": [
         {"lemma": "magazijn", "pos": "noun", "details": {"article": "het", "plural": "magazijnen"}, "sentences": ["De goederen liggen in het magazijn."]}
@@ -629,7 +629,7 @@
       "gloss": "building (premises)",
       "entries": {
         "en": [
-        {"lemma": "building (premises)", "pos": "noun", "details": {"plural": "buildings"}, "sentences": ["The building is old."]}
+        {"lemma": "building", "pos": "noun", "details": {"note": "premises", "plural": "buildings"}, "sentences": ["The building is old."]}
         ],
         "nl": [
         {"lemma": "pand", "pos": "noun", "details": {"article": "het", "plural": "panden"}, "sentences": ["Het pand is oud."]}
@@ -653,7 +653,7 @@
       "gloss": "warehouse (storehouse)",
       "entries": {
         "en": [
-        {"lemma": "warehouse (storehouse)", "pos": "noun", "details": {"plural": "warehouses"}, "sentences": ["The goods are in the warehouse."]}
+        {"lemma": "warehouse", "pos": "noun", "details": {"note": "storehouse", "plural": "warehouses"}, "sentences": ["The goods are in the warehouse."]}
         ],
         "nl": [
         {"lemma": "pakhuis", "pos": "noun", "details": {"article": "het", "plural": "pakhuizen"}, "sentences": ["De goederen liggen in het pakhuis."]}
@@ -701,7 +701,7 @@
       "gloss": "square (town)",
       "entries": {
         "en": [
-        {"lemma": "square (town)", "pos": "noun", "details": {"plural": "squares"}, "sentences": ["We meet on the square."]}
+        {"lemma": "square", "pos": "noun", "details": {"note": "town", "plural": "squares"}, "sentences": ["We meet on the square."]}
         ],
         "nl": [
         {"lemma": "plein", "pos": "noun", "details": {"article": "het", "plural": "pleinen"}, "sentences": ["Wij spreken af op het plein."]}

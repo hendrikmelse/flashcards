@@ -17,7 +17,7 @@
       "gloss": "back (adverb)",
       "entries": {
         "en": [
-        {"lemma": "back", "pos": "adverb", "sentences": ["I come back tomorrow."]}
+        {"lemma": "back", "pos": "adverb", "details": {"note": "returning"}, "sentences": ["I come back tomorrow."]}
         ],
         "nl": [
         {"lemma": "terug", "pos": "adverb", "sentences": ["Ik kom morgen terug."]}
@@ -32,7 +32,7 @@
         {"lemma": "away", "pos": "adverb", "sentences": ["He goes away."]}
         ],
         "nl": [
-        {"lemma": "weg", "pos": "adverb", "sentences": ["Hij gaat weg."]}
+        {"lemma": "weg", "pos": "adverb", "details": {"note": "niet meer hier"}, "sentences": ["Hij gaat weg."]}
         ]
       }
     },
@@ -41,10 +41,10 @@
       "gloss": "again (adverb)",
       "entries": {
         "en": [
-        {"lemma": "again", "pos": "adverb", "sentences": ["I am here again."]}
+        {"lemma": "again", "pos": "adverb", "details": {"note": "once more"}, "sentences": ["I am here again."]}
         ],
         "nl": [
-        {"lemma": "weer", "pos": "adverb", "sentences": ["Ik ben weer hier."]}
+        {"lemma": "weer", "pos": "adverb", "details": {"note": "nog een keer"}, "sentences": ["Ik ben weer hier."]}
         ]
       }
     },
@@ -65,7 +65,7 @@
       "gloss": "gladly (adverb)",
       "entries": {
         "en": [
-        {"lemma": "gladly", "pos": "adverb", "sentences": ["I would gladly help you."]}
+        {"lemma": "gladly", "pos": "adverb", "details": {"note": "willingly"}, "sentences": ["I would gladly help you."]}
         ],
         "nl": [
         {"lemma": "graag", "pos": "adverb", "sentences": ["Ik help je graag."]}
@@ -137,7 +137,7 @@
       "gloss": "first (at first)",
       "entries": {
         "en": [
-        {"lemma": "first (at first)", "pos": "adverb", "sentences": ["First I eat."]}
+        {"lemma": "first", "pos": "adverb", "details": {"note": "at first"}, "sentences": ["First I eat."]}
         ],
         "nl": [
         {"lemma": "eerst", "pos": "adverb", "sentences": ["Eerst eet ik."]}
@@ -149,7 +149,7 @@
       "gloss": "almost (adverb)",
       "entries": {
         "en": [
-        {"lemma": "almost", "pos": "adverb", "sentences": ["I am almost ready."]}
+        {"lemma": "almost", "pos": "adverb", "details": {"note": "very close to"}, "sentences": ["I am almost ready."]}
         ],
         "nl": [
         {"lemma": "bijna", "pos": "adverb", "sentences": ["Ik ben bijna klaar."]}
@@ -185,7 +185,7 @@
       "gloss": "again (anew)",
       "entries": {
         "en": [
-        {"lemma": "again (anew)", "pos": "adverb", "sentences": ["Try again."]}
+        {"lemma": "again", "pos": "adverb", "details": {"note": "anew"}, "sentences": ["Try again."]}
         ],
         "nl": [
         {"lemma": "opnieuw", "pos": "adverb", "sentences": ["Probeer het opnieuw."]}
@@ -233,7 +233,7 @@
       "gloss": "again (already)",
       "entries": {
         "en": [
-        {"lemma": "again (already)", "pos": "adverb", "sentences": ["It is raining again."]}
+        {"lemma": "again", "pos": "adverb", "details": {"note": "already"}, "sentences": ["It is raining again."]}
         ],
         "nl": [
         {"lemma": "alweer", "pos": "adverb", "sentences": ["Het regent alweer."]}
@@ -241,14 +241,14 @@
       }
     },
     {
-      "key": "almost-adverb-haast",
+      "key": "almost-nearly",
       "gloss": "almost (nearly)",
       "entries": {
         "en": [
-        {"lemma": "almost (nearly)", "pos": "adverb", "sentences": ["I am almost there."]}
+        {"lemma": "almost", "pos": "adverb", "details": {"note": "nearly"}, "sentences": ["I am almost there."]}
         ],
         "nl": [
-        {"lemma": "haast (almost)", "pos": "adverb", "sentences": ["Ik ben haast klaar."]}
+        {"lemma": "haast", "pos": "adverb", "details": {"note": "bijna"}, "sentences": ["Ik ben haast klaar."]}
         ]
       }
     },
@@ -293,7 +293,7 @@
       "gloss": "at least (minimum)",
       "entries": {
         "en": [
-        {"lemma": "at least (minimum)", "pos": "adverb", "sentences": ["It costs at least ten euros."]}
+        {"lemma": "at least", "pos": "adverb", "details": {"note": "minimum"}, "sentences": ["It costs at least ten euros."]}
         ],
         "nl": [
         {"lemma": "minstens", "pos": "adverb", "sentences": ["Het kost minstens tien euro."]}
@@ -317,10 +317,10 @@
       "gloss": "already (in advance)",
       "entries": {
         "en": [
-        {"lemma": "already (in advance)", "pos": "adverb", "sentences": ["You can already start."]}
+        {"lemma": "already", "pos": "adverb", "details": {"note": "in advance"}, "sentences": ["You can already start."]}
         ],
         "nl": [
-        {"lemma": "alvast", "pos": "adverb", "details": {"note": "van tevoren"}, "sentences": ["Je kunt alvast beginnen."]}
+        {"lemma": "alvast", "pos": "adverb", "sentences": ["Je kunt alvast beginnen."]}
         ]
       }
     },
@@ -365,7 +365,7 @@
       "gloss": "gladly (love to)",
       "entries": {
         "en": [
-        {"lemma": "gladly (love to)", "pos": "adverb", "sentences": ["I would gladly come."]}
+        {"lemma": "gladly", "pos": "adverb", "details": {"note": "love to"}, "sentences": ["I would gladly come."]}
         ],
         "nl": [
         {"lemma": "dolgraag", "pos": "adverb", "sentences": ["Ik kom dolgraag."]}
@@ -569,7 +569,7 @@
       "gloss": "quite (fairly)",
       "entries": {
         "en": [
-        {"lemma": "quite (fairly)", "pos": "adverb", "sentences": ["It is quite cold."]}
+        {"lemma": "quite", "pos": "adverb", "details": {"note": "fairly"}, "sentences": ["It is quite cold."]}
         ],
         "nl": [
         {"lemma": "behoorlijk", "pos": "adverb", "sentences": ["Het is behoorlijk koud."]}
@@ -752,7 +752,7 @@
         {"lemma": "upstairs", "pos": "adverb", "sentences": ["The bedroom is upstairs."]}
         ],
         "nl": [
-        {"lemma": "boven", "pos": "adverb", "sentences": ["De slaapkamer is boven."]}
+        {"lemma": "boven", "pos": "adverb", "details": {"note": "op de verdieping"}, "sentences": ["De slaapkamer is boven."]}
         ]
       }
     },
@@ -764,7 +764,7 @@
         {"lemma": "downstairs", "pos": "adverb", "sentences": ["The kitchen is downstairs."]}
         ],
         "nl": [
-        {"lemma": "beneden", "pos": "adverb", "sentences": ["De keuken is beneden."]}
+        {"lemma": "beneden", "pos": "adverb", "details": {"note": "op de begane grond"}, "sentences": ["De keuken is beneden."]}
         ]
       }
     },
@@ -824,7 +824,7 @@
         {"lemma": "indoors", "pos": "adverb", "sentences": ["The cat is indoors."]}
         ],
         "nl": [
-        {"lemma": "binnen", "pos": "adverb", "sentences": ["De kat is binnen."]}
+        {"lemma": "binnen", "pos": "adverb", "details": {"note": "in huis"}, "sentences": ["De kat is binnen."]}
         ]
       }
     },
@@ -836,7 +836,7 @@
         {"lemma": "outdoors", "pos": "adverb", "sentences": ["The dog is outdoors."]}
         ],
         "nl": [
-        {"lemma": "buiten", "pos": "adverb", "sentences": ["De hond is buiten."]}
+        {"lemma": "buiten", "pos": "adverb", "details": {"note": "in de open lucht"}, "sentences": ["De hond is buiten."]}
         ]
       }
     },

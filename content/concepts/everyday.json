@@ -92,7 +92,7 @@
         {"lemma": "life", "pos": "noun", "details": {"plural": "lives"}, "sentences": ["Life is beautiful."]}
         ],
         "nl": [
-        {"lemma": "leven", "pos": "noun", "details": {"article": "het", "plural": "levens"}, "sentences": ["Het leven is mooi."]}
+        {"lemma": "leven", "pos": "noun", "details": {"note": "het bestaan", "article": "het", "plural": "levens"}, "sentences": ["Het leven is mooi."]}
         ]
       }
     },
@@ -125,10 +125,10 @@
       "gloss": "job (paid position)",
       "entries": {
         "en": [
-        {"lemma": "job", "pos": "noun", "details": {"plural": "jobs"}, "sentences": ["He has a new job."]}
+        {"lemma": "job", "pos": "noun", "details": {"note": "work you are employed for", "plural": "jobs"}, "sentences": ["He has a new job."]}
         ],
         "nl": [
-        {"lemma": "baan", "pos": "noun", "details": {"note": "werk waarvoor je in dienst bent", "article": "de", "plural": "banen"}, "sentences": ["Hij heeft een nieuwe baan."]}
+        {"lemma": "baan", "pos": "noun", "details": {"article": "de", "plural": "banen"}, "sentences": ["Hij heeft een nieuwe baan."]}
         ]
       }
     },
@@ -177,7 +177,7 @@
         {"lemma": "road", "pos": "noun", "details": {"plural": "roads"}, "sentences": ["This road is long."]}
         ],
         "nl": [
-        {"lemma": "weg", "pos": "noun", "details": {"article": "de", "plural": "wegen"}, "sentences": ["Deze weg is lang."]}
+        {"lemma": "weg", "pos": "noun", "details": {"note": "om over te rijden", "article": "de", "plural": "wegen"}, "sentences": ["Deze weg is lang."]}
         ]
       }
     },
@@ -234,7 +234,7 @@
       "gloss": "party (celebration)",
       "entries": {
         "en": [
-        {"lemma": "party", "pos": "noun", "details": {"plural": "parties"}, "sentences": ["We have a party today."]}
+        {"lemma": "party", "pos": "noun", "details": {"note": "celebration", "plural": "parties"}, "sentences": ["We have a party today."]}
         ],
         "nl": [
         {"lemma": "feest", "pos": "noun", "details": {"article": "het", "plural": "feesten"}, "sentences": ["Wij hebben vandaag een feest."]}

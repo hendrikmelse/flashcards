@@ -29,10 +29,10 @@
       "gloss": "calm (adjective)",
       "entries": {
         "en": [
-        {"lemma": "calm", "pos": "adjective", "sentences": ["The sea is calm."]}
+        {"lemma": "calm", "pos": "adjective", "details": {"note": "quiet, not busy"}, "sentences": ["The sea is calm."]}
         ],
         "nl": [
-        {"lemma": "rustig", "pos": "adjective", "details": {"note": "stil, niet druk"}, "sentences": ["De zee is rustig."]}
+        {"lemma": "rustig", "pos": "adjective", "sentences": ["De zee is rustig."]}
         ]
       }
     },
@@ -41,7 +41,7 @@
       "gloss": "sweet (kind, nice)",
       "entries": {
         "en": [
-        {"lemma": "sweet", "pos": "adjective", "sentences": ["The dog is sweet."]}
+        {"lemma": "sweet", "pos": "adjective", "details": {"note": "kind, nice"}, "sentences": ["The dog is sweet."]}
         ],
         "nl": [
         {"lemma": "lief", "pos": "adjective", "sentences": ["De hond is lief."]}
@@ -53,10 +53,10 @@
       "gloss": "happy (content)",
       "entries": {
         "en": [
-        {"lemma": "happy (content)", "pos": "adjective", "sentences": ["She is happy."]}
+        {"lemma": "happy", "pos": "adjective", "details": {"note": "content"}, "sentences": ["She is happy."]}
         ],
         "nl": [
-        {"lemma": "gelukkig", "pos": "adjective", "details": {"note": "tevreden met je leven, of met geluk"}, "sentences": ["Zij is gelukkig."]}
+        {"lemma": "gelukkig", "pos": "adjective", "sentences": ["Zij is gelukkig."]}
         ]
       }
     },
@@ -101,7 +101,7 @@
       "gloss": "angry (adjective)",
       "entries": {
         "en": [
-        {"lemma": "angry", "pos": "adjective", "sentences": ["He is angry."]}
+        {"lemma": "angry", "pos": "adjective", "details": {"note": "annoyed"}, "sentences": ["He is angry."]}
         ],
         "nl": [
         {"lemma": "kwaad", "pos": "adjective", "sentences": ["Hij is kwaad."]}
@@ -149,7 +149,7 @@
       "gloss": "angry (mad)",
       "entries": {
         "en": [
-        {"lemma": "angry (mad)", "pos": "adjective", "sentences": ["The boy is angry."]}
+        {"lemma": "angry", "pos": "adjective", "details": {"note": "mad"}, "sentences": ["The boy is angry."]}
         ],
         "nl": [
         {"lemma": "boos", "pos": "adjective", "sentences": ["De jongen is boos."]}
@@ -233,10 +233,10 @@
       "gloss": "calm (composed)",
       "entries": {
         "en": [
-        {"lemma": "calm (composed)", "pos": "adjective", "sentences": ["Stay calm."]}
+        {"lemma": "calm", "pos": "adjective", "details": {"note": "composed"}, "sentences": ["Stay calm."]}
         ],
         "nl": [
-        {"lemma": "kalm", "pos": "adjective", "details": {"note": "vredig, niet opgewonden"}, "sentences": ["Blijf kalm."]}
+        {"lemma": "kalm", "pos": "adjective", "sentences": ["Blijf kalm."]}
         ]
       }
     },
@@ -245,7 +245,7 @@
       "gloss": "mean (nasty)",
       "entries": {
         "en": [
-        {"lemma": "mean (nasty)", "pos": "adjective", "sentences": ["That is mean."]}
+        {"lemma": "mean", "pos": "adjective", "details": {"note": "nasty"}, "sentences": ["That is mean."]}
         ],
         "nl": [
         {"lemma": "gemeen", "pos": "adjective", "sentences": ["Dat is gemeen."]}
@@ -461,7 +461,7 @@
       "gloss": "warm (cordial)",
       "entries": {
         "en": [
-        {"lemma": "warm (cordial)", "pos": "adjective", "sentences": ["He gives a warm welcome."]}
+        {"lemma": "warm", "pos": "adjective", "details": {"note": "cordial"}, "sentences": ["He gives a warm welcome."]}
         ],
         "nl": [
         {"lemma": "hartelijk", "pos": "adjective", "sentences": ["Hij geeft een hartelijk welkom."]}
@@ -509,7 +509,7 @@
       "gloss": "hurt (offend)",
       "entries": {
         "en": [
-        {"lemma": "to hurt (offend)", "pos": "verb", "details": {"past": "hurt", "participle": "hurt"}, "sentences": ["Do not hurt him."]}
+        {"lemma": "to hurt", "pos": "verb", "details": {"note": "offend", "past": "hurt", "participle": "hurt"}, "sentences": ["Do not hurt him."]}
         ],
         "nl": [
         {"lemma": "kwetsen", "pos": "verb", "details": {"pastSingular": "kwetste", "pastPlural": "kwetsten", "participle": "gekwetst", "auxiliary": "hebben"}, "sentences": ["Kwets hem niet."]}
@@ -701,7 +701,7 @@
       "gloss": "beloved (adjective)",
       "entries": {
         "en": [
-        {"lemma": "beloved", "pos": "adjective", "sentences": ["He is a beloved teacher."]}
+        {"lemma": "beloved", "pos": "adjective", "details": {"note": "much loved"}, "sentences": ["He is a beloved teacher."]}
         ],
         "nl": [
         {"lemma": "geliefd", "pos": "adjective", "sentences": ["Hij is een geliefde leraar."]}
@@ -725,10 +725,10 @@
       "gloss": "loyalty (noun)",
       "entries": {
         "en": [
-        {"lemma": "loyalty", "pos": "noun", "details": {"uncountable": true}, "sentences": ["Loyalty is important."]}
+        {"lemma": "loyalty", "pos": "noun", "details": {"note": "faithfulness", "uncountable": true}, "sentences": ["Loyalty is important."]}
         ],
         "nl": [
-        {"lemma": "trouw", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Trouw is belangrijk."]}
+        {"lemma": "trouw", "pos": "noun", "details": {"note": "een eigenschap", "article": "de", "uncountable": true}, "sentences": ["Trouw is belangrijk."]}
         ]
       }
     },
@@ -761,7 +761,7 @@
       "gloss": "tough (adjective)",
       "entries": {
         "en": [
-        {"lemma": "tough", "pos": "adjective", "sentences": ["He is a tough guy."]}
+        {"lemma": "tough", "pos": "adjective", "details": {"note": "strong and hard"}, "sentences": ["He is a tough guy."]}
         ],
         "nl": [
         {"lemma": "stoer", "pos": "adjective", "sentences": ["Hij is een stoere kerel."]}
@@ -941,7 +941,7 @@
       "gloss": "character (personality)",
       "entries": {
         "en": [
-        {"lemma": "character (personality)", "pos": "noun", "details": {"plural": "characters"}, "sentences": ["He has a strong character."]}
+        {"lemma": "character", "pos": "noun", "details": {"note": "personality", "plural": "characters"}, "sentences": ["He has a strong character."]}
         ],
         "nl": [
         {"lemma": "karakter", "pos": "noun", "details": {"article": "het", "plural": "karakters"}, "sentences": ["Hij heeft een sterk karakter."]}
@@ -1040,7 +1040,7 @@
         {"lemma": "to long for", "pos": "verb", "details": {"past": "longed for", "participle": "longed for"}, "sentences": ["I long for the summer."]}
         ],
         "nl": [
-        {"lemma": "verlangen", "pos": "verb", "details": {"pastSingular": "verlangde", "pastPlural": "verlangden", "participle": "verlangd", "auxiliary": "hebben"}, "sentences": ["Ik verlang naar de zomer."]}
+        {"lemma": "verlangen", "pos": "verb", "details": {"note": "naar iets uitzien", "pastSingular": "verlangde", "pastPlural": "verlangden", "participle": "verlangd", "auxiliary": "hebben"}, "sentences": ["Ik verlang naar de zomer."]}
         ]
       }
     },
@@ -1112,7 +1112,7 @@
         {"lemma": "longing", "pos": "noun", "details": {"uncountable": true}, "sentences": ["I feel longing."]}
         ],
         "nl": [
-        {"lemma": "verlangen", "pos": "noun", "details": {"article": "het", "plural": "verlangens"}, "sentences": ["Ik voel verlangen."]}
+        {"lemma": "verlangen", "pos": "noun", "details": {"note": "het gevoel", "article": "het", "plural": "verlangens"}, "sentences": ["Ik voel verlangen."]}
         ]
       }
     },
@@ -1556,7 +1556,7 @@
         {"lemma": "faithful", "pos": "adjective", "sentences": ["The dog is faithful."]}
         ],
         "nl": [
-        {"lemma": "trouw", "pos": "adjective", "sentences": ["De hond is trouw."]}
+        {"lemma": "trouw", "pos": "adjective", "details": {"note": "van een hond of partner"}, "sentences": ["De hond is trouw."]}
         ]
       }
     },
@@ -1673,7 +1673,7 @@
       "gloss": "loyalty (allegiance)",
       "entries": {
         "en": [
-        {"lemma": "loyalty (allegiance)", "pos": "noun", "details": {"uncountable": true}, "sentences": ["He shows loyalty."]}
+        {"lemma": "loyalty", "pos": "noun", "details": {"note": "allegiance", "uncountable": true}, "sentences": ["He shows loyalty."]}
         ],
         "nl": [
         {"lemma": "loyaliteit", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Hij toont loyaliteit."]}
@@ -1721,7 +1721,7 @@
       "gloss": "fun (good time)",
       "entries": {
         "en": [
-        {"lemma": "fun (good time)", "pos": "noun", "details": {"uncountable": true}, "sentences": ["We have fun."]}
+        {"lemma": "fun", "pos": "noun", "details": {"note": "good time", "uncountable": true}, "sentences": ["We have fun."]}
         ],
         "nl": [
         {"lemma": "pret", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Wij hebben pret."]}
@@ -1865,7 +1865,7 @@
       "gloss": "pleasure (enjoyment)",
       "entries": {
         "en": [
-        {"lemma": "pleasure (enjoyment)", "pos": "noun", "details": {"uncountable": true}, "sentences": ["I read with pleasure."]}
+        {"lemma": "pleasure", "pos": "noun", "details": {"note": "enjoyment", "uncountable": true}, "sentences": ["I read with pleasure."]}
         ],
         "nl": [
         {"lemma": "genot", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["Ik lees met genot."]}
@@ -2033,7 +2033,7 @@
       "gloss": "relief (noun)",
       "entries": {
         "en": [
-        {"lemma": "relief", "pos": "noun", "details": {"uncountable": true}, "sentences": ["I feel relief."]}
+        {"lemma": "relief", "pos": "noun", "details": {"note": "feeling better", "uncountable": true}, "sentences": ["I feel relief."]}
         ],
         "nl": [
         {"lemma": "opluchting", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Ik voel opluchting."]}
@@ -2057,7 +2057,7 @@
       "gloss": "patient (adjective)",
       "entries": {
         "en": [
-        {"lemma": "patient", "pos": "adjective", "sentences": ["She is patient."]}
+        {"lemma": "patient", "pos": "adjective", "details": {"note": "able to wait"}, "sentences": ["She is patient."]}
         ],
         "nl": [
         {"lemma": "geduldig", "pos": "adjective", "sentences": ["Zij is geduldig."]}
@@ -2105,7 +2105,7 @@
       "gloss": "sympathy (condolence)",
       "entries": {
         "en": [
-        {"lemma": "sympathy", "pos": "noun", "details": {"uncountable": true}, "sentences": ["I send my sympathy."]}
+        {"lemma": "sympathy", "pos": "noun", "details": {"note": "condolence", "uncountable": true}, "sentences": ["I send my sympathy."]}
         ],
         "nl": [
         {"lemma": "medeleven", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["Ik betuig mijn medeleven."]}
@@ -2513,7 +2513,7 @@
       "gloss": "just (fair)",
       "entries": {
         "en": [
-        {"lemma": "just (fair)", "pos": "adjective", "sentences": ["The judge is just."]}
+        {"lemma": "just", "pos": "adjective", "details": {"note": "fair"}, "sentences": ["The judge is just."]}
         ],
         "nl": [
         {"lemma": "rechtvaardig", "pos": "adjective", "sentences": ["De rechter is rechtvaardig."]}
@@ -2609,7 +2609,7 @@
       "gloss": "concern (worry)",
       "entries": {
         "en": [
-        {"lemma": "concern (worry)", "pos": "noun", "details": {"plural": "concerns"}, "sentences": ["I feel concern."]}
+        {"lemma": "concern", "pos": "noun", "details": {"note": "worry", "plural": "concerns"}, "sentences": ["I feel concern."]}
         ],
         "nl": [
         {"lemma": "bezorgdheid", "pos": "noun", "details": {"article": "de", "plural": "bezorgdheden"}, "sentences": ["Ik voel bezorgdheid."]}
@@ -2933,7 +2933,7 @@
       "gloss": "sympathy (liking)",
       "entries": {
         "en": [
-        {"lemma": "sympathy", "pos": "noun", "details": {"uncountable": true}, "sentences": ["I feel sympathy."]}
+        {"lemma": "sympathy", "pos": "noun", "details": {"note": "liking", "uncountable": true}, "sentences": ["I feel sympathy."]}
         ],
         "nl": [
         {"lemma": "sympathie", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Ik voel sympathie."]}
@@ -3029,7 +3029,7 @@
       "gloss": "skilled (adjective)",
       "entries": {
         "en": [
-        {"lemma": "skilled", "pos": "adjective", "sentences": ["He is skilled."]}
+        {"lemma": "skilled", "pos": "adjective", "details": {"note": "trained"}, "sentences": ["He is skilled."]}
         ],
         "nl": [
         {"lemma": "bekwaam", "pos": "adjective", "sentences": ["Hij is bekwaam."]}
@@ -3329,7 +3329,7 @@
       "gloss": "skilled (expert)",
       "entries": {
         "en": [
-        {"lemma": "skilled (expert)", "pos": "adjective", "sentences": ["He is skilled."]}
+        {"lemma": "skilled", "pos": "adjective", "details": {"note": "expert"}, "sentences": ["He is skilled."]}
         ],
         "nl": [
         {"lemma": "deskundig", "pos": "adjective", "sentences": ["Hij is deskundig."]}

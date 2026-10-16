@@ -65,10 +65,10 @@
       "gloss": "solution (liquid mixture)",
       "entries": {
         "en": [
-        {"lemma": "solution (liquid)", "pos": "noun", "details": {"plural": "solutions"}, "sentences": ["The salt makes a solution in the water."]}
+        {"lemma": "solution", "pos": "noun", "details": {"note": "liquid", "plural": "solutions"}, "sentences": ["The salt makes a solution in the water."]}
         ],
         "nl": [
-        {"lemma": "oplossing (vloeistof)", "pos": "noun", "details": {"article": "de", "plural": "oplossingen"}, "sentences": ["Het zout vormt een oplossing in het water."]}
+        {"lemma": "oplossing", "pos": "noun", "details": {"note": "vloeistof", "article": "de", "plural": "oplossingen"}, "sentences": ["Het zout vormt een oplossing in het water."]}
         ]
       }
     },
@@ -80,7 +80,7 @@
         {"lemma": "acid", "pos": "noun", "details": {"plural": "acids"}, "sentences": ["Lemon juice contains an acid."]}
         ],
         "nl": [
-        {"lemma": "zuur", "pos": "noun", "details": {"article": "het", "plural": "zuren"}, "sentences": ["Citroensap bevat een zuur."]}
+        {"lemma": "zuur", "pos": "noun", "details": {"note": "een scheikundige stof", "article": "het", "plural": "zuren"}, "sentences": ["Citroensap bevat een zuur."]}
         ]
       }
     },
@@ -89,7 +89,7 @@
       "gloss": "base (chemistry)",
       "entries": {
         "en": [
-        {"lemma": "base (chemistry)", "pos": "noun", "details": {"plural": "bases"}, "sentences": ["Soap is a base."]}
+        {"lemma": "base", "pos": "noun", "details": {"note": "chemistry", "plural": "bases"}, "sentences": ["Soap is a base."]}
         ],
         "nl": [
         {"lemma": "base", "pos": "noun", "details": {"article": "de", "plural": "basen"}, "sentences": ["Zeep is een base."]}
@@ -233,7 +233,7 @@
       "gloss": "mass (amount of matter)",
       "entries": {
         "en": [
-        {"lemma": "mass (matter)", "pos": "noun", "details": {"plural": "masses"}, "sentences": ["The mass of the sample is ten grams."]}
+        {"lemma": "mass", "pos": "noun", "details": {"note": "matter", "plural": "masses"}, "sentences": ["The mass of the sample is ten grams."]}
         ],
         "nl": [
         {"lemma": "massa", "pos": "noun", "details": {"note": "in de natuurkunde, in gram", "article": "de", "plural": "massa's"}, "sentences": ["De massa van het monster is tien gram."]}
@@ -257,7 +257,7 @@
       "gloss": "dissolve (in a liquid)",
       "entries": {
         "en": [
-        {"lemma": "to dissolve (in a liquid)", "pos": "verb", "details": {"past": "dissolved", "participle": "dissolved"}, "sentences": ["Salt dissolves in water."]}
+        {"lemma": "to dissolve", "pos": "verb", "details": {"note": "in a liquid", "past": "dissolved", "participle": "dissolved"}, "sentences": ["Salt dissolves in water."]}
         ],
         "nl": [
         {"lemma": "oplossen", "pos": "verb", "details": {"note": "zout in water", "pastSingular": "loste op", "pastPlural": "losten op", "participle": "opgelost", "auxiliary": "hebben/zijn"}, "sentences": ["Zout lost op in water."]}
@@ -293,7 +293,7 @@
       "gloss": "nucleus (of a cell)",
       "entries": {
         "en": [
-        {"lemma": "nucleus (of a cell)", "pos": "noun", "details": {"plural": "nuclei"}, "sentences": ["The nucleus contains the DNA."]}
+        {"lemma": "nucleus", "pos": "noun", "details": {"note": "of a cell", "plural": "nuclei"}, "sentences": ["The nucleus contains the DNA."]}
         ],
         "nl": [
         {"lemma": "celkern", "pos": "noun", "details": {"article": "de", "plural": "celkernen"}, "sentences": ["De celkern bevat het DNA."]}
@@ -1085,7 +1085,7 @@
       "gloss": "clone (noun)",
       "entries": {
         "en": [
-        {"lemma": "clone (noun)", "pos": "noun", "details": {"plural": "clones"}, "sentences": ["Dolly the sheep was a clone."]}
+        {"lemma": "clone", "pos": "noun", "details": {"note": "noun", "plural": "clones"}, "sentences": ["Dolly the sheep was a clone."]}
         ],
         "nl": [
         {"lemma": "kloon", "pos": "noun", "details": {"article": "de", "plural": "klonen"}, "sentences": ["Dolly het schaap was een kloon."]}
