@@ -157,6 +157,9 @@ export function DashboardPage() {
               />
             )}
           </section>
+          <p className="scheduling-note">
+            This app uses <Link to="/how-it-works">FSRS</Link> for review scheduling
+          </p>
 
           {/* Only worth saying when the limit is why there is nothing to study: with cards due, there is. */}
           {study.data.newLimitReached && ready === 0 && (
@@ -185,10 +188,6 @@ export function DashboardPage() {
           </section>
         </>
       )}
-
-      <p className="page-footer">
-        This app uses <Link to="/how-it-works">FSRS</Link> for review scheduling
-      </p>
     </>
   );
 }

@@ -2,6 +2,7 @@ import { Navigate, Route, Routes, useParams } from "react-router";
 import { Layout } from "./components/Layout";
 import { ActiveLanguagesProvider } from "./components/ActiveLanguagesProvider";
 import { PublicOnly, RequireAdmin, RequireAuth } from "./components/guards";
+import { SiteFooter } from "./components/SiteFooter";
 import { AdminDashboardPage } from "./pages/AdminDashboardPage";
 import { AdminReportsPage } from "./pages/AdminReportsPage";
 import { DashboardPage } from "./pages/DashboardPage";
@@ -11,6 +12,7 @@ import { LoginPage, RegisterPage } from "./pages/AuthPages";
 import { ForgotPasswordPage, ResetPasswordPage, VerifyEmailPage } from "./pages/EmailLinkPages";
 import { NotFoundPage } from "./pages/NotFoundPage";
 import { PackDetailPage } from "./pages/PackDetailPage";
+import { PrivacyPage } from "./pages/PrivacyPage";
 import { PacksPage } from "./pages/PacksPage";
 import { ReportsPage } from "./pages/ReportsPage";
 import { SettingsPage } from "./pages/SettingsPage";
@@ -33,6 +35,16 @@ export function App() {
 
 function AppRoutes() {
   return (
+    <>
+      <AppPages />
+      {/* On every page, signed in or not. */}
+      <SiteFooter />
+    </>
+  );
+}
+
+function AppPages() {
+  return (
     <Routes>
       <Route element={<PublicOnly />}>
         <Route path="/login" element={<LoginPage />} />
@@ -43,6 +55,8 @@ function AppRoutes() {
           another device. */}
       <Route path="/reset-password" element={<ResetPasswordPage />} />
       <Route path="/verify-email" element={<VerifyEmailPage />} />
+      {/* Readable before signing up, and signed in or out. */}
+      <Route path="/privacy" element={<PrivacyPage />} />
       <Route element={<RequireAuth />}>
         <Route element={<Layout />}>
           <Route index element={<DashboardPage />} />

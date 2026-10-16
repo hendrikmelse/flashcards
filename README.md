@@ -225,7 +225,7 @@ Before a wider launch:
 
 - Native Dutch review of the whole library, not only the flagged words
 - Protection against abuse of open sign-up, such as requiring a confirmed email address before the app can be used
-- A privacy policy and terms
+- Terms of use (the privacy policy is written, at `/privacy`: keep `apps/web/src/pages/PrivacyPage.tsx` and its date in step with what the app keeps and who handles it)
 - Error tracking, and end-to-end browser tests (today everything is unit and API tests)
 - A screen reader pass over the whole app
 
