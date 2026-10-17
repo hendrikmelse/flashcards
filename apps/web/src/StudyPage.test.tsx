@@ -1021,7 +1021,8 @@ describe("the first study session", () => {
     const user = userEvent.setup();
     renderApp("/study");
     const start = await screen.findByRole("button", { name: "Start studying" });
-    expect(start).toHaveFocus();
+    // The button takes focus in an effect, which can run just after the button first appears.
+    await waitFor(() => expect(start).toHaveFocus());
     await user.click(start);
     expect(await screen.findByText("dog")).toBeInTheDocument();
     expect(screen.queryByRole("article", { name: "How studying works" })).not.toBeInTheDocument();
