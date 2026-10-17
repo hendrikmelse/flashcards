@@ -236,3 +236,7 @@ Later: a stats page (reviews per day, retention), optimistic updates on answers,
 - SRS correctness is the heart of the app. Test it thoroughly and keep the review log.
 - Content quality and quantity matter as much as the code.
 - Privacy: passwords are hashed, traffic is HTTPS only, and users can export or delete their data from the settings.
+
+## License
+
+Copyright (c) 2026 Hendrik Melse. All rights reserved. The code is public to read, not to reuse: see [LICENSE](LICENSE).
