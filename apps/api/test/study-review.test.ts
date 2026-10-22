@@ -296,9 +296,9 @@ describe("study queue after reviews", () => {
 
     const after = await study();
     expect(after.counts.review).toBe(1);
-    // The review is the likeliest to be forgotten, so it leads; the new card is mixed in
-    // after it, and the learning card (recalled a moment ago) comes last.
-    expect(after.cards.map((c) => c.state)).toEqual(["review", "new", "learning"]);
+    // The new card opens the queue; then the review (the likeliest to be forgotten), and the
+    // learning card (recalled a moment ago) comes last.
+    expect(after.cards.map((c) => c.state)).toEqual(["new", "review", "learning"]);
   });
 
   it("does not count new cards that were marked Good or Easy against the daily limit", async () => {
@@ -415,7 +415,7 @@ describe("study queue order", () => {
     expect(await order(c)).toEqual(["review:house", "review:dog"]);
   });
 
-  it("mixes new cards in near the front of the queue", async () => {
+  it("opens the queue with a new card, ahead of the reviews", async () => {
     const c = await reviews(
       [
         { key: "dog", stability: 3, daysAgo: 8 },
@@ -425,8 +425,8 @@ describe("study queue order", () => {
     );
     const out = await order(c);
     expect(out).toHaveLength(3);
-    // One new card among two reviews: the first half of the queue, after the likeliest-forgotten review.
-    expect(out[1]).toBe("new:water");
+    // One new card among two reviews: it comes first, and the reviews keep their own order after it.
+    expect(out[0]).toBe("new:water");
   });
 });
 

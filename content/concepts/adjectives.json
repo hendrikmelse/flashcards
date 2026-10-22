@@ -911,10 +911,11 @@
       "gloss": "the same (adjective)",
       "entries": {
         "en": [
-        {"lemma": "the same", "pos": "adjective", "details": {"note": "with het-words"}, "sentences": ["It is the same."]}
+        {"lemma": "the same", "pos": "adjective", "sentences": ["It is the same.", "She has the same bag."]}
         ],
         "nl": [
-        {"lemma": "hetzelfde", "pos": "adjective", "sentences": ["Het is hetzelfde."]}
+        {"lemma": "hetzelfde", "pos": "adjective", "details": {"note": "bij het-woorden"}, "sentences": ["Het is hetzelfde."]},
+        {"lemma": "dezelfde", "pos": "adjective", "details": {"note": "bij de-woorden en meervoud"}, "sentences": ["Zij heeft dezelfde tas."]}
         ]
       }
     },
@@ -1003,18 +1004,6 @@
       }
     },
     {
-      "key": "the-same-de-words",
-      "gloss": "the same (de-words)",
-      "entries": {
-        "en": [
-        {"lemma": "the same", "pos": "adjective", "details": {"note": "de-words"}, "sentences": ["She has the same bag."]}
-        ],
-        "nl": [
-        {"lemma": "dezelfde", "pos": "adjective", "sentences": ["Zij heeft dezelfde tas."]}
-        ]
-      }
-    },
-    {
       "key": "normal",
       "gloss": "normal (adjective)",
       "entries": {
@@ -1055,10 +1044,10 @@
       "gloss": "lost (gone)",
       "entries": {
         "en": [
-        {"lemma": "lost", "pos": "adjective", "details": {"note": "gone"}, "sentences": ["I have lost my key."]}
+        {"lemma": "lost", "pos": "adjective", "details": {"note": "gone"}, "sentences": ["My key is lost."]}
         ],
         "nl": [
-        {"lemma": "kwijt", "pos": "adjective", "sentences": ["Ik ben mijn sleutel kwijt."]}
+        {"lemma": "kwijt", "pos": "adjective", "sentences": ["Mijn sleutel is kwijt."]}
         ]
       }
     },

@@ -1,12 +1,12 @@
 import { and, asc, count, eq, exists, getTableColumns, gte, inArray, isNull, lte, or, sql } from "drizzle-orm";
 import { alias } from "drizzle-orm/pg-core";
-import type { EntryView } from "@flashcards/shared";
+import { interleaveNew, type EntryView } from "@flashcards/shared";
 import { loadEntries, loadSentences, sentenceKey } from "../content/queries.js";
 import { reviewLogs, userCards, users } from "../db/schema.js";
 import type { Db } from "../db/types.js";
 import type { Scheduler } from "../srs/engine.js";
 import { endOfTomorrow, studyDayStart } from "./day.js";
-import { interleaveNew, pickNew } from "./order.js";
+import { pickNew } from "./order.js";
 import { inPair, inScope, pairOf } from "./scope.js";
 
 const reverse = alias(userCards, "reverse");
@@ -171,7 +171,7 @@ export async function getStudyCounts(
 }
 
 /**
- * The next cards to study, in order. New cards are mixed in near the front
+ * The next cards to study, in order. New cards are mixed in from the front
  * (see interleaveNew); everything else that is due, learning cards and reviews
  * alike, goes by how likely the user is to have forgotten it, most likely
  * first, so what is left at the end of a session is what they probably know.
@@ -241,7 +241,7 @@ export async function getStudyBatch(
       : [];
   const newCards = pickNew(candidates, counts.new);
 
-  const rows = interleaveNew(newCards, ranked).slice(0, opts.limit);
+  const rows = interleaveNew(newCards, ranked, Math.random).slice(0, opts.limit);
 
   const conceptIds = [...new Set(rows.map((r) => r.conceptId))];
   const languages = [...new Set(rows.flatMap((r) => [r.fromLanguage, r.toLanguage]))];

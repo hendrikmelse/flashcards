@@ -10,9 +10,25 @@
     gap: 0.5rem 0.75rem;
   }
 
+  /* The account takes what is left of the brand's row, and its greeting gives way first, so the row
+     does not drop to a line of its own when the icons are wider (an admin has one more). */
   .topbar .account {
     order: 2;
+    flex: 1 1 0;
+    min-width: 0;
+    justify-content: flex-end;
     margin-right: 0.75rem;
+  }
+
+  .topbar .account .email {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .topbar .account .icon-button {
+    flex: none;
   }
 
   /* No hover tooltips on the settings and log out buttons, so the last icon does not need much room
@@ -192,6 +208,30 @@
   .hero-empty .hero-actions {
     justify-content: center;
     justify-self: center;
+  }
+
+  /* A card's words: each on a line of its own, its note in small type directly under it. Run on
+     together, a note that wrapped left tall, empty lines (each line is as high as the large word). */
+  .study-word > span {
+    display: block;
+  }
+
+  .study-word .entry-sep {
+    display: none;
+  }
+
+  .study-word .note {
+    display: block;
+    line-height: 1.3;
+  }
+
+  /* The flag stays level with the first word, not the middle of however many lines there are. */
+  .flagged {
+    align-items: flex-start;
+  }
+
+  .flagged .flag {
+    margin-top: 0.6rem;
   }
 
   .toggle {

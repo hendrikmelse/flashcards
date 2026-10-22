@@ -1,4 +1,4 @@
-import type { Rating, ReviewResponse, StudyCardView } from "@flashcards/shared";
+import { interleaveNew, seededRandom, type Rating, type ReviewResponse, type StudyCardView } from "@flashcards/shared";
 
 // The client-side model of one study session. The server decides what each
 // answer means (POST /reviews); this decides what to show next. A card answered
@@ -140,6 +140,8 @@ export type Action =
       total?: number;
       /** How many cards had been answered when the request was sent; answers made while it was away are allowed for. */
       answeredAtRequest?: number;
+      /** In [0, 1): the jitter for the gaps between the new cards that come with a later batch. */
+      random?: number;
     }
   /** Begin a new session, with whatever has come due since the last one. */
   | { type: "restart" }
@@ -167,11 +169,19 @@ export function reducer(state: SessionState, action: Action): SessionState {
         ...(state.current ? [state.current.id] : []),
       ]);
       const fresh = action.cards.filter((c) => !known.has(c.id));
+      // The first batch comes ordered by the server. In a later one, the new cards go in from the front
+      // of what is left of the queue, 1 to 3 other cards apart (and not first), and the rest follow.
+      const later = state.asOf !== null;
+      const arrived = later
+        ? interleaveNew(
+            fresh.filter((c) => c.state === "new"),
+            [...state.queue, ...fresh.filter((c) => c.state !== "new")],
+            seededRandom(Math.floor((action.random ?? 0) * 2 ** 32)),
+            { othersFirst: true },
+          )
+        : [...state.queue, ...fresh];
       // Missed cards that were waiting for this batch go in now, among the cards that came with it.
-      const queue = state.deferred.reduce(
-        (q, d) => insertAgain(q, d.card, d.random),
-        [...state.queue, ...fresh],
-      );
+      const queue = state.deferred.reduce((q, d) => insertAgain(q, d.card, d.random), arrived);
       // The cards the server has that are not in hand. Cards answered in this session are not among
       // the server's: their next due date is after the session began. The ones that are in hand and
       // unanswered, and the ones answered while the request was on its way, are, so take them off.
@@ -316,7 +326,20 @@ export function reducer(state: SessionState, action: Action): SessionState {
   }
 }
 
-export type Phase = "loading" | "card" | "done" | "error";
+/**
+ * New cards that known words made room for are waiting, and no new card is left to come in the queue
+ * (or on screen): time to fetch them, so they arrive in one request and are worked in from the front.
+ */
+export function wantsNewCards(state: SessionState): boolean {
+  return (
+    state.unlocked > 0 &&
+    !state.exhausted &&
+    state.current?.state !== "new" &&
+    !state.queue.some((c) => c.state === "new")
+  );
+}
+
+export type Phase ="loading" | "card" | "done" | "error";
 
 export function phaseOf(state: SessionState): Phase {
   if (state.ended) return "done"; // ended early: show how it went, whatever is left
