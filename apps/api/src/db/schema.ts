@@ -341,11 +341,13 @@ export const cardReports = pgTable(
     // is still worth reading, but it should no longer be tied to a person.
     userId: uuid().references(() => users.id, { onDelete: "set null" }),
     kind: reportKindEnum().notNull().default("card"),
-    // A short summary, for bugs and suggestions. Empty for a card problem, which is about a word.
+    // A short summary, for bugs and suggestions. For a card problem, the word as it was when the
+    // report was sent ("the same → dezelfde"), so the report can still be read if the word is later
+    // deleted.
     title: text().notNull().default(""),
     // The word, the direction the card was shown in, and what was wrong with it: only for a card
-    // problem (see the check below).
-    conceptId: uuid().references(() => concepts.id, { onDelete: "cascade" }),
+    // problem (see the check below). The word is cleared if it is deleted: the report stays.
+    conceptId: uuid().references(() => concepts.id, { onDelete: "set null" }),
     fromLanguage: text().references(() => languages.code),
     toLanguage: text().references(() => languages.code),
     reason: reportReasonEnum(),
@@ -356,8 +358,8 @@ export const cardReports = pgTable(
   (t) => [
     index("card_reports_open_idx").on(t.resolvedAt, t.createdAt),
     check(
-      "card_reports_card_has_word",
-      sql`${t.kind} <> 'card' or (${t.conceptId} is not null and ${t.fromLanguage} is not null and ${t.toLanguage} is not null and ${t.reason} is not null)`,
+      "card_reports_card_has_languages",
+      sql`${t.kind} <> 'card' or (${t.fromLanguage} is not null and ${t.toLanguage} is not null and ${t.reason} is not null)`,
     ),
   ],
 );
