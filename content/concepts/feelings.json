@@ -101,7 +101,7 @@
       "gloss": "angry (adjective)",
       "entries": {
         "en": [
-        {"lemma": "angry", "pos": "adjective", "details": {"note": "annoyed"}, "sentences": ["He is angry."]}
+        {"lemma": "angry", "pos": "adjective", "sentences": ["He is angry."]}
         ],
         "nl": [
         {"lemma": "kwaad", "pos": "adjective", "sentences": ["Hij is kwaad."]}
@@ -146,13 +146,13 @@
     },
     {
       "key": "angry-mad",
-      "gloss": "angry (mad)",
+      "gloss": "mad (angry)",
       "entries": {
         "en": [
-        {"lemma": "angry", "pos": "adjective", "details": {"note": "mad"}, "sentences": ["The boy is angry."]}
+        {"lemma": "mad", "pos": "adjective", "sentences": ["The boy is mad at his sister."]}
         ],
         "nl": [
-        {"lemma": "boos", "pos": "adjective", "sentences": ["De jongen is boos."]}
+        {"lemma": "boos", "pos": "adjective", "sentences": ["De jongen is boos op zijn zus."]}
         ]
       }
     },
