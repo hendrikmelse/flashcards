@@ -76,6 +76,25 @@ describe("the Your reports page", () => {
     expect(within(items[1]!).getByText("Fixed, thanks!")).toBeInTheDocument();
   });
 
+  it("shows a report whose word has been deleted by the word as it was when sent", async () => {
+    mock.handlers["GET /reports"] = () =>
+      json(200, {
+        reports: [
+          report({
+            conceptId: null,
+            title: "the same → dezelfde, hetzelfde",
+            front: [],
+            back: [],
+            comments: [{ id: "a1", body: "Merged them.", fromAdmin: true, createdAt: "2026-10-03T09:00:00.000Z" }],
+          }),
+        ],
+      });
+    renderApp("/reports");
+
+    expect(await screen.findByText("the same → dezelfde, hetzelfde")).toBeInTheDocument();
+    expect(screen.getByText("Merged them.")).toBeInTheDocument();
+  });
+
   it("says so when nothing has been reported", async () => {
     mock.handlers["GET /reports"] = () => json(200, { reports: [] });
     renderApp("/reports");

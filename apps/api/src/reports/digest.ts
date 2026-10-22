@@ -1,5 +1,5 @@
 import { asc, eq, isNull } from "drizzle-orm";
-import { REPORT_REASON_LABELS } from "@flashcards/shared";
+import { hasWord, REPORT_REASON_LABELS } from "@flashcards/shared";
 import { cardReports, users } from "../db/schema.js";
 import type { Db } from "../db/types.js";
 import type { Mailer } from "../mail/mailer.js";
@@ -57,7 +57,7 @@ export async function loadOpenFeedback(db: Db): Promise<DigestReport[]> {
     return {
       id: v.id,
       kind: v.kind,
-      subject: v.kind === "card" ? `${lemmas(v.front)} → ${lemmas(v.back)} (${v.fromLanguage}→${v.toLanguage})` : v.title,
+      subject: hasWord(v) ? `${lemmas(v.front)} → ${lemmas(v.back)} (${v.fromLanguage}→${v.toLanguage})` : v.title,
       problem: v.reason ? REPORT_REASON_LABELS[v.reason] : undefined,
       note: v.note,
       reporter: row.email,

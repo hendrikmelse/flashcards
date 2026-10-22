@@ -580,6 +580,9 @@ removes entries and sentences that were dropped from the files. It never
 touches user data, and it never deletes a concept or pack that the files stop
 mentioning (cards and reviews point at concepts); it lists them at the end so
 you can clean up by hand.
+Deleting a concept removes the cards and review history of everyone who studied
+it, but not the reports about it: those stay, shown by the word as it was when
+they were sent.
 `--check` validates without a database: add it to the command above, or run
 `npm run content:check` locally.
 

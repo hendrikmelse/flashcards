@@ -12,6 +12,9 @@ import { loadEntries } from "../content/queries.js";
 import { cardReports, concepts, reportComments } from "../db/schema.js";
 import type { Db } from "../db/types.js";
 
+/** The longest word label saved with a word problem (a bug or suggestion title is held to 100 as well). */
+const WORD_LABEL_MAX = 100;
+
 export async function reportRoutes(app: FastifyInstance, { db, rateLimitMax }: { db: Db; rateLimitMax: number }) {
   // Someone found a problem with a word. Anyone signed in may report any word (it is the content
   // that is wrong, not their card), so this does not check that the word is in their deck.
@@ -30,7 +33,12 @@ export async function reportRoutes(app: FastifyInstance, { db, rateLimitMax }: {
       const [concept] = await db.select({ id: concepts.id }).from(concepts).where(eq(concepts.id, p.data.id));
       if (!concept) return reply.code(404).send({ error: "Word not found" });
 
-      await db.insert(cardReports).values({ userId: req.user!.id, conceptId: concept.id, ...b.data });
+      // The word is kept as text too, for if the word is deleted later (see cardReports.title).
+      const words = (await loadEntries(db, [concept.id], [b.data.fromLanguage, b.data.toLanguage])).get(concept.id) ?? [];
+      const side = (language: string) => words.filter((e) => e.language === language).map((e) => e.lemma).join(", ");
+      const title = `${side(b.data.fromLanguage)} → ${side(b.data.toLanguage)}`.slice(0, WORD_LABEL_MAX);
+
+      await db.insert(cardReports).values({ userId: req.user!.id, conceptId: concept.id, title, ...b.data });
 
       return reply.code(201).send({ ok: true });
     },

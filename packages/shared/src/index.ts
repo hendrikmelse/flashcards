@@ -87,9 +87,9 @@ export type UpdateReportInput = z.input<typeof updateReportSchema>;
 export interface MyReport {
   id: string;
   kind: ReportKind;
-  /** A bug's or suggestion's summary; empty for a word problem. */
+  /** A bug's or suggestion's summary; for a word problem, the word as it was when sent. */
   title: string;
-  /** The word, for a word problem (otherwise null, and the two lists below are empty). */
+  /** The word, for a word problem (null otherwise, or once the word is deleted: the two lists below are then empty). */
   conceptId: string | null;
   /** The word on each side of the card, in the direction it was shown. */
   front: EntryView[];
@@ -103,6 +103,14 @@ export interface MyReport {
   comments: ReportComment[];
   createdAt: string;
   resolvedAt: string | null;
+}
+
+/**
+ * Whether a report is a word problem whose word still exists. If the word has been deleted, the
+ * report stays and is shown by its `title`, the word as it was when the report was sent.
+ */
+export function hasWord(r: { kind: ReportKind; conceptId: string | null }): boolean {
+  return r.kind === "card" && r.conceptId !== null;
 }
 
 /** The numbers at the top of the admin dashboard. */

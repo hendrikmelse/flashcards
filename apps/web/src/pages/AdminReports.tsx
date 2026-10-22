@@ -1,5 +1,6 @@
 import { Fragment, useState } from "react";
 import {
+  hasWord,
   REPORT_KIND_LABELS,
   REPORT_REASON_LABELS,
   USER_ROLE_LABELS,
@@ -45,7 +46,7 @@ const dateFormat = new Intl.DateTimeFormat(undefined, { dateStyle: "medium" });
 
 // What a report is about: the word on both sides for a word problem, the title otherwise.
 const aboutOf = (r: AdminReport) =>
-  r.kind === "card" ? `${r.front.map(displayLemma).join(", ")} → ${r.back.map(displayLemma).join(", ")}` : r.title;
+  hasWord(r) ? `${r.front.map(displayLemma).join(", ")} → ${r.back.map(displayLemma).join(", ")}` : r.title;
 const fromOf = (r: AdminReport) => r.reporter?.email ?? "";
 const accountOf = (r: AdminReport) => (r.reporter ? USER_ROLE_LABELS[r.reporter.role] : "");
 

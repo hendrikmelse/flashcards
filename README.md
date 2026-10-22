@@ -169,7 +169,7 @@ A concept's **key** (lowercase words joined by hyphens, such as `dog` or `know-f
 - Example sentences are written as parallel English and Dutch pairs, because the study card shows sentences for the front and the back language
 - `npm run content:check` validates every file without a database. Errors block the import; warnings (for example a sentence that does not contain its lemma, or a concept that is in no pack) are for a reviewer to look at
 - `npm run content:import` imports into the database in `.env` (run `db:migrate` first, and `db:seed` for the languages). It is idempotent and runs in one transaction: a rerun updates in place, entries or sentences removed from a file are removed from the database, and each pack is rewritten to exactly the listed concepts. User cards are untouched
-- The importer never deletes a concept or pack that the files stop mentioning, because user cards cascade-delete with their concept. It reports them instead, and cleanup is manual
+- The importer never deletes a concept or pack that the files stop mentioning, because user cards cascade-delete with their concept. It reports them instead, and cleanup is manual. Deleting a concept does not delete the reports about it: they keep the word as text (saved in their title when sent) and show it that way
 - In production the image contains the files; import them with the command in the runbook's "Importing content" section
 
 The library has about 6,000 concepts in 90 packs:

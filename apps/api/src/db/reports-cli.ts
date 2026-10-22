@@ -102,7 +102,8 @@ if (mFlag >= 0 && !message) {
       `${r.id.slice(0, 8)}  ${r.createdAt.toISOString().slice(0, 16).replace("T", " ")}  ${what}${r.resolvedAt ? "  (resolved)" : ""}`,
     );
     const from = `from ${r.email ?? "a deleted account"}`;
-    if (r.kind === "card") console.log(`  ${lemmas(r.from)} → ${lemmas(r.to)}   [${r.key}, ${r.from}→${r.to}]   ${from}`);
+    if (r.kind === "card" && r.conceptId) console.log(`  ${lemmas(r.from)} → ${lemmas(r.to)}   [${r.key}, ${r.from}→${r.to}]   ${from}`);
+    else if (r.kind === "card") console.log(`  ${r.title}   [word deleted, ${r.from}→${r.to}]   ${from}`);
     else console.log(`  ${r.title}   ${from}`);
     if (r.note) console.log(`  “${r.note.replace(/\s+/g, " ")}”`);
     // The conversation, oldest first: what the sender added, and the replies sent back.

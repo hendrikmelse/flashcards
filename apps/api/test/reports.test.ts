@@ -4,10 +4,11 @@ import { drizzle } from "drizzle-orm/pglite";
 import { migrate } from "drizzle-orm/pglite/migrator";
 import type { FastifyInstance } from "fastify";
 import { afterAll, beforeAll, describe, expect, it } from "vitest";
+import { hasWord, type MyReport } from "@flashcards/shared";
 import { buildApp } from "../src/app.js";
 import { seed } from "../src/db/seed.js";
 import * as schema from "../src/db/schema.js";
-import { cardReports, concepts, reportComments } from "../src/db/schema.js";
+import { cardReports, concepts, entries, reportComments } from "../src/db/schema.js";
 
 let app: FastifyInstance;
 let pg: PGlite;
@@ -264,6 +265,41 @@ describe("when the person who sent a report deletes their account", () => {
 
     const [after] = await db.select().from(cardReports).where(eq(cardReports.note, "Written before leaving"));
     expect(after).toMatchObject({ conceptId, reason: "translation", userId: null });
+  });
+});
+
+describe("when the word a report is about is deleted", () => {
+  let wordId: string;
+
+  beforeAll(async () => {
+    const [word] = await db.insert(concepts).values({ key: "report-test-the-same", gloss: "the same" }).returning();
+    wordId = word!.id;
+    await db.insert(entries).values([
+      { conceptId: wordId, language: "en", lemma: "the same", partOfSpeech: "adjective" },
+      { conceptId: wordId, language: "nl", lemma: "dezelfde", partOfSpeech: "adjective" },
+      { conceptId: wordId, language: "nl", lemma: "hetzelfde", partOfSpeech: "adjective" },
+    ]);
+  });
+
+  it("saves the word as text when the report is sent", async () => {
+    expect((await report(wordId, good)).statusCode).toBe(201);
+    const [row] = await db.select().from(cardReports).where(eq(cardReports.conceptId, wordId));
+    expect(row!.title).toBe("the same → dezelfde, hetzelfde");
+  });
+
+  it("keeps the report, with the saved word and its conversation, and no word", async () => {
+    const [row] = await db.select().from(cardReports).where(eq(cardReports.conceptId, wordId));
+    await db.insert(reportComments).values({ reportId: row!.id, body: "Merged.", fromAdmin: true });
+
+    await db.delete(concepts).where(eq(concepts.id, wordId));
+
+    const [kept] = await db.select().from(cardReports).where(eq(cardReports.id, row!.id));
+    expect(kept).toMatchObject({ kind: "card", conceptId: null, title: "the same → dezelfde, hetzelfde", reason: "translation" });
+    const mine = (await app.inject({ method: "GET", url: "/reports", cookies })).json() as { reports: MyReport[] };
+    const view = mine.reports.find((r) => r.id === row!.id)!;
+    expect(view).toMatchObject({ kind: "card", conceptId: null, title: "the same → dezelfde, hetzelfde", front: [], back: [] });
+    expect(view.comments.map((c) => c.body)).toEqual(["Merged."]);
+    expect(hasWord(view)).toBe(false);
   });
 });
 

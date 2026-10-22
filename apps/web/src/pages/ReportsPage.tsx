@@ -3,6 +3,7 @@ import { useSearchParams } from "react-router";
 import {
   FEEDBACK_NOTE_MAX,
   FEEDBACK_TITLE_MAX,
+  hasWord,
   REPORT_KIND_LABELS,
   REPORT_REASON_LABELS,
   type FeedbackKind,
@@ -47,7 +48,7 @@ const DEFAULT_ORDER: Record<Sort, "asc" | "desc"> = { sent: "desc", word: "asc",
 const dateFormat = new Intl.DateTimeFormat(undefined, { dateStyle: "medium" });
 
 // What a report is about, for sorting: the word, or the title of a bug or suggestion.
-const wordOf = (r: MyReport) => (r.kind === "card" ? r.front.map(displayLemma).join(", ") : r.title);
+const wordOf = (r: MyReport) => (hasWord(r) ? r.front.map(displayLemma).join(", ") : r.title);
 
 type KindFilter = "all" | ReportKind;
 const KIND_FILTERS: { value: KindFilter; label: string }[] = [
@@ -357,7 +358,7 @@ export function ReportsPage() {
                 <li key={r.id} className="my-report">
                   <p className="my-report-head">
                     <span className="my-report-word">
-                      {r.kind === "card" ? (
+                      {hasWord(r) ? (
                         <>
                           <span {...langAttrs(r.fromLanguage ?? "en")}>{wordOf(r)}</span>
                           {" → "}
