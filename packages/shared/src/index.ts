@@ -567,4 +567,5 @@ export type AddConceptResult = { added: number; alreadyInDeck: number };
 
 export * from "./forms.js";
 export * from "./languages.js";
+export * from "./order.js";
 export * from "./sentence.js";

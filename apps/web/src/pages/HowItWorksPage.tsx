@@ -94,9 +94,10 @@ export function HowItWorksPage() {
           late. If you stop early, the cards you skip are the ones you probably remember.
         </li>
         <li>
-          <strong>New cards</strong>, up to your daily limit, are spread through the first half of
-          the queue, so you meet them while you’re fresh and there is still room left to bring back
-          the ones you miss.
+          <strong>New cards</strong>, up to your daily limit, come at the start of the queue, one
+          every two or three cards, so you meet them while you’re fresh. When knowing a new word
+          already makes room for another, the extra ones are worked in the same way once the first
+          ones are done.
         </li>
       </ul>
       <p>

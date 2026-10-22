@@ -25,6 +25,7 @@ import {
   phaseOf,
   reducer,
   remaining,
+  wantsNewCards,
   type SessionStats,
 } from "../study/session";
 
@@ -54,11 +55,14 @@ function useStudySession() {
   const [intro, setIntro] = useState(false);
   const introChecked = useRef(false);
 
+  // Also when the new cards that known words made room for are due to come in (see wantsNewCards).
+  const wantsNew = wantsNewCards(state);
+
   // Top up whenever the queue runs dry (this is also the initial load).
   useEffect(() => {
     // Also when a missed card is waiting for more cards to be slotted in among.
     const waiting = state.deferred.length > 0;
-    if (state.ended || (state.queue.length > 0 && !waiting) || state.exhausted || state.fetchError || fetching.current) return;
+    if (state.ended || (state.queue.length > 0 && !waiting && !wantsNew) || state.exhausted || state.fetchError || fetching.current) return;
     fetching.current = true;
     const answeredAtRequest = state.handled.length;
     // After the first batch, ask for the cards that were due when the session began.
@@ -79,6 +83,7 @@ function useStudySession() {
             now: r.now,
             total: r.total,
             answeredAtRequest,
+            random: Math.random(),
           });
         },
         () => dispatch({ type: "fetchFailed" }),
@@ -86,7 +91,7 @@ function useStudySession() {
       .finally(() => {
         fetching.current = false;
       });
-  }, [state.ended, state.queue.length, state.deferred.length, state.exhausted, state.fetchError, state.asOf, pair]);
+  }, [state.ended, state.queue.length, state.deferred.length, wantsNew, state.exhausted, state.fetchError, state.asOf, pair]);
 
   // Show the next card as soon as there is one.
   useEffect(() => {

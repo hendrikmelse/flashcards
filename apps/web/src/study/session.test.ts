@@ -6,6 +6,7 @@ import {
   phaseOf,
   reducer,
   remaining,
+  wantsNewCards,
   type Action,
   type SessionState,
 } from "./session";
@@ -613,3 +614,60 @@ describe("undoing the last answer", () => {
   });
 });
 
+
+describe("new cards that arrive in a later batch", () => {
+  const review = (id: string): StudyCardView => ({ ...card(id), state: "review" });
+  const reviews = (n: number, from = 1) => Array.from({ length: n }, (_, i) => review(`r${from + i}`));
+  const first: Action = { type: "fetched", cards: reviews(10), moreNew: 3, now: "2026-01-15T10:00:00.000Z" };
+
+  it("leaves the first batch as the server ordered it", () => {
+    const s = run([{ type: "fetched", cards: [card("n1"), review("r1"), card("n2")] }]);
+    expect(s.queue.map((c) => c.id)).toEqual(["n1", "r1", "n2"]);
+  });
+
+  it("works them in from the front of the queue, after 1 to 3 other cards, and the rest at the end", () => {
+    const s = run([first, { type: "pick" }]);
+    const next = reducer(s, {
+      type: "fetched",
+      cards: [card("n1"), card("n2"), ...reviews(2, 11)],
+      random: 0,
+    });
+    const order = next.queue.map((c) => c.id);
+    const at1 = order.indexOf("n1");
+    const at2 = order.indexOf("n2");
+    expect(at1).toBeGreaterThanOrEqual(1); // not first: 1 to 3 other cards come before it
+    expect(at1).toBeLessThanOrEqual(3);
+    expect(at2 - at1).toBeGreaterThanOrEqual(2); // and 1 to 3 more between the two
+    expect(at2 - at1).toBeLessThanOrEqual(4);
+    expect(order.filter((id) => id.startsWith("r"))).toEqual(
+      ["r2", "r3", "r4", "r5", "r6", "r7", "r8", "r9", "r10", "r11", "r12"],
+    );
+  });
+
+  it("does not fetch until the last new card in the queue is used up", () => {
+    const withNew = run([
+      { type: "fetched", cards: [card("n1"), ...reviews(3)], moreNew: 2, now: "2026-01-15T10:00:00.000Z" },
+      { type: "pick" },
+      answer("good", "review"),
+    ]);
+    expect(withNew.unlocked).toBe(1);
+    expect(wantsNewCards(withNew)).toBe(true);
+    const stillNew = run([
+      { type: "fetched", cards: [card("n1"), card("n2"), ...reviews(3)], moreNew: 2, now: "2026-01-15T10:00:00.000Z" },
+      { type: "pick" },
+      answer("good", "review"),
+    ]);
+    expect(wantsNewCards(stillNew)).toBe(false);
+  });
+
+  it("does not fetch while the card on screen is a new one", () => {
+    const s = run([
+      { type: "fetched", cards: [card("n1"), card("n2"), ...reviews(3)], moreNew: 2, now: "2026-01-15T10:00:00.000Z" },
+      { type: "pick" },
+      answer("good", "review"),
+      { type: "pick" },
+    ]);
+    expect(s.current?.id).toBe("n2");
+    expect(wantsNewCards(s)).toBe(false);
+  });
+});
