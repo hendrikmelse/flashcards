@@ -1,5 +1,4 @@
 import { buildApp } from "./app.js";
-import { registrationPolicyFromEnv } from "./auth/registration.js";
 import { deleteExpiredSessions } from "./auth/sessions.js";
 import { deleteExpiredEmailTokens } from "./auth/email-tokens.js";
 import { config } from "./config.js";
@@ -14,7 +13,6 @@ const app = await buildApp({
   trustProxy: config.TRUST_PROXY,
   production: config.NODE_ENV === "production",
   staticDir: config.WEB_DIST,
-  registration: registrationPolicyFromEnv(process.env),
   mailer: mail.mailer,
   publicUrl: mail.publicUrl,
 });

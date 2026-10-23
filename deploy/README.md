@@ -249,10 +249,7 @@ nano .env    # 1) replace change-me in DATABASE_URL with the password printed ab
              # 3) set REPORT_NOTIFY_EMAIL to where the daily summary of open reports should be emailed (optional)
 ```
 
-Sign-up is **open**: `compose.yaml` sets `REGISTRATION_MODE=open`, so anyone can
-create an account. The server refuses to start in production if no registration mode
-is set, so whether sign-up is open is always a choice. To limit it to a list of
-emails, or to close it, see "Who can register".
+Sign-up is **open**: anyone can create an account (see "Who can register").
 
 ## 6. Caddy
 
@@ -399,7 +396,7 @@ mail reputation stays apart from the rest of `hendrikmelse.com`.
 
 The app **refuses to start** without `RESEND_API_KEY` (a secret, in
 `/srv/flashcards/.env`), `MAIL_FROM`, and `PUBLIC_URL` (not secret, in
-`compose.yaml`), like it does without `REGISTRATION_MODE`. If the key is
+`compose.yaml`). If the key is
 missing, a new release never becomes healthy and `deploy.sh` rolls back (the old
 version keeps running).
 
@@ -635,29 +632,13 @@ and the admin routes check it on the server, so the button only being hidden is 
 
 ## Who can register
 
-`REGISTRATION_MODE` in `compose.yaml` decides who can create an account. Logging in
-never depends on it.
-
-| Mode | Who can register |
-|---|---|
-| `open` | Anyone. This is how the live site is set up. |
-| `allowlist` | Only the emails in `ALLOWED_EMAILS` (in `/srv/flashcards/.env`). Anyone else gets a 403 "Registration is closed". |
-| `closed` | No one. |
-
-To change the mode, edit `REGISTRATION_MODE` in `deploy/server/flashcards/compose.yaml`, `scp` it to
-`/srv/flashcards/`, and apply it:
-`cd /srv/flashcards && IMAGE="$(cat current-image)" docker compose up -d` (compose recreates the
-container when its environment changes). With `allowlist`, invite someone by adding their email to
-`ALLOWED_EMAILS` (comma-separated) and applying it the same way, then tell them to sign up at
-https://flashcards.hendrikmelse.com/register with that exact email. An allowlist tells an outsider
-who guesses an address whether it is on it.
+Anyone can create an account; there is no setting to limit it. Logging in works the same for everyone.
 
 **Things to watch with open sign-up:**
 
 - Every sign-up sends a verification email through Resend, so the plan's limits (the free plan
   allows 100 emails a day and 3,000 a month) cap how many people can sign up and reset
-  passwords. Watch the Resend dashboard, and switch to `allowlist` or `closed` if sign-up is being
-  abused.
+  passwords. Watch the Resend dashboard for abuse.
 - Sign-up and sign-in are rate limited per client (10 a minute), which slows one source down but
   not many. A confirmed email address is not required to use the app yet.
 - Reports arrive from anyone, so the daily summary at `REPORT_NOTIFY_EMAIL` can get long.

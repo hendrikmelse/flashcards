@@ -9,7 +9,7 @@ Live at **flashcards.hendrikmelse.com** (anyone can sign up).
 - **Spaced repetition** with FSRS: each card is shown just before it would be forgotten, and each direction of a word is scheduled on its own. A study session mixes due reviews, cards still being learned, and a daily allowance of new cards.
 - **A library of about 6,000 words in 90 packs:** the 5,000 most common Dutch words in bands of 500, plus topic, verb, and grammar packs. Users browse packs, search for single words in either language, and add them to their deck.
 - **A deck viewer** with search, filters by direction and stage, and sorting, and a dashboard showing what is ready to study.
-- **Accounts** with email and password, email verification, password reset, and open registration (which can be limited to an allowlist of emails or closed). Users can change their details, choose what the cards show, export everything held about them, and delete their account.
+- **Accounts** with email and password, email verification, password reset, and open registration. Users can change their details, choose what the cards show, export everything held about them, and delete their account.
 - **Reports and feedback:** users report problems with a word, send bug reports and feature suggestions, and request packs. Each is a conversation with the owner, who answers from an admin dashboard. See [Reports and admins](#reports-and-admins).
 - **Accessible and responsive:** a phone layout, keyboard use throughout, a skip link, `lang` attributes on card text, and reduced-motion support.
 
@@ -48,7 +48,7 @@ npm run dev                    # API on :3000 and the web app on Vite's dev port
 
 The Vite dev server proxies `/api` to the API, so the browser sees one origin and session cookies work without CORS. The proxy keeps the browser's Host header because the API rejects state-changing requests whose Origin does not match it.
 
-Registration is open in development. In production it is controlled by `REGISTRATION_MODE`. To load the full word library into your development database, run `npm run content:import` after `db:seed`.
+Registration is open. To load the full word library into your development database, run `npm run content:import` after `db:seed`.
 
 ### Scripts
 
@@ -75,8 +75,6 @@ Set in `.env` (see `.env.example`):
 |---|---|
 | `DATABASE_URL` | Postgres connection string |
 | `PORT` | API port (default 3000) |
-| `REGISTRATION_MODE` | `open`, `allowlist`, or `closed`. Production refuses to start unless this is set explicitly |
-| `ALLOWED_EMAILS` | Comma-separated emails, used with `allowlist` |
 | `RESEND_API_KEY`, `MAIL_FROM`, `PUBLIC_URL` | Email (verification, password reset) goes out through Resend. `MAIL_FROM` is the sender (`Name <noreply@mail.example.com>`) and `PUBLIC_URL` is where the app is reached from outside (links in emails start with it). Production refuses to start without all three. In development, without them, each email is printed to the API's console and `PUBLIC_URL` defaults to Vite's address |
 | `REPORT_NOTIFY_EMAIL` | Optional. Where to email a summary of all open reports every day at 7am Los Angeles time (sent from `MAIL_FROM`; nothing is sent on a day with none open). Without it, reports are only stored |
 | `NODE_ENV=production` | Enables HSTS and `Secure` cookies |
@@ -214,7 +212,7 @@ One Docker image: the API serves `/api/*` and the built web app (falling back to
 - **Deploys:** images are tagged by git SHA. `deploy.sh` migrates, restarts, waits until the app is healthy and can reach the database (`/api/ready`), and rolls back automatically if not. Only the current and previous image are kept
 - **Server security:** a non-root user, SSH keys only, a firewall allowing only ports 22, 80, and 443, fail2ban, and unattended upgrades
 - **Logs:** container logs go to the host's journal, which is capped and survives deploys
-- **Access:** sign-up is open (`REGISTRATION_MODE=open`). It can be limited to the emails in `ALLOWED_EMAILS` (`allowlist`) or closed (`closed`)
+- **Access:** sign-up is open to anyone
 - **Production data:** a separate `seed-languages` command creates the languages without the development sample data
 
 The full runbook, including server setup, rollback, backups and restores, and who can register, is in [`deploy/README.md`](deploy/README.md).

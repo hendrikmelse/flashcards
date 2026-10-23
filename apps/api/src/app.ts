@@ -4,7 +4,6 @@ import rateLimit from "@fastify/rate-limit";
 import fastifyStatic from "@fastify/static";
 import Fastify from "fastify";
 import { authPlugin } from "./auth/plugin.js";
-import { OPEN_REGISTRATION, type RegistrationPolicy } from "./auth/registration.js";
 import type { MailDeps } from "./auth/email-flows.js";
 import type { Db } from "./db/types.js";
 import { createMemoryMailer, type Mailer } from "./mail/mailer.js";
@@ -33,8 +32,6 @@ export interface AppOptions {
   production?: boolean;
   /** Directory of the built web app to serve alongside the API. */
   staticDir?: string;
-  /** Who may create an account. Defaults to open. */
-  registration?: RegistrationPolicy;
   /** Sends the emails (verification, password reset). Defaults to one that keeps them to itself. */
   mailer?: Mailer;
   /** The address the app is reached at, which the links in emails start with. */
@@ -59,7 +56,6 @@ export async function buildApp({
   trustProxy = false,
   production = false,
   staticDir,
-  registration = OPEN_REGISTRATION,
   mailer = createMemoryMailer(),
   publicUrl = "http://localhost:5173",
   authRateLimit = 10,
@@ -77,7 +73,7 @@ export async function buildApp({
   await app.register(
     async (api) => {
       await api.register(healthRoutes, { db });
-      await api.register(authRoutes, { db, registration, rateLimitMax: authRateLimit, mail });
+      await api.register(authRoutes, { db, rateLimitMax: authRateLimit, mail });
       await api.register(packRoutes, { db, searchRateLimit: publicRateLimit, readRateLimit: publicRateLimit * 2 });
       await api.register(reportRoutes, { db, rateLimitMax: authRateLimit });
       await api.register(adminReportRoutes, { db });
