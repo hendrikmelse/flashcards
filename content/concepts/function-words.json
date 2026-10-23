@@ -13,14 +13,15 @@
       }
     },
     {
-      "key": "that-het-words",
-      "gloss": "that (het-words)",
+      "key": "that-pronoun",
+      "gloss": "that (pronoun)",
       "entries": {
         "en": [
-        {"lemma": "that", "pos": "pronoun", "details": {"note": "het-words"}, "sentences": ["I do not know that."]}
+        {"lemma": "that", "pos": "pronoun", "details": {"note": "pronoun"}, "sentences": ["I do not know that.","That man is my friend."]}
         ],
         "nl": [
-        {"lemma": "dat", "pos": "pronoun", "details": {"note": "aanwijzend"}, "sentences": ["Dat weet ik niet."]}
+        {"lemma": "dat", "pos": "pronoun", "details": {"note": "bij het-woorden"}, "sentences": ["Dat weet ik niet."]},
+        {"lemma": "die", "pos": "pronoun", "details": {"note": "bij de-woorden en meervoud"}, "sentences": ["Die man is mijn vriend."]}
         ]
       }
     },
@@ -34,18 +35,6 @@
         "nl": [
         {"lemma": "zij", "pos": "pronoun", "details": {"note": "nadruk, meervoud onderwerp"}, "sentences": ["Zij wonen in Utrecht."]},
         {"lemma": "ze", "pos": "pronoun", "details": {"note": "gewoon, meervoud onderwerp"}, "sentences": ["Ze wonen in Utrecht."]}
-        ]
-      }
-    },
-    {
-      "key": "that-de-words-and-plural",
-      "gloss": "that (de-words and plural)",
-      "entries": {
-        "en": [
-        {"lemma": "that", "pos": "pronoun", "details": {"note": "de-words and plural"}, "sentences": ["That man is my friend."]}
-        ],
-        "nl": [
-        {"lemma": "die", "pos": "pronoun", "sentences": ["Die man is mijn vriend."]}
         ]
       }
     },
@@ -75,13 +64,14 @@
     },
     {
       "key": "this-pronoun",
-      "gloss": "this (het-words)",
+      "gloss": "this (pronoun)",
       "entries": {
         "en": [
-        {"lemma": "this", "pos": "pronoun", "details": {"note": "het-words"}, "sentences": ["This is good."]}
+        {"lemma": "this", "pos": "pronoun", "sentences": ["This is good.","This man is nice."]}
         ],
         "nl": [
-        {"lemma": "dit", "pos": "pronoun", "sentences": ["Dit is goed."]}
+        {"lemma": "dit", "pos": "pronoun", "details": {"note": "bij het-woorden"}, "sentences": ["Dit is goed."]},
+        {"lemma": "deze", "pos": "determiner", "details": {"note": "bij de-woorden en meervoud"}, "sentences": ["Deze man is aardig."]}
         ]
       }
     },
@@ -191,18 +181,6 @@
         ],
         "nl": [
         {"lemma": "iets", "pos": "pronoun", "sentences": ["Ik wil iets."]}
-        ]
-      }
-    },
-    {
-      "key": "this-determiner",
-      "gloss": "this (de-words)",
-      "entries": {
-        "en": [
-        {"lemma": "this", "pos": "determiner", "details": {"note": "de-words"}, "sentences": ["This man is nice."]}
-        ],
-        "nl": [
-        {"lemma": "deze", "pos": "determiner", "sentences": ["Deze man is aardig."]}
         ]
       }
     },
@@ -389,18 +367,6 @@
       }
     },
     {
-      "key": "every-de-words",
-      "gloss": "every (de-words)",
-      "entries": {
-        "en": [
-        {"lemma": "every", "pos": "determiner", "details": {"note": "de-words"}, "sentences": ["Every day is different."]}
-        ],
-        "nl": [
-        {"lemma": "elke", "pos": "determiner", "sentences": ["Elke dag is anders."]}
-        ]
-      }
-    },
-    {
       "key": "yourself",
       "gloss": "yourself (pronoun)",
       "entries": {
@@ -409,18 +375,6 @@
         ],
         "nl": [
         {"lemma": "jezelf", "pos": "pronoun", "sentences": ["Wees jezelf."]}
-        ]
-      }
-    },
-    {
-      "key": "which-de-words-and-plural",
-      "gloss": "which (de-words and plural)",
-      "entries": {
-        "en": [
-        {"lemma": "which", "pos": "determiner", "details": {"note": "de-words and plural"}, "sentences": ["Which table do you want?"]}
-        ],
-        "nl": [
-        {"lemma": "welke", "pos": "determiner", "sentences": ["Welke tafel wil je?"]}
         ]
       }
     },
@@ -497,14 +451,15 @@
       }
     },
     {
-      "key": "every-het-words",
-      "gloss": "every (het-words)",
+      "key": "every",
+      "gloss": "every (determiner)",
       "entries": {
         "en": [
-        {"lemma": "every", "pos": "determiner", "details": {"note": "het-words"}, "sentences": ["Every child has a book."]}
+        {"lemma": "every", "pos": "determiner", "sentences": ["Every child has a book.","Every day is different."]}
         ],
         "nl": [
-        {"lemma": "elk", "pos": "determiner", "sentences": ["Elk kind heeft een boek."]}
+        {"lemma": "elk", "pos": "determiner", "details": {"note": "bij het-woorden"}, "sentences": ["Elk kind heeft een boek."]},
+        {"lemma": "elke", "pos": "determiner", "details": {"note": "bij de-woorden en meervoud"}, "sentences": ["Elke dag is anders."]}
         ]
       }
     },
@@ -593,14 +548,15 @@
       }
     },
     {
-      "key": "which-het-words",
-      "gloss": "which (het-words)",
+      "key": "which",
+      "gloss": "which (determiner)",
       "entries": {
         "en": [
-        {"lemma": "which", "pos": "determiner", "details": {"note": "het-words"}, "sentences": ["Which book is yours?"]}
+        {"lemma": "which", "pos": "determiner", "sentences": ["Which book is yours?","Which table do you want?"]}
         ],
         "nl": [
-        {"lemma": "welk", "pos": "determiner", "sentences": ["Welk boek is van jou?"]}
+        {"lemma": "welk", "pos": "determiner", "details": {"note": "bij het-woorden"}, "sentences": ["Welk boek is van jou?"]},
+        {"lemma": "welke", "pos": "determiner", "details": {"note": "bij de-woorden en meervoud"}, "sentences": ["Welke tafel wil je?"]}
         ]
       }
     },
