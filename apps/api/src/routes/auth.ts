@@ -12,7 +12,6 @@ import {
 import { sendPasswordResetEmail, sendVerificationEmail, type MailDeps } from "../auth/email-flows.js";
 import { consumeEmailToken, deleteEmailTokens, sentRecently } from "../auth/email-tokens.js";
 import { DUMMY_HASH, hashPassword, verifyPassword } from "../auth/password.js";
-import { mayRegister, type RegistrationPolicy } from "../auth/registration.js";
 import {
   createSession,
   deleteAllSessions,
@@ -30,10 +29,9 @@ export async function authRoutes(
   app: FastifyInstance,
   {
     db,
-    registration,
     rateLimitMax,
     mail,
-  }: { db: Db; registration: RegistrationPolicy; rateLimitMax: number; mail: MailDeps },
+  }: { db: Db; rateLimitMax: number; mail: MailDeps },
 ) {
   const secure = process.env.NODE_ENV === "production";
 
@@ -54,9 +52,6 @@ export async function authRoutes(
     const parsed = registerSchema.safeParse(req.body);
     if (!parsed.success) return invalid(reply, parsed.error.issues);
     const { email, password, timezone, name } = parsed.data;
-    if (!mayRegister(registration, email)) {
-      return reply.code(403).send({ error: "Registration is closed" });
-    }
 
     const passwordHash = await hashPassword(password);
     const [user] = await db

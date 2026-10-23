@@ -13,8 +13,8 @@ export interface MailSettings {
 const DEV_URL = "http://localhost:5173";
 
 /**
- * Production must be able to send real email, so it refuses to start without the settings
- * (like REGISTRATION_MODE). Development prints emails to the console instead.
+ * Production must be able to send real email, so it refuses to start without the settings.
+ * Development prints emails to the console instead.
  */
 export function mailSettingsFromEnv(env: NodeJS.ProcessEnv): MailSettings {
   const apiKey = env.RESEND_API_KEY?.trim();
