@@ -137,10 +137,10 @@
       "gloss": "pass away (verb)",
       "entries": {
         "en": [
-        {"lemma": "to pass away", "pos": "verb", "details": {"past": "passed away", "participle": "passed away"}, "sentences": ["The old man passed away."]}
+        {"lemma": "to pass away", "pos": "verb", "details": {"past": "passed away", "participle": "passed away"}, "sentences": ["The old man passes away."]}
         ],
         "nl": [
-        {"lemma": "overlijden", "pos": "verb", "details": {"pastSingular": "overleed", "pastPlural": "overleden", "participle": "overleden", "auxiliary": "zijn"}, "sentences": ["De oude man overleed."]}
+        {"lemma": "overlijden", "pos": "verb", "details": {"pastSingular": "overleed", "pastPlural": "overleden", "participle": "overleden", "auxiliary": "zijn"}, "sentences": ["De oude man overlijdt."]}
         ]
       }
     },
@@ -353,10 +353,10 @@
       "gloss": "drown (verb)",
       "entries": {
         "en": [
-        {"lemma": "to drown", "pos": "verb", "details": {"past": "drowned", "participle": "drowned"}, "sentences": ["The boy drowned."]}
+        {"lemma": "to drown", "pos": "verb", "details": {"past": "drowned", "participle": "drowned"}, "sentences": ["The boy drowns."]}
         ],
         "nl": [
-        {"lemma": "verdrinken", "pos": "verb", "details": {"pastSingular": "verdronk", "pastPlural": "verdronken", "participle": "verdronken", "auxiliary": "zijn"}, "sentences": ["De jongen verdronk."]}
+        {"lemma": "verdrinken", "pos": "verb", "details": {"pastSingular": "verdronk", "pastPlural": "verdronken", "participle": "verdronken", "auxiliary": "zijn"}, "sentences": ["De jongen verdrinkt."]}
         ]
       }
     },

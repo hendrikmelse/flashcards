@@ -1061,10 +1061,10 @@
       "gloss": "phone (call up)",
       "entries": {
         "en": [
-        {"lemma": "to phone", "pos": "verb", "details": {"note": "call up", "past": "phoned", "participle": "phoned"}, "sentences": ["He phoned me yesterday."]}
+        {"lemma": "to phone", "pos": "verb", "details": {"note": "call up", "past": "phoned", "participle": "phoned"}, "sentences": ["He phones me today."]}
         ],
         "nl": [
-        {"lemma": "opbellen", "pos": "verb", "details": {"pastSingular": "belde op", "pastPlural": "belden op", "participle": "opgebeld", "auxiliary": "hebben"}, "sentences": ["Hij belde mij gisteren op."]}
+        {"lemma": "opbellen", "pos": "verb", "details": {"pastSingular": "belde op", "pastPlural": "belden op", "participle": "opgebeld", "auxiliary": "hebben"}, "sentences": ["Hij belt mij vandaag op."]}
         ]
       }
     },
@@ -1121,10 +1121,10 @@
       "gloss": "ring (phone)",
       "entries": {
         "en": [
-        {"lemma": "to ring", "pos": "verb", "details": {"note": "phone", "past": "rang", "participle": "rung"}, "sentences": ["The phone rang."]}
+        {"lemma": "to ring", "pos": "verb", "details": {"note": "phone", "past": "rang", "participle": "rung"}, "sentences": ["The phone rings."]}
         ],
         "nl": [
-        {"lemma": "overgaan", "pos": "verb", "details": {"pastSingular": "ging over", "pastPlural": "gingen over", "participle": "overgegaan", "auxiliary": "zijn"}, "sentences": ["De telefoon ging over."]}
+        {"lemma": "overgaan", "pos": "verb", "details": {"pastSingular": "ging over", "pastPlural": "gingen over", "participle": "overgegaan", "auxiliary": "zijn"}, "sentences": ["De telefoon gaat over."]}
         ]
       }
     },

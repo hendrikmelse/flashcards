@@ -689,10 +689,10 @@
       "gloss": "run over (verb)",
       "entries": {
         "en": [
-        {"lemma": "to run over", "pos": "verb", "details": {"past": "ran over", "participle": "run over"}, "sentences": ["The car ran over a cat."]}
+        {"lemma": "to run over", "pos": "verb", "details": {"past": "ran over", "participle": "run over"}, "sentences": ["The car runs over a cat."]}
         ],
         "nl": [
-        {"lemma": "aanrijden", "pos": "verb", "details": {"pastSingular": "reed aan", "pastPlural": "reden aan", "participle": "aangereden", "auxiliary": "hebben"}, "sentences": ["De auto reed een kat aan."]}
+        {"lemma": "aanrijden", "pos": "verb", "details": {"pastSingular": "reed aan", "pastPlural": "reden aan", "participle": "aangereden", "auxiliary": "hebben"}, "sentences": ["De auto rijdt een kat aan."]}
         ]
       }
     },
@@ -773,10 +773,10 @@
       "gloss": "take off (aircraft)",
       "entries": {
         "en": [
-        {"lemma": "to take off", "pos": "verb", "details": {"note": "aircraft", "past": "took off", "participle": "taken off"}, "sentences": ["The plane took off."]}
+        {"lemma": "to take off", "pos": "verb", "details": {"note": "aircraft", "past": "took off", "participle": "taken off"}, "sentences": ["The plane takes off."]}
         ],
         "nl": [
-        {"lemma": "opstijgen", "pos": "verb", "details": {"pastSingular": "steeg op", "pastPlural": "stegen op", "participle": "opgestegen", "auxiliary": "zijn"}, "sentences": ["Het vliegtuig steeg op."]}
+        {"lemma": "opstijgen", "pos": "verb", "details": {"pastSingular": "steeg op", "pastPlural": "stegen op", "participle": "opgestegen", "auxiliary": "zijn"}, "sentences": ["Het vliegtuig stijgt op."]}
         ]
       }
     },
@@ -1085,10 +1085,10 @@
       "gloss": "car accident (noun)",
       "entries": {
         "en": [
-        {"lemma": "car accident", "pos": "noun", "details": {"plural": "car accidents"}, "sentences": ["There was a car accident."]}
+        {"lemma": "car accident", "pos": "noun", "details": {"plural": "car accidents"}, "sentences": ["There is a car accident."]}
         ],
         "nl": [
-        {"lemma": "auto-ongeluk", "pos": "noun", "details": {"article": "het", "plural": "auto-ongelukken"}, "sentences": ["Er was een auto-ongeluk."]}
+        {"lemma": "auto-ongeluk", "pos": "noun", "details": {"article": "het", "plural": "auto-ongelukken"}, "sentences": ["Er is een auto-ongeluk."]}
         ]
       }
     },
@@ -1349,10 +1349,10 @@
       "gloss": "drive away (leave by vehicle)",
       "entries": {
         "en": [
-        {"lemma": "to drive away", "pos": "verb", "details": {"note": "leave by vehicle", "past": "drove away", "participle": "driven away"}, "sentences": ["The car drove away."]}
+        {"lemma": "to drive away", "pos": "verb", "details": {"note": "leave by vehicle", "past": "drove away", "participle": "driven away"}, "sentences": ["The car drives away."]}
         ],
         "nl": [
-        {"lemma": "wegrijden", "pos": "verb", "details": {"pastSingular": "reed weg", "pastPlural": "reden weg", "participle": "weggereden", "auxiliary": "zijn"}, "sentences": ["De auto reed weg."]}
+        {"lemma": "wegrijden", "pos": "verb", "details": {"pastSingular": "reed weg", "pastPlural": "reden weg", "participle": "weggereden", "auxiliary": "zijn"}, "sentences": ["De auto rijdt weg."]}
         ]
       }
     },
@@ -1817,10 +1817,10 @@
       "gloss": "run aground (verb)",
       "entries": {
         "en": [
-        {"lemma": "to run aground", "pos": "verb", "details": {"past": "ran aground", "participle": "run aground"}, "sentences": ["The ship ran aground."]}
+        {"lemma": "to run aground", "pos": "verb", "details": {"past": "ran aground", "participle": "run aground"}, "sentences": ["The ship runs aground."]}
         ],
         "nl": [
-        {"lemma": "stranden", "pos": "verb", "details": {"pastSingular": "strandde", "pastPlural": "strandden", "participle": "gestrand", "auxiliary": "zijn"}, "sentences": ["Het schip strandde."]}
+        {"lemma": "stranden", "pos": "verb", "details": {"pastSingular": "strandde", "pastPlural": "strandden", "participle": "gestrand", "auxiliary": "zijn"}, "sentences": ["Het schip strandt."]}
         ]
       }
     },

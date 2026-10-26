@@ -152,10 +152,10 @@
       "gloss": "me",
       "entries": {
         "en": [
-        {"lemma": "me", "pos": "pronoun", "sentences": ["He sees me.", "He gave it to me."]}
+        {"lemma": "me", "pos": "pronoun", "sentences": ["He sees me.", "He gives it to me."]}
         ],
         "nl": [
-        {"lemma": "mij", "pos": "pronoun", "details": {"note": "nadruk"}, "sentences": ["Hij gaf het aan mij."]},
+        {"lemma": "mij", "pos": "pronoun", "details": {"note": "nadruk"}, "sentences": ["Hij geeft het aan mij."]},
         {"lemma": "me", "pos": "pronoun", "details": {"note": "gewoon"}, "sentences": ["Hij ziet me."]}
         ]
       }
@@ -565,10 +565,10 @@
       "gloss": "such (plural)",
       "entries": {
         "en": [
-        {"lemma": "such", "pos": "determiner", "details": {"note": "plural"}, "sentences": ["I have never seen such houses."]}
+        {"lemma": "such", "pos": "determiner", "details": {"note": "plural"}, "sentences": ["I never see such houses."]}
         ],
         "nl": [
-        {"lemma": "zulke", "pos": "determiner", "sentences": ["Ik heb nog nooit zulke huizen gezien."]}
+        {"lemma": "zulke", "pos": "determiner", "sentences": ["Ik zie nooit zulke huizen."]}
         ]
       }
     },
@@ -589,10 +589,10 @@
       "gloss": "many (formal)",
       "entries": {
         "en": [
-        {"lemma": "many", "pos": "determiner", "details": {"note": "formal"}, "sentences": ["Many people came."]}
+        {"lemma": "many", "pos": "determiner", "details": {"note": "formal"}, "sentences": ["Many people come."]}
         ],
         "nl": [
-        {"lemma": "vele", "pos": "determiner", "sentences": ["Vele mensen kwamen."]}
+        {"lemma": "vele", "pos": "determiner", "sentences": ["Vele mensen komen."]}
         ]
       }
     },
@@ -625,10 +625,10 @@
       "gloss": "several (determiner)",
       "entries": {
         "en": [
-        {"lemma": "several", "pos": "determiner", "sentences": ["Several people came."]}
+        {"lemma": "several", "pos": "determiner", "sentences": ["Several people come."]}
         ],
         "nl": [
-        {"lemma": "meerdere", "pos": "determiner", "sentences": ["Meerdere mensen kwamen."]}
+        {"lemma": "meerdere", "pos": "determiner", "sentences": ["Meerdere mensen komen."]}
         ]
       }
     },
@@ -1033,7 +1033,7 @@
       "gloss": "thanks to (preposition)",
       "entries": {
         "en": [
-        {"lemma": "thanks to", "pos": "preposition", "sentences": ["Thanks to you it worked."]}
+        {"lemma": "thanks to", "pos": "preposition", "sentences": ["Thanks to you it works."]}
         ],
         "nl": [
         {"lemma": "dankzij", "pos": "preposition", "sentences": ["Dankzij jou is het gelukt."]}
@@ -1081,10 +1081,10 @@
       "gloss": "throughout (preposition)",
       "entries": {
         "en": [
-        {"lemma": "throughout", "pos": "preposition", "sentences": ["It rained throughout the day."]}
+        {"lemma": "throughout", "pos": "preposition", "sentences": ["It rains throughout the day."]}
         ],
         "nl": [
-        {"lemma": "gedurende", "pos": "preposition", "sentences": ["Het regende gedurende de hele dag."]}
+        {"lemma": "gedurende", "pos": "preposition", "sentences": ["Het regent gedurende de hele dag."]}
         ]
       }
     },
@@ -1201,10 +1201,10 @@
       "gloss": "except (conjunction)",
       "entries": {
         "en": [
-        {"lemma": "except", "pos": "conjunction", "sentences": ["Everyone came except John."]}
+        {"lemma": "except", "pos": "conjunction", "sentences": ["Everyone comes except John."]}
         ],
         "nl": [
-        {"lemma": "behalve", "pos": "conjunction", "sentences": ["Iedereen kwam behalve Jan."]}
+        {"lemma": "behalve", "pos": "conjunction", "sentences": ["Iedereen komt behalve Jan."]}
         ]
       }
     },
@@ -1333,10 +1333,10 @@
       "gloss": "because (of the fact that)",
       "entries": {
         "en": [
-        {"lemma": "because", "pos": "conjunction", "details": {"note": "of the fact that"}, "sentences": ["He is late because the train was late."]}
+        {"lemma": "because", "pos": "conjunction", "details": {"note": "of the fact that"}, "sentences": ["He is late because the train is late."]}
         ],
         "nl": [
-        {"lemma": "doordat", "pos": "conjunction", "sentences": ["Hij is te laat doordat de trein te laat was."]}
+        {"lemma": "doordat", "pos": "conjunction", "sentences": ["Hij is te laat doordat de trein te laat is."]}
         ]
       }
     },
@@ -1549,10 +1549,10 @@
       "gloss": "there too (present)",
       "entries": {
         "en": [
-        {"lemma": "there too", "pos": "adverb", "details": {"note": "present"}, "sentences": ["I was there too."]}
+        {"lemma": "there too", "pos": "adverb", "details": {"note": "present"}, "sentences": ["I am there too."]}
         ],
         "nl": [
-        {"lemma": "erbij", "pos": "adverb", "sentences": ["Ik was erbij."]}
+        {"lemma": "erbij", "pos": "adverb", "sentences": ["Ik ben erbij."]}
         ]
       }
     },
@@ -1753,10 +1753,10 @@
       "gloss": "because of that (adverb)",
       "entries": {
         "en": [
-        {"lemma": "because of that", "pos": "adverb", "sentences": ["He fell; because of that he is hurt."]}
+        {"lemma": "because of that", "pos": "adverb", "sentences": ["He falls; because of that he is hurt."]}
         ],
         "nl": [
-        {"lemma": "daardoor", "pos": "adverb", "sentences": ["Hij viel; daardoor is hij gewond."]}
+        {"lemma": "daardoor", "pos": "adverb", "sentences": ["Hij valt; daardoor is hij gewond."]}
         ]
       }
     },
@@ -1777,7 +1777,7 @@
       "gloss": "to that (reply)",
       "entries": {
         "en": [
-        {"lemma": "to that", "pos": "adverb", "details": {"note": "reply"}, "sentences": ["He replied to that."]}
+        {"lemma": "to that", "pos": "adverb", "details": {"note": "reply"}, "sentences": ["He replies to that."]}
         ],
         "nl": [
         {"lemma": "daarop", "pos": "adverb", "sentences": ["Daarop antwoordde hij."]}
@@ -2005,10 +2005,10 @@
       "gloss": "from what (adverb)",
       "entries": {
         "en": [
-        {"lemma": "from what", "pos": "adverb", "sentences": ["What did you learn that from?"]}
+        {"lemma": "from what", "pos": "adverb", "sentences": ["What do you learn that from?"]}
         ],
         "nl": [
-        {"lemma": "waarvan", "pos": "adverb", "sentences": ["Waarvan heb je dat geleerd?"]}
+        {"lemma": "waarvan", "pos": "adverb", "sentences": ["Waarvan leer je dat?"]}
         ]
       }
     },
@@ -2101,10 +2101,10 @@
       "gloss": "after which (adverb)",
       "entries": {
         "en": [
-        {"lemma": "after which", "pos": "adverb", "sentences": ["We ate, after which we walked."]}
+        {"lemma": "after which", "pos": "adverb", "sentences": ["We eat, after which we walk."]}
         ],
         "nl": [
-        {"lemma": "waarna", "pos": "adverb", "sentences": ["Wij aten, waarna wij wandelden."]}
+        {"lemma": "waarna", "pos": "adverb", "sentences": ["Wij eten, waarna wij wandelen."]}
         ]
       }
     }

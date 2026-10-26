@@ -5,10 +5,10 @@
       "gloss": "murder (verb)",
       "entries": {
         "en": [
-        {"lemma": "to murder", "pos": "verb", "details": {"past": "murdered", "participle": "murdered"}, "sentences": ["He murdered the man."]}
+        {"lemma": "to murder", "pos": "verb", "details": {"past": "murdered", "participle": "murdered"}, "sentences": ["He murders the man."]}
         ],
         "nl": [
-        {"lemma": "vermoorden", "pos": "verb", "details": {"pastSingular": "vermoordde", "pastPlural": "vermoordden", "participle": "vermoord", "auxiliary": "hebben"}, "sentences": ["Hij vermoordde de man."]}
+        {"lemma": "vermoorden", "pos": "verb", "details": {"pastSingular": "vermoordde", "pastPlural": "vermoordden", "participle": "vermoord", "auxiliary": "hebben"}, "sentences": ["Hij vermoordt de man."]}
         ]
       }
     },
@@ -521,10 +521,10 @@
       "gloss": "attack (verb)",
       "entries": {
         "en": [
-        {"lemma": "to attack", "pos": "verb", "details": {"past": "attacked", "participle": "attacked"}, "sentences": ["The dog attacked him."]}
+        {"lemma": "to attack", "pos": "verb", "details": {"past": "attacked", "participle": "attacked"}, "sentences": ["The dog attacks him."]}
         ],
         "nl": [
-        {"lemma": "aanvallen", "pos": "verb", "details": {"pastSingular": "viel aan", "pastPlural": "vielen aan", "participle": "aangevallen", "auxiliary": "hebben"}, "sentences": ["De hond viel hem aan."]}
+        {"lemma": "aanvallen", "pos": "verb", "details": {"pastSingular": "viel aan", "pastPlural": "vielen aan", "participle": "aangevallen", "auxiliary": "hebben"}, "sentences": ["De hond valt hem aan."]}
         ]
       }
     },
@@ -2657,10 +2657,10 @@
       "gloss": "found (verb)",
       "entries": {
         "en": [
-        {"lemma": "to found", "pos": "verb", "details": {"past": "founded", "participle": "founded"}, "sentences": ["They found a church."]}
+        {"lemma": "to found", "pos": "verb", "details": {"past": "founded", "participle": "founded"}, "sentences": ["He founds a church."]}
         ],
         "nl": [
-        {"lemma": "stichten", "pos": "verb", "details": {"pastSingular": "stichtte", "pastPlural": "stichtten", "participle": "gesticht", "auxiliary": "hebben"}, "sentences": ["Zij stichten een kerk."]}
+        {"lemma": "stichten", "pos": "verb", "details": {"pastSingular": "stichtte", "pastPlural": "stichtten", "participle": "gesticht", "auxiliary": "hebben"}, "sentences": ["Hij sticht een kerk."]}
         ]
       }
     },
@@ -3137,10 +3137,10 @@
       "gloss": "shooting (noun)",
       "entries": {
         "en": [
-        {"lemma": "shooting", "pos": "noun", "details": {"plural": "shootings"}, "sentences": ["There was a shooting."]}
+        {"lemma": "shooting", "pos": "noun", "details": {"plural": "shootings"}, "sentences": ["There is a shooting."]}
         ],
         "nl": [
-        {"lemma": "schietpartij", "pos": "noun", "details": {"article": "de", "plural": "schietpartijen"}, "sentences": ["Er was een schietpartij."]}
+        {"lemma": "schietpartij", "pos": "noun", "details": {"article": "de", "plural": "schietpartijen"}, "sentences": ["Er is een schietpartij."]}
         ]
       }
     },
@@ -5789,10 +5789,10 @@
       "gloss": "leak out (verb)",
       "entries": {
         "en": [
-        {"lemma": "to leak out", "pos": "verb", "details": {"past": "leaked out", "participle": "leaked out"}, "sentences": ["The news leaked out."]}
+        {"lemma": "to leak out", "pos": "verb", "details": {"past": "leaked out", "participle": "leaked out"}, "sentences": ["The news leaks out."]}
         ],
         "nl": [
-        {"lemma": "uitlekken", "pos": "verb", "details": {"pastSingular": "lekte uit", "pastPlural": "lekten uit", "participle": "uitgelekt", "auxiliary": "zijn"}, "sentences": ["Het nieuws lekte uit."]}
+        {"lemma": "uitlekken", "pos": "verb", "details": {"pastSingular": "lekte uit", "pastPlural": "lekten uit", "participle": "uitgelekt", "auxiliary": "zijn"}, "sentences": ["Het nieuws lekt uit."]}
         ]
       }
     },
@@ -5873,10 +5873,10 @@
       "gloss": "world war (noun)",
       "entries": {
         "en": [
-        {"lemma": "world war", "pos": "noun", "details": {"plural": "world wars"}, "sentences": ["The world war was long."]}
+        {"lemma": "world war", "pos": "noun", "details": {"plural": "world wars"}, "sentences": ["The world war is long."]}
         ],
         "nl": [
-        {"lemma": "wereldoorlog", "pos": "noun", "details": {"article": "de", "plural": "wereldoorlogen"}, "sentences": ["De wereldoorlog was lang."]}
+        {"lemma": "wereldoorlog", "pos": "noun", "details": {"article": "de", "plural": "wereldoorlogen"}, "sentences": ["De wereldoorlog is lang."]}
         ]
       }
     },

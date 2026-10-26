@@ -125,10 +125,10 @@
       "gloss": "fail (an exam)",
       "entries": {
         "en": [
-        {"lemma": "to fail", "pos": "verb", "details": {"note": "an exam", "past": "failed", "participle": "failed"}, "sentences": ["I failed the exam."]}
+        {"lemma": "to fail", "pos": "verb", "details": {"note": "an exam", "past": "failed", "participle": "failed"}, "sentences": ["I fail the exam."]}
         ],
         "nl": [
-        {"lemma": "zakken", "pos": "verb", "details": {"pastSingular": "zakte", "pastPlural": "zakten", "participle": "gezakt", "auxiliary": "zijn"}, "sentences": ["Ik ben voor het examen gezakt."]}
+        {"lemma": "zakken", "pos": "verb", "details": {"pastSingular": "zakte", "pastPlural": "zakten", "participle": "gezakt", "auxiliary": "zijn"}, "sentences": ["Ik zak voor het examen."]}
         ]
       }
     },
@@ -185,10 +185,10 @@
       "gloss": "succeed (pass)",
       "entries": {
         "en": [
-        {"lemma": "to succeed", "pos": "verb", "details": {"note": "pass", "past": "succeeded", "participle": "succeeded"}, "sentences": ["I succeeded."]}
+        {"lemma": "to succeed", "pos": "verb", "details": {"note": "pass", "past": "succeeded", "participle": "succeeded"}, "sentences": ["I succeed."]}
         ],
         "nl": [
-        {"lemma": "slagen", "pos": "verb", "details": {"pastSingular": "slaagde", "pastPlural": "slaagden", "participle": "geslaagd", "auxiliary": "zijn"}, "sentences": ["Ik ben geslaagd."]}
+        {"lemma": "slagen", "pos": "verb", "details": {"pastSingular": "slaagde", "pastPlural": "slaagden", "participle": "geslaagd", "auxiliary": "zijn"}, "sentences": ["Ik slaag."]}
         ]
       }
     },
@@ -257,10 +257,10 @@
       "gloss": "grade (noun)",
       "entries": {
         "en": [
-        {"lemma": "grade", "pos": "noun", "details": {"plural": "grades"}, "sentences": ["I got a good grade."]}
+        {"lemma": "grade", "pos": "noun", "details": {"plural": "grades"}, "sentences": ["I get a good grade."]}
         ],
         "nl": [
-        {"lemma": "cijfer", "pos": "noun", "details": {"article": "het", "plural": "cijfers"}, "sentences": ["Ik kreeg een goed cijfer."]}
+        {"lemma": "cijfer", "pos": "noun", "details": {"article": "het", "plural": "cijfers"}, "sentences": ["Ik krijg een goed cijfer."]}
         ]
       }
     },
