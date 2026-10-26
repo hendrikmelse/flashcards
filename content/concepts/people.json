@@ -761,10 +761,10 @@
       "gloss": "young man (noun)",
       "entries": {
         "en": [
-        {"lemma": "young man", "pos": "noun", "details": {"plural": "young men"}, "sentences": ["The *young man* carries the old lady's bag."]}
+        {"lemma": "young man", "pos": "noun", "details": {"plural": "young men"}, "sentences": ["The *young man* on the bus carries the old lady's heavy bag."]}
         ],
         "nl": [
-        {"lemma": "jongeman", "pos": "noun", "details": {"article": "de", "plural": "jongemannen"}, "sentences": ["De *jongeman* draagt de tas van de oude dame."]}
+        {"lemma": "jongeman", "pos": "noun", "details": {"article": "de", "plural": "jongemannen"}, "sentences": ["De *jongeman* in de bus draagt de zware tas van de oude dame."]}
         ]
       }
     },
@@ -1757,7 +1757,7 @@
       "gloss": "tempting (adjective)",
       "entries": {
         "en": [
-        {"lemma": "tempting", "pos": "adjective", "sentences": ["The cheap holiday offer is *tempting*, but I'm busy."]}
+        {"lemma": "tempting", "pos": "adjective", "sentences": ["The cheap holiday offer is *tempting*, but I am busy."]}
         ],
         "nl": [
         {"lemma": "verleidelijk", "pos": "adjective", "sentences": ["Het goedkope vakantieaanbod is heel *verleidelijk*, maar ik heb geen tijd."]}

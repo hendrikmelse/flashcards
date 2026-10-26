@@ -1484,7 +1484,7 @@
         {"lemma": "level", "pos": "noun", "details": {"plural": "levels"}, "sentences": ["The water *level* in the river is very high today."]}
         ],
         "nl": [
-        {"lemma": "niveau", "pos": "noun", "details": {"article": "het", "plural": "niveaus"}, "sentences": ["Het waterpeil is vandaag erg hoog; het *niveau* stijgt snel."]}
+        {"lemma": "niveau", "pos": "noun", "details": {"article": "het", "plural": "niveaus"}, "sentences": ["Het *niveau* van het water in de rivier is vandaag erg hoog."]}
         ]
       }
     },
@@ -1553,10 +1553,10 @@
       "gloss": "portion (noun)",
       "entries": {
         "en": [
-        {"lemma": "portion", "pos": "noun", "details": {"plural": "portions"}, "sentences": ["The restaurant gives me a big *portion* of rice."]}
+        {"lemma": "portion", "pos": "noun", "details": {"plural": "portions"}, "sentences": ["I eat a large *portion* of the cake alone."]}
         ],
         "nl": [
-        {"lemma": "gedeelte", "pos": "noun", "details": {"article": "het", "plural": "gedeelten"}, "sentences": ["Ik eet een groot *gedeelte* van de taart op."]}
+        {"lemma": "gedeelte", "pos": "noun", "details": {"article": "het", "plural": "gedeelten"}, "sentences": ["Ik eet een groot *gedeelte* van de taart in mijn eentje op."]}
         ]
       }
     },
@@ -1745,7 +1745,7 @@
       "gloss": "event (occurrence)",
       "entries": {
         "en": [
-        {"lemma": "event", "pos": "noun", "details": {"note": "occurrence", "plural": "events"}, "sentences": ["The city holds a big *event* every summer."]}
+        {"lemma": "event", "pos": "noun", "details": {"note": "occurrence", "plural": "events"}, "sentences": ["My sister's wedding is a lovely *event* for all of us."]}
         ],
         "nl": [
         {"lemma": "gebeurtenis", "pos": "noun", "details": {"article": "de", "plural": "gebeurtenissen"}, "sentences": ["De bruiloft van mijn zus is een mooie *gebeurtenis* voor ons allemaal."]}
@@ -2720,7 +2720,7 @@
         {"lemma": "stripe", "pos": "noun", "details": {"plural": "stripes"}, "sentences": ["The zebra has a black *stripe* on every leg."]}
         ],
         "nl": [
-        {"lemma": "streep", "pos": "noun", "details": {"article": "de", "plural": "strepen"}, "sentences": ["Het shirt van de scheidsrechter heeft een zwarte *streep*."]}
+        {"lemma": "streep", "pos": "noun", "details": {"article": "de", "plural": "strepen"}, "sentences": ["De zebra heeft op elk been een zwarte *streep*."]}
         ]
       }
     },
