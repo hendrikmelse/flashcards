@@ -210,8 +210,21 @@
     justify-self: center;
   }
 
+  /* A card's word: its note in small type directly under it. Run on together, a note that wrapped
+     left tall, empty lines (each line is as high as the large word). */
+  .study-word .note {
+    display: block;
+    line-height: 1.3;
+  }
+
+  /* With the note on a line of its own the word is two lines tall, so the flag stays level with the
+     first line instead of the middle (half the word's line, less half the flag, plus the margin above it). */
+  .flagged {
+    align-items: flex-start;
+  }
+
   .flagged .flag {
-    margin-top: 0.6rem;
+    margin-top: 1.1rem;
   }
 
   .toggle {

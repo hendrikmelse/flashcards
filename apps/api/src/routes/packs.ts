@@ -15,7 +15,7 @@ import {
   insertUserCards,
   loadEntries,
   loadSentences,
-  sentenceKey,
+  sentencesOf,
 } from "../content/queries.js";
 import { bareLemmaSql } from "../content/lemma-sql.js";
 import {
@@ -373,15 +373,17 @@ export async function packRoutes(
     const languagePair = [fromLanguage, toLanguage];
     const words = (await loadEntries(db, [concept.id], languagePair)).get(concept.id) ?? [];
     const sentences = await loadSentences(db, [concept.id], languagePair, 50);
+    const front = words.filter((e) => e.language === fromLanguage);
+    const back = words.filter((e) => e.language === toLanguage);
     return {
       conceptId: concept.id,
       fromLanguage,
       toLanguage,
-      front: words.filter((e) => e.language === fromLanguage),
-      back: words.filter((e) => e.language === toLanguage),
+      front,
+      back,
       sentences: {
-        front: sentences.get(sentenceKey(concept.id, fromLanguage)) ?? [],
-        back: sentences.get(sentenceKey(concept.id, toLanguage)) ?? [],
+        front: sentencesOf(sentences, concept.id, front),
+        back: sentencesOf(sentences, concept.id, back),
       },
     };
   });

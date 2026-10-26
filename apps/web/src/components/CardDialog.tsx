@@ -5,7 +5,7 @@ import { useDeckCard } from "../api/hooks";
 import { useConceptCard, useLanguages } from "../api/packs";
 import { useActiveLanguages } from "../hooks/useActiveLanguages";
 import { formatUntil } from "../lib/relativeTime";
-import { Entries, Forms, SentencePlaceholder, Sentences } from "./CardParts";
+import { Words } from "./CardParts";
 import { ReportProblem } from "./ReportProblem";
 import { displayLemma, entriesFor, languageName } from "./entries";
 
@@ -26,7 +26,7 @@ type Frame = {
   front: EntryView[];
   back: EntryView[];
   /** Undefined until they have loaded. */
-  sentences: { front: string[]; back: string[] } | undefined;
+  sentences: { front: string[][]; back: string[][] } | undefined;
   failed: boolean;
   /** Where the card stands, for a card in the deck. */
   facts?: readonly (readonly [string, string])[];
@@ -88,7 +88,7 @@ function CardFrame({
   }
 
   const title = entriesFor(front, fromLanguage).map(displayLemma).join(", ");
-  const noSentences = sentences && sentences.front.length === 0 && sentences.back.length === 0;
+  const noSentences = sentences && [...sentences.front, ...sentences.back].every((s) => s.length === 0);
 
   return createPortal(
     <div
@@ -114,15 +114,23 @@ function CardFrame({
         </p>
 
         <section aria-label="Front">
-          <Entries entries={front} language={fromLanguage} languages={languages} />
-          <Forms entries={front} />
-          {sentences ? <Sentences items={sentences.front} language={fromLanguage} /> : !failed && <SentencePlaceholder />}
+          <Words
+            entries={front}
+            sentences={sentences?.front}
+            language={fromLanguage}
+            languages={languages}
+            loadingSentences={!failed}
+          />
         </section>
 
         <section aria-label="Back" className="study-answer">
-          <Entries entries={back} language={toLanguage} languages={languages} />
-          <Forms entries={back} />
-          {sentences ? <Sentences items={sentences.back} language={toLanguage} /> : !failed && <SentencePlaceholder />}
+          <Words
+            entries={back}
+            sentences={sentences?.back}
+            language={toLanguage}
+            languages={languages}
+            loadingSentences={!failed}
+          />
         </section>
 
         {/* A blank line is kept here while loading, so the card does not change height when the

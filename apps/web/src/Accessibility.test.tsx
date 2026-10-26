@@ -23,7 +23,7 @@ const dog = {
   addedAt: "2025-12-31T00:00:00.000Z",
   front: [entry("en", "dog", { plural: "dogs" })],
   back: [entry("nl", "hond", { article: "de", plural: "honden" })],
-  sentences: { front: ["The dog barks."], back: ["De hond blaft."] },
+  sentences: { front: [["The dog barks."]], back: [["De hond blaft."]] },
 };
 const fish = {
   ...dog,
@@ -298,7 +298,7 @@ describe("reading the answer", () => {
     await user.click(await screen.findByRole("button", { name: "Show answer" }));
     const good = screen.getByRole("button", { name: "Good" });
     expect(good).toHaveFocus();
-    expect(good).toHaveAttribute("aria-describedby", "answer-word");
+    expect(good).toHaveAttribute("aria-describedby", "answer-word-0");
     expect(good.getAttribute("aria-describedby")).toBe(screen.getByText("de hond").closest("p")!.id);
   });
 });

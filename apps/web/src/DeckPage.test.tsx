@@ -66,7 +66,7 @@ describe("looking at a card in full", () => {
       back: [entry("nl", "hond", { article: "de", plural: "honden" })],
     });
   const houseCard = () => card("b", "house", "huis");
-  const sentences = { front: ["The dog barks.", "I walk the dog.", "A big dog."], back: ["De hond blaft."] };
+  const sentences = { front: [["The dog barks.", "I walk the dog.", "A big dog."]], back: [["De hond blaft."]] };
 
   beforeEach(() => {
     mock.handlers["GET /deck"] = () =>

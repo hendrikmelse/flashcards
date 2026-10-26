@@ -10,7 +10,7 @@ import {
   type Scope,
 } from "@flashcards/shared";
 import { bareLemmaSql } from "../content/lemma-sql.js";
-import { loadEntries, loadSentences, sentenceKey } from "../content/queries.js";
+import { loadEntries, loadSentences, sentencesOf } from "../content/queries.js";
 import { entries, userCards } from "../db/schema.js";
 import type { Db } from "../db/types.js";
 import { inScope } from "../study/scope.js";
@@ -152,11 +152,12 @@ export async function deckRoutes(app: FastifyInstance, { db }: { db: Db }) {
     const languages = [row.fromLanguage, row.toLanguage];
     const entries = await loadEntries(db, [row.conceptId], languages);
     const sentences = await loadSentences(db, [row.conceptId], languages, 50);
+    const card = cardView(row, entries.get(row.conceptId) ?? []);
     return {
-      card: cardView(row, entries.get(row.conceptId) ?? []),
+      card,
       sentences: {
-        front: sentences.get(sentenceKey(row.conceptId, row.fromLanguage)) ?? [],
-        back: sentences.get(sentenceKey(row.conceptId, row.toLanguage)) ?? [],
+        front: sentencesOf(sentences, row.conceptId, card.front),
+        back: sentencesOf(sentences, row.conceptId, card.back),
       },
     };
   });

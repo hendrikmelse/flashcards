@@ -98,15 +98,17 @@ describe("GET /deck/:id", () => {
 
   it("returns every example sentence for each side, in that side's language", async () => {
     const { sentences: s } = (await get(`/deck/${dogCard}`)).json();
-    expect(s.front.sort()).toEqual(["A big dog.", "I walk the dog.", "The dog barks."]); // all three, not just two
-    expect(s.back).toEqual(["De hond blaft."]);
+    expect(s.front).toHaveLength(1); // one list for each word of the side
+    expect(s.front[0].sort()).toEqual(["A big dog.", "I walk the dog.", "The dog barks."]); // all three, not just two
+    expect(s.back).toEqual([["De hond blaft."]]);
   });
 
   it("puts the sentences on the right side for the reverse direction", async () => {
     const { card, sentences: s } = (await get(`/deck/${reverseCard}`)).json();
     expect(card).toMatchObject({ fromLanguage: "nl", toLanguage: "en", state: "new" });
-    expect(s.front).toEqual(["De hond blaft."]);
-    expect(s.back).toHaveLength(3);
+    expect(s.front).toEqual([["De hond blaft."]]);
+    expect(s.back).toHaveLength(1);
+    expect(s.back[0]).toHaveLength(3);
   });
 
   it("says a card without sentences has none, rather than failing", async () => {
@@ -117,7 +119,7 @@ describe("GET /deck/:id", () => {
       .values({ userId: me, conceptId: cats[0]!.id, fromLanguage: "en", toLanguage: "nl" })
       .returning();
     const body = (await get(`/deck/${card!.id}`)).json();
-    expect(body.sentences).toEqual({ front: [], back: [] });
+    expect(body.sentences).toEqual({ front: [[]], back: [[]] });
     expect(body.card.front[0].lemma).toBe("house");
   });
 

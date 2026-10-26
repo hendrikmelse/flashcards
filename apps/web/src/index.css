@@ -1693,15 +1693,15 @@ a.button.secondary {
   gap: 0.75rem;
 }
 
-/* The flag stays level with the first word, not the middle of however many lines there are. */
-.flagged:has(.study-word > span:nth-child(2)) {
-  align-items: flex-start;
-}
-
 .flag {
   flex: none;
   border-radius: 3px;
   box-shadow: 0 0 0 1px color-mix(in srgb, var(--text) 25%, transparent);
+}
+
+/* The words of a side of a card, each with its forms and sentences, one after the other. */
+.entry-block + .entry-block {
+  margin-top: 1rem;
 }
 
 /* Rests on a chip of its own colors, cut by a slash. In light mode the chip is pale and the slash
@@ -1746,12 +1746,6 @@ a.button.secondary {
   overflow-wrap: anywhere;
 }
 
-/* Each word of a card on a line of its own, its note in small type directly under it. Run on
-   together, a note that wrapped left tall, empty lines (each line is as high as the large word). */
-.study-word > span {
-  display: block;
-}
-
 .study-word .pos,
 .study-word .note {
   font-size: 0.85rem;
@@ -1760,9 +1754,7 @@ a.button.secondary {
 }
 
 .study-word .note {
-  display: block;
   font-style: italic;
-  line-height: 1.3;
 }
 
 .sentence {
@@ -1814,12 +1806,6 @@ a.button.secondary {
 
 .forms dd {
   margin: 0;
-}
-
-.forms .forms-lemma {
-  margin-top: 0.4rem;
-  font-weight: 600;
-  color: var(--text);
 }
 
 button.reveal {

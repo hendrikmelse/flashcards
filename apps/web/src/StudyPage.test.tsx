@@ -19,7 +19,7 @@ const dog = {
   dueAt: "2026-01-01T00:00:00.000Z",
   front: [entry("en", "dog")],
   back: [entry("nl", "hond", { article: "de" })],
-  sentences: { front: ["The dog barks."], back: ["De hond blaft."] },
+  sentences: { front: [["The dog barks."]], back: [["De hond blaft."]] },
 };
 const house = {
   ...dog,
@@ -591,6 +591,32 @@ describe("a word's note", () => {
     await user.click(screen.getByRole("button", { name: "Show answer" }));
     expect(screen.getByText("[of a door]")).toHaveAttribute("lang", "en");
     expect(screen.getByText("[op een deur]")).toBeInTheDocument();
+  });
+
+  it("lists each word of a side with its own flag, forms, and sentences, one word after the other", async () => {
+    const user = userEvent.setup();
+    const place = {
+      ...dog,
+      id: "card-place",
+      fromLanguage: "en",
+      toLanguage: "nl",
+      front: [entry("en", "place")],
+      back: [entry("nl", "plaats", { article: "de", plural: "plaatsen" }), entry("nl", "plek", { article: "de", plural: "plekken" })],
+      sentences: { front: [["This is a nice *place*."]], back: [["Zij eindigde op de tweede *plaats*."], ["Dit is een mooie *plek*."]] },
+    };
+    studyWith([place]);
+    renderApp("/study");
+
+    await user.click(await screen.findByRole("button", { name: "Show answer" }));
+    const answer = screen.getByRole("region", { name: "Answer" });
+    const blocks = [...answer.querySelectorAll(".entry-block")];
+    expect(blocks).toHaveLength(2);
+    expect(blocks.map((b) => b.querySelector(".study-word")!.textContent)).toEqual(["de plaats", "de plek"]);
+    // Each has the flag, its own plural, and its own sentence, in that order.
+    expect(blocks.map((b) => b.querySelectorAll("svg.flag").length)).toEqual([1, 1]);
+    expect(blocks.map((b) => b.querySelector(".forms")?.textContent)).toEqual([expect.stringContaining("plaatsen"), expect.stringContaining("plekken")]);
+    expect(blocks.map((b) => b.querySelector(".sentence")?.textContent)).toEqual(["Zij eindigde op de tweede plaats.", "Dit is een mooie plek."]);
+    expect([...blocks[0]!.children].map((c) => c.className)).toEqual(["flagged", "forms", "sentence"]);
   });
 
   it("shows nothing extra for a word without one", async () => {
