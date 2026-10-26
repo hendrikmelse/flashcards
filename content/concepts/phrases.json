@@ -20,7 +20,7 @@
         {"lemma": "I am fine, thank you.", "pos": "phrase", "sentences": ["How was the trip? *I am fine*, thank you."]}
         ],
         "nl": [
-        {"lemma": "Het gaat goed, dank je.", "pos": "phrase", "sentences": ["Gaat het na die lange reis? *Het gaat goed*, dank je."]}
+        {"lemma": "Het gaat goed, dank je.", "pos": "phrase", "sentences": ["Hoe was de reis? *Het gaat goed*, dank je."]}
         ]
       }
     },
@@ -41,7 +41,7 @@
       "gloss": "My name is ... (phrase)",
       "entries": {
         "en": [
-        {"lemma": "My name is ...", "pos": "phrase", "sentences": ["Hello everyone, *my name is* Anna. I teach."]}
+        {"lemma": "My name is ...", "pos": "phrase", "sentences": ["Hello everyone, *my name is* Anna. I am a teacher."]}
         ],
         "nl": [
         {"lemma": "Ik heet ...", "pos": "phrase", "sentences": ["Hallo allemaal, *ik heet* Anna en ik ben lerares."]}
@@ -56,7 +56,7 @@
         {"lemma": "Nice to meet you.", "pos": "phrase", "sentences": ["I am John, Anna's colleague. *Nice to meet you*."]}
         ],
         "nl": [
-        {"lemma": "Aangenaam.", "pos": "phrase", "sentences": ["Ik ben Jan, een collega van Anna. *Aangenaam*, ik ben Piet."]}
+        {"lemma": "Aangenaam.", "pos": "phrase", "sentences": ["Ik ben Jan, een collega van Anna. *Aangenaam*."]}
         ]
       }
     },
@@ -89,7 +89,7 @@
       "gloss": "Thank you very much. (phrase)",
       "entries": {
         "en": [
-        {"lemma": "Thank you very much.", "pos": "phrase", "sentences": ["You carried my bags. *Thank you very much* for helping."]}
+        {"lemma": "Thank you very much.", "pos": "phrase", "sentences": ["You carried my bags upstairs. *Thank you very much* for your help."]}
         ],
         "nl": [
         {"lemma": "Hartelijk dank.", "pos": "phrase", "sentences": ["U droeg mijn tassen naar boven. *Hartelijk dank* voor uw hulp."]}
@@ -113,7 +113,7 @@
       "gloss": "See you tomorrow. (phrase)",
       "entries": {
         "en": [
-        {"lemma": "See you tomorrow.", "pos": "phrase", "sentences": ["My bus is here, so I go. *See you tomorrow*."]}
+        {"lemma": "See you tomorrow.", "pos": "phrase", "sentences": ["My bus is coming, so I must go. *See you tomorrow*."]}
         ],
         "nl": [
         {"lemma": "Tot morgen.", "pos": "phrase", "sentences": ["Mijn bus komt eraan, dus ik moet gaan. *Tot morgen*."]}
@@ -125,7 +125,7 @@
       "gloss": "See you later. (phrase)",
       "entries": {
         "en": [
-        {"lemma": "See you later.", "pos": "phrase", "sentences": ["I am off to buy milk. *See you later*."]}
+        {"lemma": "See you later.", "pos": "phrase", "sentences": ["I am off to buy milk at the shop. *See you later*."]}
         ],
         "nl": [
         {"lemma": "Tot straks.", "pos": "phrase", "sentences": ["Ik ga even melk halen bij de winkel. *Tot straks*."]}
@@ -161,7 +161,7 @@
       "gloss": "Get well soon! (phrase)",
       "entries": {
         "en": [
-        {"lemma": "Get well soon!", "pos": "phrase", "sentences": ["You have the flu? *Get well soon*, rest well!"]}
+        {"lemma": "Get well soon!", "pos": "phrase", "sentences": ["You have the flu? *Get well soon*, and rest well in bed!"]}
         ],
         "nl": [
         {"lemma": "Beterschap!", "pos": "phrase", "sentences": ["Heb je de griep? *Beterschap*, en rust lekker uit in bed!"]}
@@ -197,7 +197,7 @@
       "gloss": "Can you repeat that? (phrase)",
       "entries": {
         "en": [
-        {"lemma": "Can you repeat that?", "pos": "phrase", "sentences": ["The announcement is too quiet. *Can you repeat that*, please?"]}
+        {"lemma": "Can you repeat that?", "pos": "phrase", "sentences": ["The announcement on the train is too quiet. *Can you repeat that*, please?"]}
         ],
         "nl": [
         {"lemma": "Kunt u dat herhalen?", "pos": "phrase", "sentences": ["De omroep in de trein is te zacht. *Kunt u dat herhalen*, alstublieft?"]}
@@ -317,7 +317,7 @@
       "gloss": "I am hungry. (phrase)",
       "entries": {
         "en": [
-        {"lemma": "I am hungry.", "pos": "phrase", "sentences": ["We walk all day. *I am hungry*. Let us eat."]}
+        {"lemma": "I am hungry.", "pos": "phrase", "sentences": ["We walk all day and now *I am hungry*. Let us eat."]}
         ],
         "nl": [
         {"lemma": "Ik heb honger.", "pos": "phrase", "sentences": ["We lopen de hele dag en nu *heb ik honger*. Laten we eten."]}
@@ -332,7 +332,7 @@
         {"lemma": "I am thirsty.", "pos": "phrase", "sentences": ["After running in the sun, *I am thirsty*. Water, please."]}
         ],
         "nl": [
-        {"lemma": "Ik heb dorst.", "pos": "phrase", "sentences": ["Na het hardlopen in de zon *heb ik dorst*. Ik wil water."]}
+        {"lemma": "Ik heb dorst.", "pos": "phrase", "sentences": ["Na het hardlopen in de zon *heb ik dorst*. Water, alsjeblieft."]}
         ]
       }
     },
@@ -353,7 +353,7 @@
       "gloss": "I think so. (phrase)",
       "entries": {
         "en": [
-        {"lemma": "I think so.", "pos": "phrase", "sentences": ["Is Tom home yet? *I think so*, his car is outside."]}
+        {"lemma": "I think so.", "pos": "phrase", "sentences": ["Is Tom home from work yet? *I think so*, his car is outside."]}
         ],
         "nl": [
         {"lemma": "Dat denk ik wel.", "pos": "phrase", "sentences": ["Is Tom al thuis van zijn werk? *Dat denk ik wel*, zijn auto staat buiten."]}
@@ -380,7 +380,7 @@
         {"lemma": "No problem.", "pos": "phrase", "sentences": ["Sorry I am late. *No problem*, we just started."]}
         ],
         "nl": [
-        {"lemma": "Geen probleem.", "pos": "phrase", "sentences": ["Sorry dat ik te laat ben, de bus zat vol. *Geen probleem*, we zijn net begonnen."]}
+        {"lemma": "Geen probleem.", "pos": "phrase", "sentences": ["Sorry dat ik te laat ben. *Geen probleem*, we zijn net begonnen."]}
         ]
       }
     },
@@ -389,7 +389,7 @@
       "gloss": "What is that? (phrase)",
       "entries": {
         "en": [
-        {"lemma": "What is that?", "pos": "phrase", "sentences": ["There is a strange box here. *What is that*?"]}
+        {"lemma": "What is that?", "pos": "phrase", "sentences": ["There is a strange box on the table. *What is that*?"]}
         ],
         "nl": [
         {"lemma": "Wat is dat?", "pos": "phrase", "sentences": ["Er staat een vreemde doos op de tafel. *Wat is dat*?"]}
@@ -425,7 +425,7 @@
       "gloss": "It is delicious! (phrase)",
       "entries": {
         "en": [
-        {"lemma": "It is delicious!", "pos": "phrase", "sentences": ["You made this soup yourself. *It is delicious*!"]}
+        {"lemma": "It is delicious!", "pos": "phrase", "sentences": ["You made this soup yourself with fresh vegetables. *It is delicious*!"]}
         ],
         "nl": [
         {"lemma": "Het is lekker!", "pos": "phrase", "sentences": ["Je hebt deze soep met verse groenten gemaakt. *Het is lekker*!"]}
@@ -461,7 +461,7 @@
       "gloss": "I agree. (phrase)",
       "entries": {
         "en": [
-        {"lemma": "I agree.", "pos": "phrase", "sentences": ["We need more time for this job. *I agree*."]}
+        {"lemma": "I agree.", "pos": "phrase", "sentences": ["You say we need more time for this job. *I agree*."]}
         ],
         "nl": [
         {"lemma": "Ik ben het ermee eens.", "pos": "phrase", "sentences": ["Je zegt dat we meer tijd nodig hebben voor dit werk. *Ik ben het ermee eens*."]}
@@ -533,7 +533,7 @@
       "gloss": "I am sorry. (phrase)",
       "entries": {
         "en": [
-        {"lemma": "I am sorry.", "pos": "phrase", "sentences": ["My music is too loud tonight. *I am sorry*."]}
+        {"lemma": "I am sorry.", "pos": "phrase", "sentences": ["My music is too loud tonight. *I am sorry* for the noise."]}
         ],
         "nl": [
         {"lemma": "Het spijt me.", "pos": "phrase", "sentences": ["Mijn muziek staat vanavond te hard. *Het spijt me* van het lawaai."]}
@@ -581,7 +581,7 @@
       "gloss": "I am from the Netherlands. (phrase)",
       "entries": {
         "en": [
-        {"lemma": "I am from the Netherlands.", "pos": "phrase", "sentences": ["The guard asks me, and *I am from the Netherlands*."]}
+        {"lemma": "I am from the Netherlands.", "pos": "phrase", "sentences": ["At the border, the customs officer asks me, and *I am from the Netherlands*."]}
         ],
         "nl": [
         {"lemma": "Ik kom uit Nederland.", "pos": "phrase", "sentences": ["Bij de grens vraagt de douanier het mij en *ik kom uit Nederland*."]}
@@ -593,7 +593,7 @@
       "gloss": "How old are you? (phrase)",
       "entries": {
         "en": [
-        {"lemma": "How old are you?", "pos": "phrase", "sentences": ["The boy asks: *how old are you*? I am twelve."]}
+        {"lemma": "How old are you?", "pos": "phrase", "sentences": ["The boy asks his new girl neighbor: *how old are you*? I am twelve."]}
         ],
         "nl": [
         {"lemma": "Hoe oud ben je?", "pos": "phrase", "sentences": ["De jongen vraagt zijn nieuwe buurmeisje: *hoe oud ben je*? Ik ben twaalf."]}
@@ -605,7 +605,7 @@
       "gloss": "I have a question. (phrase)",
       "entries": {
         "en": [
-        {"lemma": "I have a question.", "pos": "phrase", "sentences": ["The lesson ends. Excuse me, *I have a question*."]}
+        {"lemma": "I have a question.", "pos": "phrase", "sentences": ["The teacher finishes the lesson. Excuse me, *I have a question*."]}
         ],
         "nl": [
         {"lemma": "Ik heb een vraag.", "pos": "phrase", "sentences": ["De lerares is klaar met de les. Pardon, *ik heb een vraag*."]}
@@ -620,7 +620,7 @@
         {"lemma": "I do not have time.", "pos": "phrase", "sentences": ["Sorry, *I do not have time* today, I have meetings."]}
         ],
         "nl": [
-        {"lemma": "Ik heb geen tijd.", "pos": "phrase", "sentences": ["Sorry, *ik heb* vandaag *geen tijd* vanwege mijn vergadering."]}
+        {"lemma": "Ik heb geen tijd.", "pos": "phrase", "sentences": ["Sorry, *ik heb* vandaag *geen tijd* vanwege mijn vergaderingen."]}
         ]
       }
     },
@@ -641,7 +641,7 @@
       "gloss": "I do not like it. (phrase)",
       "entries": {
         "en": [
-        {"lemma": "I do not like it.", "pos": "phrase", "sentences": ["The story is sad and long. *I do not like it*."]}
+        {"lemma": "I do not like it.", "pos": "phrase", "sentences": ["The story is too sad and too long. *I do not like it*."]}
         ],
         "nl": [
         {"lemma": "Ik vind het niet leuk.", "pos": "phrase", "sentences": ["Het verhaal is te treurig en te lang. *Ik vind het niet leuk*."]}

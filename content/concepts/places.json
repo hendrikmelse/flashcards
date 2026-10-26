@@ -104,7 +104,7 @@
         {"lemma": "deal", "pos": "noun", "details": {"plural": "deals"}, "sentences": ["We shake hands: we have a *deal* on the price."]}
         ],
         "nl": [
-        {"lemma": "deal", "pos": "noun", "details": {"article": "de", "plural": "deals"}, "sentences": ["We schudden elkaar de hand, want we hebben een *deal* over de prijs."]}
+        {"lemma": "deal", "pos": "noun", "details": {"article": "de", "plural": "deals"}, "sentences": ["We schudden elkaar de hand: we hebben een *deal* over de prijs."]}
         ]
       }
     },
@@ -125,7 +125,7 @@
       "gloss": "bar (noun)",
       "entries": {
         "en": [
-        {"lemma": "bar", "pos": "noun", "details": {"note": "a place for drinks", "plural": "bars"}, "sentences": ["After work, we go to a *bar* for drinks."]}
+        {"lemma": "bar", "pos": "noun", "details": {"note": "a place for drinks", "plural": "bars"}, "sentences": ["After work, we go to a *bar* for a cold drink."]}
         ],
         "nl": [
         {"lemma": "bar", "pos": "noun", "details": {"article": "de", "plural": "bars"}, "sentences": ["Na het werk gaan wij naar een *bar* voor een koud drankje."]}
@@ -149,7 +149,7 @@
       "gloss": "order (verb)",
       "entries": {
         "en": [
-        {"lemma": "to order", "pos": "verb", "details": {"past": "ordered", "participle": "ordered"}, "sentences": ["At the cafe, I *order* a coffee and cake."]}
+        {"lemma": "to order", "pos": "verb", "details": {"past": "ordered", "participle": "ordered"}, "sentences": ["At the cafe, I *order* a coffee and a small cake."]}
         ],
         "nl": [
         {"lemma": "bestellen", "pos": "verb", "details": {"pastSingular": "bestelde", "pastPlural": "bestelden", "participle": "besteld", "auxiliary": "hebben"}, "sentences": ["In het café *bestel* ik een koffie en een klein taartje."]}
@@ -173,7 +173,7 @@
       "gloss": "deliver (to the door)",
       "entries": {
         "en": [
-        {"lemma": "to deliver", "pos": "verb", "details": {"note": "to the door", "past": "delivered", "participle": "delivered"}, "sentences": ["He *delivers* the pizza to our door within twenty minutes."]}
+        {"lemma": "to deliver", "pos": "verb", "details": {"note": "to the door", "past": "delivered", "participle": "delivered"}, "sentences": ["He *delivers* the pizza to our front door within twenty minutes."]}
         ],
         "nl": [
         {"lemma": "bezorgen", "pos": "verb", "details": {"pastSingular": "bezorgde", "pastPlural": "bezorgden", "participle": "bezorgd", "auxiliary": "hebben"}, "sentences": ["Hij *bezorgt* de pizza binnen twintig minuten aan onze voordeur."]}
@@ -197,7 +197,7 @@
       "gloss": "garage (noun)",
       "entries": {
         "en": [
-        {"lemma": "garage", "pos": "noun", "details": {"plural": "garages"}, "sentences": ["The car is in the *garage* because of rain."]}
+        {"lemma": "garage", "pos": "noun", "details": {"plural": "garages"}, "sentences": ["The car is in the *garage* because of the heavy rain."]}
         ],
         "nl": [
         {"lemma": "garage", "pos": "noun", "details": {"article": "de", "plural": "garages"}, "sentences": ["De auto staat in de *garage* vanwege de zware regen."]}
@@ -269,7 +269,7 @@
       "gloss": "tower (noun)",
       "entries": {
         "en": [
-        {"lemma": "tower", "pos": "noun", "details": {"plural": "towers"}, "sentences": ["From the top of the *tower*, we see the city."]}
+        {"lemma": "tower", "pos": "noun", "details": {"plural": "towers"}, "sentences": ["From the top of the *tower*, we see the whole city."]}
         ],
         "nl": [
         {"lemma": "toren", "pos": "noun", "details": {"article": "de", "plural": "torens"}, "sentences": ["Vanaf de top van de *toren* zien we de hele stad."]}
@@ -341,7 +341,7 @@
       "gloss": "other side (noun)",
       "entries": {
         "en": [
-        {"lemma": "other side", "pos": "noun", "details": {"uncountable": true}, "sentences": ["The shop is on the *other side* of the street."]}
+        {"lemma": "other side", "pos": "noun", "details": {"uncountable": true}, "sentences": ["The shop is on the *other side* of the busy street."]}
         ],
         "nl": [
         {"lemma": "overkant", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["De winkel is aan de *overkant* van de drukke straat."]}
@@ -497,7 +497,7 @@
       "gloss": "pub (noun)",
       "entries": {
         "en": [
-        {"lemma": "pub", "pos": "noun", "details": {"plural": "pubs"}, "sentences": ["After the match, we go to the *pub* together."]}
+        {"lemma": "pub", "pos": "noun", "details": {"plural": "pubs"}, "sentences": ["After the match, we go to the *pub* with our team."]}
         ],
         "nl": [
         {"lemma": "kroeg", "pos": "noun", "details": {"article": "de", "plural": "kroegen"}, "sentences": ["Na de wedstrijd gaan wij met ons team naar de *kroeg*."]}
