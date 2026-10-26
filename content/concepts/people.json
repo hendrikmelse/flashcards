@@ -5,10 +5,10 @@
       "gloss": "man (adult male)",
       "entries": {
         "en": [
-        {"lemma": "man", "pos": "noun", "details": {"plural": "men"}, "sentences": ["The *man* is tall."]}
+        {"lemma": "man", "pos": "noun", "details": {"plural": "men"}, "sentences": ["The old *man* feeds the ducks every morning."]}
         ],
         "nl": [
-        {"lemma": "man", "pos": "noun", "details": {"article": "de", "plural": "mannen"}, "sentences": ["De *man* is lang."]}
+        {"lemma": "man", "pos": "noun", "details": {"article": "de", "plural": "mannen"}, "sentences": ["De oude *man* voert elke ochtend de eenden."]}
         ]
       }
     },
@@ -17,10 +17,10 @@
       "gloss": "woman (adult female)",
       "entries": {
         "en": [
-        {"lemma": "woman", "pos": "noun", "details": {"plural": "women"}, "sentences": ["The *woman* is reading a book."]}
+        {"lemma": "woman", "pos": "noun", "details": {"plural": "women"}, "sentences": ["The *woman* on the train reads a thick book."]}
         ],
         "nl": [
-        {"lemma": "vrouw", "pos": "noun", "details": {"article": "de", "plural": "vrouwen"}, "sentences": ["De *vrouw* leest een boek."]}
+        {"lemma": "vrouw", "pos": "noun", "details": {"article": "de", "plural": "vrouwen"}, "sentences": ["De *vrouw* in de trein leest een dik boek."]}
         ]
       }
     },
@@ -29,10 +29,10 @@
       "gloss": "child (young person)",
       "entries": {
         "en": [
-        {"lemma": "child", "pos": "noun", "details": {"plural": "children"}, "sentences": ["The *child* is sleeping."]}
+        {"lemma": "child", "pos": "noun", "details": {"plural": "children"}, "sentences": ["The tired *child* sleeps in the car seat."]}
         ],
         "nl": [
-        {"lemma": "kind", "pos": "noun", "details": {"article": "het", "plural": "kinderen"}, "sentences": ["Het *kind* slaapt."]}
+        {"lemma": "kind", "pos": "noun", "details": {"article": "het", "plural": "kinderen"}, "sentences": ["Het moede *kind* slaapt in het autostoeltje."]}
         ]
       }
     },
@@ -41,10 +41,10 @@
       "gloss": "boy (young male)",
       "entries": {
         "en": [
-        {"lemma": "boy", "pos": "noun", "details": {"plural": "boys"}, "sentences": ["The *boy* is playing."]}
+        {"lemma": "boy", "pos": "noun", "details": {"plural": "boys"}, "sentences": ["The *boy* plays football with his friends after school."]}
         ],
         "nl": [
-        {"lemma": "jongen", "pos": "noun", "details": {"article": "de", "plural": "jongens"}, "sentences": ["De *jongen* speelt."]}
+        {"lemma": "jongen", "pos": "noun", "details": {"article": "de", "plural": "jongens"}, "sentences": ["De *jongen* voetbalt na school met zijn vrienden."]}
         ]
       }
     },
@@ -53,10 +53,10 @@
       "gloss": "girl (young female)",
       "entries": {
         "en": [
-        {"lemma": "girl", "pos": "noun", "details": {"note": "standard", "plural": "girls"}, "sentences": ["The *girl* has a cat."]}
+        {"lemma": "girl", "pos": "noun", "details": {"note": "standard", "plural": "girls"}, "sentences": ["The *girl* gives her cat some milk."]}
         ],
         "nl": [
-        {"lemma": "meisje", "pos": "noun", "details": {"article": "het", "plural": "meisjes"}, "sentences": ["Het *meisje* heeft een kat."]}
+        {"lemma": "meisje", "pos": "noun", "details": {"article": "het", "plural": "meisjes"}, "sentences": ["Het *meisje* geeft haar kat wat melk."]}
         ]
       }
     },
@@ -65,10 +65,10 @@
       "gloss": "mother (female parent)",
       "entries": {
         "en": [
-        {"lemma": "mother", "pos": "noun", "details": {"plural": "mothers"}, "sentences": ["My *mother* is a doctor."]}
+        {"lemma": "mother", "pos": "noun", "details": {"plural": "mothers"}, "sentences": ["My *mother* cooks dinner for us every evening."]}
         ],
         "nl": [
-        {"lemma": "moeder", "pos": "noun", "details": {"article": "de", "plural": "moeders"}, "sentences": ["Mijn *moeder* is dokter."]}
+        {"lemma": "moeder", "pos": "noun", "details": {"article": "de", "plural": "moeders"}, "sentences": ["Mijn *moeder* kookt elke avond het eten voor ons."]}
         ]
       }
     },
@@ -77,10 +77,10 @@
       "gloss": "father (male parent)",
       "entries": {
         "en": [
-        {"lemma": "father", "pos": "noun", "details": {"plural": "fathers"}, "sentences": ["My *father* is at work."]}
+        {"lemma": "father", "pos": "noun", "details": {"plural": "fathers"}, "sentences": ["My *father* rides his bike to work every day."]}
         ],
         "nl": [
-        {"lemma": "vader", "pos": "noun", "details": {"article": "de", "plural": "vaders"}, "sentences": ["Mijn *vader* is op zijn werk."]}
+        {"lemma": "vader", "pos": "noun", "details": {"article": "de", "plural": "vaders"}, "sentences": ["Mijn *vader* fietst elke dag naar zijn werk."]}
         ]
       }
     },
@@ -89,10 +89,10 @@
       "gloss": "brother (male sibling)",
       "entries": {
         "en": [
-        {"lemma": "brother", "pos": "noun", "details": {"plural": "brothers"}, "sentences": ["My *brother* lives in the city."]}
+        {"lemma": "brother", "pos": "noun", "details": {"plural": "brothers"}, "sentences": ["My older *brother* studies in another city."]}
         ],
         "nl": [
-        {"lemma": "broer", "pos": "noun", "details": {"article": "de", "plural": "broers"}, "sentences": ["Mijn *broer* woont in de stad."]}
+        {"lemma": "broer", "pos": "noun", "details": {"article": "de", "plural": "broers"}, "sentences": ["Mijn oudere *broer* studeert in een andere stad."]}
         ]
       }
     },
@@ -101,10 +101,10 @@
       "gloss": "sister (female sibling)",
       "entries": {
         "en": [
-        {"lemma": "sister", "pos": "noun", "details": {"plural": "sisters"}, "sentences": ["My *sister* is young."]}
+        {"lemma": "sister", "pos": "noun", "details": {"plural": "sisters"}, "sentences": ["My *sister* plays the violin in a small orchestra."]}
         ],
         "nl": [
-        {"lemma": "zus", "pos": "noun", "details": {"article": "de", "plural": "zussen"}, "sentences": ["Mijn *zus* is jong."]}
+        {"lemma": "zus", "pos": "noun", "details": {"article": "de", "plural": "zussen"}, "sentences": ["Mijn *zus* speelt viool in een klein orkest."]}
         ]
       }
     },
@@ -113,10 +113,10 @@
       "gloss": "friend (person you like)",
       "entries": {
         "en": [
-        {"lemma": "friend", "pos": "noun", "details": {"plural": "friends"}, "sentences": ["He is my *friend*."]}
+        {"lemma": "friend", "pos": "noun", "details": {"plural": "friends"}, "sentences": ["My best *friend* helps me with my homework tonight."]}
         ],
         "nl": [
-        {"lemma": "vriend", "pos": "noun", "details": {"article": "de", "plural": "vrienden"}, "sentences": ["Hij is mijn *vriend*."]}
+        {"lemma": "vriend", "pos": "noun", "details": {"article": "de", "plural": "vrienden"}, "sentences": ["Mijn beste *vriend* helpt me vanavond met mijn huiswerk."]}
         ]
       }
     },
@@ -125,10 +125,10 @@
       "gloss": "baby (infant)",
       "entries": {
         "en": [
-        {"lemma": "baby", "pos": "noun", "details": {"plural": "babies"}, "sentences": ["The *baby* is sleeping."]}
+        {"lemma": "baby", "pos": "noun", "details": {"plural": "babies"}, "sentences": ["The *baby* laughs at her father's funny face."]}
         ],
         "nl": [
-        {"lemma": "baby", "pos": "noun", "details": {"article": "de", "plural": "baby's"}, "sentences": ["De *baby* slaapt."]}
+        {"lemma": "baby", "pos": "noun", "details": {"article": "de", "plural": "baby's"}, "sentences": ["De *baby* lacht om het grappige gezicht van haar vader."]}
         ]
       }
     },
@@ -137,10 +137,10 @@
       "gloss": "person (individual human)",
       "entries": {
         "en": [
-        {"lemma": "person", "pos": "noun", "details": {"plural": "people"}, "sentences": ["He is a nice *person*."]}
+        {"lemma": "person", "pos": "noun", "details": {"plural": "people"}, "sentences": ["She is a kind *person* who helps everyone."]}
         ],
         "nl": [
-        {"lemma": "persoon", "pos": "noun", "details": {"article": "de", "plural": "personen"}, "sentences": ["Hij is een aardige *persoon*."]}
+        {"lemma": "persoon", "pos": "noun", "details": {"article": "de", "plural": "personen"}, "sentences": ["Zij is een vriendelijke *persoon* die iedereen helpt."]}
         ]
       }
     },
@@ -149,10 +149,10 @@
       "gloss": "family (parents and children living together)",
       "entries": {
         "en": [
-        {"lemma": "family", "pos": "noun", "details": {"note": "parents and children", "plural": "families"}, "sentences": ["I have a big *family*."]}
+        {"lemma": "family", "pos": "noun", "details": {"note": "parents and children", "plural": "families"}, "sentences": ["A *family* of four lives in the small house."]}
         ],
         "nl": [
-        {"lemma": "gezin", "pos": "noun", "details": {"article": "het", "plural": "gezinnen"}, "sentences": ["Ik heb een groot *gezin*."]}
+        {"lemma": "gezin", "pos": "noun", "details": {"article": "het", "plural": "gezinnen"}, "sentences": ["Een *gezin* van vier woont in het kleine huis."]}
         ]
       }
     },
@@ -161,10 +161,10 @@
       "gloss": "teacher (person who teaches)",
       "entries": {
         "en": [
-        {"lemma": "teacher", "pos": "noun", "details": {"note": "any gender", "plural": "teachers"}, "sentences": ["The *teacher* is at school."]}
+        {"lemma": "teacher", "pos": "noun", "details": {"note": "any gender", "plural": "teachers"}, "sentences": ["The *teacher* explains the new words on the board."]}
         ],
         "nl": [
-        {"lemma": "leraar", "pos": "noun", "details": {"article": "de", "plural": "leraren"}, "sentences": ["De *leraar* is op school."]}
+        {"lemma": "leraar", "pos": "noun", "details": {"article": "de", "plural": "leraren"}, "sentences": ["De *leraar* legt de nieuwe woorden uit op het bord."]}
         ]
       }
     },
@@ -173,10 +173,10 @@
       "gloss": "doctor (medical professional)",
       "entries": {
         "en": [
-        {"lemma": "doctor", "pos": "noun", "details": {"plural": "doctors"}, "sentences": ["The *doctor* helps people."]}
+        {"lemma": "doctor", "pos": "noun", "details": {"plural": "doctors"}, "sentences": ["The *doctor* checks my throat and gives me medicine."]}
         ],
         "nl": [
-        {"lemma": "dokter", "pos": "noun", "details": {"article": "de", "plural": "dokters"}, "sentences": ["De *dokter* helpt mensen."]}
+        {"lemma": "dokter", "pos": "noun", "details": {"article": "de", "plural": "dokters"}, "sentences": ["De *dokter* kijkt naar mijn keel en geeft me medicijnen."]}
         ]
       }
     },
@@ -185,10 +185,10 @@
       "gloss": "people (noun)",
       "entries": {
         "en": [
-        {"lemma": "people", "pos": "noun", "details": {"pluralOnly": true}, "sentences": ["The *people* are friendly."]}
+        {"lemma": "people", "pos": "noun", "details": {"pluralOnly": true}, "sentences": ["Many *people* wait in line outside the new shop."]}
         ],
         "nl": [
-        {"lemma": "mensen", "pos": "noun", "details": {"article": "de", "pluralOnly": true}, "sentences": ["De *mensen* zijn vriendelijk."]}
+        {"lemma": "mensen", "pos": "noun", "details": {"article": "de", "pluralOnly": true}, "sentences": ["Veel *mensen* staan in de rij voor de nieuwe winkel."]}
         ]
       }
     },
@@ -197,10 +197,10 @@
       "gloss": "sir (noun)",
       "entries": {
         "en": [
-        {"lemma": "sir", "pos": "noun", "details": {"plural": "sirs"}, "sentences": ["*Sir*, can I help you?"]}
+        {"lemma": "sir", "pos": "noun", "details": {"plural": "sirs"}, "sentences": ["Excuse me, *sir*, your wallet is on the floor."]}
         ],
         "nl": [
-        {"lemma": "meneer", "pos": "noun", "details": {"article": "de", "plural": "meneren"}, "sentences": ["*Meneer*, kan ik u helpen?"]}
+        {"lemma": "meneer", "pos": "noun", "details": {"article": "de", "plural": "meneren"}, "sentences": ["Pardon, *meneer*, uw portemonnee ligt op de grond."]}
         ]
       }
     },
@@ -209,10 +209,10 @@
       "gloss": "darling (term of endearment)",
       "entries": {
         "en": [
-        {"lemma": "darling", "pos": "noun", "details": {"note": "term of endearment", "plural": "darlings"}, "sentences": ["Come here, *darling*."]}
+        {"lemma": "darling", "pos": "noun", "details": {"note": "term of endearment", "plural": "darlings"}, "sentences": ["Come here, *darling*, and give me a big hug."]}
         ],
         "nl": [
-        {"lemma": "schat", "pos": "noun", "details": {"note": "tegen iemand van wie je houdt", "article": "de", "plural": "schatten"}, "sentences": ["Kom hier, *schat*."]}
+        {"lemma": "schat", "pos": "noun", "details": {"note": "tegen iemand van wie je houdt", "article": "de", "plural": "schatten"}, "sentences": ["Kom eens hier, *schat*, en geef me een dikke knuffel."]}
         ]
       }
     },
@@ -221,10 +221,10 @@
       "gloss": "son (noun)",
       "entries": {
         "en": [
-        {"lemma": "son", "pos": "noun", "details": {"plural": "sons"}, "sentences": ["He is my *son*."]}
+        {"lemma": "son", "pos": "noun", "details": {"plural": "sons"}, "sentences": ["Our *son* learns to ride a bike this week."]}
         ],
         "nl": [
-        {"lemma": "zoon", "pos": "noun", "details": {"article": "de", "plural": "zonen"}, "sentences": ["Hij is mijn *zoon*."]}
+        {"lemma": "zoon", "pos": "noun", "details": {"article": "de", "plural": "zonen"}, "sentences": ["Onze *zoon* leert deze week fietsen."]}
         ]
       }
     },
@@ -233,10 +233,10 @@
       "gloss": "marry (verb)",
       "entries": {
         "en": [
-        {"lemma": "to marry", "pos": "verb", "details": {"past": "married", "participle": "married"}, "sentences": ["They *marry* in June."]}
+        {"lemma": "to marry", "pos": "verb", "details": {"past": "married", "participle": "married"}, "sentences": ["They *marry* in a small church in June."]}
         ],
         "nl": [
-        {"lemma": "trouwen", "pos": "verb", "details": {"pastSingular": "trouwde", "pastPlural": "trouwden", "participle": "getrouwd", "auxiliary": "zijn"}, "sentences": ["Zij *trouwen* in juni."]}
+        {"lemma": "trouwen", "pos": "verb", "details": {"pastSingular": "trouwde", "pastPlural": "trouwden", "participle": "getrouwd", "auxiliary": "zijn"}, "sentences": ["Zij *trouwen* in juni in een klein kerkje."]}
         ]
       }
     },
@@ -245,10 +245,10 @@
       "gloss": "family (relatives)",
       "entries": {
         "en": [
-        {"lemma": "family", "pos": "noun", "details": {"note": "relatives", "plural": "families"}, "sentences": ["Our *family* is big."]}
+        {"lemma": "family", "pos": "noun", "details": {"note": "relatives", "plural": "families"}, "sentences": ["All my *family* comes to our house at Christmas."]}
         ],
         "nl": [
-        {"lemma": "familie", "pos": "noun", "details": {"article": "de", "plural": "families"}, "sentences": ["Onze *familie* is groot."]}
+        {"lemma": "familie", "pos": "noun", "details": {"article": "de", "plural": "families"}, "sentences": ["Mijn hele *familie* komt met kerst bij ons thuis."]}
         ]
       }
     },
@@ -257,10 +257,10 @@
       "gloss": "gentleman (noun)",
       "entries": {
         "en": [
-        {"lemma": "gentleman", "pos": "noun", "details": {"plural": "gentlemans"}, "sentences": ["The *gentleman* is here."]}
+        {"lemma": "gentleman", "pos": "noun", "details": {"plural": "gentlemans"}, "sentences": ["The *gentleman* in the suit opens the door."]}
         ],
         "nl": [
-        {"lemma": "heer", "pos": "noun", "details": {"article": "de", "plural": "heren"}, "sentences": ["De *heer* is hier."]}
+        {"lemma": "heer", "pos": "noun", "details": {"article": "de", "plural": "heren"}, "sentences": ["De *heer* in het pak houdt de deur open."]}
         ]
       }
     },
@@ -269,10 +269,10 @@
       "gloss": "daughter (noun)",
       "entries": {
         "en": [
-        {"lemma": "daughter", "pos": "noun", "details": {"plural": "daughters"}, "sentences": ["She is my *daughter*."]}
+        {"lemma": "daughter", "pos": "noun", "details": {"plural": "daughters"}, "sentences": ["Our *daughter* sings in the school choir every Friday."]}
         ],
         "nl": [
-        {"lemma": "dochter", "pos": "noun", "details": {"article": "de", "plural": "dochters"}, "sentences": ["Zij is mijn *dochter*."]}
+        {"lemma": "dochter", "pos": "noun", "details": {"article": "de", "plural": "dochters"}, "sentences": ["Onze *dochter* zingt elke vrijdag in het schoolkoor."]}
         ]
       }
     },
@@ -281,10 +281,10 @@
       "gloss": "dad (noun)",
       "entries": {
         "en": [
-        {"lemma": "dad", "pos": "noun", "details": {"plural": "dads"}, "sentences": ["*Dad* is home."]}
+        {"lemma": "dad", "pos": "noun", "details": {"plural": "dads"}, "sentences": ["*Dad* makes pancakes for us on Sunday morning."]}
         ],
         "nl": [
-        {"lemma": "papa", "pos": "noun", "details": {"article": "de", "plural": "papa's"}, "sentences": ["*Papa* is thuis."]}
+        {"lemma": "papa", "pos": "noun", "details": {"article": "de", "plural": "papa's"}, "sentences": ["*Papa* bakt zondagochtend pannenkoeken voor ons."]}
         ]
       }
     },
@@ -293,10 +293,10 @@
       "gloss": "madam (noun)",
       "entries": {
         "en": [
-        {"lemma": "madam", "pos": "noun", "details": {"plural": "madams"}, "sentences": ["*Madam*, your coffee."]}
+        {"lemma": "madam", "pos": "noun", "details": {"plural": "madams"}, "sentences": ["Here is your coffee, *madam*, with some milk."]}
         ],
         "nl": [
-        {"lemma": "mevrouw", "pos": "noun", "details": {"article": "de", "plural": "mevrouwen"}, "sentences": ["*Mevrouw*, uw koffie."]}
+        {"lemma": "mevrouw", "pos": "noun", "details": {"article": "de", "plural": "mevrouwen"}, "sentences": ["Hier is uw koffie, *mevrouw*, met een beetje melk."]}
         ]
       }
     },
@@ -305,10 +305,10 @@
       "gloss": "lady (noun)",
       "entries": {
         "en": [
-        {"lemma": "lady", "pos": "noun", "details": {"plural": "ladies"}, "sentences": ["The *lady* is nice."]}
+        {"lemma": "lady", "pos": "noun", "details": {"plural": "ladies"}, "sentences": ["The old *lady* next door waters her flowers daily."]}
         ],
         "nl": [
-        {"lemma": "dame", "pos": "noun", "details": {"article": "de", "plural": "dames"}, "sentences": ["De *dame* is aardig."]}
+        {"lemma": "dame", "pos": "noun", "details": {"article": "de", "plural": "dames"}, "sentences": ["De oude *dame* hiernaast geeft elke dag water aan haar bloemen."]}
         ]
       }
     },
@@ -317,10 +317,10 @@
       "gloss": "mom (noun)",
       "entries": {
         "en": [
-        {"lemma": "mom", "pos": "noun", "details": {"plural": "moms"}, "sentences": ["*Mom* is home."]}
+        {"lemma": "mom", "pos": "noun", "details": {"plural": "moms"}, "sentences": ["*Mom* picks me up from school at four o'clock."]}
         ],
         "nl": [
-        {"lemma": "mama", "pos": "noun", "details": {"article": "de", "plural": "mama's"}, "sentences": ["*Mama* is thuis."]}
+        {"lemma": "mama", "pos": "noun", "details": {"article": "de", "plural": "mama's"}, "sentences": ["*Mama* haalt me om vier uur van school."]}
         ]
       }
     },
@@ -329,10 +329,10 @@
       "gloss": "love (noun)",
       "entries": {
         "en": [
-        {"lemma": "love", "pos": "noun", "details": {"uncountable": true}, "sentences": ["*Love* is beautiful."]}
+        {"lemma": "love", "pos": "noun", "details": {"uncountable": true}, "sentences": ["*Love* makes people do silly things for each other."]}
         ],
         "nl": [
-        {"lemma": "liefde", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["*Liefde* is mooi."]}
+        {"lemma": "liefde", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["*Liefde* laat mensen gekke dingen voor elkaar doen."]}
         ]
       }
     },
@@ -341,10 +341,10 @@
       "gloss": "girlfriend (noun)",
       "entries": {
         "en": [
-        {"lemma": "girlfriend", "pos": "noun", "details": {"plural": "girlfriends"}, "sentences": ["She is my *girlfriend*."]}
+        {"lemma": "girlfriend", "pos": "noun", "details": {"plural": "girlfriends"}, "sentences": ["His *girlfriend* waits for him outside the cinema."]}
         ],
         "nl": [
-        {"lemma": "vriendin", "pos": "noun", "details": {"article": "de", "plural": "vriendinnen"}, "sentences": ["Zij is mijn *vriendin*."]}
+        {"lemma": "vriendin", "pos": "noun", "details": {"article": "de", "plural": "vriendinnen"}, "sentences": ["Zijn *vriendin* wacht buiten op hem bij de bioscoop."]}
         ]
       }
     },
@@ -353,10 +353,10 @@
       "gloss": "guy (noun)",
       "entries": {
         "en": [
-        {"lemma": "guy", "pos": "noun", "details": {"plural": "guys"}, "sentences": ["That *guy* is nice."]}
+        {"lemma": "guy", "pos": "noun", "details": {"plural": "guys"}, "sentences": ["That *guy* at the bar tells really funny jokes."]}
         ],
         "nl": [
-        {"lemma": "vent", "pos": "noun", "details": {"article": "de", "plural": "venten"}, "sentences": ["Die *vent* is aardig."]}
+        {"lemma": "vent", "pos": "noun", "details": {"article": "de", "plural": "venten"}, "sentences": ["Die *vent* aan de bar vertelt echt grappige moppen."]}
         ]
       }
     },
@@ -365,10 +365,10 @@
       "gloss": "fellow (noun)",
       "entries": {
         "en": [
-        {"lemma": "fellow", "pos": "noun", "details": {"plural": "fellows"}, "sentences": ["He is a nice *fellow*."]}
+        {"lemma": "fellow", "pos": "noun", "details": {"plural": "fellows"}, "sentences": ["He is a friendly *fellow* and greets everyone."]}
         ],
         "nl": [
-        {"lemma": "kerel", "pos": "noun", "details": {"article": "de", "plural": "kerels"}, "sentences": ["Hij is een aardige *kerel*."]}
+        {"lemma": "kerel", "pos": "noun", "details": {"article": "de", "plural": "kerels"}, "sentences": ["Hij is een vriendelijke *kerel* en groet iedereen."]}
         ]
       }
     },
@@ -377,10 +377,10 @@
       "gloss": "girl (informal)",
       "entries": {
         "en": [
-        {"lemma": "girl", "pos": "noun", "details": {"note": "informal", "plural": "girls"}, "sentences": ["The *girl* laughs."]}
+        {"lemma": "girl", "pos": "noun", "details": {"note": "informal", "plural": "girls"}, "sentences": ["The *girl* next to me laughs at the joke."]}
         ],
         "nl": [
-        {"lemma": "meid", "pos": "noun", "details": {"article": "de", "plural": "meiden"}, "sentences": ["De *meid* lacht."]}
+        {"lemma": "meid", "pos": "noun", "details": {"article": "de", "plural": "meiden"}, "sentences": ["De *meid* naast mij lacht om de grap."]}
         ]
       }
     },
@@ -389,10 +389,10 @@
       "gloss": "parent (noun)",
       "entries": {
         "en": [
-        {"lemma": "parent", "pos": "noun", "details": {"plural": "parents"}, "sentences": ["My *parents* are kind."]}
+        {"lemma": "parent", "pos": "noun", "details": {"plural": "parents"}, "sentences": ["Every *parent* wants the best for their children."]}
         ],
         "nl": [
-        {"lemma": "ouder", "pos": "noun", "details": {"article": "de", "plural": "ouders"}, "sentences": ["Mijn *ouders* zijn aardig."]}
+        {"lemma": "ouder", "pos": "noun", "details": {"article": "de", "plural": "ouders"}, "sentences": ["Elke *ouder* wil het beste voor zijn kinderen."]}
         ]
       }
     },
@@ -401,10 +401,10 @@
       "gloss": "human (noun)",
       "entries": {
         "en": [
-        {"lemma": "human", "pos": "noun", "details": {"note": "a person", "plural": "humans"}, "sentences": ["Every *human* needs water."]}
+        {"lemma": "human", "pos": "noun", "details": {"note": "a person", "plural": "humans"}, "sentences": ["Every *human* needs water, food and some sleep."]}
         ],
         "nl": [
-        {"lemma": "mens", "pos": "noun", "details": {"article": "de", "plural": "mensen"}, "sentences": ["Elk *mens* heeft water nodig."]}
+        {"lemma": "mens", "pos": "noun", "details": {"article": "de", "plural": "mensen"}, "sentences": ["Elk *mens* heeft water, eten en slaap nodig."]}
         ]
       }
     },
@@ -413,10 +413,10 @@
       "gloss": "sweetheart (noun)",
       "entries": {
         "en": [
-        {"lemma": "sweetheart", "pos": "noun", "details": {"plural": "sweethearts"}, "sentences": ["Thank you, *sweetheart*."]}
+        {"lemma": "sweetheart", "pos": "noun", "details": {"plural": "sweethearts"}, "sentences": ["Thank you for the flowers, *sweetheart*, they are lovely."]}
         ],
         "nl": [
-        {"lemma": "lieverd", "pos": "noun", "details": {"article": "de", "plural": "lieverds"}, "sentences": ["Dank je, *lieverd*."]}
+        {"lemma": "lieverd", "pos": "noun", "details": {"article": "de", "plural": "lieverds"}, "sentences": ["Dank je voor de bloemen, *lieverd*, ze zijn prachtig."]}
         ]
       }
     },
@@ -425,10 +425,10 @@
       "gloss": "uncle (noun)",
       "entries": {
         "en": [
-        {"lemma": "uncle", "pos": "noun", "details": {"plural": "uncles"}, "sentences": ["My *uncle* lives in Utrecht."]}
+        {"lemma": "uncle", "pos": "noun", "details": {"plural": "uncles"}, "sentences": ["My *uncle* owns a farm with many cows."]}
         ],
         "nl": [
-        {"lemma": "oom", "pos": "noun", "details": {"article": "de", "plural": "ooms"}, "sentences": ["Mijn *oom* woont in Utrecht."]}
+        {"lemma": "oom", "pos": "noun", "details": {"article": "de", "plural": "ooms"}, "sentences": ["Mijn *oom* heeft een boerderij met veel koeien."]}
         ]
       }
     },
@@ -437,10 +437,10 @@
       "gloss": "in love (adjective)",
       "entries": {
         "en": [
-        {"lemma": "in love", "pos": "adjective", "sentences": ["She is *in love*."]}
+        {"lemma": "in love", "pos": "adjective", "sentences": ["She is *in love* and smiles all day long."]}
         ],
         "nl": [
-        {"lemma": "verliefd", "pos": "adjective", "sentences": ["Zij is *verliefd*."]}
+        {"lemma": "verliefd", "pos": "adjective", "sentences": ["Zij is *verliefd* en lacht de hele dag."]}
         ]
       }
     },
@@ -449,10 +449,10 @@
       "gloss": "guest (noun)",
       "entries": {
         "en": [
-        {"lemma": "guest", "pos": "noun", "details": {"plural": "guests"}, "sentences": ["The *guest* is welcome."]}
+        {"lemma": "guest", "pos": "noun", "details": {"plural": "guests"}, "sentences": ["Each *guest* gets a warm welcome at the door."]}
         ],
         "nl": [
-        {"lemma": "gast", "pos": "noun", "details": {"article": "de", "plural": "gasten"}, "sentences": ["De *gast* is welkom."]}
+        {"lemma": "gast", "pos": "noun", "details": {"article": "de", "plural": "gasten"}, "sentences": ["Elke *gast* krijgt een warm welkom bij de deur."]}
         ]
       }
     },
@@ -461,10 +461,10 @@
       "gloss": "relationship (noun)",
       "entries": {
         "en": [
-        {"lemma": "relationship", "pos": "noun", "details": {"plural": "relationships"}, "sentences": ["They have a good *relationship*."]}
+        {"lemma": "relationship", "pos": "noun", "details": {"plural": "relationships"}, "sentences": ["They have a good *relationship* because they talk openly."]}
         ],
         "nl": [
-        {"lemma": "relatie", "pos": "noun", "details": {"article": "de", "plural": "relaties"}, "sentences": ["Zij hebben een goede *relatie*."]}
+        {"lemma": "relatie", "pos": "noun", "details": {"article": "de", "plural": "relaties"}, "sentences": ["Zij hebben een goede *relatie* omdat ze open praten."]}
         ]
       }
     },
@@ -473,10 +473,10 @@
       "gloss": "marriage (noun)",
       "entries": {
         "en": [
-        {"lemma": "marriage", "pos": "noun", "details": {"plural": "marriages"}, "sentences": ["The *marriage* is happy."]}
+        {"lemma": "marriage", "pos": "noun", "details": {"plural": "marriages"}, "sentences": ["Their *marriage* is happy after twenty years together."]}
         ],
         "nl": [
-        {"lemma": "huwelijk", "pos": "noun", "details": {"article": "het", "plural": "huwelijken"}, "sentences": ["Het *huwelijk* is gelukkig."]}
+        {"lemma": "huwelijk", "pos": "noun", "details": {"article": "het", "plural": "huwelijken"}, "sentences": ["Hun *huwelijk* is gelukkig na twintig jaar samen."]}
         ]
       }
     },
@@ -485,10 +485,10 @@
       "gloss": "partner (noun)",
       "entries": {
         "en": [
-        {"lemma": "partner", "pos": "noun", "details": {"plural": "partners"}, "sentences": ["My *partner* is at home."]}
+        {"lemma": "partner", "pos": "noun", "details": {"plural": "partners"}, "sentences": ["My *partner* and I share the housework equally."]}
         ],
         "nl": [
-        {"lemma": "partner", "pos": "noun", "details": {"article": "de", "plural": "partners"}, "sentences": ["Mijn *partner* is thuis."]}
+        {"lemma": "partner", "pos": "noun", "details": {"article": "de", "plural": "partners"}, "sentences": ["Mijn *partner* en ik verdelen het huishouden eerlijk."]}
         ]
       }
     },
@@ -497,10 +497,10 @@
       "gloss": "separate (divorce)",
       "entries": {
         "en": [
-        {"lemma": "to separate", "pos": "verb", "details": {"note": "divorce", "past": "separated", "participle": "separated"}, "sentences": ["They *separate*."]}
+        {"lemma": "to separate", "pos": "verb", "details": {"note": "divorce", "past": "separated", "participle": "separated"}, "sentences": ["They *separate* and sell the house together."]}
         ],
         "nl": [
-        {"lemma": "scheiden", "pos": "verb", "details": {"pastSingular": "scheidde", "pastPlural": "scheidden", "participle": "gescheiden", "auxiliary": "hebben/zijn"}, "sentences": ["Zij *scheiden*."]}
+        {"lemma": "scheiden", "pos": "verb", "details": {"pastSingular": "scheidde", "pastPlural": "scheidden", "participle": "gescheiden", "auxiliary": "hebben/zijn"}, "sentences": ["Zij *scheiden* en verkopen samen het huis."]}
         ]
       }
     },
@@ -509,10 +509,10 @@
       "gloss": "grandma (noun)",
       "entries": {
         "en": [
-        {"lemma": "grandma", "pos": "noun", "details": {"plural": "grandmas"}, "sentences": ["*Grandma* is cooking."]}
+        {"lemma": "grandma", "pos": "noun", "details": {"plural": "grandmas"}, "sentences": ["*Grandma* is cooking soup for the whole family."]}
         ],
         "nl": [
-        {"lemma": "oma", "pos": "noun", "details": {"article": "de", "plural": "oma's"}, "sentences": ["*Oma* kookt."]}
+        {"lemma": "oma", "pos": "noun", "details": {"article": "de", "plural": "oma's"}, "sentences": ["*Oma* kookt soep voor het hele gezin."]}
         ]
       }
     },
@@ -521,10 +521,10 @@
       "gloss": "hero (noun)",
       "entries": {
         "en": [
-        {"lemma": "hero", "pos": "noun", "details": {"plural": "heroes"}, "sentences": ["He is a *hero*."]}
+        {"lemma": "hero", "pos": "noun", "details": {"plural": "heroes"}, "sentences": ["The firefighter is a *hero* to the whole town."]}
         ],
         "nl": [
-        {"lemma": "held", "pos": "noun", "details": {"article": "de", "plural": "helden"}, "sentences": ["Hij is een *held*."]}
+        {"lemma": "held", "pos": "noun", "details": {"article": "de", "plural": "helden"}, "sentences": ["De brandweerman is een *held* voor de hele stad."]}
         ]
       }
     },
@@ -533,10 +533,10 @@
       "gloss": "master (noun)",
       "entries": {
         "en": [
-        {"lemma": "master", "pos": "noun", "details": {"plural": "masters"}, "sentences": ["The *master* teaches."]}
+        {"lemma": "master", "pos": "noun", "details": {"plural": "masters"}, "sentences": ["The old *master* teaches the young apprentice his craft."]}
         ],
         "nl": [
-        {"lemma": "meester", "pos": "noun", "details": {"article": "de", "plural": "meesters"}, "sentences": ["De *meester* leert les."]}
+        {"lemma": "meester", "pos": "noun", "details": {"article": "de", "plural": "meesters"}, "sentences": ["De oude *meester* leert de jonge leerling zijn vak."]}
         ]
       }
     },
@@ -545,10 +545,10 @@
       "gloss": "aunt (noun)",
       "entries": {
         "en": [
-        {"lemma": "aunt", "pos": "noun", "details": {"plural": "aunts"}, "sentences": ["My *aunt* lives here."]}
+        {"lemma": "aunt", "pos": "noun", "details": {"plural": "aunts"}, "sentences": ["My *aunt* bakes apple pie when we visit."]}
         ],
         "nl": [
-        {"lemma": "tante", "pos": "noun", "details": {"article": "de", "plural": "tantes"}, "sentences": ["Mijn *tante* woont hier."]}
+        {"lemma": "tante", "pos": "noun", "details": {"article": "de", "plural": "tantes"}, "sentences": ["Mijn *tante* bakt appeltaart als wij op bezoek komen."]}
         ]
       }
     },
@@ -557,10 +557,10 @@
       "gloss": "queen (noun)",
       "entries": {
         "en": [
-        {"lemma": "queen", "pos": "noun", "details": {"plural": "queens"}, "sentences": ["The *queen* is old."]}
+        {"lemma": "queen", "pos": "noun", "details": {"plural": "queens"}, "sentences": ["The *queen* waves from the palace balcony."]}
         ],
         "nl": [
-        {"lemma": "koningin", "pos": "noun", "details": {"article": "de", "plural": "koninginnen"}, "sentences": ["De *koningin* is oud."]}
+        {"lemma": "koningin", "pos": "noun", "details": {"article": "de", "plural": "koninginnen"}, "sentences": ["De *koningin* zwaait vanaf het balkon van het paleis."]}
         ]
       }
     },
@@ -569,10 +569,10 @@
       "gloss": "grandpa (noun)",
       "entries": {
         "en": [
-        {"lemma": "grandpa", "pos": "noun", "details": {"plural": "grandpas"}, "sentences": ["*Grandpa* is old."]}
+        {"lemma": "grandpa", "pos": "noun", "details": {"plural": "grandpas"}, "sentences": ["*Grandpa* tells us old stories by the fireplace."]}
         ],
         "nl": [
-        {"lemma": "opa", "pos": "noun", "details": {"article": "de", "plural": "opa's"}, "sentences": ["*Opa* is oud."]}
+        {"lemma": "opa", "pos": "noun", "details": {"article": "de", "plural": "opa's"}, "sentences": ["*Opa* vertelt ons oude verhalen bij de open haard."]}
         ]
       }
     },
@@ -581,10 +581,10 @@
       "gloss": "leader (noun)",
       "entries": {
         "en": [
-        {"lemma": "leader", "pos": "noun", "details": {"plural": "leaders"}, "sentences": ["The *leader* speaks."]}
+        {"lemma": "leader", "pos": "noun", "details": {"plural": "leaders"}, "sentences": ["The *leader* speaks to the team before the match."]}
         ],
         "nl": [
-        {"lemma": "leider", "pos": "noun", "details": {"article": "de", "plural": "leiders"}, "sentences": ["De *leider* spreekt."]}
+        {"lemma": "leider", "pos": "noun", "details": {"article": "de", "plural": "leiders"}, "sentences": ["De *leider* spreekt het team toe voor de wedstrijd."]}
         ]
       }
     },
@@ -593,10 +593,10 @@
       "gloss": "sheriff (noun)",
       "entries": {
         "en": [
-        {"lemma": "sheriff", "pos": "noun", "details": {"plural": "sheriffs"}, "sentences": ["The *sheriff* arrives."]}
+        {"lemma": "sheriff", "pos": "noun", "details": {"plural": "sheriffs"}, "sentences": ["The *sheriff* arrives in the small town on horseback."]}
         ],
         "nl": [
-        {"lemma": "sheriff", "pos": "noun", "details": {"article": "de", "plural": "sheriffs"}, "sentences": ["De *sheriff* komt aan."]}
+        {"lemma": "sheriff", "pos": "noun", "details": {"article": "de", "plural": "sheriffs"}, "sentences": ["De *sheriff* komt te paard aan in het stadje."]}
         ]
       }
     },
@@ -605,10 +605,10 @@
       "gloss": "kiss (verb)",
       "entries": {
         "en": [
-        {"lemma": "to kiss", "pos": "verb", "details": {"past": "kissed", "participle": "kissed"}, "sentences": ["He *kisses* her."]}
+        {"lemma": "to kiss", "pos": "verb", "details": {"past": "kissed", "participle": "kissed"}, "sentences": ["He *kisses* her cheek to say goodbye."]}
         ],
         "nl": [
-        {"lemma": "kussen", "pos": "verb", "details": {"note": "met je lippen", "pastSingular": "kuste", "pastPlural": "kusten", "participle": "gekust", "auxiliary": "hebben"}, "sentences": ["Hij *kust* haar."]}
+        {"lemma": "kussen", "pos": "verb", "details": {"note": "met je lippen", "pastSingular": "kuste", "pastPlural": "kusten", "participle": "gekust", "auxiliary": "hebben"}, "sentences": ["Hij *kust* haar op de wang om gedag te zeggen."]}
         ]
       }
     },
@@ -617,10 +617,10 @@
       "gloss": "prince (noun)",
       "entries": {
         "en": [
-        {"lemma": "prince", "pos": "noun", "details": {"plural": "princes"}, "sentences": ["The *prince* is young."]}
+        {"lemma": "prince", "pos": "noun", "details": {"plural": "princes"}, "sentences": ["The young *prince* lives in a castle."]}
         ],
         "nl": [
-        {"lemma": "prins", "pos": "noun", "details": {"article": "de", "plural": "prinsen"}, "sentences": ["De *prins* is jong."]}
+        {"lemma": "prins", "pos": "noun", "details": {"article": "de", "plural": "prinsen"}, "sentences": ["De jonge *prins* woont in een kasteel."]}
         ]
       }
     },
@@ -629,10 +629,10 @@
       "gloss": "kiss (noun)",
       "entries": {
         "en": [
-        {"lemma": "kiss", "pos": "noun", "details": {"note": "a light kiss", "plural": "kisses"}, "sentences": ["He gives her a *kiss*."]}
+        {"lemma": "kiss", "pos": "noun", "details": {"note": "a light kiss", "plural": "kisses"}, "sentences": ["He gives her a quick *kiss* before work."]}
         ],
         "nl": [
-        {"lemma": "kus", "pos": "noun", "details": {"article": "de", "plural": "kussen"}, "sentences": ["Hij geeft haar een *kus*."]}
+        {"lemma": "kus", "pos": "noun", "details": {"article": "de", "plural": "kussen"}, "sentences": ["Hij geeft haar een snelle *kus* voor hij naar zijn werk gaat."]}
         ]
       }
     },
@@ -641,10 +641,10 @@
       "gloss": "princess (noun)",
       "entries": {
         "en": [
-        {"lemma": "princess", "pos": "noun", "details": {"plural": "princesses"}, "sentences": ["The *princess* lives in the castle."]}
+        {"lemma": "princess", "pos": "noun", "details": {"plural": "princesses"}, "sentences": ["The *princess* dances with the prince at the ball."]}
         ],
         "nl": [
-        {"lemma": "prinses", "pos": "noun", "details": {"article": "de", "plural": "prinsessen"}, "sentences": ["De *prinses* woont in het kasteel."]}
+        {"lemma": "prinses", "pos": "noun", "details": {"article": "de", "plural": "prinsessen"}, "sentences": ["De *prinses* danst met de prins op het bal."]}
         ]
       }
     },
@@ -653,10 +653,10 @@
       "gloss": "miss (form of address)",
       "entries": {
         "en": [
-        {"lemma": "miss", "pos": "noun", "details": {"note": "form of address", "plural": "misses"}, "sentences": ["*Miss*, may I ask something?"]}
+        {"lemma": "miss", "pos": "noun", "details": {"note": "form of address", "plural": "misses"}, "sentences": ["*Miss*, may I ask where the library is?"]}
         ],
         "nl": [
-        {"lemma": "juffrouw", "pos": "noun", "details": {"article": "de", "plural": "juffrouwen"}, "sentences": ["*Juffrouw*, mag ik iets vragen?"]}
+        {"lemma": "juffrouw", "pos": "noun", "details": {"article": "de", "plural": "juffrouwen"}, "sentences": ["*Juffrouw*, mag ik vragen waar de bibliotheek is?"]}
         ]
       }
     },
@@ -665,10 +665,10 @@
       "gloss": "wedding (noun)",
       "entries": {
         "en": [
-        {"lemma": "wedding", "pos": "noun", "details": {"plural": "weddings"}, "sentences": ["The *wedding* is in June."]}
+        {"lemma": "wedding", "pos": "noun", "details": {"plural": "weddings"}, "sentences": ["The *wedding* takes place in a garden in June."]}
         ],
         "nl": [
-        {"lemma": "bruiloft", "pos": "noun", "details": {"article": "de", "plural": "bruiloften"}, "sentences": ["De *bruiloft* is in juni."]}
+        {"lemma": "bruiloft", "pos": "noun", "details": {"article": "de", "plural": "bruiloften"}, "sentences": ["De *bruiloft* is in juni in een mooie tuin."]}
         ]
       }
     },
@@ -677,10 +677,10 @@
       "gloss": "niece (noun)",
       "entries": {
         "en": [
-        {"lemma": "niece", "pos": "noun", "details": {"plural": "nieces"}, "sentences": ["My *niece* is young."]}
+        {"lemma": "niece", "pos": "noun", "details": {"plural": "nieces"}, "sentences": ["My *niece* draws a picture for her grandmother."]}
         ],
         "nl": [
-        {"lemma": "nicht", "pos": "noun", "details": {"note": "de dochter van een broer of zus", "article": "de", "plural": "nichten"}, "sentences": ["Mijn *nicht* is jong."]}
+        {"lemma": "nicht", "pos": "noun", "details": {"note": "de dochter van een broer of zus", "article": "de", "plural": "nichten"}, "sentences": ["Mijn *nicht* tekent een tekening voor haar oma."]}
         ]
       }
     },
@@ -689,10 +689,10 @@
       "gloss": "slave (noun)",
       "entries": {
         "en": [
-        {"lemma": "slave", "pos": "noun", "details": {"plural": "slaves"}, "sentences": ["The *slave* is free."]}
+        {"lemma": "slave", "pos": "noun", "details": {"plural": "slaves"}, "sentences": ["In the old story, a *slave* finally becomes free."]}
         ],
         "nl": [
-        {"lemma": "slaaf", "pos": "noun", "details": {"article": "de", "plural": "slaven"}, "sentences": ["De *slaaf* is vrij."]}
+        {"lemma": "slaaf", "pos": "noun", "details": {"article": "de", "plural": "slaven"}, "sentences": ["In het oude verhaal wordt een *slaaf* eindelijk vrij."]}
         ]
       }
     },
@@ -701,10 +701,10 @@
       "gloss": "husband (noun)",
       "entries": {
         "en": [
-        {"lemma": "husband", "pos": "noun", "details": {"plural": "husbands"}, "sentences": ["My *husband* is home."]}
+        {"lemma": "husband", "pos": "noun", "details": {"plural": "husbands"}, "sentences": ["My *husband* cooks dinner while I help the kids."]}
         ],
         "nl": [
-        {"lemma": "echtgenoot", "pos": "noun", "details": {"article": "de", "plural": "echtgenoten"}, "sentences": ["Mijn *echtgenoot* is thuis."]}
+        {"lemma": "echtgenoot", "pos": "noun", "details": {"article": "de", "plural": "echtgenoten"}, "sentences": ["Mijn *echtgenoot* kookt het eten terwijl ik de kinderen help."]}
         ]
       }
     },
@@ -713,10 +713,10 @@
       "gloss": "cheat (verb)",
       "entries": {
         "en": [
-        {"lemma": "to cheat", "pos": "verb", "details": {"past": "cheated", "participle": "cheated"}, "sentences": ["He *cheats* his friend."]}
+        {"lemma": "to cheat", "pos": "verb", "details": {"past": "cheated", "participle": "cheated"}, "sentences": ["He *cheats* his friend and takes the money."]}
         ],
         "nl": [
-        {"lemma": "bedriegen", "pos": "verb", "details": {"pastSingular": "bedroog", "pastPlural": "bedrogen", "participle": "bedrogen", "auxiliary": "hebben"}, "sentences": ["Hij *bedriegt* zijn vriend."]}
+        {"lemma": "bedriegen", "pos": "verb", "details": {"pastSingular": "bedroog", "pastPlural": "bedrogen", "participle": "bedrogen", "auxiliary": "hebben"}, "sentences": ["Hij *bedriegt* zijn vriend en neemt het geld."]}
         ]
       }
     },
@@ -725,10 +725,10 @@
       "gloss": "neighbor (noun)",
       "entries": {
         "en": [
-        {"lemma": "neighbor", "pos": "noun", "details": {"note": "any gender", "plural": "neighbors"}, "sentences": ["My *neighbor* is nice."]}
+        {"lemma": "neighbor", "pos": "noun", "details": {"note": "any gender", "plural": "neighbors"}, "sentences": ["My *neighbor* waters my plants when I am away."]}
         ],
         "nl": [
-        {"lemma": "buur", "pos": "noun", "details": {"article": "de", "plural": "buren"}, "sentences": ["Mijn *buur*man is aardig."]}
+        {"lemma": "buur", "pos": "noun", "details": {"article": "de", "plural": "buren"}, "sentences": ["Mijn *buur* geeft mijn planten water als ik weg ben."]}
         ]
       }
     },
@@ -737,10 +737,10 @@
       "gloss": "romantic (adjective)",
       "entries": {
         "en": [
-        {"lemma": "romantic", "pos": "adjective", "sentences": ["The dinner is *romantic*."]}
+        {"lemma": "romantic", "pos": "adjective", "sentences": ["The candles make the dinner very *romantic* tonight."]}
         ],
         "nl": [
-        {"lemma": "romantisch", "pos": "adjective", "sentences": ["Het diner is *romantisch*."]}
+        {"lemma": "romantisch", "pos": "adjective", "sentences": ["De kaarsen maken het diner vanavond erg *romantisch*."]}
         ]
       }
     },
@@ -749,10 +749,10 @@
       "gloss": "couple (two people)",
       "entries": {
         "en": [
-        {"lemma": "couple", "pos": "noun", "details": {"note": "two people", "plural": "couples"}, "sentences": ["They are a nice *couple*."]}
+        {"lemma": "couple", "pos": "noun", "details": {"note": "two people", "plural": "couples"}, "sentences": ["They are a nice *couple* who always hold hands."]}
         ],
         "nl": [
-        {"lemma": "stel", "pos": "noun", "details": {"article": "het", "plural": "stellen"}, "sentences": ["Zij zijn een leuk *stel*."]}
+        {"lemma": "stel", "pos": "noun", "details": {"article": "het", "plural": "stellen"}, "sentences": ["Zij zijn een leuk *stel* dat altijd hand in hand loopt."]}
         ]
       }
     },
@@ -761,10 +761,10 @@
       "gloss": "young man (noun)",
       "entries": {
         "en": [
-        {"lemma": "young man", "pos": "noun", "details": {"plural": "young men"}, "sentences": ["The *young man* is polite."]}
+        {"lemma": "young man", "pos": "noun", "details": {"plural": "young men"}, "sentences": ["The *young man* carries the old lady's bag."]}
         ],
         "nl": [
-        {"lemma": "jongeman", "pos": "noun", "details": {"article": "de", "plural": "jongemannen"}, "sentences": ["De *jongeman* is beleefd."]}
+        {"lemma": "jongeman", "pos": "noun", "details": {"article": "de", "plural": "jongemannen"}, "sentences": ["De *jongeman* draagt de tas van de oude dame."]}
         ]
       }
     },
@@ -773,10 +773,10 @@
       "gloss": "fan (supporter)",
       "entries": {
         "en": [
-        {"lemma": "fan", "pos": "noun", "details": {"note": "supporter", "plural": "fans"}, "sentences": ["He is a big *fan*."]}
+        {"lemma": "fan", "pos": "noun", "details": {"note": "supporter", "plural": "fans"}, "sentences": ["He is a big *fan* of our football team."]}
         ],
         "nl": [
-        {"lemma": "fan", "pos": "noun", "details": {"article": "de", "plural": "fans"}, "sentences": ["Hij is een grote *fan*."]}
+        {"lemma": "fan", "pos": "noun", "details": {"article": "de", "plural": "fans"}, "sentences": ["Hij is een grote *fan* van ons voetbalteam."]}
         ]
       }
     },
@@ -785,10 +785,10 @@
       "gloss": "youth (noun)",
       "entries": {
         "en": [
-        {"lemma": "youth", "pos": "noun", "details": {"uncountable": true}, "sentences": ["The *youth* are our future."]}
+        {"lemma": "youth", "pos": "noun", "details": {"uncountable": true}, "sentences": ["The *youth* of today use their phones all day."]}
         ],
         "nl": [
-        {"lemma": "jeugd", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["De *jeugd* is onze toekomst."]}
+        {"lemma": "jeugd", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["De *jeugd* van tegenwoordig heeft de hele dag de telefoon in de hand."]}
         ]
       }
     },
@@ -797,10 +797,10 @@
       "gloss": "genius (noun)",
       "entries": {
         "en": [
-        {"lemma": "genius", "pos": "noun", "details": {"plural": "geniuses"}, "sentences": ["He is a *genius*."]}
+        {"lemma": "genius", "pos": "noun", "details": {"plural": "geniuses"}, "sentences": ["He is a *genius* at solving hard puzzles."]}
         ],
         "nl": [
-        {"lemma": "genie", "pos": "noun", "details": {"article": "het", "plural": "genieën"}, "sentences": ["Hij is een *genie*."]}
+        {"lemma": "genie", "pos": "noun", "details": {"article": "het", "plural": "genieën"}, "sentences": ["Hij is een *genie* in het oplossen van moeilijke puzzels."]}
         ]
       }
     },
@@ -809,10 +809,10 @@
       "gloss": "little brother (noun)",
       "entries": {
         "en": [
-        {"lemma": "little brother", "pos": "noun", "details": {"plural": "little brothers"}, "sentences": ["My *little brother* is five."]}
+        {"lemma": "little brother", "pos": "noun", "details": {"plural": "little brothers"}, "sentences": ["My *little brother* wants to play with my toys."]}
         ],
         "nl": [
-        {"lemma": "broertje", "pos": "noun", "details": {"article": "het", "plural": "broertjes"}, "sentences": ["Mijn *broertje* is vijf."]}
+        {"lemma": "broertje", "pos": "noun", "details": {"article": "het", "plural": "broertjes"}, "sentences": ["Mijn *broertje* wil met mijn speelgoed spelen."]}
         ]
       }
     },
@@ -821,10 +821,10 @@
       "gloss": "friendship (noun)",
       "entries": {
         "en": [
-        {"lemma": "friendship", "pos": "noun", "details": {"plural": "friendships"}, "sentences": ["*Friendship* is important."]}
+        {"lemma": "friendship", "pos": "noun", "details": {"plural": "friendships"}, "sentences": ["True *friendship* matters more than money to me."]}
         ],
         "nl": [
-        {"lemma": "vriendschap", "pos": "noun", "details": {"article": "de", "plural": "vriendschappen"}, "sentences": ["*Vriendschap* is belangrijk."]}
+        {"lemma": "vriendschap", "pos": "noun", "details": {"article": "de", "plural": "vriendschappen"}, "sentences": ["Echte *vriendschap* is voor mij belangrijker dan geld."]}
         ]
       }
     },
@@ -833,10 +833,10 @@
       "gloss": "bride (noun)",
       "entries": {
         "en": [
-        {"lemma": "bride", "pos": "noun", "details": {"plural": "brides"}, "sentences": ["The *bride* is beautiful."]}
+        {"lemma": "bride", "pos": "noun", "details": {"plural": "brides"}, "sentences": ["The *bride* wears a long white dress today."]}
         ],
         "nl": [
-        {"lemma": "bruid", "pos": "noun", "details": {"article": "de", "plural": "bruiden"}, "sentences": ["De *bruid* is mooi."]}
+        {"lemma": "bruid", "pos": "noun", "details": {"article": "de", "plural": "bruiden"}, "sentences": ["De *bruid* draagt vandaag een lange witte jurk."]}
         ]
       }
     },
@@ -845,10 +845,10 @@
       "gloss": "community (noun)",
       "entries": {
         "en": [
-        {"lemma": "community", "pos": "noun", "details": {"plural": "communities"}, "sentences": ["The *community* helps."]}
+        {"lemma": "community", "pos": "noun", "details": {"plural": "communities"}, "sentences": ["The whole *community* helps to clean the park."]}
         ],
         "nl": [
-        {"lemma": "gemeenschap", "pos": "noun", "details": {"article": "de", "plural": "gemeenschappen"}, "sentences": ["De *gemeenschap* helpt."]}
+        {"lemma": "gemeenschap", "pos": "noun", "details": {"article": "de", "plural": "gemeenschappen"}, "sentences": ["De hele *gemeenschap* helpt mee het park schoon te maken."]}
         ]
       }
     },
@@ -857,10 +857,10 @@
       "gloss": "grandfather (noun)",
       "entries": {
         "en": [
-        {"lemma": "grandfather", "pos": "noun", "details": {"plural": "grandfathers"}, "sentences": ["My *grandfather* is old."]}
+        {"lemma": "grandfather", "pos": "noun", "details": {"plural": "grandfathers"}, "sentences": ["My *grandfather* walks to the market every morning."]}
         ],
         "nl": [
-        {"lemma": "grootvader", "pos": "noun", "details": {"article": "de", "plural": "grootvaders"}, "sentences": ["Mijn *grootvader* is oud."]}
+        {"lemma": "grootvader", "pos": "noun", "details": {"article": "de", "plural": "grootvaders"}, "sentences": ["Mijn *grootvader* loopt elke ochtend naar de markt."]}
         ]
       }
     },
@@ -869,10 +869,10 @@
       "gloss": "knight (noun)",
       "entries": {
         "en": [
-        {"lemma": "knight", "pos": "noun", "details": {"plural": "knights"}, "sentences": ["The *knight* has a sword."]}
+        {"lemma": "knight", "pos": "noun", "details": {"plural": "knights"}, "sentences": ["The *knight* rides to the castle with a sword."]}
         ],
         "nl": [
-        {"lemma": "ridder", "pos": "noun", "details": {"article": "de", "plural": "ridders"}, "sentences": ["De *ridder* heeft een zwaard."]}
+        {"lemma": "ridder", "pos": "noun", "details": {"article": "de", "plural": "ridders"}, "sentences": ["De *ridder* rijdt met een zwaard naar het kasteel."]}
         ]
       }
     },
@@ -881,10 +881,10 @@
       "gloss": "divorce (noun)",
       "entries": {
         "en": [
-        {"lemma": "divorce", "pos": "noun", "details": {"plural": "divorces"}, "sentences": ["The *divorce* is hard."]}
+        {"lemma": "divorce", "pos": "noun", "details": {"plural": "divorces"}, "sentences": ["The *divorce* is hard for the two children."]}
         ],
         "nl": [
-        {"lemma": "scheiding", "pos": "noun", "details": {"article": "de", "plural": "scheidingen"}, "sentences": ["De *scheiding* is zwaar."]}
+        {"lemma": "scheiding", "pos": "noun", "details": {"article": "de", "plural": "scheidingen"}, "sentences": ["De *scheiding* is zwaar voor de twee kinderen."]}
         ]
       }
     },
@@ -893,10 +893,10 @@
       "gloss": "humanity (noun)",
       "entries": {
         "en": [
-        {"lemma": "humanity", "pos": "noun", "details": {"uncountable": true}, "sentences": ["*Humanity* needs peace."]}
+        {"lemma": "humanity", "pos": "noun", "details": {"uncountable": true}, "sentences": ["*Humanity* needs peace and clean water to survive."]}
         ],
         "nl": [
-        {"lemma": "mensheid", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["De *mensheid* heeft vrede nodig."]}
+        {"lemma": "mensheid", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["De *mensheid* heeft vrede en schoon water nodig."]}
         ]
       }
     },
@@ -905,10 +905,10 @@
       "gloss": "twins (noun)",
       "entries": {
         "en": [
-        {"lemma": "twins", "pos": "noun", "details": {"pluralOnly": true}, "sentences": ["The *twins* are five."]}
+        {"lemma": "twins", "pos": "noun", "details": {"pluralOnly": true}, "sentences": ["The *twins* wear the same red coat every day."]}
         ],
         "nl": [
-        {"lemma": "tweeling", "pos": "noun", "details": {"article": "de", "plural": "tweelingen"}, "sentences": ["De *tweeling* is vijf."]}
+        {"lemma": "tweeling", "pos": "noun", "details": {"article": "de", "plural": "tweelingen"}, "sentences": ["De *tweeling* draagt elke dag dezelfde rode jas."]}
         ]
       }
     },
@@ -917,10 +917,10 @@
       "gloss": "little sister (noun)",
       "entries": {
         "en": [
-        {"lemma": "little sister", "pos": "noun", "details": {"plural": "little sisters"}, "sentences": ["My *little sister* is six."]}
+        {"lemma": "little sister", "pos": "noun", "details": {"plural": "little sisters"}, "sentences": ["My *little sister* cries when her ice cream falls."]}
         ],
         "nl": [
-        {"lemma": "zusje", "pos": "noun", "details": {"article": "het", "plural": "zusjes"}, "sentences": ["Mijn *zusje* is zes."]}
+        {"lemma": "zusje", "pos": "noun", "details": {"article": "het", "plural": "zusjes"}, "sentences": ["Mijn *zusje* huilt als haar ijsje valt."]}
         ]
       }
     },
@@ -929,10 +929,10 @@
       "gloss": "comrade (noun)",
       "entries": {
         "en": [
-        {"lemma": "comrade", "pos": "noun", "details": {"plural": "comrades"}, "sentences": ["He is my *comrade*."]}
+        {"lemma": "comrade", "pos": "noun", "details": {"plural": "comrades"}, "sentences": ["My old *comrade* and I share a tent."]}
         ],
         "nl": [
-        {"lemma": "kameraad", "pos": "noun", "details": {"article": "de", "plural": "kameraden"}, "sentences": ["Hij is mijn *kameraad*."]}
+        {"lemma": "kameraad", "pos": "noun", "details": {"article": "de", "plural": "kameraden"}, "sentences": ["Mijn oude *kameraad* en ik delen een tent."]}
         ]
       }
     },
@@ -941,10 +941,10 @@
       "gloss": "darling (favorite)",
       "entries": {
         "en": [
-        {"lemma": "darling", "pos": "noun", "details": {"note": "favorite", "plural": "darlings"}, "sentences": ["She is my *darling*."]}
+        {"lemma": "darling", "pos": "noun", "details": {"note": "favorite", "plural": "darlings"}, "sentences": ["She is the teacher's *darling* in our class."]}
         ],
         "nl": [
-        {"lemma": "lieveling", "pos": "noun", "details": {"article": "de", "plural": "lievelingen"}, "sentences": ["Zij is mijn *lieveling*."]}
+        {"lemma": "lieveling", "pos": "noun", "details": {"article": "de", "plural": "lievelingen"}, "sentences": ["Zij is de *lieveling* van de juf in onze klas."]}
         ]
       }
     },
@@ -953,10 +953,10 @@
       "gloss": "servant (noun)",
       "entries": {
         "en": [
-        {"lemma": "servant", "pos": "noun", "details": {"plural": "servants"}, "sentences": ["The *servant* brings the tea."]}
+        {"lemma": "servant", "pos": "noun", "details": {"plural": "servants"}, "sentences": ["The *servant* brings the tea to the table."]}
         ],
         "nl": [
-        {"lemma": "bediende", "pos": "noun", "details": {"article": "de", "plural": "bedienden"}, "sentences": ["De *bediende* brengt de thee."]}
+        {"lemma": "bediende", "pos": "noun", "details": {"article": "de", "plural": "bedienden"}, "sentences": ["De *bediende* brengt de thee naar de tafel."]}
         ]
       }
     },
@@ -965,10 +965,10 @@
       "gloss": "tribe (noun)",
       "entries": {
         "en": [
-        {"lemma": "tribe", "pos": "noun", "details": {"plural": "tribes"}, "sentences": ["The *tribe* lives in the forest."]}
+        {"lemma": "tribe", "pos": "noun", "details": {"plural": "tribes"}, "sentences": ["The *tribe* lives in the forest and hunts fish."]}
         ],
         "nl": [
-        {"lemma": "stam", "pos": "noun", "details": {"article": "de", "plural": "stammen"}, "sentences": ["De *stam* leeft in het bos."]}
+        {"lemma": "stam", "pos": "noun", "details": {"article": "de", "plural": "stammen"}, "sentences": ["De *stam* leeft in het bos en vangt vis."]}
         ]
       }
     },
@@ -977,10 +977,10 @@
       "gloss": "cowboy (noun)",
       "entries": {
         "en": [
-        {"lemma": "cowboy", "pos": "noun", "details": {"plural": "cowboys"}, "sentences": ["The *cowboy* rides a horse."]}
+        {"lemma": "cowboy", "pos": "noun", "details": {"plural": "cowboys"}, "sentences": ["The *cowboy* rides his horse across the dry plain."]}
         ],
         "nl": [
-        {"lemma": "cowboy", "pos": "noun", "details": {"article": "de", "plural": "cowboys"}, "sentences": ["De *cowboy* rijdt op een paard."]}
+        {"lemma": "cowboy", "pos": "noun", "details": {"article": "de", "plural": "cowboys"}, "sentences": ["De *cowboy* rijdt op zijn paard over de droge vlakte."]}
         ]
       }
     },
@@ -989,10 +989,10 @@
       "gloss": "lover (noun)",
       "entries": {
         "en": [
-        {"lemma": "lover", "pos": "noun", "details": {"plural": "lovers"}, "sentences": ["He is her *lover*."]}
+        {"lemma": "lover", "pos": "noun", "details": {"plural": "lovers"}, "sentences": ["In the film, the queen meets her secret *lover*."]}
         ],
         "nl": [
-        {"lemma": "minnaar", "pos": "noun", "details": {"article": "de", "plural": "minnaars"}, "sentences": ["Hij is haar *minnaar*."]}
+        {"lemma": "minnaar", "pos": "noun", "details": {"article": "de", "plural": "minnaars"}, "sentences": ["In de film ontmoet de koningin haar geheime *minnaar*."]}
         ]
       }
     },
@@ -1001,10 +1001,10 @@
       "gloss": "stranger (noun)",
       "entries": {
         "en": [
-        {"lemma": "stranger", "pos": "noun", "details": {"plural": "strangers"}, "sentences": ["A *stranger* knocks."]}
+        {"lemma": "stranger", "pos": "noun", "details": {"plural": "strangers"}, "sentences": ["A *stranger* knocks at my door at night."]}
         ],
         "nl": [
-        {"lemma": "vreemdeling", "pos": "noun", "details": {"article": "de", "plural": "vreemdelingen"}, "sentences": ["Een *vreemdeling* klopt."]}
+        {"lemma": "vreemdeling", "pos": "noun", "details": {"article": "de", "plural": "vreemdelingen"}, "sentences": ["Een *vreemdeling* klopt 's nachts aan mijn deur."]}
         ]
       }
     },
@@ -1013,10 +1013,10 @@
       "gloss": "teenager (noun)",
       "entries": {
         "en": [
-        {"lemma": "teenager", "pos": "noun", "details": {"plural": "teenagers"}, "sentences": ["The *teenager* sleeps late."]}
+        {"lemma": "teenager", "pos": "noun", "details": {"plural": "teenagers"}, "sentences": ["The *teenager* sleeps late on Saturday and misses breakfast."]}
         ],
         "nl": [
-        {"lemma": "tiener", "pos": "noun", "details": {"article": "de", "plural": "tieners"}, "sentences": ["De *tiener* slaapt laat."]}
+        {"lemma": "tiener", "pos": "noun", "details": {"article": "de", "plural": "tieners"}, "sentences": ["De *tiener* slaapt op zaterdag uit tot twaalf uur."]}
         ]
       }
     },
@@ -1025,10 +1025,10 @@
       "gloss": "tempt (verb)",
       "entries": {
         "en": [
-        {"lemma": "to tempt", "pos": "verb", "details": {"past": "tempted", "participle": "tempted"}, "sentences": ["The cake *tempts* me."]}
+        {"lemma": "to tempt", "pos": "verb", "details": {"past": "tempted", "participle": "tempted"}, "sentences": ["The fresh cake *tempts* me every time I pass."]}
         ],
         "nl": [
-        {"lemma": "verleiden", "pos": "verb", "details": {"pastSingular": "verleidde", "pastPlural": "verleidden", "participle": "verleid", "auxiliary": "hebben"}, "sentences": ["De taart *verleidt* mij."]}
+        {"lemma": "verleiden", "pos": "verb", "details": {"pastSingular": "verleidde", "pastPlural": "verleidden", "participle": "verleid", "auxiliary": "hebben"}, "sentences": ["De verse taart *verleidt* mij elke keer als ik langsloop."]}
         ]
       }
     },
@@ -1037,10 +1037,10 @@
       "gloss": "date (romantic)",
       "entries": {
         "en": [
-        {"lemma": "date", "pos": "noun", "details": {"note": "romantic", "plural": "dates"}, "sentences": ["I have a *date* tonight."]}
+        {"lemma": "date", "pos": "noun", "details": {"note": "romantic", "plural": "dates"}, "sentences": ["I have a *date* tonight at a nice restaurant."]}
         ],
         "nl": [
-        {"lemma": "date", "pos": "noun", "details": {"article": "de", "plural": "dates"}, "sentences": ["Ik heb vanavond een *date*."]}
+        {"lemma": "date", "pos": "noun", "details": {"article": "de", "plural": "dates"}, "sentences": ["Ik heb vanavond een *date* in een leuk restaurant."]}
         ]
       }
     },
@@ -1049,10 +1049,10 @@
       "gloss": "pirate (noun)",
       "entries": {
         "en": [
-        {"lemma": "pirate", "pos": "noun", "details": {"plural": "pirates"}, "sentences": ["The *pirate* has a ship."]}
+        {"lemma": "pirate", "pos": "noun", "details": {"plural": "pirates"}, "sentences": ["The *pirate* hides gold on a small island."]}
         ],
         "nl": [
-        {"lemma": "piraat", "pos": "noun", "details": {"article": "de", "plural": "piraten"}, "sentences": ["De *piraat* heeft een schip."]}
+        {"lemma": "piraat", "pos": "noun", "details": {"article": "de", "plural": "piraten"}, "sentences": ["De *piraat* verstopt goud op een klein eiland."]}
         ]
       }
     },
@@ -1061,10 +1061,10 @@
       "gloss": "crown (noun)",
       "entries": {
         "en": [
-        {"lemma": "crown", "pos": "noun", "details": {"plural": "crowns"}, "sentences": ["The king wears a *crown*."]}
+        {"lemma": "crown", "pos": "noun", "details": {"plural": "crowns"}, "sentences": ["The king wears a golden *crown* at the ceremony."]}
         ],
         "nl": [
-        {"lemma": "kroon", "pos": "noun", "details": {"article": "de", "plural": "kronen"}, "sentences": ["De koning draagt een *kroon*."]}
+        {"lemma": "kroon", "pos": "noun", "details": {"article": "de", "plural": "kronen"}, "sentences": ["De koning draagt tijdens de ceremonie een gouden *kroon*."]}
         ]
       }
     },
@@ -1073,10 +1073,10 @@
       "gloss": "rebel (noun)",
       "entries": {
         "en": [
-        {"lemma": "rebel", "pos": "noun", "details": {"plural": "rebels"}, "sentences": ["The *rebel* flees."]}
+        {"lemma": "rebel", "pos": "noun", "details": {"plural": "rebels"}, "sentences": ["The *rebel* flees to the mountains at night."]}
         ],
         "nl": [
-        {"lemma": "rebel", "pos": "noun", "details": {"article": "de", "plural": "rebellen"}, "sentences": ["De *rebel* vlucht."]}
+        {"lemma": "rebel", "pos": "noun", "details": {"article": "de", "plural": "rebellen"}, "sentences": ["De *rebel* vlucht 's nachts naar de bergen."]}
         ]
       }
     },
@@ -1085,10 +1085,10 @@
       "gloss": "widow (noun)",
       "entries": {
         "en": [
-        {"lemma": "widow", "pos": "noun", "details": {"plural": "widows"}, "sentences": ["The *widow* lives alone."]}
+        {"lemma": "widow", "pos": "noun", "details": {"plural": "widows"}, "sentences": ["The *widow* lives alone but her children visit weekly."]}
         ],
         "nl": [
-        {"lemma": "weduwe", "pos": "noun", "details": {"article": "de", "plural": "weduwen"}, "sentences": ["De *weduwe* woont alleen."]}
+        {"lemma": "weduwe", "pos": "noun", "details": {"article": "de", "plural": "weduwen"}, "sentences": ["De *weduwe* woont alleen, maar haar kinderen komen wekelijks langs."]}
         ]
       }
     },
@@ -1097,10 +1097,10 @@
       "gloss": "society (noun)",
       "entries": {
         "en": [
-        {"lemma": "society", "pos": "noun", "details": {"note": "as a system", "plural": "societies"}, "sentences": ["*Society* changes."]}
+        {"lemma": "society", "pos": "noun", "details": {"note": "as a system", "plural": "societies"}, "sentences": ["Our *society* changes fast because of new technology."]}
         ],
         "nl": [
-        {"lemma": "maatschappij", "pos": "noun", "details": {"article": "de", "plural": "maatschappijen"}, "sentences": ["De *maatschappij* verandert."]}
+        {"lemma": "maatschappij", "pos": "noun", "details": {"article": "de", "plural": "maatschappijen"}, "sentences": ["Onze *maatschappij* verandert snel door nieuwe technologie."]}
         ]
       }
     },
@@ -1109,10 +1109,10 @@
       "gloss": "wife (noun)",
       "entries": {
         "en": [
-        {"lemma": "wife", "pos": "noun", "details": {"plural": "wives"}, "sentences": ["My *wife* is at home."]}
+        {"lemma": "wife", "pos": "noun", "details": {"plural": "wives"}, "sentences": ["My *wife* works at a bank near our home."]}
         ],
         "nl": [
-        {"lemma": "echtgenote", "pos": "noun", "details": {"article": "de", "plural": "echtgenotes"}, "sentences": ["Mijn *echtgenote* is thuis."]}
+        {"lemma": "echtgenote", "pos": "noun", "details": {"article": "de", "plural": "echtgenotes"}, "sentences": ["Mijn *echtgenote* werkt bij een bank vlakbij ons huis."]}
         ]
       }
     },
@@ -1121,10 +1121,10 @@
       "gloss": "neighbor (male)",
       "entries": {
         "en": [
-        {"lemma": "neighbor", "pos": "noun", "details": {"note": "male", "plural": "neighbors"}, "sentences": ["My *neighbor* is nice."]}
+        {"lemma": "neighbor", "pos": "noun", "details": {"note": "male", "plural": "neighbors"}, "sentences": ["My *neighbor* mows his lawn every Saturday morning."]}
         ],
         "nl": [
-        {"lemma": "buurman", "pos": "noun", "details": {"article": "de", "plural": "buurmannen"}, "sentences": ["Mijn *buurman* is aardig."]}
+        {"lemma": "buurman", "pos": "noun", "details": {"article": "de", "plural": "buurmannen"}, "sentences": ["Mijn *buurman* maait elke zaterdagochtend zijn gras."]}
         ]
       }
     },
@@ -1133,10 +1133,10 @@
       "gloss": "crowd (noun)",
       "entries": {
         "en": [
-        {"lemma": "crowd", "pos": "noun", "details": {"plural": "crowds"}, "sentences": ["The *crowd* cheers."]}
+        {"lemma": "crowd", "pos": "noun", "details": {"plural": "crowds"}, "sentences": ["The *crowd* cheers loudly when the band comes on."]}
         ],
         "nl": [
-        {"lemma": "menigte", "pos": "noun", "details": {"article": "de", "plural": "menigten"}, "sentences": ["De *menigte* juicht."]}
+        {"lemma": "menigte", "pos": "noun", "details": {"article": "de", "plural": "menigten"}, "sentences": ["De *menigte* juicht luid als de band opkomt."]}
         ]
       }
     },
@@ -1145,10 +1145,10 @@
       "gloss": "hug (noun)",
       "entries": {
         "en": [
-        {"lemma": "hug", "pos": "noun", "details": {"plural": "hugs"}, "sentences": ["She gives me a *hug*."]}
+        {"lemma": "hug", "pos": "noun", "details": {"plural": "hugs"}, "sentences": ["After the trip, my sister gives me a *hug*."]}
         ],
         "nl": [
-        {"lemma": "knuffel", "pos": "noun", "details": {"article": "de", "plural": "knuffels"}, "sentences": ["Zij geeft mij een *knuffel*."]}
+        {"lemma": "knuffel", "pos": "noun", "details": {"article": "de", "plural": "knuffels"}, "sentences": ["Na de lange reis geeft mijn zus mij een warme *knuffel*."]}
         ]
       }
     },
@@ -1157,10 +1157,10 @@
       "gloss": "flirt (verb)",
       "entries": {
         "en": [
-        {"lemma": "to flirt", "pos": "verb", "details": {"past": "flirted", "participle": "flirted"}, "sentences": ["They *flirt*."]}
+        {"lemma": "to flirt", "pos": "verb", "details": {"past": "flirted", "participle": "flirted"}, "sentences": ["At the party, they *flirt* with each other."]}
         ],
         "nl": [
-        {"lemma": "flirten", "pos": "verb", "details": {"pastSingular": "flirtte", "pastPlural": "flirtten", "participle": "geflirt", "auxiliary": "hebben"}, "sentences": ["Zij *flirten*."]}
+        {"lemma": "flirten", "pos": "verb", "details": {"pastSingular": "flirtte", "pastPlural": "flirtten", "participle": "geflirt", "auxiliary": "hebben"}, "sentences": ["Op het feest *flirten* zij de hele avond met elkaar."]}
         ]
       }
     },
@@ -1169,10 +1169,10 @@
       "gloss": "single (unmarried)",
       "entries": {
         "en": [
-        {"lemma": "single", "pos": "adjective", "details": {"note": "unmarried"}, "sentences": ["He is *single*."]}
+        {"lemma": "single", "pos": "adjective", "details": {"note": "unmarried"}, "sentences": ["He is *single* and lives alone in a flat."]}
         ],
         "nl": [
-        {"lemma": "vrijgezel", "pos": "adjective", "sentences": ["Hij is *vrijgezel*."]}
+        {"lemma": "vrijgezel", "pos": "adjective", "sentences": ["Hij is *vrijgezel* en woont alleen in een klein flatje."]}
         ]
       }
     },
@@ -1181,10 +1181,10 @@
       "gloss": "volunteer (noun)",
       "entries": {
         "en": [
-        {"lemma": "volunteer", "pos": "noun", "details": {"plural": "volunteers"}, "sentences": ["The *volunteer* helps."]}
+        {"lemma": "volunteer", "pos": "noun", "details": {"plural": "volunteers"}, "sentences": ["The *volunteer* serves soup at the shelter every Saturday."]}
         ],
         "nl": [
-        {"lemma": "vrijwilliger", "pos": "noun", "details": {"article": "de", "plural": "vrijwilligers"}, "sentences": ["De *vrijwilliger* helpt."]}
+        {"lemma": "vrijwilliger", "pos": "noun", "details": {"article": "de", "plural": "vrijwilligers"}, "sentences": ["De *vrijwilliger* schenkt elke zaterdag soep uit in de opvang."]}
         ]
       }
     },
@@ -1193,10 +1193,10 @@
       "gloss": "grandmother (noun)",
       "entries": {
         "en": [
-        {"lemma": "grandmother", "pos": "noun", "details": {"plural": "grandmothers"}, "sentences": ["My *grandmother* is old."]}
+        {"lemma": "grandmother", "pos": "noun", "details": {"plural": "grandmothers"}, "sentences": ["My *grandmother* bakes apple pie every Sunday."]}
         ],
         "nl": [
-        {"lemma": "grootmoeder", "pos": "noun", "details": {"article": "de", "plural": "grootmoeders"}, "sentences": ["Mijn *grootmoeder* is oud."]}
+        {"lemma": "grootmoeder", "pos": "noun", "details": {"article": "de", "plural": "grootmoeders"}, "sentences": ["Mijn *grootmoeder* bakt appeltaart als wij zondag op bezoek komen."]}
         ]
       }
     },
@@ -1205,10 +1205,10 @@
       "gloss": "survivor (noun)",
       "entries": {
         "en": [
-        {"lemma": "survivor", "pos": "noun", "details": {"plural": "survivors"}, "sentences": ["The *survivor* tells his story."]}
+        {"lemma": "survivor", "pos": "noun", "details": {"plural": "survivors"}, "sentences": ["The only *survivor* of the shipwreck tells his story."]}
         ],
         "nl": [
-        {"lemma": "overlevende", "pos": "noun", "details": {"article": "de", "plural": "overlevenden"}, "sentences": ["De *overlevende* vertelt zijn verhaal."]}
+        {"lemma": "overlevende", "pos": "noun", "details": {"article": "de", "plural": "overlevenden"}, "sentences": ["De enige *overlevende* van de scheepsramp vertelt zijn verhaal op tv."]}
         ]
       }
     },
@@ -1217,10 +1217,10 @@
       "gloss": "relative (noun)",
       "entries": {
         "en": [
-        {"lemma": "relative", "pos": "noun", "details": {"note": "a family member", "plural": "relatives"}, "sentences": ["He is a *relative*."]}
+        {"lemma": "relative", "pos": "noun", "details": {"note": "a family member", "plural": "relatives"}, "sentences": ["A distant *relative* from Canada stays with us."]}
         ],
         "nl": [
-        {"lemma": "familielid", "pos": "noun", "details": {"article": "het", "plural": "familieleden"}, "sentences": ["Hij is een *familielid*."]}
+        {"lemma": "familielid", "pos": "noun", "details": {"article": "het", "plural": "familieleden"}, "sentences": ["Een verre *familielid* uit Canada logeert deze week bij ons."]}
         ]
       }
     },
@@ -1229,10 +1229,10 @@
       "gloss": "last name (noun)",
       "entries": {
         "en": [
-        {"lemma": "last name", "pos": "noun", "details": {"plural": "last names"}, "sentences": ["What is your *last name*?"]}
+        {"lemma": "last name", "pos": "noun", "details": {"plural": "last names"}, "sentences": ["The nurse asks me to spell my *last name*."]}
         ],
         "nl": [
-        {"lemma": "achternaam", "pos": "noun", "details": {"article": "de", "plural": "achternamen"}, "sentences": ["Wat is je *achternaam*?"]}
+        {"lemma": "achternaam", "pos": "noun", "details": {"article": "de", "plural": "achternamen"}, "sentences": ["De verpleegster vraagt mij mijn *achternaam* langzaam te spellen."]}
         ]
       }
     },
@@ -1241,10 +1241,10 @@
       "gloss": "resident (noun)",
       "entries": {
         "en": [
-        {"lemma": "resident", "pos": "noun", "details": {"note": "of a town or country", "plural": "residents"}, "sentences": ["The *residents* are friendly."]}
+        {"lemma": "resident", "pos": "noun", "details": {"note": "of a town or country", "plural": "residents"}, "sentences": ["Every *resident* of this town gets a bus pass."]}
         ],
         "nl": [
-        {"lemma": "inwoner", "pos": "noun", "details": {"article": "de", "plural": "inwoners"}, "sentences": ["De *inwoners* zijn vriendelijk."]}
+        {"lemma": "inwoner", "pos": "noun", "details": {"article": "de", "plural": "inwoners"}, "sentences": ["Elke *inwoner* van deze stad krijgt een gratis buskaart."]}
         ]
       }
     },
@@ -1253,10 +1253,10 @@
       "gloss": "amateur (noun)",
       "entries": {
         "en": [
-        {"lemma": "amateur", "pos": "noun", "details": {"plural": "amateurs"}, "sentences": ["He is an *amateur*."]}
+        {"lemma": "amateur", "pos": "noun", "details": {"plural": "amateurs"}, "sentences": ["He is only an *amateur*, but plays tennis well."]}
         ],
         "nl": [
-        {"lemma": "amateur", "pos": "noun", "details": {"article": "de", "plural": "amateurs"}, "sentences": ["Hij is een *amateur*."]}
+        {"lemma": "amateur", "pos": "noun", "details": {"article": "de", "plural": "amateurs"}, "sentences": ["Hij is maar een *amateur*, maar hij tennist heel goed."]}
         ]
       }
     },
@@ -1265,10 +1265,10 @@
       "gloss": "intimate (adjective)",
       "entries": {
         "en": [
-        {"lemma": "intimate", "pos": "adjective", "sentences": ["The dinner is *intimate*."]}
+        {"lemma": "intimate", "pos": "adjective", "sentences": ["We have an *intimate* dinner with four close friends."]}
         ],
         "nl": [
-        {"lemma": "intiem", "pos": "adjective", "sentences": ["Het diner is *intiem*."]}
+        {"lemma": "intiem", "pos": "adjective", "sentences": ["Wij hebben een *intiem* diner met alleen vier goede vrienden."]}
         ]
       }
     },
@@ -1277,10 +1277,10 @@
       "gloss": "giant (noun)",
       "entries": {
         "en": [
-        {"lemma": "giant", "pos": "noun", "details": {"plural": "giants"}, "sentences": ["The *giant* is big."]}
+        {"lemma": "giant", "pos": "noun", "details": {"plural": "giants"}, "sentences": ["In fairy tales, a *giant* lives on a mountain."]}
         ],
         "nl": [
-        {"lemma": "reus", "pos": "noun", "details": {"article": "de", "plural": "reuzen"}, "sentences": ["De *reus* is groot."]}
+        {"lemma": "reus", "pos": "noun", "details": {"article": "de", "plural": "reuzen"}, "sentences": ["In het sprookje woont een *reus* boven op de berg."]}
         ]
       }
     },
@@ -1289,10 +1289,10 @@
       "gloss": "grandson (noun)",
       "entries": {
         "en": [
-        {"lemma": "grandson", "pos": "noun", "details": {"plural": "grandsons"}, "sentences": ["My *grandson* is five."]}
+        {"lemma": "grandson", "pos": "noun", "details": {"plural": "grandsons"}, "sentences": ["My *grandson* is five and loves to draw trains."]}
         ],
         "nl": [
-        {"lemma": "kleinzoon", "pos": "noun", "details": {"article": "de", "plural": "kleinzonen"}, "sentences": ["Mijn *kleinzoon* is vijf."]}
+        {"lemma": "kleinzoon", "pos": "noun", "details": {"article": "de", "plural": "kleinzonen"}, "sentences": ["Mijn *kleinzoon* is vijf en tekent graag treinen."]}
         ]
       }
     },
@@ -1301,10 +1301,10 @@
       "gloss": "population (noun)",
       "entries": {
         "en": [
-        {"lemma": "population", "pos": "noun", "details": {"plural": "populations"}, "sentences": ["The *population* grows."]}
+        {"lemma": "population", "pos": "noun", "details": {"plural": "populations"}, "sentences": ["The *population* of our village grows every year."]}
         ],
         "nl": [
-        {"lemma": "bevolking", "pos": "noun", "details": {"article": "de", "plural": "bevolkingen"}, "sentences": ["De *bevolking* groeit."]}
+        {"lemma": "bevolking", "pos": "noun", "details": {"article": "de", "plural": "bevolkingen"}, "sentences": ["De *bevolking* van ons dorp groeit elk jaar door nieuwe huizen."]}
         ]
       }
     },
@@ -1313,10 +1313,10 @@
       "gloss": "first name (noun)",
       "entries": {
         "en": [
-        {"lemma": "first name", "pos": "noun", "details": {"plural": "first names"}, "sentences": ["What is your *first name*?"]}
+        {"lemma": "first name", "pos": "noun", "details": {"plural": "first names"}, "sentences": ["The teacher calls each child by their *first name*."]}
         ],
         "nl": [
-        {"lemma": "voornaam", "pos": "noun", "details": {"article": "de", "plural": "voornamen"}, "sentences": ["Wat is je *voornaam*?"]}
+        {"lemma": "voornaam", "pos": "noun", "details": {"article": "de", "plural": "voornamen"}, "sentences": ["De juf noemt elk kind bij zijn *voornaam*."]}
         ]
       }
     },
@@ -1325,10 +1325,10 @@
       "gloss": "grandchild (noun)",
       "entries": {
         "en": [
-        {"lemma": "grandchild", "pos": "noun", "details": {"plural": "grandchilds"}, "sentences": ["My *grandchild* is young."]}
+        {"lemma": "grandchild", "pos": "noun", "details": {"plural": "grandchilds"}, "sentences": ["Every Friday, she looks after her youngest *grandchild*."]}
         ],
         "nl": [
-        {"lemma": "kleinkind", "pos": "noun", "details": {"article": "het", "plural": "kleinkinderen"}, "sentences": ["Mijn *kleinkind* is jong."]}
+        {"lemma": "kleinkind", "pos": "noun", "details": {"article": "het", "plural": "kleinkinderen"}, "sentences": ["Elke vrijdag past zij thuis op haar jongste *kleinkind*."]}
         ]
       }
     },
@@ -1337,10 +1337,10 @@
       "gloss": "kiss (smooch)",
       "entries": {
         "en": [
-        {"lemma": "kiss", "pos": "noun", "details": {"note": "smooch", "plural": "kisses"}, "sentences": ["He gives her a *kiss*."]}
+        {"lemma": "kiss", "pos": "noun", "details": {"note": "smooch", "plural": "kisses"}, "sentences": ["At the station, he gives her a long *kiss*."]}
         ],
         "nl": [
-        {"lemma": "zoen", "pos": "noun", "details": {"article": "de", "plural": "zoenen"}, "sentences": ["Hij geeft haar een *zoen*."]}
+        {"lemma": "zoen", "pos": "noun", "details": {"article": "de", "plural": "zoenen"}, "sentences": ["Op het station geeft hij haar een lange *zoen* ten afscheid."]}
         ]
       }
     },
@@ -1349,10 +1349,10 @@
       "gloss": "duke (noun)",
       "entries": {
         "en": [
-        {"lemma": "duke", "pos": "noun", "details": {"plural": "dukes"}, "sentences": ["The *duke* lives in the castle."]}
+        {"lemma": "duke", "pos": "noun", "details": {"plural": "dukes"}, "sentences": ["In the story, the *duke* hosts a feast."]}
         ],
         "nl": [
-        {"lemma": "hertog", "pos": "noun", "details": {"article": "de", "plural": "hertogen"}, "sentences": ["De *hertog* woont in het kasteel."]}
+        {"lemma": "hertog", "pos": "noun", "details": {"article": "de", "plural": "hertogen"}, "sentences": ["In het oude verhaal geeft de *hertog* een groot feest in zijn kasteel."]}
         ]
       }
     },
@@ -1361,10 +1361,10 @@
       "gloss": "roommate (noun)",
       "entries": {
         "en": [
-        {"lemma": "roommate", "pos": "noun", "details": {"plural": "roommates"}, "sentences": ["My *roommate* is nice."]}
+        {"lemma": "roommate", "pos": "noun", "details": {"plural": "roommates"}, "sentences": ["My *roommate* always washes the dishes right after dinner."]}
         ],
         "nl": [
-        {"lemma": "kamergenoot", "pos": "noun", "details": {"article": "de", "plural": "kamergenoten"}, "sentences": ["Mijn *kamergenoot* is aardig."]}
+        {"lemma": "kamergenoot", "pos": "noun", "details": {"article": "de", "plural": "kamergenoten"}, "sentences": ["Mijn *kamergenoot* doet de afwas altijd direct na het eten."]}
         ]
       }
     },
@@ -1373,10 +1373,10 @@
       "gloss": "nickname (noun)",
       "entries": {
         "en": [
-        {"lemma": "nickname", "pos": "noun", "details": {"plural": "nicknames"}, "sentences": ["His *nickname* is Max."]}
+        {"lemma": "nickname", "pos": "noun", "details": {"plural": "nicknames"}, "sentences": ["His *nickname* is Max because he is so tall."]}
         ],
         "nl": [
-        {"lemma": "bijnaam", "pos": "noun", "details": {"article": "de", "plural": "bijnamen"}, "sentences": ["Zijn *bijnaam* is Max."]}
+        {"lemma": "bijnaam", "pos": "noun", "details": {"article": "de", "plural": "bijnamen"}, "sentences": ["Zijn *bijnaam* is Max omdat hij zo lang is."]}
         ]
       }
     },
@@ -1385,10 +1385,10 @@
       "gloss": "refugee (noun)",
       "entries": {
         "en": [
-        {"lemma": "refugee", "pos": "noun", "details": {"plural": "refugees"}, "sentences": ["The *refugee* seeks safety."]}
+        {"lemma": "refugee", "pos": "noun", "details": {"plural": "refugees"}, "sentences": ["The *refugee* gets a bed and warm food."]}
         ],
         "nl": [
-        {"lemma": "vluchteling", "pos": "noun", "details": {"article": "de", "plural": "vluchtelingen"}, "sentences": ["De *vluchteling* zoekt veiligheid."]}
+        {"lemma": "vluchteling", "pos": "noun", "details": {"article": "de", "plural": "vluchtelingen"}, "sentences": ["De *vluchteling* krijgt een bed en warm eten in het kamp."]}
         ]
       }
     },
@@ -1397,10 +1397,10 @@
       "gloss": "resident (inhabitant)",
       "entries": {
         "en": [
-        {"lemma": "resident", "pos": "noun", "details": {"note": "inhabitant", "plural": "residents"}, "sentences": ["The *residents* are happy."]}
+        {"lemma": "resident", "pos": "noun", "details": {"note": "inhabitant", "plural": "residents"}, "sentences": ["The *residents* of the building share a garden."]}
         ],
         "nl": [
-        {"lemma": "bewoner", "pos": "noun", "details": {"article": "de", "plural": "bewoners"}, "sentences": ["De *bewoners* zijn blij."]}
+        {"lemma": "bewoner", "pos": "noun", "details": {"article": "de", "plural": "bewoners"}, "sentences": ["De *bewoners* van het gebouw delen een tuin achter het huis."]}
         ]
       }
     },
@@ -1409,10 +1409,10 @@
       "gloss": "society (community)",
       "entries": {
         "en": [
-        {"lemma": "society", "pos": "noun", "details": {"note": "community", "plural": "societies"}, "sentences": ["*Society* is changing."]}
+        {"lemma": "society", "pos": "noun", "details": {"note": "community", "plural": "societies"}, "sentences": ["In modern *society*, many people work from home."]}
         ],
         "nl": [
-        {"lemma": "samenleving", "pos": "noun", "details": {"article": "de", "plural": "samenlevingen"}, "sentences": ["De *samenleving* verandert."]}
+        {"lemma": "samenleving", "pos": "noun", "details": {"article": "de", "plural": "samenlevingen"}, "sentences": ["In de moderne *samenleving* werken veel mensen thuis."]}
         ]
       }
     },
@@ -1421,10 +1421,10 @@
       "gloss": "diaper (noun)",
       "entries": {
         "en": [
-        {"lemma": "diaper", "pos": "noun", "details": {"plural": "diapers"}, "sentences": ["The baby needs a *diaper*."]}
+        {"lemma": "diaper", "pos": "noun", "details": {"plural": "diapers"}, "sentences": ["The baby cries because she needs a clean *diaper*."]}
         ],
         "nl": [
-        {"lemma": "luier", "pos": "noun", "details": {"article": "de", "plural": "luiers"}, "sentences": ["De baby heeft een *luier* nodig."]}
+        {"lemma": "luier", "pos": "noun", "details": {"article": "de", "plural": "luiers"}, "sentences": ["De baby huilt omdat ze een schone *luier* nodig heeft."]}
         ]
       }
     },
@@ -1433,10 +1433,10 @@
       "gloss": "wedding anniversary (noun)",
       "entries": {
         "en": [
-        {"lemma": "wedding anniversary", "pos": "noun", "details": {"plural": "wedding anniversaries"}, "sentences": ["Today is our *wedding anniversary*."]}
+        {"lemma": "wedding anniversary", "pos": "noun", "details": {"plural": "wedding anniversaries"}, "sentences": ["Today is our *wedding anniversary*, so we eat out."]}
         ],
         "nl": [
-        {"lemma": "trouwdag", "pos": "noun", "details": {"article": "de", "plural": "trouwdagen"}, "sentences": ["Vandaag is onze *trouwdag*."]}
+        {"lemma": "trouwdag", "pos": "noun", "details": {"article": "de", "plural": "trouwdagen"}, "sentences": ["Vandaag is onze *trouwdag*, dus eten wij vanavond buiten de deur."]}
         ]
       }
     },
@@ -1445,10 +1445,10 @@
       "gloss": "movie star (noun)",
       "entries": {
         "en": [
-        {"lemma": "movie star", "pos": "noun", "details": {"plural": "movie stars"}, "sentences": ["The *movie star* is famous."]}
+        {"lemma": "movie star", "pos": "noun", "details": {"plural": "movie stars"}, "sentences": ["Fans wait outside the hotel for the *movie star*."]}
         ],
         "nl": [
-        {"lemma": "filmster", "pos": "noun", "details": {"article": "de", "plural": "filmsterren"}, "sentences": ["De *filmster* is beroemd."]}
+        {"lemma": "filmster", "pos": "noun", "details": {"article": "de", "plural": "filmsterren"}, "sentences": ["Fans wachten buiten het hotel op de beroemde *filmster*."]}
         ]
       }
     },
@@ -1457,10 +1457,10 @@
       "gloss": "host (noun)",
       "entries": {
         "en": [
-        {"lemma": "host", "pos": "noun", "details": {"plural": "hosts"}, "sentences": ["The *host* welcomes us."]}
+        {"lemma": "host", "pos": "noun", "details": {"plural": "hosts"}, "sentences": ["The *host* opens the door and takes our coats."]}
         ],
         "nl": [
-        {"lemma": "gastheer", "pos": "noun", "details": {"article": "de", "plural": "gastheren"}, "sentences": ["De *gastheer* verwelkomt ons."]}
+        {"lemma": "gastheer", "pos": "noun", "details": {"article": "de", "plural": "gastheren"}, "sentences": ["De *gastheer* opent de deur en neemt onze jassen aan."]}
         ]
       }
     },
@@ -1469,10 +1469,10 @@
       "gloss": "celebrity (noun)",
       "entries": {
         "en": [
-        {"lemma": "celebrity", "pos": "noun", "details": {"plural": "celebrities"}, "sentences": ["The *celebrity* arrives."]}
+        {"lemma": "celebrity", "pos": "noun", "details": {"plural": "celebrities"}, "sentences": ["Photographers follow every *celebrity* on the red carpet."]}
         ],
         "nl": [
-        {"lemma": "beroemdheid", "pos": "noun", "details": {"article": "de", "plural": "beroemdheden"}, "sentences": ["De *beroemdheid* komt aan."]}
+        {"lemma": "beroemdheid", "pos": "noun", "details": {"article": "de", "plural": "beroemdheden"}, "sentences": ["Fotografen volgen elke *beroemdheid* die over de rode loper loopt."]}
         ]
       }
     },
@@ -1481,10 +1481,10 @@
       "gloss": "beloved (noun)",
       "entries": {
         "en": [
-        {"lemma": "beloved", "pos": "noun", "details": {"note": "loved one", "plural": "beloveds"}, "sentences": ["She is my *beloved*."]}
+        {"lemma": "beloved", "pos": "noun", "details": {"note": "loved one", "plural": "beloveds"}, "sentences": ["He writes a poem for his *beloved* every spring."]}
         ],
         "nl": [
-        {"lemma": "geliefde", "pos": "noun", "details": {"article": "de", "plural": "geliefden"}, "sentences": ["Zij is mijn *geliefde*."]}
+        {"lemma": "geliefde", "pos": "noun", "details": {"article": "de", "plural": "geliefden"}, "sentences": ["Hij schrijft elke lente een gedicht voor zijn *geliefde*."]}
         ]
       }
     },
@@ -1493,10 +1493,10 @@
       "gloss": "little kiss (noun)",
       "entries": {
         "en": [
-        {"lemma": "little kiss", "pos": "noun", "details": {"plural": "little kisses"}, "sentences": ["She gives him a *little kiss*."]}
+        {"lemma": "little kiss", "pos": "noun", "details": {"plural": "little kisses"}, "sentences": ["Before school, she gives her son a *little kiss*."]}
         ],
         "nl": [
-        {"lemma": "kusje", "pos": "noun", "details": {"article": "het", "plural": "kusjes"}, "sentences": ["Zij geeft hem een *kusje*."]}
+        {"lemma": "kusje", "pos": "noun", "details": {"article": "het", "plural": "kusjes"}, "sentences": ["Voor school geeft zij haar zoon een *kusje* op de wang."]}
         ]
       }
     },
@@ -1505,10 +1505,10 @@
       "gloss": "ancestor (noun)",
       "entries": {
         "en": [
-        {"lemma": "ancestor", "pos": "noun", "details": {"plural": "ancestors"}, "sentences": ["My *ancestor* is in this painting."]}
+        {"lemma": "ancestor", "pos": "noun", "details": {"plural": "ancestors"}, "sentences": ["My oldest *ancestor* is in this painting from 1650."]}
         ],
         "nl": [
-        {"lemma": "voorouder", "pos": "noun", "details": {"article": "de", "plural": "voorouders"}, "sentences": ["Mijn *voorouder* staat op dit schilderij."]}
+        {"lemma": "voorouder", "pos": "noun", "details": {"article": "de", "plural": "voorouders"}, "sentences": ["Mijn oudste *voorouder* staat op dit schilderij uit 1650."]}
         ]
       }
     },
@@ -1517,10 +1517,10 @@
       "gloss": "live together (verb)",
       "entries": {
         "en": [
-        {"lemma": "to live together", "pos": "verb", "details": {"past": "lived together", "participle": "lived together"}, "sentences": ["They *live together*."]}
+        {"lemma": "to live together", "pos": "verb", "details": {"past": "lived together", "participle": "lived together"}, "sentences": ["They *live together* in a small flat."]}
         ],
         "nl": [
-        {"lemma": "samenwonen", "pos": "verb", "details": {"pastSingular": "woonde samen", "pastPlural": "woonden samen", "participle": "samengewoond", "auxiliary": "hebben"}, "sentences": ["Zij *wonen samen*."]}
+        {"lemma": "samenwonen", "pos": "verb", "details": {"pastSingular": "woonde samen", "pastPlural": "woonden samen", "participle": "samengewoond", "auxiliary": "hebben"}, "sentences": ["Zij *wonen samen* in een klein appartement bij het park."]}
         ]
       }
     },
@@ -1529,10 +1529,10 @@
       "gloss": "cuddle (verb)",
       "entries": {
         "en": [
-        {"lemma": "to cuddle", "pos": "verb", "details": {"past": "cuddled", "participle": "cuddled"}, "sentences": ["We *cuddle* on the couch."]}
+        {"lemma": "to cuddle", "pos": "verb", "details": {"past": "cuddled", "participle": "cuddled"}, "sentences": ["On rainy Sundays, we *cuddle* under a blanket."]}
         ],
         "nl": [
-        {"lemma": "knuffelen", "pos": "verb", "details": {"pastSingular": "knuffelde", "pastPlural": "knuffelden", "participle": "geknuffeld", "auxiliary": "hebben"}, "sentences": ["Wij *knuffelen* op de bank."]}
+        {"lemma": "knuffelen", "pos": "verb", "details": {"pastSingular": "knuffelde", "pastPlural": "knuffelden", "participle": "geknuffeld", "auxiliary": "hebben"}, "sentences": ["Op regenachtige zondagen *knuffelen* wij onder een deken op de bank."]}
         ]
       }
     },
@@ -1541,10 +1541,10 @@
       "gloss": "stroke (verb)",
       "entries": {
         "en": [
-        {"lemma": "to stroke", "pos": "verb", "details": {"past": "stroked", "participle": "stroked"}, "sentences": ["I *stroke* the cat."]}
+        {"lemma": "to stroke", "pos": "verb", "details": {"past": "stroked", "participle": "stroked"}, "sentences": ["I *stroke* the cat gently while she sleeps."]}
         ],
         "nl": [
-        {"lemma": "strelen", "pos": "verb", "details": {"pastSingular": "streelde", "pastPlural": "streelden", "participle": "gestreeld", "auxiliary": "hebben"}, "sentences": ["Ik *streel* de kat."]}
+        {"lemma": "strelen", "pos": "verb", "details": {"pastSingular": "streelde", "pastPlural": "streelden", "participle": "gestreeld", "auxiliary": "hebben"}, "sentences": ["Ik *streel* de kat zachtjes terwijl ze op mijn schoot slaapt."]}
         ]
       }
     },
@@ -1553,10 +1553,10 @@
       "gloss": "foreigner (noun)",
       "entries": {
         "en": [
-        {"lemma": "foreigner", "pos": "noun", "details": {"plural": "foreigners"}, "sentences": ["The *foreigner* speaks Dutch."]}
+        {"lemma": "foreigner", "pos": "noun", "details": {"plural": "foreigners"}, "sentences": ["The *foreigner* asks the way to the station."]}
         ],
         "nl": [
-        {"lemma": "buitenlander", "pos": "noun", "details": {"article": "de", "plural": "buitenlanders"}, "sentences": ["De *buitenlander* spreekt Nederlands."]}
+        {"lemma": "buitenlander", "pos": "noun", "details": {"article": "de", "plural": "buitenlanders"}, "sentences": ["De *buitenlander* vraagt in het Nederlands de weg naar het station."]}
         ]
       }
     },
@@ -1565,10 +1565,10 @@
       "gloss": "embrace (verb)",
       "entries": {
         "en": [
-        {"lemma": "to embrace", "pos": "verb", "details": {"past": "embraced", "participle": "embraced"}, "sentences": ["They *embrace*."]}
+        {"lemma": "to embrace", "pos": "verb", "details": {"past": "embraced", "participle": "embraced"}, "sentences": ["At the airport, two old friends *embrace* warmly."]}
         ],
         "nl": [
-        {"lemma": "omhelzen", "pos": "verb", "details": {"pastSingular": "omhelsde", "pastPlural": "omhelsden", "participle": "omhelsd", "auxiliary": "hebben"}, "sentences": ["Zij *omhelzen* elkaar."]}
+        {"lemma": "omhelzen", "pos": "verb", "details": {"pastSingular": "omhelsde", "pastPlural": "omhelsden", "participle": "omhelsd", "auxiliary": "hebben"}, "sentences": ["Op het vliegveld *omhelzen* de twee oude vrienden elkaar lang."]}
         ]
       }
     },
@@ -1577,10 +1577,10 @@
       "gloss": "romance (noun)",
       "entries": {
         "en": [
-        {"lemma": "romance", "pos": "noun", "details": {"uncountable": true}, "sentences": ["I like *romance*."]}
+        {"lemma": "romance", "pos": "noun", "details": {"uncountable": true}, "sentences": ["My sister loves *romance* and watches love films."]}
         ],
         "nl": [
-        {"lemma": "romantiek", "pos": "noun", "details": {"note": "liefde en genegenheid", "article": "de", "uncountable": true}, "sentences": ["Ik hou van *romantiek*."]}
+        {"lemma": "romantiek", "pos": "noun", "details": {"note": "liefde en genegenheid", "article": "de", "uncountable": true}, "sentences": ["Mijn zus houdt van *romantiek* en kijkt elk weekend liefdesfilms."]}
         ]
       }
     },
@@ -1589,10 +1589,10 @@
       "gloss": "couple (pair)",
       "entries": {
         "en": [
-        {"lemma": "couple", "pos": "noun", "details": {"note": "pair", "plural": "couples"}, "sentences": ["They are a nice *couple*."]}
+        {"lemma": "couple", "pos": "noun", "details": {"note": "pair", "plural": "couples"}, "sentences": ["They are a happy *couple* and hold hands."]}
         ],
         "nl": [
-        {"lemma": "koppel", "pos": "noun", "details": {"article": "het", "plural": "koppels"}, "sentences": ["Zij zijn een leuk *koppel*."]}
+        {"lemma": "koppel", "pos": "noun", "details": {"article": "het", "plural": "koppels"}, "sentences": ["Zij zijn een gelukkig *koppel* en lopen hand in hand."]}
         ]
       }
     },
@@ -1601,10 +1601,10 @@
       "gloss": "orphanage (noun)",
       "entries": {
         "en": [
-        {"lemma": "orphanage", "pos": "noun", "details": {"plural": "orphanages"}, "sentences": ["The child lives in an *orphanage*."]}
+        {"lemma": "orphanage", "pos": "noun", "details": {"plural": "orphanages"}, "sentences": ["The little girl lives in an *orphanage* until adopted."]}
         ],
         "nl": [
-        {"lemma": "weeshuis", "pos": "noun", "details": {"article": "het", "plural": "weeshuizen"}, "sentences": ["Het kind woont in een *weeshuis*."]}
+        {"lemma": "weeshuis", "pos": "noun", "details": {"article": "het", "plural": "weeshuizen"}, "sentences": ["Het meisje woont in een *weeshuis* tot een gezin haar adopteert."]}
         ]
       }
     },
@@ -1613,10 +1613,10 @@
       "gloss": "countess (noun)",
       "entries": {
         "en": [
-        {"lemma": "countess", "pos": "noun", "details": {"plural": "countesses"}, "sentences": ["The *countess* lives in the castle."]}
+        {"lemma": "countess", "pos": "noun", "details": {"plural": "countesses"}, "sentences": ["The *countess* walks through the garden of her castle."]}
         ],
         "nl": [
-        {"lemma": "gravin", "pos": "noun", "details": {"article": "de", "plural": "gravinnen"}, "sentences": ["De *gravin* woont in het kasteel."]}
+        {"lemma": "gravin", "pos": "noun", "details": {"article": "de", "plural": "gravinnen"}, "sentences": ["De *gravin* loopt door de tuin van haar grote kasteel."]}
         ]
       }
     },
@@ -1625,10 +1625,10 @@
       "gloss": "heir (noun)",
       "entries": {
         "en": [
-        {"lemma": "heir", "pos": "noun", "details": {"plural": "heirs"}, "sentences": ["He is the *heir*."]}
+        {"lemma": "heir", "pos": "noun", "details": {"plural": "heirs"}, "sentences": ["The old king has one son, the *heir*."]}
         ],
         "nl": [
-        {"lemma": "erfgenaam", "pos": "noun", "details": {"article": "de", "plural": "erfgenamen"}, "sentences": ["Hij is de *erfgenaam*."]}
+        {"lemma": "erfgenaam", "pos": "noun", "details": {"article": "de", "plural": "erfgenamen"}, "sentences": ["De oude koning heeft één zoon, dus die is de *erfgenaam*."]}
         ]
       }
     },
@@ -1637,10 +1637,10 @@
       "gloss": "newcomer (noun)",
       "entries": {
         "en": [
-        {"lemma": "newcomer", "pos": "noun", "details": {"plural": "newcomers"}, "sentences": ["The *newcomer* is shy."]}
+        {"lemma": "newcomer", "pos": "noun", "details": {"plural": "newcomers"}, "sentences": ["The *newcomer* is shy and sits alone at lunch."]}
         ],
         "nl": [
-        {"lemma": "nieuweling", "pos": "noun", "details": {"article": "de", "plural": "nieuwelingen"}, "sentences": ["De *nieuweling* is verlegen."]}
+        {"lemma": "nieuweling", "pos": "noun", "details": {"article": "de", "plural": "nieuwelingen"}, "sentences": ["De *nieuweling* is verlegen en zit alleen tijdens de lunch."]}
         ]
       }
     },
@@ -1649,10 +1649,10 @@
       "gloss": "rookie (noun)",
       "entries": {
         "en": [
-        {"lemma": "rookie", "pos": "noun", "details": {"plural": "rookies"}, "sentences": ["The *rookie* is nervous."]}
+        {"lemma": "rookie", "pos": "noun", "details": {"plural": "rookies"}, "sentences": ["The *rookie* is nervous on his first day."]}
         ],
         "nl": [
-        {"lemma": "groentje", "pos": "noun", "details": {"article": "het", "plural": "groentjes"}, "sentences": ["Het *groentje* is nerveus."]}
+        {"lemma": "groentje", "pos": "noun", "details": {"article": "het", "plural": "groentjes"}, "sentences": ["Het *groentje* is nerveus op zijn eerste dag bij de brandweer."]}
         ]
       }
     },
@@ -1661,10 +1661,10 @@
       "gloss": "groom (noun)",
       "entries": {
         "en": [
-        {"lemma": "groom", "pos": "noun", "details": {"plural": "grooms"}, "sentences": ["The *groom* is nervous."]}
+        {"lemma": "groom", "pos": "noun", "details": {"plural": "grooms"}, "sentences": ["The *groom* waits at the altar and smiles."]}
         ],
         "nl": [
-        {"lemma": "bruidegom", "pos": "noun", "details": {"article": "de", "plural": "bruidegoms"}, "sentences": ["De *bruidegom* is nerveus."]}
+        {"lemma": "bruidegom", "pos": "noun", "details": {"article": "de", "plural": "bruidegoms"}, "sentences": ["De *bruidegom* wacht bij het altaar en lacht naar zijn bruid."]}
         ]
       }
     },
@@ -1673,10 +1673,10 @@
       "gloss": "joker (noun)",
       "entries": {
         "en": [
-        {"lemma": "joker", "pos": "noun", "details": {"plural": "jokers"}, "sentences": ["He is a *joker*."]}
+        {"lemma": "joker", "pos": "noun", "details": {"plural": "jokers"}, "sentences": ["My uncle is a *joker* and tells funny stories."]}
         ],
         "nl": [
-        {"lemma": "grapjas", "pos": "noun", "details": {"article": "de", "plural": "grapjassen"}, "sentences": ["Hij is een *grapjas*."]}
+        {"lemma": "grapjas", "pos": "noun", "details": {"article": "de", "plural": "grapjassen"}, "sentences": ["Mijn oom is een echte *grapjas* en vertelt grappige verhalen aan tafel."]}
         ]
       }
     },
@@ -1685,10 +1685,10 @@
       "gloss": "marriage proposal (noun)",
       "entries": {
         "en": [
-        {"lemma": "marriage proposal", "pos": "noun", "details": {"plural": "marriage proposals"}, "sentences": ["He makes a *marriage proposal*."]}
+        {"lemma": "marriage proposal", "pos": "noun", "details": {"plural": "marriage proposals"}, "sentences": ["At sunset, he makes a *marriage proposal*."]}
         ],
         "nl": [
-        {"lemma": "aanzoek", "pos": "noun", "details": {"article": "het", "plural": "aanzoeken"}, "sentences": ["Hij doet een *aanzoek*."]}
+        {"lemma": "aanzoek", "pos": "noun", "details": {"article": "het", "plural": "aanzoeken"}, "sentences": ["Op het strand bij zonsondergang doet hij een *aanzoek*."]}
         ]
       }
     },
@@ -1697,10 +1697,10 @@
       "gloss": "messenger (noun)",
       "entries": {
         "en": [
-        {"lemma": "messenger", "pos": "noun", "details": {"plural": "messengers"}, "sentences": ["The *messenger* arrives."]}
+        {"lemma": "messenger", "pos": "noun", "details": {"plural": "messengers"}, "sentences": ["The *messenger* runs through town with an urgent letter."]}
         ],
         "nl": [
-        {"lemma": "boodschapper", "pos": "noun", "details": {"article": "de", "plural": "boodschappers"}, "sentences": ["De *boodschapper* komt aan."]}
+        {"lemma": "boodschapper", "pos": "noun", "details": {"article": "de", "plural": "boodschappers"}, "sentences": ["De *boodschapper* rent met een dringende brief door de stad."]}
         ]
       }
     },
@@ -1709,10 +1709,10 @@
       "gloss": "gambler (noun)",
       "entries": {
         "en": [
-        {"lemma": "gambler", "pos": "noun", "details": {"plural": "gamblers"}, "sentences": ["The *gambler* loses."]}
+        {"lemma": "gambler", "pos": "noun", "details": {"plural": "gamblers"}, "sentences": ["The *gambler* loses all his money at the casino."]}
         ],
         "nl": [
-        {"lemma": "gokker", "pos": "noun", "details": {"article": "de", "plural": "gokkers"}, "sentences": ["De *gokker* verliest."]}
+        {"lemma": "gokker", "pos": "noun", "details": {"article": "de", "plural": "gokkers"}, "sentences": ["De *gokker* verliest vanavond al zijn geld in het casino."]}
         ]
       }
     },
@@ -1721,10 +1721,10 @@
       "gloss": "pharaoh (noun)",
       "entries": {
         "en": [
-        {"lemma": "pharaoh", "pos": "noun", "details": {"plural": "pharaohs"}, "sentences": ["The *pharaoh* is old."]}
+        {"lemma": "pharaoh", "pos": "noun", "details": {"plural": "pharaohs"}, "sentences": ["The *pharaoh* is buried in a golden tomb."]}
         ],
         "nl": [
-        {"lemma": "farao", "pos": "noun", "details": {"article": "de", "plural": "farao's"}, "sentences": ["De *farao* is oud."]}
+        {"lemma": "farao", "pos": "noun", "details": {"article": "de", "plural": "farao's"}, "sentences": ["De *farao* ligt begraven in een gouden graf bij de Nijl."]}
         ]
       }
     },
@@ -1733,10 +1733,10 @@
       "gloss": "stepfather (noun)",
       "entries": {
         "en": [
-        {"lemma": "stepfather", "pos": "noun", "details": {"plural": "stepfathers"}, "sentences": ["My *stepfather* is kind."]}
+        {"lemma": "stepfather", "pos": "noun", "details": {"plural": "stepfathers"}, "sentences": ["My *stepfather* teaches me to fish at the lake."]}
         ],
         "nl": [
-        {"lemma": "stiefvader", "pos": "noun", "details": {"article": "de", "plural": "stiefvaders"}, "sentences": ["Mijn *stiefvader* is aardig."]}
+        {"lemma": "stiefvader", "pos": "noun", "details": {"article": "de", "plural": "stiefvaders"}, "sentences": ["Mijn *stiefvader* leert mij vissen bij het meer."]}
         ]
       }
     },
@@ -1745,10 +1745,10 @@
       "gloss": "brother-in-law (noun)",
       "entries": {
         "en": [
-        {"lemma": "brother-in-law", "pos": "noun", "details": {"plural": "brother-in-laws"}, "sentences": ["My *brother-in-law* lives here."]}
+        {"lemma": "brother-in-law", "pos": "noun", "details": {"plural": "brother-in-laws"}, "sentences": ["My *brother-in-law* works as a baker nearby."]}
         ],
         "nl": [
-        {"lemma": "zwager", "pos": "noun", "details": {"article": "de", "plural": "zwagers"}, "sentences": ["Mijn *zwager* woont hier."]}
+        {"lemma": "zwager", "pos": "noun", "details": {"article": "de", "plural": "zwagers"}, "sentences": ["Mijn *zwager* werkt als bakker in het volgende dorp."]}
         ]
       }
     },
@@ -1757,10 +1757,10 @@
       "gloss": "tempting (adjective)",
       "entries": {
         "en": [
-        {"lemma": "tempting", "pos": "adjective", "sentences": ["The offer is *tempting*."]}
+        {"lemma": "tempting", "pos": "adjective", "sentences": ["The cheap holiday offer is *tempting*, but I'm busy."]}
         ],
         "nl": [
-        {"lemma": "verleidelijk", "pos": "adjective", "sentences": ["Het aanbod is *verleidelijk*."]}
+        {"lemma": "verleidelijk", "pos": "adjective", "sentences": ["Het goedkope vakantieaanbod is heel *verleidelijk*, maar ik heb geen tijd."]}
         ]
       }
     },
@@ -1769,10 +1769,10 @@
       "gloss": "follower (noun)",
       "entries": {
         "en": [
-        {"lemma": "follower", "pos": "noun", "details": {"plural": "followers"}, "sentences": ["The leader has many *followers*."]}
+        {"lemma": "follower", "pos": "noun", "details": {"plural": "followers"}, "sentences": ["The singer has many *followers* who share her songs."]}
         ],
         "nl": [
-        {"lemma": "volgeling", "pos": "noun", "details": {"article": "de", "plural": "volgelingen"}, "sentences": ["De leider heeft veel *volgelingen*."]}
+        {"lemma": "volgeling", "pos": "noun", "details": {"article": "de", "plural": "volgelingen"}, "sentences": ["De zangeres heeft veel *volgelingen* die haar liedjes online delen."]}
         ]
       }
     },
@@ -1781,10 +1781,10 @@
       "gloss": "empress (noun)",
       "entries": {
         "en": [
-        {"lemma": "empress", "pos": "noun", "details": {"plural": "empresses"}, "sentences": ["The *empress* is wise."]}
+        {"lemma": "empress", "pos": "noun", "details": {"plural": "empresses"}, "sentences": ["The wise *empress* rules a huge country."]}
         ],
         "nl": [
-        {"lemma": "keizerin", "pos": "noun", "details": {"article": "de", "plural": "keizerinnen"}, "sentences": ["De *keizerin* is wijs."]}
+        {"lemma": "keizerin", "pos": "noun", "details": {"article": "de", "plural": "keizerinnen"}, "sentences": ["De wijze *keizerin* regeert vanuit haar paleis over een enorm land."]}
         ]
       }
     },
@@ -1793,10 +1793,10 @@
       "gloss": "single (alone)",
       "entries": {
         "en": [
-        {"lemma": "single", "pos": "adjective", "details": {"note": "alone"}, "sentences": ["She is *single*."]}
+        {"lemma": "single", "pos": "adjective", "details": {"note": "alone"}, "sentences": ["She is *single* and enjoys travelling on her own."]}
         ],
         "nl": [
-        {"lemma": "alleenstaand", "pos": "adjective", "sentences": ["Zij is *alleenstaand*."]}
+        {"lemma": "alleenstaand", "pos": "adjective", "sentences": ["Zij is *alleenstaand* en reist graag in haar eentje."]}
         ]
       }
     },
@@ -1805,10 +1805,10 @@
       "gloss": "granddaughter (noun)",
       "entries": {
         "en": [
-        {"lemma": "granddaughter", "pos": "noun", "details": {"plural": "granddaughters"}, "sentences": ["My *granddaughter* is six."]}
+        {"lemma": "granddaughter", "pos": "noun", "details": {"plural": "granddaughters"}, "sentences": ["My *granddaughter* is six and learns to ride."]}
         ],
         "nl": [
-        {"lemma": "kleindochter", "pos": "noun", "details": {"article": "de", "plural": "kleindochters"}, "sentences": ["Mijn *kleindochter* is zes."]}
+        {"lemma": "kleindochter", "pos": "noun", "details": {"article": "de", "plural": "kleindochters"}, "sentences": ["Mijn *kleindochter* is zes en leert fietsen."]}
         ]
       }
     },
@@ -1817,10 +1817,10 @@
       "gloss": "wed (verb)",
       "entries": {
         "en": [
-        {"lemma": "to wed", "pos": "verb", "details": {"past": "wedded", "participle": "wedded"}, "sentences": ["They *wed* in June."]}
+        {"lemma": "to wed", "pos": "verb", "details": {"past": "wedded", "participle": "wedded"}, "sentences": ["They *wed* in June in a small church."]}
         ],
         "nl": [
-        {"lemma": "huwen", "pos": "verb", "details": {"pastSingular": "huwde", "pastPlural": "huwden", "participle": "gehuwd", "auxiliary": "hebben"}, "sentences": ["Zij *huwen* in juni."]}
+        {"lemma": "huwen", "pos": "verb", "details": {"pastSingular": "huwde", "pastPlural": "huwden", "participle": "gehuwd", "auxiliary": "hebben"}, "sentences": ["Zij *huwen* in juni in een klein kerkje aan zee."]}
         ]
       }
     },
@@ -1829,10 +1829,10 @@
       "gloss": "wedding ring (noun)",
       "entries": {
         "en": [
-        {"lemma": "wedding ring", "pos": "noun", "details": {"plural": "wedding rings"}, "sentences": ["She wears a *wedding ring*."]}
+        {"lemma": "wedding ring", "pos": "noun", "details": {"plural": "wedding rings"}, "sentences": ["She wears a gold *wedding ring* on her hand."]}
         ],
         "nl": [
-        {"lemma": "trouwring", "pos": "noun", "details": {"article": "de", "plural": "trouwringen"}, "sentences": ["Zij draagt een *trouwring*."]}
+        {"lemma": "trouwring", "pos": "noun", "details": {"article": "de", "plural": "trouwringen"}, "sentences": ["Zij draagt een gouden *trouwring* aan haar linkerhand."]}
         ]
       }
     },
@@ -1841,10 +1841,10 @@
       "gloss": "contact person (noun)",
       "entries": {
         "en": [
-        {"lemma": "contact person", "pos": "noun", "details": {"plural": "contact people"}, "sentences": ["He is the *contact person*."]}
+        {"lemma": "contact person", "pos": "noun", "details": {"plural": "contact people"}, "sentences": ["For trip questions, he is the *contact person*."]}
         ],
         "nl": [
-        {"lemma": "contactpersoon", "pos": "noun", "details": {"article": "de", "plural": "contactpersonen"}, "sentences": ["Hij is de *contactpersoon*."]}
+        {"lemma": "contactpersoon", "pos": "noun", "details": {"article": "de", "plural": "contactpersonen"}, "sentences": ["Voor vragen over de reis is hij de *contactpersoon*."]}
         ]
       }
     },
@@ -1853,10 +1853,10 @@
       "gloss": "individual (noun)",
       "entries": {
         "en": [
-        {"lemma": "individual", "pos": "noun", "details": {"note": "a single person", "plural": "individuals"}, "sentences": ["Each *individual* is unique."]}
+        {"lemma": "individual", "pos": "noun", "details": {"note": "a single person", "plural": "individuals"}, "sentences": ["In our class, each *individual* gets a turn."]}
         ],
         "nl": [
-        {"lemma": "individu", "pos": "noun", "details": {"article": "het", "plural": "individuen"}, "sentences": ["Elk *individu* is uniek."]}
+        {"lemma": "individu", "pos": "noun", "details": {"article": "het", "plural": "individuen"}, "sentences": ["In onze klas krijgt elk *individu* de kans om te spreken."]}
         ]
       }
     },
@@ -1865,10 +1865,10 @@
       "gloss": "participant (noun)",
       "entries": {
         "en": [
-        {"lemma": "participant", "pos": "noun", "details": {"plural": "participants"}, "sentences": ["The *participant* wins."]}
+        {"lemma": "participant", "pos": "noun", "details": {"plural": "participants"}, "sentences": ["Each *participant* gets a number before the race starts."]}
         ],
         "nl": [
-        {"lemma": "deelnemer", "pos": "noun", "details": {"article": "de", "plural": "deelnemers"}, "sentences": ["De *deelnemer* wint."]}
+        {"lemma": "deelnemer", "pos": "noun", "details": {"article": "de", "plural": "deelnemers"}, "sentences": ["Elke *deelnemer* krijgt een nummer voordat de race begint."]}
         ]
       }
     },
@@ -1877,10 +1877,10 @@
       "gloss": "outsider (noun)",
       "entries": {
         "en": [
-        {"lemma": "outsider", "pos": "noun", "details": {"plural": "outsiders"}, "sentences": ["He feels like an *outsider*."]}
+        {"lemma": "outsider", "pos": "noun", "details": {"plural": "outsiders"}, "sentences": ["He feels like an *outsider* among strangers."]}
         ],
         "nl": [
-        {"lemma": "buitenstaander", "pos": "noun", "details": {"article": "de", "plural": "buitenstaanders"}, "sentences": ["Hij voelt zich een *buitenstaander*."]}
+        {"lemma": "buitenstaander", "pos": "noun", "details": {"article": "de", "plural": "buitenstaanders"}, "sentences": ["Hij voelt zich een *buitenstaander* omdat iedereen elkaar al kent."]}
         ]
       }
     },
@@ -1889,10 +1889,10 @@
       "gloss": "adult (noun)",
       "entries": {
         "en": [
-        {"lemma": "adult", "pos": "noun", "details": {"plural": "adults"}, "sentences": ["The *adult* helps the child."]}
+        {"lemma": "adult", "pos": "noun", "details": {"plural": "adults"}, "sentences": ["A child pays two euros, an *adult* five."]}
         ],
         "nl": [
-        {"lemma": "volwassene", "pos": "noun", "details": {"article": "de", "plural": "volwassenen"}, "sentences": ["De *volwassene* helpt het kind."]}
+        {"lemma": "volwassene", "pos": "noun", "details": {"article": "de", "plural": "volwassenen"}, "sentences": ["Een kind betaalt twee euro, maar een *volwassene* betaalt vijf."]}
         ]
       }
     },
@@ -1901,10 +1901,10 @@
       "gloss": "upbringing (noun)",
       "entries": {
         "en": [
-        {"lemma": "upbringing", "pos": "noun", "details": {"uncountable": true}, "sentences": ["His *upbringing* is strict."]}
+        {"lemma": "upbringing", "pos": "noun", "details": {"uncountable": true}, "sentences": ["His strict *upbringing* shows in his good manners."]}
         ],
         "nl": [
-        {"lemma": "opvoeding", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Zijn *opvoeding* is streng."]}
+        {"lemma": "opvoeding", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Door zijn strenge *opvoeding* zegt hij altijd alsjeblieft en dank je."]}
         ]
       }
     },
@@ -1913,10 +1913,10 @@
       "gloss": "neighbor (female)",
       "entries": {
         "en": [
-        {"lemma": "neighbor", "pos": "noun", "details": {"note": "female", "plural": "neighbors"}, "sentences": ["My *neighbor* is friendly."]}
+        {"lemma": "neighbor", "pos": "noun", "details": {"note": "female", "plural": "neighbors"}, "sentences": ["My *neighbor* waters my plants when I travel."]}
         ],
         "nl": [
-        {"lemma": "buurvrouw", "pos": "noun", "details": {"article": "de", "plural": "buurvrouwen"}, "sentences": ["Mijn *buurvrouw* is vriendelijk."]}
+        {"lemma": "buurvrouw", "pos": "noun", "details": {"article": "de", "plural": "buurvrouwen"}, "sentences": ["Mijn *buurvrouw* geeft mijn planten water als ik op vakantie ben."]}
         ]
       }
     },
@@ -1925,10 +1925,10 @@
       "gloss": "successor (noun)",
       "entries": {
         "en": [
-        {"lemma": "successor", "pos": "noun", "details": {"plural": "successors"}, "sentences": ["The *successor* is young."]}
+        {"lemma": "successor", "pos": "noun", "details": {"plural": "successors"}, "sentences": ["The director introduces his young *successor* to the team."]}
         ],
         "nl": [
-        {"lemma": "opvolger", "pos": "noun", "details": {"article": "de", "plural": "opvolgers"}, "sentences": ["De *opvolger* is jong."]}
+        {"lemma": "opvolger", "pos": "noun", "details": {"article": "de", "plural": "opvolgers"}, "sentences": ["De oude directeur stelt zijn jonge *opvolger* voor aan het team."]}
         ]
       }
     },
@@ -1937,10 +1937,10 @@
       "gloss": "barbarian (noun)",
       "entries": {
         "en": [
-        {"lemma": "barbarian", "pos": "noun", "details": {"plural": "barbarians"}, "sentences": ["The *barbarian* attacks."]}
+        {"lemma": "barbarian", "pos": "noun", "details": {"plural": "barbarians"}, "sentences": ["In the film, a *barbarian* attacks the Roman town."]}
         ],
         "nl": [
-        {"lemma": "barbaar", "pos": "noun", "details": {"article": "de", "plural": "barbaren"}, "sentences": ["De *barbaar* valt aan."]}
+        {"lemma": "barbaar", "pos": "noun", "details": {"article": "de", "plural": "barbaren"}, "sentences": ["In de geschiedenisfilm valt een *barbaar* de Romeinse stad aan."]}
         ]
       }
     },
@@ -1949,10 +1949,10 @@
       "gloss": "engagement (noun)",
       "entries": {
         "en": [
-        {"lemma": "engagement", "pos": "noun", "details": {"plural": "engagements"}, "sentences": ["The *engagement* is in May."]}
+        {"lemma": "engagement", "pos": "noun", "details": {"plural": "engagements"}, "sentences": ["Their *engagement* is in May, and everyone comes."]}
         ],
         "nl": [
-        {"lemma": "verloving", "pos": "noun", "details": {"article": "de", "plural": "verlovingen"}, "sentences": ["De *verloving* is in mei."]}
+        {"lemma": "verloving", "pos": "noun", "details": {"article": "de", "plural": "verlovingen"}, "sentences": ["Hun *verloving* is in mei en de hele familie komt."]}
         ]
       }
     },
@@ -1961,10 +1961,10 @@
       "gloss": "rescuer (noun)",
       "entries": {
         "en": [
-        {"lemma": "rescuer", "pos": "noun", "details": {"plural": "rescuers"}, "sentences": ["The *rescuer* saves the boy."]}
+        {"lemma": "rescuer", "pos": "noun", "details": {"plural": "rescuers"}, "sentences": ["The *rescuer* pulls the boy from cold water."]}
         ],
         "nl": [
-        {"lemma": "redder", "pos": "noun", "details": {"article": "de", "plural": "redders"}, "sentences": ["De *redder* redt de jongen."]}
+        {"lemma": "redder", "pos": "noun", "details": {"article": "de", "plural": "redders"}, "sentences": ["De *redder* trekt de jongen uit het koude water."]}
         ]
       }
     },
@@ -1973,10 +1973,10 @@
       "gloss": "baron (noun)",
       "entries": {
         "en": [
-        {"lemma": "baron", "pos": "noun", "details": {"plural": "barons"}, "sentences": ["The *baron* lives in the castle."]}
+        {"lemma": "baron", "pos": "noun", "details": {"plural": "barons"}, "sentences": ["The *baron* shows his guests around the old castle."]}
         ],
         "nl": [
-        {"lemma": "baron", "pos": "noun", "details": {"article": "de", "plural": "baronnen"}, "sentences": ["De *baron* woont in het kasteel."]}
+        {"lemma": "baron", "pos": "noun", "details": {"article": "de", "plural": "baronnen"}, "sentences": ["De *baron* laat zijn gasten rond in het oude kasteel."]}
         ]
       }
     },
@@ -1985,10 +1985,10 @@
       "gloss": "housewife (noun)",
       "entries": {
         "en": [
-        {"lemma": "housewife", "pos": "noun", "details": {"plural": "housewifes"}, "sentences": ["She is a *housewife*."]}
+        {"lemma": "housewife", "pos": "noun", "details": {"plural": "housewifes"}, "sentences": ["She is a *housewife* and stays home with children."]}
         ],
         "nl": [
-        {"lemma": "huisvrouw", "pos": "noun", "details": {"article": "de", "plural": "huisvrouwen"}, "sentences": ["Zij is een *huisvrouw*."]}
+        {"lemma": "huisvrouw", "pos": "noun", "details": {"article": "de", "plural": "huisvrouwen"}, "sentences": ["Zij is *huisvrouw* en brengt haar dagen door met de kinderen."]}
         ]
       }
     },
@@ -1997,10 +1997,10 @@
       "gloss": "reader (noun)",
       "entries": {
         "en": [
-        {"lemma": "reader", "pos": "noun", "details": {"plural": "readers"}, "sentences": ["The *reader* likes the book."]}
+        {"lemma": "reader", "pos": "noun", "details": {"plural": "readers"}, "sentences": ["The *reader* cannot put the book down."]}
         ],
         "nl": [
-        {"lemma": "lezer", "pos": "noun", "details": {"article": "de", "plural": "lezers"}, "sentences": ["De *lezer* houdt van het boek."]}
+        {"lemma": "lezer", "pos": "noun", "details": {"article": "de", "plural": "lezers"}, "sentences": ["De *lezer* kan het boek niet wegleggen tot de laatste bladzijde."]}
         ]
       }
     },
@@ -2009,10 +2009,10 @@
       "gloss": "landlord (noun)",
       "entries": {
         "en": [
-        {"lemma": "landlord", "pos": "noun", "details": {"plural": "landlords"}, "sentences": ["The *landlord* comes for the rent."]}
+        {"lemma": "landlord", "pos": "noun", "details": {"plural": "landlords"}, "sentences": ["The *landlord* comes on the first for the rent."]}
         ],
         "nl": [
-        {"lemma": "huisbaas", "pos": "noun", "details": {"article": "de", "plural": "huisbazen"}, "sentences": ["De *huisbaas* komt voor de huur."]}
+        {"lemma": "huisbaas", "pos": "noun", "details": {"article": "de", "plural": "huisbazen"}, "sentences": ["De *huisbaas* komt op de eerste van de maand voor de huur."]}
         ]
       }
     },
@@ -2021,10 +2021,10 @@
       "gloss": "tenant (noun)",
       "entries": {
         "en": [
-        {"lemma": "tenant", "pos": "noun", "details": {"plural": "tenants"}, "sentences": ["The *tenant* pays the rent."]}
+        {"lemma": "tenant", "pos": "noun", "details": {"plural": "tenants"}, "sentences": ["The *tenant* pays the rent every month."]}
         ],
         "nl": [
-        {"lemma": "huurder", "pos": "noun", "details": {"article": "de", "plural": "huurders"}, "sentences": ["De *huurder* betaalt de huur."]}
+        {"lemma": "huurder", "pos": "noun", "details": {"article": "de", "plural": "huurders"}, "sentences": ["De *huurder* betaalt de huur en repareert de kapotte lamp zelf."]}
         ]
       }
     },
@@ -2033,10 +2033,10 @@
       "gloss": "minority (noun)",
       "entries": {
         "en": [
-        {"lemma": "minority", "pos": "noun", "details": {"plural": "minorities"}, "sentences": ["The *minority* protests."]}
+        {"lemma": "minority", "pos": "noun", "details": {"plural": "minorities"}, "sentences": ["The *minority* protests in front of the town hall."]}
         ],
         "nl": [
-        {"lemma": "minderheid", "pos": "noun", "details": {"article": "de", "plural": "minderheden"}, "sentences": ["De *minderheid* protesteert."]}
+        {"lemma": "minderheid", "pos": "noun", "details": {"article": "de", "plural": "minderheden"}, "sentences": ["De *minderheid* protesteert voor het stadhuis tegen de nieuwe regel."]}
         ]
       }
     },
@@ -2045,10 +2045,10 @@
       "gloss": "son-in-law (noun)",
       "entries": {
         "en": [
-        {"lemma": "son-in-law", "pos": "noun", "details": {"plural": "son-in-laws"}, "sentences": ["My *son-in-law* is kind."]}
+        {"lemma": "son-in-law", "pos": "noun", "details": {"plural": "son-in-laws"}, "sentences": ["My *son-in-law* helps us move the heavy table upstairs."]}
         ],
         "nl": [
-        {"lemma": "schoonzoon", "pos": "noun", "details": {"article": "de", "plural": "schoonzoons"}, "sentences": ["Mijn *schoonzoon* is aardig."]}
+        {"lemma": "schoonzoon", "pos": "noun", "details": {"article": "de", "plural": "schoonzoons"}, "sentences": ["Mijn *schoonzoon* helpt ons de zware tafel naar boven te dragen."]}
         ]
       }
     },
@@ -2057,10 +2057,10 @@
       "gloss": "mortal (noun)",
       "entries": {
         "en": [
-        {"lemma": "mortal", "pos": "noun", "details": {"note": "a human", "plural": "mortals"}, "sentences": ["We are all *mortals*."]}
+        {"lemma": "mortal", "pos": "noun", "details": {"note": "a human", "plural": "mortals"}, "sentences": ["The old poem says we are all *mortals*."]}
         ],
         "nl": [
-        {"lemma": "sterveling", "pos": "noun", "details": {"article": "de", "plural": "stervelingen"}, "sentences": ["Wij zijn allemaal *stervelingen*."]}
+        {"lemma": "sterveling", "pos": "noun", "details": {"article": "de", "plural": "stervelingen"}, "sentences": ["Het oude gedicht zegt dat wij uiteindelijk allemaal *stervelingen* zijn."]}
         ]
       }
     },
@@ -2069,10 +2069,10 @@
       "gloss": "mentor (noun)",
       "entries": {
         "en": [
-        {"lemma": "mentor", "pos": "noun", "details": {"plural": "mentors"}, "sentences": ["My *mentor* helps me."]}
+        {"lemma": "mentor", "pos": "noun", "details": {"plural": "mentors"}, "sentences": ["My *mentor* at work explains difficult tasks."]}
         ],
         "nl": [
-        {"lemma": "mentor", "pos": "noun", "details": {"article": "de", "plural": "mentors"}, "sentences": ["Mijn *mentor* helpt mij."]}
+        {"lemma": "mentor", "pos": "noun", "details": {"article": "de", "plural": "mentors"}, "sentences": ["Mijn *mentor* op het werk legt mij de moeilijke taken uit."]}
         ]
       }
     },
@@ -2081,10 +2081,10 @@
       "gloss": "superior (noun)",
       "entries": {
         "en": [
-        {"lemma": "superior", "pos": "noun", "details": {"note": "a boss", "plural": "superiors"}, "sentences": ["The *superior* gives an order."]}
+        {"lemma": "superior", "pos": "noun", "details": {"note": "a boss", "plural": "superiors"}, "sentences": ["The *superior* gives an order and soldiers obey."]}
         ],
         "nl": [
-        {"lemma": "overste", "pos": "noun", "details": {"article": "de", "plural": "oversten"}, "sentences": ["De *overste* geeft een bevel."]}
+        {"lemma": "overste", "pos": "noun", "details": {"article": "de", "plural": "oversten"}, "sentences": ["De *overste* geeft een bevel en de soldaten gehoorzamen meteen."]}
         ]
       }
     },
@@ -2093,10 +2093,10 @@
       "gloss": "vegetarian (noun)",
       "entries": {
         "en": [
-        {"lemma": "vegetarian", "pos": "noun", "details": {"plural": "vegetarians"}, "sentences": ["He is a *vegetarian*."]}
+        {"lemma": "vegetarian", "pos": "noun", "details": {"plural": "vegetarians"}, "sentences": ["He is a *vegetarian*, so he orders cheese."]}
         ],
         "nl": [
-        {"lemma": "vegetariër", "pos": "noun", "details": {"article": "de", "plural": "vegetariërs"}, "sentences": ["Hij is een *vegetariër*."]}
+        {"lemma": "vegetariër", "pos": "noun", "details": {"article": "de", "plural": "vegetariërs"}, "sentences": ["Hij is *vegetariër*, dus bestelt hij het kaasbroodje."]}
         ]
       }
     },
@@ -2105,10 +2105,10 @@
       "gloss": "subject (of a ruler)",
       "entries": {
         "en": [
-        {"lemma": "subject", "pos": "noun", "details": {"note": "of a ruler", "plural": "subjects"}, "sentences": ["The king has many *subjects*."]}
+        {"lemma": "subject", "pos": "noun", "details": {"note": "of a ruler", "plural": "subjects"}, "sentences": ["The king greets his *subjects* from the balcony."]}
         ],
         "nl": [
-        {"lemma": "onderdaan", "pos": "noun", "details": {"article": "de", "plural": "onderdanen"}, "sentences": ["De koning heeft veel *onderdanen*."]}
+        {"lemma": "onderdaan", "pos": "noun", "details": {"article": "de", "plural": "onderdanen"}, "sentences": ["De koning groet elke *onderdaan* vanaf het balkon van het paleis."]}
         ]
       }
     },
@@ -2117,10 +2117,10 @@
       "gloss": "protector (noun)",
       "entries": {
         "en": [
-        {"lemma": "protector", "pos": "noun", "details": {"plural": "protectors"}, "sentences": ["He is my *protector*."]}
+        {"lemma": "protector", "pos": "noun", "details": {"plural": "protectors"}, "sentences": ["The big dog is my little brother's loyal *protector*."]}
         ],
         "nl": [
-        {"lemma": "beschermer", "pos": "noun", "details": {"article": "de", "plural": "beschermers"}, "sentences": ["Hij is mijn *beschermer*."]}
+        {"lemma": "beschermer", "pos": "noun", "details": {"article": "de", "plural": "beschermers"}, "sentences": ["De grote hond is de trouwe *beschermer* van mijn broertje."]}
         ]
       }
     },
@@ -2129,10 +2129,10 @@
       "gloss": "brotherhood (noun)",
       "entries": {
         "en": [
-        {"lemma": "brotherhood", "pos": "noun", "details": {"plural": "brotherhoods"}, "sentences": ["The *brotherhood* meets."]}
+        {"lemma": "brotherhood", "pos": "noun", "details": {"plural": "brotherhoods"}, "sentences": ["The *brotherhood* meets monthly in an old building."]}
         ],
         "nl": [
-        {"lemma": "broederschap", "pos": "noun", "details": {"article": "de", "plural": "broederschappen"}, "sentences": ["De *broederschap* vergadert."]}
+        {"lemma": "broederschap", "pos": "noun", "details": {"article": "de", "plural": "broederschappen"}, "sentences": ["De *broederschap* komt elke maand bijeen in een oud stenen gebouw."]}
         ]
       }
     },
@@ -2141,10 +2141,10 @@
       "gloss": "grandparents (noun)",
       "entries": {
         "en": [
-        {"lemma": "grandparents", "pos": "noun", "details": {"pluralOnly": true}, "sentences": ["My *grandparents* live in Utrecht."]}
+        {"lemma": "grandparents", "pos": "noun", "details": {"pluralOnly": true}, "sentences": ["My *grandparents* live in Utrecht and we visit often."]}
         ],
         "nl": [
-        {"lemma": "grootouders", "pos": "noun", "details": {"article": "de", "pluralOnly": true}, "sentences": ["Mijn *grootouders* wonen in Utrecht."]}
+        {"lemma": "grootouders", "pos": "noun", "details": {"article": "de", "pluralOnly": true}, "sentences": ["Mijn *grootouders* wonen in Utrecht en wij bezoeken hen vaak."]}
         ]
       }
     },
@@ -2153,10 +2153,10 @@
       "gloss": "villager (noun)",
       "entries": {
         "en": [
-        {"lemma": "villager", "pos": "noun", "details": {"plural": "villagers"}, "sentences": ["The *villager* greets me."]}
+        {"lemma": "villager", "pos": "noun", "details": {"plural": "villagers"}, "sentences": ["Every *villager* greets me on my way to shop."]}
         ],
         "nl": [
-        {"lemma": "dorpeling", "pos": "noun", "details": {"article": "de", "plural": "dorpelingen"}, "sentences": ["De *dorpeling* groet mij."]}
+        {"lemma": "dorpeling", "pos": "noun", "details": {"article": "de", "plural": "dorpelingen"}, "sentences": ["Elke *dorpeling* groet mij als ik naar de winkel loop."]}
         ]
       }
     },
@@ -2165,10 +2165,10 @@
       "gloss": "predecessor (noun)",
       "entries": {
         "en": [
-        {"lemma": "predecessor", "pos": "noun", "details": {"plural": "predecessors"}, "sentences": ["My *predecessor* leaves a note."]}
+        {"lemma": "predecessor", "pos": "noun", "details": {"plural": "predecessors"}, "sentences": ["On my first day, my *predecessor* leaves a note."]}
         ],
         "nl": [
-        {"lemma": "voorganger", "pos": "noun", "details": {"article": "de", "plural": "voorgangers"}, "sentences": ["Mijn *voorganger* laat een briefje achter."]}
+        {"lemma": "voorganger", "pos": "noun", "details": {"article": "de", "plural": "voorgangers"}, "sentences": ["Op mijn eerste dag laat mijn *voorganger* een briefje op het bureau achter."]}
         ]
       }
     },
@@ -2177,10 +2177,10 @@
       "gloss": "carrier (noun)",
       "entries": {
         "en": [
-        {"lemma": "carrier", "pos": "noun", "details": {"plural": "carriers"}, "sentences": ["The *carrier* brings the bags."]}
+        {"lemma": "carrier", "pos": "noun", "details": {"plural": "carriers"}, "sentences": ["The *carrier* brings our heavy bags upstairs."]}
         ],
         "nl": [
-        {"lemma": "drager", "pos": "noun", "details": {"article": "de", "plural": "dragers"}, "sentences": ["De *drager* brengt de tassen."]}
+        {"lemma": "drager", "pos": "noun", "details": {"article": "de", "plural": "dragers"}, "sentences": ["De *drager* brengt onze zware tassen naar de hotelkamer."]}
         ]
       }
     },
@@ -2189,10 +2189,10 @@
       "gloss": "mother-in-law (noun)",
       "entries": {
         "en": [
-        {"lemma": "mother-in-law", "pos": "noun", "details": {"plural": "mother-in-laws"}, "sentences": ["My *mother-in-law* is kind."]}
+        {"lemma": "mother-in-law", "pos": "noun", "details": {"plural": "mother-in-laws"}, "sentences": ["My *mother-in-law* cooks soup for us every Wednesday."]}
         ],
         "nl": [
-        {"lemma": "schoonmoeder", "pos": "noun", "details": {"article": "de", "plural": "schoonmoeders"}, "sentences": ["Mijn *schoonmoeder* is aardig."]}
+        {"lemma": "schoonmoeder", "pos": "noun", "details": {"article": "de", "plural": "schoonmoeders"}, "sentences": ["Mijn *schoonmoeder* kookt elke woensdag soep voor ons."]}
         ]
       }
     },
@@ -2201,10 +2201,10 @@
       "gloss": "drunkard (noun)",
       "entries": {
         "en": [
-        {"lemma": "drunkard", "pos": "noun", "details": {"plural": "drunkards"}, "sentences": ["The *drunkard* sleeps."]}
+        {"lemma": "drunkard", "pos": "noun", "details": {"plural": "drunkards"}, "sentences": ["The *drunkard* sleeps on a bench in the park."]}
         ],
         "nl": [
-        {"lemma": "dronkaard", "pos": "noun", "details": {"article": "de", "plural": "dronkaards"}, "sentences": ["De *dronkaard* slaapt."]}
+        {"lemma": "dronkaard", "pos": "noun", "details": {"article": "de", "plural": "dronkaards"}, "sentences": ["De *dronkaard* slaapt op een bankje in het koude park."]}
         ]
       }
     },
@@ -2213,10 +2213,10 @@
       "gloss": "beggar (noun)",
       "entries": {
         "en": [
-        {"lemma": "beggar", "pos": "noun", "details": {"plural": "beggars"}, "sentences": ["The *beggar* asks for money."]}
+        {"lemma": "beggar", "pos": "noun", "details": {"plural": "beggars"}, "sentences": ["The *beggar* sits by the bridge asking for money."]}
         ],
         "nl": [
-        {"lemma": "bedelaar", "pos": "noun", "details": {"article": "de", "plural": "bedelaars"}, "sentences": ["De *bedelaar* vraagt om geld."]}
+        {"lemma": "bedelaar", "pos": "noun", "details": {"article": "de", "plural": "bedelaars"}, "sentences": ["De *bedelaar* zit bij de brug en vraagt om geld."]}
         ]
       }
     },
@@ -2225,10 +2225,10 @@
       "gloss": "nobility (noun)",
       "entries": {
         "en": [
-        {"lemma": "nobility", "pos": "noun", "details": {"uncountable": true}, "sentences": ["The *nobility* lives in the castle."]}
+        {"lemma": "nobility", "pos": "noun", "details": {"uncountable": true}, "sentences": ["In the past, the *nobility* lives in castles."]}
         ],
         "nl": [
-        {"lemma": "adel", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["De *adel* woont in het kasteel."]}
+        {"lemma": "adel", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Vroeger woont de *adel* in grote kastelen met bedienden."]}
         ]
       }
     },
@@ -2237,10 +2237,10 @@
       "gloss": "scapegoat (noun)",
       "entries": {
         "en": [
-        {"lemma": "scapegoat", "pos": "noun", "details": {"plural": "scapegoats"}, "sentences": ["He is the *scapegoat*."]}
+        {"lemma": "scapegoat", "pos": "noun", "details": {"plural": "scapegoats"}, "sentences": ["After the mistake, the team makes him the *scapegoat*."]}
         ],
         "nl": [
-        {"lemma": "zondebok", "pos": "noun", "details": {"article": "de", "plural": "zondebokken"}, "sentences": ["Hij is de *zondebok*."]}
+        {"lemma": "zondebok", "pos": "noun", "details": {"article": "de", "plural": "zondebokken"}, "sentences": ["Na de fout maakt het team hem de *zondebok*."]}
         ]
       }
     },
@@ -2249,10 +2249,10 @@
       "gloss": "stepmother (noun)",
       "entries": {
         "en": [
-        {"lemma": "stepmother", "pos": "noun", "details": {"plural": "stepmothers"}, "sentences": ["My *stepmother* is kind."]}
+        {"lemma": "stepmother", "pos": "noun", "details": {"plural": "stepmothers"}, "sentences": ["My *stepmother* picks me up from school on Tuesdays."]}
         ],
         "nl": [
-        {"lemma": "stiefmoeder", "pos": "noun", "details": {"article": "de", "plural": "stiefmoeders"}, "sentences": ["Mijn *stiefmoeder* is aardig."]}
+        {"lemma": "stiefmoeder", "pos": "noun", "details": {"article": "de", "plural": "stiefmoeders"}, "sentences": ["Mijn *stiefmoeder* haalt mij op dinsdag van school af."]}
         ]
       }
     },
@@ -2261,10 +2261,10 @@
       "gloss": "bridesmaid (noun)",
       "entries": {
         "en": [
-        {"lemma": "bridesmaid", "pos": "noun", "details": {"plural": "bridesmaids"}, "sentences": ["The *bridesmaid* holds the bouquet."]}
+        {"lemma": "bridesmaid", "pos": "noun", "details": {"plural": "bridesmaids"}, "sentences": ["The *bridesmaid* holds the bouquet while the couple signs."]}
         ],
         "nl": [
-        {"lemma": "bruidsmeisje", "pos": "noun", "details": {"article": "het", "plural": "bruidsmeisjes"}, "sentences": ["Het *bruidsmeisje* houdt het boeket vast."]}
+        {"lemma": "bruidsmeisje", "pos": "noun", "details": {"article": "het", "plural": "bruidsmeisjes"}, "sentences": ["Het *bruidsmeisje* houdt het boeket vast terwijl het paar tekent."]}
         ]
       }
     },
@@ -2273,10 +2273,10 @@
       "gloss": "elite (noun)",
       "entries": {
         "en": [
-        {"lemma": "elite", "pos": "noun", "details": {"plural": "elites"}, "sentences": ["The *elite* lives here."]}
+        {"lemma": "elite", "pos": "noun", "details": {"plural": "elites"}, "sentences": ["The city's *elite* lives in big houses."]}
         ],
         "nl": [
-        {"lemma": "elite", "pos": "noun", "details": {"article": "de", "plural": "elites"}, "sentences": ["De *elite* woont hier."]}
+        {"lemma": "elite", "pos": "noun", "details": {"article": "de", "plural": "elites"}, "sentences": ["De *elite* van de stad woont in grote huizen achter hoge muren."]}
         ]
       }
     },
@@ -2285,10 +2285,10 @@
       "gloss": "collector (noun)",
       "entries": {
         "en": [
-        {"lemma": "collector", "pos": "noun", "details": {"plural": "collectors"}, "sentences": ["The *collector* has many stamps."]}
+        {"lemma": "collector", "pos": "noun", "details": {"plural": "collectors"}, "sentences": ["The *collector* shows me his old stamps."]}
         ],
         "nl": [
-        {"lemma": "verzamelaar", "pos": "noun", "details": {"article": "de", "plural": "verzamelaars"}, "sentences": ["De *verzamelaar* heeft veel postzegels."]}
+        {"lemma": "verzamelaar", "pos": "noun", "details": {"article": "de", "plural": "verzamelaars"}, "sentences": ["De *verzamelaar* laat mij zijn oude postzegels uit vele landen zien."]}
         ]
       }
     },
@@ -2297,10 +2297,10 @@
       "gloss": "remarry (verb)",
       "entries": {
         "en": [
-        {"lemma": "to remarry", "pos": "verb", "details": {"past": "remarried", "participle": "remarried"}, "sentences": ["She *remarries*."]}
+        {"lemma": "to remarry", "pos": "verb", "details": {"past": "remarried", "participle": "remarried"}, "sentences": ["Two years after the divorce, she *remarries*."]}
         ],
         "nl": [
-        {"lemma": "hertrouwen", "pos": "verb", "details": {"pastSingular": "hertrouwde", "pastPlural": "hertrouwden", "participle": "hertrouwd", "auxiliary": "hebben/zijn"}, "sentences": ["Zij *hertrouwt*."]}
+        {"lemma": "hertrouwen", "pos": "verb", "details": {"pastSingular": "hertrouwde", "pastPlural": "hertrouwden", "participle": "hertrouwd", "auxiliary": "hebben/zijn"}, "sentences": ["Twee jaar na de scheiding *hertrouwt* zij met een aardige leraar."]}
         ]
       }
     },
@@ -2309,10 +2309,10 @@
       "gloss": "godfather (noun)",
       "entries": {
         "en": [
-        {"lemma": "godfather", "pos": "noun", "details": {"plural": "godfathers"}, "sentences": ["He is the *godfather*."]}
+        {"lemma": "godfather", "pos": "noun", "details": {"plural": "godfathers"}, "sentences": ["He is the *godfather* and holds the baby."]}
         ],
         "nl": [
-        {"lemma": "peetvader", "pos": "noun", "details": {"article": "de", "plural": "peetvaders"}, "sentences": ["Hij is de *peetvader*."]}
+        {"lemma": "peetvader", "pos": "noun", "details": {"article": "de", "plural": "peetvaders"}, "sentences": ["Hij is de *peetvader* en houdt de baby vast in de kerk."]}
         ]
       }
     },
@@ -2321,10 +2321,10 @@
       "gloss": "supporter (noun)",
       "entries": {
         "en": [
-        {"lemma": "supporter", "pos": "noun", "details": {"plural": "supporters"}, "sentences": ["The *supporter* cheers."]}
+        {"lemma": "supporter", "pos": "noun", "details": {"plural": "supporters"}, "sentences": ["The loyal *supporter* cheers loudly at every home match."]}
         ],
         "nl": [
-        {"lemma": "aanhanger", "pos": "noun", "details": {"article": "de", "plural": "aanhangers"}, "sentences": ["De *aanhanger* juicht."]}
+        {"lemma": "aanhanger", "pos": "noun", "details": {"article": "de", "plural": "aanhangers"}, "sentences": ["De trouwe *aanhanger* juicht luid bij elke thuiswedstrijd."]}
         ]
       }
     },
@@ -2333,10 +2333,10 @@
       "gloss": "intermediary (noun)",
       "entries": {
         "en": [
-        {"lemma": "intermediary", "pos": "noun", "details": {"plural": "intermediaries"}, "sentences": ["He is the *intermediary*."]}
+        {"lemma": "intermediary", "pos": "noun", "details": {"plural": "intermediaries"}, "sentences": ["He is the *intermediary* between buyer and seller."]}
         ],
         "nl": [
-        {"lemma": "tussenpersoon", "pos": "noun", "details": {"article": "de", "plural": "tussenpersonen"}, "sentences": ["Hij is de *tussenpersoon*."]}
+        {"lemma": "tussenpersoon", "pos": "noun", "details": {"article": "de", "plural": "tussenpersonen"}, "sentences": ["Hij is de *tussenpersoon* tussen de koper en de verkoper."]}
         ]
       }
     },
@@ -2345,10 +2345,10 @@
       "gloss": "dreamer (noun)",
       "entries": {
         "en": [
-        {"lemma": "dreamer", "pos": "noun", "details": {"plural": "dreamers"}, "sentences": ["He is a *dreamer*."]}
+        {"lemma": "dreamer", "pos": "noun", "details": {"plural": "dreamers"}, "sentences": ["He is a *dreamer* and stares out of windows."]}
         ],
         "nl": [
-        {"lemma": "dromer", "pos": "noun", "details": {"article": "de", "plural": "dromers"}, "sentences": ["Hij is een *dromer*."]}
+        {"lemma": "dromer", "pos": "noun", "details": {"article": "de", "plural": "dromers"}, "sentences": ["Hij is een *dromer* en staart vaak uit het raam."]}
         ]
       }
     },
@@ -2357,10 +2357,10 @@
       "gloss": "spectator (noun)",
       "entries": {
         "en": [
-        {"lemma": "spectator", "pos": "noun", "details": {"plural": "spectators"}, "sentences": ["The *spectator* claps."]}
+        {"lemma": "spectator", "pos": "noun", "details": {"plural": "spectators"}, "sentences": ["The *spectator* in the front row claps loudly."]}
         ],
         "nl": [
-        {"lemma": "toeschouwer", "pos": "noun", "details": {"article": "de", "plural": "toeschouwers"}, "sentences": ["De *toeschouwer* klapt."]}
+        {"lemma": "toeschouwer", "pos": "noun", "details": {"article": "de", "plural": "toeschouwers"}, "sentences": ["De *toeschouwer* op de eerste rij klapt na het doelpunt."]}
         ]
       }
     },
@@ -2369,10 +2369,10 @@
       "gloss": "clan (noun)",
       "entries": {
         "en": [
-        {"lemma": "clan", "pos": "noun", "details": {"plural": "clans"}, "sentences": ["The *clan* is large."]}
+        {"lemma": "clan", "pos": "noun", "details": {"plural": "clans"}, "sentences": ["The whole *clan* meets yearly for a picnic."]}
         ],
         "nl": [
-        {"lemma": "clan", "pos": "noun", "details": {"article": "de", "plural": "clans"}, "sentences": ["De *clan* is groot."]}
+        {"lemma": "clan", "pos": "noun", "details": {"article": "de", "plural": "clans"}, "sentences": ["De hele *clan* komt één keer per jaar samen voor een grote picknick."]}
         ]
       }
     },
@@ -2381,10 +2381,10 @@
       "gloss": "scholar (noun)",
       "entries": {
         "en": [
-        {"lemma": "scholar", "pos": "noun", "details": {"plural": "scholars"}, "sentences": ["The *scholar* reads a book."]}
+        {"lemma": "scholar", "pos": "noun", "details": {"plural": "scholars"}, "sentences": ["The old *scholar* reads a book in the library."]}
         ],
         "nl": [
-        {"lemma": "geleerde", "pos": "noun", "details": {"article": "de", "plural": "geleerden"}, "sentences": ["De *geleerde* leest een boek."]}
+        {"lemma": "geleerde", "pos": "noun", "details": {"article": "de", "plural": "geleerden"}, "sentences": ["De oude *geleerde* leest een dik boek in de stille bibliotheek."]}
         ]
       }
     },
@@ -2393,10 +2393,10 @@
       "gloss": "immigrant (noun)",
       "entries": {
         "en": [
-        {"lemma": "immigrant", "pos": "noun", "details": {"plural": "immigrants"}, "sentences": ["The *immigrant* learns Dutch."]}
+        {"lemma": "immigrant", "pos": "noun", "details": {"plural": "immigrants"}, "sentences": ["The *immigrant* learns Dutch at night school."]}
         ],
         "nl": [
-        {"lemma": "immigrant", "pos": "noun", "details": {"article": "de", "plural": "immigranten"}, "sentences": ["De *immigrant* leert Nederlands."]}
+        {"lemma": "immigrant", "pos": "noun", "details": {"article": "de", "plural": "immigranten"}, "sentences": ["De *immigrant* leert drie avonden per week Nederlands op de avondschool."]}
         ]
       }
     },
@@ -2405,10 +2405,10 @@
       "gloss": "baroness (noun)",
       "entries": {
         "en": [
-        {"lemma": "baroness", "pos": "noun", "details": {"plural": "baronesses"}, "sentences": ["The *baroness* lives in the castle."]}
+        {"lemma": "baroness", "pos": "noun", "details": {"plural": "baronesses"}, "sentences": ["The *baroness* gives visitors a tour of her castle."]}
         ],
         "nl": [
-        {"lemma": "barones", "pos": "noun", "details": {"article": "de", "plural": "baronessen"}, "sentences": ["De *barones* woont in het kasteel."]}
+        {"lemma": "barones", "pos": "noun", "details": {"article": "de", "plural": "baronessen"}, "sentences": ["De *barones* geeft de bezoekers een rondleiding door haar kasteel."]}
         ]
       }
     },
@@ -2417,10 +2417,10 @@
       "gloss": "rival (noun)",
       "entries": {
         "en": [
-        {"lemma": "rival", "pos": "noun", "details": {"plural": "rivals"}, "sentences": ["He is my *rival*."]}
+        {"lemma": "rival", "pos": "noun", "details": {"plural": "rivals"}, "sentences": ["He is my *rival*; we both want the job."]}
         ],
         "nl": [
-        {"lemma": "rivaal", "pos": "noun", "details": {"article": "de", "plural": "rivalen"}, "sentences": ["Hij is mijn *rivaal*."]}
+        {"lemma": "rivaal", "pos": "noun", "details": {"article": "de", "plural": "rivalen"}, "sentences": ["Hij is mijn *rivaal* op het werk en wij willen allebei de baan."]}
         ]
       }
     },
@@ -2429,10 +2429,10 @@
       "gloss": "sultan (noun)",
       "entries": {
         "en": [
-        {"lemma": "sultan", "pos": "noun", "details": {"plural": "sultans"}, "sentences": ["The *sultan* lives in a palace."]}
+        {"lemma": "sultan", "pos": "noun", "details": {"plural": "sultans"}, "sentences": ["In the tale, the *sultan* lives in a palace."]}
         ],
         "nl": [
-        {"lemma": "sultan", "pos": "noun", "details": {"article": "de", "plural": "sultans"}, "sentences": ["De *sultan* woont in een paleis."]}
+        {"lemma": "sultan", "pos": "noun", "details": {"article": "de", "plural": "sultans"}, "sentences": ["In het oude verhaal woont de *sultan* in een paleis met tuinen."]}
         ]
       }
     },
@@ -2441,10 +2441,10 @@
       "gloss": "caller (noun)",
       "entries": {
         "en": [
-        {"lemma": "caller", "pos": "noun", "details": {"plural": "callers"}, "sentences": ["The *caller* hangs up."]}
+        {"lemma": "caller", "pos": "noun", "details": {"plural": "callers"}, "sentences": ["The *caller* hangs up before I say my name."]}
         ],
         "nl": [
-        {"lemma": "beller", "pos": "noun", "details": {"article": "de", "plural": "bellers"}, "sentences": ["De *beller* hangt op."]}
+        {"lemma": "beller", "pos": "noun", "details": {"article": "de", "plural": "bellers"}, "sentences": ["De *beller* hangt op voordat ik mijn naam kan zeggen."]}
         ]
       }
     },
@@ -2453,10 +2453,10 @@
       "gloss": "senior (noun)",
       "entries": {
         "en": [
-        {"lemma": "senior", "pos": "noun", "details": {"plural": "seniors"}, "sentences": ["The *senior* gets a discount."]}
+        {"lemma": "senior", "pos": "noun", "details": {"plural": "seniors"}, "sentences": ["At the cinema, the *senior* gets a ticket discount."]}
         ],
         "nl": [
-        {"lemma": "senior", "pos": "noun", "details": {"article": "de", "plural": "senioren"}, "sentences": ["De *senior* krijgt korting."]}
+        {"lemma": "senior", "pos": "noun", "details": {"article": "de", "plural": "senioren"}, "sentences": ["In de bioscoop krijgt de *senior* korting op het kaartje."]}
         ]
       }
     },
@@ -2465,10 +2465,10 @@
       "gloss": "descendant (noun)",
       "entries": {
         "en": [
-        {"lemma": "descendant", "pos": "noun", "details": {"plural": "descendants"}, "sentences": ["He is a *descendant* of the king."]}
+        {"lemma": "descendant", "pos": "noun", "details": {"plural": "descendants"}, "sentences": ["He is a *descendant* of the old king."]}
         ],
         "nl": [
-        {"lemma": "afstammeling", "pos": "noun", "details": {"article": "de", "plural": "afstammelingen"}, "sentences": ["Hij is een *afstammeling* van de koning."]}
+        {"lemma": "afstammeling", "pos": "noun", "details": {"article": "de", "plural": "afstammelingen"}, "sentences": ["Hij is een *afstammeling* van de oude koning en woont in het paleis."]}
         ]
       }
     },
@@ -2477,10 +2477,10 @@
       "gloss": "brunette (noun)",
       "entries": {
         "en": [
-        {"lemma": "brunette", "pos": "noun", "details": {"plural": "brunettes"}, "sentences": ["She is a *brunette*."]}
+        {"lemma": "brunette", "pos": "noun", "details": {"plural": "brunettes"}, "sentences": ["The *brunette* in the red coat waits outside."]}
         ],
         "nl": [
-        {"lemma": "brunette", "pos": "noun", "details": {"article": "de", "plural": "brunettes"}, "sentences": ["Zij is een *brunette*."]}
+        {"lemma": "brunette", "pos": "noun", "details": {"article": "de", "plural": "brunettes"}, "sentences": ["De *brunette* in de rode jas wacht bij de bushalte."]}
         ]
       }
     },
@@ -2489,10 +2489,10 @@
       "gloss": "patriot (noun)",
       "entries": {
         "en": [
-        {"lemma": "patriot", "pos": "noun", "details": {"plural": "patriots"}, "sentences": ["He is a *patriot*."]}
+        {"lemma": "patriot", "pos": "noun", "details": {"plural": "patriots"}, "sentences": ["He is a *patriot* and hangs the flag outside."]}
         ],
         "nl": [
-        {"lemma": "patriot", "pos": "noun", "details": {"article": "de", "plural": "patriotten"}, "sentences": ["Hij is een *patriot*."]}
+        {"lemma": "patriot", "pos": "noun", "details": {"article": "de", "plural": "patriotten"}, "sentences": ["Hij is een *patriot* en hangt op nationale feestdag de vlag uit."]}
         ]
       }
     },
@@ -2501,10 +2501,10 @@
       "gloss": "sister-in-law (noun)",
       "entries": {
         "en": [
-        {"lemma": "sister-in-law", "pos": "noun", "details": {"plural": "sister-in-laws"}, "sentences": ["My *sister-in-law* is nice."]}
+        {"lemma": "sister-in-law", "pos": "noun", "details": {"plural": "sister-in-laws"}, "sentences": ["My *sister-in-law* brings a cake to every family birthday."]}
         ],
         "nl": [
-        {"lemma": "schoonzus", "pos": "noun", "details": {"article": "de", "plural": "schoonzussen"}, "sentences": ["Mijn *schoonzus* is aardig."]}
+        {"lemma": "schoonzus", "pos": "noun", "details": {"article": "de", "plural": "schoonzussen"}, "sentences": ["Mijn *schoonzus* neemt op elke familieverjaardag een taart mee."]}
         ]
       }
     },
@@ -2513,10 +2513,10 @@
       "gloss": "father-in-law (noun)",
       "entries": {
         "en": [
-        {"lemma": "father-in-law", "pos": "noun", "details": {"plural": "father-in-laws"}, "sentences": ["My *father-in-law* is kind."]}
+        {"lemma": "father-in-law", "pos": "noun", "details": {"plural": "father-in-laws"}, "sentences": ["My *father-in-law* repairs old clocks in his garage."]}
         ],
         "nl": [
-        {"lemma": "schoonvader", "pos": "noun", "details": {"article": "de", "plural": "schoonvaders"}, "sentences": ["Mijn *schoonvader* is aardig."]}
+        {"lemma": "schoonvader", "pos": "noun", "details": {"article": "de", "plural": "schoonvaders"}, "sentences": ["Mijn *schoonvader* repareert oude klokken in zijn garage."]}
         ]
       }
     },
@@ -2525,10 +2525,10 @@
       "gloss": "daughter-in-law (noun)",
       "entries": {
         "en": [
-        {"lemma": "daughter-in-law", "pos": "noun", "details": {"plural": "daughter-in-laws"}, "sentences": ["My *daughter-in-law* is friendly."]}
+        {"lemma": "daughter-in-law", "pos": "noun", "details": {"plural": "daughter-in-laws"}, "sentences": ["My *daughter-in-law* is friendly and helps in the kitchen."]}
         ],
         "nl": [
-        {"lemma": "schoondochter", "pos": "noun", "details": {"article": "de", "plural": "schoondochters"}, "sentences": ["Mijn *schoondochter* is vriendelijk."]}
+        {"lemma": "schoondochter", "pos": "noun", "details": {"article": "de", "plural": "schoondochters"}, "sentences": ["Mijn *schoondochter* is vriendelijk en helpt mij in de keuken."]}
         ]
       }
     },
@@ -2537,10 +2537,10 @@
       "gloss": "stepbrother (noun)",
       "entries": {
         "en": [
-        {"lemma": "stepbrother", "pos": "noun", "details": {"plural": "stepbrothers"}, "sentences": ["My *stepbrother* is older."]}
+        {"lemma": "stepbrother", "pos": "noun", "details": {"plural": "stepbrothers"}, "sentences": ["My *stepbrother* is older and shares his games."]}
         ],
         "nl": [
-        {"lemma": "stiefbroer", "pos": "noun", "details": {"article": "de", "plural": "stiefbroers"}, "sentences": ["Mijn *stiefbroer* is ouder."]}
+        {"lemma": "stiefbroer", "pos": "noun", "details": {"article": "de", "plural": "stiefbroers"}, "sentences": ["Mijn *stiefbroer* is ouder en deelt zijn spelletjes met mij."]}
         ]
       }
     },
@@ -2549,10 +2549,10 @@
       "gloss": "stepsister (noun)",
       "entries": {
         "en": [
-        {"lemma": "stepsister", "pos": "noun", "details": {"plural": "stepsisters"}, "sentences": ["My *stepsister* is younger."]}
+        {"lemma": "stepsister", "pos": "noun", "details": {"plural": "stepsisters"}, "sentences": ["My *stepsister* is younger, so I help her."]}
         ],
         "nl": [
-        {"lemma": "stiefzus", "pos": "noun", "details": {"article": "de", "plural": "stiefzussen"}, "sentences": ["Mijn *stiefzus* is jonger."]}
+        {"lemma": "stiefzus", "pos": "noun", "details": {"article": "de", "plural": "stiefzussen"}, "sentences": ["Mijn *stiefzus* is jonger, dus ik help haar met huiswerk."]}
         ]
       }
     },
@@ -2561,10 +2561,10 @@
       "gloss": "half-brother (noun)",
       "entries": {
         "en": [
-        {"lemma": "half-brother", "pos": "noun", "details": {"plural": "half-brothers"}, "sentences": ["My *half-brother* lives abroad."]}
+        {"lemma": "half-brother", "pos": "noun", "details": {"plural": "half-brothers"}, "sentences": ["My *half-brother* lives abroad and calls us every Sunday."]}
         ],
         "nl": [
-        {"lemma": "halfbroer", "pos": "noun", "details": {"article": "de", "plural": "halfbroers"}, "sentences": ["Mijn *halfbroer* woont in het buitenland."]}
+        {"lemma": "halfbroer", "pos": "noun", "details": {"article": "de", "plural": "halfbroers"}, "sentences": ["Mijn *halfbroer* woont in het buitenland en belt ons elke zondag."]}
         ]
       }
     },
@@ -2573,10 +2573,10 @@
       "gloss": "half-sister (noun)",
       "entries": {
         "en": [
-        {"lemma": "half-sister", "pos": "noun", "details": {"plural": "half-sisters"}, "sentences": ["My *half-sister* is twelve."]}
+        {"lemma": "half-sister", "pos": "noun", "details": {"plural": "half-sisters"}, "sentences": ["My *half-sister* is twelve and plays the violin well."]}
         ],
         "nl": [
-        {"lemma": "halfzus", "pos": "noun", "details": {"article": "de", "plural": "halfzussen"}, "sentences": ["Mijn *halfzus* is twaalf."]}
+        {"lemma": "halfzus", "pos": "noun", "details": {"article": "de", "plural": "halfzussen"}, "sentences": ["Mijn *halfzus* is twaalf en speelt goed viool."]}
         ]
       }
     },
@@ -2585,10 +2585,10 @@
       "gloss": "nephew (noun)",
       "entries": {
         "en": [
-        {"lemma": "nephew", "pos": "noun", "details": {"plural": "nephews"}, "sentences": ["My *nephew* is eight."]}
+        {"lemma": "nephew", "pos": "noun", "details": {"plural": "nephews"}, "sentences": ["My *nephew* is eight and loves football."]}
         ],
         "nl": [
-        {"lemma": "neef", "pos": "noun", "details": {"note": "de zoon van een broer of zus", "article": "de", "plural": "neven"}, "sentences": ["Mijn *neef* is acht."]}
+        {"lemma": "neef", "pos": "noun", "details": {"note": "de zoon van een broer of zus", "article": "de", "plural": "neven"}, "sentences": ["Mijn *neef*, de zoon van mijn zus, is acht."]}
         ]
       }
     },
@@ -2597,10 +2597,10 @@
       "gloss": "cousin (male)",
       "entries": {
         "en": [
-        {"lemma": "cousin", "pos": "noun", "details": {"note": "male", "plural": "cousins"}, "sentences": ["I visit my *cousin*."]}
+        {"lemma": "cousin", "pos": "noun", "details": {"note": "male", "plural": "cousins"}, "sentences": ["I visit my *cousin* every summer at his farm."]}
         ],
         "nl": [
-        {"lemma": "neef", "pos": "noun", "details": {"note": "de zoon van een oom of tante", "article": "de", "plural": "neven"}, "sentences": ["Ik bezoek mijn *neef*."]}
+        {"lemma": "neef", "pos": "noun", "details": {"note": "de zoon van een oom of tante", "article": "de", "plural": "neven"}, "sentences": ["Ik bezoek elke zomer mijn *neef* op zijn boerderij."]}
         ]
       }
     },
@@ -2609,10 +2609,10 @@
       "gloss": "cousin (female)",
       "entries": {
         "en": [
-        {"lemma": "cousin", "pos": "noun", "details": {"note": "female", "plural": "cousins"}, "sentences": ["My *cousin* lives in Utrecht."]}
+        {"lemma": "cousin", "pos": "noun", "details": {"note": "female", "plural": "cousins"}, "sentences": ["My *cousin* lives in Utrecht, near her work."]}
         ],
         "nl": [
-        {"lemma": "nicht", "pos": "noun", "details": {"note": "de dochter van een oom of tante", "article": "de", "plural": "nichten"}, "sentences": ["Mijn *nicht* woont in Utrecht."]}
+        {"lemma": "nicht", "pos": "noun", "details": {"note": "de dochter van een oom of tante", "article": "de", "plural": "nichten"}, "sentences": ["Mijn *nicht* woont in Utrecht, vlak bij haar werk."]}
         ]
       }
     },
@@ -2621,10 +2621,10 @@
       "gloss": "godmother (noun)",
       "entries": {
         "en": [
-        {"lemma": "godmother", "pos": "noun", "details": {"plural": "godmothers"}, "sentences": ["My *godmother* gives me a gift."]}
+        {"lemma": "godmother", "pos": "noun", "details": {"plural": "godmothers"}, "sentences": ["My *godmother* gives me a gift on my birthday."]}
         ],
         "nl": [
-        {"lemma": "peetmoeder", "pos": "noun", "details": {"article": "de", "plural": "peetmoeders"}, "sentences": ["Mijn *peetmoeder* geeft mij een cadeau."]}
+        {"lemma": "peetmoeder", "pos": "noun", "details": {"article": "de", "plural": "peetmoeders"}, "sentences": ["Mijn *peetmoeder* geeft mij elk jaar een cadeau voor mijn verjaardag."]}
         ]
       }
     },
@@ -2633,10 +2633,10 @@
       "gloss": "widower (noun)",
       "entries": {
         "en": [
-        {"lemma": "widower", "pos": "noun", "details": {"plural": "widowers"}, "sentences": ["The *widower* lives alone."]}
+        {"lemma": "widower", "pos": "noun", "details": {"plural": "widowers"}, "sentences": ["The *widower* lives alone since his wife died."]}
         ],
         "nl": [
-        {"lemma": "weduwnaar", "pos": "noun", "details": {"article": "de", "plural": "weduwnaars"}, "sentences": ["De *weduwnaar* woont alleen."]}
+        {"lemma": "weduwnaar", "pos": "noun", "details": {"article": "de", "plural": "weduwnaars"}, "sentences": ["De *weduwnaar* woont alleen sinds zijn vrouw is overleden."]}
         ]
       }
     },
@@ -2645,10 +2645,10 @@
       "gloss": "orphan (noun)",
       "entries": {
         "en": [
-        {"lemma": "orphan", "pos": "noun", "details": {"plural": "orphans"}, "sentences": ["The *orphan* lives with his aunt."]}
+        {"lemma": "orphan", "pos": "noun", "details": {"plural": "orphans"}, "sentences": ["The *orphan* has no parents and lives with relatives."]}
         ],
         "nl": [
-        {"lemma": "wees", "pos": "noun", "details": {"article": "de", "plural": "wezen"}, "sentences": ["De *wees* woont bij zijn tante."]}
+        {"lemma": "wees", "pos": "noun", "details": {"article": "de", "plural": "wezen"}, "sentences": ["De *wees* heeft geen ouders en woont bij zijn tante."]}
         ]
       }
     },
@@ -2657,10 +2657,10 @@
       "gloss": "toddler (noun)",
       "entries": {
         "en": [
-        {"lemma": "toddler", "pos": "noun", "details": {"plural": "toddlers"}, "sentences": ["The *toddler* plays."]}
+        {"lemma": "toddler", "pos": "noun", "details": {"plural": "toddlers"}, "sentences": ["The *toddler* plays with blocks on the living room floor."]}
         ],
         "nl": [
-        {"lemma": "peuter", "pos": "noun", "details": {"article": "de", "plural": "peuters"}, "sentences": ["De *peuter* speelt."]}
+        {"lemma": "peuter", "pos": "noun", "details": {"article": "de", "plural": "peuters"}, "sentences": ["De *peuter* speelt met blokken op de vloer van de woonkamer."]}
         ]
       }
     },
@@ -2669,10 +2669,10 @@
       "gloss": "siblings (noun)",
       "entries": {
         "en": [
-        {"lemma": "siblings", "pos": "noun", "details": {"pluralOnly": true}, "sentences": ["I have two *siblings*."]}
+        {"lemma": "siblings", "pos": "noun", "details": {"pluralOnly": true}, "sentences": ["I have two *siblings*, an older brother and sister."]}
         ],
         "nl": [
-        {"lemma": "broers en zussen", "pos": "noun", "details": {"article": "de", "pluralOnly": true}, "sentences": ["Ik heb twee *broers en zussen*."]}
+        {"lemma": "broers en zussen", "pos": "noun", "details": {"article": "de", "pluralOnly": true}, "sentences": ["Ik heb twee *broers en zussen*: een oudere broer en een jongere zus."]}
         ]
       }
     },
@@ -2681,10 +2681,10 @@
       "gloss": "elderly person (noun)",
       "entries": {
         "en": [
-        {"lemma": "elderly person", "pos": "noun", "details": {"plural": "elderly people"}, "sentences": ["The *elderly person* sits on a bench."]}
+        {"lemma": "elderly person", "pos": "noun", "details": {"plural": "elderly people"}, "sentences": ["The *elderly person* sits on a bench near the pond."]}
         ],
         "nl": [
-        {"lemma": "bejaarde", "pos": "noun", "details": {"article": "de", "plural": "bejaarden"}, "sentences": ["De *bejaarde* zit op een bankje."]}
+        {"lemma": "bejaarde", "pos": "noun", "details": {"article": "de", "plural": "bejaarden"}, "sentences": ["De *bejaarde* zit op een bankje bij de vijver."]}
         ]
       }
     },
@@ -2693,10 +2693,10 @@
       "gloss": "family tree (noun)",
       "entries": {
         "en": [
-        {"lemma": "family tree", "pos": "noun", "details": {"plural": "family trees"}, "sentences": ["I draw a *family tree*."]}
+        {"lemma": "family tree", "pos": "noun", "details": {"plural": "family trees"}, "sentences": ["I draw a *family tree* to show my grandparents' children."]}
         ],
         "nl": [
-        {"lemma": "stamboom", "pos": "noun", "details": {"article": "de", "plural": "stambomen"}, "sentences": ["Ik teken een *stamboom*."]}
+        {"lemma": "stamboom", "pos": "noun", "details": {"article": "de", "plural": "stambomen"}, "sentences": ["Ik teken een *stamboom* met alle kinderen van mijn grootouders."]}
         ]
       }
     },
@@ -2705,10 +2705,10 @@
       "gloss": "in-laws (noun)",
       "entries": {
         "en": [
-        {"lemma": "in-laws", "pos": "noun", "details": {"pluralOnly": true}, "sentences": ["I visit my *in-laws*."]}
+        {"lemma": "in-laws", "pos": "noun", "details": {"pluralOnly": true}, "sentences": ["I visit my *in-laws* every Sunday for dinner."]}
         ],
         "nl": [
-        {"lemma": "schoonfamilie", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Ik bezoek mijn *schoonfamilie*."]}
+        {"lemma": "schoonfamilie", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Ik bezoek elke zondag mijn *schoonfamilie* voor het avondeten."]}
         ]
       }
     }
