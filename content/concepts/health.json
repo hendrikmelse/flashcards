@@ -320,7 +320,7 @@
         {"lemma": "to breathe", "pos": "verb", "details": {"past": "breathed", "participle": "breathed"}, "sentences": ["I *breathe* deeply before jumping into cold water."]}
         ],
         "nl": [
-        {"lemma": "ademen", "pos": "verb", "details": {"pastSingular": "ademde", "pastPlural": "ademden", "participle": "geademd", "auxiliary": "hebben"}, "sentences": ["Ik *adem* diep in voordat ik in het koude water spring."]}
+        {"lemma": "ademen", "pos": "verb", "details": {"pastSingular": "ademde", "pastPlural": "ademden", "participle": "geademd", "auxiliary": "hebben"}, "sentences": ["Ik *adem* diep in voordat ik in koud water spring."]}
         ]
       }
     },
@@ -677,7 +677,7 @@
       "gloss": "poison (noun)",
       "entries": {
         "en": [
-        {"lemma": "poison", "pos": "noun", "details": {"plural": "poisons"}, "sentences": ["The *poison* is deadly; keep it from children."]}
+        {"lemma": "poison", "pos": "noun", "details": {"plural": "poisons"}, "sentences": ["The *poison* is deadly, so keep it from children."]}
         ],
         "nl": [
         {"lemma": "gif", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["Het *gif* is dodelijk, dus houd het uit de buurt van kinderen."]}
@@ -977,7 +977,7 @@
       "gloss": "mental (adjective)",
       "entries": {
         "en": [
-        {"lemma": "mental", "pos": "adjective", "sentences": ["After exams, he needs *mental* rest and air."]}
+        {"lemma": "mental", "pos": "adjective", "sentences": ["After exams, he needs *mental* rest and fresh air."]}
         ],
         "nl": [
         {"lemma": "mentaal", "pos": "adjective", "sentences": ["Na de examens heeft hij *mentale* rust en frisse lucht nodig."]}

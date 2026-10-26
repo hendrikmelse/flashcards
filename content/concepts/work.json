@@ -200,7 +200,7 @@
         {"lemma": "assignment", "pos": "noun", "details": {"plural": "assignments"}, "sentences": ["Our teacher gives us an *assignment* for Friday."]}
         ],
         "nl": [
-        {"lemma": "opdracht", "pos": "noun", "details": {"article": "de", "plural": "opdrachten"}, "sentences": ["Onze leraar geeft ons een *opdracht* die we vrijdag moeten afhebben."]}
+        {"lemma": "opdracht", "pos": "noun", "details": {"article": "de", "plural": "opdrachten"}, "sentences": ["Onze leraar geeft ons een *opdracht* voor vrijdag."]}
         ]
       }
     },
@@ -848,7 +848,7 @@
         {"lemma": "agreement", "pos": "noun", "details": {"plural": "agreements"}, "sentences": ["After a long talk, they reach an *agreement*."]}
         ],
         "nl": [
-        {"lemma": "overeenkomst", "pos": "noun", "details": {"article": "de", "plural": "overeenkomsten"}, "sentences": ["Na een lang gesprek bereiken beide partijen een *overeenkomst*."]}
+        {"lemma": "overeenkomst", "pos": "noun", "details": {"article": "de", "plural": "overeenkomsten"}, "sentences": ["Na een lang gesprek bereiken ze een *overeenkomst*."]}
         ]
       }
     },
@@ -1241,7 +1241,7 @@
       "gloss": "loan (noun)",
       "entries": {
         "en": [
-        {"lemma": "loan", "pos": "noun", "details": {"plural": "loans"}, "sentences": ["They take a *loan* to buy a house."]}
+        {"lemma": "loan", "pos": "noun", "details": {"plural": "loans"}, "sentences": ["They take a *loan* from the bank to buy a house."]}
         ],
         "nl": [
         {"lemma": "lening", "pos": "noun", "details": {"article": "de", "plural": "leningen"}, "sentences": ["Zij nemen een *lening* bij de bank om een huis te kopen."]}
@@ -1268,7 +1268,7 @@
         {"lemma": "to suspend", "pos": "verb", "details": {"past": "suspended", "participle": "suspended"}, "sentences": ["The school does not *suspend* a pupil without warning."]}
         ],
         "nl": [
-        {"lemma": "schorsen", "pos": "verb", "details": {"pastSingular": "schorste", "pastPlural": "schorsten", "participle": "geschorst", "auxiliary": "hebben"}, "sentences": ["De school *schorst* een leerling niet zonder met de ouders te praten."]}
+        {"lemma": "schorsen", "pos": "verb", "details": {"pastSingular": "schorste", "pastPlural": "schorsten", "participle": "geschorst", "auxiliary": "hebben"}, "sentences": ["De school *schorst* een leerling niet zonder waarschuwing."]}
         ]
       }
     },
@@ -3305,7 +3305,7 @@
       "gloss": "promote (verb)",
       "entries": {
         "en": [
-        {"lemma": "to promote", "pos": "verb", "details": {"past": "promoted", "participle": "promoted"}, "sentences": ["They *promote* the new product with ads on television."]}
+        {"lemma": "to promote", "pos": "verb", "details": {"past": "promoted", "participle": "promoted"}, "sentences": ["They *promote* the sale of the new product with ads on television."]}
         ],
         "nl": [
         {"lemma": "bevorderen", "pos": "verb", "details": {"pastSingular": "bevorderde", "pastPlural": "bevorderden", "participle": "bevorderd", "auxiliary": "hebben"}, "sentences": ["Zij *bevorderen* de verkoop van het nieuwe product met reclame op televisie."]}

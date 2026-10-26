@@ -707,7 +707,7 @@
         {"lemma": "to try", "pos": "verb", "details": {"note": "test", "past": "tried", "participle": "tried"}, "sentences": ["I *try* the soup to check the salt."]}
         ],
         "nl": [
-        {"lemma": "proberen", "pos": "verb", "details": {"pastSingular": "probeerde", "pastPlural": "probeerden", "participle": "geprobeerd", "auxiliary": "hebben"}, "sentences": ["Ik *probeer* de soep om te zien of er zout bij moet."]}
+        {"lemma": "proberen", "pos": "verb", "details": {"pastSingular": "probeerde", "pastPlural": "probeerden", "participle": "geprobeerd", "auxiliary": "hebben"}, "sentences": ["Ik *probeer* de soep om het zout te controleren."]}
         ]
       }
     },
@@ -1436,7 +1436,7 @@
       "gloss": "shout (verb)",
       "entries": {
         "en": [
-        {"lemma": "to shout", "pos": "verb", "details": {"past": "shouted", "participle": "shouted"}, "sentences": ["From the hill, I *shout* his name."]}
+        {"lemma": "to shout", "pos": "verb", "details": {"past": "shouted", "participle": "shouted"}, "sentences": ["From the top of the hill, I *shout* his name."]}
         ],
         "nl": [
         {"lemma": "roepen", "pos": "verb", "details": {"pastSingular": "riep", "pastPlural": "riepen", "participle": "geroepen", "auxiliary": "hebben"}, "sentences": ["Vanaf de top van de heuvel *roep* ik zijn naam."]}
@@ -1703,7 +1703,7 @@
         {"lemma": "to congratulate", "pos": "verb", "details": {"past": "congratulated", "participle": "congratulated"}, "sentences": ["I *congratulate* my neighbour on her new baby."]}
         ],
         "nl": [
-        {"lemma": "feliciteren", "pos": "verb", "details": {"pastSingular": "feliciteerde", "pastPlural": "feliciteerden", "participle": "gefeliciteerd", "auxiliary": "hebben"}, "sentences": ["Ik *feliciteer* mijn buurvrouw, want zij heeft een nieuwe baby."]}
+        {"lemma": "feliciteren", "pos": "verb", "details": {"pastSingular": "feliciteerde", "pastPlural": "feliciteerden", "participle": "gefeliciteerd", "auxiliary": "hebben"}, "sentences": ["Ik *feliciteer* mijn buurvrouw met haar nieuwe baby."]}
         ]
       }
     },
@@ -3392,10 +3392,10 @@
       "gloss": "stay over (verb)",
       "entries": {
         "en": [
-        {"lemma": "to stay over", "pos": "verb", "details": {"past": "stayed over", "participle": "stayed over"}, "sentences": ["My friend *stays over* because it is very late."]}
+        {"lemma": "to stay over", "pos": "verb", "details": {"past": "stayed over", "participle": "stayed over"}, "sentences": ["My friend *stays over* at my place because it is very late."]}
         ],
         "nl": [
-        {"lemma": "logeren", "pos": "verb", "details": {"pastSingular": "logeerde", "pastPlural": "logeerden", "participle": "gelogeerd", "auxiliary": "hebben"}, "sentences": ["Mijn vriend *logeert* bij mij, want het is al laat."]}
+        {"lemma": "logeren", "pos": "verb", "details": {"pastSingular": "logeerde", "pastPlural": "logeerden", "participle": "gelogeerd", "auxiliary": "hebben"}, "sentences": ["Mijn vriend *logeert* bij mij, want het is erg laat."]}
         ]
       }
     },

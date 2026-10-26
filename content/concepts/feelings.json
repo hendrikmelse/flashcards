@@ -725,7 +725,7 @@
       "gloss": "loyalty (noun)",
       "entries": {
         "en": [
-        {"lemma": "loyalty", "pos": "noun", "details": {"note": "faithfulness", "uncountable": true}, "sentences": ["A good friend shows *loyalty* when times are hard."]}
+        {"lemma": "loyalty", "pos": "noun", "details": {"note": "faithfulness", "uncountable": true}, "sentences": ["A good friend shows *loyalty* even when times are hard."]}
         ],
         "nl": [
         {"lemma": "trouw", "pos": "noun", "details": {"note": "een eigenschap", "article": "de", "uncountable": true}, "sentences": ["Een goede vriend toont *trouw*, ook als het moeilijk gaat."]}
@@ -797,7 +797,7 @@
       "gloss": "unhappy (adjective)",
       "entries": {
         "en": [
-        {"lemma": "unhappy", "pos": "adjective", "sentences": ["She is *unhappy* at her new job; nobody talks."]}
+        {"lemma": "unhappy", "pos": "adjective", "sentences": ["She is *unhappy* at her new job because nobody talks to her."]}
         ],
         "nl": [
         {"lemma": "ongelukkig", "pos": "adjective", "sentences": ["Zij is *ongelukkig* op haar nieuwe werk omdat niemand tegen haar praat."]}
@@ -1025,7 +1025,7 @@
       "gloss": "persevere (verb)",
       "entries": {
         "en": [
-        {"lemma": "to persevere", "pos": "verb", "details": {"past": "persevered", "participle": "persevered"}, "sentences": ["She *perseveres* with piano lessons although practice is boring."]}
+        {"lemma": "to persevere", "pos": "verb", "details": {"past": "persevered", "participle": "persevered"}, "sentences": ["She *perseveres* with piano lessons even when practice is boring."]}
         ],
         "nl": [
         {"lemma": "volhouden", "pos": "verb", "details": {"pastSingular": "hield vol", "pastPlural": "hielden vol", "participle": "volgehouden", "auxiliary": "hebben"}, "sentences": ["Zij *houdt* haar pianolessen *vol*, ook als oefenen saai is."]}
@@ -1049,7 +1049,7 @@
       "gloss": "decent (adjective)",
       "entries": {
         "en": [
-        {"lemma": "decent", "pos": "adjective", "sentences": ["A *decent* man returns the wallet he finds outside."]}
+        {"lemma": "decent", "pos": "adjective", "sentences": ["A *decent* man returns the wallet he finds in the street."]}
         ],
         "nl": [
         {"lemma": "fatsoenlijk", "pos": "adjective", "sentences": ["Een *fatsoenlijke* man geeft de portemonnee terug die hij op straat vindt."]}
@@ -1157,7 +1157,7 @@
       "gloss": "thrilling (adjective)",
       "entries": {
         "en": [
-        {"lemma": "thrilling", "pos": "adjective", "sentences": ["The *thrilling* film keeps us on the edge."]}
+        {"lemma": "thrilling", "pos": "adjective", "sentences": ["The *thrilling* film keeps us on the edge of our seats."]}
         ],
         "nl": [
         {"lemma": "opwindend", "pos": "adjective", "sentences": ["De *opwindende* film houdt ons op het puntje van onze stoel."]}
@@ -1652,7 +1652,7 @@
         {"lemma": "dishonest", "pos": "adjective", "sentences": ["The *dishonest* shopkeeper gives customers too little change."]}
         ],
         "nl": [
-        {"lemma": "oneerlijk", "pos": "adjective", "sentences": ["De *oneerlijke* winkelier geeft klanten minder wisselgeld dan hij verschuldigd is."]}
+        {"lemma": "oneerlijk", "pos": "adjective", "sentences": ["De *oneerlijke* winkelier geeft klanten te weinig wisselgeld."]}
         ]
       }
     },
@@ -1709,7 +1709,7 @@
       "gloss": "ambition (noun)",
       "entries": {
         "en": [
-        {"lemma": "ambition", "pos": "noun", "details": {"plural": "ambitions"}, "sentences": ["With *ambition*, she studies nightly to become a doctor."]}
+        {"lemma": "ambition", "pos": "noun", "details": {"plural": "ambitions"}, "sentences": ["With great *ambition*, she studies nightly to become a doctor."]}
         ],
         "nl": [
         {"lemma": "ambitie", "pos": "noun", "details": {"article": "de", "plural": "ambities"}, "sentences": ["Met veel *ambitie* studeert zij elke avond om dokter te worden."]}
@@ -1820,7 +1820,7 @@
         {"lemma": "possessed", "pos": "adjective", "sentences": ["In the old film, the man looks *possessed* by a ghost."]}
         ],
         "nl": [
-        {"lemma": "bezeten", "pos": "adjective", "sentences": ["In de oude film gedraagt de man zich *bezeten* door een geest."]}
+        {"lemma": "bezeten", "pos": "adjective", "sentences": ["In de oude film lijkt de man *bezeten* door een geest."]}
         ]
       }
     },
@@ -1841,7 +1841,7 @@
       "gloss": "creepy (adjective)",
       "entries": {
         "en": [
-        {"lemma": "creepy", "pos": "adjective", "sentences": ["The empty house down the road looks *creepy*."]}
+        {"lemma": "creepy", "pos": "adjective", "sentences": ["The empty house at the end of the road looks *creepy*."]}
         ],
         "nl": [
         {"lemma": "griezelig", "pos": "adjective", "sentences": ["Het lege huis aan het eind van de weg ziet er *griezelig* uit."]}
@@ -3668,7 +3668,7 @@
         {"lemma": "sarcastic", "pos": "adjective", "sentences": ["He sounds *sarcastic* when he praises the rain."]}
         ],
         "nl": [
-        {"lemma": "sarcastisch", "pos": "adjective", "sentences": ["Hij klinkt *sarcastisch* als hij zegt dat de regen heerlijk is."]}
+        {"lemma": "sarcastisch", "pos": "adjective", "sentences": ["Hij klinkt *sarcastisch* als hij de regen prijst."]}
         ]
       }
     },
