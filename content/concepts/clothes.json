@@ -20,7 +20,7 @@
         {"lemma": "pocket", "pos": "noun", "details": {"plural": "pockets"}, "sentences": ["The house key is in my coat *pocket*."]}
         ],
         "nl": [
-        {"lemma": "zak", "pos": "noun", "details": {"article": "de", "plural": "zakken"}, "sentences": ["De huissleutel zit in de *zak* van mijn spijkerbroek."]}
+        {"lemma": "zak", "pos": "noun", "details": {"article": "de", "plural": "zakken"}, "sentences": ["De huissleutel zit in de *zak* van mijn jas."]}
         ]
       }
     },
@@ -44,7 +44,7 @@
         {"lemma": "to put on", "pos": "verb", "details": {"note": "a coat, scarf or jewelry", "past": "put on", "participle": "put on"}, "sentences": ["I *put on* my scarf before school."]}
         ],
         "nl": [
-        {"lemma": "aandoen", "pos": "verb", "details": {"pastSingular": "deed aan", "pastPlural": "deden aan", "participle": "aangedaan", "auxiliary": "hebben"}, "sentences": ["Voordat ik de deur uit ga, *doe* ik mijn jas *aan*."]}
+        {"lemma": "aandoen", "pos": "verb", "details": {"pastSingular": "deed aan", "pastPlural": "deden aan", "participle": "aangedaan", "auxiliary": "hebben"}, "sentences": ["Voor school *doe* ik mijn sjaal *aan*."]}
         ]
       }
     },
@@ -113,7 +113,7 @@
       "gloss": "coat (noun)",
       "entries": {
         "en": [
-        {"lemma": "coat", "pos": "noun", "details": {"plural": "coats"}, "sentences": ["I wear my warm *coat* when it snows."]}
+        {"lemma": "coat", "pos": "noun", "details": {"plural": "coats"}, "sentences": ["I wear my warm *coat* when it snows in January."]}
         ],
         "nl": [
         {"lemma": "jas", "pos": "noun", "details": {"article": "de", "plural": "jassen"}, "sentences": ["Als het in januari sneeuwt, draag ik mijn warme *jas*."]}
@@ -149,7 +149,7 @@
       "gloss": "fabric (noun)",
       "entries": {
         "en": [
-        {"lemma": "fabric", "pos": "noun", "details": {"plural": "fabrics"}, "sentences": ["The *fabric* of this curtain is soft and thick."]}
+        {"lemma": "fabric", "pos": "noun", "details": {"plural": "fabrics"}, "sentences": ["The *fabric* of this dress is soft and thick."]}
         ],
         "nl": [
         {"lemma": "stof", "pos": "noun", "details": {"note": "voor kleding", "article": "de", "plural": "stoffen"}, "sentences": ["De *stof* van deze jurk voelt zacht en dik aan."]}
@@ -173,7 +173,7 @@
       "gloss": "uniform (noun)",
       "entries": {
         "en": [
-        {"lemma": "uniform", "pos": "noun", "details": {"plural": "uniforms"}, "sentences": ["The pilot wears a blue *uniform* with gold buttons."]}
+        {"lemma": "uniform", "pos": "noun", "details": {"plural": "uniforms"}, "sentences": ["The pilot wears a dark blue *uniform* with gold buttons."]}
         ],
         "nl": [
         {"lemma": "uniform", "pos": "noun", "details": {"article": "het", "plural": "uniformen"}, "sentences": ["De piloot draagt een donkerblauw *uniform* met gouden knopen."]}
@@ -224,7 +224,7 @@
         {"lemma": "mask", "pos": "noun", "details": {"plural": "masks"}, "sentences": ["The child wears a tiger *mask* at the carnival."]}
         ],
         "nl": [
-        {"lemma": "masker", "pos": "noun", "details": {"article": "het", "plural": "maskers"}, "sentences": ["Op carnaval draagt het kind een tijgerachtig *masker*."]}
+        {"lemma": "masker", "pos": "noun", "details": {"article": "het", "plural": "maskers"}, "sentences": ["Op carnaval draagt het kind een tijger*masker*."]}
         ]
       }
     },
@@ -281,7 +281,7 @@
       "gloss": "boot (noun)",
       "entries": {
         "en": [
-        {"lemma": "boot", "pos": "noun", "details": {"plural": "boots"}, "sentences": ["Her *boot* is wet from a puddle."]}
+        {"lemma": "boot", "pos": "noun", "details": {"plural": "boots"}, "sentences": ["Her left *boot* is wet because she steps in a puddle."]}
         ],
         "nl": [
         {"lemma": "laars", "pos": "noun", "details": {"article": "de", "plural": "laarzen"}, "sentences": ["Haar linker *laars* is nat omdat zij in een plas stapt."]}
@@ -329,7 +329,7 @@
       "gloss": "cap (noun)",
       "entries": {
         "en": [
-        {"lemma": "cap", "pos": "noun", "details": {"plural": "caps"}, "sentences": ["The boy wears a baseball *cap* against the sun."]}
+        {"lemma": "cap", "pos": "noun", "details": {"plural": "caps"}, "sentences": ["The boy wears a baseball *cap* against the bright sun."]}
         ],
         "nl": [
         {"lemma": "pet", "pos": "noun", "details": {"article": "de", "plural": "petten"}, "sentences": ["De jongen draagt een *pet* tegen de felle zon."]}
@@ -341,7 +341,7 @@
       "gloss": "get dressed (verb)",
       "entries": {
         "en": [
-        {"lemma": "to get dressed", "pos": "verb", "details": {"past": "got dressed", "participle": "got dressed"}, "sentences": ["Every morning, I *get dressed* fast, always late."]}
+        {"lemma": "to get dressed", "pos": "verb", "details": {"past": "got dressed", "participle": "got dressed"}, "sentences": ["Every morning, I *get dressed* fast because I am late."]}
         ],
         "nl": [
         {"lemma": "aankleden", "pos": "verb", "details": {"pastSingular": "kleedde aan", "pastPlural": "kleedden aan", "participle": "aangekleed", "auxiliary": "hebben"}, "sentences": ["Elke ochtend *kleed* ik me snel *aan* omdat ik te laat ben."]}
@@ -353,7 +353,7 @@
       "gloss": "underwear (noun)",
       "entries": {
         "en": [
-        {"lemma": "underwear", "pos": "noun", "details": {"uncountable": true}, "sentences": ["I put clean *underwear* in my suitcase."]}
+        {"lemma": "underwear", "pos": "noun", "details": {"uncountable": true}, "sentences": ["I put clean *underwear* in my suitcase for the trip."]}
         ],
         "nl": [
         {"lemma": "ondergoed", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["Ik doe schoon *ondergoed* in mijn koffer voor de reis."]}
@@ -365,7 +365,7 @@
       "gloss": "dress shirt (noun)",
       "entries": {
         "en": [
-        {"lemma": "dress shirt", "pos": "noun", "details": {"note": "casual", "plural": "dress shirts"}, "sentences": ["He wears a blue *dress shirt* with jeans."]}
+        {"lemma": "dress shirt", "pos": "noun", "details": {"note": "casual", "plural": "dress shirts"}, "sentences": ["On Fridays, he wears a blue *dress shirt* with jeans."]}
         ],
         "nl": [
         {"lemma": "hemd", "pos": "noun", "details": {"article": "het", "plural": "hemden"}, "sentences": ["Op vrijdag draagt hij een blauw *hemd* met een spijkerbroek."]}
@@ -377,7 +377,7 @@
       "gloss": "sock (noun)",
       "entries": {
         "en": [
-        {"lemma": "sock", "pos": "noun", "details": {"plural": "socks"}, "sentences": ["My left *sock* has a hole in the toe."]}
+        {"lemma": "sock", "pos": "noun", "details": {"plural": "socks"}, "sentences": ["My left *sock* has a hole by the big toe."]}
         ],
         "nl": [
         {"lemma": "sok", "pos": "noun", "details": {"article": "de", "plural": "sokken"}, "sentences": ["Mijn linker *sok* heeft een gat bij de grote teen."]}
@@ -401,7 +401,7 @@
       "gloss": "sweater (noun)",
       "entries": {
         "en": [
-        {"lemma": "sweater", "pos": "noun", "details": {"plural": "sweaters"}, "sentences": ["I wear a warm *sweater* when it is cold."]}
+        {"lemma": "sweater", "pos": "noun", "details": {"plural": "sweaters"}, "sentences": ["I wear a warm *sweater* when the heating is off."]}
         ],
         "nl": [
         {"lemma": "trui", "pos": "noun", "details": {"article": "de", "plural": "truien"}, "sentences": ["Als de verwarming uit staat, draag ik een warme *trui*."]}
@@ -413,7 +413,7 @@
       "gloss": "dress up (verb)",
       "entries": {
         "en": [
-        {"lemma": "to dress up", "pos": "verb", "details": {"past": "dressed up", "participle": "dressed up"}, "sentences": ["The children *dress up* as animals for a party."]}
+        {"lemma": "to dress up", "pos": "verb", "details": {"past": "dressed up", "participle": "dressed up"}, "sentences": ["The children *dress up* as animals for the school party."]}
         ],
         "nl": [
         {"lemma": "verkleden", "pos": "verb", "details": {"pastSingular": "verkleedde", "pastPlural": "verkleedden", "participle": "verkleed", "auxiliary": "hebben"}, "sentences": ["De kinderen *verkleden* zich als dieren voor het schoolfeest."]}
@@ -437,7 +437,7 @@
       "gloss": "tattoo (noun)",
       "entries": {
         "en": [
-        {"lemma": "tattoo", "pos": "noun", "details": {"plural": "tattoos"}, "sentences": ["He has a small *tattoo* of a bird."]}
+        {"lemma": "tattoo", "pos": "noun", "details": {"plural": "tattoos"}, "sentences": ["He has a small *tattoo* of a bird on his arm."]}
         ],
         "nl": [
         {"lemma": "tatoeage", "pos": "noun", "details": {"article": "de", "plural": "tatoeages"}, "sentences": ["Hij heeft een kleine *tatoeage* van een vogel op zijn arm."]}
@@ -449,7 +449,7 @@
       "gloss": "change clothes (verb)",
       "entries": {
         "en": [
-        {"lemma": "to change clothes", "pos": "verb", "details": {"past": "changed clothes", "participle": "changed clothes"}, "sentences": ["After swimming, the kids *change clothes* in the locker room."]}
+        {"lemma": "to change clothes", "pos": "verb", "details": {"past": "changed clothes", "participle": "changed clothes"}, "sentences": ["After the swimming lesson, the kids *change clothes* in the locker room."]}
         ],
         "nl": [
         {"lemma": "omkleden", "pos": "verb", "details": {"pastSingular": "kleedde om", "pastPlural": "kleedden om", "participle": "omgekleed", "auxiliary": "hebben"}, "sentences": ["Na de zwemles *kleden* de kinderen zich in de kleedkamer *om*."]}
@@ -512,7 +512,7 @@
         {"lemma": "underpants", "pos": "noun", "details": {"pluralOnly": true}, "sentences": ["The shop sells *underpants* in packs of three."]}
         ],
         "nl": [
-        {"lemma": "onderbroek", "pos": "noun", "details": {"article": "de", "plural": "onderbroeken"}, "sentences": ["De winkel verkoopt elke *onderbroek* in een pak van drie."]}
+        {"lemma": "onderbroek", "pos": "noun", "details": {"article": "de", "plural": "onderbroeken"}, "sentences": ["De winkel verkoopt *onderbroeken* in een pak van drie."]}
         ]
       }
     },
@@ -545,7 +545,7 @@
       "gloss": "vest (noun)",
       "entries": {
         "en": [
-        {"lemma": "vest", "pos": "noun", "details": {"plural": "vests"}, "sentences": ["He wears a grey *vest* over his shirt."]}
+        {"lemma": "vest", "pos": "noun", "details": {"plural": "vests"}, "sentences": ["He wears a grey *vest* over his shirt at work."]}
         ],
         "nl": [
         {"lemma": "vest", "pos": "noun", "details": {"article": "het", "plural": "vesten"}, "sentences": ["Hij draagt op zijn werk een grijs *vest* over zijn overhemd."]}
@@ -641,7 +641,7 @@
       "gloss": "sleeve (noun)",
       "entries": {
         "en": [
-        {"lemma": "sleeve", "pos": "noun", "details": {"plural": "sleeves"}, "sentences": ["The *sleeve* of this sweater is too long."]}
+        {"lemma": "sleeve", "pos": "noun", "details": {"plural": "sleeves"}, "sentences": ["The *sleeve* of this sweater is too long for me."]}
         ],
         "nl": [
         {"lemma": "mouw", "pos": "noun", "details": {"article": "de", "plural": "mouwen"}, "sentences": ["De *mouw* van deze trui is te lang voor mij."]}
@@ -713,7 +713,7 @@
       "gloss": "scarf (noun)",
       "entries": {
         "en": [
-        {"lemma": "scarf", "pos": "noun", "details": {"plural": "scarfs"}, "sentences": ["I wrap a woolen *scarf* around my neck."]}
+        {"lemma": "scarf", "pos": "noun", "details": {"plural": "scarfs"}, "sentences": ["In winter, I wrap a woolen *scarf* around my neck."]}
         ],
         "nl": [
         {"lemma": "sjaal", "pos": "noun", "details": {"article": "de", "plural": "sjaals"}, "sentences": ["In de winter wikkel ik een wollen *sjaal* om mijn nek."]}
@@ -737,7 +737,7 @@
       "gloss": "sunglasses (noun)",
       "entries": {
         "en": [
-        {"lemma": "sunglasses", "pos": "noun", "details": {"pluralOnly": true}, "sentences": ["I wear *sunglasses* when I drive into the sun."]}
+        {"lemma": "sunglasses", "pos": "noun", "details": {"pluralOnly": true}, "sentences": ["At the beach, I wear *sunglasses* against the bright light."]}
         ],
         "nl": [
         {"lemma": "zonnebril", "pos": "noun", "details": {"article": "de", "plural": "zonnebrillen"}, "sentences": ["Op het strand draag ik een *zonnebril* tegen het felle licht."]}
@@ -749,7 +749,7 @@
       "gloss": "tuxedo (noun)",
       "entries": {
         "en": [
-        {"lemma": "tuxedo", "pos": "noun", "details": {"plural": "tuxedos"}, "sentences": ["The singer wears a black *tuxedo* at the concert."]}
+        {"lemma": "tuxedo", "pos": "noun", "details": {"plural": "tuxedos"}, "sentences": ["The singer wears a black *tuxedo* at the big concert."]}
         ],
         "nl": [
         {"lemma": "smoking", "pos": "noun", "details": {"article": "de", "plural": "smokings"}, "sentences": ["De zanger draagt een zwarte *smoking* op het grote concert."]}
@@ -773,7 +773,7 @@
       "gloss": "cloak (noun)",
       "entries": {
         "en": [
-        {"lemma": "cloak", "pos": "noun", "details": {"plural": "cloaks"}, "sentences": ["The knight in the play wears a red *cloak*."]}
+        {"lemma": "cloak", "pos": "noun", "details": {"plural": "cloaks"}, "sentences": ["The knight in the play wears a long red *cloak*."]}
         ],
         "nl": [
         {"lemma": "mantel", "pos": "noun", "details": {"article": "de", "plural": "mantels"}, "sentences": ["De ridder in het toneelstuk draagt een lange rode *mantel*."]}
@@ -785,7 +785,7 @@
       "gloss": "handbag (noun)",
       "entries": {
         "en": [
-        {"lemma": "handbag", "pos": "noun", "details": {"plural": "handbags"}, "sentences": ["She keeps her keys in a small *handbag*."]}
+        {"lemma": "handbag", "pos": "noun", "details": {"plural": "handbags"}, "sentences": ["She keeps her phone and keys in a small *handbag*."]}
         ],
         "nl": [
         {"lemma": "handtas", "pos": "noun", "details": {"article": "de", "plural": "handtassen"}, "sentences": ["Zij bewaart haar telefoon en sleutels in een kleine *handtas*."]}
@@ -809,7 +809,7 @@
       "gloss": "knit hat (noun)",
       "entries": {
         "en": [
-        {"lemma": "knit hat", "pos": "noun", "details": {"plural": "knit hats"}, "sentences": ["I wear a *knit hat* in the snow."]}
+        {"lemma": "knit hat", "pos": "noun", "details": {"plural": "knit hats"}, "sentences": ["I wear a warm *knit hat* when I walk in the snow."]}
         ],
         "nl": [
         {"lemma": "muts", "pos": "noun", "details": {"article": "de", "plural": "mutsen"}, "sentences": ["Als ik door de sneeuw loop, draag ik een warme *muts*."]}
@@ -821,7 +821,7 @@
       "gloss": "little bag (noun)",
       "entries": {
         "en": [
-        {"lemma": "little bag", "pos": "noun", "details": {"plural": "little bags"}, "sentences": ["She keeps her coins in a *little bag*."]}
+        {"lemma": "little bag", "pos": "noun", "details": {"plural": "little bags"}, "sentences": ["She keeps her coins in a *little bag* on her belt."]}
         ],
         "nl": [
         {"lemma": "tasje", "pos": "noun", "details": {"article": "het", "plural": "tasjes"}, "sentences": ["Zij bewaart haar munten in een *tasje* aan haar riem."]}
@@ -845,7 +845,7 @@
       "gloss": "umbrella (noun)",
       "entries": {
         "en": [
-        {"lemma": "umbrella", "pos": "noun", "details": {"plural": "umbrellas"}, "sentences": ["I take an *umbrella* because of the dark clouds."]}
+        {"lemma": "umbrella", "pos": "noun", "details": {"plural": "umbrellas"}, "sentences": ["I take an *umbrella* because of the dark clouds over the city."]}
         ],
         "nl": [
         {"lemma": "paraplu", "pos": "noun", "details": {"article": "de", "plural": "paraplu's"}, "sentences": ["Ik neem een *paraplu* mee omdat er donkere wolken boven de stad hangen."]}
@@ -857,7 +857,7 @@
       "gloss": "zipper (noun)",
       "entries": {
         "en": [
-        {"lemma": "zipper", "pos": "noun", "details": {"plural": "zippers"}, "sentences": ["The *zipper* of my bag is broken."]}
+        {"lemma": "zipper", "pos": "noun", "details": {"plural": "zippers"}, "sentences": ["The *zipper* of my bag is broken, so it stays open."]}
         ],
         "nl": [
         {"lemma": "rits", "pos": "noun", "details": {"article": "de", "plural": "ritsen"}, "sentences": ["De *rits* van mijn tas is kapot, dus hij blijft open."]}
