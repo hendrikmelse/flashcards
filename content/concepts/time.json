@@ -20,7 +20,7 @@
         {"lemma": "night", "pos": "noun", "details": {"plural": "nights"}, "sentences": ["It is dark and quiet at *night* here."]}
         ],
         "nl": [
-        {"lemma": "nacht", "pos": "noun", "details": {"article": "de", "plural": "nachten"}, "sentences": ["In de *nacht* is het donker en stil in ons dorp."]}
+        {"lemma": "nacht", "pos": "noun", "details": {"article": "de", "plural": "nachten"}, "sentences": ["In de *nacht* is het hier donker en stil."]}
         ]
       }
     },
@@ -44,7 +44,7 @@
         {"lemma": "evening", "pos": "noun", "details": {"plural": "evenings"}, "sentences": ["In the *evening* we eat soup and watch TV."]}
         ],
         "nl": [
-        {"lemma": "avond", "pos": "noun", "details": {"article": "de", "plural": "avonden"}, "sentences": ["In de *avond* eten we soep en kijken we een film."]}
+        {"lemma": "avond", "pos": "noun", "details": {"article": "de", "plural": "avonden"}, "sentences": ["In de *avond* eten we soep en kijken we tv."]}
         ]
       }
     },
@@ -53,7 +53,7 @@
       "gloss": "week (seven days)",
       "entries": {
         "en": [
-        {"lemma": "week", "pos": "noun", "details": {"plural": "weeks"}, "sentences": ["Our English class meets twice a *week* here."]}
+        {"lemma": "week", "pos": "noun", "details": {"plural": "weeks"}, "sentences": ["Our English class meets twice a *week* in the library."]}
         ],
         "nl": [
         {"lemma": "week", "pos": "noun", "details": {"article": "de", "plural": "weken"}, "sentences": ["Onze Engelse les is twee keer per *week* in de bibliotheek."]}
@@ -68,7 +68,7 @@
         {"lemma": "month", "pos": "noun", "details": {"plural": "months"}, "sentences": ["I pay the rent every *month* on the first."]}
         ],
         "nl": [
-        {"lemma": "maand", "pos": "noun", "details": {"article": "de", "plural": "maanden"}, "sentences": ["Ik betaal de huur aan het einde van elke *maand*."]}
+        {"lemma": "maand", "pos": "noun", "details": {"article": "de", "plural": "maanden"}, "sentences": ["Ik betaal de huur elke *maand* op de eerste."]}
         ]
       }
     },
@@ -80,7 +80,7 @@
         {"lemma": "year", "pos": "noun", "details": {"plural": "years"}, "sentences": ["This *year* my brother finishes school and finds work."]}
         ],
         "nl": [
-        {"lemma": "jaar", "pos": "noun", "details": {"article": "het", "plural": "jaren"}, "sentences": ["Dit *jaar* maakt mijn broer school af en begint hij te werken."]}
+        {"lemma": "jaar", "pos": "noun", "details": {"article": "het", "plural": "jaren"}, "sentences": ["Dit *jaar* maakt mijn broer school af en vindt hij werk."]}
         ]
       }
     },
@@ -164,7 +164,7 @@
         {"lemma": "future", "pos": "noun", "details": {"note": "time to come", "plural": "futures"}, "sentences": ["She saves money every month for her *future* abroad."]}
         ],
         "nl": [
-        {"lemma": "toekomst", "pos": "noun", "details": {"article": "de", "plural": "toekomsten"}, "sentences": ["Zij spaart elke maand geld voor haar *toekomst* in een andere stad."]}
+        {"lemma": "toekomst", "pos": "noun", "details": {"article": "de", "plural": "toekomsten"}, "sentences": ["Zij spaart elke maand geld voor haar *toekomst* in het buitenland."]}
         ]
       }
     },
@@ -173,7 +173,7 @@
       "gloss": "second (noun)",
       "entries": {
         "en": [
-        {"lemma": "second", "pos": "noun", "details": {"note": "unit of time", "plural": "seconds"}, "sentences": ["The light stays red for one more *second*."]}
+        {"lemma": "second", "pos": "noun", "details": {"note": "unit of time", "plural": "seconds"}, "sentences": ["The traffic light stays red for one more *second*."]}
         ],
         "nl": [
         {"lemma": "seconde", "pos": "noun", "details": {"article": "de", "plural": "seconden"}, "sentences": ["Het verkeerslicht blijft nog maar één *seconde* rood."]}
@@ -212,7 +212,7 @@
         {"lemma": "summer", "pos": "noun", "details": {"plural": "summers"}, "sentences": ["In *summer* the children swim in the lake daily."]}
         ],
         "nl": [
-        {"lemma": "zomer", "pos": "noun", "details": {"article": "de", "plural": "zomers"}, "sentences": ["In de *zomer* zwemmen de kinderen elke middag in het meer."]}
+        {"lemma": "zomer", "pos": "noun", "details": {"article": "de", "plural": "zomers"}, "sentences": ["In de *zomer* zwemmen de kinderen elke dag in het meer."]}
         ]
       }
     },
@@ -245,7 +245,7 @@
       "gloss": "clock (noun)",
       "entries": {
         "en": [
-        {"lemma": "clock", "pos": "noun", "details": {"plural": "clocks"}, "sentences": ["The old *clock* in the kitchen is slow."]}
+        {"lemma": "clock", "pos": "noun", "details": {"plural": "clocks"}, "sentences": ["The old *clock* in the kitchen is five minutes slow."]}
         ],
         "nl": [
         {"lemma": "klok", "pos": "noun", "details": {"article": "de", "plural": "klokken"}, "sentences": ["De oude *klok* in de keuken loopt vijf minuten achter."]}
@@ -257,7 +257,7 @@
       "gloss": "break (pause)",
       "entries": {
         "en": [
-        {"lemma": "break", "pos": "noun", "details": {"note": "pause", "plural": "breaks"}, "sentences": ["After two hours of work, we take a *break*."]}
+        {"lemma": "break", "pos": "noun", "details": {"note": "pause", "plural": "breaks"}, "sentences": ["After two hours of work, we take a *break* outside."]}
         ],
         "nl": [
         {"lemma": "pauze", "pos": "noun", "details": {"article": "de", "plural": "pauzes"}, "sentences": ["Na twee uur werken nemen we buiten een *pauze*."]}
@@ -281,7 +281,7 @@
       "gloss": "season (noun)",
       "entries": {
         "en": [
-        {"lemma": "season", "pos": "noun", "details": {"plural": "seasons"}, "sentences": ["Autumn is my favorite *season* because of the leaves."]}
+        {"lemma": "season", "pos": "noun", "details": {"plural": "seasons"}, "sentences": ["Autumn is my favorite *season* because of the colorful leaves."]}
         ],
         "nl": [
         {"lemma": "seizoen", "pos": "noun", "details": {"article": "het", "plural": "seizoenen"}, "sentences": ["De herfst is mijn favoriete *seizoen* vanwege de kleurige bladeren."]}
@@ -377,7 +377,7 @@
       "gloss": "little while (noun)",
       "entries": {
         "en": [
-        {"lemma": "little while", "pos": "noun", "details": {"plural": "little whiles"}, "sentences": ["Sit down for a *little while* and rest."]}
+        {"lemma": "little while", "pos": "noun", "details": {"plural": "little whiles"}, "sentences": ["Sit down for a *little while* and rest your feet."]}
         ],
         "nl": [
         {"lemma": "poosje", "pos": "noun", "details": {"article": "het", "plural": "poosjes"}, "sentences": ["Ga een *poosje* zitten en rust je voeten uit."]}
@@ -608,7 +608,7 @@
         {"lemma": "to stay up", "pos": "verb", "details": {"past": "stayed up", "participle": "stayed up"}, "sentences": ["I *stay up* late on Friday to watch films."]}
         ],
         "nl": [
-        {"lemma": "opblijven", "pos": "verb", "details": {"pastSingular": "bleef op", "pastPlural": "bleven op", "participle": "opgebleven", "auxiliary": "zijn"}, "sentences": ["Ik *blijf* op vrijdag laat *op* om een film te kijken."]}
+        {"lemma": "opblijven", "pos": "verb", "details": {"pastSingular": "bleef op", "pastPlural": "bleven op", "participle": "opgebleven", "auxiliary": "zijn"}, "sentences": ["Ik *blijf* op vrijdag laat *op* om films te kijken."]}
         ]
       }
     },
@@ -653,7 +653,7 @@
       "gloss": "Wednesday (noun)",
       "entries": {
         "en": [
-        {"lemma": "Wednesday", "pos": "noun", "details": {"plural": "Wednesdays"}, "sentences": ["On *Wednesday* the market on our square sells fish."]}
+        {"lemma": "Wednesday", "pos": "noun", "details": {"plural": "Wednesdays"}, "sentences": ["On *Wednesday* the market on our square sells fresh fish."]}
         ],
         "nl": [
         {"lemma": "woensdag", "pos": "noun", "details": {"article": "de", "plural": "woensdagen"}, "sentences": ["Op *woensdag* verkoopt de markt op ons plein verse vis."]}
@@ -677,7 +677,7 @@
       "gloss": "Friday (noun)",
       "entries": {
         "en": [
-        {"lemma": "Friday", "pos": "noun", "details": {"plural": "Fridays"}, "sentences": ["On *Friday* the whole office goes home early."]}
+        {"lemma": "Friday", "pos": "noun", "details": {"plural": "Fridays"}, "sentences": ["On *Friday* the whole office goes home an hour early."]}
         ],
         "nl": [
         {"lemma": "vrijdag", "pos": "noun", "details": {"article": "de", "plural": "vrijdagen"}, "sentences": ["Op *vrijdag* gaat het hele kantoor een uur eerder naar huis."]}
@@ -725,7 +725,7 @@
       "gloss": "January (proper noun)",
       "entries": {
         "en": [
-        {"lemma": "January", "pos": "proper noun", "sentences": ["*January* is the coldest month, with ice outside."]}
+        {"lemma": "January", "pos": "proper noun", "sentences": ["*January* is the coldest month, with ice on the canals."]}
         ],
         "nl": [
         {"lemma": "januari", "pos": "proper noun", "sentences": ["*Januari* is de koudste maand, met ijs op de grachten."]}
@@ -749,7 +749,7 @@
       "gloss": "March (proper noun)",
       "entries": {
         "en": [
-        {"lemma": "March", "pos": "proper noun", "sentences": ["In *March* the days get longer and flowers appear."]}
+        {"lemma": "March", "pos": "proper noun", "sentences": ["In *March* the days get longer and the first flowers appear."]}
         ],
         "nl": [
         {"lemma": "maart", "pos": "proper noun", "sentences": ["In *maart* worden de dagen langer en komen de eerste bloemen."]}
@@ -788,7 +788,7 @@
         {"lemma": "June", "pos": "proper noun", "sentences": ["In *June* the sun sets very late."]}
         ],
         "nl": [
-        {"lemma": "juni", "pos": "proper noun", "sentences": ["In *juni* gaat de zon 's avonds heel laat onder."]}
+        {"lemma": "juni", "pos": "proper noun", "sentences": ["In *juni* gaat de zon heel laat onder."]}
         ]
       }
     },
