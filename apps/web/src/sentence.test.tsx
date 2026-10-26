@@ -77,7 +77,8 @@ describe("finding the card's word in a sentence", () => {
       "werkt",
     ]);
     const separable = entry("nl", "oplossen", "verb", { pastSingular: "loste op", pastPlural: "losten op", participle: "opgelost", auxiliary: "hebben" });
-    expect(words("Zout lost op in water.", [separable])).toEqual(["lost"]);
+    expect(words("Zout lost op in water.", [separable])).toEqual(["lost op"]);
+    expect(words("De film loopt goed af.", [entry("nl", "aflopen", "verb", { pastSingular: "liep af", pastPlural: "liepen af", participle: "afgelopen", auxiliary: "zijn" })])).toEqual(["loopt", "af"]);
     expect(words("Het zout is opgelost.", [separable])).toEqual(["opgelost"]);
   });
 

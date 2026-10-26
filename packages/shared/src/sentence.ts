@@ -50,9 +50,14 @@ const SEPARABLE_PREFIXES = [
 
 // A Dutch verb's regular present tense is not stored, so its stem stands for it. A separable verb's
 // stem is also found without its prefix, which sits apart from it in a main clause.
+function separablePrefix(lemma: string): string | undefined {
+  const first = lemma.split(" ")[0] ?? "";
+  return SEPARABLE_PREFIXES.find((p) => first.startsWith(p) && first.length - p.length >= 4);
+}
+
 function dutchStems(lemma: string): string[] {
   const first = lemma.split(" ")[0] ?? "";
-  const prefix = SEPARABLE_PREFIXES.find((p) => first.startsWith(p) && first.length - p.length >= 4);
+  const prefix = separablePrefix(lemma);
   const bases = prefix ? [first, first.slice(prefix.length)] : [first];
   return bases.flatMap((word) => {
     const stem = word.replace(/(en|n)$/, "");
@@ -116,17 +121,24 @@ export function highlightSentence(sentence: string, entries: readonly WordEntry[
   }));
 
   const hit = new Set<number>();
-  for (const needle of entries.flatMap(needlesFor)) {
-    const n = needle.words.length;
-    for (let i = 0; i + n <= tokens.length; i++) {
-      let found = true;
-      for (let k = 0; k < n && found; k++) {
-        found = matches(tokens[i + k]!.norm, needle.words[k]!, needle.prefix);
-        // The words of a phrase follow each other with only spaces between.
-        if (found && k > 0 && !/^\s+$/.test(sentence.slice(tokens[i + k - 1]!.end, tokens[i + k]!.start))) found = false;
+  for (const entry of entries) {
+    const before = hit.size;
+    for (const needle of needlesFor(entry)) {
+      const n = needle.words.length;
+      for (let i = 0; i + n <= tokens.length; i++) {
+        let found = true;
+        for (let k = 0; k < n && found; k++) {
+          found = matches(tokens[i + k]!.norm, needle.words[k]!, needle.prefix);
+          // The words of a phrase follow each other with only spaces between.
+          if (found && k > 0 && !/^\s+$/.test(sentence.slice(tokens[i + k - 1]!.end, tokens[i + k]!.start))) found = false;
+        }
+        if (found) for (let k = 0; k < n; k++) hit.add(i + k);
       }
-      if (found) for (let k = 0; k < n; k++) hit.add(i + k);
     }
+    // The particle of a separable verb stands apart from its verb part, so it is only looked for once
+    // the verb part is found.
+    const particle = entry.language === "nl" && entry.partOfSpeech === "verb" ? separablePrefix(entry.lemma) : undefined;
+    if (particle && hit.size > before) tokens.forEach((t, i) => t.norm === norm(particle) && hit.add(i));
   }
   if (hit.size === 0) return [{ text: sentence, word: false }];
 
