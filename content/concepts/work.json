@@ -113,7 +113,7 @@
       "gloss": "bank (financial)",
       "entries": {
         "en": [
-        {"lemma": "bank", "pos": "noun", "details": {"note": "financial", "plural": "banks"}, "sentences": ["I go to the *bank* to get cash."]}
+        {"lemma": "bank", "pos": "noun", "details": {"note": "financial", "plural": "banks"}, "sentences": ["On Monday morning, I go to the *bank* to open an account."]}
         ],
         "nl": [
         {"lemma": "bank", "pos": "noun", "details": {"note": "voor je geld", "article": "de", "plural": "banken"}, "sentences": ["Maandagochtend ga ik naar de *bank* om een rekening te openen."]}
@@ -152,7 +152,7 @@
         {"lemma": "desk", "pos": "noun", "details": {"plural": "desks"}, "sentences": ["My laptop and a lamp stand on the *desk*."]}
         ],
         "nl": [
-        {"lemma": "bureau", "pos": "noun", "details": {"article": "het", "plural": "bureaus"}, "sentences": ["Naast de lamp ligt het boek op het *bureau*."]}
+        {"lemma": "bureau", "pos": "noun", "details": {"article": "het", "plural": "bureaus"}, "sentences": ["Mijn laptop en een lamp staan op het *bureau*."]}
         ]
       }
     },
@@ -2273,10 +2273,10 @@
       "gloss": "worker (noun)",
       "entries": {
         "en": [
-        {"lemma": "worker", "pos": "noun", "details": {"plural": "workers"}, "sentences": ["The *worker* is tired after a long day."]}
+        {"lemma": "worker", "pos": "noun", "details": {"plural": "workers"}, "sentences": ["The factory *worker* is tired after a long day."]}
         ],
         "nl": [
-        {"lemma": "werker", "pos": "noun", "details": {"article": "de", "plural": "werkers"}, "sentences": ["De *werker* is moe na een lange dag."]}
+        {"lemma": "werker", "pos": "noun", "details": {"article": "de", "plural": "werkers"}, "sentences": ["De fabrieks*werker* is moe na een lange dag."]}
         ]
       }
     },
