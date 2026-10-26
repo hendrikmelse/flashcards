@@ -23,22 +23,27 @@ export interface SentencePart {
 
 // Compared without case, accents, or doubled letters, so Dutch spelling alternations (woon / won,
 // loss / los) do not hide a match.
-const norm = (s: string): string =>
-  s
-    .toLowerCase()
-    .normalize("NFD")
-    .replace(/\p{M}/gu, "")
-    .replace(/(.)\1/g, "$1");
+const fold = (s: string): string => s.toLowerCase().normalize("NFD").replace(/\p{M}/gu, "");
+const norm = (s: string): string => fold(s).replace(/(.)\1/g, "$1");
 
 /**
  * What to look for: the words of one phrase, and how a sentence's word may differ from them.
  * `prefix` is the shortest the phrase's words can be for a sentence word that only starts with it
- * to count (a plural, a conjugation); 0 means the sentence word must be exactly it.
+ * to count (a plural, a conjugation); 0 means the sentence word must be exactly it. `plain` is the
+ * same words spelled as given, for telling an exact match from one that only matches once doubled
+ * letters are ignored ("spellen" is not "spelen").
  */
 interface Needle {
   words: string[];
+  plain: string[];
   prefix: number;
 }
+
+const needle = (words: string[], prefix: number): Needle => ({
+  words: words.map(norm),
+  plain: words.map(fold),
+  prefix,
+});
 
 // The most letters a sentence word may add to a needle's word and still count as it: -en, -s, -e.
 const MAX_EXTRA = 3;
@@ -86,8 +91,8 @@ function needlesFor(entry: WordEntry): Needle[] {
   // "bank (financial)" is shown to tell homographs apart; "of, from" lists alternatives.
   const bare = lemmaWithoutMarker(entry.language, entry.partOfSpeech, entry.lemma).replace(/\s*\([^)]*\)\s*$/, "");
   for (const alternative of bare.split(/,\s*/)) {
-    const words = alternative.split(/\s+/).map(norm).filter(Boolean);
-    if (words.length > 0) needles.push({ words, prefix: 4 });
+    const words = alternative.split(/\s+/).filter(Boolean);
+    if (words.length > 0) needles.push(needle(words, 4));
   }
 
   const forms: string[] = [];
@@ -96,14 +101,14 @@ function needlesFor(entry: WordEntry): Needle[] {
   if (entry.partOfSpeech === "verb") {
     forms.push(...allVerbForms(entry.language, entry.details));
     if (entry.language === "nl") {
-      for (const stem of dutchStems(entry.lemma)) needles.push({ words: [norm(stem)], prefix: 3 });
+      for (const stem of dutchStems(entry.lemma)) needles.push(needle([stem], 3));
     } else if (entry.language === "en") {
       forms.push(...englishForms(lemmaWithoutMarker(entry.language, entry.partOfSpeech, entry.lemma)));
     }
   }
   // A stored form is exactly that; of a form in several words ("loste op"), each word counts alone.
   for (const form of forms) {
-    for (const word of form.split(/\s+/).map(norm)) if (word.length >= 3) needles.push({ words: [word], prefix: 0 });
+    for (const word of form.split(/\s+/)) if (norm(word).length >= 3) needles.push(needle([word], 0));
   }
   return needles;
 }
@@ -118,27 +123,36 @@ export function highlightSentence(sentence: string, entries: readonly WordEntry[
     start: m.index!,
     end: m.index! + m[0].length,
     norm: norm(m[0]),
+    plain: fold(m[0]),
   }));
 
   const hit = new Set<number>();
   for (const entry of entries) {
-    const before = hit.size;
+    const exact = new Set<number>();
+    const loose = new Set<number>();
     for (const needle of needlesFor(entry)) {
       const n = needle.words.length;
       for (let i = 0; i + n <= tokens.length; i++) {
         let found = true;
+        let same = true;
         for (let k = 0; k < n && found; k++) {
           found = matches(tokens[i + k]!.norm, needle.words[k]!, needle.prefix);
+          same = same && tokens[i + k]!.plain === needle.plain[k];
           // The words of a phrase follow each other with only spaces between.
           if (found && k > 0 && !/^\s+$/.test(sentence.slice(tokens[i + k - 1]!.end, tokens[i + k]!.start))) found = false;
         }
-        if (found) for (let k = 0; k < n; k++) hit.add(i + k);
+        if (found) for (let k = 0; k < n; k++) (same ? exact : loose).add(i + k);
       }
     }
+    // A word that only starts like the lemma ("spelen" for "spel") is a guess at an inflection, and is
+    // left alone when the lemma or a stored form is in the sentence itself. A verb's stems are all such
+    // guesses, so it keeps them.
+    const found = entry.partOfSpeech !== "verb" && exact.size > 0 ? exact : new Set([...exact, ...loose]);
     // The particle of a separable verb stands apart from its verb part, so it is only looked for once
     // the verb part is found.
     const particle = entry.language === "nl" && entry.partOfSpeech === "verb" ? separablePrefix(entry.lemma) : undefined;
-    if (particle && hit.size > before) tokens.forEach((t, i) => t.norm === norm(particle) && hit.add(i));
+    if (particle && found.size > 0) tokens.forEach((t, i) => t.norm === norm(particle) && found.add(i));
+    found.forEach((i) => hit.add(i));
   }
   if (hit.size === 0) return [{ text: sentence, word: false }];
 

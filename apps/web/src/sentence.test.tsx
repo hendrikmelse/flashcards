@@ -96,6 +96,14 @@ describe("finding the card's word in a sentence", () => {
     expect(words("Ik ben in het inktpot-museum.", [entry("nl", "in", "preposition")])).toEqual(["in"]);
   });
 
+  it("does not pick out a word that only starts like the noun when the noun itself is there", () => {
+    const spel = entry("nl", "spel", "noun", { article: "het", plural: "spellen" });
+    expect(words("De kinderen spelen een spel.", [spel])).toEqual(["spel"]);
+    expect(words("De kinderen spelen spellen.", [spel])).toEqual(["spellen"]);
+    // Without the noun itself, a word that starts like it is still taken for an inflection.
+    expect(words("Ik zie spelers.", [spel])).toEqual(["spelers"]);
+  });
+
   it("finds nothing, and leaves the sentence whole, when the word is not there", () => {
     const parts = highlightSentence("The sky is blue.", [entry("en", "dog", "noun")]);
     expect(parts).toEqual([{ text: "The sky is blue.", word: false }]);
