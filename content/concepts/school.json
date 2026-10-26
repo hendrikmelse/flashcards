@@ -101,7 +101,7 @@
       "gloss": "history (noun)",
       "entries": {
         "en": [
-        {"lemma": "history", "pos": "noun", "details": {"plural": "histories"}, "sentences": ["I like *history* because the stories about kings are exciting."]}
+        {"lemma": "history", "pos": "noun", "details": {"plural": "histories"}, "sentences": ["I like *history* because the stories about old kings are exciting."]}
         ],
         "nl": [
         {"lemma": "geschiedenis", "pos": "noun", "details": {"article": "de", "plural": "geschiedenissen"}, "sentences": ["Ik hou van *geschiedenis* omdat de verhalen over oude koningen spannend zijn."]}
@@ -200,7 +200,7 @@
         {"lemma": "pound", "pos": "noun", "details": {"plural": "pounds"}, "sentences": ["I buy a *pound* of apples at the market."]}
         ],
         "nl": [
-        {"lemma": "pond", "pos": "noun", "details": {"article": "het", "plural": "ponden"}, "sentences": ["Ik koop een *pond* appels op de wekelijkse markt."]}
+        {"lemma": "pond", "pos": "noun", "details": {"article": "het", "plural": "ponden"}, "sentences": ["Ik koop een *pond* appels op de markt."]}
         ]
       }
     },
@@ -365,7 +365,7 @@
       "gloss": "translate (verb)",
       "entries": {
         "en": [
-        {"lemma": "to translate", "pos": "verb", "details": {"past": "translated", "participle": "translated"}, "sentences": ["I *translate* the text from Dutch for my friend."]}
+        {"lemma": "to translate", "pos": "verb", "details": {"past": "translated", "participle": "translated"}, "sentences": ["I *translate* the text from Dutch into English for my friend."]}
         ],
         "nl": [
         {"lemma": "vertalen", "pos": "verb", "details": {"pastSingular": "vertaalde", "pastPlural": "vertaalden", "participle": "vertaald", "auxiliary": "hebben"}, "sentences": ["Ik *vertaal* de tekst voor mijn vriend van het Nederlands naar het Engels."]}
@@ -680,7 +680,7 @@
         {"lemma": "electricity", "pos": "noun", "details": {"uncountable": true}, "sentences": ["The storm stops the *electricity*, so the street is dark."]}
         ],
         "nl": [
-        {"lemma": "elektriciteit", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Door de storm valt de *elektriciteit* uit en is de hele straat donker."]}
+        {"lemma": "elektriciteit", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Door de storm valt de *elektriciteit* uit, dus de straat is donker."]}
         ]
       }
     },
@@ -716,7 +716,7 @@
         {"lemma": "formula", "pos": "noun", "details": {"plural": "formulas"}, "sentences": ["The *formula* is simple, and students can learn it."]}
         ],
         "nl": [
-        {"lemma": "formule", "pos": "noun", "details": {"article": "de", "plural": "formules"}, "sentences": ["De *formule* is eenvoudig en elke leerling kan hem leren."]}
+        {"lemma": "formule", "pos": "noun", "details": {"article": "de", "plural": "formules"}, "sentences": ["De *formule* is eenvoudig en leerlingen kunnen hem leren."]}
         ]
       }
     },
@@ -761,7 +761,7 @@
       "gloss": "coordinate (noun)",
       "entries": {
         "en": [
-        {"lemma": "coordinate", "pos": "noun", "details": {"plural": "coordinates"}, "sentences": ["The pilot knows the *coordinates* of the small island."]}
+        {"lemma": "coordinate", "pos": "noun", "details": {"plural": "coordinates"}, "sentences": ["The pilot knows every *coordinate* of the small island."]}
         ],
         "nl": [
         {"lemma": "coördinaat", "pos": "noun", "details": {"article": "de", "plural": "coördinaten"}, "sentences": ["De piloot kent elke *coördinaat* van het kleine eiland."]}
@@ -869,7 +869,7 @@
       "gloss": "radiation (noun)",
       "entries": {
         "en": [
-        {"lemma": "radiation", "pos": "noun", "details": {"uncountable": true}, "sentences": ["Too much *radiation* from the sun burns skin."]}
+        {"lemma": "radiation", "pos": "noun", "details": {"uncountable": true}, "sentences": ["Too much *radiation* from the sun can burn your skin."]}
         ],
         "nl": [
         {"lemma": "straling", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Te veel *straling* van de zon kan je huid verbranden."]}
@@ -1217,7 +1217,7 @@
       "gloss": "experiment (verb)",
       "entries": {
         "en": [
-        {"lemma": "to experiment", "pos": "verb", "details": {"past": "experimented", "participle": "experimented"}, "sentences": ["We *experiment* with colors in our art class."]}
+        {"lemma": "to experiment", "pos": "verb", "details": {"past": "experimented", "participle": "experimented"}, "sentences": ["We *experiment* with colors in our drawing class."]}
         ],
         "nl": [
         {"lemma": "experimenteren", "pos": "verb", "details": {"pastSingular": "experimenteerde", "pastPlural": "experimenteerden", "participle": "geëxperimenteerd", "auxiliary": "hebben"}, "sentences": ["Wij *experimenteren* met kleuren in de tekenles."]}

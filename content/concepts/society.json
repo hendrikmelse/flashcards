@@ -65,7 +65,7 @@
       "gloss": "weapon (noun)",
       "entries": {
         "en": [
-        {"lemma": "weapon", "pos": "noun", "details": {"plural": "weapons"}, "sentences": ["A museum shows an old *weapon* from the past."]}
+        {"lemma": "weapon", "pos": "noun", "details": {"plural": "weapons"}, "sentences": ["A museum shows an old *weapon* from the Middle Ages."]}
         ],
         "nl": [
         {"lemma": "wapen", "pos": "noun", "details": {"article": "het", "plural": "wapens"}, "sentences": ["Een museum toont een oud *wapen* uit de middeleeuwen."]}
@@ -896,7 +896,7 @@
         {"lemma": "revenge", "pos": "noun", "details": {"uncountable": true}, "sentences": ["He wants *revenge* on the man who hurts him."]}
         ],
         "nl": [
-        {"lemma": "wraak", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Hij wil *wraak* op de man die zijn familie pijn doet."]}
+        {"lemma": "wraak", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Hij wil *wraak* op de man die hem pijn doet."]}
         ]
       }
     },
@@ -1076,7 +1076,7 @@
         {"lemma": "perpetrator", "pos": "noun", "details": {"plural": "perpetrators"}, "sentences": ["The police look for the *perpetrator* of the robbery."]}
         ],
         "nl": [
-        {"lemma": "dader", "pos": "noun", "details": {"article": "de", "plural": "daders"}, "sentences": ["De politie zoekt nog steeds de *dader* van de overval."]}
+        {"lemma": "dader", "pos": "noun", "details": {"article": "de", "plural": "daders"}, "sentences": ["De politie zoekt de *dader* van de overval."]}
         ]
       }
     },
@@ -1193,7 +1193,7 @@
       "gloss": "witch (noun)",
       "entries": {
         "en": [
-        {"lemma": "witch", "pos": "noun", "details": {"plural": "witches"}, "sentences": ["In the story, a *witch* makes a strange drink."]}
+        {"lemma": "witch", "pos": "noun", "details": {"plural": "witches"}, "sentences": ["In the story, an old *witch* makes a strange drink."]}
         ],
         "nl": [
         {"lemma": "heks", "pos": "noun", "details": {"article": "de", "plural": "heksen"}, "sentences": ["In het verhaal maakt een oude *heks* een vreemd drankje."]}
@@ -1625,7 +1625,7 @@
       "gloss": "threat (noun)",
       "entries": {
         "en": [
-        {"lemma": "threat", "pos": "noun", "details": {"note": "a danger", "plural": "threats"}, "sentences": ["The rising water is a *threat* to the town."]}
+        {"lemma": "threat", "pos": "noun", "details": {"note": "a danger", "plural": "threats"}, "sentences": ["The rising water is a real *threat* to the town."]}
         ],
         "nl": [
         {"lemma": "bedreiging", "pos": "noun", "details": {"article": "de", "plural": "bedreigingen"}, "sentences": ["Het stijgende water is een echte *bedreiging* voor de stad."]}
@@ -1724,7 +1724,7 @@
         {"lemma": "political", "pos": "adjective", "sentences": ["My uncle always argues about *political* topics at dinner."]}
         ],
         "nl": [
-        {"lemma": "politiek", "pos": "adjective", "details": {"note": "over de overheid"}, "sentences": ["Mijn oom praat tijdens het eten altijd over *politieke* onderwerpen."]}
+        {"lemma": "politiek", "pos": "adjective", "details": {"note": "over de overheid"}, "sentences": ["Mijn oom discussieert tijdens het eten altijd over *politieke* onderwerpen."]}
         ]
       }
     },
@@ -2069,7 +2069,7 @@
       "gloss": "kidnapping (noun)",
       "entries": {
         "en": [
-        {"lemma": "kidnapping", "pos": "noun", "details": {"plural": "kidnappings"}, "sentences": ["The *kidnapping* of the rich man shocks the town."]}
+        {"lemma": "kidnapping", "pos": "noun", "details": {"plural": "kidnappings"}, "sentences": ["The *kidnapping* of the rich man shocks the whole town."]}
         ],
         "nl": [
         {"lemma": "ontvoering", "pos": "noun", "details": {"article": "de", "plural": "ontvoeringen"}, "sentences": ["De *ontvoering* van de rijke man schokt het hele stadje."]}
@@ -2081,7 +2081,7 @@
       "gloss": "worship (verb)",
       "entries": {
         "en": [
-        {"lemma": "to worship", "pos": "verb", "details": {"past": "worshiped", "participle": "worshiped"}, "sentences": ["Many families *worship* together every Sunday morning."]}
+        {"lemma": "to worship", "pos": "verb", "details": {"past": "worshiped", "participle": "worshiped"}, "sentences": ["Many families *worship* their God together every Sunday morning."]}
         ],
         "nl": [
         {"lemma": "vereren", "pos": "verb", "details": {"pastSingular": "vereerde", "pastPlural": "vereerden", "participle": "vereerd", "auxiliary": "hebben"}, "sentences": ["Veel gezinnen *vereren* elke zondagochtend samen hun God."]}
@@ -2120,7 +2120,7 @@
         {"lemma": "ammunition", "pos": "noun", "details": {"uncountable": true}, "sentences": ["The soldiers run out of *ammunition* in the mountains."]}
         ],
         "nl": [
-        {"lemma": "munitie", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["De soldaten hebben in de bergen bijna geen *munitie* meer."]}
+        {"lemma": "munitie", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["De soldaten zijn in de bergen door hun *munitie* heen."]}
         ]
       }
     },
@@ -2285,7 +2285,7 @@
       "gloss": "burglary (noun)",
       "entries": {
         "en": [
-        {"lemma": "burglary", "pos": "noun", "details": {"plural": "burglaries"}, "sentences": ["Our neighbors report a *burglary* this morning."]}
+        {"lemma": "burglary", "pos": "noun", "details": {"plural": "burglaries"}, "sentences": ["Our neighbors report a *burglary* to the police this morning."]}
         ],
         "nl": [
         {"lemma": "inbraak", "pos": "noun", "details": {"article": "de", "plural": "inbraken"}, "sentences": ["Onze buren melden vanochtend een *inbraak* bij de politie."]}
@@ -2609,7 +2609,7 @@
       "gloss": "congress (noun)",
       "entries": {
         "en": [
-        {"lemma": "congress", "pos": "noun", "details": {"plural": "congresses"}, "sentences": ["The *congress* meets in the capital to discuss laws."]}
+        {"lemma": "congress", "pos": "noun", "details": {"plural": "congresses"}, "sentences": ["The *congress* meets in the capital to discuss new laws."]}
         ],
         "nl": [
         {"lemma": "congres", "pos": "noun", "details": {"article": "het", "plural": "congressen"}, "sentences": ["Het *congres* vergadert in de hoofdstad over nieuwe wetten."]}
@@ -4784,7 +4784,7 @@
         {"lemma": "majority", "pos": "noun", "details": {"plural": "majorities"}, "sentences": ["The *majority* of the voters wants a new road."]}
         ],
         "nl": [
-        {"lemma": "meerderheid", "pos": "noun", "details": {"article": "de", "plural": "meerderheden"}, "sentences": ["De *meerderheid* van de inwoners wil een nieuwe weg."]}
+        {"lemma": "meerderheid", "pos": "noun", "details": {"article": "de", "plural": "meerderheden"}, "sentences": ["De *meerderheid* van de kiezers wil een nieuwe weg."]}
         ]
       }
     },
@@ -4868,7 +4868,7 @@
         {"lemma": "lobby", "pos": "noun", "details": {"note": "pressure group", "plural": "lobbies"}, "sentences": ["The farmers' *lobby* pushes the government for lower taxes."]}
         ],
         "nl": [
-        {"lemma": "lobby", "pos": "noun", "details": {"article": "de", "plural": "lobby's"}, "sentences": ["De sterke *lobby* van de boeren wil lagere belastingen."]}
+        {"lemma": "lobby", "pos": "noun", "details": {"article": "de", "plural": "lobby's"}, "sentences": ["De *lobby* van de boeren dringt bij de regering aan op lagere belastingen."]}
         ]
       }
     },
@@ -5060,7 +5060,7 @@
         {"lemma": "identification", "pos": "noun", "details": {"plural": "identifications"}, "sentences": ["At the club door, I show my *identification* again."]}
         ],
         "nl": [
-        {"lemma": "legitimatie", "pos": "noun", "details": {"article": "de", "plural": "legitimaties"}, "sentences": ["Bij de ingang van de club toon ik mijn *legitimatie*."]}
+        {"lemma": "legitimatie", "pos": "noun", "details": {"article": "de", "plural": "legitimaties"}, "sentences": ["Bij de ingang van de club toon ik mijn *legitimatie* weer."]}
         ]
       }
     },
@@ -5705,7 +5705,7 @@
       "gloss": "councillor (noun)",
       "entries": {
         "en": [
-        {"lemma": "councillor", "pos": "noun", "details": {"plural": "councillors"}, "sentences": ["The *councillor* answers questions at the town meeting."]}
+        {"lemma": "councillor", "pos": "noun", "details": {"plural": "councillors"}, "sentences": ["The *councillor* answers questions at the meeting in the town hall."]}
         ],
         "nl": [
         {"lemma": "raadslid", "pos": "noun", "details": {"article": "het", "plural": "raadsleden"}, "sentences": ["Het *raadslid* beantwoordt vragen tijdens de vergadering in het stadhuis."]}
@@ -6065,7 +6065,7 @@
       "gloss": "shrine (noun)",
       "entries": {
         "en": [
-        {"lemma": "shrine", "pos": "noun", "details": {"plural": "shrines"}, "sentences": ["Visitors leave flowers at the old *shrine* today."]}
+        {"lemma": "shrine", "pos": "noun", "details": {"plural": "shrines"}, "sentences": ["Visitors leave flowers at the old *shrine* on the hill."]}
         ],
         "nl": [
         {"lemma": "heiligdom", "pos": "noun", "details": {"article": "het", "plural": "heiligdommen"}, "sentences": ["Bezoekers leggen bloemen bij het oude *heiligdom* op de heuvel."]}
@@ -6101,7 +6101,7 @@
       "gloss": "immortality (noun)",
       "entries": {
         "en": [
-        {"lemma": "immortality", "pos": "noun", "details": {"uncountable": true}, "sentences": ["The king seeks *immortality* to live forever."]}
+        {"lemma": "immortality", "pos": "noun", "details": {"uncountable": true}, "sentences": ["In the story, the king seeks *immortality* to live forever."]}
         ],
         "nl": [
         {"lemma": "onsterfelijkheid", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["In het verhaal zoekt de koning *onsterfelijkheid* om eeuwig te leven."]}
