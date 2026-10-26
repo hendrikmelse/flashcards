@@ -5,10 +5,10 @@
       "gloss": "hello (greeting)",
       "entries": {
         "en": [
-        {"lemma": "hello", "pos": "interjection", "details": {"note": "standard greeting"}, "sentences": ["Hello, how are you?"]}
+        {"lemma": "hello", "pos": "interjection", "details": {"note": "standard greeting"}, "sentences": ["*Hello*, how are you?"]}
         ],
         "nl": [
-        {"lemma": "hallo", "pos": "interjection", "sentences": ["Hallo, hoe gaat het?"]}
+        {"lemma": "hallo", "pos": "interjection", "sentences": ["*Hallo*, hoe gaat het?"]}
         ]
       }
     },
@@ -17,10 +17,10 @@
       "gloss": "goodbye (parting)",
       "entries": {
         "en": [
-        {"lemma": "goodbye", "pos": "interjection", "sentences": ["Goodbye, see you tomorrow."]}
+        {"lemma": "goodbye", "pos": "interjection", "sentences": ["*Goodbye*, see you tomorrow."]}
         ],
         "nl": [
-        {"lemma": "tot ziens", "pos": "phrase", "sentences": ["Tot ziens, tot morgen."]}
+        {"lemma": "tot ziens", "pos": "phrase", "sentences": ["*Tot ziens*, tot morgen."]}
         ]
       }
     },
@@ -29,10 +29,10 @@
       "gloss": "yes (affirmative answer)",
       "entries": {
         "en": [
-        {"lemma": "yes", "pos": "interjection", "sentences": ["Yes, I understand."]}
+        {"lemma": "yes", "pos": "interjection", "sentences": ["*Yes*, I understand."]}
         ],
         "nl": [
-        {"lemma": "ja", "pos": "interjection", "sentences": ["Ja, ik begrijp het."]}
+        {"lemma": "ja", "pos": "interjection", "sentences": ["*Ja*, ik begrijp het."]}
         ]
       }
     },
@@ -41,10 +41,10 @@
       "gloss": "no (negative answer)",
       "entries": {
         "en": [
-        {"lemma": "no", "pos": "interjection", "details": {"note": "negative answer"}, "sentences": ["No, thank you."]}
+        {"lemma": "no", "pos": "interjection", "details": {"note": "negative answer"}, "sentences": ["*No*, thank you."]}
         ],
         "nl": [
-        {"lemma": "nee", "pos": "interjection", "sentences": ["Nee, dank je."]}
+        {"lemma": "nee", "pos": "interjection", "sentences": ["*Nee*, dank je."]}
         ]
       }
     },
@@ -53,10 +53,10 @@
       "gloss": "please (polite request)",
       "entries": {
         "en": [
-        {"lemma": "please", "pos": "interjection", "details": {"note": "informal, to one person"}, "sentences": ["Water, please."]}
+        {"lemma": "please", "pos": "interjection", "details": {"note": "informal, to one person"}, "sentences": ["Water, *please*."]}
         ],
         "nl": [
-        {"lemma": "alsjeblieft", "pos": "interjection", "sentences": ["Water, alsjeblieft."]}
+        {"lemma": "alsjeblieft", "pos": "interjection", "sentences": ["Water, *alsjeblieft*."]}
         ]
       }
     },
@@ -65,10 +65,10 @@
       "gloss": "thank you (gratitude)",
       "entries": {
         "en": [
-        {"lemma": "thank you", "pos": "phrase", "sentences": ["Thank you for the coffee."]}
+        {"lemma": "thank you", "pos": "phrase", "sentences": ["*Thank you* for the coffee."]}
         ],
         "nl": [
-        {"lemma": "dank je wel", "pos": "phrase", "sentences": ["Dank je wel voor de koffie."]}
+        {"lemma": "dank je wel", "pos": "phrase", "sentences": ["*Dank je wel* voor de koffie."]}
         ]
       }
     },
@@ -77,10 +77,10 @@
       "gloss": "sorry (apology)",
       "entries": {
         "en": [
-        {"lemma": "sorry", "pos": "interjection", "sentences": ["Sorry, I am late."]}
+        {"lemma": "sorry", "pos": "interjection", "sentences": ["*Sorry*, I am late."]}
         ],
         "nl": [
-        {"lemma": "sorry", "pos": "interjection", "sentences": ["Sorry, ik ben te laat."]}
+        {"lemma": "sorry", "pos": "interjection", "sentences": ["*Sorry*, ik ben te laat."]}
         ]
       }
     },
@@ -89,10 +89,10 @@
       "gloss": "good morning (greeting)",
       "entries": {
         "en": [
-        {"lemma": "good morning", "pos": "phrase", "sentences": ["Good morning, Anna!"]}
+        {"lemma": "good morning", "pos": "phrase", "sentences": ["*Good morning*, Anna!"]}
         ],
         "nl": [
-        {"lemma": "goedemorgen", "pos": "phrase", "sentences": ["Goedemorgen, Anna!"]}
+        {"lemma": "goedemorgen", "pos": "phrase", "sentences": ["*Goedemorgen*, Anna!"]}
         ]
       }
     },
@@ -101,10 +101,10 @@
       "gloss": "good night (before sleep)",
       "entries": {
         "en": [
-        {"lemma": "good night", "pos": "phrase", "sentences": ["Good night, sleep well."]}
+        {"lemma": "good night", "pos": "phrase", "sentences": ["*Good night*, sleep well."]}
         ],
         "nl": [
-        {"lemma": "welterusten", "pos": "phrase", "sentences": ["Welterusten, slaap lekker."]}
+        {"lemma": "welterusten", "pos": "phrase", "sentences": ["*Welterusten*, slaap lekker."]}
         ]
       }
     },
@@ -113,10 +113,10 @@
       "gloss": "excuse me (to get attention)",
       "entries": {
         "en": [
-        {"lemma": "excuse me", "pos": "phrase", "sentences": ["Excuse me, where is the bus?"]}
+        {"lemma": "excuse me", "pos": "phrase", "sentences": ["*Excuse me*, where is the bus?"]}
         ],
         "nl": [
-        {"lemma": "pardon", "pos": "interjection", "sentences": ["Pardon, waar is de bus?"]}
+        {"lemma": "pardon", "pos": "interjection", "sentences": ["*Pardon*, waar is de bus?"]}
         ]
       }
     }

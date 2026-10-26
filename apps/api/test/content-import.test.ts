@@ -59,13 +59,13 @@ const noun = (key: string, en: string, nl: string, article = "de"): Concept =>
     key,
     gloss: `${key} (test)`,
     entries: {
-      en: [{ lemma: en, pos: "noun", details: { plural: `${en}s` }, sentences: [`The ${en} runs.`] }],
+      en: [{ lemma: en, pos: "noun", details: { plural: `${en}s` }, sentences: [`The *${en}* runs.`] }],
       nl: [
         {
           lemma: nl,
           pos: "noun",
           details: { article, plural: `${nl}en` },
-          sentences: [`De ${nl} rent.`],
+          sentences: [`De *${nl}* rent.`],
         },
       ],
     },
@@ -244,8 +244,8 @@ describe("checkConcept", () => {
         key: "run",
         gloss: "run (test)",
         entries: {
-          en: [{ lemma: "to run", pos: "verb", details: en, sentences: ["I run."] }],
-          nl: [{ lemma: "rennen", pos: "verb", details: nl, sentences: ["Ik ren."] }],
+          en: [{ lemma: "to run", pos: "verb", details: en, sentences: ["I *run*."] }],
+          nl: [{ lemma: "rennen", pos: "verb", details: nl, sentences: ["Ik *ren*."] }],
         },
       });
     const goodEn = { past: "ran", participle: "run" };
@@ -266,8 +266,8 @@ describe("checkConcept", () => {
           key: "run",
           gloss: "run (test)",
           entries: {
-            en: [{ lemma, pos: "verb", details, sentences: ["I run, and I have to run."] }],
-            nl: [{ lemma: "rennen", pos: "verb", details: goodNl, sentences: ["Ik ren."] }],
+            en: [{ lemma, pos: "verb", details, sentences: ["I *run*, and I have to run."] }],
+            nl: [{ lemma: "rennen", pos: "verb", details: goodNl, sentences: ["Ik *ren*."] }],
           },
         });
       const missing = checkConcept(en("run", goodEn)).errors;
@@ -284,13 +284,13 @@ describe("checkConcept", () => {
         key: "walk",
         gloss: "walk (test)",
         entries: {
-          en: [{ lemma: "to walk", pos: "verb", details: { past: "walked", participle: "walked" }, sentences: ["She walks home.", "To be fair, it rains."] }],
-          nl: [{ lemma: "lopen", pos: "verb", details: goodNl, sentences: ["Ik loop."] }],
+          en: [{ lemma: "to walk", pos: "verb", details: { past: "walked", participle: "walked" }, sentences: ["She *walks* home.", "To *be* fair, it rains."] }],
+          nl: [{ lemma: "lopen", pos: "verb", details: goodNl, sentences: ["Ik *loop*."] }],
         },
       });
       const { warnings } = checkConcept(walks);
       expect(warnings).toHaveLength(1);
-      expect(warnings[0]).toContain("To be fair");
+      expect(warnings[0]).toContain("To *be* fair");
     });
 
     it("warns about missing forms unless the verb is marked defective", () => {
@@ -310,8 +310,8 @@ describe("checkConcept", () => {
 
     it("accepts a verb sentence that uses an inflected form", () => {
       const c = verb(goodEn, goodNl);
-      c.entries["en"]![0]!.sentences = ["She ran home."];
-      c.entries["nl"]![0]!.sentences = ["Hij rende naar huis."];
+      c.entries["en"]![0]!.sentences = ["She *ran* home."];
+      c.entries["nl"]![0]!.sentences = ["Hij *rende* naar huis."];
       expect(checkConcept(c).warnings).toEqual([]);
     });
   });
@@ -364,7 +364,7 @@ describe("importContent", () => {
 
     const fixed = make();
     fixed.concepts[0]!.entries["nl"]![0]!.lemma = "puppy";
-    fixed.concepts[0]!.entries["en"]![0]!.sentences = ["The dog sleeps."];
+    fixed.concepts[0]!.entries["en"]![0]!.sentences = ["The *dog* sleeps."];
     fixed.concepts[0]!.gloss = "dog (reworded)";
     fixed.packs = [pack("t", ["water", "dog"])];
     await importContent(db, fixed);

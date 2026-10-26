@@ -1,4 +1,4 @@
-import { entryNote, formLines, highlightSentence, isFormNote, type EntryView, type LanguageInfo } from "@flashcards/shared";
+import { entryNote, formLines, isFormNote, parseSentence, type EntryView, type LanguageInfo } from "@flashcards/shared";
 import { displayLemma, langAttrs, languageName } from "./entries";
 import { LanguageFlag } from "./LanguageFlag";
 
@@ -76,13 +76,13 @@ export function SentencePlaceholder() {
 }
 
 // Example sentences in the card's language, with the card's word in bold among the rest of the
-// sentence. `entries` are the words of that side of the card, which say what to look for.
-export function Sentences({ items, language, entries = [] }: { items: string[]; language: string; entries?: EntryView[] }) {
+// sentence. The sentence says which word that is, between asterisks.
+export function Sentences({ items, language }: { items: string[]; language: string }) {
   return (
     <>
       {items.map((s) => (
         <p key={s} className="sentence" {...langAttrs(language)}>
-          {highlightSentence(s, entries).map((part, i) =>
+          {parseSentence(s).map((part, i) =>
             part.word ? (
               <span key={i} className="sentence-word">
                 {part.text}

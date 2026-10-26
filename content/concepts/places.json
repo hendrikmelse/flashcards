@@ -5,10 +5,10 @@
       "gloss": "neighborhood (noun)",
       "entries": {
         "en": [
-        {"lemma": "neighborhood", "pos": "noun", "details": {"plural": "neighborhoods"}, "sentences": ["I live in this neighborhood."]}
+        {"lemma": "neighborhood", "pos": "noun", "details": {"plural": "neighborhoods"}, "sentences": ["I live in this *neighborhood*."]}
         ],
         "nl": [
-        {"lemma": "buurt", "pos": "noun", "details": {"article": "de", "plural": "buurten"}, "sentences": ["Ik woon in deze buurt."]}
+        {"lemma": "buurt", "pos": "noun", "details": {"article": "de", "plural": "buurten"}, "sentences": ["Ik woon in deze *buurt*."]}
         ]
       }
     },
@@ -17,10 +17,10 @@
       "gloss": "price (noun)",
       "entries": {
         "en": [
-        {"lemma": "price", "pos": "noun", "details": {"plural": "prices"}, "sentences": ["The price is high."]}
+        {"lemma": "price", "pos": "noun", "details": {"plural": "prices"}, "sentences": ["The *price* is high."]}
         ],
         "nl": [
-        {"lemma": "prijs", "pos": "noun", "details": {"note": "wat het kost", "article": "de", "plural": "prijzen"}, "sentences": ["De prijs is hoog."]}
+        {"lemma": "prijs", "pos": "noun", "details": {"note": "wat het kost", "article": "de", "plural": "prijzen"}, "sentences": ["De *prijs* is hoog."]}
         ]
       }
     },
@@ -29,10 +29,10 @@
       "gloss": "building (noun)",
       "entries": {
         "en": [
-        {"lemma": "building", "pos": "noun", "details": {"note": "a structure", "plural": "buildings"}, "sentences": ["The building is tall."]}
+        {"lemma": "building", "pos": "noun", "details": {"note": "a structure", "plural": "buildings"}, "sentences": ["The *building* is tall."]}
         ],
         "nl": [
-        {"lemma": "gebouw", "pos": "noun", "details": {"article": "het", "plural": "gebouwen"}, "sentences": ["Het gebouw is hoog."]}
+        {"lemma": "gebouw", "pos": "noun", "details": {"article": "het", "plural": "gebouwen"}, "sentences": ["Het *gebouw* is hoog."]}
         ]
       }
     },
@@ -41,10 +41,10 @@
       "gloss": "groceries (noun)",
       "entries": {
         "en": [
-        {"lemma": "groceries", "pos": "noun", "details": {"pluralOnly": true}, "sentences": ["I buy groceries."]}
+        {"lemma": "groceries", "pos": "noun", "details": {"pluralOnly": true}, "sentences": ["I buy *groceries*."]}
         ],
         "nl": [
-        {"lemma": "boodschappen", "pos": "noun", "details": {"article": "de", "pluralOnly": true}, "sentences": ["Ik doe boodschappen."]}
+        {"lemma": "boodschappen", "pos": "noun", "details": {"article": "de", "pluralOnly": true}, "sentences": ["Ik doe *boodschappen*."]}
         ]
       }
     },
@@ -53,10 +53,10 @@
       "gloss": "bill (noun)",
       "entries": {
         "en": [
-        {"lemma": "bill", "pos": "noun", "details": {"plural": "bills"}, "sentences": ["The bill, please."]}
+        {"lemma": "bill", "pos": "noun", "details": {"plural": "bills"}, "sentences": ["The *bill*, please."]}
         ],
         "nl": [
-        {"lemma": "rekening", "pos": "noun", "details": {"article": "de", "plural": "rekeningen"}, "sentences": ["De rekening, alsjeblieft."]}
+        {"lemma": "rekening", "pos": "noun", "details": {"article": "de", "plural": "rekeningen"}, "sentences": ["De *rekening*, alsjeblieft."]}
         ]
       }
     },
@@ -65,10 +65,10 @@
       "gloss": "customer (noun)",
       "entries": {
         "en": [
-        {"lemma": "customer", "pos": "noun", "details": {"plural": "customers"}, "sentences": ["The customer pays."]}
+        {"lemma": "customer", "pos": "noun", "details": {"plural": "customers"}, "sentences": ["The *customer* pays."]}
         ],
         "nl": [
-        {"lemma": "klant", "pos": "noun", "details": {"article": "de", "plural": "klanten"}, "sentences": ["De klant betaalt."]}
+        {"lemma": "klant", "pos": "noun", "details": {"article": "de", "plural": "klanten"}, "sentences": ["De *klant* betaalt."]}
         ]
       }
     },
@@ -77,10 +77,10 @@
       "gloss": "deliver (verb)",
       "entries": {
         "en": [
-        {"lemma": "to deliver", "pos": "verb", "details": {"note": "supply goods", "past": "delivered", "participle": "delivered"}, "sentences": ["They deliver the bread."]}
+        {"lemma": "to deliver", "pos": "verb", "details": {"note": "supply goods", "past": "delivered", "participle": "delivered"}, "sentences": ["They *deliver* the bread."]}
         ],
         "nl": [
-        {"lemma": "leveren", "pos": "verb", "details": {"pastSingular": "leverde", "pastPlural": "leverden", "participle": "geleverd", "auxiliary": "hebben"}, "sentences": ["Zij leveren het brood."]}
+        {"lemma": "leveren", "pos": "verb", "details": {"pastSingular": "leverde", "pastPlural": "leverden", "participle": "geleverd", "auxiliary": "hebben"}, "sentences": ["Zij *leveren* het brood."]}
         ]
       }
     },
@@ -89,10 +89,10 @@
       "gloss": "address (noun)",
       "entries": {
         "en": [
-        {"lemma": "address", "pos": "noun", "details": {"plural": "addresses"}, "sentences": ["What is your address?"]}
+        {"lemma": "address", "pos": "noun", "details": {"plural": "addresses"}, "sentences": ["What is your *address*?"]}
         ],
         "nl": [
-        {"lemma": "adres", "pos": "noun", "details": {"article": "het", "plural": "adressen"}, "sentences": ["Wat is je adres?"]}
+        {"lemma": "adres", "pos": "noun", "details": {"article": "het", "plural": "adressen"}, "sentences": ["Wat is je *adres*?"]}
         ]
       }
     },
@@ -101,10 +101,10 @@
       "gloss": "deal (noun)",
       "entries": {
         "en": [
-        {"lemma": "deal", "pos": "noun", "details": {"plural": "deals"}, "sentences": ["We have a deal."]}
+        {"lemma": "deal", "pos": "noun", "details": {"plural": "deals"}, "sentences": ["We have a *deal*."]}
         ],
         "nl": [
-        {"lemma": "deal", "pos": "noun", "details": {"article": "de", "plural": "deals"}, "sentences": ["Wij hebben een deal."]}
+        {"lemma": "deal", "pos": "noun", "details": {"article": "de", "plural": "deals"}, "sentences": ["Wij hebben een *deal*."]}
         ]
       }
     },
@@ -113,10 +113,10 @@
       "gloss": "corner (noun)",
       "entries": {
         "en": [
-        {"lemma": "corner", "pos": "noun", "details": {"plural": "corners"}, "sentences": ["The shop is on the corner."]}
+        {"lemma": "corner", "pos": "noun", "details": {"plural": "corners"}, "sentences": ["The shop is on the *corner*."]}
         ],
         "nl": [
-        {"lemma": "hoek", "pos": "noun", "details": {"article": "de", "plural": "hoeken"}, "sentences": ["De winkel is op de hoek."]}
+        {"lemma": "hoek", "pos": "noun", "details": {"article": "de", "plural": "hoeken"}, "sentences": ["De winkel is op de *hoek*."]}
         ]
       }
     },
@@ -125,10 +125,10 @@
       "gloss": "bar (noun)",
       "entries": {
         "en": [
-        {"lemma": "bar", "pos": "noun", "details": {"note": "a place for drinks", "plural": "bars"}, "sentences": ["We go to a bar."]}
+        {"lemma": "bar", "pos": "noun", "details": {"note": "a place for drinks", "plural": "bars"}, "sentences": ["We go to a *bar*."]}
         ],
         "nl": [
-        {"lemma": "bar", "pos": "noun", "details": {"article": "de", "plural": "bars"}, "sentences": ["Wij gaan naar een bar."]}
+        {"lemma": "bar", "pos": "noun", "details": {"article": "de", "plural": "bars"}, "sentences": ["Wij gaan naar een *bar*."]}
         ]
       }
     },
@@ -137,10 +137,10 @@
       "gloss": "bridge (noun)",
       "entries": {
         "en": [
-        {"lemma": "bridge", "pos": "noun", "details": {"plural": "bridges"}, "sentences": ["We cross the bridge."]}
+        {"lemma": "bridge", "pos": "noun", "details": {"plural": "bridges"}, "sentences": ["We cross the *bridge*."]}
         ],
         "nl": [
-        {"lemma": "brug", "pos": "noun", "details": {"article": "de", "plural": "bruggen"}, "sentences": ["Wij steken de brug over."]}
+        {"lemma": "brug", "pos": "noun", "details": {"article": "de", "plural": "bruggen"}, "sentences": ["Wij steken de *brug* over."]}
         ]
       }
     },
@@ -149,10 +149,10 @@
       "gloss": "order (verb)",
       "entries": {
         "en": [
-        {"lemma": "to order", "pos": "verb", "details": {"past": "ordered", "participle": "ordered"}, "sentences": ["I order a coffee."]}
+        {"lemma": "to order", "pos": "verb", "details": {"past": "ordered", "participle": "ordered"}, "sentences": ["I *order* a coffee."]}
         ],
         "nl": [
-        {"lemma": "bestellen", "pos": "verb", "details": {"pastSingular": "bestelde", "pastPlural": "bestelden", "participle": "besteld", "auxiliary": "hebben"}, "sentences": ["Ik bestel een koffie."]}
+        {"lemma": "bestellen", "pos": "verb", "details": {"pastSingular": "bestelde", "pastPlural": "bestelden", "participle": "besteld", "auxiliary": "hebben"}, "sentences": ["Ik *bestel* een koffie."]}
         ]
       }
     },
@@ -161,10 +161,10 @@
       "gloss": "free (no cost)",
       "entries": {
         "en": [
-        {"lemma": "free", "pos": "adjective", "details": {"note": "no cost"}, "sentences": ["The coffee is free."]}
+        {"lemma": "free", "pos": "adjective", "details": {"note": "no cost"}, "sentences": ["The coffee is *free*."]}
         ],
         "nl": [
-        {"lemma": "gratis", "pos": "adjective", "sentences": ["De koffie is gratis."]}
+        {"lemma": "gratis", "pos": "adjective", "sentences": ["De koffie is *gratis*."]}
         ]
       }
     },
@@ -173,10 +173,10 @@
       "gloss": "deliver (to the door)",
       "entries": {
         "en": [
-        {"lemma": "to deliver", "pos": "verb", "details": {"note": "to the door", "past": "delivered", "participle": "delivered"}, "sentences": ["He delivers the pizza."]}
+        {"lemma": "to deliver", "pos": "verb", "details": {"note": "to the door", "past": "delivered", "participle": "delivered"}, "sentences": ["He *delivers* the pizza."]}
         ],
         "nl": [
-        {"lemma": "bezorgen", "pos": "verb", "details": {"pastSingular": "bezorgde", "pastPlural": "bezorgden", "participle": "bezorgd", "auxiliary": "hebben"}, "sentences": ["Hij bezorgt de pizza."]}
+        {"lemma": "bezorgen", "pos": "verb", "details": {"pastSingular": "bezorgde", "pastPlural": "bezorgden", "participle": "bezorgd", "auxiliary": "hebben"}, "sentences": ["Hij *bezorgt* de pizza."]}
         ]
       }
     },
@@ -185,10 +185,10 @@
       "gloss": "order (purchase)",
       "entries": {
         "en": [
-        {"lemma": "order", "pos": "noun", "details": {"note": "purchase", "plural": "orders"}, "sentences": ["I place an order."]}
+        {"lemma": "order", "pos": "noun", "details": {"note": "purchase", "plural": "orders"}, "sentences": ["I place an *order*."]}
         ],
         "nl": [
-        {"lemma": "order", "pos": "noun", "details": {"article": "de", "plural": "orders"}, "sentences": ["Ik plaats een order."]}
+        {"lemma": "order", "pos": "noun", "details": {"article": "de", "plural": "orders"}, "sentences": ["Ik plaats een *order*."]}
         ]
       }
     },
@@ -197,10 +197,10 @@
       "gloss": "garage (noun)",
       "entries": {
         "en": [
-        {"lemma": "garage", "pos": "noun", "details": {"plural": "garages"}, "sentences": ["The car is in the garage."]}
+        {"lemma": "garage", "pos": "noun", "details": {"plural": "garages"}, "sentences": ["The car is in the *garage*."]}
         ],
         "nl": [
-        {"lemma": "garage", "pos": "noun", "details": {"article": "de", "plural": "garages"}, "sentences": ["De auto staat in de garage."]}
+        {"lemma": "garage", "pos": "noun", "details": {"article": "de", "plural": "garages"}, "sentences": ["De auto staat in de *garage*."]}
         ]
       }
     },
@@ -209,10 +209,10 @@
       "gloss": "gate (noun)",
       "entries": {
         "en": [
-        {"lemma": "gate", "pos": "noun", "details": {"plural": "gates"}, "sentences": ["The gate is open."]}
+        {"lemma": "gate", "pos": "noun", "details": {"plural": "gates"}, "sentences": ["The *gate* is open."]}
         ],
         "nl": [
-        {"lemma": "poort", "pos": "noun", "details": {"article": "de", "plural": "poorten"}, "sentences": ["De poort is open."]}
+        {"lemma": "poort", "pos": "noun", "details": {"article": "de", "plural": "poorten"}, "sentences": ["De *poort* is open."]}
         ]
       }
     },
@@ -221,10 +221,10 @@
       "gloss": "castle (noun)",
       "entries": {
         "en": [
-        {"lemma": "castle", "pos": "noun", "details": {"plural": "castles"}, "sentences": ["The castle is old."]}
+        {"lemma": "castle", "pos": "noun", "details": {"plural": "castles"}, "sentences": ["The *castle* is old."]}
         ],
         "nl": [
-        {"lemma": "kasteel", "pos": "noun", "details": {"article": "het", "plural": "kastelen"}, "sentences": ["Het kasteel is oud."]}
+        {"lemma": "kasteel", "pos": "noun", "details": {"article": "het", "plural": "kastelen"}, "sentences": ["Het *kasteel* is oud."]}
         ]
       }
     },
@@ -233,10 +233,10 @@
       "gloss": "park (noun)",
       "entries": {
         "en": [
-        {"lemma": "park", "pos": "noun", "details": {"plural": "parks"}, "sentences": ["We walk in the park."]}
+        {"lemma": "park", "pos": "noun", "details": {"plural": "parks"}, "sentences": ["We walk in the *park*."]}
         ],
         "nl": [
-        {"lemma": "park", "pos": "noun", "details": {"article": "het", "plural": "parken"}, "sentences": ["Wij lopen in het park."]}
+        {"lemma": "park", "pos": "noun", "details": {"article": "het", "plural": "parken"}, "sentences": ["Wij lopen in het *park*."]}
         ]
       }
     },
@@ -245,10 +245,10 @@
       "gloss": "offer (proposal)",
       "entries": {
         "en": [
-        {"lemma": "offer", "pos": "noun", "details": {"note": "proposal", "plural": "offers"}, "sentences": ["I accept the offer."]}
+        {"lemma": "offer", "pos": "noun", "details": {"note": "proposal", "plural": "offers"}, "sentences": ["I accept the *offer*."]}
         ],
         "nl": [
-        {"lemma": "aanbod", "pos": "noun", "details": {"article": "het", "plural": "aanbiedingen"}, "sentences": ["Ik accepteer het aanbod."]}
+        {"lemma": "aanbod", "pos": "noun", "details": {"article": "het", "plural": "aanbiedingen"}, "sentences": ["Ik accepteer het *aanbod*."]}
         ]
       }
     },
@@ -257,10 +257,10 @@
       "gloss": "location (noun)",
       "entries": {
         "en": [
-        {"lemma": "location", "pos": "noun", "details": {"plural": "locations"}, "sentences": ["This is a good location."]}
+        {"lemma": "location", "pos": "noun", "details": {"plural": "locations"}, "sentences": ["This is a good *location*."]}
         ],
         "nl": [
-        {"lemma": "locatie", "pos": "noun", "details": {"article": "de", "plural": "locaties"}, "sentences": ["Dit is een goede locatie."]}
+        {"lemma": "locatie", "pos": "noun", "details": {"article": "de", "plural": "locaties"}, "sentences": ["Dit is een goede *locatie*."]}
         ]
       }
     },
@@ -269,10 +269,10 @@
       "gloss": "tower (noun)",
       "entries": {
         "en": [
-        {"lemma": "tower", "pos": "noun", "details": {"plural": "towers"}, "sentences": ["The tower is high."]}
+        {"lemma": "tower", "pos": "noun", "details": {"plural": "towers"}, "sentences": ["The *tower* is high."]}
         ],
         "nl": [
-        {"lemma": "toren", "pos": "noun", "details": {"article": "de", "plural": "torens"}, "sentences": ["De toren is hoog."]}
+        {"lemma": "toren", "pos": "noun", "details": {"article": "de", "plural": "torens"}, "sentences": ["De *toren* is hoog."]}
         ]
       }
     },
@@ -281,10 +281,10 @@
       "gloss": "swap (verb)",
       "entries": {
         "en": [
-        {"lemma": "to swap", "pos": "verb", "details": {"past": "swapped", "participle": "swapped"}, "sentences": ["We swap books."]}
+        {"lemma": "to swap", "pos": "verb", "details": {"past": "swapped", "participle": "swapped"}, "sentences": ["We *swap* books."]}
         ],
         "nl": [
-        {"lemma": "ruilen", "pos": "verb", "details": {"pastSingular": "ruilde", "pastPlural": "ruilden", "participle": "geruild", "auxiliary": "hebben"}, "sentences": ["Wij ruilen boeken."]}
+        {"lemma": "ruilen", "pos": "verb", "details": {"pastSingular": "ruilde", "pastPlural": "ruilden", "participle": "geruild", "auxiliary": "hebben"}, "sentences": ["Wij *ruilen* boeken."]}
         ]
       }
     },
@@ -293,10 +293,10 @@
       "gloss": "museum (noun)",
       "entries": {
         "en": [
-        {"lemma": "museum", "pos": "noun", "details": {"plural": "museums"}, "sentences": ["We visit the museum."]}
+        {"lemma": "museum", "pos": "noun", "details": {"plural": "museums"}, "sentences": ["We visit the *museum*."]}
         ],
         "nl": [
-        {"lemma": "museum", "pos": "noun", "details": {"article": "het", "plural": "musea"}, "sentences": ["Wij bezoeken het museum."]}
+        {"lemma": "museum", "pos": "noun", "details": {"article": "het", "plural": "musea"}, "sentences": ["Wij bezoeken het *museum*."]}
         ]
       }
     },
@@ -305,10 +305,10 @@
       "gloss": "library (noun)",
       "entries": {
         "en": [
-        {"lemma": "library", "pos": "noun", "details": {"plural": "libraries"}, "sentences": ["I read in the library."]}
+        {"lemma": "library", "pos": "noun", "details": {"plural": "libraries"}, "sentences": ["I read in the *library*."]}
         ],
         "nl": [
-        {"lemma": "bibliotheek", "pos": "noun", "details": {"article": "de", "plural": "bibliotheken"}, "sentences": ["Ik lees in de bibliotheek."]}
+        {"lemma": "bibliotheek", "pos": "noun", "details": {"article": "de", "plural": "bibliotheken"}, "sentences": ["Ik lees in de *bibliotheek*."]}
         ]
       }
     },
@@ -317,10 +317,10 @@
       "gloss": "market (noun)",
       "entries": {
         "en": [
-        {"lemma": "market", "pos": "noun", "details": {"plural": "markets"}, "sentences": ["We go to the market."]}
+        {"lemma": "market", "pos": "noun", "details": {"plural": "markets"}, "sentences": ["We go to the *market*."]}
         ],
         "nl": [
-        {"lemma": "markt", "pos": "noun", "details": {"article": "de", "plural": "markten"}, "sentences": ["Wij gaan naar de markt."]}
+        {"lemma": "markt", "pos": "noun", "details": {"article": "de", "plural": "markten"}, "sentences": ["Wij gaan naar de *markt*."]}
         ]
       }
     },
@@ -329,10 +329,10 @@
       "gloss": "exit (noun)",
       "entries": {
         "en": [
-        {"lemma": "exit", "pos": "noun", "details": {"note": "way out", "plural": "exits"}, "sentences": ["The exit is on the left."]}
+        {"lemma": "exit", "pos": "noun", "details": {"note": "way out", "plural": "exits"}, "sentences": ["The *exit* is on the left."]}
         ],
         "nl": [
-        {"lemma": "uitgang", "pos": "noun", "details": {"article": "de", "plural": "uitgangen"}, "sentences": ["De uitgang is links."]}
+        {"lemma": "uitgang", "pos": "noun", "details": {"article": "de", "plural": "uitgangen"}, "sentences": ["De *uitgang* is links."]}
         ]
       }
     },
@@ -341,10 +341,10 @@
       "gloss": "other side (noun)",
       "entries": {
         "en": [
-        {"lemma": "other side", "pos": "noun", "details": {"uncountable": true}, "sentences": ["The shop is on the other side."]}
+        {"lemma": "other side", "pos": "noun", "details": {"uncountable": true}, "sentences": ["The shop is on the *other side*."]}
         ],
         "nl": [
-        {"lemma": "overkant", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["De winkel is aan de overkant."]}
+        {"lemma": "overkant", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["De winkel is aan de *overkant*."]}
         ]
       }
     },
@@ -353,10 +353,10 @@
       "gloss": "entrance (noun)",
       "entries": {
         "en": [
-        {"lemma": "entrance", "pos": "noun", "details": {"plural": "entrances"}, "sentences": ["The entrance is there."]}
+        {"lemma": "entrance", "pos": "noun", "details": {"plural": "entrances"}, "sentences": ["The *entrance* is there."]}
         ],
         "nl": [
-        {"lemma": "ingang", "pos": "noun", "details": {"article": "de", "plural": "ingangen"}, "sentences": ["De ingang is daar."]}
+        {"lemma": "ingang", "pos": "noun", "details": {"article": "de", "plural": "ingangen"}, "sentences": ["De *ingang* is daar."]}
         ]
       }
     },
@@ -365,10 +365,10 @@
       "gloss": "café (noun)",
       "entries": {
         "en": [
-        {"lemma": "café", "pos": "noun", "details": {"plural": "cafés"}, "sentences": ["We drink coffee in the café."]}
+        {"lemma": "café", "pos": "noun", "details": {"plural": "cafés"}, "sentences": ["We drink coffee in the *café*."]}
         ],
         "nl": [
-        {"lemma": "café", "pos": "noun", "details": {"article": "het", "plural": "cafés"}, "sentences": ["Wij drinken koffie in het café."]}
+        {"lemma": "café", "pos": "noun", "details": {"article": "het", "plural": "cafés"}, "sentences": ["Wij drinken koffie in het *café*."]}
         ]
       }
     },
@@ -377,10 +377,10 @@
       "gloss": "hall (noun)",
       "entries": {
         "en": [
-        {"lemma": "hall", "pos": "noun", "details": {"plural": "halls"}, "sentences": ["The hall is full."]}
+        {"lemma": "hall", "pos": "noun", "details": {"plural": "halls"}, "sentences": ["The *hall* is full."]}
         ],
         "nl": [
-        {"lemma": "zaal", "pos": "noun", "details": {"article": "de", "plural": "zalen"}, "sentences": ["De zaal is vol."]}
+        {"lemma": "zaal", "pos": "noun", "details": {"article": "de", "plural": "zalen"}, "sentences": ["De *zaal* is vol."]}
         ]
       }
     },
@@ -389,10 +389,10 @@
       "gloss": "go shopping (verb)",
       "entries": {
         "en": [
-        {"lemma": "to go shopping", "pos": "verb", "details": {"past": "went shopping", "participle": "gone shopping"}, "sentences": ["We go shopping."]}
+        {"lemma": "to go shopping", "pos": "verb", "details": {"past": "went shopping", "participle": "gone shopping"}, "sentences": ["We *go shopping*."]}
         ],
         "nl": [
-        {"lemma": "winkelen", "pos": "verb", "details": {"pastSingular": "winkelde", "pastPlural": "winkelden", "participle": "gewinkeld", "auxiliary": "hebben"}, "sentences": ["Wij gaan winkelen."]}
+        {"lemma": "winkelen", "pos": "verb", "details": {"pastSingular": "winkelde", "pastPlural": "winkelden", "participle": "gewinkeld", "auxiliary": "hebben"}, "sentences": ["Wij gaan *winkelen*."]}
         ]
       }
     },
@@ -401,10 +401,10 @@
       "gloss": "palace (noun)",
       "entries": {
         "en": [
-        {"lemma": "palace", "pos": "noun", "details": {"plural": "palaces"}, "sentences": ["The king lives in a palace."]}
+        {"lemma": "palace", "pos": "noun", "details": {"plural": "palaces"}, "sentences": ["The king lives in a *palace*."]}
         ],
         "nl": [
-        {"lemma": "paleis", "pos": "noun", "details": {"article": "het", "plural": "paleizen"}, "sentences": ["De koning woont in een paleis."]}
+        {"lemma": "paleis", "pos": "noun", "details": {"article": "het", "plural": "paleizen"}, "sentences": ["De koning woont in een *paleis*."]}
         ]
       }
     },
@@ -413,10 +413,10 @@
       "gloss": "receipt (noun)",
       "entries": {
         "en": [
-        {"lemma": "receipt", "pos": "noun", "details": {"plural": "receipts"}, "sentences": ["I keep the receipt."]}
+        {"lemma": "receipt", "pos": "noun", "details": {"plural": "receipts"}, "sentences": ["I keep the *receipt*."]}
         ],
         "nl": [
-        {"lemma": "bon", "pos": "noun", "details": {"article": "de", "plural": "bonnen"}, "sentences": ["Ik bewaar de bon."]}
+        {"lemma": "bon", "pos": "noun", "details": {"article": "de", "plural": "bonnen"}, "sentences": ["Ik bewaar de *bon*."]}
         ]
       }
     },
@@ -425,10 +425,10 @@
       "gloss": "product (noun)",
       "entries": {
         "en": [
-        {"lemma": "product", "pos": "noun", "details": {"plural": "products"}, "sentences": ["This product is new."]}
+        {"lemma": "product", "pos": "noun", "details": {"plural": "products"}, "sentences": ["This *product* is new."]}
         ],
         "nl": [
-        {"lemma": "product", "pos": "noun", "details": {"article": "het", "plural": "producten"}, "sentences": ["Dit product is nieuw."]}
+        {"lemma": "product", "pos": "noun", "details": {"article": "het", "plural": "producten"}, "sentences": ["Dit *product* is nieuw."]}
         ]
       }
     },
@@ -437,10 +437,10 @@
       "gloss": "buyer (noun)",
       "entries": {
         "en": [
-        {"lemma": "buyer", "pos": "noun", "details": {"plural": "buyers"}, "sentences": ["The buyer pays."]}
+        {"lemma": "buyer", "pos": "noun", "details": {"plural": "buyers"}, "sentences": ["The *buyer* pays."]}
         ],
         "nl": [
-        {"lemma": "koper", "pos": "noun", "details": {"note": "iemand die koopt", "article": "de", "plural": "kopers"}, "sentences": ["De koper betaalt."]}
+        {"lemma": "koper", "pos": "noun", "details": {"note": "iemand die koopt", "article": "de", "plural": "kopers"}, "sentences": ["De *koper* betaalt."]}
         ]
       }
     },
@@ -449,10 +449,10 @@
       "gloss": "package (noun)",
       "entries": {
         "en": [
-        {"lemma": "package", "pos": "noun", "details": {"plural": "packages"}, "sentences": ["The package is here."]}
+        {"lemma": "package", "pos": "noun", "details": {"plural": "packages"}, "sentences": ["The *package* is here."]}
         ],
         "nl": [
-        {"lemma": "pakket", "pos": "noun", "details": {"article": "het", "plural": "pakketten"}, "sentences": ["Het pakket is er."]}
+        {"lemma": "pakket", "pos": "noun", "details": {"article": "het", "plural": "pakketten"}, "sentences": ["Het *pakket* is er."]}
         ]
       }
     },
@@ -461,10 +461,10 @@
       "gloss": "shopping mall (noun)",
       "entries": {
         "en": [
-        {"lemma": "shopping mall", "pos": "noun", "details": {"plural": "shopping malls"}, "sentences": ["We go to the shopping mall."]}
+        {"lemma": "shopping mall", "pos": "noun", "details": {"plural": "shopping malls"}, "sentences": ["We go to the *shopping mall*."]}
         ],
         "nl": [
-        {"lemma": "winkelcentrum", "pos": "noun", "details": {"article": "het", "plural": "winkelcentra"}, "sentences": ["Wij gaan naar het winkelcentrum."]}
+        {"lemma": "winkelcentrum", "pos": "noun", "details": {"article": "het", "plural": "winkelcentra"}, "sentences": ["Wij gaan naar het *winkelcentrum*."]}
         ]
       }
     },
@@ -473,10 +473,10 @@
       "gloss": "seller (noun)",
       "entries": {
         "en": [
-        {"lemma": "seller", "pos": "noun", "details": {"plural": "sellers"}, "sentences": ["The seller is friendly."]}
+        {"lemma": "seller", "pos": "noun", "details": {"plural": "sellers"}, "sentences": ["The *seller* is friendly."]}
         ],
         "nl": [
-        {"lemma": "verkoper", "pos": "noun", "details": {"article": "de", "plural": "verkopers"}, "sentences": ["De verkoper is vriendelijk."]}
+        {"lemma": "verkoper", "pos": "noun", "details": {"article": "de", "plural": "verkopers"}, "sentences": ["De *verkoper* is vriendelijk."]}
         ]
       }
     },
@@ -485,10 +485,10 @@
       "gloss": "district (noun)",
       "entries": {
         "en": [
-        {"lemma": "district", "pos": "noun", "details": {"plural": "districts"}, "sentences": ["I live in this district."]}
+        {"lemma": "district", "pos": "noun", "details": {"plural": "districts"}, "sentences": ["I live in this *district*."]}
         ],
         "nl": [
-        {"lemma": "wijk", "pos": "noun", "details": {"article": "de", "plural": "wijken"}, "sentences": ["Ik woon in deze wijk."]}
+        {"lemma": "wijk", "pos": "noun", "details": {"article": "de", "plural": "wijken"}, "sentences": ["Ik woon in deze *wijk*."]}
         ]
       }
     },
@@ -497,10 +497,10 @@
       "gloss": "pub (noun)",
       "entries": {
         "en": [
-        {"lemma": "pub", "pos": "noun", "details": {"plural": "pubs"}, "sentences": ["We go to the pub."]}
+        {"lemma": "pub", "pos": "noun", "details": {"plural": "pubs"}, "sentences": ["We go to the *pub*."]}
         ],
         "nl": [
-        {"lemma": "kroeg", "pos": "noun", "details": {"article": "de", "plural": "kroegen"}, "sentences": ["Wij gaan naar de kroeg."]}
+        {"lemma": "kroeg", "pos": "noun", "details": {"article": "de", "plural": "kroegen"}, "sentences": ["Wij gaan naar de *kroeg*."]}
         ]
       }
     },
@@ -509,10 +509,10 @@
       "gloss": "parking lot (noun)",
       "entries": {
         "en": [
-        {"lemma": "parking lot", "pos": "noun", "details": {"plural": "parking lots"}, "sentences": ["The parking lot is full."]}
+        {"lemma": "parking lot", "pos": "noun", "details": {"plural": "parking lots"}, "sentences": ["The *parking lot* is full."]}
         ],
         "nl": [
-        {"lemma": "parkeerplaats", "pos": "noun", "details": {"article": "de", "plural": "parkeerplaatsen"}, "sentences": ["De parkeerplaats is vol."]}
+        {"lemma": "parkeerplaats", "pos": "noun", "details": {"article": "de", "plural": "parkeerplaatsen"}, "sentences": ["De *parkeerplaats* is vol."]}
         ]
       }
     },
@@ -521,10 +521,10 @@
       "gloss": "police station (noun)",
       "entries": {
         "en": [
-        {"lemma": "police station", "pos": "noun", "details": {"plural": "police stations"}, "sentences": ["The police station is open."]}
+        {"lemma": "police station", "pos": "noun", "details": {"plural": "police stations"}, "sentences": ["The *police station* is open."]}
         ],
         "nl": [
-        {"lemma": "politiebureau", "pos": "noun", "details": {"article": "het", "plural": "politiebureaus"}, "sentences": ["Het politiebureau is open."]}
+        {"lemma": "politiebureau", "pos": "noun", "details": {"article": "het", "plural": "politiebureaus"}, "sentences": ["Het *politiebureau* is open."]}
         ]
       }
     },
@@ -533,10 +533,10 @@
       "gloss": "alley (noun)",
       "entries": {
         "en": [
-        {"lemma": "alley", "pos": "noun", "details": {"plural": "alleys"}, "sentences": ["The cat walks through the alley."]}
+        {"lemma": "alley", "pos": "noun", "details": {"plural": "alleys"}, "sentences": ["The cat walks through the *alley*."]}
         ],
         "nl": [
-        {"lemma": "steeg", "pos": "noun", "details": {"article": "de", "plural": "stegen"}, "sentences": ["De kat loopt door de steeg."]}
+        {"lemma": "steeg", "pos": "noun", "details": {"article": "de", "plural": "stegen"}, "sentences": ["De kat loopt door de *steeg*."]}
         ]
       }
     },
@@ -545,10 +545,10 @@
       "gloss": "supermarket (noun)",
       "entries": {
         "en": [
-        {"lemma": "supermarket", "pos": "noun", "details": {"plural": "supermarkets"}, "sentences": ["I go to the supermarket."]}
+        {"lemma": "supermarket", "pos": "noun", "details": {"plural": "supermarkets"}, "sentences": ["I go to the *supermarket*."]}
         ],
         "nl": [
-        {"lemma": "supermarkt", "pos": "noun", "details": {"article": "de", "plural": "supermarkten"}, "sentences": ["Ik ga naar de supermarkt."]}
+        {"lemma": "supermarkt", "pos": "noun", "details": {"article": "de", "plural": "supermarkten"}, "sentences": ["Ik ga naar de *supermarkt*."]}
         ]
       }
     },
@@ -557,10 +557,10 @@
       "gloss": "checkout (noun)",
       "entries": {
         "en": [
-        {"lemma": "checkout", "pos": "noun", "details": {"plural": "checkouts"}, "sentences": ["I pay at the checkout."]}
+        {"lemma": "checkout", "pos": "noun", "details": {"plural": "checkouts"}, "sentences": ["I pay at the *checkout*."]}
         ],
         "nl": [
-        {"lemma": "kassa", "pos": "noun", "details": {"article": "de", "plural": "kassa's"}, "sentences": ["Ik betaal bij de kassa."]}
+        {"lemma": "kassa", "pos": "noun", "details": {"article": "de", "plural": "kassa's"}, "sentences": ["Ik betaal bij de *kassa*."]}
         ]
       }
     },
@@ -569,10 +569,10 @@
       "gloss": "warehouse (noun)",
       "entries": {
         "en": [
-        {"lemma": "warehouse", "pos": "noun", "details": {"note": "for goods", "plural": "warehouses"}, "sentences": ["The goods are in the warehouse."]}
+        {"lemma": "warehouse", "pos": "noun", "details": {"note": "for goods", "plural": "warehouses"}, "sentences": ["The goods are in the *warehouse*."]}
         ],
         "nl": [
-        {"lemma": "magazijn", "pos": "noun", "details": {"article": "het", "plural": "magazijnen"}, "sentences": ["De goederen liggen in het magazijn."]}
+        {"lemma": "magazijn", "pos": "noun", "details": {"article": "het", "plural": "magazijnen"}, "sentences": ["De goederen liggen in het *magazijn*."]}
         ]
       }
     },
@@ -581,10 +581,10 @@
       "gloss": "sidewalk (noun)",
       "entries": {
         "en": [
-        {"lemma": "sidewalk", "pos": "noun", "details": {"plural": "sidewalks"}, "sentences": ["I walk on the sidewalk."]}
+        {"lemma": "sidewalk", "pos": "noun", "details": {"plural": "sidewalks"}, "sentences": ["I walk on the *sidewalk*."]}
         ],
         "nl": [
-        {"lemma": "stoep", "pos": "noun", "details": {"article": "de", "plural": "stoepen"}, "sentences": ["Ik loop op de stoep."]}
+        {"lemma": "stoep", "pos": "noun", "details": {"article": "de", "plural": "stoepen"}, "sentences": ["Ik loop op de *stoep*."]}
         ]
       }
     },
@@ -593,10 +593,10 @@
       "gloss": "guarantee (noun)",
       "entries": {
         "en": [
-        {"lemma": "guarantee", "pos": "noun", "details": {"plural": "guarantees"}, "sentences": ["The phone has a guarantee."]}
+        {"lemma": "guarantee", "pos": "noun", "details": {"plural": "guarantees"}, "sentences": ["The phone has a *guarantee*."]}
         ],
         "nl": [
-        {"lemma": "garantie", "pos": "noun", "details": {"article": "de", "plural": "garanties"}, "sentences": ["De telefoon heeft garantie."]}
+        {"lemma": "garantie", "pos": "noun", "details": {"article": "de", "plural": "garanties"}, "sentences": ["De telefoon heeft *garantie*."]}
         ]
       }
     },
@@ -605,10 +605,10 @@
       "gloss": "service (noun)",
       "entries": {
         "en": [
-        {"lemma": "service", "pos": "noun", "details": {"uncountable": true}, "sentences": ["The service is good."]}
+        {"lemma": "service", "pos": "noun", "details": {"uncountable": true}, "sentences": ["The *service* is good."]}
         ],
         "nl": [
-        {"lemma": "service", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["De service is goed."]}
+        {"lemma": "service", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["De *service* is goed."]}
         ]
       }
     },
@@ -617,10 +617,10 @@
       "gloss": "nightclub (noun)",
       "entries": {
         "en": [
-        {"lemma": "nightclub", "pos": "noun", "details": {"plural": "nightclubs"}, "sentences": ["We go to a nightclub."]}
+        {"lemma": "nightclub", "pos": "noun", "details": {"plural": "nightclubs"}, "sentences": ["We go to a *nightclub*."]}
         ],
         "nl": [
-        {"lemma": "nachtclub", "pos": "noun", "details": {"article": "de", "plural": "nachtclubs"}, "sentences": ["Wij gaan naar een nachtclub."]}
+        {"lemma": "nachtclub", "pos": "noun", "details": {"article": "de", "plural": "nachtclubs"}, "sentences": ["Wij gaan naar een *nachtclub*."]}
         ]
       }
     },
@@ -629,10 +629,10 @@
       "gloss": "building (premises)",
       "entries": {
         "en": [
-        {"lemma": "building", "pos": "noun", "details": {"note": "premises", "plural": "buildings"}, "sentences": ["The building is old."]}
+        {"lemma": "building", "pos": "noun", "details": {"note": "premises", "plural": "buildings"}, "sentences": ["The *building* is old."]}
         ],
         "nl": [
-        {"lemma": "pand", "pos": "noun", "details": {"article": "het", "plural": "panden"}, "sentences": ["Het pand is oud."]}
+        {"lemma": "pand", "pos": "noun", "details": {"article": "het", "plural": "panden"}, "sentences": ["Het *pand* is oud."]}
         ]
       }
     },
@@ -641,10 +641,10 @@
       "gloss": "special offer (noun)",
       "entries": {
         "en": [
-        {"lemma": "special offer", "pos": "noun", "details": {"plural": "special offers"}, "sentences": ["This is a special offer."]}
+        {"lemma": "special offer", "pos": "noun", "details": {"plural": "special offers"}, "sentences": ["This is a *special offer*."]}
         ],
         "nl": [
-        {"lemma": "aanbieding", "pos": "noun", "details": {"article": "de", "plural": "aanbiedingen"}, "sentences": ["Dit is een aanbieding."]}
+        {"lemma": "aanbieding", "pos": "noun", "details": {"article": "de", "plural": "aanbiedingen"}, "sentences": ["Dit is een *aanbieding*."]}
         ]
       }
     },
@@ -653,10 +653,10 @@
       "gloss": "warehouse (storehouse)",
       "entries": {
         "en": [
-        {"lemma": "warehouse", "pos": "noun", "details": {"note": "storehouse", "plural": "warehouses"}, "sentences": ["The goods are in the warehouse."]}
+        {"lemma": "warehouse", "pos": "noun", "details": {"note": "storehouse", "plural": "warehouses"}, "sentences": ["The goods are in the *warehouse*."]}
         ],
         "nl": [
-        {"lemma": "pakhuis", "pos": "noun", "details": {"article": "het", "plural": "pakhuizen"}, "sentences": ["De goederen liggen in het pakhuis."]}
+        {"lemma": "pakhuis", "pos": "noun", "details": {"article": "het", "plural": "pakhuizen"}, "sentences": ["De goederen liggen in het *pakhuis*."]}
         ]
       }
     },
@@ -665,10 +665,10 @@
       "gloss": "phone booth (noun)",
       "entries": {
         "en": [
-        {"lemma": "phone booth", "pos": "noun", "details": {"plural": "phone booths"}, "sentences": ["The phone booth is empty."]}
+        {"lemma": "phone booth", "pos": "noun", "details": {"plural": "phone booths"}, "sentences": ["The *phone booth* is empty."]}
         ],
         "nl": [
-        {"lemma": "telefooncel", "pos": "noun", "details": {"article": "de", "plural": "telefooncellen"}, "sentences": ["De telefooncel is leeg."]}
+        {"lemma": "telefooncel", "pos": "noun", "details": {"article": "de", "plural": "telefooncellen"}, "sentences": ["De *telefooncel* is leeg."]}
         ]
       }
     },
@@ -677,10 +677,10 @@
       "gloss": "goods (noun)",
       "entries": {
         "en": [
-        {"lemma": "goods", "pos": "noun", "details": {"pluralOnly": true}, "sentences": ["The goods arrive tomorrow."]}
+        {"lemma": "goods", "pos": "noun", "details": {"pluralOnly": true}, "sentences": ["The *goods* arrive tomorrow."]}
         ],
         "nl": [
-        {"lemma": "goederen", "pos": "noun", "details": {"article": "de", "pluralOnly": true}, "sentences": ["De goederen komen morgen aan."]}
+        {"lemma": "goederen", "pos": "noun", "details": {"article": "de", "pluralOnly": true}, "sentences": ["De *goederen* komen morgen aan."]}
         ]
       }
     },
@@ -689,10 +689,10 @@
       "gloss": "sewer (noun)",
       "entries": {
         "en": [
-        {"lemma": "sewer", "pos": "noun", "details": {"plural": "sewers"}, "sentences": ["The sewer smells bad."]}
+        {"lemma": "sewer", "pos": "noun", "details": {"plural": "sewers"}, "sentences": ["The *sewer* smells bad."]}
         ],
         "nl": [
-        {"lemma": "riool", "pos": "noun", "details": {"article": "het", "plural": "riolen"}, "sentences": ["Het riool stinkt."]}
+        {"lemma": "riool", "pos": "noun", "details": {"article": "het", "plural": "riolen"}, "sentences": ["Het *riool* stinkt."]}
         ]
       }
     },
@@ -701,10 +701,10 @@
       "gloss": "square (town)",
       "entries": {
         "en": [
-        {"lemma": "square", "pos": "noun", "details": {"note": "town", "plural": "squares"}, "sentences": ["We meet on the square."]}
+        {"lemma": "square", "pos": "noun", "details": {"note": "town", "plural": "squares"}, "sentences": ["We meet on the *square*."]}
         ],
         "nl": [
-        {"lemma": "plein", "pos": "noun", "details": {"article": "het", "plural": "pleinen"}, "sentences": ["Wij spreken af op het plein."]}
+        {"lemma": "plein", "pos": "noun", "details": {"article": "het", "plural": "pleinen"}, "sentences": ["Wij spreken af op het *plein*."]}
         ]
       }
     },
@@ -713,10 +713,10 @@
       "gloss": "gutter (noun)",
       "entries": {
         "en": [
-        {"lemma": "gutter", "pos": "noun", "details": {"plural": "gutters"}, "sentences": ["The leaf lies in the gutter."]}
+        {"lemma": "gutter", "pos": "noun", "details": {"plural": "gutters"}, "sentences": ["The leaf lies in the *gutter*."]}
         ],
         "nl": [
-        {"lemma": "goot", "pos": "noun", "details": {"article": "de", "plural": "gooten"}, "sentences": ["Het blad ligt in de goot."]}
+        {"lemma": "goot", "pos": "noun", "details": {"article": "de", "plural": "gooten"}, "sentences": ["Het blad ligt in de *goot*."]}
         ]
       }
     },
@@ -725,10 +725,10 @@
       "gloss": "auction (noun)",
       "entries": {
         "en": [
-        {"lemma": "auction", "pos": "noun", "details": {"plural": "auctions"}, "sentences": ["The auction starts at ten."]}
+        {"lemma": "auction", "pos": "noun", "details": {"plural": "auctions"}, "sentences": ["The *auction* starts at ten."]}
         ],
         "nl": [
-        {"lemma": "veiling", "pos": "noun", "details": {"article": "de", "plural": "veilingen"}, "sentences": ["De veiling begint om tien uur."]}
+        {"lemma": "veiling", "pos": "noun", "details": {"article": "de", "plural": "veilingen"}, "sentences": ["De *veiling* begint om tien uur."]}
         ]
       }
     },
@@ -737,10 +737,10 @@
       "gloss": "delivery (noun)",
       "entries": {
         "en": [
-        {"lemma": "delivery", "pos": "noun", "details": {"plural": "deliveries"}, "sentences": ["The delivery is tomorrow."]}
+        {"lemma": "delivery", "pos": "noun", "details": {"plural": "deliveries"}, "sentences": ["The *delivery* is tomorrow."]}
         ],
         "nl": [
-        {"lemma": "levering", "pos": "noun", "details": {"article": "de", "plural": "leveringen"}, "sentences": ["De levering is morgen."]}
+        {"lemma": "levering", "pos": "noun", "details": {"article": "de", "plural": "leveringen"}, "sentences": ["De *levering* is morgen."]}
         ]
       }
     },
@@ -749,10 +749,10 @@
       "gloss": "discount (noun)",
       "entries": {
         "en": [
-        {"lemma": "discount", "pos": "noun", "details": {"plural": "discounts"}, "sentences": ["I get a discount."]}
+        {"lemma": "discount", "pos": "noun", "details": {"plural": "discounts"}, "sentences": ["I get a *discount*."]}
         ],
         "nl": [
-        {"lemma": "korting", "pos": "noun", "details": {"article": "de", "plural": "kortingen"}, "sentences": ["Ik krijg korting."]}
+        {"lemma": "korting", "pos": "noun", "details": {"article": "de", "plural": "kortingen"}, "sentences": ["Ik krijg *korting*."]}
         ]
       }
     },
@@ -761,10 +761,10 @@
       "gloss": "post office (noun)",
       "entries": {
         "en": [
-        {"lemma": "post office", "pos": "noun", "details": {"plural": "post offices"}, "sentences": ["I go to the post office."]}
+        {"lemma": "post office", "pos": "noun", "details": {"plural": "post offices"}, "sentences": ["I go to the *post office*."]}
         ],
         "nl": [
-        {"lemma": "postkantoor", "pos": "noun", "details": {"article": "het", "plural": "postkantoren"}, "sentences": ["Ik ga naar het postkantoor."]}
+        {"lemma": "postkantoor", "pos": "noun", "details": {"article": "het", "plural": "postkantoren"}, "sentences": ["Ik ga naar het *postkantoor*."]}
         ]
       }
     },
@@ -773,10 +773,10 @@
       "gloss": "salon (noun)",
       "entries": {
         "en": [
-        {"lemma": "salon", "pos": "noun", "details": {"plural": "salons"}, "sentences": ["She goes to the salon."]}
+        {"lemma": "salon", "pos": "noun", "details": {"plural": "salons"}, "sentences": ["She goes to the *salon*."]}
         ],
         "nl": [
-        {"lemma": "salon", "pos": "noun", "details": {"article": "de", "plural": "salons"}, "sentences": ["Zij gaat naar de salon."]}
+        {"lemma": "salon", "pos": "noun", "details": {"article": "de", "plural": "salons"}, "sentences": ["Zij gaat naar de *salon*."]}
         ]
       }
     },
@@ -785,10 +785,10 @@
       "gloss": "pharmacy (noun)",
       "entries": {
         "en": [
-        {"lemma": "pharmacy", "pos": "noun", "details": {"plural": "pharmacies"}, "sentences": ["I go to the pharmacy."]}
+        {"lemma": "pharmacy", "pos": "noun", "details": {"plural": "pharmacies"}, "sentences": ["I go to the *pharmacy*."]}
         ],
         "nl": [
-        {"lemma": "apotheek", "pos": "noun", "details": {"article": "de", "plural": "apotheken"}, "sentences": ["Ik ga naar de apotheek."]}
+        {"lemma": "apotheek", "pos": "noun", "details": {"article": "de", "plural": "apotheken"}, "sentences": ["Ik ga naar de *apotheek*."]}
         ]
       }
     },
@@ -797,10 +797,10 @@
       "gloss": "label (noun)",
       "entries": {
         "en": [
-        {"lemma": "label", "pos": "noun", "details": {"plural": "labels"}, "sentences": ["The label says the price."]}
+        {"lemma": "label", "pos": "noun", "details": {"plural": "labels"}, "sentences": ["The *label* says the price."]}
         ],
         "nl": [
-        {"lemma": "label", "pos": "noun", "details": {"article": "het", "plural": "labels"}, "sentences": ["Op het label staat de prijs."]}
+        {"lemma": "label", "pos": "noun", "details": {"article": "het", "plural": "labels"}, "sentences": ["Op het *label* staat de prijs."]}
         ]
       }
     },
@@ -809,10 +809,10 @@
       "gloss": "monument (noun)",
       "entries": {
         "en": [
-        {"lemma": "monument", "pos": "noun", "details": {"plural": "monuments"}, "sentences": ["The monument is old."]}
+        {"lemma": "monument", "pos": "noun", "details": {"plural": "monuments"}, "sentences": ["The *monument* is old."]}
         ],
         "nl": [
-        {"lemma": "monument", "pos": "noun", "details": {"article": "het", "plural": "monumenten"}, "sentences": ["Het monument is oud."]}
+        {"lemma": "monument", "pos": "noun", "details": {"article": "het", "plural": "monumenten"}, "sentences": ["Het *monument* is oud."]}
         ]
       }
     },
@@ -821,10 +821,10 @@
       "gloss": "floor plan (noun)",
       "entries": {
         "en": [
-        {"lemma": "floor plan", "pos": "noun", "details": {"plural": "floor plans"}, "sentences": ["I look at the floor plan."]}
+        {"lemma": "floor plan", "pos": "noun", "details": {"plural": "floor plans"}, "sentences": ["I look at the *floor plan*."]}
         ],
         "nl": [
-        {"lemma": "plattegrond", "pos": "noun", "details": {"article": "de", "plural": "plattegronden"}, "sentences": ["Ik kijk naar de plattegrond."]}
+        {"lemma": "plattegrond", "pos": "noun", "details": {"article": "de", "plural": "plattegronden"}, "sentences": ["Ik kijk naar de *plattegrond*."]}
         ]
       }
     },
@@ -833,10 +833,10 @@
       "gloss": "city hall (noun)",
       "entries": {
         "en": [
-        {"lemma": "city hall", "pos": "noun", "details": {"plural": "city halls"}, "sentences": ["The city hall is old."]}
+        {"lemma": "city hall", "pos": "noun", "details": {"plural": "city halls"}, "sentences": ["The *city hall* is old."]}
         ],
         "nl": [
-        {"lemma": "stadhuis", "pos": "noun", "details": {"article": "het", "plural": "stadhuizen"}, "sentences": ["Het stadhuis is oud."]}
+        {"lemma": "stadhuis", "pos": "noun", "details": {"article": "het", "plural": "stadhuizen"}, "sentences": ["Het *stadhuis* is oud."]}
         ]
       }
     },
@@ -845,10 +845,10 @@
       "gloss": "dry cleaner (noun)",
       "entries": {
         "en": [
-        {"lemma": "dry cleaner", "pos": "noun", "details": {"plural": "dry cleaners"}, "sentences": ["I bring the coat to the dry cleaner."]}
+        {"lemma": "dry cleaner", "pos": "noun", "details": {"plural": "dry cleaners"}, "sentences": ["I bring the coat to the *dry cleaner*."]}
         ],
         "nl": [
-        {"lemma": "stomerij", "pos": "noun", "details": {"article": "de", "plural": "stomerijen"}, "sentences": ["Ik breng de jas naar de stomerij."]}
+        {"lemma": "stomerij", "pos": "noun", "details": {"article": "de", "plural": "stomerijen"}, "sentences": ["Ik breng de jas naar de *stomerij*."]}
         ]
       }
     },
@@ -857,10 +857,10 @@
       "gloss": "fountain (noun)",
       "entries": {
         "en": [
-        {"lemma": "fountain", "pos": "noun", "details": {"plural": "fountains"}, "sentences": ["The fountain is in the square."]}
+        {"lemma": "fountain", "pos": "noun", "details": {"plural": "fountains"}, "sentences": ["The *fountain* is in the square."]}
         ],
         "nl": [
-        {"lemma": "fontein", "pos": "noun", "details": {"article": "de", "plural": "fonteinen"}, "sentences": ["De fontein staat op het plein."]}
+        {"lemma": "fontein", "pos": "noun", "details": {"article": "de", "plural": "fonteinen"}, "sentences": ["De *fontein* staat op het plein."]}
         ]
       }
     },
@@ -869,10 +869,10 @@
       "gloss": "sale (noun)",
       "entries": {
         "en": [
-        {"lemma": "sale", "pos": "noun", "details": {"plural": "sales"}, "sentences": ["The shop has a sale."]}
+        {"lemma": "sale", "pos": "noun", "details": {"plural": "sales"}, "sentences": ["The shop has a *sale*."]}
         ],
         "nl": [
-        {"lemma": "uitverkoop", "pos": "noun", "details": {"article": "de", "plural": "uitverkopen"}, "sentences": ["De winkel heeft uitverkoop."]}
+        {"lemma": "uitverkoop", "pos": "noun", "details": {"article": "de", "plural": "uitverkopen"}, "sentences": ["De winkel heeft *uitverkoop*."]}
         ]
       }
     },
@@ -881,10 +881,10 @@
       "gloss": "department store (noun)",
       "entries": {
         "en": [
-        {"lemma": "department store", "pos": "noun", "details": {"plural": "department stores"}, "sentences": ["We go to the department store."]}
+        {"lemma": "department store", "pos": "noun", "details": {"plural": "department stores"}, "sentences": ["We go to the *department store*."]}
         ],
         "nl": [
-        {"lemma": "warenhuis", "pos": "noun", "details": {"article": "het", "plural": "warenhuizen"}, "sentences": ["Wij gaan naar het warenhuis."]}
+        {"lemma": "warenhuis", "pos": "noun", "details": {"article": "het", "plural": "warenhuizen"}, "sentences": ["Wij gaan naar het *warenhuis*."]}
         ]
       }
     },
@@ -893,10 +893,10 @@
       "gloss": "supplier (noun)",
       "entries": {
         "en": [
-        {"lemma": "supplier", "pos": "noun", "details": {"plural": "suppliers"}, "sentences": ["The supplier delivers the goods."]}
+        {"lemma": "supplier", "pos": "noun", "details": {"plural": "suppliers"}, "sentences": ["The *supplier* delivers the goods."]}
         ],
         "nl": [
-        {"lemma": "leverancier", "pos": "noun", "details": {"article": "de", "plural": "leveranciers"}, "sentences": ["De leverancier levert de goederen."]}
+        {"lemma": "leverancier", "pos": "noun", "details": {"article": "de", "plural": "leveranciers"}, "sentences": ["De *leverancier* levert de goederen."]}
         ]
       }
     },
@@ -905,10 +905,10 @@
       "gloss": "slum (noun)",
       "entries": {
         "en": [
-        {"lemma": "slum", "pos": "noun", "details": {"plural": "slums"}, "sentences": ["They live in a slum."]}
+        {"lemma": "slum", "pos": "noun", "details": {"plural": "slums"}, "sentences": ["They live in a *slum*."]}
         ],
         "nl": [
-        {"lemma": "krot", "pos": "noun", "details": {"article": "het", "plural": "krotten"}, "sentences": ["Zij wonen in een krot."]}
+        {"lemma": "krot", "pos": "noun", "details": {"article": "het", "plural": "krotten"}, "sentences": ["Zij wonen in een *krot*."]}
         ]
       }
     },
@@ -917,10 +917,10 @@
       "gloss": "terrace (noun)",
       "entries": {
         "en": [
-        {"lemma": "terrace", "pos": "noun", "details": {"plural": "terraces"}, "sentences": ["We drink coffee on the terrace."]}
+        {"lemma": "terrace", "pos": "noun", "details": {"plural": "terraces"}, "sentences": ["We drink coffee on the *terrace*."]}
         ],
         "nl": [
-        {"lemma": "terras", "pos": "noun", "details": {"article": "het", "plural": "terrassen"}, "sentences": ["Wij drinken koffie op het terras."]}
+        {"lemma": "terras", "pos": "noun", "details": {"article": "het", "plural": "terrassen"}, "sentences": ["Wij drinken koffie op het *terras*."]}
         ]
       }
     },
@@ -929,10 +929,10 @@
       "gloss": "bargain (noun)",
       "entries": {
         "en": [
-        {"lemma": "bargain", "pos": "noun", "details": {"plural": "bargains"}, "sentences": ["That is a bargain."]}
+        {"lemma": "bargain", "pos": "noun", "details": {"plural": "bargains"}, "sentences": ["That is a *bargain*."]}
         ],
         "nl": [
-        {"lemma": "koopje", "pos": "noun", "details": {"article": "het", "plural": "koopjes"}, "sentences": ["Dat is een koopje."]}
+        {"lemma": "koopje", "pos": "noun", "details": {"article": "het", "plural": "koopjes"}, "sentences": ["Dat is een *koopje*."]}
         ]
       }
     },
@@ -941,10 +941,10 @@
       "gloss": "suburb (noun)",
       "entries": {
         "en": [
-        {"lemma": "suburb", "pos": "noun", "details": {"plural": "suburbs"}, "sentences": ["We live in a suburb."]}
+        {"lemma": "suburb", "pos": "noun", "details": {"plural": "suburbs"}, "sentences": ["We live in a *suburb*."]}
         ],
         "nl": [
-        {"lemma": "buitenwijk", "pos": "noun", "details": {"article": "de", "plural": "buitenwijken"}, "sentences": ["Wij wonen in een buitenwijk."]}
+        {"lemma": "buitenwijk", "pos": "noun", "details": {"article": "de", "plural": "buitenwijken"}, "sentences": ["Wij wonen in een *buitenwijk*."]}
         ]
       }
     },
@@ -953,10 +953,10 @@
       "gloss": "sell out (verb)",
       "entries": {
         "en": [
-        {"lemma": "to sell out", "pos": "verb", "details": {"past": "sold out", "participle": "sold out"}, "sentences": ["The shop sells out the tickets."]}
+        {"lemma": "to sell out", "pos": "verb", "details": {"past": "sold out", "participle": "sold out"}, "sentences": ["The shop *sells out* the tickets."]}
         ],
         "nl": [
-        {"lemma": "uitverkopen", "pos": "verb", "details": {"pastSingular": "verkocht uit", "pastPlural": "verkochten uit", "participle": "uitverkocht", "auxiliary": "hebben"}, "sentences": ["De winkel verkoopt de kaartjes uit."]}
+        {"lemma": "uitverkopen", "pos": "verb", "details": {"pastSingular": "verkocht uit", "pastPlural": "verkochten uit", "participle": "uitverkocht", "auxiliary": "hebben"}, "sentences": ["De winkel *verkoopt* de kaartjes *uit*."]}
         ]
       }
     },
@@ -965,10 +965,10 @@
       "gloss": "cashier (noun)",
       "entries": {
         "en": [
-        {"lemma": "cashier", "pos": "noun", "details": {"plural": "cashiers"}, "sentences": ["The cashier scans the items."]}
+        {"lemma": "cashier", "pos": "noun", "details": {"plural": "cashiers"}, "sentences": ["The *cashier* scans the items."]}
         ],
         "nl": [
-        {"lemma": "kassier", "pos": "noun", "details": {"article": "de", "plural": "kassiers"}, "sentences": ["De kassier scant de artikelen."]}
+        {"lemma": "kassier", "pos": "noun", "details": {"article": "de", "plural": "kassiers"}, "sentences": ["De *kassier* scant de artikelen."]}
         ]
       }
     },
@@ -977,10 +977,10 @@
       "gloss": "shopping cart (noun)",
       "entries": {
         "en": [
-        {"lemma": "shopping cart", "pos": "noun", "details": {"plural": "shopping carts"}, "sentences": ["I push the shopping cart."]}
+        {"lemma": "shopping cart", "pos": "noun", "details": {"plural": "shopping carts"}, "sentences": ["I push the *shopping cart*."]}
         ],
         "nl": [
-        {"lemma": "winkelwagentje", "pos": "noun", "details": {"article": "het", "plural": "winkelwagentjes"}, "sentences": ["Ik duw het winkelwagentje."]}
+        {"lemma": "winkelwagentje", "pos": "noun", "details": {"article": "het", "plural": "winkelwagentjes"}, "sentences": ["Ik duw het *winkelwagentje*."]}
         ]
       }
     },
@@ -989,10 +989,10 @@
       "gloss": "refund (noun)",
       "entries": {
         "en": [
-        {"lemma": "refund", "pos": "noun", "details": {"plural": "refunds"}, "sentences": ["I ask for a refund."]}
+        {"lemma": "refund", "pos": "noun", "details": {"plural": "refunds"}, "sentences": ["I ask for a *refund*."]}
         ],
         "nl": [
-        {"lemma": "terugbetaling", "pos": "noun", "details": {"article": "de", "plural": "terugbetalingen"}, "sentences": ["Ik vraag om een terugbetaling."]}
+        {"lemma": "terugbetaling", "pos": "noun", "details": {"article": "de", "plural": "terugbetalingen"}, "sentences": ["Ik vraag om een *terugbetaling*."]}
         ]
       }
     },
@@ -1001,10 +1001,10 @@
       "gloss": "brand (noun)",
       "entries": {
         "en": [
-        {"lemma": "brand", "pos": "noun", "details": {"plural": "brands"}, "sentences": ["This brand is expensive."]}
+        {"lemma": "brand", "pos": "noun", "details": {"plural": "brands"}, "sentences": ["This *brand* is expensive."]}
         ],
         "nl": [
-        {"lemma": "merk", "pos": "noun", "details": {"article": "het", "plural": "merken"}, "sentences": ["Dit merk is duur."]}
+        {"lemma": "merk", "pos": "noun", "details": {"article": "het", "plural": "merken"}, "sentences": ["Dit *merk* is duur."]}
         ]
       }
     },
@@ -1013,10 +1013,10 @@
       "gloss": "window display (noun)",
       "entries": {
         "en": [
-        {"lemma": "window display", "pos": "noun", "details": {"plural": "window displays"}, "sentences": ["The window display is beautiful."]}
+        {"lemma": "window display", "pos": "noun", "details": {"plural": "window displays"}, "sentences": ["The *window display* is beautiful."]}
         ],
         "nl": [
-        {"lemma": "etalage", "pos": "noun", "details": {"article": "de", "plural": "etalages"}, "sentences": ["De etalage is mooi."]}
+        {"lemma": "etalage", "pos": "noun", "details": {"article": "de", "plural": "etalages"}, "sentences": ["De *etalage* is mooi."]}
         ]
       }
     },
@@ -1025,10 +1025,10 @@
       "gloss": "shopping list (noun)",
       "entries": {
         "en": [
-        {"lemma": "shopping list", "pos": "noun", "details": {"plural": "shopping lists"}, "sentences": ["I write a shopping list."]}
+        {"lemma": "shopping list", "pos": "noun", "details": {"plural": "shopping lists"}, "sentences": ["I write a *shopping list*."]}
         ],
         "nl": [
-        {"lemma": "boodschappenlijstje", "pos": "noun", "details": {"article": "het", "plural": "boodschappenlijstjes"}, "sentences": ["Ik schrijf een boodschappenlijstje."]}
+        {"lemma": "boodschappenlijstje", "pos": "noun", "details": {"article": "het", "plural": "boodschappenlijstjes"}, "sentences": ["Ik schrijf een *boodschappenlijstje*."]}
         ]
       }
     },
@@ -1037,10 +1037,10 @@
       "gloss": "market stall (noun)",
       "entries": {
         "en": [
-        {"lemma": "market stall", "pos": "noun", "details": {"plural": "market stalls"}, "sentences": ["The market stall sells fish."]}
+        {"lemma": "market stall", "pos": "noun", "details": {"plural": "market stalls"}, "sentences": ["The *market stall* sells fish."]}
         ],
         "nl": [
-        {"lemma": "kraam", "pos": "noun", "details": {"article": "de", "plural": "kramen"}, "sentences": ["De kraam verkoopt vis."]}
+        {"lemma": "kraam", "pos": "noun", "details": {"article": "de", "plural": "kramen"}, "sentences": ["De *kraam* verkoopt vis."]}
         ]
       }
     },
@@ -1049,10 +1049,10 @@
       "gloss": "bakery (noun)",
       "entries": {
         "en": [
-        {"lemma": "bakery", "pos": "noun", "details": {"plural": "bakeries"}, "sentences": ["The bakery smells good."]}
+        {"lemma": "bakery", "pos": "noun", "details": {"plural": "bakeries"}, "sentences": ["The *bakery* smells good."]}
         ],
         "nl": [
-        {"lemma": "bakkerij", "pos": "noun", "details": {"article": "de", "plural": "bakkerijen"}, "sentences": ["De bakkerij ruikt lekker."]}
+        {"lemma": "bakkerij", "pos": "noun", "details": {"article": "de", "plural": "bakkerijen"}, "sentences": ["De *bakkerij* ruikt lekker."]}
         ]
       }
     },
@@ -1061,10 +1061,10 @@
       "gloss": "butcher shop (noun)",
       "entries": {
         "en": [
-        {"lemma": "butcher shop", "pos": "noun", "details": {"plural": "butcher shops"}, "sentences": ["The butcher shop is open."]}
+        {"lemma": "butcher shop", "pos": "noun", "details": {"plural": "butcher shops"}, "sentences": ["The *butcher shop* is open."]}
         ],
         "nl": [
-        {"lemma": "slagerij", "pos": "noun", "details": {"article": "de", "plural": "slagerijen"}, "sentences": ["De slagerij is open."]}
+        {"lemma": "slagerij", "pos": "noun", "details": {"article": "de", "plural": "slagerijen"}, "sentences": ["De *slagerij* is open."]}
         ]
       }
     },
@@ -1073,10 +1073,10 @@
       "gloss": "haggle (verb)",
       "entries": {
         "en": [
-        {"lemma": "to haggle", "pos": "verb", "details": {"past": "haggled", "participle": "haggled"}, "sentences": ["He haggles over the price."]}
+        {"lemma": "to haggle", "pos": "verb", "details": {"past": "haggled", "participle": "haggled"}, "sentences": ["He *haggles* over the price."]}
         ],
         "nl": [
-        {"lemma": "afdingen", "pos": "verb", "details": {"pastSingular": "dong af", "pastPlural": "dongen af", "participle": "afgedongen", "auxiliary": "hebben"}, "sentences": ["Hij dingt af op de prijs."]}
+        {"lemma": "afdingen", "pos": "verb", "details": {"pastSingular": "dong af", "pastPlural": "dongen af", "participle": "afgedongen", "auxiliary": "hebben"}, "sentences": ["Hij *dingt af* op de prijs."]}
         ]
       }
     }

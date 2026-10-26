@@ -27,16 +27,16 @@ const dog: Concept = conceptSchema.parse({
   key: "dog",
   gloss: "dog (animal)",
   entries: {
-    en: [{ lemma: "dog", pos: "noun", details: { plural: "dogs" }, sentences: ["The dog runs."] }],
-    nl: [{ lemma: "hond", pos: "noun", details: { article: "de", plural: "honden" }, sentences: ["De hond rent."] }],
+    en: [{ lemma: "dog", pos: "noun", details: { plural: "dogs" }, sentences: ["The *dog* runs."] }],
+    nl: [{ lemma: "hond", pos: "noun", details: { article: "de", plural: "honden" }, sentences: ["De *hond* rent."] }],
   },
 });
 const house: Concept = conceptSchema.parse({
   key: "house",
   gloss: "house (building)",
   entries: {
-    en: [{ lemma: "house", pos: "noun", details: { plural: "houses" }, sentences: ["The house is big."] }],
-    nl: [{ lemma: "huis", pos: "noun", details: { article: "het", plural: "huizen" }, sentences: ["Het huis is groot."] }],
+    en: [{ lemma: "house", pos: "noun", details: { plural: "houses" }, sentences: ["The *house* is big."] }],
+    nl: [{ lemma: "huis", pos: "noun", details: { article: "het", plural: "huizen" }, sentences: ["Het *huis* is groot."] }],
   },
 });
 
@@ -50,7 +50,7 @@ const fr = (...concepts: { key: string; lemma: string; sentence?: string }[]): L
           lemma: c.lemma,
           pos: "noun",
           details: { plural: `${c.lemma}s` },
-          sentences: [c.sentence ?? `Le ${c.lemma} est ici.`],
+          sentences: [c.sentence ?? `Le *${c.lemma}* est ici.`],
         },
       ],
     })),
@@ -110,7 +110,7 @@ describe("language files: validation", () => {
   });
 
   it("applies the checks for entries to them, naming the file", () => {
-    const { warnings } = check([source(fr({ key: "dog", lemma: "chien", sentence: "Il fait beau." }))]);
+    const { warnings } = check([source(fr({ key: "dog", lemma: "chien", sentence: "Il *fait* beau." }))]);
     expect(warnings).toEqual([
       expect.stringMatching(/^languages\/fr\/a\.json: "dog" fr "chien": sentence does not contain the lemma/),
     ]);

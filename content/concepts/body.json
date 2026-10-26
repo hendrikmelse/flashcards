@@ -5,10 +5,10 @@
       "gloss": "head (top of the body)",
       "entries": {
         "en": [
-        {"lemma": "head", "pos": "noun", "details": {"plural": "heads"}, "sentences": ["My head hurts."]}
+        {"lemma": "head", "pos": "noun", "details": {"plural": "heads"}, "sentences": ["My *head* hurts."]}
         ],
         "nl": [
-        {"lemma": "hoofd", "pos": "noun", "details": {"article": "het", "plural": "hoofden"}, "sentences": ["Mijn hoofd doet pijn."]}
+        {"lemma": "hoofd", "pos": "noun", "details": {"article": "het", "plural": "hoofden"}, "sentences": ["Mijn *hoofd* doet pijn."]}
         ]
       }
     },
@@ -17,10 +17,10 @@
       "gloss": "hand (end of the arm)",
       "entries": {
         "en": [
-        {"lemma": "hand", "pos": "noun", "details": {"plural": "hands"}, "sentences": ["Give me your hand."]}
+        {"lemma": "hand", "pos": "noun", "details": {"plural": "hands"}, "sentences": ["Give me your *hand*."]}
         ],
         "nl": [
-        {"lemma": "hand", "pos": "noun", "details": {"article": "de", "plural": "handen"}, "sentences": ["Geef mij je hand."]}
+        {"lemma": "hand", "pos": "noun", "details": {"article": "de", "plural": "handen"}, "sentences": ["Geef mij je *hand*."]}
         ]
       }
     },
@@ -29,10 +29,10 @@
       "gloss": "eye (organ of sight)",
       "entries": {
         "en": [
-        {"lemma": "eye", "pos": "noun", "details": {"plural": "eyes"}, "sentences": ["She has blue eyes."]}
+        {"lemma": "eye", "pos": "noun", "details": {"plural": "eyes"}, "sentences": ["She has blue *eyes*."]}
         ],
         "nl": [
-        {"lemma": "oog", "pos": "noun", "details": {"article": "het", "plural": "ogen"}, "sentences": ["Zij heeft blauwe ogen."]}
+        {"lemma": "oog", "pos": "noun", "details": {"article": "het", "plural": "ogen"}, "sentences": ["Zij heeft blauwe *ogen*."]}
         ]
       }
     },
@@ -41,10 +41,10 @@
       "gloss": "foot (end of the leg)",
       "entries": {
         "en": [
-        {"lemma": "foot", "pos": "noun", "details": {"plural": "feet"}, "sentences": ["My foot hurts."]}
+        {"lemma": "foot", "pos": "noun", "details": {"plural": "feet"}, "sentences": ["My *foot* hurts."]}
         ],
         "nl": [
-        {"lemma": "voet", "pos": "noun", "details": {"article": "de", "plural": "voeten"}, "sentences": ["Mijn voet doet pijn."]}
+        {"lemma": "voet", "pos": "noun", "details": {"article": "de", "plural": "voeten"}, "sentences": ["Mijn *voet* doet pijn."]}
         ]
       }
     },
@@ -53,10 +53,10 @@
       "gloss": "heart (organ)",
       "entries": {
         "en": [
-        {"lemma": "heart", "pos": "noun", "details": {"plural": "hearts"}, "sentences": ["She has a big heart."]}
+        {"lemma": "heart", "pos": "noun", "details": {"plural": "hearts"}, "sentences": ["She has a big *heart*."]}
         ],
         "nl": [
-        {"lemma": "hart", "pos": "noun", "details": {"article": "het", "plural": "harten"}, "sentences": ["Zij heeft een groot hart."]}
+        {"lemma": "hart", "pos": "noun", "details": {"article": "het", "plural": "harten"}, "sentences": ["Zij heeft een groot *hart*."]}
         ]
       }
     },
@@ -65,10 +65,10 @@
       "gloss": "mouth (part of the face)",
       "entries": {
         "en": [
-        {"lemma": "mouth", "pos": "noun", "details": {"plural": "mouths"}, "sentences": ["Open your mouth."]}
+        {"lemma": "mouth", "pos": "noun", "details": {"plural": "mouths"}, "sentences": ["Open your *mouth*."]}
         ],
         "nl": [
-        {"lemma": "mond", "pos": "noun", "details": {"article": "de", "plural": "monden"}, "sentences": ["Doe je mond open."]}
+        {"lemma": "mond", "pos": "noun", "details": {"article": "de", "plural": "monden"}, "sentences": ["Doe je *mond* open."]}
         ]
       }
     },
@@ -77,10 +77,10 @@
       "gloss": "hair (on the head)",
       "entries": {
         "en": [
-        {"lemma": "hair", "pos": "noun", "details": {"uncountable": true}, "sentences": ["She has long hair."]}
+        {"lemma": "hair", "pos": "noun", "details": {"uncountable": true}, "sentences": ["She has long *hair*."]}
         ],
         "nl": [
-        {"lemma": "haar", "pos": "noun", "details": {"note": "op je hoofd", "article": "het", "uncountable": true}, "sentences": ["Zij heeft lang haar."]}
+        {"lemma": "haar", "pos": "noun", "details": {"note": "op je hoofd", "article": "het", "uncountable": true}, "sentences": ["Zij heeft lang *haar*."]}
         ]
       }
     },
@@ -89,10 +89,10 @@
       "gloss": "face (noun)",
       "entries": {
         "en": [
-        {"lemma": "face", "pos": "noun", "details": {"plural": "faces"}, "sentences": ["She has a nice face."]}
+        {"lemma": "face", "pos": "noun", "details": {"plural": "faces"}, "sentences": ["She has a nice *face*."]}
         ],
         "nl": [
-        {"lemma": "gezicht", "pos": "noun", "details": {"article": "het", "plural": "gezichten"}, "sentences": ["Zij heeft een mooi gezicht."]}
+        {"lemma": "gezicht", "pos": "noun", "details": {"article": "het", "plural": "gezichten"}, "sentences": ["Zij heeft een mooi *gezicht*."]}
         ]
       }
     },
@@ -101,10 +101,10 @@
       "gloss": "blood (noun)",
       "entries": {
         "en": [
-        {"lemma": "blood", "pos": "noun", "details": {"uncountable": true}, "sentences": ["There is blood on the floor."]}
+        {"lemma": "blood", "pos": "noun", "details": {"uncountable": true}, "sentences": ["There is *blood* on the floor."]}
         ],
         "nl": [
-        {"lemma": "bloed", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["Er is bloed op de vloer."]}
+        {"lemma": "bloed", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["Er is *bloed* op de vloer."]}
         ]
       }
     },
@@ -113,10 +113,10 @@
       "gloss": "body (noun)",
       "entries": {
         "en": [
-        {"lemma": "body", "pos": "noun", "details": {"plural": "bodies"}, "sentences": ["The body needs water."]}
+        {"lemma": "body", "pos": "noun", "details": {"plural": "bodies"}, "sentences": ["The *body* needs water."]}
         ],
         "nl": [
-        {"lemma": "lichaam", "pos": "noun", "details": {"article": "het", "plural": "lichamen"}, "sentences": ["Het lichaam heeft water nodig."]}
+        {"lemma": "lichaam", "pos": "noun", "details": {"article": "het", "plural": "lichamen"}, "sentences": ["Het *lichaam* heeft water nodig."]}
         ]
       }
     },
@@ -125,10 +125,10 @@
       "gloss": "arm (noun)",
       "entries": {
         "en": [
-        {"lemma": "arm", "pos": "noun", "details": {"plural": "arms"}, "sentences": ["My arm hurts."]}
+        {"lemma": "arm", "pos": "noun", "details": {"plural": "arms"}, "sentences": ["My *arm* hurts."]}
         ],
         "nl": [
-        {"lemma": "arm", "pos": "noun", "details": {"note": "een lichaamsdeel", "article": "de", "plural": "armen"}, "sentences": ["Mijn arm doet pijn."]}
+        {"lemma": "arm", "pos": "noun", "details": {"note": "een lichaamsdeel", "article": "de", "plural": "armen"}, "sentences": ["Mijn *arm* doet pijn."]}
         ]
       }
     },
@@ -137,10 +137,10 @@
       "gloss": "back (noun)",
       "entries": {
         "en": [
-        {"lemma": "back", "pos": "noun", "details": {"note": "body part", "plural": "backs"}, "sentences": ["My back hurts."]}
+        {"lemma": "back", "pos": "noun", "details": {"note": "body part", "plural": "backs"}, "sentences": ["My *back* hurts."]}
         ],
         "nl": [
-        {"lemma": "rug", "pos": "noun", "details": {"article": "de", "plural": "ruggen"}, "sentences": ["Mijn rug doet pijn."]}
+        {"lemma": "rug", "pos": "noun", "details": {"article": "de", "plural": "ruggen"}, "sentences": ["Mijn *rug* doet pijn."]}
         ]
       }
     },
@@ -149,10 +149,10 @@
       "gloss": "nose (noun)",
       "entries": {
         "en": [
-        {"lemma": "nose", "pos": "noun", "details": {"plural": "noses"}, "sentences": ["I have a cold nose."]}
+        {"lemma": "nose", "pos": "noun", "details": {"plural": "noses"}, "sentences": ["I have a cold *nose*."]}
         ],
         "nl": [
-        {"lemma": "neus", "pos": "noun", "details": {"article": "de", "plural": "neuzen"}, "sentences": ["Ik heb een koude neus."]}
+        {"lemma": "neus", "pos": "noun", "details": {"article": "de", "plural": "neuzen"}, "sentences": ["Ik heb een koude *neus*."]}
         ]
       }
     },
@@ -161,10 +161,10 @@
       "gloss": "ear (noun)",
       "entries": {
         "en": [
-        {"lemma": "ear", "pos": "noun", "details": {"plural": "ears"}, "sentences": ["My ear hurts."]}
+        {"lemma": "ear", "pos": "noun", "details": {"plural": "ears"}, "sentences": ["My *ear* hurts."]}
         ],
         "nl": [
-        {"lemma": "oor", "pos": "noun", "details": {"article": "het", "plural": "oren"}, "sentences": ["Mijn oor doet pijn."]}
+        {"lemma": "oor", "pos": "noun", "details": {"article": "het", "plural": "oren"}, "sentences": ["Mijn *oor* doet pijn."]}
         ]
       }
     },
@@ -173,10 +173,10 @@
       "gloss": "finger (noun)",
       "entries": {
         "en": [
-        {"lemma": "finger", "pos": "noun", "details": {"plural": "fingers"}, "sentences": ["My finger hurts."]}
+        {"lemma": "finger", "pos": "noun", "details": {"plural": "fingers"}, "sentences": ["My *finger* hurts."]}
         ],
         "nl": [
-        {"lemma": "vinger", "pos": "noun", "details": {"article": "de", "plural": "vingers"}, "sentences": ["Mijn vinger doet pijn."]}
+        {"lemma": "vinger", "pos": "noun", "details": {"article": "de", "plural": "vingers"}, "sentences": ["Mijn *vinger* doet pijn."]}
         ]
       }
     },
@@ -185,10 +185,10 @@
       "gloss": "leg (noun)",
       "entries": {
         "en": [
-        {"lemma": "leg", "pos": "noun", "details": {"plural": "legs"}, "sentences": ["My leg hurts."]}
+        {"lemma": "leg", "pos": "noun", "details": {"plural": "legs"}, "sentences": ["My *leg* hurts."]}
         ],
         "nl": [
-        {"lemma": "been", "pos": "noun", "details": {"article": "het", "plural": "benen"}, "sentences": ["Mijn been doet pijn."]}
+        {"lemma": "been", "pos": "noun", "details": {"article": "het", "plural": "benen"}, "sentences": ["Mijn *been* doet pijn."]}
         ]
       }
     },
@@ -197,10 +197,10 @@
       "gloss": "neck (noun)",
       "entries": {
         "en": [
-        {"lemma": "neck", "pos": "noun", "details": {"note": "body part", "plural": "necks"}, "sentences": ["My neck hurts."]}
+        {"lemma": "neck", "pos": "noun", "details": {"note": "body part", "plural": "necks"}, "sentences": ["My *neck* hurts."]}
         ],
         "nl": [
-        {"lemma": "nek", "pos": "noun", "details": {"article": "de", "plural": "nekken"}, "sentences": ["Mijn nek doet pijn."]}
+        {"lemma": "nek", "pos": "noun", "details": {"article": "de", "plural": "nekken"}, "sentences": ["Mijn *nek* doet pijn."]}
         ]
       }
     },
@@ -209,10 +209,10 @@
       "gloss": "tooth (noun)",
       "entries": {
         "en": [
-        {"lemma": "tooth", "pos": "noun", "details": {"plural": "teeth"}, "sentences": ["My tooth hurts."]}
+        {"lemma": "tooth", "pos": "noun", "details": {"plural": "teeth"}, "sentences": ["My *tooth* hurts."]}
         ],
         "nl": [
-        {"lemma": "tand", "pos": "noun", "details": {"article": "de", "plural": "tanden"}, "sentences": ["Mijn tand doet pijn."]}
+        {"lemma": "tand", "pos": "noun", "details": {"article": "de", "plural": "tanden"}, "sentences": ["Mijn *tand* doet pijn."]}
         ]
       }
     },
@@ -221,10 +221,10 @@
       "gloss": "chest (noun)",
       "entries": {
         "en": [
-        {"lemma": "chest", "pos": "noun", "details": {"note": "upper body", "plural": "chests"}, "sentences": ["My chest hurts."]}
+        {"lemma": "chest", "pos": "noun", "details": {"note": "upper body", "plural": "chests"}, "sentences": ["My *chest* hurts."]}
         ],
         "nl": [
-        {"lemma": "borst", "pos": "noun", "details": {"article": "de", "plural": "borsten"}, "sentences": ["Mijn borst doet pijn."]}
+        {"lemma": "borst", "pos": "noun", "details": {"article": "de", "plural": "borsten"}, "sentences": ["Mijn *borst* doet pijn."]}
         ]
       }
     },
@@ -233,10 +233,10 @@
       "gloss": "breath (noun)",
       "entries": {
         "en": [
-        {"lemma": "breath", "pos": "noun", "details": {"plural": "breaths"}, "sentences": ["I hold my breath."]}
+        {"lemma": "breath", "pos": "noun", "details": {"plural": "breaths"}, "sentences": ["I hold my *breath*."]}
         ],
         "nl": [
-        {"lemma": "adem", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Ik houd mijn adem in."]}
+        {"lemma": "adem", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Ik houd mijn *adem* in."]}
         ]
       }
     },
@@ -245,10 +245,10 @@
       "gloss": "skin (noun)",
       "entries": {
         "en": [
-        {"lemma": "skin", "pos": "noun", "details": {"plural": "skins"}, "sentences": ["My skin is dry."]}
+        {"lemma": "skin", "pos": "noun", "details": {"plural": "skins"}, "sentences": ["My *skin* is dry."]}
         ],
         "nl": [
-        {"lemma": "huid", "pos": "noun", "details": {"article": "de", "plural": "huiden"}, "sentences": ["Mijn huid is droog."]}
+        {"lemma": "huid", "pos": "noun", "details": {"article": "de", "plural": "huiden"}, "sentences": ["Mijn *huid* is droog."]}
         ]
       }
     },
@@ -257,10 +257,10 @@
       "gloss": "knee (noun)",
       "entries": {
         "en": [
-        {"lemma": "knee", "pos": "noun", "details": {"plural": "knees"}, "sentences": ["My knee hurts."]}
+        {"lemma": "knee", "pos": "noun", "details": {"plural": "knees"}, "sentences": ["My *knee* hurts."]}
         ],
         "nl": [
-        {"lemma": "knie", "pos": "noun", "details": {"article": "de", "plural": "knieën"}, "sentences": ["Mijn knie doet pijn."]}
+        {"lemma": "knie", "pos": "noun", "details": {"article": "de", "plural": "knieën"}, "sentences": ["Mijn *knie* doet pijn."]}
         ]
       }
     },
@@ -269,10 +269,10 @@
       "gloss": "brain (noun)",
       "entries": {
         "en": [
-        {"lemma": "brain", "pos": "noun", "details": {"plural": "brains"}, "sentences": ["My brain is tired."]}
+        {"lemma": "brain", "pos": "noun", "details": {"plural": "brains"}, "sentences": ["My *brain* is tired."]}
         ],
         "nl": [
-        {"lemma": "hersenen", "pos": "noun", "details": {"article": "de", "pluralOnly": true}, "sentences": ["Mijn hersenen zijn moe."]}
+        {"lemma": "hersenen", "pos": "noun", "details": {"article": "de", "pluralOnly": true}, "sentences": ["Mijn *hersenen* zijn moe."]}
         ]
       }
     },
@@ -281,10 +281,10 @@
       "gloss": "tongue (noun)",
       "entries": {
         "en": [
-        {"lemma": "tongue", "pos": "noun", "details": {"plural": "tongues"}, "sentences": ["I burn my tongue."]}
+        {"lemma": "tongue", "pos": "noun", "details": {"plural": "tongues"}, "sentences": ["I burn my *tongue*."]}
         ],
         "nl": [
-        {"lemma": "tong", "pos": "noun", "details": {"article": "de", "plural": "tongen"}, "sentences": ["Ik verbrand mijn tong."]}
+        {"lemma": "tong", "pos": "noun", "details": {"article": "de", "plural": "tongen"}, "sentences": ["Ik verbrand mijn *tong*."]}
         ]
       }
     },
@@ -293,10 +293,10 @@
       "gloss": "shoulder (noun)",
       "entries": {
         "en": [
-        {"lemma": "shoulder", "pos": "noun", "details": {"plural": "shoulders"}, "sentences": ["My shoulder hurts."]}
+        {"lemma": "shoulder", "pos": "noun", "details": {"plural": "shoulders"}, "sentences": ["My *shoulder* hurts."]}
         ],
         "nl": [
-        {"lemma": "schouder", "pos": "noun", "details": {"article": "de", "plural": "schouders"}, "sentences": ["Mijn schouder doet pijn."]}
+        {"lemma": "schouder", "pos": "noun", "details": {"article": "de", "plural": "schouders"}, "sentences": ["Mijn *schouder* doet pijn."]}
         ]
       }
     },
@@ -305,10 +305,10 @@
       "gloss": "lip (noun)",
       "entries": {
         "en": [
-        {"lemma": "lip", "pos": "noun", "details": {"plural": "lips"}, "sentences": ["She has red lips."]}
+        {"lemma": "lip", "pos": "noun", "details": {"plural": "lips"}, "sentences": ["She has red *lips*."]}
         ],
         "nl": [
-        {"lemma": "lip", "pos": "noun", "details": {"article": "de", "plural": "lippen"}, "sentences": ["Zij heeft rode lippen."]}
+        {"lemma": "lip", "pos": "noun", "details": {"article": "de", "plural": "lippen"}, "sentences": ["Zij heeft rode *lippen*."]}
         ]
       }
     },
@@ -317,10 +317,10 @@
       "gloss": "throat (noun)",
       "entries": {
         "en": [
-        {"lemma": "throat", "pos": "noun", "details": {"plural": "throats"}, "sentences": ["My throat hurts."]}
+        {"lemma": "throat", "pos": "noun", "details": {"plural": "throats"}, "sentences": ["My *throat* hurts."]}
         ],
         "nl": [
-        {"lemma": "keel", "pos": "noun", "details": {"article": "de", "plural": "kelen"}, "sentences": ["Mijn keel doet pijn."]}
+        {"lemma": "keel", "pos": "noun", "details": {"article": "de", "plural": "kelen"}, "sentences": ["Mijn *keel* doet pijn."]}
         ]
       }
     },
@@ -329,10 +329,10 @@
       "gloss": "belly (noun)",
       "entries": {
         "en": [
-        {"lemma": "belly", "pos": "noun", "details": {"plural": "bellies"}, "sentences": ["My belly hurts."]}
+        {"lemma": "belly", "pos": "noun", "details": {"plural": "bellies"}, "sentences": ["My *belly* hurts."]}
         ],
         "nl": [
-        {"lemma": "buik", "pos": "noun", "details": {"article": "de", "plural": "buiken"}, "sentences": ["Mijn buik doet pijn."]}
+        {"lemma": "buik", "pos": "noun", "details": {"article": "de", "plural": "buiken"}, "sentences": ["Mijn *buik* doet pijn."]}
         ]
       }
     },
@@ -341,10 +341,10 @@
       "gloss": "stomach (noun)",
       "entries": {
         "en": [
-        {"lemma": "stomach", "pos": "noun", "details": {"plural": "stomaches"}, "sentences": ["My stomach hurts."]}
+        {"lemma": "stomach", "pos": "noun", "details": {"plural": "stomaches"}, "sentences": ["My *stomach* hurts."]}
         ],
         "nl": [
-        {"lemma": "maag", "pos": "noun", "details": {"article": "de", "plural": "magen"}, "sentences": ["Mijn maag doet pijn."]}
+        {"lemma": "maag", "pos": "noun", "details": {"article": "de", "plural": "magen"}, "sentences": ["Mijn *maag* doet pijn."]}
         ]
       }
     },
@@ -353,10 +353,10 @@
       "gloss": "tear (noun)",
       "entries": {
         "en": [
-        {"lemma": "tear", "pos": "noun", "details": {"plural": "tears"}, "sentences": ["A tear runs down her cheek."]}
+        {"lemma": "tear", "pos": "noun", "details": {"plural": "tears"}, "sentences": ["A *tear* runs down her cheek."]}
         ],
         "nl": [
-        {"lemma": "traan", "pos": "noun", "details": {"article": "de", "plural": "tranen"}, "sentences": ["Een traan rolt over haar wang."]}
+        {"lemma": "traan", "pos": "noun", "details": {"article": "de", "plural": "tranen"}, "sentences": ["Een *traan* rolt over haar wang."]}
         ]
       }
     },
@@ -365,10 +365,10 @@
       "gloss": "toe (noun)",
       "entries": {
         "en": [
-        {"lemma": "toe", "pos": "noun", "details": {"plural": "toes"}, "sentences": ["My toe hurts."]}
+        {"lemma": "toe", "pos": "noun", "details": {"plural": "toes"}, "sentences": ["My *toe* hurts."]}
         ],
         "nl": [
-        {"lemma": "teen", "pos": "noun", "details": {"article": "de", "plural": "tenen"}, "sentences": ["Mijn teen doet pijn."]}
+        {"lemma": "teen", "pos": "noun", "details": {"article": "de", "plural": "tenen"}, "sentences": ["Mijn *teen* doet pijn."]}
         ]
       }
     },
@@ -377,10 +377,10 @@
       "gloss": "nerve (noun)",
       "entries": {
         "en": [
-        {"lemma": "nerve", "pos": "noun", "details": {"plural": "nerves"}, "sentences": ["A nerve hurts."]}
+        {"lemma": "nerve", "pos": "noun", "details": {"plural": "nerves"}, "sentences": ["A *nerve* hurts."]}
         ],
         "nl": [
-        {"lemma": "zenuw", "pos": "noun", "details": {"article": "de", "plural": "zenuwen"}, "sentences": ["Een zenuw doet pijn."]}
+        {"lemma": "zenuw", "pos": "noun", "details": {"article": "de", "plural": "zenuwen"}, "sentences": ["Een *zenuw* doet pijn."]}
         ]
       }
     },
@@ -389,10 +389,10 @@
       "gloss": "wrist (noun)",
       "entries": {
         "en": [
-        {"lemma": "wrist", "pos": "noun", "details": {"plural": "wrists"}, "sentences": ["My wrist hurts."]}
+        {"lemma": "wrist", "pos": "noun", "details": {"plural": "wrists"}, "sentences": ["My *wrist* hurts."]}
         ],
         "nl": [
-        {"lemma": "pols", "pos": "noun", "details": {"article": "de", "plural": "polsen"}, "sentences": ["Mijn pols doet pijn."]}
+        {"lemma": "pols", "pos": "noun", "details": {"article": "de", "plural": "polsen"}, "sentences": ["Mijn *pols* doet pijn."]}
         ]
       }
     },
@@ -401,10 +401,10 @@
       "gloss": "nail (noun)",
       "entries": {
         "en": [
-        {"lemma": "nail", "pos": "noun", "details": {"note": "of a finger", "plural": "nails"}, "sentences": ["I cut my nails."]}
+        {"lemma": "nail", "pos": "noun", "details": {"note": "of a finger", "plural": "nails"}, "sentences": ["I cut my *nails*."]}
         ],
         "nl": [
-        {"lemma": "nagel", "pos": "noun", "details": {"article": "de", "plural": "nagels"}, "sentences": ["Ik knip mijn nagels."]}
+        {"lemma": "nagel", "pos": "noun", "details": {"article": "de", "plural": "nagels"}, "sentences": ["Ik knip mijn *nagels*."]}
         ]
       }
     },
@@ -413,10 +413,10 @@
       "gloss": "skull (noun)",
       "entries": {
         "en": [
-        {"lemma": "skull", "pos": "noun", "details": {"plural": "skulls"}, "sentences": ["The skull is old."]}
+        {"lemma": "skull", "pos": "noun", "details": {"plural": "skulls"}, "sentences": ["The *skull* is old."]}
         ],
         "nl": [
-        {"lemma": "schedel", "pos": "noun", "details": {"article": "de", "plural": "schedels"}, "sentences": ["De schedel is oud."]}
+        {"lemma": "schedel", "pos": "noun", "details": {"article": "de", "plural": "schedels"}, "sentences": ["De *schedel* is oud."]}
         ]
       }
     },
@@ -425,10 +425,10 @@
       "gloss": "muscle (noun)",
       "entries": {
         "en": [
-        {"lemma": "muscle", "pos": "noun", "details": {"plural": "muscles"}, "sentences": ["My muscle hurts."]}
+        {"lemma": "muscle", "pos": "noun", "details": {"plural": "muscles"}, "sentences": ["My *muscle* hurts."]}
         ],
         "nl": [
-        {"lemma": "spier", "pos": "noun", "details": {"article": "de", "plural": "spieren"}, "sentences": ["Mijn spier doet pijn."]}
+        {"lemma": "spier", "pos": "noun", "details": {"article": "de", "plural": "spieren"}, "sentences": ["Mijn *spier* doet pijn."]}
         ]
       }
     },
@@ -437,10 +437,10 @@
       "gloss": "thumb (noun)",
       "entries": {
         "en": [
-        {"lemma": "thumb", "pos": "noun", "details": {"plural": "thumbs"}, "sentences": ["I hurt my thumb."]}
+        {"lemma": "thumb", "pos": "noun", "details": {"plural": "thumbs"}, "sentences": ["I hurt my *thumb*."]}
         ],
         "nl": [
-        {"lemma": "duim", "pos": "noun", "details": {"article": "de", "plural": "duimen"}, "sentences": ["Ik bezeer mijn duim."]}
+        {"lemma": "duim", "pos": "noun", "details": {"article": "de", "plural": "duimen"}, "sentences": ["Ik bezeer mijn *duim*."]}
         ]
       }
     },
@@ -449,10 +449,10 @@
       "gloss": "beard (noun)",
       "entries": {
         "en": [
-        {"lemma": "beard", "pos": "noun", "details": {"plural": "beards"}, "sentences": ["He has a beard."]}
+        {"lemma": "beard", "pos": "noun", "details": {"plural": "beards"}, "sentences": ["He has a *beard*."]}
         ],
         "nl": [
-        {"lemma": "baard", "pos": "noun", "details": {"article": "de", "plural": "baarden"}, "sentences": ["Hij heeft een baard."]}
+        {"lemma": "baard", "pos": "noun", "details": {"article": "de", "plural": "baarden"}, "sentences": ["Hij heeft een *baard*."]}
         ]
       }
     },
@@ -461,10 +461,10 @@
       "gloss": "lung (noun)",
       "entries": {
         "en": [
-        {"lemma": "lung", "pos": "noun", "details": {"plural": "lungs"}, "sentences": ["My lung hurts."]}
+        {"lemma": "lung", "pos": "noun", "details": {"plural": "lungs"}, "sentences": ["My *lung* hurts."]}
         ],
         "nl": [
-        {"lemma": "long", "pos": "noun", "details": {"article": "de", "plural": "longen"}, "sentences": ["Mijn long doet pijn."]}
+        {"lemma": "long", "pos": "noun", "details": {"article": "de", "plural": "longen"}, "sentences": ["Mijn *long* doet pijn."]}
         ]
       }
     },
@@ -473,10 +473,10 @@
       "gloss": "bone (noun)",
       "entries": {
         "en": [
-        {"lemma": "bone", "pos": "noun", "details": {"plural": "bones"}, "sentences": ["The dog has a bone."]}
+        {"lemma": "bone", "pos": "noun", "details": {"plural": "bones"}, "sentences": ["The dog has a *bone*."]}
         ],
         "nl": [
-        {"lemma": "bot", "pos": "noun", "details": {"article": "het", "plural": "botten"}, "sentences": ["De hond heeft een bot."]}
+        {"lemma": "bot", "pos": "noun", "details": {"article": "het", "plural": "botten"}, "sentences": ["De hond heeft een *bot*."]}
         ]
       }
     },
@@ -485,10 +485,10 @@
       "gloss": "hip (noun)",
       "entries": {
         "en": [
-        {"lemma": "hip", "pos": "noun", "details": {"plural": "hips"}, "sentences": ["My hip hurts."]}
+        {"lemma": "hip", "pos": "noun", "details": {"plural": "hips"}, "sentences": ["My *hip* hurts."]}
         ],
         "nl": [
-        {"lemma": "heup", "pos": "noun", "details": {"article": "de", "plural": "heupen"}, "sentences": ["Mijn heup doet pijn."]}
+        {"lemma": "heup", "pos": "noun", "details": {"article": "de", "plural": "heupen"}, "sentences": ["Mijn *heup* doet pijn."]}
         ]
       }
     },
@@ -497,10 +497,10 @@
       "gloss": "mustache (noun)",
       "entries": {
         "en": [
-        {"lemma": "mustache", "pos": "noun", "details": {"plural": "mustaches"}, "sentences": ["He has a mustache."]}
+        {"lemma": "mustache", "pos": "noun", "details": {"plural": "mustaches"}, "sentences": ["He has a *mustache*."]}
         ],
         "nl": [
-        {"lemma": "snor", "pos": "noun", "details": {"article": "de", "plural": "snorren"}, "sentences": ["Hij heeft een snor."]}
+        {"lemma": "snor", "pos": "noun", "details": {"article": "de", "plural": "snorren"}, "sentences": ["Hij heeft een *snor*."]}
         ]
       }
     },
@@ -509,10 +509,10 @@
       "gloss": "cheek (noun)",
       "entries": {
         "en": [
-        {"lemma": "cheek", "pos": "noun", "details": {"plural": "cheeks"}, "sentences": ["She has red cheeks."]}
+        {"lemma": "cheek", "pos": "noun", "details": {"plural": "cheeks"}, "sentences": ["She has red *cheeks*."]}
         ],
         "nl": [
-        {"lemma": "wang", "pos": "noun", "details": {"article": "de", "plural": "wangen"}, "sentences": ["Zij heeft rode wangen."]}
+        {"lemma": "wang", "pos": "noun", "details": {"article": "de", "plural": "wangen"}, "sentences": ["Zij heeft rode *wangen*."]}
         ]
       }
     },
@@ -521,10 +521,10 @@
       "gloss": "fist (noun)",
       "entries": {
         "en": [
-        {"lemma": "fist", "pos": "noun", "details": {"plural": "fists"}, "sentences": ["He makes a fist."]}
+        {"lemma": "fist", "pos": "noun", "details": {"plural": "fists"}, "sentences": ["He makes a *fist*."]}
         ],
         "nl": [
-        {"lemma": "vuist", "pos": "noun", "details": {"article": "de", "plural": "vuisten"}, "sentences": ["Hij maakt een vuist."]}
+        {"lemma": "vuist", "pos": "noun", "details": {"article": "de", "plural": "vuisten"}, "sentences": ["Hij maakt een *vuist*."]}
         ]
       }
     },
@@ -533,10 +533,10 @@
       "gloss": "organ (noun)",
       "entries": {
         "en": [
-        {"lemma": "organ", "pos": "noun", "details": {"plural": "organs"}, "sentences": ["The heart is an organ."]}
+        {"lemma": "organ", "pos": "noun", "details": {"plural": "organs"}, "sentences": ["The heart is an *organ*."]}
         ],
         "nl": [
-        {"lemma": "orgaan", "pos": "noun", "details": {"article": "het", "plural": "organen"}, "sentences": ["Het hart is een orgaan."]}
+        {"lemma": "orgaan", "pos": "noun", "details": {"article": "het", "plural": "organen"}, "sentences": ["Het hart is een *orgaan*."]}
         ]
       }
     },
@@ -545,10 +545,10 @@
       "gloss": "vein (noun)",
       "entries": {
         "en": [
-        {"lemma": "vein", "pos": "noun", "details": {"plural": "veins"}, "sentences": ["The blood flows through the veins."]}
+        {"lemma": "vein", "pos": "noun", "details": {"plural": "veins"}, "sentences": ["The blood flows through the *veins*."]}
         ],
         "nl": [
-        {"lemma": "ader", "pos": "noun", "details": {"article": "de", "plural": "aders"}, "sentences": ["Het bloed stroomt door de aders."]}
+        {"lemma": "ader", "pos": "noun", "details": {"article": "de", "plural": "aders"}, "sentences": ["Het bloed stroomt door de *aders*."]}
         ]
       }
     },
@@ -557,10 +557,10 @@
       "gloss": "sweat (noun)",
       "entries": {
         "en": [
-        {"lemma": "sweat", "pos": "noun", "details": {"uncountable": true}, "sentences": ["There is sweat on his face."]}
+        {"lemma": "sweat", "pos": "noun", "details": {"uncountable": true}, "sentences": ["There is *sweat* on his face."]}
         ],
         "nl": [
-        {"lemma": "zweet", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["Er zit zweet op zijn gezicht."]}
+        {"lemma": "zweet", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["Er zit *zweet* op zijn gezicht."]}
         ]
       }
     },
@@ -569,10 +569,10 @@
       "gloss": "rib (noun)",
       "entries": {
         "en": [
-        {"lemma": "rib", "pos": "noun", "details": {"plural": "ribs"}, "sentences": ["My rib hurts."]}
+        {"lemma": "rib", "pos": "noun", "details": {"plural": "ribs"}, "sentences": ["My *rib* hurts."]}
         ],
         "nl": [
-        {"lemma": "rib", "pos": "noun", "details": {"article": "de", "plural": "ribben"}, "sentences": ["Mijn rib doet pijn."]}
+        {"lemma": "rib", "pos": "noun", "details": {"article": "de", "plural": "ribben"}, "sentences": ["Mijn *rib* doet pijn."]}
         ]
       }
     },
@@ -581,10 +581,10 @@
       "gloss": "hairstyle (noun)",
       "entries": {
         "en": [
-        {"lemma": "hairstyle", "pos": "noun", "details": {"plural": "hairstyles"}, "sentences": ["I like your hairstyle."]}
+        {"lemma": "hairstyle", "pos": "noun", "details": {"plural": "hairstyles"}, "sentences": ["I like your *hairstyle*."]}
         ],
         "nl": [
-        {"lemma": "kapsel", "pos": "noun", "details": {"article": "het", "plural": "kapsels"}, "sentences": ["Ik hou van je kapsel."]}
+        {"lemma": "kapsel", "pos": "noun", "details": {"article": "het", "plural": "kapsels"}, "sentences": ["Ik hou van je *kapsel*."]}
         ]
       }
     },
@@ -593,10 +593,10 @@
       "gloss": "kidney (noun)",
       "entries": {
         "en": [
-        {"lemma": "kidney", "pos": "noun", "details": {"plural": "kidneys"}, "sentences": ["The kidney is an organ."]}
+        {"lemma": "kidney", "pos": "noun", "details": {"plural": "kidneys"}, "sentences": ["The *kidney* is an organ."]}
         ],
         "nl": [
-        {"lemma": "nier", "pos": "noun", "details": {"article": "de", "plural": "nieren"}, "sentences": ["De nier is een orgaan."]}
+        {"lemma": "nier", "pos": "noun", "details": {"article": "de", "plural": "nieren"}, "sentences": ["De *nier* is een orgaan."]}
         ]
       }
     },
@@ -605,10 +605,10 @@
       "gloss": "forehead (noun)",
       "entries": {
         "en": [
-        {"lemma": "forehead", "pos": "noun", "details": {"plural": "foreheads"}, "sentences": ["He has a big forehead."]}
+        {"lemma": "forehead", "pos": "noun", "details": {"plural": "foreheads"}, "sentences": ["He has a big *forehead*."]}
         ],
         "nl": [
-        {"lemma": "voorhoofd", "pos": "noun", "details": {"article": "het", "plural": "voorhoofden"}, "sentences": ["Hij heeft een groot voorhoofd."]}
+        {"lemma": "voorhoofd", "pos": "noun", "details": {"article": "het", "plural": "voorhoofden"}, "sentences": ["Hij heeft een groot *voorhoofd*."]}
         ]
       }
     },
@@ -617,10 +617,10 @@
       "gloss": "jaw (noun)",
       "entries": {
         "en": [
-        {"lemma": "jaw", "pos": "noun", "details": {"plural": "jaws"}, "sentences": ["My jaw hurts."]}
+        {"lemma": "jaw", "pos": "noun", "details": {"plural": "jaws"}, "sentences": ["My *jaw* hurts."]}
         ],
         "nl": [
-        {"lemma": "kaak", "pos": "noun", "details": {"article": "de", "plural": "kaken"}, "sentences": ["Mijn kaak doet pijn."]}
+        {"lemma": "kaak", "pos": "noun", "details": {"article": "de", "plural": "kaken"}, "sentences": ["Mijn *kaak* doet pijn."]}
         ]
       }
     },
@@ -629,10 +629,10 @@
       "gloss": "neck (throat)",
       "entries": {
         "en": [
-        {"lemma": "neck", "pos": "noun", "details": {"note": "throat", "plural": "necks"}, "sentences": ["He has a long neck."]}
+        {"lemma": "neck", "pos": "noun", "details": {"note": "throat", "plural": "necks"}, "sentences": ["He has a long *neck*."]}
         ],
         "nl": [
-        {"lemma": "hals", "pos": "noun", "details": {"article": "de", "plural": "halzen"}, "sentences": ["Hij heeft een lange hals."]}
+        {"lemma": "hals", "pos": "noun", "details": {"article": "de", "plural": "halzen"}, "sentences": ["Hij heeft een lange *hals*."]}
         ]
       }
     },
@@ -641,10 +641,10 @@
       "gloss": "chin (noun)",
       "entries": {
         "en": [
-        {"lemma": "chin", "pos": "noun", "details": {"plural": "chins"}, "sentences": ["He has a round chin."]}
+        {"lemma": "chin", "pos": "noun", "details": {"plural": "chins"}, "sentences": ["He has a round *chin*."]}
         ],
         "nl": [
-        {"lemma": "kin", "pos": "noun", "details": {"article": "de", "plural": "kinnen"}, "sentences": ["Hij heeft een ronde kin."]}
+        {"lemma": "kin", "pos": "noun", "details": {"article": "de", "plural": "kinnen"}, "sentences": ["Hij heeft een ronde *kin*."]}
         ]
       }
     },
@@ -653,10 +653,10 @@
       "gloss": "intestine (noun)",
       "entries": {
         "en": [
-        {"lemma": "intestine", "pos": "noun", "details": {"plural": "intestines"}, "sentences": ["The intestine is long."]}
+        {"lemma": "intestine", "pos": "noun", "details": {"plural": "intestines"}, "sentences": ["The *intestine* is long."]}
         ],
         "nl": [
-        {"lemma": "darm", "pos": "noun", "details": {"article": "de", "plural": "darmen"}, "sentences": ["De darm is lang."]}
+        {"lemma": "darm", "pos": "noun", "details": {"article": "de", "plural": "darmen"}, "sentences": ["De *darm* is lang."]}
         ]
       }
     },
@@ -665,10 +665,10 @@
       "gloss": "tissue (noun)",
       "entries": {
         "en": [
-        {"lemma": "tissue", "pos": "noun", "details": {"plural": "tissues"}, "sentences": ["The tissue is damaged."]}
+        {"lemma": "tissue", "pos": "noun", "details": {"plural": "tissues"}, "sentences": ["The *tissue* is damaged."]}
         ],
         "nl": [
-        {"lemma": "weefsel", "pos": "noun", "details": {"article": "het", "plural": "weefsels"}, "sentences": ["Het weefsel is beschadigd."]}
+        {"lemma": "weefsel", "pos": "noun", "details": {"article": "het", "plural": "weefsels"}, "sentences": ["Het *weefsel* is beschadigd."]}
         ]
       }
     },
@@ -677,10 +677,10 @@
       "gloss": "heel (noun)",
       "entries": {
         "en": [
-        {"lemma": "heel", "pos": "noun", "details": {"plural": "heels"}, "sentences": ["My heel hurts."]}
+        {"lemma": "heel", "pos": "noun", "details": {"plural": "heels"}, "sentences": ["My *heel* hurts."]}
         ],
         "nl": [
-        {"lemma": "hiel", "pos": "noun", "details": {"article": "de", "plural": "hielen"}, "sentences": ["Mijn hiel doet pijn."]}
+        {"lemma": "hiel", "pos": "noun", "details": {"article": "de", "plural": "hielen"}, "sentences": ["Mijn *hiel* doet pijn."]}
         ]
       }
     },
@@ -689,10 +689,10 @@
       "gloss": "torso (noun)",
       "entries": {
         "en": [
-        {"lemma": "torso", "pos": "noun", "details": {"plural": "torsos"}, "sentences": ["The torso is strong."]}
+        {"lemma": "torso", "pos": "noun", "details": {"plural": "torsos"}, "sentences": ["The *torso* is strong."]}
         ],
         "nl": [
-        {"lemma": "romp", "pos": "noun", "details": {"article": "de", "plural": "rompen"}, "sentences": ["De romp is sterk."]}
+        {"lemma": "romp", "pos": "noun", "details": {"article": "de", "plural": "rompen"}, "sentences": ["De *romp* is sterk."]}
         ]
       }
     },
@@ -701,10 +701,10 @@
       "gloss": "elbow (noun)",
       "entries": {
         "en": [
-        {"lemma": "elbow", "pos": "noun", "details": {"plural": "elbows"}, "sentences": ["My elbow hurts."]}
+        {"lemma": "elbow", "pos": "noun", "details": {"plural": "elbows"}, "sentences": ["My *elbow* hurts."]}
         ],
         "nl": [
-        {"lemma": "elleboog", "pos": "noun", "details": {"article": "de", "plural": "ellebogen"}, "sentences": ["Mijn elleboog doet pijn."]}
+        {"lemma": "elleboog", "pos": "noun", "details": {"article": "de", "plural": "ellebogen"}, "sentences": ["Mijn *elleboog* doet pijn."]}
         ]
       }
     },
@@ -713,10 +713,10 @@
       "gloss": "thigh (noun)",
       "entries": {
         "en": [
-        {"lemma": "thigh", "pos": "noun", "details": {"plural": "thighs"}, "sentences": ["My thigh hurts."]}
+        {"lemma": "thigh", "pos": "noun", "details": {"plural": "thighs"}, "sentences": ["My *thigh* hurts."]}
         ],
         "nl": [
-        {"lemma": "dij", "pos": "noun", "details": {"article": "de", "plural": "dijen"}, "sentences": ["Mijn dij doet pijn."]}
+        {"lemma": "dij", "pos": "noun", "details": {"article": "de", "plural": "dijen"}, "sentences": ["Mijn *dij* doet pijn."]}
         ]
       }
     },
@@ -725,10 +725,10 @@
       "gloss": "spine (noun)",
       "entries": {
         "en": [
-        {"lemma": "spine", "pos": "noun", "details": {"plural": "spines"}, "sentences": ["His spine hurts."]}
+        {"lemma": "spine", "pos": "noun", "details": {"plural": "spines"}, "sentences": ["His *spine* hurts."]}
         ],
         "nl": [
-        {"lemma": "ruggengraat", "pos": "noun", "details": {"article": "de", "plural": "ruggengraten"}, "sentences": ["Zijn ruggengraat doet pijn."]}
+        {"lemma": "ruggengraat", "pos": "noun", "details": {"article": "de", "plural": "ruggengraten"}, "sentences": ["Zijn *ruggengraat* doet pijn."]}
         ]
       }
     },
@@ -737,10 +737,10 @@
       "gloss": "left hand (noun)",
       "entries": {
         "en": [
-        {"lemma": "left hand", "pos": "noun", "details": {"plural": "left hands"}, "sentences": ["He writes with his left hand."]}
+        {"lemma": "left hand", "pos": "noun", "details": {"plural": "left hands"}, "sentences": ["He writes with his *left hand*."]}
         ],
         "nl": [
-        {"lemma": "linkerhand", "pos": "noun", "details": {"article": "de", "plural": "linkerhanden"}, "sentences": ["Hij schrijft met zijn linkerhand."]}
+        {"lemma": "linkerhand", "pos": "noun", "details": {"article": "de", "plural": "linkerhanden"}, "sentences": ["Hij schrijft met zijn *linkerhand*."]}
         ]
       }
     },
@@ -749,10 +749,10 @@
       "gloss": "sense (noun)",
       "entries": {
         "en": [
-        {"lemma": "sense", "pos": "noun", "details": {"note": "of sight, hearing and so on", "plural": "senses"}, "sentences": ["Sight is a sense."]}
+        {"lemma": "sense", "pos": "noun", "details": {"note": "of sight, hearing and so on", "plural": "senses"}, "sentences": ["Sight is a *sense*."]}
         ],
         "nl": [
-        {"lemma": "zintuig", "pos": "noun", "details": {"article": "het", "plural": "zintuigen"}, "sentences": ["Zicht is een zintuig."]}
+        {"lemma": "zintuig", "pos": "noun", "details": {"article": "het", "plural": "zintuigen"}, "sentences": ["Zicht is een *zintuig*."]}
         ]
       }
     },
@@ -761,10 +761,10 @@
       "gloss": "eyebrow (noun)",
       "entries": {
         "en": [
-        {"lemma": "eyebrow", "pos": "noun", "details": {"plural": "eyebrows"}, "sentences": ["He raises an eyebrow."]}
+        {"lemma": "eyebrow", "pos": "noun", "details": {"plural": "eyebrows"}, "sentences": ["He raises an *eyebrow*."]}
         ],
         "nl": [
-        {"lemma": "wenkbrauw", "pos": "noun", "details": {"article": "de", "plural": "wenkbrauwen"}, "sentences": ["Hij trekt een wenkbrauw op."]}
+        {"lemma": "wenkbrauw", "pos": "noun", "details": {"article": "de", "plural": "wenkbrauwen"}, "sentences": ["Hij trekt een *wenkbrauw* op."]}
         ]
       }
     },
@@ -773,10 +773,10 @@
       "gloss": "back of the head (noun)",
       "entries": {
         "en": [
-        {"lemma": "back of the head", "pos": "noun", "details": {"plural": "back of the heads"}, "sentences": ["She has a bump on the back of the head."]}
+        {"lemma": "back of the head", "pos": "noun", "details": {"plural": "back of the heads"}, "sentences": ["She has a bump on *the back of the head*."]}
         ],
         "nl": [
-        {"lemma": "achterhoofd", "pos": "noun", "details": {"article": "het", "plural": "achterhoofden"}, "sentences": ["Zij heeft een bult op haar achterhoofd."]}
+        {"lemma": "achterhoofd", "pos": "noun", "details": {"article": "het", "plural": "achterhoofden"}, "sentences": ["Zij heeft een bult op haar *achterhoofd*."]}
         ]
       }
     },
@@ -785,10 +785,10 @@
       "gloss": "skeleton (noun)",
       "entries": {
         "en": [
-        {"lemma": "skeleton", "pos": "noun", "details": {"plural": "skeletons"}, "sentences": ["The skeleton is white."]}
+        {"lemma": "skeleton", "pos": "noun", "details": {"plural": "skeletons"}, "sentences": ["The *skeleton* is white."]}
         ],
         "nl": [
-        {"lemma": "skelet", "pos": "noun", "details": {"article": "het", "plural": "skeletten"}, "sentences": ["Het skelet is wit."]}
+        {"lemma": "skelet", "pos": "noun", "details": {"article": "het", "plural": "skeletten"}, "sentences": ["Het *skelet* is wit."]}
         ]
       }
     },
@@ -797,10 +797,10 @@
       "gloss": "teeth (noun)",
       "entries": {
         "en": [
-        {"lemma": "teeth", "pos": "noun", "details": {"pluralOnly": true}, "sentences": ["He has healthy teeth."]}
+        {"lemma": "teeth", "pos": "noun", "details": {"pluralOnly": true}, "sentences": ["He has healthy *teeth*."]}
         ],
         "nl": [
-        {"lemma": "gebit", "pos": "noun", "details": {"article": "het", "plural": "gebitten"}, "sentences": ["Hij heeft een gezond gebit."]}
+        {"lemma": "gebit", "pos": "noun", "details": {"article": "het", "plural": "gebitten"}, "sentences": ["Hij heeft een gezond *gebit*."]}
         ]
       }
     },
@@ -809,10 +809,10 @@
       "gloss": "body part (noun)",
       "entries": {
         "en": [
-        {"lemma": "body part", "pos": "noun", "details": {"plural": "body parts"}, "sentences": ["The arm is a body part."]}
+        {"lemma": "body part", "pos": "noun", "details": {"plural": "body parts"}, "sentences": ["The arm is a *body part*."]}
         ],
         "nl": [
-        {"lemma": "lichaamsdeel", "pos": "noun", "details": {"article": "het", "plural": "lichaamsdelen"}, "sentences": ["De arm is een lichaamsdeel."]}
+        {"lemma": "lichaamsdeel", "pos": "noun", "details": {"article": "het", "plural": "lichaamsdelen"}, "sentences": ["De arm is een *lichaamsdeel*."]}
         ]
       }
     },
@@ -821,10 +821,10 @@
       "gloss": "wrinkle (noun)",
       "entries": {
         "en": [
-        {"lemma": "wrinkle", "pos": "noun", "details": {"plural": "wrinkles"}, "sentences": ["She has a wrinkle."]}
+        {"lemma": "wrinkle", "pos": "noun", "details": {"plural": "wrinkles"}, "sentences": ["She has a *wrinkle*."]}
         ],
         "nl": [
-        {"lemma": "rimpel", "pos": "noun", "details": {"article": "de", "plural": "rimpels"}, "sentences": ["Zij heeft een rimpel."]}
+        {"lemma": "rimpel", "pos": "noun", "details": {"article": "de", "plural": "rimpels"}, "sentences": ["Zij heeft een *rimpel*."]}
         ]
       }
     },
@@ -833,10 +833,10 @@
       "gloss": "ankle (noun)",
       "entries": {
         "en": [
-        {"lemma": "ankle", "pos": "noun", "details": {"plural": "ankles"}, "sentences": ["My ankle hurts."]}
+        {"lemma": "ankle", "pos": "noun", "details": {"plural": "ankles"}, "sentences": ["My *ankle* hurts."]}
         ],
         "nl": [
-        {"lemma": "enkel", "pos": "noun", "details": {"note": "een lichaamsdeel", "article": "de", "plural": "enkels"}, "sentences": ["Mijn enkel doet pijn."]}
+        {"lemma": "enkel", "pos": "noun", "details": {"note": "een lichaamsdeel", "article": "de", "plural": "enkels"}, "sentences": ["Mijn *enkel* doet pijn."]}
         ]
       }
     },
@@ -845,10 +845,10 @@
       "gloss": "artery (noun)",
       "entries": {
         "en": [
-        {"lemma": "artery", "pos": "noun", "details": {"plural": "arteries"}, "sentences": ["The artery carries blood."]}
+        {"lemma": "artery", "pos": "noun", "details": {"plural": "arteries"}, "sentences": ["The *artery* carries blood."]}
         ],
         "nl": [
-        {"lemma": "slagader", "pos": "noun", "details": {"article": "de", "plural": "slagaders"}, "sentences": ["De slagader voert bloed."]}
+        {"lemma": "slagader", "pos": "noun", "details": {"article": "de", "plural": "slagaders"}, "sentences": ["De *slagader* voert bloed."]}
         ]
       }
     },
@@ -857,10 +857,10 @@
       "gloss": "limbs (noun)",
       "entries": {
         "en": [
-        {"lemma": "limbs", "pos": "noun", "details": {"pluralOnly": true}, "sentences": ["His limbs hurt."]}
+        {"lemma": "limbs", "pos": "noun", "details": {"pluralOnly": true}, "sentences": ["His *limbs* hurt."]}
         ],
         "nl": [
-        {"lemma": "ledematen", "pos": "noun", "details": {"article": "de", "pluralOnly": true}, "sentences": ["Zijn ledematen doen pijn."]}
+        {"lemma": "ledematen", "pos": "noun", "details": {"article": "de", "pluralOnly": true}, "sentences": ["Zijn *ledematen* doen pijn."]}
         ]
       }
     },
@@ -869,10 +869,10 @@
       "gloss": "curl (noun)",
       "entries": {
         "en": [
-        {"lemma": "curl", "pos": "noun", "details": {"plural": "curls"}, "sentences": ["She has a curl in her hair."]}
+        {"lemma": "curl", "pos": "noun", "details": {"plural": "curls"}, "sentences": ["She has a *curl* in her hair."]}
         ],
         "nl": [
-        {"lemma": "krul", "pos": "noun", "details": {"article": "de", "plural": "krullen"}, "sentences": ["Zij heeft een krul in haar haar."]}
+        {"lemma": "krul", "pos": "noun", "details": {"article": "de", "plural": "krullen"}, "sentences": ["Zij heeft een *krul* in haar haar."]}
         ]
       }
     },
@@ -881,10 +881,10 @@
       "gloss": "mole (skin)",
       "entries": {
         "en": [
-        {"lemma": "mole", "pos": "noun", "details": {"note": "skin", "plural": "moles"}, "sentences": ["I have a mole on my arm."]}
+        {"lemma": "mole", "pos": "noun", "details": {"note": "skin", "plural": "moles"}, "sentences": ["I have a *mole* on my arm."]}
         ],
         "nl": [
-        {"lemma": "moedervlek", "pos": "noun", "details": {"article": "de", "plural": "moedervlekken"}, "sentences": ["Ik heb een moedervlek op mijn arm."]}
+        {"lemma": "moedervlek", "pos": "noun", "details": {"article": "de", "plural": "moedervlekken"}, "sentences": ["Ik heb een *moedervlek* op mijn arm."]}
         ]
       }
     }

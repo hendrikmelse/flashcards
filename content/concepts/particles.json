@@ -5,10 +5,10 @@
       "gloss": "do (emphatic)",
       "entries": {
         "en": [
-        {"lemma": "do", "pos": "particle", "details": {"note": "emphatic"}, "sentences": ["He does come."]}
+        {"lemma": "do", "pos": "particle", "details": {"note": "emphatic"}, "sentences": ["He *does* come."]}
         ],
         "nl": [
-        {"lemma": "wel", "pos": "particle", "sentences": ["Hij komt wel."]}
+        {"lemma": "wel", "pos": "particle", "sentences": ["Hij komt *wel*."]}
         ]
       }
     },
@@ -17,10 +17,10 @@
       "gloss": "still (particle)",
       "entries": {
         "en": [
-        {"lemma": "still", "pos": "particle", "sentences": ["I am still here."]}
+        {"lemma": "still", "pos": "particle", "sentences": ["I am *still* here."]}
         ],
         "nl": [
-        {"lemma": "nog", "pos": "particle", "sentences": ["Ik ben nog hier."]}
+        {"lemma": "nog", "pos": "particle", "sentences": ["Ik ben *nog* hier."]}
         ]
       }
     },
@@ -29,10 +29,10 @@
       "gloss": "so (particle)",
       "entries": {
         "en": [
-        {"lemma": "so", "pos": "particle", "details": {"note": "very"}, "sentences": ["It is so beautiful."]}
+        {"lemma": "so", "pos": "particle", "details": {"note": "very"}, "sentences": ["It is *so* beautiful."]}
         ],
         "nl": [
-        {"lemma": "zo", "pos": "particle", "sentences": ["Het is zo mooi."]}
+        {"lemma": "zo", "pos": "particle", "sentences": ["Het is *zo* mooi."]}
         ]
       }
     },
@@ -41,10 +41,10 @@
       "gloss": "then (particle)",
       "entries": {
         "en": [
-        {"lemma": "then", "pos": "particle", "sentences": ["First work, then play."]}
+        {"lemma": "then", "pos": "particle", "sentences": ["First work, *then* play."]}
         ],
         "nl": [
-        {"lemma": "dan", "pos": "particle", "sentences": ["Eerst werken, dan spelen."]}
+        {"lemma": "dan", "pos": "particle", "sentences": ["Eerst werken, *dan* spelen."]}
         ]
       }
     },
@@ -53,10 +53,10 @@
       "gloss": "anyway (all the same)",
       "entries": {
         "en": [
-        {"lemma": "anyway", "pos": "particle", "details": {"note": "all the same"}, "sentences": ["It is cold, but I am going anyway."]}
+        {"lemma": "anyway", "pos": "particle", "details": {"note": "all the same"}, "sentences": ["It is cold, but I am going *anyway*."]}
         ],
         "nl": [
-        {"lemma": "toch", "pos": "particle", "sentences": ["Het is koud, maar ik ga toch."]}
+        {"lemma": "toch", "pos": "particle", "sentences": ["Het is koud, maar ik ga *toch*."]}
         ]
       }
     },
@@ -65,10 +65,10 @@
       "gloss": "well (filler)",
       "entries": {
         "en": [
-        {"lemma": "well", "pos": "particle", "details": {"note": "filler"}, "sentences": ["Well, I do not know."]}
+        {"lemma": "well", "pos": "particle", "details": {"note": "filler"}, "sentences": ["*Well*, I do not know."]}
         ],
         "nl": [
-        {"lemma": "nou", "pos": "particle", "sentences": ["Nou, ik weet het niet."]}
+        {"lemma": "nou", "pos": "particle", "sentences": ["*Nou*, ik weet het niet."]}
         ]
       }
     },
@@ -77,10 +77,10 @@
       "gloss": "only (particle)",
       "entries": {
         "en": [
-        {"lemma": "only", "pos": "particle", "details": {"note": "nothing more than"}, "sentences": ["I only want water."]}
+        {"lemma": "only", "pos": "particle", "details": {"note": "nothing more than"}, "sentences": ["I *only* want water."]}
         ],
         "nl": [
-        {"lemma": "alleen", "pos": "particle", "sentences": ["Ik wil alleen water."]}
+        {"lemma": "alleen", "pos": "particle", "sentences": ["Ik wil *alleen* water."]}
         ]
       }
     },
@@ -89,10 +89,10 @@
       "gloss": "so (therefore)",
       "entries": {
         "en": [
-        {"lemma": "so", "pos": "particle", "details": {"note": "therefore"}, "sentences": ["It is raining, so I stay home."]}
+        {"lemma": "so", "pos": "particle", "details": {"note": "therefore"}, "sentences": ["It is raining, *so* I stay home."]}
         ],
         "nl": [
-        {"lemma": "dus", "pos": "particle", "sentences": ["Het regent, dus ik blijf thuis."]}
+        {"lemma": "dus", "pos": "particle", "sentences": ["Het regent, *dus* ik blijf thuis."]}
         ]
       }
     },
@@ -101,10 +101,10 @@
       "gloss": "for a moment (particle)",
       "entries": {
         "en": [
-        {"lemma": "for a moment", "pos": "particle", "sentences": ["Wait for a moment."]}
+        {"lemma": "for a moment", "pos": "particle", "sentences": ["Wait *for a moment*."]}
         ],
         "nl": [
-        {"lemma": "even", "pos": "particle", "sentences": ["Wacht even."]}
+        {"lemma": "even", "pos": "particle", "sentences": ["Wacht *even*."]}
         ]
       }
     },
@@ -113,10 +113,10 @@
       "gloss": "for once (particle)",
       "entries": {
         "en": [
-        {"lemma": "for once", "pos": "particle", "sentences": ["For once, I am on time."]}
+        {"lemma": "for once", "pos": "particle", "sentences": ["*For once*, I am on time."]}
         ],
         "nl": [
-        {"lemma": "eens", "pos": "particle", "sentences": ["Ik ben eens op tijd."]}
+        {"lemma": "eens", "pos": "particle", "sentences": ["Ik ben *eens* op tijd."]}
         ]
       }
     },
@@ -125,10 +125,10 @@
       "gloss": "just (a moment ago)",
       "entries": {
         "en": [
-        {"lemma": "just", "pos": "particle", "details": {"note": "a moment ago"}, "sentences": ["He just left."]}
+        {"lemma": "just", "pos": "particle", "details": {"note": "a moment ago"}, "sentences": ["He *just* left."]}
         ],
         "nl": [
-        {"lemma": "net", "pos": "particle", "sentences": ["Hij is net weggegaan."]}
+        {"lemma": "net", "pos": "particle", "sentences": ["Hij is *net* weggegaan."]}
         ]
       }
     },
@@ -137,10 +137,10 @@
       "gloss": "self (emphatic)",
       "entries": {
         "en": [
-        {"lemma": "self", "pos": "particle", "details": {"note": "emphatic"}, "sentences": ["I do it myself."]}
+        {"lemma": "self", "pos": "particle", "details": {"note": "emphatic"}, "sentences": ["I do it *myself*."]}
         ],
         "nl": [
-        {"lemma": "zelf", "pos": "particle", "sentences": ["Ik doe het zelf."]}
+        {"lemma": "zelf", "pos": "particle", "sentences": ["Ik doe het *zelf*."]}
         ]
       }
     },
@@ -149,10 +149,10 @@
       "gloss": "even (particle)",
       "entries": {
         "en": [
-        {"lemma": "even", "pos": "particle", "sentences": ["Even a child knows it."]}
+        {"lemma": "even", "pos": "particle", "sentences": ["*Even* a child knows it."]}
         ],
         "nl": [
-        {"lemma": "zelfs", "pos": "particle", "sentences": ["Zelfs een kind weet het."]}
+        {"lemma": "zelfs", "pos": "particle", "sentences": ["*Zelfs* een kind weet het."]}
         ]
       }
     },
@@ -161,10 +161,10 @@
       "gloss": "only just (particle)",
       "entries": {
         "en": [
-        {"lemma": "only just", "pos": "particle", "sentences": ["I only just arrived."]}
+        {"lemma": "only just", "pos": "particle", "sentences": ["I *only just* arrived."]}
         ],
         "nl": [
-        {"lemma": "pas", "pos": "particle", "details": {"note": "zojuist"}, "sentences": ["Ik ben pas aangekomen."]}
+        {"lemma": "pas", "pos": "particle", "details": {"note": "zojuist"}, "sentences": ["Ik ben *pas* aangekomen."]}
         ]
       }
     },
@@ -173,10 +173,10 @@
       "gloss": "indeed (particle)",
       "entries": {
         "en": [
-        {"lemma": "indeed", "pos": "particle", "sentences": ["That is indeed true."]}
+        {"lemma": "indeed", "pos": "particle", "sentences": ["That is *indeed* true."]}
         ],
         "nl": [
-        {"lemma": "inderdaad", "pos": "particle", "sentences": ["Dat is inderdaad waar."]}
+        {"lemma": "inderdaad", "pos": "particle", "sentences": ["Dat is *inderdaad* waar."]}
         ]
       }
     },
@@ -185,10 +185,10 @@
       "gloss": "rather (preferably)",
       "entries": {
         "en": [
-        {"lemma": "rather", "pos": "particle", "details": {"note": "preferably"}, "sentences": ["I would rather drink tea."]}
+        {"lemma": "rather", "pos": "particle", "details": {"note": "preferably"}, "sentences": ["I would *rather* drink tea."]}
         ],
         "nl": [
-        {"lemma": "liever", "pos": "particle", "sentences": ["Ik drink liever thee."]}
+        {"lemma": "liever", "pos": "particle", "sentences": ["Ik drink *liever* thee."]}
         ]
       }
     },
@@ -197,10 +197,10 @@
       "gloss": "very (formal)",
       "entries": {
         "en": [
-        {"lemma": "very", "pos": "particle", "details": {"note": "formal"}, "sentences": ["He is very kind."]}
+        {"lemma": "very", "pos": "particle", "details": {"note": "formal"}, "sentences": ["He is *very* kind."]}
         ],
         "nl": [
-        {"lemma": "zeer", "pos": "particle", "sentences": ["Hij is zeer vriendelijk."]}
+        {"lemma": "zeer", "pos": "particle", "sentences": ["Hij is *zeer* vriendelijk."]}
         ]
       }
     },
@@ -209,10 +209,10 @@
       "gloss": "rather, quite (particle)",
       "entries": {
         "en": [
-        {"lemma": "rather, quite", "pos": "particle", "sentences": ["It is rather cold."]}
+        {"lemma": "rather, quite", "pos": "particle", "sentences": ["It is *rather* cold."]}
         ],
         "nl": [
-        {"lemma": "nogal", "pos": "particle", "sentences": ["Het is nogal koud."]}
+        {"lemma": "nogal", "pos": "particle", "sentences": ["Het is *nogal* koud."]}
         ]
       }
     },
@@ -221,10 +221,10 @@
       "gloss": "exactly (particle)",
       "entries": {
         "en": [
-        {"lemma": "exactly", "pos": "particle", "sentences": ["That is exactly right."]}
+        {"lemma": "exactly", "pos": "particle", "sentences": ["That is *exactly* right."]}
         ],
         "nl": [
-        {"lemma": "juist", "pos": "particle", "details": {"note": "precies"}, "sentences": ["Dat is juist."]}
+        {"lemma": "juist", "pos": "particle", "details": {"note": "precies"}, "sentences": ["Dat is *juist*."]}
         ]
       }
     },
@@ -233,10 +233,10 @@
       "gloss": "just like that (particle)",
       "entries": {
         "en": [
-        {"lemma": "just like that", "pos": "particle", "sentences": ["He leaves just like that."]}
+        {"lemma": "just like that", "pos": "particle", "sentences": ["He leaves *just like that*."]}
         ],
         "nl": [
-        {"lemma": "zomaar", "pos": "particle", "sentences": ["Hij gaat zomaar weg."]}
+        {"lemma": "zomaar", "pos": "particle", "sentences": ["Hij gaat *zomaar* weg."]}
         ]
       }
     },
@@ -245,10 +245,10 @@
       "gloss": "at least (particle)",
       "entries": {
         "en": [
-        {"lemma": "at least", "pos": "particle", "details": {"note": "on the bright side"}, "sentences": ["At least he calls."]}
+        {"lemma": "at least", "pos": "particle", "details": {"note": "on the bright side"}, "sentences": ["*At least* he calls."]}
         ],
         "nl": [
-        {"lemma": "tenminste", "pos": "particle", "sentences": ["Hij belt tenminste."]}
+        {"lemma": "tenminste", "pos": "particle", "sentences": ["Hij belt *tenminste*."]}
         ]
       }
     },
@@ -257,10 +257,10 @@
       "gloss": "by the way (particle)",
       "entries": {
         "en": [
-        {"lemma": "by the way", "pos": "particle", "sentences": ["By the way, I am home tomorrow."]}
+        {"lemma": "by the way", "pos": "particle", "sentences": ["*By the way*, I am home tomorrow."]}
         ],
         "nl": [
-        {"lemma": "trouwens", "pos": "particle", "sentences": ["Trouwens, ik ben morgen thuis."]}
+        {"lemma": "trouwens", "pos": "particle", "sentences": ["*Trouwens*, ik ben morgen thuis."]}
         ]
       }
     },
@@ -269,10 +269,10 @@
       "gloss": "only (formal)",
       "entries": {
         "en": [
-        {"lemma": "only", "pos": "particle", "details": {"note": "formal"}, "sentences": ["There is only one left."]}
+        {"lemma": "only", "pos": "particle", "details": {"note": "formal"}, "sentences": ["There is *only* one left."]}
         ],
         "nl": [
-        {"lemma": "slechts", "pos": "particle", "sentences": ["Er is slechts één over."]}
+        {"lemma": "slechts", "pos": "particle", "sentences": ["Er is *slechts* één over."]}
         ]
       }
     },
@@ -281,10 +281,10 @@
       "gloss": "especially (particle)",
       "entries": {
         "en": [
-        {"lemma": "especially", "pos": "particle", "sentences": ["I especially like cheese."]}
+        {"lemma": "especially", "pos": "particle", "sentences": ["I *especially* like cheese."]}
         ],
         "nl": [
-        {"lemma": "vooral", "pos": "particle", "sentences": ["Ik hou vooral van kaas."]}
+        {"lemma": "vooral", "pos": "particle", "sentences": ["Ik hou *vooral* van kaas."]}
         ]
       }
     },
@@ -293,10 +293,10 @@
       "gloss": "of course (colloquial)",
       "entries": {
         "en": [
-        {"lemma": "of course", "pos": "particle", "details": {"note": "colloquial"}, "sentences": ["Of course I will help you."]}
+        {"lemma": "of course", "pos": "particle", "details": {"note": "colloquial"}, "sentences": ["*Of course* I will help you."]}
         ],
         "nl": [
-        {"lemma": "tuurlijk", "pos": "particle", "sentences": ["Tuurlijk help ik je."]}
+        {"lemma": "tuurlijk", "pos": "particle", "sentences": ["*Tuurlijk* help ik je."]}
         ]
       }
     },
@@ -305,10 +305,10 @@
       "gloss": "only (just)",
       "entries": {
         "en": [
-        {"lemma": "only", "pos": "particle", "details": {"note": "just"}, "sentences": ["I want only one."]}
+        {"lemma": "only", "pos": "particle", "details": {"note": "just"}, "sentences": ["I want *only* one."]}
         ],
         "nl": [
-        {"lemma": "enkel", "pos": "particle", "details": {"note": "formeel of geschreven"}, "sentences": ["Ik wil enkel één."]}
+        {"lemma": "enkel", "pos": "particle", "details": {"note": "formeel of geschreven"}, "sentences": ["Ik wil *enkel* één."]}
         ]
       }
     },
@@ -317,10 +317,10 @@
       "gloss": "for example (particle)",
       "entries": {
         "en": [
-        {"lemma": "for example", "pos": "particle", "sentences": ["For example, a cat."]}
+        {"lemma": "for example", "pos": "particle", "sentences": ["*For example*, a cat."]}
         ],
         "nl": [
-        {"lemma": "bijvoorbeeld", "pos": "particle", "sentences": ["Bijvoorbeeld een kat."]}
+        {"lemma": "bijvoorbeeld", "pos": "particle", "sentences": ["*Bijvoorbeeld* een kat."]}
         ]
       }
     },
@@ -329,10 +329,10 @@
       "gloss": "really (colloquial)",
       "entries": {
         "en": [
-        {"lemma": "really", "pos": "particle", "details": {"note": "colloquial"}, "sentences": ["That is really good."]}
+        {"lemma": "really", "pos": "particle", "details": {"note": "colloquial"}, "sentences": ["That is *really* good."]}
         ],
         "nl": [
-        {"lemma": "hartstikke", "pos": "particle", "sentences": ["Dat is hartstikke goed."]}
+        {"lemma": "hartstikke", "pos": "particle", "sentences": ["Dat is *hartstikke* goed."]}
         ]
       }
     },
@@ -341,10 +341,10 @@
       "gloss": "of course (naturally)",
       "entries": {
         "en": [
-        {"lemma": "of course", "pos": "particle", "details": {"note": "naturally"}, "sentences": ["Of course you may come."]}
+        {"lemma": "of course", "pos": "particle", "details": {"note": "naturally"}, "sentences": ["*Of course* you may come."]}
         ],
         "nl": [
-        {"lemma": "uiteraard", "pos": "particle", "sentences": ["Je mag uiteraard komen."]}
+        {"lemma": "uiteraard", "pos": "particle", "sentences": ["Je mag *uiteraard* komen."]}
         ]
       }
     },
@@ -353,10 +353,10 @@
       "gloss": "you see (particle)",
       "entries": {
         "en": [
-        {"lemma": "you see", "pos": "particle", "sentences": ["I am tired; I sleep badly, you see."]}
+        {"lemma": "you see", "pos": "particle", "sentences": ["I am tired; I sleep badly, *you see*."]}
         ],
         "nl": [
-        {"lemma": "namelijk", "pos": "particle", "sentences": ["Ik ben moe; ik slaap namelijk slecht."]}
+        {"lemma": "namelijk", "pos": "particle", "sentences": ["Ik ben moe; ik slaap *namelijk* slecht."]}
         ]
       }
     },
@@ -365,10 +365,10 @@
       "gloss": "hence (particle)",
       "entries": {
         "en": [
-        {"lemma": "hence", "pos": "particle", "sentences": ["I am ill, hence my absence."]}
+        {"lemma": "hence", "pos": "particle", "sentences": ["I am ill, *hence* my absence."]}
         ],
         "nl": [
-        {"lemma": "vandaar", "pos": "particle", "sentences": ["Ik ben ziek, vandaar mijn afwezigheid."]}
+        {"lemma": "vandaar", "pos": "particle", "sentences": ["Ik ben ziek, *vandaar* mijn afwezigheid."]}
         ]
       }
     },
@@ -377,10 +377,10 @@
       "gloss": "however (particle)",
       "entries": {
         "en": [
-        {"lemma": "however", "pos": "particle", "sentences": ["He is rich; he is not happy, however."]}
+        {"lemma": "however", "pos": "particle", "sentences": ["He is rich; he is not happy, *however*."]}
         ],
         "nl": [
-        {"lemma": "echter", "pos": "particle", "sentences": ["Hij is rijk; hij is echter niet gelukkig."]}
+        {"lemma": "echter", "pos": "particle", "sentences": ["Hij is rijk; hij is *echter* niet gelukkig."]}
         ]
       }
     },
@@ -389,10 +389,10 @@
       "gloss": "meanwhile (particle)",
       "entries": {
         "en": [
-        {"lemma": "meanwhile", "pos": "particle", "sentences": ["Meanwhile I cook."]}
+        {"lemma": "meanwhile", "pos": "particle", "sentences": ["*Meanwhile* I cook."]}
         ],
         "nl": [
-        {"lemma": "ondertussen", "pos": "particle", "sentences": ["Ondertussen kook ik."]}
+        {"lemma": "ondertussen", "pos": "particle", "sentences": ["*Ondertussen* kook ik."]}
         ]
       }
     },
@@ -401,10 +401,10 @@
       "gloss": "moreover (particle)",
       "entries": {
         "en": [
-        {"lemma": "moreover", "pos": "particle", "sentences": ["Moreover, it is cheap."]}
+        {"lemma": "moreover", "pos": "particle", "sentences": ["*Moreover*, it is cheap."]}
         ],
         "nl": [
-        {"lemma": "bovendien", "pos": "particle", "sentences": ["Bovendien is het goedkoop."]}
+        {"lemma": "bovendien", "pos": "particle", "sentences": ["*Bovendien* is het goedkoop."]}
         ]
       }
     },
@@ -413,10 +413,10 @@
       "gloss": "anyway (in any case)",
       "entries": {
         "en": [
-        {"lemma": "anyway", "pos": "particle", "details": {"note": "in any case"}, "sentences": ["I am coming anyway."]}
+        {"lemma": "anyway", "pos": "particle", "details": {"note": "in any case"}, "sentences": ["I am coming *anyway*."]}
         ],
         "nl": [
-        {"lemma": "sowieso", "pos": "particle", "sentences": ["Ik kom sowieso."]}
+        {"lemma": "sowieso", "pos": "particle", "sentences": ["Ik kom *sowieso*."]}
         ]
       }
     },
@@ -425,10 +425,10 @@
       "gloss": "after all (particle)",
       "entries": {
         "en": [
-        {"lemma": "after all", "pos": "particle", "sentences": ["I help; you are my friend, after all."]}
+        {"lemma": "after all", "pos": "particle", "sentences": ["I help; you are my friend, *after all*."]}
         ],
         "nl": [
-        {"lemma": "immers", "pos": "particle", "sentences": ["Ik help; je bent immers mijn vriend."]}
+        {"lemma": "immers", "pos": "particle", "sentences": ["Ik help; je bent *immers* mijn vriend."]}
         ]
       }
     },
@@ -437,10 +437,10 @@
       "gloss": "on the contrary (particle)",
       "entries": {
         "en": [
-        {"lemma": "on the contrary", "pos": "particle", "sentences": ["On the contrary, I like it."]}
+        {"lemma": "on the contrary", "pos": "particle", "sentences": ["*On the contrary*, I like it."]}
         ],
         "nl": [
-        {"lemma": "integendeel", "pos": "particle", "sentences": ["Integendeel, ik vind het leuk."]}
+        {"lemma": "integendeel", "pos": "particle", "sentences": ["*Integendeel*, ik vind het leuk."]}
         ]
       }
     },
@@ -449,10 +449,10 @@
       "gloss": "or something (particle)",
       "entries": {
         "en": [
-        {"lemma": "or something", "pos": "particle", "sentences": ["Tea or something?"]}
+        {"lemma": "or something", "pos": "particle", "sentences": ["Tea *or something*?"]}
         ],
         "nl": [
-        {"lemma": "ofzo", "pos": "particle", "sentences": ["Thee ofzo?"]}
+        {"lemma": "ofzo", "pos": "particle", "sentences": ["Thee *ofzo*?"]}
         ]
       }
     },
@@ -461,10 +461,10 @@
       "gloss": "just a moment (particle)",
       "entries": {
         "en": [
-        {"lemma": "just a moment", "pos": "particle", "sentences": ["Wait just a moment."]}
+        {"lemma": "just a moment", "pos": "particle", "sentences": ["Wait *just a moment*."]}
         ],
         "nl": [
-        {"lemma": "eventjes", "pos": "particle", "sentences": ["Wacht eventjes."]}
+        {"lemma": "eventjes", "pos": "particle", "sentences": ["Wacht *eventjes*."]}
         ]
       }
     },
@@ -473,10 +473,10 @@
       "gloss": "already (particle)",
       "entries": {
         "en": [
-        {"lemma": "already", "pos": "particle", "details": {"note": "sooner than expected"}, "sentences": ["I am already here."]}
+        {"lemma": "already", "pos": "particle", "details": {"note": "sooner than expected"}, "sentences": ["I am *already* here."]}
         ],
         "nl": [
-        {"lemma": "al", "pos": "particle", "sentences": ["Ik ben al hier."]}
+        {"lemma": "al", "pos": "particle", "sentences": ["Ik ben *al* hier."]}
         ]
       }
     },
@@ -485,10 +485,10 @@
       "gloss": "just (encouraging)",
       "entries": {
         "en": [
-        {"lemma": "just", "pos": "particle", "details": {"note": "encouraging"}, "sentences": ["Just come in."]}
+        {"lemma": "just", "pos": "particle", "details": {"note": "encouraging"}, "sentences": ["*Just* come in."]}
         ],
         "nl": [
-        {"lemma": "maar", "pos": "particle", "details": {"note": "aanmoedigend"}, "sentences": ["Kom maar binnen."]}
+        {"lemma": "maar", "pos": "particle", "details": {"note": "aanmoedigend"}, "sentences": ["Kom *maar* binnen."]}
         ]
       }
     },
@@ -497,10 +497,10 @@
       "gloss": "you know (softener)",
       "entries": {
         "en": [
-        {"lemma": "you know", "pos": "particle", "details": {"note": "softener"}, "sentences": ["That is fine, you know."]}
+        {"lemma": "you know", "pos": "particle", "details": {"note": "softener"}, "sentences": ["That is fine, *you know*."]}
         ],
         "nl": [
-        {"lemma": "hoor", "pos": "particle", "sentences": ["Dat is goed, hoor."]}
+        {"lemma": "hoor", "pos": "particle", "sentences": ["Dat is goed, *hoor*."]}
         ]
       }
     },
@@ -509,10 +509,10 @@
       "gloss": "next (then)",
       "entries": {
         "en": [
-        {"lemma": "next", "pos": "particle", "details": {"note": "then"}, "sentences": ["Next we walk."]}
+        {"lemma": "next", "pos": "particle", "details": {"note": "then"}, "sentences": ["*Next* we walk."]}
         ],
         "nl": [
-        {"lemma": "vervolgens", "pos": "particle", "sentences": ["Vervolgens lopen we."]}
+        {"lemma": "vervolgens", "pos": "particle", "sentences": ["*Vervolgens* lopen we."]}
         ]
       }
     },
@@ -521,10 +521,10 @@
       "gloss": "at all (particle)",
       "entries": {
         "en": [
-        {"lemma": "at all", "pos": "particle", "sentences": ["I do not know at all."]}
+        {"lemma": "at all", "pos": "particle", "sentences": ["I do not know *at all*."]}
         ],
         "nl": [
-        {"lemma": "überhaupt", "pos": "particle", "sentences": ["Ik weet het überhaupt niet."]}
+        {"lemma": "überhaupt", "pos": "particle", "sentences": ["Ik weet het *überhaupt* niet."]}
         ]
       }
     },
@@ -533,10 +533,10 @@
       "gloss": "plus (particle)",
       "entries": {
         "en": [
-        {"lemma": "plus", "pos": "particle", "sentences": ["Two plus three is five."]}
+        {"lemma": "plus", "pos": "particle", "sentences": ["Two *plus* three is five."]}
         ],
         "nl": [
-        {"lemma": "plus", "pos": "particle", "sentences": ["Twee plus drie is vijf."]}
+        {"lemma": "plus", "pos": "particle", "sentences": ["Twee *plus* drie is vijf."]}
         ]
       }
     },
@@ -545,10 +545,10 @@
       "gloss": "oh (interjection)",
       "entries": {
         "en": [
-        {"lemma": "oh", "pos": "interjection", "sentences": ["Oh, I see."]}
+        {"lemma": "oh", "pos": "interjection", "sentences": ["*Oh*, I see."]}
         ],
         "nl": [
-        {"lemma": "oh", "pos": "interjection", "sentences": ["Oh, ik zie het."]}
+        {"lemma": "oh", "pos": "interjection", "sentences": ["*Oh*, ik zie het."]}
         ]
       }
     },
@@ -557,10 +557,10 @@
       "gloss": "oh well (resignation)",
       "entries": {
         "en": [
-        {"lemma": "oh well", "pos": "interjection", "details": {"note": "resignation"}, "sentences": ["Oh well, that is life."]}
+        {"lemma": "oh well", "pos": "interjection", "details": {"note": "resignation"}, "sentences": ["*Oh well*, that is life."]}
         ],
         "nl": [
-        {"lemma": "ach", "pos": "interjection", "sentences": ["Ach, zo gaat het leven."]}
+        {"lemma": "ach", "pos": "interjection", "sentences": ["*Ach*, zo gaat het leven."]}
         ]
       }
     },
@@ -569,10 +569,10 @@
       "gloss": "isn't it (huh)",
       "entries": {
         "en": [
-        {"lemma": "isn't it", "pos": "interjection", "details": {"note": "huh"}, "sentences": ["Nice, isn't it?"]}
+        {"lemma": "isn't it", "pos": "interjection", "details": {"note": "huh"}, "sentences": ["Nice, *isn't it*?"]}
         ],
         "nl": [
-        {"lemma": "hè", "pos": "interjection", "sentences": ["Mooi, hè?"]}
+        {"lemma": "hè", "pos": "interjection", "sentences": ["Mooi, *hè*?"]}
         ]
       }
     },
@@ -581,10 +581,10 @@
       "gloss": "hey (interjection)",
       "entries": {
         "en": [
-        {"lemma": "hey", "pos": "interjection", "sentences": ["Hey, wait for me!"]}
+        {"lemma": "hey", "pos": "interjection", "sentences": ["*Hey*, wait for me!"]}
         ],
         "nl": [
-        {"lemma": "hé", "pos": "interjection", "sentences": ["Hé, wacht op mij!"]}
+        {"lemma": "hé", "pos": "interjection", "sentences": ["*Hé*, wacht op mij!"]}
         ]
       }
     },
@@ -593,10 +593,10 @@
       "gloss": "ha (interjection)",
       "entries": {
         "en": [
-        {"lemma": "ha", "pos": "interjection", "sentences": ["Ha, here it is!"]}
+        {"lemma": "ha", "pos": "interjection", "sentences": ["*Ha*, here it is!"]}
         ],
         "nl": [
-        {"lemma": "ha", "pos": "interjection", "sentences": ["Ha, hier is het!"]}
+        {"lemma": "ha", "pos": "interjection", "sentences": ["*Ha*, hier is het!"]}
         ]
       }
     },
@@ -605,10 +605,10 @@
       "gloss": "come on (interjection)",
       "entries": {
         "en": [
-        {"lemma": "come on", "pos": "interjection", "sentences": ["Come on, let's go!"]}
+        {"lemma": "come on", "pos": "interjection", "sentences": ["*Come on*, let's go!"]}
         ],
         "nl": [
-        {"lemma": "hup", "pos": "interjection", "sentences": ["Hup, we gaan!"]}
+        {"lemma": "hup", "pos": "interjection", "sentences": ["*Hup*, we gaan!"]}
         ]
       }
     },
@@ -617,10 +617,10 @@
       "gloss": "uh (interjection)",
       "entries": {
         "en": [
-        {"lemma": "uh", "pos": "interjection", "sentences": ["Uh, I do not know."]}
+        {"lemma": "uh", "pos": "interjection", "sentences": ["*Uh*, I do not know."]}
         ],
         "nl": [
-        {"lemma": "euh", "pos": "interjection", "sentences": ["Euh, ik weet het niet."]}
+        {"lemma": "euh", "pos": "interjection", "sentences": ["*Euh*, ik weet het niet."]}
         ]
       }
     },
@@ -629,10 +629,10 @@
       "gloss": "yuck (interjection)",
       "entries": {
         "en": [
-        {"lemma": "yuck", "pos": "interjection", "sentences": ["Yuck, that smells bad!"]}
+        {"lemma": "yuck", "pos": "interjection", "sentences": ["*Yuck*, that smells bad!"]}
         ],
         "nl": [
-        {"lemma": "bah", "pos": "interjection", "sentences": ["Bah, dat stinkt!"]}
+        {"lemma": "bah", "pos": "interjection", "sentences": ["*Bah*, dat stinkt!"]}
         ]
       }
     },
@@ -641,10 +641,10 @@
       "gloss": "pardon? (interjection)",
       "entries": {
         "en": [
-        {"lemma": "pardon?", "pos": "interjection", "sentences": ["Pardon? I do not hear you."]}
+        {"lemma": "pardon?", "pos": "interjection", "sentences": ["*Pardon*? I do not hear you."]}
         ],
         "nl": [
-        {"lemma": "wablief", "pos": "interjection", "sentences": ["Wablief? Ik hoor je niet."]}
+        {"lemma": "wablief", "pos": "interjection", "sentences": ["*Wablief*? Ik hoor je niet."]}
         ]
       }
     },
@@ -653,10 +653,10 @@
       "gloss": "gosh (interjection)",
       "entries": {
         "en": [
-        {"lemma": "gosh", "pos": "interjection", "sentences": ["Gosh, how nice!"]}
+        {"lemma": "gosh", "pos": "interjection", "sentences": ["*Gosh*, how nice!"]}
         ],
         "nl": [
-        {"lemma": "goh", "pos": "interjection", "sentences": ["Goh, wat leuk!"]}
+        {"lemma": "goh", "pos": "interjection", "sentences": ["*Goh*, wat leuk!"]}
         ]
       }
     },
@@ -665,10 +665,10 @@
       "gloss": "okay (interjection)",
       "entries": {
         "en": [
-        {"lemma": "okay", "pos": "interjection", "sentences": ["Okay, I am coming."]}
+        {"lemma": "okay", "pos": "interjection", "sentences": ["*Okay*, I am coming."]}
         ],
         "nl": [
-        {"lemma": "oké", "pos": "interjection", "sentences": ["Oké, ik kom."]}
+        {"lemma": "oké", "pos": "interjection", "sentences": ["*Oké*, ik kom."]}
         ]
       }
     },
@@ -677,10 +677,10 @@
       "gloss": "oops (interjection)",
       "entries": {
         "en": [
-        {"lemma": "oops", "pos": "interjection", "sentences": ["Oops, I drop it."]}
+        {"lemma": "oops", "pos": "interjection", "sentences": ["*Oops*, I drop it."]}
         ],
         "nl": [
-        {"lemma": "oei", "pos": "interjection", "sentences": ["Oei, ik laat het vallen."]}
+        {"lemma": "oei", "pos": "interjection", "sentences": ["*Oei*, ik laat het vallen."]}
         ]
       }
     },
@@ -689,10 +689,10 @@
       "gloss": "go ahead (come on)",
       "entries": {
         "en": [
-        {"lemma": "go ahead", "pos": "interjection", "details": {"note": "come on"}, "sentences": ["Go ahead, try it."]}
+        {"lemma": "go ahead", "pos": "interjection", "details": {"note": "come on"}, "sentences": ["*Go ahead*, try it."]}
         ],
         "nl": [
-        {"lemma": "vooruit", "pos": "interjection", "sentences": ["Vooruit, probeer het."]}
+        {"lemma": "vooruit", "pos": "interjection", "sentences": ["*Vooruit*, probeer het."]}
         ]
       }
     },
@@ -701,10 +701,10 @@
       "gloss": "damn (interjection)",
       "entries": {
         "en": [
-        {"lemma": "damn", "pos": "interjection", "sentences": ["Damn, I forget my keys!"]}
+        {"lemma": "damn", "pos": "interjection", "sentences": ["*Damn*, I forget my keys!"]}
         ],
         "nl": [
-        {"lemma": "verdomme", "pos": "interjection", "sentences": ["Verdomme, ik vergeet mijn sleutels!"]}
+        {"lemma": "verdomme", "pos": "interjection", "sentences": ["*Verdomme*, ik vergeet mijn sleutels!"]}
         ]
       }
     },
@@ -713,10 +713,10 @@
       "gloss": "please (formal)",
       "entries": {
         "en": [
-        {"lemma": "please", "pos": "interjection", "details": {"note": "formal"}, "sentences": ["Your coffee, please."]}
+        {"lemma": "please", "pos": "interjection", "details": {"note": "formal"}, "sentences": ["Your coffee, *please*."]}
         ],
         "nl": [
-        {"lemma": "alstublieft", "pos": "interjection", "sentences": ["Uw koffie, alstublieft."]}
+        {"lemma": "alstublieft", "pos": "interjection", "sentences": ["Uw koffie, *alstublieft*."]}
         ]
       }
     },
@@ -725,10 +725,10 @@
       "gloss": "agreed (interjection)",
       "entries": {
         "en": [
-        {"lemma": "agreed", "pos": "interjection", "sentences": ["Agreed, let us do it."]}
+        {"lemma": "agreed", "pos": "interjection", "sentences": ["*Agreed*, let us do it."]}
         ],
         "nl": [
-        {"lemma": "akkoord", "pos": "interjection", "sentences": ["Akkoord, laten we het doen."]}
+        {"lemma": "akkoord", "pos": "interjection", "sentences": ["*Akkoord*, laten we het doen."]}
         ]
       }
     },
@@ -737,10 +737,10 @@
       "gloss": "cheers (interjection)",
       "entries": {
         "en": [
-        {"lemma": "cheers", "pos": "interjection", "sentences": ["Cheers!"]}
+        {"lemma": "cheers", "pos": "interjection", "sentences": ["*Cheers*!"]}
         ],
         "nl": [
-        {"lemma": "proost", "pos": "interjection", "sentences": ["Proost!"]}
+        {"lemma": "proost", "pos": "interjection", "sentences": ["*Proost*!"]}
         ]
       }
     },
@@ -749,10 +749,10 @@
       "gloss": "bye (informal)",
       "entries": {
         "en": [
-        {"lemma": "bye", "pos": "interjection", "details": {"note": "informal"}, "sentences": ["Bye, see you tomorrow."]}
+        {"lemma": "bye", "pos": "interjection", "details": {"note": "informal"}, "sentences": ["*Bye*, see you tomorrow."]}
         ],
         "nl": [
-        {"lemma": "doei", "pos": "interjection", "sentences": ["Doei, tot morgen."]}
+        {"lemma": "doei", "pos": "interjection", "sentences": ["*Doei*, tot morgen."]}
         ]
       }
     },
@@ -761,10 +761,10 @@
       "gloss": "good afternoon (interjection)",
       "entries": {
         "en": [
-        {"lemma": "good afternoon", "pos": "interjection", "sentences": ["Good afternoon, madam."]}
+        {"lemma": "good afternoon", "pos": "interjection", "sentences": ["*Good afternoon*, madam."]}
         ],
         "nl": [
-        {"lemma": "goedemiddag", "pos": "interjection", "sentences": ["Goedemiddag, mevrouw."]}
+        {"lemma": "goedemiddag", "pos": "interjection", "sentences": ["*Goedemiddag*, mevrouw."]}
         ]
       }
     },
@@ -773,10 +773,10 @@
       "gloss": "good day (interjection)",
       "entries": {
         "en": [
-        {"lemma": "good day", "pos": "interjection", "sentences": ["Good day, sir."]}
+        {"lemma": "good day", "pos": "interjection", "sentences": ["*Good day*, sir."]}
         ],
         "nl": [
-        {"lemma": "goedendag", "pos": "interjection", "sentences": ["Goedendag, meneer."]}
+        {"lemma": "goedendag", "pos": "interjection", "sentences": ["*Goedendag*, meneer."]}
         ]
       }
     },
@@ -785,10 +785,10 @@
       "gloss": "hi (interjection)",
       "entries": {
         "en": [
-        {"lemma": "hi", "pos": "interjection", "sentences": ["Hi, how are you?"]}
+        {"lemma": "hi", "pos": "interjection", "sentences": ["*Hi*, how are you?"]}
         ],
         "nl": [
-        {"lemma": "hoi", "pos": "interjection", "sentences": ["Hoi, hoe gaat het?"]}
+        {"lemma": "hoi", "pos": "interjection", "sentences": ["*Hoi*, hoe gaat het?"]}
         ]
       }
     },
@@ -797,10 +797,10 @@
       "gloss": "hello (informal, hi or bye)",
       "entries": {
         "en": [
-        {"lemma": "hello", "pos": "interjection", "details": {"note": "informal, hi or bye"}, "sentences": ["Hello, how are you?"]}
+        {"lemma": "hello", "pos": "interjection", "details": {"note": "informal, hi or bye"}, "sentences": ["*Hello*, how are you?"]}
         ],
         "nl": [
-        {"lemma": "dag", "pos": "interjection", "details": {"note": "een groet"}, "sentences": ["Dag, hoe gaat het?"]}
+        {"lemma": "dag", "pos": "interjection", "details": {"note": "een groet"}, "sentences": ["*Dag*, hoe gaat het?"]}
         ]
       }
     },
@@ -809,10 +809,10 @@
       "gloss": "good evening (interjection)",
       "entries": {
         "en": [
-        {"lemma": "good evening", "pos": "interjection", "sentences": ["Good evening, madam."]}
+        {"lemma": "good evening", "pos": "interjection", "sentences": ["*Good evening*, madam."]}
         ],
         "nl": [
-        {"lemma": "goedenavond", "pos": "interjection", "sentences": ["Goedenavond, mevrouw."]}
+        {"lemma": "goedenavond", "pos": "interjection", "sentences": ["*Goedenavond*, mevrouw."]}
         ]
       }
     },
@@ -821,10 +821,10 @@
       "gloss": "thanks (interjection)",
       "entries": {
         "en": [
-        {"lemma": "thanks", "pos": "interjection", "details": {"note": "casual"}, "sentences": ["Thanks for your help."]}
+        {"lemma": "thanks", "pos": "interjection", "details": {"note": "casual"}, "sentences": ["*Thanks* for your help."]}
         ],
         "nl": [
-        {"lemma": "bedankt", "pos": "interjection", "sentences": ["Bedankt voor je hulp."]}
+        {"lemma": "bedankt", "pos": "interjection", "sentences": ["*Bedankt* voor je hulp."]}
         ]
       }
     },
@@ -833,10 +833,10 @@
       "gloss": "thanks (informal)",
       "entries": {
         "en": [
-        {"lemma": "thanks", "pos": "interjection", "details": {"note": "informal"}, "sentences": ["Thanks for the gift."]}
+        {"lemma": "thanks", "pos": "interjection", "details": {"note": "informal"}, "sentences": ["*Thanks* for the gift."]}
         ],
         "nl": [
-        {"lemma": "dankjewel", "pos": "interjection", "sentences": ["Dankjewel voor het cadeau."]}
+        {"lemma": "dankjewel", "pos": "interjection", "sentences": ["*Dankjewel* voor het cadeau."]}
         ]
       }
     },
@@ -845,10 +845,10 @@
       "gloss": "hooray (interjection)",
       "entries": {
         "en": [
-        {"lemma": "hooray", "pos": "interjection", "sentences": ["Hooray, we win!"]}
+        {"lemma": "hooray", "pos": "interjection", "sentences": ["*Hooray*, we win!"]}
         ],
         "nl": [
-        {"lemma": "hoera", "pos": "interjection", "sentences": ["Hoera, we winnen!"]}
+        {"lemma": "hoera", "pos": "interjection", "sentences": ["*Hoera*, we winnen!"]}
         ]
       }
     },
@@ -857,10 +857,10 @@
       "gloss": "ouch (interjection)",
       "entries": {
         "en": [
-        {"lemma": "ouch", "pos": "interjection", "sentences": ["Ouch, that hurts!"]}
+        {"lemma": "ouch", "pos": "interjection", "sentences": ["*Ouch*, that hurts!"]}
         ],
         "nl": [
-        {"lemma": "au", "pos": "interjection", "sentences": ["Au, dat doet pijn!"]}
+        {"lemma": "au", "pos": "interjection", "sentences": ["*Au*, dat doet pijn!"]}
         ]
       }
     },
@@ -869,10 +869,10 @@
       "gloss": "wow (interjection)",
       "entries": {
         "en": [
-        {"lemma": "wow", "pos": "interjection", "sentences": ["Wow, how beautiful!"]}
+        {"lemma": "wow", "pos": "interjection", "sentences": ["*Wow*, how beautiful!"]}
         ],
         "nl": [
-        {"lemma": "wauw", "pos": "interjection", "sentences": ["Wauw, wat mooi!"]}
+        {"lemma": "wauw", "pos": "interjection", "sentences": ["*Wauw*, wat mooi!"]}
         ]
       }
     },
@@ -881,10 +881,10 @@
       "gloss": "shame on you (interjection)",
       "entries": {
         "en": [
-        {"lemma": "shame on you", "pos": "interjection", "sentences": ["Shame on you!"]}
+        {"lemma": "shame on you", "pos": "interjection", "sentences": ["*Shame on you*!"]}
         ],
         "nl": [
-        {"lemma": "foei", "pos": "interjection", "sentences": ["Foei, dat doe je niet!"]}
+        {"lemma": "foei", "pos": "interjection", "sentences": ["*Foei*, dat doe je niet!"]}
         ]
       }
     },
@@ -893,10 +893,10 @@
       "gloss": "shh (interjection)",
       "entries": {
         "en": [
-        {"lemma": "shh", "pos": "interjection", "sentences": ["Shh, the baby sleeps."]}
+        {"lemma": "shh", "pos": "interjection", "sentences": ["*Shh*, the baby sleeps."]}
         ],
         "nl": [
-        {"lemma": "sst", "pos": "interjection", "sentences": ["Sst, de baby slaapt."]}
+        {"lemma": "sst", "pos": "interjection", "sentences": ["*Sst*, de baby slaapt."]}
         ]
       }
     },
@@ -905,10 +905,10 @@
       "gloss": "yippee (interjection)",
       "entries": {
         "en": [
-        {"lemma": "yippee", "pos": "interjection", "sentences": ["Yippee, it is vacation!"]}
+        {"lemma": "yippee", "pos": "interjection", "sentences": ["*Yippee*, it is vacation!"]}
         ],
         "nl": [
-        {"lemma": "jippie", "pos": "interjection", "sentences": ["Jippie, het is vakantie!"]}
+        {"lemma": "jippie", "pos": "interjection", "sentences": ["*Jippie*, het is vakantie!"]}
         ]
       }
     },
@@ -917,10 +917,10 @@
       "gloss": "well (hesitation)",
       "entries": {
         "en": [
-        {"lemma": "well", "pos": "interjection", "details": {"note": "hesitation"}, "sentences": ["Well, I do not know."]}
+        {"lemma": "well", "pos": "interjection", "details": {"note": "hesitation"}, "sentences": ["*Well*, I do not know."]}
         ],
         "nl": [
-        {"lemma": "tja", "pos": "interjection", "sentences": ["Tja, ik weet het niet."]}
+        {"lemma": "tja", "pos": "interjection", "sentences": ["*Tja*, ik weet het niet."]}
         ]
       }
     }

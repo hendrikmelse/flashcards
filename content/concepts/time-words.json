@@ -5,10 +5,10 @@
       "gloss": "now (at this moment)",
       "entries": {
         "en": [
-        {"lemma": "now", "pos": "adverb", "sentences": ["I am working now."]}
+        {"lemma": "now", "pos": "adverb", "sentences": ["I am working *now*."]}
         ],
         "nl": [
-        {"lemma": "nu", "pos": "adverb", "sentences": ["Ik werk nu."]}
+        {"lemma": "nu", "pos": "adverb", "sentences": ["Ik werk *nu*."]}
         ]
       }
     },
@@ -17,10 +17,10 @@
       "gloss": "today (this day)",
       "entries": {
         "en": [
-        {"lemma": "today", "pos": "adverb", "sentences": ["Today it is cold."]}
+        {"lemma": "today", "pos": "adverb", "sentences": ["*Today* it is cold."]}
         ],
         "nl": [
-        {"lemma": "vandaag", "pos": "adverb", "sentences": ["Vandaag is het koud."]}
+        {"lemma": "vandaag", "pos": "adverb", "sentences": ["*Vandaag* is het koud."]}
         ]
       }
     },
@@ -29,10 +29,10 @@
       "gloss": "tomorrow (the next day)",
       "entries": {
         "en": [
-        {"lemma": "tomorrow", "pos": "adverb", "sentences": ["Tomorrow I am working."]}
+        {"lemma": "tomorrow", "pos": "adverb", "sentences": ["*Tomorrow* I am working."]}
         ],
         "nl": [
-        {"lemma": "morgen", "pos": "adverb", "sentences": ["Morgen werk ik."]}
+        {"lemma": "morgen", "pos": "adverb", "sentences": ["*Morgen* werk ik."]}
         ]
       }
     },
@@ -41,10 +41,10 @@
       "gloss": "yesterday (the day before today)",
       "entries": {
         "en": [
-        {"lemma": "yesterday", "pos": "adverb", "sentences": ["I was at home yesterday."]}
+        {"lemma": "yesterday", "pos": "adverb", "sentences": ["I was at home *yesterday*."]}
         ],
         "nl": [
-        {"lemma": "gisteren", "pos": "adverb", "sentences": ["Ik was gisteren thuis."]}
+        {"lemma": "gisteren", "pos": "adverb", "sentences": ["Ik was *gisteren* thuis."]}
         ]
       }
     },
@@ -53,10 +53,10 @@
       "gloss": "always (at all times)",
       "entries": {
         "en": [
-        {"lemma": "always", "pos": "adverb", "sentences": ["She always drinks tea."]}
+        {"lemma": "always", "pos": "adverb", "sentences": ["She *always* drinks tea."]}
         ],
         "nl": [
-        {"lemma": "altijd", "pos": "adverb", "sentences": ["Zij drinkt altijd thee."]}
+        {"lemma": "altijd", "pos": "adverb", "sentences": ["Zij drinkt *altijd* thee."]}
         ]
       }
     },
@@ -65,10 +65,10 @@
       "gloss": "never (at no time)",
       "entries": {
         "en": [
-        {"lemma": "never", "pos": "adverb", "sentences": ["I never drink beer."]}
+        {"lemma": "never", "pos": "adverb", "sentences": ["I *never* drink beer."]}
         ],
         "nl": [
-        {"lemma": "nooit", "pos": "adverb", "sentences": ["Ik drink nooit bier."]}
+        {"lemma": "nooit", "pos": "adverb", "sentences": ["Ik drink *nooit* bier."]}
         ]
       }
     },
@@ -77,10 +77,10 @@
       "gloss": "often (many times)",
       "entries": {
         "en": [
-        {"lemma": "often", "pos": "adverb", "sentences": ["We often walk."]}
+        {"lemma": "often", "pos": "adverb", "sentences": ["We *often* walk."]}
         ],
         "nl": [
-        {"lemma": "vaak", "pos": "adverb", "sentences": ["Wij lopen vaak."]}
+        {"lemma": "vaak", "pos": "adverb", "sentences": ["Wij lopen *vaak*."]}
         ]
       }
     },
@@ -89,10 +89,10 @@
       "gloss": "sometimes (now and then)",
       "entries": {
         "en": [
-        {"lemma": "sometimes", "pos": "adverb", "sentences": ["Sometimes I read."]}
+        {"lemma": "sometimes", "pos": "adverb", "sentences": ["*Sometimes* I read."]}
         ],
         "nl": [
-        {"lemma": "soms", "pos": "adverb", "sentences": ["Soms lees ik."]}
+        {"lemma": "soms", "pos": "adverb", "sentences": ["*Soms* lees ik."]}
         ]
       }
     },
@@ -101,10 +101,10 @@
       "gloss": "ago (adverb)",
       "entries": {
         "en": [
-        {"lemma": "ago", "pos": "adverb", "sentences": ["I saw him a week ago."]}
+        {"lemma": "ago", "pos": "adverb", "sentences": ["I saw him a week *ago*."]}
         ],
         "nl": [
-        {"lemma": "geleden", "pos": "adverb", "sentences": ["Ik zag hem een week geleden."]}
+        {"lemma": "geleden", "pos": "adverb", "sentences": ["Ik zag hem een week *geleden*."]}
         ]
       }
     },
@@ -113,10 +113,10 @@
       "gloss": "tonight (adverb)",
       "entries": {
         "en": [
-        {"lemma": "tonight", "pos": "adverb", "details": {"note": "this evening"}, "sentences": ["I am home tonight."]}
+        {"lemma": "tonight", "pos": "adverb", "details": {"note": "this evening"}, "sentences": ["I am home *tonight*."]}
         ],
         "nl": [
-        {"lemma": "vanavond", "pos": "adverb", "sentences": ["Ik ben vanavond thuis."]}
+        {"lemma": "vanavond", "pos": "adverb", "sentences": ["Ik ben *vanavond* thuis."]}
         ]
       }
     },
@@ -125,10 +125,10 @@
       "gloss": "later (in a while)",
       "entries": {
         "en": [
-        {"lemma": "later", "pos": "adverb", "details": {"note": "later today"}, "sentences": ["I will call you later."]}
+        {"lemma": "later", "pos": "adverb", "details": {"note": "later today"}, "sentences": ["I will call you *later*."]}
         ],
         "nl": [
-        {"lemma": "straks", "pos": "adverb", "sentences": ["Ik bel je straks."]}
+        {"lemma": "straks", "pos": "adverb", "sentences": ["Ik bel je *straks*."]}
         ]
       }
     },
@@ -137,10 +137,10 @@
       "gloss": "last night (adverb)",
       "entries": {
         "en": [
-        {"lemma": "last night", "pos": "adverb", "sentences": ["I was at home last night."]}
+        {"lemma": "last night", "pos": "adverb", "sentences": ["I was at home *last night*."]}
         ],
         "nl": [
-        {"lemma": "gisteravond", "pos": "adverb", "sentences": ["Ik was gisteravond thuis."]}
+        {"lemma": "gisteravond", "pos": "adverb", "sentences": ["Ik was *gisteravond* thuis."]}
         ]
       }
     },
@@ -149,10 +149,10 @@
       "gloss": "tonight (in the night)",
       "entries": {
         "en": [
-        {"lemma": "tonight", "pos": "adverb", "details": {"note": "in the night"}, "sentences": ["It will freeze tonight."]}
+        {"lemma": "tonight", "pos": "adverb", "details": {"note": "in the night"}, "sentences": ["It will freeze *tonight*."]}
         ],
         "nl": [
-        {"lemma": "vannacht", "pos": "adverb", "sentences": ["Vannacht vriest het."]}
+        {"lemma": "vannacht", "pos": "adverb", "sentences": ["*Vannacht* vriest het."]}
         ]
       }
     },
@@ -161,10 +161,10 @@
       "gloss": "usually (adverb)",
       "entries": {
         "en": [
-        {"lemma": "usually", "pos": "adverb", "sentences": ["I usually eat bread."]}
+        {"lemma": "usually", "pos": "adverb", "sentences": ["I *usually* eat bread."]}
         ],
         "nl": [
-        {"lemma": "meestal", "pos": "adverb", "sentences": ["Ik eet meestal brood."]}
+        {"lemma": "meestal", "pos": "adverb", "sentences": ["Ik eet *meestal* brood."]}
         ]
       }
     },
@@ -173,10 +173,10 @@
       "gloss": "suddenly (adverb)",
       "entries": {
         "en": [
-        {"lemma": "suddenly", "pos": "adverb", "sentences": ["Suddenly it is dark."]}
+        {"lemma": "suddenly", "pos": "adverb", "sentences": ["*Suddenly* it is dark."]}
         ],
         "nl": [
-        {"lemma": "ineens", "pos": "adverb", "sentences": ["Ineens is het donker."]}
+        {"lemma": "ineens", "pos": "adverb", "sentences": ["*Ineens* is het donker."]}
         ]
       }
     },
@@ -185,10 +185,10 @@
       "gloss": "all at once (adverb)",
       "entries": {
         "en": [
-        {"lemma": "all at once", "pos": "adverb", "sentences": ["All at once the door opens."]}
+        {"lemma": "all at once", "pos": "adverb", "sentences": ["*All at once* the door opens."]}
         ],
         "nl": [
-        {"lemma": "opeens", "pos": "adverb", "sentences": ["Opeens gaat de deur open."]}
+        {"lemma": "opeens", "pos": "adverb", "sentences": ["*Opeens* gaat de deur open."]}
         ]
       }
     },
@@ -197,10 +197,10 @@
       "gloss": "soon (shortly)",
       "entries": {
         "en": [
-        {"lemma": "soon", "pos": "adverb", "details": {"note": "shortly"}, "sentences": ["I am coming soon."]}
+        {"lemma": "soon", "pos": "adverb", "details": {"note": "shortly"}, "sentences": ["I am coming *soon*."]}
         ],
         "nl": [
-        {"lemma": "binnenkort", "pos": "adverb", "sentences": ["Ik kom binnenkort."]}
+        {"lemma": "binnenkort", "pos": "adverb", "sentences": ["Ik kom *binnenkort*."]}
         ]
       }
     },
@@ -209,10 +209,10 @@
       "gloss": "this morning (adverb)",
       "entries": {
         "en": [
-        {"lemma": "this morning", "pos": "adverb", "sentences": ["I slept late this morning."]}
+        {"lemma": "this morning", "pos": "adverb", "sentences": ["I slept late *this morning*."]}
         ],
         "nl": [
-        {"lemma": "vanmorgen", "pos": "adverb", "sentences": ["Ik heb vanmorgen laat geslapen."]}
+        {"lemma": "vanmorgen", "pos": "adverb", "sentences": ["Ik heb *vanmorgen* laat geslapen."]}
         ]
       }
     },
@@ -221,10 +221,10 @@
       "gloss": "this afternoon (adverb)",
       "entries": {
         "en": [
-        {"lemma": "this afternoon", "pos": "adverb", "sentences": ["I am working this afternoon."]}
+        {"lemma": "this afternoon", "pos": "adverb", "sentences": ["I am working *this afternoon*."]}
         ],
         "nl": [
-        {"lemma": "vanmiddag", "pos": "adverb", "sentences": ["Ik werk vanmiddag."]}
+        {"lemma": "vanmiddag", "pos": "adverb", "sentences": ["Ik werk *vanmiddag*."]}
         ]
       }
     },
@@ -233,10 +233,10 @@
       "gloss": "tomorrow morning (adverb)",
       "entries": {
         "en": [
-        {"lemma": "tomorrow morning", "pos": "adverb", "sentences": ["I am leaving tomorrow morning."]}
+        {"lemma": "tomorrow morning", "pos": "adverb", "sentences": ["I am leaving *tomorrow morning*."]}
         ],
         "nl": [
-        {"lemma": "morgenochtend", "pos": "adverb", "sentences": ["Ik vertrek morgenochtend."]}
+        {"lemma": "morgenochtend", "pos": "adverb", "sentences": ["Ik vertrek *morgenochtend*."]}
         ]
       }
     },
@@ -245,10 +245,10 @@
       "gloss": "tomorrow evening (adverb)",
       "entries": {
         "en": [
-        {"lemma": "tomorrow evening", "pos": "adverb", "sentences": ["We eat out tomorrow evening."]}
+        {"lemma": "tomorrow evening", "pos": "adverb", "sentences": ["We eat out *tomorrow evening*."]}
         ],
         "nl": [
-        {"lemma": "morgenavond", "pos": "adverb", "sentences": ["Wij eten morgenavond buiten de deur."]}
+        {"lemma": "morgenavond", "pos": "adverb", "sentences": ["Wij eten *morgenavond* buiten de deur."]}
         ]
       }
     },
@@ -257,10 +257,10 @@
       "gloss": "the day after tomorrow (adverb)",
       "entries": {
         "en": [
-        {"lemma": "the day after tomorrow", "pos": "adverb", "sentences": ["He comes the day after tomorrow."]}
+        {"lemma": "the day after tomorrow", "pos": "adverb", "sentences": ["He comes *the day after tomorrow*."]}
         ],
         "nl": [
-        {"lemma": "overmorgen", "pos": "adverb", "sentences": ["Hij komt overmorgen."]}
+        {"lemma": "overmorgen", "pos": "adverb", "sentences": ["Hij komt *overmorgen*."]}
         ]
       }
     },
@@ -269,10 +269,10 @@
       "gloss": "the day before yesterday (adverb)",
       "entries": {
         "en": [
-        {"lemma": "the day before yesterday", "pos": "adverb", "sentences": ["I saw him the day before yesterday."]}
+        {"lemma": "the day before yesterday", "pos": "adverb", "sentences": ["I saw him *the day before yesterday*."]}
         ],
         "nl": [
-        {"lemma": "eergisteren", "pos": "adverb", "sentences": ["Ik zag hem eergisteren."]}
+        {"lemma": "eergisteren", "pos": "adverb", "sentences": ["Ik zag hem *eergisteren*."]}
         ]
       }
     },
@@ -281,10 +281,10 @@
       "gloss": "the other day (adverb)",
       "entries": {
         "en": [
-        {"lemma": "the other day", "pos": "adverb", "sentences": ["The other day I saw him."]}
+        {"lemma": "the other day", "pos": "adverb", "sentences": ["*The other day* I saw him."]}
         ],
         "nl": [
-        {"lemma": "laatst", "pos": "adverb", "details": {"note": "kortgeleden"}, "sentences": ["Laatst zag ik hem."]}
+        {"lemma": "laatst", "pos": "adverb", "details": {"note": "kortgeleden"}, "sentences": ["*Laatst* zag ik hem."]}
         ]
       }
     },
@@ -293,10 +293,10 @@
       "gloss": "just now (adverb)",
       "entries": {
         "en": [
-        {"lemma": "just now", "pos": "adverb", "sentences": ["He called just now."]}
+        {"lemma": "just now", "pos": "adverb", "sentences": ["He called *just now*."]}
         ],
         "nl": [
-        {"lemma": "zojuist", "pos": "adverb", "sentences": ["Hij belde zojuist."]}
+        {"lemma": "zojuist", "pos": "adverb", "sentences": ["Hij belde *zojuist*."]}
         ]
       }
     },
@@ -305,10 +305,10 @@
       "gloss": "from now on (adverb)",
       "entries": {
         "en": [
-        {"lemma": "from now on", "pos": "adverb", "sentences": ["From now on I will be on time."]}
+        {"lemma": "from now on", "pos": "adverb", "sentences": ["*From now on* I will be on time."]}
         ],
         "nl": [
-        {"lemma": "voortaan", "pos": "adverb", "sentences": ["Voortaan ben ik op tijd."]}
+        {"lemma": "voortaan", "pos": "adverb", "sentences": ["*Voortaan* ben ik op tijd."]}
         ]
       }
     },
@@ -317,10 +317,10 @@
       "gloss": "every time (adverb)",
       "entries": {
         "en": [
-        {"lemma": "every time", "pos": "adverb", "sentences": ["Every time he is late."]}
+        {"lemma": "every time", "pos": "adverb", "sentences": ["*Every time* he is late."]}
         ],
         "nl": [
-        {"lemma": "telkens", "pos": "adverb", "sentences": ["Telkens is hij te laat."]}
+        {"lemma": "telkens", "pos": "adverb", "sentences": ["*Telkens* is hij te laat."]}
         ]
       }
     },
@@ -329,10 +329,10 @@
       "gloss": "recently (adverb)",
       "entries": {
         "en": [
-        {"lemma": "recently", "pos": "adverb", "sentences": ["I recently moved."]}
+        {"lemma": "recently", "pos": "adverb", "sentences": ["I *recently* moved."]}
         ],
         "nl": [
-        {"lemma": "onlangs", "pos": "adverb", "sentences": ["Ik ben onlangs verhuisd."]}
+        {"lemma": "onlangs", "pos": "adverb", "sentences": ["Ik ben *onlangs* verhuisd."]}
         ]
       }
     },
@@ -341,10 +341,10 @@
       "gloss": "for a long time (adverb)",
       "entries": {
         "en": [
-        {"lemma": "for a long time", "pos": "adverb", "sentences": ["I have known that for a long time."]}
+        {"lemma": "for a long time", "pos": "adverb", "sentences": ["I have known that *for a long time*."]}
         ],
         "nl": [
-        {"lemma": "allang", "pos": "adverb", "sentences": ["Dat weet ik allang."]}
+        {"lemma": "allang", "pos": "adverb", "sentences": ["Dat weet ik *allang*."]}
         ]
       }
     },
@@ -353,10 +353,10 @@
       "gloss": "since then (adverb)",
       "entries": {
         "en": [
-        {"lemma": "since then", "pos": "adverb", "sentences": ["Since then I no longer smoke."]}
+        {"lemma": "since then", "pos": "adverb", "sentences": ["*Since then* I no longer smoke."]}
         ],
         "nl": [
-        {"lemma": "sindsdien", "pos": "adverb", "sentences": ["Sindsdien rook ik niet meer."]}
+        {"lemma": "sindsdien", "pos": "adverb", "sentences": ["*Sindsdien* rook ik niet meer."]}
         ]
       }
     },
@@ -365,10 +365,10 @@
       "gloss": "rarely (adverb)",
       "entries": {
         "en": [
-        {"lemma": "rarely", "pos": "adverb", "sentences": ["I rarely eat meat."]}
+        {"lemma": "rarely", "pos": "adverb", "sentences": ["I *rarely* eat meat."]}
         ],
         "nl": [
-        {"lemma": "zelden", "pos": "adverb", "sentences": ["Ik eet zelden vlees."]}
+        {"lemma": "zelden", "pos": "adverb", "sentences": ["Ik eet *zelden* vlees."]}
         ]
       }
     },
@@ -377,10 +377,10 @@
       "gloss": "by now (adverb)",
       "entries": {
         "en": [
-        {"lemma": "by now", "pos": "adverb", "sentences": ["By now it is dark."]}
+        {"lemma": "by now", "pos": "adverb", "sentences": ["*By now* it is dark."]}
         ],
         "nl": [
-        {"lemma": "inmiddels", "pos": "adverb", "sentences": ["Inmiddels is het donker."]}
+        {"lemma": "inmiddels", "pos": "adverb", "sentences": ["*Inmiddels* is het donker."]}
         ]
       }
     },
@@ -389,10 +389,10 @@
       "gloss": "in hindsight (afterwards)",
       "entries": {
         "en": [
-        {"lemma": "in hindsight", "pos": "adverb", "details": {"note": "afterwards"}, "sentences": ["In hindsight I was wrong."]}
+        {"lemma": "in hindsight", "pos": "adverb", "details": {"note": "afterwards"}, "sentences": ["*In hindsight* I was wrong."]}
         ],
         "nl": [
-        {"lemma": "achteraf", "pos": "adverb", "sentences": ["Achteraf had ik ongelijk."]}
+        {"lemma": "achteraf", "pos": "adverb", "sentences": ["*Achteraf* had ik ongelijk."]}
         ]
       }
     },
@@ -401,10 +401,10 @@
       "gloss": "during the day (adverb)",
       "entries": {
         "en": [
-        {"lemma": "during the day", "pos": "adverb", "sentences": ["During the day I work."]}
+        {"lemma": "during the day", "pos": "adverb", "sentences": ["*During the day* I work."]}
         ],
         "nl": [
-        {"lemma": "overdag", "pos": "adverb", "sentences": ["Overdag werk ik."]}
+        {"lemma": "overdag", "pos": "adverb", "sentences": ["*Overdag* werk ik."]}
         ]
       }
     },
@@ -413,10 +413,10 @@
       "gloss": "finally (adverb)",
       "entries": {
         "en": [
-        {"lemma": "finally", "pos": "adverb", "sentences": ["Finally we are home."]}
+        {"lemma": "finally", "pos": "adverb", "sentences": ["*Finally* we are home."]}
         ],
         "nl": [
-        {"lemma": "tenslotte", "pos": "adverb", "sentences": ["Tenslotte zijn we thuis."]}
+        {"lemma": "tenslotte", "pos": "adverb", "sentences": ["*Tenslotte* zijn we thuis."]}
         ]
       }
     },
@@ -425,10 +425,10 @@
       "gloss": "earlier (adverb)",
       "entries": {
         "en": [
-        {"lemma": "earlier", "pos": "adverb", "sentences": ["I was here earlier."]}
+        {"lemma": "earlier", "pos": "adverb", "sentences": ["I was here *earlier*."]}
         ],
         "nl": [
-        {"lemma": "eerder", "pos": "adverb", "sentences": ["Ik was hier eerder."]}
+        {"lemma": "eerder", "pos": "adverb", "sentences": ["Ik was hier *eerder*."]}
         ]
       }
     },
@@ -437,10 +437,10 @@
       "gloss": "in the past (adverb)",
       "entries": {
         "en": [
-        {"lemma": "in the past", "pos": "adverb", "sentences": ["In the past I lived here."]}
+        {"lemma": "in the past", "pos": "adverb", "sentences": ["*In the past* I lived here."]}
         ],
         "nl": [
-        {"lemma": "vroeger", "pos": "adverb", "sentences": ["Vroeger woonde ik hier."]}
+        {"lemma": "vroeger", "pos": "adverb", "sentences": ["*Vroeger* woonde ik hier."]}
         ]
       }
     },
@@ -449,10 +449,10 @@
       "gloss": "at last (adverb)",
       "entries": {
         "en": [
-        {"lemma": "at last", "pos": "adverb", "sentences": ["At last we are home."]}
+        {"lemma": "at last", "pos": "adverb", "sentences": ["*At last* we are home."]}
         ],
         "nl": [
-        {"lemma": "eindelijk", "pos": "adverb", "sentences": ["Eindelijk zijn we thuis."]}
+        {"lemma": "eindelijk", "pos": "adverb", "sentences": ["*Eindelijk* zijn we thuis."]}
         ]
       }
     },
@@ -461,10 +461,10 @@
       "gloss": "eventually (adverb)",
       "entries": {
         "en": [
-        {"lemma": "eventually", "pos": "adverb", "sentences": ["Eventually we arrive."]}
+        {"lemma": "eventually", "pos": "adverb", "sentences": ["*Eventually* we arrive."]}
         ],
         "nl": [
-        {"lemma": "uiteindelijk", "pos": "adverb", "sentences": ["Uiteindelijk komen we aan."]}
+        {"lemma": "uiteindelijk", "pos": "adverb", "sentences": ["*Uiteindelijk* komen we aan."]}
         ]
       }
     },
@@ -473,10 +473,10 @@
       "gloss": "soon (adverb)",
       "entries": {
         "en": [
-        {"lemma": "soon", "pos": "adverb", "details": {"note": "before long"}, "sentences": ["I am coming soon."]}
+        {"lemma": "soon", "pos": "adverb", "details": {"note": "before long"}, "sentences": ["I am coming *soon*."]}
         ],
         "nl": [
-        {"lemma": "gauw", "pos": "adverb", "sentences": ["Ik kom gauw."]}
+        {"lemma": "gauw", "pos": "adverb", "sentences": ["Ik kom *gauw*."]}
         ]
       }
     },
@@ -485,10 +485,10 @@
       "gloss": "nowadays (adverb)",
       "entries": {
         "en": [
-        {"lemma": "nowadays", "pos": "adverb", "sentences": ["Nowadays everyone has a phone."]}
+        {"lemma": "nowadays", "pos": "adverb", "sentences": ["*Nowadays* everyone has a phone."]}
         ],
         "nl": [
-        {"lemma": "tegenwoordig", "pos": "adverb", "sentences": ["Tegenwoordig heeft iedereen een telefoon."]}
+        {"lemma": "tegenwoordig", "pos": "adverb", "sentences": ["*Tegenwoordig* heeft iedereen een telefoon."]}
         ]
       }
     },
@@ -497,10 +497,10 @@
       "gloss": "currently (adverb)",
       "entries": {
         "en": [
-        {"lemma": "currently", "pos": "adverb", "sentences": ["I am currently at work."]}
+        {"lemma": "currently", "pos": "adverb", "sentences": ["I am *currently* at work."]}
         ],
         "nl": [
-        {"lemma": "momenteel", "pos": "adverb", "sentences": ["Ik ben momenteel op mijn werk."]}
+        {"lemma": "momenteel", "pos": "adverb", "sentences": ["Ik ben *momenteel* op mijn werk."]}
         ]
       }
     },
@@ -509,10 +509,10 @@
       "gloss": "back then (adverb)",
       "entries": {
         "en": [
-        {"lemma": "back then", "pos": "adverb", "sentences": ["Back then I lived here."]}
+        {"lemma": "back then", "pos": "adverb", "sentences": ["*Back then* I lived here."]}
         ],
         "nl": [
-        {"lemma": "destijds", "pos": "adverb", "sentences": ["Destijds woonde ik hier."]}
+        {"lemma": "destijds", "pos": "adverb", "sentences": ["*Destijds* woonde ik hier."]}
         ]
       }
     }

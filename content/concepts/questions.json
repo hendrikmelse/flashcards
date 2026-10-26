@@ -5,10 +5,10 @@
       "gloss": "I (first person singular)",
       "entries": {
         "en": [
-        {"lemma": "I", "pos": "pronoun", "sentences": ["I am tired."]}
+        {"lemma": "I", "pos": "pronoun", "sentences": ["*I* am tired."]}
         ],
         "nl": [
-        {"lemma": "ik", "pos": "pronoun", "sentences": ["Ik ben moe."]}
+        {"lemma": "ik", "pos": "pronoun", "sentences": ["*Ik* ben moe."]}
         ]
       }
     },
@@ -17,11 +17,11 @@
       "gloss": "you (informal, singular)",
       "entries": {
         "en": [
-        {"lemma": "you", "pos": "pronoun", "details": {"note": "subject, singular"}, "sentences": ["Are you hungry?", "Do you have time?"]}
+        {"lemma": "you", "pos": "pronoun", "details": {"note": "subject, singular"}, "sentences": ["Are *you* hungry?", "Do *you* have time?"]}
         ],
         "nl": [
-        {"lemma": "jij", "pos": "pronoun", "sentences": ["Heb jij honger?"]},
-        {"lemma": "je", "pos": "pronoun", "details": {"note": "gewoon, als onderwerp"}, "sentences": ["Heb je tijd?"]}
+        {"lemma": "jij", "pos": "pronoun", "sentences": ["Heb *jij* honger?"]},
+        {"lemma": "je", "pos": "pronoun", "details": {"note": "gewoon, als onderwerp"}, "sentences": ["Heb *je* tijd?"]}
         ]
       }
     },
@@ -30,10 +30,10 @@
       "gloss": "he",
       "entries": {
         "en": [
-        {"lemma": "he", "pos": "pronoun", "sentences": ["He is my brother."]}
+        {"lemma": "he", "pos": "pronoun", "sentences": ["*He* is my brother."]}
         ],
         "nl": [
-        {"lemma": "hij", "pos": "pronoun", "sentences": ["Hij is mijn broer."]}
+        {"lemma": "hij", "pos": "pronoun", "sentences": ["*Hij* is mijn broer."]}
         ]
       }
     },
@@ -42,11 +42,11 @@
       "gloss": "she",
       "entries": {
         "en": [
-        {"lemma": "she", "pos": "pronoun", "sentences": ["She is my sister."]}
+        {"lemma": "she", "pos": "pronoun", "sentences": ["*She* is my sister."]}
         ],
         "nl": [
-        {"lemma": "zij", "pos": "pronoun", "details": {"note": "nadruk, enkelvoud onderwerp"}, "sentences": ["Zij is mijn zus."]},
-        {"lemma": "ze", "pos": "pronoun", "details": {"note": "gewoon, enkelvoud onderwerp"}, "sentences": ["Ze is mijn zus."]}
+        {"lemma": "zij", "pos": "pronoun", "details": {"note": "nadruk, enkelvoud onderwerp"}, "sentences": ["*Zij* is mijn zus."]},
+        {"lemma": "ze", "pos": "pronoun", "details": {"note": "gewoon, enkelvoud onderwerp"}, "sentences": ["*Ze* is mijn zus."]}
         ]
       }
     },
@@ -55,11 +55,11 @@
       "gloss": "we",
       "entries": {
         "en": [
-        {"lemma": "we", "pos": "pronoun", "sentences": ["We are friends."]}
+        {"lemma": "we", "pos": "pronoun", "sentences": ["*We* are friends."]}
         ],
         "nl": [
-        {"lemma": "wij", "pos": "pronoun", "details": {"note": "nadruk"}, "sentences": ["Wij zijn vrienden."]},
-        {"lemma": "we", "pos": "pronoun", "details": {"note": "gewoon"}, "sentences": ["We zijn vrienden."]}
+        {"lemma": "wij", "pos": "pronoun", "details": {"note": "nadruk"}, "sentences": ["*Wij* zijn vrienden."]},
+        {"lemma": "we", "pos": "pronoun", "details": {"note": "gewoon"}, "sentences": ["*We* zijn vrienden."]}
         ]
       }
     },
@@ -68,10 +68,10 @@
       "gloss": "what (question word)",
       "entries": {
         "en": [
-        {"lemma": "what", "pos": "pronoun", "details": {"note": "question word"}, "sentences": ["What is this?"]}
+        {"lemma": "what", "pos": "pronoun", "details": {"note": "question word"}, "sentences": ["*What* is this?"]}
         ],
         "nl": [
-        {"lemma": "wat", "pos": "pronoun", "details": {"note": "vraagwoord"}, "sentences": ["Wat is dit?"]}
+        {"lemma": "wat", "pos": "pronoun", "details": {"note": "vraagwoord"}, "sentences": ["*Wat* is dit?"]}
         ]
       }
     },
@@ -80,10 +80,10 @@
       "gloss": "who (question word)",
       "entries": {
         "en": [
-        {"lemma": "who", "pos": "pronoun", "sentences": ["Who is that man?"]}
+        {"lemma": "who", "pos": "pronoun", "sentences": ["*Who* is that man?"]}
         ],
         "nl": [
-        {"lemma": "wie", "pos": "pronoun", "sentences": ["Wie is die man?"]}
+        {"lemma": "wie", "pos": "pronoun", "sentences": ["*Wie* is die man?"]}
         ]
       }
     },
@@ -92,10 +92,10 @@
       "gloss": "where (question word)",
       "entries": {
         "en": [
-        {"lemma": "where", "pos": "adverb", "sentences": ["Where is the bus?"]}
+        {"lemma": "where", "pos": "adverb", "sentences": ["*Where* is the bus?"]}
         ],
         "nl": [
-        {"lemma": "waar", "pos": "adverb", "details": {"note": "vraagwoord"}, "sentences": ["Waar is de bus?"]}
+        {"lemma": "waar", "pos": "adverb", "details": {"note": "vraagwoord"}, "sentences": ["*Waar* is de bus?"]}
         ]
       }
     },
@@ -104,10 +104,10 @@
       "gloss": "why (question word)",
       "entries": {
         "en": [
-        {"lemma": "why", "pos": "adverb", "details": {"note": "question word"}, "sentences": ["Why are you tired?"]}
+        {"lemma": "why", "pos": "adverb", "details": {"note": "question word"}, "sentences": ["*Why* are you tired?"]}
         ],
         "nl": [
-        {"lemma": "waarom", "pos": "adverb", "sentences": ["Waarom ben je moe?"]}
+        {"lemma": "waarom", "pos": "adverb", "sentences": ["*Waarom* ben je moe?"]}
         ]
       }
     },
@@ -116,10 +116,10 @@
       "gloss": "how (question word)",
       "entries": {
         "en": [
-        {"lemma": "how", "pos": "adverb", "sentences": ["How are you?"]}
+        {"lemma": "how", "pos": "adverb", "sentences": ["*How* are you?"]}
         ],
         "nl": [
-        {"lemma": "hoe", "pos": "adverb", "sentences": ["Hoe gaat het met je?"]}
+        {"lemma": "hoe", "pos": "adverb", "sentences": ["*Hoe* gaat het met je?"]}
         ]
       }
     },
@@ -128,10 +128,10 @@
       "gloss": "when (question word)",
       "entries": {
         "en": [
-        {"lemma": "when", "pos": "adverb", "details": {"note": "question word"}, "sentences": ["When do you eat?"]}
+        {"lemma": "when", "pos": "adverb", "details": {"note": "question word"}, "sentences": ["*When* do you eat?"]}
         ],
         "nl": [
-        {"lemma": "wanneer", "pos": "adverb", "sentences": ["Wanneer eet je?"]}
+        {"lemma": "wanneer", "pos": "adverb", "sentences": ["*Wanneer* eet je?"]}
         ]
       }
     }

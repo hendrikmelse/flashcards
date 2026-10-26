@@ -5,10 +5,10 @@
       "gloss": "day (24 hours)",
       "entries": {
         "en": [
-        {"lemma": "day", "pos": "noun", "details": {"plural": "days"}, "sentences": ["I work every day."]}
+        {"lemma": "day", "pos": "noun", "details": {"plural": "days"}, "sentences": ["I work every *day*."]}
         ],
         "nl": [
-        {"lemma": "dag", "pos": "noun", "details": {"note": "24 uur", "article": "de", "plural": "dagen"}, "sentences": ["Ik werk elke dag."]}
+        {"lemma": "dag", "pos": "noun", "details": {"note": "24 uur", "article": "de", "plural": "dagen"}, "sentences": ["Ik werk elke *dag*."]}
         ]
       }
     },
@@ -17,10 +17,10 @@
       "gloss": "night (dark part of the day)",
       "entries": {
         "en": [
-        {"lemma": "night", "pos": "noun", "details": {"plural": "nights"}, "sentences": ["The night is long."]}
+        {"lemma": "night", "pos": "noun", "details": {"plural": "nights"}, "sentences": ["The *night* is long."]}
         ],
         "nl": [
-        {"lemma": "nacht", "pos": "noun", "details": {"article": "de", "plural": "nachten"}, "sentences": ["De nacht is lang."]}
+        {"lemma": "nacht", "pos": "noun", "details": {"article": "de", "plural": "nachten"}, "sentences": ["De *nacht* is lang."]}
         ]
       }
     },
@@ -29,10 +29,10 @@
       "gloss": "morning (early part of the day)",
       "entries": {
         "en": [
-        {"lemma": "morning", "pos": "noun", "details": {"plural": "mornings"}, "sentences": ["I read in the morning."]}
+        {"lemma": "morning", "pos": "noun", "details": {"plural": "mornings"}, "sentences": ["I read in the *morning*."]}
         ],
         "nl": [
-        {"lemma": "ochtend", "pos": "noun", "details": {"article": "de", "plural": "ochtenden"}, "sentences": ["Ik lees 's ochtends."]}
+        {"lemma": "ochtend", "pos": "noun", "details": {"article": "de", "plural": "ochtenden"}, "sentences": ["Ik lees 's *ochtends*."]}
         ]
       }
     },
@@ -41,10 +41,10 @@
       "gloss": "evening (end of the day)",
       "entries": {
         "en": [
-        {"lemma": "evening", "pos": "noun", "details": {"plural": "evenings"}, "sentences": ["I walk in the evening."]}
+        {"lemma": "evening", "pos": "noun", "details": {"plural": "evenings"}, "sentences": ["I walk in the *evening*."]}
         ],
         "nl": [
-        {"lemma": "avond", "pos": "noun", "details": {"article": "de", "plural": "avonden"}, "sentences": ["Ik loop 's avonds."]}
+        {"lemma": "avond", "pos": "noun", "details": {"article": "de", "plural": "avonden"}, "sentences": ["Ik loop 's *avonds*."]}
         ]
       }
     },
@@ -53,10 +53,10 @@
       "gloss": "week (seven days)",
       "entries": {
         "en": [
-        {"lemma": "week", "pos": "noun", "details": {"plural": "weeks"}, "sentences": ["I work five days a week."]}
+        {"lemma": "week", "pos": "noun", "details": {"plural": "weeks"}, "sentences": ["I work five days a *week*."]}
         ],
         "nl": [
-        {"lemma": "week", "pos": "noun", "details": {"article": "de", "plural": "weken"}, "sentences": ["Ik werk vijf dagen per week."]}
+        {"lemma": "week", "pos": "noun", "details": {"article": "de", "plural": "weken"}, "sentences": ["Ik werk vijf dagen per *week*."]}
         ]
       }
     },
@@ -65,10 +65,10 @@
       "gloss": "month (part of a year)",
       "entries": {
         "en": [
-        {"lemma": "month", "pos": "noun", "details": {"plural": "months"}, "sentences": ["There are twelve months in a year."]}
+        {"lemma": "month", "pos": "noun", "details": {"plural": "months"}, "sentences": ["There are twelve *months* in a year."]}
         ],
         "nl": [
-        {"lemma": "maand", "pos": "noun", "details": {"article": "de", "plural": "maanden"}, "sentences": ["Er zijn twaalf maanden in een jaar."]}
+        {"lemma": "maand", "pos": "noun", "details": {"article": "de", "plural": "maanden"}, "sentences": ["Er zijn twaalf *maanden* in een jaar."]}
         ]
       }
     },
@@ -77,10 +77,10 @@
       "gloss": "year (twelve months)",
       "entries": {
         "en": [
-        {"lemma": "year", "pos": "noun", "details": {"plural": "years"}, "sentences": ["This year I learn Dutch."]}
+        {"lemma": "year", "pos": "noun", "details": {"plural": "years"}, "sentences": ["This *year* I learn Dutch."]}
         ],
         "nl": [
-        {"lemma": "jaar", "pos": "noun", "details": {"article": "het", "plural": "jaren"}, "sentences": ["Dit jaar leer ik Nederlands."]}
+        {"lemma": "jaar", "pos": "noun", "details": {"article": "het", "plural": "jaren"}, "sentences": ["Dit *jaar* leer ik Nederlands."]}
         ]
       }
     },
@@ -89,10 +89,10 @@
       "gloss": "hour (sixty minutes)",
       "entries": {
         "en": [
-        {"lemma": "hour", "pos": "noun", "details": {"plural": "hours"}, "sentences": ["The film lasts one hour."]}
+        {"lemma": "hour", "pos": "noun", "details": {"plural": "hours"}, "sentences": ["The film lasts one *hour*."]}
         ],
         "nl": [
-        {"lemma": "uur", "pos": "noun", "details": {"article": "het", "plural": "uren"}, "sentences": ["De film duurt één uur."]}
+        {"lemma": "uur", "pos": "noun", "details": {"article": "het", "plural": "uren"}, "sentences": ["De film duurt één *uur*."]}
         ]
       }
     },
@@ -101,10 +101,10 @@
       "gloss": "minute (sixty seconds)",
       "entries": {
         "en": [
-        {"lemma": "minute", "pos": "noun", "details": {"plural": "minutes"}, "sentences": ["Wait one minute, please."]}
+        {"lemma": "minute", "pos": "noun", "details": {"plural": "minutes"}, "sentences": ["Wait one *minute*, please."]}
         ],
         "nl": [
-        {"lemma": "minuut", "pos": "noun", "details": {"article": "de", "plural": "minuten"}, "sentences": ["Wacht één minuut, alsjeblieft."]}
+        {"lemma": "minuut", "pos": "noun", "details": {"article": "de", "plural": "minuten"}, "sentences": ["Wacht één *minuut*, alsjeblieft."]}
         ]
       }
     },
@@ -113,10 +113,10 @@
       "gloss": "time (in general)",
       "entries": {
         "en": [
-        {"lemma": "time", "pos": "noun", "details": {"note": "as a concept", "plural": "times"}, "sentences": ["I have no time."]}
+        {"lemma": "time", "pos": "noun", "details": {"note": "as a concept", "plural": "times"}, "sentences": ["I have no *time*."]}
         ],
         "nl": [
-        {"lemma": "tijd", "pos": "noun", "details": {"article": "de", "plural": "tijden"}, "sentences": ["Ik heb geen tijd."]}
+        {"lemma": "tijd", "pos": "noun", "details": {"article": "de", "plural": "tijden"}, "sentences": ["Ik heb geen *tijd*."]}
         ]
       }
     },
@@ -125,10 +125,10 @@
       "gloss": "moment (noun)",
       "entries": {
         "en": [
-        {"lemma": "moment", "pos": "noun", "details": {"note": "a short while", "plural": "moments"}, "sentences": ["Wait a moment."]}
+        {"lemma": "moment", "pos": "noun", "details": {"note": "a short while", "plural": "moments"}, "sentences": ["Wait a *moment*."]}
         ],
         "nl": [
-        {"lemma": "moment", "pos": "noun", "details": {"article": "het", "plural": "momenten"}, "sentences": ["Wacht een moment."]}
+        {"lemma": "moment", "pos": "noun", "details": {"article": "het", "plural": "momenten"}, "sentences": ["Wacht een *moment*."]}
         ]
       }
     },
@@ -137,10 +137,10 @@
       "gloss": "last (verb)",
       "entries": {
         "en": [
-        {"lemma": "to last", "pos": "verb", "details": {"past": "lasted", "participle": "lasted"}, "sentences": ["The film lasts two hours."]}
+        {"lemma": "to last", "pos": "verb", "details": {"past": "lasted", "participle": "lasted"}, "sentences": ["The film *lasts* two hours."]}
         ],
         "nl": [
-        {"lemma": "duren", "pos": "verb", "details": {"pastSingular": "duurde", "pastPlural": "duurden", "participle": "geduurd", "auxiliary": "hebben"}, "sentences": ["De film duurt twee uur."]}
+        {"lemma": "duren", "pos": "verb", "details": {"pastSingular": "duurde", "pastPlural": "duurden", "participle": "geduurd", "auxiliary": "hebben"}, "sentences": ["De film *duurt* twee uur."]}
         ]
       }
     },
@@ -149,10 +149,10 @@
       "gloss": "half (adjective)",
       "entries": {
         "en": [
-        {"lemma": "half", "pos": "adjective", "details": {"note": "not whole"}, "sentences": ["It is half past two."]}
+        {"lemma": "half", "pos": "adjective", "details": {"note": "not whole"}, "sentences": ["It is *half* past two."]}
         ],
         "nl": [
-        {"lemma": "half", "pos": "adjective", "sentences": ["Het is half drie."]}
+        {"lemma": "half", "pos": "adjective", "sentences": ["Het is *half* drie."]}
         ]
       }
     },
@@ -161,10 +161,10 @@
       "gloss": "future (noun)",
       "entries": {
         "en": [
-        {"lemma": "future", "pos": "noun", "details": {"note": "time to come", "plural": "futures"}, "sentences": ["I think about the future."]}
+        {"lemma": "future", "pos": "noun", "details": {"note": "time to come", "plural": "futures"}, "sentences": ["I think about the *future*."]}
         ],
         "nl": [
-        {"lemma": "toekomst", "pos": "noun", "details": {"article": "de", "plural": "toekomsten"}, "sentences": ["Ik denk aan de toekomst."]}
+        {"lemma": "toekomst", "pos": "noun", "details": {"article": "de", "plural": "toekomsten"}, "sentences": ["Ik denk aan de *toekomst*."]}
         ]
       }
     },
@@ -173,10 +173,10 @@
       "gloss": "second (noun)",
       "entries": {
         "en": [
-        {"lemma": "second", "pos": "noun", "details": {"note": "unit of time", "plural": "seconds"}, "sentences": ["Wait one second."]}
+        {"lemma": "second", "pos": "noun", "details": {"note": "unit of time", "plural": "seconds"}, "sentences": ["Wait one *second*."]}
         ],
         "nl": [
-        {"lemma": "seconde", "pos": "noun", "details": {"article": "de", "plural": "seconden"}, "sentences": ["Wacht één seconde."]}
+        {"lemma": "seconde", "pos": "noun", "details": {"article": "de", "plural": "seconden"}, "sentences": ["Wacht één *seconde*."]}
         ]
       }
     },
@@ -185,10 +185,10 @@
       "gloss": "weekend (noun)",
       "entries": {
         "en": [
-        {"lemma": "weekend", "pos": "noun", "details": {"plural": "weekends"}, "sentences": ["I rest on the weekend."]}
+        {"lemma": "weekend", "pos": "noun", "details": {"plural": "weekends"}, "sentences": ["I rest on the *weekend*."]}
         ],
         "nl": [
-        {"lemma": "weekend", "pos": "noun", "details": {"article": "het", "plural": "weekenden"}, "sentences": ["Ik rust in het weekend."]}
+        {"lemma": "weekend", "pos": "noun", "details": {"article": "het", "plural": "weekenden"}, "sentences": ["Ik rust in het *weekend*."]}
         ]
       }
     },
@@ -197,10 +197,10 @@
       "gloss": "past (noun)",
       "entries": {
         "en": [
-        {"lemma": "past", "pos": "noun", "details": {"uncountable": true}, "sentences": ["The past is gone."]}
+        {"lemma": "past", "pos": "noun", "details": {"uncountable": true}, "sentences": ["The *past* is gone."]}
         ],
         "nl": [
-        {"lemma": "verleden", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["Het verleden is voorbij."]}
+        {"lemma": "verleden", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["Het *verleden* is voorbij."]}
         ]
       }
     },
@@ -209,10 +209,10 @@
       "gloss": "summer (noun)",
       "entries": {
         "en": [
-        {"lemma": "summer", "pos": "noun", "details": {"plural": "summers"}, "sentences": ["The summer is warm."]}
+        {"lemma": "summer", "pos": "noun", "details": {"plural": "summers"}, "sentences": ["The *summer* is warm."]}
         ],
         "nl": [
-        {"lemma": "zomer", "pos": "noun", "details": {"article": "de", "plural": "zomers"}, "sentences": ["De zomer is warm."]}
+        {"lemma": "zomer", "pos": "noun", "details": {"article": "de", "plural": "zomers"}, "sentences": ["De *zomer* is warm."]}
         ]
       }
     },
@@ -221,10 +221,10 @@
       "gloss": "century (noun)",
       "entries": {
         "en": [
-        {"lemma": "century", "pos": "noun", "details": {"plural": "centuries"}, "sentences": ["A century has a hundred years."]}
+        {"lemma": "century", "pos": "noun", "details": {"plural": "centuries"}, "sentences": ["A *century* has a hundred years."]}
         ],
         "nl": [
-        {"lemma": "eeuw", "pos": "noun", "details": {"article": "de", "plural": "eeuwen"}, "sentences": ["Een eeuw heeft honderd jaar."]}
+        {"lemma": "eeuw", "pos": "noun", "details": {"article": "de", "plural": "eeuwen"}, "sentences": ["Een *eeuw* heeft honderd jaar."]}
         ]
       }
     },
@@ -233,10 +233,10 @@
       "gloss": "moment (instant)",
       "entries": {
         "en": [
-        {"lemma": "moment", "pos": "noun", "details": {"note": "instant", "plural": "moments"}, "sentences": ["Just a moment."]}
+        {"lemma": "moment", "pos": "noun", "details": {"note": "instant", "plural": "moments"}, "sentences": ["Just a *moment*."]}
         ],
         "nl": [
-        {"lemma": "ogenblik", "pos": "noun", "details": {"article": "het", "plural": "ogenblikken"}, "sentences": ["Een ogenblik, alstublieft."]}
+        {"lemma": "ogenblik", "pos": "noun", "details": {"article": "het", "plural": "ogenblikken"}, "sentences": ["Een *ogenblik*, alstublieft."]}
         ]
       }
     },
@@ -245,10 +245,10 @@
       "gloss": "clock (noun)",
       "entries": {
         "en": [
-        {"lemma": "clock", "pos": "noun", "details": {"plural": "clocks"}, "sentences": ["The clock is on the wall."]}
+        {"lemma": "clock", "pos": "noun", "details": {"plural": "clocks"}, "sentences": ["The *clock* is on the wall."]}
         ],
         "nl": [
-        {"lemma": "klok", "pos": "noun", "details": {"article": "de", "plural": "klokken"}, "sentences": ["De klok hangt aan de muur."]}
+        {"lemma": "klok", "pos": "noun", "details": {"article": "de", "plural": "klokken"}, "sentences": ["De *klok* hangt aan de muur."]}
         ]
       }
     },
@@ -257,10 +257,10 @@
       "gloss": "break (pause)",
       "entries": {
         "en": [
-        {"lemma": "break", "pos": "noun", "details": {"note": "pause", "plural": "breaks"}, "sentences": ["We take a break."]}
+        {"lemma": "break", "pos": "noun", "details": {"note": "pause", "plural": "breaks"}, "sentences": ["We take a *break*."]}
         ],
         "nl": [
-        {"lemma": "pauze", "pos": "noun", "details": {"article": "de", "plural": "pauzes"}, "sentences": ["Wij nemen een pauze."]}
+        {"lemma": "pauze", "pos": "noun", "details": {"article": "de", "plural": "pauzes"}, "sentences": ["Wij nemen een *pauze*."]}
         ]
       }
     },
@@ -269,10 +269,10 @@
       "gloss": "afternoon (noun)",
       "entries": {
         "en": [
-        {"lemma": "afternoon", "pos": "noun", "details": {"plural": "afternoons"}, "sentences": ["I work in the afternoon."]}
+        {"lemma": "afternoon", "pos": "noun", "details": {"plural": "afternoons"}, "sentences": ["I work in the *afternoon*."]}
         ],
         "nl": [
-        {"lemma": "middag", "pos": "noun", "details": {"article": "de", "plural": "middagen"}, "sentences": ["Ik werk in de middag."]}
+        {"lemma": "middag", "pos": "noun", "details": {"article": "de", "plural": "middagen"}, "sentences": ["Ik werk in de *middag*."]}
         ]
       }
     },
@@ -281,10 +281,10 @@
       "gloss": "season (noun)",
       "entries": {
         "en": [
-        {"lemma": "season", "pos": "noun", "details": {"plural": "seasons"}, "sentences": ["Summer is my favorite season."]}
+        {"lemma": "season", "pos": "noun", "details": {"plural": "seasons"}, "sentences": ["Summer is my favorite *season*."]}
         ],
         "nl": [
-        {"lemma": "seizoen", "pos": "noun", "details": {"article": "het", "plural": "seizoenen"}, "sentences": ["De zomer is mijn favoriete seizoen."]}
+        {"lemma": "seizoen", "pos": "noun", "details": {"article": "het", "plural": "seizoenen"}, "sentences": ["De zomer is mijn favoriete *seizoen*."]}
         ]
       }
     },
@@ -293,10 +293,10 @@
       "gloss": "winter (noun)",
       "entries": {
         "en": [
-        {"lemma": "winter", "pos": "noun", "details": {"plural": "winters"}, "sentences": ["The winter is cold."]}
+        {"lemma": "winter", "pos": "noun", "details": {"plural": "winters"}, "sentences": ["The *winter* is cold."]}
         ],
         "nl": [
-        {"lemma": "winter", "pos": "noun", "details": {"article": "de", "plural": "winters"}, "sentences": ["De winter is koud."]}
+        {"lemma": "winter", "pos": "noun", "details": {"article": "de", "plural": "winters"}, "sentences": ["De *winter* is koud."]}
         ]
       }
     },
@@ -305,10 +305,10 @@
       "gloss": "midnight (noun)",
       "entries": {
         "en": [
-        {"lemma": "midnight", "pos": "noun", "details": {"uncountable": true}, "sentences": ["We sleep at midnight."]}
+        {"lemma": "midnight", "pos": "noun", "details": {"uncountable": true}, "sentences": ["We sleep at *midnight*."]}
         ],
         "nl": [
-        {"lemma": "middernacht", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Wij slapen om middernacht."]}
+        {"lemma": "middernacht", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Wij slapen om *middernacht*."]}
         ]
       }
     },
@@ -317,10 +317,10 @@
       "gloss": "quarter of an hour (noun)",
       "entries": {
         "en": [
-        {"lemma": "quarter of an hour", "pos": "noun", "details": {"plural": "quarter of an hours"}, "sentences": ["I wait a quarter of an hour."]}
+        {"lemma": "quarter of an hour", "pos": "noun", "details": {"plural": "quarter of an hours"}, "sentences": ["I wait a *quarter of an hour*."]}
         ],
         "nl": [
-        {"lemma": "kwartier", "pos": "noun", "details": {"article": "het", "plural": "kwartieren"}, "sentences": ["Ik wacht een kwartier."]}
+        {"lemma": "kwartier", "pos": "noun", "details": {"article": "het", "plural": "kwartieren"}, "sentences": ["Ik wacht een *kwartier*."]}
         ]
       }
     },
@@ -329,10 +329,10 @@
       "gloss": "period (noun)",
       "entries": {
         "en": [
-        {"lemma": "period", "pos": "noun", "details": {"plural": "periods"}, "sentences": ["This is a difficult period."]}
+        {"lemma": "period", "pos": "noun", "details": {"plural": "periods"}, "sentences": ["This is a difficult *period*."]}
         ],
         "nl": [
-        {"lemma": "periode", "pos": "noun", "details": {"article": "de", "plural": "periodes"}, "sentences": ["Dit is een moeilijke periode."]}
+        {"lemma": "periode", "pos": "noun", "details": {"article": "de", "plural": "periodes"}, "sentences": ["Dit is een moeilijke *periode*."]}
         ]
       }
     },
@@ -341,10 +341,10 @@
       "gloss": "spring (noun)",
       "entries": {
         "en": [
-        {"lemma": "spring", "pos": "noun", "details": {"plural": "springs"}, "sentences": ["The spring is warm."]}
+        {"lemma": "spring", "pos": "noun", "details": {"plural": "springs"}, "sentences": ["The *spring* is warm."]}
         ],
         "nl": [
-        {"lemma": "lente", "pos": "noun", "details": {"article": "de", "plural": "lentes"}, "sentences": ["De lente is warm."]}
+        {"lemma": "lente", "pos": "noun", "details": {"article": "de", "plural": "lentes"}, "sentences": ["De *lente* is warm."]}
         ]
       }
     },
@@ -353,10 +353,10 @@
       "gloss": "date (calendar)",
       "entries": {
         "en": [
-        {"lemma": "date", "pos": "noun", "details": {"note": "calendar", "plural": "dates"}, "sentences": ["What is the date?"]}
+        {"lemma": "date", "pos": "noun", "details": {"note": "calendar", "plural": "dates"}, "sentences": ["What is the *date*?"]}
         ],
         "nl": [
-        {"lemma": "datum", "pos": "noun", "details": {"article": "de", "plural": "data"}, "sentences": ["Wat is de datum?"]}
+        {"lemma": "datum", "pos": "noun", "details": {"article": "de", "plural": "data"}, "sentences": ["Wat is de *datum*?"]}
         ]
       }
     },
@@ -365,10 +365,10 @@
       "gloss": "recent (adjective)",
       "entries": {
         "en": [
-        {"lemma": "recent", "pos": "adjective", "sentences": ["The news is recent."]}
+        {"lemma": "recent", "pos": "adjective", "sentences": ["The news is *recent*."]}
         ],
         "nl": [
-        {"lemma": "recent", "pos": "adjective", "sentences": ["Het nieuws is recent."]}
+        {"lemma": "recent", "pos": "adjective", "sentences": ["Het nieuws is *recent*."]}
         ]
       }
     },
@@ -377,10 +377,10 @@
       "gloss": "little while (noun)",
       "entries": {
         "en": [
-        {"lemma": "little while", "pos": "noun", "details": {"plural": "little whiles"}, "sentences": ["Wait a little while."]}
+        {"lemma": "little while", "pos": "noun", "details": {"plural": "little whiles"}, "sentences": ["Wait a *little while*."]}
         ],
         "nl": [
-        {"lemma": "poosje", "pos": "noun", "details": {"article": "het", "plural": "poosjes"}, "sentences": ["Wacht een poosje."]}
+        {"lemma": "poosje", "pos": "noun", "details": {"article": "het", "plural": "poosjes"}, "sentences": ["Wacht een *poosje*."]}
         ]
       }
     },
@@ -389,10 +389,10 @@
       "gloss": "historical (adjective)",
       "entries": {
         "en": [
-        {"lemma": "historical", "pos": "adjective", "sentences": ["This is a historical building."]}
+        {"lemma": "historical", "pos": "adjective", "sentences": ["This is a *historical* building."]}
         ],
         "nl": [
-        {"lemma": "historisch", "pos": "adjective", "sentences": ["Dit is een historisch gebouw."]}
+        {"lemma": "historisch", "pos": "adjective", "sentences": ["Dit is een *historisch* gebouw."]}
         ]
       }
     },
@@ -401,10 +401,10 @@
       "gloss": "early (adjective)",
       "entries": {
         "en": [
-        {"lemma": "early", "pos": "adjective", "sentences": ["I get up early."]}
+        {"lemma": "early", "pos": "adjective", "sentences": ["I get up *early*."]}
         ],
         "nl": [
-        {"lemma": "vroeg", "pos": "adjective", "sentences": ["Ik sta vroeg op."]}
+        {"lemma": "vroeg", "pos": "adjective", "sentences": ["Ik sta *vroeg* op."]}
         ]
       }
     },
@@ -413,10 +413,10 @@
       "gloss": "autumn (noun)",
       "entries": {
         "en": [
-        {"lemma": "autumn", "pos": "noun", "details": {"plural": "autumns"}, "sentences": ["The autumn is colorful."]}
+        {"lemma": "autumn", "pos": "noun", "details": {"plural": "autumns"}, "sentences": ["The *autumn* is colorful."]}
         ],
         "nl": [
-        {"lemma": "herfst", "pos": "noun", "details": {"article": "de", "plural": "herfsten"}, "sentences": ["De herfst is kleurrijk."]}
+        {"lemma": "herfst", "pos": "noun", "details": {"article": "de", "plural": "herfsten"}, "sentences": ["De *herfst* is kleurrijk."]}
         ]
       }
     },
@@ -425,10 +425,10 @@
       "gloss": "era (noun)",
       "entries": {
         "en": [
-        {"lemma": "era", "pos": "noun", "details": {"plural": "eras"}, "sentences": ["This is a new era."]}
+        {"lemma": "era", "pos": "noun", "details": {"plural": "eras"}, "sentences": ["This is a new *era*."]}
         ],
         "nl": [
-        {"lemma": "tijdperk", "pos": "noun", "details": {"article": "het", "plural": "tijdperken"}, "sentences": ["Dit is een nieuw tijdperk."]}
+        {"lemma": "tijdperk", "pos": "noun", "details": {"article": "het", "plural": "tijdperken"}, "sentences": ["Dit is een nieuw *tijdperk*."]}
         ]
       }
     },
@@ -437,10 +437,10 @@
       "gloss": "bedtime (noun)",
       "entries": {
         "en": [
-        {"lemma": "bedtime", "pos": "noun", "details": {"uncountable": true}, "sentences": ["It is bedtime."]}
+        {"lemma": "bedtime", "pos": "noun", "details": {"uncountable": true}, "sentences": ["It is *bedtime*."]}
         ],
         "nl": [
-        {"lemma": "bedtijd", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Het is bedtijd."]}
+        {"lemma": "bedtijd", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Het is *bedtijd*."]}
         ]
       }
     },
@@ -449,10 +449,10 @@
       "gloss": "Friday evening (noun)",
       "entries": {
         "en": [
-        {"lemma": "Friday evening", "pos": "noun", "details": {"plural": "Friday evenings"}, "sentences": ["Friday evening we go out."]}
+        {"lemma": "Friday evening", "pos": "noun", "details": {"plural": "Friday evenings"}, "sentences": ["*Friday evening* we go out."]}
         ],
         "nl": [
-        {"lemma": "vrijdagavond", "pos": "noun", "details": {"article": "de", "plural": "vrijdagavonden"}, "sentences": ["Vrijdagavond gaan we uit."]}
+        {"lemma": "vrijdagavond", "pos": "noun", "details": {"article": "de", "plural": "vrijdagavonden"}, "sentences": ["*Vrijdagavond* gaan we uit."]}
         ]
       }
     },
@@ -461,10 +461,10 @@
       "gloss": "annual (adjective)",
       "entries": {
         "en": [
-        {"lemma": "annual", "pos": "adjective", "sentences": ["This is an annual event."]}
+        {"lemma": "annual", "pos": "adjective", "sentences": ["This is an *annual* event."]}
         ],
         "nl": [
-        {"lemma": "jaarlijks", "pos": "adjective", "sentences": ["Dit is een jaarlijks evenement."]}
+        {"lemma": "jaarlijks", "pos": "adjective", "sentences": ["Dit is een *jaarlijks* evenement."]}
         ]
       }
     },
@@ -473,10 +473,10 @@
       "gloss": "upcoming (adjective)",
       "entries": {
         "en": [
-        {"lemma": "upcoming", "pos": "adjective", "sentences": ["The upcoming week is busy."]}
+        {"lemma": "upcoming", "pos": "adjective", "sentences": ["The *upcoming* week is busy."]}
         ],
         "nl": [
-        {"lemma": "aanstaande", "pos": "adjective", "sentences": ["De aanstaande week is druk."]}
+        {"lemma": "aanstaande", "pos": "adjective", "sentences": ["De *aanstaande* week is druk."]}
         ]
       }
     },
@@ -485,10 +485,10 @@
       "gloss": "half hour (noun)",
       "entries": {
         "en": [
-        {"lemma": "half hour", "pos": "noun", "details": {"plural": "half hours"}, "sentences": ["I wait a half hour."]}
+        {"lemma": "half hour", "pos": "noun", "details": {"plural": "half hours"}, "sentences": ["I wait a *half hour*."]}
         ],
         "nl": [
-        {"lemma": "halfuur", "pos": "noun", "details": {"article": "het", "plural": "halfuren"}, "sentences": ["Ik wacht een halfuur."]}
+        {"lemma": "halfuur", "pos": "noun", "details": {"article": "het", "plural": "halfuren"}, "sentences": ["Ik wacht een *halfuur*."]}
         ]
       }
     },
@@ -497,10 +497,10 @@
       "gloss": "Saturday evening (noun)",
       "entries": {
         "en": [
-        {"lemma": "Saturday evening", "pos": "noun", "details": {"plural": "Saturday evenings"}, "sentences": ["Saturday evening we eat out."]}
+        {"lemma": "Saturday evening", "pos": "noun", "details": {"plural": "Saturday evenings"}, "sentences": ["*Saturday evening* we eat out."]}
         ],
         "nl": [
-        {"lemma": "zaterdagavond", "pos": "noun", "details": {"article": "de", "plural": "zaterdagavonden"}, "sentences": ["Zaterdagavond eten we buiten de deur."]}
+        {"lemma": "zaterdagavond", "pos": "noun", "details": {"article": "de", "plural": "zaterdagavonden"}, "sentences": ["*Zaterdagavond* eten we buiten de deur."]}
         ]
       }
     },
@@ -509,10 +509,10 @@
       "gloss": "pass (of time)",
       "entries": {
         "en": [
-        {"lemma": "to pass", "pos": "verb", "details": {"note": "of time", "past": "passed", "participle": "passed"}, "sentences": ["The time passes."]}
+        {"lemma": "to pass", "pos": "verb", "details": {"note": "of time", "past": "passed", "participle": "passed"}, "sentences": ["The time *passes*."]}
         ],
         "nl": [
-        {"lemma": "verstrijken", "pos": "verb", "details": {"pastSingular": "verstreek", "pastPlural": "verstreken", "participle": "verstreken", "auxiliary": "zijn"}, "sentences": ["De tijd verstrijkt."]}
+        {"lemma": "verstrijken", "pos": "verb", "details": {"pastSingular": "verstreek", "pastPlural": "verstreken", "participle": "verstreken", "auxiliary": "zijn"}, "sentences": ["De tijd *verstrijkt*."]}
         ]
       }
     },
@@ -521,10 +521,10 @@
       "gloss": "New Year (noun)",
       "entries": {
         "en": [
-        {"lemma": "New Year", "pos": "noun", "details": {"uncountable": true}, "sentences": ["We celebrate New Year."]}
+        {"lemma": "New Year", "pos": "noun", "details": {"uncountable": true}, "sentences": ["We celebrate *New Year*."]}
         ],
         "nl": [
-        {"lemma": "nieuwjaar", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["Wij vieren nieuwjaar."]}
+        {"lemma": "nieuwjaar", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["Wij vieren *nieuwjaar*."]}
         ]
       }
     },
@@ -533,10 +533,10 @@
       "gloss": "interim (noun)",
       "entries": {
         "en": [
-        {"lemma": "interim", "pos": "noun", "details": {"uncountable": true}, "sentences": ["In the interim we wait."]}
+        {"lemma": "interim", "pos": "noun", "details": {"uncountable": true}, "sentences": ["In the *interim* we wait."]}
         ],
         "nl": [
-        {"lemma": "tussentijd", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["In de tussentijd wachten wij."]}
+        {"lemma": "tussentijd", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["In de *tussentijd* wachten wij."]}
         ]
       }
     },
@@ -545,10 +545,10 @@
       "gloss": "dawn (noun)",
       "entries": {
         "en": [
-        {"lemma": "dawn", "pos": "noun", "details": {"uncountable": true}, "sentences": ["We leave at dawn."]}
+        {"lemma": "dawn", "pos": "noun", "details": {"uncountable": true}, "sentences": ["We leave at *dawn*."]}
         ],
         "nl": [
-        {"lemma": "dageraad", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Wij vertrekken bij de dageraad."]}
+        {"lemma": "dageraad", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Wij vertrekken bij de *dageraad*."]}
         ]
       }
     },
@@ -557,10 +557,10 @@
       "gloss": "calendar (noun)",
       "entries": {
         "en": [
-        {"lemma": "calendar", "pos": "noun", "details": {"plural": "calendars"}, "sentences": ["The calendar hangs on the wall."]}
+        {"lemma": "calendar", "pos": "noun", "details": {"plural": "calendars"}, "sentences": ["The *calendar* hangs on the wall."]}
         ],
         "nl": [
-        {"lemma": "kalender", "pos": "noun", "details": {"article": "de", "plural": "kalenders"}, "sentences": ["De kalender hangt aan de muur."]}
+        {"lemma": "kalender", "pos": "noun", "details": {"article": "de", "plural": "kalenders"}, "sentences": ["De *kalender* hangt aan de muur."]}
         ]
       }
     },
@@ -569,10 +569,10 @@
       "gloss": "half year (noun)",
       "entries": {
         "en": [
-        {"lemma": "half year", "pos": "noun", "details": {"plural": "half years"}, "sentences": ["I stay a half year."]}
+        {"lemma": "half year", "pos": "noun", "details": {"plural": "half years"}, "sentences": ["I stay a *half year*."]}
         ],
         "nl": [
-        {"lemma": "halfjaar", "pos": "noun", "details": {"article": "het", "plural": "halfjaren"}, "sentences": ["Ik blijf een halfjaar."]}
+        {"lemma": "halfjaar", "pos": "noun", "details": {"article": "het", "plural": "halfjaren"}, "sentences": ["Ik blijf een *halfjaar*."]}
         ]
       }
     },
@@ -581,10 +581,10 @@
       "gloss": "school days (noun)",
       "entries": {
         "en": [
-        {"lemma": "school days", "pos": "noun", "details": {"pluralOnly": true}, "sentences": ["I remember my school days."]}
+        {"lemma": "school days", "pos": "noun", "details": {"pluralOnly": true}, "sentences": ["I remember my *school days*."]}
         ],
         "nl": [
-        {"lemma": "schooltijd", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Ik herinner mij mijn schooltijd."]}
+        {"lemma": "schooltijd", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Ik herinner mij mijn *schooltijd*."]}
         ]
       }
     },
@@ -593,10 +593,10 @@
       "gloss": "millennium (noun)",
       "entries": {
         "en": [
-        {"lemma": "millennium", "pos": "noun", "details": {"plural": "millenniums"}, "sentences": ["A millennium has a thousand years."]}
+        {"lemma": "millennium", "pos": "noun", "details": {"plural": "millenniums"}, "sentences": ["A *millennium* has a thousand years."]}
         ],
         "nl": [
-        {"lemma": "millennium", "pos": "noun", "details": {"article": "het", "plural": "millennia"}, "sentences": ["Een millennium heeft duizend jaar."]}
+        {"lemma": "millennium", "pos": "noun", "details": {"article": "het", "plural": "millennia"}, "sentences": ["Een *millennium* heeft duizend jaar."]}
         ]
       }
     },
@@ -605,10 +605,10 @@
       "gloss": "stay up (verb)",
       "entries": {
         "en": [
-        {"lemma": "to stay up", "pos": "verb", "details": {"past": "stayed up", "participle": "stayed up"}, "sentences": ["I stay up late."]}
+        {"lemma": "to stay up", "pos": "verb", "details": {"past": "stayed up", "participle": "stayed up"}, "sentences": ["I *stay up* late."]}
         ],
         "nl": [
-        {"lemma": "opblijven", "pos": "verb", "details": {"pastSingular": "bleef op", "pastPlural": "bleven op", "participle": "opgebleven", "auxiliary": "zijn"}, "sentences": ["Ik blijf laat op."]}
+        {"lemma": "opblijven", "pos": "verb", "details": {"pastSingular": "bleef op", "pastPlural": "bleven op", "participle": "opgebleven", "auxiliary": "zijn"}, "sentences": ["Ik *blijf* laat *op*."]}
         ]
       }
     },
@@ -617,10 +617,10 @@
       "gloss": "weekly (adjective)",
       "entries": {
         "en": [
-        {"lemma": "weekly", "pos": "adjective", "sentences": ["This is a weekly meeting."]}
+        {"lemma": "weekly", "pos": "adjective", "sentences": ["This is a *weekly* meeting."]}
         ],
         "nl": [
-        {"lemma": "wekelijks", "pos": "adjective", "sentences": ["Dit is een wekelijkse vergadering."]}
+        {"lemma": "wekelijks", "pos": "adjective", "sentences": ["Dit is een *wekelijkse* vergadering."]}
         ]
       }
     },
@@ -629,10 +629,10 @@
       "gloss": "Monday (noun)",
       "entries": {
         "en": [
-        {"lemma": "Monday", "pos": "noun", "details": {"plural": "Mondays"}, "sentences": ["On Monday I work."]}
+        {"lemma": "Monday", "pos": "noun", "details": {"plural": "Mondays"}, "sentences": ["On *Monday* I work."]}
         ],
         "nl": [
-        {"lemma": "maandag", "pos": "noun", "details": {"article": "de", "plural": "maandagen"}, "sentences": ["Op maandag werk ik."]}
+        {"lemma": "maandag", "pos": "noun", "details": {"article": "de", "plural": "maandagen"}, "sentences": ["Op *maandag* werk ik."]}
         ]
       }
     },
@@ -641,10 +641,10 @@
       "gloss": "Tuesday (noun)",
       "entries": {
         "en": [
-        {"lemma": "Tuesday", "pos": "noun", "details": {"plural": "Tuesdays"}, "sentences": ["On Tuesday I swim."]}
+        {"lemma": "Tuesday", "pos": "noun", "details": {"plural": "Tuesdays"}, "sentences": ["On *Tuesday* I swim."]}
         ],
         "nl": [
-        {"lemma": "dinsdag", "pos": "noun", "details": {"article": "de", "plural": "dinsdagen"}, "sentences": ["Op dinsdag zwem ik."]}
+        {"lemma": "dinsdag", "pos": "noun", "details": {"article": "de", "plural": "dinsdagen"}, "sentences": ["Op *dinsdag* zwem ik."]}
         ]
       }
     },
@@ -653,10 +653,10 @@
       "gloss": "Wednesday (noun)",
       "entries": {
         "en": [
-        {"lemma": "Wednesday", "pos": "noun", "details": {"plural": "Wednesdays"}, "sentences": ["On Wednesday I study."]}
+        {"lemma": "Wednesday", "pos": "noun", "details": {"plural": "Wednesdays"}, "sentences": ["On *Wednesday* I study."]}
         ],
         "nl": [
-        {"lemma": "woensdag", "pos": "noun", "details": {"article": "de", "plural": "woensdagen"}, "sentences": ["Op woensdag studeer ik."]}
+        {"lemma": "woensdag", "pos": "noun", "details": {"article": "de", "plural": "woensdagen"}, "sentences": ["Op *woensdag* studeer ik."]}
         ]
       }
     },
@@ -665,10 +665,10 @@
       "gloss": "Thursday (noun)",
       "entries": {
         "en": [
-        {"lemma": "Thursday", "pos": "noun", "details": {"plural": "Thursdays"}, "sentences": ["On Thursday I cook."]}
+        {"lemma": "Thursday", "pos": "noun", "details": {"plural": "Thursdays"}, "sentences": ["On *Thursday* I cook."]}
         ],
         "nl": [
-        {"lemma": "donderdag", "pos": "noun", "details": {"article": "de", "plural": "donderdagen"}, "sentences": ["Op donderdag kook ik."]}
+        {"lemma": "donderdag", "pos": "noun", "details": {"article": "de", "plural": "donderdagen"}, "sentences": ["Op *donderdag* kook ik."]}
         ]
       }
     },
@@ -677,10 +677,10 @@
       "gloss": "Friday (noun)",
       "entries": {
         "en": [
-        {"lemma": "Friday", "pos": "noun", "details": {"plural": "Fridays"}, "sentences": ["On Friday I go out."]}
+        {"lemma": "Friday", "pos": "noun", "details": {"plural": "Fridays"}, "sentences": ["On *Friday* I go out."]}
         ],
         "nl": [
-        {"lemma": "vrijdag", "pos": "noun", "details": {"article": "de", "plural": "vrijdagen"}, "sentences": ["Op vrijdag ga ik uit."]}
+        {"lemma": "vrijdag", "pos": "noun", "details": {"article": "de", "plural": "vrijdagen"}, "sentences": ["Op *vrijdag* ga ik uit."]}
         ]
       }
     },
@@ -689,10 +689,10 @@
       "gloss": "Saturday (noun)",
       "entries": {
         "en": [
-        {"lemma": "Saturday", "pos": "noun", "details": {"plural": "Saturdays"}, "sentences": ["On Saturday I sleep in."]}
+        {"lemma": "Saturday", "pos": "noun", "details": {"plural": "Saturdays"}, "sentences": ["On *Saturday* I sleep in."]}
         ],
         "nl": [
-        {"lemma": "zaterdag", "pos": "noun", "details": {"article": "de", "plural": "zaterdagen"}, "sentences": ["Op zaterdag slaap ik uit."]}
+        {"lemma": "zaterdag", "pos": "noun", "details": {"article": "de", "plural": "zaterdagen"}, "sentences": ["Op *zaterdag* slaap ik uit."]}
         ]
       }
     },
@@ -701,10 +701,10 @@
       "gloss": "Sunday (noun)",
       "entries": {
         "en": [
-        {"lemma": "Sunday", "pos": "noun", "details": {"plural": "Sundays"}, "sentences": ["On Sunday I rest."]}
+        {"lemma": "Sunday", "pos": "noun", "details": {"plural": "Sundays"}, "sentences": ["On *Sunday* I rest."]}
         ],
         "nl": [
-        {"lemma": "zondag", "pos": "noun", "details": {"article": "de", "plural": "zondagen"}, "sentences": ["Op zondag rust ik."]}
+        {"lemma": "zondag", "pos": "noun", "details": {"article": "de", "plural": "zondagen"}, "sentences": ["Op *zondag* rust ik."]}
         ]
       }
     },
@@ -713,10 +713,10 @@
       "gloss": "weekday (noun)",
       "entries": {
         "en": [
-        {"lemma": "weekday", "pos": "noun", "details": {"plural": "weekdays"}, "sentences": ["A weekday is a working day."]}
+        {"lemma": "weekday", "pos": "noun", "details": {"plural": "weekdays"}, "sentences": ["A *weekday* is a working day."]}
         ],
         "nl": [
-        {"lemma": "werkdag", "pos": "noun", "details": {"article": "de", "plural": "werkdagen"}, "sentences": ["Een werkdag is een dag om te werken."]}
+        {"lemma": "werkdag", "pos": "noun", "details": {"article": "de", "plural": "werkdagen"}, "sentences": ["Een *werkdag* is een dag om te werken."]}
         ]
       }
     },
@@ -725,10 +725,10 @@
       "gloss": "January (proper noun)",
       "entries": {
         "en": [
-        {"lemma": "January", "pos": "proper noun", "sentences": ["January is cold."]}
+        {"lemma": "January", "pos": "proper noun", "sentences": ["*January* is cold."]}
         ],
         "nl": [
-        {"lemma": "januari", "pos": "proper noun", "sentences": ["Januari is koud."]}
+        {"lemma": "januari", "pos": "proper noun", "sentences": ["*Januari* is koud."]}
         ]
       }
     },
@@ -737,10 +737,10 @@
       "gloss": "February (proper noun)",
       "entries": {
         "en": [
-        {"lemma": "February", "pos": "proper noun", "sentences": ["February is short."]}
+        {"lemma": "February", "pos": "proper noun", "sentences": ["*February* is short."]}
         ],
         "nl": [
-        {"lemma": "februari", "pos": "proper noun", "sentences": ["Februari is kort."]}
+        {"lemma": "februari", "pos": "proper noun", "sentences": ["*Februari* is kort."]}
         ]
       }
     },
@@ -749,10 +749,10 @@
       "gloss": "March (proper noun)",
       "entries": {
         "en": [
-        {"lemma": "March", "pos": "proper noun", "sentences": ["In March spring begins."]}
+        {"lemma": "March", "pos": "proper noun", "sentences": ["In *March* spring begins."]}
         ],
         "nl": [
-        {"lemma": "maart", "pos": "proper noun", "sentences": ["In maart begint de lente."]}
+        {"lemma": "maart", "pos": "proper noun", "sentences": ["In *maart* begint de lente."]}
         ]
       }
     },
@@ -761,10 +761,10 @@
       "gloss": "April (proper noun)",
       "entries": {
         "en": [
-        {"lemma": "April", "pos": "proper noun", "sentences": ["April has rain."]}
+        {"lemma": "April", "pos": "proper noun", "sentences": ["*April* has rain."]}
         ],
         "nl": [
-        {"lemma": "april", "pos": "proper noun", "sentences": ["April heeft regen."]}
+        {"lemma": "april", "pos": "proper noun", "sentences": ["*April* heeft regen."]}
         ]
       }
     },
@@ -773,10 +773,10 @@
       "gloss": "May (proper noun)",
       "entries": {
         "en": [
-        {"lemma": "May", "pos": "proper noun", "sentences": ["May is warm."]}
+        {"lemma": "May", "pos": "proper noun", "sentences": ["*May* is warm."]}
         ],
         "nl": [
-        {"lemma": "mei", "pos": "proper noun", "sentences": ["Mei is warm."]}
+        {"lemma": "mei", "pos": "proper noun", "sentences": ["*Mei* is warm."]}
         ]
       }
     },
@@ -785,10 +785,10 @@
       "gloss": "June (proper noun)",
       "entries": {
         "en": [
-        {"lemma": "June", "pos": "proper noun", "sentences": ["June has long days."]}
+        {"lemma": "June", "pos": "proper noun", "sentences": ["*June* has long days."]}
         ],
         "nl": [
-        {"lemma": "juni", "pos": "proper noun", "sentences": ["Juni heeft lange dagen."]}
+        {"lemma": "juni", "pos": "proper noun", "sentences": ["*Juni* heeft lange dagen."]}
         ]
       }
     },
@@ -797,10 +797,10 @@
       "gloss": "July (proper noun)",
       "entries": {
         "en": [
-        {"lemma": "July", "pos": "proper noun", "sentences": ["July is hot."]}
+        {"lemma": "July", "pos": "proper noun", "sentences": ["*July* is hot."]}
         ],
         "nl": [
-        {"lemma": "juli", "pos": "proper noun", "sentences": ["Juli is heet."]}
+        {"lemma": "juli", "pos": "proper noun", "sentences": ["*Juli* is heet."]}
         ]
       }
     },
@@ -809,10 +809,10 @@
       "gloss": "August (proper noun)",
       "entries": {
         "en": [
-        {"lemma": "August", "pos": "proper noun", "sentences": ["August is vacation time."]}
+        {"lemma": "August", "pos": "proper noun", "sentences": ["*August* is vacation time."]}
         ],
         "nl": [
-        {"lemma": "augustus", "pos": "proper noun", "sentences": ["Augustus is vakantietijd."]}
+        {"lemma": "augustus", "pos": "proper noun", "sentences": ["*Augustus* is vakantietijd."]}
         ]
       }
     },
@@ -821,10 +821,10 @@
       "gloss": "September (proper noun)",
       "entries": {
         "en": [
-        {"lemma": "September", "pos": "proper noun", "sentences": ["In September school starts."]}
+        {"lemma": "September", "pos": "proper noun", "sentences": ["In *September* school starts."]}
         ],
         "nl": [
-        {"lemma": "september", "pos": "proper noun", "sentences": ["In september begint school."]}
+        {"lemma": "september", "pos": "proper noun", "sentences": ["In *september* begint school."]}
         ]
       }
     },
@@ -833,10 +833,10 @@
       "gloss": "October (proper noun)",
       "entries": {
         "en": [
-        {"lemma": "October", "pos": "proper noun", "sentences": ["October is colorful."]}
+        {"lemma": "October", "pos": "proper noun", "sentences": ["*October* is colorful."]}
         ],
         "nl": [
-        {"lemma": "oktober", "pos": "proper noun", "sentences": ["Oktober is kleurrijk."]}
+        {"lemma": "oktober", "pos": "proper noun", "sentences": ["*Oktober* is kleurrijk."]}
         ]
       }
     },
@@ -845,10 +845,10 @@
       "gloss": "November (proper noun)",
       "entries": {
         "en": [
-        {"lemma": "November", "pos": "proper noun", "sentences": ["November is gray."]}
+        {"lemma": "November", "pos": "proper noun", "sentences": ["*November* is gray."]}
         ],
         "nl": [
-        {"lemma": "november", "pos": "proper noun", "sentences": ["November is grijs."]}
+        {"lemma": "november", "pos": "proper noun", "sentences": ["*November* is grijs."]}
         ]
       }
     },
@@ -857,10 +857,10 @@
       "gloss": "December (proper noun)",
       "entries": {
         "en": [
-        {"lemma": "December", "pos": "proper noun", "sentences": ["December has Christmas."]}
+        {"lemma": "December", "pos": "proper noun", "sentences": ["*December* has Christmas."]}
         ],
         "nl": [
-        {"lemma": "december", "pos": "proper noun", "sentences": ["December heeft kerst."]}
+        {"lemma": "december", "pos": "proper noun", "sentences": ["*December* heeft kerst."]}
         ]
       }
     }
