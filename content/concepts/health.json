@@ -149,7 +149,7 @@
       "gloss": "sleep (noun)",
       "entries": {
         "en": [
-        {"lemma": "sleep", "pos": "noun", "details": {"uncountable": true}, "sentences": ["I need more *sleep* because I work late."]}
+        {"lemma": "sleep", "pos": "noun", "details": {"uncountable": true}, "sentences": ["I need more *sleep* because I work late every evening."]}
         ],
         "nl": [
         {"lemma": "slaap", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Ik heb meer *slaap* nodig, want ik werk elke avond laat."]}
@@ -200,7 +200,7 @@
         {"lemma": "patient", "pos": "noun", "details": {"note": "someone being treated", "plural": "patients"}, "sentences": ["The *patient* waits outside the doctor's room."]}
         ],
         "nl": [
-        {"lemma": "patiënt", "pos": "noun", "details": {"article": "de", "plural": "patiënten"}, "sentences": ["De *patiënt* wacht op een stoel voor de kamer van de dokter."]}
+        {"lemma": "patiënt", "pos": "noun", "details": {"article": "de", "plural": "patiënten"}, "sentences": ["De *patiënt* wacht buiten de kamer van de dokter."]}
         ]
       }
     },
@@ -257,7 +257,7 @@
       "gloss": "rest (verb)",
       "entries": {
         "en": [
-        {"lemma": "to rest", "pos": "verb", "details": {"past": "rested", "participle": "rested"}, "sentences": ["I *rest* on the couch with some tea."]}
+        {"lemma": "to rest", "pos": "verb", "details": {"past": "rested", "participle": "rested"}, "sentences": ["I *rest* on the couch with a blanket and some tea."]}
         ],
         "nl": [
         {"lemma": "rusten", "pos": "verb", "details": {"pastSingular": "rustte", "pastPlural": "rustten", "participle": "gerust", "auxiliary": "hebben"}, "sentences": ["Ik *rust* op de bank met een deken en thee."]}
@@ -356,7 +356,7 @@
         {"lemma": "to drown", "pos": "verb", "details": {"past": "drowned", "participle": "drowned"}, "sentences": ["The boy almost *drowns* in the deep pool."]}
         ],
         "nl": [
-        {"lemma": "verdrinken", "pos": "verb", "details": {"pastSingular": "verdronk", "pastPlural": "verdronken", "participle": "verdronken", "auxiliary": "zijn"}, "sentences": ["De jongen *verdrinkt* bijna in het diepe deel van het zwembad."]}
+        {"lemma": "verdrinken", "pos": "verb", "details": {"pastSingular": "verdronk", "pastPlural": "verdronken", "participle": "verdronken", "auxiliary": "zijn"}, "sentences": ["De jongen *verdrinkt* bijna in het diepe zwembad."]}
         ]
       }
     },
@@ -380,7 +380,7 @@
         {"lemma": "ambulance", "pos": "noun", "details": {"plural": "ambulances"}, "sentences": ["The *ambulance* comes quickly with loud sirens."]}
         ],
         "nl": [
-        {"lemma": "ambulance", "pos": "noun", "details": {"article": "de", "plural": "ambulances"}, "sentences": ["De *ambulance* komt snel met luide sirenes door de straat."]}
+        {"lemma": "ambulance", "pos": "noun", "details": {"article": "de", "plural": "ambulances"}, "sentences": ["De *ambulance* komt snel met luide sirenes."]}
         ]
       }
     },
@@ -404,7 +404,7 @@
         {"lemma": "wound", "pos": "noun", "details": {"plural": "wounds"}, "sentences": ["The *wound* on his leg needs stitches."]}
         ],
         "nl": [
-        {"lemma": "wond", "pos": "noun", "details": {"article": "de", "plural": "wonden"}, "sentences": ["De *wond* aan zijn been is diep en moet gehecht worden."]}
+        {"lemma": "wond", "pos": "noun", "details": {"article": "de", "plural": "wonden"}, "sentences": ["De *wond* aan zijn been moet gehecht worden."]}
         ]
       }
     },
@@ -413,7 +413,7 @@
       "gloss": "health (noun)",
       "entries": {
         "en": [
-        {"lemma": "health", "pos": "noun", "details": {"uncountable": true}, "sentences": ["*Health* is important, so I walk to work."]}
+        {"lemma": "health", "pos": "noun", "details": {"uncountable": true}, "sentences": ["*Health* is important, so I walk to work every day."]}
         ],
         "nl": [
         {"lemma": "gezondheid", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["*Gezondheid* is belangrijk, daarom loop ik elke dag naar mijn werk."]}
@@ -473,7 +473,7 @@
       "gloss": "choke (verb)",
       "entries": {
         "en": [
-        {"lemma": "to choke", "pos": "verb", "details": {"past": "choked", "participle": "choked"}, "sentences": ["He *chokes* on a fish bone at dinner."]}
+        {"lemma": "to choke", "pos": "verb", "details": {"past": "choked", "participle": "choked"}, "sentences": ["He almost *chokes* on a fish bone at the dinner table."]}
         ],
         "nl": [
         {"lemma": "stikken", "pos": "verb", "details": {"pastSingular": "stikte", "pastPlural": "stikten", "participle": "gestikt", "auxiliary": "zijn"}, "sentences": ["Hij *stikt* bijna in een graat aan de eettafel."]}
@@ -500,7 +500,7 @@
         {"lemma": "cancer", "pos": "noun", "details": {"uncountable": true}, "sentences": ["He has *cancer*, but the doctors are hopeful."]}
         ],
         "nl": [
-        {"lemma": "kanker", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Hij heeft *kanker*, maar de artsen zijn hoopvol over de uitslag."]}
+        {"lemma": "kanker", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Hij heeft *kanker*, maar de artsen zijn hoopvol."]}
         ]
       }
     },
@@ -545,7 +545,7 @@
       "gloss": "headache (noun)",
       "entries": {
         "en": [
-        {"lemma": "headache", "pos": "noun", "details": {"plural": "headaches"}, "sentences": ["I have a *headache* from staring at screens."]}
+        {"lemma": "headache", "pos": "noun", "details": {"plural": "headaches"}, "sentences": ["I have a *headache* from looking at a screen all day."]}
         ],
         "nl": [
         {"lemma": "hoofdpijn", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Ik heb *hoofdpijn* van de hele dag naar het scherm kijken."]}
@@ -569,7 +569,7 @@
       "gloss": "scar (noun)",
       "entries": {
         "en": [
-        {"lemma": "scar", "pos": "noun", "details": {"plural": "scars"}, "sentences": ["He has a small *scar* from a fall."]}
+        {"lemma": "scar", "pos": "noun", "details": {"plural": "scars"}, "sentences": ["He has a small *scar* on his chin from a fall."]}
         ],
         "nl": [
         {"lemma": "litteken", "pos": "noun", "details": {"article": "het", "plural": "littekens"}, "sentences": ["Hij heeft een klein *litteken* op zijn kin van een val."]}
@@ -593,7 +593,7 @@
       "gloss": "cigar (noun)",
       "entries": {
         "en": [
-        {"lemma": "cigar", "pos": "noun", "details": {"plural": "cigars"}, "sentences": ["My grandfather smokes a *cigar* on his birthday."]}
+        {"lemma": "cigar", "pos": "noun", "details": {"plural": "cigars"}, "sentences": ["My grandfather smokes a *cigar* every year on his birthday."]}
         ],
         "nl": [
         {"lemma": "sigaar", "pos": "noun", "details": {"article": "de", "plural": "sigaren"}, "sentences": ["Mijn opa rookt elk jaar op zijn verjaardag een *sigaar*."]}
@@ -653,7 +653,7 @@
       "gloss": "coma (noun)",
       "entries": {
         "en": [
-        {"lemma": "coma", "pos": "noun", "details": {"plural": "comas"}, "sentences": ["After the accident, he lies in a *coma*."]}
+        {"lemma": "coma", "pos": "noun", "details": {"plural": "comas"}, "sentences": ["After the accident, he lies in a *coma* for days."]}
         ],
         "nl": [
         {"lemma": "coma", "pos": "noun", "details": {"article": "het", "plural": "coma's"}, "sentences": ["Na het ongeluk ligt hij dagenlang in een *coma*."]}
@@ -713,7 +713,7 @@
       "gloss": "heartbeat (noun)",
       "entries": {
         "en": [
-        {"lemma": "heartbeat", "pos": "noun", "details": {"plural": "heartbeats"}, "sentences": ["I feel my *heartbeat* in my ears."]}
+        {"lemma": "heartbeat", "pos": "noun", "details": {"plural": "heartbeats"}, "sentences": ["I feel my *heartbeat* in my ears after running."]}
         ],
         "nl": [
         {"lemma": "hartslag", "pos": "noun", "details": {"article": "de", "plural": "hartslagen"}, "sentences": ["Ik voel mijn *hartslag* in mijn oren na het rennen."]}
@@ -725,7 +725,7 @@
       "gloss": "consciousness (noun)",
       "entries": {
         "en": [
-        {"lemma": "consciousness", "pos": "noun", "details": {"uncountable": true}, "sentences": ["He loses *consciousness* for a minute after the hit."]}
+        {"lemma": "consciousness", "pos": "noun", "details": {"uncountable": true}, "sentences": ["He loses *consciousness* for a minute after the hard hit."]}
         ],
         "nl": [
         {"lemma": "bewustzijn", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["Hij verliest een minuut het *bewustzijn* na de harde klap."]}
@@ -857,7 +857,7 @@
       "gloss": "dose (noun)",
       "entries": {
         "en": [
-        {"lemma": "dose", "pos": "noun", "details": {"plural": "doses"}, "sentences": ["The *dose* is small, so it is safe."]}
+        {"lemma": "dose", "pos": "noun", "details": {"plural": "doses"}, "sentences": ["The *dose* is small, so it is safe for children."]}
         ],
         "nl": [
         {"lemma": "dosis", "pos": "noun", "details": {"article": "de", "plural": "doses"}, "sentences": ["De *dosis* is klein, dus het is veilig voor kinderen."]}
@@ -869,7 +869,7 @@
       "gloss": "injury (noun)",
       "entries": {
         "en": [
-        {"lemma": "injury", "pos": "noun", "details": {"plural": "injuries"}, "sentences": ["The knee *injury* is serious; he cannot play."]}
+        {"lemma": "injury", "pos": "noun", "details": {"plural": "injuries"}, "sentences": ["The knee *injury* is serious; he cannot play football."]}
         ],
         "nl": [
         {"lemma": "verwonding", "pos": "noun", "details": {"article": "de", "plural": "verwondingen"}, "sentences": ["De knie*verwonding* is ernstig, dus hij kan niet voetballen."]}
@@ -905,7 +905,7 @@
       "gloss": "prick (verb)",
       "entries": {
         "en": [
-        {"lemma": "to prick", "pos": "verb", "details": {"past": "pricked", "participle": "pricked"}, "sentences": ["The needle *pricks* my finger while I sew."]}
+        {"lemma": "to prick", "pos": "verb", "details": {"past": "pricked", "participle": "pricked"}, "sentences": ["The needle *pricks* my finger while I sew on a button."]}
         ],
         "nl": [
         {"lemma": "prikken", "pos": "verb", "details": {"pastSingular": "prikte", "pastPlural": "prikten", "participle": "geprikt", "auxiliary": "hebben"}, "sentences": ["De naald *prikt* in mijn vinger als ik een knoop aannaai."]}
@@ -917,7 +917,7 @@
       "gloss": "wheelchair (noun)",
       "entries": {
         "en": [
-        {"lemma": "wheelchair", "pos": "noun", "details": {"plural": "wheelchairs"}, "sentences": ["He sits in a *wheelchair* and rolls down."]}
+        {"lemma": "wheelchair", "pos": "noun", "details": {"plural": "wheelchairs"}, "sentences": ["He sits in a *wheelchair* and rolls down the slope."]}
         ],
         "nl": [
         {"lemma": "rolstoel", "pos": "noun", "details": {"article": "de", "plural": "rolstoelen"}, "sentences": ["Hij zit in een *rolstoel* en rijdt de helling af."]}
@@ -941,7 +941,7 @@
       "gloss": "hurt (injure oneself)",
       "entries": {
         "en": [
-        {"lemma": "to hurt", "pos": "verb", "details": {"note": "injure oneself", "past": "hurt", "participle": "hurt"}, "sentences": ["I *hurt* my knee on the wet floor."]}
+        {"lemma": "to hurt", "pos": "verb", "details": {"note": "injure oneself", "past": "hurt", "participle": "hurt"}, "sentences": ["I *hurt* my knee when I slip on the wet floor."]}
         ],
         "nl": [
         {"lemma": "bezeren", "pos": "verb", "details": {"pastSingular": "bezeerde", "pastPlural": "bezeerden", "participle": "bezeerd", "auxiliary": "hebben"}, "sentences": ["Ik *bezeer* mijn knie als ik uitglijd op de natte vloer."]}
@@ -953,7 +953,7 @@
       "gloss": "fitness (noun)",
       "entries": {
         "en": [
-        {"lemma": "fitness", "pos": "noun", "details": {"uncountable": true}, "sentences": ["I have good *fitness* because I cycle daily."]}
+        {"lemma": "fitness", "pos": "noun", "details": {"uncountable": true}, "sentences": ["I have good *fitness* because I cycle to work daily."]}
         ],
         "nl": [
         {"lemma": "conditie", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Ik heb een goede *conditie* omdat ik dagelijks naar mijn werk fiets."]}
@@ -992,7 +992,7 @@
         {"lemma": "to lose weight", "pos": "verb", "details": {"past": "lost weight", "participle": "lost weight"}, "sentences": ["I want to *lose weight* before the summer holiday."]}
         ],
         "nl": [
-        {"lemma": "afvallen", "pos": "verb", "details": {"pastSingular": "viel af", "pastPlural": "vielen af", "participle": "afgevallen", "auxiliary": "zijn"}, "sentences": ["Ik wil voor de zomervakantie vijf kilo *afvallen*."]}
+        {"lemma": "afvallen", "pos": "verb", "details": {"pastSingular": "viel af", "pastPlural": "vielen af", "participle": "afgevallen", "auxiliary": "zijn"}, "sentences": ["Ik wil voor de zomervakantie *afvallen*."]}
         ]
       }
     },
@@ -1013,7 +1013,7 @@
       "gloss": "injection (noun)",
       "entries": {
         "en": [
-        {"lemma": "injection", "pos": "noun", "details": {"plural": "injections"}, "sentences": ["I get an *injection* in my arm today."]}
+        {"lemma": "injection", "pos": "noun", "details": {"plural": "injections"}, "sentences": ["I get an *injection* in my arm at the doctor's today."]}
         ],
         "nl": [
         {"lemma": "injectie", "pos": "noun", "details": {"article": "de", "plural": "injecties"}, "sentences": ["Ik krijg bij de dokter een *injectie* in mijn arm."]}
@@ -1025,7 +1025,7 @@
       "gloss": "fire department (noun)",
       "entries": {
         "en": [
-        {"lemma": "fire department", "pos": "noun", "details": {"uncountable": true}, "sentences": ["The *fire department* comes when the kitchen smokes."]}
+        {"lemma": "fire department", "pos": "noun", "details": {"uncountable": true}, "sentences": ["The *fire department* comes quickly when the kitchen is full of smoke."]}
         ],
         "nl": [
         {"lemma": "brandweer", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["De *brandweer* komt snel als de keuken vol rook staat."]}
@@ -1049,7 +1049,7 @@
       "gloss": "syringe (noun)",
       "entries": {
         "en": [
-        {"lemma": "syringe", "pos": "noun", "details": {"plural": "syringes"}, "sentences": ["The nurse holds a *syringe* and smiles."]}
+        {"lemma": "syringe", "pos": "noun", "details": {"plural": "syringes"}, "sentences": ["The nurse holds a *syringe* and smiles at the child."]}
         ],
         "nl": [
         {"lemma": "spuit", "pos": "noun", "details": {"article": "de", "plural": "spuiten"}, "sentences": ["De zuster houdt een *spuit* vast en lacht naar het kind."]}
@@ -1109,7 +1109,7 @@
       "gloss": "overdose (noun)",
       "entries": {
         "en": [
-        {"lemma": "overdose", "pos": "noun", "details": {"plural": "overdoses"}, "sentences": ["The nurse calls an ambulance after an *overdose*."]}
+        {"lemma": "overdose", "pos": "noun", "details": {"plural": "overdoses"}, "sentences": ["The nurse calls an ambulance after an *overdose* of pills."]}
         ],
         "nl": [
         {"lemma": "overdosis", "pos": "noun", "details": {"article": "de", "plural": "overdoses"}, "sentences": ["De verpleegster belt een ambulance na een *overdosis* pillen."]}
@@ -1169,7 +1169,7 @@
       "gloss": "nap (noun)",
       "entries": {
         "en": [
-        {"lemma": "nap", "pos": "noun", "details": {"plural": "naps"}, "sentences": ["My grandfather takes a short *nap* every afternoon."]}
+        {"lemma": "nap", "pos": "noun", "details": {"plural": "naps"}, "sentences": ["My grandfather takes a short *nap* on the couch every afternoon."]}
         ],
         "nl": [
         {"lemma": "dutje", "pos": "noun", "details": {"article": "het", "plural": "dutjes"}, "sentences": ["Mijn opa doet elke middag een kort *dutje* op de bank."]}
@@ -1349,7 +1349,7 @@
       "gloss": "scrape (noun)",
       "entries": {
         "en": [
-        {"lemma": "scrape", "pos": "noun", "details": {"plural": "scrapes"}, "sentences": ["After falling off my bike, I have a *scrape*."]}
+        {"lemma": "scrape", "pos": "noun", "details": {"plural": "scrapes"}, "sentences": ["After falling off my bike, I have a *scrape* on my knee."]}
         ],
         "nl": [
         {"lemma": "schram", "pos": "noun", "details": {"article": "de", "plural": "schrammen"}, "sentences": ["Na mijn val van de fiets heb ik een *schram* op mijn knie."]}
@@ -1385,7 +1385,7 @@
       "gloss": "home (institution)",
       "entries": {
         "en": [
-        {"lemma": "home", "pos": "noun", "details": {"note": "institution", "plural": "homes"}, "sentences": ["My grandfather lives in a nursing *home* nearby."]}
+        {"lemma": "home", "pos": "noun", "details": {"note": "institution", "plural": "homes"}, "sentences": ["My grandfather lives in a nursing *home* near the park."]}
         ],
         "nl": [
         {"lemma": "tehuis", "pos": "noun", "details": {"article": "het", "plural": "tehuizen"}, "sentences": ["Mijn opa woont in een verpleeg*tehuis* vlak bij het park."]}
@@ -1397,7 +1397,7 @@
       "gloss": "fit (adjective)",
       "entries": {
         "en": [
-        {"lemma": "fit", "pos": "adjective", "sentences": ["He runs every morning, so he is *fit*."]}
+        {"lemma": "fit", "pos": "adjective", "sentences": ["He runs every morning, so he is very *fit*."]}
         ],
         "nl": [
         {"lemma": "fit", "pos": "adjective", "sentences": ["Hij rent elke ochtend, dus hij is erg *fit*."]}
@@ -1409,7 +1409,7 @@
       "gloss": "antidote (noun)",
       "entries": {
         "en": [
-        {"lemma": "antidote", "pos": "noun", "details": {"plural": "antidotes"}, "sentences": ["After the snake bite, he gets an *antidote*."]}
+        {"lemma": "antidote", "pos": "noun", "details": {"plural": "antidotes"}, "sentences": ["After the snake bite, he gets an *antidote* from the doctor."]}
         ],
         "nl": [
         {"lemma": "tegengif", "pos": "noun", "details": {"article": "het", "plural": "tegengiffen"}, "sentences": ["Na de slangenbeet krijgt hij een *tegengif* van de dokter."]}
@@ -1421,7 +1421,7 @@
       "gloss": "trauma (noun)",
       "entries": {
         "en": [
-        {"lemma": "trauma", "pos": "noun", "details": {"plural": "traumas"}, "sentences": ["Since the car crash, he has a *trauma*."]}
+        {"lemma": "trauma", "pos": "noun", "details": {"plural": "traumas"}, "sentences": ["Since the car crash, he has a *trauma* about driving."]}
         ],
         "nl": [
         {"lemma": "trauma", "pos": "noun", "details": {"article": "het", "plural": "trauma's"}, "sentences": ["Sinds het auto-ongeluk heeft hij een *trauma* over autorijden."]}
@@ -1481,7 +1481,7 @@
       "gloss": "remedy (noun)",
       "entries": {
         "en": [
-        {"lemma": "remedy", "pos": "noun", "details": {"plural": "remedies"}, "sentences": ["Honey with warm milk is an old *remedy*."]}
+        {"lemma": "remedy", "pos": "noun", "details": {"plural": "remedies"}, "sentences": ["Honey with warm milk is an old *remedy* for coughs."]}
         ],
         "nl": [
         {"lemma": "geneesmiddel", "pos": "noun", "details": {"article": "het", "plural": "geneesmiddelen"}, "sentences": ["Honing met warme melk is een oud *geneesmiddel* tegen hoest."]}
@@ -1493,7 +1493,7 @@
       "gloss": "vitamin (noun)",
       "entries": {
         "en": [
-        {"lemma": "vitamin", "pos": "noun", "details": {"plural": "vitamins"}, "sentences": ["In winter, I take a *vitamin* every day."]}
+        {"lemma": "vitamin", "pos": "noun", "details": {"plural": "vitamins"}, "sentences": ["In winter, I take a *vitamin* because there is little sun."]}
         ],
         "nl": [
         {"lemma": "vitamine", "pos": "noun", "details": {"article": "de", "plural": "vitamines"}, "sentences": ["In de winter slik ik een *vitamine*, want er is weinig zon."]}
@@ -1565,7 +1565,7 @@
       "gloss": "hallucination (noun)",
       "entries": {
         "en": [
-        {"lemma": "hallucination", "pos": "noun", "details": {"plural": "hallucinations"}, "sentences": ["With a high fever, he has a *hallucination*."]}
+        {"lemma": "hallucination", "pos": "noun", "details": {"plural": "hallucinations"}, "sentences": ["With a high fever, he has a *hallucination* about spiders."]}
         ],
         "nl": [
         {"lemma": "hallucinatie", "pos": "noun", "details": {"article": "de", "plural": "hallucinaties"}, "sentences": ["Met hoge koorts heeft hij een *hallucinatie* over spinnen."]}
@@ -1685,7 +1685,7 @@
       "gloss": "drool (verb)",
       "entries": {
         "en": [
-        {"lemma": "to drool", "pos": "verb", "details": {"past": "drooled", "participle": "drooled"}, "sentences": ["The big dog *drools* on my shoes."]}
+        {"lemma": "to drool", "pos": "verb", "details": {"past": "drooled", "participle": "drooled"}, "sentences": ["The big dog *drools* on my shoes while I eat."]}
         ],
         "nl": [
         {"lemma": "kwijlen", "pos": "verb", "details": {"pastSingular": "kwijlde", "pastPlural": "kwijlden", "participle": "gekwijld", "auxiliary": "hebben"}, "sentences": ["De grote hond *kwijlt* op mijn schoenen terwijl ik eet."]}
@@ -1697,7 +1697,7 @@
       "gloss": "alive (adjective)",
       "entries": {
         "en": [
-        {"lemma": "alive", "pos": "adjective", "sentences": ["The fisherman keeps the fish *alive* in water."]}
+        {"lemma": "alive", "pos": "adjective", "sentences": ["The fisherman keeps the fish *alive* in a bucket of water."]}
         ],
         "nl": [
         {"lemma": "levend", "pos": "adjective", "sentences": ["De visser houdt de vis *levend* in een emmer water."]}
@@ -1709,7 +1709,7 @@
       "gloss": "adrenaline (noun)",
       "entries": {
         "en": [
-        {"lemma": "adrenaline", "pos": "noun", "details": {"uncountable": true}, "sentences": ["Before the jump, I feel the *adrenaline* everywhere."]}
+        {"lemma": "adrenaline", "pos": "noun", "details": {"uncountable": true}, "sentences": ["Before the jump, I feel the *adrenaline* in my whole body."]}
         ],
         "nl": [
         {"lemma": "adrenaline", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Voor de sprong voel ik de *adrenaline* in mijn hele lijf."]}
@@ -1745,7 +1745,7 @@
       "gloss": "inject (verb)",
       "entries": {
         "en": [
-        {"lemma": "to inject", "pos": "verb", "details": {"past": "injected", "participle": "injected"}, "sentences": ["At the clinic, the doctor *injects* my arm."]}
+        {"lemma": "to inject", "pos": "verb", "details": {"past": "injected", "participle": "injected"}, "sentences": ["At the clinic, the doctor *injects* medicine into my arm."]}
         ],
         "nl": [
         {"lemma": "injecteren", "pos": "verb", "details": {"pastSingular": "injecteerde", "pastPlural": "injecteerden", "participle": "geïnjecteerd", "auxiliary": "hebben"}, "sentences": ["In de kliniek *injecteert* de dokter medicijn in mijn arm."]}
@@ -1781,7 +1781,7 @@
       "gloss": "concussion (noun)",
       "entries": {
         "en": [
-        {"lemma": "concussion", "pos": "noun", "details": {"plural": "concussions"}, "sentences": ["After a football clash, he has a *concussion*."]}
+        {"lemma": "concussion", "pos": "noun", "details": {"plural": "concussions"}, "sentences": ["After a blow to his head at football, he has a *concussion*."]}
         ],
         "nl": [
         {"lemma": "hersenschudding", "pos": "noun", "details": {"article": "de", "plural": "hersenschuddingen"}, "sentences": ["Na een klap tegen zijn hoofd bij voetbal heeft hij een *hersenschudding*."]}
@@ -1793,7 +1793,7 @@
       "gloss": "brace (noun)",
       "entries": {
         "en": [
-        {"lemma": "brace", "pos": "noun", "details": {"plural": "braces"}, "sentences": ["My daughter wears a *brace* on her teeth."]}
+        {"lemma": "brace", "pos": "noun", "details": {"plural": "braces"}, "sentences": ["My daughter wears a *brace* on her teeth for two years."]}
         ],
         "nl": [
         {"lemma": "beugel", "pos": "noun", "details": {"article": "de", "plural": "beugels"}, "sentences": ["Mijn dochter draagt twee jaar een *beugel* om haar tanden."]}
@@ -1805,7 +1805,7 @@
       "gloss": "vital (adjective)",
       "entries": {
         "en": [
-        {"lemma": "vital", "pos": "adjective", "sentences": ["My grandfather is eighty, but still *vital*."]}
+        {"lemma": "vital", "pos": "adjective", "sentences": ["My grandfather is eighty, but still *vital* and walks daily."]}
         ],
         "nl": [
         {"lemma": "vitaal", "pos": "adjective", "sentences": ["Mijn opa is tachtig, maar nog *vitaal* en wandelt dagelijks."]}
@@ -1829,7 +1829,7 @@
       "gloss": "burn (noun)",
       "entries": {
         "en": [
-        {"lemma": "burn", "pos": "noun", "details": {"plural": "burns"}, "sentences": ["He has a painful *burn* from the hot oven."]}
+        {"lemma": "burn", "pos": "noun", "details": {"plural": "burns"}, "sentences": ["He has a painful *burn* on his hand from the hot oven."]}
         ],
         "nl": [
         {"lemma": "brandwond", "pos": "noun", "details": {"article": "de", "plural": "brandwonden"}, "sentences": ["Hij heeft een pijnlijke *brandwond* aan zijn hand van de oven."]}
@@ -1841,10 +1841,10 @@
       "gloss": "scan (noun)",
       "entries": {
         "en": [
-        {"lemma": "scan", "pos": "noun", "details": {"plural": "scans"}, "sentences": ["At the hospital, I get a *scan* today."]}
+        {"lemma": "scan", "pos": "noun", "details": {"plural": "scans"}, "sentences": ["At the hospital, I get a *scan* of my head today."]}
         ],
         "nl": [
-        {"lemma": "scan", "pos": "noun", "details": {"article": "de", "plural": "scans"}, "sentences": ["In het ziekenhuis krijg ik een *scan* van mijn hoofd."]}
+        {"lemma": "scan", "pos": "noun", "details": {"article": "de", "plural": "scans"}, "sentences": ["In het ziekenhuis krijg ik vandaag een *scan* van mijn hoofd."]}
         ]
       }
     },
@@ -1865,7 +1865,7 @@
       "gloss": "bump (noun)",
       "entries": {
         "en": [
-        {"lemma": "bump", "pos": "noun", "details": {"plural": "bumps"}, "sentences": ["After hitting the shelf, he has a *bump*."]}
+        {"lemma": "bump", "pos": "noun", "details": {"plural": "bumps"}, "sentences": ["After hitting the shelf, he has a *bump* on his head."]}
         ],
         "nl": [
         {"lemma": "bult", "pos": "noun", "details": {"article": "de", "plural": "bulten"}, "sentences": ["Na de klap tegen de plank heeft hij een *bult* op zijn hoofd."]}
@@ -1913,7 +1913,7 @@
       "gloss": "immune (adjective)",
       "entries": {
         "en": [
-        {"lemma": "immune", "pos": "adjective", "sentences": ["After the illness, she is *immune* to it."]}
+        {"lemma": "immune", "pos": "adjective", "sentences": ["After the illness, she is *immune* and does not get it again."]}
         ],
         "nl": [
         {"lemma": "immuun", "pos": "adjective", "sentences": ["Na de ziekte is ze *immuun* en krijgt het niet weer."]}
@@ -1973,7 +1973,7 @@
       "gloss": "disabled (adjective)",
       "entries": {
         "en": [
-        {"lemma": "disabled", "pos": "adjective", "sentences": ["The shop has parking for *disabled* people."]}
+        {"lemma": "disabled", "pos": "adjective", "sentences": ["The shop has special parking for *disabled* people."]}
         ],
         "nl": [
         {"lemma": "gehandicapt", "pos": "adjective", "sentences": ["De winkel heeft een speciale parkeerplaats voor *gehandicapte* mensen."]}
@@ -2009,7 +2009,7 @@
       "gloss": "donor (noun)",
       "entries": {
         "en": [
-        {"lemma": "donor", "pos": "noun", "details": {"plural": "donors"}, "sentences": ["My neighbour is a blood *donor* and gives often."]}
+        {"lemma": "donor", "pos": "noun", "details": {"plural": "donors"}, "sentences": ["My neighbour is a blood *donor* and gives blood twice a year."]}
         ],
         "nl": [
         {"lemma": "donor", "pos": "noun", "details": {"article": "de", "plural": "donoren"}, "sentences": ["Mijn buurman is bloed*donor* en geeft twee keer per jaar bloed."]}
@@ -2021,7 +2021,7 @@
       "gloss": "swell (verb)",
       "entries": {
         "en": [
-        {"lemma": "to swell", "pos": "verb", "details": {"past": "swelled", "participle": "swollen"}, "sentences": ["After the wasp sting, my foot *swells* up."]}
+        {"lemma": "to swell", "pos": "verb", "details": {"past": "swelled", "participle": "swollen"}, "sentences": ["After the wasp sting, my foot *swells* up and turns red."]}
         ],
         "nl": [
         {"lemma": "zwellen", "pos": "verb", "details": {"pastSingular": "zwol", "pastPlural": "zwollen", "participle": "gezwollen", "auxiliary": "zijn"}, "sentences": ["Na de wespensteek *zwelt* mijn voet op en wordt rood."]}
@@ -2033,7 +2033,7 @@
       "gloss": "adhesive bandage (noun)",
       "entries": {
         "en": [
-        {"lemma": "adhesive bandage", "pos": "noun", "details": {"plural": "adhesive bandages"}, "sentences": ["I put an *adhesive bandage* on my finger."]}
+        {"lemma": "adhesive bandage", "pos": "noun", "details": {"plural": "adhesive bandages"}, "sentences": ["I put an *adhesive bandage* on the small cut in my finger."]}
         ],
         "nl": [
         {"lemma": "pleister", "pos": "noun", "details": {"article": "de", "plural": "pleisters"}, "sentences": ["Ik plak een *pleister* op de kleine snee in mijn vinger."]}
@@ -2045,7 +2045,7 @@
       "gloss": "cramp (noun)",
       "entries": {
         "en": [
-        {"lemma": "cramp", "pos": "noun", "details": {"plural": "cramps"}, "sentences": ["While swimming in the lake, I get a *cramp*."]}
+        {"lemma": "cramp", "pos": "noun", "details": {"plural": "cramps"}, "sentences": ["While swimming in the lake, I get a *cramp* in my leg."]}
         ],
         "nl": [
         {"lemma": "kramp", "pos": "noun", "details": {"article": "de", "plural": "krampen"}, "sentences": ["Tijdens het zwemmen in het meer krijg ik *kramp* in mijn been."]}
@@ -2069,7 +2069,7 @@
       "gloss": "handicap (noun)",
       "entries": {
         "en": [
-        {"lemma": "handicap", "pos": "noun", "details": {"plural": "handicaps"}, "sentences": ["Despite his *handicap*, he works in an office."]}
+        {"lemma": "handicap", "pos": "noun", "details": {"plural": "handicaps"}, "sentences": ["Despite his *handicap*, he works every day in an office."]}
         ],
         "nl": [
         {"lemma": "handicap", "pos": "noun", "details": {"article": "de", "plural": "handicaps"}, "sentences": ["Ondanks zijn *handicap* werkt hij elke dag op een kantoor."]}
@@ -2117,7 +2117,7 @@
       "gloss": "drip (noun)",
       "entries": {
         "en": [
-        {"lemma": "drip", "pos": "noun", "details": {"plural": "drips"}, "sentences": ["In the hospital bed, he has a *drip*."]}
+        {"lemma": "drip", "pos": "noun", "details": {"plural": "drips"}, "sentences": ["In the hospital bed, he has a *drip* in his arm."]}
         ],
         "nl": [
         {"lemma": "infuus", "pos": "noun", "details": {"article": "het", "plural": "infusen"}, "sentences": ["In het ziekenhuisbed heeft hij een *infuus* in zijn arm."]}
@@ -2201,7 +2201,7 @@
       "gloss": "sleepy (adjective)",
       "entries": {
         "en": [
-        {"lemma": "sleepy", "pos": "adjective", "sentences": ["After a big lunch, I am always *sleepy*."]}
+        {"lemma": "sleepy", "pos": "adjective", "sentences": ["After a big lunch, I am always *sleepy* in the afternoon."]}
         ],
         "nl": [
         {"lemma": "slaperig", "pos": "adjective", "sentences": ["Na een grote lunch ben ik 's middags altijd *slaperig*."]}
@@ -2261,7 +2261,7 @@
       "gloss": "cardiac arrest (noun)",
       "entries": {
         "en": [
-        {"lemma": "cardiac arrest", "pos": "noun", "details": {"plural": "cardiac arrests"}, "sentences": ["A man has a *cardiac arrest* at the station."]}
+        {"lemma": "cardiac arrest", "pos": "noun", "details": {"plural": "cardiac arrests"}, "sentences": ["A man has a *cardiac arrest* at the station and a stranger helps."]}
         ],
         "nl": [
         {"lemma": "hartstilstand", "pos": "noun", "details": {"article": "de", "plural": "hartstilstanden"}, "sentences": ["De man krijgt een *hartstilstand* op het station en een vreemde helpt."]}
