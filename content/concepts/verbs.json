@@ -5,10 +5,10 @@
       "gloss": "be (exist, state of being)",
       "entries": {
         "en": [
-        {"lemma": "to be", "pos": "verb", "details": {"past": "was/were", "participle": "been", "present": {"I": "am", "you": "are", "he": "is", "we": "are"}}, "sentences": ["I *am* at home."]}
+        {"lemma": "to be", "pos": "verb", "details": {"past": "was/were", "participle": "been", "present": {"I": "am", "you": "are", "he": "is", "we": "are"}}, "sentences": ["I *am* at home because I am sick."]}
         ],
         "nl": [
-        {"lemma": "zijn", "pos": "verb", "details": {"note": "het werkwoord", "pastSingular": "was", "pastPlural": "waren", "participle": "geweest", "auxiliary": "zijn", "present": {"ik": "ben", "jij": "bent", "hij": "is", "wij": "zijn"}}, "sentences": ["Ik *ben* thuis."]}
+        {"lemma": "zijn", "pos": "verb", "details": {"note": "het werkwoord", "pastSingular": "was", "pastPlural": "waren", "participle": "geweest", "auxiliary": "zijn", "present": {"ik": "ben", "jij": "bent", "hij": "is", "wij": "zijn"}}, "sentences": ["Ik *ben* thuis omdat ik ziek ben."]}
         ]
       }
     },
@@ -17,10 +17,10 @@
       "gloss": "have (possess)",
       "entries": {
         "en": [
-        {"lemma": "to have", "pos": "verb", "details": {"past": "had", "participle": "had", "present": {"I": "have", "you": "have", "he": "has", "we": "have"}}, "sentences": ["I *have* a dog."]}
+        {"lemma": "to have", "pos": "verb", "details": {"past": "had", "participle": "had", "present": {"I": "have", "you": "have", "he": "has", "we": "have"}}, "sentences": ["I *have* a dog that likes long walks."]}
         ],
         "nl": [
-        {"lemma": "hebben", "pos": "verb", "details": {"pastSingular": "had", "pastPlural": "hadden", "participle": "gehad", "auxiliary": "hebben", "present": {"ik": "heb", "jij": "hebt", "hij": "heeft", "wij": "hebben"}}, "sentences": ["Ik *heb* een hond."]}
+        {"lemma": "hebben", "pos": "verb", "details": {"pastSingular": "had", "pastPlural": "hadden", "participle": "gehad", "auxiliary": "hebben", "present": {"ik": "heb", "jij": "hebt", "hij": "heeft", "wij": "hebben"}}, "sentences": ["Ik *heb* een hond die van lange wandelingen houdt."]}
         ]
       }
     },
@@ -29,10 +29,10 @@
       "gloss": "go (travel to a place)",
       "entries": {
         "en": [
-        {"lemma": "to go", "pos": "verb", "details": {"past": "went", "participle": "gone"}, "sentences": ["We *go* to school."]}
+        {"lemma": "to go", "pos": "verb", "details": {"past": "went", "participle": "gone"}, "sentences": ["We *go* to school by bike every morning."]}
         ],
         "nl": [
-        {"lemma": "gaan", "pos": "verb", "details": {"pastSingular": "ging", "pastPlural": "gingen", "participle": "gegaan", "auxiliary": "zijn", "present": {"ik": "ga", "jij": "gaat", "hij": "gaat", "wij": "gaan"}}, "sentences": ["Wij *gaan* naar school."]}
+        {"lemma": "gaan", "pos": "verb", "details": {"pastSingular": "ging", "pastPlural": "gingen", "participle": "gegaan", "auxiliary": "zijn", "present": {"ik": "ga", "jij": "gaat", "hij": "gaat", "wij": "gaan"}}, "sentences": ["Wij *gaan* elke ochtend op de fiets naar school."]}
         ]
       }
     },
@@ -41,10 +41,10 @@
       "gloss": "come (move toward the speaker)",
       "entries": {
         "en": [
-        {"lemma": "to come", "pos": "verb", "details": {"past": "came", "participle": "come"}, "sentences": ["He *comes* from Amsterdam."]}
+        {"lemma": "to come", "pos": "verb", "details": {"past": "came", "participle": "come"}, "sentences": ["He *comes* from Amsterdam and speaks with an accent."]}
         ],
         "nl": [
-        {"lemma": "komen", "pos": "verb", "details": {"pastSingular": "kwam", "pastPlural": "kwamen", "participle": "gekomen", "auxiliary": "zijn"}, "sentences": ["Hij *komt* uit Amsterdam."]}
+        {"lemma": "komen", "pos": "verb", "details": {"pastSingular": "kwam", "pastPlural": "kwamen", "participle": "gekomen", "auxiliary": "zijn"}, "sentences": ["Hij *komt* uit Amsterdam en praat met een accent."]}
         ]
       }
     },
@@ -53,10 +53,10 @@
       "gloss": "see (perceive with the eyes)",
       "entries": {
         "en": [
-        {"lemma": "to see", "pos": "verb", "details": {"past": "saw", "participle": "seen"}, "sentences": ["I *see* a bird."]}
+        {"lemma": "to see", "pos": "verb", "details": {"past": "saw", "participle": "seen"}, "sentences": ["I *see* a small bird in the tree."]}
         ],
         "nl": [
-        {"lemma": "zien", "pos": "verb", "details": {"pastSingular": "zag", "pastPlural": "zagen", "participle": "gezien", "auxiliary": "hebben"}, "sentences": ["Ik *zie* een vogel."]}
+        {"lemma": "zien", "pos": "verb", "details": {"pastSingular": "zag", "pastPlural": "zagen", "participle": "gezien", "auxiliary": "hebben"}, "sentences": ["Ik *zie* een klein vogeltje in de boom."]}
         ]
       }
     },
@@ -65,10 +65,10 @@
       "gloss": "hear (perceive with the ears)",
       "entries": {
         "en": [
-        {"lemma": "to hear", "pos": "verb", "details": {"past": "heard", "participle": "heard"}, "sentences": ["I *hear* music."]}
+        {"lemma": "to hear", "pos": "verb", "details": {"past": "heard", "participle": "heard"}, "sentences": ["I *hear* loud music from the room next door."]}
         ],
         "nl": [
-        {"lemma": "horen", "pos": "verb", "details": {"pastSingular": "hoorde", "pastPlural": "hoorden", "participle": "gehoord", "auxiliary": "hebben"}, "sentences": ["Ik *hoor* muziek."]}
+        {"lemma": "horen", "pos": "verb", "details": {"pastSingular": "hoorde", "pastPlural": "hoorden", "participle": "gehoord", "auxiliary": "hebben"}, "sentences": ["Ik *hoor* luide muziek uit de kamer hiernaast."]}
         ]
       }
     },
@@ -77,10 +77,10 @@
       "gloss": "eat (consume food)",
       "entries": {
         "en": [
-        {"lemma": "to eat", "pos": "verb", "details": {"past": "ate", "participle": "eaten"}, "sentences": ["We *eat* bread."]}
+        {"lemma": "to eat", "pos": "verb", "details": {"past": "ate", "participle": "eaten"}, "sentences": ["We *eat* fresh bread with cheese for lunch."]}
         ],
         "nl": [
-        {"lemma": "eten", "pos": "verb", "details": {"pastSingular": "at", "pastPlural": "aten", "participle": "gegeten", "auxiliary": "hebben"}, "sentences": ["Wij *eten* brood."]}
+        {"lemma": "eten", "pos": "verb", "details": {"pastSingular": "at", "pastPlural": "aten", "participle": "gegeten", "auxiliary": "hebben"}, "sentences": ["Wij *eten* vers brood met kaas als lunch."]}
         ]
       }
     },
@@ -89,10 +89,10 @@
       "gloss": "drink (consume liquid)",
       "entries": {
         "en": [
-        {"lemma": "to drink", "pos": "verb", "details": {"past": "drank", "participle": "drunk"}, "sentences": ["I *drink* water."]}
+        {"lemma": "to drink", "pos": "verb", "details": {"past": "drank", "participle": "drunk"}, "sentences": ["I *drink* a glass of water after running."]}
         ],
         "nl": [
-        {"lemma": "drinken", "pos": "verb", "details": {"pastSingular": "dronk", "pastPlural": "dronken", "participle": "gedronken", "auxiliary": "hebben"}, "sentences": ["Ik *drink* water."]}
+        {"lemma": "drinken", "pos": "verb", "details": {"pastSingular": "dronk", "pastPlural": "dronken", "participle": "gedronken", "auxiliary": "hebben"}, "sentences": ["Ik *drink* een glas water na het hardlopen."]}
         ]
       }
     },
