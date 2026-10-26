@@ -5,10 +5,10 @@
       "gloss": "it (pronoun)",
       "entries": {
         "en": [
-        {"lemma": "it", "pos": "pronoun", "sentences": ["It is cold today."]}
+        {"lemma": "it", "pos": "pronoun", "sentences": ["*It* is cold today, so wear a scarf."]}
         ],
         "nl": [
-        {"lemma": "het", "pos": "pronoun", "sentences": ["Het is vandaag koud."]}
+        {"lemma": "het", "pos": "pronoun", "sentences": ["*Het* is vandaag koud, dus draag een sjaal."]}
         ]
       }
     },
@@ -17,11 +17,11 @@
       "gloss": "that (pronoun)",
       "entries": {
         "en": [
-        {"lemma": "that", "pos": "pronoun", "details": {"note": "pronoun"}, "sentences": ["I do not know that.","That man is my friend."]}
+        {"lemma": "that", "pos": "pronoun", "details": {"note": "pronoun"}, "sentences": ["I do not know *that* about my new teacher.", "*That* man at the bus stop is my friend."]}
         ],
         "nl": [
-        {"lemma": "dat", "pos": "pronoun", "details": {"note": "bij het-woorden"}, "sentences": ["Dat weet ik niet."]},
-        {"lemma": "die", "pos": "pronoun", "details": {"note": "bij de-woorden en meervoud"}, "sentences": ["Die man is mijn vriend."]}
+        {"lemma": "dat", "pos": "pronoun", "details": {"note": "bij het-woorden"}, "sentences": ["*Dat* weet ik niet van mijn nieuwe leraar."]},
+        {"lemma": "die", "pos": "pronoun", "details": {"note": "bij de-woorden en meervoud"}, "sentences": ["*Die* man bij de bushalte is mijn vriend."]}
         ]
       }
     },
@@ -30,11 +30,11 @@
       "gloss": "they",
       "entries": {
         "en": [
-        {"lemma": "they", "pos": "pronoun", "sentences": ["They live in Utrecht."]}
+        {"lemma": "they", "pos": "pronoun", "sentences": ["*They* live in Utrecht near the old canal."]}
         ],
         "nl": [
-        {"lemma": "zij", "pos": "pronoun", "details": {"note": "nadruk, meervoud onderwerp"}, "sentences": ["Zij wonen in Utrecht."]},
-        {"lemma": "ze", "pos": "pronoun", "details": {"note": "gewoon, meervoud onderwerp"}, "sentences": ["Ze wonen in Utrecht."]}
+        {"lemma": "zij", "pos": "pronoun", "details": {"note": "nadruk, meervoud onderwerp"}, "sentences": ["*Zij* wonen in Utrecht, vlak bij de oude gracht."]},
+        {"lemma": "ze", "pos": "pronoun", "details": {"note": "gewoon, meervoud onderwerp"}, "sentences": ["*Ze* wonen in Utrecht, vlak bij de oude gracht."]}
         ]
       }
     },
@@ -43,10 +43,10 @@
       "gloss": "my (determiner)",
       "entries": {
         "en": [
-        {"lemma": "my", "pos": "determiner", "sentences": ["This is my house."]}
+        {"lemma": "my", "pos": "determiner", "sentences": ["This is *my* house with the red door."]}
         ],
         "nl": [
-        {"lemma": "mijn", "pos": "determiner", "sentences": ["Dit is mijn huis."]}
+        {"lemma": "mijn", "pos": "determiner", "sentences": ["Dit is *mijn* huis met de rode deur."]}
         ]
       }
     },
@@ -55,10 +55,10 @@
       "gloss": "you (formal)",
       "entries": {
         "en": [
-        {"lemma": "you", "pos": "pronoun", "details": {"note": "formal"}, "sentences": ["Can I help you?"]}
+        {"lemma": "you", "pos": "pronoun", "details": {"note": "formal"}, "sentences": ["Excuse me, can I help *you* with your bags?"]}
         ],
         "nl": [
-        {"lemma": "u", "pos": "pronoun", "sentences": ["Kan ik u helpen?"]}
+        {"lemma": "u", "pos": "pronoun", "sentences": ["Pardon, kan ik *u* helpen met uw tassen?"]}
         ]
       }
     },
@@ -67,11 +67,11 @@
       "gloss": "this (pronoun)",
       "entries": {
         "en": [
-        {"lemma": "this", "pos": "pronoun", "sentences": ["This is good.","This man is nice."]}
+        {"lemma": "this", "pos": "pronoun", "sentences": ["*This* is good, thank you for the soup.", "*This* man in the shop is really nice."]}
         ],
         "nl": [
-        {"lemma": "dit", "pos": "pronoun", "details": {"note": "bij het-woorden"}, "sentences": ["Dit is goed."]},
-        {"lemma": "deze", "pos": "determiner", "details": {"note": "bij de-woorden en meervoud"}, "sentences": ["Deze man is aardig."]}
+        {"lemma": "dit", "pos": "pronoun", "details": {"note": "bij het-woorden"}, "sentences": ["*Dit* is goed, bedankt voor de soep."]},
+        {"lemma": "deze", "pos": "determiner", "details": {"note": "bij de-woorden en meervoud"}, "sentences": ["*Deze* man in de winkel is echt aardig."]}
         ]
       }
     },
@@ -80,10 +80,10 @@
       "gloss": "him (pronoun)",
       "entries": {
         "en": [
-        {"lemma": "him", "pos": "pronoun", "sentences": ["I see him."]}
+        {"lemma": "him", "pos": "pronoun", "sentences": ["I see *him* at the station every morning."]}
         ],
         "nl": [
-        {"lemma": "hem", "pos": "pronoun", "sentences": ["Ik zie hem."]}
+        {"lemma": "hem", "pos": "pronoun", "sentences": ["Ik zie *hem* elke ochtend op het station."]}
         ]
       }
     },
@@ -92,10 +92,10 @@
       "gloss": "no (not any)",
       "entries": {
         "en": [
-        {"lemma": "no", "pos": "determiner", "details": {"note": "not any"}, "sentences": ["I have no money."]}
+        {"lemma": "no", "pos": "determiner", "details": {"note": "not any"}, "sentences": ["Sorry, I have *no* money for the bus."]}
         ],
         "nl": [
-        {"lemma": "geen", "pos": "determiner", "sentences": ["Ik heb geen geld."]}
+        {"lemma": "geen", "pos": "determiner", "sentences": ["Sorry, ik heb *geen* geld voor de bus."]}
         ]
       }
     },
@@ -104,10 +104,10 @@
       "gloss": "us (pronoun)",
       "entries": {
         "en": [
-        {"lemma": "us", "pos": "pronoun", "sentences": ["He sees us."]}
+        {"lemma": "us", "pos": "pronoun", "sentences": ["He sees *us* waiting at the bus stop."]}
         ],
         "nl": [
-        {"lemma": "ons", "pos": "pronoun", "details": {"note": "als lijdend voorwerp"}, "sentences": ["Hij ziet ons."]}
+        {"lemma": "ons", "pos": "pronoun", "details": {"note": "als lijdend voorwerp"}, "sentences": ["Hij ziet *ons* wachten bij de bushalte."]}
         ]
       }
     },
@@ -116,10 +116,10 @@
       "gloss": "our (het-words)",
       "entries": {
         "en": [
-        {"lemma": "our", "pos": "determiner", "details": {"note": "het-words"}, "sentences": ["Our house is big."]}
+        {"lemma": "our", "pos": "determiner", "details": {"note": "het-words"}, "sentences": ["*Our* house is big, with a green garden."]}
         ],
         "nl": [
-        {"lemma": "ons", "pos": "determiner", "details": {"note": "bezittelijk"}, "sentences": ["Ons huis is groot."]}
+        {"lemma": "ons", "pos": "determiner", "details": {"note": "bezittelijk"}, "sentences": ["*Ons* huis is groot, met een groene tuin."]}
         ]
       }
     },
@@ -128,10 +128,10 @@
       "gloss": "her (pronoun)",
       "entries": {
         "en": [
-        {"lemma": "her", "pos": "pronoun", "details": {"note": "as an object"}, "sentences": ["I see her."]}
+        {"lemma": "her", "pos": "pronoun", "details": {"note": "as an object"}, "sentences": ["I see *her* at the library every Friday."]}
         ],
         "nl": [
-        {"lemma": "haar", "pos": "pronoun", "details": {"note": "als lijdend voorwerp"}, "sentences": ["Ik zie haar."]}
+        {"lemma": "haar", "pos": "pronoun", "details": {"note": "als lijdend voorwerp"}, "sentences": ["Ik zie *haar* elke vrijdag in de bibliotheek."]}
         ]
       }
     },
@@ -140,10 +140,10 @@
       "gloss": "her (possessive)",
       "entries": {
         "en": [
-        {"lemma": "her", "pos": "determiner", "details": {"note": "possessive"}, "sentences": ["Her house is big."]}
+        {"lemma": "her", "pos": "determiner", "details": {"note": "possessive"}, "sentences": ["*Her* house is big, with a small pond."]}
         ],
         "nl": [
-        {"lemma": "haar", "pos": "determiner", "details": {"note": "bezittelijk"}, "sentences": ["Haar huis is groot."]}
+        {"lemma": "haar", "pos": "determiner", "details": {"note": "bezittelijk"}, "sentences": ["*Haar* huis is groot, met een kleine vijver."]}
         ]
       }
     },
@@ -152,11 +152,11 @@
       "gloss": "me",
       "entries": {
         "en": [
-        {"lemma": "me", "pos": "pronoun", "sentences": ["He sees me.", "He gave it to me."]}
+        {"lemma": "me", "pos": "pronoun", "sentences": ["He sees *me* from across the busy street.", "He gives the keys to *me* at the door."]}
         ],
         "nl": [
-        {"lemma": "mij", "pos": "pronoun", "details": {"note": "nadruk"}, "sentences": ["Hij gaf het aan mij."]},
-        {"lemma": "me", "pos": "pronoun", "details": {"note": "gewoon"}, "sentences": ["Hij ziet me."]}
+        {"lemma": "mij", "pos": "pronoun", "details": {"note": "nadruk"}, "sentences": ["Hij geeft de sleutels aan *mij* bij de deur."]},
+        {"lemma": "me", "pos": "pronoun", "details": {"note": "gewoon"}, "sentences": ["Hij ziet *me* vanaf de drukke straat."]}
         ]
       }
     },
@@ -165,10 +165,10 @@
       "gloss": "you (plural)",
       "entries": {
         "en": [
-        {"lemma": "you", "pos": "pronoun", "details": {"note": "plural"}, "sentences": ["You are my friends."]}
+        {"lemma": "you", "pos": "pronoun", "details": {"note": "plural"}, "sentences": ["*You* are my friends, so come and eat."]}
         ],
         "nl": [
-        {"lemma": "jullie", "pos": "pronoun", "sentences": ["Jullie zijn mijn vrienden."]}
+        {"lemma": "jullie", "pos": "pronoun", "sentences": ["*Jullie* zijn mijn vrienden, dus kom eten."]}
         ]
       }
     },
@@ -177,10 +177,10 @@
       "gloss": "something (pronoun)",
       "entries": {
         "en": [
-        {"lemma": "something", "pos": "pronoun", "sentences": ["I want something."]}
+        {"lemma": "something", "pos": "pronoun", "sentences": ["I want *something* sweet after the long walk."]}
         ],
         "nl": [
-        {"lemma": "iets", "pos": "pronoun", "sentences": ["Ik wil iets."]}
+        {"lemma": "iets", "pos": "pronoun", "sentences": ["Ik wil *iets* zoets na de lange wandeling."]}
         ]
       }
     },
@@ -189,10 +189,10 @@
       "gloss": "everything (pronoun)",
       "entries": {
         "en": [
-        {"lemma": "everything", "pos": "pronoun", "sentences": ["Everything is ready."]}
+        {"lemma": "everything", "pos": "pronoun", "sentences": ["*Everything* is ready for the party tonight."]}
         ],
         "nl": [
-        {"lemma": "alles", "pos": "pronoun", "sentences": ["Alles is klaar."]}
+        {"lemma": "alles", "pos": "pronoun", "sentences": ["*Alles* is klaar voor het feest vanavond."]}
         ]
       }
     },
@@ -201,11 +201,11 @@
       "gloss": "you (object)",
       "entries": {
         "en": [
-        {"lemma": "you", "pos": "pronoun", "details": {"note": "object"}, "sentences": ["I see you."]}
+        {"lemma": "you", "pos": "pronoun", "details": {"note": "object"}, "sentences": ["I see *you* behind the big tree."]}
         ],
         "nl": [
-        {"lemma": "jou", "pos": "pronoun", "sentences": ["Ik zie jou."]},
-        {"lemma": "je", "pos": "pronoun", "details": {"note": "gewoon, als lijdend voorwerp"}, "sentences": ["Ik zie je."]}
+        {"lemma": "jou", "pos": "pronoun", "sentences": ["Ik zie *jou* achter die grote boom."]},
+        {"lemma": "je", "pos": "pronoun", "details": {"note": "gewoon, als lijdend voorwerp"}, "sentences": ["Ik zie *je* achter die grote boom."]}
         ]
       }
     },
@@ -214,10 +214,10 @@
       "gloss": "nothing (pronoun)",
       "entries": {
         "en": [
-        {"lemma": "nothing", "pos": "pronoun", "details": {"note": "standard"}, "sentences": ["There is nothing here."]}
+        {"lemma": "nothing", "pos": "pronoun", "details": {"note": "standard"}, "sentences": ["There is *nothing* in the fridge this morning."]}
         ],
         "nl": [
-        {"lemma": "niets", "pos": "pronoun", "sentences": ["Er is hier niets."]}
+        {"lemma": "niets", "pos": "pronoun", "sentences": ["Er is vanochtend *niets* in de koelkast."]}
         ]
       }
     },
@@ -226,10 +226,10 @@
       "gloss": "someone (pronoun)",
       "entries": {
         "en": [
-        {"lemma": "someone", "pos": "pronoun", "sentences": ["Someone is at the door."]}
+        {"lemma": "someone", "pos": "pronoun", "sentences": ["*Someone* is at the door with a package."]}
         ],
         "nl": [
-        {"lemma": "iemand", "pos": "pronoun", "sentences": ["Er staat iemand bij de deur."]}
+        {"lemma": "iemand", "pos": "pronoun", "sentences": ["Er staat *iemand* met een pakketje bij de deur."]}
         ]
       }
     },
@@ -238,10 +238,10 @@
       "gloss": "your (formal)",
       "entries": {
         "en": [
-        {"lemma": "your", "pos": "determiner", "details": {"note": "formal"}, "sentences": ["Is this your key?"]}
+        {"lemma": "your", "pos": "determiner", "details": {"note": "formal"}, "sentences": ["Is this *your* key, sir, on the floor?"]}
         ],
         "nl": [
-        {"lemma": "uw", "pos": "determiner", "sentences": ["Is dit uw sleutel?"]}
+        {"lemma": "uw", "pos": "determiner", "sentences": ["Is dit *uw* sleutel, meneer, op de vloer?"]}
         ]
       }
     },
@@ -250,10 +250,10 @@
       "gloss": "nothing (informal)",
       "entries": {
         "en": [
-        {"lemma": "nothing", "pos": "pronoun", "details": {"note": "informal"}, "sentences": ["I see nothing."]}
+        {"lemma": "nothing", "pos": "pronoun", "details": {"note": "informal"}, "sentences": ["I see *nothing* in this thick fog."]}
         ],
         "nl": [
-        {"lemma": "niks", "pos": "pronoun", "sentences": ["Ik zie niks."]}
+        {"lemma": "niks", "pos": "pronoun", "sentences": ["Ik zie *niks* in deze dichte mist."]}
         ]
       }
     },
@@ -262,10 +262,10 @@
       "gloss": "your (stressed)",
       "entries": {
         "en": [
-        {"lemma": "your", "pos": "determiner", "details": {"note": "stressed"}, "sentences": ["Is this your book?"]}
+        {"lemma": "your", "pos": "determiner", "details": {"note": "stressed"}, "sentences": ["Is this *your* book or her book?"]}
         ],
         "nl": [
-        {"lemma": "jouw", "pos": "determiner", "sentences": ["Is dit jouw boek?"]}
+        {"lemma": "jouw", "pos": "determiner", "sentences": ["Is dit *jouw* boek of haar boek?"]}
         ]
       }
     },
@@ -274,10 +274,10 @@
       "gloss": "their (determiner)",
       "entries": {
         "en": [
-        {"lemma": "their", "pos": "determiner", "sentences": ["Their house is big."]}
+        {"lemma": "their", "pos": "determiner", "sentences": ["*Their* house is big, with a red roof."]}
         ],
         "nl": [
-        {"lemma": "hun", "pos": "determiner", "sentences": ["Hun huis is groot."]}
+        {"lemma": "hun", "pos": "determiner", "sentences": ["*Hun* huis is groot, met een rood dak."]}
         ]
       }
     },
@@ -286,10 +286,10 @@
       "gloss": "nobody (pronoun)",
       "entries": {
         "en": [
-        {"lemma": "nobody", "pos": "pronoun", "sentences": ["Nobody knows."]}
+        {"lemma": "nobody", "pos": "pronoun", "sentences": ["*Nobody* knows where the cat is hiding."]}
         ],
         "nl": [
-        {"lemma": "niemand", "pos": "pronoun", "sentences": ["Niemand weet het."]}
+        {"lemma": "niemand", "pos": "pronoun", "sentences": ["*Niemand* weet waar de kat zich verstopt."]}
         ]
       }
     },
@@ -298,10 +298,10 @@
       "gloss": "everyone (pronoun)",
       "entries": {
         "en": [
-        {"lemma": "everyone", "pos": "pronoun", "sentences": ["Everyone is here."]}
+        {"lemma": "everyone", "pos": "pronoun", "sentences": ["*Everyone* is here, so the lesson starts now."]}
         ],
         "nl": [
-        {"lemma": "iedereen", "pos": "pronoun", "sentences": ["Iedereen is hier."]}
+        {"lemma": "iedereen", "pos": "pronoun", "sentences": ["*Iedereen* is hier, dus de les begint nu."]}
         ]
       }
     },
@@ -310,10 +310,10 @@
       "gloss": "himself (reflexive)",
       "entries": {
         "en": [
-        {"lemma": "himself", "pos": "pronoun", "details": {"note": "reflexive"}, "sentences": ["He washes himself."]}
+        {"lemma": "himself", "pos": "pronoun", "details": {"note": "reflexive"}, "sentences": ["He washes *himself* quickly before the football match."]}
         ],
         "nl": [
-        {"lemma": "zich", "pos": "pronoun", "sentences": ["Hij wast zich."]}
+        {"lemma": "zich", "pos": "pronoun", "sentences": ["Hij wast *zich* snel voor de voetbalwedstrijd."]}
         ]
       }
     },
@@ -322,10 +322,10 @@
       "gloss": "each other (pronoun)",
       "entries": {
         "en": [
-        {"lemma": "each other", "pos": "pronoun", "sentences": ["They help each other."]}
+        {"lemma": "each other", "pos": "pronoun", "sentences": ["At the school gate, they help *each other*."]}
         ],
         "nl": [
-        {"lemma": "elkaar", "pos": "pronoun", "sentences": ["Zij helpen elkaar."]}
+        {"lemma": "elkaar", "pos": "pronoun", "sentences": ["Bij het schoolhek helpen zij *elkaar*."]}
         ]
       }
     },
@@ -334,10 +334,10 @@
       "gloss": "all (plural)",
       "entries": {
         "en": [
-        {"lemma": "all", "pos": "determiner", "details": {"note": "plural"}, "sentences": ["All children are here."]}
+        {"lemma": "all", "pos": "determiner", "details": {"note": "plural"}, "sentences": ["*All* children in my class like the new teacher."]}
         ],
         "nl": [
-        {"lemma": "alle", "pos": "determiner", "sentences": ["Alle kinderen zijn hier."]}
+        {"lemma": "alle", "pos": "determiner", "sentences": ["*Alle* kinderen in mijn klas houden van de nieuwe juf."]}
         ]
       }
     },
@@ -346,10 +346,10 @@
       "gloss": "such a (determiner)",
       "entries": {
         "en": [
-        {"lemma": "such a", "pos": "determiner", "sentences": ["I want such a car."]}
+        {"lemma": "such a", "pos": "determiner", "sentences": ["I want *such a* car for my trips."]}
         ],
         "nl": [
-        {"lemma": "zo'n", "pos": "determiner", "sentences": ["Ik wil zo'n auto."]}
+        {"lemma": "zo'n", "pos": "determiner", "sentences": ["Ik wil *zo'n* auto voor mijn reizen."]}
         ]
       }
     },
@@ -358,11 +358,11 @@
       "gloss": "them (pronoun)",
       "entries": {
         "en": [
-        {"lemma": "them", "pos": "pronoun", "sentences": ["I see them."]}
+        {"lemma": "them", "pos": "pronoun", "sentences": ["I see *them* walking along the river."]}
         ],
         "nl": [
-        {"lemma": "hen", "pos": "pronoun", "details": {"note": "mensen, als lijdend voorwerp"}, "sentences": ["Ik zie hen."]},
-        {"lemma": "ze", "pos": "pronoun", "details": {"note": "gewoon, als lijdend voorwerp"}, "sentences": ["Ik zie ze."]}
+        {"lemma": "hen", "pos": "pronoun", "details": {"note": "mensen, als lijdend voorwerp"}, "sentences": ["Ik zie *hen* langs de rivier lopen."]},
+        {"lemma": "ze", "pos": "pronoun", "details": {"note": "gewoon, als lijdend voorwerp"}, "sentences": ["Ik zie *ze* langs de rivier lopen."]}
         ]
       }
     },
@@ -371,10 +371,10 @@
       "gloss": "yourself (pronoun)",
       "entries": {
         "en": [
-        {"lemma": "yourself", "pos": "pronoun", "sentences": ["Be yourself."]}
+        {"lemma": "yourself", "pos": "pronoun", "sentences": ["Don't copy others, just be *yourself* at the party."]}
         ],
         "nl": [
-        {"lemma": "jezelf", "pos": "pronoun", "sentences": ["Wees jezelf."]}
+        {"lemma": "jezelf", "pos": "pronoun", "sentences": ["Kopieer anderen niet, wees gewoon *jezelf* op het feest."]}
         ]
       }
     },
@@ -383,10 +383,10 @@
       "gloss": "somewhere (pronoun)",
       "entries": {
         "en": [
-        {"lemma": "somewhere", "pos": "pronoun", "sentences": ["He lives somewhere in Utrecht."]}
+        {"lemma": "somewhere", "pos": "pronoun", "sentences": ["He lives *somewhere* in Utrecht, near the old canal."]}
         ],
         "nl": [
-        {"lemma": "ergens", "pos": "pronoun", "sentences": ["Hij woont ergens in Utrecht."]}
+        {"lemma": "ergens", "pos": "pronoun", "sentences": ["Hij woont *ergens* in Utrecht, vlak bij de gracht."]}
         ]
       }
     },
@@ -395,10 +395,10 @@
       "gloss": "something like that (pronoun)",
       "entries": {
         "en": [
-        {"lemma": "something like that", "pos": "pronoun", "sentences": ["I want something like that."]}
+        {"lemma": "something like that", "pos": "pronoun", "sentences": ["I want *something like that* for my birthday."]}
         ],
         "nl": [
-        {"lemma": "zoiets", "pos": "pronoun", "sentences": ["Ik wil zoiets."]}
+        {"lemma": "zoiets", "pos": "pronoun", "sentences": ["Ik wil *zoiets* voor mijn verjaardag."]}
         ]
       }
     },
@@ -407,10 +407,10 @@
       "gloss": "each (determiner)",
       "entries": {
         "en": [
-        {"lemma": "each", "pos": "determiner", "sentences": ["Each child gets a gift."]}
+        {"lemma": "each", "pos": "determiner", "sentences": ["The teacher gives *each* child a small gift today."]}
         ],
         "nl": [
-        {"lemma": "ieder", "pos": "determiner", "sentences": ["Ieder kind krijgt een cadeau."]}
+        {"lemma": "ieder", "pos": "determiner", "sentences": ["De juf geeft *ieder* kind vandaag een klein cadeautje."]}
         ]
       }
     },
@@ -419,10 +419,10 @@
       "gloss": "myself (pronoun)",
       "entries": {
         "en": [
-        {"lemma": "myself", "pos": "pronoun", "sentences": ["I wash myself."]}
+        {"lemma": "myself", "pos": "pronoun", "sentences": ["I look at *myself* in the mirror before work."]}
         ],
         "nl": [
-        {"lemma": "mezelf", "pos": "pronoun", "sentences": ["Ik was mezelf."]}
+        {"lemma": "mezelf", "pos": "pronoun", "sentences": ["Ik kijk voor het werk even naar *mezelf* in de spiegel."]}
         ]
       }
     },
@@ -431,10 +431,10 @@
       "gloss": "everywhere (pronoun)",
       "entries": {
         "en": [
-        {"lemma": "everywhere", "pos": "pronoun", "sentences": ["There are flowers everywhere."]}
+        {"lemma": "everywhere", "pos": "pronoun", "sentences": ["In spring there are yellow flowers *everywhere* in our street."]}
         ],
         "nl": [
-        {"lemma": "overal", "pos": "pronoun", "sentences": ["Er zijn overal bloemen."]}
+        {"lemma": "overal", "pos": "pronoun", "sentences": ["In de lente staan er *overal* gele bloemen in onze straat."]}
         ]
       }
     },
@@ -443,10 +443,10 @@
       "gloss": "nowhere (pronoun)",
       "entries": {
         "en": [
-        {"lemma": "nowhere", "pos": "pronoun", "sentences": ["I can find it nowhere."]}
+        {"lemma": "nowhere", "pos": "pronoun", "sentences": ["I look for my keys, but they are *nowhere*."]}
         ],
         "nl": [
-        {"lemma": "nergens", "pos": "pronoun", "sentences": ["Ik kan het nergens vinden."]}
+        {"lemma": "nergens", "pos": "pronoun", "sentences": ["Ik zoek mijn sleutels, maar ik kan ze *nergens* vinden."]}
         ]
       }
     },
@@ -455,11 +455,11 @@
       "gloss": "every (determiner)",
       "entries": {
         "en": [
-        {"lemma": "every", "pos": "determiner", "sentences": ["Every child has a book.","Every day is different."]}
+        {"lemma": "every", "pos": "determiner", "sentences": ["*Every* child in the class has a library book.", "*Every* day at the market is a little different."]}
         ],
         "nl": [
-        {"lemma": "elk", "pos": "determiner", "details": {"note": "bij het-woorden"}, "sentences": ["Elk kind heeft een boek."]},
-        {"lemma": "elke", "pos": "determiner", "details": {"note": "bij de-woorden en meervoud"}, "sentences": ["Elke dag is anders."]}
+        {"lemma": "elk", "pos": "determiner", "details": {"note": "bij het-woorden"}, "sentences": ["*Elk* kind in de klas heeft een bibliotheekboek."]},
+        {"lemma": "elke", "pos": "determiner", "details": {"note": "bij de-woorden en meervoud"}, "sentences": ["*Elke* dag op de markt is weer een beetje anders."]}
         ]
       }
     },
@@ -468,10 +468,10 @@
       "gloss": "both (pronoun)",
       "entries": {
         "en": [
-        {"lemma": "both", "pos": "pronoun", "details": {"note": "the two of them"}, "sentences": ["We both like it."]}
+        {"lemma": "both", "pos": "pronoun", "details": {"note": "the two of them"}, "sentences": ["My brother and I *both* like this old film."]}
         ],
         "nl": [
-        {"lemma": "allebei", "pos": "pronoun", "sentences": ["Wij vinden het allebei leuk."]}
+        {"lemma": "allebei", "pos": "pronoun", "sentences": ["Mijn broer en ik vinden deze oude film *allebei* leuk."]}
         ]
       }
     },
@@ -480,10 +480,10 @@
       "gloss": "less (pronoun)",
       "entries": {
         "en": [
-        {"lemma": "less", "pos": "pronoun", "sentences": ["I eat less meat."]}
+        {"lemma": "less", "pos": "pronoun", "sentences": ["I eat *less* meat now because I want to be healthy."]}
         ],
         "nl": [
-        {"lemma": "minder", "pos": "pronoun", "sentences": ["Ik eet minder vlees."]}
+        {"lemma": "minder", "pos": "pronoun", "sentences": ["Ik eet nu *minder* vlees omdat ik gezond wil leven."]}
         ]
       }
     },
@@ -492,10 +492,10 @@
       "gloss": "one (people in general)",
       "entries": {
         "en": [
-        {"lemma": "one", "pos": "pronoun", "details": {"note": "people in general"}, "sentences": ["One must be careful."]}
+        {"lemma": "one", "pos": "pronoun", "details": {"note": "people in general"}, "sentences": ["In a busy city, *one* must be careful when crossing the street."]}
         ],
         "nl": [
-        {"lemma": "men", "pos": "pronoun", "sentences": ["Men moet voorzichtig zijn."]}
+        {"lemma": "men", "pos": "pronoun", "sentences": ["In een drukke stad moet *men* voorzichtig zijn bij het oversteken."]}
         ]
       }
     },
@@ -504,10 +504,10 @@
       "gloss": "a few (determiner)",
       "entries": {
         "en": [
-        {"lemma": "a few", "pos": "determiner", "sentences": ["A few people are here."]}
+        {"lemma": "a few", "pos": "determiner", "sentences": ["*A few* people are waiting at the bus stop."]}
         ],
         "nl": [
-        {"lemma": "enkele", "pos": "determiner", "sentences": ["Enkele mensen zijn hier."]}
+        {"lemma": "enkele", "pos": "determiner", "sentences": ["*Enkele* mensen wachten bij de bushalte op de bus."]}
         ]
       }
     },
@@ -516,10 +516,10 @@
       "gloss": "both (of the)",
       "entries": {
         "en": [
-        {"lemma": "both", "pos": "determiner", "details": {"note": "of the"}, "sentences": ["Both children are here."]}
+        {"lemma": "both", "pos": "determiner", "details": {"note": "of the"}, "sentences": ["*Both* children are in the garden with their grandmother."]}
         ],
         "nl": [
-        {"lemma": "beide", "pos": "determiner", "sentences": ["Beide kinderen zijn hier."]}
+        {"lemma": "beide", "pos": "determiner", "sentences": ["*Beide* kinderen zijn met hun oma in de tuin."]}
         ]
       }
     },
@@ -528,10 +528,10 @@
       "gloss": "some (plural)",
       "entries": {
         "en": [
-        {"lemma": "some", "pos": "determiner", "details": {"note": "plural"}, "sentences": ["Some people like it."]}
+        {"lemma": "some", "pos": "determiner", "details": {"note": "plural"}, "sentences": ["*Some* people like coffee with milk in the morning."]}
         ],
         "nl": [
-        {"lemma": "sommige", "pos": "determiner", "sentences": ["Sommige mensen vinden het leuk."]}
+        {"lemma": "sommige", "pos": "determiner", "sentences": ["*Sommige* mensen drinken 's ochtends graag koffie met melk."]}
         ]
       }
     },
@@ -540,10 +540,10 @@
       "gloss": "the one who (pronoun)",
       "entries": {
         "en": [
-        {"lemma": "the one who", "pos": "pronoun", "sentences": ["The one who comes first wins."]}
+        {"lemma": "the one who", "pos": "pronoun", "sentences": ["*The one who* finishes the race first wins a medal."]}
         ],
         "nl": [
-        {"lemma": "degene", "pos": "pronoun", "sentences": ["Degene die het eerst komt, wint."]}
+        {"lemma": "degene", "pos": "pronoun", "sentences": ["*Degene* die als eerste over de finish komt, wint een medaille."]}
         ]
       }
     },
@@ -552,11 +552,11 @@
       "gloss": "which (determiner)",
       "entries": {
         "en": [
-        {"lemma": "which", "pos": "determiner", "sentences": ["Which book is yours?","Which table do you want?"]}
+        {"lemma": "which", "pos": "determiner", "sentences": ["*Which* bag on the shelf is yours?", "*Which* table do you want at the restaurant?"]}
         ],
         "nl": [
-        {"lemma": "welk", "pos": "determiner", "details": {"note": "bij het-woorden"}, "sentences": ["Welk boek is van jou?"]},
-        {"lemma": "welke", "pos": "determiner", "details": {"note": "bij de-woorden en meervoud"}, "sentences": ["Welke tafel wil je?"]}
+        {"lemma": "welk", "pos": "determiner", "details": {"note": "bij het-woorden"}, "sentences": ["*Welk* boek op de plank is van jou?"]},
+        {"lemma": "welke", "pos": "determiner", "details": {"note": "bij de-woorden en meervoud"}, "sentences": ["*Welke* tafel wil je in het restaurant?"]}
         ]
       }
     },
@@ -565,10 +565,10 @@
       "gloss": "such (plural)",
       "entries": {
         "en": [
-        {"lemma": "such", "pos": "determiner", "details": {"note": "plural"}, "sentences": ["I have never seen such houses."]}
+        {"lemma": "such", "pos": "determiner", "details": {"note": "plural"}, "sentences": ["I never see *such* tall houses in my small village."]}
         ],
         "nl": [
-        {"lemma": "zulke", "pos": "determiner", "sentences": ["Ik heb nog nooit zulke huizen gezien."]}
+        {"lemma": "zulke", "pos": "determiner", "sentences": ["In mijn kleine dorp zie ik nooit *zulke* hoge huizen."]}
         ]
       }
     },
@@ -577,10 +577,10 @@
       "gloss": "some (people)",
       "entries": {
         "en": [
-        {"lemma": "some", "pos": "pronoun", "details": {"note": "people"}, "sentences": ["Some are late."]}
+        {"lemma": "some", "pos": "pronoun", "details": {"note": "people"}, "sentences": ["The meeting starts at nine, and *some* are late again."]}
         ],
         "nl": [
-        {"lemma": "sommigen", "pos": "pronoun", "sentences": ["Sommigen zijn te laat."]}
+        {"lemma": "sommigen", "pos": "pronoun", "sentences": ["De vergadering begint om negen uur en *sommigen* zijn weer te laat."]}
         ]
       }
     },
@@ -589,10 +589,10 @@
       "gloss": "many (formal)",
       "entries": {
         "en": [
-        {"lemma": "many", "pos": "determiner", "details": {"note": "formal"}, "sentences": ["Many people came."]}
+        {"lemma": "many", "pos": "determiner", "details": {"note": "formal"}, "sentences": ["*Many* people come to the market on Saturday morning."]}
         ],
         "nl": [
-        {"lemma": "vele", "pos": "determiner", "sentences": ["Vele mensen kwamen."]}
+        {"lemma": "vele", "pos": "determiner", "sentences": ["*Vele* mensen komen zaterdagochtend naar de markt."]}
         ]
       }
     },
@@ -601,10 +601,10 @@
       "gloss": "too much (pronoun)",
       "entries": {
         "en": [
-        {"lemma": "too much", "pos": "pronoun", "sentences": ["That is too much."]}
+        {"lemma": "too much", "pos": "pronoun", "sentences": ["You want two more bags? That is *too much* for me."]}
         ],
         "nl": [
-        {"lemma": "teveel", "pos": "pronoun", "sentences": ["Dat is teveel."]}
+        {"lemma": "teveel", "pos": "pronoun", "sentences": ["Nog twee tassen erbij? Dat is *teveel* voor mij."]}
         ]
       }
     },
@@ -613,10 +613,10 @@
       "gloss": "ourselves (pronoun)",
       "entries": {
         "en": [
-        {"lemma": "ourselves", "pos": "pronoun", "sentences": ["We wash ourselves."]}
+        {"lemma": "ourselves", "pos": "pronoun", "sentences": ["We are proud of *ourselves* after the long hike."]}
         ],
         "nl": [
-        {"lemma": "onszelf", "pos": "pronoun", "sentences": ["Wij wassen onszelf."]}
+        {"lemma": "onszelf", "pos": "pronoun", "sentences": ["Na de lange wandeling zijn we trots op *onszelf*."]}
         ]
       }
     },
@@ -625,10 +625,10 @@
       "gloss": "several (determiner)",
       "entries": {
         "en": [
-        {"lemma": "several", "pos": "determiner", "sentences": ["Several people came."]}
+        {"lemma": "several", "pos": "determiner", "sentences": ["*Several* people in the office bring cake on Fridays."]}
         ],
         "nl": [
-        {"lemma": "meerdere", "pos": "determiner", "sentences": ["Meerdere mensen kwamen."]}
+        {"lemma": "meerdere", "pos": "determiner", "sentences": ["*Meerdere* mensen op kantoor nemen op vrijdag taart mee."]}
         ]
       }
     },
@@ -637,10 +637,10 @@
       "gloss": "his (determiner)",
       "entries": {
         "en": [
-        {"lemma": "his", "pos": "determiner", "sentences": ["This is his house."]}
+        {"lemma": "his", "pos": "determiner", "sentences": ["That man lives alone, and this is *his* small house."]}
         ],
         "nl": [
-        {"lemma": "zijn", "pos": "determiner", "details": {"note": "bezittelijk"}, "sentences": ["Dit is zijn huis."]}
+        {"lemma": "zijn", "pos": "determiner", "details": {"note": "bezittelijk"}, "sentences": ["Die man woont alleen en dit is *zijn* kleine huis."]}
         ]
       }
     },
@@ -649,10 +649,10 @@
       "gloss": "those who (pronoun)",
       "entries": {
         "en": [
-        {"lemma": "those who", "pos": "pronoun", "sentences": ["Those who want to may come."]}
+        {"lemma": "those who", "pos": "pronoun", "sentences": ["*Those who* want to swim may come to the lake."]}
         ],
         "nl": [
-        {"lemma": "degenen", "pos": "pronoun", "sentences": ["Degenen die willen, mogen komen."]}
+        {"lemma": "degenen", "pos": "pronoun", "sentences": ["*Degenen* die willen zwemmen, mogen mee naar het meer."]}
         ]
       }
     },
@@ -661,10 +661,10 @@
       "gloss": "what (exclamation)",
       "entries": {
         "en": [
-        {"lemma": "what", "pos": "pronoun", "details": {"note": "exclamation"}, "sentences": ["What a beautiful day!"]}
+        {"lemma": "what", "pos": "pronoun", "details": {"note": "exclamation"}, "sentences": ["*What* a beautiful day for a picnic in the park!"]}
         ],
         "nl": [
-        {"lemma": "wat", "pos": "pronoun", "details": {"note": "uitroep"}, "sentences": ["Wat een mooie dag!"]}
+        {"lemma": "wat", "pos": "pronoun", "details": {"note": "uitroep"}, "sentences": ["*Wat* een mooie dag voor een picknick in het park!"]}
         ]
       }
     },
@@ -673,10 +673,10 @@
       "gloss": "whose (pronoun)",
       "entries": {
         "en": [
-        {"lemma": "whose", "pos": "pronoun", "sentences": ["Whose book is this?"]}
+        {"lemma": "whose", "pos": "pronoun", "sentences": ["*Whose* umbrella is this on the chair?"]}
         ],
         "nl": [
-        {"lemma": "wiens", "pos": "pronoun", "sentences": ["Wiens boek is dit?"]}
+        {"lemma": "wiens", "pos": "pronoun", "sentences": ["*Wiens* paraplu ligt daar op de stoel?"]}
         ]
       }
     },
@@ -685,10 +685,10 @@
       "gloss": "of, from (preposition)",
       "entries": {
         "en": [
-        {"lemma": "of, from", "pos": "preposition", "sentences": ["This is the book of my father."]}
+        {"lemma": "of, from", "pos": "preposition", "sentences": ["This is the old book *of* my father."]}
         ],
         "nl": [
-        {"lemma": "van", "pos": "preposition", "sentences": ["Dit is het boek van mijn vader."]}
+        {"lemma": "van", "pos": "preposition", "sentences": ["Dit is het oude boek *van* mijn vader."]}
         ]
       }
     },
@@ -697,10 +697,10 @@
       "gloss": "for (preposition)",
       "entries": {
         "en": [
-        {"lemma": "for", "pos": "preposition", "sentences": ["This gift is for you."]}
+        {"lemma": "for", "pos": "preposition", "sentences": ["I buy this small gift *for* you on your birthday."]}
         ],
         "nl": [
-        {"lemma": "voor", "pos": "preposition", "sentences": ["Dit cadeau is voor jou."]}
+        {"lemma": "voor", "pos": "preposition", "sentences": ["Ik koop dit kleine cadeau *voor* jou voor je verjaardag."]}
         ]
       }
     },
@@ -709,10 +709,10 @@
       "gloss": "to, toward (preposition)",
       "entries": {
         "en": [
-        {"lemma": "to, toward", "pos": "preposition", "sentences": ["I am going to school."]}
+        {"lemma": "to, toward", "pos": "preposition", "sentences": ["Every morning I cycle *to* school with my friend."]}
         ],
         "nl": [
-        {"lemma": "naar", "pos": "preposition", "sentences": ["Ik ga naar school."]}
+        {"lemma": "naar", "pos": "preposition", "sentences": ["Elke ochtend fiets ik met mijn vriend *naar* school."]}
         ]
       }
     },
@@ -721,10 +721,10 @@
       "gloss": "at, around (time)",
       "entries": {
         "en": [
-        {"lemma": "at, around", "pos": "preposition", "details": {"note": "time"}, "sentences": ["The train leaves at ten o'clock."]}
+        {"lemma": "at, around", "pos": "preposition", "details": {"note": "time"}, "sentences": ["The train to Utrecht leaves *at* ten o'clock sharp."]}
         ],
         "nl": [
-        {"lemma": "om", "pos": "preposition", "sentences": ["De trein vertrekt om tien uur."]}
+        {"lemma": "om", "pos": "preposition", "sentences": ["De trein naar Utrecht vertrekt precies *om* tien uur."]}
         ]
       }
     },
@@ -733,10 +733,10 @@
       "gloss": "at, on, to (preposition)",
       "entries": {
         "en": [
-        {"lemma": "at, on, to", "pos": "preposition", "sentences": ["The picture hangs on the wall."]}
+        {"lemma": "at, on, to", "pos": "preposition", "sentences": ["A large painting of a boat hangs *on* the wall."]}
         ],
         "nl": [
-        {"lemma": "aan", "pos": "preposition", "sentences": ["Het schilderij hangt aan de muur."]}
+        {"lemma": "aan", "pos": "preposition", "sentences": ["Een groot schilderij van een boot hangt *aan* de muur."]}
         ]
       }
     },
@@ -745,10 +745,10 @@
       "gloss": "out of, from (preposition)",
       "entries": {
         "en": [
-        {"lemma": "out of, from", "pos": "preposition", "sentences": ["He comes from Amsterdam."]}
+        {"lemma": "out of, from", "pos": "preposition", "sentences": ["My neighbour comes *from* a small town near Amsterdam."]}
         ],
         "nl": [
-        {"lemma": "uit", "pos": "preposition", "sentences": ["Hij komt uit Amsterdam."]}
+        {"lemma": "uit", "pos": "preposition", "sentences": ["Mijn buurman komt *uit* een klein stadje bij Amsterdam."]}
         ]
       }
     },
@@ -757,10 +757,10 @@
       "gloss": "over, about (preposition)",
       "entries": {
         "en": [
-        {"lemma": "over, about", "pos": "preposition", "sentences": ["We are talking about the weather."]}
+        {"lemma": "over, about", "pos": "preposition", "sentences": ["At dinner we are talking *about* the cold weather."]}
         ],
         "nl": [
-        {"lemma": "over", "pos": "preposition", "sentences": ["Wij praten over het weer."]}
+        {"lemma": "over", "pos": "preposition", "sentences": ["Aan tafel praten we *over* het koude weer."]}
         ]
       }
     },
@@ -769,10 +769,10 @@
       "gloss": "at, near, with (preposition)",
       "entries": {
         "en": [
-        {"lemma": "at, near, with", "pos": "preposition", "sentences": ["I am at my sister's."]}
+        {"lemma": "at, near, with", "pos": "preposition", "sentences": ["Today I am *at* my sister's for dinner."]}
         ],
         "nl": [
-        {"lemma": "bij", "pos": "preposition", "details": {"note": "bij iemand of iets"}, "sentences": ["Ik ben bij mijn zus."]}
+        {"lemma": "bij", "pos": "preposition", "details": {"note": "bij iemand of iets"}, "sentences": ["Vandaag eet ik *bij* mijn zus."]}
         ]
       }
     },
@@ -781,10 +781,10 @@
       "gloss": "through, by (preposition)",
       "entries": {
         "en": [
-        {"lemma": "through, by", "pos": "preposition", "sentences": ["We walk through the park."]}
+        {"lemma": "through, by", "pos": "preposition", "sentences": ["On Sundays we walk *through* the park with our dog."]}
         ],
         "nl": [
-        {"lemma": "door", "pos": "preposition", "sentences": ["Wij lopen door het park."]}
+        {"lemma": "door", "pos": "preposition", "sentences": ["Op zondag lopen we met onze hond *door* het park."]}
         ]
       }
     },
@@ -793,10 +793,10 @@
       "gloss": "until, to (preposition)",
       "entries": {
         "en": [
-        {"lemma": "until, to", "pos": "preposition", "sentences": ["I wait until tomorrow."]}
+        {"lemma": "until, to", "pos": "preposition", "sentences": ["The shop is closed, so I wait *until* tomorrow."]}
         ],
         "nl": [
-        {"lemma": "tot", "pos": "preposition", "sentences": ["Ik wacht tot morgen."]}
+        {"lemma": "tot", "pos": "preposition", "sentences": ["De winkel is dicht, dus ik wacht *tot* morgen."]}
         ]
       }
     },
@@ -805,10 +805,10 @@
       "gloss": "against (preposition)",
       "entries": {
         "en": [
-        {"lemma": "against", "pos": "preposition", "sentences": ["He leans against the wall."]}
+        {"lemma": "against", "pos": "preposition", "sentences": ["He is tired and leans *against* the cold wall."]}
         ],
         "nl": [
-        {"lemma": "tegen", "pos": "preposition", "sentences": ["Hij leunt tegen de muur."]}
+        {"lemma": "tegen", "pos": "preposition", "sentences": ["Hij is moe en leunt *tegen* de koude muur."]}
         ]
       }
     },
@@ -817,10 +817,10 @@
       "gloss": "inside, within (preposition)",
       "entries": {
         "en": [
-        {"lemma": "inside, within", "pos": "preposition", "sentences": ["I am back within an hour."]}
+        {"lemma": "inside, within", "pos": "preposition", "sentences": ["I go to the shop and I am back *within* an hour."]}
         ],
         "nl": [
-        {"lemma": "binnen", "pos": "preposition", "details": {"note": "binnen een tijd"}, "sentences": ["Ik ben binnen een uur terug."]}
+        {"lemma": "binnen", "pos": "preposition", "details": {"note": "binnen een tijd"}, "sentences": ["Ik loop even naar de winkel en ben *binnen* een uur terug."]}
         ]
       }
     },
@@ -829,10 +829,10 @@
       "gloss": "after (preposition)",
       "entries": {
         "en": [
-        {"lemma": "after", "pos": "preposition", "details": {"note": "before a noun"}, "sentences": ["After dinner I walk."]}
+        {"lemma": "after", "pos": "preposition", "details": {"note": "before a noun"}, "sentences": ["*After* dinner I take a short walk with my wife."]}
         ],
         "nl": [
-        {"lemma": "na", "pos": "preposition", "sentences": ["Na het eten loop ik."]}
+        {"lemma": "na", "pos": "preposition", "sentences": ["*Na* het eten maak ik een korte wandeling met mijn vrouw."]}
         ]
       }
     },
@@ -841,10 +841,10 @@
       "gloss": "behind (preposition)",
       "entries": {
         "en": [
-        {"lemma": "behind", "pos": "preposition", "sentences": ["The garden is behind the house."]}
+        {"lemma": "behind", "pos": "preposition", "sentences": ["There is a small pond in the garden *behind* the house."]}
         ],
         "nl": [
-        {"lemma": "achter", "pos": "preposition", "sentences": ["De tuin ligt achter het huis."]}
+        {"lemma": "achter", "pos": "preposition", "sentences": ["In de tuin *achter* het huis ligt een kleine vijver."]}
         ]
       }
     },
@@ -853,10 +853,10 @@
       "gloss": "outside (preposition)",
       "entries": {
         "en": [
-        {"lemma": "outside", "pos": "preposition", "details": {"note": "not inside"}, "sentences": ["The children play outside."]}
+        {"lemma": "outside", "pos": "preposition", "details": {"note": "not inside"}, "sentences": ["The sun is out, so the children play *outside*."]}
         ],
         "nl": [
-        {"lemma": "buiten", "pos": "preposition", "details": {"note": "aan de buitenkant"}, "sentences": ["De kinderen spelen buiten."]}
+        {"lemma": "buiten", "pos": "preposition", "details": {"note": "aan de buitenkant"}, "sentences": ["De zon schijnt, dus de kinderen spelen *buiten*."]}
         ]
       }
     },
@@ -865,10 +865,10 @@
       "gloss": "according to (preposition)",
       "entries": {
         "en": [
-        {"lemma": "according to", "pos": "preposition", "sentences": ["According to him it is true."]}
+        {"lemma": "according to", "pos": "preposition", "sentences": ["*According to* him, the news about the shop is true."]}
         ],
         "nl": [
-        {"lemma": "volgens", "pos": "preposition", "sentences": ["Volgens hem is het waar."]}
+        {"lemma": "volgens", "pos": "preposition", "sentences": ["*Volgens* hem is het nieuws over de winkel waar."]}
         ]
       }
     },
@@ -877,10 +877,10 @@
       "gloss": "between (preposition)",
       "entries": {
         "en": [
-        {"lemma": "between", "pos": "preposition", "sentences": ["The shop is between two houses."]}
+        {"lemma": "between", "pos": "preposition", "sentences": ["The new bakery is *between* the bank and a flower shop."]}
         ],
         "nl": [
-        {"lemma": "tussen", "pos": "preposition", "sentences": ["De winkel ligt tussen twee huizen."]}
+        {"lemma": "tussen", "pos": "preposition", "sentences": ["De nieuwe bakker zit *tussen* de bank en een bloemenwinkel."]}
         ]
       }
     },
@@ -889,10 +889,10 @@
       "gloss": "above (preposition)",
       "entries": {
         "en": [
-        {"lemma": "above", "pos": "preposition", "sentences": ["The lamp hangs above the table."]}
+        {"lemma": "above", "pos": "preposition", "sentences": ["A round lamp hangs *above* the kitchen table."]}
         ],
         "nl": [
-        {"lemma": "boven", "pos": "preposition", "details": {"note": "hoger dan iets"}, "sentences": ["De lamp hangt boven de tafel."]}
+        {"lemma": "boven", "pos": "preposition", "details": {"note": "hoger dan iets"}, "sentences": ["Een ronde lamp hangt *boven* de keukentafel."]}
         ]
       }
     },
@@ -901,10 +901,10 @@
       "gloss": "since (preposition)",
       "entries": {
         "en": [
-        {"lemma": "since", "pos": "preposition", "sentences": ["I have lived here since May."]}
+        {"lemma": "since", "pos": "preposition", "sentences": ["I have lived in this small flat *since* May."]}
         ],
         "nl": [
-        {"lemma": "sinds", "pos": "preposition", "sentences": ["Ik woon hier sinds mei."]}
+        {"lemma": "sinds", "pos": "preposition", "sentences": ["Ik woon *sinds* mei in dit kleine appartement."]}
         ]
       }
     },
@@ -913,10 +913,10 @@
       "gloss": "below (preposition)",
       "entries": {
         "en": [
-        {"lemma": "below", "pos": "preposition", "sentences": ["The temperature is below zero."]}
+        {"lemma": "below", "pos": "preposition", "sentences": ["It is winter and the temperature is *below* zero."]}
         ],
         "nl": [
-        {"lemma": "beneden", "pos": "preposition", "details": {"note": "lager dan iets"}, "sentences": ["De temperatuur is beneden nul."]}
+        {"lemma": "beneden", "pos": "preposition", "details": {"note": "lager dan iets"}, "sentences": ["Het is winter en de temperatuur is *beneden* nul."]}
         ]
       }
     },
@@ -925,10 +925,10 @@
       "gloss": "along, past (preposition)",
       "entries": {
         "en": [
-        {"lemma": "along, past", "pos": "preposition", "sentences": ["We walk along the river."]}
+        {"lemma": "along, past", "pos": "preposition", "sentences": ["On warm evenings we walk *along* the river."]}
         ],
         "nl": [
-        {"lemma": "langs", "pos": "preposition", "sentences": ["Wij lopen langs de rivier."]}
+        {"lemma": "langs", "pos": "preposition", "sentences": ["Op warme avonden lopen we *langs* de rivier."]}
         ]
       }
     },
@@ -937,10 +937,10 @@
       "gloss": "around (preposition)",
       "entries": {
         "en": [
-        {"lemma": "around", "pos": "preposition", "sentences": ["We sit around the table."]}
+        {"lemma": "around", "pos": "preposition", "sentences": ["On Sundays the whole family sits *around* the big table."]}
         ],
         "nl": [
-        {"lemma": "rond", "pos": "preposition", "sentences": ["Wij zitten rond de tafel."]}
+        {"lemma": "rond", "pos": "preposition", "sentences": ["Op zondag zit de hele familie *rond* de grote tafel."]}
         ]
       }
     },
@@ -949,10 +949,10 @@
       "gloss": "per (preposition)",
       "entries": {
         "en": [
-        {"lemma": "per", "pos": "preposition", "sentences": ["It costs five euros per night."]}
+        {"lemma": "per", "pos": "preposition", "sentences": ["The small hotel costs fifty euros *per* night."]}
         ],
         "nl": [
-        {"lemma": "per", "pos": "preposition", "sentences": ["Het kost vijf euro per nacht."]}
+        {"lemma": "per", "pos": "preposition", "sentences": ["Het kleine hotel kost vijftig euro *per* nacht."]}
         ]
       }
     },
@@ -961,10 +961,10 @@
       "gloss": "from (a point on)",
       "entries": {
         "en": [
-        {"lemma": "from", "pos": "preposition", "details": {"note": "a point on"}, "sentences": ["From tomorrow I work here."]}
+        {"lemma": "from", "pos": "preposition", "details": {"note": "a point on"}, "sentences": ["I start a new job, so *from* tomorrow I work here."]}
         ],
         "nl": [
-        {"lemma": "vanaf", "pos": "preposition", "sentences": ["Vanaf morgen werk ik hier."]}
+        {"lemma": "vanaf", "pos": "preposition", "sentences": ["Ik heb een nieuwe baan, dus *vanaf* morgen werk ik hier."]}
         ]
       }
     },
@@ -973,10 +973,10 @@
       "gloss": "during (preposition)",
       "entries": {
         "en": [
-        {"lemma": "during", "pos": "preposition", "sentences": ["During the film I sleep."]}
+        {"lemma": "during", "pos": "preposition", "sentences": ["*During* the long film my husband always falls asleep."]}
         ],
         "nl": [
-        {"lemma": "tijdens", "pos": "preposition", "sentences": ["Tijdens de film slaap ik."]}
+        {"lemma": "tijdens", "pos": "preposition", "sentences": ["*Tijdens* de lange film valt mijn man altijd in slaap."]}
         ]
       }
     },
@@ -985,10 +985,10 @@
       "gloss": "next to (preposition)",
       "entries": {
         "en": [
-        {"lemma": "next to", "pos": "preposition", "sentences": ["The bank is next to the shop."]}
+        {"lemma": "next to", "pos": "preposition", "sentences": ["The bank is *next to* the bakery on the corner."]}
         ],
         "nl": [
-        {"lemma": "naast", "pos": "preposition", "sentences": ["De bank is naast de winkel."]}
+        {"lemma": "naast", "pos": "preposition", "sentences": ["De bank staat *naast* de bakker op de hoek."]}
         ]
       }
     },
@@ -997,10 +997,10 @@
       "gloss": "via (preposition)",
       "entries": {
         "en": [
-        {"lemma": "via", "pos": "preposition", "sentences": ["We go via Utrecht."]}
+        {"lemma": "via", "pos": "preposition", "sentences": ["To get to Groningen, we go *via* Utrecht by train."]}
         ],
         "nl": [
-        {"lemma": "via", "pos": "preposition", "sentences": ["Wij gaan via Utrecht."]}
+        {"lemma": "via", "pos": "preposition", "sentences": ["Om naar Groningen te gaan, reizen we met de trein *via* Utrecht."]}
         ]
       }
     },
@@ -1009,10 +1009,10 @@
       "gloss": "because of (preposition)",
       "entries": {
         "en": [
-        {"lemma": "because of", "pos": "preposition", "sentences": ["Because of the rain we stay home."]}
+        {"lemma": "because of", "pos": "preposition", "sentences": ["*Because of* the heavy rain, we stay home today."]}
         ],
         "nl": [
-        {"lemma": "vanwege", "pos": "preposition", "sentences": ["Vanwege de regen blijven we thuis."]}
+        {"lemma": "vanwege", "pos": "preposition", "sentences": ["*Vanwege* de harde regen blijven we vandaag thuis."]}
         ]
       }
     },
@@ -1021,10 +1021,10 @@
       "gloss": "from (out of)",
       "entries": {
         "en": [
-        {"lemma": "from", "pos": "preposition", "details": {"note": "out of"}, "sentences": ["I work from home."]}
+        {"lemma": "from", "pos": "preposition", "details": {"note": "out of"}, "sentences": ["On Fridays I work *from* home to save time."]}
         ],
         "nl": [
-        {"lemma": "vanuit", "pos": "preposition", "sentences": ["Ik werk vanuit huis."]}
+        {"lemma": "vanuit", "pos": "preposition", "sentences": ["Op vrijdag werk ik *vanuit* huis om tijd te besparen."]}
         ]
       }
     },
@@ -1033,10 +1033,10 @@
       "gloss": "thanks to (preposition)",
       "entries": {
         "en": [
-        {"lemma": "thanks to", "pos": "preposition", "sentences": ["Thanks to you it worked."]}
+        {"lemma": "thanks to", "pos": "preposition", "sentences": ["*Thanks to* your help, the old computer works again."]}
         ],
         "nl": [
-        {"lemma": "dankzij", "pos": "preposition", "sentences": ["Dankzij jou is het gelukt."]}
+        {"lemma": "dankzij", "pos": "preposition", "sentences": ["*Dankzij* jouw hulp werkt de oude computer weer."]}
         ]
       }
     },
@@ -1045,10 +1045,10 @@
       "gloss": "opposite (preposition)",
       "entries": {
         "en": [
-        {"lemma": "opposite", "pos": "preposition", "details": {"note": "across from"}, "sentences": ["The shop is opposite the school."]}
+        {"lemma": "opposite", "pos": "preposition", "details": {"note": "across from"}, "sentences": ["The flower shop is *opposite* the school on our street."]}
         ],
         "nl": [
-        {"lemma": "tegenover", "pos": "preposition", "sentences": ["De winkel ligt tegenover de school."]}
+        {"lemma": "tegenover", "pos": "preposition", "sentences": ["De bloemenwinkel ligt *tegenover* de school in onze straat."]}
         ]
       }
     },
@@ -1057,10 +1057,10 @@
       "gloss": "despite (preposition)",
       "entries": {
         "en": [
-        {"lemma": "despite", "pos": "preposition", "sentences": ["Despite the rain we walk."]}
+        {"lemma": "despite", "pos": "preposition", "sentences": ["*Despite* the cold rain, we still walk to the beach."]}
         ],
         "nl": [
-        {"lemma": "ondanks", "pos": "preposition", "sentences": ["Ondanks de regen lopen we."]}
+        {"lemma": "ondanks", "pos": "preposition", "sentences": ["*Ondanks* de koude regen lopen we toch naar het strand."]}
         ]
       }
     },
@@ -1069,10 +1069,10 @@
       "gloss": "due to (preposition)",
       "entries": {
         "en": [
-        {"lemma": "due to", "pos": "preposition", "sentences": ["The shop is closed due to illness."]}
+        {"lemma": "due to", "pos": "preposition", "sentences": ["The small shop is closed today *due to* illness."]}
         ],
         "nl": [
-        {"lemma": "wegens", "pos": "preposition", "sentences": ["De winkel is gesloten wegens ziekte."]}
+        {"lemma": "wegens", "pos": "preposition", "sentences": ["Het kleine winkeltje is vandaag gesloten *wegens* ziekte."]}
         ]
       }
     },
@@ -1081,10 +1081,10 @@
       "gloss": "throughout (preposition)",
       "entries": {
         "en": [
-        {"lemma": "throughout", "pos": "preposition", "sentences": ["It rained throughout the day."]}
+        {"lemma": "throughout", "pos": "preposition", "sentences": ["It rains *throughout* the day, so we play inside."]}
         ],
         "nl": [
-        {"lemma": "gedurende", "pos": "preposition", "sentences": ["Het regende gedurende de hele dag."]}
+        {"lemma": "gedurende", "pos": "preposition", "sentences": ["Het regent *gedurende* de hele dag, dus we spelen binnen."]}
         ]
       }
     },
@@ -1093,10 +1093,10 @@
       "gloss": "all around (preposition)",
       "entries": {
         "en": [
-        {"lemma": "all around", "pos": "preposition", "sentences": ["There is a fence all around the garden."]}
+        {"lemma": "all around", "pos": "preposition", "sentences": ["There is a tall green fence *all around* the garden."]}
         ],
         "nl": [
-        {"lemma": "rondom", "pos": "preposition", "sentences": ["Er staat een hek rondom de tuin."]}
+        {"lemma": "rondom", "pos": "preposition", "sentences": ["Er staat een hoog groen hek *rondom* de tuin."]}
         ]
       }
     },
@@ -1105,10 +1105,10 @@
       "gloss": "if, when, as (conjunction)",
       "entries": {
         "en": [
-        {"lemma": "if, when, as", "pos": "conjunction", "sentences": ["If it rains, I stay home."]}
+        {"lemma": "if, when, as", "pos": "conjunction", "sentences": ["*If* it rains this afternoon, I stay home and read."]}
         ],
         "nl": [
-        {"lemma": "als", "pos": "conjunction", "sentences": ["Als het regent, blijf ik thuis."]}
+        {"lemma": "als", "pos": "conjunction", "sentences": ["*Als* het vanmiddag regent, blijf ik thuis om te lezen."]}
         ]
       }
     },
@@ -1117,10 +1117,10 @@
       "gloss": "when (past)",
       "entries": {
         "en": [
-        {"lemma": "when", "pos": "conjunction", "details": {"note": "past"}, "sentences": ["When I was young, I lived here."]}
+        {"lemma": "when", "pos": "conjunction", "details": {"note": "past"}, "sentences": ["*When* I was young, I lived in this old village."]}
         ],
         "nl": [
-        {"lemma": "toen", "pos": "conjunction", "sentences": ["Toen ik jong was, woonde ik hier."]}
+        {"lemma": "toen", "pos": "conjunction", "sentences": ["*Toen* ik jong was, woonde ik in dit oude dorp."]}
         ]
       }
     },
@@ -1129,10 +1129,10 @@
       "gloss": "because (main clause)",
       "entries": {
         "en": [
-        {"lemma": "because", "pos": "conjunction", "details": {"note": "main clause"}, "sentences": ["I stay home, because I am tired."]}
+        {"lemma": "because", "pos": "conjunction", "details": {"note": "main clause"}, "sentences": ["I stay home tonight, *because* I am very tired."]}
         ],
         "nl": [
-        {"lemma": "want", "pos": "conjunction", "sentences": ["Ik blijf thuis, want ik ben moe."]}
+        {"lemma": "want", "pos": "conjunction", "sentences": ["Ik blijf vanavond thuis, *want* ik ben erg moe."]}
         ]
       }
     },
@@ -1141,10 +1141,10 @@
       "gloss": "like, as (conjunction)",
       "entries": {
         "en": [
-        {"lemma": "like, as", "pos": "conjunction", "sentences": ["Do it like I do."]}
+        {"lemma": "like, as", "pos": "conjunction", "sentences": ["Please cook the rice *like* I show you."]}
         ],
         "nl": [
-        {"lemma": "zoals", "pos": "conjunction", "sentences": ["Doe het zoals ik het doe."]}
+        {"lemma": "zoals", "pos": "conjunction", "sentences": ["Kook de rijst alsjeblieft *zoals* ik het je laat zien."]}
         ]
       }
     },
@@ -1153,10 +1153,10 @@
       "gloss": "as if (conjunction)",
       "entries": {
         "en": [
-        {"lemma": "as if", "pos": "conjunction", "sentences": ["He acts as if he knows everything."]}
+        {"lemma": "as if", "pos": "conjunction", "sentences": ["My boss acts *as if* he knows everything about computers."]}
         ],
         "nl": [
-        {"lemma": "alsof", "pos": "conjunction", "sentences": ["Hij doet alsof hij alles weet."]}
+        {"lemma": "alsof", "pos": "conjunction", "sentences": ["Mijn baas doet *alsof* hij alles van computers weet."]}
         ]
       }
     },
@@ -1165,10 +1165,10 @@
       "gloss": "so that (conjunction)",
       "entries": {
         "en": [
-        {"lemma": "so that", "pos": "conjunction", "details": {"note": "standard"}, "sentences": ["I speak slowly so that you understand."]}
+        {"lemma": "so that", "pos": "conjunction", "details": {"note": "standard"}, "sentences": ["I speak slowly *so that* the tourists understand me."]}
         ],
         "nl": [
-        {"lemma": "zodat", "pos": "conjunction", "sentences": ["Ik praat langzaam zodat je het begrijpt."]}
+        {"lemma": "zodat", "pos": "conjunction", "sentences": ["Ik praat langzaam *zodat* de toeristen me goed begrijpen."]}
         ]
       }
     },
@@ -1177,10 +1177,10 @@
       "gloss": "before (conjunction)",
       "entries": {
         "en": [
-        {"lemma": "before", "pos": "conjunction", "sentences": ["Wash your hands before you eat."]}
+        {"lemma": "before", "pos": "conjunction", "sentences": ["Please wash your hands *before* you eat lunch."]}
         ],
         "nl": [
-        {"lemma": "voordat", "pos": "conjunction", "sentences": ["Was je handen voordat je eet."]}
+        {"lemma": "voordat", "pos": "conjunction", "sentences": ["Was alsjeblieft je handen *voordat* je je lunch eet."]}
         ]
       }
     },
@@ -1189,10 +1189,10 @@
       "gloss": "while (conjunction)",
       "entries": {
         "en": [
-        {"lemma": "while", "pos": "conjunction", "sentences": ["I read while she cooks."]}
+        {"lemma": "while", "pos": "conjunction", "sentences": ["I read the newspaper *while* my wife cooks dinner."]}
         ],
         "nl": [
-        {"lemma": "terwijl", "pos": "conjunction", "sentences": ["Ik lees terwijl zij kookt."]}
+        {"lemma": "terwijl", "pos": "conjunction", "sentences": ["Ik lees de krant *terwijl* mijn vrouw het avondeten kookt."]}
         ]
       }
     },
@@ -1201,10 +1201,10 @@
       "gloss": "except (conjunction)",
       "entries": {
         "en": [
-        {"lemma": "except", "pos": "conjunction", "sentences": ["Everyone came except John."]}
+        {"lemma": "except", "pos": "conjunction", "sentences": ["The whole family comes to dinner *except* my uncle."]}
         ],
         "nl": [
-        {"lemma": "behalve", "pos": "conjunction", "sentences": ["Iedereen kwam behalve Jan."]}
+        {"lemma": "behalve", "pos": "conjunction", "sentences": ["De hele familie komt eten *behalve* mijn oom."]}
         ]
       }
     },
@@ -1213,10 +1213,10 @@
       "gloss": "as soon as (conjunction)",
       "entries": {
         "en": [
-        {"lemma": "as soon as", "pos": "conjunction", "sentences": ["Call me as soon as you arrive."]}
+        {"lemma": "as soon as", "pos": "conjunction", "sentences": ["Please call me *as soon as* your train arrives."]}
         ],
         "nl": [
-        {"lemma": "zodra", "pos": "conjunction", "sentences": ["Bel me zodra je aankomt."]}
+        {"lemma": "zodra", "pos": "conjunction", "sentences": ["Bel me alsjeblieft *zodra* je trein aankomt."]}
         ]
       }
     },
@@ -1225,10 +1225,10 @@
       "gloss": "until (conjunction)",
       "entries": {
         "en": [
-        {"lemma": "until", "pos": "conjunction", "sentences": ["Wait until I come back."]}
+        {"lemma": "until", "pos": "conjunction", "sentences": ["Please wait here *until* the doctor comes back."]}
         ],
         "nl": [
-        {"lemma": "totdat", "pos": "conjunction", "sentences": ["Wacht totdat ik terugkom."]}
+        {"lemma": "totdat", "pos": "conjunction", "sentences": ["Wacht hier alsjeblieft *totdat* de dokter terugkomt."]}
         ]
       }
     },
@@ -1237,10 +1237,10 @@
       "gloss": "unless (conjunction)",
       "entries": {
         "en": [
-        {"lemma": "unless", "pos": "conjunction", "sentences": ["I stay unless you call."]}
+        {"lemma": "unless", "pos": "conjunction", "sentences": ["I stay at the office *unless* my wife calls."]}
         ],
         "nl": [
-        {"lemma": "tenzij", "pos": "conjunction", "sentences": ["Ik blijf tenzij je belt."]}
+        {"lemma": "tenzij", "pos": "conjunction", "sentences": ["Ik blijf op kantoor *tenzij* mijn vrouw belt."]}
         ]
       }
     },
@@ -1249,10 +1249,10 @@
       "gloss": "after (conjunction)",
       "entries": {
         "en": [
-        {"lemma": "after", "pos": "conjunction", "details": {"note": "conjunction"}, "sentences": ["After I eat, I walk."]}
+        {"lemma": "after", "pos": "conjunction", "details": {"note": "conjunction"}, "sentences": ["*After* I eat lunch, I walk to the park."]}
         ],
         "nl": [
-        {"lemma": "nadat", "pos": "conjunction", "sentences": ["Nadat ik gegeten heb, loop ik."]}
+        {"lemma": "nadat", "pos": "conjunction", "sentences": ["*Nadat* ik heb geluncht, loop ik naar het park."]}
         ]
       }
     },
@@ -1261,10 +1261,10 @@
       "gloss": "as long as (conjunction)",
       "entries": {
         "en": [
-        {"lemma": "as long as", "pos": "conjunction", "sentences": ["You can stay as long as you want."]}
+        {"lemma": "as long as", "pos": "conjunction", "sentences": ["You can stay at my house *as long as* you want."]}
         ],
         "nl": [
-        {"lemma": "zolang", "pos": "conjunction", "sentences": ["Je mag blijven zolang je wilt."]}
+        {"lemma": "zolang", "pos": "conjunction", "sentences": ["Je mag bij mij logeren *zolang* je dat wilt."]}
         ]
       }
     },
@@ -1273,10 +1273,10 @@
       "gloss": "although (conjunction)",
       "entries": {
         "en": [
-        {"lemma": "although", "pos": "conjunction", "sentences": ["Although it rains, we walk."]}
+        {"lemma": "although", "pos": "conjunction", "sentences": ["*Although* it rains hard, we still walk to the beach."]}
         ],
         "nl": [
-        {"lemma": "hoewel", "pos": "conjunction", "sentences": ["Hoewel het regent, lopen we."]}
+        {"lemma": "hoewel", "pos": "conjunction", "sentences": ["*Hoewel* het hard regent, lopen we toch naar het strand."]}
         ]
       }
     },
@@ -1285,10 +1285,10 @@
       "gloss": "since, because (conjunction)",
       "entries": {
         "en": [
-        {"lemma": "since, because", "pos": "conjunction", "sentences": ["Since it is late, we go home."]}
+        {"lemma": "since, because", "pos": "conjunction", "sentences": ["*Since* it is late, we go home by taxi."]}
         ],
         "nl": [
-        {"lemma": "aangezien", "pos": "conjunction", "sentences": ["Aangezien het laat is, gaan we naar huis."]}
+        {"lemma": "aangezien", "pos": "conjunction", "sentences": ["*Aangezien* het laat is, gaan we met de taxi naar huis."]}
         ]
       }
     },
@@ -1297,10 +1297,10 @@
       "gloss": "nor (conjunction)",
       "entries": {
         "en": [
-        {"lemma": "nor", "pos": "conjunction", "sentences": ["He eats neither meat nor fish."]}
+        {"lemma": "nor", "pos": "conjunction", "sentences": ["He eats neither meat *nor* fish, only vegetables."]}
         ],
         "nl": [
-        {"lemma": "noch", "pos": "conjunction", "sentences": ["Hij eet noch vlees noch vis."]}
+        {"lemma": "noch", "pos": "conjunction", "sentences": ["Hij eet *noch* vlees *noch* vis, alleen groente."]}
         ]
       }
     },
@@ -1309,10 +1309,10 @@
       "gloss": "or (formal)",
       "entries": {
         "en": [
-        {"lemma": "or", "pos": "conjunction", "details": {"note": "formal"}, "sentences": ["You pay now or later."]}
+        {"lemma": "or", "pos": "conjunction", "details": {"note": "formal"}, "sentences": ["Sir, you can pay at the desk now *or* later."]}
         ],
         "nl": [
-        {"lemma": "ofwel", "pos": "conjunction", "sentences": ["U betaalt nu ofwel later."]}
+        {"lemma": "ofwel", "pos": "conjunction", "sentences": ["Meneer, u kunt aan de balie nu betalen *ofwel* later."]}
         ]
       }
     },
@@ -1321,10 +1321,10 @@
       "gloss": "if (formal)",
       "entries": {
         "en": [
-        {"lemma": "if", "pos": "conjunction", "details": {"note": "formal"}, "sentences": ["Please call if necessary."]}
+        {"lemma": "if", "pos": "conjunction", "details": {"note": "formal"}, "sentences": ["Please call the office *if* you have a question."]}
         ],
         "nl": [
-        {"lemma": "indien", "pos": "conjunction", "sentences": ["Bel indien nodig."]}
+        {"lemma": "indien", "pos": "conjunction", "sentences": ["Bel het kantoor *indien* u een vraag heeft."]}
         ]
       }
     },
@@ -1333,10 +1333,10 @@
       "gloss": "because (of the fact that)",
       "entries": {
         "en": [
-        {"lemma": "because", "pos": "conjunction", "details": {"note": "of the fact that"}, "sentences": ["He is late because the train was late."]}
+        {"lemma": "because", "pos": "conjunction", "details": {"note": "of the fact that"}, "sentences": ["He is late for work *because* the train is delayed."]}
         ],
         "nl": [
-        {"lemma": "doordat", "pos": "conjunction", "sentences": ["Hij is te laat doordat de trein te laat was."]}
+        {"lemma": "doordat", "pos": "conjunction", "sentences": ["Hij komt te laat op zijn werk *doordat* de trein vertraagd is."]}
         ]
       }
     },
@@ -1345,10 +1345,10 @@
       "gloss": "so that (formal)",
       "entries": {
         "en": [
-        {"lemma": "so that", "pos": "conjunction", "details": {"note": "formal"}, "sentences": ["I tell you this so that you know."]}
+        {"lemma": "so that", "pos": "conjunction", "details": {"note": "formal"}, "sentences": ["I tell you this now *so that* you know everything."]}
         ],
         "nl": [
-        {"lemma": "opdat", "pos": "conjunction", "sentences": ["Ik zeg je dit opdat je het weet."]}
+        {"lemma": "opdat", "pos": "conjunction", "sentences": ["Ik vertel je dit nu *opdat* je alles weet."]}
         ]
       }
     },
@@ -1357,10 +1357,10 @@
       "gloss": "just like (conjunction)",
       "entries": {
         "en": [
-        {"lemma": "just like", "pos": "conjunction", "sentences": ["He is a doctor, just like his father."]}
+        {"lemma": "just like", "pos": "conjunction", "sentences": ["He is a doctor in the city, *just like* his father."]}
         ],
         "nl": [
-        {"lemma": "evenals", "pos": "conjunction", "sentences": ["Hij is arts, evenals zijn vader."]}
+        {"lemma": "evenals", "pos": "conjunction", "sentences": ["Hij is arts in de stad, *evenals* zijn vader."]}
         ]
       }
     },
@@ -1369,10 +1369,10 @@
       "gloss": "in other words (conjunction)",
       "entries": {
         "en": [
-        {"lemma": "in other words", "pos": "conjunction", "sentences": ["He works at the bank, in other words, he is a banker."]}
+        {"lemma": "in other words", "pos": "conjunction", "sentences": ["He works at the bank; *in other words*, he is a banker."]}
         ],
         "nl": [
-        {"lemma": "oftewel", "pos": "conjunction", "sentences": ["Hij werkt bij de bank, oftewel, hij is bankier."]}
+        {"lemma": "oftewel", "pos": "conjunction", "sentences": ["Hij werkt bij de bank, *oftewel* hij is bankier."]}
         ]
       }
     },
@@ -1381,10 +1381,10 @@
       "gloss": "provided that (conjunction)",
       "entries": {
         "en": [
-        {"lemma": "provided that", "pos": "conjunction", "sentences": ["You can come, provided that you are on time."]}
+        {"lemma": "provided that", "pos": "conjunction", "sentences": ["You can come to the party, *provided that* you are on time."]}
         ],
         "nl": [
-        {"lemma": "mits", "pos": "conjunction", "sentences": ["Je mag komen, mits je op tijd bent."]}
+        {"lemma": "mits", "pos": "conjunction", "sentences": ["Je mag naar het feest komen, *mits* je op tijd bent."]}
         ]
       }
     },
@@ -1393,10 +1393,10 @@
       "gloss": "that (conjunction)",
       "entries": {
         "en": [
-        {"lemma": "that", "pos": "conjunction", "details": {"note": "conjunction"}, "sentences": ["I think that it is good."]}
+        {"lemma": "that", "pos": "conjunction", "details": {"note": "conjunction"}, "sentences": ["I think *that* the soup is very good today."]}
         ],
         "nl": [
-        {"lemma": "dat", "pos": "conjunction", "details": {"note": "voegwoord"}, "sentences": ["Ik denk dat het goed is."]}
+        {"lemma": "dat", "pos": "conjunction", "details": {"note": "voegwoord"}, "sentences": ["Ik denk *dat* de soep vandaag erg lekker is."]}
         ]
       }
     },
@@ -1405,10 +1405,10 @@
       "gloss": "whether (indirect question)",
       "entries": {
         "en": [
-        {"lemma": "whether", "pos": "conjunction", "details": {"note": "indirect question"}, "sentences": ["I do not know whether he is home."]}
+        {"lemma": "whether", "pos": "conjunction", "details": {"note": "indirect question"}, "sentences": ["I do not know *whether* he is home this evening."]}
         ],
         "nl": [
-        {"lemma": "of", "pos": "conjunction", "details": {"note": "als vraag in een bijzin"}, "sentences": ["Ik weet niet of hij thuis is."]}
+        {"lemma": "of", "pos": "conjunction", "details": {"note": "als vraag in een bijzin"}, "sentences": ["Ik weet niet *of* hij vanavond thuis is."]}
         ]
       }
     },
@@ -1417,10 +1417,10 @@
       "gloss": "as well as (conjunction)",
       "entries": {
         "en": [
-        {"lemma": "as well as", "pos": "conjunction", "sentences": ["He as well as she is here."]}
+        {"lemma": "as well as", "pos": "conjunction", "sentences": ["He *as well as* his sister is at the party."]}
         ],
         "nl": [
-        {"lemma": "zowel", "pos": "conjunction", "sentences": ["Zowel hij als zij is hier."]}
+        {"lemma": "zowel", "pos": "conjunction", "sentences": ["*Zowel* hij als zijn zus is op het feest."]}
         ]
       }
     },
@@ -1429,10 +1429,10 @@
       "gloss": "how much, how many (pronoun)",
       "entries": {
         "en": [
-        {"lemma": "how much, how many", "pos": "pronoun", "sentences": ["How much is this?"]}
+        {"lemma": "how much, how many", "pos": "pronoun", "sentences": ["Excuse me, *how much* is this red scarf?"]}
         ],
         "nl": [
-        {"lemma": "hoeveel", "pos": "pronoun", "sentences": ["Hoeveel kost dit?"]}
+        {"lemma": "hoeveel", "pos": "pronoun", "sentences": ["Pardon, *hoeveel* kost deze rode sjaal?"]}
         ]
       }
     },
@@ -1441,10 +1441,10 @@
       "gloss": "how long (pronoun)",
       "entries": {
         "en": [
-        {"lemma": "how long", "pos": "pronoun", "sentences": ["How long do you stay?"]}
+        {"lemma": "how long", "pos": "pronoun", "sentences": ["*How long* do you stay in Amsterdam on this trip?"]}
         ],
         "nl": [
-        {"lemma": "hoelang", "pos": "pronoun", "sentences": ["Hoelang blijf je?"]}
+        {"lemma": "hoelang", "pos": "pronoun", "sentences": ["*Hoelang* blijf je tijdens deze reis in Amsterdam?"]}
         ]
       }
     },
@@ -1453,10 +1453,10 @@
       "gloss": "why (what do you mean)",
       "entries": {
         "en": [
-        {"lemma": "why", "pos": "interjection", "details": {"note": "what do you mean"}, "sentences": ["Why? What do you mean?"]}
+        {"lemma": "why", "pos": "interjection", "details": {"note": "what do you mean"}, "sentences": ["'You must leave now.' '*Why*? What do you mean?'"]}
         ],
         "nl": [
-        {"lemma": "hoezo", "pos": "interjection", "sentences": ["Hoezo? Wat bedoel je?"]}
+        {"lemma": "hoezo", "pos": "interjection", "sentences": ["'Je moet nu weggaan.' '*Hoezo*? Wat bedoel je?'"]}
         ]
       }
     },
@@ -1465,10 +1465,10 @@
       "gloss": "on it (adverb)",
       "entries": {
         "en": [
-        {"lemma": "on it", "pos": "adverb", "sentences": ["He puts the book on it."]}
+        {"lemma": "on it", "pos": "adverb", "sentences": ["He cleans the table and puts the book *on it*."]}
         ],
         "nl": [
-        {"lemma": "erop", "pos": "adverb", "sentences": ["Hij legt het boek erop."]}
+        {"lemma": "erop", "pos": "adverb", "sentences": ["Hij maakt de tafel schoon en legt het boek *erop*."]}
         ]
       }
     },
@@ -1477,10 +1477,10 @@
       "gloss": "about it (think of it)",
       "entries": {
         "en": [
-        {"lemma": "about it", "pos": "adverb", "details": {"note": "think of it"}, "sentences": ["Think about it."]}
+        {"lemma": "about it", "pos": "adverb", "details": {"note": "think of it"}, "sentences": ["The exam is difficult, so think *about it* carefully."]}
         ],
         "nl": [
-        {"lemma": "eraan", "pos": "adverb", "sentences": ["Denk eraan."]}
+        {"lemma": "eraan", "pos": "adverb", "sentences": ["Het examen is moeilijk, dus denk goed *eraan*."]}
         ]
       }
     },
@@ -1489,10 +1489,10 @@
       "gloss": "in it (adverb)",
       "entries": {
         "en": [
-        {"lemma": "in it", "pos": "adverb", "sentences": ["The key is in it."]}
+        {"lemma": "in it", "pos": "adverb", "sentences": ["Look at the small box; the key is *in it*."]}
         ],
         "nl": [
-        {"lemma": "erin", "pos": "adverb", "sentences": ["De sleutel zit erin."]}
+        {"lemma": "erin", "pos": "adverb", "sentences": ["Kijk naar het kleine doosje; de sleutel zit *erin*."]}
         ]
       }
     },
@@ -1501,10 +1501,10 @@
       "gloss": "with it (adverb)",
       "entries": {
         "en": [
-        {"lemma": "with it", "pos": "adverb", "sentences": ["I work with it."]}
+        {"lemma": "with it", "pos": "adverb", "sentences": ["This is my new laptop, and I work *with it* daily."]}
         ],
         "nl": [
-        {"lemma": "ermee", "pos": "adverb", "sentences": ["Ik werk ermee."]}
+        {"lemma": "ermee", "pos": "adverb", "sentences": ["Dit is mijn nieuwe laptop en ik werk er dagelijks *ermee*."]}
         ]
       }
     },
@@ -1513,10 +1513,10 @@
       "gloss": "for it (adverb)",
       "entries": {
         "en": [
-        {"lemma": "for it", "pos": "adverb", "details": {"note": "in exchange for it"}, "sentences": ["I pay for it."]}
+        {"lemma": "for it", "pos": "adverb", "details": {"note": "in exchange for it"}, "sentences": ["The coat is expensive, but I gladly pay *for it*."]}
         ],
         "nl": [
-        {"lemma": "ervoor", "pos": "adverb", "sentences": ["Ik betaal ervoor."]}
+        {"lemma": "ervoor", "pos": "adverb", "sentences": ["De jas is duur, maar ik betaal graag *ervoor*."]}
         ]
       }
     },
@@ -1525,10 +1525,10 @@
       "gloss": "of it (adverb)",
       "entries": {
         "en": [
-        {"lemma": "of it", "pos": "adverb", "sentences": ["I eat some of it."]}
+        {"lemma": "of it", "pos": "adverb", "sentences": ["The cake is lovely, so I eat some *of it*."]}
         ],
         "nl": [
-        {"lemma": "ervan", "pos": "adverb", "sentences": ["Ik eet ervan."]}
+        {"lemma": "ervan", "pos": "adverb", "sentences": ["De taart is heerlijk, dus ik eet er een stuk *ervan*."]}
         ]
       }
     },
@@ -1537,10 +1537,10 @@
       "gloss": "about it (talk about it)",
       "entries": {
         "en": [
-        {"lemma": "about it", "pos": "adverb", "details": {"note": "talk about it"}, "sentences": ["We talk about it."]}
+        {"lemma": "about it", "pos": "adverb", "details": {"note": "talk about it"}, "sentences": ["It is a big problem, so we talk *about it* tonight."]}
         ],
         "nl": [
-        {"lemma": "erover", "pos": "adverb", "sentences": ["Wij praten erover."]}
+        {"lemma": "erover", "pos": "adverb", "sentences": ["Het is een groot probleem, dus we praten er vanavond *erover*."]}
         ]
       }
     },
@@ -1549,10 +1549,10 @@
       "gloss": "there too (present)",
       "entries": {
         "en": [
-        {"lemma": "there too", "pos": "adverb", "details": {"note": "present"}, "sentences": ["I was there too."]}
+        {"lemma": "there too", "pos": "adverb", "details": {"note": "present"}, "sentences": ["My friends go to the party, and I am *there too*."]}
         ],
         "nl": [
-        {"lemma": "erbij", "pos": "adverb", "sentences": ["Ik was erbij."]}
+        {"lemma": "erbij", "pos": "adverb", "sentences": ["Mijn vrienden gaan naar het feest en ik ben *erbij*."]}
         ]
       }
     },
@@ -1561,10 +1561,10 @@
       "gloss": "out of it (adverb)",
       "entries": {
         "en": [
-        {"lemma": "out of it", "pos": "adverb", "sentences": ["It falls out of it."]}
+        {"lemma": "out of it", "pos": "adverb", "sentences": ["The bag has a hole, so the apple falls *out of it*."]}
         ],
         "nl": [
-        {"lemma": "eruit", "pos": "adverb", "sentences": ["Het valt eruit."]}
+        {"lemma": "eruit", "pos": "adverb", "sentences": ["De tas heeft een gat, dus de appel valt *eruit*."]}
         ]
       }
     },
@@ -1573,10 +1573,10 @@
       "gloss": "behind it (adverb)",
       "entries": {
         "en": [
-        {"lemma": "behind it", "pos": "adverb", "sentences": ["Behind it lies a garden."]}
+        {"lemma": "behind it", "pos": "adverb", "sentences": ["There is an old wall, and *behind it* lies a garden."]}
         ],
         "nl": [
-        {"lemma": "erachter", "pos": "adverb", "sentences": ["Erachter ligt een tuin."]}
+        {"lemma": "erachter", "pos": "adverb", "sentences": ["Daar staat een oude muur en *erachter* ligt een tuin."]}
         ]
       }
     },
@@ -1585,10 +1585,10 @@
       "gloss": "through it (adverb)",
       "entries": {
         "en": [
-        {"lemma": "through it", "pos": "adverb", "sentences": ["The train drives through it."]}
+        {"lemma": "through it", "pos": "adverb", "sentences": ["There is a long tunnel, and the train drives *through it*."]}
         ],
         "nl": [
-        {"lemma": "erdoor", "pos": "adverb", "sentences": ["De trein rijdt erdoor."]}
+        {"lemma": "erdoor", "pos": "adverb", "sentences": ["Daar is een lange tunnel en de trein rijdt *erdoor*."]}
         ]
       }
     },
@@ -1597,10 +1597,10 @@
       "gloss": "after it (adverb)",
       "entries": {
         "en": [
-        {"lemma": "after it", "pos": "adverb", "sentences": ["We eat and walk after it."]}
+        {"lemma": "after it", "pos": "adverb", "sentences": ["We eat a big dinner and go for a walk *after it*."]}
         ],
         "nl": [
-        {"lemma": "erna", "pos": "adverb", "sentences": ["Wij eten en wandelen erna."]}
+        {"lemma": "erna", "pos": "adverb", "sentences": ["Wij eten een groot diner en gaan *erna* wandelen."]}
         ]
       }
     },
@@ -1609,10 +1609,10 @@
       "gloss": "at it (toward it)",
       "entries": {
         "en": [
-        {"lemma": "at it", "pos": "adverb", "details": {"note": "toward it"}, "sentences": ["I am looking at it."]}
+        {"lemma": "at it", "pos": "adverb", "details": {"note": "toward it"}, "sentences": ["There is a nice painting, and I am looking *at it*."]}
         ],
         "nl": [
-        {"lemma": "ernaar", "pos": "adverb", "sentences": ["Ik kijk ernaar."]}
+        {"lemma": "ernaar", "pos": "adverb", "sentences": ["Daar hangt een mooi schilderij en ik kijk *ernaar*."]}
         ]
       }
     },
@@ -1621,10 +1621,10 @@
       "gloss": "there (to that place)",
       "entries": {
         "en": [
-        {"lemma": "there", "pos": "adverb", "details": {"note": "to that place"}, "sentences": ["I am going there."]}
+        {"lemma": "there", "pos": "adverb", "details": {"note": "to that place"}, "sentences": ["The new museum is open, so I am going *there* today."]}
         ],
         "nl": [
-        {"lemma": "erheen", "pos": "adverb", "sentences": ["Ik ga erheen."]}
+        {"lemma": "erheen", "pos": "adverb", "sentences": ["Het nieuwe museum is open, dus ik ga er vandaag *erheen*."]}
         ]
       }
     },
@@ -1633,10 +1633,10 @@
       "gloss": "for it (ask for it)",
       "entries": {
         "en": [
-        {"lemma": "for it", "pos": "adverb", "details": {"note": "ask for it"}, "sentences": ["I ask for it."]}
+        {"lemma": "for it", "pos": "adverb", "details": {"note": "ask for it"}, "sentences": ["I need help with this form, so I ask *for it*."]}
         ],
         "nl": [
-        {"lemma": "erom", "pos": "adverb", "sentences": ["Ik vraag erom."]}
+        {"lemma": "erom", "pos": "adverb", "sentences": ["Ik heb hulp nodig bij dit formulier, dus ik vraag *erom*."]}
         ]
       }
     },
@@ -1645,10 +1645,10 @@
       "gloss": "next to it (adverb)",
       "entries": {
         "en": [
-        {"lemma": "next to it", "pos": "adverb", "sentences": ["The shop is next to it."]}
+        {"lemma": "next to it", "pos": "adverb", "sentences": ["There is a new bank, and the shop is *next to it*."]}
         ],
         "nl": [
-        {"lemma": "ernaast", "pos": "adverb", "sentences": ["De winkel is ernaast."]}
+        {"lemma": "ernaast", "pos": "adverb", "sentences": ["Daar is een nieuwe bank en de winkel is *ernaast*."]}
         ]
       }
     },
@@ -1657,10 +1657,10 @@
       "gloss": "against it (adverb)",
       "entries": {
         "en": [
-        {"lemma": "against it", "pos": "adverb", "sentences": ["I am against it."]}
+        {"lemma": "against it", "pos": "adverb", "sentences": ["They want a new road, but I am *against it*."]}
         ],
         "nl": [
-        {"lemma": "ertegen", "pos": "adverb", "sentences": ["Ik ben ertegen."]}
+        {"lemma": "ertegen", "pos": "adverb", "sentences": ["Ze willen een nieuwe weg, maar ik ben *ertegen*."]}
         ]
       }
     },
@@ -1669,10 +1669,10 @@
       "gloss": "that is why (adverb)",
       "entries": {
         "en": [
-        {"lemma": "that is why", "pos": "adverb", "sentences": ["I am tired; that is why I sleep."]}
+        {"lemma": "that is why", "pos": "adverb", "sentences": ["I am very tired; *that is why* I go to bed early."]}
         ],
         "nl": [
-        {"lemma": "daarom", "pos": "adverb", "sentences": ["Ik ben moe; daarom slaap ik."]}
+        {"lemma": "daarom", "pos": "adverb", "sentences": ["Ik ben erg moe; *daarom* ga ik vroeg naar bed."]}
         ]
       }
     },
@@ -1681,10 +1681,10 @@
       "gloss": "after that (adverb)",
       "entries": {
         "en": [
-        {"lemma": "after that", "pos": "adverb", "sentences": ["First we eat, after that we walk."]}
+        {"lemma": "after that", "pos": "adverb", "sentences": ["First we eat lunch, and *after that* we walk."]}
         ],
         "nl": [
-        {"lemma": "daarna", "pos": "adverb", "sentences": ["Eerst eten we, daarna lopen we."]}
+        {"lemma": "daarna", "pos": "adverb", "sentences": ["Eerst eten we lunch en *daarna* gaan we wandelen."]}
         ]
       }
     },
@@ -1693,10 +1693,10 @@
       "gloss": "with that (adverb)",
       "entries": {
         "en": [
-        {"lemma": "with that", "pos": "adverb", "sentences": ["I agree with that."]}
+        {"lemma": "with that", "pos": "adverb", "sentences": ["You say we need more time, and I agree *with that*."]}
         ],
         "nl": [
-        {"lemma": "daarmee", "pos": "adverb", "sentences": ["Daarmee ben ik het eens."]}
+        {"lemma": "daarmee", "pos": "adverb", "sentences": ["Jij zegt dat we meer tijd nodig hebben, *daarmee* ben ik het eens."]}
         ]
       }
     },
@@ -1705,10 +1705,10 @@
       "gloss": "for that (adverb)",
       "entries": {
         "en": [
-        {"lemma": "for that", "pos": "adverb", "sentences": ["I pay for that."]}
+        {"lemma": "for that", "pos": "adverb", "sentences": ["The tickets are expensive, but I gladly pay *for that*."]}
         ],
         "nl": [
-        {"lemma": "daarvoor", "pos": "adverb", "sentences": ["Ik betaal daarvoor."]}
+        {"lemma": "daarvoor", "pos": "adverb", "sentences": ["De kaartjes zijn duur, maar daar betaal ik graag *daarvoor*."]}
         ]
       }
     },
@@ -1717,10 +1717,10 @@
       "gloss": "of that (adverb)",
       "entries": {
         "en": [
-        {"lemma": "of that", "pos": "adverb", "details": {"note": "from that"}, "sentences": ["I know nothing of that."]}
+        {"lemma": "of that", "pos": "adverb", "details": {"note": "from that"}, "sentences": ["You ask about the plan, but I know nothing *of that*."]}
         ],
         "nl": [
-        {"lemma": "daarvan", "pos": "adverb", "sentences": ["Daarvan weet ik niets."]}
+        {"lemma": "daarvan", "pos": "adverb", "sentences": ["Je vraagt naar het plan, maar *daarvan* weet ik niets."]}
         ]
       }
     },
@@ -1729,10 +1729,10 @@
       "gloss": "in that (adverb)",
       "entries": {
         "en": [
-        {"lemma": "in that", "pos": "adverb", "sentences": ["There is water in that."]}
+        {"lemma": "in that", "pos": "adverb", "sentences": ["Look at the big bottle; there is water *in that*."]}
         ],
         "nl": [
-        {"lemma": "daarin", "pos": "adverb", "sentences": ["Daarin zit water."]}
+        {"lemma": "daarin", "pos": "adverb", "sentences": ["Kijk naar die grote fles; *daarin* zit water."]}
         ]
       }
     },
@@ -1741,10 +1741,10 @@
       "gloss": "in addition (adverb)",
       "entries": {
         "en": [
-        {"lemma": "in addition", "pos": "adverb", "sentences": ["In addition, it is cheap."]}
+        {"lemma": "in addition", "pos": "adverb", "sentences": ["The flat is nice, and *in addition*, it is cheap."]}
         ],
         "nl": [
-        {"lemma": "daarbij", "pos": "adverb", "sentences": ["Daarbij is het goedkoop."]}
+        {"lemma": "daarbij", "pos": "adverb", "sentences": ["Het appartement is mooi en *daarbij* is het ook goedkoop."]}
         ]
       }
     },
@@ -1753,10 +1753,10 @@
       "gloss": "because of that (adverb)",
       "entries": {
         "en": [
-        {"lemma": "because of that", "pos": "adverb", "sentences": ["He fell; because of that he is hurt."]}
+        {"lemma": "because of that", "pos": "adverb", "sentences": ["He falls off his bike; *because of that* he is hurt."]}
         ],
         "nl": [
-        {"lemma": "daardoor", "pos": "adverb", "sentences": ["Hij viel; daardoor is hij gewond."]}
+        {"lemma": "daardoor", "pos": "adverb", "sentences": ["Hij valt van zijn fiets en *daardoor* is hij gewond."]}
         ]
       }
     },
@@ -1765,10 +1765,10 @@
       "gloss": "of that (think of)",
       "entries": {
         "en": [
-        {"lemma": "of that", "pos": "adverb", "details": {"note": "think of"}, "sentences": ["I do not think of that."]}
+        {"lemma": "of that", "pos": "adverb", "details": {"note": "think of"}, "sentences": ["You want to leave early, but I do not think *of that*."]}
         ],
         "nl": [
-        {"lemma": "daaraan", "pos": "adverb", "sentences": ["Daaraan denk ik niet."]}
+        {"lemma": "daaraan", "pos": "adverb", "sentences": ["Jij wilt vroeg weg, maar *daaraan* denk ik niet."]}
         ]
       }
     },
@@ -1777,10 +1777,10 @@
       "gloss": "to that (reply)",
       "entries": {
         "en": [
-        {"lemma": "to that", "pos": "adverb", "details": {"note": "reply"}, "sentences": ["He replied to that."]}
+        {"lemma": "to that", "pos": "adverb", "details": {"note": "reply"}, "sentences": ["She asks a hard question, and he replies *to that*."]}
         ],
         "nl": [
-        {"lemma": "daarop", "pos": "adverb", "sentences": ["Daarop antwoordde hij."]}
+        {"lemma": "daarop", "pos": "adverb", "sentences": ["Zij stelt een moeilijke vraag en *daarop* antwoordt hij."]}
         ]
       }
     },
@@ -1789,10 +1789,10 @@
       "gloss": "about that (adverb)",
       "entries": {
         "en": [
-        {"lemma": "about that", "pos": "adverb", "sentences": ["We talk about that tomorrow."]}
+        {"lemma": "about that", "pos": "adverb", "sentences": ["We are tired now, so we talk *about that* tomorrow."]}
         ],
         "nl": [
-        {"lemma": "daarover", "pos": "adverb", "sentences": ["Daarover praten we morgen."]}
+        {"lemma": "daarover", "pos": "adverb", "sentences": ["We zijn nu moe, dus *daarover* praten we morgen."]}
         ]
       }
     },
@@ -1801,10 +1801,10 @@
       "gloss": "besides that (adverb)",
       "entries": {
         "en": [
-        {"lemma": "besides that", "pos": "adverb", "sentences": ["He is a teacher; besides that he writes."]}
+        {"lemma": "besides that", "pos": "adverb", "sentences": ["He is a teacher at school; *besides that* he writes books."]}
         ],
         "nl": [
-        {"lemma": "daarnaast", "pos": "adverb", "sentences": ["Hij is leraar; daarnaast schrijft hij."]}
+        {"lemma": "daarnaast", "pos": "adverb", "sentences": ["Hij is leraar op school; *daarnaast* schrijft hij boeken."]}
         ]
       }
     },
@@ -1813,10 +1813,10 @@
       "gloss": "from that (adverb)",
       "entries": {
         "en": [
-        {"lemma": "from that", "pos": "adverb", "sentences": ["From that we learn a lot."]}
+        {"lemma": "from that", "pos": "adverb", "sentences": ["Every mistake is useful, and *from that* we learn a lot."]}
         ],
         "nl": [
-        {"lemma": "daaruit", "pos": "adverb", "sentences": ["Daaruit leren we veel."]}
+        {"lemma": "daaruit", "pos": "adverb", "sentences": ["Elke fout is nuttig en *daaruit* leren we veel."]}
         ]
       }
     },
@@ -1825,10 +1825,10 @@
       "gloss": "on the other hand (adverb)",
       "entries": {
         "en": [
-        {"lemma": "on the other hand", "pos": "adverb", "sentences": ["He is tall, she, on the other hand, is small."]}
+        {"lemma": "on the other hand", "pos": "adverb", "sentences": ["He is very tall, she, *on the other hand*, is small."]}
         ],
         "nl": [
-        {"lemma": "daarentegen", "pos": "adverb", "sentences": ["Hij is groot, zij daarentegen is klein."]}
+        {"lemma": "daarentegen", "pos": "adverb", "sentences": ["Hij is erg groot, zij *daarentegen* is klein."]}
         ]
       }
     },
@@ -1837,10 +1837,10 @@
       "gloss": "there (to that place, emphatic)",
       "entries": {
         "en": [
-        {"lemma": "there", "pos": "adverb", "details": {"note": "to that place, emphatic"}, "sentences": ["I am going there."]}
+        {"lemma": "there", "pos": "adverb", "details": {"note": "to that place, emphatic"}, "sentences": ["The beach is lovely, so I am going *there* tomorrow."]}
         ],
         "nl": [
-        {"lemma": "daarheen", "pos": "adverb", "sentences": ["Ik ga daarheen."]}
+        {"lemma": "daarheen", "pos": "adverb", "sentences": ["Het strand is mooi, dus morgen ga ik *daarheen*."]}
         ]
       }
     },
@@ -1849,10 +1849,10 @@
       "gloss": "over here (to this place)",
       "entries": {
         "en": [
-        {"lemma": "over here", "pos": "adverb", "details": {"note": "to this place"}, "sentences": ["Come over here."]}
+        {"lemma": "over here", "pos": "adverb", "details": {"note": "to this place"}, "sentences": ["Please come *over here* and look at this map."]}
         ],
         "nl": [
-        {"lemma": "hierheen", "pos": "adverb", "sentences": ["Kom hierheen."]}
+        {"lemma": "hierheen", "pos": "adverb", "sentences": ["Kom alsjeblieft *hierheen* en kijk naar deze kaart."]}
         ]
       }
     },
@@ -1861,10 +1861,10 @@
       "gloss": "with this (adverb)",
       "entries": {
         "en": [
-        {"lemma": "with this", "pos": "adverb", "sentences": ["I do it with this."]}
+        {"lemma": "with this", "pos": "adverb", "sentences": ["I fix the loose chair *with this* small screwdriver."]}
         ],
         "nl": [
-        {"lemma": "hiermee", "pos": "adverb", "sentences": ["Ik doe het hiermee."]}
+        {"lemma": "hiermee", "pos": "adverb", "sentences": ["Ik repareer de losse stoel *hiermee* met een kleine schroevendraaier."]}
         ]
       }
     },
@@ -1873,10 +1873,10 @@
       "gloss": "of this (adverb)",
       "entries": {
         "en": [
-        {"lemma": "of this", "pos": "adverb", "sentences": ["I know nothing of this."]}
+        {"lemma": "of this", "pos": "adverb", "sentences": ["My brother knows nothing *of this* secret plan."]}
         ],
         "nl": [
-        {"lemma": "hiervan", "pos": "adverb", "sentences": ["Hiervan weet ik niets."]}
+        {"lemma": "hiervan", "pos": "adverb", "sentences": ["Mijn broer weet niets *hiervan*, want het is een geheim plan."]}
         ]
       }
     },
@@ -1885,10 +1885,10 @@
       "gloss": "in this (adverb)",
       "entries": {
         "en": [
-        {"lemma": "in this", "pos": "adverb", "sentences": ["There is sugar in this."]}
+        {"lemma": "in this", "pos": "adverb", "sentences": ["There is a lot of sugar *in this* lemonade."]}
         ],
         "nl": [
-        {"lemma": "hierin", "pos": "adverb", "sentences": ["Hierin zit suiker."]}
+        {"lemma": "hierin", "pos": "adverb", "sentences": ["*Hierin* zit veel suiker, dus drink het niet te snel."]}
         ]
       }
     },
@@ -1897,10 +1897,10 @@
       "gloss": "herewith (adverb)",
       "entries": {
         "en": [
-        {"lemma": "herewith", "pos": "adverb", "sentences": ["Herewith I send you the file."]}
+        {"lemma": "herewith", "pos": "adverb", "sentences": ["*Herewith* I send you the file for tomorrow's meeting."]}
         ],
         "nl": [
-        {"lemma": "hierbij", "pos": "adverb", "sentences": ["Hierbij stuur ik je het bestand."]}
+        {"lemma": "hierbij", "pos": "adverb", "sentences": ["*Hierbij* stuur ik je het bestand voor de vergadering van morgen."]}
         ]
       }
     },
@@ -1909,10 +1909,10 @@
       "gloss": "for this (adverb)",
       "entries": {
         "en": [
-        {"lemma": "for this", "pos": "adverb", "sentences": ["I pay for this."]}
+        {"lemma": "for this", "pos": "adverb", "sentences": ["I pay twenty euros *for this* warm winter hat."]}
         ],
         "nl": [
-        {"lemma": "hiervoor", "pos": "adverb", "sentences": ["Ik betaal hiervoor."]}
+        {"lemma": "hiervoor", "pos": "adverb", "sentences": ["Ik betaal twintig euro *hiervoor*, voor deze warme muts."]}
         ]
       }
     },
@@ -1921,10 +1921,10 @@
       "gloss": "about this (adverb)",
       "entries": {
         "en": [
-        {"lemma": "about this", "pos": "adverb", "sentences": ["We talk about this later."]}
+        {"lemma": "about this", "pos": "adverb", "sentences": ["We talk *about this* again after the lunch break."]}
         ],
         "nl": [
-        {"lemma": "hierover", "pos": "adverb", "sentences": ["Hierover praten we later."]}
+        {"lemma": "hierover", "pos": "adverb", "sentences": ["*Hierover* praten we na de lunchpauze nog een keer."]}
         ]
       }
     },
@@ -1933,10 +1933,10 @@
       "gloss": "on this (adverb)",
       "entries": {
         "en": [
-        {"lemma": "on this", "pos": "adverb", "sentences": ["Put the book on this."]}
+        {"lemma": "on this", "pos": "adverb", "sentences": ["Put the heavy book *on this* shelf, please."]}
         ],
         "nl": [
-        {"lemma": "hierop", "pos": "adverb", "sentences": ["Leg het boek hierop."]}
+        {"lemma": "hierop", "pos": "adverb", "sentences": ["Leg het zware boek *hierop*, op deze plank."]}
         ]
       }
     },
@@ -1945,10 +1945,10 @@
       "gloss": "after this (adverb)",
       "entries": {
         "en": [
-        {"lemma": "after this", "pos": "adverb", "sentences": ["After this we go home."]}
+        {"lemma": "after this", "pos": "adverb", "sentences": ["*After this* lesson we all go home for dinner."]}
         ],
         "nl": [
-        {"lemma": "hierna", "pos": "adverb", "sentences": ["Hierna gaan we naar huis."]}
+        {"lemma": "hierna", "pos": "adverb", "sentences": ["*Hierna* gaan we allemaal naar huis om te eten."]}
         ]
       }
     },
@@ -1957,10 +1957,10 @@
       "gloss": "because of this (adverb)",
       "entries": {
         "en": [
-        {"lemma": "because of this", "pos": "adverb", "sentences": ["He is late; because of this we wait."]}
+        {"lemma": "because of this", "pos": "adverb", "sentences": ["The train is late; *because of this* we wait."]}
         ],
         "nl": [
-        {"lemma": "hierdoor", "pos": "adverb", "sentences": ["Hij is laat; hierdoor wachten wij."]}
+        {"lemma": "hierdoor", "pos": "adverb", "sentences": ["De trein is laat; *hierdoor* wachten wij buiten in de kou."]}
         ]
       }
     },
@@ -1969,10 +1969,10 @@
       "gloss": "for what (adverb)",
       "entries": {
         "en": [
-        {"lemma": "for what", "pos": "adverb", "sentences": ["What do you need it for?"]}
+        {"lemma": "for what", "pos": "adverb", "sentences": ["*For what* do you need the ladder this morning?"]}
         ],
         "nl": [
-        {"lemma": "waarvoor", "pos": "adverb", "sentences": ["Waarvoor heb je het nodig?"]}
+        {"lemma": "waarvoor", "pos": "adverb", "sentences": ["*Waarvoor* heb je vanochtend de ladder nodig?"]}
         ]
       }
     },
@@ -1981,10 +1981,10 @@
       "gloss": "with what (adverb)",
       "entries": {
         "en": [
-        {"lemma": "with what", "pos": "adverb", "sentences": ["What do you cut with?"]}
+        {"lemma": "with what", "pos": "adverb", "sentences": ["*With what* do you cut the bread at home?"]}
         ],
         "nl": [
-        {"lemma": "waarmee", "pos": "adverb", "sentences": ["Waarmee snij je?"]}
+        {"lemma": "waarmee", "pos": "adverb", "sentences": ["*Waarmee* snij je thuis het brood?"]}
         ]
       }
     },
@@ -1993,10 +1993,10 @@
       "gloss": "about what (adverb)",
       "entries": {
         "en": [
-        {"lemma": "about what", "pos": "adverb", "sentences": ["What are you talking about?"]}
+        {"lemma": "about what", "pos": "adverb", "sentences": ["*About what* are you two laughing so loudly?"]}
         ],
         "nl": [
-        {"lemma": "waarover", "pos": "adverb", "sentences": ["Waarover praat je?"]}
+        {"lemma": "waarover", "pos": "adverb", "sentences": ["*Waarover* lachen jullie twee zo hard?"]}
         ]
       }
     },
@@ -2005,10 +2005,10 @@
       "gloss": "from what (adverb)",
       "entries": {
         "en": [
-        {"lemma": "from what", "pos": "adverb", "sentences": ["What did you learn that from?"]}
+        {"lemma": "from what", "pos": "adverb", "sentences": ["*From what* do you learn that old song?"]}
         ],
         "nl": [
-        {"lemma": "waarvan", "pos": "adverb", "sentences": ["Waarvan heb je dat geleerd?"]}
+        {"lemma": "waarvan", "pos": "adverb", "sentences": ["*Waarvan* leer je dat oude liedje eigenlijk?"]}
         ]
       }
     },
@@ -2017,10 +2017,10 @@
       "gloss": "on which (adverb)",
       "entries": {
         "en": [
-        {"lemma": "on which", "pos": "adverb", "sentences": ["The table on which the book lies."]}
+        {"lemma": "on which", "pos": "adverb", "sentences": ["This is the table *on which* we eat dinner."]}
         ],
         "nl": [
-        {"lemma": "waarop", "pos": "adverb", "sentences": ["De tafel waarop het boek ligt."]}
+        {"lemma": "waarop", "pos": "adverb", "sentences": ["Dit is de tafel *waarop* wij elke avond eten."]}
         ]
       }
     },
@@ -2029,10 +2029,10 @@
       "gloss": "in which (adverb)",
       "entries": {
         "en": [
-        {"lemma": "in which", "pos": "adverb", "sentences": ["The house in which I live."]}
+        {"lemma": "in which", "pos": "adverb", "sentences": ["It is the house *in which* grandma lives."]}
         ],
         "nl": [
-        {"lemma": "waarin", "pos": "adverb", "sentences": ["Het huis waarin ik woon."]}
+        {"lemma": "waarin", "pos": "adverb", "sentences": ["Het is het kleine huis *waarin* mijn oma woont."]}
         ]
       }
     },
@@ -2041,10 +2041,10 @@
       "gloss": "how come (adverb)",
       "entries": {
         "en": [
-        {"lemma": "how come", "pos": "adverb", "sentences": ["How come it is broken?"]}
+        {"lemma": "how come", "pos": "adverb", "sentences": ["*How come* the shop is closed at noon today?"]}
         ],
         "nl": [
-        {"lemma": "waardoor", "pos": "adverb", "sentences": ["Waardoor is het kapot?"]}
+        {"lemma": "waardoor", "pos": "adverb", "sentences": ["*Waardoor* is de winkel vandaag om twaalf uur dicht?"]}
         ]
       }
     },
@@ -2053,10 +2053,10 @@
       "gloss": "whereby (adverb)",
       "entries": {
         "en": [
-        {"lemma": "whereby", "pos": "adverb", "sentences": ["A game whereby everyone laughs."]}
+        {"lemma": "whereby", "pos": "adverb", "sentences": ["It is a game *whereby* everyone laughs loudly."]}
         ],
         "nl": [
-        {"lemma": "waarbij", "pos": "adverb", "sentences": ["Een spel waarbij iedereen lacht."]}
+        {"lemma": "waarbij", "pos": "adverb", "sentences": ["Het is een kaartspel *waarbij* iedereen veel lacht."]}
         ]
       }
     },
@@ -2065,10 +2065,10 @@
       "gloss": "of what (thinking)",
       "entries": {
         "en": [
-        {"lemma": "of what", "pos": "adverb", "details": {"note": "thinking"}, "sentences": ["Of what are you thinking?"]}
+        {"lemma": "of what", "pos": "adverb", "details": {"note": "thinking"}, "sentences": ["*Of what* are you thinking while you look outside?"]}
         ],
         "nl": [
-        {"lemma": "waaraan", "pos": "adverb", "sentences": ["Waaraan denk je?"]}
+        {"lemma": "waaraan", "pos": "adverb", "sentences": ["*Waaraan* denk je terwijl je naar buiten kijkt?"]}
         ]
       }
     },
@@ -2077,10 +2077,10 @@
       "gloss": "where to (adverb)",
       "entries": {
         "en": [
-        {"lemma": "where to", "pos": "adverb", "sentences": ["Where are you going to?"]}
+        {"lemma": "where to", "pos": "adverb", "sentences": ["*Where to* is this night bus going, please?"]}
         ],
         "nl": [
-        {"lemma": "waarheen", "pos": "adverb", "sentences": ["Waarheen ga je?"]}
+        {"lemma": "waarheen", "pos": "adverb", "sentences": ["*Waarheen* gaat deze nachtbus eigenlijk?"]}
         ]
       }
     },
@@ -2089,10 +2089,10 @@
       "gloss": "out of what (adverb)",
       "entries": {
         "en": [
-        {"lemma": "out of what", "pos": "adverb", "sentences": ["What is it made out of?"]}
+        {"lemma": "out of what", "pos": "adverb", "sentences": ["*Out of what* is this old bridge made?"]}
         ],
         "nl": [
-        {"lemma": "waaruit", "pos": "adverb", "sentences": ["Waaruit is het gemaakt?"]}
+        {"lemma": "waaruit", "pos": "adverb", "sentences": ["*Waaruit* is deze oude brug gemaakt?"]}
         ]
       }
     },
@@ -2101,10 +2101,10 @@
       "gloss": "after which (adverb)",
       "entries": {
         "en": [
-        {"lemma": "after which", "pos": "adverb", "sentences": ["We ate, after which we walked."]}
+        {"lemma": "after which", "pos": "adverb", "sentences": ["We eat, *after which* we walk to the lake."]}
         ],
         "nl": [
-        {"lemma": "waarna", "pos": "adverb", "sentences": ["Wij aten, waarna wij wandelden."]}
+        {"lemma": "waarna", "pos": "adverb", "sentences": ["Wij eten samen, *waarna* wij naar het meer wandelen."]}
         ]
       }
     }

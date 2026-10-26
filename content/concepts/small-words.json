@@ -5,10 +5,10 @@
       "gloss": "and (conjunction)",
       "entries": {
         "en": [
-        {"lemma": "and", "pos": "conjunction", "sentences": ["I eat bread and cheese."]}
+        {"lemma": "and", "pos": "conjunction", "sentences": ["I eat bread *and* cheese for breakfast every day."]}
         ],
         "nl": [
-        {"lemma": "en", "pos": "conjunction", "sentences": ["Ik eet brood en kaas."]}
+        {"lemma": "en", "pos": "conjunction", "sentences": ["Ik eet elke dag brood *en* kaas als ontbijt."]}
         ]
       }
     },
@@ -17,10 +17,10 @@
       "gloss": "but (conjunction)",
       "entries": {
         "en": [
-        {"lemma": "but", "pos": "conjunction", "sentences": ["I am tired, but happy."]}
+        {"lemma": "but", "pos": "conjunction", "sentences": ["I am tired after the long trip, *but* happy."]}
         ],
         "nl": [
-        {"lemma": "maar", "pos": "conjunction", "details": {"note": "tegenstelling"}, "sentences": ["Ik ben moe, maar blij."]}
+        {"lemma": "maar", "pos": "conjunction", "details": {"note": "tegenstelling"}, "sentences": ["Ik ben moe na de lange reis, *maar* blij."]}
         ]
       }
     },
@@ -29,10 +29,10 @@
       "gloss": "or (conjunction)",
       "entries": {
         "en": [
-        {"lemma": "or", "pos": "conjunction", "details": {"note": "standard"}, "sentences": ["Tea or coffee?"]}
+        {"lemma": "or", "pos": "conjunction", "details": {"note": "standard"}, "sentences": ["Do you want tea *or* coffee after dinner?"]}
         ],
         "nl": [
-        {"lemma": "of", "pos": "conjunction", "details": {"note": "een keuze"}, "sentences": ["Thee of koffie?"]}
+        {"lemma": "of", "pos": "conjunction", "details": {"note": "een keuze"}, "sentences": ["Wil je na het eten thee *of* koffie?"]}
         ]
       }
     },
@@ -41,10 +41,10 @@
       "gloss": "because (conjunction)",
       "entries": {
         "en": [
-        {"lemma": "because", "pos": "conjunction", "details": {"note": "general"}, "sentences": ["I sleep because I am tired."]}
+        {"lemma": "because", "pos": "conjunction", "details": {"note": "general"}, "sentences": ["I stay home today *because* I have a cold."]}
         ],
         "nl": [
-        {"lemma": "omdat", "pos": "conjunction", "sentences": ["Ik slaap omdat ik moe ben."]}
+        {"lemma": "omdat", "pos": "conjunction", "sentences": ["Ik blijf vandaag thuis *omdat* ik verkouden ben."]}
         ]
       }
     },
@@ -53,10 +53,10 @@
       "gloss": "with (accompanied by)",
       "entries": {
         "en": [
-        {"lemma": "with", "pos": "preposition", "sentences": ["I drink coffee with milk."]}
+        {"lemma": "with", "pos": "preposition", "sentences": ["I drink my coffee *with* milk in the morning."]}
         ],
         "nl": [
-        {"lemma": "met", "pos": "preposition", "sentences": ["Ik drink koffie met melk."]}
+        {"lemma": "met", "pos": "preposition", "sentences": ["Ik drink 's ochtends mijn koffie *met* melk."]}
         ]
       }
     },
@@ -65,10 +65,10 @@
       "gloss": "without (lacking)",
       "entries": {
         "en": [
-        {"lemma": "without", "pos": "preposition", "sentences": ["Coffee without sugar, please."]}
+        {"lemma": "without", "pos": "preposition", "sentences": ["I drink my tea *without* sugar at work."]}
         ],
         "nl": [
-        {"lemma": "zonder", "pos": "preposition", "sentences": ["Koffie zonder suiker, alsjeblieft."]}
+        {"lemma": "zonder", "pos": "preposition", "sentences": ["Op mijn werk drink ik thee *zonder* suiker."]}
         ]
       }
     },
@@ -77,10 +77,10 @@
       "gloss": "in (inside)",
       "entries": {
         "en": [
-        {"lemma": "in", "pos": "preposition", "sentences": ["The cat is in the house."]}
+        {"lemma": "in", "pos": "preposition", "sentences": ["The cat sleeps *in* the warm kitchen all day."]}
         ],
         "nl": [
-        {"lemma": "in", "pos": "preposition", "sentences": ["De kat is in het huis."]}
+        {"lemma": "in", "pos": "preposition", "sentences": ["De kat slaapt de hele dag *in* de warme keuken."]}
         ]
       }
     },
@@ -89,10 +89,10 @@
       "gloss": "on (on top of)",
       "entries": {
         "en": [
-        {"lemma": "on", "pos": "preposition", "sentences": ["The book is on the table."]}
+        {"lemma": "on", "pos": "preposition", "sentences": ["My keys lie *on* the table by the door."]}
         ],
         "nl": [
-        {"lemma": "op", "pos": "preposition", "sentences": ["Het boek ligt op de tafel."]}
+        {"lemma": "op", "pos": "preposition", "sentences": ["Mijn sleutels liggen *op* de tafel bij de deur."]}
         ]
       }
     },
@@ -101,10 +101,10 @@
       "gloss": "under (beneath)",
       "entries": {
         "en": [
-        {"lemma": "under", "pos": "preposition", "sentences": ["The cat is under the table."]}
+        {"lemma": "under", "pos": "preposition", "sentences": ["The cat hides *under* the bed when visitors come."]}
         ],
         "nl": [
-        {"lemma": "onder", "pos": "preposition", "sentences": ["De kat zit onder de tafel."]}
+        {"lemma": "onder", "pos": "preposition", "sentences": ["De kat verstopt zich *onder* het bed als er bezoek komt."]}
         ]
       }
     },
@@ -113,10 +113,10 @@
       "gloss": "very (to a high degree)",
       "entries": {
         "en": [
-        {"lemma": "very", "pos": "adverb", "details": {"note": "to a high degree"}, "sentences": ["The coffee is very hot."]}
+        {"lemma": "very", "pos": "adverb", "details": {"note": "to a high degree"}, "sentences": ["Be careful, the coffee is *very* hot this morning."]}
         ],
         "nl": [
-        {"lemma": "heel", "pos": "adverb", "details": {"note": "in hoge mate"}, "sentences": ["De koffie is heel heet."]}
+        {"lemma": "heel", "pos": "adverb", "details": {"note": "in hoge mate"}, "sentences": ["Pas op, de koffie is vanochtend *heel* heet."]}
         ]
       }
     },
@@ -125,10 +125,10 @@
       "gloss": "also (as well)",
       "entries": {
         "en": [
-        {"lemma": "also", "pos": "adverb", "sentences": ["I also want tea."]}
+        {"lemma": "also", "pos": "adverb", "sentences": ["I want tea, and my sister *also* wants some."]}
         ],
         "nl": [
-        {"lemma": "ook", "pos": "adverb", "sentences": ["Ik wil ook thee."]}
+        {"lemma": "ook", "pos": "adverb", "sentences": ["Ik wil thee en mijn zus wil *ook* thee."]}
         ]
       }
     },
@@ -137,10 +137,10 @@
       "gloss": "not (negation)",
       "entries": {
         "en": [
-        {"lemma": "not", "pos": "adverb", "sentences": ["I do not know."]}
+        {"lemma": "not", "pos": "adverb", "sentences": ["I do *not* know the way to school."]}
         ],
         "nl": [
-        {"lemma": "niet", "pos": "adverb", "sentences": ["Ik weet het niet."]}
+        {"lemma": "niet", "pos": "adverb", "sentences": ["Ik weet de weg naar school *niet*."]}
         ]
       }
     },
@@ -149,10 +149,10 @@
       "gloss": "more (a greater amount)",
       "entries": {
         "en": [
-        {"lemma": "more", "pos": "adverb", "sentences": ["I want more water."]}
+        {"lemma": "more", "pos": "adverb", "sentences": ["The kids are thirsty and want *more* water."]}
         ],
         "nl": [
-        {"lemma": "meer", "pos": "adverb", "sentences": ["Ik wil meer water."]}
+        {"lemma": "meer", "pos": "adverb", "sentences": ["De kinderen hebben dorst en willen *meer* water."]}
         ]
       }
     },
@@ -161,10 +161,10 @@
       "gloss": "here (at this place)",
       "entries": {
         "en": [
-        {"lemma": "here", "pos": "adverb", "sentences": ["Come here!"]}
+        {"lemma": "here", "pos": "adverb", "sentences": ["Come *here* and look at this picture, please."]}
         ],
         "nl": [
-        {"lemma": "hier", "pos": "adverb", "sentences": ["Kom hier!"]}
+        {"lemma": "hier", "pos": "adverb", "sentences": ["Kom *hier* en kijk even naar deze foto."]}
         ]
       }
     },
@@ -173,10 +173,10 @@
       "gloss": "there (at that place)",
       "entries": {
         "en": [
-        {"lemma": "there", "pos": "adverb", "details": {"note": "at that place"}, "sentences": ["The bus is over there."]}
+        {"lemma": "there", "pos": "adverb", "details": {"note": "at that place"}, "sentences": ["The bus stop is over *there*, near the bakery."]}
         ],
         "nl": [
-        {"lemma": "daar", "pos": "adverb", "sentences": ["De bus is daar."]}
+        {"lemma": "daar", "pos": "adverb", "sentences": ["De bushalte is *daar* bij de bakker."]}
         ]
       }
     },
@@ -185,10 +185,10 @@
       "gloss": "at home (in one's own house)",
       "entries": {
         "en": [
-        {"lemma": "at home", "pos": "adverb", "sentences": ["I am at home today."]}
+        {"lemma": "at home", "pos": "adverb", "sentences": ["I stay *at home* today because it rains."]}
         ],
         "nl": [
-        {"lemma": "thuis", "pos": "adverb", "sentences": ["Ik ben vandaag thuis."]}
+        {"lemma": "thuis", "pos": "adverb", "sentences": ["Ik blijf vandaag *thuis* omdat het regent."]}
         ]
       }
     }

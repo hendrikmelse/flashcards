@@ -32,7 +32,7 @@ type Card = {
   state: string;
   fromLanguage: string;
   front: { lemma: string }[];
-  sentences: { front: string[]; back: string[] };
+  sentences: { front: string[][]; back: string[][] };
 };
 
 const get = async (url: string, c = cookies) =>
@@ -118,9 +118,9 @@ describe("GET /study", () => {
     // New cards come in pack order.
     expect(cards.map((c) => c.front[0]?.lemma)).toEqual(["dog", "house", "water"]);
     const dog = cards.find((c) => c.front[0]?.lemma === "dog")!;
-    expect(dog.sentences).toEqual({ front: ["The dog barks."], back: ["De hond blaft."] });
+    expect(dog.sentences).toEqual({ front: [["The dog barks."]], back: [["De hond blaft."]] });
     const house = cards.find((c) => c.front[0]?.lemma === "house")!;
-    expect(house.sentences).toEqual({ front: [], back: [] });
+    expect(house.sentences).toEqual({ front: [[]], back: [[]] });
   });
 
   it("honors the batch limit and validates query params", async () => {

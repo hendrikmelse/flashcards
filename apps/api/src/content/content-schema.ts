@@ -10,6 +10,8 @@ import {
   lemmaWithoutMarker,
   missingInfinitiveMarker,
   presentPronouns,
+  sentenceMarkupProblem,
+  sentenceText,
   verbFormKeys,
 } from "@flashcards/shared";
 import { z } from "zod";
@@ -180,6 +182,11 @@ export function checkEntries(
     if (entry.sentences.length === 0) {
       warnings.push(`${at}: no example sentence`);
     }
+    // The card shows the word in bold where the sentence puts it between asterisks.
+    for (const s of entry.sentences) {
+      const problem = sentenceMarkupProblem(s);
+      if (problem) errors.push(`${at}: sentence ${problem}: "${s}"`);
+    }
     // Inflected forms (plurals, "an" for "a") legitimately miss the lemma,
     // so this is only a prompt to look, not an error. Verbs may use any
     // stored form instead.
@@ -202,7 +209,7 @@ export function checkEntries(
             ]
           : alternatives;
       for (const s of entry.sentences) {
-        const hay = squash(s);
+        const hay = squash(sentenceText(s));
         // A multi-word lemma ("what for") may be split in a sentence
         // ("What do you need it for?"), so all of its words appearing counts.
         const hasAllWords = (alt: string) => {

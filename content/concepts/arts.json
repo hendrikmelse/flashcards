@@ -5,10 +5,10 @@
       "gloss": "win (verb)",
       "entries": {
         "en": [
-        {"lemma": "to win", "pos": "verb", "details": {"past": "won", "participle": "won"}, "sentences": ["We win the game."]}
+        {"lemma": "to win", "pos": "verb", "details": {"past": "won", "participle": "won"}, "sentences": ["Our team *wins* thanks to a late goal."]}
         ],
         "nl": [
-        {"lemma": "winnen", "pos": "verb", "details": {"pastSingular": "won", "pastPlural": "wonnen", "participle": "gewonnen", "auxiliary": "hebben"}, "sentences": ["Wij winnen het spel."]}
+        {"lemma": "winnen", "pos": "verb", "details": {"pastSingular": "won", "pastPlural": "wonnen", "participle": "gewonnen", "auxiliary": "hebben"}, "sentences": ["Ons team *wint* de wedstrijd dankzij een late goal."]}
         ]
       }
     },
@@ -17,10 +17,10 @@
       "gloss": "ball (noun)",
       "entries": {
         "en": [
-        {"lemma": "ball", "pos": "noun", "details": {"plural": "balls"}, "sentences": ["The child plays with the ball."]}
+        {"lemma": "ball", "pos": "noun", "details": {"plural": "balls"}, "sentences": ["The boy kicks the red *ball* over the fence."]}
         ],
         "nl": [
-        {"lemma": "bal", "pos": "noun", "details": {"article": "de", "plural": "ballen"}, "sentences": ["Het kind speelt met de bal."]}
+        {"lemma": "bal", "pos": "noun", "details": {"article": "de", "plural": "ballen"}, "sentences": ["De jongen schopt de rode *bal* over het hek."]}
         ]
       }
     },
@@ -29,10 +29,10 @@
       "gloss": "dance (verb)",
       "entries": {
         "en": [
-        {"lemma": "to dance", "pos": "verb", "details": {"past": "danced", "participle": "danced"}, "sentences": ["We dance."]}
+        {"lemma": "to dance", "pos": "verb", "details": {"past": "danced", "participle": "danced"}, "sentences": ["They *dance* together at the party until midnight."]}
         ],
         "nl": [
-        {"lemma": "dansen", "pos": "verb", "details": {"pastSingular": "danste", "pastPlural": "dansten", "participle": "gedanst", "auxiliary": "hebben"}, "sentences": ["Wij dansen."]}
+        {"lemma": "dansen", "pos": "verb", "details": {"pastSingular": "danste", "pastPlural": "dansten", "participle": "gedanst", "auxiliary": "hebben"}, "sentences": ["Zij *dansen* samen op het feest tot middernacht."]}
         ]
       }
     },
@@ -41,10 +41,10 @@
       "gloss": "sing (verb)",
       "entries": {
         "en": [
-        {"lemma": "to sing", "pos": "verb", "details": {"past": "sang", "participle": "sung"}, "sentences": ["She sings a song."]}
+        {"lemma": "to sing", "pos": "verb", "details": {"past": "sang", "participle": "sung"}, "sentences": ["My father *sings* in the shower every morning."]}
         ],
         "nl": [
-        {"lemma": "zingen", "pos": "verb", "details": {"pastSingular": "zong", "pastPlural": "zongen", "participle": "gezongen", "auxiliary": "hebben"}, "sentences": ["Zij zingt een lied."]}
+        {"lemma": "zingen", "pos": "verb", "details": {"pastSingular": "zong", "pastPlural": "zongen", "participle": "gezongen", "auxiliary": "hebben"}, "sentences": ["Mijn vader *zingt* elke ochtend onder de douche."]}
         ]
       }
     },
@@ -53,10 +53,10 @@
       "gloss": "fun (noun)",
       "entries": {
         "en": [
-        {"lemma": "fun", "pos": "noun", "details": {"note": "enjoyment", "uncountable": true}, "sentences": ["We had a lot of fun."]}
+        {"lemma": "fun", "pos": "noun", "details": {"note": "enjoyment", "uncountable": true}, "sentences": ["The kids have lots of *fun* at the beach."]}
         ],
         "nl": [
-        {"lemma": "plezier", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["Wij hebben veel plezier gehad."]}
+        {"lemma": "plezier", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["De kinderen hebben veel *plezier* op het strand."]}
         ]
       }
     },
@@ -65,10 +65,10 @@
       "gloss": "team (noun)",
       "entries": {
         "en": [
-        {"lemma": "team", "pos": "noun", "details": {"plural": "teams"}, "sentences": ["Our team wins."]}
+        {"lemma": "team", "pos": "noun", "details": {"plural": "teams"}, "sentences": ["Our *team* meets every Tuesday to plan the week."]}
         ],
         "nl": [
-        {"lemma": "team", "pos": "noun", "details": {"article": "het", "plural": "teams"}, "sentences": ["Ons team wint."]}
+        {"lemma": "team", "pos": "noun", "details": {"article": "het", "plural": "teams"}, "sentences": ["Ons *team* komt elke dinsdag bijeen om de week te plannen."]}
         ]
       }
     },
@@ -77,10 +77,10 @@
       "gloss": "voice (noun)",
       "entries": {
         "en": [
-        {"lemma": "voice", "pos": "noun", "details": {"plural": "voices"}, "sentences": ["She has a nice voice."]}
+        {"lemma": "voice", "pos": "noun", "details": {"plural": "voices"}, "sentences": ["The singer has a warm, deep *voice* on radio."]}
         ],
         "nl": [
-        {"lemma": "stem", "pos": "noun", "details": {"article": "de", "plural": "stemmen"}, "sentences": ["Zij heeft een mooie stem."]}
+        {"lemma": "stem", "pos": "noun", "details": {"article": "de", "plural": "stemmen"}, "sentences": ["De zangeres heeft een warme, diepe *stem* op de radio."]}
         ]
       }
     },
@@ -89,10 +89,10 @@
       "gloss": "prize (noun)",
       "entries": {
         "en": [
-        {"lemma": "prize", "pos": "noun", "details": {"plural": "prizes"}, "sentences": ["He wins a prize."]}
+        {"lemma": "prize", "pos": "noun", "details": {"plural": "prizes"}, "sentences": ["The best drawing in class gets a *prize* today."]}
         ],
         "nl": [
-        {"lemma": "prijs", "pos": "noun", "details": {"note": "om te winnen", "article": "de", "plural": "prijzen"}, "sentences": ["Hij wint een prijs."]}
+        {"lemma": "prijs", "pos": "noun", "details": {"note": "om te winnen", "article": "de", "plural": "prijzen"}, "sentences": ["De mooiste tekening van de klas krijgt een *prijs* van de juf."]}
         ]
       }
     },
@@ -101,10 +101,10 @@
       "gloss": "match (game)",
       "entries": {
         "en": [
-        {"lemma": "match", "pos": "noun", "details": {"note": "a sports game", "plural": "matches"}, "sentences": ["The match starts at two."]}
+        {"lemma": "match", "pos": "noun", "details": {"note": "a sports game", "plural": "matches"}, "sentences": ["The football *match* starts at two, so we hurry."]}
         ],
         "nl": [
-        {"lemma": "wedstrijd", "pos": "noun", "details": {"article": "de", "plural": "wedstrijden"}, "sentences": ["De wedstrijd begint om twee uur."]}
+        {"lemma": "wedstrijd", "pos": "noun", "details": {"article": "de", "plural": "wedstrijden"}, "sentences": ["De voetbal*wedstrijd* begint om twee uur, dus we vertrekken vroeg."]}
         ]
       }
     },
@@ -113,10 +113,10 @@
       "gloss": "draw (verb)",
       "entries": {
         "en": [
-        {"lemma": "to draw", "pos": "verb", "details": {"past": "drew", "participle": "drawn"}, "sentences": ["The child draws a house."]}
+        {"lemma": "to draw", "pos": "verb", "details": {"past": "drew", "participle": "drawn"}, "sentences": ["My little brother *draws* a horse with colored pencils."]}
         ],
         "nl": [
-        {"lemma": "tekenen", "pos": "verb", "details": {"pastSingular": "tekende", "pastPlural": "tekenden", "participle": "getekend", "auxiliary": "hebben"}, "sentences": ["Het kind tekent een huis."]}
+        {"lemma": "tekenen", "pos": "verb", "details": {"pastSingular": "tekende", "pastPlural": "tekenden", "participle": "getekend", "auxiliary": "hebben"}, "sentences": ["Mijn broertje *tekent* een paard met kleurpotloden."]}
         ]
       }
     },
@@ -125,10 +125,10 @@
       "gloss": "image (noun)",
       "entries": {
         "en": [
-        {"lemma": "image", "pos": "noun", "details": {"plural": "images"}, "sentences": ["The image is clear."]}
+        {"lemma": "image", "pos": "noun", "details": {"plural": "images"}, "sentences": ["The *image* on the screen is sharp and bright."]}
         ],
         "nl": [
-        {"lemma": "beeld", "pos": "noun", "details": {"article": "het", "plural": "beelden"}, "sentences": ["Het beeld is duidelijk."]}
+        {"lemma": "beeld", "pos": "noun", "details": {"article": "het", "plural": "beelden"}, "sentences": ["Het *beeld* op het scherm is scherp en helder."]}
         ]
       }
     },
@@ -137,10 +137,10 @@
       "gloss": "defeat (verb)",
       "entries": {
         "en": [
-        {"lemma": "to defeat", "pos": "verb", "details": {"past": "defeated", "participle": "defeated"}, "sentences": ["We defeat the team."]}
+        {"lemma": "to defeat", "pos": "verb", "details": {"past": "defeated", "participle": "defeated"}, "sentences": ["Our school team *defeats* the visitors by five goals."]}
         ],
         "nl": [
-        {"lemma": "verslaan", "pos": "verb", "details": {"pastSingular": "versloeg", "pastPlural": "versloegen", "participle": "verslagen", "auxiliary": "hebben"}, "sentences": ["Wij verslaan het team."]}
+        {"lemma": "verslaan", "pos": "verb", "details": {"pastSingular": "versloeg", "pastPlural": "versloegen", "participle": "verslagen", "auxiliary": "hebben"}, "sentences": ["Het schoolteam *verslaat* de bezoekers met een grote uitslag."]}
         ]
       }
     },
@@ -149,10 +149,10 @@
       "gloss": "role (noun)",
       "entries": {
         "en": [
-        {"lemma": "role", "pos": "noun", "details": {"plural": "roles"}, "sentences": ["He plays a big role."]}
+        {"lemma": "role", "pos": "noun", "details": {"plural": "roles"}, "sentences": ["She plays the main *role* in the school play."]}
         ],
         "nl": [
-        {"lemma": "rol", "pos": "noun", "details": {"article": "de", "plural": "rollen"}, "sentences": ["Hij speelt een grote rol."]}
+        {"lemma": "rol", "pos": "noun", "details": {"article": "de", "plural": "rollen"}, "sentences": ["Zij speelt de hoofd*rol* in het toneelstuk van school."]}
         ]
       }
     },
@@ -161,10 +161,10 @@
       "gloss": "bet (verb)",
       "entries": {
         "en": [
-        {"lemma": "to bet", "pos": "verb", "details": {"past": "bet", "participle": "bet"}, "sentences": ["I bet on the horse."]}
+        {"lemma": "to bet", "pos": "verb", "details": {"past": "bet", "participle": "bet"}, "sentences": ["My uncle *bets* ten euros on the red horse."]}
         ],
         "nl": [
-        {"lemma": "wedden", "pos": "verb", "details": {"pastSingular": "wedde", "pastPlural": "wedden", "participle": "gewed", "auxiliary": "hebben"}, "sentences": ["Ik wed op het paard."]}
+        {"lemma": "wedden", "pos": "verb", "details": {"pastSingular": "wedde", "pastPlural": "wedden", "participle": "gewed", "auxiliary": "hebben"}, "sentences": ["Mijn oom *wedt* tien euro op het rode paard."]}
         ]
       }
     },
@@ -173,10 +173,10 @@
       "gloss": "vacation (noun)",
       "entries": {
         "en": [
-        {"lemma": "vacation", "pos": "noun", "details": {"plural": "vacations"}, "sentences": ["We are on vacation."]}
+        {"lemma": "vacation", "pos": "noun", "details": {"plural": "vacations"}, "sentences": ["We are on *vacation* in Spain for two weeks."]}
         ],
         "nl": [
-        {"lemma": "vakantie", "pos": "noun", "details": {"article": "de", "plural": "vakanties"}, "sentences": ["Wij zijn op vakantie."]}
+        {"lemma": "vakantie", "pos": "noun", "details": {"article": "de", "plural": "vakanties"}, "sentences": ["Wij zijn twee weken op *vakantie* in Spanje."]}
         ]
       }
     },
@@ -185,10 +185,10 @@
       "gloss": "club (noun)",
       "entries": {
         "en": [
-        {"lemma": "club", "pos": "noun", "details": {"plural": "clubs"}, "sentences": ["I am a member of the club."]}
+        {"lemma": "club", "pos": "noun", "details": {"plural": "clubs"}, "sentences": ["I am a member of the chess *club* downtown."]}
         ],
         "nl": [
-        {"lemma": "club", "pos": "noun", "details": {"article": "de", "plural": "clubs"}, "sentences": ["Ik ben lid van de club."]}
+        {"lemma": "club", "pos": "noun", "details": {"article": "de", "plural": "clubs"}, "sentences": ["Ik ben lid van de schaak*club* in de stad."]}
         ]
       }
     },
@@ -197,10 +197,10 @@
       "gloss": "swim (verb)",
       "entries": {
         "en": [
-        {"lemma": "to swim", "pos": "verb", "details": {"past": "swam", "participle": "swum"}, "sentences": ["I swim in the sea."]}
+        {"lemma": "to swim", "pos": "verb", "details": {"past": "swam", "participle": "swum"}, "sentences": ["I *swim* in the cold sea every summer morning."]}
         ],
         "nl": [
-        {"lemma": "zwemmen", "pos": "verb", "details": {"pastSingular": "zwom", "pastPlural": "zwommen", "participle": "gezwommen", "auxiliary": "hebben/zijn"}, "sentences": ["Ik zwem in de zee."]}
+        {"lemma": "zwemmen", "pos": "verb", "details": {"pastSingular": "zwom", "pastPlural": "zwommen", "participle": "gezwommen", "auxiliary": "hebben/zijn"}, "sentences": ["Ik *zwem* elke zomerochtend in de koude zee."]}
         ]
       }
     },
@@ -209,10 +209,10 @@
       "gloss": "birthday (noun)",
       "entries": {
         "en": [
-        {"lemma": "birthday", "pos": "noun", "details": {"plural": "birthdays"}, "sentences": ["Today is my birthday."]}
+        {"lemma": "birthday", "pos": "noun", "details": {"plural": "birthdays"}, "sentences": ["Today is my *birthday*, so friends bring a cake."]}
         ],
         "nl": [
-        {"lemma": "verjaardag", "pos": "noun", "details": {"article": "de", "plural": "verjaardagen"}, "sentences": ["Vandaag is mijn verjaardag."]}
+        {"lemma": "verjaardag", "pos": "noun", "details": {"article": "de", "plural": "verjaardagen"}, "sentences": ["Vandaag is mijn *verjaardag*, dus mijn vrienden brengen een taart mee."]}
         ]
       }
     },
@@ -221,10 +221,10 @@
       "gloss": "celebrate (verb)",
       "entries": {
         "en": [
-        {"lemma": "to celebrate", "pos": "verb", "details": {"past": "celebrated", "participle": "celebrated"}, "sentences": ["We celebrate his birthday."]}
+        {"lemma": "to celebrate", "pos": "verb", "details": {"past": "celebrated", "participle": "celebrated"}, "sentences": ["We *celebrate* the new year with fireworks outside."]}
         ],
         "nl": [
-        {"lemma": "vieren", "pos": "verb", "details": {"pastSingular": "vierde", "pastPlural": "vierden", "participle": "gevierd", "auxiliary": "hebben"}, "sentences": ["Wij vieren zijn verjaardag."]}
+        {"lemma": "vieren", "pos": "verb", "details": {"pastSingular": "vierde", "pastPlural": "vierden", "participle": "gevierd", "auxiliary": "hebben"}, "sentences": ["Wij *vieren* het nieuwe jaar met vuurwerk op straat."]}
         ]
       }
     },
@@ -233,10 +233,10 @@
       "gloss": "relax (verb)",
       "entries": {
         "en": [
-        {"lemma": "to relax", "pos": "verb", "details": {"past": "relaxed", "participle": "relaxed"}, "sentences": ["I relax at home."]}
+        {"lemma": "to relax", "pos": "verb", "details": {"past": "relaxed", "participle": "relaxed"}, "sentences": ["I *relax* on the sofa after a long workday."]}
         ],
         "nl": [
-        {"lemma": "ontspannen", "pos": "verb", "details": {"pastSingular": "ontspande", "pastPlural": "ontspanden", "participle": "ontspannen", "auxiliary": "hebben"}, "sentences": ["Ik ontspan thuis."]}
+        {"lemma": "ontspannen", "pos": "verb", "details": {"pastSingular": "ontspande", "pastPlural": "ontspanden", "participle": "ontspannen", "auxiliary": "hebben"}, "sentences": ["Ik *ontspan* op de bank na een lange werkdag."]}
         ]
       }
     },
@@ -245,10 +245,10 @@
       "gloss": "train (verb)",
       "entries": {
         "en": [
-        {"lemma": "to train", "pos": "verb", "details": {"past": "trained", "participle": "trained"}, "sentences": ["We train every day."]}
+        {"lemma": "to train", "pos": "verb", "details": {"past": "trained", "participle": "trained"}, "sentences": ["We *train* three evenings a week for the marathon."]}
         ],
         "nl": [
-        {"lemma": "trainen", "pos": "verb", "details": {"pastSingular": "trainde", "pastPlural": "trainden", "participle": "getraind", "auxiliary": "hebben"}, "sentences": ["Wij trainen elke dag."]}
+        {"lemma": "trainen", "pos": "verb", "details": {"pastSingular": "trainde", "pastPlural": "trainden", "participle": "getraind", "auxiliary": "hebben"}, "sentences": ["Wij *trainen* drie avonden per week voor de marathon."]}
         ]
       }
     },
@@ -257,10 +257,10 @@
       "gloss": "stroll (verb)",
       "entries": {
         "en": [
-        {"lemma": "to stroll", "pos": "verb", "details": {"past": "strolled", "participle": "strolled"}, "sentences": ["We stroll in the park."]}
+        {"lemma": "to stroll", "pos": "verb", "details": {"past": "strolled", "participle": "strolled"}, "sentences": ["On Sundays, my parents *stroll* slowly along the river."]}
         ],
         "nl": [
-        {"lemma": "wandelen", "pos": "verb", "details": {"pastSingular": "wandelde", "pastPlural": "wandelden", "participle": "gewandeld", "auxiliary": "hebben/zijn"}, "sentences": ["Wij wandelen in het park."]}
+        {"lemma": "wandelen", "pos": "verb", "details": {"pastSingular": "wandelde", "pastPlural": "wandelden", "participle": "gewandeld", "auxiliary": "hebben/zijn"}, "sentences": ["Op zondag *wandelen* mijn ouders rustig langs de rivier."]}
         ]
       }
     },
@@ -269,10 +269,10 @@
       "gloss": "little game (noun)",
       "entries": {
         "en": [
-        {"lemma": "little game", "pos": "noun", "details": {"plural": "little games"}, "sentences": ["We play a little game."]}
+        {"lemma": "little game", "pos": "noun", "details": {"plural": "little games"}, "sentences": ["After dinner, we play a *little game* of cards."]}
         ],
         "nl": [
-        {"lemma": "spelletje", "pos": "noun", "details": {"article": "het", "plural": "spelletjes"}, "sentences": ["Wij spelen een spelletje."]}
+        {"lemma": "spelletje", "pos": "noun", "details": {"article": "het", "plural": "spelletjes"}, "sentences": ["Na het eten spelen we een snel *spelletje* kaarten."]}
         ]
       }
     },
@@ -281,10 +281,10 @@
       "gloss": "collect (verb)",
       "entries": {
         "en": [
-        {"lemma": "to collect", "pos": "verb", "details": {"note": "bring many things together", "past": "collected", "participle": "collected"}, "sentences": ["I collect stamps."]}
+        {"lemma": "to collect", "pos": "verb", "details": {"note": "bring many things together", "past": "collected", "participle": "collected"}, "sentences": ["My son *collects* old coins and keeps them safely."]}
         ],
         "nl": [
-        {"lemma": "verzamelen", "pos": "verb", "details": {"pastSingular": "verzamelde", "pastPlural": "verzamelden", "participle": "verzameld", "auxiliary": "hebben"}, "sentences": ["Ik verzamel postzegels."]}
+        {"lemma": "verzamelen", "pos": "verb", "details": {"pastSingular": "verzamelde", "pastPlural": "verzamelden", "participle": "verzameld", "auxiliary": "hebben"}, "sentences": ["Mijn zoon *verzamelt* oude munten en bewaart ze in een doos."]}
         ]
       }
     },
@@ -293,10 +293,10 @@
       "gloss": "art (noun)",
       "entries": {
         "en": [
-        {"lemma": "art", "pos": "noun", "details": {"uncountable": true}, "sentences": ["I like art."]}
+        {"lemma": "art", "pos": "noun", "details": {"uncountable": true}, "sentences": ["I like *art*, so I visit a museum monthly."]}
         ],
         "nl": [
-        {"lemma": "kunst", "pos": "noun", "details": {"article": "de", "plural": "kunsten"}, "sentences": ["Ik hou van kunst."]}
+        {"lemma": "kunst", "pos": "noun", "details": {"article": "de", "plural": "kunsten"}, "sentences": ["Ik hou van *kunst*, dus ik bezoek elke maand een museum."]}
         ]
       }
     },
@@ -305,10 +305,10 @@
       "gloss": "Christmas (noun)",
       "entries": {
         "en": [
-        {"lemma": "Christmas", "pos": "noun", "details": {"uncountable": true}, "sentences": ["We celebrate Christmas."]}
+        {"lemma": "Christmas", "pos": "noun", "details": {"uncountable": true}, "sentences": ["At *Christmas*, our whole family eats together at home."]}
         ],
         "nl": [
-        {"lemma": "kerst", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Wij vieren kerst."]}
+        {"lemma": "kerst", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Met *kerst* eet onze hele familie samen thuis."]}
         ]
       }
     },
@@ -317,10 +317,10 @@
       "gloss": "go out (verb)",
       "entries": {
         "en": [
-        {"lemma": "to go out", "pos": "verb", "details": {"past": "went out", "participle": "gone out"}, "sentences": ["We went out last night."]}
+        {"lemma": "to go out", "pos": "verb", "details": {"past": "went out", "participle": "gone out"}, "sentences": ["We *go out* tonight to dance with our friends."]}
         ],
         "nl": [
-        {"lemma": "uitgaan", "pos": "verb", "details": {"pastSingular": "ging uit", "pastPlural": "gingen uit", "participle": "uitgegaan", "auxiliary": "zijn"}, "sentences": ["Wij gingen gisteravond uit."]}
+        {"lemma": "uitgaan", "pos": "verb", "details": {"pastSingular": "ging uit", "pastPlural": "gingen uit", "participle": "uitgegaan", "auxiliary": "zijn"}, "sentences": ["Wij *gaan* vanavond met onze vrienden *uit* om te dansen."]}
         ]
       }
     },
@@ -329,10 +329,10 @@
       "gloss": "song (noun)",
       "entries": {
         "en": [
-        {"lemma": "song", "pos": "noun", "details": {"plural": "songs"}, "sentences": ["She sings a song."]}
+        {"lemma": "song", "pos": "noun", "details": {"plural": "songs"}, "sentences": ["The radio plays my favorite *song* when I cook."]}
         ],
         "nl": [
-        {"lemma": "lied", "pos": "noun", "details": {"article": "het", "plural": "liederen"}, "sentences": ["Zij zingt een lied."]}
+        {"lemma": "lied", "pos": "noun", "details": {"article": "het", "plural": "liederen"}, "sentences": ["De radio draait mijn favoriete *lied* terwijl ik kook."]}
         ]
       }
     },
@@ -341,10 +341,10 @@
       "gloss": "painting (noun)",
       "entries": {
         "en": [
-        {"lemma": "painting", "pos": "noun", "details": {"plural": "paintings"}, "sentences": ["The painting is beautiful."]}
+        {"lemma": "painting", "pos": "noun", "details": {"plural": "paintings"}, "sentences": ["The *painting* of the sea hangs above our bed."]}
         ],
         "nl": [
-        {"lemma": "schilderij", "pos": "noun", "details": {"article": "het", "plural": "schilderijen"}, "sentences": ["Het schilderij is mooi."]}
+        {"lemma": "schilderij", "pos": "noun", "details": {"article": "het", "plural": "schilderijen"}, "sentences": ["Het *schilderij* van de zee hangt boven ons bed."]}
         ]
       }
     },
@@ -353,10 +353,10 @@
       "gloss": "magic (noun)",
       "entries": {
         "en": [
-        {"lemma": "magic", "pos": "noun", "details": {"uncountable": true}, "sentences": ["I believe in magic."]}
+        {"lemma": "magic", "pos": "noun", "details": {"uncountable": true}, "sentences": ["The little girl believes in *magic* and fairies."]}
         ],
         "nl": [
-        {"lemma": "magie", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Ik geloof in magie."]}
+        {"lemma": "magie", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Het meisje gelooft in *magie* en in feeën."]}
         ]
       }
     },
@@ -365,10 +365,10 @@
       "gloss": "coach (noun)",
       "entries": {
         "en": [
-        {"lemma": "coach", "pos": "noun", "details": {"plural": "coaches"}, "sentences": ["The coach is strict."]}
+        {"lemma": "coach", "pos": "noun", "details": {"plural": "coaches"}, "sentences": ["The *coach* shouts from the side of the field."]}
         ],
         "nl": [
-        {"lemma": "coach", "pos": "noun", "details": {"article": "de", "plural": "coaches"}, "sentences": ["De coach is streng."]}
+        {"lemma": "coach", "pos": "noun", "details": {"article": "de", "plural": "coaches"}, "sentences": ["De *coach* roept vanaf de zijlijn van het veld."]}
         ]
       }
     },
@@ -377,10 +377,10 @@
       "gloss": "little song (noun)",
       "entries": {
         "en": [
-        {"lemma": "little song", "pos": "noun", "details": {"plural": "little songs"}, "sentences": ["The child sings a little song."]}
+        {"lemma": "little song", "pos": "noun", "details": {"plural": "little songs"}, "sentences": ["Before bed, the mother hums a soft *little song*."]}
         ],
         "nl": [
-        {"lemma": "liedje", "pos": "noun", "details": {"article": "het", "plural": "liedjes"}, "sentences": ["Het kind zingt een liedje."]}
+        {"lemma": "liedje", "pos": "noun", "details": {"article": "het", "plural": "liedjes"}, "sentences": ["Voor het slapengaan zingt de moeder een zacht *liedje*."]}
         ]
       }
     },
@@ -389,10 +389,10 @@
       "gloss": "doll (noun)",
       "entries": {
         "en": [
-        {"lemma": "doll", "pos": "noun", "details": {"plural": "dolls"}, "sentences": ["The girl plays with a doll."]}
+        {"lemma": "doll", "pos": "noun", "details": {"plural": "dolls"}, "sentences": ["My daughter takes her favorite *doll* to school daily."]}
         ],
         "nl": [
-        {"lemma": "pop", "pos": "noun", "details": {"article": "de", "plural": "poppen"}, "sentences": ["Het meisje speelt met een pop."]}
+        {"lemma": "pop", "pos": "noun", "details": {"article": "de", "plural": "poppen"}, "sentences": ["Mijn dochter neemt elke dag haar lievelings*pop* mee naar school."]}
         ]
       }
     },
@@ -401,10 +401,10 @@
       "gloss": "dive (verb)",
       "entries": {
         "en": [
-        {"lemma": "to dive", "pos": "verb", "details": {"past": "dived", "participle": "dived"}, "sentences": ["He dives into the water."]}
+        {"lemma": "to dive", "pos": "verb", "details": {"past": "dived", "participle": "dived"}, "sentences": ["The boy *dives* from the high board into water."]}
         ],
         "nl": [
-        {"lemma": "duiken", "pos": "verb", "details": {"pastSingular": "dook", "pastPlural": "doken", "participle": "gedoken", "auxiliary": "hebben/zijn"}, "sentences": ["Hij duikt in het water."]}
+        {"lemma": "duiken", "pos": "verb", "details": {"pastSingular": "dook", "pastPlural": "doken", "participle": "gedoken", "auxiliary": "hebben/zijn"}, "sentences": ["De jongen *duikt* van de hoge plank in het zwembad."]}
         ]
       }
     },
@@ -413,10 +413,10 @@
       "gloss": "winner (noun)",
       "entries": {
         "en": [
-        {"lemma": "winner", "pos": "noun", "details": {"plural": "winners"}, "sentences": ["The winner gets a prize."]}
+        {"lemma": "winner", "pos": "noun", "details": {"plural": "winners"}, "sentences": ["The race *winner* gets flowers and a cup."]}
         ],
         "nl": [
-        {"lemma": "winnaar", "pos": "noun", "details": {"article": "de", "plural": "winnaars"}, "sentences": ["De winnaar krijgt een prijs."]}
+        {"lemma": "winnaar", "pos": "noun", "details": {"article": "de", "plural": "winnaars"}, "sentences": ["De *winnaar* van de race krijgt bloemen en een beker."]}
         ]
       }
     },
@@ -425,10 +425,10 @@
       "gloss": "kick (verb)",
       "entries": {
         "en": [
-        {"lemma": "to kick", "pos": "verb", "details": {"past": "kicked", "participle": "kicked"}, "sentences": ["He kicks the ball."]}
+        {"lemma": "to kick", "pos": "verb", "details": {"past": "kicked", "participle": "kicked"}, "sentences": ["The goalkeeper *kicks* the ball far down the field."]}
         ],
         "nl": [
-        {"lemma": "trappen", "pos": "verb", "details": {"pastSingular": "trapte", "pastPlural": "trapten", "participle": "getrapt", "auxiliary": "hebben"}, "sentences": ["Hij trapt de bal."]}
+        {"lemma": "trappen", "pos": "verb", "details": {"pastSingular": "trapte", "pastPlural": "trapten", "participle": "getrapt", "auxiliary": "hebben"}, "sentences": ["De keeper *trapt* de bal ver het veld in."]}
         ]
       }
     },
@@ -437,10 +437,10 @@
       "gloss": "climb (verb)",
       "entries": {
         "en": [
-        {"lemma": "to climb", "pos": "verb", "details": {"past": "climbed", "participle": "climbed"}, "sentences": ["We climb the mountain."]}
+        {"lemma": "to climb", "pos": "verb", "details": {"past": "climbed", "participle": "climbed"}, "sentences": ["We *climb* the steep hill to see the sunrise."]}
         ],
         "nl": [
-        {"lemma": "klimmen", "pos": "verb", "details": {"pastSingular": "klom", "pastPlural": "klommen", "participle": "geklommen", "auxiliary": "hebben/zijn"}, "sentences": ["Wij klimmen de berg op."]}
+        {"lemma": "klimmen", "pos": "verb", "details": {"pastSingular": "klom", "pastPlural": "klommen", "participle": "geklommen", "auxiliary": "hebben/zijn"}, "sentences": ["Wij *klimmen* de steile heuvel op om de zonsopgang te zien."]}
         ]
       }
     },
@@ -449,10 +449,10 @@
       "gloss": "race (noun)",
       "entries": {
         "en": [
-        {"lemma": "race", "pos": "noun", "details": {"plural": "races"}, "sentences": ["The race starts now."]}
+        {"lemma": "race", "pos": "noun", "details": {"plural": "races"}, "sentences": ["The bike *race* through the village starts at noon."]}
         ],
         "nl": [
-        {"lemma": "race", "pos": "noun", "details": {"article": "de", "plural": "races"}, "sentences": ["De race begint nu."]}
+        {"lemma": "race", "pos": "noun", "details": {"article": "de", "plural": "races"}, "sentences": ["De fiets*race* door het dorp begint om twaalf uur."]}
         ]
       }
     },
@@ -461,10 +461,10 @@
       "gloss": "champion (noun)",
       "entries": {
         "en": [
-        {"lemma": "champion", "pos": "noun", "details": {"plural": "champions"}, "sentences": ["He is the champion."]}
+        {"lemma": "champion", "pos": "noun", "details": {"plural": "champions"}, "sentences": ["Our neighbor is the national swimming *champion* this year."]}
         ],
         "nl": [
-        {"lemma": "kampioen", "pos": "noun", "details": {"article": "de", "plural": "kampioenen"}, "sentences": ["Hij is de kampioen."]}
+        {"lemma": "kampioen", "pos": "noun", "details": {"article": "de", "plural": "kampioenen"}, "sentences": ["Onze buurman is dit jaar de nationale zwem*kampioen*."]}
         ]
       }
     },
@@ -473,10 +473,10 @@
       "gloss": "dance (noun)",
       "entries": {
         "en": [
-        {"lemma": "dance", "pos": "noun", "details": {"plural": "dances"}, "sentences": ["The dance is beautiful."]}
+        {"lemma": "dance", "pos": "noun", "details": {"plural": "dances"}, "sentences": ["The folk *dance* at the festival makes everyone smile."]}
         ],
         "nl": [
-        {"lemma": "dans", "pos": "noun", "details": {"article": "de", "plural": "dansen"}, "sentences": ["De dans is mooi."]}
+        {"lemma": "dans", "pos": "noun", "details": {"article": "de", "plural": "dansen"}, "sentences": ["De volks*dans* op het festival laat iedereen lachen."]}
         ]
       }
     },
@@ -485,10 +485,10 @@
       "gloss": "player (noun)",
       "entries": {
         "en": [
-        {"lemma": "player", "pos": "noun", "details": {"plural": "players"}, "sentences": ["The player scores."]}
+        {"lemma": "player", "pos": "noun", "details": {"plural": "players"}, "sentences": ["The young *player* scores twice in the first half."]}
         ],
         "nl": [
-        {"lemma": "speler", "pos": "noun", "details": {"article": "de", "plural": "spelers"}, "sentences": ["De speler scoort."]}
+        {"lemma": "speler", "pos": "noun", "details": {"article": "de", "plural": "spelers"}, "sentences": ["De jonge *speler* scoort twee keer in de eerste helft."]}
         ]
       }
     },
@@ -497,10 +497,10 @@
       "gloss": "paint (verb)",
       "entries": {
         "en": [
-        {"lemma": "to paint", "pos": "verb", "details": {"note": "make a painting", "past": "painted", "participle": "painted"}, "sentences": ["I paint the wall."]}
+        {"lemma": "to paint", "pos": "verb", "details": {"note": "make a painting", "past": "painted", "participle": "painted"}, "sentences": ["My aunt *paints* flowers on canvas in her studio."]}
         ],
         "nl": [
-        {"lemma": "schilderen", "pos": "verb", "details": {"pastSingular": "schilderde", "pastPlural": "schilderden", "participle": "geschilderd", "auxiliary": "hebben"}, "sentences": ["Ik schilder de muur."]}
+        {"lemma": "schilderen", "pos": "verb", "details": {"pastSingular": "schilderde", "pastPlural": "schilderden", "participle": "geschilderd", "auxiliary": "hebben"}, "sentences": ["Mijn tante *schildert* bloemen op grote doeken in haar atelier."]}
         ]
       }
     },
@@ -509,10 +509,10 @@
       "gloss": "style (noun)",
       "entries": {
         "en": [
-        {"lemma": "style", "pos": "noun", "details": {"plural": "styles"}, "sentences": ["I like his style."]}
+        {"lemma": "style", "pos": "noun", "details": {"plural": "styles"}, "sentences": ["I like her modern *style* of dressing for work."]}
         ],
         "nl": [
-        {"lemma": "stijl", "pos": "noun", "details": {"article": "de", "plural": "stijlen"}, "sentences": ["Ik hou van zijn stijl."]}
+        {"lemma": "stijl", "pos": "noun", "details": {"article": "de", "plural": "stijlen"}, "sentences": ["Ik hou van haar moderne kleding*stijl* voor op het werk."]}
         ]
       }
     },
@@ -521,10 +521,10 @@
       "gloss": "victory (noun)",
       "entries": {
         "en": [
-        {"lemma": "victory", "pos": "noun", "details": {"plural": "victories"}, "sentences": ["The victory is ours."]}
+        {"lemma": "victory", "pos": "noun", "details": {"plural": "victories"}, "sentences": ["The crowd cheers loudly after the team's first *victory*."]}
         ],
         "nl": [
-        {"lemma": "overwinning", "pos": "noun", "details": {"article": "de", "plural": "overwinningen"}, "sentences": ["De overwinning is van ons."]}
+        {"lemma": "overwinning", "pos": "noun", "details": {"article": "de", "plural": "overwinningen"}, "sentences": ["Het publiek juicht luid na de eerste *overwinning* van het team."]}
         ]
       }
     },
@@ -533,10 +533,10 @@
       "gloss": "swimming pool (noun)",
       "entries": {
         "en": [
-        {"lemma": "swimming pool", "pos": "noun", "details": {"plural": "swimming pools"}, "sentences": ["We swim in the swimming pool."]}
+        {"lemma": "swimming pool", "pos": "noun", "details": {"plural": "swimming pools"}, "sentences": ["The hotel has a big *swimming pool* outside."]}
         ],
         "nl": [
-        {"lemma": "zwembad", "pos": "noun", "details": {"article": "het", "plural": "zwembaden"}, "sentences": ["Wij zwemmen in het zwembad."]}
+        {"lemma": "zwembad", "pos": "noun", "details": {"article": "het", "plural": "zwembaden"}, "sentences": ["Het hotel heeft een groot *zwembad* achter de tuin."]}
         ]
       }
     },
@@ -545,10 +545,10 @@
       "gloss": "score (verb)",
       "entries": {
         "en": [
-        {"lemma": "to score", "pos": "verb", "details": {"past": "scored", "participle": "scored"}, "sentences": ["He scores a goal."]}
+        {"lemma": "to score", "pos": "verb", "details": {"past": "scored", "participle": "scored"}, "sentences": ["The striker *scores* in the last minute of play."]}
         ],
         "nl": [
-        {"lemma": "scoren", "pos": "verb", "details": {"pastSingular": "scoorde", "pastPlural": "scoorden", "participle": "gescoord", "auxiliary": "hebben"}, "sentences": ["Hij scoort een doelpunt."]}
+        {"lemma": "scoren", "pos": "verb", "details": {"pastSingular": "scoorde", "pastPlural": "scoorden", "participle": "gescoord", "auxiliary": "hebben"}, "sentences": ["De spits *scoort* in de laatste minuut van de wedstrijd."]}
         ]
       }
     },
@@ -557,10 +557,10 @@
       "gloss": "Santa Claus (noun)",
       "entries": {
         "en": [
-        {"lemma": "Santa Claus", "pos": "noun", "details": {"plural": "Santa Clauses"}, "sentences": ["Santa Claus brings gifts."]}
+        {"lemma": "Santa Claus", "pos": "noun", "details": {"plural": "Santa Clauses"}, "sentences": ["Children write letters to *Santa Claus* in December."]}
         ],
         "nl": [
-        {"lemma": "kerstman", "pos": "noun", "details": {"article": "de", "plural": "kerstmannen"}, "sentences": ["De kerstman brengt cadeaus."]}
+        {"lemma": "kerstman", "pos": "noun", "details": {"article": "de", "plural": "kerstmannen"}, "sentences": ["Kinderen schrijven in december brieven aan de *kerstman*."]}
         ]
       }
     },
@@ -569,10 +569,10 @@
       "gloss": "defense (noun)",
       "entries": {
         "en": [
-        {"lemma": "defense", "pos": "noun", "details": {"plural": "defenses"}, "sentences": ["The defense is strong."]}
+        {"lemma": "defense", "pos": "noun", "details": {"plural": "defenses"}, "sentences": ["Their *defense* is strong, so nobody scores against them."]}
         ],
         "nl": [
-        {"lemma": "verdediging", "pos": "noun", "details": {"article": "de", "plural": "verdedigingen"}, "sentences": ["De verdediging is sterk."]}
+        {"lemma": "verdediging", "pos": "noun", "details": {"article": "de", "plural": "verdedigingen"}, "sentences": ["Hun *verdediging* is sterk, dus niemand scoort tegen hen."]}
         ]
       }
     },
@@ -581,10 +581,10 @@
       "gloss": "poem (noun)",
       "entries": {
         "en": [
-        {"lemma": "poem", "pos": "noun", "details": {"plural": "poems"}, "sentences": ["I read a poem."]}
+        {"lemma": "poem", "pos": "noun", "details": {"plural": "poems"}, "sentences": ["I read a short *poem* to my class today."]}
         ],
         "nl": [
-        {"lemma": "gedicht", "pos": "noun", "details": {"article": "het", "plural": "gedichten"}, "sentences": ["Ik lees een gedicht."]}
+        {"lemma": "gedicht", "pos": "noun", "details": {"article": "het", "plural": "gedichten"}, "sentences": ["Ik lees op vrijdag een kort *gedicht* voor aan mijn klas."]}
         ]
       }
     },
@@ -593,10 +593,10 @@
       "gloss": "theater (noun)",
       "entries": {
         "en": [
-        {"lemma": "theater", "pos": "noun", "details": {"plural": "theaters"}, "sentences": ["We go to the theater."]}
+        {"lemma": "theater", "pos": "noun", "details": {"plural": "theaters"}, "sentences": ["We go to the *theater* in town on Saturday."]}
         ],
         "nl": [
-        {"lemma": "theater", "pos": "noun", "details": {"article": "het", "plural": "theaters"}, "sentences": ["Wij gaan naar het theater."]}
+        {"lemma": "theater", "pos": "noun", "details": {"article": "het", "plural": "theaters"}, "sentences": ["Wij gaan zaterdag naar het *theater* in de stad."]}
         ]
       }
     },
@@ -605,10 +605,10 @@
       "gloss": "legend (noun)",
       "entries": {
         "en": [
-        {"lemma": "legend", "pos": "noun", "details": {"plural": "legends"}, "sentences": ["This is an old legend."]}
+        {"lemma": "legend", "pos": "noun", "details": {"plural": "legends"}, "sentences": ["The old *legend* tells of a knight and dragon."]}
         ],
         "nl": [
-        {"lemma": "legende", "pos": "noun", "details": {"article": "de", "plural": "legendes"}, "sentences": ["Dit is een oude legende."]}
+        {"lemma": "legende", "pos": "noun", "details": {"article": "de", "plural": "legendes"}, "sentences": ["De oude *legende* vertelt over een ridder en een draak."]}
         ]
       }
     },
@@ -617,10 +617,10 @@
       "gloss": "wizard (noun)",
       "entries": {
         "en": [
-        {"lemma": "wizard", "pos": "noun", "details": {"plural": "wizards"}, "sentences": ["The wizard casts a spell."]}
+        {"lemma": "wizard", "pos": "noun", "details": {"plural": "wizards"}, "sentences": ["The *wizard* turns a frog into a prince."]}
         ],
         "nl": [
-        {"lemma": "tovenaar", "pos": "noun", "details": {"article": "de", "plural": "tovenaars"}, "sentences": ["De tovenaar spreekt een spreuk uit."]}
+        {"lemma": "tovenaar", "pos": "noun", "details": {"article": "de", "plural": "tovenaars"}, "sentences": ["In het verhaal verandert de *tovenaar* een kikker in een prins."]}
         ]
       }
     },
@@ -629,10 +629,10 @@
       "gloss": "drinks (social gathering)",
       "entries": {
         "en": [
-        {"lemma": "drinks", "pos": "noun", "details": {"note": "social gathering", "plural": "drinkses"}, "sentences": ["We have drinks on Friday."]}
+        {"lemma": "drinks", "pos": "noun", "details": {"note": "social gathering", "plural": "drinkses"}, "sentences": ["We have *drinks* at the office on Friday afternoon."]}
         ],
         "nl": [
-        {"lemma": "borrel", "pos": "noun", "details": {"article": "de", "plural": "borrels"}, "sentences": ["Wij gaan vrijdag op een borrel."]}
+        {"lemma": "borrel", "pos": "noun", "details": {"article": "de", "plural": "borrels"}, "sentences": ["Wij gaan vrijdagmiddag op kantoor naar de *borrel*."]}
         ]
       }
     },
@@ -641,10 +641,10 @@
       "gloss": "decorate (verb)",
       "entries": {
         "en": [
-        {"lemma": "to decorate", "pos": "verb", "details": {"past": "decorated", "participle": "decorated"}, "sentences": ["We decorate the tree."]}
+        {"lemma": "to decorate", "pos": "verb", "details": {"past": "decorated", "participle": "decorated"}, "sentences": ["We *decorate* the tree with lights and little stars."]}
         ],
         "nl": [
-        {"lemma": "versieren", "pos": "verb", "details": {"pastSingular": "versierde", "pastPlural": "versierden", "participle": "versierd", "auxiliary": "hebben"}, "sentences": ["Wij versieren de boom."]}
+        {"lemma": "versieren", "pos": "verb", "details": {"pastSingular": "versierde", "pastPlural": "versierden", "participle": "versierd", "auxiliary": "hebben"}, "sentences": ["Wij *versieren* de boom met lichtjes en kleine sterren."]}
         ]
       }
     },
@@ -653,10 +653,10 @@
       "gloss": "perform (verb)",
       "entries": {
         "en": [
-        {"lemma": "to perform", "pos": "verb", "details": {"note": "on stage", "past": "performed", "participle": "performed"}, "sentences": ["The band performs tonight."]}
+        {"lemma": "to perform", "pos": "verb", "details": {"note": "on stage", "past": "performed", "participle": "performed"}, "sentences": ["The band *performs* on the big stage tonight."]}
         ],
         "nl": [
-        {"lemma": "optreden", "pos": "verb", "details": {"pastSingular": "trad op", "pastPlural": "traden op", "participle": "opgetreden", "auxiliary": "hebben"}, "sentences": ["De band treedt vanavond op."]}
+        {"lemma": "optreden", "pos": "verb", "details": {"pastSingular": "trad op", "pastPlural": "traden op", "participle": "opgetreden", "auxiliary": "hebben"}, "sentences": ["De band *treedt* vanavond *op* op het grote podium."]}
         ]
       }
     },
@@ -665,10 +665,10 @@
       "gloss": "training (noun)",
       "entries": {
         "en": [
-        {"lemma": "training", "pos": "noun", "details": {"plural": "trainings"}, "sentences": ["The training is hard."]}
+        {"lemma": "training", "pos": "noun", "details": {"plural": "trainings"}, "sentences": ["Monday's *training* is hard, but it is fun."]}
         ],
         "nl": [
-        {"lemma": "training", "pos": "noun", "details": {"article": "de", "plural": "trainingen"}, "sentences": ["De training is zwaar."]}
+        {"lemma": "training", "pos": "noun", "details": {"article": "de", "plural": "trainingen"}, "sentences": ["De *training* op maandag is zwaar, maar wel leuk."]}
         ]
       }
     },
@@ -677,10 +677,10 @@
       "gloss": "gamble (verb)",
       "entries": {
         "en": [
-        {"lemma": "to gamble", "pos": "verb", "details": {"past": "gambled", "participle": "gambled"}, "sentences": ["He gambles every week."]}
+        {"lemma": "to gamble", "pos": "verb", "details": {"past": "gambled", "participle": "gambled"}, "sentences": ["He *gambles* with his savings and often loses money."]}
         ],
         "nl": [
-        {"lemma": "gokken", "pos": "verb", "details": {"pastSingular": "gokte", "pastPlural": "gokten", "participle": "gegokt", "auxiliary": "hebben"}, "sentences": ["Hij gokt elke week."]}
+        {"lemma": "gokken", "pos": "verb", "details": {"pastSingular": "gokte", "pastPlural": "gokten", "participle": "gegokt", "auxiliary": "hebben"}, "sentences": ["Hij *gokt* met zijn spaargeld en verliest vaak geld."]}
         ]
       }
     },
@@ -689,10 +689,10 @@
       "gloss": "sport (noun)",
       "entries": {
         "en": [
-        {"lemma": "sport", "pos": "noun", "details": {"plural": "sports"}, "sentences": ["Football is a sport."]}
+        {"lemma": "sport", "pos": "noun", "details": {"plural": "sports"}, "sentences": ["Tennis is my favorite *sport* because friends play it."]}
         ],
         "nl": [
-        {"lemma": "sport", "pos": "noun", "details": {"article": "de", "plural": "sporten"}, "sentences": ["Voetbal is een sport."]}
+        {"lemma": "sport", "pos": "noun", "details": {"article": "de", "plural": "sporten"}, "sentences": ["Tennis is mijn favoriete *sport* omdat ik met vrienden speel."]}
         ]
       }
     },
@@ -701,10 +701,10 @@
       "gloss": "audition (noun)",
       "entries": {
         "en": [
-        {"lemma": "audition", "pos": "noun", "details": {"plural": "auditions"}, "sentences": ["I have an audition."]}
+        {"lemma": "audition", "pos": "noun", "details": {"plural": "auditions"}, "sentences": ["I have an *audition* tomorrow for the school musical."]}
         ],
         "nl": [
-        {"lemma": "auditie", "pos": "noun", "details": {"article": "de", "plural": "audities"}, "sentences": ["Ik heb een auditie."]}
+        {"lemma": "auditie", "pos": "noun", "details": {"article": "de", "plural": "audities"}, "sentences": ["Ik heb morgen een *auditie* voor de musical van school."]}
         ]
       }
     },
@@ -713,10 +713,10 @@
       "gloss": "toys (noun)",
       "entries": {
         "en": [
-        {"lemma": "toys", "pos": "noun", "details": {"pluralOnly": true}, "sentences": ["The children play with toys."]}
+        {"lemma": "toys", "pos": "noun", "details": {"pluralOnly": true}, "sentences": ["The children put their *toys* away before dinner."]}
         ],
         "nl": [
-        {"lemma": "speelgoed", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["De kinderen spelen met speelgoed."]}
+        {"lemma": "speelgoed", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["De kinderen ruimen hun *speelgoed* op voor het avondeten."]}
         ]
       }
     },
@@ -725,10 +725,10 @@
       "gloss": "applause (noun)",
       "entries": {
         "en": [
-        {"lemma": "applause", "pos": "noun", "details": {"uncountable": true}, "sentences": ["The applause is loud."]}
+        {"lemma": "applause", "pos": "noun", "details": {"uncountable": true}, "sentences": ["After the song, the *applause* fills the whole hall."]}
         ],
         "nl": [
-        {"lemma": "applaus", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["Het applaus is luid."]}
+        {"lemma": "applaus", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["Na het lied vult het *applaus* de hele zaal."]}
         ]
       }
     },
@@ -737,10 +737,10 @@
       "gloss": "casino (noun)",
       "entries": {
         "en": [
-        {"lemma": "casino", "pos": "noun", "details": {"plural": "casinos"}, "sentences": ["We go to the casino."]}
+        {"lemma": "casino", "pos": "noun", "details": {"plural": "casinos"}, "sentences": ["Tourists play cards and slots in the big *casino*."]}
         ],
         "nl": [
-        {"lemma": "casino", "pos": "noun", "details": {"article": "het", "plural": "casino's"}, "sentences": ["Wij gaan naar het casino."]}
+        {"lemma": "casino", "pos": "noun", "details": {"article": "het", "plural": "casino's"}, "sentences": ["Toeristen spelen kaart en gokkasten in het grote *casino*."]}
         ]
       }
     },
@@ -749,10 +749,10 @@
       "gloss": "drawing (noun)",
       "entries": {
         "en": [
-        {"lemma": "drawing", "pos": "noun", "details": {"plural": "drawings"}, "sentences": ["The drawing is beautiful."]}
+        {"lemma": "drawing", "pos": "noun", "details": {"plural": "drawings"}, "sentences": ["The child shows her teacher a *drawing*."]}
         ],
         "nl": [
-        {"lemma": "tekening", "pos": "noun", "details": {"article": "de", "plural": "tekeningen"}, "sentences": ["De tekening is mooi."]}
+        {"lemma": "tekening", "pos": "noun", "details": {"article": "de", "plural": "tekeningen"}, "sentences": ["Het kind laat de juf een *tekening* van het gezin zien."]}
         ]
       }
     },
@@ -761,10 +761,10 @@
       "gloss": "clown (noun)",
       "entries": {
         "en": [
-        {"lemma": "clown", "pos": "noun", "details": {"plural": "clowns"}, "sentences": ["The clown makes me laugh."]}
+        {"lemma": "clown", "pos": "noun", "details": {"plural": "clowns"}, "sentences": ["The *clown* with the red nose makes kids laugh."]}
         ],
         "nl": [
-        {"lemma": "clown", "pos": "noun", "details": {"article": "de", "plural": "clowns"}, "sentences": ["De clown laat mij lachen."]}
+        {"lemma": "clown", "pos": "noun", "details": {"article": "de", "plural": "clowns"}, "sentences": ["De *clown* met de rode neus laat de kinderen lachen."]}
         ]
       }
     },
@@ -773,10 +773,10 @@
       "gloss": "costume (noun)",
       "entries": {
         "en": [
-        {"lemma": "costume", "pos": "noun", "details": {"plural": "costumes"}, "sentences": ["The costume is funny."]}
+        {"lemma": "costume", "pos": "noun", "details": {"plural": "costumes"}, "sentences": ["Her *costume* for the carnival is a green frog."]}
         ],
         "nl": [
-        {"lemma": "kostuum", "pos": "noun", "details": {"article": "het", "plural": "kostuums"}, "sentences": ["Het kostuum is grappig."]}
+        {"lemma": "kostuum", "pos": "noun", "details": {"article": "het", "plural": "kostuums"}, "sentences": ["Haar *kostuum* voor het carnavalsfeest is een groene kikker."]}
         ]
       }
     },
@@ -785,10 +785,10 @@
       "gloss": "entertain (verb)",
       "entries": {
         "en": [
-        {"lemma": "to entertain", "pos": "verb", "details": {"past": "entertained", "participle": "entertained"}, "sentences": ["The clown entertains the children."]}
+        {"lemma": "to entertain", "pos": "verb", "details": {"past": "entertained", "participle": "entertained"}, "sentences": ["The magician *entertains* the guests with funny card tricks."]}
         ],
         "nl": [
-        {"lemma": "vermaken", "pos": "verb", "details": {"pastSingular": "vermaakte", "pastPlural": "vermaakten", "participle": "vermaakt", "auxiliary": "hebben"}, "sentences": ["De clown vermaakt de kinderen."]}
+        {"lemma": "vermaken", "pos": "verb", "details": {"pastSingular": "vermaakte", "pastPlural": "vermaakten", "participle": "vermaakt", "auxiliary": "hebben"}, "sentences": ["De goochelaar *vermaakt* de gasten met grappige kaarttrucs."]}
         ]
       }
     },
@@ -797,10 +797,10 @@
       "gloss": "opponent (noun)",
       "entries": {
         "en": [
-        {"lemma": "opponent", "pos": "noun", "details": {"plural": "opponents"}, "sentences": ["The opponent is strong."]}
+        {"lemma": "opponent", "pos": "noun", "details": {"plural": "opponents"}, "sentences": ["The tennis player studies her *opponent* before the final."]}
         ],
         "nl": [
-        {"lemma": "tegenstander", "pos": "noun", "details": {"article": "de", "plural": "tegenstanders"}, "sentences": ["De tegenstander is sterk."]}
+        {"lemma": "tegenstander", "pos": "noun", "details": {"article": "de", "plural": "tegenstanders"}, "sentences": ["De tennisster bestudeert haar *tegenstander* voor de laatste set."]}
         ]
       }
     },
@@ -809,10 +809,10 @@
       "gloss": "concert (noun)",
       "entries": {
         "en": [
-        {"lemma": "concert", "pos": "noun", "details": {"plural": "concerts"}, "sentences": ["We go to a concert."]}
+        {"lemma": "concert", "pos": "noun", "details": {"plural": "concerts"}, "sentences": ["We go to a *concert* in the park."]}
         ],
         "nl": [
-        {"lemma": "concert", "pos": "noun", "details": {"article": "het", "plural": "concerten"}, "sentences": ["Wij gaan naar een concert."]}
+        {"lemma": "concert", "pos": "noun", "details": {"article": "het", "plural": "concerten"}, "sentences": ["Wij gaan zondag naar een *concert* in het park."]}
         ]
       }
     },
@@ -821,10 +821,10 @@
       "gloss": "act (perform)",
       "entries": {
         "en": [
-        {"lemma": "to act", "pos": "verb", "details": {"note": "perform", "past": "acted", "participle": "acted"}, "sentences": ["She acts in a film."]}
+        {"lemma": "to act", "pos": "verb", "details": {"note": "perform", "past": "acted", "participle": "acted"}, "sentences": ["She *acts* in a new film about a doctor."]}
         ],
         "nl": [
-        {"lemma": "acteren", "pos": "verb", "details": {"pastSingular": "acteerde", "pastPlural": "acteerden", "participle": "geacteerd", "auxiliary": "hebben"}, "sentences": ["Zij acteert in een film."]}
+        {"lemma": "acteren", "pos": "verb", "details": {"pastSingular": "acteerde", "pastPlural": "acteerden", "participle": "geacteerd", "auxiliary": "hebben"}, "sentences": ["Zij *acteert* in een nieuwe film over een jonge arts."]}
         ]
       }
     },
@@ -833,10 +833,10 @@
       "gloss": "piano (noun)",
       "entries": {
         "en": [
-        {"lemma": "piano", "pos": "noun", "details": {"plural": "pianos"}, "sentences": ["She plays the piano."]}
+        {"lemma": "piano", "pos": "noun", "details": {"plural": "pianos"}, "sentences": ["She plays the *piano* every evening after her homework."]}
         ],
         "nl": [
-        {"lemma": "piano", "pos": "noun", "details": {"article": "de", "plural": "piano's"}, "sentences": ["Zij speelt piano."]}
+        {"lemma": "piano", "pos": "noun", "details": {"article": "de", "plural": "piano's"}, "sentences": ["Zij speelt elke avond *piano* na haar huiswerk."]}
         ]
       }
     },
@@ -845,10 +845,10 @@
       "gloss": "performer (noun)",
       "entries": {
         "en": [
-        {"lemma": "performer", "pos": "noun", "details": {"plural": "performers"}, "sentences": ["The performer sings."]}
+        {"lemma": "performer", "pos": "noun", "details": {"plural": "performers"}, "sentences": ["The *performer* sings and dances on the street stage."]}
         ],
         "nl": [
-        {"lemma": "artiest", "pos": "noun", "details": {"article": "de", "plural": "artiesten"}, "sentences": ["De artiest zingt."]}
+        {"lemma": "artiest", "pos": "noun", "details": {"article": "de", "plural": "artiesten"}, "sentences": ["De *artiest* zingt en danst op het kleine podium in de straat."]}
         ]
       }
     },
@@ -857,10 +857,10 @@
       "gloss": "amuse (verb)",
       "entries": {
         "en": [
-        {"lemma": "to amuse", "pos": "verb", "details": {"past": "amused", "participle": "amused"}, "sentences": ["The film amuses me."]}
+        {"lemma": "to amuse", "pos": "verb", "details": {"past": "amused", "participle": "amused"}, "sentences": ["The funny film *amuses* me after a tiring week."]}
         ],
         "nl": [
-        {"lemma": "amuseren", "pos": "verb", "details": {"pastSingular": "amuseerde", "pastPlural": "amuseerden", "participle": "geamuseerd", "auxiliary": "hebben"}, "sentences": ["De film amuseert mij."]}
+        {"lemma": "amuseren", "pos": "verb", "details": {"pastSingular": "amuseerde", "pastPlural": "amuseerden", "participle": "geamuseerd", "auxiliary": "hebben"}, "sentences": ["De grappige film *amuseert* mij na een vermoeiende week."]}
         ]
       }
     },
@@ -869,10 +869,10 @@
       "gloss": "box (verb)",
       "entries": {
         "en": [
-        {"lemma": "to box", "pos": "verb", "details": {"past": "boxed", "participle": "boxed"}, "sentences": ["He boxes."]}
+        {"lemma": "to box", "pos": "verb", "details": {"past": "boxed", "participle": "boxed"}, "sentences": ["He *boxes* in a small gym near the station."]}
         ],
         "nl": [
-        {"lemma": "boksen", "pos": "verb", "details": {"pastSingular": "bokste", "pastPlural": "boksten", "participle": "geboksd", "auxiliary": "hebben"}, "sentences": ["Hij bokst."]}
+        {"lemma": "boksen", "pos": "verb", "details": {"pastSingular": "bokste", "pastPlural": "boksten", "participle": "geboksd", "auxiliary": "hebben"}, "sentences": ["Hij *bokst* in een kleine sportschool bij het station."]}
         ]
       }
     },
@@ -881,10 +881,10 @@
       "gloss": "circus (noun)",
       "entries": {
         "en": [
-        {"lemma": "circus", "pos": "noun", "details": {"plural": "circuses"}, "sentences": ["We go to the circus."]}
+        {"lemma": "circus", "pos": "noun", "details": {"plural": "circuses"}, "sentences": ["The *circus* comes to town with lions and clowns."]}
         ],
         "nl": [
-        {"lemma": "circus", "pos": "noun", "details": {"article": "het", "plural": "circussen"}, "sentences": ["Wij gaan naar het circus."]}
+        {"lemma": "circus", "pos": "noun", "details": {"article": "het", "plural": "circussen"}, "sentences": ["Het *circus* komt met leeuwen en clowns naar onze stad."]}
         ]
       }
     },
@@ -893,10 +893,10 @@
       "gloss": "performance (noun)",
       "entries": {
         "en": [
-        {"lemma": "performance", "pos": "noun", "details": {"note": "a show", "plural": "performances"}, "sentences": ["The performance starts at eight."]}
+        {"lemma": "performance", "pos": "noun", "details": {"note": "a show", "plural": "performances"}, "sentences": ["The evening *performance* starts at eight o'clock."]}
         ],
         "nl": [
-        {"lemma": "voorstelling", "pos": "noun", "details": {"article": "de", "plural": "voorstellingen"}, "sentences": ["De voorstelling begint om acht uur."]}
+        {"lemma": "voorstelling", "pos": "noun", "details": {"article": "de", "plural": "voorstellingen"}, "sentences": ["De avond*voorstelling* begint om acht uur, dus we eten vroeg."]}
         ]
       }
     },
@@ -905,10 +905,10 @@
       "gloss": "bet (noun)",
       "entries": {
         "en": [
-        {"lemma": "bet", "pos": "noun", "details": {"plural": "bets"}, "sentences": ["I make a bet."]}
+        {"lemma": "bet", "pos": "noun", "details": {"plural": "bets"}, "sentences": ["I make a *bet* with my brother about football."]}
         ],
         "nl": [
-        {"lemma": "weddenschap", "pos": "noun", "details": {"article": "de", "plural": "weddenschappen"}, "sentences": ["Ik maak een weddenschap."]}
+        {"lemma": "weddenschap", "pos": "noun", "details": {"article": "de", "plural": "weddenschappen"}, "sentences": ["Ik sluit een *weddenschap* met mijn broer over de wedstrijd."]}
         ]
       }
     },
@@ -917,10 +917,10 @@
       "gloss": "stage (noun)",
       "entries": {
         "en": [
-        {"lemma": "stage", "pos": "noun", "details": {"plural": "stages"}, "sentences": ["The actor is on the stage."]}
+        {"lemma": "stage", "pos": "noun", "details": {"plural": "stages"}, "sentences": ["The actor stands alone on the dark *stage*."]}
         ],
         "nl": [
-        {"lemma": "toneel", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["De acteur staat op het toneel."]}
+        {"lemma": "toneel", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["De acteur staat alleen op het donkere *toneel*."]}
         ]
       }
     },
@@ -929,10 +929,10 @@
       "gloss": "medal (noun)",
       "entries": {
         "en": [
-        {"lemma": "medal", "pos": "noun", "details": {"plural": "medals"}, "sentences": ["He wins a medal."]}
+        {"lemma": "medal", "pos": "noun", "details": {"plural": "medals"}, "sentences": ["The young swimmer wears her gold *medal* proudly."]}
         ],
         "nl": [
-        {"lemma": "medaille", "pos": "noun", "details": {"article": "de", "plural": "medailles"}, "sentences": ["Hij wint een medaille."]}
+        {"lemma": "medaille", "pos": "noun", "details": {"article": "de", "plural": "medailles"}, "sentences": ["De jonge zwemster draagt trots haar gouden *medaille*."]}
         ]
       }
     },
@@ -941,10 +941,10 @@
       "gloss": "soccer (noun)",
       "entries": {
         "en": [
-        {"lemma": "soccer", "pos": "noun", "details": {"plural": "soccers"}, "sentences": ["We play soccer."]}
+        {"lemma": "soccer", "pos": "noun", "details": {"plural": "soccers"}, "sentences": ["We play *soccer* in the park after school."]}
         ],
         "nl": [
-        {"lemma": "voetbal", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["Wij spelen voetbal."]}
+        {"lemma": "voetbal", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["Wij spelen na school *voetbal* in het park."]}
         ]
       }
     },
@@ -953,10 +953,10 @@
       "gloss": "round (of drinks)",
       "entries": {
         "en": [
-        {"lemma": "round", "pos": "noun", "details": {"note": "of drinks", "plural": "rounds"}, "sentences": ["I buy a round."]}
+        {"lemma": "round", "pos": "noun", "details": {"note": "of drinks", "plural": "rounds"}, "sentences": ["It is my turn, so I buy a *round*."]}
         ],
         "nl": [
-        {"lemma": "rondje", "pos": "noun", "details": {"article": "het", "plural": "rondjes"}, "sentences": ["Ik geef een rondje."]}
+        {"lemma": "rondje", "pos": "noun", "details": {"article": "het", "plural": "rondjes"}, "sentences": ["Het is mijn beurt, dus ik geef iedereen een *rondje*."]}
         ]
       }
     },
@@ -965,10 +965,10 @@
       "gloss": "opera (noun)",
       "entries": {
         "en": [
-        {"lemma": "opera", "pos": "noun", "details": {"plural": "operas"}, "sentences": ["We go to the opera."]}
+        {"lemma": "opera", "pos": "noun", "details": {"plural": "operas"}, "sentences": ["My grandparents love the *opera* and go every winter."]}
         ],
         "nl": [
-        {"lemma": "opera", "pos": "noun", "details": {"article": "de", "plural": "opera's"}, "sentences": ["Wij gaan naar de opera."]}
+        {"lemma": "opera", "pos": "noun", "details": {"article": "de", "plural": "opera's"}, "sentences": ["Mijn grootouders houden van de *opera* en gaan elke winter."]}
         ]
       }
     },
@@ -977,10 +977,10 @@
       "gloss": "honeymoon (noun)",
       "entries": {
         "en": [
-        {"lemma": "honeymoon", "pos": "noun", "details": {"plural": "honeymoons"}, "sentences": ["We go on a honeymoon."]}
+        {"lemma": "honeymoon", "pos": "noun", "details": {"plural": "honeymoons"}, "sentences": ["The couple goes on *honeymoon* to Italy."]}
         ],
         "nl": [
-        {"lemma": "huwelijksreis", "pos": "noun", "details": {"article": "de", "plural": "huwelijksreizen"}, "sentences": ["Wij gaan op huwelijksreis."]}
+        {"lemma": "huwelijksreis", "pos": "noun", "details": {"article": "de", "plural": "huwelijksreizen"}, "sentences": ["Na de bruiloft gaat het stel op *huwelijksreis* naar Italië."]}
         ]
       }
     },
@@ -989,10 +989,10 @@
       "gloss": "guitar (noun)",
       "entries": {
         "en": [
-        {"lemma": "guitar", "pos": "noun", "details": {"plural": "guitars"}, "sentences": ["He plays the guitar."]}
+        {"lemma": "guitar", "pos": "noun", "details": {"plural": "guitars"}, "sentences": ["He plays the *guitar* and sings around the campfire."]}
         ],
         "nl": [
-        {"lemma": "gitaar", "pos": "noun", "details": {"article": "de", "plural": "gitaren"}, "sentences": ["Hij speelt gitaar."]}
+        {"lemma": "gitaar", "pos": "noun", "details": {"article": "de", "plural": "gitaren"}, "sentences": ["Hij speelt *gitaar* en zingt rond het kampvuur."]}
         ]
       }
     },
@@ -1001,10 +1001,10 @@
       "gloss": "final (noun)",
       "entries": {
         "en": [
-        {"lemma": "final", "pos": "noun", "details": {"note": "last match", "plural": "finals"}, "sentences": ["The final is tonight."]}
+        {"lemma": "final", "pos": "noun", "details": {"note": "last match", "plural": "finals"}, "sentences": ["The *final* is tonight, and the whole town watches."]}
         ],
         "nl": [
-        {"lemma": "finale", "pos": "noun", "details": {"article": "de", "plural": "finales"}, "sentences": ["De finale is vanavond."]}
+        {"lemma": "finale", "pos": "noun", "details": {"article": "de", "plural": "finales"}, "sentences": ["De *finale* is vanavond en de hele stad kijkt mee."]}
         ]
       }
     },
@@ -1013,10 +1013,10 @@
       "gloss": "play (theater)",
       "entries": {
         "en": [
-        {"lemma": "play", "pos": "noun", "details": {"note": "theater", "plural": "plays"}, "sentences": ["We see a play."]}
+        {"lemma": "play", "pos": "noun", "details": {"note": "theater", "plural": "plays"}, "sentences": ["We see a funny *play* at the local theater."]}
         ],
         "nl": [
-        {"lemma": "toneelstuk", "pos": "noun", "details": {"article": "het", "plural": "toneelstukken"}, "sentences": ["Wij zien een toneelstuk."]}
+        {"lemma": "toneelstuk", "pos": "noun", "details": {"article": "het", "plural": "toneelstukken"}, "sentences": ["Wij zien een grappig *toneelstuk* in het plaatselijke theater."]}
         ]
       }
     },
@@ -1025,10 +1025,10 @@
       "gloss": "cinema (noun)",
       "entries": {
         "en": [
-        {"lemma": "cinema", "pos": "noun", "details": {"plural": "cinemas"}, "sentences": ["We go to the cinema."]}
+        {"lemma": "cinema", "pos": "noun", "details": {"plural": "cinemas"}, "sentences": ["We go to the *cinema* for a comedy."]}
         ],
         "nl": [
-        {"lemma": "bioscoop", "pos": "noun", "details": {"article": "de", "plural": "bioscopen"}, "sentences": ["Wij gaan naar de bioscoop."]}
+        {"lemma": "bioscoop", "pos": "noun", "details": {"article": "de", "plural": "bioscopen"}, "sentences": ["Wij gaan vrijdag naar de *bioscoop* voor een komedie."]}
         ]
       }
     },
@@ -1037,10 +1037,10 @@
       "gloss": "instrument (noun)",
       "entries": {
         "en": [
-        {"lemma": "instrument", "pos": "noun", "details": {"plural": "instruments"}, "sentences": ["The piano is an instrument."]}
+        {"lemma": "instrument", "pos": "noun", "details": {"plural": "instruments"}, "sentences": ["The violin is a beautiful *instrument* with four strings."]}
         ],
         "nl": [
-        {"lemma": "instrument", "pos": "noun", "details": {"article": "het", "plural": "instrumenten"}, "sentences": ["De piano is een instrument."]}
+        {"lemma": "instrument", "pos": "noun", "details": {"article": "het", "plural": "instrumenten"}, "sentences": ["De viool is een mooi *instrument* met vier snaren."]}
         ]
       }
     },
@@ -1049,10 +1049,10 @@
       "gloss": "enchant (verb)",
       "entries": {
         "en": [
-        {"lemma": "to enchant", "pos": "verb", "details": {"past": "enchanted", "participle": "enchanted"}, "sentences": ["The music enchants me."]}
+        {"lemma": "to enchant", "pos": "verb", "details": {"past": "enchanted", "participle": "enchanted"}, "sentences": ["The soft music *enchants* me by the sea."]}
         ],
         "nl": [
-        {"lemma": "betoveren", "pos": "verb", "details": {"pastSingular": "betoverde", "pastPlural": "betoverden", "participle": "betoverd", "auxiliary": "hebben"}, "sentences": ["De muziek betovert mij."]}
+        {"lemma": "betoveren", "pos": "verb", "details": {"pastSingular": "betoverde", "pastPlural": "betoverden", "participle": "betoverd", "auxiliary": "hebben"}, "sentences": ["De zachte muziek *betovert* mij terwijl ik aan zee zit."]}
         ]
       }
     },
@@ -1061,10 +1061,10 @@
       "gloss": "record (noun)",
       "entries": {
         "en": [
-        {"lemma": "record", "pos": "noun", "details": {"plural": "records"}, "sentences": ["He sets a record."]}
+        {"lemma": "record", "pos": "noun", "details": {"plural": "records"}, "sentences": ["The runner sets a new *record* today."]}
         ],
         "nl": [
-        {"lemma": "record", "pos": "noun", "details": {"article": "het", "plural": "records"}, "sentences": ["Hij vestigt een record."]}
+        {"lemma": "record", "pos": "noun", "details": {"article": "het", "plural": "records"}, "sentences": ["De loper vestigt een nieuw *record* op de honderd meter."]}
         ]
       }
     },
@@ -1073,10 +1073,10 @@
       "gloss": "hobby (noun)",
       "entries": {
         "en": [
-        {"lemma": "hobby", "pos": "noun", "details": {"plural": "hobbies"}, "sentences": ["My hobby is reading."]}
+        {"lemma": "hobby", "pos": "noun", "details": {"plural": "hobbies"}, "sentences": ["My *hobby* is reading, so I visit the library."]}
         ],
         "nl": [
-        {"lemma": "hobby", "pos": "noun", "details": {"article": "de", "plural": "hobby's"}, "sentences": ["Mijn hobby is lezen."]}
+        {"lemma": "hobby", "pos": "noun", "details": {"article": "de", "plural": "hobby's"}, "sentences": ["Mijn *hobby* is lezen, dus ik ga wekelijks naar de bibliotheek."]}
         ]
       }
     },
@@ -1085,10 +1085,10 @@
       "gloss": "walk (noun)",
       "entries": {
         "en": [
-        {"lemma": "walk", "pos": "noun", "details": {"plural": "walks"}, "sentences": ["We take a walk."]}
+        {"lemma": "walk", "pos": "noun", "details": {"plural": "walks"}, "sentences": ["After lunch, we take a *walk* in the forest."]}
         ],
         "nl": [
-        {"lemma": "wandeling", "pos": "noun", "details": {"article": "de", "plural": "wandelingen"}, "sentences": ["Wij maken een wandeling."]}
+        {"lemma": "wandeling", "pos": "noun", "details": {"article": "de", "plural": "wandelingen"}, "sentences": ["Na de lunch maken wij een *wandeling* door het stille bos."]}
         ]
       }
     },
@@ -1097,10 +1097,10 @@
       "gloss": "bingo (noun)",
       "entries": {
         "en": [
-        {"lemma": "bingo", "pos": "noun", "details": {"uncountable": true}, "sentences": ["We play bingo."]}
+        {"lemma": "bingo", "pos": "noun", "details": {"uncountable": true}, "sentences": ["On Thursdays, the old people play *bingo* together."]}
         ],
         "nl": [
-        {"lemma": "bingo", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Wij spelen bingo."]}
+        {"lemma": "bingo", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Elke donderdag spelen de ouderen *bingo* in het buurthuis."]}
         ]
       }
     },
@@ -1109,10 +1109,10 @@
       "gloss": "baseball (noun)",
       "entries": {
         "en": [
-        {"lemma": "baseball", "pos": "noun", "details": {"uncountable": true}, "sentences": ["We play baseball."]}
+        {"lemma": "baseball", "pos": "noun", "details": {"uncountable": true}, "sentences": ["In America, many boys play *baseball* after school."]}
         ],
         "nl": [
-        {"lemma": "honkbal", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["Wij spelen honkbal."]}
+        {"lemma": "honkbal", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["In Amerika spelen veel jongens na school *honkbal*."]}
         ]
       }
     },
@@ -1121,10 +1121,10 @@
       "gloss": "poetry (noun)",
       "entries": {
         "en": [
-        {"lemma": "poetry", "pos": "noun", "details": {"uncountable": true}, "sentences": ["I like poetry."]}
+        {"lemma": "poetry", "pos": "noun", "details": {"uncountable": true}, "sentences": ["She likes *poetry* and writes lines every night."]}
         ],
         "nl": [
-        {"lemma": "poëzie", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Ik hou van poëzie."]}
+        {"lemma": "poëzie", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Zij houdt van *poëzie* en schrijft elke avond een paar regels."]}
         ]
       }
     },
@@ -1133,10 +1133,10 @@
       "gloss": "drama (noun)",
       "entries": {
         "en": [
-        {"lemma": "drama", "pos": "noun", "details": {"plural": "dramas"}, "sentences": ["The film is a drama."]}
+        {"lemma": "drama", "pos": "noun", "details": {"plural": "dramas"}, "sentences": ["The new film is a sad *drama* about brothers."]}
         ],
         "nl": [
-        {"lemma": "drama", "pos": "noun", "details": {"article": "het", "plural": "drama's"}, "sentences": ["De film is een drama."]}
+        {"lemma": "drama", "pos": "noun", "details": {"article": "het", "plural": "drama's"}, "sentences": ["De nieuwe film is een droevig *drama* over twee broers."]}
         ]
       }
     },
@@ -1145,10 +1145,10 @@
       "gloss": "tragedy (noun)",
       "entries": {
         "en": [
-        {"lemma": "tragedy", "pos": "noun", "details": {"plural": "tragedies"}, "sentences": ["The film is a tragedy."]}
+        {"lemma": "tragedy", "pos": "noun", "details": {"plural": "tragedies"}, "sentences": ["The old play is a *tragedy* that ends sadly."]}
         ],
         "nl": [
-        {"lemma": "tragedie", "pos": "noun", "details": {"article": "de", "plural": "tragedies"}, "sentences": ["De film is een tragedie."]}
+        {"lemma": "tragedie", "pos": "noun", "details": {"article": "de", "plural": "tragedies"}, "sentences": ["Het oude toneelstuk is een *tragedie* die heel droevig eindigt."]}
         ]
       }
     },
@@ -1157,10 +1157,10 @@
       "gloss": "fairy tale (noun)",
       "entries": {
         "en": [
-        {"lemma": "fairy tale", "pos": "noun", "details": {"plural": "fairy tales"}, "sentences": ["I read a fairy tale."]}
+        {"lemma": "fairy tale", "pos": "noun", "details": {"plural": "fairy tales"}, "sentences": ["Before sleep, I read my son a *fairy tale*."]}
         ],
         "nl": [
-        {"lemma": "sprookje", "pos": "noun", "details": {"article": "het", "plural": "sprookjes"}, "sentences": ["Ik lees een sprookje."]}
+        {"lemma": "sprookje", "pos": "noun", "details": {"article": "het", "plural": "sprookjes"}, "sentences": ["Voor het slapengaan lees ik mijn zoon een *sprookje* voor."]}
         ]
       }
     },
@@ -1169,10 +1169,10 @@
       "gloss": "loser (noun)",
       "entries": {
         "en": [
-        {"lemma": "loser", "pos": "noun", "details": {"plural": "losers"}, "sentences": ["The loser is sad."]}
+        {"lemma": "loser", "pos": "noun", "details": {"plural": "losers"}, "sentences": ["The *loser* of the game shakes the winner's hand."]}
         ],
         "nl": [
-        {"lemma": "verliezer", "pos": "noun", "details": {"article": "de", "plural": "verliezers"}, "sentences": ["De verliezer is verdrietig."]}
+        {"lemma": "verliezer", "pos": "noun", "details": {"article": "de", "plural": "verliezers"}, "sentences": ["De *verliezer* van het spel geeft de winnaar een hand."]}
         ]
       }
     },
@@ -1181,10 +1181,10 @@
       "gloss": "trip (short outing)",
       "entries": {
         "en": [
-        {"lemma": "trip", "pos": "noun", "details": {"note": "short outing", "plural": "trips"}, "sentences": ["We go on a trip."]}
+        {"lemma": "trip", "pos": "noun", "details": {"note": "short outing", "plural": "trips"}, "sentences": ["The class goes on a *trip* to the zoo."]}
         ],
         "nl": [
-        {"lemma": "trip", "pos": "noun", "details": {"article": "de", "plural": "trips"}, "sentences": ["Wij gaan op een trip."]}
+        {"lemma": "trip", "pos": "noun", "details": {"article": "de", "plural": "trips"}, "sentences": ["De klas gaat vandaag op *trip* naar de dierentuin."]}
         ]
       }
     },
@@ -1193,10 +1193,10 @@
       "gloss": "horn (noun)",
       "entries": {
         "en": [
-        {"lemma": "horn", "pos": "noun", "details": {"plural": "horns"}, "sentences": ["He plays the horn."]}
+        {"lemma": "horn", "pos": "noun", "details": {"plural": "horns"}, "sentences": ["He plays the *horn* in the town's brass band."]}
         ],
         "nl": [
-        {"lemma": "hoorn", "pos": "noun", "details": {"article": "de", "plural": "hoorns"}, "sentences": ["Hij speelt de hoorn."]}
+        {"lemma": "hoorn", "pos": "noun", "details": {"article": "de", "plural": "hoorns"}, "sentences": ["Hij speelt de *hoorn* in de blaaskapel van het stadje."]}
         ]
       }
     },
@@ -1205,10 +1205,10 @@
       "gloss": "rehearsal (noun)",
       "entries": {
         "en": [
-        {"lemma": "rehearsal", "pos": "noun", "details": {"plural": "rehearsals"}, "sentences": ["The rehearsal starts at eight."]}
+        {"lemma": "rehearsal", "pos": "noun", "details": {"plural": "rehearsals"}, "sentences": ["The *rehearsal* starts at eight, and everyone brings scripts."]}
         ],
         "nl": [
-        {"lemma": "repetitie", "pos": "noun", "details": {"article": "de", "plural": "repetities"}, "sentences": ["De repetitie begint om acht uur."]}
+        {"lemma": "repetitie", "pos": "noun", "details": {"article": "de", "plural": "repetities"}, "sentences": ["De *repetitie* begint om acht uur en iedereen neemt zijn script mee."]}
         ]
       }
     },
@@ -1217,10 +1217,10 @@
       "gloss": "row (verb)",
       "entries": {
         "en": [
-        {"lemma": "to row", "pos": "verb", "details": {"past": "rowed", "participle": "rowed"}, "sentences": ["We row on the lake."]}
+        {"lemma": "to row", "pos": "verb", "details": {"past": "rowed", "participle": "rowed"}, "sentences": ["We *row* a small boat across the calm lake."]}
         ],
         "nl": [
-        {"lemma": "roeien", "pos": "verb", "details": {"pastSingular": "roeide", "pastPlural": "roeiden", "participle": "geroeid", "auxiliary": "hebben"}, "sentences": ["Wij roeien op het meer."]}
+        {"lemma": "roeien", "pos": "verb", "details": {"pastSingular": "roeide", "pastPlural": "roeiden", "participle": "geroeid", "auxiliary": "hebben"}, "sentences": ["Wij *roeien* met een klein bootje over het rustige meer."]}
         ]
       }
     },
@@ -1229,10 +1229,10 @@
       "gloss": "trainer (noun)",
       "entries": {
         "en": [
-        {"lemma": "trainer", "pos": "noun", "details": {"plural": "trainers"}, "sentences": ["The trainer is strict."]}
+        {"lemma": "trainer", "pos": "noun", "details": {"plural": "trainers"}, "sentences": ["The *trainer* tells the girls to run another lap."]}
         ],
         "nl": [
-        {"lemma": "trainer", "pos": "noun", "details": {"article": "de", "plural": "trainers"}, "sentences": ["De trainer is streng."]}
+        {"lemma": "trainer", "pos": "noun", "details": {"article": "de", "plural": "trainers"}, "sentences": ["De *trainer* zegt tegen de meisjes dat ze nog een ronde rennen."]}
         ]
       }
     },
@@ -1241,10 +1241,10 @@
       "gloss": "wrestle (verb)",
       "entries": {
         "en": [
-        {"lemma": "to wrestle", "pos": "verb", "details": {"past": "wrestled", "participle": "wrestled"}, "sentences": ["They wrestle."]}
+        {"lemma": "to wrestle", "pos": "verb", "details": {"past": "wrestled", "participle": "wrestled"}, "sentences": ["The two brothers *wrestle* on the soft carpet."]}
         ],
         "nl": [
-        {"lemma": "worstelen", "pos": "verb", "details": {"pastSingular": "worstelde", "pastPlural": "worstelden", "participle": "geworsteld", "auxiliary": "hebben"}, "sentences": ["Zij worstelen."]}
+        {"lemma": "worstelen", "pos": "verb", "details": {"pastSingular": "worstelde", "pastPlural": "worstelden", "participle": "geworsteld", "auxiliary": "hebben"}, "sentences": ["De twee broers *worstelen* op het zachte tapijt."]}
         ]
       }
     },
@@ -1253,10 +1253,10 @@
       "gloss": "rhythm (noun)",
       "entries": {
         "en": [
-        {"lemma": "rhythm", "pos": "noun", "details": {"plural": "rhythms"}, "sentences": ["I like the rhythm."]}
+        {"lemma": "rhythm", "pos": "noun", "details": {"plural": "rhythms"}, "sentences": ["I like the fast *rhythm* of this dance music."]}
         ],
         "nl": [
-        {"lemma": "ritme", "pos": "noun", "details": {"article": "het", "plural": "ritmes"}, "sentences": ["Ik hou van het ritme."]}
+        {"lemma": "ritme", "pos": "noun", "details": {"article": "het", "plural": "ritmes"}, "sentences": ["Ik hou van het snelle *ritme* van deze dansmuziek."]}
         ]
       }
     },
@@ -1265,10 +1265,10 @@
       "gloss": "race (verb)",
       "entries": {
         "en": [
-        {"lemma": "to race", "pos": "verb", "details": {"past": "raced", "participle": "raced"}, "sentences": ["The cars race."]}
+        {"lemma": "to race", "pos": "verb", "details": {"past": "raced", "participle": "raced"}, "sentences": ["The cars *race* around the track at high speed."]}
         ],
         "nl": [
-        {"lemma": "racen", "pos": "verb", "details": {"pastSingular": "racete", "pastPlural": "raceten", "participle": "geracet", "auxiliary": "hebben/zijn"}, "sentences": ["De auto's racen."]}
+        {"lemma": "racen", "pos": "verb", "details": {"pastSingular": "racete", "pastPlural": "raceten", "participle": "geracet", "auxiliary": "hebben/zijn"}, "sentences": ["De auto's *racen* met hoge snelheid over het circuit."]}
         ]
       }
     },
@@ -1277,10 +1277,10 @@
       "gloss": "rehearse (verb)",
       "entries": {
         "en": [
-        {"lemma": "to rehearse", "pos": "verb", "details": {"past": "rehearsed", "participle": "rehearsed"}, "sentences": ["We rehearse every day."]}
+        {"lemma": "to rehearse", "pos": "verb", "details": {"past": "rehearsed", "participle": "rehearsed"}, "sentences": ["The actors *rehearse* their lines in an empty classroom."]}
         ],
         "nl": [
-        {"lemma": "repeteren", "pos": "verb", "details": {"pastSingular": "repeteerde", "pastPlural": "repeteerden", "participle": "gerepeteerd", "auxiliary": "hebben"}, "sentences": ["Wij repeteren elke dag."]}
+        {"lemma": "repeteren", "pos": "verb", "details": {"pastSingular": "repeteerde", "pastPlural": "repeteerden", "participle": "gerepeteerd", "auxiliary": "hebben"}, "sentences": ["De acteurs *repeteren* hun tekst in een leeg klaslokaal."]}
         ]
       }
     },
@@ -1289,10 +1289,10 @@
       "gloss": "balloon (noun)",
       "entries": {
         "en": [
-        {"lemma": "balloon", "pos": "noun", "details": {"plural": "balloons"}, "sentences": ["The child has a balloon."]}
+        {"lemma": "balloon", "pos": "noun", "details": {"plural": "balloons"}, "sentences": ["The little boy holds a blue *balloon*."]}
         ],
         "nl": [
-        {"lemma": "ballon", "pos": "noun", "details": {"article": "de", "plural": "ballonnen"}, "sentences": ["Het kind heeft een ballon."]}
+        {"lemma": "ballon", "pos": "noun", "details": {"article": "de", "plural": "ballonnen"}, "sentences": ["Het jongetje houdt een blauwe *ballon* vast op het feestje."]}
         ]
       }
     },
@@ -1301,10 +1301,10 @@
       "gloss": "boxer (noun)",
       "entries": {
         "en": [
-        {"lemma": "boxer", "pos": "noun", "details": {"plural": "boxers"}, "sentences": ["The boxer is strong."]}
+        {"lemma": "boxer", "pos": "noun", "details": {"plural": "boxers"}, "sentences": ["The *boxer* trains hard before the big fight."]}
         ],
         "nl": [
-        {"lemma": "bokser", "pos": "noun", "details": {"article": "de", "plural": "boksers"}, "sentences": ["De bokser is sterk."]}
+        {"lemma": "bokser", "pos": "noun", "details": {"article": "de", "plural": "boksers"}, "sentences": ["De *bokser* traint hard voor het grote gevecht."]}
         ]
       }
     },
@@ -1313,10 +1313,10 @@
       "gloss": "design (noun)",
       "entries": {
         "en": [
-        {"lemma": "design", "pos": "noun", "details": {"plural": "designs"}, "sentences": ["The design is beautiful."]}
+        {"lemma": "design", "pos": "noun", "details": {"plural": "designs"}, "sentences": ["The *design* of the new chair looks modern."]}
         ],
         "nl": [
-        {"lemma": "ontwerp", "pos": "noun", "details": {"article": "het", "plural": "ontwerpen"}, "sentences": ["Het ontwerp is mooi."]}
+        {"lemma": "ontwerp", "pos": "noun", "details": {"article": "het", "plural": "ontwerpen"}, "sentences": ["Het *ontwerp* van de nieuwe stoel ziet er modern en simpel uit."]}
         ]
       }
     },
@@ -1325,10 +1325,10 @@
       "gloss": "stunt (noun)",
       "entries": {
         "en": [
-        {"lemma": "stunt", "pos": "noun", "details": {"plural": "stunts"}, "sentences": ["The stunt is dangerous."]}
+        {"lemma": "stunt", "pos": "noun", "details": {"plural": "stunts"}, "sentences": ["The actor does a dangerous *stunt* on a train."]}
         ],
         "nl": [
-        {"lemma": "stunt", "pos": "noun", "details": {"article": "de", "plural": "stunts"}, "sentences": ["De stunt is gevaarlijk."]}
+        {"lemma": "stunt", "pos": "noun", "details": {"article": "de", "plural": "stunts"}, "sentences": ["De acteur doet een gevaarlijke *stunt* op een rijdende trein."]}
         ]
       }
     },
@@ -1337,10 +1337,10 @@
       "gloss": "choir (noun)",
       "entries": {
         "en": [
-        {"lemma": "choir", "pos": "noun", "details": {"plural": "choirs"}, "sentences": ["The choir sings."]}
+        {"lemma": "choir", "pos": "noun", "details": {"plural": "choirs"}, "sentences": ["Our school *choir* sings every Friday morning."]}
         ],
         "nl": [
-        {"lemma": "koor", "pos": "noun", "details": {"article": "het", "plural": "koren"}, "sentences": ["Het koor zingt."]}
+        {"lemma": "koor", "pos": "noun", "details": {"article": "het", "plural": "koren"}, "sentences": ["Ons school*koor* zingt elke vrijdagochtend een lied."]}
         ]
       }
     },
@@ -1349,10 +1349,10 @@
       "gloss": "lead (advantage)",
       "entries": {
         "en": [
-        {"lemma": "lead", "pos": "noun", "details": {"note": "advantage", "plural": "leads"}, "sentences": ["He has a big lead."]}
+        {"lemma": "lead", "pos": "noun", "details": {"note": "advantage", "plural": "leads"}, "sentences": ["The runner has a *lead* with one lap left."]}
         ],
         "nl": [
-        {"lemma": "voorsprong", "pos": "noun", "details": {"article": "de", "plural": "voorsprongen"}, "sentences": ["Hij heeft een grote voorsprong."]}
+        {"lemma": "voorsprong", "pos": "noun", "details": {"article": "de", "plural": "voorsprongen"}, "sentences": ["De loper heeft een grote *voorsprong* met nog één ronde te gaan."]}
         ]
       }
     },
@@ -1361,10 +1361,10 @@
       "gloss": "locker room (noun)",
       "entries": {
         "en": [
-        {"lemma": "locker room", "pos": "noun", "details": {"plural": "locker rooms"}, "sentences": ["The players are in the locker room."]}
+        {"lemma": "locker room", "pos": "noun", "details": {"plural": "locker rooms"}, "sentences": ["After the match, players sit in the *locker room*."]}
         ],
         "nl": [
-        {"lemma": "kleedkamer", "pos": "noun", "details": {"article": "de", "plural": "kleedkamers"}, "sentences": ["De spelers zijn in de kleedkamer."]}
+        {"lemma": "kleedkamer", "pos": "noun", "details": {"article": "de", "plural": "kleedkamers"}, "sentences": ["Na de wedstrijd zitten de spelers in de *kleedkamer*."]}
         ]
       }
     },
@@ -1373,10 +1373,10 @@
       "gloss": "basketball (noun)",
       "entries": {
         "en": [
-        {"lemma": "basketball", "pos": "noun", "details": {"uncountable": true}, "sentences": ["We play basketball."]}
+        {"lemma": "basketball", "pos": "noun", "details": {"uncountable": true}, "sentences": ["My brother plays *basketball* with his friends after school."]}
         ],
         "nl": [
-        {"lemma": "basketbal", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["Wij spelen basketbal."]}
+        {"lemma": "basketbal", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["Mijn broer speelt na school *basketbal* met zijn vrienden."]}
         ]
       }
     },
@@ -1385,10 +1385,10 @@
       "gloss": "holiday (noun)",
       "entries": {
         "en": [
-        {"lemma": "holiday", "pos": "noun", "details": {"plural": "holidays"}, "sentences": ["Today is a holiday."]}
+        {"lemma": "holiday", "pos": "noun", "details": {"plural": "holidays"}, "sentences": ["Shops are closed today because it is a *holiday*."]}
         ],
         "nl": [
-        {"lemma": "feestdag", "pos": "noun", "details": {"article": "de", "plural": "feestdagen"}, "sentences": ["Vandaag is het een feestdag."]}
+        {"lemma": "feestdag", "pos": "noun", "details": {"article": "de", "plural": "feestdagen"}, "sentences": ["Winkels zijn vandaag dicht, want het is een *feestdag*."]}
         ]
       }
     },
@@ -1397,10 +1397,10 @@
       "gloss": "score (noun)",
       "entries": {
         "en": [
-        {"lemma": "score", "pos": "noun", "details": {"plural": "scores"}, "sentences": ["The score is two to one."]}
+        {"lemma": "score", "pos": "noun", "details": {"plural": "scores"}, "sentences": ["The *score* is two to one, ten minutes left."]}
         ],
         "nl": [
-        {"lemma": "score", "pos": "noun", "details": {"article": "de", "plural": "scores"}, "sentences": ["De score is twee-een."]}
+        {"lemma": "score", "pos": "noun", "details": {"article": "de", "plural": "scores"}, "sentences": ["De *score* is twee-een en er zijn nog tien minuten te spelen."]}
         ]
       }
     },
@@ -1409,10 +1409,10 @@
       "gloss": "challenge (verb)",
       "entries": {
         "en": [
-        {"lemma": "to challenge", "pos": "verb", "details": {"past": "challenged", "participle": "challenged"}, "sentences": ["I challenge you."]}
+        {"lemma": "to challenge", "pos": "verb", "details": {"past": "challenged", "participle": "challenged"}, "sentences": ["My sister *challenges* me to a race."]}
         ],
         "nl": [
-        {"lemma": "uitdagen", "pos": "verb", "details": {"pastSingular": "daagde uit", "pastPlural": "daagden uit", "participle": "uitgedaagd", "auxiliary": "hebben"}, "sentences": ["Ik daag je uit."]}
+        {"lemma": "uitdagen", "pos": "verb", "details": {"pastSingular": "daagde uit", "pastPlural": "daagden uit", "participle": "uitgedaagd", "auxiliary": "hebben"}, "sentences": ["Mijn zus *daagt* me *uit* voor een wedstrijdje hardlopen."]}
         ]
       }
     },
@@ -1421,10 +1421,10 @@
       "gloss": "myth (noun)",
       "entries": {
         "en": [
-        {"lemma": "myth", "pos": "noun", "details": {"plural": "myths"}, "sentences": ["This is an old myth."]}
+        {"lemma": "myth", "pos": "noun", "details": {"plural": "myths"}, "sentences": ["People believe the *myth* that carrots improve eyesight."]}
         ],
         "nl": [
-        {"lemma": "mythe", "pos": "noun", "details": {"article": "de", "plural": "mythes"}, "sentences": ["Dit is een oude mythe."]}
+        {"lemma": "mythe", "pos": "noun", "details": {"article": "de", "plural": "mythes"}, "sentences": ["Mensen geloven de *mythe* dat wortels goed zijn voor je ogen."]}
         ]
       }
     },
@@ -1433,10 +1433,10 @@
       "gloss": "throw (noun)",
       "entries": {
         "en": [
-        {"lemma": "throw", "pos": "noun", "details": {"plural": "throws"}, "sentences": ["That was a good throw."]}
+        {"lemma": "throw", "pos": "noun", "details": {"plural": "throws"}, "sentences": ["What a *throw*! The ball lands in the basket."]}
         ],
         "nl": [
-        {"lemma": "worp", "pos": "noun", "details": {"article": "de", "plural": "worpen"}, "sentences": ["Dat was een goede worp."]}
+        {"lemma": "worp", "pos": "noun", "details": {"article": "de", "plural": "worpen"}, "sentences": ["Wat een *worp*! De bal landt precies in de mand."]}
         ]
       }
     },
@@ -1445,10 +1445,10 @@
       "gloss": "fighter (person who fights)",
       "entries": {
         "en": [
-        {"lemma": "fighter", "pos": "noun", "details": {"note": "person who fights", "plural": "fighters"}, "sentences": ["The fighter is strong."]}
+        {"lemma": "fighter", "pos": "noun", "details": {"note": "person who fights", "plural": "fighters"}, "sentences": ["The young *fighter* trains in the gym every morning."]}
         ],
         "nl": [
-        {"lemma": "vechter", "pos": "noun", "details": {"article": "de", "plural": "vechters"}, "sentences": ["De vechter is sterk."]}
+        {"lemma": "vechter", "pos": "noun", "details": {"article": "de", "plural": "vechters"}, "sentences": ["De jonge *vechter* traint elke ochtend in de sportschool."]}
         ]
       }
     },
@@ -1457,10 +1457,10 @@
       "gloss": "fireworks (noun)",
       "entries": {
         "en": [
-        {"lemma": "fireworks", "pos": "noun", "details": {"uncountable": true}, "sentences": ["The fireworks are beautiful."]}
+        {"lemma": "fireworks", "pos": "noun", "details": {"uncountable": true}, "sentences": ["At midnight, the *fireworks* light up the sky."]}
         ],
         "nl": [
-        {"lemma": "vuurwerk", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["Het vuurwerk is mooi."]}
+        {"lemma": "vuurwerk", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["Om middernacht verlicht het *vuurwerk* de hemel."]}
         ]
       }
     },
@@ -1469,10 +1469,10 @@
       "gloss": "competition (noun)",
       "entries": {
         "en": [
-        {"lemma": "competition", "pos": "noun", "details": {"plural": "competitions"}, "sentences": ["The competition is tough."]}
+        {"lemma": "competition", "pos": "noun", "details": {"plural": "competitions"}, "sentences": ["The *competition* is tough: only one team wins."]}
         ],
         "nl": [
-        {"lemma": "competitie", "pos": "noun", "details": {"article": "de", "plural": "competities"}, "sentences": ["De competitie is zwaar."]}
+        {"lemma": "competitie", "pos": "noun", "details": {"article": "de", "plural": "competities"}, "sentences": ["De *competitie* is zwaar: maar één team wint."]}
         ]
       }
     },
@@ -1481,10 +1481,10 @@
       "gloss": "comedy (noun)",
       "entries": {
         "en": [
-        {"lemma": "comedy", "pos": "noun", "details": {"plural": "comedies"}, "sentences": ["The film is a comedy."]}
+        {"lemma": "comedy", "pos": "noun", "details": {"plural": "comedies"}, "sentences": ["We want to laugh, so we watch a *comedy*."]}
         ],
         "nl": [
-        {"lemma": "komedie", "pos": "noun", "details": {"article": "de", "plural": "komedies"}, "sentences": ["De film is een komedie."]}
+        {"lemma": "komedie", "pos": "noun", "details": {"article": "de", "plural": "komedies"}, "sentences": ["We willen lachen, dus kijken we een *komedie*."]}
         ]
       }
     },
@@ -1493,10 +1493,10 @@
       "gloss": "surf (verb)",
       "entries": {
         "en": [
-        {"lemma": "to surf", "pos": "verb", "details": {"past": "surfed", "participle": "surfed"}, "sentences": ["We surf in the sea."]}
+        {"lemma": "to surf", "pos": "verb", "details": {"past": "surfed", "participle": "surfed"}, "sentences": ["My cousins *surf* every summer at the beach."]}
         ],
         "nl": [
-        {"lemma": "surfen", "pos": "verb", "details": {"pastSingular": "surfte", "pastPlural": "surften", "participle": "gesurft", "auxiliary": "hebben"}, "sentences": ["Wij surfen in de zee."]}
+        {"lemma": "surfen", "pos": "verb", "details": {"pastSingular": "surfte", "pastPlural": "surften", "participle": "gesurft", "auxiliary": "hebben"}, "sentences": ["Mijn neven en nichten *surfen* elke zomer op het strand."]}
         ]
       }
     },
@@ -1505,10 +1505,10 @@
       "gloss": "album (noun)",
       "entries": {
         "en": [
-        {"lemma": "album", "pos": "noun", "details": {"plural": "albums"}, "sentences": ["I buy an album."]}
+        {"lemma": "album", "pos": "noun", "details": {"plural": "albums"}, "sentences": ["My favorite singer releases a new *album* today."]}
         ],
         "nl": [
-        {"lemma": "album", "pos": "noun", "details": {"article": "het", "plural": "albums"}, "sentences": ["Ik koop een album."]}
+        {"lemma": "album", "pos": "noun", "details": {"article": "het", "plural": "albums"}, "sentences": ["Mijn favoriete zangeres brengt vandaag een nieuw *album* uit."]}
         ]
       }
     },
@@ -1517,10 +1517,10 @@
       "gloss": "little toy (noun)",
       "entries": {
         "en": [
-        {"lemma": "little toy", "pos": "noun", "details": {"plural": "little toys"}, "sentences": ["The child has a little toy."]}
+        {"lemma": "little toy", "pos": "noun", "details": {"plural": "little toys"}, "sentences": ["The baby chews on a soft *little toy*."]}
         ],
         "nl": [
-        {"lemma": "speeltje", "pos": "noun", "details": {"article": "het", "plural": "speeltjes"}, "sentences": ["Het kind heeft een speeltje."]}
+        {"lemma": "speeltje", "pos": "noun", "details": {"article": "het", "plural": "speeltjes"}, "sentences": ["De baby kauwt op een zacht *speeltje*."]}
         ]
       }
     },
@@ -1529,10 +1529,10 @@
       "gloss": "fair (noun)",
       "entries": {
         "en": [
-        {"lemma": "fair", "pos": "noun", "details": {"plural": "fairs"}, "sentences": ["We go to the fair."]}
+        {"lemma": "fair", "pos": "noun", "details": {"plural": "fairs"}, "sentences": ["Every August, the town has a *fair* with rides."]}
         ],
         "nl": [
-        {"lemma": "kermis", "pos": "noun", "details": {"article": "de", "plural": "kermissen"}, "sentences": ["Wij gaan naar de kermis."]}
+        {"lemma": "kermis", "pos": "noun", "details": {"article": "de", "plural": "kermissen"}, "sentences": ["Elke augustus heeft het dorp een *kermis* met attracties en snoep."]}
         ]
       }
     },
@@ -1541,10 +1541,10 @@
       "gloss": "portrait (noun)",
       "entries": {
         "en": [
-        {"lemma": "portrait", "pos": "noun", "details": {"plural": "portraits"}, "sentences": ["The portrait hangs on the wall."]}
+        {"lemma": "portrait", "pos": "noun", "details": {"plural": "portraits"}, "sentences": ["A *portrait* of a queen hangs above the door."]}
         ],
         "nl": [
-        {"lemma": "portret", "pos": "noun", "details": {"article": "het", "plural": "portretten"}, "sentences": ["Het portret hangt aan de muur."]}
+        {"lemma": "portret", "pos": "noun", "details": {"article": "het", "plural": "portretten"}, "sentences": ["Een *portret* van een koningin hangt boven de deur."]}
         ]
       }
     },
@@ -1553,10 +1553,10 @@
       "gloss": "ski (verb)",
       "entries": {
         "en": [
-        {"lemma": "to ski", "pos": "verb", "details": {"past": "skied", "participle": "skied"}, "sentences": ["We ski in the winter."]}
+        {"lemma": "to ski", "pos": "verb", "details": {"past": "skied", "participle": "skied"}, "sentences": ["My parents *ski* in the Alps every winter."]}
         ],
         "nl": [
-        {"lemma": "skiën", "pos": "verb", "details": {"pastSingular": "skiede", "pastPlural": "skieden", "participle": "geskied", "auxiliary": "hebben"}, "sentences": ["Wij skiën in de winter."]}
+        {"lemma": "skiën", "pos": "verb", "details": {"pastSingular": "skiede", "pastPlural": "skieden", "participle": "geskied", "auxiliary": "hebben"}, "sentences": ["Mijn ouders *skiën* elke winter in de Alpen."]}
         ]
       }
     },
@@ -1565,10 +1565,10 @@
       "gloss": "tournament (noun)",
       "entries": {
         "en": [
-        {"lemma": "tournament", "pos": "noun", "details": {"plural": "tournaments"}, "sentences": ["The tournament starts tomorrow."]}
+        {"lemma": "tournament", "pos": "noun", "details": {"plural": "tournaments"}, "sentences": ["The football *tournament* starts tomorrow with sixteen teams."]}
         ],
         "nl": [
-        {"lemma": "toernooi", "pos": "noun", "details": {"article": "het", "plural": "toernooien"}, "sentences": ["Het toernooi begint morgen."]}
+        {"lemma": "toernooi", "pos": "noun", "details": {"article": "het", "plural": "toernooien"}, "sentences": ["Het voetbal*toernooi* begint morgen met zestien teams."]}
         ]
       }
     },
@@ -1577,10 +1577,10 @@
       "gloss": "tour (series of performances)",
       "entries": {
         "en": [
-        {"lemma": "tour", "pos": "noun", "details": {"note": "series of performances", "plural": "tours"}, "sentences": ["The band goes on tour."]}
+        {"lemma": "tour", "pos": "noun", "details": {"note": "series of performances", "plural": "tours"}, "sentences": ["The band is on *tour* in twenty cities."]}
         ],
         "nl": [
-        {"lemma": "tournee", "pos": "noun", "details": {"article": "de", "plural": "tournees"}, "sentences": ["De band gaat op tournee."]}
+        {"lemma": "tournee", "pos": "noun", "details": {"article": "de", "plural": "tournees"}, "sentences": ["De band is op *tournee* in twintig steden."]}
         ]
       }
     },
@@ -1589,10 +1589,10 @@
       "gloss": "poker (noun)",
       "entries": {
         "en": [
-        {"lemma": "poker", "pos": "noun", "details": {"uncountable": true}, "sentences": ["We play poker."]}
+        {"lemma": "poker", "pos": "noun", "details": {"uncountable": true}, "sentences": ["On Saturday evenings, my uncle plays *poker* with neighbors."]}
         ],
         "nl": [
-        {"lemma": "poker", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Wij spelen poker."]}
+        {"lemma": "poker", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Op zaterdagavond speelt mijn oom *poker* met buren."]}
         ]
       }
     },
@@ -1601,10 +1601,10 @@
       "gloss": "puzzle (noun)",
       "entries": {
         "en": [
-        {"lemma": "puzzle", "pos": "noun", "details": {"plural": "puzzles"}, "sentences": ["We do a puzzle."]}
+        {"lemma": "puzzle", "pos": "noun", "details": {"plural": "puzzles"}, "sentences": ["Grandma and I do a thousand-piece *puzzle*."]}
         ],
         "nl": [
-        {"lemma": "puzzel", "pos": "noun", "details": {"article": "de", "plural": "puzzels"}, "sentences": ["Wij doen een puzzel."]}
+        {"lemma": "puzzel", "pos": "noun", "details": {"article": "de", "plural": "puzzels"}, "sentences": ["Oma en ik maken een *puzzel* van duizend stukjes."]}
         ]
       }
     },
@@ -1613,10 +1613,10 @@
       "gloss": "seesaw (noun)",
       "entries": {
         "en": [
-        {"lemma": "seesaw", "pos": "noun", "details": {"plural": "seesaws"}, "sentences": ["The children play on the seesaw."]}
+        {"lemma": "seesaw", "pos": "noun", "details": {"plural": "seesaws"}, "sentences": ["Two girls sit on the *seesaw* in the playground."]}
         ],
         "nl": [
-        {"lemma": "wip", "pos": "noun", "details": {"article": "de", "plural": "wippen"}, "sentences": ["De kinderen spelen op de wip."]}
+        {"lemma": "wip", "pos": "noun", "details": {"article": "de", "plural": "wippen"}, "sentences": ["Twee meisjes zitten op de *wip* op het speelplein."]}
         ]
       }
     },
@@ -1625,10 +1625,10 @@
       "gloss": "zombie (noun)",
       "entries": {
         "en": [
-        {"lemma": "zombie", "pos": "noun", "details": {"plural": "zombies"}, "sentences": ["The zombie walks."]}
+        {"lemma": "zombie", "pos": "noun", "details": {"plural": "zombies"}, "sentences": ["In the film, a *zombie* walks down the street."]}
         ],
         "nl": [
-        {"lemma": "zombie", "pos": "noun", "details": {"article": "de", "plural": "zombies"}, "sentences": ["De zombie loopt."]}
+        {"lemma": "zombie", "pos": "noun", "details": {"article": "de", "plural": "zombies"}, "sentences": ["In de film loopt een *zombie* door de donkere straat."]}
         ]
       }
     },
@@ -1637,10 +1637,10 @@
       "gloss": "championship (noun)",
       "entries": {
         "en": [
-        {"lemma": "championship", "pos": "noun", "details": {"plural": "championships"}, "sentences": ["The championship starts tomorrow."]}
+        {"lemma": "championship", "pos": "noun", "details": {"plural": "championships"}, "sentences": ["The *championship* starts tomorrow and the town is excited."]}
         ],
         "nl": [
-        {"lemma": "kampioenschap", "pos": "noun", "details": {"article": "het", "plural": "kampioenschappen"}, "sentences": ["Het kampioenschap begint morgen."]}
+        {"lemma": "kampioenschap", "pos": "noun", "details": {"article": "het", "plural": "kampioenschappen"}, "sentences": ["Het *kampioenschap* begint morgen en het dorp is opgewonden."]}
         ]
       }
     },
@@ -1649,10 +1649,10 @@
       "gloss": "ballet (noun)",
       "entries": {
         "en": [
-        {"lemma": "ballet", "pos": "noun", "details": {"plural": "ballets"}, "sentences": ["We go to the ballet."]}
+        {"lemma": "ballet", "pos": "noun", "details": {"plural": "ballets"}, "sentences": ["My daughter dances, so we go to the *ballet*."]}
         ],
         "nl": [
-        {"lemma": "ballet", "pos": "noun", "details": {"article": "het", "plural": "balletten"}, "sentences": ["Wij gaan naar het ballet."]}
+        {"lemma": "ballet", "pos": "noun", "details": {"article": "het", "plural": "balletten"}, "sentences": ["Mijn dochter danst, dus we gaan naar het *ballet*."]}
         ]
       }
     },
@@ -1661,10 +1661,10 @@
       "gloss": "dive (noun)",
       "entries": {
         "en": [
-        {"lemma": "dive", "pos": "noun", "details": {"plural": "dives"}, "sentences": ["He takes a dive."]}
+        {"lemma": "dive", "pos": "noun", "details": {"plural": "dives"}, "sentences": ["The boy takes a quick *dive* into the lake."]}
         ],
         "nl": [
-        {"lemma": "duik", "pos": "noun", "details": {"article": "de", "plural": "duiken"}, "sentences": ["Hij neemt een duik."]}
+        {"lemma": "duik", "pos": "noun", "details": {"article": "de", "plural": "duiken"}, "sentences": ["De jongen neemt een snelle *duik* in het koude meer."]}
         ]
       }
     },
@@ -1673,10 +1673,10 @@
       "gloss": "skate (verb)",
       "entries": {
         "en": [
-        {"lemma": "to skate", "pos": "verb", "details": {"past": "skated", "participle": "skated"}, "sentences": ["We skate on the ice."]}
+        {"lemma": "to skate", "pos": "verb", "details": {"past": "skated", "participle": "skated"}, "sentences": ["When the canal freezes, everyone comes to *skate*."]}
         ],
         "nl": [
-        {"lemma": "schaatsen", "pos": "verb", "details": {"pastSingular": "schaatste", "pastPlural": "schaatsten", "participle": "geschaatst", "auxiliary": "hebben/zijn"}, "sentences": ["Wij schaatsen op het ijs."]}
+        {"lemma": "schaatsen", "pos": "verb", "details": {"pastSingular": "schaatste", "pastPlural": "schaatsten", "participle": "geschaatst", "auxiliary": "hebben/zijn"}, "sentences": ["Als de gracht bevroren is, komt iedereen *schaatsen*."]}
         ]
       }
     },
@@ -1685,10 +1685,10 @@
       "gloss": "improvise (verb)",
       "entries": {
         "en": [
-        {"lemma": "to improvise", "pos": "verb", "details": {"past": "improvised", "participle": "improvised"}, "sentences": ["The musician improvises."]}
+        {"lemma": "to improvise", "pos": "verb", "details": {"past": "improvised", "participle": "improvised"}, "sentences": ["The jazz musician *improvises* a long melody without notes."]}
         ],
         "nl": [
-        {"lemma": "improviseren", "pos": "verb", "details": {"pastSingular": "improviseerde", "pastPlural": "improviseerden", "participle": "geïmproviseerd", "auxiliary": "hebben"}, "sentences": ["De muzikant improviseert."]}
+        {"lemma": "improviseren", "pos": "verb", "details": {"pastSingular": "improviseerde", "pastPlural": "improviseerden", "participle": "geïmproviseerd", "auxiliary": "hebben"}, "sentences": ["De jazzmuzikant *improviseert* een lange melodie zonder bladmuziek."]}
         ]
       }
     },
@@ -1697,10 +1697,10 @@
       "gloss": "trophy (noun)",
       "entries": {
         "en": [
-        {"lemma": "trophy", "pos": "noun", "details": {"plural": "trophies"}, "sentences": ["He wins the trophy."]}
+        {"lemma": "trophy", "pos": "noun", "details": {"plural": "trophies"}, "sentences": ["The captain lifts the golden *trophy* above her head."]}
         ],
         "nl": [
-        {"lemma": "trofee", "pos": "noun", "details": {"article": "de", "plural": "trofeeën"}, "sentences": ["Hij wint de trofee."]}
+        {"lemma": "trofee", "pos": "noun", "details": {"article": "de", "plural": "trofeeën"}, "sentences": ["De aanvoerder houdt de gouden *trofee* boven haar hoofd."]}
         ]
       }
     },
@@ -1709,10 +1709,10 @@
       "gloss": "picnic (noun)",
       "entries": {
         "en": [
-        {"lemma": "picnic", "pos": "noun", "details": {"plural": "picnics"}, "sentences": ["We have a picnic."]}
+        {"lemma": "picnic", "pos": "noun", "details": {"plural": "picnics"}, "sentences": ["On Sundays, we have a *picnic* in the park."]}
         ],
         "nl": [
-        {"lemma": "picknick", "pos": "noun", "details": {"article": "de", "plural": "picknicks"}, "sentences": ["Wij houden een picknick."]}
+        {"lemma": "picknick", "pos": "noun", "details": {"article": "de", "plural": "picknicks"}, "sentences": ["Op zondag houden we een *picknick* in het park."]}
         ]
       }
     },
@@ -1721,10 +1721,10 @@
       "gloss": "lottery (noun)",
       "entries": {
         "en": [
-        {"lemma": "lottery", "pos": "noun", "details": {"plural": "lotteries"}, "sentences": ["I win the lottery."]}
+        {"lemma": "lottery", "pos": "noun", "details": {"plural": "lotteries"}, "sentences": ["My neighbor hopes to win the *lottery* this week."]}
         ],
         "nl": [
-        {"lemma": "loterij", "pos": "noun", "details": {"article": "de", "plural": "loterijen"}, "sentences": ["Ik win de loterij."]}
+        {"lemma": "loterij", "pos": "noun", "details": {"article": "de", "plural": "loterijen"}, "sentences": ["Mijn buurman hoopt deze week de *loterij* te winnen."]}
         ]
       }
     },
@@ -1733,10 +1733,10 @@
       "gloss": "color (verb)",
       "entries": {
         "en": [
-        {"lemma": "to color", "pos": "verb", "details": {"note": "verb", "past": "colored", "participle": "colored"}, "sentences": ["The child colors a picture."]}
+        {"lemma": "to color", "pos": "verb", "details": {"note": "verb", "past": "colored", "participle": "colored"}, "sentences": ["The girl *colors* a picture of a house."]}
         ],
         "nl": [
-        {"lemma": "kleuren", "pos": "verb", "details": {"pastSingular": "kleurde", "pastPlural": "kleurden", "participle": "gekleurd", "auxiliary": "hebben"}, "sentences": ["Het kind kleurt een plaatje."]}
+        {"lemma": "kleuren", "pos": "verb", "details": {"pastSingular": "kleurde", "pastPlural": "kleurden", "participle": "gekleurd", "auxiliary": "hebben"}, "sentences": ["Het meisje *kleurt* een plaatje van een huis met waskrijt."]}
         ]
       }
     },
@@ -1745,10 +1745,10 @@
       "gloss": "aim (verb)",
       "entries": {
         "en": [
-        {"lemma": "to aim", "pos": "verb", "details": {"past": "aimed", "participle": "aimed"}, "sentences": ["I aim at the target."]}
+        {"lemma": "to aim", "pos": "verb", "details": {"past": "aimed", "participle": "aimed"}, "sentences": ["The archer *aims* carefully at the target's center."]}
         ],
         "nl": [
-        {"lemma": "mikken", "pos": "verb", "details": {"pastSingular": "mikte", "pastPlural": "mikten", "participle": "gemikt", "auxiliary": "hebben"}, "sentences": ["Ik mik op het doelwit."]}
+        {"lemma": "mikken", "pos": "verb", "details": {"pastSingular": "mikte", "pastPlural": "mikten", "participle": "gemikt", "auxiliary": "hebben"}, "sentences": ["De boogschutter *mikt* zorgvuldig op het midden van het doelwit."]}
         ]
       }
     },
@@ -1757,10 +1757,10 @@
       "gloss": "stadium (noun)",
       "entries": {
         "en": [
-        {"lemma": "stadium", "pos": "noun", "details": {"plural": "stadiums"}, "sentences": ["The stadium is full."]}
+        {"lemma": "stadium", "pos": "noun", "details": {"plural": "stadiums"}, "sentences": ["Fifty thousand fans fill the *stadium* before kickoff."]}
         ],
         "nl": [
-        {"lemma": "stadion", "pos": "noun", "details": {"article": "het", "plural": "stadions"}, "sentences": ["Het stadion is vol."]}
+        {"lemma": "stadion", "pos": "noun", "details": {"article": "het", "plural": "stadions"}, "sentences": ["Vijftigduizend fans vullen het *stadion* voor de aftrap."]}
         ]
       }
     },
@@ -1769,10 +1769,10 @@
       "gloss": "golf (verb)",
       "entries": {
         "en": [
-        {"lemma": "to golf", "pos": "verb", "details": {"past": "golfed", "participle": "golfed"}, "sentences": ["We golf on Sunday."]}
+        {"lemma": "to golf", "pos": "verb", "details": {"past": "golfed", "participle": "golfed"}, "sentences": ["My grandfather and his friends *golf* every Sunday morning."]}
         ],
         "nl": [
-        {"lemma": "golfen", "pos": "verb", "details": {"pastSingular": "golfde", "pastPlural": "golfden", "participle": "gegolfd", "auxiliary": "hebben"}, "sentences": ["Wij golfen op zondag."]}
+        {"lemma": "golfen", "pos": "verb", "details": {"pastSingular": "golfde", "pastPlural": "golfden", "participle": "gegolfd", "auxiliary": "hebben"}, "sentences": ["Mijn opa en zijn vrienden *golfen* elke zondagochtend."]}
         ]
       }
     },
@@ -1781,10 +1781,10 @@
       "gloss": "conjure (verb)",
       "entries": {
         "en": [
-        {"lemma": "to conjure", "pos": "verb", "details": {"past": "conjured", "participle": "conjured"}, "sentences": ["The magician conjures a rabbit."]}
+        {"lemma": "to conjure", "pos": "verb", "details": {"past": "conjured", "participle": "conjured"}, "sentences": ["At the party, the magician *conjures* a rabbit."]}
         ],
         "nl": [
-        {"lemma": "toveren", "pos": "verb", "details": {"pastSingular": "toverde", "pastPlural": "toverden", "participle": "getoverd", "auxiliary": "hebben"}, "sentences": ["De goochelaar tovert een konijn."]}
+        {"lemma": "toveren", "pos": "verb", "details": {"pastSingular": "toverde", "pastPlural": "toverden", "participle": "getoverd", "auxiliary": "hebben"}, "sentences": ["Op het feestje *tovert* de goochelaar een konijn uit zijn hoed."]}
         ]
       }
     },
@@ -1793,10 +1793,10 @@
       "gloss": "statue (noun)",
       "entries": {
         "en": [
-        {"lemma": "statue", "pos": "noun", "details": {"plural": "statues"}, "sentences": ["The statue is old."]}
+        {"lemma": "statue", "pos": "noun", "details": {"plural": "statues"}, "sentences": ["A *statue* of a king stands on the square."]}
         ],
         "nl": [
-        {"lemma": "standbeeld", "pos": "noun", "details": {"article": "het", "plural": "standbeelden"}, "sentences": ["Het standbeeld is oud."]}
+        {"lemma": "standbeeld", "pos": "noun", "details": {"article": "het", "plural": "standbeelden"}, "sentences": ["Een *standbeeld* van een koning staat midden op het plein."]}
         ]
       }
     },
@@ -1805,10 +1805,10 @@
       "gloss": "mummy (noun)",
       "entries": {
         "en": [
-        {"lemma": "mummy", "pos": "noun", "details": {"plural": "mummies"}, "sentences": ["The mummy is old."]}
+        {"lemma": "mummy", "pos": "noun", "details": {"plural": "mummies"}, "sentences": ["An old *mummy* lies in a glass case."]}
         ],
         "nl": [
-        {"lemma": "mummie", "pos": "noun", "details": {"article": "de", "plural": "mummies"}, "sentences": ["De mummie is oud."]}
+        {"lemma": "mummie", "pos": "noun", "details": {"article": "de", "plural": "mummies"}, "sentences": ["Een oude *mummie* ligt in een glazen kist."]}
         ]
       }
     },
@@ -1817,10 +1817,10 @@
       "gloss": "artwork (noun)",
       "entries": {
         "en": [
-        {"lemma": "artwork", "pos": "noun", "details": {"plural": "artworks"}, "sentences": ["The artwork is beautiful."]}
+        {"lemma": "artwork", "pos": "noun", "details": {"plural": "artworks"}, "sentences": ["Each *artwork* here is by a local painter."]}
         ],
         "nl": [
-        {"lemma": "kunstwerk", "pos": "noun", "details": {"article": "het", "plural": "kunstwerken"}, "sentences": ["Het kunstwerk is mooi."]}
+        {"lemma": "kunstwerk", "pos": "noun", "details": {"article": "het", "plural": "kunstwerken"}, "sentences": ["Elk *kunstwerk* hier is van een plaatselijke schilder."]}
         ]
       }
     },
@@ -1829,10 +1829,10 @@
       "gloss": "musical (adjective)",
       "entries": {
         "en": [
-        {"lemma": "musical", "pos": "adjective", "details": {"note": "good at music"}, "sentences": ["She is musical."]}
+        {"lemma": "musical", "pos": "adjective", "details": {"note": "good at music"}, "sentences": ["She plays three instruments, so she is very *musical*."]}
         ],
         "nl": [
-        {"lemma": "muzikaal", "pos": "adjective", "sentences": ["Zij is muzikaal."]}
+        {"lemma": "muzikaal", "pos": "adjective", "sentences": ["Ze speelt drie instrumenten, dus ze is erg *muzikaal*."]}
         ]
       }
     },
@@ -1841,10 +1841,10 @@
       "gloss": "play (an instrument)",
       "entries": {
         "en": [
-        {"lemma": "to play", "pos": "verb", "details": {"note": "an instrument", "past": "played", "participle": "played"}, "sentences": ["He plays the violin."]}
+        {"lemma": "to play", "pos": "verb", "details": {"note": "an instrument", "past": "played", "participle": "played"}, "sentences": ["He *plays* the violin in the school orchestra."]}
         ],
         "nl": [
-        {"lemma": "bespelen", "pos": "verb", "details": {"pastSingular": "bespeelde", "pastPlural": "bespeelden", "participle": "bespeeld", "auxiliary": "hebben"}, "sentences": ["Hij bespeelt de viool."]}
+        {"lemma": "bespelen", "pos": "verb", "details": {"pastSingular": "bespeelde", "pastPlural": "bespeelden", "participle": "bespeeld", "auxiliary": "hebben"}, "sentences": ["Hij *bespeelt* de viool in het schoolorkest."]}
         ]
       }
     },
@@ -1853,10 +1853,10 @@
       "gloss": "flute (noun)",
       "entries": {
         "en": [
-        {"lemma": "flute", "pos": "noun", "details": {"plural": "flutes"}, "sentences": ["She plays the flute."]}
+        {"lemma": "flute", "pos": "noun", "details": {"plural": "flutes"}, "sentences": ["She practices the *flute* for an hour after dinner."]}
         ],
         "nl": [
-        {"lemma": "fluit", "pos": "noun", "details": {"article": "de", "plural": "fluiten"}, "sentences": ["Zij speelt de fluit."]}
+        {"lemma": "fluit", "pos": "noun", "details": {"article": "de", "plural": "fluiten"}, "sentences": ["Ze oefent na het eten een uur op de *fluit*."]}
         ]
       }
     },
@@ -1865,10 +1865,10 @@
       "gloss": "duel (noun)",
       "entries": {
         "en": [
-        {"lemma": "duel", "pos": "noun", "details": {"plural": "duels"}, "sentences": ["The duel starts at dawn."]}
+        {"lemma": "duel", "pos": "noun", "details": {"plural": "duels"}, "sentences": ["In the old film, the *duel* starts at dawn."]}
         ],
         "nl": [
-        {"lemma": "duel", "pos": "noun", "details": {"article": "het", "plural": "duels"}, "sentences": ["Het duel begint bij zonsopgang."]}
+        {"lemma": "duel", "pos": "noun", "details": {"article": "het", "plural": "duels"}, "sentences": ["In de oude film begint het *duel* tussen de twee mannen bij zonsopgang."]}
         ]
       }
     },
@@ -1877,10 +1877,10 @@
       "gloss": "triumph (verb)",
       "entries": {
         "en": [
-        {"lemma": "to triumph", "pos": "verb", "details": {"past": "triumphed", "participle": "triumphed"}, "sentences": ["Good triumphs over evil."]}
+        {"lemma": "to triumph", "pos": "verb", "details": {"past": "triumphed", "participle": "triumphed"}, "sentences": ["In fairy tales, the hero *triumphs* over the witch."]}
         ],
         "nl": [
-        {"lemma": "zegevieren", "pos": "verb", "details": {"pastSingular": "zegevierde", "pastPlural": "zegevierden", "participle": "gezegevierd", "auxiliary": "hebben"}, "sentences": ["Het goede zegeviert over het kwade."]}
+        {"lemma": "zegevieren", "pos": "verb", "details": {"pastSingular": "zegevierde", "pastPlural": "zegevierden", "participle": "gezegevierd", "auxiliary": "hebben"}, "sentences": ["In sprookjes *zegeviert* de held over de heks."]}
         ]
       }
     },
@@ -1889,10 +1889,10 @@
       "gloss": "violin (noun)",
       "entries": {
         "en": [
-        {"lemma": "violin", "pos": "noun", "details": {"plural": "violins"}, "sentences": ["He plays the violin."]}
+        {"lemma": "violin", "pos": "noun", "details": {"plural": "violins"}, "sentences": ["My little brother practices the *violin* every evening."]}
         ],
         "nl": [
-        {"lemma": "viool", "pos": "noun", "details": {"article": "de", "plural": "violen"}, "sentences": ["Hij speelt viool."]}
+        {"lemma": "viool", "pos": "noun", "details": {"article": "de", "plural": "violen"}, "sentences": ["Mijn kleine broertje oefent elke avond op de *viool*."]}
         ]
       }
     },
@@ -1901,10 +1901,10 @@
       "gloss": "lead role (noun)",
       "entries": {
         "en": [
-        {"lemma": "lead role", "pos": "noun", "details": {"plural": "lead roles"}, "sentences": ["She plays the lead role."]}
+        {"lemma": "lead role", "pos": "noun", "details": {"plural": "lead roles"}, "sentences": ["She is nervous because she has the *lead role*."]}
         ],
         "nl": [
-        {"lemma": "hoofdrol", "pos": "noun", "details": {"article": "de", "plural": "hoofdrollen"}, "sentences": ["Zij speelt de hoofdrol."]}
+        {"lemma": "hoofdrol", "pos": "noun", "details": {"article": "de", "plural": "hoofdrollen"}, "sentences": ["Ze is nerveus, want ze heeft de *hoofdrol*."]}
         ]
       }
     },
@@ -1913,10 +1913,10 @@
       "gloss": "musical (noun)",
       "entries": {
         "en": [
-        {"lemma": "musical", "pos": "noun", "details": {"note": "a show with songs", "plural": "musicals"}, "sentences": ["We see a musical."]}
+        {"lemma": "musical", "pos": "noun", "details": {"note": "a show with songs", "plural": "musicals"}, "sentences": ["We see a *musical* with great songs and dancing."]}
         ],
         "nl": [
-        {"lemma": "musical", "pos": "noun", "details": {"article": "de", "plural": "musicals"}, "sentences": ["Wij zien een musical."]}
+        {"lemma": "musical", "pos": "noun", "details": {"article": "de", "plural": "musicals"}, "sentences": ["We zien een *musical* met mooie liedjes en dans."]}
         ]
       }
     },
@@ -1925,10 +1925,10 @@
       "gloss": "kite (noun)",
       "entries": {
         "en": [
-        {"lemma": "kite", "pos": "noun", "details": {"plural": "kites"}, "sentences": ["The child flies a kite."]}
+        {"lemma": "kite", "pos": "noun", "details": {"plural": "kites"}, "sentences": ["On a windy day, the boy flies a *kite*."]}
         ],
         "nl": [
-        {"lemma": "vlieger", "pos": "noun", "details": {"article": "de", "plural": "vliegers"}, "sentences": ["Het kind laat een vlieger op."]}
+        {"lemma": "vlieger", "pos": "noun", "details": {"article": "de", "plural": "vliegers"}, "sentences": ["Op een winderige dag laat de jongen een *vlieger* op."]}
         ]
       }
     },
@@ -1937,10 +1937,10 @@
       "gloss": "souvenir (noun)",
       "entries": {
         "en": [
-        {"lemma": "souvenir", "pos": "noun", "details": {"plural": "souvenirs"}, "sentences": ["I buy a souvenir."]}
+        {"lemma": "souvenir", "pos": "noun", "details": {"plural": "souvenirs"}, "sentences": ["On our trip, I buy a *souvenir* for Mom."]}
         ],
         "nl": [
-        {"lemma": "souvenir", "pos": "noun", "details": {"article": "het", "plural": "souvenirs"}, "sentences": ["Ik koop een souvenir."]}
+        {"lemma": "souvenir", "pos": "noun", "details": {"article": "het", "plural": "souvenirs"}, "sentences": ["Op onze reis koop ik een *souvenir* voor mama."]}
         ]
       }
     },
@@ -1949,10 +1949,10 @@
       "gloss": "runner (noun)",
       "entries": {
         "en": [
-        {"lemma": "runner", "pos": "noun", "details": {"plural": "runners"}, "sentences": ["The runner is fast."]}
+        {"lemma": "runner", "pos": "noun", "details": {"plural": "runners"}, "sentences": ["The fastest *runner* crosses the finish line first."]}
         ],
         "nl": [
-        {"lemma": "loper", "pos": "noun", "details": {"article": "de", "plural": "lopers"}, "sentences": ["De loper is snel."]}
+        {"lemma": "loper", "pos": "noun", "details": {"article": "de", "plural": "lopers"}, "sentences": ["De snelste *loper* komt als eerste over de finishlijn."]}
         ]
       }
     },
@@ -1961,10 +1961,10 @@
       "gloss": "sled (noun)",
       "entries": {
         "en": [
-        {"lemma": "sled", "pos": "noun", "details": {"plural": "sleds"}, "sentences": ["The children ride the sled."]}
+        {"lemma": "sled", "pos": "noun", "details": {"plural": "sleds"}, "sentences": ["After snowfall, the children pull their *sled* uphill."]}
         ],
         "nl": [
-        {"lemma": "slee", "pos": "noun", "details": {"article": "de", "plural": "sleeën"}, "sentences": ["De kinderen rijden op de slee."]}
+        {"lemma": "slee", "pos": "noun", "details": {"article": "de", "plural": "sleeën"}, "sentences": ["Na de sneeuwval trekken de kinderen hun *slee* de heuvel op."]}
         ]
       }
     },
@@ -1973,10 +1973,10 @@
       "gloss": "team captain (noun)",
       "entries": {
         "en": [
-        {"lemma": "team captain", "pos": "noun", "details": {"plural": "team captains"}, "sentences": ["The team captain scores."]}
+        {"lemma": "team captain", "pos": "noun", "details": {"plural": "team captains"}, "sentences": ["The *team captain* talks to the referee before kickoff."]}
         ],
         "nl": [
-        {"lemma": "aanvoerder", "pos": "noun", "details": {"article": "de", "plural": "aanvoerders"}, "sentences": ["De aanvoerder scoort."]}
+        {"lemma": "aanvoerder", "pos": "noun", "details": {"article": "de", "plural": "aanvoerders"}, "sentences": ["De *aanvoerder* praat met de scheidsrechter voor de aftrap."]}
         ]
       }
     },
@@ -1985,10 +1985,10 @@
       "gloss": "bowl (verb)",
       "entries": {
         "en": [
-        {"lemma": "to bowl", "pos": "verb", "details": {"past": "bowled", "participle": "bowled"}, "sentences": ["We bowl on Friday."]}
+        {"lemma": "to bowl", "pos": "verb", "details": {"past": "bowled", "participle": "bowled"}, "sentences": ["Every Friday evening, my colleagues and I *bowl*."]}
         ],
         "nl": [
-        {"lemma": "bowlen", "pos": "verb", "details": {"pastSingular": "bowlde", "pastPlural": "bowlden", "participle": "gebowld", "auxiliary": "hebben"}, "sentences": ["Wij bowlen op vrijdag."]}
+        {"lemma": "bowlen", "pos": "verb", "details": {"pastSingular": "bowlde", "pastPlural": "bowlden", "participle": "gebowld", "auxiliary": "hebben"}, "sentences": ["Elke vrijdagavond *bowlen* mijn collega's en ik."]}
         ]
       }
     },
@@ -1997,10 +1997,10 @@
       "gloss": "diver (noun)",
       "entries": {
         "en": [
-        {"lemma": "diver", "pos": "noun", "details": {"plural": "divers"}, "sentences": ["The diver goes deep."]}
+        {"lemma": "diver", "pos": "noun", "details": {"plural": "divers"}, "sentences": ["The *diver* swims down to the old ship."]}
         ],
         "nl": [
-        {"lemma": "duiker", "pos": "noun", "details": {"article": "de", "plural": "duikers"}, "sentences": ["De duiker gaat diep."]}
+        {"lemma": "duiker", "pos": "noun", "details": {"article": "de", "plural": "duikers"}, "sentences": ["De *duiker* zwemt naar beneden naar het oude schip."]}
         ]
       }
     },
@@ -2009,10 +2009,10 @@
       "gloss": "masterpiece (noun)",
       "entries": {
         "en": [
-        {"lemma": "masterpiece", "pos": "noun", "details": {"plural": "masterpieces"}, "sentences": ["This is a masterpiece."]}
+        {"lemma": "masterpiece", "pos": "noun", "details": {"plural": "masterpieces"}, "sentences": ["People stand in line to see this *masterpiece*."]}
         ],
         "nl": [
-        {"lemma": "meesterwerk", "pos": "noun", "details": {"article": "het", "plural": "meesterwerken"}, "sentences": ["Dit is een meesterwerk."]}
+        {"lemma": "meesterwerk", "pos": "noun", "details": {"article": "het", "plural": "meesterwerken"}, "sentences": ["Mensen staan in de rij om dit *meesterwerk* te zien."]}
         ]
       }
     },
@@ -2021,10 +2021,10 @@
       "gloss": "jazz (noun)",
       "entries": {
         "en": [
-        {"lemma": "jazz", "pos": "noun", "details": {"uncountable": true}, "sentences": ["I like jazz."]}
+        {"lemma": "jazz", "pos": "noun", "details": {"uncountable": true}, "sentences": ["In the evening, I relax and listen to *jazz*."]}
         ],
         "nl": [
-        {"lemma": "jazz", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Ik hou van jazz."]}
+        {"lemma": "jazz", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["In de avond ontspan ik en luister ik naar *jazz*."]}
         ]
       }
     },
@@ -2033,10 +2033,10 @@
       "gloss": "play soccer (verb)",
       "entries": {
         "en": [
-        {"lemma": "to play soccer", "pos": "verb", "details": {"past": "played soccer", "participle": "played soccer"}, "sentences": ["The boys play soccer."]}
+        {"lemma": "to play soccer", "pos": "verb", "details": {"past": "played soccer", "participle": "played soccer"}, "sentences": ["The boys *play soccer* behind the school every afternoon."]}
         ],
         "nl": [
-        {"lemma": "voetballen", "pos": "verb", "details": {"pastSingular": "voetbalde", "pastPlural": "voetbalden", "participle": "gevoetbald", "auxiliary": "hebben"}, "sentences": ["De jongens voetballen."]}
+        {"lemma": "voetballen", "pos": "verb", "details": {"pastSingular": "voetbalde", "pastPlural": "voetbalden", "participle": "gevoetbald", "auxiliary": "hebben"}, "sentences": ["De jongens *voetballen* elke middag op het gras achter de school."]}
         ]
       }
     },
@@ -2045,10 +2045,10 @@
       "gloss": "defeat (noun)",
       "entries": {
         "en": [
-        {"lemma": "defeat", "pos": "noun", "details": {"plural": "defeats"}, "sentences": ["The defeat is bitter."]}
+        {"lemma": "defeat", "pos": "noun", "details": {"plural": "defeats"}, "sentences": ["After the bitter *defeat*, the team goes home silently."]}
         ],
         "nl": [
-        {"lemma": "nederlaag", "pos": "noun", "details": {"article": "de", "plural": "nederlagen"}, "sentences": ["De nederlaag is bitter."]}
+        {"lemma": "nederlaag", "pos": "noun", "details": {"article": "de", "plural": "nederlagen"}, "sentences": ["Na de bittere *nederlaag* gaat het team zwijgend naar huis."]}
         ]
       }
     },
@@ -2057,10 +2057,10 @@
       "gloss": "artistic (adjective)",
       "entries": {
         "en": [
-        {"lemma": "artistic", "pos": "adjective", "sentences": ["She is artistic."]}
+        {"lemma": "artistic", "pos": "adjective", "sentences": ["She paints all day, because she is very *artistic*."]}
         ],
         "nl": [
-        {"lemma": "artistiek", "pos": "adjective", "sentences": ["Zij is artistiek."]}
+        {"lemma": "artistiek", "pos": "adjective", "sentences": ["Ze schildert de hele dag, want ze is erg *artistiek*."]}
         ]
       }
     },
@@ -2069,10 +2069,10 @@
       "gloss": "play chess (verb)",
       "entries": {
         "en": [
-        {"lemma": "to play chess", "pos": "verb", "details": {"past": "played chess", "participle": "played chess"}, "sentences": ["We play chess."]}
+        {"lemma": "to play chess", "pos": "verb", "details": {"past": "played chess", "participle": "played chess"}, "sentences": ["My grandfather and I *play chess* in the kitchen."]}
         ],
         "nl": [
-        {"lemma": "schaken", "pos": "verb", "details": {"pastSingular": "schaakte", "pastPlural": "schaakten", "participle": "geschaakt", "auxiliary": "hebben"}, "sentences": ["Wij schaken."]}
+        {"lemma": "schaken", "pos": "verb", "details": {"pastSingular": "schaakte", "pastPlural": "schaakten", "participle": "geschaakt", "auxiliary": "hebben"}, "sentences": ["Mijn opa en ik *schaken* in de keuken."]}
         ]
       }
     },
@@ -2081,10 +2081,10 @@
       "gloss": "disguise (noun)",
       "entries": {
         "en": [
-        {"lemma": "disguise", "pos": "noun", "details": {"plural": "disguises"}, "sentences": ["His disguise is good."]}
+        {"lemma": "disguise", "pos": "noun", "details": {"plural": "disguises"}, "sentences": ["With a fake beard, his *disguise* fools everyone."]}
         ],
         "nl": [
-        {"lemma": "vermomming", "pos": "noun", "details": {"article": "de", "plural": "vermommingen"}, "sentences": ["Zijn vermomming is goed."]}
+        {"lemma": "vermomming", "pos": "noun", "details": {"article": "de", "plural": "vermommingen"}, "sentences": ["Met een valse baard misleidt zijn *vermomming* iedereen."]}
         ]
       }
     },
@@ -2093,10 +2093,10 @@
       "gloss": "tour (round trip)",
       "entries": {
         "en": [
-        {"lemma": "tour", "pos": "noun", "details": {"note": "round trip", "plural": "tours"}, "sentences": ["We make a tour."]}
+        {"lemma": "tour", "pos": "noun", "details": {"note": "round trip", "plural": "tours"}, "sentences": ["On Sunday, we make a *tour* around the lake."]}
         ],
         "nl": [
-        {"lemma": "toer", "pos": "noun", "details": {"article": "de", "plural": "toeren"}, "sentences": ["Wij maken een toer."]}
+        {"lemma": "toer", "pos": "noun", "details": {"article": "de", "plural": "toeren"}, "sentences": ["Op zondag maken we een *toer* om het meer."]}
         ]
       }
     },
@@ -2105,10 +2105,10 @@
       "gloss": "festival (noun)",
       "entries": {
         "en": [
-        {"lemma": "festival", "pos": "noun", "details": {"plural": "festivals"}, "sentences": ["We go to a festival."]}
+        {"lemma": "festival", "pos": "noun", "details": {"plural": "festivals"}, "sentences": ["Thousands of young people go to the music *festival*."]}
         ],
         "nl": [
-        {"lemma": "festival", "pos": "noun", "details": {"article": "het", "plural": "festivals"}, "sentences": ["Wij gaan naar een festival."]}
+        {"lemma": "festival", "pos": "noun", "details": {"article": "het", "plural": "festivals"}, "sentences": ["Duizenden jongeren gaan naar het muziek*festival*."]}
         ]
       }
     },
@@ -2117,10 +2117,10 @@
       "gloss": "parade (noun)",
       "entries": {
         "en": [
-        {"lemma": "parade", "pos": "noun", "details": {"plural": "parades"}, "sentences": ["The parade passes by."]}
+        {"lemma": "parade", "pos": "noun", "details": {"plural": "parades"}, "sentences": ["On the king's birthday, the *parade* passes our street."]}
         ],
         "nl": [
-        {"lemma": "parade", "pos": "noun", "details": {"article": "de", "plural": "parades"}, "sentences": ["De parade trekt voorbij."]}
+        {"lemma": "parade", "pos": "noun", "details": {"article": "de", "plural": "parades"}, "sentences": ["Op de verjaardag van de koning trekt de *parade* door onze straat."]}
         ]
       }
     },
@@ -2129,10 +2129,10 @@
       "gloss": "sponsor (noun)",
       "entries": {
         "en": [
-        {"lemma": "sponsor", "pos": "noun", "details": {"plural": "sponsors"}, "sentences": ["The sponsor pays."]}
+        {"lemma": "sponsor", "pos": "noun", "details": {"plural": "sponsors"}, "sentences": ["The *sponsor* pays for the new team shirts."]}
         ],
         "nl": [
-        {"lemma": "sponsor", "pos": "noun", "details": {"article": "de", "plural": "sponsors"}, "sentences": ["De sponsor betaalt."]}
+        {"lemma": "sponsor", "pos": "noun", "details": {"article": "de", "plural": "sponsors"}, "sentences": ["De *sponsor* betaalt de nieuwe teamshirts."]}
         ]
       }
     },
@@ -2141,10 +2141,10 @@
       "gloss": "competitor (noun)",
       "entries": {
         "en": [
-        {"lemma": "competitor", "pos": "noun", "details": {"plural": "competitors"}, "sentences": ["The competitor is strong."]}
+        {"lemma": "competitor", "pos": "noun", "details": {"plural": "competitors"}, "sentences": ["Our main *competitor* sells the same bikes cheaper."]}
         ],
         "nl": [
-        {"lemma": "concurrent", "pos": "noun", "details": {"article": "de", "plural": "concurrenten"}, "sentences": ["De concurrent is sterk."]}
+        {"lemma": "concurrent", "pos": "noun", "details": {"article": "de", "plural": "concurrenten"}, "sentences": ["Onze belangrijkste *concurrent* verkoopt dezelfde fietsen goedkoper."]}
         ]
       }
     },
@@ -2153,10 +2153,10 @@
       "gloss": "orchestra (noun)",
       "entries": {
         "en": [
-        {"lemma": "orchestra", "pos": "noun", "details": {"plural": "orchestras"}, "sentences": ["The orchestra plays."]}
+        {"lemma": "orchestra", "pos": "noun", "details": {"plural": "orchestras"}, "sentences": ["The *orchestra* plays an evening concert in the church."]}
         ],
         "nl": [
-        {"lemma": "orkest", "pos": "noun", "details": {"article": "het", "plural": "orkesten"}, "sentences": ["Het orkest speelt."]}
+        {"lemma": "orkest", "pos": "noun", "details": {"article": "het", "plural": "orkesten"}, "sentences": ["Het *orkest* speelt een avondconcert in de kerk."]}
         ]
       }
     },
@@ -2165,10 +2165,10 @@
       "gloss": "Christmas tree (noun)",
       "entries": {
         "en": [
-        {"lemma": "Christmas tree", "pos": "noun", "details": {"plural": "Christmas trees"}, "sentences": ["We decorate the Christmas tree."]}
+        {"lemma": "Christmas tree", "pos": "noun", "details": {"plural": "Christmas trees"}, "sentences": ["In December, we put lights on the *Christmas tree*."]}
         ],
         "nl": [
-        {"lemma": "kerstboom", "pos": "noun", "details": {"article": "de", "plural": "kerstbomen"}, "sentences": ["Wij versieren de kerstboom."]}
+        {"lemma": "kerstboom", "pos": "noun", "details": {"article": "de", "plural": "kerstbomen"}, "sentences": ["In december hangen we lichtjes in de *kerstboom*."]}
         ]
       }
     },
@@ -2177,10 +2177,10 @@
       "gloss": "world champion (noun)",
       "entries": {
         "en": [
-        {"lemma": "world champion", "pos": "noun", "details": {"plural": "world champions"}, "sentences": ["He is the world champion."]}
+        {"lemma": "world champion", "pos": "noun", "details": {"plural": "world champions"}, "sentences": ["After winning every race, he is the *world champion*."]}
         ],
         "nl": [
-        {"lemma": "wereldkampioen", "pos": "noun", "details": {"article": "de", "plural": "wereldkampioenen"}, "sentences": ["Hij is de wereldkampioen."]}
+        {"lemma": "wereldkampioen", "pos": "noun", "details": {"article": "de", "plural": "wereldkampioenen"}, "sentences": ["Na elke race te winnen is hij de *wereldkampioen*."]}
         ]
       }
     },
@@ -2189,10 +2189,10 @@
       "gloss": "birthday party (noun)",
       "entries": {
         "en": [
-        {"lemma": "birthday party", "pos": "noun", "details": {"plural": "birthday parties"}, "sentences": ["The birthday party is on Saturday."]}
+        {"lemma": "birthday party", "pos": "noun", "details": {"plural": "birthday parties"}, "sentences": ["My friend's *birthday party* is Saturday; I bring cake."]}
         ],
         "nl": [
-        {"lemma": "verjaardagsfeest", "pos": "noun", "details": {"article": "het", "plural": "verjaardagsfeesten"}, "sentences": ["Het verjaardagsfeest is zaterdag."]}
+        {"lemma": "verjaardagsfeest", "pos": "noun", "details": {"article": "het", "plural": "verjaardagsfeesten"}, "sentences": ["Het *verjaardagsfeest* van mijn vriend is zaterdag; ik breng taart mee."]}
         ]
       }
     },
@@ -2201,10 +2201,10 @@
       "gloss": "karate (noun)",
       "entries": {
         "en": [
-        {"lemma": "karate", "pos": "noun", "details": {"uncountable": true}, "sentences": ["He does karate."]}
+        {"lemma": "karate", "pos": "noun", "details": {"uncountable": true}, "sentences": ["My son does *karate* twice a week."]}
         ],
         "nl": [
-        {"lemma": "karate", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Hij doet karate."]}
+        {"lemma": "karate", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Mijn zoon doet twee keer per week *karate*."]}
         ]
       }
     },
@@ -2213,10 +2213,10 @@
       "gloss": "premiere (noun)",
       "entries": {
         "en": [
-        {"lemma": "premiere", "pos": "noun", "details": {"plural": "premieres"}, "sentences": ["The premiere is tonight."]}
+        {"lemma": "premiere", "pos": "noun", "details": {"plural": "premieres"}, "sentences": ["The red carpet is ready: the *premiere* is tonight."]}
         ],
         "nl": [
-        {"lemma": "première", "pos": "noun", "details": {"article": "de", "plural": "premières"}, "sentences": ["De première is vanavond."]}
+        {"lemma": "première", "pos": "noun", "details": {"article": "de", "plural": "premières"}, "sentences": ["De rode loper ligt klaar: de *première* is vanavond."]}
         ]
       }
     },
@@ -2225,10 +2225,10 @@
       "gloss": "solo (noun)",
       "entries": {
         "en": [
-        {"lemma": "solo", "pos": "noun", "details": {"plural": "solos"}, "sentences": ["He plays a solo."]}
+        {"lemma": "solo", "pos": "noun", "details": {"plural": "solos"}, "sentences": ["In the song, the guitarist plays a long *solo*."]}
         ],
         "nl": [
-        {"lemma": "solo", "pos": "noun", "details": {"article": "de", "plural": "solo's"}, "sentences": ["Hij speelt een solo."]}
+        {"lemma": "solo", "pos": "noun", "details": {"article": "de", "plural": "solo's"}, "sentences": ["In het nummer speelt de gitarist een lange *solo*."]}
         ]
       }
     },
@@ -2237,10 +2237,10 @@
       "gloss": "attacker (noun)",
       "entries": {
         "en": [
-        {"lemma": "attacker", "pos": "noun", "details": {"plural": "attackers"}, "sentences": ["The attacker scores."]}
+        {"lemma": "attacker", "pos": "noun", "details": {"plural": "attackers"}, "sentences": ["The fast *attacker* runs past two players and scores."]}
         ],
         "nl": [
-        {"lemma": "aanvaller", "pos": "noun", "details": {"article": "de", "plural": "aanvallers"}, "sentences": ["De aanvaller scoort."]}
+        {"lemma": "aanvaller", "pos": "noun", "details": {"article": "de", "plural": "aanvallers"}, "sentences": ["De snelle *aanvaller* rent langs twee spelers en scoort."]}
         ]
       }
     },
@@ -2249,10 +2249,10 @@
       "gloss": "tennis (noun)",
       "entries": {
         "en": [
-        {"lemma": "tennis", "pos": "noun", "details": {"uncountable": true}, "sentences": ["We play tennis."]}
+        {"lemma": "tennis", "pos": "noun", "details": {"uncountable": true}, "sentences": ["On warm evenings, my wife and I play *tennis*."]}
         ],
         "nl": [
-        {"lemma": "tennis", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["Wij spelen tennis."]}
+        {"lemma": "tennis", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["Op warme avonden spelen mijn vrouw en ik *tennis*."]}
         ]
       }
     },
@@ -2261,10 +2261,10 @@
       "gloss": "defender (noun)",
       "entries": {
         "en": [
-        {"lemma": "defender", "pos": "noun", "details": {"plural": "defenders"}, "sentences": ["The defender stops the ball."]}
+        {"lemma": "defender", "pos": "noun", "details": {"plural": "defenders"}, "sentences": ["The tall *defender* stops the ball near the goal."]}
         ],
         "nl": [
-        {"lemma": "verdediger", "pos": "noun", "details": {"article": "de", "plural": "verdedigers"}, "sentences": ["De verdediger stopt de bal."]}
+        {"lemma": "verdediger", "pos": "noun", "details": {"article": "de", "plural": "verdedigers"}, "sentences": ["De lange *verdediger* stopt de bal bij het doel."]}
         ]
       }
     },
@@ -2273,10 +2273,10 @@
       "gloss": "referee (noun)",
       "entries": {
         "en": [
-        {"lemma": "referee", "pos": "noun", "details": {"plural": "referees"}, "sentences": ["The referee blows the whistle."]}
+        {"lemma": "referee", "pos": "noun", "details": {"plural": "referees"}, "sentences": ["The fans shout, but the *referee* blows the whistle."]}
         ],
         "nl": [
-        {"lemma": "scheidsrechter", "pos": "noun", "details": {"article": "de", "plural": "scheidsrechters"}, "sentences": ["De scheidsrechter fluit."]}
+        {"lemma": "scheidsrechter", "pos": "noun", "details": {"article": "de", "plural": "scheidsrechters"}, "sentences": ["De fans schreeuwen, maar de *scheidsrechter* fluit toch."]}
         ]
       }
     },
@@ -2285,10 +2285,10 @@
       "gloss": "exhibition (noun)",
       "entries": {
         "en": [
-        {"lemma": "exhibition", "pos": "noun", "details": {"plural": "exhibitions"}, "sentences": ["We visit an exhibition."]}
+        {"lemma": "exhibition", "pos": "noun", "details": {"plural": "exhibitions"}, "sentences": ["This weekend, we visit an *exhibition* of old photographs."]}
         ],
         "nl": [
-        {"lemma": "tentoonstelling", "pos": "noun", "details": {"article": "de", "plural": "tentoonstellingen"}, "sentences": ["Wij bezoeken een tentoonstelling."]}
+        {"lemma": "tentoonstelling", "pos": "noun", "details": {"article": "de", "plural": "tentoonstellingen"}, "sentences": ["Dit weekend bezoeken we een *tentoonstelling* van oude foto's."]}
         ]
       }
     },
@@ -2297,10 +2297,10 @@
       "gloss": "troll (noun)",
       "entries": {
         "en": [
-        {"lemma": "troll", "pos": "noun", "details": {"plural": "trolls"}, "sentences": ["The troll lives under the bridge."]}
+        {"lemma": "troll", "pos": "noun", "details": {"plural": "trolls"}, "sentences": ["In the story, a *troll* lives under the bridge."]}
         ],
         "nl": [
-        {"lemma": "trol", "pos": "noun", "details": {"article": "de", "plural": "trollen"}, "sentences": ["De trol woont onder de brug."]}
+        {"lemma": "trol", "pos": "noun", "details": {"article": "de", "plural": "trollen"}, "sentences": ["In het verhaal woont een *trol* onder de brug."]}
         ]
       }
     },
@@ -2309,10 +2309,10 @@
       "gloss": "jog (verb)",
       "entries": {
         "en": [
-        {"lemma": "to jog", "pos": "verb", "details": {"past": "jogged", "participle": "jogged"}, "sentences": ["I jog in the park."]}
+        {"lemma": "to jog", "pos": "verb", "details": {"past": "jogged", "participle": "jogged"}, "sentences": ["Every morning before work, I *jog* in the park."]}
         ],
         "nl": [
-        {"lemma": "joggen", "pos": "verb", "details": {"pastSingular": "jogde", "pastPlural": "jogden", "participle": "gejogd", "auxiliary": "hebben"}, "sentences": ["Ik jog in het park."]}
+        {"lemma": "joggen", "pos": "verb", "details": {"pastSingular": "jogde", "pastPlural": "jogden", "participle": "gejogd", "auxiliary": "hebben"}, "sentences": ["Elke ochtend voor het werk *jog* ik in het park."]}
         ]
       }
     },
@@ -2321,10 +2321,10 @@
       "gloss": "catch (haul)",
       "entries": {
         "en": [
-        {"lemma": "catch", "pos": "noun", "details": {"note": "haul", "plural": "catches"}, "sentences": ["The fisherman has a good catch."]}
+        {"lemma": "catch", "pos": "noun", "details": {"note": "haul", "plural": "catches"}, "sentences": ["The fisherman comes home with a good *catch*."]}
         ],
         "nl": [
-        {"lemma": "vangst", "pos": "noun", "details": {"article": "de", "plural": "vangsten"}, "sentences": ["De visser heeft een goede vangst."]}
+        {"lemma": "vangst", "pos": "noun", "details": {"article": "de", "plural": "vangsten"}, "sentences": ["De visser komt thuis met een goede *vangst*."]}
         ]
       }
     },
@@ -2333,10 +2333,10 @@
       "gloss": "single (song)",
       "entries": {
         "en": [
-        {"lemma": "single", "pos": "noun", "details": {"note": "song", "plural": "singles"}, "sentences": ["The single is new."]}
+        {"lemma": "single", "pos": "noun", "details": {"note": "song", "plural": "singles"}, "sentences": ["The band's new *single* plays on the radio."]}
         ],
         "nl": [
-        {"lemma": "single", "pos": "noun", "details": {"article": "de", "plural": "singles"}, "sentences": ["De single is nieuw."]}
+        {"lemma": "single", "pos": "noun", "details": {"article": "de", "plural": "singles"}, "sentences": ["De nieuwe *single* van de band draait op de radio."]}
         ]
       }
     },
@@ -2345,10 +2345,10 @@
       "gloss": "gallery (noun)",
       "entries": {
         "en": [
-        {"lemma": "gallery", "pos": "noun", "details": {"plural": "galleries"}, "sentences": ["We visit the gallery."]}
+        {"lemma": "gallery", "pos": "noun", "details": {"plural": "galleries"}, "sentences": ["On rainy days, we visit the *gallery* downtown."]}
         ],
         "nl": [
-        {"lemma": "galerie", "pos": "noun", "details": {"article": "de", "plural": "galerijen"}, "sentences": ["Wij bezoeken de galerie."]}
+        {"lemma": "galerie", "pos": "noun", "details": {"article": "de", "plural": "galerijen"}, "sentences": ["Op regenachtige dagen bezoeken we de *galerie* in het centrum."]}
         ]
       }
     },
@@ -2357,10 +2357,10 @@
       "gloss": "superhero (noun)",
       "entries": {
         "en": [
-        {"lemma": "superhero", "pos": "noun", "details": {"plural": "superheros"}, "sentences": ["The superhero saves the city."]}
+        {"lemma": "superhero", "pos": "noun", "details": {"plural": "superheros"}, "sentences": ["In the cartoon, the *superhero* flies over the city."]}
         ],
         "nl": [
-        {"lemma": "superheld", "pos": "noun", "details": {"article": "de", "plural": "superhelden"}, "sentences": ["De superheld redt de stad."]}
+        {"lemma": "superheld", "pos": "noun", "details": {"article": "de", "plural": "superhelden"}, "sentences": ["In de tekenfilm vliegt de *superheld* over de stad."]}
         ]
       }
     },
@@ -2369,10 +2369,10 @@
       "gloss": "trio (noun)",
       "entries": {
         "en": [
-        {"lemma": "trio", "pos": "noun", "details": {"plural": "trios"}, "sentences": ["The trio plays."]}
+        {"lemma": "trio", "pos": "noun", "details": {"plural": "trios"}, "sentences": ["A *trio* with piano, violin and cello plays."]}
         ],
         "nl": [
-        {"lemma": "trio", "pos": "noun", "details": {"article": "het", "plural": "trio's"}, "sentences": ["Het trio speelt."]}
+        {"lemma": "trio", "pos": "noun", "details": {"article": "het", "plural": "trio's"}, "sentences": ["Een *trio* met piano, viool en cello speelt."]}
         ]
       }
     },
@@ -2381,10 +2381,10 @@
       "gloss": "disco (noun)",
       "entries": {
         "en": [
-        {"lemma": "disco", "pos": "noun", "details": {"plural": "discos"}, "sentences": ["We go to a disco."]}
+        {"lemma": "disco", "pos": "noun", "details": {"plural": "discos"}, "sentences": ["On Fridays, my friends dance at a *disco*."]}
         ],
         "nl": [
-        {"lemma": "disco", "pos": "noun", "details": {"article": "de", "plural": "disco's"}, "sentences": ["Wij gaan naar een disco."]}
+        {"lemma": "disco", "pos": "noun", "details": {"article": "de", "plural": "disco's"}, "sentences": ["Op vrijdag dansen mijn vrienden in een *disco*."]}
         ]
       }
     },
@@ -2393,10 +2393,10 @@
       "gloss": "yoga (noun)",
       "entries": {
         "en": [
-        {"lemma": "yoga", "pos": "noun", "details": {"uncountable": true}, "sentences": ["I do yoga."]}
+        {"lemma": "yoga", "pos": "noun", "details": {"uncountable": true}, "sentences": ["Every morning, I do *yoga* on a soft mat."]}
         ],
         "nl": [
-        {"lemma": "yoga", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Ik doe yoga."]}
+        {"lemma": "yoga", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Elke ochtend doe ik *yoga* op een zachte mat."]}
         ]
       }
     },
@@ -2405,10 +2405,10 @@
       "gloss": "ride (a horse)",
       "entries": {
         "en": [
-        {"lemma": "to ride", "pos": "verb", "details": {"note": "a horse", "past": "rode", "participle": "ridden"}, "sentences": ["She rides a horse."]}
+        {"lemma": "to ride", "pos": "verb", "details": {"note": "a horse", "past": "rode", "participle": "ridden"}, "sentences": ["The girl *rides* a brown horse along the beach."]}
         ],
         "nl": [
-        {"lemma": "berijden", "pos": "verb", "details": {"pastSingular": "bereed", "pastPlural": "bereden", "participle": "bereden", "auxiliary": "hebben"}, "sentences": ["Zij berijdt een paard."]}
+        {"lemma": "berijden", "pos": "verb", "details": {"pastSingular": "bereed", "pastPlural": "bereden", "participle": "bereden", "auxiliary": "hebben"}, "sentences": ["Het meisje *berijdt* een bruin paard langs het strand."]}
         ]
       }
     },
@@ -2417,10 +2417,10 @@
       "gloss": "melody (noun)",
       "entries": {
         "en": [
-        {"lemma": "melody", "pos": "noun", "details": {"plural": "melodies"}, "sentences": ["The melody is nice."]}
+        {"lemma": "melody", "pos": "noun", "details": {"plural": "melodies"}, "sentences": ["The *melody* of this song is easy to remember."]}
         ],
         "nl": [
-        {"lemma": "melodie", "pos": "noun", "details": {"article": "de", "plural": "melodieën"}, "sentences": ["De melodie is mooi."]}
+        {"lemma": "melodie", "pos": "noun", "details": {"article": "de", "plural": "melodieën"}, "sentences": ["De *melodie* van dit liedje is makkelijk te onthouden."]}
         ]
       }
     },
@@ -2429,10 +2429,10 @@
       "gloss": "racing driver (noun)",
       "entries": {
         "en": [
-        {"lemma": "racing driver", "pos": "noun", "details": {"plural": "racing drivers"}, "sentences": ["The racing driver wins."]}
+        {"lemma": "racing driver", "pos": "noun", "details": {"plural": "racing drivers"}, "sentences": ["The young *racing driver* wins his first big race."]}
         ],
         "nl": [
-        {"lemma": "coureur", "pos": "noun", "details": {"article": "de", "plural": "coureurs"}, "sentences": ["De coureur wint."]}
+        {"lemma": "coureur", "pos": "noun", "details": {"article": "de", "plural": "coureurs"}, "sentences": ["De jonge *coureur* wint zijn eerste grote race."]}
         ]
       }
     },
@@ -2441,10 +2441,10 @@
       "gloss": "Christmas present (noun)",
       "entries": {
         "en": [
-        {"lemma": "Christmas present", "pos": "noun", "details": {"plural": "Christmas presents"}, "sentences": ["I buy a Christmas present."]}
+        {"lemma": "Christmas present", "pos": "noun", "details": {"plural": "Christmas presents"}, "sentences": ["I buy a *Christmas present* for my father."]}
         ],
         "nl": [
-        {"lemma": "kerstcadeau", "pos": "noun", "details": {"article": "het", "plural": "kerstcadeaus"}, "sentences": ["Ik koop een kerstcadeau."]}
+        {"lemma": "kerstcadeau", "pos": "noun", "details": {"article": "het", "plural": "kerstcadeaus"}, "sentences": ["Ik koop een *kerstcadeau* voor mijn vader."]}
         ]
       }
     },
@@ -2453,10 +2453,10 @@
       "gloss": "dance floor (noun)",
       "entries": {
         "en": [
-        {"lemma": "dance floor", "pos": "noun", "details": {"plural": "dance floors"}, "sentences": ["The dance floor is full."]}
+        {"lemma": "dance floor", "pos": "noun", "details": {"plural": "dance floors"}, "sentences": ["After midnight, the *dance floor* is full of people."]}
         ],
         "nl": [
-        {"lemma": "dansvloer", "pos": "noun", "details": {"article": "de", "plural": "dansvloeren"}, "sentences": ["De dansvloer is vol."]}
+        {"lemma": "dansvloer", "pos": "noun", "details": {"article": "de", "plural": "dansvloeren"}, "sentences": ["Na middernacht is de *dansvloer* vol mensen."]}
         ]
       }
     },
@@ -2465,10 +2465,10 @@
       "gloss": "goal (scored in sport)",
       "entries": {
         "en": [
-        {"lemma": "goal", "pos": "noun", "details": {"note": "scored in sport", "plural": "goals"}, "sentences": ["He scores a goal."]}
+        {"lemma": "goal", "pos": "noun", "details": {"note": "scored in sport", "plural": "goals"}, "sentences": ["In the last minute, the striker scores a *goal*."]}
         ],
         "nl": [
-        {"lemma": "goal", "pos": "noun", "details": {"article": "de", "plural": "goals"}, "sentences": ["Hij scoort een goal."]}
+        {"lemma": "goal", "pos": "noun", "details": {"article": "de", "plural": "goals"}, "sentences": ["In de laatste minuut scoort de spits een *goal*."]}
         ]
       }
     },
@@ -2477,10 +2477,10 @@
       "gloss": "token (chip)",
       "entries": {
         "en": [
-        {"lemma": "token", "pos": "noun", "details": {"note": "for games", "plural": "tokens"}, "sentences": ["I put a token on the table."]}
+        {"lemma": "token", "pos": "noun", "details": {"note": "for games", "plural": "tokens"}, "sentences": ["The player puts a red *token* on seven."]}
         ],
         "nl": [
-        {"lemma": "fiche", "pos": "noun", "details": {"article": "de", "plural": "fiches"}, "sentences": ["Ik leg een fiche op de tafel."]}
+        {"lemma": "fiche", "pos": "noun", "details": {"article": "de", "plural": "fiches"}, "sentences": ["De speler legt een rode *fiche* op de zeven."]}
         ]
       }
     },
@@ -2489,10 +2489,10 @@
       "gloss": "cover (of an album)",
       "entries": {
         "en": [
-        {"lemma": "cover", "pos": "noun", "details": {"note": "of an album", "plural": "covers"}, "sentences": ["The cover is beautiful."]}
+        {"lemma": "cover", "pos": "noun", "details": {"note": "of an album", "plural": "covers"}, "sentences": ["The *cover* of the album shows a snowy house."]}
         ],
         "nl": [
-        {"lemma": "cover", "pos": "noun", "details": {"article": "de", "plural": "covers"}, "sentences": ["De cover is mooi."]}
+        {"lemma": "cover", "pos": "noun", "details": {"article": "de", "plural": "covers"}, "sentences": ["De *cover* van het album toont een besneeuwd huis."]}
         ]
       }
     },
@@ -2501,10 +2501,10 @@
       "gloss": "hide-and-seek (noun)",
       "entries": {
         "en": [
-        {"lemma": "hide-and-seek", "pos": "noun", "details": {"uncountable": true}, "sentences": ["We play hide-and-seek."]}
+        {"lemma": "hide-and-seek", "pos": "noun", "details": {"uncountable": true}, "sentences": ["After dinner, the children play *hide-and-seek* in the garden."]}
         ],
         "nl": [
-        {"lemma": "verstoppertje", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["Wij spelen verstoppertje."]}
+        {"lemma": "verstoppertje", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["De kinderen spelen na het eten *verstoppertje* in de tuin."]}
         ]
       }
     },
@@ -2513,10 +2513,10 @@
       "gloss": "pawn (noun)",
       "entries": {
         "en": [
-        {"lemma": "pawn", "pos": "noun", "details": {"plural": "pawns"}, "sentences": ["I move a pawn."]}
+        {"lemma": "pawn", "pos": "noun", "details": {"plural": "pawns"}, "sentences": ["In the first move, I push a *pawn* forward."]}
         ],
         "nl": [
-        {"lemma": "pion", "pos": "noun", "details": {"article": "de", "plural": "pionnen"}, "sentences": ["Ik verzet een pion."]}
+        {"lemma": "pion", "pos": "noun", "details": {"article": "de", "plural": "pionnen"}, "sentences": ["Bij de eerste zet schuif ik een *pion* naar voren."]}
         ]
       }
     },
@@ -2525,10 +2525,10 @@
       "gloss": "stamp (postage)",
       "entries": {
         "en": [
-        {"lemma": "stamp", "pos": "noun", "details": {"note": "postage", "plural": "stamps"}, "sentences": ["I collect stamps."]}
+        {"lemma": "stamp", "pos": "noun", "details": {"note": "postage", "plural": "stamps"}, "sentences": ["My grandfather collects old *stamps* from many countries."]}
         ],
         "nl": [
-        {"lemma": "postzegel", "pos": "noun", "details": {"article": "de", "plural": "postzegels"}, "sentences": ["Ik verzamel postzegels."]}
+        {"lemma": "postzegel", "pos": "noun", "details": {"article": "de", "plural": "postzegels"}, "sentences": ["Mijn opa verzamelt oude *postzegels* uit veel landen."]}
         ]
       }
     },
@@ -2537,10 +2537,10 @@
       "gloss": "drummer (noun)",
       "entries": {
         "en": [
-        {"lemma": "drummer", "pos": "noun", "details": {"plural": "drummers"}, "sentences": ["The drummer plays loudly."]}
+        {"lemma": "drummer", "pos": "noun", "details": {"plural": "drummers"}, "sentences": ["The *drummer* plays so loudly the neighbors complain."]}
         ],
         "nl": [
-        {"lemma": "drummer", "pos": "noun", "details": {"article": "de", "plural": "drummers"}, "sentences": ["De drummer speelt luid."]}
+        {"lemma": "drummer", "pos": "noun", "details": {"article": "de", "plural": "drummers"}, "sentences": ["De *drummer* speelt zo luid dat de buren klagen."]}
         ]
       }
     },
@@ -2549,10 +2549,10 @@
       "gloss": "drum (noun)",
       "entries": {
         "en": [
-        {"lemma": "drum", "pos": "noun", "details": {"plural": "drums"}, "sentences": ["He plays the drum."]}
+        {"lemma": "drum", "pos": "noun", "details": {"plural": "drums"}, "sentences": ["The boy hits the *drum* with two sticks."]}
         ],
         "nl": [
-        {"lemma": "drum", "pos": "noun", "details": {"article": "de", "plural": "drums"}, "sentences": ["Hij speelt de drum."]}
+        {"lemma": "drum", "pos": "noun", "details": {"article": "de", "plural": "drums"}, "sentences": ["De jongen slaat met twee stokjes op de *drum*."]}
         ]
       }
     },
@@ -2561,10 +2561,10 @@
       "gloss": "rhyme (verb)",
       "entries": {
         "en": [
-        {"lemma": "to rhyme", "pos": "verb", "details": {"past": "rhymed", "participle": "rhymed"}, "sentences": ["The words rhyme."]}
+        {"lemma": "to rhyme", "pos": "verb", "details": {"past": "rhymed", "participle": "rhymed"}, "sentences": ["In this poem, the last words *rhyme*."]}
         ],
         "nl": [
-        {"lemma": "rijmen", "pos": "verb", "details": {"pastSingular": "rijmde", "pastPlural": "rijmden", "participle": "gerijmd", "auxiliary": "hebben"}, "sentences": ["De woorden rijmen."]}
+        {"lemma": "rijmen", "pos": "verb", "details": {"pastSingular": "rijmde", "pastPlural": "rijmden", "participle": "gerijmd", "auxiliary": "hebben"}, "sentences": ["In dit gedicht *rijmen* de laatste woorden."]}
         ]
       }
     },
@@ -2573,10 +2573,10 @@
       "gloss": "event (organized occasion)",
       "entries": {
         "en": [
-        {"lemma": "event", "pos": "noun", "details": {"note": "organized occasion", "plural": "events"}, "sentences": ["The event is on Saturday."]}
+        {"lemma": "event", "pos": "noun", "details": {"note": "organized occasion", "plural": "events"}, "sentences": ["The school *event* is on Saturday; parents bring food."]}
         ],
         "nl": [
-        {"lemma": "evenement", "pos": "noun", "details": {"article": "het", "plural": "evenementen"}, "sentences": ["Het evenement is zaterdag."]}
+        {"lemma": "evenement", "pos": "noun", "details": {"article": "het", "plural": "evenementen"}, "sentences": ["Het school*evenement* is zaterdag; ouders brengen eten mee."]}
         ]
       }
     },
@@ -2585,10 +2585,10 @@
       "gloss": "trumpet (noun)",
       "entries": {
         "en": [
-        {"lemma": "trumpet", "pos": "noun", "details": {"plural": "trumpets"}, "sentences": ["He plays the trumpet."]}
+        {"lemma": "trumpet", "pos": "noun", "details": {"plural": "trumpets"}, "sentences": ["Every morning, our neighbor plays the *trumpet* loudly."]}
         ],
         "nl": [
-        {"lemma": "trompet", "pos": "noun", "details": {"article": "de", "plural": "trompetten"}, "sentences": ["Hij speelt trompet."]}
+        {"lemma": "trompet", "pos": "noun", "details": {"article": "de", "plural": "trompetten"}, "sentences": ["Elke ochtend speelt onze buurman luid *trompet*."]}
         ]
       }
     },
@@ -2597,10 +2597,10 @@
       "gloss": "bogeyman (noun)",
       "entries": {
         "en": [
-        {"lemma": "bogeyman", "pos": "noun", "details": {"plural": "bogeymans"}, "sentences": ["The child is afraid of the bogeyman."]}
+        {"lemma": "bogeyman", "pos": "noun", "details": {"plural": "bogeymans"}, "sentences": ["The boy fears the *bogeyman* under his bed."]}
         ],
         "nl": [
-        {"lemma": "boeman", "pos": "noun", "details": {"article": "de", "plural": "boemannen"}, "sentences": ["Het kind is bang voor de boeman."]}
+        {"lemma": "boeman", "pos": "noun", "details": {"article": "de", "plural": "boemannen"}, "sentences": ["Het jongetje is bang voor de *boeman* onder zijn bed."]}
         ]
       }
     },
@@ -2609,10 +2609,10 @@
       "gloss": "gym (noun)",
       "entries": {
         "en": [
-        {"lemma": "gym", "pos": "noun", "details": {"plural": "gyms"}, "sentences": ["I go to the gym."]}
+        {"lemma": "gym", "pos": "noun", "details": {"plural": "gyms"}, "sentences": ["After work, I go to the *gym* to train."]}
         ],
         "nl": [
-        {"lemma": "sportschool", "pos": "noun", "details": {"article": "de", "plural": "sportscholen"}, "sentences": ["Ik ga naar de sportschool."]}
+        {"lemma": "sportschool", "pos": "noun", "details": {"article": "de", "plural": "sportscholen"}, "sentences": ["Na het werk ga ik naar de *sportschool* om te trainen."]}
         ]
       }
     },
@@ -2621,10 +2621,10 @@
       "gloss": "attraction (noun)",
       "entries": {
         "en": [
-        {"lemma": "attraction", "pos": "noun", "details": {"plural": "attractions"}, "sentences": ["The attraction is popular."]}
+        {"lemma": "attraction", "pos": "noun", "details": {"plural": "attractions"}, "sentences": ["The big wheel is the most popular *attraction* here."]}
         ],
         "nl": [
-        {"lemma": "attractie", "pos": "noun", "details": {"article": "de", "plural": "attracties"}, "sentences": ["De attractie is populair."]}
+        {"lemma": "attractie", "pos": "noun", "details": {"article": "de", "plural": "attracties"}, "sentences": ["Het reuzenrad is hier de populairste *attractie*."]}
         ]
       }
     },
@@ -2633,10 +2633,10 @@
       "gloss": "stand (noun)",
       "entries": {
         "en": [
-        {"lemma": "stand", "pos": "noun", "details": {"plural": "stands"}, "sentences": ["The stand is full."]}
+        {"lemma": "stand", "pos": "noun", "details": {"plural": "stands"}, "sentences": ["Before the match, the *stand* fills with singing fans."]}
         ],
         "nl": [
-        {"lemma": "tribune", "pos": "noun", "details": {"article": "de", "plural": "tribunes"}, "sentences": ["De tribune is vol."]}
+        {"lemma": "tribune", "pos": "noun", "details": {"article": "de", "plural": "tribunes"}, "sentences": ["Voor de wedstrijd vult de *tribune* zich met zingende fans."]}
         ]
       }
     },
@@ -2645,10 +2645,10 @@
       "gloss": "gnome (noun)",
       "entries": {
         "en": [
-        {"lemma": "gnome", "pos": "noun", "details": {"plural": "gnomes"}, "sentences": ["The gnome lives in the forest."]}
+        {"lemma": "gnome", "pos": "noun", "details": {"plural": "gnomes"}, "sentences": ["In the tale, a *gnome* lives in the forest."]}
         ],
         "nl": [
-        {"lemma": "kabouter", "pos": "noun", "details": {"article": "de", "plural": "kabouters"}, "sentences": ["De kabouter woont in het bos."]}
+        {"lemma": "kabouter", "pos": "noun", "details": {"article": "de", "plural": "kabouters"}, "sentences": ["In het sprookje woont een kleine *kabouter* in het bos."]}
         ]
       }
     },
@@ -2657,10 +2657,10 @@
       "gloss": "imitate (verb)",
       "entries": {
         "en": [
-        {"lemma": "to imitate", "pos": "verb", "details": {"past": "imitated", "participle": "imitated"}, "sentences": ["He imitates the teacher."]}
+        {"lemma": "to imitate", "pos": "verb", "details": {"past": "imitated", "participle": "imitated"}, "sentences": ["The funny boy *imitates* his teacher's voice."]}
         ],
         "nl": [
-        {"lemma": "imiteren", "pos": "verb", "details": {"pastSingular": "imiteerde", "pastPlural": "imiteerden", "participle": "geïmiteerd", "auxiliary": "hebben"}, "sentences": ["Hij imiteert de leraar."]}
+        {"lemma": "imiteren", "pos": "verb", "details": {"pastSingular": "imiteerde", "pastPlural": "imiteerden", "participle": "geïmiteerd", "auxiliary": "hebben"}, "sentences": ["De grappige jongen *imiteert* de stem van zijn leraar."]}
         ]
       }
     },
@@ -2669,10 +2669,10 @@
       "gloss": "arena (noun)",
       "entries": {
         "en": [
-        {"lemma": "arena", "pos": "noun", "details": {"plural": "arenas"}, "sentences": ["The arena is full."]}
+        {"lemma": "arena", "pos": "noun", "details": {"plural": "arenas"}, "sentences": ["On concert night, the *arena* is full of people."]}
         ],
         "nl": [
-        {"lemma": "arena", "pos": "noun", "details": {"article": "de", "plural": "arena's"}, "sentences": ["De arena is vol."]}
+        {"lemma": "arena", "pos": "noun", "details": {"article": "de", "plural": "arena's"}, "sentences": ["Op de avond van het concert is de *arena* vol mensen."]}
         ]
       }
     },
@@ -2681,10 +2681,10 @@
       "gloss": "excursion (noun)",
       "entries": {
         "en": [
-        {"lemma": "excursion", "pos": "noun", "details": {"plural": "excursions"}, "sentences": ["We go on an excursion."]}
+        {"lemma": "excursion", "pos": "noun", "details": {"plural": "excursions"}, "sentences": ["Our class goes on an *excursion* to a farm."]}
         ],
         "nl": [
-        {"lemma": "uitstapje", "pos": "noun", "details": {"article": "het", "plural": "uitstapjes"}, "sentences": ["Wij gaan op uitstapje."]}
+        {"lemma": "uitstapje", "pos": "noun", "details": {"article": "het", "plural": "uitstapjes"}, "sentences": ["Onze klas gaat op *uitstapje* naar een boerderij."]}
         ]
       }
     },
@@ -2693,10 +2693,10 @@
       "gloss": "chess (noun)",
       "entries": {
         "en": [
-        {"lemma": "chess", "pos": "noun", "details": {"uncountable": true}, "sentences": ["We play chess."]}
+        {"lemma": "chess", "pos": "noun", "details": {"uncountable": true}, "sentences": ["My uncle teaches me *chess* on a wooden board."]}
         ],
         "nl": [
-        {"lemma": "schaak", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["Wij spelen schaak."]}
+        {"lemma": "schaak", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["Mijn oom leert me *schaak* spelen op een houten bord."]}
         ]
       }
     },
@@ -2705,10 +2705,10 @@
       "gloss": "racetrack (noun)",
       "entries": {
         "en": [
-        {"lemma": "racetrack", "pos": "noun", "details": {"plural": "racetracks"}, "sentences": ["The horses run on the racetrack."]}
+        {"lemma": "racetrack", "pos": "noun", "details": {"plural": "racetracks"}, "sentences": ["On Sunday, the horses run fast on the *racetrack*."]}
         ],
         "nl": [
-        {"lemma": "renbaan", "pos": "noun", "details": {"article": "de", "plural": "renbanen"}, "sentences": ["De paarden rennen op de renbaan."]}
+        {"lemma": "renbaan", "pos": "noun", "details": {"article": "de", "plural": "renbanen"}, "sentences": ["Op zondagmiddag rennen de paarden snel op de *renbaan*."]}
         ]
       }
     },
@@ -2717,10 +2717,10 @@
       "gloss": "tango (noun)",
       "entries": {
         "en": [
-        {"lemma": "tango", "pos": "noun", "details": {"plural": "tangos"}, "sentences": ["We dance a tango."]}
+        {"lemma": "tango", "pos": "noun", "details": {"plural": "tangos"}, "sentences": ["My parents dance a slow *tango* in the kitchen."]}
         ],
         "nl": [
-        {"lemma": "tango", "pos": "noun", "details": {"article": "de", "plural": "tango's"}, "sentences": ["Wij dansen een tango."]}
+        {"lemma": "tango", "pos": "noun", "details": {"article": "de", "plural": "tango's"}, "sentences": ["Mijn ouders dansen een langzame *tango* in de keuken."]}
         ]
       }
     },
@@ -2729,10 +2729,10 @@
       "gloss": "party (informal)",
       "entries": {
         "en": [
-        {"lemma": "party", "pos": "noun", "details": {"note": "informal", "plural": "parties"}, "sentences": ["We go to a party."]}
+        {"lemma": "party", "pos": "noun", "details": {"note": "informal", "plural": "parties"}, "sentences": ["We go to a *party* at my friend's house."]}
         ],
         "nl": [
-        {"lemma": "fuif", "pos": "noun", "details": {"article": "de", "plural": "fuiven"}, "sentences": ["Wij gaan naar een fuif."]}
+        {"lemma": "fuif", "pos": "noun", "details": {"article": "de", "plural": "fuiven"}, "sentences": ["We gaan naar een *fuif* bij mijn vriend thuis."]}
         ]
       }
     },
@@ -2741,10 +2741,10 @@
       "gloss": "video game (noun)",
       "entries": {
         "en": [
-        {"lemma": "video game", "pos": "noun", "details": {"plural": "video games"}, "sentences": ["I play a video game."]}
+        {"lemma": "video game", "pos": "noun", "details": {"plural": "video games"}, "sentences": ["After homework, my brother plays a *video game*."]}
         ],
         "nl": [
-        {"lemma": "videospel", "pos": "noun", "details": {"article": "het", "plural": "videospellen"}, "sentences": ["Ik speel een videospel."]}
+        {"lemma": "videospel", "pos": "noun", "details": {"article": "het", "plural": "videospellen"}, "sentences": ["Na zijn huiswerk speelt mijn broer een *videospel*."]}
         ]
       }
     },
@@ -2753,10 +2753,10 @@
       "gloss": "campfire (noun)",
       "entries": {
         "en": [
-        {"lemma": "campfire", "pos": "noun", "details": {"plural": "campfires"}, "sentences": ["We sit around the campfire."]}
+        {"lemma": "campfire", "pos": "noun", "details": {"plural": "campfires"}, "sentences": ["On cold nights, we sit around the *campfire*."]}
         ],
         "nl": [
-        {"lemma": "kampvuur", "pos": "noun", "details": {"article": "het", "plural": "kampvuren"}, "sentences": ["Wij zitten rond het kampvuur."]}
+        {"lemma": "kampvuur", "pos": "noun", "details": {"article": "het", "plural": "kampvuren"}, "sentences": ["Op koude avonden zitten we rond het *kampvuur*."]}
         ]
       }
     },
@@ -2765,10 +2765,10 @@
       "gloss": "heavyweight (noun)",
       "entries": {
         "en": [
-        {"lemma": "heavyweight", "pos": "noun", "details": {"plural": "heavyweights"}, "sentences": ["The heavyweight wins."]}
+        {"lemma": "heavyweight", "pos": "noun", "details": {"plural": "heavyweights"}, "sentences": ["The *heavyweight* wins the boxing match tonight."]}
         ],
         "nl": [
-        {"lemma": "zwaargewicht", "pos": "noun", "details": {"article": "de", "plural": "zwaargewichten"}, "sentences": ["De zwaargewicht wint."]}
+        {"lemma": "zwaargewicht", "pos": "noun", "details": {"article": "de", "plural": "zwaargewichten"}, "sentences": ["De *zwaargewicht* wint de bokswedstrijd in de laatste ronde."]}
         ]
       }
     },
@@ -2777,10 +2777,10 @@
       "gloss": "exercise (do sports)",
       "entries": {
         "en": [
-        {"lemma": "to exercise", "pos": "verb", "details": {"note": "do sports", "past": "exercised", "participle": "exercised"}, "sentences": ["I exercise three times a week."]}
+        {"lemma": "to exercise", "pos": "verb", "details": {"note": "do sports", "past": "exercised", "participle": "exercised"}, "sentences": ["My neighbor *exercises* at the gym every morning."]}
         ],
         "nl": [
-        {"lemma": "sporten", "pos": "verb", "details": {"pastSingular": "sportte", "pastPlural": "sportten", "participle": "gesport", "auxiliary": "hebben"}, "sentences": ["Ik sport drie keer per week."]}
+        {"lemma": "sporten", "pos": "verb", "details": {"pastSingular": "sportte", "pastPlural": "sportten", "participle": "gesport", "auxiliary": "hebben"}, "sentences": ["Mijn buurman *sport* elke ochtend in de sportschool voor zijn werk."]}
         ]
       }
     }

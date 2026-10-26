@@ -49,8 +49,8 @@ describe("the list of supported languages", () => {
 
 describe("what depends on the language", () => {
   const concept = (entries: Concept["entries"]): Concept => ({ key: "dog", gloss: "dog", entries });
-  const en = { lemma: "dog", pos: "noun" as const, details: { plural: "dogs" }, sentences: ["The dog runs."] };
-  const nl = { lemma: "hond", pos: "noun" as const, details: { article: "de", plural: "honden" }, sentences: ["De hond rent."] };
+  const en = { lemma: "dog", pos: "noun" as const, details: { plural: "dogs" }, sentences: ["The *dog* runs."] };
+  const nl = { lemma: "hond", pos: "noun" as const, details: { article: "de", plural: "honden" }, sentences: ["De *hond* rent."] };
 
   it("rejects entries in a language that is not supported", () => {
     const { errors } = checkConcept(concept({ en: [en], nl: [nl], xx: [en] }));

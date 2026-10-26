@@ -426,13 +426,13 @@ export type ConceptCardDetail = {
   toLanguage: string;
   front: EntryView[];
   back: EntryView[];
-  sentences: { front: string[]; back: string[] };
+  sentences: { front: string[][]; back: string[][] };
 };
 
 /** One card of the deck in full: both sides' words and forms, and all their example sentences. */
 export type DeckCardDetail = {
   card: DeckCardView;
-  sentences: { front: string[]; back: string[] };
+  sentences: { front: string[][]; back: string[][] };
 };
 
 export type DeckResponse = {
@@ -453,7 +453,7 @@ export type StudyCardView = {
   dueAt: string;
   front: EntryView[];
   back: EntryView[];
-  sentences: { front: string[]; back: string[] };
+  sentences: { front: string[][]; back: string[][] };
 };
 export type StudyResponse = {
   now: string;

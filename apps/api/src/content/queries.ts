@@ -89,11 +89,11 @@ export async function insertUserCards(
   return added;
 }
 
-export const sentenceKey = (conceptId: string, language: string) =>
-  `${conceptId}:${language}`;
+export const sentenceKey = (conceptId: string, language: string, lemma: string) =>
+  `${conceptId}:${language}:${lemma}`;
 
-// Example sentences attached to a concept's entries, keyed by sentenceKey().
-// Capped per key; sentences are in the entry's language.
+// Example sentences attached to a concept's entries, keyed by sentenceKey() (an entry is one lemma
+// of a concept in a language). Capped per entry; sentences are in the entry's language.
 export async function loadSentences(
   db: Db,
   conceptIds: string[],
@@ -107,6 +107,7 @@ export async function loadSentences(
     .select({
       conceptId: entries.conceptId,
       language: entries.language,
+      lemma: entries.lemma,
       text: sentences.text,
     })
     .from(entries)
@@ -122,10 +123,14 @@ export async function loadSentences(
     .orderBy(asc(sentences.id));
 
   for (const r of rows) {
-    const key = sentenceKey(r.conceptId, r.language);
+    const key = sentenceKey(r.conceptId, r.language, r.lemma);
     const list = out.get(key) ?? [];
     if (list.length < cap && !list.includes(r.text)) list.push(r.text);
     out.set(key, list);
   }
   return out;
 }
+
+/** The sentences of each of a concept's words, in the order of `words`. */
+export const sentencesOf = (found: Map<string, string[]>, conceptId: string, words: EntryView[]): string[][] =>
+  words.map((w) => found.get(sentenceKey(conceptId, w.language, w.lemma)) ?? []);

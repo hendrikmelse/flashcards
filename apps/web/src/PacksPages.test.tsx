@@ -866,7 +866,7 @@ describe("dashboard link", () => {
 });
 
 describe("looking at a word as a card", () => {
-  const detail = (conceptId: string, front: unknown[], back: unknown[], sentences = { front: [] as string[], back: [] as string[] }) => ({
+  const detail = (conceptId: string, front: unknown[], back: unknown[], sentences = { front: [] as string[][], back: [] as string[][] }) => ({
     conceptId,
     fromLanguage: "en",
     toLanguage: "nl",
@@ -879,7 +879,7 @@ describe("looking at a word as a card", () => {
       "c1",
       [entry("en", "dog", { plural: "dogs" })],
       [entry("nl", "hond", { article: "de", plural: "honden" })],
-      { front: ["The dog barks.", "I walk the dog."], back: ["De hond blaft."] },
+      { front: [["The dog barks.", "I walk the dog."]], back: [["De hond blaft."]] },
     );
 
   beforeEach(() => {

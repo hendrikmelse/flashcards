@@ -1,7 +1,7 @@
 import { and, asc, count, eq, exists, getTableColumns, gte, inArray, isNull, lte, or, sql } from "drizzle-orm";
 import { alias } from "drizzle-orm/pg-core";
 import { interleaveNew, type EntryView } from "@flashcards/shared";
-import { loadEntries, loadSentences, sentenceKey } from "../content/queries.js";
+import { loadEntries, loadSentences, sentencesOf } from "../content/queries.js";
 import { reviewLogs, userCards, users } from "../db/schema.js";
 import type { Db } from "../db/types.js";
 import type { Scheduler } from "../srs/engine.js";
@@ -22,7 +22,7 @@ interface StudyCard {
   dueAt: Date;
   front: EntryView[];
   back: EntryView[];
-  sentences: { front: string[]; back: string[] };
+  sentences: { front: string[][]; back: string[][] };
 }
 
 export type StudyCounts = { learning: number; review: number; new: number };
@@ -250,6 +250,8 @@ export async function getStudyBatch(
 
   const cards = rows.map((r): StudyCard => {
     const es = entryMap.get(r.conceptId) ?? [];
+    const front = es.filter((e) => e.language === r.fromLanguage);
+    const back = es.filter((e) => e.language === r.toLanguage);
     return {
       id: r.id,
       conceptId: r.conceptId,
@@ -257,11 +259,11 @@ export async function getStudyBatch(
       toLanguage: r.toLanguage,
       state: r.state,
       dueAt: r.dueAt,
-      front: es.filter((e) => e.language === r.fromLanguage),
-      back: es.filter((e) => e.language === r.toLanguage),
+      front,
+      back,
       sentences: {
-        front: sentenceMap.get(sentenceKey(r.conceptId, r.fromLanguage)) ?? [],
-        back: sentenceMap.get(sentenceKey(r.conceptId, r.toLanguage)) ?? [],
+        front: sentencesOf(sentenceMap, r.conceptId, front),
+        back: sentencesOf(sentenceMap, r.conceptId, back),
       },
     };
   });

@@ -1,88 +1,95 @@
-import { entryNote, formLines, highlightSentence, isFormNote, type EntryView, type LanguageInfo } from "@flashcards/shared";
+import { entryNote, formLines, isFormNote, parseSentence, type EntryView, type LanguageInfo } from "@flashcards/shared";
 import { displayLemma, langAttrs, languageName } from "./entries";
 import { LanguageFlag } from "./LanguageFlag";
 
 // The pieces of a card's face, shared by the study screen and the deck viewer's card view.
 
-// The word, with a flag for the language it is in.
-// `id` lets something else point at the word (the Good button reads the answer through it).
-export function Entries({
+// One side of a card: each of its words in turn, with its own forms and example sentences under it,
+// and the flag of the language beside it.
+// `sentences` holds the sentences of each word, in the order of `entries`; without it they are not
+// loaded yet (`loadingSentences` holds their room meanwhile). `id` lets something else point at the
+// words (the Good button reads the answer through them): the word at index i has the id `${id}-${i}`.
+export function Words({
   entries,
+  sentences,
   language,
   languages,
   id,
+  showForms = true,
+  showSentences = true,
+  loadingSentences = false,
 }: {
   entries: EntryView[];
+  sentences?: string[][];
   language: string;
   languages: LanguageInfo[];
   id?: string;
+  showForms?: boolean;
+  showSentences?: boolean;
+  loadingSentences?: boolean;
 }) {
   return (
-    <div className="flagged">
-      <LanguageFlag code={language} label={languageName(languages, language)} />
-      <p className="study-word" id={id}>
-        {entries.map((e, i) => (
-          <span key={`${e.lemma}-${i}`}>
-            {/* Hidden on a phone, where each word has a line of its own (see mobile.css). */}
-            {i > 0 && <span className="entry-sep">, </span>}
-            {/* The word is in its own language, so a screen reader pronounces it that way. */}
-            <span {...langAttrs(language)}>{displayLemma(e)}</span>
-            {e.partOfSpeech && <span className="pos"> {e.partOfSpeech}</span>}
-            {/* Which sense or use this is, in the word's own language, like the word. */}
-            {entryNote(e.details) && (
-              <span className="note" {...langAttrs(language)}>
-                {" "}
-                [{entryNote(e.details)}]
-              </span>
-            )}
-          </span>
-        ))}
-      </p>
-    </div>
-  );
-}
-
-// Word forms (noun plural; verb past, participle, and irregular present). Entries without
-// forms render nothing.
-export function Forms({ entries }: { entries: EntryView[] }) {
-  const withForms = entries
-    .map((e) => ({ e, lines: formLines(e.language, e.details) }))
-    .filter(({ lines }) => lines.length > 0);
-  if (withForms.length === 0) return null;
-  return (
     <>
-      {withForms.map(({ e, lines }) => (
-        <dl key={e.lemma} className="forms" aria-label={`Forms of ${e.lemma}`}>
-          {withForms.length > 1 && (
-            <dt className="forms-lemma" {...langAttrs(e.language)}>
-              {e.lemma}
-            </dt>
-          )}
-          {lines.map((l) => (
-            <div key={l.label}>
-              <dt>{l.label}</dt>
-              <dd {...(isFormNote(l.value) ? {} : langAttrs(e.language))}>{l.value}</dd>
-            </div>
-          ))}
-        </dl>
+      {entries.map((e, i) => (
+        <div key={`${e.lemma}-${i}`} className="entry-block">
+          <div className="flagged">
+            <LanguageFlag code={language} label={languageName(languages, language)} />
+            <p className="study-word" id={id ? `${id}-${i}` : undefined}>
+              {/* The word is in its own language, so a screen reader pronounces it that way. */}
+              <span {...langAttrs(language)}>{displayLemma(e)}</span>
+              {e.partOfSpeech && <span className="pos"> {e.partOfSpeech}</span>}
+              {/* Which sense or use this is, in the word's own language, like the word. */}
+              {entryNote(e.details) && (
+                <span className="note" {...langAttrs(language)}>
+                  {" "}
+                  [{entryNote(e.details)}]
+                </span>
+              )}
+            </p>
+          </div>
+          {showForms && <Forms entry={e} />}
+          {showSentences &&
+            (sentences ? (
+              <Sentences items={sentences[i] ?? []} language={language} />
+            ) : (
+              loadingSentences && <SentencePlaceholder />
+            ))}
+        </div>
       ))}
     </>
   );
 }
 
+// A word's forms (noun plural; verb past, participle, and irregular present). A word without
+// forms renders nothing.
+function Forms({ entry }: { entry: EntryView }) {
+  const lines = formLines(entry.language, entry.details);
+  if (lines.length === 0) return null;
+  return (
+    <dl className="forms" aria-label={`Forms of ${entry.lemma}`}>
+      {lines.map((l) => (
+        <div key={l.label}>
+          <dt>{l.label}</dt>
+          <dd {...(isFormNote(l.value) ? {} : langAttrs(entry.language))}>{l.value}</dd>
+        </div>
+      ))}
+    </dl>
+  );
+}
+
 // Holds the room of one sentence while the sentences load, so what follows does not jump when they arrive.
-export function SentencePlaceholder() {
+function SentencePlaceholder() {
   return <p className="sentence sentence-placeholder" aria-hidden="true" />;
 }
 
 // Example sentences in the card's language, with the card's word in bold among the rest of the
-// sentence. `entries` are the words of that side of the card, which say what to look for.
-export function Sentences({ items, language, entries = [] }: { items: string[]; language: string; entries?: EntryView[] }) {
+// sentence. The sentence says which word that is, between asterisks.
+export function Sentences({ items, language }: { items: string[]; language: string }) {
   return (
     <>
       {items.map((s) => (
         <p key={s} className="sentence" {...langAttrs(language)}>
-          {highlightSentence(s, entries).map((part, i) =>
+          {parseSentence(s).map((part, i) =>
             part.word ? (
               <span key={i} className="sentence-word">
                 {part.text}

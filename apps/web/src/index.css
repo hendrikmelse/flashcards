@@ -1699,6 +1699,11 @@ a.button.secondary {
   box-shadow: 0 0 0 1px color-mix(in srgb, var(--text) 25%, transparent);
 }
 
+/* The words of a side of a card, each with its forms and sentences, one after the other. */
+.entry-block + .entry-block {
+  margin-top: 1rem;
+}
+
 /* Rests on a chip of its own colors, cut by a slash. In light mode the chip is pale and the slash
    dark; in dark mode the other way round. (Written twice, like the theme colors at the top.) */
 .flag-split {
@@ -1801,12 +1806,6 @@ a.button.secondary {
 
 .forms dd {
   margin: 0;
-}
-
-.forms .forms-lemma {
-  margin-top: 0.4rem;
-  font-weight: 600;
-  color: var(--text);
 }
 
 button.reveal {

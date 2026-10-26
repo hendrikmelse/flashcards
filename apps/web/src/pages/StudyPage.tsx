@@ -15,7 +15,7 @@ import { useActiveLanguages } from "../hooks/useActiveLanguages";
 import { usePageTitle } from "../hooks/usePageTitle";
 import { useRatingShortcuts } from "../hooks/useRatingShortcuts";
 import { useLanguages } from "../api/packs";
-import { Entries, Forms, Sentences } from "../components/CardParts";
+import { Words } from "../components/CardParts";
 import { FirstSessionIntro } from "../components/FirstSessionIntro";
 import { languageName } from "../components/entries";
 import { ReportProblem } from "../components/ReportProblem";
@@ -371,15 +371,27 @@ function CardView({
       </p>
 
       <section aria-label="Prompt">
-        <Entries entries={card.front} language={card.fromLanguage} languages={languages} />
-        {showSentences && <Sentences items={card.sentences.front} language={card.fromLanguage} entries={card.front} />}
+        <Words
+          entries={card.front}
+          sentences={card.sentences.front}
+          language={card.fromLanguage}
+          languages={languages}
+          showForms={false}
+          showSentences={showSentences}
+        />
       </section>
 
       {revealed ? (
         <section aria-label="Answer" className="study-answer">
-          <Entries entries={card.back} language={card.toLanguage} languages={languages} id="answer-word" />
-          {showForms && <Forms entries={card.back} />}
-          {showSentences && <Sentences items={card.sentences.back} language={card.toLanguage} entries={card.back} />}
+          <Words
+            entries={card.back}
+            sentences={card.sentences.back}
+            language={card.toLanguage}
+            languages={languages}
+            id="answer-word"
+            showForms={showForms}
+            showSentences={showSentences}
+          />
         </section>
       ) : (
         <button ref={revealRef} className="primary reveal" onClick={onReveal}>
@@ -394,7 +406,7 @@ function CardView({
               key={rating}
               ref={rating === "good" ? goodRef : undefined}
               // Focus lands here when the answer appears, so the button reads the answer too.
-              aria-describedby={rating === "good" ? "answer-word" : undefined}
+              aria-describedby={rating === "good" ? card.back.map((_, i) => `answer-word-${i}`).join(" ") : undefined}
               className={`rating ${rating}`}
               onClick={() => onRate(rating)}
               disabled={submitting}
