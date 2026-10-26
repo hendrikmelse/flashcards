@@ -5,10 +5,10 @@
       "gloss": "atom (noun)",
       "entries": {
         "en": [
-        {"lemma": "atom", "pos": "noun", "details": {"plural": "atoms"}, "sentences": ["An *atom* is very small."]}
+        {"lemma": "atom", "pos": "noun", "details": {"plural": "atoms"}, "sentences": ["Every *atom* is too small to see."]}
         ],
         "nl": [
-        {"lemma": "atoom", "pos": "noun", "details": {"article": "het", "plural": "atomen"}, "sentences": ["Een *atoom* is heel klein."]}
+        {"lemma": "atoom", "pos": "noun", "details": {"article": "het", "plural": "atomen"}, "sentences": ["Elk *atoom* is veel te klein om met je ogen te zien."]}
         ]
       }
     },
@@ -17,10 +17,10 @@
       "gloss": "molecule (noun)",
       "entries": {
         "en": [
-        {"lemma": "molecule", "pos": "noun", "details": {"plural": "molecules"}, "sentences": ["Water is a *molecule*."]}
+        {"lemma": "molecule", "pos": "noun", "details": {"plural": "molecules"}, "sentences": ["One water *molecule* contains two hydrogen atoms."]}
         ],
         "nl": [
-        {"lemma": "molecuul", "pos": "noun", "details": {"article": "het", "plural": "moleculen"}, "sentences": ["Water is een *molecuul*."]}
+        {"lemma": "molecuul", "pos": "noun", "details": {"article": "het", "plural": "moleculen"}, "sentences": ["Een water*molecuul* bevat twee waterstofatomen."]}
         ]
       }
     },
@@ -29,10 +29,10 @@
       "gloss": "periodic table (noun)",
       "entries": {
         "en": [
-        {"lemma": "periodic table", "pos": "noun", "details": {"plural": "periodic tables"}, "sentences": ["The *periodic table* lists all the elements."]}
+        {"lemma": "periodic table", "pos": "noun", "details": {"plural": "periodic tables"}, "sentences": ["The teacher hangs a big *periodic table* on the wall."]}
         ],
         "nl": [
-        {"lemma": "periodiek systeem", "pos": "noun", "details": {"article": "het", "plural": "periodieke systemen"}, "sentences": ["Het *periodiek systeem* toont alle elementen."]}
+        {"lemma": "periodiek systeem", "pos": "noun", "details": {"article": "het", "plural": "periodieke systemen"}, "sentences": ["De scheikundeleraar hangt een groot *periodiek systeem* aan de muur."]}
         ]
       }
     },
@@ -41,10 +41,10 @@
       "gloss": "compound (chemical)",
       "entries": {
         "en": [
-        {"lemma": "compound", "pos": "noun", "details": {"plural": "compounds"}, "sentences": ["Salt is a *compound* of sodium and chlorine."]}
+        {"lemma": "compound", "pos": "noun", "details": {"plural": "compounds"}, "sentences": ["In the lab, we make a new *compound* today."]}
         ],
         "nl": [
-        {"lemma": "verbinding", "pos": "noun", "details": {"note": "in de scheikunde", "article": "de", "plural": "verbindingen"}, "sentences": ["Zout is een *verbinding* van natrium en chloor."]}
+        {"lemma": "verbinding", "pos": "noun", "details": {"note": "in de scheikunde", "article": "de", "plural": "verbindingen"}, "sentences": ["In het lab maken we een nieuwe *verbinding* van twee simpele elementen."]}
         ]
       }
     },
@@ -53,10 +53,10 @@
       "gloss": "mixture (noun)",
       "entries": {
         "en": [
-        {"lemma": "mixture", "pos": "noun", "details": {"plural": "mixtures"}, "sentences": ["Air is a *mixture* of gases."]}
+        {"lemma": "mixture", "pos": "noun", "details": {"plural": "mixtures"}, "sentences": ["She stirs the *mixture* of flour and water."]}
         ],
         "nl": [
-        {"lemma": "mengsel", "pos": "noun", "details": {"article": "het", "plural": "mengsels"}, "sentences": ["Lucht is een *mengsel* van gassen."]}
+        {"lemma": "mengsel", "pos": "noun", "details": {"article": "het", "plural": "mengsels"}, "sentences": ["Zij roert het *mengsel* van bloem en water met een lepel."]}
         ]
       }
     },
@@ -65,10 +65,10 @@
       "gloss": "solution (liquid mixture)",
       "entries": {
         "en": [
-        {"lemma": "solution", "pos": "noun", "details": {"note": "liquid", "plural": "solutions"}, "sentences": ["The salt makes a *solution* in the water."]}
+        {"lemma": "solution", "pos": "noun", "details": {"note": "liquid", "plural": "solutions"}, "sentences": ["Sugar and warm water form a clear *solution*."]}
         ],
         "nl": [
-        {"lemma": "oplossing", "pos": "noun", "details": {"note": "vloeistof", "article": "de", "plural": "oplossingen"}, "sentences": ["Het zout vormt een *oplossing* in het water."]}
+        {"lemma": "oplossing", "pos": "noun", "details": {"note": "vloeistof", "article": "de", "plural": "oplossingen"}, "sentences": ["De suiker en het warme water vormen een heldere *oplossing* in het glas."]}
         ]
       }
     },
@@ -77,10 +77,10 @@
       "gloss": "acid (noun)",
       "entries": {
         "en": [
-        {"lemma": "acid", "pos": "noun", "details": {"plural": "acids"}, "sentences": ["Lemon juice contains an *acid*."]}
+        {"lemma": "acid", "pos": "noun", "details": {"plural": "acids"}, "sentences": ["Vinegar contains an *acid* that makes the taste sour."]}
         ],
         "nl": [
-        {"lemma": "zuur", "pos": "noun", "details": {"note": "een scheikundige stof", "article": "het", "plural": "zuren"}, "sentences": ["Citroensap bevat een *zuur*."]}
+        {"lemma": "zuur", "pos": "noun", "details": {"note": "een scheikundige stof", "article": "het", "plural": "zuren"}, "sentences": ["Azijn bevat een *zuur* dat de smaak scherp maakt."]}
         ]
       }
     },
@@ -89,10 +89,10 @@
       "gloss": "base (chemistry)",
       "entries": {
         "en": [
-        {"lemma": "base", "pos": "noun", "details": {"note": "chemistry", "plural": "bases"}, "sentences": ["Soap is a *base*."]}
+        {"lemma": "base", "pos": "noun", "details": {"note": "chemistry", "plural": "bases"}, "sentences": ["Soap is a *base*, so it feels slippery."]}
         ],
         "nl": [
-        {"lemma": "base", "pos": "noun", "details": {"article": "de", "plural": "basen"}, "sentences": ["Zeep is een *base*."]}
+        {"lemma": "base", "pos": "noun", "details": {"article": "de", "plural": "basen"}, "sentences": ["Zeep is een *base*, daarom voelt het glad aan je handen."]}
         ]
       }
     },
@@ -101,10 +101,10 @@
       "gloss": "chemical reaction (noun)",
       "entries": {
         "en": [
-        {"lemma": "chemical reaction", "pos": "noun", "details": {"plural": "chemical reactions"}, "sentences": ["A *chemical reaction* makes new substances."]}
+        {"lemma": "chemical reaction", "pos": "noun", "details": {"plural": "chemical reactions"}, "sentences": ["A *chemical reaction* makes bubbles in the baking soda."]}
         ],
         "nl": [
-        {"lemma": "chemische reactie", "pos": "noun", "details": {"article": "de", "plural": "chemische reacties"}, "sentences": ["Een *chemische reactie* maakt nieuwe stoffen."]}
+        {"lemma": "chemische reactie", "pos": "noun", "details": {"article": "de", "plural": "chemische reacties"}, "sentences": ["Een *chemische reactie* geeft bellen als je azijn bij soda doet."]}
         ]
       }
     },
@@ -113,10 +113,10 @@
       "gloss": "catalyst (noun)",
       "entries": {
         "en": [
-        {"lemma": "catalyst", "pos": "noun", "details": {"plural": "catalysts"}, "sentences": ["A *catalyst* speeds up a reaction."]}
+        {"lemma": "catalyst", "pos": "noun", "details": {"plural": "catalysts"}, "sentences": ["In the factory, a *catalyst* makes the reaction faster."]}
         ],
         "nl": [
-        {"lemma": "katalysator", "pos": "noun", "details": {"article": "de", "plural": "katalysatoren"}, "sentences": ["Een *katalysator* versnelt een reactie."]}
+        {"lemma": "katalysator", "pos": "noun", "details": {"article": "de", "plural": "katalysatoren"}, "sentences": ["In de fabriek laat een *katalysator* de reactie veel sneller verlopen."]}
         ]
       }
     },
@@ -125,10 +125,10 @@
       "gloss": "electron (noun)",
       "entries": {
         "en": [
-        {"lemma": "electron", "pos": "noun", "details": {"plural": "electrons"}, "sentences": ["An *electron* has a negative charge."]}
+        {"lemma": "electron", "pos": "noun", "details": {"plural": "electrons"}, "sentences": ["Each *electron* moves around the center of an atom."]}
         ],
         "nl": [
-        {"lemma": "elektron", "pos": "noun", "details": {"article": "het", "plural": "elektronen"}, "sentences": ["Een *elektron* heeft een negatieve lading."]}
+        {"lemma": "elektron", "pos": "noun", "details": {"article": "het", "plural": "elektronen"}, "sentences": ["Elk *elektron* beweegt rond het midden van een atoom."]}
         ]
       }
     },
@@ -137,10 +137,10 @@
       "gloss": "proton (noun)",
       "entries": {
         "en": [
-        {"lemma": "proton", "pos": "noun", "details": {"plural": "protons"}, "sentences": ["A *proton* has a positive charge."]}
+        {"lemma": "proton", "pos": "noun", "details": {"plural": "protons"}, "sentences": ["The nucleus of a hydrogen atom holds one *proton*."]}
         ],
         "nl": [
-        {"lemma": "proton", "pos": "noun", "details": {"article": "het", "plural": "protonen"}, "sentences": ["Een *proton* heeft een positieve lading."]}
+        {"lemma": "proton", "pos": "noun", "details": {"article": "het", "plural": "protonen"}, "sentences": ["De kern van een waterstofatoom bevat één *proton*."]}
         ]
       }
     },
@@ -149,10 +149,10 @@
       "gloss": "neutron (noun)",
       "entries": {
         "en": [
-        {"lemma": "neutron", "pos": "noun", "details": {"plural": "neutrons"}, "sentences": ["A *neutron* has no charge."]}
+        {"lemma": "neutron", "pos": "noun", "details": {"plural": "neutrons"}, "sentences": ["Next to the proton, the nucleus holds a *neutron*."]}
         ],
         "nl": [
-        {"lemma": "neutron", "pos": "noun", "details": {"article": "het", "plural": "neutronen"}, "sentences": ["Een *neutron* heeft geen lading."]}
+        {"lemma": "neutron", "pos": "noun", "details": {"article": "het", "plural": "neutronen"}, "sentences": ["Naast een proton kan de kern ook een *neutron* bevatten."]}
         ]
       }
     },
@@ -161,10 +161,10 @@
       "gloss": "ion (noun)",
       "entries": {
         "en": [
-        {"lemma": "ion", "pos": "noun", "details": {"plural": "ions"}, "sentences": ["An *ion* has an electric charge."]}
+        {"lemma": "ion", "pos": "noun", "details": {"plural": "ions"}, "sentences": ["In salt water, each *ion* floats around alone."]}
         ],
         "nl": [
-        {"lemma": "ion", "pos": "noun", "details": {"article": "het", "plural": "ionen"}, "sentences": ["Een *ion* heeft een elektrische lading."]}
+        {"lemma": "ion", "pos": "noun", "details": {"article": "het", "plural": "ionen"}, "sentences": ["Als zout oplost in water, zweeft elk *ion* los rond."]}
         ]
       }
     },
@@ -173,10 +173,10 @@
       "gloss": "isotope (noun)",
       "entries": {
         "en": [
-        {"lemma": "isotope", "pos": "noun", "details": {"plural": "isotopes"}, "sentences": ["This *isotope* is radioactive."]}
+        {"lemma": "isotope", "pos": "noun", "details": {"plural": "isotopes"}, "sentences": ["Doctors use a radioactive *isotope* to scan the body."]}
         ],
         "nl": [
-        {"lemma": "isotoop", "pos": "noun", "details": {"article": "de", "plural": "isotopen"}, "sentences": ["Deze *isotoop* is radioactief."]}
+        {"lemma": "isotoop", "pos": "noun", "details": {"article": "de", "plural": "isotopen"}, "sentences": ["Artsen gebruiken een radioactieve *isotoop* om foto's van binnen het lichaam te maken."]}
         ]
       }
     },
@@ -185,10 +185,10 @@
       "gloss": "carbon (noun)",
       "entries": {
         "en": [
-        {"lemma": "carbon", "pos": "noun", "details": {"uncountable": true}, "sentences": ["Diamonds are made of *carbon*."]}
+        {"lemma": "carbon", "pos": "noun", "details": {"uncountable": true}, "sentences": ["Coal is black because it consists mostly of *carbon*."]}
         ],
         "nl": [
-        {"lemma": "koolstof", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Diamanten bestaan uit *koolstof*."]}
+        {"lemma": "koolstof", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Steenkool is zwart, omdat het vooral uit *koolstof* bestaat."]}
         ]
       }
     },
@@ -197,10 +197,10 @@
       "gloss": "hydrogen (noun)",
       "entries": {
         "en": [
-        {"lemma": "hydrogen", "pos": "noun", "details": {"uncountable": true}, "sentences": ["Water contains *hydrogen* and oxygen."]}
+        {"lemma": "hydrogen", "pos": "noun", "details": {"uncountable": true}, "sentences": ["The balloon rises because it is full of *hydrogen*."]}
         ],
         "nl": [
-        {"lemma": "waterstof", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Water bevat *waterstof* en zuurstof."]}
+        {"lemma": "waterstof", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["De ballon stijgt op, omdat hij met *waterstof* gevuld is."]}
         ]
       }
     },
@@ -209,10 +209,10 @@
       "gloss": "nitrogen (noun)",
       "entries": {
         "en": [
-        {"lemma": "nitrogen", "pos": "noun", "details": {"uncountable": true}, "sentences": ["Air is mostly *nitrogen*."]}
+        {"lemma": "nitrogen", "pos": "noun", "details": {"uncountable": true}, "sentences": ["Farmers put *nitrogen* in the soil for their crops."]}
         ],
         "nl": [
-        {"lemma": "stikstof", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Lucht bestaat vooral uit *stikstof*."]}
+        {"lemma": "stikstof", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Boeren doen *stikstof* in de grond om hun gewassen te laten groeien."]}
         ]
       }
     },
@@ -221,10 +221,10 @@
       "gloss": "noble gas (noun)",
       "entries": {
         "en": [
-        {"lemma": "noble gas", "pos": "noun", "details": {"plural": "noble gases"}, "sentences": ["Helium is a *noble gas*."]}
+        {"lemma": "noble gas", "pos": "noun", "details": {"plural": "noble gases"}, "sentences": ["A *noble gas* like neon fills the bright shop sign."]}
         ],
         "nl": [
-        {"lemma": "edelgas", "pos": "noun", "details": {"article": "het", "plural": "edelgassen"}, "sentences": ["Helium is een *edelgas*."]}
+        {"lemma": "edelgas", "pos": "noun", "details": {"article": "het", "plural": "edelgassen"}, "sentences": ["Een *edelgas* zoals neon zit in de felle lichtreclames boven de winkel."]}
         ]
       }
     },
@@ -233,10 +233,10 @@
       "gloss": "mass (amount of matter)",
       "entries": {
         "en": [
-        {"lemma": "mass", "pos": "noun", "details": {"note": "matter", "plural": "masses"}, "sentences": ["The *mass* of the sample is ten grams."]}
+        {"lemma": "mass", "pos": "noun", "details": {"note": "matter", "plural": "masses"}, "sentences": ["The scale shows the *mass* of this apple: 150 grams."]}
         ],
         "nl": [
-        {"lemma": "massa", "pos": "noun", "details": {"note": "in de natuurkunde, in gram", "article": "de", "plural": "massa's"}, "sentences": ["De *massa* van het monster is tien gram."]}
+        {"lemma": "massa", "pos": "noun", "details": {"note": "in de natuurkunde, in gram", "article": "de", "plural": "massa's"}, "sentences": ["De weegschaal laat zien dat de *massa* van deze appel 150 gram is."]}
         ]
       }
     },
@@ -245,10 +245,10 @@
       "gloss": "substance (noun)",
       "entries": {
         "en": [
-        {"lemma": "substance", "pos": "noun", "details": {"plural": "substances"}, "sentences": ["This *substance* is toxic."]}
+        {"lemma": "substance", "pos": "noun", "details": {"plural": "substances"}, "sentences": ["The label warns that this *substance* is dangerous."]}
         ],
         "nl": [
-        {"lemma": "stof", "pos": "noun", "details": {"note": "in de scheikunde", "article": "de", "plural": "stoffen"}, "sentences": ["Deze *stof* is giftig."]}
+        {"lemma": "stof", "pos": "noun", "details": {"note": "in de scheikunde", "article": "de", "plural": "stoffen"}, "sentences": ["Het etiket waarschuwt dat deze *stof* gevaarlijk is voor kinderen."]}
         ]
       }
     },
@@ -257,10 +257,10 @@
       "gloss": "dissolve (in a liquid)",
       "entries": {
         "en": [
-        {"lemma": "to dissolve", "pos": "verb", "details": {"note": "in a liquid", "past": "dissolved", "participle": "dissolved"}, "sentences": ["Salt *dissolves* in water."]}
+        {"lemma": "to dissolve", "pos": "verb", "details": {"note": "in a liquid", "past": "dissolved", "participle": "dissolved"}, "sentences": ["The sugar *dissolves* quickly in my hot tea."]}
         ],
         "nl": [
-        {"lemma": "oplossen", "pos": "verb", "details": {"note": "zout in water", "pastSingular": "loste op", "pastPlural": "losten op", "participle": "opgelost", "auxiliary": "hebben/zijn"}, "sentences": ["Zout *lost op* in water."]}
+        {"lemma": "oplossen", "pos": "verb", "details": {"note": "zout in water", "pastSingular": "loste op", "pastPlural": "losten op", "participle": "opgelost", "auxiliary": "hebben/zijn"}, "sentences": ["De suiker *lost* snel *op* als ik in mijn hete thee roer."]}
         ]
       }
     },
@@ -269,10 +269,10 @@
       "gloss": "cell membrane (noun)",
       "entries": {
         "en": [
-        {"lemma": "cell membrane", "pos": "noun", "details": {"plural": "cell membranes"}, "sentences": ["The *cell membrane* protects the cell."]}
+        {"lemma": "cell membrane", "pos": "noun", "details": {"plural": "cell membranes"}, "sentences": ["The *cell membrane* lets water in and keeps germs out."]}
         ],
         "nl": [
-        {"lemma": "celmembraan", "pos": "noun", "details": {"article": "het", "plural": "celmembranen"}, "sentences": ["Het *celmembraan* beschermt de cel."]}
+        {"lemma": "celmembraan", "pos": "noun", "details": {"article": "het", "plural": "celmembranen"}, "sentences": ["Het *celmembraan* laat water door, maar houdt schadelijke dingen buiten."]}
         ]
       }
     },
@@ -281,10 +281,10 @@
       "gloss": "cell wall (noun)",
       "entries": {
         "en": [
-        {"lemma": "cell wall", "pos": "noun", "details": {"plural": "cell walls"}, "sentences": ["Plant cells have a *cell wall*."]}
+        {"lemma": "cell wall", "pos": "noun", "details": {"plural": "cell walls"}, "sentences": ["A strong *cell wall* keeps the plant cell firm."]}
         ],
         "nl": [
-        {"lemma": "celwand", "pos": "noun", "details": {"article": "de", "plural": "celwanden"}, "sentences": ["Plantencellen hebben een *celwand*."]}
+        {"lemma": "celwand", "pos": "noun", "details": {"article": "de", "plural": "celwanden"}, "sentences": ["Een stevige *celwand* houdt de plantencel stijf en stevig."]}
         ]
       }
     },
@@ -293,10 +293,10 @@
       "gloss": "nucleus (of a cell)",
       "entries": {
         "en": [
-        {"lemma": "nucleus", "pos": "noun", "details": {"note": "of a cell", "plural": "nuclei"}, "sentences": ["The *nucleus* contains the DNA."]}
+        {"lemma": "nucleus", "pos": "noun", "details": {"note": "of a cell", "plural": "nuclei"}, "sentences": ["In the cell's middle, the *nucleus* guards the DNA."]}
         ],
         "nl": [
-        {"lemma": "celkern", "pos": "noun", "details": {"article": "de", "plural": "celkernen"}, "sentences": ["De *celkern* bevat het DNA."]}
+        {"lemma": "celkern", "pos": "noun", "details": {"article": "de", "plural": "celkernen"}, "sentences": ["In het midden van de cel bewaakt de *celkern* het DNA."]}
         ]
       }
     },
@@ -305,10 +305,10 @@
       "gloss": "cytoplasm (noun)",
       "entries": {
         "en": [
-        {"lemma": "cytoplasm", "pos": "noun", "details": {"uncountable": true}, "sentences": ["*Cytoplasm* fills the cell."]}
+        {"lemma": "cytoplasm", "pos": "noun", "details": {"uncountable": true}, "sentences": ["Under the microscope, the *cytoplasm* looks like clear jelly."]}
         ],
         "nl": [
-        {"lemma": "cytoplasma", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["Het *cytoplasma* vult de cel."]}
+        {"lemma": "cytoplasma", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["Onder de microscoop lijkt het *cytoplasma* op dikke, heldere gelei."]}
         ]
       }
     },
@@ -317,10 +317,10 @@
       "gloss": "organelle (noun)",
       "entries": {
         "en": [
-        {"lemma": "organelle", "pos": "noun", "details": {"plural": "organelles"}, "sentences": ["Every *organelle* has its own job."]}
+        {"lemma": "organelle", "pos": "noun", "details": {"plural": "organelles"}, "sentences": ["Each *organelle* inside the cell does one small task."]}
         ],
         "nl": [
-        {"lemma": "organel", "pos": "noun", "details": {"article": "het", "plural": "organellen"}, "sentences": ["Elk *organel* heeft zijn eigen taak."]}
+        {"lemma": "organel", "pos": "noun", "details": {"article": "het", "plural": "organellen"}, "sentences": ["Elk *organel* in de cel doet één klein taakje."]}
         ]
       }
     },
@@ -329,10 +329,10 @@
       "gloss": "mitochondrion (noun)",
       "entries": {
         "en": [
-        {"lemma": "mitochondrion", "pos": "noun", "details": {"plural": "mitochondria"}, "sentences": ["A *mitochondrion* makes energy for the cell."]}
+        {"lemma": "mitochondrion", "pos": "noun", "details": {"plural": "mitochondria"}, "sentences": ["Every muscle cell has a *mitochondrion* that supplies energy."]}
         ],
         "nl": [
-        {"lemma": "mitochondrium", "pos": "noun", "details": {"article": "het", "plural": "mitochondriën"}, "sentences": ["Een *mitochondrium* maakt energie voor de cel."]}
+        {"lemma": "mitochondrium", "pos": "noun", "details": {"article": "het", "plural": "mitochondriën"}, "sentences": ["Elke spiercel heeft een *mitochondrium* dat energie levert."]}
         ]
       }
     },
@@ -341,10 +341,10 @@
       "gloss": "chromosome (noun)",
       "entries": {
         "en": [
-        {"lemma": "chromosome", "pos": "noun", "details": {"plural": "chromosomes"}, "sentences": ["Humans have forty-six *chromosomes*."]}
+        {"lemma": "chromosome", "pos": "noun", "details": {"plural": "chromosomes"}, "sentences": ["Each *chromosome* in the cell contains many genes."]}
         ],
         "nl": [
-        {"lemma": "chromosoom", "pos": "noun", "details": {"article": "het", "plural": "chromosomen"}, "sentences": ["Mensen hebben zesenveertig *chromosomen*."]}
+        {"lemma": "chromosoom", "pos": "noun", "details": {"article": "het", "plural": "chromosomen"}, "sentences": ["Elk *chromosoom* in de cel bevat veel genen."]}
         ]
       }
     },
@@ -353,10 +353,10 @@
       "gloss": "DNA (noun)",
       "entries": {
         "en": [
-        {"lemma": "DNA", "pos": "noun", "details": {"uncountable": true}, "sentences": ["*DNA* carries genetic information."]}
+        {"lemma": "DNA", "pos": "noun", "details": {"uncountable": true}, "sentences": ["The police find *DNA* on the glass."]}
         ],
         "nl": [
-        {"lemma": "DNA", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["Het *DNA* bevat erfelijke informatie."]}
+        {"lemma": "DNA", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["De politie vindt *DNA* op het glas en onderzoekt het."]}
         ]
       }
     },
@@ -365,10 +365,10 @@
       "gloss": "RNA (noun)",
       "entries": {
         "en": [
-        {"lemma": "RNA", "pos": "noun", "details": {"uncountable": true}, "sentences": ["*RNA* helps the cell make proteins."]}
+        {"lemma": "RNA", "pos": "noun", "details": {"uncountable": true}, "sentences": ["The vaccine uses *RNA* to fight a virus."]}
         ],
         "nl": [
-        {"lemma": "RNA", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["Het *RNA* helpt de cel eiwitten te maken."]}
+        {"lemma": "RNA", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["Het vaccin gebruikt *RNA* om het lichaam een virus te leren bestrijden."]}
         ]
       }
     },
@@ -377,10 +377,10 @@
       "gloss": "double helix (noun)",
       "entries": {
         "en": [
-        {"lemma": "double helix", "pos": "noun", "details": {"plural": "double helices"}, "sentences": ["DNA has the shape of a *double helix*."]}
+        {"lemma": "double helix", "pos": "noun", "details": {"plural": "double helices"}, "sentences": ["A model of the *double helix* stands on the desk."]}
         ],
         "nl": [
-        {"lemma": "dubbele helix", "pos": "noun", "details": {"article": "de", "plural": "dubbele helices"}, "sentences": ["DNA heeft de vorm van een *dubbele helix*."]}
+        {"lemma": "dubbele helix", "pos": "noun", "details": {"article": "de", "plural": "dubbele helices"}, "sentences": ["Een model van de *dubbele helix* staat op het bureau van de leraar."]}
         ]
       }
     },
@@ -389,10 +389,10 @@
       "gloss": "genome (noun)",
       "entries": {
         "en": [
-        {"lemma": "genome", "pos": "noun", "details": {"plural": "genomes"}, "sentences": ["The human *genome* has been mapped."]}
+        {"lemma": "genome", "pos": "noun", "details": {"plural": "genomes"}, "sentences": ["Scientists read the whole *genome* of a small fish."]}
         ],
         "nl": [
-        {"lemma": "genoom", "pos": "noun", "details": {"article": "het", "plural": "genomen"}, "sentences": ["Het menselijk *genoom* is in kaart gebracht."]}
+        {"lemma": "genoom", "pos": "noun", "details": {"article": "het", "plural": "genomen"}, "sentences": ["Wetenschappers lezen het hele *genoom* van een klein visje."]}
         ]
       }
     },
@@ -401,10 +401,10 @@
       "gloss": "genetic code (noun)",
       "entries": {
         "en": [
-        {"lemma": "genetic code", "pos": "noun", "details": {"plural": "genetic codes"}, "sentences": ["The *genetic code* tells the cell how to build proteins."]}
+        {"lemma": "genetic code", "pos": "noun", "details": {"plural": "genetic codes"}, "sentences": ["Every living thing uses the same *genetic code*."]}
         ],
         "nl": [
-        {"lemma": "genetische code", "pos": "noun", "details": {"article": "de", "plural": "genetische codes"}, "sentences": ["De *genetische code* vertelt de cel hoe ze eiwitten moet maken."]}
+        {"lemma": "genetische code", "pos": "noun", "details": {"article": "de", "plural": "genetische codes"}, "sentences": ["Elk levend wezen gebruikt dezelfde *genetische code* om zijn lichaam te bouwen."]}
         ]
       }
     },
@@ -413,10 +413,10 @@
       "gloss": "protein (noun)",
       "entries": {
         "en": [
-        {"lemma": "protein", "pos": "noun", "details": {"plural": "proteins"}, "sentences": ["Meat contains a lot of *protein*."]}
+        {"lemma": "protein", "pos": "noun", "details": {"plural": "proteins"}, "sentences": ["After training, he eats eggs for the *protein*."]}
         ],
         "nl": [
-        {"lemma": "eiwit", "pos": "noun", "details": {"article": "het", "plural": "eiwitten"}, "sentences": ["Vlees bevat veel *eiwit*."]}
+        {"lemma": "eiwit", "pos": "noun", "details": {"article": "het", "plural": "eiwitten"}, "sentences": ["Na de training eet hij eieren en vis voor het *eiwit*."]}
         ]
       }
     },
@@ -425,10 +425,10 @@
       "gloss": "enzyme (noun)",
       "entries": {
         "en": [
-        {"lemma": "enzyme", "pos": "noun", "details": {"plural": "enzymes"}, "sentences": ["An *enzyme* speeds up a reaction in the body."]}
+        {"lemma": "enzyme", "pos": "noun", "details": {"plural": "enzymes"}, "sentences": ["An *enzyme* in your saliva breaks down bread."]}
         ],
         "nl": [
-        {"lemma": "enzym", "pos": "noun", "details": {"article": "het", "plural": "enzymen"}, "sentences": ["Een *enzym* versnelt een reactie in het lichaam."]}
+        {"lemma": "enzym", "pos": "noun", "details": {"article": "het", "plural": "enzymen"}, "sentences": ["Een *enzym* in je speeksel begint brood af te breken."]}
         ]
       }
     },
@@ -437,10 +437,10 @@
       "gloss": "amino acid (noun)",
       "entries": {
         "en": [
-        {"lemma": "amino acid", "pos": "noun", "details": {"plural": "amino acids"}, "sentences": ["Proteins are made of *amino acids*."]}
+        {"lemma": "amino acid", "pos": "noun", "details": {"plural": "amino acids"}, "sentences": ["Your body needs every *amino acid* to build muscle."]}
         ],
         "nl": [
-        {"lemma": "aminozuur", "pos": "noun", "details": {"article": "het", "plural": "aminozuren"}, "sentences": ["Eiwitten bestaan uit *aminozuren*."]}
+        {"lemma": "aminozuur", "pos": "noun", "details": {"article": "het", "plural": "aminozuren"}, "sentences": ["Je lichaam heeft elk *aminozuur* nodig om spieren op te bouwen."]}
         ]
       }
     },
@@ -449,10 +449,10 @@
       "gloss": "carbohydrate (noun)",
       "entries": {
         "en": [
-        {"lemma": "carbohydrate", "pos": "noun", "details": {"plural": "carbohydrates"}, "sentences": ["Bread is rich in *carbohydrates*."]}
+        {"lemma": "carbohydrate", "pos": "noun", "details": {"plural": "carbohydrates"}, "sentences": ["Rice is a cheap *carbohydrate* that gives athletes energy."]}
         ],
         "nl": [
-        {"lemma": "koolhydraat", "pos": "noun", "details": {"article": "het", "plural": "koolhydraten"}, "sentences": ["Brood is rijk aan *koolhydraten*."]}
+        {"lemma": "koolhydraat", "pos": "noun", "details": {"article": "het", "plural": "koolhydraten"}, "sentences": ["Rijst is een goedkoop *koolhydraat* dat sporters energie geeft."]}
         ]
       }
     },
@@ -461,10 +461,10 @@
       "gloss": "mineral (noun)",
       "entries": {
         "en": [
-        {"lemma": "mineral", "pos": "noun", "details": {"plural": "minerals"}, "sentences": ["The body needs *minerals* such as iron."]}
+        {"lemma": "mineral", "pos": "noun", "details": {"plural": "minerals"}, "sentences": ["This water contains every *mineral* you need."]}
         ],
         "nl": [
-        {"lemma": "mineraal", "pos": "noun", "details": {"article": "het", "plural": "mineralen"}, "sentences": ["Het lichaam heeft *mineralen* nodig, zoals ijzer."]}
+        {"lemma": "mineraal", "pos": "noun", "details": {"article": "het", "plural": "mineralen"}, "sentences": ["Op de fles staat dat dit water elk *mineraal* bevat dat je nodig hebt."]}
         ]
       }
     },
@@ -473,10 +473,10 @@
       "gloss": "cell division (noun)",
       "entries": {
         "en": [
-        {"lemma": "cell division", "pos": "noun", "details": {"plural": "cell divisions"}, "sentences": ["*Cell division* makes new cells."]}
+        {"lemma": "cell division", "pos": "noun", "details": {"plural": "cell divisions"}, "sentences": ["In *cell division*, one cell splits into two cells."]}
         ],
         "nl": [
-        {"lemma": "celdeling", "pos": "noun", "details": {"article": "de", "plural": "celdelingen"}, "sentences": ["*Celdeling* maakt nieuwe cellen."]}
+        {"lemma": "celdeling", "pos": "noun", "details": {"article": "de", "plural": "celdelingen"}, "sentences": ["Bij *celdeling* splitst één cel zich in twee nieuwe cellen."]}
         ]
       }
     },
@@ -485,10 +485,10 @@
       "gloss": "stem cell (noun)",
       "entries": {
         "en": [
-        {"lemma": "stem cell", "pos": "noun", "details": {"plural": "stem cells"}, "sentences": ["A *stem cell* can become any type of cell."]}
+        {"lemma": "stem cell", "pos": "noun", "details": {"plural": "stem cells"}, "sentences": ["Doctors use a *stem cell* to grow new skin."]}
         ],
         "nl": [
-        {"lemma": "stamcel", "pos": "noun", "details": {"article": "de", "plural": "stamcellen"}, "sentences": ["Een *stamcel* kan elk type cel worden."]}
+        {"lemma": "stamcel", "pos": "noun", "details": {"article": "de", "plural": "stamcellen"}, "sentences": ["Artsen gebruiken een *stamcel* om nieuwe huid voor brandwonden te kweken."]}
         ]
       }
     },
@@ -497,10 +497,10 @@
       "gloss": "egg cell (noun)",
       "entries": {
         "en": [
-        {"lemma": "egg cell", "pos": "noun", "details": {"plural": "egg cells"}, "sentences": ["The *egg cell* is the largest cell in the human body."]}
+        {"lemma": "egg cell", "pos": "noun", "details": {"plural": "egg cells"}, "sentences": ["Once a month, an *egg cell* leaves the ovary."]}
         ],
         "nl": [
-        {"lemma": "eicel", "pos": "noun", "details": {"article": "de", "plural": "eicellen"}, "sentences": ["De *eicel* is de grootste cel in het menselijk lichaam."]}
+        {"lemma": "eicel", "pos": "noun", "details": {"article": "de", "plural": "eicellen"}, "sentences": ["Eén keer per maand verlaat een *eicel* de eierstok van een vrouw."]}
         ]
       }
     },
@@ -509,10 +509,10 @@
       "gloss": "sperm cell (noun)",
       "entries": {
         "en": [
-        {"lemma": "sperm cell", "pos": "noun", "details": {"plural": "sperm cells"}, "sentences": ["A *sperm cell* has a tail."]}
+        {"lemma": "sperm cell", "pos": "noun", "details": {"plural": "sperm cells"}, "sentences": ["A *sperm cell* swims toward the egg with its tail."]}
         ],
         "nl": [
-        {"lemma": "zaadcel", "pos": "noun", "details": {"article": "de", "plural": "zaadcellen"}, "sentences": ["Een *zaadcel* heeft een staart."]}
+        {"lemma": "zaadcel", "pos": "noun", "details": {"article": "de", "plural": "zaadcellen"}, "sentences": ["Een *zaadcel* zwemt met zijn staart naar de eicel toe."]}
         ]
       }
     },
@@ -521,10 +521,10 @@
       "gloss": "nerve cell (noun)",
       "entries": {
         "en": [
-        {"lemma": "nerve cell", "pos": "noun", "details": {"plural": "nerve cells"}, "sentences": ["A *nerve cell* sends signals through the body."]}
+        {"lemma": "nerve cell", "pos": "noun", "details": {"plural": "nerve cells"}, "sentences": ["When you touch fire, a *nerve cell* warns your brain."]}
         ],
         "nl": [
-        {"lemma": "zenuwcel", "pos": "noun", "details": {"article": "de", "plural": "zenuwcellen"}, "sentences": ["Een *zenuwcel* stuurt signalen door het lichaam."]}
+        {"lemma": "zenuwcel", "pos": "noun", "details": {"article": "de", "plural": "zenuwcellen"}, "sentences": ["Als je vuur aanraakt, waarschuwt een *zenuwcel* je hersenen."]}
         ]
       }
     },
@@ -533,10 +533,10 @@
       "gloss": "red blood cell (noun)",
       "entries": {
         "en": [
-        {"lemma": "red blood cell", "pos": "noun", "details": {"plural": "red blood cells"}, "sentences": ["*Red blood cells* carry oxygen."]}
+        {"lemma": "red blood cell", "pos": "noun", "details": {"plural": "red blood cells"}, "sentences": ["A *red blood cell* carries oxygen through your body."]}
         ],
         "nl": [
-        {"lemma": "rode bloedcel", "pos": "noun", "details": {"article": "de", "plural": "rode bloedcellen"}, "sentences": ["*Rode bloedcellen* vervoeren zuurstof."]}
+        {"lemma": "rode bloedcel", "pos": "noun", "details": {"article": "de", "plural": "rode bloedcellen"}, "sentences": ["Een *rode bloedcel* reist door je hele lichaam en vervoert zuurstof."]}
         ]
       }
     },
@@ -545,10 +545,10 @@
       "gloss": "white blood cell (noun)",
       "entries": {
         "en": [
-        {"lemma": "white blood cell", "pos": "noun", "details": {"plural": "white blood cells"}, "sentences": ["*White blood cells* fight infection."]}
+        {"lemma": "white blood cell", "pos": "noun", "details": {"plural": "white blood cells"}, "sentences": ["With a cold, a *white blood cell* attacks germs."]}
         ],
         "nl": [
-        {"lemma": "witte bloedcel", "pos": "noun", "details": {"article": "de", "plural": "witte bloedcellen"}, "sentences": ["*Witte bloedcellen* bestrijden infecties."]}
+        {"lemma": "witte bloedcel", "pos": "noun", "details": {"article": "de", "plural": "witte bloedcellen"}, "sentences": ["Bij een verkoudheid valt een *witte bloedcel* ziektekiemen aan."]}
         ]
       }
     },
@@ -557,10 +557,10 @@
       "gloss": "microorganism (noun)",
       "entries": {
         "en": [
-        {"lemma": "microorganism", "pos": "noun", "details": {"plural": "microorganisms"}, "sentences": ["A *microorganism* is too small to see."]}
+        {"lemma": "microorganism", "pos": "noun", "details": {"plural": "microorganisms"}, "sentences": ["A *microorganism* in the dirty pond makes you sick."]}
         ],
         "nl": [
-        {"lemma": "micro-organisme", "pos": "noun", "details": {"article": "het", "plural": "micro-organismen"}, "sentences": ["Een *micro-organisme* is te klein om te zien."]}
+        {"lemma": "micro-organisme", "pos": "noun", "details": {"article": "het", "plural": "micro-organismen"}, "sentences": ["Een *micro-organisme* in de vieze vijver kan je ziek maken."]}
         ]
       }
     },
@@ -569,10 +569,10 @@
       "gloss": "fungus (noun)",
       "entries": {
         "en": [
-        {"lemma": "fungus", "pos": "noun", "details": {"plural": "fungi"}, "sentences": ["A *fungus* grows on old bread."]}
+        {"lemma": "fungus", "pos": "noun", "details": {"plural": "fungi"}, "sentences": ["A *fungus* grows on the wet bathroom wall."]}
         ],
         "nl": [
-        {"lemma": "schimmel", "pos": "noun", "details": {"note": "het organisme", "article": "de", "plural": "schimmels"}, "sentences": ["Een *schimmel* groeit op oud brood."]}
+        {"lemma": "schimmel", "pos": "noun", "details": {"note": "het organisme", "article": "de", "plural": "schimmels"}, "sentences": ["Een *schimmel* groeit op de natte muur van onze badkamer."]}
         ]
       }
     },
@@ -581,10 +581,10 @@
       "gloss": "species (biology)",
       "entries": {
         "en": [
-        {"lemma": "species", "pos": "noun", "details": {"plural": "species"}, "sentences": ["This *species* lives in the sea."]}
+        {"lemma": "species", "pos": "noun", "details": {"plural": "species"}, "sentences": ["This rare *species* of bird lives on one island."]}
         ],
         "nl": [
-        {"lemma": "soort", "pos": "noun", "details": {"note": "in de biologie", "article": "de", "plural": "soorten"}, "sentences": ["Deze *soort* leeft in de zee."]}
+        {"lemma": "soort", "pos": "noun", "details": {"note": "in de biologie", "article": "de", "plural": "soorten"}, "sentences": ["Deze zeldzame *soort* vogel leeft alleen op één eiland."]}
         ]
       }
     },
@@ -593,10 +593,10 @@
       "gloss": "pathogen (noun)",
       "entries": {
         "en": [
-        {"lemma": "pathogen", "pos": "noun", "details": {"plural": "pathogens"}, "sentences": ["A *pathogen* is something that causes disease."]}
+        {"lemma": "pathogen", "pos": "noun", "details": {"plural": "pathogens"}, "sentences": ["The nurse washes her hands to stop every *pathogen*."]}
         ],
         "nl": [
-        {"lemma": "ziekteverwekker", "pos": "noun", "details": {"article": "de", "plural": "ziekteverwekkers"}, "sentences": ["Een *ziekteverwekker* veroorzaakt een ziekte."]}
+        {"lemma": "ziekteverwekker", "pos": "noun", "details": {"article": "de", "plural": "ziekteverwekkers"}, "sentences": ["De verpleegster wast haar handen om elke *ziekteverwekker* tegen te houden."]}
         ]
       }
     },
@@ -605,10 +605,10 @@
       "gloss": "photosynthesis (noun)",
       "entries": {
         "en": [
-        {"lemma": "photosynthesis", "pos": "noun", "details": {"uncountable": true}, "sentences": ["Plants use *photosynthesis* to make food."]}
+        {"lemma": "photosynthesis", "pos": "noun", "details": {"uncountable": true}, "sentences": ["During *photosynthesis*, a leaf uses sunlight to make sugar."]}
         ],
         "nl": [
-        {"lemma": "fotosynthese", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Planten gebruiken *fotosynthese* om voedsel te maken."]}
+        {"lemma": "fotosynthese", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Bij *fotosynthese* gebruikt een blad zonlicht om suiker te maken."]}
         ]
       }
     },
@@ -617,10 +617,10 @@
       "gloss": "chlorophyll (noun)",
       "entries": {
         "en": [
-        {"lemma": "chlorophyll", "pos": "noun", "details": {"uncountable": true}, "sentences": ["*Chlorophyll* makes leaves green."]}
+        {"lemma": "chlorophyll", "pos": "noun", "details": {"uncountable": true}, "sentences": ["In autumn, the *chlorophyll* disappears and leaves turn brown."]}
         ],
         "nl": [
-        {"lemma": "bladgroen", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["*Bladgroen* maakt bladeren groen."]}
+        {"lemma": "bladgroen", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["In de herfst verdwijnt het *bladgroen* en worden de bladeren bruin."]}
         ]
       }
     },
@@ -629,10 +629,10 @@
       "gloss": "cellular respiration (noun)",
       "entries": {
         "en": [
-        {"lemma": "cellular respiration", "pos": "noun", "details": {"uncountable": true}, "sentences": ["*Cellular respiration* releases energy from food."]}
+        {"lemma": "cellular respiration", "pos": "noun", "details": {"uncountable": true}, "sentences": ["In *cellular respiration*, your cells use oxygen for energy."]}
         ],
         "nl": [
-        {"lemma": "celademhaling", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["*Celademhaling* maakt energie vrij uit voedsel."]}
+        {"lemma": "celademhaling", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Via *celademhaling* gebruiken je cellen zuurstof om energie vrij te maken."]}
         ]
       }
     },
@@ -641,10 +641,10 @@
       "gloss": "metabolism (noun)",
       "entries": {
         "en": [
-        {"lemma": "metabolism", "pos": "noun", "details": {"uncountable": true}, "sentences": ["A fast *metabolism* burns energy quickly."]}
+        {"lemma": "metabolism", "pos": "noun", "details": {"uncountable": true}, "sentences": ["Young people often have a faster *metabolism* than old people."]}
         ],
         "nl": [
-        {"lemma": "stofwisseling", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Een snelle *stofwisseling* verbrandt snel energie."]}
+        {"lemma": "stofwisseling", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Jonge mensen hebben vaak een snellere *stofwisseling* dan oudere mensen."]}
         ]
       }
     },
@@ -653,10 +653,10 @@
       "gloss": "digestion (noun)",
       "entries": {
         "en": [
-        {"lemma": "digestion", "pos": "noun", "details": {"uncountable": true}, "sentences": ["*Digestion* begins in the mouth."]}
+        {"lemma": "digestion", "pos": "noun", "details": {"uncountable": true}, "sentences": ["A short walk after dinner helps your *digestion*."]}
         ],
         "nl": [
-        {"lemma": "spijsvertering", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["De *spijsvertering* begint in de mond."]}
+        {"lemma": "spijsvertering", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Een korte wandeling na het eten helpt je *spijsvertering* enorm."]}
         ]
       }
     },
@@ -665,10 +665,10 @@
       "gloss": "reproduction (biology)",
       "entries": {
         "en": [
-        {"lemma": "reproduction", "pos": "noun", "details": {"uncountable": true}, "sentences": ["*Reproduction* keeps a species alive."]}
+        {"lemma": "reproduction", "pos": "noun", "details": {"uncountable": true}, "sentences": ["In spring, *reproduction* begins for birds in the park."]}
         ],
         "nl": [
-        {"lemma": "voortplanting", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["*Voortplanting* houdt een soort in stand."]}
+        {"lemma": "voortplanting", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["In het voorjaar begint de *voortplanting* bij veel vogels in het park."]}
         ]
       }
     },
@@ -677,10 +677,10 @@
       "gloss": "fertilization (noun)",
       "entries": {
         "en": [
-        {"lemma": "fertilization", "pos": "noun", "details": {"uncountable": true}, "sentences": ["*Fertilization* happens when a sperm cell meets an egg cell."]}
+        {"lemma": "fertilization", "pos": "noun", "details": {"uncountable": true}, "sentences": ["After *fertilization*, the egg cell begins to divide."]}
         ],
         "nl": [
-        {"lemma": "bevruchting", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["*Bevruchting* vindt plaats wanneer een zaadcel een eicel ontmoet."]}
+        {"lemma": "bevruchting", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Na de *bevruchting* begint de eicel zich te delen."]}
         ]
       }
     },
@@ -689,10 +689,10 @@
       "gloss": "embryo (noun)",
       "entries": {
         "en": [
-        {"lemma": "embryo", "pos": "noun", "details": {"plural": "embryos"}, "sentences": ["An *embryo* grows into a baby."]}
+        {"lemma": "embryo", "pos": "noun", "details": {"plural": "embryos"}, "sentences": ["On the screen, the doctor shows the tiny *embryo*."]}
         ],
         "nl": [
-        {"lemma": "embryo", "pos": "noun", "details": {"article": "het", "plural": "embryo's"}, "sentences": ["Een *embryo* groeit uit tot een baby."]}
+        {"lemma": "embryo", "pos": "noun", "details": {"article": "het", "plural": "embryo's"}, "sentences": ["Op het scherm laat de dokter ons het piepkleine *embryo* zien."]}
         ]
       }
     },
@@ -701,10 +701,10 @@
       "gloss": "heredity (noun)",
       "entries": {
         "en": [
-        {"lemma": "heredity", "pos": "noun", "details": {"uncountable": true}, "sentences": ["*Heredity* explains why children look like their parents."]}
+        {"lemma": "heredity", "pos": "noun", "details": {"uncountable": true}, "sentences": ["Eye color is a clear example of *heredity* in families."]}
         ],
         "nl": [
-        {"lemma": "erfelijkheid", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["*Erfelijkheid* verklaart waarom kinderen op hun ouders lijken."]}
+        {"lemma": "erfelijkheid", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Oogkleur is een duidelijk voorbeeld van *erfelijkheid* in mijn familie."]}
         ]
       }
     },
@@ -713,10 +713,10 @@
       "gloss": "natural selection (noun)",
       "entries": {
         "en": [
-        {"lemma": "natural selection", "pos": "noun", "details": {"uncountable": true}, "sentences": ["*Natural selection* favors the traits that help an animal survive."]}
+        {"lemma": "natural selection", "pos": "noun", "details": {"uncountable": true}, "sentences": ["With *natural selection*, the fastest rabbits in the field survive."]}
         ],
         "nl": [
-        {"lemma": "natuurlijke selectie", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["*Natuurlijke selectie* bevoordeelt eigenschappen die een dier helpen overleven."]}
+        {"lemma": "natuurlijke selectie", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Door *natuurlijke selectie* overleven de snelste konijnen in het veld."]}
         ]
       }
     },
@@ -725,10 +725,10 @@
       "gloss": "evolve (verb)",
       "entries": {
         "en": [
-        {"lemma": "to evolve", "pos": "verb", "details": {"past": "evolved", "participle": "evolved"}, "sentences": ["Species *evolve* over millions of years."]}
+        {"lemma": "to evolve", "pos": "verb", "details": {"past": "evolved", "participle": "evolved"}, "sentences": ["Over time, birds *evolve* different beaks for different food."]}
         ],
         "nl": [
-        {"lemma": "evolueren", "pos": "verb", "details": {"pastSingular": "evolueerde", "pastPlural": "evolueerden", "participle": "geëvolueerd", "auxiliary": "zijn"}, "sentences": ["Soorten *evolueren* over miljoenen jaren."]}
+        {"lemma": "evolueren", "pos": "verb", "details": {"pastSingular": "evolueerde", "pastPlural": "evolueerden", "participle": "geëvolueerd", "auxiliary": "zijn"}, "sentences": ["Na lange tijd *evolueren* vogels met verschillende snavels voor ander voedsel."]}
         ]
       }
     },
@@ -737,10 +737,10 @@
       "gloss": "mutate (verb)",
       "entries": {
         "en": [
-        {"lemma": "to mutate", "pos": "verb", "details": {"past": "mutated", "participle": "mutated"}, "sentences": ["Viruses *mutate* quickly."]}
+        {"lemma": "to mutate", "pos": "verb", "details": {"past": "mutated", "participle": "mutated"}, "sentences": ["The flu virus *mutates* every year, so vaccines change."]}
         ],
         "nl": [
-        {"lemma": "muteren", "pos": "verb", "details": {"pastSingular": "muteerde", "pastPlural": "muteerden", "participle": "gemuteerd", "auxiliary": "zijn"}, "sentences": ["Virussen *muteren* snel."]}
+        {"lemma": "muteren", "pos": "verb", "details": {"pastSingular": "muteerde", "pastPlural": "muteerden", "participle": "gemuteerd", "auxiliary": "zijn"}, "sentences": ["Het griepvirus *muteert* elk jaar, dus vaccins veranderen."]}
         ]
       }
     },
@@ -749,10 +749,10 @@
       "gloss": "ferment (verb)",
       "entries": {
         "en": [
-        {"lemma": "to ferment", "pos": "verb", "details": {"past": "fermented", "participle": "fermented"}, "sentences": ["Yeast *ferments* sugar."]}
+        {"lemma": "to ferment", "pos": "verb", "details": {"past": "fermented", "participle": "fermented"}, "sentences": ["Cabbage *ferments* in a jar for a few weeks."]}
         ],
         "nl": [
-        {"lemma": "fermenteren", "pos": "verb", "details": {"pastSingular": "fermenteerde", "pastPlural": "fermenteerden", "participle": "gefermenteerd", "auxiliary": "hebben"}, "sentences": ["Gist *fermenteert* suiker."]}
+        {"lemma": "fermenteren", "pos": "verb", "details": {"pastSingular": "fermenteerde", "pastPlural": "fermenteerden", "participle": "gefermenteerd", "auxiliary": "hebben"}, "sentences": ["Kool *fermenteert* een paar weken in een grote pot."]}
         ]
       }
     },
@@ -761,10 +761,10 @@
       "gloss": "fermentation (noun)",
       "entries": {
         "en": [
-        {"lemma": "fermentation", "pos": "noun", "details": {"uncountable": true}, "sentences": ["*Fermentation* turns sugar into alcohol."]}
+        {"lemma": "fermentation", "pos": "noun", "details": {"uncountable": true}, "sentences": ["*Fermentation* gives beer and yogurt their special taste."]}
         ],
         "nl": [
-        {"lemma": "fermentatie", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["*Fermentatie* verandert suiker in alcohol."]}
+        {"lemma": "fermentatie", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["*Fermentatie* geeft bier en yoghurt hun bijzondere smaak."]}
         ]
       }
     },
@@ -773,10 +773,10 @@
       "gloss": "immune system (noun)",
       "entries": {
         "en": [
-        {"lemma": "immune system", "pos": "noun", "details": {"plural": "immune systems"}, "sentences": ["A strong *immune system* fights disease."]}
+        {"lemma": "immune system", "pos": "noun", "details": {"plural": "immune systems"}, "sentences": ["Sleep and healthy food make your *immune system* stronger."]}
         ],
         "nl": [
-        {"lemma": "immuunsysteem", "pos": "noun", "details": {"article": "het", "plural": "immuunsystemen"}, "sentences": ["Een sterk *immuunsysteem* bestrijdt ziekten."]}
+        {"lemma": "immuunsysteem", "pos": "noun", "details": {"article": "het", "plural": "immuunsystemen"}, "sentences": ["Slaap en gezond eten maken je *immuunsysteem* sterker."]}
         ]
       }
     },
@@ -785,10 +785,10 @@
       "gloss": "antibody (noun)",
       "entries": {
         "en": [
-        {"lemma": "antibody", "pos": "noun", "details": {"plural": "antibodies"}, "sentences": ["The body makes an *antibody* against the virus."]}
+        {"lemma": "antibody", "pos": "noun", "details": {"plural": "antibodies"}, "sentences": ["After the vaccine, your blood makes an *antibody*."]}
         ],
         "nl": [
-        {"lemma": "antilichaam", "pos": "noun", "details": {"article": "het", "plural": "antilichamen"}, "sentences": ["Het lichaam maakt een *antilichaam* tegen het virus."]}
+        {"lemma": "antilichaam", "pos": "noun", "details": {"article": "het", "plural": "antilichamen"}, "sentences": ["Na het vaccin maakt je bloed een *antilichaam* aan."]}
         ]
       }
     },
@@ -797,10 +797,10 @@
       "gloss": "antibiotic (noun)",
       "entries": {
         "en": [
-        {"lemma": "antibiotic", "pos": "noun", "details": {"plural": "antibiotics"}, "sentences": ["The doctor gives me an *antibiotic*."]}
+        {"lemma": "antibiotic", "pos": "noun", "details": {"plural": "antibiotics"}, "sentences": ["For my throat infection, the doctor gives an *antibiotic*."]}
         ],
         "nl": [
-        {"lemma": "antibioticum", "pos": "noun", "details": {"article": "het", "plural": "antibiotica"}, "sentences": ["De dokter geeft mij een *antibioticum*."]}
+        {"lemma": "antibioticum", "pos": "noun", "details": {"article": "het", "plural": "antibiotica"}, "sentences": ["Voor mijn keelontsteking schrijft de dokter een *antibioticum* voor een week voor."]}
         ]
       }
     },
@@ -809,10 +809,10 @@
       "gloss": "insulin (noun)",
       "entries": {
         "en": [
-        {"lemma": "insulin", "pos": "noun", "details": {"uncountable": true}, "sentences": ["People with diabetes need *insulin*."]}
+        {"lemma": "insulin", "pos": "noun", "details": {"uncountable": true}, "sentences": ["My uncle has diabetes and takes *insulin* before meals."]}
         ],
         "nl": [
-        {"lemma": "insuline", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Mensen met diabetes hebben *insuline* nodig."]}
+        {"lemma": "insuline", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Mijn oom heeft suikerziekte en neemt *insuline* voor elke maaltijd."]}
         ]
       }
     },
@@ -821,10 +821,10 @@
       "gloss": "clinical trial (noun)",
       "entries": {
         "en": [
-        {"lemma": "clinical trial", "pos": "noun", "details": {"plural": "clinical trials"}, "sentences": ["A *clinical trial* tests a new drug on patients."]}
+        {"lemma": "clinical trial", "pos": "noun", "details": {"plural": "clinical trials"}, "sentences": ["Hundreds of volunteers join a *clinical trial* of the medicine."]}
         ],
         "nl": [
-        {"lemma": "klinische studie", "pos": "noun", "details": {"article": "de", "plural": "klinische studies"}, "sentences": ["Een *klinische studie* test een nieuw medicijn op patiënten."]}
+        {"lemma": "klinische studie", "pos": "noun", "details": {"article": "de", "plural": "klinische studies"}, "sentences": ["Honderden vrijwilligers doen mee aan een *klinische studie* van het nieuwe medicijn."]}
         ]
       }
     },
@@ -833,10 +833,10 @@
       "gloss": "gene therapy (noun)",
       "entries": {
         "en": [
-        {"lemma": "gene therapy", "pos": "noun", "details": {"uncountable": true}, "sentences": ["*Gene therapy* tries to repair a faulty gene."]}
+        {"lemma": "gene therapy", "pos": "noun", "details": {"uncountable": true}, "sentences": ["With *gene therapy*, doctors try to cure a rare disease."]}
         ],
         "nl": [
-        {"lemma": "gentherapie", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["*Gentherapie* probeert een defect gen te herstellen."]}
+        {"lemma": "gentherapie", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Met *gentherapie* proberen artsen een zeldzame bloedziekte te genezen."]}
         ]
       }
     },
@@ -845,10 +845,10 @@
       "gloss": "ecosystem (noun)",
       "entries": {
         "en": [
-        {"lemma": "ecosystem", "pos": "noun", "details": {"plural": "ecosystems"}, "sentences": ["A forest is an *ecosystem*."]}
+        {"lemma": "ecosystem", "pos": "noun", "details": {"plural": "ecosystems"}, "sentences": ["Plastic in the sea damages the whole coastal *ecosystem*."]}
         ],
         "nl": [
-        {"lemma": "ecosysteem", "pos": "noun", "details": {"article": "het", "plural": "ecosystemen"}, "sentences": ["Een bos is een *ecosysteem*."]}
+        {"lemma": "ecosysteem", "pos": "noun", "details": {"article": "het", "plural": "ecosystemen"}, "sentences": ["Plastic in zee beschadigt het hele *ecosysteem* van de kust."]}
         ]
       }
     },
@@ -857,10 +857,10 @@
       "gloss": "habitat (noun)",
       "entries": {
         "en": [
-        {"lemma": "habitat", "pos": "noun", "details": {"plural": "habitats"}, "sentences": ["The frog's *habitat* is the pond."]}
+        {"lemma": "habitat", "pos": "noun", "details": {"plural": "habitats"}, "sentences": ["Cutting down trees destroys the *habitat* of many monkeys."]}
         ],
         "nl": [
-        {"lemma": "leefgebied", "pos": "noun", "details": {"article": "het", "plural": "leefgebieden"}, "sentences": ["Het *leefgebied* van de kikker is de vijver."]}
+        {"lemma": "leefgebied", "pos": "noun", "details": {"article": "het", "plural": "leefgebieden"}, "sentences": ["Het kappen van bomen vernietigt het *leefgebied* van veel apen."]}
         ]
       }
     },
@@ -869,10 +869,10 @@
       "gloss": "food chain (noun)",
       "entries": {
         "en": [
-        {"lemma": "food chain", "pos": "noun", "details": {"plural": "food chains"}, "sentences": ["Grass is at the bottom of the *food chain*."]}
+        {"lemma": "food chain", "pos": "noun", "details": {"plural": "food chains"}, "sentences": ["In the river, small fish are in the *food chain*."]}
         ],
         "nl": [
-        {"lemma": "voedselketen", "pos": "noun", "details": {"article": "de", "plural": "voedselketens"}, "sentences": ["Gras staat onderaan de *voedselketen*."]}
+        {"lemma": "voedselketen", "pos": "noun", "details": {"article": "de", "plural": "voedselketens"}, "sentences": ["In de rivier zijn kleine vissen een deel van de *voedselketen*."]}
         ]
       }
     },
@@ -881,10 +881,10 @@
       "gloss": "biodiversity (noun)",
       "entries": {
         "en": [
-        {"lemma": "biodiversity", "pos": "noun", "details": {"uncountable": true}, "sentences": ["The rainforest has great *biodiversity*."]}
+        {"lemma": "biodiversity", "pos": "noun", "details": {"uncountable": true}, "sentences": ["Planting flowers along roads increases *biodiversity* in town."]}
         ],
         "nl": [
-        {"lemma": "biodiversiteit", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Het regenwoud heeft een grote *biodiversiteit*."]}
+        {"lemma": "biodiversiteit", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Bloemen langs de weg planten vergroot de *biodiversiteit* in onze stad."]}
         ]
       }
     },
@@ -893,10 +893,10 @@
       "gloss": "extinct (adjective)",
       "entries": {
         "en": [
-        {"lemma": "extinct", "pos": "adjective", "sentences": ["The dodo is *extinct*."]}
+        {"lemma": "extinct", "pos": "adjective", "sentences": ["Dinosaurs are *extinct*, but we find their bones."]}
         ],
         "nl": [
-        {"lemma": "uitgestorven", "pos": "adjective", "sentences": ["De dodo is *uitgestorven*."]}
+        {"lemma": "uitgestorven", "pos": "adjective", "sentences": ["Dinosaurussen zijn *uitgestorven*, maar we vinden hun botten in de grond."]}
         ]
       }
     },
@@ -905,10 +905,10 @@
       "gloss": "endangered (adjective)",
       "entries": {
         "en": [
-        {"lemma": "endangered", "pos": "adjective", "sentences": ["The tiger is an *endangered* species."]}
+        {"lemma": "endangered", "pos": "adjective", "sentences": ["The panda is an *endangered* animal, so people protect it."]}
         ],
         "nl": [
-        {"lemma": "bedreigd", "pos": "adjective", "sentences": ["De tijger is een *bedreigde* diersoort."]}
+        {"lemma": "bedreigd", "pos": "adjective", "sentences": ["De panda is een *bedreigd* dier, dus mensen beschermen hem."]}
         ]
       }
     },
@@ -917,10 +917,10 @@
       "gloss": "biotechnology (noun)",
       "entries": {
         "en": [
-        {"lemma": "biotechnology", "pos": "noun", "details": {"uncountable": true}, "sentences": ["*Biotechnology* uses living cells to make products."]}
+        {"lemma": "biotechnology", "pos": "noun", "details": {"uncountable": true}, "sentences": ["She works in *biotechnology* and makes medicine with yeast."]}
         ],
         "nl": [
-        {"lemma": "biotechnologie", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["*Biotechnologie* gebruikt levende cellen om producten te maken."]}
+        {"lemma": "biotechnologie", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Zij werkt in de *biotechnologie* en maakt medicijnen met gist."]}
         ]
       }
     },
@@ -929,10 +929,10 @@
       "gloss": "bioreactor (noun)",
       "entries": {
         "en": [
-        {"lemma": "bioreactor", "pos": "noun", "details": {"plural": "bioreactors"}, "sentences": ["The cells grow in a *bioreactor*."]}
+        {"lemma": "bioreactor", "pos": "noun", "details": {"plural": "bioreactors"}, "sentences": ["The company grows yeast in a large steel *bioreactor*."]}
         ],
         "nl": [
-        {"lemma": "bioreactor", "pos": "noun", "details": {"article": "de", "plural": "bioreactoren"}, "sentences": ["De cellen groeien in een *bioreactor*."]}
+        {"lemma": "bioreactor", "pos": "noun", "details": {"article": "de", "plural": "bioreactoren"}, "sentences": ["Het bedrijf kweekt gist in een grote *bioreactor* van staal."]}
         ]
       }
     },
@@ -941,10 +941,10 @@
       "gloss": "cell culture (noun)",
       "entries": {
         "en": [
-        {"lemma": "cell culture", "pos": "noun", "details": {"plural": "cell cultures"}, "sentences": ["The *cell culture* grows in a warm room."]}
+        {"lemma": "cell culture", "pos": "noun", "details": {"plural": "cell cultures"}, "sentences": ["Every morning, she checks the *cell culture* in the lab."]}
         ],
         "nl": [
-        {"lemma": "celkweek", "pos": "noun", "details": {"article": "de", "plural": "celkweken"}, "sentences": ["De *celkweek* groeit in een warme ruimte."]}
+        {"lemma": "celkweek", "pos": "noun", "details": {"article": "de", "plural": "celkweken"}, "sentences": ["Elke ochtend controleert zij de *celkweek* in het lab."]}
         ]
       }
     },
@@ -953,10 +953,10 @@
       "gloss": "petri dish (noun)",
       "entries": {
         "en": [
-        {"lemma": "petri dish", "pos": "noun", "details": {"plural": "petri dishes"}, "sentences": ["The bacteria grow in a *petri dish*."]}
+        {"lemma": "petri dish", "pos": "noun", "details": {"plural": "petri dishes"}, "sentences": ["She puts a drop of water in the *petri dish*."]}
         ],
         "nl": [
-        {"lemma": "petrischaal", "pos": "noun", "details": {"article": "de", "plural": "petrischalen"}, "sentences": ["De bacteriën groeien in een *petrischaal*."]}
+        {"lemma": "petrischaal", "pos": "noun", "details": {"article": "de", "plural": "petrischalen"}, "sentences": ["Zij doet een druppel water in de *petrischaal*."]}
         ]
       }
     },
@@ -965,10 +965,10 @@
       "gloss": "microscope (noun)",
       "entries": {
         "en": [
-        {"lemma": "microscope", "pos": "noun", "details": {"plural": "microscopes"}, "sentences": ["I look at the cell through a *microscope*."]}
+        {"lemma": "microscope", "pos": "noun", "details": {"plural": "microscopes"}, "sentences": ["The student looks at a leaf under the *microscope*."]}
         ],
         "nl": [
-        {"lemma": "microscoop", "pos": "noun", "details": {"article": "de", "plural": "microscopen"}, "sentences": ["Ik kijk door een *microscoop* naar de cel."]}
+        {"lemma": "microscoop", "pos": "noun", "details": {"article": "de", "plural": "microscopen"}, "sentences": ["De leerling bekijkt een blad onder de *microscoop*."]}
         ]
       }
     },
@@ -977,10 +977,10 @@
       "gloss": "test tube (noun)",
       "entries": {
         "en": [
-        {"lemma": "test tube", "pos": "noun", "details": {"plural": "test tubes"}, "sentences": ["She pours the liquid into a *test tube*."]}
+        {"lemma": "test tube", "pos": "noun", "details": {"plural": "test tubes"}, "sentences": ["The chemist heats blue liquid in a glass *test tube*."]}
         ],
         "nl": [
-        {"lemma": "reageerbuis", "pos": "noun", "details": {"article": "de", "plural": "reageerbuizen"}, "sentences": ["Zij giet de vloeistof in een *reageerbuis*."]}
+        {"lemma": "reageerbuis", "pos": "noun", "details": {"article": "de", "plural": "reageerbuizen"}, "sentences": ["De scheikundige verwarmt de blauwe vloeistof in een glazen *reageerbuis*."]}
         ]
       }
     },
@@ -989,10 +989,10 @@
       "gloss": "sample (specimen)",
       "entries": {
         "en": [
-        {"lemma": "sample", "pos": "noun", "details": {"plural": "samples"}, "sentences": ["The doctor takes a blood *sample*."]}
+        {"lemma": "sample", "pos": "noun", "details": {"plural": "samples"}, "sentences": ["At the clinic, a nurse takes a blood *sample*."]}
         ],
         "nl": [
-        {"lemma": "monster", "pos": "noun", "details": {"note": "om te onderzoeken", "article": "het", "plural": "monsters"}, "sentences": ["De dokter neemt een bloed*monster*."]}
+        {"lemma": "monster", "pos": "noun", "details": {"note": "om te onderzoeken", "article": "het", "plural": "monsters"}, "sentences": ["In de kliniek neemt een verpleegster een bloed*monster* van mij af."]}
         ]
       }
     },
@@ -1001,10 +1001,10 @@
       "gloss": "hypothesis (noun)",
       "entries": {
         "en": [
-        {"lemma": "hypothesis", "pos": "noun", "details": {"plural": "hypotheses"}, "sentences": ["The scientist tests her *hypothesis*."]}
+        {"lemma": "hypothesis", "pos": "noun", "details": {"plural": "hypotheses"}, "sentences": ["Our *hypothesis* is that plants grow faster in sunlight."]}
         ],
         "nl": [
-        {"lemma": "hypothese", "pos": "noun", "details": {"article": "de", "plural": "hypotheses"}, "sentences": ["De wetenschapper test haar *hypothese*."]}
+        {"lemma": "hypothese", "pos": "noun", "details": {"article": "de", "plural": "hypotheses"}, "sentences": ["Onze *hypothese* is dat planten sneller groeien in de zon."]}
         ]
       }
     },
@@ -1013,10 +1013,10 @@
       "gloss": "genetic modification (noun)",
       "entries": {
         "en": [
-        {"lemma": "genetic modification", "pos": "noun", "details": {"uncountable": true}, "sentences": ["*Genetic modification* changes the DNA of a plant."]}
+        {"lemma": "genetic modification", "pos": "noun", "details": {"uncountable": true}, "sentences": ["*Genetic modification* makes tomatoes last longer in the supermarket."]}
         ],
         "nl": [
-        {"lemma": "genetische modificatie", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["*Genetische modificatie* verandert het DNA van een plant."]}
+        {"lemma": "genetische modificatie", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["*Genetische modificatie* zorgt ervoor dat tomaten langer houdbaar zijn in de supermarkt."]}
         ]
       }
     },
@@ -1025,10 +1025,10 @@
       "gloss": "genetically modified (adjective)",
       "entries": {
         "en": [
-        {"lemma": "genetically modified", "pos": "adjective", "sentences": ["This corn is *genetically modified*."]}
+        {"lemma": "genetically modified", "pos": "adjective", "sentences": ["Some shops sell *genetically modified* rice that resists insects."]}
         ],
         "nl": [
-        {"lemma": "genetisch gemodificeerd", "pos": "adjective", "sentences": ["Deze maïs is *genetisch gemodificeerd*."]}
+        {"lemma": "genetisch gemodificeerd", "pos": "adjective", "sentences": ["Sommige winkels verkopen *genetisch gemodificeerd* rijst die bestand is tegen insecten."]}
         ]
       }
     },
@@ -1037,10 +1037,10 @@
       "gloss": "biofuel (noun)",
       "entries": {
         "en": [
-        {"lemma": "biofuel", "pos": "noun", "details": {"plural": "biofuels"}, "sentences": ["*Biofuel* is made from plants."]}
+        {"lemma": "biofuel", "pos": "noun", "details": {"plural": "biofuels"}, "sentences": ["Some city buses run on *biofuel* made from cooking oil."]}
         ],
         "nl": [
-        {"lemma": "biobrandstof", "pos": "noun", "details": {"article": "de", "plural": "biobrandstoffen"}, "sentences": ["*Biobrandstof* wordt gemaakt van planten."]}
+        {"lemma": "biobrandstof", "pos": "noun", "details": {"article": "de", "plural": "biobrandstoffen"}, "sentences": ["Sommige bussen in onze stad rijden op *biobrandstof* van oude frituurolie."]}
         ]
       }
     },
@@ -1049,10 +1049,10 @@
       "gloss": "biodegradable (adjective)",
       "entries": {
         "en": [
-        {"lemma": "biodegradable", "pos": "adjective", "sentences": ["*Biodegradable* plastic breaks down in nature."]}
+        {"lemma": "biodegradable", "pos": "adjective", "sentences": ["These *biodegradable* bags disappear in the soil within months."]}
         ],
         "nl": [
-        {"lemma": "biologisch afbreekbaar", "pos": "adjective", "sentences": ["*Biologisch afbreekbaar* plastic breekt af in de natuur."]}
+        {"lemma": "biologisch afbreekbaar", "pos": "adjective", "sentences": ["Deze zakken zijn *biologisch afbreekbaar* en verdwijnen binnen maanden in de grond."]}
         ]
       }
     },
@@ -1061,10 +1061,10 @@
       "gloss": "microscopic (adjective)",
       "entries": {
         "en": [
-        {"lemma": "microscopic", "pos": "adjective", "sentences": ["Bacteria are *microscopic*."]}
+        {"lemma": "microscopic", "pos": "adjective", "sentences": ["The dust mites in my bed are *microscopic*."]}
         ],
         "nl": [
-        {"lemma": "microscopisch", "pos": "adjective", "sentences": ["Bacteriën zijn *microscopisch* klein."]}
+        {"lemma": "microscopisch", "pos": "adjective", "sentences": ["De stofmijten in mijn bed zijn *microscopisch* klein."]}
         ]
       }
     },
@@ -1073,10 +1073,10 @@
       "gloss": "sterile (adjective)",
       "entries": {
         "en": [
-        {"lemma": "sterile", "pos": "adjective", "sentences": ["The instruments must be *sterile*."]}
+        {"lemma": "sterile", "pos": "adjective", "sentences": ["The surgeon wears *sterile* gloves before the operation starts."]}
         ],
         "nl": [
-        {"lemma": "steriel", "pos": "adjective", "sentences": ["De instrumenten moeten *steriel* zijn."]}
+        {"lemma": "steriel", "pos": "adjective", "sentences": ["De chirurg draagt *steriele* handschoenen voordat de operatie begint."]}
         ]
       }
     },
@@ -1085,10 +1085,10 @@
       "gloss": "clone (noun)",
       "entries": {
         "en": [
-        {"lemma": "clone", "pos": "noun", "details": {"note": "noun", "plural": "clones"}, "sentences": ["Dolly the sheep is a *clone*."]}
+        {"lemma": "clone", "pos": "noun", "details": {"note": "noun", "plural": "clones"}, "sentences": ["The scientists show a *clone* of the sheep."]}
         ],
         "nl": [
-        {"lemma": "kloon", "pos": "noun", "details": {"article": "de", "plural": "klonen"}, "sentences": ["Dolly het schaap is een *kloon*."]}
+        {"lemma": "kloon", "pos": "noun", "details": {"article": "de", "plural": "klonen"}, "sentences": ["De wetenschappers tonen een *kloon* van het schaap op de boerderij."]}
         ]
       }
     },
@@ -1097,10 +1097,10 @@
       "gloss": "absorb (verb)",
       "entries": {
         "en": [
-        {"lemma": "to absorb", "pos": "verb", "details": {"past": "absorbed", "participle": "absorbed"}, "sentences": ["Plants *absorb* water through their roots."]}
+        {"lemma": "to absorb", "pos": "verb", "details": {"past": "absorbed", "participle": "absorbed"}, "sentences": ["A sponge *absorbs* the spilled milk on the table."]}
         ],
         "nl": [
-        {"lemma": "absorberen", "pos": "verb", "details": {"pastSingular": "absorbeerde", "pastPlural": "absorbeerden", "participle": "geabsorbeerd", "auxiliary": "hebben"}, "sentences": ["Planten *absorberen* water via hun wortels."]}
+        {"lemma": "absorberen", "pos": "verb", "details": {"pastSingular": "absorbeerde", "pastPlural": "absorbeerden", "participle": "geabsorbeerd", "auxiliary": "hebben"}, "sentences": ["Een spons *absorbeert* de gemorste melk op de keukentafel."]}
         ]
       }
     }
