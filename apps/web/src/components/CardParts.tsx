@@ -23,8 +23,6 @@ export function Entries({
       <p className="study-word" id={id}>
         {entries.map((e, i) => (
           <span key={`${e.lemma}-${i}`}>
-            {/* Hidden on a phone, where each word has a line of its own (see mobile.css). */}
-            {i > 0 && <span className="entry-sep">, </span>}
             {/* The word is in its own language, so a screen reader pronounces it that way. */}
             <span {...langAttrs(language)}>{displayLemma(e)}</span>
             {e.partOfSpeech && <span className="pos"> {e.partOfSpeech}</span>}
