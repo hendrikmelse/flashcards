@@ -1556,7 +1556,7 @@
       "gloss": "trust (verb)",
       "entries": {
         "en": [
-        {"lemma": "to trust", "pos": "verb", "details": {"past": "trusted", "participle": "trusted"}, "sentences": ["I *trust* my sister because she keeps her promises."]}
+        {"lemma": "to trust", "pos": "verb", "details": {"past": "trusted", "participle": "trusted"}, "sentences": ["I *trust* my sister because she always keeps her promises."]}
         ],
         "nl": [
         {"lemma": "vertrouwen", "pos": "verb", "details": {"note": "op iemand rekenen", "pastSingular": "vertrouwde", "pastPlural": "vertrouwden", "participle": "vertrouwd", "auxiliary": "hebben"}, "sentences": ["Ik *vertrouw* mijn zus, want zij houdt altijd haar beloftes."]}
@@ -1568,7 +1568,7 @@
       "gloss": "swear (verb)",
       "entries": {
         "en": [
-        {"lemma": "to swear", "pos": "verb", "details": {"note": "make a promise or oath", "past": "swore", "participle": "sworn"}, "sentences": ["He *swears* to his mother that he tells truth."]}
+        {"lemma": "to swear", "pos": "verb", "details": {"note": "make a promise or oath", "past": "swore", "participle": "sworn"}, "sentences": ["He *swears* to his mother that he tells the truth."]}
         ],
         "nl": [
         {"lemma": "zweren", "pos": "verb", "details": {"pastSingular": "zwoer", "pastPlural": "zwoeren", "participle": "gezworen", "auxiliary": "hebben"}, "sentences": ["Hij *zweert* zijn moeder dat hij de waarheid vertelt."]}
@@ -1580,7 +1580,7 @@
       "gloss": "end (verb)",
       "entries": {
         "en": [
-        {"lemma": "to end", "pos": "verb", "details": {"note": "finish by itself", "past": "ended", "participle": "ended"}, "sentences": ["The long film *ends* with a happy scene outside."]}
+        {"lemma": "to end", "pos": "verb", "details": {"note": "finish by itself", "past": "ended", "participle": "ended"}, "sentences": ["The long film *ends* with a happy scene on the beach."]}
         ],
         "nl": [
         {"lemma": "aflopen", "pos": "verb", "details": {"pastSingular": "liep af", "pastPlural": "liepen af", "participle": "afgelopen", "auxiliary": "zijn"}, "sentences": ["De lange film *loopt* met een vrolijke scène op het strand *af*."]}
@@ -1664,10 +1664,10 @@
       "gloss": "jump (verb)",
       "entries": {
         "en": [
-        {"lemma": "to jump", "pos": "verb", "details": {"past": "jumped", "participle": "jumped"}, "sentences": ["The child *jumps* over the puddle before school."]}
+        {"lemma": "to jump", "pos": "verb", "details": {"past": "jumped", "participle": "jumped"}, "sentences": ["The child *jumps* over the small puddle before school."]}
         ],
         "nl": [
-        {"lemma": "springen", "pos": "verb", "details": {"pastSingular": "sprong", "pastPlural": "sprongen", "participle": "gesprongen", "auxiliary": "hebben/zijn"}, "sentences": ["Het kind *springt* over de kleine plas voor de school."]}
+        {"lemma": "springen", "pos": "verb", "details": {"pastSingular": "sprong", "pastPlural": "sprongen", "participle": "gesprongen", "auxiliary": "hebben/zijn"}, "sentences": ["Het kind *springt* over de kleine plas voor school."]}
         ]
       }
     },
@@ -1676,7 +1676,7 @@
       "gloss": "smell (verb)",
       "entries": {
         "en": [
-        {"lemma": "to smell", "pos": "verb", "details": {"past": "smelled", "participle": "smelled"}, "sentences": ["I *smell* the hot soup from the kitchen."]}
+        {"lemma": "to smell", "pos": "verb", "details": {"past": "smelled", "participle": "smelled"}, "sentences": ["I *smell* the hot soup all the way from the kitchen."]}
         ],
         "nl": [
         {"lemma": "ruiken", "pos": "verb", "details": {"pastSingular": "rook", "pastPlural": "roken", "participle": "geroken", "auxiliary": "hebben"}, "sentences": ["Ik *ruik* de hete soep helemaal vanuit de keuken."]}
@@ -1688,7 +1688,7 @@
       "gloss": "offer (verb)",
       "entries": {
         "en": [
-        {"lemma": "to offer", "pos": "verb", "details": {"note": "give a chance, or make a bid", "past": "offered", "participle": "offered"}, "sentences": ["A buyer *offers* a high price for our car."]}
+        {"lemma": "to offer", "pos": "verb", "details": {"note": "give a chance, or make a bid", "past": "offered", "participle": "offered"}, "sentences": ["A buyer *offers* a high price for our old car."]}
         ],
         "nl": [
         {"lemma": "bieden", "pos": "verb", "details": {"pastSingular": "bood", "pastPlural": "boden", "participle": "geboden", "auxiliary": "hebben"}, "sentences": ["Een koper *biedt* een hoge prijs voor onze oude auto."]}
@@ -1724,7 +1724,7 @@
       "gloss": "recognize (verb)",
       "entries": {
         "en": [
-        {"lemma": "to recognize", "pos": "verb", "details": {"past": "recognized", "participle": "recognized"}, "sentences": ["I *recognize* you by your red coat."]}
+        {"lemma": "to recognize", "pos": "verb", "details": {"past": "recognized", "participle": "recognized"}, "sentences": ["I *recognize* you by your red coat and your hat."]}
         ],
         "nl": [
         {"lemma": "herkennen", "pos": "verb", "details": {"pastSingular": "herkende", "pastPlural": "herkenden", "participle": "herkend", "auxiliary": "hebben"}, "sentences": ["Ik *herken* je aan je rode jas en je hoed."]}
@@ -1772,7 +1772,7 @@
       "gloss": "warn (verb)",
       "entries": {
         "en": [
-        {"lemma": "to warn", "pos": "verb", "details": {"past": "warned", "participle": "warned"}, "sentences": ["I *warn* you: the floor near the door is wet."]}
+        {"lemma": "to warn", "pos": "verb", "details": {"past": "warned", "participle": "warned"}, "sentences": ["I *warn* you: the floor near the door is very wet."]}
         ],
         "nl": [
         {"lemma": "waarschuwen", "pos": "verb", "details": {"pastSingular": "waarschuwde", "pastPlural": "waarschuwden", "participle": "gewaarschuwd", "auxiliary": "hebben"}, "sentences": ["Ik *waarschuw* je: de vloer is vlak bij de deur erg nat."]}
@@ -1784,7 +1784,7 @@
       "gloss": "explain (verb)",
       "entries": {
         "en": [
-        {"lemma": "to explain", "pos": "verb", "details": {"past": "explained", "participle": "explained"}, "sentences": ["The teacher *explains* the rule again with an example."]}
+        {"lemma": "to explain", "pos": "verb", "details": {"past": "explained", "participle": "explained"}, "sentences": ["The teacher *explains* the rule again with a simple example."]}
         ],
         "nl": [
         {"lemma": "uitleggen", "pos": "verb", "details": {"pastSingular": "legde uit", "pastPlural": "legden uit", "participle": "uitgelegd", "auxiliary": "hebben"}, "sentences": ["De leraar *legt* de regel nog een keer met een eenvoudig voorbeeld *uit*."]}
@@ -1796,7 +1796,7 @@
       "gloss": "arrive (verb)",
       "entries": {
         "en": [
-        {"lemma": "to arrive", "pos": "verb", "details": {"past": "arrived", "participle": "arrived"}, "sentences": ["The train from Amsterdam *arrives* at six o'clock."]}
+        {"lemma": "to arrive", "pos": "verb", "details": {"past": "arrived", "participle": "arrived"}, "sentences": ["The train from Amsterdam *arrives* at six o'clock on platform five."]}
         ],
         "nl": [
         {"lemma": "aankomen", "pos": "verb", "details": {"pastSingular": "kwam aan", "pastPlural": "kwamen aan", "participle": "aangekomen", "auxiliary": "zijn"}, "sentences": ["De trein uit Amsterdam *komt* om zes uur op spoor vijf *aan*."]}
@@ -1856,7 +1856,7 @@
       "gloss": "feed (verb)",
       "entries": {
         "en": [
-        {"lemma": "to feed", "pos": "verb", "details": {"past": "fed", "participle": "fed"}, "sentences": ["Every morning I *feed* the horse hay."]}
+        {"lemma": "to feed", "pos": "verb", "details": {"past": "fed", "participle": "fed"}, "sentences": ["Every morning I *feed* the horse hay in the stable."]}
         ],
         "nl": [
         {"lemma": "voeren", "pos": "verb", "details": {"pastSingular": "voerde", "pastPlural": "voerden", "participle": "gevoerd", "auxiliary": "hebben"}, "sentences": ["Elke ochtend *voer* ik het paard hooi in de stal."]}
@@ -1895,7 +1895,7 @@
         {"lemma": "to continue", "pos": "verb", "details": {"past": "continued", "participle": "continued"}, "sentences": ["The show *continues* after a short break."]}
         ],
         "nl": [
-        {"lemma": "doorgaan", "pos": "verb", "details": {"pastSingular": "ging door", "pastPlural": "gingen door", "participle": "doorgegaan", "auxiliary": "zijn"}, "sentences": ["De show *gaat* na een korte pauze in het midden *door*."]}
+        {"lemma": "doorgaan", "pos": "verb", "details": {"pastSingular": "ging door", "pastPlural": "gingen door", "participle": "doorgegaan", "auxiliary": "zijn"}, "sentences": ["De show *gaat* na een korte pauze *door*."]}
         ]
       }
     },
@@ -1928,7 +1928,7 @@
       "gloss": "receive (verb)",
       "entries": {
         "en": [
-        {"lemma": "to receive", "pos": "verb", "details": {"past": "received", "participle": "received"}, "sentences": ["I *receive* a long letter from my aunt."]}
+        {"lemma": "to receive", "pos": "verb", "details": {"past": "received", "participle": "received"}, "sentences": ["I *receive* a long letter from my aunt in Spain."]}
         ],
         "nl": [
         {"lemma": "ontvangen", "pos": "verb", "details": {"pastSingular": "ontving", "pastPlural": "ontvingen", "participle": "ontvangen", "auxiliary": "hebben"}, "sentences": ["Ik *ontvang* een lange brief van mijn tante in Spanje."]}
@@ -1952,7 +1952,7 @@
       "gloss": "keep (store)",
       "entries": {
         "en": [
-        {"lemma": "to keep", "pos": "verb", "details": {"note": "store", "past": "kept", "participle": "kept"}, "sentences": ["I *keep* every old letter from my grandfather."]}
+        {"lemma": "to keep", "pos": "verb", "details": {"note": "store", "past": "kept", "participle": "kept"}, "sentences": ["I *keep* every old letter from my grandfather in a box."]}
         ],
         "nl": [
         {"lemma": "bewaren", "pos": "verb", "details": {"pastSingular": "bewaarde", "pastPlural": "bewaarden", "participle": "bewaard", "auxiliary": "hebben"}, "sentences": ["Ik *bewaar* elke oude brief van mijn opa in een doos."]}
@@ -2036,7 +2036,7 @@
       "gloss": "declare (verb)",
       "entries": {
         "en": [
-        {"lemma": "to declare", "pos": "verb", "details": {"past": "declared", "participle": "declared"}, "sentences": ["At the airport, he *declares* his expensive watch."]}
+        {"lemma": "to declare", "pos": "verb", "details": {"past": "declared", "participle": "declared"}, "sentences": ["At the airport, he *declares* his expensive watch at customs."]}
         ],
         "nl": [
         {"lemma": "verklaren", "pos": "verb", "details": {"pastSingular": "verklaarde", "pastPlural": "verklaarden", "participle": "verklaard", "auxiliary": "hebben"}, "sentences": ["Op het vliegveld *verklaart* hij het dure horloge bij de douane."]}
@@ -2060,7 +2060,7 @@
       "gloss": "seize (verb)",
       "entries": {
         "en": [
-        {"lemma": "to seize", "pos": "verb", "details": {"past": "seized", "participle": "seized"}, "sentences": ["He *seizes* the chance to work abroad."]}
+        {"lemma": "to seize", "pos": "verb", "details": {"past": "seized", "participle": "seized"}, "sentences": ["He *seizes* the chance to work abroad for a year."]}
         ],
         "nl": [
         {"lemma": "grijpen", "pos": "verb", "details": {"pastSingular": "greep", "pastPlural": "grepen", "participle": "gegrepen", "auxiliary": "hebben"}, "sentences": ["Hij *grijpt* de kans om een jaar in het buitenland te werken."]}
@@ -2072,7 +2072,7 @@
       "gloss": "show (verb)",
       "entries": {
         "en": [
-        {"lemma": "to show", "pos": "verb", "details": {"past": "showed", "participle": "shown"}, "sentences": ["I *show* you the photo from our holiday."]}
+        {"lemma": "to show", "pos": "verb", "details": {"past": "showed", "participle": "shown"}, "sentences": ["I *show* you the photo from our holiday in Italy."]}
         ],
         "nl": [
         {"lemma": "tonen", "pos": "verb", "details": {"pastSingular": "toonde", "pastPlural": "toonden", "participle": "getoond", "auxiliary": "hebben"}, "sentences": ["Ik *toon* je de foto van onze vakantie in Italië."]}
@@ -2084,7 +2084,7 @@
       "gloss": "convince (verb)",
       "entries": {
         "en": [
-        {"lemma": "to convince", "pos": "verb", "details": {"past": "convinced", "participle": "convinced"}, "sentences": ["I *convince* him to come to the party."]}
+        {"lemma": "to convince", "pos": "verb", "details": {"past": "convinced", "participle": "convinced"}, "sentences": ["I *convince* him to come to the party with us."]}
         ],
         "nl": [
         {"lemma": "overtuigen", "pos": "verb", "details": {"pastSingular": "overtuigde", "pastPlural": "overtuigden", "participle": "overtuigd", "auxiliary": "hebben"}, "sentences": ["Ik *overtuig* hem om met ons mee naar het feest te gaan."]}
@@ -2096,7 +2096,7 @@
       "gloss": "realize (verb)",
       "entries": {
         "en": [
-        {"lemma": "to realize", "pos": "verb", "details": {"past": "realized", "participle": "realized"}, "sentences": ["Suddenly I *realize* that I forgot my keys."]}
+        {"lemma": "to realize", "pos": "verb", "details": {"past": "realized", "participle": "realized"}, "sentences": ["Suddenly I *realize* that I forgot my keys at home."]}
         ],
         "nl": [
         {"lemma": "beseffen", "pos": "verb", "details": {"pastSingular": "besefte", "pastPlural": "beseften", "participle": "beseft", "auxiliary": "hebben"}, "sentences": ["Opeens *besef* ik dat ik mijn sleutels thuis vergeten ben."]}
@@ -2108,7 +2108,7 @@
       "gloss": "decide (verb)",
       "entries": {
         "en": [
-        {"lemma": "to decide", "pos": "verb", "details": {"note": "choose between options", "past": "decided", "participle": "decided"}, "sentences": ["In the shop, I *decide* quickly between two shirts."]}
+        {"lemma": "to decide", "pos": "verb", "details": {"note": "choose between options", "past": "decided", "participle": "decided"}, "sentences": ["In the shop, I *decide* quickly between the blue and the red shirt."]}
         ],
         "nl": [
         {"lemma": "beslissen", "pos": "verb", "details": {"pastSingular": "besliste", "pastPlural": "beslisten", "participle": "beslist", "auxiliary": "hebben"}, "sentences": ["In de winkel *beslis* ik snel tussen het blauwe en rode shirt."]}
@@ -2120,7 +2120,7 @@
       "gloss": "turn out (verb)",
       "entries": {
         "en": [
-        {"lemma": "to turn out", "pos": "verb", "details": {"past": "turned out", "participle": "turned out"}, "sentences": ["The weather forecast *turns out* to be right."]}
+        {"lemma": "to turn out", "pos": "verb", "details": {"past": "turned out", "participle": "turned out"}, "sentences": ["The weather forecast *turns out* to be right this time."]}
         ],
         "nl": [
         {"lemma": "blijken", "pos": "verb", "details": {"pastSingular": "bleek", "pastPlural": "bleken", "participle": "gebleken", "auxiliary": "zijn"}, "sentences": ["Het weerbericht *blijkt* deze keer te kloppen."]}
@@ -2132,7 +2132,7 @@
       "gloss": "come in (verb)",
       "entries": {
         "en": [
-        {"lemma": "to come in", "pos": "verb", "details": {"past": "came in", "participle": "come in"}, "sentences": ["The waiter *comes in* with hot coffee."]}
+        {"lemma": "to come in", "pos": "verb", "details": {"past": "came in", "participle": "come in"}, "sentences": ["The waiter *comes in* with a tray full of hot coffee."]}
         ],
         "nl": [
         {"lemma": "binnenkomen", "pos": "verb", "details": {"pastSingular": "kwam binnen", "pastPlural": "kwamen binnen", "participle": "binnengekomen", "auxiliary": "zijn"}, "sentences": ["De ober *komt binnen* met een dienblad vol hete koffie."]}
@@ -2216,7 +2216,7 @@
       "gloss": "finish (verb)",
       "entries": {
         "en": [
-        {"lemma": "to finish", "pos": "verb", "details": {"note": "complete fully", "past": "finished", "participle": "finished"}, "sentences": ["I *finish* my homework before dinner, then I play."]}
+        {"lemma": "to finish", "pos": "verb", "details": {"note": "complete fully", "past": "finished", "participle": "finished"}, "sentences": ["I *finish* my homework before dinner, so I can play."]}
         ],
         "nl": [
         {"lemma": "afmaken", "pos": "verb", "details": {"pastSingular": "maakte af", "pastPlural": "maakten af", "participle": "afgemaakt", "auxiliary": "hebben"}, "sentences": ["Ik *maak* mijn huiswerk voor het avondeten *af*, zodat ik kan spelen."]}
@@ -2300,7 +2300,7 @@
       "gloss": "accept (verb)",
       "entries": {
         "en": [
-        {"lemma": "to accept", "pos": "verb", "details": {"past": "accepted", "participle": "accepted"}, "sentences": ["I *accept* the gift with a big smile."]}
+        {"lemma": "to accept", "pos": "verb", "details": {"past": "accepted", "participle": "accepted"}, "sentences": ["I *accept* the gift with a big smile and a thank you."]}
         ],
         "nl": [
         {"lemma": "accepteren", "pos": "verb", "details": {"pastSingular": "accepteerde", "pastPlural": "accepteerden", "participle": "geaccepteerd", "auxiliary": "hebben"}, "sentences": ["Ik *accepteer* het cadeau met een brede glimlach en een bedankje."]}
@@ -2327,7 +2327,7 @@
         {"lemma": "to move", "pos": "verb", "details": {"note": "relocate", "past": "moved", "participle": "moved"}, "sentences": ["For my new job, we *move* to Utrecht."]}
         ],
         "nl": [
-        {"lemma": "verhuizen", "pos": "verb", "details": {"pastSingular": "verhuisde", "pastPlural": "verhuisden", "participle": "verhuisd", "auxiliary": "zijn"}, "sentences": ["Voor mijn nieuwe baan *verhuizen* wij naar een stad bij Utrecht."]}
+        {"lemma": "verhuizen", "pos": "verb", "details": {"pastSingular": "verhuisde", "pastPlural": "verhuisden", "participle": "verhuisd", "auxiliary": "zijn"}, "sentences": ["Voor mijn nieuwe baan *verhuizen* wij naar Utrecht."]}
         ]
       }
     },
@@ -2348,7 +2348,7 @@
       "gloss": "push (verb)",
       "entries": {
         "en": [
-        {"lemma": "to push", "pos": "verb", "details": {"past": "pushed", "participle": "pushed"}, "sentences": ["The door is heavy, so I *push* it hard."]}
+        {"lemma": "to push", "pos": "verb", "details": {"past": "pushed", "participle": "pushed"}, "sentences": ["The door is heavy, so I *push* it with both hands."]}
         ],
         "nl": [
         {"lemma": "duwen", "pos": "verb", "details": {"pastSingular": "duwde", "pastPlural": "duwden", "participle": "geduwd", "auxiliary": "hebben"}, "sentences": ["De deur is zwaar, dus ik *duw* hem met twee handen."]}
@@ -2372,7 +2372,7 @@
       "gloss": "get up (verb)",
       "entries": {
         "en": [
-        {"lemma": "to get up", "pos": "verb", "details": {"past": "got up", "participle": "got up"}, "sentences": ["On school days, I *get up* at seven."]}
+        {"lemma": "to get up", "pos": "verb", "details": {"past": "got up", "participle": "got up"}, "sentences": ["On school days, I *get up* at seven and take a shower."]}
         ],
         "nl": [
         {"lemma": "opstaan", "pos": "verb", "details": {"pastSingular": "stond op", "pastPlural": "stonden op", "participle": "opgestaan", "auxiliary": "zijn"}, "sentences": ["Op schooldagen *sta* ik om zeven uur *op* en neem ik een douche."]}
@@ -2384,7 +2384,7 @@
       "gloss": "catch (verb)",
       "entries": {
         "en": [
-        {"lemma": "to catch", "pos": "verb", "details": {"note": "an animal or a ball", "past": "caught", "participle": "caught"}, "sentences": ["The boy runs fast and *catches* the ball."]}
+        {"lemma": "to catch", "pos": "verb", "details": {"note": "an animal or a ball", "past": "caught", "participle": "caught"}, "sentences": ["The boy runs fast and *catches* the ball with one hand."]}
         ],
         "nl": [
         {"lemma": "vangen", "pos": "verb", "details": {"pastSingular": "ving", "pastPlural": "vingen", "participle": "gevangen", "auxiliary": "hebben"}, "sentences": ["De jongen rent hard en *vangt* de bal met één hand."]}
@@ -2399,7 +2399,7 @@
         {"lemma": "to beg", "pos": "verb", "details": {"note": "ask urgently", "past": "begged", "participle": "begged"}, "sentences": ["The hungry dog *begs* for food at the table."]}
         ],
         "nl": [
-        {"lemma": "smeken", "pos": "verb", "details": {"pastSingular": "smeekte", "pastPlural": "smeekten", "participle": "gesmeekt", "auxiliary": "hebben"}, "sentences": ["De hongerige hond *smeekt* om eten naast de tafel."]}
+        {"lemma": "smeken", "pos": "verb", "details": {"pastSingular": "smeekte", "pastPlural": "smeekten", "participle": "gesmeekt", "auxiliary": "hebben"}, "sentences": ["De hongerige hond *smeekt* aan tafel om eten."]}
         ]
       }
     },
@@ -2408,7 +2408,7 @@
       "gloss": "dream (verb)",
       "entries": {
         "en": [
-        {"lemma": "to dream", "pos": "verb", "details": {"past": "dreamed", "participle": "dreamed"}, "sentences": ["At night, I *dream* of a house by the sea."]}
+        {"lemma": "to dream", "pos": "verb", "details": {"past": "dreamed", "participle": "dreamed"}, "sentences": ["At night, I *dream* of a big house by the sea."]}
         ],
         "nl": [
         {"lemma": "dromen", "pos": "verb", "details": {"pastSingular": "droomde", "pastPlural": "droomden", "participle": "gedroomd", "auxiliary": "hebben"}, "sentences": ["'s Nachts *droom* ik van een groot huis aan zee."]}
@@ -2420,7 +2420,7 @@
       "gloss": "react (verb)",
       "entries": {
         "en": [
-        {"lemma": "to react", "pos": "verb", "details": {"past": "reacted", "participle": "reacted"}, "sentences": ["When the ball flies, he *reacts* quickly and jumps."]}
+        {"lemma": "to react", "pos": "verb", "details": {"past": "reacted", "participle": "reacted"}, "sentences": ["When the ball flies, he *reacts* quickly and jumps aside."]}
         ],
         "nl": [
         {"lemma": "reageren", "pos": "verb", "details": {"pastSingular": "reageerde", "pastPlural": "reageerden", "participle": "gereageerd", "auxiliary": "hebben"}, "sentences": ["Als de bal aan komt vliegen, *reageert* hij snel en springt opzij."]}
@@ -2444,7 +2444,7 @@
       "gloss": "serve (verb)",
       "entries": {
         "en": [
-        {"lemma": "to serve", "pos": "verb", "details": {"note": "work for, or be useful", "past": "served", "participle": "served"}, "sentences": ["In the army, he *serves* his country for years."]}
+        {"lemma": "to serve", "pos": "verb", "details": {"note": "work for, or be useful", "past": "served", "participle": "served"}, "sentences": ["In the army, he *serves* his country for two years."]}
         ],
         "nl": [
         {"lemma": "dienen", "pos": "verb", "details": {"pastSingular": "diende", "pastPlural": "dienden", "participle": "gediend", "auxiliary": "hebben"}, "sentences": ["In het leger *dient* hij twee jaar zijn land."]}
@@ -2456,7 +2456,7 @@
       "gloss": "betray (verb)",
       "entries": {
         "en": [
-        {"lemma": "to betray", "pos": "verb", "details": {"past": "betrayed", "participle": "betrayed"}, "sentences": ["He *betrays* his best friend and tells his secret."]}
+        {"lemma": "to betray", "pos": "verb", "details": {"past": "betrayed", "participle": "betrayed"}, "sentences": ["He *betrays* his best friend and tells everyone his secret."]}
         ],
         "nl": [
         {"lemma": "verraden", "pos": "verb", "details": {"pastSingular": "verried", "pastPlural": "verrieden", "participle": "verraden", "auxiliary": "hebben"}, "sentences": ["Hij *verraadt* zijn beste vriend en vertelt het geheim aan iedereen."]}
@@ -2480,7 +2480,7 @@
       "gloss": "invite (verb)",
       "entries": {
         "en": [
-        {"lemma": "to invite", "pos": "verb", "details": {"past": "invited", "participle": "invited"}, "sentences": ["For my birthday, I *invite* all my friends."]}
+        {"lemma": "to invite", "pos": "verb", "details": {"past": "invited", "participle": "invited"}, "sentences": ["For my birthday, I *invite* all my friends for dinner."]}
         ],
         "nl": [
         {"lemma": "uitnodigen", "pos": "verb", "details": {"pastSingular": "nodigde uit", "pastPlural": "nodigden uit", "participle": "uitgenodigd", "auxiliary": "hebben"}, "sentences": ["Voor mijn verjaardag *nodig* ik al mijn vrienden voor het eten *uit*."]}
@@ -2492,7 +2492,7 @@
       "gloss": "cause (verb)",
       "entries": {
         "en": [
-        {"lemma": "to cause", "pos": "verb", "details": {"past": "caused", "participle": "caused"}, "sentences": ["The heavy rain *causes* problems on the roads today."]}
+        {"lemma": "to cause", "pos": "verb", "details": {"past": "caused", "participle": "caused"}, "sentences": ["The heavy rain *causes* problems on the roads this morning."]}
         ],
         "nl": [
         {"lemma": "veroorzaken", "pos": "verb", "details": {"pastSingular": "veroorzaakte", "pastPlural": "veroorzaakten", "participle": "veroorzaakt", "auxiliary": "hebben"}, "sentences": ["De zware regen *veroorzaakt* vanochtend problemen op de wegen."]}
@@ -2516,7 +2516,7 @@
       "gloss": "hold on to (verb)",
       "entries": {
         "en": [
-        {"lemma": "to hold on to", "pos": "verb", "details": {"past": "held on to", "participle": "held on to"}, "sentences": ["On the boat, I *hold on to* the rope."]}
+        {"lemma": "to hold on to", "pos": "verb", "details": {"past": "held on to", "participle": "held on to"}, "sentences": ["On the boat, I *hold on to* the rope tightly."]}
         ],
         "nl": [
         {"lemma": "vasthouden", "pos": "verb", "details": {"pastSingular": "hield vast", "pastPlural": "hielden vast", "participle": "vastgehouden", "auxiliary": "hebben"}, "sentences": ["Op de boot *houd* ik het touw stevig *vast*."]}
@@ -2540,7 +2540,7 @@
       "gloss": "prevent (verb)",
       "entries": {
         "en": [
-        {"lemma": "to prevent", "pos": "verb", "details": {"past": "prevented", "participle": "prevented"}, "sentences": ["With a small fence, we *prevent* an accident here."]}
+        {"lemma": "to prevent", "pos": "verb", "details": {"past": "prevented", "participle": "prevented"}, "sentences": ["With a small fence, we *prevent* an accident at the pond."]}
         ],
         "nl": [
         {"lemma": "voorkomen", "pos": "verb", "details": {"pastSingular": "voorkwam", "pastPlural": "voorkwamen", "participle": "voorkomen", "auxiliary": "hebben"}, "sentences": ["Met een klein hekje *voorkomen* wij een ongeluk bij de vijver."]}
@@ -2600,7 +2600,7 @@
       "gloss": "pick out (verb)",
       "entries": {
         "en": [
-        {"lemma": "to pick out", "pos": "verb", "details": {"past": "picked out", "participle": "picked out"}, "sentences": ["In the shop, I *pick out* a book for Dad."]}
+        {"lemma": "to pick out", "pos": "verb", "details": {"past": "picked out", "participle": "picked out"}, "sentences": ["In the shop, I *pick out* a nice book for Dad."]}
         ],
         "nl": [
         {"lemma": "uitzoeken", "pos": "verb", "details": {"pastSingular": "zocht uit", "pastPlural": "zochten uit", "participle": "uitgezocht", "auxiliary": "hebben"}, "sentences": ["In de winkel *zoek* ik een mooi boek voor mijn vader *uit*."]}
@@ -2612,7 +2612,7 @@
       "gloss": "flee (verb)",
       "entries": {
         "en": [
-        {"lemma": "to flee", "pos": "verb", "details": {"past": "fled", "participle": "fled"}, "sentences": ["Many families *flee* from the war to safety."]}
+        {"lemma": "to flee", "pos": "verb", "details": {"past": "fled", "participle": "fled"}, "sentences": ["Many families *flee* from the war to a safe country."]}
         ],
         "nl": [
         {"lemma": "vluchten", "pos": "verb", "details": {"pastSingular": "vluchtte", "pastPlural": "vluchtten", "participle": "gevlucht", "auxiliary": "zijn"}, "sentences": ["Veel gezinnen *vluchten* voor de oorlog naar een veilig land."]}
@@ -2624,7 +2624,7 @@
       "gloss": "guess (verb)",
       "entries": {
         "en": [
-        {"lemma": "to guess", "pos": "verb", "details": {"past": "guessed", "participle": "guessed"}, "sentences": ["The teacher asks a hard question; I *guess*."]}
+        {"lemma": "to guess", "pos": "verb", "details": {"past": "guessed", "participle": "guessed"}, "sentences": ["The teacher asks a hard question; I *guess* the answer."]}
         ],
         "nl": [
         {"lemma": "raden", "pos": "verb", "details": {"pastSingular": "raadde", "pastPlural": "raadden", "participle": "geraden", "auxiliary": "hebben"}, "sentences": ["De leraar stelt een moeilijke vraag en ik *raad* het antwoord."]}
@@ -2768,7 +2768,7 @@
       "gloss": "run away (verb)",
       "entries": {
         "en": [
-        {"lemma": "to run away", "pos": "verb", "details": {"past": "ran away", "participle": "run away"}, "sentences": ["When the door is open, the dog *runs away*."]}
+        {"lemma": "to run away", "pos": "verb", "details": {"past": "ran away", "participle": "run away"}, "sentences": ["When the door is open, the dog *runs away* into the street."]}
         ],
         "nl": [
         {"lemma": "weglopen", "pos": "verb", "details": {"pastSingular": "liep weg", "pastPlural": "liepen weg", "participle": "weggelopen", "auxiliary": "zijn"}, "sentences": ["Als de deur openstaat, *loopt* de hond de straat in *weg*."]}
@@ -2852,7 +2852,7 @@
       "gloss": "prepare (verb)",
       "entries": {
         "en": [
-        {"lemma": "to prepare", "pos": "verb", "details": {"past": "prepared", "participle": "prepared"}, "sentences": ["In the kitchen, I *prepare* the meal for guests."]}
+        {"lemma": "to prepare", "pos": "verb", "details": {"past": "prepared", "participle": "prepared"}, "sentences": ["In the kitchen, I *prepare* the meal for six guests."]}
         ],
         "nl": [
         {"lemma": "voorbereiden", "pos": "verb", "details": {"pastSingular": "bereidde voor", "pastPlural": "bereidden voor", "participle": "voorbereid", "auxiliary": "hebben"}, "sentences": ["In de keuken *bereid* ik de maaltijd voor zes gasten *voor*."]}
@@ -2864,7 +2864,7 @@
       "gloss": "waste (verb)",
       "entries": {
         "en": [
-        {"lemma": "to waste", "pos": "verb", "details": {"past": "wasted", "participle": "wasted"}, "sentences": ["When I watch videos all day, I *waste* time."]}
+        {"lemma": "to waste", "pos": "verb", "details": {"past": "wasted", "participle": "wasted"}, "sentences": ["When I watch videos all day, I *waste* a lot of time."]}
         ],
         "nl": [
         {"lemma": "verspillen", "pos": "verb", "details": {"pastSingular": "verspilde", "pastPlural": "verspilden", "participle": "verspild", "auxiliary": "hebben"}, "sentences": ["Als ik de hele dag video's kijk, *verspil* ik veel tijd."]}
@@ -2891,7 +2891,7 @@
         {"lemma": "to look up", "pos": "verb", "details": {"past": "looked up", "participle": "looked up"}, "sentences": ["I *look up* the new word in a dictionary."]}
         ],
         "nl": [
-        {"lemma": "opzoeken", "pos": "verb", "details": {"pastSingular": "zocht op", "pastPlural": "zochten op", "participle": "opgezocht", "auxiliary": "hebben"}, "sentences": ["Ik ken dit woord niet, dus ik *zoek* de betekenis *op*."]}
+        {"lemma": "opzoeken", "pos": "verb", "details": {"pastSingular": "zocht op", "pastPlural": "zochten op", "participle": "opgezocht", "auxiliary": "hebben"}, "sentences": ["Ik *zoek* het nieuwe woord in een woordenboek *op*."]}
         ]
       }
     },
@@ -2924,7 +2924,7 @@
       "gloss": "replace (verb)",
       "entries": {
         "en": [
-        {"lemma": "to replace", "pos": "verb", "details": {"past": "replaced", "participle": "replaced"}, "sentences": ["My phone is dead, so I *replace* the battery."]}
+        {"lemma": "to replace", "pos": "verb", "details": {"past": "replaced", "participle": "replaced"}, "sentences": ["My phone is dead, so I *replace* the old battery."]}
         ],
         "nl": [
         {"lemma": "vervangen", "pos": "verb", "details": {"pastSingular": "verving", "pastPlural": "vervingen", "participle": "vervangen", "auxiliary": "hebben"}, "sentences": ["Mijn telefoon is leeg, dus ik *vervang* de oude batterij."]}
@@ -2960,7 +2960,7 @@
       "gloss": "greeting (noun)",
       "entries": {
         "en": [
-        {"lemma": "greeting", "pos": "noun", "details": {"plural": "greetings"}, "sentences": ["Please give my *greetings* to your mother today."]}
+        {"lemma": "greeting", "pos": "noun", "details": {"plural": "greetings"}, "sentences": ["Please give my *greetings* to your mother when you see her."]}
         ],
         "nl": [
         {"lemma": "groet", "pos": "noun", "details": {"article": "de", "plural": "groeten"}, "sentences": ["Doe de *groeten* aan je moeder als je haar ziet."]}
@@ -2972,7 +2972,7 @@
       "gloss": "move (shift something)",
       "entries": {
         "en": [
-        {"lemma": "to move", "pos": "verb", "details": {"note": "shift something", "past": "moved", "participle": "moved"}, "sentences": ["To make room, I *move* the heavy table."]}
+        {"lemma": "to move", "pos": "verb", "details": {"note": "shift something", "past": "moved", "participle": "moved"}, "sentences": ["To make room, I *move* the heavy table to the wall."]}
         ],
         "nl": [
         {"lemma": "verplaatsen", "pos": "verb", "details": {"pastSingular": "verplaatste", "pastPlural": "verplaatsten", "participle": "verplaatst", "auxiliary": "hebben"}, "sentences": ["Om ruimte te maken, *verplaats* ik de zware tafel naar de muur."]}
@@ -7306,7 +7306,7 @@
       "gloss": "lean (verb)",
       "entries": {
         "en": [
-        {"lemma": "to lean", "pos": "verb", "details": {"past": "leaned", "participle": "leaned"}, "sentences": ["After the long walk, I *lean* against the wall."]}
+        {"lemma": "to lean", "pos": "verb", "details": {"past": "leaned", "participle": "leaned"}, "sentences": ["After the long walk, I *lean* against the garden wall."]}
         ],
         "nl": [
         {"lemma": "leunen", "pos": "verb", "details": {"pastSingular": "leunde", "pastPlural": "leunden", "participle": "geleund", "auxiliary": "hebben"}, "sentences": ["Na de lange wandeling *leun* ik tegen de tuinmuur."]}
@@ -7318,7 +7318,7 @@
       "gloss": "hinder (verb)",
       "entries": {
         "en": [
-        {"lemma": "to hinder", "pos": "verb", "details": {"past": "hindered", "participle": "hindered"}, "sentences": ["The loud noise from the street *hinders* me."]}
+        {"lemma": "to hinder", "pos": "verb", "details": {"past": "hindered", "participle": "hindered"}, "sentences": ["The loud noise from the street *hinders* me while I study."]}
         ],
         "nl": [
         {"lemma": "hinderen", "pos": "verb", "details": {"pastSingular": "hinderde", "pastPlural": "hinderden", "participle": "gehinderd", "auxiliary": "hebben"}, "sentences": ["Het harde lawaai van de straat *hindert* mij tijdens het leren."]}
@@ -7330,7 +7330,7 @@
       "gloss": "drop in (verb)",
       "entries": {
         "en": [
-        {"lemma": "to drop in", "pos": "verb", "details": {"past": "dropped in", "participle": "dropped in"}, "sentences": ["When I pass his street, I *drop in*."]}
+        {"lemma": "to drop in", "pos": "verb", "details": {"past": "dropped in", "participle": "dropped in"}, "sentences": ["When I pass his street, I *drop in* for coffee."]}
         ],
         "nl": [
         {"lemma": "binnenlopen", "pos": "verb", "details": {"pastSingular": "liep binnen", "pastPlural": "liepen binnen", "participle": "binnengelopen", "auxiliary": "zijn"}, "sentences": ["Als ik langs zijn straat kom, *loop* ik even *binnen* voor koffie."]}
@@ -7366,7 +7366,7 @@
       "gloss": "depend (verb)",
       "entries": {
         "en": [
-        {"lemma": "to depend", "pos": "verb", "details": {"past": "depended", "participle": "depended"}, "sentences": ["Our picnic *depends* on the weather, so we check."]}
+        {"lemma": "to depend", "pos": "verb", "details": {"past": "depended", "participle": "depended"}, "sentences": ["Our picnic *depends* on the weather, so we check the forecast."]}
         ],
         "nl": [
         {"lemma": "afhangen", "pos": "verb", "details": {"pastSingular": "hing af", "pastPlural": "hingen af", "participle": "afgehangen", "auxiliary": "hebben"}, "sentences": ["Ons picknick *hangt af* van het weer, dus we kijken naar de voorspelling."]}
@@ -7390,7 +7390,7 @@
       "gloss": "hold out (verb)",
       "entries": {
         "en": [
-        {"lemma": "to hold out", "pos": "verb", "details": {"past": "held out", "participle": "held out"}, "sentences": ["It is so hot that I cannot *hold out*."]}
+        {"lemma": "to hold out", "pos": "verb", "details": {"past": "held out", "participle": "held out"}, "sentences": ["It is so hot in this room that I cannot *hold out* long."]}
         ],
         "nl": [
         {"lemma": "uithouden", "pos": "verb", "details": {"pastSingular": "hield uit", "pastPlural": "hielden uit", "participle": "uitgehouden", "auxiliary": "hebben"}, "sentences": ["Het is zo warm in deze kamer dat ik het niet lang kan *uithouden*."]}
@@ -7402,7 +7402,7 @@
       "gloss": "increase (verb)",
       "entries": {
         "en": [
-        {"lemma": "to increase", "pos": "verb", "details": {"past": "increased", "participle": "increased"}, "sentences": ["In December, the traffic on the motorway *increases*."]}
+        {"lemma": "to increase", "pos": "verb", "details": {"past": "increased", "participle": "increased"}, "sentences": ["In December, the traffic on the motorway *increases* every week."]}
         ],
         "nl": [
         {"lemma": "toenemen", "pos": "verb", "details": {"pastSingular": "nam toe", "pastPlural": "namen toe", "participle": "toegenomen", "auxiliary": "zijn"}, "sentences": ["In december *neemt* het verkeer op de snelweg elke week *toe*."]}
@@ -7414,7 +7414,7 @@
       "gloss": "comb (verb)",
       "entries": {
         "en": [
-        {"lemma": "to comb", "pos": "verb", "details": {"past": "combed", "participle": "combed"}, "sentences": ["Every morning, I *comb* my wet hair carefully."]}
+        {"lemma": "to comb", "pos": "verb", "details": {"past": "combed", "participle": "combed"}, "sentences": ["Every morning, I *comb* my wet hair in front of the mirror."]}
         ],
         "nl": [
         {"lemma": "kammen", "pos": "verb", "details": {"pastSingular": "kamde", "pastPlural": "kamden", "participle": "gekamd", "auxiliary": "hebben"}, "sentences": ["Elke ochtend *kam* ik mijn natte haar voor de spiegel."]}
@@ -7438,7 +7438,7 @@
       "gloss": "motivate (verb)",
       "entries": {
         "en": [
-        {"lemma": "to motivate", "pos": "verb", "details": {"past": "motivated", "participle": "motivated"}, "sentences": ["The coach *motivates* the tired team with a speech."]}
+        {"lemma": "to motivate", "pos": "verb", "details": {"past": "motivated", "participle": "motivated"}, "sentences": ["The coach *motivates* the tired team with a short speech."]}
         ],
         "nl": [
         {"lemma": "motiveren", "pos": "verb", "details": {"pastSingular": "motiveerde", "pastPlural": "motiveerden", "participle": "gemotiveerd", "auxiliary": "hebben"}, "sentences": ["De trainer *motiveert* het vermoeide team met een korte toespraak."]}
@@ -7450,7 +7450,7 @@
       "gloss": "soften (verb)",
       "entries": {
         "en": [
-        {"lemma": "to soften", "pos": "verb", "details": {"past": "softened", "participle": "softened"}, "sentences": ["This cream *softens* my dry hands in winter."]}
+        {"lemma": "to soften", "pos": "verb", "details": {"past": "softened", "participle": "softened"}, "sentences": ["This cream *softens* my dry hands in the cold winter."]}
         ],
         "nl": [
         {"lemma": "verzachten", "pos": "verb", "details": {"pastSingular": "verzachtte", "pastPlural": "verzachtten", "participle": "verzacht", "auxiliary": "hebben"}, "sentences": ["Deze crème *verzacht* mijn droge handen tijdens de koude winter."]}
@@ -7462,7 +7462,7 @@
       "gloss": "contribute (verb)",
       "entries": {
         "en": [
-        {"lemma": "to contribute", "pos": "verb", "details": {"past": "contributed", "participle": "contributed"}, "sentences": ["Everyone in the class *contributes* money to the present."]}
+        {"lemma": "to contribute", "pos": "verb", "details": {"past": "contributed", "participle": "contributed"}, "sentences": ["Everyone in the class *contributes* money to the birthday present."]}
         ],
         "nl": [
         {"lemma": "bijdragen", "pos": "verb", "details": {"pastSingular": "droeg bij", "pastPlural": "droegen bij", "participle": "bijgedragen", "auxiliary": "hebben"}, "sentences": ["Iedereen in de klas *draagt* geld *bij* aan het verjaardagscadeau."]}
@@ -7474,7 +7474,7 @@
       "gloss": "gather (verb)",
       "entries": {
         "en": [
-        {"lemma": "to gather", "pos": "verb", "details": {"past": "gathered", "participle": "gathered"}, "sentences": ["Every Friday, the neighbors *gather* in the park."]}
+        {"lemma": "to gather", "pos": "verb", "details": {"past": "gathered", "participle": "gathered"}, "sentences": ["Every Friday, the neighbors *gather* in the park for a barbecue."]}
         ],
         "nl": [
         {"lemma": "samenkomen", "pos": "verb", "details": {"pastSingular": "kwam samen", "pastPlural": "kwamen samen", "participle": "samengekomen", "auxiliary": "zijn"}, "sentences": ["Elke vrijdag *komen* de buren in het park *samen* voor een barbecue."]}
@@ -7486,7 +7486,7 @@
       "gloss": "knock down (verb)",
       "entries": {
         "en": [
-        {"lemma": "to knock down", "pos": "verb", "details": {"past": "knocked down", "participle": "knocked down"}, "sentences": ["The strong wind *knocks down* the bike outside."]}
+        {"lemma": "to knock down", "pos": "verb", "details": {"past": "knocked down", "participle": "knocked down"}, "sentences": ["The strong wind *knocks down* the bike outside the shop."]}
         ],
         "nl": [
         {"lemma": "neerslaan", "pos": "verb", "details": {"pastSingular": "sloeg neer", "pastPlural": "sloegen neer", "participle": "neergeslagen", "auxiliary": "hebben"}, "sentences": ["De harde wind *slaat* de fiets voor de winkel *neer*."]}
@@ -7534,7 +7534,7 @@
       "gloss": "refer (verb)",
       "entries": {
         "en": [
-        {"lemma": "to refer", "pos": "verb", "details": {"past": "referred", "participle": "referred"}, "sentences": ["In my essay, I *refer* to a book."]}
+        {"lemma": "to refer", "pos": "verb", "details": {"past": "referred", "participle": "referred"}, "sentences": ["In my essay, I *refer* to the book on page ten."]}
         ],
         "nl": [
         {"lemma": "verwijzen", "pos": "verb", "details": {"pastSingular": "verwees", "pastPlural": "verwezen", "participle": "verwezen", "auxiliary": "hebben"}, "sentences": ["In mijn opstel *verwijs* ik naar het boek op pagina tien."]}
@@ -7546,7 +7546,7 @@
       "gloss": "drop (verb)",
       "entries": {
         "en": [
-        {"lemma": "to drop", "pos": "verb", "details": {"past": "dropped", "participle": "dropped"}, "sentences": ["The plane *drops* food over the flooded village."]}
+        {"lemma": "to drop", "pos": "verb", "details": {"past": "dropped", "participle": "dropped"}, "sentences": ["The plane *drops* food and water over the flooded village."]}
         ],
         "nl": [
         {"lemma": "droppen", "pos": "verb", "details": {"pastSingular": "dropte", "pastPlural": "dropten", "participle": "gedropt", "auxiliary": "hebben"}, "sentences": ["Het vliegtuig *dropt* eten en water boven het overstroomde dorp."]}
@@ -7558,7 +7558,7 @@
       "gloss": "contact (verb)",
       "entries": {
         "en": [
-        {"lemma": "to contact", "pos": "verb", "details": {"past": "contacted", "participle": "contacted"}, "sentences": ["If the heating breaks, I *contact* the landlord."]}
+        {"lemma": "to contact", "pos": "verb", "details": {"past": "contacted", "participle": "contacted"}, "sentences": ["If the heating breaks, I *contact* the landlord by phone."]}
         ],
         "nl": [
         {"lemma": "contacteren", "pos": "verb", "details": {"pastSingular": "contacteerde", "pastPlural": "contacteerden", "participle": "gecontacteerd", "auxiliary": "hebben"}, "sentences": ["Als de verwarming kapotgaat, *contacteer* ik de huisbaas per telefoon."]}
@@ -7582,7 +7582,7 @@
       "gloss": "get hold of (verb)",
       "entries": {
         "en": [
-        {"lemma": "to get hold of", "pos": "verb", "details": {"past": "got hold of", "participle": "got hold of"}, "sentences": ["I finally *get hold of* a ticket for tonight."]}
+        {"lemma": "to get hold of", "pos": "verb", "details": {"past": "got hold of", "participle": "got hold of"}, "sentences": ["I finally *get hold of* a ticket for tonight's concert."]}
         ],
         "nl": [
         {"lemma": "bemachtigen", "pos": "verb", "details": {"pastSingular": "bemachtigde", "pastPlural": "bemachtigden", "participle": "bemachtigd", "auxiliary": "hebben"}, "sentences": ["Ik *bemachtig* eindelijk een kaartje voor het concert van vanavond."]}
@@ -7594,7 +7594,7 @@
       "gloss": "lock out (verb)",
       "entries": {
         "en": [
-        {"lemma": "to lock out", "pos": "verb", "details": {"past": "locked out", "participle": "locked out"}, "sentences": ["The angry neighbors *lock* him *out* of the garden."]}
+        {"lemma": "to lock out", "pos": "verb", "details": {"past": "locked out", "participle": "locked out"}, "sentences": ["The angry neighbors *lock* him *out* of the shared garden."]}
         ],
         "nl": [
         {"lemma": "buitensluiten", "pos": "verb", "details": {"pastSingular": "sloot buiten", "pastPlural": "sloten buiten", "participle": "buitengesloten", "auxiliary": "hebben"}, "sentences": ["De boze buren *sluiten* hem *buiten* van de gedeelde tuin."]}
@@ -7606,7 +7606,7 @@
       "gloss": "shift (verb)",
       "entries": {
         "en": [
-        {"lemma": "to shift", "pos": "verb", "details": {"past": "shifted", "participle": "shifted"}, "sentences": ["Because of the flu, we *shift* the meeting."]}
+        {"lemma": "to shift", "pos": "verb", "details": {"past": "shifted", "participle": "shifted"}, "sentences": ["Because of the flu, we *shift* the meeting to Thursday."]}
         ],
         "nl": [
         {"lemma": "verschuiven", "pos": "verb", "details": {"pastSingular": "verschoof", "pastPlural": "verschoven", "participle": "verschoven", "auxiliary": "hebben/zijn"}, "sentences": ["Vanwege de griep *verschuiven* wij de vergadering naar donderdag."]}
@@ -7630,7 +7630,7 @@
       "gloss": "restrain (verb)",
       "entries": {
         "en": [
-        {"lemma": "to restrain", "pos": "verb", "details": {"past": "restrained", "participle": "restrained"}, "sentences": ["When the referee is unfair, I *restrain* my anger."]}
+        {"lemma": "to restrain", "pos": "verb", "details": {"past": "restrained", "participle": "restrained"}, "sentences": ["When the referee is unfair, I *restrain* my anger and stay calm."]}
         ],
         "nl": [
         {"lemma": "bedwingen", "pos": "verb", "details": {"pastSingular": "bedwong", "pastPlural": "bedwongen", "participle": "bedwongen", "auxiliary": "hebben"}, "sentences": ["Als de scheidsrechter oneerlijk is, *bedwing* ik mijn woede en blijf kalm."]}
@@ -7642,7 +7642,7 @@
       "gloss": "fish (verb)",
       "entries": {
         "en": [
-        {"lemma": "to fish", "pos": "verb", "details": {"past": "fished", "participle": "fished"}, "sentences": ["On Sunday morning, we *fish* in the quiet lake."]}
+        {"lemma": "to fish", "pos": "verb", "details": {"past": "fished", "participle": "fished"}, "sentences": ["On Sunday morning, we *fish* in the quiet lake behind the forest."]}
         ],
         "nl": [
         {"lemma": "vissen", "pos": "verb", "details": {"pastSingular": "viste", "pastPlural": "visten", "participle": "gevist", "auxiliary": "hebben"}, "sentences": ["Op zondagochtend *vissen* wij in het rustige meer achter het bos."]}
@@ -7654,7 +7654,7 @@
       "gloss": "renew (verb)",
       "entries": {
         "en": [
-        {"lemma": "to renew", "pos": "verb", "details": {"past": "renewed", "participle": "renewed"}, "sentences": ["Every five years, I *renew* my passport."]}
+        {"lemma": "to renew", "pos": "verb", "details": {"past": "renewed", "participle": "renewed"}, "sentences": ["Every five years, I *renew* my passport at the town hall."]}
         ],
         "nl": [
         {"lemma": "vernieuwen", "pos": "verb", "details": {"pastSingular": "vernieuwde", "pastPlural": "vernieuwden", "participle": "vernieuwd", "auxiliary": "hebben"}, "sentences": ["Elke vijf jaar *vernieuw* ik mijn paspoort op het gemeentehuis."]}
@@ -7678,7 +7678,7 @@
       "gloss": "wrap (verb)",
       "entries": {
         "en": [
-        {"lemma": "to wrap", "pos": "verb", "details": {"past": "wrapped", "participle": "wrapped"}, "sentences": ["Before the party, I *wrap* the gift neatly."]}
+        {"lemma": "to wrap", "pos": "verb", "details": {"past": "wrapped", "participle": "wrapped"}, "sentences": ["Before the party, I *wrap* the gift neatly in blue paper."]}
         ],
         "nl": [
         {"lemma": "wikkelen", "pos": "verb", "details": {"pastSingular": "wikkelde", "pastPlural": "wikkelden", "participle": "gewikkeld", "auxiliary": "hebben"}, "sentences": ["Voor het feest *wikkel* ik het cadeau in blauw papier *in*."]}
@@ -7690,7 +7690,7 @@
       "gloss": "bring in (verb)",
       "entries": {
         "en": [
-        {"lemma": "to bring in", "pos": "verb", "details": {"past": "brought in", "participle": "brought in"}, "sentences": ["In October, the farmers *bring in* the harvest."]}
+        {"lemma": "to bring in", "pos": "verb", "details": {"past": "brought in", "participle": "brought in"}, "sentences": ["In October, the farmers *bring in* the harvest before the rain."]}
         ],
         "nl": [
         {"lemma": "binnenhalen", "pos": "verb", "details": {"pastSingular": "haalde binnen", "pastPlural": "haalden binnen", "participle": "binnengehaald", "auxiliary": "hebben"}, "sentences": ["In oktober *halen* de boeren de oogst voor de regen *binnen*."]}
@@ -7750,7 +7750,7 @@
       "gloss": "find out (verb)",
       "entries": {
         "en": [
-        {"lemma": "to find out", "pos": "verb", "details": {"past": "found out", "participle": "found out"}, "sentences": ["After a long search, I *find out* the truth."]}
+        {"lemma": "to find out", "pos": "verb", "details": {"past": "found out", "participle": "found out"}, "sentences": ["After a long search, I *find out* the truth about the letter."]}
         ],
         "nl": [
         {"lemma": "achterkomen", "pos": "verb", "details": {"pastSingular": "kwam achter", "pastPlural": "kwamen achter", "participle": "achtergekomen", "auxiliary": "zijn"}, "sentences": ["Na lang zoeken *kom* ik *achter* de waarheid over de brief."]}
@@ -7762,7 +7762,7 @@
       "gloss": "count down (verb)",
       "entries": {
         "en": [
-        {"lemma": "to count down", "pos": "verb", "details": {"past": "counted down", "participle": "counted down"}, "sentences": ["At midnight, we *count down* the last ten seconds."]}
+        {"lemma": "to count down", "pos": "verb", "details": {"past": "counted down", "participle": "counted down"}, "sentences": ["At midnight, we *count down* the last ten seconds together."]}
         ],
         "nl": [
         {"lemma": "aftellen", "pos": "verb", "details": {"pastSingular": "telde af", "pastPlural": "telden af", "participle": "afgeteld", "auxiliary": "hebben"}, "sentences": ["Om middernacht *tellen* wij samen de laatste tien seconden *af*."]}
@@ -7774,7 +7774,7 @@
       "gloss": "pose (verb)",
       "entries": {
         "en": [
-        {"lemma": "to pose", "pos": "verb", "details": {"past": "posed", "participle": "posed"}, "sentences": ["She *poses* in front of the castle."]}
+        {"lemma": "to pose", "pos": "verb", "details": {"past": "posed", "participle": "posed"}, "sentences": ["She *poses* in front of the old castle for a photo."]}
         ],
         "nl": [
         {"lemma": "poseren", "pos": "verb", "details": {"pastSingular": "poseerde", "pastPlural": "poseerden", "participle": "geposeerd", "auxiliary": "hebben"}, "sentences": ["Zij *poseert* voor het oude kasteel voor een foto."]}
@@ -7798,7 +7798,7 @@
       "gloss": "adoption (noun)",
       "entries": {
         "en": [
-        {"lemma": "adoption", "pos": "noun", "details": {"plural": "adoptions"}, "sentences": ["After two years of waiting, the *adoption* is complete."]}
+        {"lemma": "adoption", "pos": "noun", "details": {"plural": "adoptions"}, "sentences": ["After two years of waiting, the *adoption* of the baby is finally complete."]}
         ],
         "nl": [
         {"lemma": "adoptie", "pos": "noun", "details": {"article": "de", "plural": "adopties"}, "sentences": ["Na twee jaar wachten is de *adoptie* van de baby eindelijk rond."]}
@@ -7810,7 +7810,7 @@
       "gloss": "succumb (verb)",
       "entries": {
         "en": [
-        {"lemma": "to succumb", "pos": "verb", "details": {"past": "succumbed", "participle": "succumbed"}, "sentences": ["After weeks of work, he *succumbs* to the pressure."]}
+        {"lemma": "to succumb", "pos": "verb", "details": {"past": "succumbed", "participle": "succumbed"}, "sentences": ["After weeks of work, he *succumbs* to the pressure and rests."]}
         ],
         "nl": [
         {"lemma": "bezwijken", "pos": "verb", "details": {"pastSingular": "bezweek", "pastPlural": "bezweken", "participle": "bezweken", "auxiliary": "zijn"}, "sentences": ["Na weken werk *bezwijkt* hij onder de druk en rust uit."]}
@@ -7846,7 +7846,7 @@
       "gloss": "dry out (verb)",
       "entries": {
         "en": [
-        {"lemma": "to dry out", "pos": "verb", "details": {"past": "dried out", "participle": "dried out"}, "sentences": ["In the hot summer, the garden soil *dries out*."]}
+        {"lemma": "to dry out", "pos": "verb", "details": {"past": "dried out", "participle": "dried out"}, "sentences": ["In the hot summer, the soil in our garden *dries out*."]}
         ],
         "nl": [
         {"lemma": "uitdrogen", "pos": "verb", "details": {"pastSingular": "droogde uit", "pastPlural": "droogden uit", "participle": "uitgedroogd", "auxiliary": "zijn"}, "sentences": ["In de hete zomer *droogt* de grond in onze tuin *uit*."]}
@@ -7858,7 +7858,7 @@
       "gloss": "rise (arise)",
       "entries": {
         "en": [
-        {"lemma": "to rise", "pos": "verb", "details": {"note": "arise", "past": "rose", "participle": "risen"}, "sentences": ["During the meeting, a difficult question *arises* about money."]}
+        {"lemma": "to rise", "pos": "verb", "details": {"note": "arise", "past": "rose", "participle": "risen"}, "sentences": ["During the meeting, a difficult question *arises* about the budget."]}
         ],
         "nl": [
         {"lemma": "rijzen", "pos": "verb", "details": {"pastSingular": "rees", "pastPlural": "rezen", "participle": "gerezen", "auxiliary": "zijn"}, "sentences": ["Tijdens de vergadering *rijst* er een lastige vraag over het budget."]}
@@ -7870,7 +7870,7 @@
       "gloss": "pin down (verb)",
       "entries": {
         "en": [
-        {"lemma": "to pin down", "pos": "verb", "details": {"past": "pinned down", "participle": "pinned down"}, "sentences": ["In the wind, I *pin down* the paper."]}
+        {"lemma": "to pin down", "pos": "verb", "details": {"past": "pinned down", "participle": "pinned down"}, "sentences": ["In the strong wind, I *pin down* the paper with a stone."]}
         ],
         "nl": [
         {"lemma": "vastzetten", "pos": "verb", "details": {"pastSingular": "zette vast", "pastPlural": "zetten vast", "participle": "vastgezet", "auxiliary": "hebben"}, "sentences": ["In de harde wind *zet* ik het papier met een steen *vast*."]}
@@ -7882,7 +7882,7 @@
       "gloss": "stabilize (verb)",
       "entries": {
         "en": [
-        {"lemma": "to stabilize", "pos": "verb", "details": {"past": "stabilized", "participle": "stabilized"}, "sentences": ["After the storm, the situation slowly *stabilizes* again."]}
+        {"lemma": "to stabilize", "pos": "verb", "details": {"past": "stabilized", "participle": "stabilized"}, "sentences": ["After the storm, the situation in the village slowly *stabilizes*."]}
         ],
         "nl": [
         {"lemma": "stabiliseren", "pos": "verb", "details": {"pastSingular": "stabiliseerde", "pastPlural": "stabiliseerden", "participle": "gestabiliseerd", "auxiliary": "hebben/zijn"}, "sentences": ["Na de storm *stabiliseert* de situatie in het dorp langzaam."]}
@@ -7906,7 +7906,7 @@
       "gloss": "stamp (verb)",
       "entries": {
         "en": [
-        {"lemma": "to stamp", "pos": "verb", "details": {"past": "stamped", "participle": "stamped"}, "sentences": ["The angry child *stamps* its feet on the floor."]}
+        {"lemma": "to stamp", "pos": "verb", "details": {"past": "stamped", "participle": "stamped"}, "sentences": ["The angry child *stamps* its feet on the kitchen floor."]}
         ],
         "nl": [
         {"lemma": "stampen", "pos": "verb", "details": {"pastSingular": "stampte", "pastPlural": "stampten", "participle": "gestampt", "auxiliary": "hebben"}, "sentences": ["Het boze kind *stampt* met zijn voeten op de keukenvloer."]}
@@ -7930,7 +7930,7 @@
       "gloss": "forfeit (verb)",
       "entries": {
         "en": [
-        {"lemma": "to forfeit", "pos": "verb", "details": {"past": "forfeited", "participle": "forfeited"}, "sentences": ["If he cheats, he *forfeits* his right."]}
+        {"lemma": "to forfeit", "pos": "verb", "details": {"past": "forfeited", "participle": "forfeited"}, "sentences": ["If he cheats at the game, he *forfeits* his right to win."]}
         ],
         "nl": [
         {"lemma": "verspelen", "pos": "verb", "details": {"pastSingular": "verspeelde", "pastPlural": "verspeelden", "participle": "verspeeld", "auxiliary": "hebben"}, "sentences": ["Als hij vals speelt bij het spel, *verspeelt* hij zijn recht om te winnen."]}
@@ -7942,7 +7942,7 @@
       "gloss": "behold (verb)",
       "entries": {
         "en": [
-        {"lemma": "to behold", "pos": "verb", "details": {"past": "beheld", "participle": "beheld"}, "sentences": ["From the mountain top, we *behold* the green valley."]}
+        {"lemma": "to behold", "pos": "verb", "details": {"past": "beheld", "participle": "beheld"}, "sentences": ["From the mountain top, we *behold* the wide green valley."]}
         ],
         "nl": [
         {"lemma": "aanschouwen", "pos": "verb", "details": {"pastSingular": "aanschouwde", "pastPlural": "aanschouwden", "participle": "aanschouwd", "auxiliary": "hebben"}, "sentences": ["Vanaf de bergtop *aanschouwen* wij de wijde groene vallei."]}
@@ -7954,7 +7954,7 @@
       "gloss": "flatter (verb)",
       "entries": {
         "en": [
-        {"lemma": "to flatter", "pos": "verb", "details": {"past": "flattered", "participle": "flattered"}, "sentences": ["He *flatters* me with kind words to get something."]}
+        {"lemma": "to flatter", "pos": "verb", "details": {"past": "flattered", "participle": "flattered"}, "sentences": ["He *flatters* me with kind words because he wants a favor."]}
         ],
         "nl": [
         {"lemma": "vleien", "pos": "verb", "details": {"pastSingular": "vleide", "pastPlural": "vleiden", "participle": "gevleid", "auxiliary": "hebben"}, "sentences": ["Hij *vleit* mij met lieve woorden omdat hij een gunst wil."]}
@@ -7966,7 +7966,7 @@
       "gloss": "show around (verb)",
       "entries": {
         "en": [
-        {"lemma": "to show around", "pos": "verb", "details": {"past": "showed around", "participle": "shown around"}, "sentences": ["When guests arrive, I *show* them *around* the house."]}
+        {"lemma": "to show around", "pos": "verb", "details": {"past": "showed around", "participle": "shown around"}, "sentences": ["When guests arrive, I *show* them *around* our new house."]}
         ],
         "nl": [
         {"lemma": "rondleiden", "pos": "verb", "details": {"pastSingular": "leidde rond", "pastPlural": "leidden rond", "participle": "rondgeleid", "auxiliary": "hebben"}, "sentences": ["Als er gasten komen, *leid* ik ze door ons nieuwe huis *rond*."]}
@@ -7978,7 +7978,7 @@
       "gloss": "proclaim (verb)",
       "entries": {
         "en": [
-        {"lemma": "to proclaim", "pos": "verb", "details": {"past": "proclaimed", "participle": "proclaimed"}, "sentences": ["The mayor *proclaims* the good news from the balcony."]}
+        {"lemma": "to proclaim", "pos": "verb", "details": {"past": "proclaimed", "participle": "proclaimed"}, "sentences": ["The mayor *proclaims* the good news from the town hall balcony."]}
         ],
         "nl": [
         {"lemma": "verkondigen", "pos": "verb", "details": {"pastSingular": "verkondigde", "pastPlural": "verkondigden", "participle": "verkondigd", "auxiliary": "hebben"}, "sentences": ["De burgemeester *verkondigt* het goede nieuws vanaf het balkon van het gemeentehuis."]}
@@ -8014,7 +8014,7 @@
       "gloss": "tend (verb)",
       "entries": {
         "en": [
-        {"lemma": "to tend", "pos": "verb", "details": {"past": "tended", "participle": "tended"}, "sentences": ["He *tends* to be late when it rains."]}
+        {"lemma": "to tend", "pos": "verb", "details": {"past": "tended", "participle": "tended"}, "sentences": ["He *tends* to be late when the weather is bad."]}
         ],
         "nl": [
         {"lemma": "neigen", "pos": "verb", "details": {"pastSingular": "neigde", "pastPlural": "neigden", "participle": "geneigd", "auxiliary": "hebben"}, "sentences": ["Hij *neigt* ernaar te laat te komen als het slecht weer is."]}
@@ -8038,7 +8038,7 @@
       "gloss": "provoke (verb)",
       "entries": {
         "en": [
-        {"lemma": "to provoke", "pos": "verb", "details": {"past": "provoked", "participle": "provoked"}, "sentences": ["The boy *provokes* his sister by hiding her toy."]}
+        {"lemma": "to provoke", "pos": "verb", "details": {"past": "provoked", "participle": "provoked"}, "sentences": ["The boy *provokes* his sister by hiding her favorite toy."]}
         ],
         "nl": [
         {"lemma": "provoceren", "pos": "verb", "details": {"pastSingular": "provoceerde", "pastPlural": "provoceerden", "participle": "geprovoceerd", "auxiliary": "hebben"}, "sentences": ["De jongen *provoceert* zijn zus door haar lievelingsspeelgoed te verstoppen."]}
@@ -8062,7 +8062,7 @@
       "gloss": "scratch (mark)",
       "entries": {
         "en": [
-        {"lemma": "to scratch", "pos": "verb", "details": {"note": "mark", "past": "scratched", "participle": "scratched"}, "sentences": ["With a nail, I *scratch* the new table."]}
+        {"lemma": "to scratch", "pos": "verb", "details": {"note": "mark", "past": "scratched", "participle": "scratched"}, "sentences": ["With a nail, I accidentally *scratch* the new table."]}
         ],
         "nl": [
         {"lemma": "krassen", "pos": "verb", "details": {"pastSingular": "kraste", "pastPlural": "krasten", "participle": "gekrast", "auxiliary": "hebben"}, "sentences": ["Met een spijker *kras* ik per ongeluk de nieuwe tafel."]}
@@ -8074,7 +8074,7 @@
       "gloss": "dominate (verb)",
       "entries": {
         "en": [
-        {"lemma": "to dominate", "pos": "verb", "details": {"past": "dominated", "participle": "dominated"}, "sentences": ["The tall player *dominates* the game from the start."]}
+        {"lemma": "to dominate", "pos": "verb", "details": {"past": "dominated", "participle": "dominated"}, "sentences": ["The tall player *dominates* the game from the first minute."]}
         ],
         "nl": [
         {"lemma": "domineren", "pos": "verb", "details": {"pastSingular": "domineerde", "pastPlural": "domineerden", "participle": "gedomineerd", "auxiliary": "hebben"}, "sentences": ["De lange speler *domineert* de wedstrijd vanaf de eerste minuut."]}
@@ -8098,7 +8098,7 @@
       "gloss": "forge (metal)",
       "entries": {
         "en": [
-        {"lemma": "to forge", "pos": "verb", "details": {"note": "metal", "past": "forged", "participle": "forged"}, "sentences": ["In his hot workshop, the smith *forges* a sword."]}
+        {"lemma": "to forge", "pos": "verb", "details": {"note": "metal", "past": "forged", "participle": "forged"}, "sentences": ["In his hot workshop, the smith *forges* a sword of iron."]}
         ],
         "nl": [
         {"lemma": "smeden", "pos": "verb", "details": {"pastSingular": "smeedde", "pastPlural": "smeedden", "participle": "gesmeed", "auxiliary": "hebben"}, "sentences": ["In zijn hete werkplaats *smeedt* de smid een zwaard van ijzer."]}
@@ -8110,7 +8110,7 @@
       "gloss": "land (come down)",
       "entries": {
         "en": [
-        {"lemma": "to land", "pos": "verb", "details": {"note": "come down", "past": "landed", "participle": "landed"}, "sentences": ["A small bird *lands* on the branch outside."]}
+        {"lemma": "to land", "pos": "verb", "details": {"note": "come down", "past": "landed", "participle": "landed"}, "sentences": ["A small bird *lands* on the branch outside my window."]}
         ],
         "nl": [
         {"lemma": "neerkomen", "pos": "verb", "details": {"pastSingular": "kwam neer", "pastPlural": "kwamen neer", "participle": "neergekomen", "auxiliary": "zijn"}, "sentences": ["Een klein vogeltje *komt neer* op de tak voor mijn raam."]}
@@ -8122,7 +8122,7 @@
       "gloss": "get through (verb)",
       "entries": {
         "en": [
-        {"lemma": "to get through", "pos": "verb", "details": {"past": "got through", "participle": "got through"}, "sentences": ["With warm clothes and food, we *get through* winter."]}
+        {"lemma": "to get through", "pos": "verb", "details": {"past": "got through", "participle": "got through"}, "sentences": ["With warm clothes and enough food, we *get through* winter."]}
         ],
         "nl": [
         {"lemma": "doorkomen", "pos": "verb", "details": {"pastSingular": "kwam door", "pastPlural": "kwamen door", "participle": "doorgekomen", "auxiliary": "zijn"}, "sentences": ["Met warme kleren en genoeg eten *komen* wij de winter *door*."]}
@@ -8134,7 +8134,7 @@
       "gloss": "redo (verb)",
       "entries": {
         "en": [
-        {"lemma": "to redo", "pos": "verb", "details": {"past": "redid", "participle": "redone"}, "sentences": ["It is messy, so I *redo* it."]}
+        {"lemma": "to redo", "pos": "verb", "details": {"past": "redid", "participle": "redone"}, "sentences": ["The teacher says it is messy, so I *redo* the work."]}
         ],
         "nl": [
         {"lemma": "overdoen", "pos": "verb", "details": {"pastSingular": "deed over", "pastPlural": "deden over", "participle": "overgedaan", "auxiliary": "hebben"}, "sentences": ["De leraar zegt dat het slordig is, dus ik *doe* het werk *over*."]}
@@ -8146,7 +8146,7 @@
       "gloss": "stoke (verb)",
       "entries": {
         "en": [
-        {"lemma": "to stoke", "pos": "verb", "details": {"past": "stoked", "participle": "stoked"}, "sentences": ["On a cold night, I *stoke* the fire."]}
+        {"lemma": "to stoke", "pos": "verb", "details": {"past": "stoked", "participle": "stoked"}, "sentences": ["On a cold evening, I *stoke* the fire with more wood."]}
         ],
         "nl": [
         {"lemma": "stoken", "pos": "verb", "details": {"pastSingular": "stookte", "pastPlural": "stookten", "participle": "gestookt", "auxiliary": "hebben"}, "sentences": ["Op een koude avond *stook* ik het vuur op met meer hout."]}
@@ -8170,7 +8170,7 @@
       "gloss": "dim (verb)",
       "entries": {
         "en": [
-        {"lemma": "to dim", "pos": "verb", "details": {"past": "dimmed", "participle": "dimmed"}, "sentences": ["For a cozy movie night, I *dim* the lights."]}
+        {"lemma": "to dim", "pos": "verb", "details": {"past": "dimmed", "participle": "dimmed"}, "sentences": ["For a cozy movie night, I *dim* the lights in the living room."]}
         ],
         "nl": [
         {"lemma": "dimmen", "pos": "verb", "details": {"pastSingular": "dimde", "pastPlural": "dimden", "participle": "gedimd", "auxiliary": "hebben"}, "sentences": ["Voor een gezellige filmavond *dim* ik de lichten in de woonkamer."]}
@@ -8182,7 +8182,7 @@
       "gloss": "keep away (verb)",
       "entries": {
         "en": [
-        {"lemma": "to keep away", "pos": "verb", "details": {"past": "kept away", "participle": "kept away"}, "sentences": ["I *keep* the kids *away* from the grill."]}
+        {"lemma": "to keep away", "pos": "verb", "details": {"past": "kept away", "participle": "kept away"}, "sentences": ["At the barbecue, I *keep* the kids *away* from the hot grill."]}
         ],
         "nl": [
         {"lemma": "afhouden", "pos": "verb", "details": {"pastSingular": "hield af", "pastPlural": "hielden af", "participle": "afgehouden", "auxiliary": "hebben"}, "sentences": ["Bij de barbecue *houd* ik de kinderen *af* van de hete grill."]}
@@ -8194,7 +8194,7 @@
       "gloss": "nod (verb)",
       "entries": {
         "en": [
-        {"lemma": "to nod", "pos": "verb", "details": {"past": "nodded", "participle": "nodded"}, "sentences": ["When the teacher asks if we understand, I *nod*."]}
+        {"lemma": "to nod", "pos": "verb", "details": {"past": "nodded", "participle": "nodded"}, "sentences": ["When the teacher asks if we understand, I *nod* and smile."]}
         ],
         "nl": [
         {"lemma": "knikken", "pos": "verb", "details": {"pastSingular": "knikte", "pastPlural": "knikten", "participle": "geknikt", "auxiliary": "hebben"}, "sentences": ["Als de leraar vraagt of we het snappen, *knik* ik en glimlach."]}
@@ -8206,7 +8206,7 @@
       "gloss": "whine (verb)",
       "entries": {
         "en": [
-        {"lemma": "to whine", "pos": "verb", "details": {"past": "whined", "participle": "whined"}, "sentences": ["In the shop, the tired child *whines* for candy."]}
+        {"lemma": "to whine", "pos": "verb", "details": {"past": "whined", "participle": "whined"}, "sentences": ["In the supermarket, the tired child *whines* because he wants candy."]}
         ],
         "nl": [
         {"lemma": "jammeren", "pos": "verb", "details": {"pastSingular": "jammerde", "pastPlural": "jammerden", "participle": "gejammerd", "auxiliary": "hebben"}, "sentences": ["In de supermarkt *jammert* het vermoeide kind omdat hij snoep wil."]}
@@ -8218,7 +8218,7 @@
       "gloss": "refine (verb)",
       "entries": {
         "en": [
-        {"lemma": "to refine", "pos": "verb", "details": {"past": "refined", "participle": "refined"}, "sentences": ["After the first test, we *refine* the plan."]}
+        {"lemma": "to refine", "pos": "verb", "details": {"past": "refined", "participle": "refined"}, "sentences": ["After the first test, we *refine* the plan with new ideas."]}
         ],
         "nl": [
         {"lemma": "verfijnen", "pos": "verb", "details": {"pastSingular": "verfijnde", "pastPlural": "verfijnden", "participle": "verfijnd", "auxiliary": "hebben"}, "sentences": ["Na de eerste test *verfijnen* wij het plan met nieuwe ideeën."]}
@@ -8242,7 +8242,7 @@
       "gloss": "hypnotize (verb)",
       "entries": {
         "en": [
-        {"lemma": "to hypnotize", "pos": "verb", "details": {"past": "hypnotized", "participle": "hypnotized"}, "sentences": ["On stage, the magician *hypnotizes* a man."]}
+        {"lemma": "to hypnotize", "pos": "verb", "details": {"past": "hypnotized", "participle": "hypnotized"}, "sentences": ["On stage, the magician *hypnotizes* a man from the audience."]}
         ],
         "nl": [
         {"lemma": "hypnotiseren", "pos": "verb", "details": {"pastSingular": "hypnotiseerde", "pastPlural": "hypnotiseerden", "participle": "gehypnotiseerd", "auxiliary": "hebben"}, "sentences": ["Op het podium *hypnotiseert* de goochelaar een man uit het publiek."]}
@@ -8266,7 +8266,7 @@
       "gloss": "rebuild (verb)",
       "entries": {
         "en": [
-        {"lemma": "to rebuild", "pos": "verb", "details": {"past": "rebuilt", "participle": "rebuilt"}, "sentences": ["After the flood, the villagers *rebuild* their house."]}
+        {"lemma": "to rebuild", "pos": "verb", "details": {"past": "rebuilt", "participle": "rebuilt"}, "sentences": ["After the flood, the villagers *rebuild* their house with new bricks."]}
         ],
         "nl": [
         {"lemma": "herbouwen", "pos": "verb", "details": {"pastSingular": "herbouwde", "pastPlural": "herbouwden", "participle": "herbouwd", "auxiliary": "hebben"}, "sentences": ["Na de overstroming *herbouwen* de dorpelingen hun huis met nieuwe stenen."]}
@@ -8278,7 +8278,7 @@
       "gloss": "disagreement (noun)",
       "entries": {
         "en": [
-        {"lemma": "disagreement", "pos": "noun", "details": {"plural": "disagreements"}, "sentences": ["My sister and I have a *disagreement* about chores."]}
+        {"lemma": "disagreement", "pos": "noun", "details": {"plural": "disagreements"}, "sentences": ["My sister and I have a *disagreement* about who does the cleaning."]}
         ],
         "nl": [
         {"lemma": "meningsverschil", "pos": "noun", "details": {"article": "het", "plural": "meningsverschillen"}, "sentences": ["Mijn zus en ik hebben een *meningsverschil* over wie er schoonmaakt."]}
@@ -8290,7 +8290,7 @@
       "gloss": "shake off (verb)",
       "entries": {
         "en": [
-        {"lemma": "to shake off", "pos": "verb", "details": {"past": "shook off", "participle": "shaken off"}, "sentences": ["Outside the door, I *shake off* the dust."]}
+        {"lemma": "to shake off", "pos": "verb", "details": {"past": "shook off", "participle": "shaken off"}, "sentences": ["Outside the door, I *shake off* the dust from my coat."]}
         ],
         "nl": [
         {"lemma": "afschudden", "pos": "verb", "details": {"pastSingular": "schudde af", "pastPlural": "schudden af", "participle": "afgeschud", "auxiliary": "hebben"}, "sentences": ["Buiten de deur *schud* ik het stof van mijn jas *af*."]}
@@ -8314,7 +8314,7 @@
       "gloss": "wipe (verb)",
       "entries": {
         "en": [
-        {"lemma": "to wipe", "pos": "verb", "details": {"past": "wiped", "participle": "wiped"}, "sentences": ["After dinner, I *wipe* the sticky table clean."]}
+        {"lemma": "to wipe", "pos": "verb", "details": {"past": "wiped", "participle": "wiped"}, "sentences": ["After dinner, I *wipe* the sticky table clean with a cloth."]}
         ],
         "nl": [
         {"lemma": "afvegen", "pos": "verb", "details": {"pastSingular": "veegde af", "pastPlural": "veegden af", "participle": "afgeveegd", "auxiliary": "hebben"}, "sentences": ["Na het eten *veeg* ik de plakkerige tafel met een doek *af*."]}
@@ -8326,7 +8326,7 @@
       "gloss": "patch up (verb)",
       "entries": {
         "en": [
-        {"lemma": "to patch up", "pos": "verb", "details": {"past": "patched up", "participle": "patched up"}, "sentences": ["Instead of buying new, I *patch up* this chair."]}
+        {"lemma": "to patch up", "pos": "verb", "details": {"past": "patched up", "participle": "patched up"}, "sentences": ["Instead of buying new, I *patch up* the old chair."]}
         ],
         "nl": [
         {"lemma": "oplappen", "pos": "verb", "details": {"pastSingular": "lapte op", "pastPlural": "lapten op", "participle": "opgelapt", "auxiliary": "hebben"}, "sentences": ["In plaats van een nieuwe te kopen, *lap* ik de oude stoel *op*."]}
@@ -8338,7 +8338,7 @@
       "gloss": "stay home (verb)",
       "entries": {
         "en": [
-        {"lemma": "to stay home", "pos": "verb", "details": {"past": "stayed home", "participle": "stayed home"}, "sentences": ["Because I am sick, I *stay home* today."]}
+        {"lemma": "to stay home", "pos": "verb", "details": {"past": "stayed home", "participle": "stayed home"}, "sentences": ["Because I am sick, I *stay home* today and rest."]}
         ],
         "nl": [
         {"lemma": "thuisblijven", "pos": "verb", "details": {"pastSingular": "bleef thuis", "pastPlural": "bleven thuis", "participle": "thuisgebleven", "auxiliary": "zijn"}, "sentences": ["Omdat ik ziek ben, *blijf* ik vandaag *thuis* en rust ik uit."]}
@@ -8350,7 +8350,7 @@
       "gloss": "knock (on a door)",
       "entries": {
         "en": [
-        {"lemma": "to knock", "pos": "verb", "details": {"note": "on a door", "past": "knocked", "participle": "knocked"}, "sentences": ["Before entering the office, I *knock* on the door."]}
+        {"lemma": "to knock", "pos": "verb", "details": {"note": "on a door", "past": "knocked", "participle": "knocked"}, "sentences": ["Before entering the teacher's room, I *knock* on the door."]}
         ],
         "nl": [
         {"lemma": "aankloppen", "pos": "verb", "details": {"pastSingular": "klopte aan", "pastPlural": "klopten aan", "participle": "aangeklopt", "auxiliary": "hebben"}, "sentences": ["Voordat ik de kamer van de leraar binnenga, *klop* ik op de deur *aan*."]}
@@ -8362,7 +8362,7 @@
       "gloss": "criticize (verb)",
       "entries": {
         "en": [
-        {"lemma": "to criticize", "pos": "verb", "details": {"past": "criticized", "participle": "criticized"}, "sentences": ["At work, he *criticizes* the plan for its cost."]}
+        {"lemma": "to criticize", "pos": "verb", "details": {"past": "criticized", "participle": "criticized"}, "sentences": ["In the meeting, he *criticizes* the plan because it costs too much."]}
         ],
         "nl": [
         {"lemma": "bekritiseren", "pos": "verb", "details": {"pastSingular": "bekritiseerde", "pastPlural": "bekritiseerden", "participle": "bekritiseerd", "auxiliary": "hebben"}, "sentences": ["In de vergadering *bekritiseert* hij het plan omdat het te veel kost."]}
@@ -8374,7 +8374,7 @@
       "gloss": "pack (wrap)",
       "entries": {
         "en": [
-        {"lemma": "to pack", "pos": "verb", "details": {"note": "wrap", "past": "packed", "participle": "packed"}, "sentences": ["At the shop, the clerk *packs* the gift."]}
+        {"lemma": "to pack", "pos": "verb", "details": {"note": "wrap", "past": "packed", "participle": "packed"}, "sentences": ["At the shop, the clerk *packs* the gift in nice paper."]}
         ],
         "nl": [
         {"lemma": "verpakken", "pos": "verb", "details": {"pastSingular": "verpakte", "pastPlural": "verpakten", "participle": "verpakt", "auxiliary": "hebben"}, "sentences": ["In de winkel *verpakt* de verkoper het cadeau in mooi papier."]}
@@ -8386,7 +8386,7 @@
       "gloss": "neutralize (verb)",
       "entries": {
         "en": [
-        {"lemma": "to neutralize", "pos": "verb", "details": {"past": "neutralized", "participle": "neutralized"}, "sentences": ["The police quickly *neutralize* the threat at the station."]}
+        {"lemma": "to neutralize", "pos": "verb", "details": {"past": "neutralized", "participle": "neutralized"}, "sentences": ["The police quickly *neutralize* the threat at the busy station."]}
         ],
         "nl": [
         {"lemma": "neutraliseren", "pos": "verb", "details": {"pastSingular": "neutraliseerde", "pastPlural": "neutraliseerden", "participle": "geneutraliseerd", "auxiliary": "hebben"}, "sentences": ["De politie *neutraliseert* snel de dreiging op het drukke station."]}
@@ -8398,7 +8398,7 @@
       "gloss": "result from (verb)",
       "entries": {
         "en": [
-        {"lemma": "to result from", "pos": "verb", "details": {"past": "resulted from", "participle": "resulted from"}, "sentences": ["The problem *results from* a mistake in the calculation."]}
+        {"lemma": "to result from", "pos": "verb", "details": {"past": "resulted from", "participle": "resulted from"}, "sentences": ["The problem *results from* a mistake in the first calculation."]}
         ],
         "nl": [
         {"lemma": "voortkomen", "pos": "verb", "details": {"pastSingular": "kwam voort", "pastPlural": "kwamen voort", "participle": "voortgekomen", "auxiliary": "zijn"}, "sentences": ["Het probleem *komt voort* uit een fout in de eerste berekening."]}
@@ -8410,7 +8410,7 @@
       "gloss": "hoist (verb)",
       "entries": {
         "en": [
-        {"lemma": "to hoist", "pos": "verb", "details": {"past": "hoisted", "participle": "hoisted"}, "sentences": ["Every morning at eight, the sailors *hoist* the flag."]}
+        {"lemma": "to hoist", "pos": "verb", "details": {"past": "hoisted", "participle": "hoisted"}, "sentences": ["Every morning at eight, the sailors *hoist* the flag on the ship."]}
         ],
         "nl": [
         {"lemma": "hijsen", "pos": "verb", "details": {"pastSingular": "hees", "pastPlural": "hesen", "participle": "gehesen", "auxiliary": "hebben"}, "sentences": ["Elke ochtend om acht uur *hijsen* de zeilers de vlag op het schip."]}
@@ -8434,7 +8434,7 @@
       "gloss": "discord (noun)",
       "entries": {
         "en": [
-        {"lemma": "discord", "pos": "noun", "details": {"uncountable": true}, "sentences": ["Since the money argument, there is *discord* at home."]}
+        {"lemma": "discord", "pos": "noun", "details": {"uncountable": true}, "sentences": ["Since the money argument, there is *discord* in the family."]}
         ],
         "nl": [
         {"lemma": "onenigheid", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Sinds de ruzie over geld is er *onenigheid* in de familie."]}
@@ -8470,7 +8470,7 @@
       "gloss": "pet (stroke)",
       "entries": {
         "en": [
-        {"lemma": "to pet", "pos": "verb", "details": {"note": "stroke", "past": "petted", "participle": "petted"}, "sentences": ["When I visit my aunt, I *pet* her dog."]}
+        {"lemma": "to pet", "pos": "verb", "details": {"note": "stroke", "past": "petted", "participle": "petted"}, "sentences": ["When I visit my aunt, I *pet* her friendly dog."]}
         ],
         "nl": [
         {"lemma": "aaien", "pos": "verb", "details": {"pastSingular": "aaide", "pastPlural": "aaiden", "participle": "geaaid", "auxiliary": "hebben"}, "sentences": ["Als ik mijn tante bezoek, *aai* ik haar vriendelijke hond."]}
@@ -8494,7 +8494,7 @@
       "gloss": "alert (verb)",
       "entries": {
         "en": [
-        {"lemma": "to alert", "pos": "verb", "details": {"past": "alerted", "participle": "alerted"}, "sentences": ["When I smell smoke, I *alert* the fire brigade."]}
+        {"lemma": "to alert", "pos": "verb", "details": {"past": "alerted", "participle": "alerted"}, "sentences": ["When I smell smoke, I *alert* the fire brigade and my neighbors."]}
         ],
         "nl": [
         {"lemma": "alarmeren", "pos": "verb", "details": {"pastSingular": "alarmeerde", "pastPlural": "alarmeerden", "participle": "gealarmeerd", "auxiliary": "hebben"}, "sentences": ["Als ik rook ruik, *alarmeer* ik de brandweer en mijn buren."]}
@@ -8506,7 +8506,7 @@
       "gloss": "sew (verb)",
       "entries": {
         "en": [
-        {"lemma": "to sew", "pos": "verb", "details": {"past": "sewed", "participle": "sewn"}, "sentences": ["With needle and thread, I *sew* a button on."]}
+        {"lemma": "to sew", "pos": "verb", "details": {"past": "sewed", "participle": "sewn"}, "sentences": ["With needle and thread, I *sew* a button on my coat."]}
         ],
         "nl": [
         {"lemma": "naaien", "pos": "verb", "details": {"pastSingular": "naaide", "pastPlural": "naaiden", "participle": "genaaid", "auxiliary": "hebben"}, "sentences": ["Met naald en draad *naai* ik een knoop aan mijn jas."]}
@@ -8518,7 +8518,7 @@
       "gloss": "knit (verb)",
       "entries": {
         "en": [
-        {"lemma": "to knit", "pos": "verb", "details": {"past": "knitted", "participle": "knitted"}, "sentences": ["In the evening, my grandmother *knits* a warm scarf."]}
+        {"lemma": "to knit", "pos": "verb", "details": {"past": "knitted", "participle": "knitted"}, "sentences": ["In the evening, my grandmother *knits* a warm scarf for me."]}
         ],
         "nl": [
         {"lemma": "breien", "pos": "verb", "details": {"pastSingular": "breide", "pastPlural": "breiden", "participle": "gebreid", "auxiliary": "hebben"}, "sentences": ["In de avond *breit* mijn oma een warme sjaal voor mij."]}
@@ -8530,7 +8530,7 @@
       "gloss": "weave (verb)",
       "entries": {
         "en": [
-        {"lemma": "to weave", "pos": "verb", "details": {"past": "wove", "participle": "woven"}, "sentences": ["In the workshop, they *weave* a carpet from wool."]}
+        {"lemma": "to weave", "pos": "verb", "details": {"past": "wove", "participle": "woven"}, "sentences": ["In the small workshop, they *weave* a carpet from colorful wool."]}
         ],
         "nl": [
         {"lemma": "weven", "pos": "verb", "details": {"pastSingular": "weefde", "pastPlural": "weefden", "participle": "geweven", "auxiliary": "hebben"}, "sentences": ["In de kleine werkplaats *weven* zij een tapijt van kleurrijke wol."]}
@@ -8542,7 +8542,7 @@
       "gloss": "glue (verb)",
       "entries": {
         "en": [
-        {"lemma": "to glue", "pos": "verb", "details": {"past": "glued", "participle": "glued"}, "sentences": ["With a small tube, I *glue* the broken plate."]}
+        {"lemma": "to glue", "pos": "verb", "details": {"past": "glued", "participle": "glued"}, "sentences": ["With a small tube, I *glue* the broken plate back together."]}
         ],
         "nl": [
         {"lemma": "lijmen", "pos": "verb", "details": {"pastSingular": "lijmde", "pastPlural": "lijmden", "participle": "gelijmd", "auxiliary": "hebben"}, "sentences": ["Met een klein tubetje *lijm* ik het gebroken bord weer aan elkaar."]}
@@ -8566,7 +8566,7 @@
       "gloss": "sand (verb)",
       "entries": {
         "en": [
-        {"lemma": "to sand", "pos": "verb", "details": {"past": "sanded", "participle": "sanded"}, "sentences": ["Before painting, I *sand* the rough table."]}
+        {"lemma": "to sand", "pos": "verb", "details": {"past": "sanded", "participle": "sanded"}, "sentences": ["Before painting, I *sand* the rough wooden table in the garage."]}
         ],
         "nl": [
         {"lemma": "schuren", "pos": "verb", "details": {"pastSingular": "schuurde", "pastPlural": "schuurden", "participle": "geschuurd", "auxiliary": "hebben"}, "sentences": ["Voordat ik verf, *schuur* ik de ruwe houten tafel in de garage."]}
@@ -8578,7 +8578,7 @@
       "gloss": "weld (verb)",
       "entries": {
         "en": [
-        {"lemma": "to weld", "pos": "verb", "details": {"past": "welded", "participle": "welded"}, "sentences": ["In the workshop, he *welds* the broken pipe."]}
+        {"lemma": "to weld", "pos": "verb", "details": {"past": "welded", "participle": "welded"}, "sentences": ["In the workshop, he *welds* the broken pipe with a torch."]}
         ],
         "nl": [
         {"lemma": "lassen", "pos": "verb", "details": {"pastSingular": "laste", "pastPlural": "lasten", "participle": "gelast", "auxiliary": "hebben"}, "sentences": ["In de werkplaats *last* hij de kapotte pijp met een brander."]}
