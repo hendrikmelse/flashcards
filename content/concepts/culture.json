@@ -41,7 +41,7 @@
       "gloss": "lock (canal)",
       "entries": {
         "en": [
-        {"lemma": "lock", "pos": "noun", "details": {"note": "canal", "plural": "locks"}, "sentences": ["The boat waits in the *lock* for the water."]}
+        {"lemma": "lock", "pos": "noun", "details": {"note": "canal", "plural": "locks"}, "sentences": ["The boat waits in the *lock* until the water rises."]}
         ],
         "nl": [
         {"lemma": "sluis", "pos": "noun", "details": {"article": "de", "plural": "sluizen"}, "sentences": ["De boot wacht in de *sluis* tot het water stijgt."]}
@@ -140,7 +140,7 @@
         {"lemma": "storm surge barrier", "pos": "noun", "details": {"plural": "storm surge barriers"}, "sentences": ["The *storm surge barrier* closes when the sea rises."]}
         ],
         "nl": [
-        {"lemma": "stormvloedkering", "pos": "noun", "details": {"article": "de", "plural": "stormvloedkeringen"}, "sentences": ["De *stormvloedkering* sluit als de zee hoog staat."]}
+        {"lemma": "stormvloedkering", "pos": "noun", "details": {"article": "de", "plural": "stormvloedkeringen"}, "sentences": ["De *stormvloedkering* sluit als de zee stijgt."]}
         ]
       }
     },

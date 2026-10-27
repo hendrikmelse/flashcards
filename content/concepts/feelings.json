@@ -716,7 +716,7 @@
         {"lemma": "anxious", "pos": "adjective", "sentences": ["I feel *anxious* before my exam tomorrow morning."]}
         ],
         "nl": [
-        {"lemma": "ongerust", "pos": "adjective", "sentences": ["Ik ben *ongerust* omdat mijn dochter nog niet thuis is."]}
+        {"lemma": "ongerust", "pos": "adjective", "sentences": ["Ik ben *ongerust* voor mijn examen morgenochtend."]}
         ]
       }
     },
@@ -725,7 +725,7 @@
       "gloss": "loyalty (noun)",
       "entries": {
         "en": [
-        {"lemma": "loyalty", "pos": "noun", "details": {"note": "faithfulness", "uncountable": true}, "sentences": ["A good friend shows *loyalty* when times are hard."]}
+        {"lemma": "loyalty", "pos": "noun", "details": {"note": "faithfulness", "uncountable": true}, "sentences": ["A good friend shows *loyalty* even when times are hard."]}
         ],
         "nl": [
         {"lemma": "trouw", "pos": "noun", "details": {"note": "een eigenschap", "article": "de", "uncountable": true}, "sentences": ["Een goede vriend toont *trouw*, ook als het moeilijk gaat."]}
@@ -749,7 +749,7 @@
       "gloss": "courageous (adjective)",
       "entries": {
         "en": [
-        {"lemma": "courageous", "pos": "adjective", "sentences": ["The *courageous* girl jumps in to save a puppy."]}
+        {"lemma": "courageous", "pos": "adjective", "sentences": ["The *courageous* girl jumps into the river to save a puppy."]}
         ],
         "nl": [
         {"lemma": "moedig", "pos": "adjective", "sentences": ["Het *moedige* meisje springt in de rivier om de pup te redden."]}
@@ -761,7 +761,7 @@
       "gloss": "tough (adjective)",
       "entries": {
         "en": [
-        {"lemma": "tough", "pos": "adjective", "details": {"note": "strong and hard"}, "sentences": ["The *tough* farmer works outside all day in snow."]}
+        {"lemma": "tough", "pos": "adjective", "details": {"note": "strong and hard"}, "sentences": ["The *tough* farmer works outside all day, even in snow."]}
         ],
         "nl": [
         {"lemma": "stoer", "pos": "adjective", "sentences": ["De *stoere* boer werkt de hele dag buiten, zelfs in de sneeuw."]}
@@ -788,7 +788,7 @@
         {"lemma": "gloomy", "pos": "adjective", "sentences": ["It is a *gloomy* day with grey clouds."]}
         ],
         "nl": [
-        {"lemma": "triest", "pos": "adjective", "sentences": ["Het is een *trieste* dag met grijze wolken en aanhoudende regen."]}
+        {"lemma": "triest", "pos": "adjective", "sentences": ["Het is een *trieste* dag met grijze wolken."]}
         ]
       }
     },
@@ -797,7 +797,7 @@
       "gloss": "unhappy (adjective)",
       "entries": {
         "en": [
-        {"lemma": "unhappy", "pos": "adjective", "sentences": ["She is *unhappy* at her new job; nobody talks."]}
+        {"lemma": "unhappy", "pos": "adjective", "sentences": ["She is *unhappy* at her new job because nobody talks to her."]}
         ],
         "nl": [
         {"lemma": "ongelukkig", "pos": "adjective", "sentences": ["Zij is *ongelukkig* op haar nieuwe werk omdat niemand tegen haar praat."]}
@@ -821,7 +821,7 @@
       "gloss": "cruel (adjective)",
       "entries": {
         "en": [
-        {"lemma": "cruel", "pos": "adjective", "sentences": ["The king is *cruel* and punishes small mistakes."]}
+        {"lemma": "cruel", "pos": "adjective", "sentences": ["The king is *cruel* and punishes his people for small mistakes."]}
         ],
         "nl": [
         {"lemma": "wreed", "pos": "adjective", "sentences": ["De koning is *wreed* en straft zijn volk voor kleine fouten."]}
@@ -845,7 +845,7 @@
       "gloss": "naughty (adjective)",
       "entries": {
         "en": [
-        {"lemma": "naughty", "pos": "adjective", "sentences": ["The *naughty* boy hides his sister's shoes again."]}
+        {"lemma": "naughty", "pos": "adjective", "sentences": ["The *naughty* boy hides his sister's shoes under the couch again."]}
         ],
         "nl": [
         {"lemma": "stout", "pos": "adjective", "sentences": ["De *stoute* jongen verstopt de schoenen van zijn zusje onder de bank."]}
@@ -953,7 +953,7 @@
       "gloss": "strict (adjective)",
       "entries": {
         "en": [
-        {"lemma": "strict", "pos": "adjective", "sentences": ["The *strict* teacher gives extra homework when we talk."]}
+        {"lemma": "strict", "pos": "adjective", "sentences": ["The *strict* teacher gives extra homework when we talk in class."]}
         ],
         "nl": [
         {"lemma": "streng", "pos": "adjective", "sentences": ["De *strenge* leraar geeft extra huiswerk als we in de klas praten."]}
@@ -1001,7 +1001,7 @@
       "gloss": "charming (adjective)",
       "entries": {
         "en": [
-        {"lemma": "charming", "pos": "adjective", "sentences": ["The *charming* waiter greets every guest with a smile."]}
+        {"lemma": "charming", "pos": "adjective", "sentences": ["The *charming* waiter greets every guest with a warm smile."]}
         ],
         "nl": [
         {"lemma": "charmant", "pos": "adjective", "sentences": ["De *charmante* ober begroet elke gast met een warme glimlach."]}
@@ -1013,7 +1013,7 @@
       "gloss": "cheeky (adjective)",
       "entries": {
         "en": [
-        {"lemma": "cheeky", "pos": "adjective", "sentences": ["The boy is *cheeky* and sticks his tongue out."]}
+        {"lemma": "cheeky", "pos": "adjective", "sentences": ["The boy is *cheeky* and sticks his tongue out at the teacher."]}
         ],
         "nl": [
         {"lemma": "brutaal", "pos": "adjective", "sentences": ["De jongen is *brutaal* en steekt zijn tong uit naar de juf."]}
@@ -1025,7 +1025,7 @@
       "gloss": "persevere (verb)",
       "entries": {
         "en": [
-        {"lemma": "to persevere", "pos": "verb", "details": {"past": "persevered", "participle": "persevered"}, "sentences": ["She *perseveres* with piano lessons although practice is boring."]}
+        {"lemma": "to persevere", "pos": "verb", "details": {"past": "persevered", "participle": "persevered"}, "sentences": ["She *perseveres* with piano lessons even when practice is boring."]}
         ],
         "nl": [
         {"lemma": "volhouden", "pos": "verb", "details": {"pastSingular": "hield vol", "pastPlural": "hielden vol", "participle": "volgehouden", "auxiliary": "hebben"}, "sentences": ["Zij *houdt* haar pianolessen *vol*, ook als oefenen saai is."]}
@@ -1049,7 +1049,7 @@
       "gloss": "decent (adjective)",
       "entries": {
         "en": [
-        {"lemma": "decent", "pos": "adjective", "sentences": ["A *decent* man returns the wallet he finds outside."]}
+        {"lemma": "decent", "pos": "adjective", "sentences": ["A *decent* man returns the wallet he finds in the street."]}
         ],
         "nl": [
         {"lemma": "fatsoenlijk", "pos": "adjective", "sentences": ["Een *fatsoenlijke* man geeft de portemonnee terug die hij op straat vindt."]}
@@ -1064,7 +1064,7 @@
         {"lemma": "terrified", "pos": "adjective", "sentences": ["I am *terrified* when a spider crawls on me."]}
         ],
         "nl": [
-        {"lemma": "doodsbang", "pos": "adjective", "sentences": ["Ik ben *doodsbang* voor spinnen als er een over mijn bed kruipt."]}
+        {"lemma": "doodsbang", "pos": "adjective", "sentences": ["Ik ben *doodsbang* als er een spin op me kruipt."]}
         ]
       }
     },
@@ -1073,7 +1073,7 @@
       "gloss": "calm down (verb)",
       "entries": {
         "en": [
-        {"lemma": "to calm down", "pos": "verb", "details": {"past": "calmed down", "participle": "calmed down"}, "sentences": ["Please *calm down*, the dog is only playing."]}
+        {"lemma": "to calm down", "pos": "verb", "details": {"past": "calmed down", "participle": "calmed down"}, "sentences": ["Please *calm down*, the dog is only playing with you."]}
         ],
         "nl": [
         {"lemma": "kalmeren", "pos": "verb", "details": {"pastSingular": "kalmeerde", "pastPlural": "kalmeerden", "participle": "gekalmeerd", "auxiliary": "hebben/zijn"}, "sentences": ["*Kalmeer* maar, de hond speelt alleen maar met je."]}
@@ -1100,7 +1100,7 @@
         {"lemma": "distress", "pos": "noun", "details": {"uncountable": true}, "sentences": ["The ship's crew is in *distress* at sea."]}
         ],
         "nl": [
-        {"lemma": "nood", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Het schip stuurt een signaal omdat de bemanning in *nood* is."]}
+        {"lemma": "nood", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["De bemanning van het schip is op zee in *nood*."]}
         ]
       }
     },
@@ -1109,7 +1109,7 @@
       "gloss": "longing (noun)",
       "entries": {
         "en": [
-        {"lemma": "longing", "pos": "noun", "details": {"uncountable": true}, "sentences": ["Far from home, he feels a deep *longing*."]}
+        {"lemma": "longing", "pos": "noun", "details": {"uncountable": true}, "sentences": ["Far from home, he feels a deep *longing* for his family."]}
         ],
         "nl": [
         {"lemma": "verlangen", "pos": "noun", "details": {"note": "het gevoel", "article": "het", "plural": "verlangens"}, "sentences": ["Ver van huis voelt hij een diep *verlangen* naar zijn familie."]}
@@ -1145,7 +1145,7 @@
       "gloss": "foolish (adjective)",
       "entries": {
         "en": [
-        {"lemma": "foolish", "pos": "adjective", "sentences": ["Swimming in cold water without a towel is *foolish*."]}
+        {"lemma": "foolish", "pos": "adjective", "sentences": ["Swimming in the cold sea without a towel is *foolish*."]}
         ],
         "nl": [
         {"lemma": "dwaas", "pos": "adjective", "sentences": ["Zonder handdoek in de koude zee zwemmen is *dwaas*."]}
@@ -1157,7 +1157,7 @@
       "gloss": "thrilling (adjective)",
       "entries": {
         "en": [
-        {"lemma": "thrilling", "pos": "adjective", "sentences": ["The *thrilling* film keeps us on the edge."]}
+        {"lemma": "thrilling", "pos": "adjective", "sentences": ["The *thrilling* film keeps us on the edge of our seats."]}
         ],
         "nl": [
         {"lemma": "opwindend", "pos": "adjective", "sentences": ["De *opwindende* film houdt ons op het puntje van onze stoel."]}
@@ -1169,7 +1169,7 @@
       "gloss": "upset (adjective)",
       "entries": {
         "en": [
-        {"lemma": "upset", "pos": "adjective", "sentences": ["She is *upset* because her friend forgets her birthday."]}
+        {"lemma": "upset", "pos": "adjective", "sentences": ["She is *upset* because her best friend forgets her birthday."]}
         ],
         "nl": [
         {"lemma": "overstuur", "pos": "adjective", "sentences": ["Zij is *overstuur* omdat haar beste vriendin haar verjaardag vergeet."]}
@@ -1181,7 +1181,7 @@
       "gloss": "passion (noun)",
       "entries": {
         "en": [
-        {"lemma": "passion", "pos": "noun", "details": {"plural": "passions"}, "sentences": ["He plays the guitar with *passion* every evening."]}
+        {"lemma": "passion", "pos": "noun", "details": {"plural": "passions"}, "sentences": ["He plays the guitar with *passion* every evening after work."]}
         ],
         "nl": [
         {"lemma": "passie", "pos": "noun", "details": {"article": "de", "plural": "passies"}, "sentences": ["Hij speelt elke avond na het werk met *passie* gitaar."]}
@@ -1208,7 +1208,7 @@
         {"lemma": "moral", "pos": "adjective", "sentences": ["Is lying wrong? It is a *moral* issue."]}
         ],
         "nl": [
-        {"lemma": "moreel", "pos": "adjective", "sentences": ["Is liegen goed? Dat is een *moreel* vraagstuk."]}
+        {"lemma": "moreel", "pos": "adjective", "sentences": ["Is liegen verkeerd? Dat is een *moreel* vraagstuk."]}
         ]
       }
     },
@@ -1229,7 +1229,7 @@
       "gloss": "look forward to (verb)",
       "entries": {
         "en": [
-        {"lemma": "to look forward to", "pos": "verb", "details": {"past": "looked forward to", "participle": "looked forward to"}, "sentences": ["The children *look forward to* Friday's school trip."]}
+        {"lemma": "to look forward to", "pos": "verb", "details": {"past": "looked forward to", "participle": "looked forward to"}, "sentences": ["The children *look forward to* next Friday's school trip."]}
         ],
         "nl": [
         {"lemma": "verheugen", "pos": "verb", "details": {"pastSingular": "verheugde", "pastPlural": "verheugden", "participle": "verheugd", "auxiliary": "hebben"}, "sentences": ["De kinderen *verheugen* zich op het schoolreisje van volgende vrijdag."]}
@@ -1277,7 +1277,7 @@
       "gloss": "aggressive (adjective)",
       "entries": {
         "en": [
-        {"lemma": "aggressive", "pos": "adjective", "sentences": ["The dog is *aggressive* and barks at passers-by."]}
+        {"lemma": "aggressive", "pos": "adjective", "sentences": ["The dog is *aggressive* and barks at everyone who walks past the fence."]}
         ],
         "nl": [
         {"lemma": "agressief", "pos": "adjective", "sentences": ["De hond is *agressief* en blaft naar iedereen die langs het hek loopt."]}
@@ -1313,7 +1313,7 @@
       "gloss": "selfish (adjective)",
       "entries": {
         "en": [
-        {"lemma": "selfish", "pos": "adjective", "sentences": ["He is *selfish* and never shares his sweets."]}
+        {"lemma": "selfish", "pos": "adjective", "sentences": ["He is *selfish* and never shares his sweets with his little brother."]}
         ],
         "nl": [
         {"lemma": "egoïstisch", "pos": "adjective", "sentences": ["Hij is *egoïstisch* en deelt nooit zijn snoep met zijn broertje."]}
@@ -1325,7 +1325,7 @@
       "gloss": "noble (adjective)",
       "entries": {
         "en": [
-        {"lemma": "noble", "pos": "adjective", "sentences": ["He is *noble* and gives his seat away."]}
+        {"lemma": "noble", "pos": "adjective", "sentences": ["He is *noble* and gives his seat to an old lady."]}
         ],
         "nl": [
         {"lemma": "nobel", "pos": "adjective", "sentences": ["Het is *nobel* van hem om zijn plaats aan een oude dame te geven."]}
@@ -1337,7 +1337,7 @@
       "gloss": "inspire (verb)",
       "entries": {
         "en": [
-        {"lemma": "to inspire", "pos": "verb", "details": {"past": "inspired", "participle": "inspired"}, "sentences": ["The beautiful music *inspires* her to paint a picture."]}
+        {"lemma": "to inspire", "pos": "verb", "details": {"past": "inspired", "participle": "inspired"}, "sentences": ["The beautiful music *inspires* her to paint a new picture."]}
         ],
         "nl": [
         {"lemma": "inspireren", "pos": "verb", "details": {"pastSingular": "inspireerde", "pastPlural": "inspireerden", "participle": "geïnspireerd", "auxiliary": "hebben"}, "sentences": ["De mooie muziek *inspireert* haar om een nieuw schilderij te maken."]}
@@ -1361,7 +1361,7 @@
       "gloss": "miserable (adjective)",
       "entries": {
         "en": [
-        {"lemma": "miserable", "pos": "adjective", "sentences": ["I feel *miserable* with a bad cold."]}
+        {"lemma": "miserable", "pos": "adjective", "sentences": ["I feel *miserable* with a bad cold and a headache."]}
         ],
         "nl": [
         {"lemma": "ellendig", "pos": "adjective", "sentences": ["Ik voel me *ellendig* met een zware verkoudheid en hoofdpijn."]}
@@ -1433,7 +1433,7 @@
       "gloss": "dignified (adjective)",
       "entries": {
         "en": [
-        {"lemma": "dignified", "pos": "adjective", "sentences": ["The old lady stays *dignified* and quiet."]}
+        {"lemma": "dignified", "pos": "adjective", "sentences": ["The old lady stays *dignified* and quiet during the long speech."]}
         ],
         "nl": [
         {"lemma": "waardig", "pos": "adjective", "sentences": ["De oude dame blijft *waardig* en rustig tijdens de lange toespraak."]}
@@ -1445,7 +1445,7 @@
       "gloss": "civilized (adjective)",
       "entries": {
         "en": [
-        {"lemma": "civilized", "pos": "adjective", "sentences": ["They discuss the problem in a *civilized* way."]}
+        {"lemma": "civilized", "pos": "adjective", "sentences": ["They discuss the problem in a *civilized* way, without shouting."]}
         ],
         "nl": [
         {"lemma": "beschaafd", "pos": "adjective", "sentences": ["Zij bespreken het probleem op een *beschaafde* manier, zonder te schreeuwen."]}
@@ -1469,7 +1469,7 @@
       "gloss": "cowardly (adjective)",
       "entries": {
         "en": [
-        {"lemma": "cowardly", "pos": "adjective", "sentences": ["The *cowardly* man runs away at the first noise."]}
+        {"lemma": "cowardly", "pos": "adjective", "sentences": ["The *cowardly* man runs away at the first loud noise."]}
         ],
         "nl": [
         {"lemma": "laf", "pos": "adjective", "sentences": ["De *lafe* man rent weg bij het eerste harde geluid."]}
@@ -1481,7 +1481,7 @@
       "gloss": "comfort (noun)",
       "entries": {
         "en": [
-        {"lemma": "comfort", "pos": "noun", "details": {"uncountable": true}, "sentences": ["After bad news, she seeks *comfort* from her friend."]}
+        {"lemma": "comfort", "pos": "noun", "details": {"uncountable": true}, "sentences": ["After bad news, she seeks *comfort* from her best friend."]}
         ],
         "nl": [
         {"lemma": "troost", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Na het slechte nieuws zoekt zij *troost* bij haar beste vriendin."]}
@@ -1493,7 +1493,7 @@
       "gloss": "corrupt (adjective)",
       "entries": {
         "en": [
-        {"lemma": "corrupt", "pos": "adjective", "sentences": ["The paper says the *corrupt* judge takes bribes."]}
+        {"lemma": "corrupt", "pos": "adjective", "sentences": ["The paper says the *corrupt* judge takes bribes from criminals."]}
         ],
         "nl": [
         {"lemma": "corrupt", "pos": "adjective", "sentences": ["De krant schrijft dat de *corrupte* rechter geld van criminelen aanneemt."]}
@@ -1517,7 +1517,7 @@
       "gloss": "personality (noun)",
       "entries": {
         "en": [
-        {"lemma": "personality", "pos": "noun", "details": {"plural": "personalities"}, "sentences": ["Her warm *personality* makes new colleagues feel welcome."]}
+        {"lemma": "personality", "pos": "noun", "details": {"plural": "personalities"}, "sentences": ["Her warm *personality* makes new colleagues feel welcome right away."]}
         ],
         "nl": [
         {"lemma": "persoonlijkheid", "pos": "noun", "details": {"article": "de", "plural": "persoonlijkheden"}, "sentences": ["Haar warme *persoonlijkheid* laat nieuwe collega's zich meteen welkom voelen."]}
@@ -1529,7 +1529,7 @@
       "gloss": "creative (adjective)",
       "entries": {
         "en": [
-        {"lemma": "creative", "pos": "adjective", "sentences": ["She is *creative* and makes beautiful cards from paper."]}
+        {"lemma": "creative", "pos": "adjective", "sentences": ["She is *creative* and makes beautiful cards from old paper."]}
         ],
         "nl": [
         {"lemma": "creatief", "pos": "adjective", "sentences": ["Zij is *creatief* en maakt mooie kaarten van oud papier."]}
@@ -1589,7 +1589,7 @@
       "gloss": "thorough (adjective)",
       "entries": {
         "en": [
-        {"lemma": "thorough", "pos": "adjective", "sentences": ["He is *thorough* and checks every number twice."]}
+        {"lemma": "thorough", "pos": "adjective", "sentences": ["He is *thorough* and checks every number twice before he sends it."]}
         ],
         "nl": [
         {"lemma": "grondig", "pos": "adjective", "sentences": ["Hij is *grondig* en controleert elk getal twee keer voor hij het verstuurt."]}
@@ -1625,7 +1625,7 @@
       "gloss": "modest (adjective)",
       "entries": {
         "en": [
-        {"lemma": "modest", "pos": "adjective", "sentences": ["He is *modest* and thanks his team."]}
+        {"lemma": "modest", "pos": "adjective", "sentences": ["He is *modest* about his prize and thanks his team."]}
         ],
         "nl": [
         {"lemma": "bescheiden", "pos": "adjective", "sentences": ["Hij is *bescheiden* over zijn prijs en bedankt zijn team."]}
@@ -1652,7 +1652,7 @@
         {"lemma": "dishonest", "pos": "adjective", "sentences": ["The *dishonest* shopkeeper gives customers too little change."]}
         ],
         "nl": [
-        {"lemma": "oneerlijk", "pos": "adjective", "sentences": ["De *oneerlijke* winkelier geeft klanten minder wisselgeld dan hij verschuldigd is."]}
+        {"lemma": "oneerlijk", "pos": "adjective", "sentences": ["De *oneerlijke* winkelier geeft klanten te weinig wisselgeld."]}
         ]
       }
     },
@@ -1673,7 +1673,7 @@
       "gloss": "loyalty (allegiance)",
       "entries": {
         "en": [
-        {"lemma": "loyalty", "pos": "noun", "details": {"note": "allegiance", "uncountable": true}, "sentences": ["The soldier swears *loyalty* to his country."]}
+        {"lemma": "loyalty", "pos": "noun", "details": {"note": "allegiance", "uncountable": true}, "sentences": ["The soldier swears *loyalty* to his country before the flag."]}
         ],
         "nl": [
         {"lemma": "loyaliteit", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["De soldaat zweert *loyaliteit* aan zijn land voor de vlag."]}
@@ -1709,7 +1709,7 @@
       "gloss": "ambition (noun)",
       "entries": {
         "en": [
-        {"lemma": "ambition", "pos": "noun", "details": {"plural": "ambitions"}, "sentences": ["With *ambition*, she studies nightly to become a doctor."]}
+        {"lemma": "ambition", "pos": "noun", "details": {"plural": "ambitions"}, "sentences": ["With great *ambition*, she studies nightly to become a doctor."]}
         ],
         "nl": [
         {"lemma": "ambitie", "pos": "noun", "details": {"article": "de", "plural": "ambities"}, "sentences": ["Met veel *ambitie* studeert zij elke avond om dokter te worden."]}
@@ -1721,7 +1721,7 @@
       "gloss": "fun (good time)",
       "entries": {
         "en": [
-        {"lemma": "fun", "pos": "noun", "details": {"note": "good time", "uncountable": true}, "sentences": ["We have a lot of *fun* at the beach."]}
+        {"lemma": "fun", "pos": "noun", "details": {"note": "good time", "uncountable": true}, "sentences": ["We have a lot of *fun* at the beach today."]}
         ],
         "nl": [
         {"lemma": "pret", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Wij hebben veel *pret* op het strand vandaag."]}
@@ -1745,7 +1745,7 @@
       "gloss": "excitement (noun)",
       "entries": {
         "en": [
-        {"lemma": "excitement", "pos": "noun", "details": {"uncountable": true}, "sentences": ["The *excitement* grows as the first guests arrive."]}
+        {"lemma": "excitement", "pos": "noun", "details": {"uncountable": true}, "sentences": ["The *excitement* grows as the first guests arrive at the party."]}
         ],
         "nl": [
         {"lemma": "opwinding", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["De *opwinding* groeit als de eerste gasten op het feest aankomen."]}
@@ -1793,7 +1793,7 @@
       "gloss": "somber (adjective)",
       "entries": {
         "en": [
-        {"lemma": "somber", "pos": "adjective", "sentences": ["The mood is *somber* at the funeral."]}
+        {"lemma": "somber", "pos": "adjective", "sentences": ["The mood is *somber* at the funeral and nobody talks."]}
         ],
         "nl": [
         {"lemma": "somber", "pos": "adjective", "sentences": ["De stemming is *somber* op de begrafenis en niemand praat."]}
@@ -1820,7 +1820,7 @@
         {"lemma": "possessed", "pos": "adjective", "sentences": ["In the old film, the man looks *possessed* by a ghost."]}
         ],
         "nl": [
-        {"lemma": "bezeten", "pos": "adjective", "sentences": ["In de oude film gedraagt de man zich *bezeten* door een geest."]}
+        {"lemma": "bezeten", "pos": "adjective", "sentences": ["In de oude film lijkt de man *bezeten* door een geest."]}
         ]
       }
     },
@@ -1841,7 +1841,7 @@
       "gloss": "creepy (adjective)",
       "entries": {
         "en": [
-        {"lemma": "creepy", "pos": "adjective", "sentences": ["The empty house down the road looks *creepy*."]}
+        {"lemma": "creepy", "pos": "adjective", "sentences": ["The empty house at the end of the road looks *creepy*."]}
         ],
         "nl": [
         {"lemma": "griezelig", "pos": "adjective", "sentences": ["Het lege huis aan het eind van de weg ziet er *griezelig* uit."]}
@@ -1853,7 +1853,7 @@
       "gloss": "malicious (adjective)",
       "entries": {
         "en": [
-        {"lemma": "malicious", "pos": "adjective", "sentences": ["The *malicious* rumour about our teacher spreads through school."]}
+        {"lemma": "malicious", "pos": "adjective", "sentences": ["The *malicious* rumour about our teacher spreads quickly through school."]}
         ],
         "nl": [
         {"lemma": "kwaadaardig", "pos": "adjective", "sentences": ["Het *kwaadaardige* gerucht over onze leraar verspreidt zich snel op school."]}
@@ -1877,7 +1877,7 @@
       "gloss": "sentimental (adjective)",
       "entries": {
         "en": [
-        {"lemma": "sentimental", "pos": "adjective", "sentences": ["He is *sentimental* about his old toys."]}
+        {"lemma": "sentimental", "pos": "adjective", "sentences": ["He is *sentimental* about his old toys and keeps them."]}
         ],
         "nl": [
         {"lemma": "sentimenteel", "pos": "adjective", "sentences": ["Hij is *sentimenteel* over zijn oude speelgoed en bewaart het."]}
@@ -1973,7 +1973,7 @@
       "gloss": "mourn (verb)",
       "entries": {
         "en": [
-        {"lemma": "to mourn", "pos": "verb", "details": {"past": "mourned", "participle": "mourned"}, "sentences": ["The whole family *mourns* their father in church."]}
+        {"lemma": "to mourn", "pos": "verb", "details": {"past": "mourned", "participle": "mourned"}, "sentences": ["The whole family *mourns* their father in a quiet church."]}
         ],
         "nl": [
         {"lemma": "rouwen", "pos": "verb", "details": {"pastSingular": "rouwde", "pastPlural": "rouwden", "participle": "gerouwd", "auxiliary": "hebben"}, "sentences": ["De hele familie *rouwt* om hun vader in een stille kerk."]}
@@ -2045,7 +2045,7 @@
       "gloss": "hysterical (adjective)",
       "entries": {
         "en": [
-        {"lemma": "hysterical", "pos": "adjective", "sentences": ["She becomes *hysterical* when she sees a mouse."]}
+        {"lemma": "hysterical", "pos": "adjective", "sentences": ["She becomes *hysterical* when she sees a mouse in the kitchen."]}
         ],
         "nl": [
         {"lemma": "hysterisch", "pos": "adjective", "sentences": ["Zij wordt *hysterisch* als ze een muis in de keuken ziet."]}
@@ -2057,7 +2057,7 @@
       "gloss": "patient (adjective)",
       "entries": {
         "en": [
-        {"lemma": "patient", "pos": "adjective", "details": {"note": "able to wait"}, "sentences": ["She is *patient* and waits quietly in the queue."]}
+        {"lemma": "patient", "pos": "adjective", "details": {"note": "able to wait"}, "sentences": ["She is *patient* and waits quietly in the long queue."]}
         ],
         "nl": [
         {"lemma": "geduldig", "pos": "adjective", "sentences": ["Zij is *geduldig* en wacht rustig in de lange rij."]}
@@ -2105,7 +2105,7 @@
       "gloss": "sympathy (condolence)",
       "entries": {
         "en": [
-        {"lemma": "sympathy", "pos": "noun", "details": {"note": "condolence", "uncountable": true}, "sentences": ["I send my *sympathy* to the grieving family."]}
+        {"lemma": "sympathy", "pos": "noun", "details": {"note": "condolence", "uncountable": true}, "sentences": ["I send my *sympathy* to the family after the sad news."]}
         ],
         "nl": [
         {"lemma": "medeleven", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["Ik betuig mijn *medeleven* aan de familie na het droevige nieuws."]}
@@ -2117,7 +2117,7 @@
       "gloss": "lazy (adjective)",
       "entries": {
         "en": [
-        {"lemma": "lazy", "pos": "adjective", "sentences": ["He is *lazy* on Sundays and stays in bed."]}
+        {"lemma": "lazy", "pos": "adjective", "sentences": ["He is *lazy* on Sundays and stays in bed until noon."]}
         ],
         "nl": [
         {"lemma": "lui", "pos": "adjective", "sentences": ["Hij is *lui* op zondag en blijft tot twaalf uur in bed."]}
@@ -2288,7 +2288,7 @@
         {"lemma": "discreet", "pos": "adjective", "sentences": ["A *discreet* waiter never repeats what guests say."]}
         ],
         "nl": [
-        {"lemma": "discreet", "pos": "adjective", "sentences": ["De ober is *discreet* en vertelt niets door."]}
+        {"lemma": "discreet", "pos": "adjective", "sentences": ["De ober is *discreet* en vertelt nooit door wat gasten zeggen."]}
         ]
       }
     },
@@ -2420,7 +2420,7 @@
         {"lemma": "spontaneous", "pos": "adjective", "sentences": ["She is *spontaneous* and books a trip on Friday."]}
         ],
         "nl": [
-        {"lemma": "spontaan", "pos": "adjective", "sentences": ["Ze is *spontaan* en boekt vrijdag zomaar een reis."]}
+        {"lemma": "spontaan", "pos": "adjective", "sentences": ["Ze is *spontaan* en boekt vrijdag een reis."]}
         ]
       }
     },
@@ -2621,7 +2621,7 @@
       "gloss": "powerless (adjective)",
       "entries": {
         "en": [
-        {"lemma": "powerless", "pos": "adjective", "sentences": ["I feel *powerless* when I watch the flood rise."]}
+        {"lemma": "powerless", "pos": "adjective", "sentences": ["I feel *powerless* when I watch the water rise."]}
         ],
         "nl": [
         {"lemma": "machteloos", "pos": "adjective", "sentences": ["Ik voel me *machteloos* als ik het water zie stijgen."]}
@@ -2720,7 +2720,7 @@
         {"lemma": "to grieve", "pos": "verb", "details": {"past": "grieved", "participle": "grieved"}, "sentences": ["They *grieve* for their grandfather at the quiet funeral."]}
         ],
         "nl": [
-        {"lemma": "treuren", "pos": "verb", "details": {"pastSingular": "treurde", "pastPlural": "treurden", "participle": "getreurd", "auxiliary": "hebben"}, "sentences": ["Zij *treuren* om hun opa na de stille begrafenis."]}
+        {"lemma": "treuren", "pos": "verb", "details": {"pastSingular": "treurde", "pastPlural": "treurden", "participle": "getreurd", "auxiliary": "hebben"}, "sentences": ["Zij *treuren* om hun opa tijdens de stille begrafenis."]}
         ]
       }
     },
@@ -2813,7 +2813,7 @@
       "gloss": "cheer up (verb)",
       "entries": {
         "en": [
-        {"lemma": "to cheer up", "pos": "verb", "details": {"past": "cheered up", "participle": "cheered up"}, "sentences": ["I bring cake to *cheer up* my sad friend."]}
+        {"lemma": "to cheer up", "pos": "verb", "details": {"past": "cheered up", "participle": "cheered up"}, "sentences": ["I *cheer up* my sad friend with a joke."]}
         ],
         "nl": [
         {"lemma": "opvrolijken", "pos": "verb", "details": {"pastSingular": "vrolijkte op", "pastPlural": "vrolijkten op", "participle": "opgevrolijkt", "auxiliary": "hebben"}, "sentences": ["Ik *vrolijk* mijn verdrietige vriend *op* met een grapje."]}
@@ -3317,7 +3317,7 @@
       "gloss": "fear of heights (noun)",
       "entries": {
         "en": [
-        {"lemma": "fear of heights", "pos": "noun", "details": {"uncountable": true}, "sentences": ["He has a *fear of heights* and avoids towers."]}
+        {"lemma": "fear of heights", "pos": "noun", "details": {"uncountable": true}, "sentences": ["He has a *fear of heights* and avoids high towers."]}
         ],
         "nl": [
         {"lemma": "hoogtevrees", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Hij heeft *hoogtevrees* en mijdt hoge torens."]}
@@ -3497,7 +3497,7 @@
       "gloss": "superstitious (adjective)",
       "entries": {
         "en": [
-        {"lemma": "superstitious", "pos": "adjective", "sentences": ["She is *superstitious* and avoids walking under ladders."]}
+        {"lemma": "superstitious", "pos": "adjective", "sentences": ["She is *superstitious* and never walks under ladders."]}
         ],
         "nl": [
         {"lemma": "bijgelovig", "pos": "adjective", "sentences": ["Zij is *bijgelovig* en loopt nooit onder ladders door."]}
@@ -3668,7 +3668,7 @@
         {"lemma": "sarcastic", "pos": "adjective", "sentences": ["He sounds *sarcastic* when he praises the rain."]}
         ],
         "nl": [
-        {"lemma": "sarcastisch", "pos": "adjective", "sentences": ["Hij klinkt *sarcastisch* als hij zegt dat de regen heerlijk is."]}
+        {"lemma": "sarcastisch", "pos": "adjective", "sentences": ["Hij klinkt *sarcastisch* als hij de regen prijst."]}
         ]
       }
     },
@@ -3680,7 +3680,7 @@
         {"lemma": "likeable", "pos": "adjective", "sentences": ["Our new neighbour is *likeable* and always says hello."]}
         ],
         "nl": [
-        {"lemma": "sympathiek", "pos": "adjective", "sentences": ["Onze nieuwe buurman is *sympathiek* en groet altijd vriendelijk."]}
+        {"lemma": "sympathiek", "pos": "adjective", "sentences": ["Onze nieuwe buurman is *sympathiek* en groet altijd."]}
         ]
       }
     },
@@ -3704,7 +3704,7 @@
         {"lemma": "unforgivable", "pos": "adjective", "sentences": ["Breaking a promise to a friend is *unforgivable*."]}
         ],
         "nl": [
-        {"lemma": "onvergeeflijk", "pos": "adjective", "sentences": ["Een belofte aan een vriend breken is voor haar *onvergeeflijk*."]}
+        {"lemma": "onvergeeflijk", "pos": "adjective", "sentences": ["Een belofte aan een vriend breken is *onvergeeflijk*."]}
         ]
       }
     },
@@ -3800,7 +3800,7 @@
         {"lemma": "punctual", "pos": "adjective", "sentences": ["He is *punctual* and arrives at nine sharp."]}
         ],
         "nl": [
-        {"lemma": "stipt", "pos": "adjective", "sentences": ["Hij is *stipt* en komt precies om negen uur op de vergadering."]}
+        {"lemma": "stipt", "pos": "adjective", "sentences": ["Hij is *stipt* en komt precies om negen uur aan."]}
         ]
       }
     },

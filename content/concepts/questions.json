@@ -45,7 +45,7 @@
         {"lemma": "she", "pos": "pronoun", "sentences": ["*She* is my sister and works at a hospital."]}
         ],
         "nl": [
-        {"lemma": "zij", "pos": "pronoun", "details": {"note": "nadruk, enkelvoud onderwerp"}, "sentences": ["*Zij* is mijn zus, niet mijn tante, zoals jij denkt."]},
+        {"lemma": "zij", "pos": "pronoun", "details": {"note": "nadruk, enkelvoud onderwerp"}, "sentences": ["*Zij* is mijn zus en werkt in een ziekenhuis."]},
         {"lemma": "ze", "pos": "pronoun", "details": {"note": "gewoon, enkelvoud onderwerp"}, "sentences": ["*Ze* is mijn zus en werkt in een ziekenhuis."]}
         ]
       }
@@ -55,10 +55,10 @@
       "gloss": "we",
       "entries": {
         "en": [
-        {"lemma": "we", "pos": "pronoun", "sentences": ["*We* are friends and we play football every Sunday."]}
+        {"lemma": "we", "pos": "pronoun", "sentences": ["*We* are friends and we play football together every Sunday."]}
         ],
         "nl": [
-        {"lemma": "wij", "pos": "pronoun", "details": {"note": "nadruk"}, "sentences": ["*Wij* zijn vrienden, maar zij zijn gewoon collega's."]},
+        {"lemma": "wij", "pos": "pronoun", "details": {"note": "nadruk"}, "sentences": ["*Wij* zijn vrienden en voetballen elke zondag samen."]},
         {"lemma": "we", "pos": "pronoun", "details": {"note": "gewoon"}, "sentences": ["*We* zijn vrienden en voetballen elke zondag samen."]}
         ]
       }

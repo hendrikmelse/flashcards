@@ -5,7 +5,7 @@
       "gloss": "dollar (noun)",
       "entries": {
         "en": [
-        {"lemma": "dollar", "pos": "noun", "details": {"plural": "dollars"}, "sentences": ["In New York, a coffee costs five *dollars*."]}
+        {"lemma": "dollar", "pos": "noun", "details": {"plural": "dollars"}, "sentences": ["At the market in New York, a coffee costs five *dollars*."]}
         ],
         "nl": [
         {"lemma": "dollar", "pos": "noun", "details": {"article": "de", "plural": "dollars"}, "sentences": ["Op de markt in New York kost een koffie vijf *dollar*."]}
@@ -17,7 +17,7 @@
       "gloss": "earn (verb)",
       "entries": {
         "en": [
-        {"lemma": "to earn", "pos": "verb", "details": {"past": "earned", "participle": "earned"}, "sentences": ["At my summer job, I *earn* money."]}
+        {"lemma": "to earn", "pos": "verb", "details": {"past": "earned", "participle": "earned"}, "sentences": ["At my summer job, I *earn* money for a new bike."]}
         ],
         "nl": [
         {"lemma": "verdienen", "pos": "verb", "details": {"pastSingular": "verdiende", "pastPlural": "verdienden", "participle": "verdiend", "auxiliary": "hebben"}, "sentences": ["Met mijn zomerbaantje *verdien* ik geld voor een nieuwe fiets."]}
@@ -29,7 +29,7 @@
       "gloss": "boss (noun)",
       "entries": {
         "en": [
-        {"lemma": "boss", "pos": "noun", "details": {"plural": "bosses"}, "sentences": ["My *boss* is nice and lets me leave early."]}
+        {"lemma": "boss", "pos": "noun", "details": {"plural": "bosses"}, "sentences": ["My *boss* is nice and lets me leave early on Fridays."]}
         ],
         "nl": [
         {"lemma": "baas", "pos": "noun", "details": {"article": "de", "plural": "bazen"}, "sentences": ["Mijn *baas* is aardig en laat mij op vrijdag eerder naar huis gaan."]}
@@ -41,7 +41,7 @@
       "gloss": "captain (noun)",
       "entries": {
         "en": [
-        {"lemma": "captain", "pos": "noun", "details": {"plural": "captains"}, "sentences": ["On the big ship, the *captain* looks through binoculars."]}
+        {"lemma": "captain", "pos": "noun", "details": {"plural": "captains"}, "sentences": ["On the big ship, the *captain* looks through binoculars at the sea."]}
         ],
         "nl": [
         {"lemma": "kapitein", "pos": "noun", "details": {"article": "de", "plural": "kapiteins"}, "sentences": ["Op het grote schip kijkt de *kapitein* door een verrekijker naar de zee."]}
@@ -53,7 +53,7 @@
       "gloss": "appointment (noun)",
       "entries": {
         "en": [
-        {"lemma": "appointment", "pos": "noun", "details": {"plural": "appointments"}, "sentences": ["Tomorrow I have an *appointment* with the dentist."]}
+        {"lemma": "appointment", "pos": "noun", "details": {"plural": "appointments"}, "sentences": ["Tomorrow at ten o'clock I have an *appointment* with the dentist."]}
         ],
         "nl": [
         {"lemma": "afspraak", "pos": "noun", "details": {"article": "de", "plural": "afspraken"}, "sentences": ["Morgen om tien uur heb ik een *afspraak* bij de tandarts."]}
@@ -65,7 +65,7 @@
       "gloss": "office (noun)",
       "entries": {
         "en": [
-        {"lemma": "office", "pos": "noun", "details": {"plural": "offices"}, "sentences": ["On weekdays, I work at the *office* downtown."]}
+        {"lemma": "office", "pos": "noun", "details": {"plural": "offices"}, "sentences": ["On weekdays, I work at the *office* near the station."]}
         ],
         "nl": [
         {"lemma": "kantoor", "pos": "noun", "details": {"article": "het", "plural": "kantoren"}, "sentences": ["Op werkdagen werk ik op het *kantoor* bij het station."]}
@@ -77,7 +77,7 @@
       "gloss": "cost (verb)",
       "entries": {
         "en": [
-        {"lemma": "to cost", "pos": "verb", "details": {"past": "cost", "participle": "cost"}, "sentences": ["This heavy book *costs* ten euros at the shop."]}
+        {"lemma": "to cost", "pos": "verb", "details": {"past": "cost", "participle": "cost"}, "sentences": ["This heavy book *costs* ten euros at the small shop."]}
         ],
         "nl": [
         {"lemma": "kosten", "pos": "verb", "details": {"pastSingular": "kostte", "pastPlural": "kostten", "participle": "gekost", "auxiliary": "hebben"}, "sentences": ["Dit zware boek *kost* tien euro in het winkeltje."]}
@@ -89,7 +89,7 @@
       "gloss": "shift (noun)",
       "entries": {
         "en": [
-        {"lemma": "shift", "pos": "noun", "details": {"plural": "shifts"}, "sentences": ["Three nights a week, I work the night *shift*."]}
+        {"lemma": "shift", "pos": "noun", "details": {"plural": "shifts"}, "sentences": ["Three nights a week, I work the night *shift* at the hospital."]}
         ],
         "nl": [
         {"lemma": "dienst", "pos": "noun", "details": {"article": "de", "plural": "diensten"}, "sentences": ["Drie nachten per week werk ik de nacht*dienst* in het ziekenhuis."]}
@@ -101,7 +101,7 @@
       "gloss": "lawyer (noun)",
       "entries": {
         "en": [
-        {"lemma": "lawyer", "pos": "noun", "details": {"plural": "lawyers"}, "sentences": ["Because of the contract, the *lawyer* helps me."]}
+        {"lemma": "lawyer", "pos": "noun", "details": {"plural": "lawyers"}, "sentences": ["Because of the contract, the *lawyer* helps me understand the rules."]}
         ],
         "nl": [
         {"lemma": "advocaat", "pos": "noun", "details": {"article": "de", "plural": "advocaten"}, "sentences": ["Vanwege het contract helpt de *advocaat* mij de regels te begrijpen."]}
@@ -125,7 +125,7 @@
       "gloss": "company (noun)",
       "entries": {
         "en": [
-        {"lemma": "company", "pos": "noun", "details": {"note": "a business", "plural": "companies"}, "sentences": ["My father works at a *company* that makes bicycles."]}
+        {"lemma": "company", "pos": "noun", "details": {"note": "a business", "plural": "companies"}, "sentences": ["My father works at a *company* that makes bicycles in Utrecht."]}
         ],
         "nl": [
         {"lemma": "bedrijf", "pos": "noun", "details": {"article": "het", "plural": "bedrijven"}, "sentences": ["Mijn vader werkt bij een *bedrijf* dat fietsen maakt in Utrecht."]}
@@ -161,7 +161,7 @@
       "gloss": "professor (noun)",
       "entries": {
         "en": [
-        {"lemma": "professor", "pos": "noun", "details": {"plural": "professors"}, "sentences": ["The *professor* explains the theory in a big hall."]}
+        {"lemma": "professor", "pos": "noun", "details": {"plural": "professors"}, "sentences": ["The *professor* explains the theory to students in a big hall."]}
         ],
         "nl": [
         {"lemma": "professor", "pos": "noun", "details": {"article": "de", "plural": "professoren"}, "sentences": ["De *professor* legt de theorie uit aan studenten in een grote zaal."]}
@@ -200,7 +200,7 @@
         {"lemma": "assignment", "pos": "noun", "details": {"plural": "assignments"}, "sentences": ["Our teacher gives us an *assignment* for Friday."]}
         ],
         "nl": [
-        {"lemma": "opdracht", "pos": "noun", "details": {"article": "de", "plural": "opdrachten"}, "sentences": ["Onze leraar geeft ons een *opdracht* die we vrijdag moeten afhebben."]}
+        {"lemma": "opdracht", "pos": "noun", "details": {"article": "de", "plural": "opdrachten"}, "sentences": ["Onze leraar geeft ons een *opdracht* voor vrijdag."]}
         ]
       }
     },
@@ -293,7 +293,7 @@
       "gloss": "safe (box)",
       "entries": {
         "en": [
-        {"lemma": "safe", "pos": "noun", "details": {"note": "box", "plural": "safes"}, "sentences": ["The hotel keeps our passports in a *safe*."]}
+        {"lemma": "safe", "pos": "noun", "details": {"note": "box", "plural": "safes"}, "sentences": ["The hotel keeps our passports in a *safe* behind the desk."]}
         ],
         "nl": [
         {"lemma": "kluis", "pos": "noun", "details": {"article": "de", "plural": "kluizen"}, "sentences": ["Het hotel bewaart onze paspoorten in een *kluis* achter de balie."]}
@@ -308,7 +308,7 @@
         {"lemma": "contract", "pos": "noun", "details": {"plural": "contracts"}, "sentences": ["I read the *contract* before I accept the job."]}
         ],
         "nl": [
-        {"lemma": "contract", "pos": "noun", "details": {"article": "het", "plural": "contracten"}, "sentences": ["Ik lees het *contract* goed door voordat ik mijn nieuwe baan accepteer."]}
+        {"lemma": "contract", "pos": "noun", "details": {"article": "het", "plural": "contracten"}, "sentences": ["Ik lees het *contract* door voordat ik de baan accepteer."]}
         ]
       }
     },
@@ -329,7 +329,7 @@
       "gloss": "director (noun)",
       "entries": {
         "en": [
-        {"lemma": "director", "pos": "noun", "details": {"plural": "directors"}, "sentences": ["The *director* of our school welcomes the parents."]}
+        {"lemma": "director", "pos": "noun", "details": {"plural": "directors"}, "sentences": ["The *director* of our school welcomes the parents in the hall."]}
         ],
         "nl": [
         {"lemma": "directeur", "pos": "noun", "details": {"article": "de", "plural": "directeuren"}, "sentences": ["De *directeur* van onze school verwelkomt de ouders in de aula."]}
@@ -341,7 +341,7 @@
       "gloss": "client (noun)",
       "entries": {
         "en": [
-        {"lemma": "client", "pos": "noun", "details": {"plural": "clients"}, "sentences": ["The *client* calls because the invoice looks wrong."]}
+        {"lemma": "client", "pos": "noun", "details": {"plural": "clients"}, "sentences": ["The *client* calls the office because the invoice looks wrong."]}
         ],
         "nl": [
         {"lemma": "cliënt", "pos": "noun", "details": {"article": "de", "plural": "cliënten"}, "sentences": ["De *cliënt* belt het kantoor omdat de factuur niet klopt."]}
@@ -365,7 +365,7 @@
       "gloss": "rent (verb)",
       "entries": {
         "en": [
-        {"lemma": "to rent", "pos": "verb", "details": {"past": "rented", "participle": "rented"}, "sentences": ["We *rent* a small house near the beach."]}
+        {"lemma": "to rent", "pos": "verb", "details": {"past": "rented", "participle": "rented"}, "sentences": ["We *rent* a small house near the beach every summer."]}
         ],
         "nl": [
         {"lemma": "huren", "pos": "verb", "details": {"pastSingular": "huurde", "pastPlural": "huurden", "participle": "gehuurd", "auxiliary": "hebben"}, "sentences": ["Wij *huren* elke zomer een klein huisje bij het strand."]}
@@ -377,7 +377,7 @@
       "gloss": "career (noun)",
       "entries": {
         "en": [
-        {"lemma": "career", "pos": "noun", "details": {"plural": "careers"}, "sentences": ["She has a successful *career* as a teacher."]}
+        {"lemma": "career", "pos": "noun", "details": {"plural": "careers"}, "sentences": ["She has a successful *career* as a teacher in a big city."]}
         ],
         "nl": [
         {"lemma": "carrière", "pos": "noun", "details": {"article": "de", "plural": "carrières"}, "sentences": ["Zij heeft een succesvolle *carrière* als lerares in een grote stad."]}
@@ -389,7 +389,7 @@
       "gloss": "writer (noun)",
       "entries": {
         "en": [
-        {"lemma": "writer", "pos": "noun", "details": {"note": "any gender", "plural": "writers"}, "sentences": ["The *writer* signs copies of her new book."]}
+        {"lemma": "writer", "pos": "noun", "details": {"note": "any gender", "plural": "writers"}, "sentences": ["The *writer* signs copies of her new book in the shop."]}
         ],
         "nl": [
         {"lemma": "schrijver", "pos": "noun", "details": {"article": "de", "plural": "schrijvers"}, "sentences": ["De *schrijver* signeert exemplaren van haar nieuwe boek in de winkel."]}
@@ -413,7 +413,7 @@
       "gloss": "save (money)",
       "entries": {
         "en": [
-        {"lemma": "to save", "pos": "verb", "details": {"note": "money", "past": "saved", "participle": "saved"}, "sentences": ["I *save* ten euros every week for a bike."]}
+        {"lemma": "to save", "pos": "verb", "details": {"note": "money", "past": "saved", "participle": "saved"}, "sentences": ["I *save* ten euros every week for a new bike."]}
         ],
         "nl": [
         {"lemma": "sparen", "pos": "verb", "details": {"pastSingular": "spaarde", "pastPlural": "spaarden", "participle": "gespaard", "auxiliary": "hebben"}, "sentences": ["Ik *spaar* elke week tien euro voor een nieuwe fiets."]}
@@ -437,7 +437,7 @@
       "gloss": "meeting (noun)",
       "entries": {
         "en": [
-        {"lemma": "meeting", "pos": "noun", "details": {"plural": "meetings"}, "sentences": ["Our weekly *meeting* starts at nine sharp."]}
+        {"lemma": "meeting", "pos": "noun", "details": {"plural": "meetings"}, "sentences": ["Our weekly *meeting* starts at nine sharp in the small hall."]}
         ],
         "nl": [
         {"lemma": "vergadering", "pos": "noun", "details": {"article": "de", "plural": "vergaderingen"}, "sentences": ["Onze wekelijkse *vergadering* begint om negen uur in de kleine zaal."]}
@@ -449,7 +449,7 @@
       "gloss": "driver (noun)",
       "entries": {
         "en": [
-        {"lemma": "driver", "pos": "noun", "details": {"note": "a professional", "plural": "drivers"}, "sentences": ["The bus *driver* greets every passenger with a smile."]}
+        {"lemma": "driver", "pos": "noun", "details": {"note": "a professional", "plural": "drivers"}, "sentences": ["The bus *driver* greets every passenger with a friendly smile."]}
         ],
         "nl": [
         {"lemma": "chauffeur", "pos": "noun", "details": {"article": "de", "plural": "chauffeurs"}, "sentences": ["De bus*chauffeur* begroet elke passagier met een vriendelijke glimlach."]}
@@ -464,7 +464,7 @@
         {"lemma": "project", "pos": "noun", "details": {"plural": "projects"}, "sentences": ["Our group works on a big *project* about nature."]}
         ],
         "nl": [
-        {"lemma": "project", "pos": "noun", "details": {"article": "het", "plural": "projecten"}, "sentences": ["Onze groep werkt aan een groot *project* over het milieu."]}
+        {"lemma": "project", "pos": "noun", "details": {"article": "het", "plural": "projecten"}, "sentences": ["Onze groep werkt aan een groot *project* over de natuur."]}
         ]
       }
     },
@@ -473,7 +473,7 @@
       "gloss": "diamond (noun)",
       "entries": {
         "en": [
-        {"lemma": "diamond", "pos": "noun", "details": {"plural": "diamonds"}, "sentences": ["The ring has a small *diamond* that sparkles."]}
+        {"lemma": "diamond", "pos": "noun", "details": {"plural": "diamonds"}, "sentences": ["The ring has a small *diamond* that sparkles in the light."]}
         ],
         "nl": [
         {"lemma": "diamant", "pos": "noun", "details": {"article": "de", "plural": "diamanten"}, "sentences": ["De ring heeft een kleine *diamant* die schittert in het licht."]}
@@ -485,7 +485,7 @@
       "gloss": "check (payment)",
       "entries": {
         "en": [
-        {"lemma": "check", "pos": "noun", "details": {"note": "payment", "plural": "checks"}, "sentences": ["My grandmother pays the rent with a *check*."]}
+        {"lemma": "check", "pos": "noun", "details": {"note": "payment", "plural": "checks"}, "sentences": ["My grandmother pays the rent every month with a *check*."]}
         ],
         "nl": [
         {"lemma": "cheque", "pos": "noun", "details": {"article": "de", "plural": "cheques"}, "sentences": ["Mijn oma betaalt de huur elke maand met een *cheque*."]}
@@ -497,7 +497,7 @@
       "gloss": "dismissal (noun)",
       "entries": {
         "en": [
-        {"lemma": "dismissal", "pos": "noun", "details": {"plural": "dismissals"}, "sentences": ["After his *dismissal*, he looks for a new job."]}
+        {"lemma": "dismissal", "pos": "noun", "details": {"plural": "dismissals"}, "sentences": ["After his *dismissal*, he looks for a new job right away."]}
         ],
         "nl": [
         {"lemma": "ontslag", "pos": "noun", "details": {"article": "het", "plural": "ontslagen"}, "sentences": ["Na zijn *ontslag* zoekt hij meteen een nieuwe baan."]}
@@ -509,7 +509,7 @@
       "gloss": "deposit (verb)",
       "entries": {
         "en": [
-        {"lemma": "to deposit", "pos": "verb", "details": {"past": "deposited", "participle": "deposited"}, "sentences": ["I *deposit* my salary at the bank every month."]}
+        {"lemma": "to deposit", "pos": "verb", "details": {"past": "deposited", "participle": "deposited"}, "sentences": ["I *deposit* my salary in my account on the first day of the month."]}
         ],
         "nl": [
         {"lemma": "storten", "pos": "verb", "details": {"pastSingular": "stortte", "pastPlural": "stortten", "participle": "gestort", "auxiliary": "hebben"}, "sentences": ["Ik *stort* mijn salaris op de eerste dag van de maand op mijn rekening."]}
@@ -533,7 +533,7 @@
       "gloss": "carry out (verb)",
       "entries": {
         "en": [
-        {"lemma": "to carry out", "pos": "verb", "details": {"past": "carried out", "participle": "carried out"}, "sentences": ["Engineers *carry out* the plan to repair the bridge."]}
+        {"lemma": "to carry out", "pos": "verb", "details": {"past": "carried out", "participle": "carried out"}, "sentences": ["Engineers *carry out* the plan to repair the old bridge."]}
         ],
         "nl": [
         {"lemma": "uitvoeren", "pos": "verb", "details": {"pastSingular": "voerde uit", "pastPlural": "voerden uit", "participle": "uitgevoerd", "auxiliary": "hebben"}, "sentences": ["Ingenieurs *voeren* het plan om de oude brug te repareren *uit*."]}
@@ -548,7 +548,7 @@
         {"lemma": "to take over", "pos": "verb", "details": {"past": "took over", "participle": "taken over"}, "sentences": ["I *take over* the shift when she is tired."]}
         ],
         "nl": [
-        {"lemma": "overnemen", "pos": "verb", "details": {"pastSingular": "nam over", "pastPlural": "namen over", "participle": "overgenomen", "auxiliary": "hebben"}, "sentences": ["Ik *neem* de dienst *over* als mijn vriend moe wordt."]}
+        {"lemma": "overnemen", "pos": "verb", "details": {"pastSingular": "nam over", "pastPlural": "namen over", "participle": "overgenomen", "auxiliary": "hebben"}, "sentences": ["Ik *neem* de dienst *over* als zij moe wordt."]}
         ]
       }
     },
@@ -557,7 +557,7 @@
       "gloss": "manager (noun)",
       "entries": {
         "en": [
-        {"lemma": "manager", "pos": "noun", "details": {"plural": "managers"}, "sentences": ["The *manager* of the shop gives workers a tour."]}
+        {"lemma": "manager", "pos": "noun", "details": {"plural": "managers"}, "sentences": ["The *manager* of the shop gives every new worker a tour."]}
         ],
         "nl": [
         {"lemma": "manager", "pos": "noun", "details": {"article": "de", "plural": "managers"}, "sentences": ["De *manager* van de winkel geeft elke nieuwe medewerker een rondleiding."]}
@@ -569,7 +569,7 @@
       "gloss": "cooperate (verb)",
       "entries": {
         "en": [
-        {"lemma": "to cooperate", "pos": "verb", "details": {"past": "cooperated", "participle": "cooperated"}, "sentences": ["Both teams *cooperate* to finish the project on time."]}
+        {"lemma": "to cooperate", "pos": "verb", "details": {"past": "cooperated", "participle": "cooperated"}, "sentences": ["Both teams *cooperate* to finish the big project on time."]}
         ],
         "nl": [
         {"lemma": "samenwerken", "pos": "verb", "details": {"pastSingular": "werkte samen", "pastPlural": "werkten samen", "participle": "samengewerkt", "auxiliary": "hebben"}, "sentences": ["Beide teams *werken samen* om het grote project op tijd af te krijgen."]}
@@ -617,7 +617,7 @@
       "gloss": "share (noun)",
       "entries": {
         "en": [
-        {"lemma": "share", "pos": "noun", "details": {"plural": "shares"}, "sentences": ["She owns one *share* and checks the price daily."]}
+        {"lemma": "share", "pos": "noun", "details": {"plural": "shares"}, "sentences": ["She owns one *share* of the company and checks the price daily."]}
         ],
         "nl": [
         {"lemma": "aandeel", "pos": "noun", "details": {"article": "het", "plural": "aandelen"}, "sentences": ["Zij bezit één *aandeel* van het bedrijf en kijkt dagelijks naar de koers."]}
@@ -641,7 +641,7 @@
       "gloss": "copy (noun)",
       "entries": {
         "en": [
-        {"lemma": "copy", "pos": "noun", "details": {"note": "duplicate", "plural": "copies"}, "sentences": ["I make a *copy* of my passport today."]}
+        {"lemma": "copy", "pos": "noun", "details": {"note": "duplicate", "plural": "copies"}, "sentences": ["I make a *copy* of my passport today for the travel agency."]}
         ],
         "nl": [
         {"lemma": "kopie", "pos": "noun", "details": {"article": "de", "plural": "kopieën"}, "sentences": ["Ik maak een *kopie* van mijn paspoort voor het reisbureau."]}
@@ -653,7 +653,7 @@
       "gloss": "set up (verb)",
       "entries": {
         "en": [
-        {"lemma": "to set up", "pos": "verb", "details": {"past": "set up", "participle": "set up"}, "sentences": ["Two friends *set up* a small company together."]}
+        {"lemma": "to set up", "pos": "verb", "details": {"past": "set up", "participle": "set up"}, "sentences": ["Two friends *set up* a small company together in their garage."]}
         ],
         "nl": [
         {"lemma": "opzetten", "pos": "verb", "details": {"pastSingular": "zette op", "pastPlural": "zetten op", "participle": "opgezet", "auxiliary": "hebben"}, "sentences": ["Twee vrienden *zetten* in hun garage een klein bedrijf *op*."]}
@@ -677,7 +677,7 @@
       "gloss": "factory (noun)",
       "entries": {
         "en": [
-        {"lemma": "factory", "pos": "noun", "details": {"plural": "factories"}, "sentences": ["The *factory* near the river makes bicycles."]}
+        {"lemma": "factory", "pos": "noun", "details": {"plural": "factories"}, "sentences": ["The *factory* near the river makes bicycles for the whole country."]}
         ],
         "nl": [
         {"lemma": "fabriek", "pos": "noun", "details": {"article": "de", "plural": "fabrieken"}, "sentences": ["De *fabriek* bij de rivier maakt fietsen voor het hele land."]}
@@ -692,7 +692,7 @@
         {"lemma": "chief", "pos": "noun", "details": {"plural": "chiefs"}, "sentences": ["The *chief* of the fire station talks to us."]}
         ],
         "nl": [
-        {"lemma": "chef", "pos": "noun", "details": {"article": "de", "plural": "chefs"}, "sentences": ["De *chef* van de brandweerkazerne praat met het nieuwe team."]}
+        {"lemma": "chef", "pos": "noun", "details": {"article": "de", "plural": "chefs"}, "sentences": ["De *chef* van de brandweerkazerne praat met ons."]}
         ]
       }
     },
@@ -701,7 +701,7 @@
       "gloss": "organize (verb)",
       "entries": {
         "en": [
-        {"lemma": "to organize", "pos": "verb", "details": {"past": "organized", "participle": "organized"}, "sentences": ["We *organize* a surprise party for our teacher."]}
+        {"lemma": "to organize", "pos": "verb", "details": {"past": "organized", "participle": "organized"}, "sentences": ["We *organize* a surprise party for our teacher on Friday."]}
         ],
         "nl": [
         {"lemma": "organiseren", "pos": "verb", "details": {"pastSingular": "organiseerde", "pastPlural": "organiseerden", "participle": "georganiseerd", "auxiliary": "hebben"}, "sentences": ["Wij *organiseren* vrijdag een verrassingsfeest voor onze leraar."]}
@@ -713,7 +713,7 @@
       "gloss": "trade (noun)",
       "entries": {
         "en": [
-        {"lemma": "trade", "pos": "noun", "details": {"uncountable": true}, "sentences": ["*Trade* between both countries grows thanks to the harbour."]}
+        {"lemma": "trade", "pos": "noun", "details": {"uncountable": true}, "sentences": ["*Trade* between both countries grows thanks to the new harbour."]}
         ],
         "nl": [
         {"lemma": "handel", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["De *handel* tussen de twee landen groeit door de nieuwe haven."]}
@@ -725,7 +725,7 @@
       "gloss": "signature (noun)",
       "entries": {
         "en": [
-        {"lemma": "signature", "pos": "noun", "details": {"plural": "signatures"}, "sentences": ["The bank needs your *signature* at the bottom."]}
+        {"lemma": "signature", "pos": "noun", "details": {"plural": "signatures"}, "sentences": ["The bank needs your *signature* at the bottom of the page."]}
         ],
         "nl": [
         {"lemma": "handtekening", "pos": "noun", "details": {"article": "de", "plural": "handtekeningen"}, "sentences": ["De bank heeft je *handtekening* nodig onderaan de pagina."]}
@@ -764,7 +764,7 @@
         {"lemma": "profit", "pos": "noun", "details": {"plural": "profits"}, "sentences": ["The shop makes a small *profit* this month."]}
         ],
         "nl": [
-        {"lemma": "winst", "pos": "noun", "details": {"article": "de", "plural": "winsten"}, "sentences": ["De winkel maakt in de eerste maand een kleine *winst*."]}
+        {"lemma": "winst", "pos": "noun", "details": {"article": "de", "plural": "winsten"}, "sentences": ["De winkel maakt deze maand een kleine *winst*."]}
         ]
       }
     },
@@ -776,7 +776,7 @@
         {"lemma": "scientist", "pos": "noun", "details": {"plural": "scientists"}, "sentences": ["The *scientist* studies the ice at the North Pole."]}
         ],
         "nl": [
-        {"lemma": "wetenschapper", "pos": "noun", "details": {"article": "de", "plural": "wetenschappers"}, "sentences": ["De *wetenschapper* bestudeert al jaren het ijs op de Noordpool."]}
+        {"lemma": "wetenschapper", "pos": "noun", "details": {"article": "de", "plural": "wetenschappers"}, "sentences": ["De *wetenschapper* bestudeert het ijs op de Noordpool."]}
         ]
       }
     },
@@ -800,7 +800,7 @@
         {"lemma": "reward", "pos": "noun", "details": {"plural": "rewards"}, "sentences": ["The owner offers a *reward* for the lost dog."]}
         ],
         "nl": [
-        {"lemma": "beloning", "pos": "noun", "details": {"article": "de", "plural": "beloningen"}, "sentences": ["De baas van de hond biedt een *beloning* aan wie hem vindt."]}
+        {"lemma": "beloning", "pos": "noun", "details": {"article": "de", "plural": "beloningen"}, "sentences": ["De eigenaar biedt een *beloning* aan voor de verdwenen hond."]}
         ]
       }
     },
@@ -848,7 +848,7 @@
         {"lemma": "agreement", "pos": "noun", "details": {"plural": "agreements"}, "sentences": ["After a long talk, they reach an *agreement*."]}
         ],
         "nl": [
-        {"lemma": "overeenkomst", "pos": "noun", "details": {"article": "de", "plural": "overeenkomsten"}, "sentences": ["Na een lang gesprek bereiken beide partijen een *overeenkomst*."]}
+        {"lemma": "overeenkomst", "pos": "noun", "details": {"article": "de", "plural": "overeenkomsten"}, "sentences": ["Na een lang gesprek bereiken ze een *overeenkomst*."]}
         ]
       }
     },
@@ -881,7 +881,7 @@
       "gloss": "document (noun)",
       "entries": {
         "en": [
-        {"lemma": "document", "pos": "noun", "details": {"plural": "documents"}, "sentences": ["Please bring this *document* to the town hall tomorrow."]}
+        {"lemma": "document", "pos": "noun", "details": {"plural": "documents"}, "sentences": ["Please bring this *document* to the town hall tomorrow morning."]}
         ],
         "nl": [
         {"lemma": "document", "pos": "noun", "details": {"article": "het", "plural": "documenten"}, "sentences": ["Breng dit *document* morgenochtend alsjeblieft naar het gemeentehuis."]}
@@ -905,7 +905,7 @@
       "gloss": "wage (noun)",
       "entries": {
         "en": [
-        {"lemma": "wage", "pos": "noun", "details": {"plural": "wages"}, "sentences": ["The *wage* in this job is too low."]}
+        {"lemma": "wage", "pos": "noun", "details": {"plural": "wages"}, "sentences": ["The *wage* in this job is low, so he looks for something else."]}
         ],
         "nl": [
         {"lemma": "loon", "pos": "noun", "details": {"article": "het", "plural": "lonen"}, "sentences": ["Het *loon* in deze baan is laag, dus hij zoekt iets anders."]}
@@ -917,7 +917,7 @@
       "gloss": "insurance (noun)",
       "entries": {
         "en": [
-        {"lemma": "insurance", "pos": "noun", "details": {"uncountable": true}, "sentences": ["My *insurance* pays for the damage after the accident."]}
+        {"lemma": "insurance", "pos": "noun", "details": {"uncountable": true}, "sentences": ["My *insurance* pays for the damage to the car after the accident."]}
         ],
         "nl": [
         {"lemma": "verzekering", "pos": "noun", "details": {"article": "de", "plural": "verzekeringen"}, "sentences": ["Mijn *verzekering* betaalt de schade aan de auto na het ongeluk."]}
@@ -977,7 +977,7 @@
       "gloss": "coin (noun)",
       "entries": {
         "en": [
-        {"lemma": "coin", "pos": "noun", "details": {"plural": "coins"}, "sentences": ["I put a *coin* in the machine."]}
+        {"lemma": "coin", "pos": "noun", "details": {"plural": "coins"}, "sentences": ["I put a *coin* in the machine to get a ticket."]}
         ],
         "nl": [
         {"lemma": "munt", "pos": "noun", "details": {"note": "geld", "article": "de", "plural": "munten"}, "sentences": ["Ik gooi een *munt* in de automaat om een kaartje te krijgen."]}
@@ -989,7 +989,7 @@
       "gloss": "amount (noun)",
       "entries": {
         "en": [
-        {"lemma": "amount", "pos": "noun", "details": {"plural": "amounts"}, "sentences": ["The total *amount* on the bill is high."]}
+        {"lemma": "amount", "pos": "noun", "details": {"plural": "amounts"}, "sentences": ["The total *amount* on the bill is higher than I expect."]}
         ],
         "nl": [
         {"lemma": "bedrag", "pos": "noun", "details": {"article": "het", "plural": "bedragen"}, "sentences": ["Het totale *bedrag* op de rekening is hoger dan ik verwacht."]}
@@ -1001,7 +1001,7 @@
       "gloss": "ambassador (noun)",
       "entries": {
         "en": [
-        {"lemma": "ambassador", "pos": "noun", "details": {"plural": "ambassadors"}, "sentences": ["The *ambassador* lives in a big house downtown."]}
+        {"lemma": "ambassador", "pos": "noun", "details": {"plural": "ambassadors"}, "sentences": ["The *ambassador* lives in a big house in the capital."]}
         ],
         "nl": [
         {"lemma": "ambassadeur", "pos": "noun", "details": {"article": "de", "plural": "ambassadeurs"}, "sentences": ["De *ambassadeur* woont in een groot huis in de hoofdstad."]}
@@ -1013,7 +1013,7 @@
       "gloss": "afford (verb)",
       "entries": {
         "en": [
-        {"lemma": "to afford", "pos": "verb", "details": {"past": "afforded", "participle": "afforded"}, "sentences": ["We cannot *afford* a new car now."]}
+        {"lemma": "to afford", "pos": "verb", "details": {"past": "afforded", "participle": "afforded"}, "sentences": ["We cannot *afford* a new car because it is too expensive."]}
         ],
         "nl": [
         {"lemma": "veroorloven", "pos": "verb", "details": {"pastSingular": "veroorloofde", "pastPlural": "veroorloofden", "participle": "veroorloofd", "auxiliary": "hebben"}, "sentences": ["Wij kunnen ons geen nieuwe auto *veroorloven* omdat die te duur is."]}
@@ -1025,7 +1025,7 @@
       "gloss": "schedule (noun)",
       "entries": {
         "en": [
-        {"lemma": "schedule", "pos": "noun", "details": {"plural": "schedules"}, "sentences": ["I check the train *schedule* before I leave."]}
+        {"lemma": "schedule", "pos": "noun", "details": {"plural": "schedules"}, "sentences": ["I check the train *schedule* before I go to work."]}
         ],
         "nl": [
         {"lemma": "schema", "pos": "noun", "details": {"article": "het", "plural": "schema's"}, "sentences": ["Ik bekijk het *schema* van de treinen voordat ik naar mijn werk ga."]}
@@ -1049,7 +1049,7 @@
       "gloss": "promotion (noun)",
       "entries": {
         "en": [
-        {"lemma": "promotion", "pos": "noun", "details": {"plural": "promotions"}, "sentences": ["He gets a *promotion* and a bigger office."]}
+        {"lemma": "promotion", "pos": "noun", "details": {"plural": "promotions"}, "sentences": ["After two years, he gets a *promotion* and a bigger office."]}
         ],
         "nl": [
         {"lemma": "promotie", "pos": "noun", "details": {"article": "de", "plural": "promoties"}, "sentences": ["Hij krijgt na twee jaar een *promotie* en een groter kantoor."]}
@@ -1073,7 +1073,7 @@
       "gloss": "dentist (noun)",
       "entries": {
         "en": [
-        {"lemma": "dentist", "pos": "noun", "details": {"plural": "dentists"}, "sentences": ["The *dentist* looks at my teeth and smiles."]}
+        {"lemma": "dentist", "pos": "noun", "details": {"plural": "dentists"}, "sentences": ["The *dentist* looks at my teeth and says they are healthy."]}
         ],
         "nl": [
         {"lemma": "tandarts", "pos": "noun", "details": {"article": "de", "plural": "tandartsen"}, "sentences": ["De *tandarts* bekijkt mijn tanden en zegt dat ze gezond zijn."]}
@@ -1088,7 +1088,7 @@
         {"lemma": "artist", "pos": "noun", "details": {"plural": "artists"}, "sentences": ["The *artist* shows her paintings in a small gallery."]}
         ],
         "nl": [
-        {"lemma": "kunstenaar", "pos": "noun", "details": {"article": "de", "plural": "kunstenaars"}, "sentences": ["De *kunstenaar* toont haar schilderijen in een galerie in de stad."]}
+        {"lemma": "kunstenaar", "pos": "noun", "details": {"article": "de", "plural": "kunstenaars"}, "sentences": ["De *kunstenaar* toont haar schilderijen in een kleine galerie."]}
         ]
       }
     },
@@ -1097,7 +1097,7 @@
       "gloss": "own (verb)",
       "entries": {
         "en": [
-        {"lemma": "to own", "pos": "verb", "details": {"past": "owned", "participle": "owned"}, "sentences": ["He *owns* a small house by the lake."]}
+        {"lemma": "to own", "pos": "verb", "details": {"past": "owned", "participle": "owned"}, "sentences": ["He *owns* a small house and a garden by the lake."]}
         ],
         "nl": [
         {"lemma": "bezitten", "pos": "verb", "details": {"pastSingular": "bezat", "pastPlural": "bezaten", "participle": "bezeten", "auxiliary": "hebben"}, "sentences": ["Hij *bezit* een klein huis en een tuin aan het meer."]}
@@ -1121,7 +1121,7 @@
       "gloss": "secretary (noun)",
       "entries": {
         "en": [
-        {"lemma": "secretary", "pos": "noun", "details": {"note": "typist", "plural": "secretaries"}, "sentences": ["The *secretary* types letters and answers the phone."]}
+        {"lemma": "secretary", "pos": "noun", "details": {"note": "typist", "plural": "secretaries"}, "sentences": ["The *secretary* types letters and answers the phone all day."]}
         ],
         "nl": [
         {"lemma": "secretaresse", "pos": "noun", "details": {"article": "de", "plural": "secretaressen"}, "sentences": ["De *secretaresse* typt de brieven en neemt de hele dag de telefoon op."]}
@@ -1145,7 +1145,7 @@
       "gloss": "sign (a document)",
       "entries": {
         "en": [
-        {"lemma": "to sign", "pos": "verb", "details": {"note": "a document", "past": "signed", "participle": "signed"}, "sentences": ["I *sign* the contract on the last page."]}
+        {"lemma": "to sign", "pos": "verb", "details": {"note": "a document", "past": "signed", "participle": "signed"}, "sentences": ["I *sign* the contract at the bottom of the last page."]}
         ],
         "nl": [
         {"lemma": "ondertekenen", "pos": "verb", "details": {"pastSingular": "ondertekende", "pastPlural": "ondertekenden", "participle": "ondertekend", "auxiliary": "hebben"}, "sentences": ["Ik *onderteken* het contract onderaan de laatste pagina."]}
@@ -1169,7 +1169,7 @@
       "gloss": "tip (gratuity)",
       "entries": {
         "en": [
-        {"lemma": "tip", "pos": "noun", "details": {"note": "gratuity", "plural": "tips"}, "sentences": ["I leave a *tip* because the service is great."]}
+        {"lemma": "tip", "pos": "noun", "details": {"note": "gratuity", "plural": "tips"}, "sentences": ["I leave a small *tip* because the service in the cafe is great."]}
         ],
         "nl": [
         {"lemma": "fooi", "pos": "noun", "details": {"article": "de", "plural": "fooien"}, "sentences": ["Ik laat een kleine *fooi* achter omdat de bediening in het café geweldig is."]}
@@ -1193,7 +1193,7 @@
       "gloss": "businessman (noun)",
       "entries": {
         "en": [
-        {"lemma": "businessman", "pos": "noun", "details": {"plural": "businessmans"}, "sentences": ["The *businessman* flies to London twice a month."]}
+        {"lemma": "businessman", "pos": "noun", "details": {"plural": "businessmans"}, "sentences": ["The *businessman* flies to London twice a month for meetings."]}
         ],
         "nl": [
         {"lemma": "zakenman", "pos": "noun", "details": {"article": "de", "plural": "zakenlieden"}, "sentences": ["De *zakenman* vliegt twee keer per maand naar Londen voor vergaderingen."]}
@@ -1205,7 +1205,7 @@
       "gloss": "credit card (noun)",
       "entries": {
         "en": [
-        {"lemma": "credit card", "pos": "noun", "details": {"plural": "credit cards"}, "sentences": ["I pay for the hotel with my *credit card*."]}
+        {"lemma": "credit card", "pos": "noun", "details": {"plural": "credit cards"}, "sentences": ["I pay for the hotel online with my *credit card*."]}
         ],
         "nl": [
         {"lemma": "creditcard", "pos": "noun", "details": {"article": "de", "plural": "creditcards"}, "sentences": ["Ik betaal het hotel online met mijn *creditcard*."]}
@@ -1217,7 +1217,7 @@
       "gloss": "salary (noun)",
       "entries": {
         "en": [
-        {"lemma": "salary", "pos": "noun", "details": {"plural": "salaries"}, "sentences": ["My *salary* arrives in my bank account monthly."]}
+        {"lemma": "salary", "pos": "noun", "details": {"plural": "salaries"}, "sentences": ["My *salary* arrives in my bank account on the twenty-fifth."]}
         ],
         "nl": [
         {"lemma": "salaris", "pos": "noun", "details": {"article": "het", "plural": "salarissen"}, "sentences": ["Mijn *salaris* staat op de vijfentwintigste op mijn bankrekening."]}
@@ -1241,7 +1241,7 @@
       "gloss": "loan (noun)",
       "entries": {
         "en": [
-        {"lemma": "loan", "pos": "noun", "details": {"plural": "loans"}, "sentences": ["They take a *loan* to buy a house."]}
+        {"lemma": "loan", "pos": "noun", "details": {"plural": "loans"}, "sentences": ["They take a *loan* from the bank to buy a house."]}
         ],
         "nl": [
         {"lemma": "lening", "pos": "noun", "details": {"article": "de", "plural": "leningen"}, "sentences": ["Zij nemen een *lening* bij de bank om een huis te kopen."]}
@@ -1253,7 +1253,7 @@
       "gloss": "agenda (noun)",
       "entries": {
         "en": [
-        {"lemma": "agenda", "pos": "noun", "details": {"plural": "agendas"}, "sentences": ["My *agenda* is full this week, with five meetings."]}
+        {"lemma": "agenda", "pos": "noun", "details": {"plural": "agendas"}, "sentences": ["My *agenda* is full this week, with five meetings on Monday."]}
         ],
         "nl": [
         {"lemma": "agenda", "pos": "noun", "details": {"article": "de", "plural": "agenda's"}, "sentences": ["Mijn *agenda* zit deze week vol, met vijf afspraken op maandag."]}
@@ -1268,7 +1268,7 @@
         {"lemma": "to suspend", "pos": "verb", "details": {"past": "suspended", "participle": "suspended"}, "sentences": ["The school does not *suspend* a pupil without warning."]}
         ],
         "nl": [
-        {"lemma": "schorsen", "pos": "verb", "details": {"pastSingular": "schorste", "pastPlural": "schorsten", "participle": "geschorst", "auxiliary": "hebben"}, "sentences": ["De school *schorst* een leerling niet zonder met de ouders te praten."]}
+        {"lemma": "schorsen", "pos": "verb", "details": {"pastSingular": "schorste", "pastPlural": "schorsten", "participle": "geschorst", "auxiliary": "hebben"}, "sentences": ["De school *schorst* een leerling niet zonder waarschuwing."]}
         ]
       }
     },
@@ -1277,7 +1277,7 @@
       "gloss": "guide (noun)",
       "entries": {
         "en": [
-        {"lemma": "guide", "pos": "noun", "details": {"plural": "guides"}, "sentences": ["The tour *guide* tells us about the castle's history."]}
+        {"lemma": "guide", "pos": "noun", "details": {"plural": "guides"}, "sentences": ["The tour *guide* tells us about the long history of the castle."]}
         ],
         "nl": [
         {"lemma": "gids", "pos": "noun", "details": {"article": "de", "plural": "gidsen"}, "sentences": ["De *gids* vertelt ons over de lange geschiedenis van het kasteel."]}
@@ -1289,7 +1289,7 @@
       "gloss": "hairdresser (noun)",
       "entries": {
         "en": [
-        {"lemma": "hairdresser", "pos": "noun", "details": {"plural": "hairdressers"}, "sentences": ["My *hairdresser* trims my hair and chats."]}
+        {"lemma": "hairdresser", "pos": "noun", "details": {"plural": "hairdressers"}, "sentences": ["My *hairdresser* trims my hair and asks about my holiday."]}
         ],
         "nl": [
         {"lemma": "kapper", "pos": "noun", "details": {"article": "de", "plural": "kappers"}, "sentences": ["Mijn *kapper* knipt mijn haar en vraagt naar mijn vakantie."]}
@@ -1301,7 +1301,7 @@
       "gloss": "teacher (female)",
       "entries": {
         "en": [
-        {"lemma": "teacher", "pos": "noun", "details": {"note": "female", "plural": "teachers"}, "sentences": ["Our *teacher* reads a story to the class."]}
+        {"lemma": "teacher", "pos": "noun", "details": {"note": "female", "plural": "teachers"}, "sentences": ["Our *teacher* reads a story to the class after lunch."]}
         ],
         "nl": [
         {"lemma": "lerares", "pos": "noun", "details": {"article": "de", "plural": "leraressen"}, "sentences": ["Onze *lerares* leest na de lunch een verhaal voor aan de klas."]}
@@ -1337,7 +1337,7 @@
       "gloss": "photographer (noun)",
       "entries": {
         "en": [
-        {"lemma": "photographer", "pos": "noun", "details": {"plural": "photographers"}, "sentences": ["The *photographer* takes pictures of the bride and groom."]}
+        {"lemma": "photographer", "pos": "noun", "details": {"plural": "photographers"}, "sentences": ["The *photographer* takes pictures of the bride and groom outside."]}
         ],
         "nl": [
         {"lemma": "fotograaf", "pos": "noun", "details": {"article": "de", "plural": "fotografen"}, "sentences": ["De *fotograaf* maakt buiten foto's van de bruid en bruidegom."]}
@@ -1361,7 +1361,7 @@
       "gloss": "tax (noun)",
       "entries": {
         "en": [
-        {"lemma": "tax", "pos": "noun", "details": {"plural": "taxes"}, "sentences": ["I pay *tax* on the money I earn."]}
+        {"lemma": "tax", "pos": "noun", "details": {"plural": "taxes"}, "sentences": ["I pay *tax* on the money I earn with my job."]}
         ],
         "nl": [
         {"lemma": "belasting", "pos": "noun", "details": {"article": "de", "plural": "belastingen"}, "sentences": ["Ik betaal *belasting* over het geld dat ik met mijn baan verdien."]}
@@ -1388,7 +1388,7 @@
         {"lemma": "sector", "pos": "noun", "details": {"plural": "sectors"}, "sentences": ["Tourism is a growing *sector* in this country."]}
         ],
         "nl": [
-        {"lemma": "sector", "pos": "noun", "details": {"article": "de", "plural": "sectoren"}, "sentences": ["Toerisme is een groeiende *sector* in dit deel van het land."]}
+        {"lemma": "sector", "pos": "noun", "details": {"article": "de", "plural": "sectoren"}, "sentences": ["Toerisme is een groeiende *sector* in dit land."]}
         ]
       }
     },
@@ -1397,7 +1397,7 @@
       "gloss": "waiter (noun)",
       "entries": {
         "en": [
-        {"lemma": "waiter", "pos": "noun", "details": {"plural": "waiters"}, "sentences": ["The *waiter* brings us the menu and some water."]}
+        {"lemma": "waiter", "pos": "noun", "details": {"plural": "waiters"}, "sentences": ["The *waiter* brings us the menu and a glass of water."]}
         ],
         "nl": [
         {"lemma": "ober", "pos": "noun", "details": {"article": "de", "plural": "obers"}, "sentences": ["De *ober* brengt ons de kaart en een glas water."]}
@@ -1421,7 +1421,7 @@
       "gloss": "present (verb)",
       "entries": {
         "en": [
-        {"lemma": "to present", "pos": "verb", "details": {"past": "presented", "participle": "presented"}, "sentences": ["She *presents* the new idea to the whole team."]}
+        {"lemma": "to present", "pos": "verb", "details": {"past": "presented", "participle": "presented"}, "sentences": ["She *presents* the new idea to the whole team on Monday."]}
         ],
         "nl": [
         {"lemma": "presenteren", "pos": "verb", "details": {"pastSingular": "presenteerde", "pastPlural": "presenteerden", "participle": "gepresenteerd", "auxiliary": "hebben"}, "sentences": ["Zij *presenteert* maandag het nieuwe idee aan het hele team."]}
@@ -1445,7 +1445,7 @@
       "gloss": "laborer (noun)",
       "entries": {
         "en": [
-        {"lemma": "laborer", "pos": "noun", "details": {"plural": "laborers"}, "sentences": ["The *laborer* carries heavy bricks on the building site."]}
+        {"lemma": "laborer", "pos": "noun", "details": {"plural": "laborers"}, "sentences": ["The *laborer* carries heavy bricks all day on the building site."]}
         ],
         "nl": [
         {"lemma": "arbeider", "pos": "noun", "details": {"article": "de", "plural": "arbeiders"}, "sentences": ["De *arbeider* sjouwt de hele dag zware stenen op de bouwplaats."]}
@@ -1457,7 +1457,7 @@
       "gloss": "leave (noun)",
       "entries": {
         "en": [
-        {"lemma": "leave", "pos": "noun", "details": {"uncountable": true}, "sentences": ["She is on *leave* this week at the beach."]}
+        {"lemma": "leave", "pos": "noun", "details": {"uncountable": true}, "sentences": ["She is on *leave* this week, so she is not at the office."]}
         ],
         "nl": [
         {"lemma": "verlof", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["Zij heeft deze week *verlof*, dus ze zit niet op kantoor."]}
@@ -1469,7 +1469,7 @@
       "gloss": "form (noun)",
       "entries": {
         "en": [
-        {"lemma": "form", "pos": "noun", "details": {"plural": "forms"}, "sentences": ["I fill in the *form* with my address."]}
+        {"lemma": "form", "pos": "noun", "details": {"plural": "forms"}, "sentences": ["I fill in the *form* with my name and address."]}
         ],
         "nl": [
         {"lemma": "formulier", "pos": "noun", "details": {"article": "het", "plural": "formulieren"}, "sentences": ["Ik vul het *formulier* in met mijn naam en adres."]}
@@ -1481,7 +1481,7 @@
       "gloss": "register (verb)",
       "entries": {
         "en": [
-        {"lemma": "to register", "pos": "verb", "details": {"past": "registered", "participle": "registered"}, "sentences": ["I *register* my new address at the town hall."]}
+        {"lemma": "to register", "pos": "verb", "details": {"past": "registered", "participle": "registered"}, "sentences": ["I *register* my new address at the town hall this week."]}
         ],
         "nl": [
         {"lemma": "registreren", "pos": "verb", "details": {"pastSingular": "registreerde", "pastPlural": "registreerden", "participle": "geregistreerd", "auxiliary": "hebben"}, "sentences": ["Ik *registreer* mijn nieuwe adres deze week bij het gemeentehuis."]}
@@ -1493,7 +1493,7 @@
       "gloss": "bail (noun)",
       "entries": {
         "en": [
-        {"lemma": "bail", "pos": "noun", "details": {"uncountable": true}, "sentences": ["The judge sets the *bail* at five thousand euros."]}
+        {"lemma": "bail", "pos": "noun", "details": {"uncountable": true}, "sentences": ["The judge sets the *bail* for the man at five thousand euros."]}
         ],
         "nl": [
         {"lemma": "borgtocht", "pos": "noun", "details": {"article": "de", "plural": "borgtochten"}, "sentences": ["De rechter stelt de *borgtocht* voor de man op vijfduizend euro."]}
@@ -1505,7 +1505,7 @@
       "gloss": "skill (noun)",
       "entries": {
         "en": [
-        {"lemma": "skill", "pos": "noun", "details": {"plural": "skills"}, "sentences": ["Speaking two languages is a useful *skill* here."]}
+        {"lemma": "skill", "pos": "noun", "details": {"plural": "skills"}, "sentences": ["Speaking two languages is a useful *skill* in this job."]}
         ],
         "nl": [
         {"lemma": "vaardigheid", "pos": "noun", "details": {"article": "de", "plural": "vaardigheden"}, "sentences": ["Twee talen spreken is een nuttige *vaardigheid* in deze baan."]}
@@ -1517,7 +1517,7 @@
       "gloss": "invest (verb)",
       "entries": {
         "en": [
-        {"lemma": "to invest", "pos": "verb", "details": {"past": "invested", "participle": "invested"}, "sentences": ["They *invest* their savings in a small farm."]}
+        {"lemma": "to invest", "pos": "verb", "details": {"past": "invested", "participle": "invested"}, "sentences": ["They *invest* their savings in a small farm on the coast."]}
         ],
         "nl": [
         {"lemma": "investeren", "pos": "verb", "details": {"pastSingular": "investeerde", "pastPlural": "investeerden", "participle": "geïnvesteerd", "auxiliary": "hebben"}, "sentences": ["Zij *investeren* hun spaargeld in een kleine boerderij aan de kust."]}
@@ -1529,7 +1529,7 @@
       "gloss": "bid (noun)",
       "entries": {
         "en": [
-        {"lemma": "bid", "pos": "noun", "details": {"plural": "bids"}, "sentences": ["At the auction, her *bid* of two hundred wins."]}
+        {"lemma": "bid", "pos": "noun", "details": {"plural": "bids"}, "sentences": ["At the auction, her *bid* of two hundred euros wins the painting."]}
         ],
         "nl": [
         {"lemma": "bod", "pos": "noun", "details": {"article": "het", "plural": "biedingen"}, "sentences": ["Op de veiling wint haar *bod* van tweehonderd euro het schilderij."]}
@@ -1553,7 +1553,7 @@
       "gloss": "appoint (verb)",
       "entries": {
         "en": [
-        {"lemma": "to appoint", "pos": "verb", "details": {"past": "appointed", "participle": "appointed"}, "sentences": ["The company wants to *appoint* a new manager."]}
+        {"lemma": "to appoint", "pos": "verb", "details": {"past": "appointed", "participle": "appointed"}, "sentences": ["The company wants to *appoint* a new manager for the office in Utrecht."]}
         ],
         "nl": [
         {"lemma": "benoemen", "pos": "verb", "details": {"pastSingular": "benoemde", "pastPlural": "benoemden", "participle": "benoemd", "auxiliary": "hebben"}, "sentences": ["Het bedrijf wil een nieuwe manager voor het kantoor in Utrecht *benoemen*."]}
@@ -1577,7 +1577,7 @@
       "gloss": "strategy (noun)",
       "entries": {
         "en": [
-        {"lemma": "strategy", "pos": "noun", "details": {"plural": "strategies"}, "sentences": ["Our team has a clear *strategy* to win."]}
+        {"lemma": "strategy", "pos": "noun", "details": {"plural": "strategies"}, "sentences": ["Our team has a clear *strategy* to win the next match."]}
         ],
         "nl": [
         {"lemma": "strategie", "pos": "noun", "details": {"article": "de", "plural": "strategieën"}, "sentences": ["Ons team heeft een duidelijke *strategie* om de volgende wedstrijd te winnen."]}
@@ -1601,7 +1601,7 @@
       "gloss": "silver (noun)",
       "entries": {
         "en": [
-        {"lemma": "silver", "pos": "noun", "details": {"note": "the metal", "uncountable": true}, "sentences": ["Her grandmother gave her a ring made of *silver*."]}
+        {"lemma": "silver", "pos": "noun", "details": {"note": "the metal", "uncountable": true}, "sentences": ["Her grandmother gives her a ring made of *silver*."]}
         ],
         "nl": [
         {"lemma": "zilver", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["Haar oma geeft haar een ring van *zilver*."]}
@@ -1649,7 +1649,7 @@
       "gloss": "maintain (verb)",
       "entries": {
         "en": [
-        {"lemma": "to maintain", "pos": "verb", "details": {"past": "maintained", "participle": "maintained"}, "sentences": ["The city *maintains* the roads every single winter."]}
+        {"lemma": "to maintain", "pos": "verb", "details": {"past": "maintained", "participle": "maintained"}, "sentences": ["The city *maintains* the roads every winter."]}
         ],
         "nl": [
         {"lemma": "onderhouden", "pos": "verb", "details": {"pastSingular": "onderhield", "pastPlural": "onderhielden", "participle": "onderhouden", "auxiliary": "hebben"}, "sentences": ["De gemeente *onderhoudt* de wegen elke winter."]}
@@ -1721,7 +1721,7 @@
       "gloss": "firm (noun)",
       "entries": {
         "en": [
-        {"lemma": "firm", "pos": "noun", "details": {"plural": "firms"}, "sentences": ["My sister works at a law *firm* downtown."]}
+        {"lemma": "firm", "pos": "noun", "details": {"plural": "firms"}, "sentences": ["My sister works at a big *firm* downtown."]}
         ],
         "nl": [
         {"lemma": "firma", "pos": "noun", "details": {"article": "de", "plural": "firma's"}, "sentences": ["Mijn zus werkt bij een grote *firma* in het centrum."]}
@@ -1736,7 +1736,7 @@
         {"lemma": "caretaker", "pos": "noun", "details": {"plural": "caretakers"}, "sentences": ["The school *caretaker* unlocks the gates every morning."]}
         ],
         "nl": [
-        {"lemma": "conciërge", "pos": "noun", "details": {"article": "de", "plural": "conciërges"}, "sentences": ["De *conciërge* van de school opent elke ochtend de poort."]}
+        {"lemma": "conciërge", "pos": "noun", "details": {"article": "de", "plural": "conciërges"}, "sentences": ["De *conciërge* van de school opent elke ochtend de poorten."]}
         ]
       }
     },
@@ -2384,7 +2384,7 @@
         {"lemma": "interest", "pos": "noun", "details": {"note": "on money", "uncountable": true}, "sentences": ["The bank pays high *interest* on my savings."]}
         ],
         "nl": [
-        {"lemma": "rente", "pos": "noun", "details": {"article": "de", "plural": "rentes"}, "sentences": ["De bank betaalt veel *rente* op mijn spaargeld."]}
+        {"lemma": "rente", "pos": "noun", "details": {"article": "de", "plural": "rentes"}, "sentences": ["De bank betaalt hoge *rente* op mijn spaargeld."]}
         ]
       }
     },
@@ -3065,7 +3065,7 @@
       "gloss": "industry (noun)",
       "entries": {
         "en": [
-        {"lemma": "industry", "pos": "noun", "details": {"plural": "industries"}, "sentences": ["The *industry* here gives work to many people."]}
+        {"lemma": "industry", "pos": "noun", "details": {"plural": "industries"}, "sentences": ["The *industry* in this region gives work to many people."]}
         ],
         "nl": [
         {"lemma": "industrie", "pos": "noun", "details": {"article": "de", "plural": "industrieën"}, "sentences": ["De *industrie* in deze regio geeft werk aan veel mensen."]}
@@ -3221,7 +3221,7 @@
       "gloss": "maker (noun)",
       "entries": {
         "en": [
-        {"lemma": "maker", "pos": "noun", "details": {"plural": "makers"}, "sentences": ["The *maker* of this chair is proud of it."]}
+        {"lemma": "maker", "pos": "noun", "details": {"plural": "makers"}, "sentences": ["The *maker* of this chair is proud of his work."]}
         ],
         "nl": [
         {"lemma": "maker", "pos": "noun", "details": {"article": "de", "plural": "makers"}, "sentences": ["De *maker* van deze stoel is trots op zijn werk."]}
@@ -3305,10 +3305,10 @@
       "gloss": "promote (verb)",
       "entries": {
         "en": [
-        {"lemma": "to promote", "pos": "verb", "details": {"past": "promoted", "participle": "promoted"}, "sentences": ["They *promote* the new product with ads on television."]}
+        {"lemma": "to promote", "pos": "verb", "details": {"past": "promoted", "participle": "promoted"}, "sentences": ["They *promote* the sale of the new product with ads on television."]}
         ],
         "nl": [
-        {"lemma": "bevorderen", "pos": "verb", "details": {"pastSingular": "bevorderde", "pastPlural": "bevorderden", "participle": "bevorderd", "auxiliary": "hebben"}, "sentences": ["Zij *bevorderen* de verkoop van het nieuwe product met reclame."]}
+        {"lemma": "bevorderen", "pos": "verb", "details": {"pastSingular": "bevorderde", "pastPlural": "bevorderden", "participle": "bevorderd", "auxiliary": "hebben"}, "sentences": ["Zij *bevorderen* de verkoop van het nieuwe product met reclame op televisie."]}
         ]
       }
     },
@@ -3320,7 +3320,7 @@
         {"lemma": "agency", "pos": "noun", "details": {"plural": "agencies"}, "sentences": ["The *agency* helps companies find new staff quickly."]}
         ],
         "nl": [
-        {"lemma": "agentschap", "pos": "noun", "details": {"article": "het", "plural": "agentschappen"}, "sentences": ["Het *agentschap* helpt bedrijven bij het zoeken naar personeel."]}
+        {"lemma": "agentschap", "pos": "noun", "details": {"article": "het", "plural": "agentschappen"}, "sentences": ["Het *agentschap* helpt bedrijven snel nieuw personeel te vinden."]}
         ]
       }
     },
@@ -3416,7 +3416,7 @@
         {"lemma": "to practice", "pos": "verb", "details": {"note": "a profession", "past": "practiced", "participle": "practiced"}, "sentences": ["He *practices* law in a small office downtown."]}
         ],
         "nl": [
-        {"lemma": "uitoefenen", "pos": "verb", "details": {"pastSingular": "oefende uit", "pastPlural": "oefenden uit", "participle": "uitgeoefend", "auxiliary": "hebben"}, "sentences": ["Hij *oefent* het advocatenvak *uit* in een klein kantoor."]}
+        {"lemma": "uitoefenen", "pos": "verb", "details": {"pastSingular": "oefende uit", "pastPlural": "oefenden uit", "participle": "uitgeoefend", "auxiliary": "hebben"}, "sentences": ["Hij *oefent* het advocatenvak *uit* in een klein kantoor in het centrum."]}
         ]
       }
     },
@@ -3512,7 +3512,7 @@
         {"lemma": "pass", "pos": "noun", "details": {"note": "card", "plural": "passes"}, "sentences": ["I show my *pass* to the guard downstairs."]}
         ],
         "nl": [
-        {"lemma": "pasje", "pos": "noun", "details": {"article": "het", "plural": "pasjes"}, "sentences": ["Ik toon mijn *pasje* aan de bewaker bij de deur."]}
+        {"lemma": "pasje", "pos": "noun", "details": {"article": "het", "plural": "pasjes"}, "sentences": ["Ik toon mijn *pasje* aan de bewaker beneden."]}
         ]
       }
     },
@@ -3641,7 +3641,7 @@
       "gloss": "savings (noun)",
       "entries": {
         "en": [
-        {"lemma": "savings", "pos": "noun", "details": {"pluralOnly": true}, "sentences": ["My *savings* are small, but I keep adding some."]}
+        {"lemma": "savings", "pos": "noun", "details": {"pluralOnly": true}, "sentences": ["My *savings* are small, but I add some every month."]}
         ],
         "nl": [
         {"lemma": "spaargeld", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["Mijn *spaargeld* is klein, maar ik spaar elke maand bij."]}
@@ -3701,7 +3701,7 @@
       "gloss": "male nurse (noun)",
       "entries": {
         "en": [
-        {"lemma": "male nurse", "pos": "noun", "details": {"plural": "male nurses"}, "sentences": ["The *male nurse* helps the old man stand up."]}
+        {"lemma": "male nurse", "pos": "noun", "details": {"plural": "male nurses"}, "sentences": ["The *male nurse* helps the old man out of bed."]}
         ],
         "nl": [
         {"lemma": "verpleger", "pos": "noun", "details": {"article": "de", "plural": "verplegers"}, "sentences": ["De *verpleger* helpt de oude man uit bed."]}
@@ -3809,11 +3809,11 @@
       "gloss": "donation (noun)",
       "entries": {
         "en": [
-        {"lemma": "donation", "pos": "noun", "details": {"plural": "donations"}, "sentences": ["I make a *donation* to the local animal shelter."]}
+        {"lemma": "donation", "pos": "noun", "details": {"plural": "donations"}, "sentences": ["I make a *donation* to the local animal shelter every year."]}
         ],
         "nl": [
-        {"lemma": "donatie", "pos": "noun", "details": {"note": "geld voor een goed doel", "article": "de", "plural": "donaties"}, "sentences": ["Ik doe elk jaar een *donatie* aan het kinderfonds."]},
-        {"lemma": "gift", "pos": "noun", "details": {"note": "een cadeau, vaak geld", "article": "de", "plural": "giften"}, "sentences": ["Hij doet een *gift* aan de voedselbank van onze stad."]}
+        {"lemma": "donatie", "pos": "noun", "details": {"note": "geld voor een goed doel", "article": "de", "plural": "donaties"}, "sentences": ["Ik doe elk jaar een *donatie* aan het plaatselijke dierenasiel."]},
+        {"lemma": "gift", "pos": "noun", "details": {"note": "een cadeau, vaak geld", "article": "de", "plural": "giften"}, "sentences": ["Ik doe elk jaar een *gift* aan het plaatselijke dierenasiel."]}
         ]
       }
     },
@@ -3825,7 +3825,7 @@
         {"lemma": "miner", "pos": "noun", "details": {"plural": "miners"}, "sentences": ["The *miner* works deep underground with a small lamp."]}
         ],
         "nl": [
-        {"lemma": "mijnwerker", "pos": "noun", "details": {"article": "de", "plural": "mijnwerkers"}, "sentences": ["De *mijnwerker* werkt diep onder de grond met een lamp."]}
+        {"lemma": "mijnwerker", "pos": "noun", "details": {"article": "de", "plural": "mijnwerkers"}, "sentences": ["De *mijnwerker* werkt diep onder de grond met een kleine lamp."]}
         ]
       }
     },

@@ -80,7 +80,7 @@
         {"lemma": "only", "pos": "particle", "details": {"note": "nothing more than"}, "sentences": ["I *only* want water with my dinner tonight."]}
         ],
         "nl": [
-        {"lemma": "alleen", "pos": "particle", "sentences": ["Ik wil bij het avondeten *alleen* water."]}
+        {"lemma": "alleen", "pos": "particle", "sentences": ["Ik wil vanavond bij het avondeten *alleen* water."]}
         ]
       }
     },
@@ -341,7 +341,7 @@
       "gloss": "of course (naturally)",
       "entries": {
         "en": [
-        {"lemma": "of course", "pos": "particle", "details": {"note": "naturally"}, "sentences": ["*Of course* you may come to our dinner tonight."]}
+        {"lemma": "of course", "pos": "particle", "details": {"note": "naturally"}, "sentences": ["*Of course* you may come for dinner tonight."]}
         ],
         "nl": [
         {"lemma": "uiteraard", "pos": "particle", "sentences": ["Je mag *uiteraard* vanavond komen eten."]}
@@ -752,7 +752,7 @@
         {"lemma": "bye", "pos": "interjection", "details": {"note": "informal"}, "sentences": ["*Bye*, I have to go, see you tomorrow."]}
         ],
         "nl": [
-        {"lemma": "doei", "pos": "interjection", "sentences": ["*Doei*, ik moet gaan, tot morgen op school."]}
+        {"lemma": "doei", "pos": "interjection", "sentences": ["*Doei*, ik moet gaan, tot morgen!"]}
         ]
       }
     },
@@ -788,7 +788,7 @@
         {"lemma": "hi", "pos": "interjection", "sentences": ["*Hi*, how are you? You look happy today."]}
         ],
         "nl": [
-        {"lemma": "hoi", "pos": "interjection", "sentences": ["*Hoi*, hoe gaat het? Je ziet er vrolijk uit."]}
+        {"lemma": "hoi", "pos": "interjection", "sentences": ["*Hoi*, hoe gaat het? Je ziet er vandaag vrolijk uit."]}
         ]
       }
     },

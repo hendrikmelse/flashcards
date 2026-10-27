@@ -386,7 +386,7 @@
         {"lemma": "somewhere", "pos": "pronoun", "sentences": ["He lives *somewhere* in Utrecht, near the old canal."]}
         ],
         "nl": [
-        {"lemma": "ergens", "pos": "pronoun", "sentences": ["Hij woont *ergens* in Utrecht, vlak bij de gracht."]}
+        {"lemma": "ergens", "pos": "pronoun", "sentences": ["Hij woont *ergens* in Utrecht, vlak bij de oude gracht."]}
         ]
       }
     },
@@ -504,7 +504,7 @@
       "gloss": "a few (determiner)",
       "entries": {
         "en": [
-        {"lemma": "a few", "pos": "determiner", "sentences": ["*A few* people are waiting at the bus stop."]}
+        {"lemma": "a few", "pos": "determiner", "sentences": ["*A few* people are waiting for the bus at the bus stop."]}
         ],
         "nl": [
         {"lemma": "enkele", "pos": "determiner", "sentences": ["*Enkele* mensen wachten bij de bushalte op de bus."]}
@@ -1744,7 +1744,7 @@
         {"lemma": "in addition", "pos": "adverb", "sentences": ["The flat is nice, and *in addition*, it is cheap."]}
         ],
         "nl": [
-        {"lemma": "daarbij", "pos": "adverb", "sentences": ["Het appartement is mooi en *daarbij* is het ook goedkoop."]}
+        {"lemma": "daarbij", "pos": "adverb", "sentences": ["Het appartement is mooi en *daarbij* is het goedkoop."]}
         ]
       }
     },
@@ -1876,7 +1876,7 @@
         {"lemma": "of this", "pos": "adverb", "sentences": ["My brother knows nothing *of this* secret plan."]}
         ],
         "nl": [
-        {"lemma": "hiervan", "pos": "adverb", "sentences": ["Mijn broer weet niets *hiervan*, want het is een geheim plan."]}
+        {"lemma": "hiervan", "pos": "adverb", "sentences": ["Mijn broer weet niets *hiervan*, van dit geheime plan."]}
         ]
       }
     },
@@ -1888,7 +1888,7 @@
         {"lemma": "in this", "pos": "adverb", "sentences": ["There is a lot of sugar *in this* lemonade."]}
         ],
         "nl": [
-        {"lemma": "hierin", "pos": "adverb", "sentences": ["*Hierin* zit veel suiker, dus drink het niet te snel."]}
+        {"lemma": "hierin", "pos": "adverb", "sentences": ["*Hierin* zit veel suiker, in deze limonade."]}
         ]
       }
     },
@@ -1912,7 +1912,7 @@
         {"lemma": "for this", "pos": "adverb", "sentences": ["I pay twenty euros *for this* warm winter hat."]}
         ],
         "nl": [
-        {"lemma": "hiervoor", "pos": "adverb", "sentences": ["Ik betaal twintig euro *hiervoor*, voor deze warme muts."]}
+        {"lemma": "hiervoor", "pos": "adverb", "sentences": ["Ik betaal twintig euro *hiervoor*, voor deze warme wintermuts."]}
         ]
       }
     },
@@ -1960,7 +1960,7 @@
         {"lemma": "because of this", "pos": "adverb", "sentences": ["The train is late; *because of this* we wait."]}
         ],
         "nl": [
-        {"lemma": "hierdoor", "pos": "adverb", "sentences": ["De trein is laat; *hierdoor* wachten wij buiten in de kou."]}
+        {"lemma": "hierdoor", "pos": "adverb", "sentences": ["De trein is laat; *hierdoor* wachten wij."]}
         ]
       }
     },
@@ -2017,7 +2017,7 @@
       "gloss": "on which (adverb)",
       "entries": {
         "en": [
-        {"lemma": "on which", "pos": "adverb", "sentences": ["This is the table *on which* we eat dinner."]}
+        {"lemma": "on which", "pos": "adverb", "sentences": ["This is the table *on which* we eat dinner every evening."]}
         ],
         "nl": [
         {"lemma": "waarop", "pos": "adverb", "sentences": ["Dit is de tafel *waarop* wij elke avond eten."]}
@@ -2029,7 +2029,7 @@
       "gloss": "in which (adverb)",
       "entries": {
         "en": [
-        {"lemma": "in which", "pos": "adverb", "sentences": ["It is the house *in which* grandma lives."]}
+        {"lemma": "in which", "pos": "adverb", "sentences": ["It is the small house *in which* my grandma lives."]}
         ],
         "nl": [
         {"lemma": "waarin", "pos": "adverb", "sentences": ["Het is het kleine huis *waarin* mijn oma woont."]}
@@ -2056,7 +2056,7 @@
         {"lemma": "whereby", "pos": "adverb", "sentences": ["It is a game *whereby* everyone laughs loudly."]}
         ],
         "nl": [
-        {"lemma": "waarbij", "pos": "adverb", "sentences": ["Het is een kaartspel *waarbij* iedereen veel lacht."]}
+        {"lemma": "waarbij", "pos": "adverb", "sentences": ["Het is een spel *waarbij* iedereen hard lacht."]}
         ]
       }
     },
@@ -2077,10 +2077,10 @@
       "gloss": "where to (adverb)",
       "entries": {
         "en": [
-        {"lemma": "where to", "pos": "adverb", "sentences": ["*Where to* is this night bus going, please?"]}
+        {"lemma": "where to", "pos": "adverb", "sentences": ["*Where to* is this night bus going?"]}
         ],
         "nl": [
-        {"lemma": "waarheen", "pos": "adverb", "sentences": ["*Waarheen* gaat deze nachtbus eigenlijk?"]}
+        {"lemma": "waarheen", "pos": "adverb", "sentences": ["*Waarheen* gaat deze nachtbus?"]}
         ]
       }
     },
@@ -2104,7 +2104,7 @@
         {"lemma": "after which", "pos": "adverb", "sentences": ["We eat, *after which* we walk to the lake."]}
         ],
         "nl": [
-        {"lemma": "waarna", "pos": "adverb", "sentences": ["Wij eten samen, *waarna* wij naar het meer wandelen."]}
+        {"lemma": "waarna", "pos": "adverb", "sentences": ["Wij eten, *waarna* wij naar het meer wandelen."]}
         ]
       }
     }

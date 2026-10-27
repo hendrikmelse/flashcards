@@ -29,7 +29,7 @@
       "gloss": "bird (flying animal)",
       "entries": {
         "en": [
-        {"lemma": "bird", "pos": "noun", "details": {"plural": "birds"}, "sentences": ["A small *bird* sings in the tree outside."]}
+        {"lemma": "bird", "pos": "noun", "details": {"plural": "birds"}, "sentences": ["A small *bird* sings in the tree outside my window."]}
         ],
         "nl": [
         {"lemma": "vogel", "pos": "noun", "details": {"article": "de", "plural": "vogels"}, "sentences": ["Een kleine *vogel* zingt in de boom voor mijn raam."]}
@@ -41,7 +41,7 @@
       "gloss": "horse (large farm animal)",
       "entries": {
         "en": [
-        {"lemma": "horse", "pos": "noun", "details": {"plural": "horses"}, "sentences": ["The farmer rides his brown *horse* across the field."]}
+        {"lemma": "horse", "pos": "noun", "details": {"plural": "horses"}, "sentences": ["The farmer rides his big brown *horse* across the field."]}
         ],
         "nl": [
         {"lemma": "paard", "pos": "noun", "details": {"article": "het", "plural": "paarden"}, "sentences": ["De boer rijdt op zijn grote bruine *paard* over het veld."]}
@@ -53,7 +53,7 @@
       "gloss": "cow (farm animal)",
       "entries": {
         "en": [
-        {"lemma": "cow", "pos": "noun", "details": {"plural": "cows"}, "sentences": ["The *cow* eats grass in the field all day."]}
+        {"lemma": "cow", "pos": "noun", "details": {"plural": "cows"}, "sentences": ["The *cow* eats grass in the field and gives milk."]}
         ],
         "nl": [
         {"lemma": "koe", "pos": "noun", "details": {"article": "de", "plural": "koeien"}, "sentences": ["De *koe* eet gras in de wei en geeft melk."]}
@@ -89,7 +89,7 @@
       "gloss": "beast (noun)",
       "entries": {
         "en": [
-        {"lemma": "beast", "pos": "noun", "details": {"plural": "beasts"}, "sentences": ["In the old story, a hungry *beast* lives nearby."]}
+        {"lemma": "beast", "pos": "noun", "details": {"plural": "beasts"}, "sentences": ["In the old story, a hungry *beast* lives in the forest."]}
         ],
         "nl": [
         {"lemma": "beest", "pos": "noun", "details": {"article": "het", "plural": "beesten"}, "sentences": ["In het oude verhaal woont een hongerig *beest* in het bos."]}
@@ -393,7 +393,7 @@
         ],
         "nl": [
         {"lemma": "vee", "pos": "noun", "details": {"note": "alle boerderijdieren samen", "article": "het", "uncountable": true}, "sentences": ["De boer geeft zijn *vee* 's winters hooi."]},
-        {"lemma": "rund", "pos": "noun", "details": {"note": "één koe of stier", "article": "het", "plural": "runderen"}, "sentences": ["Deze boer houdt vooral *runderen* voor het vlees."]}
+        {"lemma": "rund", "pos": "noun", "details": {"note": "één koe of stier", "article": "het", "plural": "runderen"}, "sentences": ["De boer geeft zijn *runderen* 's winters hooi."]}
         ]
       }
     },
@@ -702,7 +702,7 @@
       "gloss": "den (noun)",
       "entries": {
         "en": [
-        {"lemma": "den", "pos": "noun", "details": {"plural": "dens"}, "sentences": ["The mother fox keeps her babies in the *den*."]}
+        {"lemma": "den", "pos": "noun", "details": {"plural": "dens"}, "sentences": ["The mother fox keeps her babies safe in the *den*."]}
         ],
         "nl": [
         {"lemma": "hol", "pos": "noun", "details": {"article": "het", "plural": "holen"}, "sentences": ["De moedervos houdt haar jongen veilig in het *hol*."]}
@@ -774,7 +774,7 @@
       "gloss": "vermin (noun)",
       "entries": {
         "en": [
-        {"lemma": "vermin", "pos": "noun", "details": {"uncountable": true}, "sentences": ["The landlord calls someone because there is *vermin*."]}
+        {"lemma": "vermin", "pos": "noun", "details": {"uncountable": true}, "sentences": ["The landlord calls someone because there is *vermin* in the cellar."]}
         ],
         "nl": [
         {"lemma": "ongedierte", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["De huisbaas belt iemand, want er zit *ongedierte* in de kelder."]}
@@ -786,7 +786,7 @@
       "gloss": "bat (noun)",
       "entries": {
         "en": [
-        {"lemma": "bat", "pos": "noun", "details": {"plural": "bats"}, "sentences": ["A small *bat* flies out of the attic."]}
+        {"lemma": "bat", "pos": "noun", "details": {"plural": "bats"}, "sentences": ["A small *bat* flies out of the attic at sunset."]}
         ],
         "nl": [
         {"lemma": "vleermuis", "pos": "noun", "details": {"article": "de", "plural": "vleermuizen"}, "sentences": ["Een kleine *vleermuis* vliegt bij zonsondergang van zolder."]}
@@ -1062,7 +1062,7 @@
       "gloss": "reptile (noun)",
       "entries": {
         "en": [
-        {"lemma": "reptile", "pos": "noun", "details": {"plural": "reptiles"}, "sentences": ["In science class, we learn a lizard is a *reptile*."]}
+        {"lemma": "reptile", "pos": "noun", "details": {"plural": "reptiles"}, "sentences": ["In biology class, we learn a lizard is a *reptile*."]}
         ],
         "nl": [
         {"lemma": "reptiel", "pos": "noun", "details": {"article": "het", "plural": "reptielen"}, "sentences": ["Bij biologie leren we dat een hagedis een *reptiel* is."]}
@@ -1158,7 +1158,7 @@
       "gloss": "reindeer (noun)",
       "entries": {
         "en": [
-        {"lemma": "reindeer", "pos": "noun", "details": {"plural": "reindeers"}, "sentences": ["In Finland, a strong *reindeer* pulls the sled."]}
+        {"lemma": "reindeer", "pos": "noun", "details": {"plural": "reindeers"}, "sentences": ["In Finland, a strong *reindeer* pulls the sled through the snow."]}
         ],
         "nl": [
         {"lemma": "rendier", "pos": "noun", "details": {"article": "het", "plural": "rendieren"}, "sentences": ["In Finland trekt een sterk *rendier* de slee door de sneeuw."]}
@@ -1170,7 +1170,7 @@
       "gloss": "unicorn (noun)",
       "entries": {
         "en": [
-        {"lemma": "unicorn", "pos": "noun", "details": {"plural": "unicorns"}, "sentences": ["In the fairy tale, a white *unicorn* appears."]}
+        {"lemma": "unicorn", "pos": "noun", "details": {"plural": "unicorns"}, "sentences": ["In the fairy tale, a white *unicorn* with a golden horn appears."]}
         ],
         "nl": [
         {"lemma": "eenhoorn", "pos": "noun", "details": {"article": "de", "plural": "eenhoorns"}, "sentences": ["In het sprookje verschijnt een witte *eenhoorn* met een gouden hoorn."]}
@@ -1182,7 +1182,7 @@
       "gloss": "moth (noun)",
       "entries": {
         "en": [
-        {"lemma": "moth", "pos": "noun", "details": {"plural": "moths"}, "sentences": ["At night, a pale *moth* circles the porch lamp."]}
+        {"lemma": "moth", "pos": "noun", "details": {"plural": "moths"}, "sentences": ["In the evening, a pale *moth* circles the porch lamp."]}
         ],
         "nl": [
         {"lemma": "mot", "pos": "noun", "details": {"article": "de", "plural": "motten"}, "sentences": ["'s Avonds vliegt een bleke *mot* rond de lamp op de veranda."]}
@@ -1194,7 +1194,7 @@
       "gloss": "guinea pig (noun)",
       "entries": {
         "en": [
-        {"lemma": "guinea pig", "pos": "noun", "details": {"plural": "guinea pigs"}, "sentences": ["Scientists test the new medicine on a *guinea pig*."]}
+        {"lemma": "guinea pig", "pos": "noun", "details": {"plural": "guinea pigs"}, "sentences": ["Scientists test the new medicine first on a *guinea pig*."]}
         ],
         "nl": [
         {"lemma": "proefkonijn", "pos": "noun", "details": {"article": "het", "plural": "proefkonijnen"}, "sentences": ["Wetenschappers testen het nieuwe medicijn eerst op een *proefkonijn*."]}
@@ -1206,7 +1206,7 @@
       "gloss": "beaver (noun)",
       "entries": {
         "en": [
-        {"lemma": "beaver", "pos": "noun", "details": {"plural": "beavers"}, "sentences": ["A busy *beaver* builds a dam with branches."]}
+        {"lemma": "beaver", "pos": "noun", "details": {"plural": "beavers"}, "sentences": ["A busy *beaver* builds a dam with branches in the stream."]}
         ],
         "nl": [
         {"lemma": "bever", "pos": "noun", "details": {"article": "de", "plural": "bevers"}, "sentences": ["Een drukke *bever* bouwt met takken een dam in de beek."]}
@@ -1290,7 +1290,7 @@
       "gloss": "moose (noun)",
       "entries": {
         "en": [
-        {"lemma": "moose", "pos": "noun", "details": {"plural": "mooses"}, "sentences": ["In Canada, a huge *moose* walks through the forest."]}
+        {"lemma": "moose", "pos": "noun", "details": {"plural": "mooses"}, "sentences": ["In Canada, a huge *moose* walks through the wet forest."]}
         ],
         "nl": [
         {"lemma": "eland", "pos": "noun", "details": {"article": "de", "plural": "elanden"}, "sentences": ["In Canada loopt een enorme *eland* door het natte bos."]}
@@ -1302,7 +1302,7 @@
       "gloss": "crab (noun)",
       "entries": {
         "en": [
-        {"lemma": "crab", "pos": "noun", "details": {"plural": "crabs"}, "sentences": ["On the beach, a small *crab* walks sideways."]}
+        {"lemma": "crab", "pos": "noun", "details": {"plural": "crabs"}, "sentences": ["On the beach, a small *crab* walks sideways across the sand."]}
         ],
         "nl": [
         {"lemma": "krab", "pos": "noun", "details": {"article": "de", "plural": "krabben"}, "sentences": ["Op het strand loopt een kleine *krab* zijwaarts over het zand."]}
@@ -1326,7 +1326,7 @@
       "gloss": "sparrow (noun)",
       "entries": {
         "en": [
-        {"lemma": "sparrow", "pos": "noun", "details": {"plural": "sparrows"}, "sentences": ["A small *sparrow* hops onto our cafe table."]}
+        {"lemma": "sparrow", "pos": "noun", "details": {"plural": "sparrows"}, "sentences": ["A small *sparrow* hops onto our cafe table and pecks bread."]}
         ],
         "nl": [
         {"lemma": "mus", "pos": "noun", "details": {"article": "de", "plural": "mussen"}, "sentences": ["Een kleine *mus* hupt op ons cafétafeltje en pikt brood."]}
@@ -1398,7 +1398,7 @@
       "gloss": "peacock (noun)",
       "entries": {
         "en": [
-        {"lemma": "peacock", "pos": "noun", "details": {"plural": "peacocks"}, "sentences": ["In the park, a proud *peacock* shows his tail."]}
+        {"lemma": "peacock", "pos": "noun", "details": {"plural": "peacocks"}, "sentences": ["In the park, a proud *peacock* shows his colourful tail."]}
         ],
         "nl": [
         {"lemma": "pauw", "pos": "noun", "details": {"article": "de", "plural": "pauwen"}, "sentences": ["In het park laat een trotse *pauw* zijn kleurige staart zien."]}
@@ -1410,7 +1410,7 @@
       "gloss": "blackbird (noun)",
       "entries": {
         "en": [
-        {"lemma": "blackbird", "pos": "noun", "details": {"plural": "blackbirds"}, "sentences": ["Early in the morning, a *blackbird* sings outside."]}
+        {"lemma": "blackbird", "pos": "noun", "details": {"plural": "blackbirds"}, "sentences": ["Early in the morning, a *blackbird* sings in our garden."]}
         ],
         "nl": [
         {"lemma": "merel", "pos": "noun", "details": {"article": "de", "plural": "merels"}, "sentences": ["Vroeg in de ochtend zingt een *merel* in onze tuin."]}
@@ -1422,7 +1422,7 @@
       "gloss": "woodpecker (noun)",
       "entries": {
         "en": [
-        {"lemma": "woodpecker", "pos": "noun", "details": {"plural": "woodpeckers"}, "sentences": ["In the forest, a *woodpecker* knocks on a trunk."]}
+        {"lemma": "woodpecker", "pos": "noun", "details": {"plural": "woodpeckers"}, "sentences": ["In the forest, a *woodpecker* knocks on an old trunk."]}
         ],
         "nl": [
         {"lemma": "specht", "pos": "noun", "details": {"article": "de", "plural": "spechten"}, "sentences": ["In het bos klopt een *specht* op een oude boomstam."]}
@@ -1434,7 +1434,7 @@
       "gloss": "nightingale (noun)",
       "entries": {
         "en": [
-        {"lemma": "nightingale", "pos": "noun", "details": {"plural": "nightingales"}, "sentences": ["On spring evenings, a *nightingale* sings near our house."]}
+        {"lemma": "nightingale", "pos": "noun", "details": {"plural": "nightingales"}, "sentences": ["On spring evenings, a *nightingale* sings beautifully near our house."]}
         ],
         "nl": [
         {"lemma": "nachtegaal", "pos": "noun", "details": {"article": "de", "plural": "nachtegalen"}, "sentences": ["Op lenteavonden zingt een *nachtegaal* prachtig bij ons huis."]}
@@ -1578,7 +1578,7 @@
       "gloss": "jellyfish (noun)",
       "entries": {
         "en": [
-        {"lemma": "jellyfish", "pos": "noun", "details": {"plural": "jellyfishes"}, "sentences": ["A *jellyfish* floats in the warm sea."]}
+        {"lemma": "jellyfish", "pos": "noun", "details": {"plural": "jellyfishes"}, "sentences": ["A *jellyfish* floats in the warm sea near the beach."]}
         ],
         "nl": [
         {"lemma": "kwal", "pos": "noun", "details": {"article": "de", "plural": "kwallen"}, "sentences": ["Een *kwal* drijft in de warme zee vlak bij het strand."]}
@@ -1605,7 +1605,7 @@
         {"lemma": "starfish", "pos": "noun", "details": {"plural": "starfishes"}, "sentences": ["A *starfish* lies on the wet sand."]}
         ],
         "nl": [
-        {"lemma": "zeester", "pos": "noun", "details": {"article": "de", "plural": "zeesterren"}, "sentences": ["Een kleine *zeester* ligt bij laag water op het natte zand."]}
+        {"lemma": "zeester", "pos": "noun", "details": {"article": "de", "plural": "zeesterren"}, "sentences": ["Een *zeester* ligt op het natte zand."]}
         ]
       }
     },
@@ -1653,7 +1653,7 @@
         {"lemma": "walrus", "pos": "noun", "details": {"plural": "walruses"}, "sentences": ["A big *walrus* rests on the ice."]}
         ],
         "nl": [
-        {"lemma": "walrus", "pos": "noun", "details": {"article": "de", "plural": "walrussen"}, "sentences": ["Een grote *walrus* rust op het ijs met zijn lange tanden."]}
+        {"lemma": "walrus", "pos": "noun", "details": {"article": "de", "plural": "walrussen"}, "sentences": ["Een grote *walrus* rust op het ijs."]}
         ]
       }
     }

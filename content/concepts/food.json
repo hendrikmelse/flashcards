@@ -296,7 +296,7 @@
         {"lemma": "liquor", "pos": "noun", "details": {"uncountable": true}, "sentences": ["He avoids *liquor* because he drives home later."]}
         ],
         "nl": [
-        {"lemma": "drank", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Hij drinkt geen sterke *drank* omdat hij later nog rijdt."]}
+        {"lemma": "drank", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["Hij mijdt *drank* omdat hij later naar huis rijdt."]}
         ]
       }
     },
@@ -653,7 +653,7 @@
       "gloss": "hamburger (noun)",
       "entries": {
         "en": [
-        {"lemma": "hamburger", "pos": "noun", "details": {"plural": "hamburgers"}, "sentences": ["He orders a *hamburger* with onions at the bar."]}
+        {"lemma": "hamburger", "pos": "noun", "details": {"plural": "hamburgers"}, "sentences": ["He orders a *hamburger* with onions at the snack bar."]}
         ],
         "nl": [
         {"lemma": "hamburger", "pos": "noun", "details": {"article": "de", "plural": "hamburgers"}, "sentences": ["Hij bestelt een *hamburger* met uien bij de snackbar."]}
@@ -689,7 +689,7 @@
       "gloss": "bean (noun)",
       "entries": {
         "en": [
-        {"lemma": "bean", "pos": "noun", "details": {"plural": "beans"}, "sentences": ["A single *bean* falls off the table."]}
+        {"lemma": "bean", "pos": "noun", "details": {"plural": "beans"}, "sentences": ["A single *bean* falls off the table onto the floor."]}
         ],
         "nl": [
         {"lemma": "boon", "pos": "noun", "details": {"article": "de", "plural": "bonen"}, "sentences": ["Eén *boon* valt van de tafel op de grond."]}
@@ -845,7 +845,7 @@
       "gloss": "donut (noun)",
       "entries": {
         "en": [
-        {"lemma": "donut", "pos": "noun", "details": {"plural": "donuts"}, "sentences": ["I buy a *donut* with pink sugar there."]}
+        {"lemma": "donut", "pos": "noun", "details": {"plural": "donuts"}, "sentences": ["I buy a *donut* with pink sugar at the market."]}
         ],
         "nl": [
         {"lemma": "donut", "pos": "noun", "details": {"article": "de", "plural": "donuts"}, "sentences": ["Ik koop op de markt een *donut* met roze suiker."]}
@@ -881,7 +881,7 @@
       "gloss": "chips (noun)",
       "entries": {
         "en": [
-        {"lemma": "chips", "pos": "noun", "details": {"pluralOnly": true}, "sentences": ["We share salty *chips* during the film."]}
+        {"lemma": "chips", "pos": "noun", "details": {"pluralOnly": true}, "sentences": ["We share a bag of salty *chips* during the film."]}
         ],
         "nl": [
         {"lemma": "chips", "pos": "noun", "details": {"article": "de", "pluralOnly": true}, "sentences": ["Wij delen tijdens de film een zak zoute *chips*."]}
@@ -1664,7 +1664,7 @@
         {"lemma": "to slaughter", "pos": "verb", "details": {"past": "slaughtered", "participle": "slaughtered"}, "sentences": ["The farmer *slaughters* a pig for the winter."]}
         ],
         "nl": [
-        {"lemma": "slachten", "pos": "verb", "details": {"pastSingular": "slachtte", "pastPlural": "slachtten", "participle": "geslacht", "auxiliary": "hebben"}, "sentences": ["De boer *slacht* in de winter een varken."]}
+        {"lemma": "slachten", "pos": "verb", "details": {"pastSingular": "slachtte", "pastPlural": "slachtten", "participle": "geslacht", "auxiliary": "hebben"}, "sentences": ["De boer *slacht* een varken voor de winter."]}
         ]
       }
     },
@@ -1832,7 +1832,7 @@
         {"lemma": "brandy", "pos": "noun", "details": {"plural": "brandies"}, "sentences": ["My uncle sips *brandy* by the fire after dinner."]}
         ],
         "nl": [
-        {"lemma": "brandy", "pos": "noun", "details": {"article": "de", "plural": "brandy's"}, "sentences": ["Mijn oom neemt na het eten een slokje *brandy*."]}
+        {"lemma": "brandy", "pos": "noun", "details": {"article": "de", "plural": "brandy's"}, "sentences": ["Mijn oom neemt na het eten bij het vuur een slokje *brandy*."]}
         ]
       }
     },
@@ -1964,7 +1964,7 @@
         {"lemma": "can", "pos": "noun", "details": {"note": "for drinks or food", "plural": "cans"}, "sentences": ["He opens a *can* of soda with one hand."]}
         ],
         "nl": [
-        {"lemma": "blikje", "pos": "noun", "details": {"article": "het", "plural": "blikjes"}, "sentences": ["Hij opent met één hand een *blikje* cola."]}
+        {"lemma": "blikje", "pos": "noun", "details": {"article": "het", "plural": "blikjes"}, "sentences": ["Hij opent met één hand een *blikje* frisdrank."]}
         ]
       }
     },
@@ -2237,7 +2237,7 @@
       "gloss": "roll out (verb)",
       "entries": {
         "en": [
-        {"lemma": "to roll out", "pos": "verb", "details": {"past": "rolled out", "participle": "rolled out"}, "sentences": ["I *roll out* the dough on the table."]}
+        {"lemma": "to roll out", "pos": "verb", "details": {"past": "rolled out", "participle": "rolled out"}, "sentences": ["I *roll out* the dough thin on the kitchen counter."]}
         ],
         "nl": [
         {"lemma": "uitrollen", "pos": "verb", "details": {"pastSingular": "rolde uit", "pastPlural": "rolden uit", "participle": "uitgerold", "auxiliary": "hebben"}, "sentences": ["Ik *rol* het deeg dun *uit* op het aanrecht."]}
@@ -2561,7 +2561,7 @@
       "gloss": "cappuccino (noun)",
       "entries": {
         "en": [
-        {"lemma": "cappuccino", "pos": "noun", "details": {"plural": "cappuccinos"}, "sentences": ["She orders a *cappuccino* and a croissant."]}
+        {"lemma": "cappuccino", "pos": "noun", "details": {"plural": "cappuccinos"}, "sentences": ["She orders a *cappuccino* and a croissant at the café."]}
         ],
         "nl": [
         {"lemma": "cappuccino", "pos": "noun", "details": {"article": "de", "plural": "cappuccino's"}, "sentences": ["Zij bestelt een *cappuccino* en een croissant in het café."]}
@@ -3044,7 +3044,7 @@
         {"lemma": "hazelnut", "pos": "noun", "details": {"plural": "hazelnuts"}, "sentences": ["My favorite chocolate spread has *hazelnut* in it."]}
         ],
         "nl": [
-        {"lemma": "hazelnoot", "pos": "noun", "details": {"article": "de", "plural": "hazelnoten"}, "sentences": ["Mijn favoriete chocopasta bevat *hazelnoot* en cacao."]}
+        {"lemma": "hazelnoot", "pos": "noun", "details": {"article": "de", "plural": "hazelnoten"}, "sentences": ["Mijn favoriete chocopasta bevat *hazelnoot*."]}
         ]
       }
     },
@@ -3212,7 +3212,7 @@
         {"lemma": "croissant", "pos": "noun", "details": {"plural": "croissants"}, "sentences": ["The bakery on the corner sells a buttery *croissant*."]}
         ],
         "nl": [
-        {"lemma": "croissant", "pos": "noun", "details": {"article": "de", "plural": "croissants"}, "sentences": ["De bakker op de hoek verkoopt een knapperige *croissant*."]}
+        {"lemma": "croissant", "pos": "noun", "details": {"article": "de", "plural": "croissants"}, "sentences": ["De bakker op de hoek verkoopt een boterige *croissant*."]}
         ]
       }
     },
@@ -3425,7 +3425,7 @@
       "gloss": "mini pancakes (noun)",
       "entries": {
         "en": [
-        {"lemma": "mini pancakes", "pos": "noun", "details": {"pluralOnly": true}, "sentences": ["At the fair, we eat *mini pancakes* with sugar."]}
+        {"lemma": "mini pancakes", "pos": "noun", "details": {"pluralOnly": true}, "sentences": ["At the fair, we eat *mini pancakes* with powdered sugar."]}
         ],
         "nl": [
         {"lemma": "poffertjes", "pos": "noun", "details": {"article": "de", "pluralOnly": true}, "sentences": ["Op de kermis eten wij *poffertjes* met poedersuiker."]}
@@ -3449,7 +3449,7 @@
       "gloss": "bitterballen (noun)",
       "entries": {
         "en": [
-        {"lemma": "bitterballen", "pos": "noun", "details": {"pluralOnly": true}, "sentences": ["At the bar, we share *bitterballen* with mustard."]}
+        {"lemma": "bitterballen", "pos": "noun", "details": {"pluralOnly": true}, "sentences": ["At the café, we share *bitterballen* with mustard."]}
         ],
         "nl": [
         {"lemma": "bitterballen", "pos": "noun", "details": {"article": "de", "pluralOnly": true}, "sentences": ["In het café delen wij *bitterballen* met mosterd."]}
@@ -3557,7 +3557,7 @@
       "gloss": "fried fish pieces (noun)",
       "entries": {
         "en": [
-        {"lemma": "fried fish pieces", "pos": "noun", "details": {"pluralOnly": true}, "sentences": ["At the harbor market, we eat *fried fish pieces*."]}
+        {"lemma": "fried fish pieces", "pos": "noun", "details": {"pluralOnly": true}, "sentences": ["At the harbor market, we eat *fried fish pieces* with sauce."]}
         ],
         "nl": [
         {"lemma": "kibbeling", "pos": "noun", "details": {"article": "de", "pluralOnly": true}, "sentences": ["Op de havenmarkt eten wij *kibbeling* met saus."]}
@@ -3569,7 +3569,7 @@
       "gloss": "Dutch meat snack (noun)",
       "entries": {
         "en": [
-        {"lemma": "Dutch meat snack", "pos": "noun", "details": {"plural": "Dutch meat snacks"}, "sentences": ["After school, he eats a *Dutch meat snack*."]}
+        {"lemma": "Dutch meat snack", "pos": "noun", "details": {"plural": "Dutch meat snacks"}, "sentences": ["After school, he eats a *Dutch meat snack* with mayonnaise."]}
         ],
         "nl": [
         {"lemma": "frikandel", "pos": "noun", "details": {"article": "de", "plural": "frikandellen"}, "sentences": ["Na school eet hij een *frikandel* met mayonaise."]}

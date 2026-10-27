@@ -32,7 +32,7 @@
         {"lemma": "news", "pos": "noun", "details": {"uncountable": true}, "sentences": ["The *news* is bad, so Dad turns it off."]}
         ],
         "nl": [
-        {"lemma": "nieuws", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["Het *nieuws* is slecht, dus papa zet de radio uit."]}
+        {"lemma": "nieuws", "pos": "noun", "details": {"article": "het", "uncountable": true}, "sentences": ["Het *nieuws* is slecht, dus papa zet het uit."]}
         ]
       }
     },
@@ -41,7 +41,7 @@
       "gloss": "letter (noun)",
       "entries": {
         "en": [
-        {"lemma": "letter", "pos": "noun", "details": {"note": "that you post", "plural": "letters"}, "sentences": ["I write a *letter* to my aunt today."]}
+        {"lemma": "letter", "pos": "noun", "details": {"note": "that you post", "plural": "letters"}, "sentences": ["I write a *letter* to my aunt and buy a stamp."]}
         ],
         "nl": [
         {"lemma": "brief", "pos": "noun", "details": {"article": "de", "plural": "brieven"}, "sentences": ["Ik schrijf een *brief* aan mijn tante en koop een postzegel."]}
@@ -77,7 +77,7 @@
       "gloss": "message (noun)",
       "entries": {
         "en": [
-        {"lemma": "message", "pos": "noun", "details": {"plural": "messages"}, "sentences": ["I send her a short *message* now."]}
+        {"lemma": "message", "pos": "noun", "details": {"plural": "messages"}, "sentences": ["I send her a short *message* because I am late."]}
         ],
         "nl": [
         {"lemma": "bericht", "pos": "noun", "details": {"article": "het", "plural": "berichten"}, "sentences": ["Ik stuur haar een kort *bericht* omdat ik te laat ben."]}
@@ -89,7 +89,7 @@
       "gloss": "camera (noun)",
       "entries": {
         "en": [
-        {"lemma": "camera", "pos": "noun", "details": {"plural": "cameras"}, "sentences": ["I have a small *camera* for the trip."]}
+        {"lemma": "camera", "pos": "noun", "details": {"plural": "cameras"}, "sentences": ["I have a small *camera* in my bag for the trip."]}
         ],
         "nl": [
         {"lemma": "camera", "pos": "noun", "details": {"article": "de", "plural": "camera's"}, "sentences": ["Ik heb een kleine *camera* in mijn tas voor de reis."]}
@@ -437,7 +437,7 @@
       "gloss": "title (noun)",
       "entries": {
         "en": [
-        {"lemma": "title", "pos": "noun", "details": {"plural": "titles"}, "sentences": ["The *title* of the book is very long."]}
+        {"lemma": "title", "pos": "noun", "details": {"plural": "titles"}, "sentences": ["The *title* of the book is very long, so I forget it."]}
         ],
         "nl": [
         {"lemma": "titel", "pos": "noun", "details": {"article": "de", "plural": "titels"}, "sentences": ["De *titel* van het boek is lang, dus ik vergeet hem."]}
@@ -668,7 +668,7 @@
         {"lemma": "cell phone", "pos": "noun", "details": {"plural": "cell phones"}, "sentences": ["My *cell phone* is new and very fast."]}
         ],
         "nl": [
-        {"lemma": "mobiel", "pos": "noun", "details": {"note": "de telefoon", "article": "de", "plural": "mobiels"}, "sentences": ["Mijn *mobiel* is nieuw en heeft een goede camera."]}
+        {"lemma": "mobiel", "pos": "noun", "details": {"note": "de telefoon", "article": "de", "plural": "mobiels"}, "sentences": ["Mijn *mobiel* is nieuw en erg snel."]}
         ]
       }
     },
@@ -749,7 +749,7 @@
       "gloss": "turn on (verb)",
       "entries": {
         "en": [
-        {"lemma": "to turn on", "pos": "verb", "details": {"past": "turned on", "participle": "turned on"}, "sentences": ["It is dark, so I *turn on* the light."]}
+        {"lemma": "to turn on", "pos": "verb", "details": {"past": "turned on", "participle": "turned on"}, "sentences": ["It is dark here, so I *turn on* the light."]}
         ],
         "nl": [
         {"lemma": "aanzetten", "pos": "verb", "details": {"pastSingular": "zette aan", "pastPlural": "zetten aan", "participle": "aangezet", "auxiliary": "hebben"}, "sentences": ["Het is hier donker, dus ik *zet* het licht *aan*."]}
@@ -821,7 +821,7 @@
       "gloss": "novel (noun)",
       "entries": {
         "en": [
-        {"lemma": "novel", "pos": "noun", "details": {"plural": "novels"}, "sentences": ["On holiday, I read a long *novel*."]}
+        {"lemma": "novel", "pos": "noun", "details": {"plural": "novels"}, "sentences": ["On holiday, I read a long *novel* about the sea."]}
         ],
         "nl": [
         {"lemma": "roman", "pos": "noun", "details": {"article": "de", "plural": "romans"}, "sentences": ["Op vakantie lees ik een dikke *roman* over de zee."]}
@@ -833,7 +833,7 @@
       "gloss": "character (in a story)",
       "entries": {
         "en": [
-        {"lemma": "character", "pos": "noun", "details": {"note": "in a story", "plural": "characters"}, "sentences": ["The main *character* of the book is funny."]}
+        {"lemma": "character", "pos": "noun", "details": {"note": "in a story", "plural": "characters"}, "sentences": ["The main *character* of the book is funny and lazy."]}
         ],
         "nl": [
         {"lemma": "personage", "pos": "noun", "details": {"article": "het", "plural": "personages"}, "sentences": ["Het hoofd*personage* van het boek is grappig en lui."]}
@@ -857,7 +857,7 @@
       "gloss": "edit (verb)",
       "entries": {
         "en": [
-        {"lemma": "to edit", "pos": "verb", "details": {"past": "edited", "participle": "edited"}, "sentences": ["Before sending it, I *edit* the text again."]}
+        {"lemma": "to edit", "pos": "verb", "details": {"past": "edited", "participle": "edited"}, "sentences": ["Before sending it, I *edit* the text and correct mistakes."]}
         ],
         "nl": [
         {"lemma": "bewerken", "pos": "verb", "details": {"pastSingular": "bewerkte", "pastPlural": "bewerkten", "participle": "bewerkt", "auxiliary": "hebben"}, "sentences": ["Voor het versturen *bewerk* ik de tekst en verbeter ik fouten."]}
@@ -1037,7 +1037,7 @@
       "gloss": "malfunction (noun)",
       "entries": {
         "en": [
-        {"lemma": "malfunction", "pos": "noun", "details": {"plural": "malfunctions"}, "sentences": ["There is a *malfunction* on the line today."]}
+        {"lemma": "malfunction", "pos": "noun", "details": {"plural": "malfunctions"}, "sentences": ["There is a *malfunction* on the tracks, so trains stand still."]}
         ],
         "nl": [
         {"lemma": "storing", "pos": "noun", "details": {"article": "de", "plural": "storingen"}, "sentences": ["Er is een *storing* op het spoor, dus treinen staan stil."]}
@@ -1049,7 +1049,7 @@
       "gloss": "picture (noun)",
       "entries": {
         "en": [
-        {"lemma": "picture", "pos": "noun", "details": {"plural": "pictures"}, "sentences": ["The *picture* on the wall is nice and colorful."]}
+        {"lemma": "picture", "pos": "noun", "details": {"plural": "pictures"}, "sentences": ["The *picture* in the children's book is nice and colorful."]}
         ],
         "nl": [
         {"lemma": "plaatje", "pos": "noun", "details": {"article": "het", "plural": "plaatjes"}, "sentences": ["Het *plaatje* in het kinderboek is mooi en kleurrijk."]}
@@ -1133,7 +1133,7 @@
       "gloss": "storage (noun)",
       "entries": {
         "en": [
-        {"lemma": "storage", "pos": "noun", "details": {"uncountable": true}, "sentences": ["The *storage* on my phone is full."]}
+        {"lemma": "storage", "pos": "noun", "details": {"uncountable": true}, "sentences": ["The *storage* on my phone is full, so I delete photos."]}
         ],
         "nl": [
         {"lemma": "opslag", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["De *opslag* op mijn telefoon is vol, dus ik wis foto's."]}
@@ -1145,7 +1145,7 @@
       "gloss": "request (verb)",
       "entries": {
         "en": [
-        {"lemma": "to request", "pos": "verb", "details": {"past": "requested", "participle": "requested"}, "sentences": ["For next week, I *request* a meeting."]}
+        {"lemma": "to request", "pos": "verb", "details": {"past": "requested", "participle": "requested"}, "sentences": ["For next week, I *request* a meeting with the manager."]}
         ],
         "nl": [
         {"lemma": "verzoeken", "pos": "verb", "details": {"pastSingular": "verzocht", "pastPlural": "verzochten", "participle": "verzocht", "auxiliary": "hebben"}, "sentences": ["Voor volgende week *verzoek* ik om een gesprek met de manager."]}
@@ -1172,7 +1172,7 @@
         {"lemma": "scandal", "pos": "noun", "details": {"plural": "scandals"}, "sentences": ["The *scandal* is big and shocks the town."]}
         ],
         "nl": [
-        {"lemma": "schandaal", "pos": "noun", "details": {"article": "het", "plural": "schandalen"}, "sentences": ["Het *schandaal* is groot en elke krant schrijft erover."]}
+        {"lemma": "schandaal", "pos": "noun", "details": {"article": "het", "plural": "schandalen"}, "sentences": ["Het *schandaal* is groot en schokt de stad."]}
         ]
       }
     },
@@ -1241,7 +1241,7 @@
       "gloss": "producer (noun)",
       "entries": {
         "en": [
-        {"lemma": "producer", "pos": "noun", "details": {"plural": "producers"}, "sentences": ["The *producer* makes a film about a boy."]}
+        {"lemma": "producer", "pos": "noun", "details": {"plural": "producers"}, "sentences": ["The *producer* makes a film about a boy and a dog."]}
         ],
         "nl": [
         {"lemma": "producer", "pos": "noun", "details": {"article": "de", "plural": "producers"}, "sentences": ["De *producer* maakt een film over een jongen en hond."]}
@@ -1313,7 +1313,7 @@
       "gloss": "print (verb)",
       "entries": {
         "en": [
-        {"lemma": "to print", "pos": "verb", "details": {"past": "printed", "participle": "printed"}, "sentences": ["At the library, I *print* the page."]}
+        {"lemma": "to print", "pos": "verb", "details": {"past": "printed", "participle": "printed"}, "sentences": ["At the library, I *print* the page with the map."]}
         ],
         "nl": [
         {"lemma": "afdrukken", "pos": "verb", "details": {"pastSingular": "drukte af", "pastPlural": "drukten af", "participle": "afgedrukt", "auxiliary": "hebben"}, "sentences": ["In de bibliotheek *druk* ik de pagina met de kaart *af*."]}

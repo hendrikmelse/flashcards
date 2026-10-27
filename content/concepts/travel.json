@@ -80,7 +80,7 @@
         {"lemma": "flight", "pos": "noun", "details": {"plural": "flights"}, "sentences": ["The *flight* to Madrid takes three hours."]}
         ],
         "nl": [
-        {"lemma": "vlucht", "pos": "noun", "details": {"article": "de", "plural": "vluchten"}, "sentences": ["De *vlucht* naar Madrid duurt drie uur en kost weinig."]}
+        {"lemma": "vlucht", "pos": "noun", "details": {"article": "de", "plural": "vluchten"}, "sentences": ["De *vlucht* naar Madrid duurt drie uur."]}
         ]
       }
     },
@@ -137,7 +137,7 @@
       "gloss": "border (noun)",
       "entries": {
         "en": [
-        {"lemma": "border", "pos": "noun", "details": {"plural": "borders"}, "sentences": ["We cross the *border* by train with passports."]}
+        {"lemma": "border", "pos": "noun", "details": {"plural": "borders"}, "sentences": ["We cross the *border* by train and show our passports."]}
         ],
         "nl": [
         {"lemma": "grens", "pos": "noun", "details": {"article": "de", "plural": "grenzen"}, "sentences": ["Wij steken de *grens* met de trein over en laten onze paspoorten zien."]}
@@ -221,7 +221,7 @@
       "gloss": "tunnel (noun)",
       "entries": {
         "en": [
-        {"lemma": "tunnel", "pos": "noun", "details": {"plural": "tunnels"}, "sentences": ["The train goes through a long *tunnel* under water."]}
+        {"lemma": "tunnel", "pos": "noun", "details": {"plural": "tunnels"}, "sentences": ["The train goes through a long *tunnel* under the river."]}
         ],
         "nl": [
         {"lemma": "tunnel", "pos": "noun", "details": {"article": "de", "plural": "tunnels"}, "sentences": ["De trein rijdt door een lange *tunnel* onder de rivier."]}
@@ -293,7 +293,7 @@
       "gloss": "gasoline (noun)",
       "entries": {
         "en": [
-        {"lemma": "gasoline", "pos": "noun", "details": {"uncountable": true}, "sentences": ["The car needs *gasoline*, so we stop at a pump."]}
+        {"lemma": "gasoline", "pos": "noun", "details": {"uncountable": true}, "sentences": ["The car needs *gasoline*, so we stop at a gas station."]}
         ],
         "nl": [
         {"lemma": "benzine", "pos": "noun", "details": {"article": "de", "uncountable": true}, "sentences": ["De auto heeft *benzine* nodig, dus stoppen we bij het tankstation."]}
@@ -449,7 +449,7 @@
       "gloss": "harbor (noun)",
       "entries": {
         "en": [
-        {"lemma": "harbor", "pos": "noun", "details": {"plural": "harbors"}, "sentences": ["Many small fishing boats lie in the *harbor* tonight."]}
+        {"lemma": "harbor", "pos": "noun", "details": {"plural": "harbors"}, "sentences": ["Many small fishing boats lie in the *harbor* at night."]}
         ],
         "nl": [
         {"lemma": "haven", "pos": "noun", "details": {"article": "de", "plural": "havens"}, "sentences": ["Veel kleine vissersboten liggen 's nachts in de *haven*."]}
@@ -461,7 +461,7 @@
       "gloss": "get off (verb)",
       "entries": {
         "en": [
-        {"lemma": "to get off", "pos": "verb", "details": {"past": "got off", "participle": "got off"}, "sentences": ["We *get off* at the next stop near the museum."]}
+        {"lemma": "to get off", "pos": "verb", "details": {"past": "got off", "participle": "got off"}, "sentences": ["We *get off* at the next station near the museum."]}
         ],
         "nl": [
         {"lemma": "uitstappen", "pos": "verb", "details": {"pastSingular": "stapte uit", "pastPlural": "stapten uit", "participle": "uitgestapt", "auxiliary": "zijn"}, "sentences": ["Wij *stappen* bij het volgende station bij het museum *uit*."]}
@@ -1325,7 +1325,7 @@
       "gloss": "back seat (noun)",
       "entries": {
         "en": [
-        {"lemma": "back seat", "pos": "noun", "details": {"plural": "back seats"}, "sentences": ["The kids sleep on the *back seat* during trips."]}
+        {"lemma": "back seat", "pos": "noun", "details": {"plural": "back seats"}, "sentences": ["Two kids sleep on the *back seat* during the trip."]}
         ],
         "nl": [
         {"lemma": "achterbank", "pos": "noun", "details": {"article": "de", "plural": "achterbanken"}, "sentences": ["Twee kinderen slapen tijdens de reis op de *achterbank*."]}

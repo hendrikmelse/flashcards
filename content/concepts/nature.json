@@ -248,7 +248,7 @@
         {"lemma": "to burn", "pos": "verb", "details": {"note": "be on fire", "past": "burned", "participle": "burned"}, "sentences": ["Firefighters rush to the old house that is *burning*."]}
         ],
         "nl": [
-        {"lemma": "branden", "pos": "verb", "details": {"pastSingular": "brandde", "pastPlural": "brandden", "participle": "gebrand", "auxiliary": "hebben"}, "sentences": ["Brandweermannen rennen naar de straat waar het oude huis *brandt*."]}
+        {"lemma": "branden", "pos": "verb", "details": {"pastSingular": "brandde", "pastPlural": "brandden", "participle": "gebrand", "auxiliary": "hebben"}, "sentences": ["Brandweermannen rennen naar het oude huis dat *brandt*."]}
         ]
       }
     },
@@ -332,7 +332,7 @@
         {"lemma": "coast", "pos": "noun", "details": {"plural": "coasts"}, "sentences": ["My grandparents live on the *coast* and love the sea."]}
         ],
         "nl": [
-        {"lemma": "kust", "pos": "noun", "details": {"article": "de", "plural": "kusten"}, "sentences": ["Mijn grootouders wonen aan de *kust* en houden van de zeelucht."]}
+        {"lemma": "kust", "pos": "noun", "details": {"article": "de", "plural": "kusten"}, "sentences": ["Mijn grootouders wonen aan de *kust* en houden van de zee."]}
         ]
       }
     },
@@ -884,7 +884,7 @@
         {"lemma": "earthquake", "pos": "noun", "details": {"plural": "earthquakes"}, "sentences": ["The *earthquake* is strong, and the lamps shake everywhere."]}
         ],
         "nl": [
-        {"lemma": "aardbeving", "pos": "noun", "details": {"article": "de", "plural": "aardbevingen"}, "sentences": ["De *aardbeving* is sterk en de lampen trillen in elke kamer."]}
+        {"lemma": "aardbeving", "pos": "noun", "details": {"article": "de", "plural": "aardbevingen"}, "sentences": ["De *aardbeving* is sterk en de lampen trillen overal."]}
         ]
       }
     },
@@ -1136,7 +1136,7 @@
         {"lemma": "bank", "pos": "noun", "details": {"note": "of a river", "plural": "banks"}, "sentences": ["Two fishermen sit on the river *bank* all morning."]}
         ],
         "nl": [
-        {"lemma": "wal", "pos": "noun", "details": {"article": "de", "plural": "wallen"}, "sentences": ["Twee vissers zitten de hele ochtend op de *wal*."]}
+        {"lemma": "wal", "pos": "noun", "details": {"article": "de", "plural": "wallen"}, "sentences": ["Twee vissers zitten de hele ochtend op de *wal* van de rivier."]}
         ]
       }
     },
