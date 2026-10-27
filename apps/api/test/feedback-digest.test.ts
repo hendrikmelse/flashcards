@@ -74,10 +74,13 @@ describe("the daily feedback email", () => {
         { userId, kind: "bug", title: "Followed-up bug", note: "n" },
       ])
       .returning({ id: cardReports.id });
-    // One at a time, as they arrive: comments inserted together share a timestamp and so an order.
-    await db.insert(reportComments).values({ reportId: answered!.id, body: "Looking into it", fromAdmin: true });
-    await db.insert(reportComments).values({ reportId: followedUp!.id, body: "Looking into it", fromAdmin: true });
-    await db.insert(reportComments).values({ reportId: followedUp!.id, body: "Still broken today", fromAdmin: false });
+    // Explicit times: the digest orders comments by createdAt, and rows written back to back can tie.
+    const at = (minutes: number) => new Date(Date.UTC(2026, 0, 1, 12, minutes));
+    await db.insert(reportComments).values([
+      { reportId: answered!.id, body: "Looking into it", fromAdmin: true, createdAt: at(0) },
+      { reportId: followedUp!.id, body: "Looking into it", fromAdmin: true, createdAt: at(1) },
+      { reportId: followedUp!.id, body: "Still broken today", fromAdmin: false, createdAt: at(2) },
+    ]);
     await sendFeedbackDigest(d);
 
     const mail = d.mailer.sent[0]!;
